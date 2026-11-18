@@ -1,0 +1,124 @@
+id: hats-russian-war
+name: Hats’ Russian War
+start: "1741"
+end: "1743"
+tier: B
+summary: ""
+sides:
+  - id: se
+    name: Sweden
+    polities:
+      - sweden
+    ink: blue
+    moves: Swedish and allied moves
+    success: Swedish success
+  - id: foe
+    name: Sweden’s other enemies
+    ink: purple
+    moves: Moves by Sweden’s other enemies
+    success: Success for Sweden’s other enemies
+    polities:
+      - russia
+notes:
+  - Dates are New Style.
+  - Migrated from Sweden at War, so the story is told from Sweden’s side.
+sources:
+  - url: https://www.hhogman.se/swe_wars-1700s.htm
+    title: Swedish wars in the 1700s (Hans Högman)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Villmanstrand
+    title: Battle of Villmanstrand (Wikipedia)
+  - url: https://www.britannica.com/event/Treaty-of-Abo
+    title: Treaty of Åbo (Britannica)
+steps:
+  - title: The Hats’ war
+    date: 1741–1743
+    when: "1741"
+    borders: "1743"
+    countries:
+      - se
+    view:
+      center:
+        - 25.5558
+        - 61.3099
+      size:
+        - 718
+        - 575
+    body:
+      - The Hats, the party then in power in Sweden, wanted revenge for the Great Northern War and had French backing. Sweden declared war on Russia in the summer of 1741, but on 3 September a Russian army under Peter Lacy stormed Villmanstrand and routed the Swedish force there.
+      - The main army, badly led and ravaged by disease, fell back across Finland. Surrounded near Helsingfors, it capitulated in August 1742, and Russia occupied all of Finland, a time Finns call the Lesser Wrath. At Åbo in August 1743 Sweden got Finland back but gave up a strip of the south-east beyond the Kymi river, with Fredrikshamn, Villmanstrand and Nyslott.
+    facts:
+      - - Battle of Villmanstrand
+        - 3 September 1741, Russian victory
+      - - Treaty of Åbo
+        - August 1743
+    markers:
+      - kind: battle
+        side: foe
+        name: Battle of Villmanstrand
+        date: 3 September 1741
+        lonlat:
+          - 28.1867
+          - 61.0577
+        text: A Russian army of about 10,000 stormed the small town. The Swedish commander, Carl Henrik Wrangel, was taken prisoner.
+      - kind: event
+        side: foe
+        name: Capitulation at Helsingfors
+        date: August 1742
+        lonlat:
+          - 24.9403
+          - 60.169
+        lp: l
+        text: Cut off by land and sea, the Swedish army surrendered and was shipped home, leaving Finland to the Russians.
+      - kind: treaty
+        side: none
+        name: Treaty of Åbo
+        date: August 1743
+        lonlat:
+          - 22.2701
+          - 60.4482
+        lp: l
+        text: Russia returned most of Finland, and Sweden accepted the Russian candidate, Adolf Frederick, as heir to the throne.
+    arrows:
+      - side: foe
+        label: Lacy
+        label_at:
+          - 29.4978
+          - 61.2487
+        bezier:
+          - - 29.5976
+            - 60.8992
+          - - 29.4808
+            - 60.9157
+          - - 29.1172
+            - 60.9723
+          - - 28.9006
+            - 60.9987
+          - - 28.6831
+            - 61.0224
+          - - 28.4015
+            - 61.042
+          - - 28.3013
+            - 61.0495
+      - side: foe
+        bezier:
+          - - 27.5
+            - 60.6193
+          - - 27.2487
+            - 60.5791
+          - - 26.3969
+            - 60.4457
+          - - 25.9975
+            - 60.3786
+          - - 25.5996
+            - 60.3103
+          - - 25.2509
+            - 60.2441
+          - - 25.1016
+            - 60.2182
+    areas:
+      - style: lost
+        label: Lost by Sweden in this peace
+        atoms:
+          - FI-02
+          - FI-04~fiOld
+          - FI-09~fiOld

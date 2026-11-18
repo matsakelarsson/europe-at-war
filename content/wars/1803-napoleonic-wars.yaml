@@ -1,0 +1,315 @@
+id: napoleonic-wars
+name: Napoleonic Wars
+start: "1803"
+end: "1815"
+tier: B
+summary: ""
+sides:
+  - id: se
+    name: Sweden
+    polities:
+      - sweden
+    ink: blue
+    moves: Swedish and allied moves
+    success: Swedish success
+  - id: dk
+    name: Denmark–Norway
+    polities:
+      - denmark-norway
+      - danish-duchies
+    ink: red
+    moves: Danish–Norwegian moves
+    success: Danish–Norwegian success
+  - id: foe
+    name: Sweden’s other enemies
+    ink: purple
+    moves: Moves by Sweden’s other enemies
+    success: Success for Sweden’s other enemies
+    polities:
+      - france
+notes:
+  - Dates are New Style.
+  - Migrated from Sweden at War, so the story is told from Sweden’s side.
+sources:
+  - url: https://en.wikipedia.org/wiki/Franco-Swedish_War
+    title: Franco-Swedish War (Wikipedia)
+  - url: https://www.historyofwar.org/articles/people_bernadotte.html
+    title: Jean-Baptiste Bernadotte (History of War)
+  - url: https://en.wikipedia.org/wiki/Treaty_of_Kiel
+    title: Treaty of Kiel (Wikipedia)
+steps:
+  - title: War with Napoleon in Pomerania
+    date: 1805–1807
+    when: "1805"
+    borders: "1795"
+    countries:
+      - se
+    view:
+      center:
+        - 12.0983
+        - 53.928
+      size:
+        - 452
+        - 340
+    body:
+      - Gustav IV Adolf, who loathed Napoleon, joined the Third Coalition in 1805. A British, Russian and Swedish force marched from Swedish Pomerania toward French-held Hanover, but the coalition fell apart after Austerlitz, and in November 1806 Swedish troops were caught up in the French storming of Lübeck.
+      - In January 1807 Marshal Mortier’s French army blockaded Stralsund. The garrison made a great sortie in April, but after the Peace of Tilsit the French returned in strength. Stralsund fell in August 1807, and Swedish Pomerania stayed under French occupation until 1810.
+    facts:
+      - - Siege of Stralsund
+        - January – August 1807
+      - - French occupation
+        - Until the Treaty of Paris, January 1810
+    markers:
+      - kind: battle
+        side: foe
+        name: Battle of Lübeck
+        date: 6 November 1806
+        lonlat:
+          - 10.6892
+          - 53.8698
+        lp: l
+        text: French troops stormed the city, catching a Swedish detachment along with retreating Prussians.
+      - kind: siege
+        side: foe
+        name: Stralsund
+        date: January – August 1807
+        lonlat:
+          - 13.0918
+          - 54.3095
+        text: Blockaded from January, the town fell in August to Marshal Brune’s army of about 50,000.
+    arrows:
+      - side: se
+        label: Toward Hanover, 1805
+        label_at:
+          - 10.4997
+          - 53.7485
+        bezier:
+          - - 12.9983
+            - 54.1499
+          - - 12.833
+            - 54.0914
+          - - 12.3339
+            - 53.9233
+          - - 12.0007
+            - 53.7989
+          - - 11.6694
+            - 53.6735
+          - - 11.3319
+            - 53.5489
+          - - 10.9982
+            - 53.3997
+          - - 10.6669
+            - 53.2497
+          - - 10.1666
+            - 52.9854
+          - - 10.0002
+            - 52.9007
+      - side: foe
+        bezier:
+          - - 12.2002
+            - 53.4505
+          - - 12.2853
+            - 53.516
+          - - 12.564
+            - 53.7231
+          - - 12.7019
+            - 53.8486
+          - - 12.8406
+            - 53.974
+          - - 12.9679
+            - 54.1408
+          - - 13.0209
+            - 54.1986
+    areas:
+      - style: occupied
+        side: foe
+        label: Occupied by France, 1807–1810
+        atoms:
+          - DE-MV~pomN
+  - title: Bernadotte and the Army of the North
+    date: 1810–1813
+    when: "1810"
+    borders: "1807"
+    countries:
+      - se
+    view:
+      center:
+        - 12.3277
+        - 52.9234
+      size:
+        - 523
+        - 521
+    body:
+      - In 1810 Sweden chose the French marshal Jean-Baptiste Bernadotte as crown prince, and as Charles John he soon ran the country. When Napoleon occupied Swedish Pomerania again in 1812, Charles John allied with Russia, which agreed to help Sweden take Norway from Denmark.
+      - In 1813 he commanded the allied Army of the North, made up of Swedes, Prussians and Russians, against his old master. It beat the French at Grossbeeren on 23 August and Dennewitz on 6 September, protecting Berlin, and took part in the decisive Battle of Leipzig on 16–19 October 1813.
+    facts:
+      - - Army of the North
+        - Swedish, Prussian and Russian troops
+      - - Battle of Leipzig
+        - 16–19 October 1813
+    markers:
+      - kind: battle
+        side: se
+        name: Battle of Grossbeeren
+        date: 23 August 1813
+        lonlat:
+          - 13.3099
+          - 52.3498
+        text: Marshal Oudinot’s drive on Berlin was beaten back, mostly by the Prussian troops of the Army of the North.
+      - kind: battle
+        side: se
+        name: Battle of Dennewitz
+        date: 6 September 1813
+        lonlat:
+          - 12.8995
+          - 51.8996
+        lp: l
+        text: Marshal Ney’s Army of Berlin was routed south of the Prussian capital.
+      - kind: battle
+        side: se
+        name: Battle of Leipzig
+        date: 16–19 October 1813
+        lonlat:
+          - 12.3685
+          - 51.3392
+        text: The Battle of the Nations, Napoleon’s first great defeat. The Army of the North joined the final attacks.
+    arrows:
+      - side: se
+        label: Charles John
+        label_at:
+          - 14.1007
+          - 53.3983
+        bezier:
+          - - 13.1014
+            - 54.1993
+          - - 13.1357
+            - 54.0649
+          - - 13.2683
+            - 53.666
+          - - 13.2988
+            - 53.3994
+          - - 13.3328
+            - 53.1331
+          - - 13.2976
+            - 52.7327
+          - - 13.299
+            - 52.5986
+      - side: se
+        bezier:
+          - - 12.9995
+            - 52.1987
+          - - 12.9509
+            - 52.1317
+          - - 12.7874
+            - 51.9267
+          - - 12.6977
+            - 51.8
+          - - 12.6085
+            - 51.6732
+          - - 12.4987
+            - 51.5
+          - - 12.4577
+            - 51.4403
+  - title: "Kiel: Norway for Pomerania"
+    date: 1813–1814
+    when: "1813"
+    borders: 1814-01-14
+    countries:
+      - se
+      - dk
+      - no
+    view:
+      center:
+        - 10.6428
+        - 57.346
+      size:
+        - 550
+        - 908
+    body:
+      - After Leipzig, Charles John turned north against Denmark–Norway, Napoleon’s last ally, and invaded Holstein in December 1813. Swedish cavalry won a clash at Bornhöved on 7 December, but the Danes fought their way past the allies at Sehested on 10 December and reached the fortress of Rendsburg.
+      - Denmark could not hold out. By the Treaty of Kiel on 14 January 1814, King Frederick VI gave Norway to the king of Sweden, and Sweden handed Swedish Pomerania and Rügen to Denmark. It was the last war between Sweden and Denmark. The Norwegians, though, refused to be handed over.
+    facts:
+      - - Treaty of Kiel
+        - 14 January 1814
+      - - Exchange
+        - Norway to Sweden, Swedish Pomerania to Denmark
+    markers:
+      - kind: battle
+        side: se
+        name: Battle of Bornhöved
+        date: 7 December 1813
+        lonlat:
+          - 10.2181
+          - 54.0689
+        text: Swedish cavalry charged the Danish rearguard, which got away toward Kiel.
+      - kind: battle
+        side: dk
+        name: Battle of Sehested
+        date: 10 December 1813
+        lonlat:
+          - 9.8188
+          - 54.3707
+        lp: l
+        text: The Danish corps broke through the allies and reached the fortress of Rendsburg.
+      - kind: treaty
+        side: se
+        name: Treaty of Kiel
+        date: 14 January 1814
+        lonlat:
+          - 10.1381
+          - 54.32
+        lp: t
+        text: Frederick VI ceded Norway, but not Iceland, Greenland or the Faroes, to the king of Sweden.
+    arrows:
+      - side: se
+        label: Charles John
+        label_at:
+          - 11.6017
+          - 53.9493
+        bezier:
+          - - 10.9999
+            - 53.7501
+          - - 10.9358
+            - 53.7825
+          - - 10.7165
+            - 53.8888
+          - - 10.6004
+            - 53.9495
+          - - 10.4839
+            - 54.0101
+          - - 10.3537
+            - 54.0908
+          - - 10.3017
+            - 54.1192
+    areas:
+      - style: occupied
+        side: se
+        atoms:
+          - DE-SH
+      - style: gained
+        label: Ceded to Sweden at Kiel
+        atoms:
+          - NO-01
+          - NO-02
+          - NO-03
+          - NO-04
+          - NO-05
+          - NO-06
+          - NO-07
+          - NO-08
+          - NO-09
+          - NO-10
+          - NO-11
+          - NO-12
+          - NO-14
+          - NO-15
+          - NO-15~no
+          - NO-16
+          - NO-17
+          - NO-18~no
+          - NO-19
+          - NO-20
+      - style: lost
+        label: Lost by Sweden in this peace
+        atoms:
+          - DE-MV~pomN

@@ -1,0 +1,345 @@
+// Validates content/ and emits the static site into dist/.
+//
+//   dist/index.html, app.js, style.css, vendor/…    (copied from site/)
+//   dist/data/atoms.topo.json                      (from site-data/, see build-geo.mjs)
+//   dist/data/borders.json                         polities + border timeline
+//   dist/data/polities.css                         polity colours, light and dark
+//   dist/data/wars.json                            catalogue
+//   dist/data/wars/<id>.json                       one per war, projected
+//   dist/data/labels.json                          seas, regions, capitals
+//
+// Exit code 1 on validation errors; warnings are printed but do not fail.
+import { mkdir, writeFile, cp, rm, readFile, stat } from 'node:fs/promises';
+import { join } from 'node:path';
+import { gzipSync } from 'node:zlib';
+import { ROOT, CONTENT, readJSON, readYAML, listFiles, exists, loadPolities, darkFill, hexToOklch, oklchToHex } from './lib.mjs';
+import { project, FRAME } from './projection.mjs';
+
+const DIST = join(ROOT, 'dist');
+const errors = [], warnings = [];
+const err = (m) => errors.push(m), warn = (m) => warnings.push(m);
+
+const INKS = ['blue', 'red', 'purple', 'orange', 'green', 'teal', 'brown', 'magenta', 'gold', 'slate', 'navy', 'olive', 'none'];
+const KINDS = ['battle', 'naval', 'siege', 'held', 'taken', 'event', 'treaty', 'toll', 'air', 'capital'];
+const AREA_STYLES = ['occupied', 'gained', 'pledged', 'lost', 'outline', 'contested', 'front'];
+
+/** Sortable date key: "1658" -> "1658-00-00", "1658-02" -> "1658-02-00". */
+export function dateKey(d) {
+  if (d === undefined || d === null) return null;
+  const m = String(d).trim().match(/^(-?\d{1,4})(?:-(\d{2}))?(?:-(\d{2}))?$/);
+  if (!m) return null;
+  return `${m[1].padStart(4, '0')}-${m[2] || '00'}-${m[3] || '00'}`;
+}
+
+// ---------------------------------------------------------------- polities
+async function buildPolities() {
+  const { byId, redirect } = await loadPolities();
+  const list = [...byId.values()].sort((a, b) => a.id.localeCompare(b.id));
+  const index = new Map(list.map((p, i) => [p.id, i]));
+  for (const [from, to] of redirect) if (index.has(to)) index.set(from, index.get(to));
+  for (const p of list) {
+    if (!/^#[0-9a-f]{6}$/i.test(p.color || '')) err(`polity ${p.id}: bad color ${p.color}`);
+    if (p.ink && !INKS.includes(p.ink)) err(`polity ${p.id}: unknown ink ${p.ink}`);
+  }
+  // CSS custom properties: --p<i> (fill), --q<i> (muted fill, for non-participants).
+  const muted = (hex, dark) => { const [L, C, H] = hexToOklch(hex); return dark ? oklchToHex(0.3, Math.min(0.04, C * 0.6), H) : oklchToHex(Math.min(0.95, L + 0.035), C * 0.45, H); };
+  const light = list.map((p, i) => `--p${i}:${p.color};--q${i}:${muted(p.color, false)};`).join('');
+  const dark = list.map((p, i) => { const d = darkFill(p.color); return `--p${i}:${d};--q${i}:${muted(p.color, true)};`; }).join('');
+  const css = `:root{${light}}\n@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){${dark}}}\n:root[data-theme="dark"]{${dark}}\n`;
+  return { list, index, css };
+}
+
+// ---------------------------------------------------------------- borders
+async function buildBorders(pol, topo) {
+  const atomsMeta = await readJSON(join(CONTENT, 'borders/atoms.json'));
+  const meta = new Map(atomsMeta.map((a) => [a.id, a]));
+  const order = topo.objects.atoms.geometries.map((g) => g.properties.id);
+  const aidx = new Map(order.map((id, i) => [id, i]));
+  const children = new Map();
+  for (const a of atomsMeta) if (a.parent) (children.get(a.parent) || children.set(a.parent, []).get(a.parent)).push(a.id);
+  /** An atom id means the original region, including any split-off children. */
+  const expand = (id, where) => {
+    const out = [];
+    const walk = (x) => { if (aidx.has(x)) out.push(aidx.get(x)); for (const c of children.get(x) || []) walk(c); };
+    walk(id);
+    if (!out.length) err(`${where}: unknown atom ${id}`);
+    return out;
+  };
+  const polIdx = (id, where) => {
+    if (id === '-' || id === null) return -1;
+    if (!pol.index.has(id)) { err(`${where}: unknown polity ${id}`); return -1; }
+    return pol.index.get(id);
+  };
+
+  // Curated ranges: keyframe assignments for these atoms inside [from, until) are ignored.
+  const curated = [];
+  if (await exists(join(CONTENT, 'borders/curated.yaml'))) {
+    for (const c of (await readYAML(join(CONTENT, 'borders/curated.yaml'))) || []) {
+      const set = new Set((c.atoms || []).flatMap((id) => expand(id, `curated ${c.name}`)));
+      curated.push({ from: dateKey(c.from), until: dateKey(c.until), set });
+    }
+  }
+  const isCurated = (i, key) => curated.some((c) => key >= c.from && key < c.until && c.set.has(i));
+
+  const entries = [];
+  for (const f of await listFiles(join(CONTENT, 'borders/keyframes'), '.json')) {
+    const kf = await readJSON(join(CONTENT, 'borders/keyframes', f));
+    const set = new Map();
+    for (const [p, ids] of Object.entries(kf.owners)) {
+      const pi = polIdx(p, `keyframe ${f}`);
+      for (const id of ids) {
+        if (!aidx.has(id) && !children.has(id)) { warn(`keyframe ${f}: atom ${id} no longer exists`); continue; }
+        // Children inherit from the parent unless they are listed themselves.
+        for (const i of expand(id, `keyframe ${f}`)) if (!set.has(i) || order[i] === id) set.set(i, pi);
+      }
+    }
+    const key = dateKey(kf.date);
+    const raw = new Map(set);
+    for (const i of [...set.keys()]) if (isCurated(i, key)) set.delete(i);
+    entries.push({ key, date: String(kf.date), src: kf.source || f, kind: 'keyframe', set, raw });
+  }
+  for (const f of await listFiles(join(CONTENT, 'borders/events'), '.yaml')) {
+    const evs = (await readYAML(join(CONTENT, 'borders/events', f))) || [];
+    for (const [k, ev] of evs.entries()) {
+      const where = `events ${f} #${k + 1}`;
+      if (!dateKey(ev.date)) { err(`${where}: bad date ${ev.date}`); continue; }
+      const set = new Map();
+      for (const [p, ids] of Object.entries(ev.owners || {})) {
+        // "-" in an event means: no curated owner, use the latest keyframe.
+        const pi = p === '-' ? 'kf' : polIdx(p, where);
+        for (const id of ids) for (const i of expand(id, where)) set.set(i, pi);
+      }
+      entries.push({ key: dateKey(ev.date), date: String(ev.date), src: ev.note || f, kind: 'event', war: ev.war, set });
+    }
+  }
+  entries.sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : a.kind === 'keyframe' ? -1 : 1));
+
+  // Resolve full states to compute deltas and lint.
+  const N = order.length;
+  let state = new Int16Array(N).fill(-1);
+  const lastKf = new Int16Array(N).fill(-1); // owner per the latest keyframe, ignoring curated ranges
+  const timeline = [];
+  const history = Array.from({ length: N }, () => []);
+  for (const e of entries) {
+    const next = state.slice();
+    if (e.kind === 'keyframe') for (const [i, p] of e.raw || e.set) lastKf[i] = p;
+    for (const [i, p] of e.set) next[i] = p === 'kf' ? lastKf[i] : p;
+    const changes = [];
+    for (let i = 0; i < N; i++) if (next[i] !== state[i]) { changes.push(i, next[i]); history[i].push({ key: e.key, p: next[i], kind: e.kind }); }
+    timeline.push({ d: e.date, k: e.key, s: e.src, c: changes });
+    state = next;
+  }
+  // Flip-flop lint: A -> B -> A within 60 years where a draft keyframe is involved.
+  const reviewed = new Set();
+  for (const r of (await exists(join(CONTENT, 'borders', 'reviewed.yaml'))) ? (await readYAML(join(CONTENT, 'borders', 'reviewed.yaml'))) || [] : []) {
+    const k = dateKey(r.at);
+    if (!k) err(`borders/reviewed.yaml: bad date ${r.at}`);
+    for (const a of r.atoms || []) reviewed.add(`${a}@${k}`);
+  }
+  const flips = [];
+  const pname = (pi) => (pi < 0 ? '-' : pol.list[pi].id);
+  for (let i = 0; i < N; i++) {
+    const h = history[i];
+    for (let k = 2; k < h.length; k++) {
+      if (h[k].p === h[k - 2].p && h[k].p !== h[k - 1].p && (h[k].kind === 'keyframe' || h[k - 1].kind === 'keyframe')) {
+        const y0 = +h[k - 1].key.slice(0, 4), y1 = +h[k].key.slice(0, 4);
+        if (y1 - y0 <= 60 && (h[k].kind === 'event' || h[k - 1].kind === 'event') && !reviewed.has(`${order[i]}@${h[k - 1].key}`)) flips.push(`${order[i]}: ${pname(h[k - 2].p)} → ${pname(h[k - 1].p)} (${h[k - 1].key.slice(0, 4)}, ${h[k - 1].kind}) → ${pname(h[k].p)} (${h[k].key.slice(0, 4)}, ${h[k].kind})`);
+      }
+    }
+  }
+  if (flips.length) warn(`borders: ${flips.length} flip-flop(s) between curated events and draft keyframes, check them:\n    ` + flips.slice(0, 12).join('\n    ') + (flips.length > 12 ? `\n    … and ${flips.length - 12} more` : ''));
+  return { order, aidx, expand, timeline, meta };
+}
+
+// ---------------------------------------------------------------- labels
+async function buildLabels() {
+  const out = { labels: [], capitals: [] };
+  if (await exists(join(CONTENT, 'labels.yaml'))) {
+    const L = await readYAML(join(CONTENT, 'labels.yaml'));
+    for (const l of L.labels || []) out.labels.push({ t: l.text, xy: project(l.lonlat), cls: l.class || 'lbl-reg', minZoom: l.min_zoom || 0, from: dateKey(l.from), until: dateKey(l.until), anchor: l.anchor || 'middle' });
+    for (const c of L.capitals || []) out.capitals.push({ name: c.name, xy: project(c.lonlat), lp: c.lp || 'r', from: dateKey(c.from), until: dateKey(c.until), minZoom: c.min_zoom || 0 });
+  }
+  return out;
+}
+
+// ---------------------------------------------------------------- wars
+const r1 = (v) => Math.round(v * 10) / 10;
+function catmullRom(pts) {
+  if (pts.length === 2) return `M${pts[0]}L${pts[1]}`;
+  let d = `M${pts[0][0]},${pts[0][1]}`;
+  for (let i = 0; i < pts.length - 1; i++) {
+    const p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
+    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    d += `C${r1(c1[0])},${r1(c1[1])} ${r1(c2[0])},${r1(c2[1])} ${p2[0]},${p2[1]}`;
+  }
+  return d;
+}
+function pathPoint(pts, t) {
+  let L = 0; const seg = [];
+  for (let i = 1; i < pts.length; i++) { const l = Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]); seg.push(l); L += l; }
+  let goal = L * t;
+  for (let i = 1; i < pts.length; i++) {
+    if (goal <= seg[i - 1]) { const k = seg[i - 1] ? goal / seg[i - 1] : 0; return { p: [pts[i - 1][0] + (pts[i][0] - pts[i - 1][0]) * k, pts[i - 1][1] + (pts[i][1] - pts[i - 1][1]) * k], dir: [pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]] }; }
+    goal -= seg[i - 1];
+  }
+  return { p: pts[pts.length - 1], dir: [1, 0] };
+}
+
+function validLonLat(ll, where) {
+  if (!Array.isArray(ll) || ll.length !== 2 || !ll.every(Number.isFinite)) { err(`${where}: bad lonlat ${JSON.stringify(ll)}`); return false; }
+  const [x, y] = project(ll);
+  if (x < FRAME.x0 || x > FRAME.x1 || y < FRAME.y0 || y > FRAME.y1) warn(`${where}: ${JSON.stringify(ll)} is outside the map frame`);
+  return true;
+}
+
+function buildWar(w, file, ctx) {
+  const where = `war ${file}`;
+  for (const k of ['id', 'name', 'start', 'tier']) if (w[k] === undefined) err(`${where}: missing ${k}`);
+  if (w.id && file !== `${w.id}.yaml` && !file.endsWith(`-${w.id}.yaml`)) warn(`${where}: file name does not match id ${w.id}`);
+  if (!dateKey(w.start)) err(`${where}: bad start ${w.start}`);
+  if (w.end !== undefined && w.end !== 'ongoing' && !dateKey(w.end)) err(`${where}: bad end ${w.end}`);
+  if (!['A', 'B', 'C'].includes(w.tier)) err(`${where}: tier must be A, B or C`);
+  if (!w.sources?.length) err(`${where}: no sources`);
+  const sides = (w.sides || []).map((s, i) => {
+    for (const p of s.polities || []) if (!ctx.pol.index.has(p)) err(`${where}: side ${s.id}: unknown polity ${p}`);
+    const first = ctx.pol.list[ctx.pol.index.get((s.polities || [])[0])];
+    const ink = s.ink || first?.ink || ['blue', 'red', 'purple', 'orange'][i % 4];
+    if (!INKS.includes(ink)) err(`${where}: side ${s.id}: unknown ink ${ink}`);
+    return { id: s.id, name: s.name, ink, polities: (s.polities || []).map((p) => ctx.pol.index.get(p)).filter((v) => v !== undefined), moves: s.moves || null, success: s.success || null };
+  });
+  const sideIds = new Set(sides.map((s) => s.id).concat('none'));
+  const countries = new Set(w.countries || []);
+  for (const s of w.sides || []) for (const p of s.polities || []) for (const c of ctx.pol.list[ctx.pol.index.get(p)]?.countries || []) if (!w.countries) countries.add(c);
+
+  const steps = (w.steps || []).map((s, si) => {
+    const sw = `${where} step ${si + 1}`;
+    if (!s.title) err(`${sw}: missing title`);
+    if (!s.body?.length && w.tier !== 'C') err(`${sw}: missing body`);
+    const bkey = dateKey(s.borders ?? s.date);
+    if (!bkey) err(`${sw}: bad date/borders ${s.borders ?? s.date}`);
+    const pts = [];
+    const markers = (s.markers || []).map((m, mi) => {
+      const mw = `${sw} marker ${m.name || mi + 1}`;
+      if (!KINDS.includes(m.kind)) err(`${mw}: unknown kind ${m.kind}`);
+      if (!sideIds.has(m.side || 'none')) err(`${mw}: unknown side ${m.side}`);
+      validLonLat(m.lonlat, mw);
+      const xy = project(m.lonlat || [0, 0]); pts.push(xy);
+      return { kind: m.kind, side: m.side || 'none', name: m.name, date: m.date || '', text: m.text || '', xy, lp: m.lp || 'r' };
+    });
+    const arrows = (s.arrows || []).map((a, ai) => {
+      const aw = `${sw} arrow ${ai + 1}`;
+      if (!sideIds.has(a.side || 'none')) err(`${aw}: unknown side ${a.side}`);
+      let d, end, ang, poly;
+      if (a.bezier) {
+        const P = a.bezier.map((ll) => (validLonLat(ll, aw), project(ll)));
+        if ((P.length - 1) % 3) err(`${aw}: bezier needs 1 + 3n points`);
+        d = `M${P[0]}` + Array.from({ length: (P.length - 1) / 3 | 0 }, (_, k) => `C${P[1 + 3 * k]} ${P[2 + 3 * k]} ${P[3 + 3 * k]}`).join('');
+        end = P[P.length - 1]; const c = P[P.length - 2]; ang = Math.atan2(end[1] - c[1], end[0] - c[0]); poly = P.filter((_, k) => k % 3 === 0);
+      } else {
+        const P = (a.via || []).map((ll) => (validLonLat(ll, aw), project(ll)));
+        if (P.length < 2) { err(`${aw}: needs at least two points in via`); return null; }
+        d = catmullRom(P); end = P[P.length - 1];
+        // The spline's end tangent points from the second-to-last point to the end.
+        const c = P[P.length - 2];
+        ang = Math.atan2(end[1] - c[1], end[0] - c[0]);
+        poly = P;
+      }
+      pts.push(...poly);
+      let lxy = null;
+      if (a.label) {
+        if (a.label_at) { validLonLat(a.label_at, aw); lxy = project(a.label_at); }
+        else { const { p, dir } = pathPoint(poly, 0.5); const n = Math.hypot(dir[0], dir[1]) || 1; lxy = [p[0], p[1]]; lxy.auto = [-dir[1] / n, dir[0] / n]; }
+      }
+      return { side: a.side || 'none', d, end, ang: Math.round(ang * 1000) / 1000, label: a.label || null, lxy, auto: lxy?.auto || null };
+    }).filter(Boolean);
+    const areas = (s.areas || []).map((ar, ai) => {
+      const aw = `${sw} area ${ai + 1}`;
+      if (!AREA_STYLES.includes(ar.style)) err(`${aw}: unknown style ${ar.style}`);
+      if (ar.side && !sideIds.has(ar.side)) err(`${aw}: unknown side ${ar.side}`);
+      const atoms = [...new Set((ar.atoms || []).flatMap((id) => ctx.borders.expand(id, aw)))];
+      for (const i of atoms) { const m = ctx.borders.meta.get(ctx.borders.order[i]); if (m) pts.push(m.xy); }
+      return { style: ar.style, side: ar.side || null, label: ar.label || null, atoms };
+    });
+    // View box
+    let view;
+    if (s.view?.center) { const c = project(s.view.center); const [vw, vh] = s.view.size; view = [c[0] - vw / 2, c[1] - vh / 2, vw, vh]; }
+    else if (Array.isArray(s.view) && s.view.length === 2) { const a = project(s.view[0]), b = project(s.view[1]); view = [Math.min(a[0], b[0]), Math.min(a[1], b[1]), Math.abs(b[0] - a[0]), Math.abs(b[1] - a[1])]; }
+    else if (pts.length) {
+      let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+      for (const [x, y] of pts) { x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y); }
+      const w0 = Math.max(x1 - x0, 260), h0 = Math.max(y1 - y0, 260), cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
+      view = [cx - w0 * 0.62, cy - h0 * 0.62, w0 * 1.24, h0 * 1.24];
+    } else view = null;
+    if (view) view = view.map(r1);
+    for (const a of arrows) if (a.auto && view) { const off = Math.max(view[2], view[3]) * 0.025; a.lxy = [r1(a.lxy[0] + a.auto[0] * off), r1(a.lxy[1] + a.auto[1] * off)]; }
+    for (const a of arrows) delete a.auto;
+    const when = dateKey(s.when ?? (String(s.date ?? '').match(/\d{4}/) || [])[0] ?? w.start);
+    if (!when) err(`${sw}: cannot work out a sort date (add when:)`);
+    return {
+      title: s.title, date: String(s.date ?? ''), when, borders: bkey, countries: s.countries || null,
+      body: s.body || [], facts: s.facts || [], link: s.link || null, view, markers, arrows, areas,
+      sideNames: s.side_names || null, moveNames: s.move_names || null,
+    };
+  });
+  return {
+    war: { id: w.id, name: w.name, start: String(w.start), end: w.end !== undefined ? String(w.end) : null, tier: w.tier, summary: w.summary || '', sides, notes: w.notes || [], sources: w.sources || [], steps },
+    index: { id: w.id, name: w.name, start: String(w.start), end: w.end !== undefined ? String(w.end) : null, sk: dateKey(w.start), ek: dateKey(w.end === 'ongoing' ? '9999' : w.end ?? w.start), tier: w.tier, summary: w.summary || '', countries: [...countries].sort(), steps: steps.map((s) => ({ t: s.title, d: s.date, c: s.countries, w: s.when })), polities: [...new Set(sides.flatMap((s) => s.polities))] },
+  };
+}
+
+// ---------------------------------------------------------------- main
+async function main() {
+  await rm(DIST, { recursive: true, force: true });
+  await mkdir(join(DIST, 'data/wars'), { recursive: true });
+  await cp(join(ROOT, 'site'), DIST, { recursive: true });
+
+  const topoText = await readFile(join(ROOT, 'site-data/atoms.topo.json'), 'utf8');
+  const topo = JSON.parse(topoText);
+  const pol = await buildPolities();
+  const borders = await buildBorders(pol, topo);
+  const labels = await buildLabels();
+
+  const wars = [];
+  const seen = new Set();
+  for (const f of await listFiles(join(CONTENT, 'wars'), '.yaml')) {
+    const w = await readYAML(join(CONTENT, 'wars', f));
+    if (seen.has(w.id)) err(`war ${f}: duplicate id ${w.id}`);
+    seen.add(w.id);
+    const { war, index } = buildWar(w, f, { pol, borders });
+    wars.push(index);
+    await writeFile(join(DIST, 'data/wars', `${w.id}.json`), JSON.stringify(war));
+  }
+  wars.sort((a, b) => (a.sk < b.sk ? -1 : a.sk > b.sk ? 1 : a.name.localeCompare(b.name)));
+
+  const bordersOut = {
+    frame: [FRAME.x0, FRAME.y0, FRAME.x1 - FRAME.x0, FRAME.y1 - FRAME.y0],
+    atoms: borders.order,
+    names: borders.order.map((id) => borders.meta.get(id)?.name || id),
+    polities: pol.list.map((p) => {
+      const hints = p.label ? (Array.isArray(p.label[0]) ? p.label : [p.label]) : [];
+      const names = (p.names || []).map(([until, n]) => [dateKey(until), n]);
+      for (const [k] of names) if (!k) err(`polity ${p.id}: bad date in names`);
+      return { id: p.id, name: p.name, ink: p.ink || null, countries: p.countries || [], auto: !!p.auto, ...(hints.length ? { lxy: hints.map((h) => project(h)) } : {}), ...(names.length ? { names } : {}) };
+    }),
+    timeline: borders.timeline.map((t) => ({ d: t.d, k: t.k, s: t.s, c: t.c })),
+  };
+  await writeFile(join(DIST, 'data/atoms.topo.json'), topoText);
+  await writeFile(join(DIST, 'data/borders.json'), JSON.stringify(bordersOut));
+  await writeFile(join(DIST, 'data/polities.css'), pol.css);
+  await writeFile(join(DIST, 'data/wars.json'), JSON.stringify(wars));
+  await writeFile(join(DIST, 'data/labels.json'), JSON.stringify(labels));
+
+  // Size report: what a first visit downloads.
+  const first = ['index.html', 'app.js', 'style.css', 'vendor/topojson-client.min.js', 'data/atoms.topo.json', 'data/borders.json', 'data/polities.css', 'data/wars.json', 'data/labels.json'];
+  let raw = 0, gz = 0;
+  for (const f of first) { try { const b = await readFile(join(DIST, f)); raw += b.length; gz += gzipSync(b).length; } catch {} }
+  console.log(`polities ${pol.list.length}, atoms ${borders.order.length}, timeline entries ${borders.timeline.length}, wars ${wars.length}`);
+  console.log(`first load: ${(raw / 1e6).toFixed(2)} MB raw, ${(gz / 1e6).toFixed(2)} MB gzip`);
+  if (gz > 1.2e6) warn(`first load is over budget (${(gz / 1e6).toFixed(2)} MB gzip > 1.2 MB)`);
+  for (const w of warnings) console.warn('warning:', w);
+  for (const e of errors) console.error('ERROR:', e);
+  if (errors.length) { console.error(`${errors.length} error(s)`); process.exit(1); }
+}
+
+main().catch((e) => { console.error(e); process.exit(1); });

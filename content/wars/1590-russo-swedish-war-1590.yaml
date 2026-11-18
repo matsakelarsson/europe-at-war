@@ -1,0 +1,105 @@
+id: russo-swedish-war-1590
+name: Russo-Swedish War, 1590–1595
+start: "1590"
+end: "1595"
+tier: B
+summary: ""
+sides:
+  - id: se
+    name: Sweden
+    polities:
+      - sweden
+    ink: blue
+    moves: Swedish and allied moves
+    success: Swedish success
+  - id: foe
+    name: Sweden’s other enemies
+    ink: purple
+    moves: Moves by Sweden’s other enemies
+    success: Success for Sweden’s other enemies
+    polities:
+      - russia
+notes:
+  - Dates in Germany and Poland are New Style (Gregorian); Scandinavian dates are mostly Old Style (Julian), as usually cited, which ran ten days behind.
+  - Migrated from Sweden at War, so the story is told from Sweden’s side.
+sources:
+  - url: https://en.wikipedia.org/wiki/Russo-Swedish_War_(1590%E2%80%931595)
+    title: Russo-Swedish War, 1590–1595 (Wikipedia)
+  - url: https://hhogman.se/swe_wars-1500s.htm
+    title: Swedish wars in the 1500s (Hans Högman)
+steps:
+  - title: The Treaty of Teusina
+    date: 1590–1595
+    when: "1590"
+    borders: "1595"
+    countries:
+      - se
+    view:
+      center:
+        - 27.3503
+        - 60.2812
+      size:
+        - 648
+        - 539
+    body:
+      - When the truce ran out in 1590, Boris Godunov’s Russia attacked to win back the coast. In January 1590 a Russian army crossed the Narva river and besieged Narva, which held, but Jama fell within two weeks, and the local Swedish commander signed an armistice handing back Jama, Koporye and Ivangorod.
+      - King John III would not accept it, and fighting dragged on until talks began in 1593. The Treaty of Teusina on 18 May 1595 returned Ingria and Kexholm to Russia, but Russia gave up all claims to Estonia and Narva. It replaced the Treaty of Nöteborg of 1323 as the basis of the border.
+    facts:
+      - - Treaty of Teusina
+        - 18 May 1595
+      - - Sweden kept
+        - Estonia with Narva
+    markers:
+      - kind: held
+        side: se
+        name: Siege of Narva
+        date: "1590"
+        lonlat:
+          - 28.1886
+          - 59.3797
+        lp: l
+        text: Arvid Stålarm’s garrison held the town against the Russian army.
+      - kind: siege
+        side: foe
+        name: Jama
+        date: February 1590
+        lonlat:
+          - 28.6086
+          - 59.3779
+        text: The fortress fell to the Russians within two weeks.
+      - kind: treaty
+        side: none
+        name: Treaty of Teusina
+        date: 18 May 1595
+        lonlat:
+          - 28.3772
+          - 59.5296
+        lp: t
+        text: Signed at the village of Tyavzino in Ingria. It restored the borders from before the Livonian War, except that Narva and Estonia stayed Swedish.
+    arrows:
+      - side: foe
+        bezier:
+          - - 29.5977
+            - 59.2996
+          - - 29.4993
+            - 59.3129
+          - - 29.1512
+            - 59.365
+          - - 28.9972
+            - 59.379
+          - - 28.843
+            - 59.3927
+          - - 28.7334
+            - 59.3779
+          - - 28.6781
+            - 59.3787
+    areas:
+      - style: lost
+        label: Lost by Sweden in this peace
+        atoms:
+          - RU-KR~ingria
+          - RU-KR~kex
+          - RU-LEN~ingria
+          - RU-LEN~kex
+          - RU-SPE
+          - RU-SPE~kex

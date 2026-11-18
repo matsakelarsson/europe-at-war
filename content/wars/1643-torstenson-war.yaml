@@ -1,0 +1,160 @@
+id: torstenson-war
+name: Torstenson War
+start: "1643"
+end: "1645"
+tier: B
+summary: ""
+sides:
+  - id: se
+    name: Sweden
+    polities:
+      - sweden
+    ink: blue
+    moves: Swedish and allied moves
+    success: Swedish success
+  - id: dk
+    name: Denmark–Norway
+    polities:
+      - denmark-norway
+      - danish-duchies
+    ink: red
+    moves: Danish–Norwegian moves
+    success: Danish–Norwegian success
+notes:
+  - Dates in Germany and Poland are New Style (Gregorian); Scandinavian dates are mostly Old Style (Julian), as usually cited, which ran ten days behind.
+  - Migrated from Sweden at War, so the story is told from Sweden’s side.
+sources:
+  - url: https://www.britannica.com/event/Peace-of-Westphalia
+    title: Peace of Westphalia (Britannica)
+  - title: Torstenson War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Torstenson_War
+steps:
+  - title: The Torstenson War with Denmark
+    date: 1643–1645
+    when: "1643"
+    borders: "1643"
+    countries:
+      - se
+    view:
+      center:
+        - 14.6636
+        - 59.0219
+      size:
+        - 1123
+        - 1305
+    body:
+      - In the middle of the German war Sweden turned on Denmark–Norway. Torstenson overran Jutland from the south in December 1643 and January 1644, Gustav Horn invaded Scania, and a Swedish-Dutch fleet destroyed the Danish navy off Fehmarn in October 1644. Bremen and Verden were occupied in 1645.
+      - At the Peace of Brömsebro on 13 August 1645, Denmark–Norway gave up Gotland, Ösel, Jämtland, Härjedalen, Idre and Särna, handed over Halland for 30 years, and freed Swedish ships from the Sound Dues.
+    facts:
+      - - Ceded for good
+        - Gotland, Ösel, Jämtland, Härjedalen, Idre, Särna
+      - - For 30 years
+        - Halland
+    link:
+      href: https://claude.ai/artifact/UqvBTT9QGQ378ySriansTu
+      text: Open the Torstenson War map
+    markers:
+      - kind: battle
+        side: se
+        name: Jutland overrun
+        date: Dec 1643 – Jan 1644
+        lonlat:
+          - 9.471
+          - 55.4896
+        lp: l
+        text: About 16,000 men under Torstenson crossed into Holstein without a declaration of war and took the whole of Jutland within weeks.
+      - kind: siege
+        side: se
+        name: Horn in Scania
+        date: "1644"
+        lonlat:
+          - 12.8307
+          - 55.8705
+        text: Gustav Horn took most of Scania, Halland and Blekinge, but Malmö and Kristianstad held out.
+      - kind: naval
+        side: se
+        name: Battle of Fehmarn
+        date: 13 October 1644
+        lonlat:
+          - 11.121
+          - 54.6007
+        lp: b
+        text: A Swedish fleet with hired Dutch ships destroyed or captured 15 of 17 Danish warships.
+      - kind: treaty
+        side: se
+        name: Peace of Brömsebro
+        date: 13 August 1645
+        lonlat:
+          - 15.9687
+          - 56.2997
+        text: Signed on the border stream between Danish Blekinge and Swedish Småland.
+    arrows:
+      - side: se
+        label: Torstenson
+        label_at:
+          - 8.3991
+          - 55.001
+        bezier:
+          - - 10.5997
+            - 53.4994
+          - - 10.4849
+            - 53.6666
+          - - 10.0863
+            - 54.1823
+          - - 9.9011
+            - 54.4996
+          - - 9.7171
+            - 54.8169
+          - - 9.5214
+            - 55.0501
+          - - 9.5018
+            - 55.3999
+          - - 9.4819
+            - 55.7497
+          - - 9.7481
+            - 56.3993
+          - - 9.8007
+            - 56.5989
+      - side: se
+        label: Horn
+        label_at:
+          - 14.5021
+          - 56.6483
+        bezier:
+          - - 14.1992
+            - 56.9996
+          - - 14.0995
+            - 56.9071
+          - - 13.8012
+            - 56.617
+          - - 13.6026
+            - 56.4499
+          - - 13.4056
+            - 56.2824
+          - - 13.1002
+            - 56.0746
+          - - 13.0016
+            - 55.9998
+    areas:
+      - style: occupied
+        side: se
+        atoms:
+          - DE-BB~pomAll
+          - DE-MV~pomN
+          - DE-MV~pomS
+          - DE-NI~bv
+          - PL-PM~pomE
+          - PL-ZP
+          - PL-ZP~pomO
+          - PL-ZP~pomS
+      - style: gained
+        label: Gained by Sweden in this peace
+        atoms:
+          - EE-74
+          - SE-I
+          - SE-W~idre
+          - SE-Z
+      - style: pledged
+        label: Swedish on a 30-year pledge
+        atoms:
+          - SE-N

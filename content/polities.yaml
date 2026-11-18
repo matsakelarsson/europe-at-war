@@ -1,0 +1,751 @@
+# Curated polities. Each polity has:
+#   id        stable slug, used in border data and war files
+#   name      display name
+#   color     light-mode fill (pastel). Dark mode is derived automatically.
+#   ink       strong colour token used when the polity leads a side in a war:
+#             blue red purple orange green teal brown magenta gold slate navy olive
+#   countries modern-country lens tags (ISO 3166 alpha-2, lower case)
+#   aliases   historical-basemaps NAME values and/or Natural Earth adm0_a3 codes
+#             that mean this polity
+#   names     optional earlier names: [[until-date, name], ...], oldest first
+#   label     optional preferred label position(s), [lon, lat], used when that
+#             point is inside the polity and in view
+# Polities not listed here are generated into polities.auto.yaml by
+# `npm run draft`. Move an entry here to curate it.
+
+# ---------- Scandinavia ----------
+- id: sweden
+  name: Sweden
+  color: "#a5bfdd"
+  ink: blue
+  countries: [se]
+  label: [15.6, 61.2]
+  aliases: [Sweden, Swedes and Goths, SWE]
+- id: sweden-norway
+  name: Sweden–Norway
+  color: "#c5c9ec"
+  ink: blue
+  countries: [se, "no"]
+  aliases: [Sweden–Norway]
+- id: denmark
+  name: Denmark
+  color: "#e6aca6"
+  ink: red
+  countries: [dk]
+  aliases: [Denmark, Danes, DNK, FRO, GRL, Greenland]
+- id: denmark-norway
+  name: Denmark–Norway
+  color: "#e6aca6"
+  ink: red
+  countries: [dk, "no"]
+  label: [9.2, 61.6]
+  aliases: [Denmark-Norway]
+- id: danish-duchies
+  name: Danish king’s German lands
+  color: "#f2d6d2"
+  ink: red
+  countries: [dk, de]
+  aliases: [Holstein, Schleswig]
+- id: norway-union
+  name: Norway, in union with Sweden
+  color: "#c5c9ec"
+  ink: blue
+  countries: ["no"]
+- id: kalmar-union
+  name: Kalmar Union
+  color: "#dcc0dc"
+  ink: red
+  countries: [dk, se, "no"]
+  aliases: [Kalmar Union]
+- id: norway
+  name: Norway
+  color: "#f0c8b4"
+  ink: red
+  countries: ["no"]
+  aliases: [Norway, Kingdom of Norway, Northmen, NOR]
+- id: iceland
+  name: Iceland
+  color: "#dfe5cf"
+  ink: slate
+  countries: [is]
+  aliases: [Icelandic Commonwealth, Iceland, ISL]
+- id: finland
+  name: Finland
+  color: "#cde3e8"
+  ink: teal
+  countries: [fi]
+  aliases: [Finland, FIN, ALD]
+- id: grand-duchy-finland
+  name: Grand Duchy of Finland
+  color: "#cde3e8"
+  ink: green
+  countries: [fi]
+  aliases: [Grand Duchy of Finland]
+
+# ---------- Baltic and Poland–Lithuania ----------
+- id: teutonic-order
+  name: Teutonic and Livonian Orders
+  color: "#e4cfe0"
+  ink: slate
+  countries: [pl, ee, lv]
+  aliases: [Teutonic Knights]
+- id: lithuania
+  name: Lithuania
+  color: "#f2e6d8"
+  ink: brown
+  countries: [lt]
+  aliases: [Lithuania, LTU]
+- id: poland
+  name: Poland
+  color: "#ecd2b8"
+  ink: magenta
+  countries: [pl]
+  aliases: [Poland, POL]
+- id: poland-lithuania
+  name: Poland–Lithuania
+  color: "#ecd2b8"
+  ink: magenta
+  countries: [pl, lt]
+  aliases: [Poland-Lithuania, Polish–Lithuanian Commonwealth]
+- id: duchy-of-warsaw
+  name: Duchy of Warsaw
+  color: "#efc6b6"
+  ink: magenta
+  countries: [pl]
+- id: krakow
+  name: Free City of Kraków
+  color: "#f3dfcb"
+  ink: magenta
+  countries: [pl]
+  aliases: [Republic of Kraków]
+- id: danzig
+  name: Free City of Danzig
+  color: "#efe4cf"
+  ink: slate
+  countries: [pl]
+  aliases: [Danzig]
+- id: estonia
+  name: Estonia
+  color: "#c9dbe9"
+  ink: navy
+  countries: [ee]
+  aliases: [Estonia, EST]
+- id: latvia
+  name: Latvia
+  color: "#e7c9cf"
+  ink: red
+  countries: [lv]
+  aliases: [Latvia, LVA]
+- id: prussia
+  name: Prussia
+  names: [["1618", Brandenburg], ["1701", Brandenburg-Prussia]]
+  color: "#b5d6d0"
+  ink: slate
+  countries: [de, pl]
+  aliases: [Prussia, Brandenburg, East Prussia]
+
+# ---------- Rus, Russia and the steppe ----------
+- id: kievan-rus
+  name: Kievan Rus’
+  color: "#d3dccd"
+  ink: green
+  countries: [ua, ru, by]
+  aliases: [Kyivan Rus, Kievan Rus, Rus' Khaganate]
+- id: novgorod
+  name: Novgorod
+  color: "#d3dccd"
+  ink: green
+  countries: [ru]
+  aliases: [Novgorod, Principality of Novgorod]
+- id: russia
+  name: Russia
+  names: [["1263", Vladimir-Suzdal], ["1547", Grand Duchy of Moscow], ["1721", Tsardom of Russia], ["1917", Russian Empire]]
+  color: "#d3dccd"
+  ink: green
+  countries: [ru]
+  aliases: [Grand Duchy of Moscow, Tsardom of Muscovy, Principality of Vladimir-Suzdal, Russian Empire, Russia, RUS]
+- id: ussr
+  name: Soviet Union
+  color: "#e8c7c2"
+  ink: red
+  countries: [ru, ua, by]
+  aliases: [USSR]
+- id: ukraine
+  name: Ukraine
+  color: "#f1e3a6"
+  ink: gold
+  countries: [ua]
+  aliases: [Ukraine, UKR]
+- id: belarus
+  name: Belarus
+  color: "#e3d6c3"
+  ink: brown
+  countries: [by]
+  aliases: [Byelarus, White Russia, BLR]
+- id: golden-horde
+  name: Golden Horde
+  color: "#e9d9a8"
+  ink: olive
+  countries: [ru, ua]
+  aliases: [Khanate of the Golden Horde, Golden Horde, Blue Horde, White Horde]
+- id: cossack-hetmanate
+  name: Cossack Hetmanate
+  color: "#ebe0b0"
+  ink: olive
+  countries: [ua]
+- id: crimean-khanate
+  name: Crimean Khanate
+  color: "#ebd9b0"
+  ink: olive
+  countries: [ua]
+  aliases: [Crimean Khanate]
+
+# ---------- Central Europe ----------
+- id: carolingian
+  name: Carolingian Empire
+  color: "#e7e0c9"
+  ink: gold
+  countries: [fr, de, it, nl, be, ch, at]
+  aliases: [Carolingian Empire]
+- id: east-francia
+  name: East Francia
+  color: "#e7e0c9"
+  ink: gold
+  countries: [de]
+  aliases: [East Francia]
+- id: hre
+  name: Holy Roman Empire
+  color: "#e7e0c9"
+  ink: gold
+  countries: [de, at, cz, it, nl, be, ch]
+  aliases: [Holy Roman Empire, Duchy of Swabia, Swabia]
+- id: habsburg
+  name: Habsburg Monarchy
+  color: "#d8cde9"
+  ink: purple
+  countries: [at, cz, hu, sk, hr, si]
+  aliases: [Austrian Empire, Imperial Hungary]
+- id: austria-hungary
+  name: Austria-Hungary
+  color: "#d8cde9"
+  ink: purple
+  countries: [at, hu, cz, sk, hr, si, ba]
+  aliases: [Austria Hungary, Austro-Hungarian Empire]
+- id: austria
+  name: Austria
+  color: "#d8cde9"
+  ink: purple
+  countries: [at]
+  aliases: [Austria, AUT]
+- id: hungary
+  name: Hungary
+  color: "#d2e3bd"
+  ink: olive
+  countries: [hu]
+  aliases: [Hungary, Kingdom of Hungary, Magyars, HUN]
+- id: bavaria
+  name: Bavaria
+  color: "#c5dbbf"
+  ink: navy
+  countries: [de]
+  aliases: [Bavaria]
+- id: saxony
+  name: Saxony
+  color: "#f1d3a9"
+  ink: brown
+  countries: [de]
+  aliases: [Saxony]
+- id: hanover
+  name: Hanover
+  color: "#d4c4a0"
+  ink: brown
+  countries: [de]
+  aliases: [Hanover, Brunswick]
+- id: mecklenburg
+  name: Mecklenburg
+  color: "#d6dfb1"
+  ink: olive
+  countries: [de]
+  aliases: [Mecklenburg-Schwerin, Mecklenburg-Strelitz]
+- id: hesse
+  name: Hesse
+  color: "#f2e5b5"
+  ink: gold
+  countries: [de]
+  aliases: [Electoral Hesse, Grand Duchy of Hesse]
+- id: wurttemberg
+  name: Württemberg
+  color: "#efd9cb"
+  ink: brown
+  countries: [de]
+  aliases: [Württemberg]
+- id: baden
+  name: Baden
+  color: "#efd9cb"
+  ink: brown
+  countries: [de]
+  aliases: [Baden]
+- id: rhine-westphalia
+  name: Rhineland and Westphalia
+  color: "#dfe5cf"
+  ink: olive
+  countries: [de]
+- id: wurttemberg-baden
+  name: Württemberg and Baden
+  color: "#efd9cb"
+  ink: brown
+  countries: [de]
+- id: german-states
+  name: Smaller German states
+  color: "#e6e2d6"
+  ink: slate
+  countries: [de]
+- id: germany
+  name: Germany
+  color: "#dcd3bf"
+  ink: slate
+  countries: [de]
+  aliases: [German Empire, Germany, DEU]
+- id: west-germany
+  name: West Germany
+  color: "#dcd3bf"
+  ink: slate
+  countries: [de]
+  aliases: [West Germany]
+- id: east-germany
+  name: East Germany
+  color: "#e6cfc6"
+  ink: red
+  countries: [de]
+  aliases: [East Germany]
+- id: czechoslovakia
+  name: Czechoslovakia
+  color: "#cfd9ea"
+  ink: navy
+  countries: [cz, sk]
+  aliases: [Czechoslovakia]
+- id: czechia
+  name: Czech Republic
+  color: "#cfd9ea"
+  ink: navy
+  countries: [cz]
+  aliases: [Czech Republic, CZE]
+- id: slovakia
+  name: Slovakia
+  color: "#d9e6cf"
+  ink: navy
+  countries: [sk]
+  aliases: [Slovakia, SVK]
+- id: switzerland
+  name: Swiss Confederation
+  color: "#e9e9e4"
+  ink: red
+  countries: [ch]
+  aliases: [Swiss Confederation, Switzerland, Helvetic Republic, CHE]
+- id: liechtenstein
+  name: Liechtenstein
+  color: "#e4dccb"
+  ink: navy
+  countries: [li]
+  aliases: [Liechtenstein, LIE]
+
+# ---------- Low Countries ----------
+- id: dutch-republic
+  name: Dutch Republic
+  color: "#f6d5b0"
+  ink: orange
+  countries: [nl]
+  aliases: [Dutch Republic, Batavian Republic]
+- id: netherlands
+  name: Netherlands
+  color: "#f6d5b0"
+  ink: orange
+  countries: [nl]
+  aliases: [Netherlands, NLD]
+- id: habsburg-netherlands
+  name: Spanish Netherlands
+  color: "#e9dcc6"
+  ink: gold
+  countries: [be, lu, nl]
+  aliases: [Habsburg Netherlands]
+- id: austrian-netherlands
+  name: Austrian Netherlands
+  color: "#ddd2e6"
+  ink: purple
+  countries: [be, lu]
+  aliases: [Austrian Netherlands]
+- id: belgium
+  name: Belgium
+  color: "#efe1b8"
+  ink: gold
+  countries: [be]
+  aliases: [Belgium, BEL]
+- id: luxembourg
+  name: Luxembourg
+  color: "#d9e2ec"
+  ink: navy
+  countries: [lu]
+  aliases: [Luxembourg, LUX]
+
+# ---------- France, Britain and Ireland ----------
+- id: west-francia
+  name: West Francia
+  color: "#d7dde9"
+  ink: navy
+  countries: [fr]
+  aliases: [West Francia]
+- id: france
+  name: France
+  color: "#d7dde9"
+  ink: navy
+  countries: [fr]
+  aliases: [France, Kingdom of France, FRA, MCO]
+- id: angevin-empire
+  name: Angevin Empire
+  color: "#f3cbd3"
+  ink: red
+  countries: [gb, fr]
+  aliases: [Angevin Empire]
+- id: england
+  name: England
+  color: "#f3cbd3"
+  ink: red
+  countries: [gb]
+  aliases: [England, England and Ireland, English territory, Wessex]
+- id: scotland
+  name: Scotland
+  color: "#cfdcee"
+  ink: navy
+  countries: [gb]
+  aliases: [Scotland, Scots]
+- id: ireland
+  name: Ireland
+  color: "#cfe5c6"
+  ink: green
+  countries: [ie]
+  aliases: [Irlanda, Kingdom of Ireland, Ireland, IRL]
+- id: united-kingdom
+  name: United Kingdom
+  color: "#f3cbd3"
+  ink: red
+  countries: [gb]
+  aliases: [United Kingdom, United Kingdom of Great Britain and Ireland, GBR, IMN, JEY, GGY, GIB, ESB, WSB]
+
+# ---------- Iberia ----------
+- id: cordoba
+  name: Emirate of Córdoba
+  color: "#e0e8c4"
+  ink: green
+  countries: [es, pt]
+  aliases: [Emirate of Córdoba, Caliphate of Córdoba]
+- id: castile
+  name: Castile
+  color: "#f3e1a7"
+  ink: gold
+  countries: [es]
+  aliases: [Castilla, Castile, Castille]
+- id: aragon
+  name: Crown of Aragon
+  color: "#f2cfa7"
+  ink: orange
+  countries: [es]
+  aliases: [Aragón]
+- id: spain
+  name: Spain
+  color: "#f3e1a7"
+  ink: gold
+  countries: [es]
+  aliases: [Spain, ESP]
+- id: portugal
+  name: Portugal
+  color: "#cfe3c9"
+  ink: green
+  countries: [pt]
+  aliases: [Portugal, PRT]
+- id: andorra
+  name: Andorra
+  color: "#e8dcc8"
+  ink: navy
+  countries: [ad]
+  aliases: [Andorra, AND]
+
+# ---------- Italy ----------
+- id: papal-states
+  name: Papal States
+  color: "#f2ecc4"
+  ink: gold
+  countries: [it, va]
+  aliases: [Papal States, VAT]
+- id: venice
+  name: Republic of Venice
+  color: "#efd0c4"
+  ink: red
+  countries: [it, hr, gr]
+  aliases: [Venice]
+- id: genoa
+  name: Republic of Genoa
+  color: "#d5dfe6"
+  ink: navy
+  countries: [it]
+  aliases: [Genoa]
+- id: milan
+  name: Duchy of Milan
+  color: "#dcd6ea"
+  ink: purple
+  countries: [it]
+  aliases: [Milan]
+- id: tuscany
+  name: Tuscany
+  color: "#e9e0c4"
+  ink: red
+  countries: [it]
+  aliases: [Florence, Tuscany]
+- id: naples
+  name: Kingdom of Naples
+  color: "#e9dcc6"
+  ink: gold
+  countries: [it]
+  aliases: [Naples]
+- id: sicily
+  name: Kingdom of Sicily
+  color: "#ead7c0"
+  ink: gold
+  countries: [it]
+  aliases: [Sicily]
+- id: two-sicilies
+  name: Kingdom of the Two Sicilies
+  color: "#e9dcc6"
+  ink: gold
+  countries: [it]
+  aliases: [Kingdom of the Two Sicilies]
+- id: savoy
+  name: Savoy-Sardinia
+  color: "#d0dde9"
+  ink: navy
+  countries: [it, fr]
+  aliases: [Savoy, Sardinia-Piedmont, Kingdom of Sardinia]
+- id: italy
+  name: Italy
+  color: "#e5d3ea"
+  ink: green
+  countries: [it]
+  aliases: [Italy, Kingdom of Italy, ITA, SMR, San Marino]
+- id: malta
+  name: Malta
+  color: "#ead6d6"
+  ink: red
+  countries: [mt]
+  aliases: [Malta, MLT]
+
+# ---------- Byzantium, Ottomans and the Balkans ----------
+- id: byzantium
+  name: Byzantine Empire
+  color: "#e2cde6"
+  ink: purple
+  countries: [gr, tr]
+  aliases: [Byzantine Empire]
+- id: ottoman
+  name: Ottoman Empire
+  color: "#d1e4dd"
+  ink: teal
+  countries: [tr]
+  aliases: [Ottoman Empire, Ottoman Sultanate]
+- id: turkey
+  name: Turkey
+  color: "#d1e4dd"
+  ink: teal
+  countries: [tr]
+  aliases: [Republic of Turkey, Turkey, TUR]
+- id: bulgaria
+  name: Bulgaria
+  color: "#d9e6c3"
+  ink: green
+  countries: [bg]
+  aliases: [Bulgars, Bulgaria, BGR]
+- id: serbia
+  name: Serbia
+  color: "#e9c9c6"
+  ink: red
+  countries: [rs]
+  aliases: [Serbia, Raška, SRB]
+- id: croatia
+  name: Croatia
+  color: "#d0d9ec"
+  ink: red
+  countries: [hr]
+  aliases: [Croatian kingdom, Croatia, HRV]
+- id: bosnia
+  name: Bosnia
+  color: "#efe2b3"
+  ink: navy
+  countries: [ba]
+  aliases: [Bosnia, Bosnia-Herzegovina, Bosnia and Herzegovina, BIH]
+- id: montenegro
+  name: Montenegro
+  color: "#e7cfc0"
+  ink: red
+  countries: [me]
+  aliases: [Montenegro, MNE]
+- id: albania
+  name: Albania
+  color: "#efcaca"
+  ink: red
+  countries: [al]
+  aliases: [Albania, ALB]
+- id: north-macedonia
+  name: North Macedonia
+  color: "#f1dfb0"
+  ink: red
+  countries: [mk]
+  aliases: [Macedonia, MKD]
+- id: kosovo
+  name: Kosovo
+  color: "#d6deec"
+  ink: navy
+  countries: [xk]
+  aliases: [KOS]
+- id: slovenia
+  name: Slovenia
+  color: "#d4e3d6"
+  ink: navy
+  countries: [si]
+  aliases: [Slovenia, SVN]
+- id: yugoslavia
+  name: Yugoslavia
+  color: "#d8d2e8"
+  ink: navy
+  countries: [rs, hr, si, ba, me, mk]
+  aliases: [Yugoslavia]
+- id: greece
+  name: Greece
+  color: "#c9dcec"
+  ink: navy
+  countries: [gr]
+  aliases: [Greece, GRC, Dodecanese Islands]
+- id: romania
+  name: Romania
+  color: "#efe0b0"
+  ink: navy
+  countries: [ro]
+  aliases: [Romania, ROU]
+- id: wallachia
+  name: Wallachia
+  color: "#efe0b0"
+  ink: navy
+  countries: [ro]
+  aliases: [Principality of Wallachia]
+- id: moldavia
+  name: Moldavia
+  color: "#e6d6ea"
+  ink: navy
+  countries: [md, ro]
+  aliases: [Moldova, MDA]
+- id: cyprus
+  name: Cyprus
+  color: "#efdcc0"
+  ink: orange
+  countries: [cy]
+  aliases: [Cyprus, CYP]
+
+# ---------- Caucasus, Middle East, North Africa ----------
+- id: georgia
+  name: Georgia
+  color: "#ead1d1"
+  ink: red
+  countries: [ge]
+  aliases: [Georgia, Kingdom of Georgia, GEO]
+- id: armenia
+  name: Armenia
+  color: "#efd8c0"
+  ink: orange
+  countries: [am]
+  aliases: [Armenia, ARM]
+- id: azerbaijan
+  name: Azerbaijan
+  color: "#cfe2e6"
+  ink: teal
+  countries: [az]
+  aliases: [Azerbaijan, AZE]
+- id: khazars
+  name: Khazar Khaganate
+  color: "#e9e0bf"
+  ink: olive
+  countries: [ru, ua]
+  aliases: [Khazars]
+- id: abbasid
+  name: Abbasid Caliphate
+  color: "#dfe5c6"
+  ink: green
+  aliases: [Abbasid Caliphate]
+- id: fatimid
+  name: Fatimid Caliphate
+  color: "#e3e8c6"
+  ink: green
+  aliases: [Fatimid Caliphate]
+- id: seljuk
+  name: Seljuk Empire
+  color: "#e5dcc2"
+  ink: olive
+  countries: [tr]
+  aliases: [Seljuk Empire, Seljuk Caliphate]
+- id: mamluk
+  name: Mamluk Sultanate
+  color: "#ecdcb9"
+  ink: brown
+  countries: [eg]
+  aliases: [Mamluke Sultanate]
+- id: persia
+  name: Persia
+  color: "#d7e3cc"
+  ink: green
+  aliases: [Safavid Empire, Persia, Iran, IRN]
+- id: egypt
+  name: Egypt
+  color: "#ecdcb9"
+  ink: brown
+  countries: [eg]
+  aliases: [Egypt, EGY]
+- id: morocco
+  name: Morocco
+  color: "#ecd5c2"
+  ink: red
+  countries: [ma]
+  aliases: [Morocco, MAR]
+- id: algeria
+  name: Algeria
+  color: "#d9e5cd"
+  ink: green
+  countries: [dz]
+  aliases: [Algiers, Algeria, DZA]
+- id: tunisia
+  name: Tunisia
+  color: "#ecd2cd"
+  ink: red
+  countries: [tn]
+  aliases: [Tunis, Tunisia, TUN]
+- id: libya
+  name: Libya
+  color: "#e5dfc4"
+  ink: olive
+  countries: [ly]
+  aliases: [Tripolitania, Libya, LBY]
+- id: syria
+  name: Syria
+  color: "#e1e5cc"
+  ink: green
+  aliases: [Syria, SYR]
+- id: iraq
+  name: Iraq
+  color: "#e6dcc9"
+  ink: brown
+  aliases: [Iraq, IRQ]
+- id: saudi-arabia
+  name: Saudi Arabia
+  color: "#dce6cc"
+  ink: green
+  aliases: [Saudi Arabia, SAU]
+- id: kazakhstan
+  name: Kazakhstan
+  color: "#cfe0e9"
+  ink: teal
+  aliases: [Kazakhstan, KAZ]

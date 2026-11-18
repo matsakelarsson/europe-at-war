@@ -1,0 +1,182 @@
+id: ingrian-war
+name: Ingrian War
+start: "1610"
+end: "1617"
+tier: B
+summary: ""
+sides:
+  - id: se
+    name: Sweden
+    polities:
+      - sweden
+    ink: blue
+    moves: Swedish and allied moves
+    success: Swedish success
+  - id: foe
+    name: Sweden’s other enemies
+    ink: purple
+    moves: Moves by Sweden’s other enemies
+    success: Success for Sweden’s other enemies
+    polities:
+      - russia
+notes:
+  - Dates in Germany and Poland are New Style (Gregorian); Scandinavian dates are mostly Old Style (Julian), as usually cited, which ran ten days behind.
+  - Migrated from Sweden at War, so the story is told from Sweden’s side.
+sources:
+  - url: https://en.wikipedia.org/wiki/Ingrian_War
+    title: Ingrian War (Wikipedia)
+steps:
+  - title: Moscow, Novgorod and Stolbovo
+    date: 1609–1617
+    when: "1609"
+    borders: "1617"
+    countries:
+      - se
+    view:
+      center:
+        - 31.2986
+        - 58.4353
+      size:
+        - 1036
+        - 895
+    body:
+      - In Russia’s Time of Troubles, Tsar Vasily Shuisky called in Swedish help against a Polish-backed pretender. In 1609 Jacob De la Gardie’s corps of Swedish and foreign mercenaries joined Prince Skopin-Shuisky’s Russian army and helped relieve Moscow. But on 4 July 1610 the Poles crushed the combined army at Klushino, between Moscow and Smolensk, and the unpaid mercenaries gave up.
+      - Sweden then turned on Russia. De la Gardie stormed Novgorod on 16 July 1611, and the occupied city even talked of a Swedish prince as tsar. In 1615 the young Gustav II Adolf besieged Pskov but could not take it. At Stolbovo on 27 February 1617 Russia gave Sweden Ingria and Kexholm, cutting itself off from the Baltic, and got Novgorod back.
+    facts:
+      - - Battle of Klushino
+        - 4 July 1610, Polish victory
+      - - Treaty of Stolbovo
+        - 27 February 1617
+    markers:
+      - kind: event
+        side: se
+        name: Moscow relieved
+        date: "1610"
+        lonlat:
+          - 37.6181
+          - 55.75
+        lp: l
+        text: De la Gardie’s corps and Skopin-Shuisky drove off the rebels besieging the capital.
+      - kind: battle
+        side: foe
+        name: Battle of Klushino
+        date: 4 July 1610
+        lonlat:
+          - 34.7497
+          - 55.4994
+        lp: b
+        text: Hetman Stanisław Żółkiewski’s smaller Polish army beat the Russians and De la Gardie’s mercenaries.
+      - kind: siege
+        side: se
+        name: Novgorod stormed
+        date: 16 July 1611
+        lonlat:
+          - 31.2706
+          - 58.5192
+        text: After a failed first attack, De la Gardie took the city, which stayed under Swedish occupation until 1617.
+      - kind: held
+        side: foe
+        name: Siege of Pskov
+        date: August – October 1615
+        lonlat:
+          - 28.3287
+          - 57.8181
+        lp: l
+        text: Gustav II Adolf’s siege failed, and peace talks followed.
+      - kind: treaty
+        side: se
+        name: Treaty of Stolbovo
+        date: 27 February 1617
+        lonlat:
+          - 32.9493
+          - 59.7499
+        text: Signed at a village south of Lake Ladoga. Sweden also recognised the new Romanov dynasty in Russia.
+    arrows:
+      - side: se
+        label: De la Gardie, 1609–10
+        label_at:
+          - 34.4004
+          - 57.7504
+        bezier:
+          - - 31.2993
+            - 58.3985
+          - - 31.672
+            - 58.2833
+          - - 32.7352
+            - 58.0134
+          - - 33.4979
+            - 57.6988
+          - - 34.2476
+            - 57.3797
+          - - 35.1534
+            - 56.8075
+          - - 35.8013
+            - 56.4993
+          - - 36.4388
+            - 56.1878
+          - - 37.1371
+            - 55.9599
+          - - 37.3996
+            - 55.8499
+      - side: se
+        bezier:
+          - - 37.3008
+            - 55.6993
+          - - 37.1185
+            - 55.6829
+          - - 36.5889
+            - 55.63
+          - - 36.1984
+            - 55.6007
+          - - 35.8085
+            - 55.5701
+          - - 35.1592
+            - 55.5333
+          - - 34.9511
+            - 55.5193
+      - side: se
+        bezier:
+          - - 29.5972
+            - 59.599
+          - - 29.7344
+            - 59.5148
+          - - 30.1429
+            - 59.2636
+          - - 30.3992
+            - 59.0994
+          - - 30.6532
+            - 58.9348
+          - - 30.9989
+            - 58.6987
+          - - 31.1174
+            - 58.6186
+      - side: se
+        label: Gustav II Adolf
+        label_at:
+          - 29.9992
+          - 58.199
+        bezier:
+          - - 29.4004
+            - 58.6494
+          - - 29.315
+            - 58.5746
+          - - 29.0553
+            - 58.3243
+          - - 28.8978
+            - 58.1995
+          - - 28.7457
+            - 58.0743
+          - - 28.5416
+            - 57.9496
+          - - 28.4692
+            - 57.8996
+    areas:
+      - style: gained
+        label: Gained by Sweden at Stolbovo
+        atoms:
+          - RU-KR~ingria
+          - RU-KR~kex
+          - RU-LEN~ingria
+          - RU-LEN~kex
+          - RU-SPE
+          - RU-SPE~kex

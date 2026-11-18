@@ -1,0 +1,890 @@
+id: thirty-years-war
+name: Thirty Years’ War
+start: "1618"
+end: "1648"
+tier: A
+summary: ""
+sides:
+  - id: se
+    name: Sweden
+    polities:
+      - sweden
+    ink: blue
+    moves: Swedish and allied moves
+    success: Swedish success
+  - id: foe
+    name: Sweden’s other enemies
+    ink: purple
+    moves: Moves by Sweden’s other enemies
+    success: Success for Sweden’s other enemies
+    polities:
+      - hre
+      - habsburg
+      - bavaria
+notes:
+  - Dates in Germany and Poland are New Style (Gregorian); Scandinavian dates are mostly Old Style (Julian), as usually cited, which ran ten days behind.
+  - Migrated from Sweden at War, so the story is told from Sweden’s side.
+sources:
+  - url: https://en.wikipedia.org/wiki/Treaty_of_Stettin_(1630)
+    title: Treaty of Stettin, 1630 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Breitenfeld_(1631)
+    title: Battle of Breitenfeld, 1631 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Rain
+    title: Battle of Rain (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_N%C3%B6rdlingen_(1634)
+    title: Battle of Nördlingen, 1634 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Treaty_of_Stuhmsdorf
+    title: Treaty of Stuhmsdorf (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Wittstock
+    title: Battle of Wittstock (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Johan_Ban%C3%A9r
+    title: Johan Banér (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Breitenfeld_(1642)
+    title: Second Battle of Breitenfeld (Wikipedia)
+  - url: https://www.britannica.com/event/Peace-of-Westphalia
+    title: Peace of Westphalia (Britannica)
+steps:
+  - title: Sweden enters the war
+    date: "1630"
+    when: "1630"
+    borders: "1630"
+    countries:
+      - se
+    view:
+      center:
+        - 15.5455
+        - 54.3354
+      size:
+        - 871
+        - 592
+    body:
+      - The Truce of Altmark with Poland in 1629 let Sweden keep Livonia and several Prussian ports, and it freed King Gustav II Adolf to intervene in Germany. In July 1630 he landed at Peenemünde on the island of Usedom with about 13,000 men.
+      - Stettin fell within weeks, and a treaty with the Duke of Pomerania turned the duchy into Sweden’s bridgehead. In January 1631 France promised to pay for the war in the Treaty of Bärwalde.
+    facts:
+      - - King
+        - Gustav II Adolf
+      - - Landing force
+        - About 13,000 men (10,000 foot, 3,000 horse)
+    markers:
+      - kind: event
+        side: se
+        name: Landing at Peenemünde
+        date: 6 July 1630 (New Style)
+        lonlat:
+          - 13.8012
+          - 54.1382
+        text: A fleet of 27 ships brought the king and some 13,000 troops to Usedom, at the mouth of the Peene.
+      - kind: taken
+        side: se
+        name: Stettin
+        date: July 1630
+        lonlat:
+          - 14.5495
+          - 53.4289
+        lp: b
+        text: The Pomeranian capital was taken soon after the landing. By the autumn it held the largest Swedish garrison in the duchy, over 4,200 men.
+      - kind: taken
+        side: se
+        name: Stralsund
+        date: "1630"
+        lonlat:
+          - 13.0918
+          - 54.3095
+        lp: l
+        text: Already a Swedish ally. In the autumn of 1630 about 3,100 Swedish soldiers were based here.
+      - kind: event
+        side: se
+        name: Prussian ports
+        date: 1629–1635
+        lonlat:
+          - 19.8989
+          - 54.6291
+        text: Under the Truce of Altmark Sweden held coastal towns such as Pillau, Memel and Elbing and took a share of the tolls on Polish trade, which helped pay for the war in Germany.
+    arrows:
+      - side: se
+        label: Gustav II Adolf
+        label_at:
+          - 16.4006
+          - 55.3487
+        bezier:
+          - - 16.4996
+            - 55.9983
+          - - 16.2972
+            - 55.8662
+          - - 15.6858
+            - 55.4393
+          - - 15.3022
+            - 55.1985
+          - - 14.9233
+            - 54.9566
+          - - 14.4385
+            - 54.7168
+          - - 14.198
+            - 54.5503
+          - - 13.9594
+            - 54.3833
+          - - 13.9088
+            - 54.2578
+          - - 13.8505
+            - 54.2001
+    areas:
+      - style: occupied
+        side: se
+        atoms:
+          - DE-BB~pomAll
+          - DE-MV~pomN
+          - DE-MV~pomS
+          - PL-PM~pomE
+          - PL-ZP
+          - PL-ZP~pomO
+          - PL-ZP~pomS
+  - title: Magdeburg and Breitenfeld
+    date: "1631"
+    when: "1631"
+    borders: "1630"
+    countries:
+      - se
+    view:
+      center:
+        - 11.0017
+        - 52.1361
+      size:
+        - 667
+        - 634
+    body:
+      - In May 1631 Imperial troops under Tilly stormed the Protestant city of Magdeburg before the Swedes could relieve it, killing some 20,000 people. The massacre pushed wavering Protestant princes toward Sweden, and Saxony joined Gustav Adolf.
+      - On 17 September 1631, at Breitenfeld north of Leipzig, the Swedish-Saxon army of about 40,000 routed Tilly’s 31,000, even after the Saxons fled early in the battle. The king then swept west through Franconia to winter at Mainz on the Rhine.
+    facts:
+      - - Swedish-Saxon army
+        - About 40,000
+      - - Imperial army
+        - About 31,000
+    markers:
+      - kind: siege
+        side: foe
+        name: Sack of Magdeburg
+        date: 20 May 1631
+        lonlat:
+          - 11.6301
+          - 52.1303
+        lp: l
+        text: Tilly’s army stormed the city after a two-month siege. Most of its inhabitants died in the massacre and fire that followed.
+      - kind: battle
+        side: se
+        name: Battle of Breitenfeld
+        date: 17 September 1631
+        lonlat:
+          - 12.3786
+          - 51.42
+        text: The first great Protestant victory of the war. The Saxons broke, but the Swedish brigades held and destroyed Tilly’s army.
+      - kind: event
+        side: se
+        name: Winter quarters at Mainz
+        date: Winter 1631–32
+        lonlat:
+          - 8.2692
+          - 50.0007
+        lp: b
+        text: After conquering Franconia the king set up his winter quarters on the Rhine.
+    arrows:
+      - side: se
+        bezier:
+          - - 13.7016
+            - 53.5998
+          - - 13.5828
+            - 53.4674
+          - - 13.1844
+            - 53.0665
+          - - 13.0008
+            - 52.7994
+          - - 12.8196
+            - 52.532
+          - - 12.6925
+            - 52.2164
+          - - 12.5973
+            - 51.9997
+          - - 12.5031
+            - 51.7829
+          - - 12.448
+            - 51.5832
+          - - 12.4196
+            - 51.4986
+      - side: se
+        label: Into Franconia
+        label_at:
+          - 10.0979
+          - 50.449
+        bezier:
+          - - 12.1994
+            - 51.2998
+          - - 12.0154
+            - 51.2426
+          - - 11.4714
+            - 51.166
+          - - 11.1
+            - 50.949
+          - - 10.7323
+            - 50.7308
+          - - 10.3467
+            - 50.1741
+          - - 9.9997
+            - 49.9996
+          - - 9.6554
+            - 49.8241
+          - - 9.273
+            - 49.8984
+          - - 8.9975
+            - 49.8983
+          - - 8.7221
+            - 49.8976
+          - - 8.4551
+            - 49.9825
+          - - 8.3467
+            - 50.0005
+      - side: foe
+        label: Tilly
+        label_at:
+          - 11.2984
+          - 51.7502
+        bezier:
+          - - 11.5481
+            - 52.0502
+          - - 11.6245
+            - 52
+          - - 11.8761
+            - 51.8463
+          - - 11.9995
+            - 51.7503
+          - - 12.1262
+            - 51.6544
+          - - 12.2477
+            - 51.5251
+          - - 12.2986
+            - 51.4797
+    areas:
+      - style: occupied
+        side: se
+        atoms:
+          - DE-BB~pomAll
+          - DE-MV~pomN
+          - DE-MV~pomS
+          - PL-PM~pomE
+          - PL-ZP
+          - PL-ZP~pomO
+          - PL-ZP~pomS
+  - title: Into Bavaria, and death at Lützen
+    date: "1632"
+    when: "1632"
+    borders: "1630"
+    countries:
+      - se
+    view:
+      center:
+        - 10.8532
+        - 49.8155
+      size:
+        - 524
+        - 530
+    body:
+      - In April 1632 the Swedes forced the river Lech at Rain over a pontoon bridge. Tilly was mortally wounded, and on 17 May the king rode into Munich. Wallenstein, back in command of the Emperor’s armies, then pinned him at Nuremberg, where a costly assault on Wallenstein’s camp at the Alte Veste failed in September.
+      - The armies met again at Lützen on 16 November 1632. Sweden won the battle, but Gustav II Adolf was killed. His five-year-old daughter Christina became queen, and Chancellor Axel Oxenstierna took charge of the war.
+    facts:
+      - - Killed at Lützen
+        - Gustav II Adolf, aged 37
+      - - New ruler
+        - Queen Christina, with a regency
+    markers:
+      - kind: battle
+        side: se
+        name: Battle of Rain
+        date: 15 April 1632
+        lonlat:
+          - 10.908
+          - 48.6794
+        lp: l
+        text: Finnish cavalry crossed first, under fire. Tilly was badly wounded and died two weeks later.
+      - kind: taken
+        side: se
+        name: Munich
+        date: 17 May 1632
+        lonlat:
+          - 11.5789
+          - 48.1394
+        text: The Bavarian capital paid a heavy ransom to avoid being plundered. It was the deepest Swedish thrust into the Empire.
+      - kind: battle
+        side: foe
+        name: Battle of the Alte Veste
+        date: 3–4 September 1632
+        lonlat:
+          - 10.969
+          - 49.4498
+        text: Gustav Adolf attacked Wallenstein’s entrenched camp outside Nuremberg and was beaten back with heavy losses.
+      - kind: battle
+        side: se
+        name: Battle of Lützen
+        date: 16 November 1632
+        lonlat:
+          - 12.1398
+          - 51.2597
+        text: A hard-fought Swedish victory over Wallenstein, paid for with the life of the king, who was killed in the fighting.
+    arrows:
+      - side: se
+        bezier:
+          - - 8.3982
+            - 49.9497
+          - - 8.5984
+            - 49.8927
+          - - 9.2312
+            - 49.6975
+          - - 9.5966
+            - 49.5981
+          - - 9.9603
+            - 49.4975
+          - - 10.3893
+            - 49.4496
+          - - 10.5974
+            - 49.3502
+          - - 10.805
+            - 49.2481
+          - - 10.7958
+            - 49.0989
+          - - 10.8473
+            - 48.998
+          - - 10.8986
+            - 48.8972
+          - - 10.8904
+            - 48.7905
+          - - 10.8996
+            - 48.7491
+      - side: se
+        bezier:
+          - - 10.9786
+            - 48.6181
+          - - 11.0334
+            - 48.5787
+          - - 11.2073
+            - 48.4473
+          - - 11.2964
+            - 48.3783
+          - - 11.3852
+            - 48.3091
+          - - 11.4796
+            - 48.2287
+          - - 11.5173
+            - 48.1994
+      - side: se
+        label: To Lützen
+        label_at:
+          - 10.9981
+          - 50.5481
+        bezier:
+          - - 11.0482
+            - 49.549
+          - - 11.1221
+            - 49.6737
+          - - 11.348
+            - 50.0734
+          - - 11.4975
+            - 50.2987
+          - - 11.6486
+            - 50.5239
+          - - 11.8487
+            - 50.7529
+          - - 11.9483
+            - 50.9002
+          - - 12.0485
+            - 51.0474
+          - - 12.076
+            - 51.1321
+          - - 12.1001
+            - 51.1788
+    areas:
+      - style: occupied
+        side: se
+        atoms:
+          - DE-BB~pomAll
+          - DE-MV~pomN
+          - DE-MV~pomS
+          - PL-PM~pomE
+          - PL-ZP
+          - PL-ZP~pomO
+          - PL-ZP~pomS
+  - title: Nördlingen and the Peace of Prague
+    date: 1633–1635
+    when: "1633"
+    borders: "1630"
+    countries:
+      - se
+    view:
+      center:
+        - 13.4599
+        - 51.4604
+      size:
+        - 981
+        - 898
+    body:
+      - Oxenstierna kept the war going through the Heilbronn League of German Protestant states, paid for by France. But on 6 September 1634 an Imperial army, reinforced by 15,000 Spanish troops, crushed the Swedish-German army at Nördlingen. The Swedes had to pull out of Bavaria.
+      - In May 1635 Saxony and other Lutheran princes made the Peace of Prague with the Emperor, leaving Sweden almost alone. To free up troops, Sweden also gave up its Prussian ports in the Truce of Stuhmsdorf with Poland in September 1635, while keeping Livonia with Riga.
+    facts:
+      - - Swedish losses at Nördlingen
+        - About 21,000 killed or captured
+      - - Allies lost
+        - Saxony and most Lutheran princes
+    markers:
+      - kind: event
+        side: se
+        name: Heilbronn League
+        date: "1633"
+        lonlat:
+          - 9.2192
+          - 49.1384
+        lp: l
+        text: An alliance of German Protestant states under Swedish leadership, formed after the king’s death and funded by France.
+      - kind: battle
+        side: foe
+        name: Battle of Nördlingen
+        date: 6 September 1634
+        lonlat:
+          - 10.4875
+          - 48.8495
+        lp: l
+        text: A crushing Imperial-Spanish victory that destroyed the Swedish field army in the south. Some historians call it the pivotal battle of the war.
+      - kind: treaty
+        side: foe
+        name: Peace of Prague
+        date: 30 May 1635
+        lonlat:
+          - 14.4205
+          - 50.0784
+        text: Saxony and most German Lutheran rulers made peace with the Emperor and abandoned their Swedish alliance.
+      - kind: treaty
+        side: none
+        name: Truce of Stuhmsdorf
+        date: 12 September 1635
+        lonlat:
+          - 19.0309
+          - 53.9195
+        text: The truce with Poland was extended by 26 years. Sweden gave up the Prussian ports and their tolls, and kept most of Livonia, including Riga.
+    arrows:
+      - side: se
+        label: Swedish retreat
+        label_at:
+          - 8.8476
+          - 51.1492
+        bezier:
+          - - 10.4463
+            - 48.9489
+          - - 10.3739
+            - 49.0734
+          - - 10.1381
+            - 49.424
+          - - 9.9975
+            - 49.6996
+          - - 9.8553
+            - 49.9752
+          - - 9.6177
+            - 50.2833
+          - - 9.5979
+            - 50.6005
+          - - 9.5779
+            - 50.9179
+          - - 9.7349
+            - 51.2657
+          - - 9.8981
+            - 51.5995
+          - - 10.0638
+            - 51.9333
+          - - 10.4807
+            - 52.4325
+          - - 10.5983
+            - 52.5996
+    areas:
+      - style: occupied
+        side: se
+        atoms:
+          - DE-BB~pomAll
+          - DE-MV~pomN
+          - DE-MV~pomS
+          - PL-PM~pomE
+          - PL-ZP
+          - PL-ZP~pomO
+          - PL-ZP~pomS
+  - title: Banér holds on
+    date: 1636–1641
+    when: "1636"
+    borders: "1630"
+    countries:
+      - se
+    view:
+      center:
+        - 12.4962
+        - 51.4174
+      size:
+        - 597
+        - 725
+    body:
+      - With Saxony now an enemy, Johan Banér fought back from Sweden’s Baltic base. On 4 October 1636 he and the Scottish general Alexander Leslie beat a larger Imperial-Saxon army at Wittstock in Brandenburg, restoring Swedish power in northern Germany. A new subsidy treaty with France followed in 1638.
+      - Banér beat the Saxons again at Chemnitz in 1639 and pushed into Bohemia. In the winter of 1640–41 he struck at Regensburg with French help, then had to fall back. He died at Halberstadt in May 1641.
+    facts:
+      - - At Wittstock
+        - About 18,000 Swedes against about 25,000
+      - - French subsidies
+        - Treaty of Hamburg, 1638
+    markers:
+      - kind: battle
+        side: se
+        name: Battle of Wittstock
+        date: 4 October 1636
+        lonlat:
+          - 12.4907
+          - 53.1586
+        text: A decisive victory over the Imperial-Saxon army, 93 km north-west of Berlin, which showed the Swedes were not a spent force after Nördlingen.
+      - kind: battle
+        side: se
+        name: Battle of Chemnitz
+        date: "1639"
+        lonlat:
+          - 12.9204
+          - 50.8284
+        text: Banér defeated the Saxons, opening the way into Bohemia. It may have been his finest battle.
+      - kind: event
+        side: foe
+        name: Strike at Regensburg
+        date: Winter 1640–41
+        lonlat:
+          - 12.0967
+          - 49.0178
+        text: Banér and the French under Guébriant tried a surprise attack on the city where the Imperial Diet was meeting, but could not take it.
+      - kind: event
+        side: none
+        name: Banér dies
+        date: May 1641
+        lonlat:
+          - 11.0496
+          - 51.9005
+        lp: l
+        text: Worn out by the retreat, Banér died at Halberstadt after naming Lennart Torstenson his successor.
+    arrows:
+      - side: se
+        bezier:
+          - - 13.4985
+            - 53.9496
+          - - 13.4149
+            - 53.883
+          - - 13.1522
+            - 53.67
+          - - 13.0009
+            - 53.5488
+          - - 12.8505
+            - 53.4275
+          - - 12.6682
+            - 53.273
+          - - 12.6004
+            - 53.2185
+      - side: se
+        label: Into Bohemia
+        label_at:
+          - 14.6006
+          - 50.5484
+        bezier:
+          - - 12.898
+            - 50.7492
+          - - 13.0162
+            - 50.6921
+          - - 13.3665
+            - 50.4919
+          - - 13.5996
+            - 50.4002
+          - - 13.8319
+            - 50.3079
+          - - 14.185
+            - 50.2324
+          - - 14.2999
+            - 50.1998
+      - side: se
+        label: Retreat
+        label_at:
+          - 10.7472
+          - 50.3995
+        bezier:
+          - - 12.2967
+            - 49.1495
+          - - 12.1971
+            - 49.2915
+          - - 11.8638
+            - 49.6907
+          - - 11.6976
+            - 49.9985
+          - - 11.5291
+            - 50.3062
+          - - 11.3981
+            - 50.7022
+          - - 11.2982
+            - 50.9998
+          - - 11.197
+            - 51.2975
+          - - 11.1309
+            - 51.6504
+          - - 11.0971
+            - 51.7796
+    areas:
+      - style: occupied
+        side: se
+        atoms:
+          - DE-BB~pomAll
+          - DE-MV~pomN
+          - DE-MV~pomS
+          - PL-PM~pomE
+          - PL-ZP
+          - PL-ZP~pomO
+          - PL-ZP~pomS
+  - title: Torstenson on the offensive
+    date: 1642–1645
+    when: "1642"
+    borders: "1630"
+    countries:
+      - se
+    view:
+      center:
+        - 14.0685
+        - 50.2507
+      size:
+        - 663
+        - 592
+    body:
+      - Lennart Torstenson moved fast. He took Olomouc in Moravia in June 1642 and destroyed an Imperial army at the second battle of Breitenfeld on 2 November 1642.
+      - After a lightning campaign against Denmark (next step), he turned south again. At Jankau in Bohemia on 6 March 1645 he routed the Emperor’s army and headed for Vienna, but a long siege of Brno failed and he had to withdraw.
+    facts:
+      - - Commander
+        - Lennart Torstenson
+      - - Brno siege
+        - 3 May – 23 August 1645, failed
+    markers:
+      - kind: taken
+        side: se
+        name: Olomouc
+        date: 14 June 1642
+        lonlat:
+          - 17.2496
+          - 49.5885
+        text: The Moravian city fell after a short siege and stayed in Swedish hands for the rest of the war.
+      - kind: battle
+        side: se
+        name: Second Battle of Breitenfeld
+        date: 2 November 1642
+        lonlat:
+          - 12.3786
+          - 51.42
+        text: Fought on the same ground as in 1631. Torstenson turned on the army that had lifted his siege of Leipzig and won crushingly.
+      - kind: battle
+        side: se
+        name: Battle of Jankau
+        date: 6 March 1645
+        lonlat:
+          - 14.979
+          - 49.6478
+        lp: l
+        text: One of the bloodiest battles of the war, about 50 km south-east of Prague. It opened the road to Vienna.
+      - kind: held
+        side: foe
+        name: Siege of Brno
+        date: May – August 1645
+        lonlat:
+          - 16.6075
+          - 49.1976
+        text: The last fortress between Torstenson and Vienna held out for more than three months. When his Transylvanian allies made peace, he gave up.
+    arrows:
+      - side: se
+        bezier:
+          - - 12.5988
+            - 51.2981
+          - - 12.7679
+            - 51.1815
+          - - 13.2976
+            - 50.7994
+          - - 13.5991
+            - 50.5996
+          - - 13.8979
+            - 50.3991
+          - - 14.1839
+            - 50.2393
+          - - 14.3993
+            - 50.0981
+          - - 14.6132
+            - 49.9565
+          - - 14.816
+            - 49.8069
+          - - 14.9002
+            - 49.7486
+      - side: se
+        bezier:
+          - - 15.0975
+            - 49.5983
+          - - 15.2315
+            - 49.566
+          - - 15.666
+            - 49.4578
+          - - 15.8991
+            - 49.3992
+          - - 16.1315
+            - 49.3401
+          - - 16.3997
+            - 49.2751
+          - - 16.4989
+            - 49.249
+      - side: se
+        label: Toward Vienna
+        label_at:
+          - 17.2996
+          - 48.5484
+        bezier:
+          - - 16.5993
+            - 49.0993
+          - - 16.5844
+            - 49.0333
+          - - 16.5339
+            - 48.8237
+          - - 16.5003
+            - 48.6987
+          - - 16.4668
+            - 48.5738
+          - - 16.4165
+            - 48.4085
+          - - 16.3978
+            - 48.3494
+    areas:
+      - style: occupied
+        side: se
+        atoms:
+          - DE-BB~pomAll
+          - DE-MV~pomN
+          - DE-MV~pomS
+          - PL-PM~pomE
+          - PL-ZP
+          - PL-ZP~pomO
+          - PL-ZP~pomS
+  - title: The last campaigns and the Peace of Westphalia
+    date: 1646–1648
+    when: "1646"
+    borders: "1648"
+    countries:
+      - se
+    view:
+      center:
+        - 11.3785
+        - 51.481
+      size:
+        - 798
+        - 919
+    body:
+      - Carl Gustaf Wrangel and the French under Turenne beat the last Imperial-Bavarian field army at Zusmarshausen on 17 May 1648. Königsmarck’s flying column then surprised Prague in July and looted the castle and the Lesser Town, but students and citizens held the Charles Bridge.
+      - Peace was signed at Osnabrück and Münster on 24 October 1648. Sweden gained Western Pomerania with Stettin and Rügen, the port of Wismar, and the bishoprics of Bremen and Verden, together with 5 million thalers and a seat in the Imperial Diet.
+    facts:
+      - - Gained
+        - Western Pomerania, Wismar, Bremen-Verden
+      - - Indemnity
+        - 5 million thalers
+      - - Also
+        - Brandenburg got Farther Pomerania, France most of Alsace
+    markers:
+      - kind: battle
+        side: se
+        name: Battle of Zusmarshausen
+        date: 17 May 1648
+        lonlat:
+          - 10.5984
+          - 48.3996
+        text: The last major battle of the war on German soil, won by a Franco-Swedish army under Wrangel and Turenne.
+      - kind: siege
+        side: none
+        name: Battle of Prague
+        date: 25 July – 1 November 1648
+        lonlat:
+          - 14.4205
+          - 50.0784
+        text: The Swedes took and plundered the west bank of the city, including the castle, but never got across the river. Fighting stopped when news of the peace arrived.
+      - kind: treaty
+        side: se
+        name: Treaty of Osnabrück
+        date: 24 October 1648
+        lonlat:
+          - 8.0482
+          - 52.2797
+        lp: l
+        text: Sweden negotiated its part of the Peace of Westphalia here, in a city held by Protestant forces.
+      - kind: taken
+        side: se
+        name: Wismar
+        date: "1648"
+        lonlat:
+          - 11.4713
+          - 53.8891
+        lp: l
+        text: The Mecklenburg port and the island of Poel became Swedish under the peace.
+    arrows:
+      - side: se
+        label: Wrangel
+        label_at:
+          - 8.5983
+          - 50.3501
+        bezier:
+          - - 9.1974
+            - 52.5992
+          - - 9.267
+            - 52.3667
+          - - 9.4643
+            - 51.6663
+          - - 9.5974
+            - 51.1993
+          - - 9.7313
+            - 50.7328
+          - - 9.8562
+            - 50.2328
+          - - 9.9985
+            - 49.7988
+          - - 10.138
+            - 49.365
+          - - 10.3779
+            - 48.7983
+          - - 10.4496
+            - 48.5985
+      - side: se
+        label: Königsmarck
+        label_at:
+          - 12.3985
+          - 49.9491
+        bezier:
+          - - 10.8497
+            - 48.749
+          - - 11.0394
+            - 48.859
+          - - 11.5922
+            - 49.2227
+          - - 11.9991
+            - 49.3992
+          - - 12.4093
+            - 49.5742
+          - - 12.9164
+            - 49.6915
+          - - 13.3001
+            - 49.7997
+          - - 13.6857
+            - 49.9065
+          - - 14.1319
+            - 50.0087
+          - - 14.2971
+            - 50.0496
+    areas:
+      - style: gained
+        label: Gained by Sweden in this peace
+        atoms:
+          - DE-BB~pomAll
+          - DE-MV~pomN
+          - DE-MV~pomS
+          - DE-NI~bv
+          - PL-ZP~pomO
+          - PL-ZP~pomS
+      - style: pledged
+        label: Swedish on a 30-year pledge
+        atoms:
+          - SE-N

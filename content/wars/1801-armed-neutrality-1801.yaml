@@ -1,0 +1,103 @@
+id: armed-neutrality-1801
+name: War of the Second Armed Neutrality
+start: "1801-03-12"
+end: "1801-04-09"
+tier: B
+summary: A brief war in 1801 in which Britain sent a fleet to break up the Russian-led League of Armed Neutrality, which Denmark–Norway had joined. Nelson’s attack on the Danish defence line at Copenhagen on 2 April forced Denmark to suspend its part in the league, which collapsed after the murder of Tsar Paul I.
+countries: [dk, "no", gb]
+sides:
+  - id: dk
+    name: Denmark–Norway
+    polities: [denmark-norway, danish-duchies]
+    ink: red
+    moves: Danish–Norwegian moves
+    success: Danish–Norwegian success
+  - id: gb
+    name: Britain
+    polities: [united-kingdom]
+    ink: navy
+    moves: British moves
+    success: British success
+notes:
+  - Dates are New Style. In Denmark the battle is called Slaget på Reden, “the Battle of the Roads”, and it opened the period known as the English Wars (Englandskrigene), which continued with the Gunboat War of 1807–1814.
+sources:
+  - title: Battle of Copenhagen, 1801 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Copenhagen_(1801)
+  - title: Second League of Armed Neutrality (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_League_of_Armed_Neutrality
+  - title: Battle of Copenhagen, 1801 (Britannica)
+    url: https://www.britannica.com/event/Battle-of-Copenhagen-1801
+  - title: Slaget på Reden (Danish Wikipedia)
+    url: https://da.wikipedia.org/wiki/Slaget_p%C3%A5_Reden
+steps:
+  - title: The league and the British fleet
+    date: December 1800 – March 1801
+    when: "1801-03-12"
+    borders: "1801-03-30"
+    countries: [dk, "no", gb]
+    body:
+      - During the wars against revolutionary France, the Royal Navy stopped and searched neutral merchant ships for goods bound for its enemies. Denmark–Norway, with one of Europe’s largest merchant fleets, sent warships to escort its convoys, which led to clashes at sea. In December 1800 Tsar Paul I of Russia brought Denmark–Norway, Sweden and Prussia into a League of Armed Neutrality to resist the searches. Britain saw the league as a pro-French alliance that threatened its supplies of timber, hemp and tar from the Baltic.
+      - In March 1801 a British fleet under Admiral Sir Hyde Parker, with Vice-Admiral Horatio Nelson as second in command, sailed from Great Yarmouth to break up the league before the Russian, Swedish and Danish fleets could join. It passed through the Sound on 30 March, keeping close to the Swedish shore, whose guns stayed silent. Most of the Danish fleet was laid up without masts or rigging, so the defence of Copenhagen rested on a line of old ships, hulks and floating batteries moored before the city.
+    facts:
+      - [League of Armed Neutrality, "Russia, Sweden, Denmark–Norway and Prussia, December 1800"]
+      - [British fleet, "Parker and Nelson, from Great Yarmouth on 12 March 1801"]
+      - [Through the Sound, "30 March 1801"]
+    markers:
+      - kind: event
+        side: gb
+        name: Great Yarmouth
+        date: 12 March 1801
+        text: The fleet assembled in Yarmouth Roads. Parker was slow to leave until a private note from the First Lord of the Admiralty hurried him off.
+        lonlat: [1.733, 52.608]
+      - kind: event
+        side: gb
+        name: Kronborg
+        date: 30 March 1801
+        text: The fleet passed the fortress guarding the Sound with little damage, out of range of the Danish guns.
+        lonlat: [12.622, 56.039]
+      - kind: held
+        side: dk
+        name: Copenhagen defence line
+        date: March 1801
+        text: Eighteen ships and floating batteries, partly manned by volunteers, lay in a line along the shoal off the city, with the Trekroner fort at its northern end.
+        lonlat: [12.613, 55.703]
+    arrows:
+      - side: gb
+        label: Parker and Nelson
+        via: [[1.9, 52.65], [8.0, 57.3], [11.5, 57.0], [12.62, 55.95]]
+  - title: The Battle of Copenhagen
+    date: 2 April 1801
+    when: "1801-04-02"
+    borders: "1801-04-09"
+    countries: [dk, "no", gb]
+    body:
+      - On the morning of 2 April Nelson led twelve ships of the line and smaller vessels down the narrow channel in front of Copenhagen. Three of his ships ran aground, but the rest anchored opposite the Danish line and opened fire. The Danes and Norwegians, many of them untrained volunteers, fought for about four hours. When Parker signalled him to break off the action, Nelson is said to have put his telescope to his blind eye and claimed he could not see the signal.
+      - By the afternoon most of the Danish ships had been silenced or taken. Nelson sent a letter ashore offering a truce, which Crown Prince Frederick accepted. The British lost 274 killed and 737 wounded; Danish and Norwegian casualties are uncertain, and estimates range from about 1,000 to 1,800 killed and wounded, with many more taken prisoner. After days of talks Denmark agreed on 9 April to a fourteen-week armistice and suspended its part in the league. News arrived that Tsar Paul had been murdered on 23–24 March, and the league fell apart.
+    facts:
+      - [Battle of Copenhagen, "2 April 1801, British victory"]
+      - [British losses, "274 killed, 737 wounded"]
+      - [Danish ships, "Of 18, twelve captured, two sunk and one blown up"]
+    markers:
+      - kind: naval
+        side: gb
+        name: Battle of Copenhagen
+        date: 2 April 1801
+        text: Fought at close range on the roads before the city. The Danish flagship Dannebroge caught fire and blew up after the fighting, killing 250 men.
+        lonlat: [12.613, 55.703]
+      - kind: held
+        side: dk
+        name: Trekroner
+        date: 2 April 1801
+        text: The fort at the harbour mouth was never silenced. Its fire killed Captain Riou as his frigates drew off.
+        lonlat: [12.614, 55.71]
+        lp: t
+      - kind: treaty
+        name: Armistice
+        date: 9 April 1801
+        text: Nelson negotiated in person with Crown Prince Frederick. Copenhagen’s harbour was opened to the British, who sailed on into the Baltic.
+        lonlat: [12.585, 55.684]
+        lp: l
+    arrows:
+      - side: gb
+        label: Nelson
+        via: [[12.72, 55.8], [12.7, 55.66], [12.63, 55.68]]

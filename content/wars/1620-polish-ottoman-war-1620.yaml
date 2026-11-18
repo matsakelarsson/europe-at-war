@@ -1,0 +1,101 @@
+id: polish-ottoman-war-1620
+name: Polish–Ottoman War, 1620–1621
+start: "1620"
+end: "1621"
+tier: B
+summary: A war over Moldavia and over Cossack and Tatar raiding. The Ottomans destroyed a Polish army at Cecora in 1620, but a year later the Commonwealth and the Zaporozhian Cossacks held their camp at Khotyn against Sultan Osman II, and the peace left the border on the Dniester.
+countries: [pl, lt, ua, tr, md, ro]
+sides:
+  - id: pl
+    name: Poland–Lithuania
+    polities: [poland, lithuania, poland-lithuania]
+    ink: magenta
+    moves: Polish–Lithuanian moves
+    success: Polish–Lithuanian success
+  - id: zc
+    name: Zaporozhian Cossacks
+    polities: [cossack-hetmanate]
+    ink: gold
+    moves: Cossack moves
+    success: Cossack success
+  - id: ot
+    name: Ottoman Empire and the Tatars
+    polities: [ottoman, crimean-khanate]
+    ink: teal
+    moves: Ottoman and Tatar moves
+    success: Ottoman success
+notes:
+  - Dates are New Style (Gregorian), as used in Poland–Lithuania.
+sources:
+  - title: Polish–Ottoman War (1620–1621) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Polish%E2%80%93Ottoman_War_(1620%E2%80%931621)
+  - title: Battle of Cecora (1620) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Cecora_(1620)
+  - title: Battle of Khotyn (1621) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Khotyn_(1621)
+  - title: Stanisław Żółkiewski (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Stanis%C5%82aw_%C5%BB%C3%B3%C5%82kiewski
+steps:
+  - title: Disaster at Cecora
+    date: 1620
+    when: "1620-09"
+    borders: "1620"
+    countries: [pl, ua, md, ro, tr]
+    body:
+      - For decades Polish magnates had meddled in Moldavia, an Ottoman vassal, while Zaporozhian Cossacks raided Ottoman ports on the Black Sea and Tatars raided Poland–Lithuania in return. In 1620 the Moldavian prince Gaspar Graziani rebelled against the sultan and asked for help. The elderly Crown Grand Hetman Stanisław Żółkiewski crossed the Dniester with perhaps 5,000–9,000 men, many of them magnates’ private troops, but few Moldavians joined him.
+      - From 17 September his camp at Cecora (Țuțora) on the Prut was attacked by Ottoman troops under Iskender Pasha and Tatars of Khan Temir. On 29 September the Poles began to retreat in a moving fort of wagons, fighting off attacks for a week. Close to the Dniester, on 6–7 October, the column broke up. Żółkiewski was killed and his head was sent to the sultan. Field Hetman Stanisław Koniecpolski was among the many taken prisoner, as was the young Bohdan Khmelnytsky, whose father died in the battle.
+    facts:
+      - [Battle of Cecora, "17 September – 7 October 1620, Ottoman victory"]
+      - [Killed, Crown Grand Hetman Stanisław Żółkiewski]
+    markers:
+      - kind: battle
+        side: ot
+        name: Battle of Cecora
+        date: 17–29 September 1620
+        text: The Polish camp beside the Prut held for twelve days but was surrounded, and many of the private troops deserted.
+        lonlat: [27.78, 47.13]
+      - kind: event
+        side: ot
+        name: Death of Żółkiewski
+        date: 6–7 October 1620
+        text: The retreating army was overrun a few miles short of the Dniester, near Mohyliv. The hetman refused to escape and was killed.
+        lonlat: [27.70, 48.38]
+    arrows:
+      - side: pl
+        label: Żółkiewski
+        via: [[27.75, 48.5], [27.45, 47.9], [27.7, 47.2]]
+      - side: pl
+        label: Retreat
+        via: [[27.85, 47.2], [27.85, 47.8], [27.72, 48.32]]
+  - title: The camp at Khotyn
+    date: September – October 1621
+    when: "1621-09"
+    borders: "1621-10-09"
+    countries: [pl, lt, ua, tr, md]
+    body:
+      - In 1621 the young Sultan Osman II led a huge army north, with Tatar and Moldavian and Wallachian contingents, by most estimates well over 100,000 men. Lithuanian Grand Hetman Jan Karol Chodkiewicz entrenched about 30,000 Polish and Lithuanian troops beside the fortress of Khotyn on the Dniester, and some 25,000–40,000 Zaporozhian Cossacks under Hetman Petro Sahaidachny joined him.
+      - From 2 September the Ottomans attacked the camp again and again and were beaten off with heavy losses. Chodkiewicz, ill, handed over command to Stanisław Lubomirski and died on 24 September. With autumn coming and his army shrinking, Osman agreed to the Treaty of Khotyn on 9 October. The border stayed on the Dniester, the Commonwealth promised to curb the Cossacks and stop meddling in Moldavia, and the sultan to restrain the Tatars. Osman blamed his janissaries, and they killed him in a revolt the next year.
+    facts:
+      - [Siege of the camp, 2 September – 9 October 1621]
+      - [Treaty of Khotyn, "9 October 1621, no change of borders"]
+      - [Cossack hetman, "Petro Sahaidachny, wounded, died in 1622"]
+    markers:
+      - kind: held
+        side: pl
+        name: Camp at Khotyn
+        date: 2 September – 9 October 1621
+        text: Polish, Lithuanian and Cossack troops held their entrenched camp beside the fortress through five weeks of assaults.
+        lonlat: [26.50, 48.52]
+      - kind: treaty
+        name: Treaty of Khotyn
+        date: 9 October 1621
+        text: Both sides claimed victory. Moldavia stayed under Ottoman control.
+        lonlat: [26.60, 48.47]
+        lp: b
+    arrows:
+      - side: ot
+        label: Osman II
+        via: [[28.46, 45.3], [27.9, 46.5], [27.2, 47.7], [26.6, 48.42]]
+      - side: zc
+        label: Sahaidachny
+        via: [[27.8, 48.4], [27.2, 48.42], [26.62, 48.5]]

@@ -1,0 +1,271 @@
+id: khmelnytsky-uprising
+name: Khmelnytsky Uprising
+start: "1648"
+end: "1657"
+tier: A
+summary: A Cossack rising led by Bohdan Khmelnytsky, allied at first with the Crimean Tatars, became a peasant war across Ukraine, with mass killings of Jews, Polish nobles and Catholic clergy and brutal reprisals. It created a Cossack state, the Hetmanate, which placed itself under the Russian tsar at Pereiaslav in 1654.
+countries: [ua, pl, lt, by, ru]
+sides:
+  - id: zc
+    name: Zaporozhian Cossacks
+    polities: [cossack-hetmanate]
+    ink: gold
+    moves: Cossack moves
+    success: Cossack success
+  - id: ct
+    name: Crimean Khanate
+    polities: [crimean-khanate]
+    ink: orange
+    moves: Tatar moves
+    success: Tatar success
+  - id: pl
+    name: Poland–Lithuania
+    polities: [poland, lithuania, poland-lithuania]
+    ink: magenta
+    moves: Polish–Lithuanian moves
+    success: Polish–Lithuanian success
+  - id: ru
+    name: Tsardom of Russia
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+notes:
+  - Dates are New Style (Gregorian), as used in Poland–Lithuania. The Cossacks and Russia used the Julian calendar, ten days behind, so Ukrainian and Russian accounts often give dates ten days earlier.
+  - Casualty figures for this war, above all for the killings of Jews, have been disputed for centuries. The text gives ranges where historians differ.
+sources:
+  - title: Khmelnytsky Uprising (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Khmelnytsky_Uprising
+  - title: Cossack-Polish War (Internet Encyclopedia of Ukraine)
+    url: https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CC%5CO%5CCossack6PolishWar.htm
+  - title: Bohdan Khmelnytsky (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bohdan_Khmelnytsky
+  - title: Battle of Korsuń (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Korsu%C5%84
+  - title: Battle of Berestechko (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Berestechko
+  - title: Treaty of Zboriv (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Zboriv
+  - title: Pereiaslav Agreement (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pereiaslav_Agreement
+steps:
+  - title: Zhovti Vody and Korsun
+    date: January – May 1648
+    when: "1648-01"
+    borders: "1648-05-26"
+    countries: [ua, pl]
+    body:
+      - In the Dnieper lands of Poland–Lithuania, Orthodox Ruthenian peasants worked the estates of mostly Catholic, Polish or Polonised magnates, often under Jewish leaseholders who collected the dues. The Cossacks, frontier soldiers who had risen several times, were bitter that only a few thousand of them were recognised as registered, paid soldiers. Bohdan Khmelnytsky, a Cossack officer whose estate at Subotiv had been seized by a local Polish official, could get no redress, and in January 1648 he fled to the Zaporozhian Sich.
+      - Elected hetman, he won an alliance with the Crimean khan İslam III Giray. At Zhovti Vody in May the registered Cossacks sent against him changed sides, and the Polish vanguard under Stefan Potocki was destroyed on 16 May. On 26 May, at Korsun, Cossacks and Tatars ambushed the main Crown army; both its hetmans, Mikołaj Potocki and Marcin Kalinowski, were captured and handed over to the Tatars. King Władysław IV had died six days earlier, and the Commonwealth was left without a king or an army in Ukraine.
+    facts:
+      - [Zhovti Vody, "29 April – 16 May 1648, Cossack victory"]
+      - [Korsun, "26 May 1648, Cossack and Tatar victory"]
+    markers:
+      - kind: event
+        side: zc
+        name: The Sich
+        date: January 1648
+        text: Khmelnytsky’s small band drove the Crown garrison out of the Cossack fortress on the lower Dnieper, and the Cossacks elected him hetman.
+        lonlat: [34.41, 47.55]
+      - kind: battle
+        side: zc
+        name: Battle of Zhovti Vody
+        date: 29 April – 16 May 1648
+        text: Stefan Potocki’s force was surrounded after its Cossack auxiliaries deserted. He died of his wounds in Tatar captivity.
+        lonlat: [33.50, 48.35]
+      - kind: battle
+        side: zc
+        name: Battle of Korsun
+        date: 26 May 1648
+        text: The retreating Crown army was trapped in a ravine on the road to Bohuslav and destroyed.
+        lonlat: [31.17, 49.44]
+    arrows:
+      - side: zc
+        label: Khmelnytsky
+        via: [[34.4, 47.6], [33.55, 48.3], [32.3, 49.0], [31.25, 49.42]]
+      - side: ct
+        label: Tuhay Bey
+        via: [[33.7, 46.2], [33.9, 47.2], [33.6, 48.25]]
+  - title: Revolt, massacre and Pyliavtsi
+    date: June 1648 – January 1649
+    when: "1648-06"
+    borders: "1648-11"
+    countries: [ua, pl]
+    body:
+      - The victories set off a peasant war. Bands of Cossacks and peasants, some led by colonels such as Maksym Kryvonis, killed Polish and Polonised nobles, Catholic priests, Uniate clergy and above all Jews, often whole communities, at Nemyriv, Tulchyn, Polonne and many other towns. Jewish chroniclers of the time gave figures from tens of thousands to well over 100,000; modern historians mostly estimate that tens of thousands of Jews were killed or carried off, perhaps 15,000–30,000, out of some 40,000–50,000 living in the region. The prince Jeremi Wiśniowiecki answered with his own terror, impaling and hanging rebels as he retreated west.
+      - On 23 September 1648, at Pyliavtsi in Podolia, a large Polish army led by three noble commanders broke in panic after two days of fighting and fled. Khmelnytsky marched west, took a heavy ransom from Lviv and besieged Zamość. After John II Casimir was elected king in November he turned back, and on 2 January 1649 he rode into Kyiv to be hailed as the ruler of Rus’. The Tatars took many thousands of captives, Ruthenians as well as Poles and Jews, to the slave markets of Crimea.
+    facts:
+      - [Pyliavtsi, "23 September 1648, Cossack victory"]
+      - [New king, "John II Casimir Vasa, elected 17 November 1648"]
+    markers:
+      - kind: event
+        name: Nemyriv massacre
+        date: June 1648
+        text: Cossacks entered the town and massacred its Jews, many of them refugees from further east, in one of the worst killings of 1648. Jews remember these years as the “decrees of 1648–1649”.
+        lonlat: [28.85, 48.97]
+      - kind: event
+        name: Polonne
+        date: July 1648
+        text: Kryvonis’s Cossacks stormed the fortified town and killed many Jews and Poles who had taken refuge there.
+        lonlat: [27.51, 50.12]
+        lp: l
+      - kind: battle
+        side: zc
+        name: Battle of Pyliavtsi
+        date: 23 September 1648
+        text: The Polish army, slowed by an enormous baggage train, panicked and fled, leaving its guns and treasure behind.
+        lonlat: [27.46, 49.60]
+        lp: b
+      - kind: siege
+        name: Lviv
+        date: October 1648
+        text: Khmelnytsky besieged the city for about three weeks and withdrew for a large ransom, much of it paid to the Tatars.
+        lonlat: [24.03, 49.84]
+      - kind: held
+        side: pl
+        name: Zamość
+        date: November 1648
+        text: The fortress held until the new king asked Khmelnytsky to stop and await talks.
+        lonlat: [23.25, 50.72]
+      - kind: event
+        side: zc
+        name: Kyiv
+        date: 2 January 1649
+        text: Khmelnytsky was welcomed by the Orthodox clergy as a liberator of the Ruthenian people.
+        lonlat: [30.52, 50.45]
+    arrows:
+      - side: pl
+        label: Wiśniowiecki
+        via: [[33.0, 50.02], [31.6, 51.0], [30.3, 51.5], [28.6, 50.5]]
+      - side: zc
+        label: Khmelnytsky
+        via: [[27.5, 49.6], [25.8, 49.75], [24.1, 49.82]]
+      - side: zc
+        via: [[24.2, 49.95], [23.7, 50.35], [23.3, 50.68]]
+  - title: Zbarazh and Zboriv
+    date: 1649
+    when: "1649"
+    borders: "1649-08-18"
+    countries: [ua, pl, by]
+    body:
+      - Talks over the winter failed. In the summer of 1649 Khmelnytsky and Khan İslam Giray, with a huge Cossack, peasant and Tatar army, besieged a small Polish army in the castle of Zbarazh. The defenders held out for more than a month. In the north the Lithuanian army under Janusz Radziwiłł beat a Cossack force at Loyew on the Dnieper in July and kept the war away from Lithuania.
+      - John Casimir led a relief force of about 15,000–20,000 men, and on 15 August he was caught crossing the Strypa at Zboriv and surrounded. He saved himself by buying off the khan, and on 18 August he accepted the Treaty of Zboriv. The register was raised to 40,000 Cossacks, the voivodeships of Kyiv, Bratslav and Chernihiv were to be run by Orthodox nobles under the hetman, and Jews and Jesuits were barred from living there. Neither side was satisfied, and on their way home the Tatars carried off thousands of local people.
+    facts:
+      - [Treaty of Zboriv, "18 August 1649"]
+      - [Cossack register, "Raised from 6,000 to 40,000"]
+    markers:
+      - kind: held
+        side: pl
+        name: Siege of Zbarazh
+        date: July – August 1649
+        text: Led in practice by Jeremi Wiśniowiecki, the garrison fought off assaults for more than a month while food ran out.
+        lonlat: [25.78, 49.67]
+      - kind: battle
+        side: zc
+        name: Battle of Zboriv
+        date: 15–16 August 1649
+        text: Cossacks and Tatars attacked the royal army at the river crossing. The king was surrounded and saved only by a deal with the khan.
+        lonlat: [25.15, 49.66]
+        lp: l
+      - kind: battle
+        side: pl
+        name: Battle of Loyew
+        date: July 1649
+        text: Janusz Radziwiłł’s Lithuanians destroyed a Cossack army under Mykhailo Krychevsky, who died of his wounds.
+        lonlat: [30.80, 51.93]
+    arrows:
+      - side: pl
+        label: John Casimir
+        via: [[23.25, 50.72], [24.1, 50.3], [24.8, 49.85], [25.1, 49.7]]
+    areas:
+      - style: gained
+        side: zc
+        label: Under Cossack rule by the Treaty of Zboriv
+        atoms: [UA-30, UA-32, UA-71, UA-05, UA-74, UA-53]
+  - title: Berestechko and Batih
+    date: 1651–1653
+    when: "1651"
+    borders: "1651-09-28"
+    countries: [ua, pl, lt]
+    body:
+      - War resumed in 1651. From 28 June the Commonwealth army, led by the king, fought Khmelnytsky and the khan at Berestechko in Volhynia, one of the largest battles of 17th-century Europe. On 30 June the Tatars fled, taking Khmelnytsky with them as a virtual prisoner. The leaderless Cossacks held a fortified camp beside the marshes for ten days; when Ivan Bohun led a breakout on 10 July the peasants panicked, and thousands were killed or drowned. That summer a Lithuanian army took Kyiv.
+      - The Treaty of Bila Tserkva in September cut the register to 20,000 and Cossack rule to the Kyiv voivodeship, but the Sejm never ratified it. In June 1652, at Batih in Podolia, Cossacks and Tatars overran the army of Hetman Kalinowski, who was killed. On Khmelnytsky’s orders thousands of Polish prisoners, many of them bought from the Tatars, were then killed. A royal campaign in 1653 ended inconclusively at Zhvanets when the khan again made a separate peace.
+    facts:
+      - [Berestechko, "28 June – 10 July 1651, Polish–Lithuanian victory"]
+      - [Batih, "1–2 June 1652, Cossack and Tatar victory, followed by the killing of prisoners"]
+    markers:
+      - kind: battle
+        side: pl
+        name: Battle of Berestechko
+        date: 28 June – 10 July 1651
+        text: After the Tatars fled, the Cossack camp held out by the Plyashivka river until the breakout turned into a rout.
+        lonlat: [25.12, 50.35]
+      - kind: taken
+        side: pl
+        name: Kyiv
+        date: Summer 1651
+        text: The Lithuanian army under Janusz Radziwiłł marched down the Dnieper and took the city.
+        lonlat: [30.52, 50.45]
+      - kind: treaty
+        side: pl
+        name: Treaty of Bila Tserkva
+        date: 28 September 1651
+        text: Harsher terms than Zboriv for the Cossacks, but never ratified.
+        lonlat: [30.12, 49.80]
+        lp: l
+      - kind: battle
+        side: zc
+        name: Battle of Batih
+        date: 1–2 June 1652
+        text: The Polish camp was stormed. The killing of the captives afterwards became known as the Batih massacre.
+        lonlat: [29.28, 48.59]
+      - kind: event
+        name: Zhvanets
+        date: October – December 1653
+        text: The royal army, blockaded by Cossacks and Tatars, was rescued by another deal with the khan.
+        lonlat: [26.49, 48.55]
+    arrows:
+      - side: pl
+        label: Radziwiłł
+        via: [[30.8, 51.93], [30.7, 51.2], [30.55, 50.55]]
+  - title: Pereiaslav
+    date: 1654–1657
+    when: "1654"
+    borders: "1654-01-18"
+    countries: [ua, ru, pl, by, lt]
+    body:
+      - Unable to beat Poland alone and abandoned again and again by the Tatars, Khmelnytsky turned to the Orthodox tsar. On 18 January 1654 a Cossack council at Pereiaslav accepted Tsar Alexis’s protection. The tsar’s envoy Vasily Buturlin refused to swear any oath in return, and the terms, settled in Moscow that spring, left the Hetmanate wide self-government. Ukrainian and Russian historians have argued ever since over whether it was a military alliance, a protectorate or a union.
+      - Russia went to war with Poland–Lithuania that year, and Cossack troops fought beside the Russians in Belarus. The Tatars switched to Poland’s side, and the armies met in deep frost at Okhmativ in January 1655. Khmelnytsky soon fell out with Moscow and drew closer to Sweden. He died at Chyhyryn on 6 August 1657. Much of Ukraine had been laid waste by war, famine, plague and slave raids, and the struggle over the Hetmanate went on for decades.
+    facts:
+      - [Pereiaslav council, "18 January 1654 (8 January Old Style)"]
+      - [Khmelnytsky’s death, "6 August 1657, Chyhyryn"]
+    markers:
+      - kind: treaty
+        name: Pereiaslav council
+        date: 18 January 1654
+        text: The Cossack officers swore allegiance to the tsar. The terms were confirmed in the March Articles of 1654.
+        lonlat: [31.45, 50.07]
+      - kind: battle
+        name: Battle of Okhmativ
+        date: Late January 1655
+        text: Cossack and Russian troops fought a Polish and Tatar army to a bloody standstill in bitter cold.
+        lonlat: [30.22, 49.17]
+      - kind: siege
+        name: Lviv
+        date: Autumn 1655
+        text: Khmelnytsky and the Russian commander Vasily Buturlin besieged the city again and withdrew for a contribution.
+        lonlat: [24.03, 49.84]
+      - kind: event
+        name: Death of Khmelnytsky
+        date: 6 August 1657
+        text: The hetman died after a stroke at his capital and was buried at Subotiv.
+        lonlat: [32.65, 49.08]
+    arrows:
+      - side: zc
+        label: Khmelnytsky and Buturlin
+        via: [[30.4, 50.4], [27.6, 50.1], [25.4, 49.9], [24.15, 49.84]]
+    areas:
+      - style: outline
+        side: zc
+        label: The Cossack Hetmanate, 1654
+        atoms: [UA-30, UA-32, UA-71, UA-05, UA-74, UA-53]

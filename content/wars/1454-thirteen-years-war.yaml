@@ -1,0 +1,155 @@
+id: thirteen-years-war
+name: Thirteen Years’ War
+start: "1454"
+end: "1466"
+tier: B
+summary: A war between the Teutonic Order and the Prussian Confederation of towns and gentry, allied with Poland under Casimir IV. Fought largely by mercenaries on both sides, it ended with the Second Peace of Thorn in 1466, which gave western Prussia to Poland as Royal Prussia and made the rest of the Order’s state a Polish fief.
+sides:
+  - id: pl
+    name: Poland and the Prussian Confederation
+    polities: [poland, poland-lithuania]
+    ink: magenta
+    moves: Polish and Prussian Confederation moves
+    success: Polish or Confederation success
+  - id: to
+    name: Teutonic Order
+    polities: [teutonic-order]
+    ink: slate
+    moves: Teutonic moves
+    success: Teutonic success
+notes:
+  - Dates are Julian (Old Style), as the sources give them.
+  - Also called the War of the Cities. Inside Prussia it was largely a civil war, and Lithuania, though ruled by Casimir IV, took almost no part.
+  - Places are given their modern names, with the German names of the time where useful, such as Malbork (Marienburg) and Chojnice (Konitz).
+sources:
+  - title: Thirteen Years’ War, 1454–1466 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Thirteen_Years%27_War_(1454%E2%80%931466)
+  - title: Battle of Chojnice, 1454 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Chojnice_(1454)
+  - title: Battle of Świecino (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_%C5%9Awiecino
+  - title: Second Peace of Thorn (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Peace_of_Thorn
+  - title: Royal Prussia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Royal_Prussia
+steps:
+  - title: The Prussian revolt and Chojnice
+    date: 1454
+    when: "1454-02-04"
+    borders: "1454-03-06"
+    countries: [pl]
+    body:
+      - "After Grunwald the Order taxed Prussia heavily and kept a tight grip on its trade, and the towns and gentry wanted the rights their neighbours enjoyed in Poland. In 1440 they formed the Prussian Confederation, led by Gdańsk, Toruń and Elbląg and the knights of the Chełmno Land. When the Emperor banned it in 1453, it turned to Poland. On 4 February 1454 it renounced its allegiance to the Grand Master, and within weeks its forces held almost all of Prussia except Malbork, Sztum and Chojnice. On 6 March King Casimir IV took Prussia into his kingdom."
+      - "The Order hired mercenaries in Germany and Bohemia, and in September a relief army of about 15,000 under Duke Rudolf of Żagań and Bernard von Zinnenberg marched on Chojnice, which a Polish levy was besieging. On 18 September 1454 the Polish cavalry broke the first Teutonic line, killing Rudolf, but the mercenaries’ wagon fort held and a sally from the town struck the Poles from behind. Casimir had to be led from the field, and some 300 knights were captured. The Poles abandoned the siege of Malbork, and what both sides had expected to be a short war became a long, costly struggle for castles and towns."
+    facts:
+      - [Prussian Confederation, "Founded 1440, rose against the Order 4 February 1454"]
+      - [Incorporation into Poland, 6 March 1454]
+      - [Battle of Chojnice, "18 September 1454, Teutonic victory"]
+    markers:
+      - kind: taken
+        side: pl
+        name: Toruń
+        date: February 1454
+        text: The townspeople took the Order’s castle and pulled it down, one of many castles destroyed at the start of the revolt.
+        lonlat: [18.6111, 53.0222]
+      - kind: held
+        side: to
+        name: Malbork
+        date: February–September 1454
+        text: The Grand Master held his capital against Confederation and Polish forces, which gave up the siege after Chojnice.
+        lonlat: [19.0278, 54.0397]
+      - kind: battle
+        side: to
+        name: Battle of Chojnice
+        date: 18 September 1454
+        text: The Polish cavalry broke the first Teutonic line but was routed by the mercenaries’ wagon fort and a sally from the town. About 300 Polish knights were captured.
+        lonlat: [17.5667, 53.7]
+    arrows:
+      - side: pl
+        label: Casimir IV
+        via: [[17.0, 52.55], [17.35, 53.15], [17.53, 53.62]]
+      - side: to
+        label: Mercenaries
+        via: [[15.5, 53.25], [16.6, 53.55], [17.5, 53.68]]
+  - title: Malbork bought, Świecino won
+    date: 1455–1464
+    when: "1457-06-06"
+    borders: "1462-09-17"
+    countries: [pl, ru]
+    body:
+      - "Unable to pay its mercenaries, the Order pledged them its castles, and in 1455 they took over Malbork. Their Bohemian captain, Ulrich Czerwonka, sold it to the Poles, and on 6 June 1457 Malbork, Tczew and Iława were handed over for 190,000 Hungarian gold pieces, much of it lent by Gdańsk. The Grand Master moved to Königsberg, which became the Order’s capital. Teutonic troops retook the town of Malbork that September with the help of its burghers, but the castle stayed Polish, and the town fell again in 1460."
+      - "The war turned once Poland stopped relying on noble levies and paid for a small professional army under Piotr Dunin. On 17 September 1462 Dunin beat the Order’s army at Świecino, west of Gdańsk, where its able commander Fritz Raweneck was killed. On 15 September 1463 ships from Gdańsk and Elbląg destroyed the Order’s fleet on the Vistula Lagoon, and Gniew surrendered on 1 January 1464 after a long siege. From then on the Order, short of money, was mostly on the defensive."
+    facts:
+      - [Malbork handed over, "6 June 1457, for 190,000 Hungarian gold pieces"]
+      - [Battle of Świecino, "17 September 1462, Polish victory"]
+      - [Vistula Lagoon, "15 September 1463, the Order’s fleet destroyed"]
+    markers:
+      - kind: taken
+        side: pl
+        name: Malbork
+        date: 6 June 1457
+        text: Unpaid mercenaries handed the Order’s capital to the Poles. Casimir IV entered the castle two days later.
+        lonlat: [19.0278, 54.0397]
+      - kind: event
+        side: to
+        name: Königsberg
+        date: "1457"
+        text: The Grand Masters ruled from here after losing Malbork.
+        lonlat: [20.4531, 54.7003]
+      - kind: battle
+        side: pl
+        name: Battle of Świecino
+        date: 17 September 1462
+        text: Piotr Dunin’s paid troops, with a wagon fort, beat a larger Teutonic army near Żarnowiec.
+        lonlat: [18.0878, 54.7872]
+      - kind: naval
+        side: pl
+        name: Battle of the Vistula Lagoon
+        date: 15 September 1463
+        text: The fleets of Gdańsk and Elbląg destroyed the Order’s ships, cutting its links by water.
+        lonlat: [19.75, 54.45]
+      - kind: siege
+        side: pl
+        name: Gniew
+        date: July 1463 – 1 January 1464
+        text: Dunin took the Order’s fortress on the lower Vistula after a five-month siege.
+        lonlat: [18.8236, 53.8361]
+        lp: l
+    arrows:
+      - side: pl
+        label: Dunin
+        via: [[18.6, 54.35], [18.35, 54.58], [18.12, 54.77]]
+  - title: The Second Peace of Thorn
+    date: 1464–1466
+    when: "1466-10-19"
+    borders: "1466-10-19"
+    countries: [pl, ru, lt]
+    body:
+      - "Talks in 1464 and 1465 failed, but the Order’s position kept slipping. In 1466 the Prince-Bishop of Warmia changed sides, and on 28 September Dunin took Chojnice, the Order’s last major stronghold in the west. With the papal legate Rudolf of Rüdesheim as mediator, peace was signed at Toruń on 19 October 1466. Thirteen years of war, raids and unpaid soldiers had left much of Prussia devastated."
+      - "The Order gave up Gdańsk Pomerania, the Chełmno Land, the lands around Malbork and Elbląg, and the Prince-Bishopric of Warmia. These became Royal Prussia, a province of the Polish crown with its own diet and privileges. The Order kept eastern Prussia, ruled from Königsberg, but as a Polish fief: each Grand Master had to swear allegiance to the king within six months of taking office."
+    facts:
+      - [Second Peace of Thorn, 19 October 1466]
+      - [Royal Prussia, "Gdańsk Pomerania, the Chełmno Land, Malbork, Elbląg and Warmia"]
+      - [The Order’s Prussia, "A Polish fief, ruled from Königsberg"]
+    markers:
+      - kind: siege
+        side: pl
+        name: Chojnice
+        date: 28 September 1466
+        text: Piotr Dunin took the town where the Poles had been beaten twelve years before.
+        lonlat: [17.55, 53.7]
+      - kind: treaty
+        side: pl
+        name: Second Peace of Thorn
+        date: 19 October 1466
+        text: Signed in the Artus Court at Toruń. The Grand Master became a counsellor of the Polish king and his vassal.
+        lonlat: [18.6111, 53.0222]
+    areas:
+      - style: gained
+        side: pl
+        label: Royal Prussia, to Poland in this peace
+        atoms: [PL-PM!, PL-PM~danzig, PL-PM~de1930, PL-PM~eprussia, PL-KP~netze, PL-WN~warm]
+      - style: outline
+        side: to
+        label: The Order’s Prussia, a Polish fief from 1466
+        atoms: [PL-WN!, PL-WN~pl1930, RU-KGD, LT-KL]

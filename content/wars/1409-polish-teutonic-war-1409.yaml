@@ -1,0 +1,243 @@
+id: polish-teutonic-war-1409
+name: Polish–Lithuanian–Teutonic War, 1409–1411
+start: "1409"
+end: "1411"
+tier: A
+summary: A war between the Teutonic Order and the allied Kingdom of Poland and Grand Duchy of Lithuania, sparked by a revolt in Samogitia. The allies crushed the Order at Grunwald in July 1410 but failed to take Malbork, and the First Peace of Thorn in 1411 changed little on the map while leaving the Order heavily in debt.
+sides:
+  - id: pl
+    name: Poland
+    polities: [poland, poland-lithuania]
+    ink: magenta
+    moves: Polish moves
+    success: Polish or Polish–Lithuanian success
+  - id: lt
+    name: Lithuania
+    polities: [lithuania]
+    ink: brown
+    moves: Lithuanian moves
+    success: Lithuanian success
+  - id: to
+    name: Teutonic Order
+    polities: [teutonic-order]
+    ink: slate
+    moves: Teutonic moves
+    success: Teutonic success
+notes:
+  - Dates are Julian (Old Style), as the sources give them; the Gregorian calendar came only in 1582.
+  - Places are given their modern names, with the German names of the time where useful, such as Malbork (Marienburg) and Toruń (Thorn).
+  - Also called the Great War, and in Lithuania the war of Žalgiris.
+sources:
+  - title: Polish–Lithuanian–Teutonic War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Polish%E2%80%93Lithuanian%E2%80%93Teutonic_War
+  - title: Battle of Grunwald (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Grunwald
+  - title: Siege of Marienburg, 1410 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Marienburg_(1410)
+  - title: Peace of Thorn, 1411 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peace_of_Thorn_(1411)
+  - title: State of the Teutonic Order (Wikipedia)
+    url: https://en.wikipedia.org/wiki/State_of_the_Teutonic_Order
+  - title: Union of Krewo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Union_of_Krewo
+steps:
+  - title: The Order, the union and Samogitia
+    date: 1226–1409
+    when: "1409"
+    borders: "1409-05-01"
+    countries: [pl, lt, by]
+    body:
+      - "In the 1220s Duke Konrad of Masovia invited the Teutonic Knights, a German crusading order, to help him against the pagan Prussians. From the Chełmno Land the knights conquered Prussia by the 1280s and made it a state of their own. In 1308–1309 they seized Gdańsk Pomerania from Poland and moved their headquarters to Malbork. By the Treaty of Kalisz in 1343 Poland won back Kuyavia and Dobrzyń but gave up its claim to Pomerania, while the Order kept up a long crusade against pagan Lithuania."
+      - "That crusade lost its purpose in 1385. At Krewo the Lithuanian grand duke Jogaila agreed to become a Catholic and marry the young Queen Jadwiga of Poland. He was crowned in Kraków in 1386 as Władysław II Jagiełło, and Lithuania was baptised the next year. The Order doubted the conversion and fought on over Samogitia, the Lithuanian land that separated Prussia from Livonia. Jogaila’s cousin Vytautas, who ruled Lithuania, ceded it to the Order in 1398 and again in 1404. In May 1409 the Samogitians rose in revolt, with his support."
+    facts:
+      - [Union of Krewo, 14 August 1385]
+      - [Samogitia, "Ceded to the Order in 1398 and 1404, in revolt from May 1409"]
+      - [Grand Master, Ulrich von Jungingen (from 1407)]
+    markers:
+      - kind: event
+        side: to
+        name: Chełmno Land
+        date: c. 1230
+        text: The Order’s first base in Prussia, granted by Konrad of Masovia. The knights founded Toruń and Chełmno here in 1233.
+        lonlat: [18.42, 53.35]
+        lp: l
+      - kind: taken
+        side: to
+        name: Gdańsk
+        date: November 1308
+        text: The Order took the town and castle and killed many of the townspeople; the death toll is disputed. The rest of Gdańsk Pomerania followed by 1309.
+        lonlat: [18.6453, 54.3475]
+      - kind: event
+        side: to
+        name: Malbork
+        date: "1309"
+        text: The Grand Master moved his seat to this great brick castle on the Nogat, which became the capital of the Order’s state.
+        lonlat: [19.0278, 54.0397]
+      - kind: treaty
+        name: Union of Krewo
+        date: 14 August 1385
+        text: Jogaila promised to accept Catholic baptism for himself and Lithuania and to marry Jadwiga, joining Poland and Lithuania under one ruler.
+        lonlat: [26.284, 54.31]
+      - kind: event
+        name: Jagiełło crowned
+        date: 4 March 1386
+        text: Baptised, married to Jadwiga and crowned king of Poland in Kraków within three weeks.
+        lonlat: [19.9372, 50.0614]
+      - kind: event
+        side: lt
+        name: Samogitian revolt
+        date: May 1409
+        text: The Samogitians rose against the Order’s rule with Vytautas’s backing, and Poland let it be known that it would stand by Lithuania.
+        lonlat: [22.6, 55.7]
+    areas:
+      - style: contested
+        side: to
+        label: Samogitia, ceded to the Order in 1398 and 1404
+        atoms: [LT-TE, LT-TA, LT-SA]
+  - title: The Order strikes first
+    date: August 1409 – June 1410
+    when: "1409-08-06"
+    borders: "1409-10-08"
+    countries: [pl, lt]
+    body:
+      - "On 6 August 1409 Ulrich von Jungingen declared war on Poland and Lithuania, hoping to beat them one at a time. His army overran the Dobrzyń Land, burned the castle at Dobrzyń, took Bobrowniki after a fourteen-day siege and seized Bydgoszcz, while other forces raided Kuyavia and Greater Poland. The Poles, caught unprepared, gathered their levies and won Bydgoszcz back in the autumn. In the north the Samogitians attacked Memel."
+      - "Neither side was ready for a long war. Wenceslaus, King of the Romans and of Bohemia, arranged a truce on 8 October 1409 that was to last until 24 June 1410, and offered to judge the dispute. Early in 1410 he ruled that Samogitia belonged to the Order and only Dobrzyń should go back to Poland; the Order had given him 60,000 florins. The allies rejected the verdict and spent the winter planning a joint campaign against Malbork, while the Order hired mercenaries across the Empire."
+    facts:
+      - [Declaration of war, 6 August 1409]
+      - [Truce, 8 October 1409 – 24 June 1410]
+    markers:
+      - kind: taken
+        side: to
+        name: Dobrzyń
+        date: August 1409
+        text: The knights burned the castle and overran the Dobrzyń Land, which the Order had held in pawn until 1405.
+        lonlat: [19.3214, 52.6378]
+      - kind: siege
+        side: to
+        name: Bobrowniki
+        date: August 1409
+        text: The castle on the Vistula fell after a fourteen-day siege.
+        lonlat: [18.9472, 52.7794]
+        lp: l
+      - kind: siege
+        side: pl
+        name: Bydgoszcz
+        date: Autumn 1409
+        text: Taken by the knights in August and won back by the Poles before the truce.
+        lonlat: [18.0003, 53.1219]
+        lp: l
+      - kind: event
+        side: lt
+        name: Memel attacked
+        date: "1409"
+        text: The Samogitians struck at the Order’s castle at the mouth of the Neman.
+        lonlat: [21.13, 55.71]
+    arrows:
+      - side: to
+        label: Ulrich von Jungingen
+        via: [[18.61, 53.02], [18.9, 52.86], [19.3, 52.66]]
+      - side: to
+        via: [[18.43, 53.42], [18.25, 53.27], [18.04, 53.14]]
+    areas:
+      - style: occupied
+        side: to
+        label: Dobrzyń Land, occupied by the Order
+        polygon: [[18.78, 52.95], [19.1, 53.13], [19.5, 53.2], [19.75, 53.05], [19.72, 52.75], [19.45, 52.6], [19.1, 52.68], [18.85, 52.82]]
+  - title: Grunwald
+    date: June–July 1410
+    when: "1410-07-15"
+    borders: "1410-07-15"
+    countries: [pl, lt, by]
+    body:
+      - "The allies did what the Order did not expect and joined forces. Between 24 and 30 June 1410 the Polish army and Vytautas’s Lithuanians and Ruthenians, with Tatar and Czech contingents, crossed the Vistula at Czerwińsk on a pontoon bridge. Joined by the Masovians, they marched north and entered Prussia on 9 July. Ulrich von Jungingen blocked the crossing of the Drwęca at Kurzętnik, so Jagiełło turned east around the river’s headwaters, and his troops plundered the small town of Dąbrówno (Gilgenburg) on the way."
+      - "On 15 July the armies met in the fields near Grunwald and Stębark (Tannenberg). Modern estimates range from about 16,500 to 39,000 men on the allied side and from 11,000 to 27,000 for the Order. After more than an hour of heavy fighting the Lithuanian wing fell back, in flight or as a planned feint, which is still debated, but it returned to the field, and the Grand Master was killed trying to break through. The Order’s camp was overrun. Some 200 of its brother knights died, with most of its leaders, and thousands were taken prisoner."
+    facts:
+      - [Battle of Grunwald, "15 July 1410, Polish–Lithuanian victory"]
+      - [Commanders, "Władysław II Jagiełło and Vytautas; Ulrich von Jungingen, killed"]
+      - [Other names, "Tannenberg in German, Žalgiris in Lithuanian"]
+    markers:
+      - kind: event
+        side: pl
+        name: Czerwińsk
+        date: 24–30 June 1410
+        text: The Polish and Lithuanian armies met here and crossed the Vistula on a pontoon bridge prepared in advance.
+        lonlat: [20.3094, 52.3956]
+      - kind: held
+        side: to
+        name: Kurzętnik
+        date: 11 July 1410
+        text: The Order’s army held the crossing of the Drwęca, and Jagiełło chose not to force it.
+        lonlat: [19.5769, 53.3992]
+        lp: l
+      - kind: taken
+        side: pl
+        name: Dąbrówno
+        date: 13 July 1410
+        text: The allied army took and plundered the little town of Gilgenburg. The Order later made much of the atrocities it said were committed there.
+        lonlat: [20.0333, 53.4333]
+        lp: b
+      - kind: battle
+        side: pl
+        name: Battle of Grunwald
+        date: 15 July 1410
+        text: One of the largest battles of medieval Europe. Ulrich von Jungingen and most of the Order’s leaders were killed.
+        lonlat: [20.1247, 53.4861]
+    arrows:
+      - side: pl
+        label: Jagiełło
+        via: [[19.83, 51.5], [20.05, 51.95], [20.28, 52.37]]
+      - side: lt
+        label: Vytautas
+        via: [[23.83, 53.67], [22.6, 53.15], [21.2, 52.7], [20.36, 52.42]]
+      - side: pl
+        label: Allied army
+        via: [[20.3, 52.45], [19.85, 53.2], [20.15, 53.27], [20.1, 53.46]]
+      - side: to
+        label: Ulrich von Jungingen
+        via: [[18.45, 53.42], [19.1, 53.38], [19.75, 53.52], [20.08, 53.5]]
+  - title: Malbork holds, and the First Peace of Thorn
+    date: July 1410 – February 1411
+    when: "1410-07-26"
+    borders: "1411-02-01"
+    countries: [pl, lt]
+    body:
+      - "The victors stayed three days on the battlefield and moved slowly, reaching Malbork only on 26 July. By then Heinrich von Plauen, left with about 3,000 men at Świecie, had reached the castle and organised its defence. Most Prussian towns and castles, Gdańsk, Toruń and Elbląg among them, submitted to Jagiełło, and only eight castles held out. But Malbork resisted. The besiegers ran short of powder, suffered from dysentery and wanted to be home for the harvest, and the siege was lifted on 19 September."
+      - "The Order quickly won back most of its castles. A fresh Polish army beat a Teutonic force at Koronowo on 10 October, and von Plauen, elected Grand Master in November, agreed to talk. By the First Peace of Thorn on 1 February 1411 the Order returned the Dobrzyń Land and gave up Samogitia, but only for the lifetimes of Jagiełło and Vytautas, and paid 100,000 kopas of Prague groschen for its prisoners. Its losses of land were slight, but the payments and the taxes raised for them weakened the Order for good."
+    facts:
+      - [Siege of Malbork, 26 July – 19 September 1410]
+      - [First Peace of Thorn, 1 February 1411]
+      - [Ransom, "100,000 kopas of Prague groschen, about 20 tonnes of silver"]
+    markers:
+      - kind: held
+        side: to
+        name: Siege of Malbork
+        date: 26 July – 19 September 1410
+        text: Heinrich von Plauen burned the town outside the walls and held the castle for eight weeks until the allies gave up.
+        lonlat: [19.0278, 54.0397]
+      - kind: battle
+        side: pl
+        name: Battle of Koronowo
+        date: 10 October 1410
+        text: A Polish victory over a newly raised Teutonic army, which helped bring the Order to the table.
+        lonlat: [17.8111, 53.3569]
+      - kind: treaty
+        name: First Peace of Thorn
+        date: 1 February 1411
+        text: Signed at Toruń. The borders went back to those of 1409, apart from Samogitia, and the Order paid a huge ransom in four instalments.
+        lonlat: [18.6111, 53.0222]
+    arrows:
+      - side: pl
+        label: Jagiełło
+        via: [[20.12, 53.5], [19.97, 53.7], [19.34, 53.92], [19.08, 54.02]]
+      - side: to
+        label: von Plauen
+        via: [[18.43, 53.42], [18.75, 53.75], [18.98, 54.0]]
+    areas:
+      - style: gained
+        side: pl
+        label: Dobrzyń Land, returned to Poland
+        polygon: [[18.78, 52.95], [19.1, 53.13], [19.5, 53.2], [19.75, 53.05], [19.72, 52.75], [19.45, 52.6], [19.1, 52.68], [18.85, 52.82]]
+      - style: gained
+        side: lt
+        label: Samogitia, to Lithuania for the lifetimes of Jagiełło and Vytautas
+        atoms: [LT-TE, LT-TA, LT-SA]

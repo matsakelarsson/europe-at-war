@@ -1,0 +1,128 @@
+id: polish-ottoman-war-1672
+name: Polish–Ottoman War, 1672–1676
+start: "1672"
+end: "1676"
+tier: B
+summary: Sultan Mehmed IV, backing the Cossack hetman Petro Doroshenko, took the fortress of Kamianets and forced Poland–Lithuania to cede Podolia at Buchach in 1672. Jan Sobieski’s victory at Khotyn in 1673 helped make him king, but the Treaty of Żurawno in 1676 left Podolia Ottoman.
+countries: [pl, lt, ua, tr, md]
+sides:
+  - id: pl
+    name: Poland–Lithuania
+    polities: [poland, lithuania, poland-lithuania]
+    ink: magenta
+    moves: Polish–Lithuanian moves
+    success: Polish–Lithuanian success
+  - id: ot
+    name: Ottoman Empire and the Tatars
+    polities: [ottoman, crimean-khanate]
+    ink: teal
+    moves: Ottoman and Tatar moves
+    success: Ottoman success
+  - id: zc
+    name: Doroshenko’s Cossacks
+    polities: [cossack-hetmanate]
+    ink: gold
+    moves: Cossack moves
+    success: Cossack success
+notes:
+  - Dates are New Style (Gregorian).
+  - The Ottomans held Podolia until the Treaty of Karlowitz in 1699; see the Great Turkish War.
+sources:
+  - title: Polish–Ottoman War (1672–1676) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Polish%E2%80%93Ottoman_War_(1672%E2%80%931676)
+  - title: Peace of Buczacz (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peace_of_Buczacz
+  - title: Battle of Khotyn (1673) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Khotyn_(1673)
+  - title: Treaty of Żurawno (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_%C5%BBurawno
+steps:
+  - title: Kamianets and the Peace of Buchach
+    date: 1672
+    when: "1672"
+    borders: "1672-10-18"
+    countries: [ua, pl, tr]
+    body:
+      - Ukraine west of the Dnieper was still fought over after the Truce of Andrusovo. Its hetman, Petro Doroshenko, placed himself under the sultan in 1669, and in August 1672 Mehmed IV and his grand vizier Köprülü Fazıl Ahmed Pasha invaded with an army of perhaps 80,000. The Commonwealth, under the weak King Michael Korybut Wiśniowiecki and divided by noble feuds, was unready. Kamianets, the great fortress of Podolia, surrendered on 27 August after a siege of about ten days, and its cathedral became a mosque.
+      - The Ottomans then besieged Lviv, while Tatar raiders spread across south-eastern Poland. Crown Grand Hetman Jan Sobieski, with only about 3,000 horsemen, struck at the raiding parties in October and freed many thousands of captives. But on 18 October the king’s envoys signed the Peace of Buchach. Podolia became an Ottoman province, the Bratslav lands and southern Kyiv region went to Doroshenko, and the Commonwealth was to pay an annual tribute of 22,000 ducats. The Sejm refused to ratify it.
+    facts:
+      - [Kamianets surrendered, 27 August 1672]
+      - [Peace of Buchach, "18 October 1672, never ratified by the Sejm"]
+    markers:
+      - kind: siege
+        side: ot
+        name: Kamianets
+        date: August 1672
+        text: The garrison gave up after Ottoman guns and mines breached the old castle. As the troops withdrew the castle’s powder magazine exploded, killing Colonel Jerzy Wołodyjowski among others.
+        lonlat: [26.56, 48.67]
+      - kind: siege
+        name: Lviv
+        date: September – October 1672
+        text: The city held out and bought off the besiegers with a ransom.
+        lonlat: [24.03, 49.84]
+      - kind: battle
+        side: pl
+        name: Sobieski’s raid
+        date: 5–14 October 1672
+        text: In ten days of hard riding Sobieski beat several Tatar raiding parties, among them at Niemirów and Komarno, and freed their captives.
+        lonlat: [23.70, 49.62]
+        lp: l
+      - kind: treaty
+        side: ot
+        name: Peace of Buchach
+        date: 18 October 1672
+        text: Signed in the sultan’s camp. Poles remember it as one of the most humiliating treaties in their history.
+        lonlat: [25.40, 49.08]
+    arrows:
+      - side: ot
+        label: Mehmed IV
+        via: [[27.9, 46.6], [27.0, 47.8], [26.6, 48.6]]
+      - side: ot
+        via: [[26.3, 48.85], [25.2, 49.3], [24.15, 49.78]]
+    areas:
+      - style: lost
+        side: ot
+        label: Ceded to the Ottoman Empire
+        atoms: [UA-68]
+  - title: Khotyn and Żurawno
+    date: 1673–1676
+    when: "1673"
+    borders: "1676-10-17"
+    countries: [ua, pl, lt, tr, md]
+    body:
+      - The Sejm voted money for an army instead of tribute. In November 1673 Sobieski, with about 30,000 Polish and Lithuanian troops, marched on the fortified Ottoman camp at Khotyn. After a freezing night his men stormed it at dawn on 11 November, and much of Hüseyin Pasha’s army was killed or drowned when the bridge over the Dniester collapsed. King Michael had died the day before, and in May 1674 the nobles elected Sobieski king as John III.
+      - He could not win back Kamianets. In 1675 an Ottoman and Tatar army advanced again, and Sobieski beat it outside Lviv in August, while the small garrison of Terebovlia held out for three weeks. In 1676 a much larger Ottoman army besieged his camp at Żurawno on the Dniester for two weeks, and on 17 October the two sides made peace. Poland–Lithuania no longer had to pay tribute and got back part of Ukraine, but Podolia stayed Ottoman.
+    facts:
+      - [Battle of Khotyn, "11 November 1673, Polish–Lithuanian victory"]
+      - [Treaty of Żurawno, "17 October 1676"]
+      - [New king, "John III Sobieski, elected May 1674"]
+    markers:
+      - kind: battle
+        side: pl
+        name: Battle of Khotyn
+        date: 11 November 1673
+        text: Sobieski’s infantry broke into the Ottoman camp, and his hussars finished the rout. Moldavian and Wallachian troops changed sides.
+        lonlat: [26.50, 48.49]
+      - kind: battle
+        side: pl
+        name: Battle of Lviv
+        date: August 1675
+        text: Sobieski beat a Tatar army approaching the city.
+        lonlat: [24.03, 49.84]
+      - kind: held
+        side: pl
+        name: Terebovlia
+        date: 20 September – 11 October 1675
+        text: A garrison of a few hundred soldiers and townspeople under Jan Samuel Chrzanowski held the castle until relief came. His wife, Anna Dorota, is remembered for urging them on.
+        lonlat: [25.69, 49.30]
+      - kind: treaty
+        side: ot
+        name: Treaty of Żurawno
+        date: 17 October 1676
+        text: Agreed in the besieged Polish camp. The Sejm never ratified it, but the border held until 1683.
+        lonlat: [24.28, 49.26]
+    areas:
+      - style: lost
+        side: ot
+        label: Held by the Ottoman Empire
+        atoms: [UA-68]

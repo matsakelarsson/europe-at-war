@@ -3,7 +3,7 @@ name: Count’s Feud and Dacke War
 start: "1534"
 end: "1543"
 tier: B
-summary: ""
+summary: Denmark’s civil war of 1534–1536, in which Lübeck tried to restore the deposed Christian II and Christian III won the throne with Swedish help and then made Denmark–Norway Lutheran, followed by the Dacke War, the great peasant rising in Småland against Gustav Vasa in 1542–1543.
 sides:
   - id: se
     name: Sweden
@@ -12,6 +12,18 @@ sides:
     ink: blue
     moves: Swedish and allied moves
     success: Swedish success
+  - id: dk
+    name: Christian III
+    polities: [denmark-norway, danish-duchies]
+    ink: red
+    moves: Christian III’s moves
+    success: Christian III’s success
+  - id: lub
+    name: Lübeck and Count Christopher
+    polities: [lubeck]
+    ink: brown
+    moves: Moves of Lübeck and the Count
+    success: Success for Lübeck and the Count
 notes:
   - Dates in Germany and Poland are New Style (Gregorian); Scandinavian dates are mostly Old Style (Julian), as usually cited, which ran ten days behind.
   - Migrated from Sweden at War, so the story is told from Sweden’s side.
@@ -22,6 +34,10 @@ sources:
     title: Dacke War (Wikipedia)
   - url: https://hhogman.se/swe_wars-1500s.htm
     title: Swedish wars in the 1500s (Hans Högman)
+  - url: https://en.wikipedia.org/wiki/Count%27s_Feud
+    title: Count’s Feud (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Reformation_in_Denmark%E2%80%93Norway_and_Holstein
+    title: Reformation in Denmark–Norway and Holstein (Wikipedia)
 steps:
   - title: The Count’s Feud and Dacke’s revolt
     date: 1534–1543
@@ -29,6 +45,8 @@ steps:
     borders: "1521"
     countries:
       - se
+      - dk
+      - de
     view:
       center:
         - 14.4833
@@ -110,3 +128,53 @@ steps:
             - 56.0927
           - - 12.7589
             - 56.0687
+  - title: The siege of Copenhagen and the Reformation
+    date: 1534–1537
+    when: "1535-07"
+    borders: "1536-07-29"
+    countries: [dk, "no", de]
+    body:
+      - The civil war began in 1534, when Lübeck, under its mayor Jürgen Wullenwever, hired Count Christopher of Oldenburg to restore the imprisoned Christian II. Copenhagen and Malmö opened their gates to him, and in north Jutland the privateer Skipper Clement raised the peasants, who beat the nobles at Svenstrup in October. The frightened nobles of Jutland and Funen chose the Lutheran Duke Christian of Holstein as king. His general, Johan Rantzau, stormed Aalborg on 18 December 1534, killing some 2,000 people, and crushed the rising.
+      - In June 1535 Rantzau destroyed the Count’s army at Øksnebjerg on Funen, while the allied fleet beat Lübeck’s at sea. Christian III then besieged Copenhagen for a year. Malmö gave in in April 1536, and Copenhagen, starving, surrendered on 29 July. Christian used his victory to carry out the Reformation. In August he had the Catholic bishops arrested; an assembly in October deposed them and gave their estates to the crown, and a Lutheran church order followed in 1537. Norway, whose archbishop had opposed Christian III, lost its own council of the realm and was ruled from Copenhagen as part of the Danish realm.
+    facts:
+      - [Aalborg stormed, "18 December 1534, some 2,000 killed"]
+      - [Copenhagen surrenders, "29 July 1536, after a siege of a year"]
+      - [Catholic bishops arrested, "12 August 1536"]
+    markers:
+      - kind: battle
+        side: lub
+        name: Battle of Svenstrup
+        date: 16 October 1534
+        text: Skipper Clement’s peasants routed the army of the north Jutland nobles south of Aalborg.
+        lonlat: [9.85, 56.97]
+        lp: l
+      - kind: taken
+        side: dk
+        name: Aalborg
+        date: 18 December 1534
+        text: Rantzau’s troops stormed the town where the rebel peasants had taken refuge, and slaughtered many of its defenders. Skipper Clement was later executed.
+        lonlat: [9.917, 57.05]
+      - kind: battle
+        side: dk
+        name: Battle of Øksnebjerg
+        date: 11 June 1535
+        text: Rantzau’s army defeated the last field army of Count Christopher’s side near Assens on Funen.
+        lonlat: [9.98, 55.28]
+      - kind: siege
+        side: dk
+        name: Siege of Copenhagen
+        date: July 1535 – 29 July 1536
+        text: The city held out for a year until its people were starving. Christian III entered it in August 1536.
+        lonlat: [12.568, 55.676]
+    arrows:
+      - side: dk
+        label: Rantzau
+        via: [[9.95, 56.95], [9.6, 56.0], [9.85, 55.3]]
+      - side: dk
+        label: Christian III
+        via: [[10.2, 55.35], [11.3, 55.4], [12.45, 55.65]]
+    areas:
+      - style: occupied
+        side: lub
+        label: Held by Count Christopher’s side, 1534–1535
+        atoms: [DK-84!, DK-85]

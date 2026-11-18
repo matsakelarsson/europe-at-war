@@ -1,0 +1,121 @@
+id: muscovite-lithuanian-wars
+name: Muscovite–Lithuanian Wars, 1492–1537
+start: "1492"
+end: "1537"
+tier: B
+summary: A series of wars in which the Grand Duchy of Moscow, claiming the lands of the old Kievan Rus’, took a large part of eastern Lithuania. The peace of 1494 and the truce of 1503 cost Lithuania Vyazma, Chernihiv and Siveria, and Smolensk fell in 1514 despite the Polish–Lithuanian victory at Orsha; a last war in 1534–1537 changed little.
+sides:
+  - id: lt
+    name: Lithuania and Poland
+    polities: [lithuania, poland-lithuania, poland]
+    ink: brown
+    moves: Lithuanian and Polish moves
+    success: Lithuanian or Polish success
+  - id: ru
+    name: Moscow
+    polities: [russia]
+    ink: green
+    moves: Muscovite moves
+    success: Muscovite success
+notes:
+  - Dates are Julian (Old Style), as the sources give them.
+  - Lithuania and Poland were separate states under one dynasty; Polish troops fought in strength only from 1514. Moscow was often allied with the Crimean Khanate, and Lithuania at times with the Livonian Order.
+  - The wars are usually counted as five, in 1487–1494, 1500–1503, 1507–1508, 1512–1522 and 1534–1537. Only the two that changed the border most are told here.
+sources:
+  - title: Muscovite–Lithuanian Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Muscovite%E2%80%93Lithuanian_Wars
+  - title: Battle of Vedrosha (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Vedrosha
+  - title: Siege of Smolensk, 1514 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Smolensk_(1514)
+  - title: Battle of Orsha (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Orsha
+steps:
+  - title: Vedrosha and the loss of Siveria
+    date: 1500–1503
+    when: "1500"
+    borders: "1503-03-25"
+    countries: [lt, ru, by, ua]
+    body:
+      - "Ivan III of Moscow called himself sovereign of all Russia and claimed the lands of the old Kievan Rus’, many of them ruled by Lithuania. A first border war in 1492–1494 cost Lithuania Vyazma and towns on the upper Oka. In May 1500, citing the treatment of the Orthodox in Lithuania, Ivan attacked again, and several Orthodox border princes went over to him. Bryansk, Dorogobuzh, Putyvl and other towns fell quickly. On 14 July 1500 his army crushed a Lithuanian force on the Vedrosha river near Dorogobuzh and captured its commander, Grand Hetman Konstanty Ostrogski."
+      - "Lithuania was beaten again at Mstsislaw in 1501. The Livonian Order came in on its side and won on the Seritsa in August 1501, and a Muscovite siege of Smolensk in 1502 failed. A six-year truce was agreed on 25 March 1503, the feast of the Annunciation. Moscow kept Chernihiv, Novhorod-Siverskyi, Starodub, Bryansk and the upper Oka lands, by some estimates about a third of the Grand Duchy."
+    facts:
+      - [Battle of Vedrosha, "14 July 1500, Muscovite victory"]
+      - [Truce of 1503, 25 March 1503]
+      - [Grand dukes, Alexander of Lithuania and Ivan III of Moscow]
+    markers:
+      - kind: taken
+        side: ru
+        name: Bryansk
+        date: "1500"
+        text: One of the first Lithuanian towns to fall to Ivan III’s armies.
+        lonlat: [34.3667, 53.2425]
+      - kind: battle
+        side: ru
+        name: Battle of Vedrosha
+        date: 14 July 1500
+        text: The Lithuanians attacked a larger Muscovite army across the river and were routed. Ostrogski spent seven years as a prisoner.
+        lonlat: [33.4769, 54.8186]
+      - kind: battle
+        side: ru
+        name: Mstsislaw
+        date: November 1501
+        text: A second Lithuanian defeat, east of the Dnieper.
+        lonlat: [31.73, 54.02]
+        lp: l
+      - kind: held
+        side: lt
+        name: Smolensk
+        date: "1502"
+        text: The fortress on the Dnieper withstood a Muscovite siege.
+        lonlat: [32.0453, 54.7828]
+        lp: l
+    arrows:
+      - side: ru
+        label: Ivan III’s army
+        via: [[36.9, 55.55], [34.3, 55.2], [33.55, 54.86]]
+      - side: lt
+        label: Ostrogski
+        via: [[32.1, 54.78], [32.9, 54.78], [33.4, 54.81]]
+    areas:
+      - style: lost
+        side: lt
+        label: Lost by Lithuania in 1503 (approximate)
+        atoms: [RU-BRY, UA-74, UA-59]
+  - title: Smolensk and Orsha
+    date: 1512–1522
+    when: "1514"
+    borders: "1522"
+    countries: [lt, pl, ru, by]
+    body:
+      - "Ivan’s son Vasily III renewed the war in December 1512, aiming at Smolensk, the great fortress on the upper Dnieper. Sieges in 1513 failed, but a third, with heavy artillery, forced the town to surrender on 30 July 1514. Muscovite forces pushed on towards Orsha and Mstsislaw. King Sigismund I raised an army of about 35,000, more than half of them Poles, and gave the field command to Konstanty Ostrogski, who had escaped from Muscovite captivity."
+      - "On 8 September 1514 Ostrogski crossed the Dnieper near Orsha on pontoon bridges and routed the Muscovite army, whose commander Ivan Chelyadnin was captured. Sigismund celebrated the victory across Europe, but his army could not retake Smolensk. The war dragged on in raids until a truce in 1522 left Smolensk with Moscow, which kept it until 1611. A further war in 1534–1537 ended with Lithuania regaining Homel and Moscow keeping Sebezh."
+    facts:
+      - [Smolensk, "Surrendered to Moscow, 30 July 1514"]
+      - [Battle of Orsha, "8 September 1514, Polish–Lithuanian victory"]
+      - [Size of the armies, "Disputed; a contemporary claimed 80,000 Muscovites, modern estimates are much lower"]
+    markers:
+      - kind: siege
+        side: ru
+        name: Smolensk
+        date: July 1514
+        text: After two failed sieges, Vasily III’s artillery forced the garrison to give up the city.
+        lonlat: [32.0453, 54.7828]
+      - kind: battle
+        side: lt
+        name: Battle of Orsha
+        date: 8 September 1514
+        text: Ostrogski’s Lithuanian and Polish cavalry, with infantry and guns, beat the Muscovites on the banks of the Krapivna.
+        lonlat: [30.3833, 54.5]
+    arrows:
+      - side: ru
+        label: Vasily III
+        via: [[34.3, 55.2], [33.3, 54.92], [32.15, 54.8]]
+      - side: lt
+        label: Ostrogski
+        via: [[28.5, 54.23], [29.4, 54.35], [30.3, 54.48]]
+    areas:
+      - style: lost
+        side: lt
+        label: Smolensk, lost by Lithuania
+        atoms: [RU-SMO]

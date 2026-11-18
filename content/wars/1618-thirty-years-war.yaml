@@ -3,7 +3,7 @@ name: Thirty Years’ War
 start: "1618"
 end: "1648"
 tier: A
-summary: ""
+summary: The long war in the Holy Roman Empire between the Catholic Emperor and his allies and Protestant princes backed by foreign powers, which devastated much of Germany. Denmark–Norway fought in it in 1625–1629 and Sweden from 1630; by the Peace of Westphalia in 1648 Sweden gained Western Pomerania, Wismar and Bremen-Verden.
 sides:
   - id: se
     name: Sweden
@@ -21,9 +21,15 @@ sides:
       - hre
       - habsburg
       - bavaria
+  - id: dk
+    name: Denmark–Norway
+    polities: [denmark-norway, danish-duchies]
+    ink: red
+    moves: Danish–Norwegian moves
+    success: Danish–Norwegian success
 notes:
   - Dates in Germany and Poland are New Style (Gregorian); Scandinavian dates are mostly Old Style (Julian), as usually cited, which ran ten days behind.
-  - Migrated from Sweden at War, so the story is told from Sweden’s side.
+  - The Swedish phase (1630–1648) was migrated from Sweden at War and is told from Sweden’s side. The Danish phase (1625–1629) was added for Europe at War; the war’s Bohemian and Palatine phases (1618–1623) are not yet told here.
 sources:
   - url: https://en.wikipedia.org/wiki/Treaty_of_Stettin_(1630)
     title: Treaty of Stettin, 1630 (Wikipedia)
@@ -43,13 +49,189 @@ sources:
     title: Second Battle of Breitenfeld (Wikipedia)
   - url: https://www.britannica.com/event/Peace-of-Westphalia
     title: Peace of Westphalia (Britannica)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Lutter
+    title: Battle of Lutter (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Siege_of_Stralsund_(1628)
+    title: Siege of Stralsund, 1628 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Wolgast
+    title: Battle of Wolgast (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Treaty_of_L%C3%BCbeck
+    title: Treaty of Lübeck (Wikipedia)
 steps:
+  - title: Christian IV enters the war
+    date: 1625 – spring 1626
+    when: "1625"
+    borders: "1625"
+    countries: [dk, de]
+    side_names:
+      foe: Imperial and Catholic League success
+    move_names:
+      foe: Imperial and Catholic League moves
+    body:
+      - By 1625 the Emperor Ferdinand II and the Catholic League had crushed the Bohemian revolt and overrun the Palatinate, and the Protestant princes of northern Germany feared that their lands and their former church estates would be next. Christian IV of Denmark–Norway, who as Duke of Holstein was also a prince of the Empire, took command of the forces of the Lower Saxon Circle in May 1625. He hoped as well to win north German bishoprics for his sons.
+      - Christian had few trained troops, and England and the Dutch Republic agreed to pay for more only in the Treaty of The Hague in December 1625. Meanwhile the Emperor gained an army of his own, raised by the Bohemian nobleman Albrecht von Wallenstein and fed by the lands it occupied. In April 1626 Wallenstein beat Christian’s ally Ernst von Mansfeld at the Dessau Bridge on the Elbe, and Mansfeld’s army marched off towards Silesia and Hungary.
+    facts:
+      - [Christian IV, "King of Denmark–Norway and Duke of Holstein"]
+      - [Allies, "German Protestant princes, with English and Dutch subsidies"]
+      - [Battle of Dessau Bridge, "25 April 1626, Imperial victory"]
+    markers:
+      - kind: held
+        side: dk
+        name: Wolfenbüttel
+        date: "1626"
+        text: Christian’s headquarters in the duchy of Brunswick, from where he set out against Tilly in the summer of 1626.
+        lonlat: [10.537, 52.162]
+      - kind: event
+        side: foe
+        name: Halberstadt
+        date: "1625"
+        text: Catholic League troops under Tilly occupied this Protestant-held bishopric early in 1625, while Wallenstein’s new imperial army moved against nearby Magdeburg.
+        lonlat: [11.05, 51.9]
+      - kind: battle
+        side: foe
+        name: Battle of Dessau Bridge
+        date: 25 April 1626
+        text: Mansfeld’s attack on Wallenstein’s fortified bridgehead over the Elbe was beaten off with heavy losses.
+        lonlat: [12.237, 51.884]
+    arrows:
+      - side: dk
+        label: Christian IV
+        via: [[9.6, 53.75], [9.8, 53.0], [10.5, 52.2]]
+  - title: Lutter
+    date: Summer 1626
+    when: "1626-08-27"
+    borders: "1626"
+    countries: [dk, de]
+    side_names:
+      foe: Imperial and Catholic League success
+    move_names:
+      foe: Imperial and Catholic League moves
+    body:
+      - In late July 1626 Christian led his army out of Wolfenbüttel to seek battle with Tilly’s Catholic League army, not knowing that Wallenstein had sent Tilly more than 4,000 reinforcements. Outmanoeuvred and soaked by torrential rain, the Danes turned back, and for three days their rearguard fought off Tilly’s cavalry. On 27 August Christian decided to stand at Lutter am Barenberge.
+      - An unauthorised attack by his right wing drew the whole army into a general advance, which was thrown back with heavy losses. Christian had four horses shot under him and fled with his cavalry. He left behind about 3,000 dead and wounded and all his artillery, and 2,500 more men surrendered the next day; Tilly lost about 700. Most of Christian’s German allies now abandoned him, and he withdrew to winter quarters at Stade.
+    facts:
+      - [Battle of Lutter, "27 August 1626, Catholic League victory"]
+      - [Danish losses, "About 3,000 killed or wounded and 2,500 captured"]
+      - [League losses, "About 700 killed or wounded"]
+    markers:
+      - kind: battle
+        side: foe
+        name: Battle of Lutter
+        date: 27 August 1626
+        text: Tilly’s veterans broke the Danish-German army at the foot of the Barenberg, twenty miles from Wolfenbüttel. The survivors who took refuge in Lutter castle surrendered the next day.
+        lonlat: [10.27, 51.98]
+      - kind: held
+        side: dk
+        name: Stade
+        date: Winter 1626–1627
+        text: Unable to hold Wolfenbüttel, Christian moved his winter quarters north to the lower Elbe.
+        lonlat: [9.476, 53.6]
+    arrows:
+      - side: foe
+        label: Tilly
+        via: [[9.93, 51.53], [10.1, 51.8], [10.24, 51.96]]
+      - side: dk
+        label: Retreat to Stade
+        via: [[10.3, 52.05], [9.9, 52.9], [9.5, 53.55]]
+  - title: Wallenstein in Jutland
+    date: "1627"
+    when: "1627-09"
+    borders: "1627"
+    countries: [dk, de]
+    side_names:
+      foe: Imperial and Catholic League success
+    move_names:
+      foe: Imperial and Catholic League moves
+    body:
+      - In the summer of 1627 Wallenstein brought his army north and joined Tilly, and the Danish forces were swept out of Lower Saxony. In September the two armies invaded Holstein and then pushed up through Schleswig and the Jutland peninsula as far as the Limfjord, while Christian withdrew to the Danish islands, which his navy kept safe. The occupying troops lived off the land, and Jutland suffered heavy requisitions, looting and violence.
+      - The Emperor rewarded Wallenstein with the duchy of Mecklenburg, whose dukes had sided with Christian, and in April 1628 named him “General of the Oceanic and Baltic Seas”. Together with Spain he planned an imperial fleet on the Baltic, to be built in the captured ports of Wismar, Rostock and Greifswald. The prospect of Habsburg power on the Baltic alarmed both Denmark and Sweden, which made an alliance in April 1628.
+    facts:
+      - [Invasion of Holstein, "September 1627"]
+      - [Occupied, "Holstein, Schleswig and Jutland, 1627–1629"]
+      - [Wallenstein, "Duke of Mecklenburg from January 1628"]
+    markers:
+      - kind: held
+        side: dk
+        name: Glückstadt
+        date: 1627–1628
+        text: Christian IV’s new fortress town on the Elbe held out, supplied by sea.
+        lonlat: [9.422, 53.792]
+        lp: l
+      - kind: taken
+        side: foe
+        name: Aalborg
+        date: "1627"
+        text: Imperial troops reached the Limfjord, and Wallenstein planned to use the port for his fleet. The Danes later raided it from the sea and destroyed the naval works.
+        lonlat: [9.917, 57.05]
+      - kind: event
+        side: foe
+        name: Güstrow
+        date: "1628"
+        text: Wallenstein made the castle of the deposed dukes his residence as the new Duke of Mecklenburg.
+        lonlat: [12.175, 53.794]
+    arrows:
+      - side: foe
+        label: Wallenstein and Tilly
+        via: [[10.5, 53.5], [9.9, 54.3], [9.4, 55.3], [9.7, 56.6]]
+    areas:
+      - style: occupied
+        side: foe
+        label: Occupied by Imperial and League troops, 1627–1629
+        atoms: [DE-SH~holstein, DE-SH~schleswig, DK-83~jut, DK-82, DK-81]
+  - title: Stralsund, Wolgast and the Peace of Lübeck
+    date: 1628–1629
+    when: "1628-05"
+    borders: "1629-05-22"
+    countries: [dk, de]
+    side_names:
+      foe: Imperial and Catholic League success
+    move_names:
+      foe: Imperial and Catholic League moves
+    body:
+      - The Pomeranian port of Stralsund refused to take an imperial garrison, and in May 1628 imperial troops laid siege to it. Denmark sent help by sea, including 900 Scots of Donald Mackay’s regiment, of whom 500 were killed in the fighting. Swedish troops followed, and in June the town made a twenty-year alliance with Sweden. Wallenstein took command himself but lifted the siege on 4 August, his first serious setback.
+      - Christian IV used his command of the sea to raid the coasts. In August he landed on Usedom with 7,000 men and took Wolgast, but on 2 September Wallenstein beat him outside the town and the Danes re-embarked. Both men now wanted peace. By the Peace of Lübeck, signed on 22 May 1629, Christian got back all his lands without paying anything, but gave up his claims to the north German bishoprics and promised to stay out of the Empire’s affairs. The next year Sweden entered the war.
+    facts:
+      - [Siege of Stralsund, "13 May – 4 August 1628, abandoned"]
+      - [Battle of Wolgast, "2 September 1628, Imperial victory"]
+      - [Peace of Lübeck, "22 May 1629, ratified by the Emperor on 7 June"]
+    markers:
+      - kind: siege
+        side: dk
+        name: Siege of Stralsund
+        date: 13 May – 4 August 1628
+        text: Danish, Scottish and then Swedish troops helped the townspeople beat off repeated assaults. The town stayed in Swedish hands for most of the next two centuries.
+        lonlat: [13.082, 54.309]
+      - kind: battle
+        side: foe
+        name: Battle of Wolgast
+        date: 2 September 1628
+        text: Wallenstein, fresh from Stralsund, routed Christian’s landing force, which had to abandon the town.
+        lonlat: [13.767, 54.05]
+      - kind: treaty
+        name: Peace of Lübeck
+        date: 22 May 1629
+        text: Negotiated in secret by Christian and Wallenstein. Denmark–Norway lost no land but left the war.
+        lonlat: [10.686, 53.87]
+    arrows:
+      - side: dk
+        label: Christian IV, 1628
+        via: [[12.6, 55.55], [13.2, 54.75], [13.85, 54.15]]
+      - side: foe
+        label: Wallenstein
+        via: [[13.05, 54.25], [13.45, 54.1], [13.72, 54.05]]
+    areas:
+      - style: occupied
+        side: foe
+        label: Occupied by Imperial and League troops until the peace
+        atoms: [DE-SH~holstein, DE-SH~schleswig, DK-83~jut, DK-82, DK-81]
   - title: Sweden enters the war
     date: "1630"
     when: "1630"
     borders: "1630"
     countries:
       - se
+      - de
+      - pl
     view:
       center:
         - 15.5455
@@ -144,6 +326,7 @@ steps:
     borders: "1630"
     countries:
       - se
+      - de
     view:
       center:
         - 11.0017
@@ -278,6 +461,7 @@ steps:
     borders: "1630"
     countries:
       - se
+      - de
     view:
       center:
         - 10.8532
@@ -415,6 +599,8 @@ steps:
     borders: "1630"
     countries:
       - se
+      - de
+      - pl
     view:
       center:
         - 13.4599
@@ -515,6 +701,8 @@ steps:
     borders: "1630"
     countries:
       - se
+      - de
+      - cz
     view:
       center:
         - 12.4962
@@ -644,6 +832,8 @@ steps:
     borders: "1630"
     countries:
       - se
+      - de
+      - cz
     view:
       center:
         - 14.0685
@@ -653,7 +843,7 @@ steps:
         - 592
     body:
       - Lennart Torstenson moved fast. He took Olomouc in Moravia in June 1642 and destroyed an Imperial army at the second battle of Breitenfeld on 2 November 1642.
-      - After a lightning campaign against Denmark (next step), he turned south again. At Jankau in Bohemia on 6 March 1645 he routed the Emperor’s army and headed for Vienna, but a long siege of Brno failed and he had to withdraw.
+      - After a lightning campaign against Denmark (see the Torstenson War), he turned south again. At Jankau in Bohemia on 6 March 1645 he routed the Emperor’s army and headed for Vienna, but a long siege of Brno failed and he had to withdraw.
     facts:
       - - Commander
         - Lennart Torstenson
@@ -769,6 +959,8 @@ steps:
     borders: "1648"
     countries:
       - se
+      - de
+      - cz
     view:
       center:
         - 11.3785

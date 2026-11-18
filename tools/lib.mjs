@@ -21,13 +21,15 @@ export function slug(s) {
 
 /** Curated + auto polities, merged. Curated wins on id and alias clashes. */
 export async function loadPolities() {
+  // polities.yaml plus any topic files in content/polities/ (all curated).
   const curated = (await readYAML(join(CONTENT, 'polities.yaml'))) || [];
+  for (const f of await listFiles(join(CONTENT, 'polities'), '.yaml')) curated.push(...(((await readYAML(join(CONTENT, 'polities', f))) || []).map((p) => ({ ...p, file: f }))));
   let auto = [];
   if (await exists(join(CONTENT, 'polities.auto.yaml'))) auto = (await readYAML(join(CONTENT, 'polities.auto.yaml'))) || [];
   const byId = new Map();
   const alias = new Map();
   for (const p of curated) {
-    if (byId.has(p.id)) throw new Error(`polities.yaml: duplicate id ${p.id}`);
+    if (byId.has(p.id)) throw new Error(`${p.file || 'polities.yaml'}: duplicate polity id ${p.id}`);
     byId.set(p.id, { ...p, curated: true });
     for (const a of p.aliases || []) {
       if (alias.has(a) && alias.get(a) !== p.id) throw new Error(`polities.yaml: alias "${a}" used by ${alias.get(a)} and ${p.id}`);

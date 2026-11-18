@@ -1,0 +1,131 @@
+id: polish-russian-war-1792
+name: War in Defence of the Constitution
+start: "1792"
+end: "1792"
+tier: B
+summary: Also called the Polish–Russian War of 1792. Catherine II sent her armies into Poland–Lithuania in support of the Confederation of Targowica, magnates opposed to the reforming Constitution of 3 May 1791. After three months the king gave in, and in 1793 Russia and Prussia carried out the Second Partition.
+countries: [pl, lt, by, ua, ru, de]
+sides:
+  - id: pl
+    name: Poland–Lithuania
+    polities: [poland, lithuania, poland-lithuania]
+    ink: magenta
+    moves: Polish–Lithuanian moves
+    success: Polish–Lithuanian success
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: tg
+    name: Confederation of Targowica
+    ink: brown
+    moves: Targowica moves
+    success: Targowica success
+  - id: pr
+    name: Prussia
+    polities: [prussia]
+    ink: slate
+    moves: Prussian moves
+    success: Prussian success
+notes:
+  - Dates are New Style (Gregorian).
+sources:
+  - title: Polish–Russian War of 1792 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Polish%E2%80%93Russian_War_of_1792
+  - title: Constitution of 3 May 1791 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Constitution_of_3_May_1791
+  - title: Targowica Confederation (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Targowica_Confederation
+  - title: Battle of Zieleńce (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Zielence
+  - title: Battle of Dubienka (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Dubienka
+  - title: Second Partition of Poland (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Partition_of_Poland
+steps:
+  - title: The Constitution and Targowica
+    date: 1788 – May 1792
+    when: "1791-05-03"
+    borders: "1792-05-18"
+    countries: [pl, lt, ua, by, ru]
+    body:
+      - While Russia was busy fighting the Ottomans and Sweden, the Great Sejm that met in Warsaw from 1788 set out to rebuild the state left weak after the First Partition of 1772. It allied with Prussia in 1790, and on 3 May 1791 it passed a new constitution, the first of its kind in Europe. It made the throne hereditary, abolished the liberum veto that let one deputy block the Sejm, gave townspeople new rights, placed peasants under the protection of the law and planned an army of 100,000.
+      - Catherine II saw the reforms as a threat to Russian control. Once peace with the Ottomans was signed in January 1792, she backed a group of magnates led by Stanisław Szczęsny Potocki, Franciszek Ksawery Branicki and Seweryn Rzewuski. Their act of confederation, drawn up in St Petersburg in April, was proclaimed in the border town of Targowica on 14 May, and on 18 May nearly 100,000 Russian troops crossed into Poland and Lithuania. Prussia refused to honour its alliance.
+    facts:
+      - [Constitution of 3 May, "Adopted 3 May 1791 by the Great Sejm"]
+      - [Russian invasion, "18 May 1792, nearly 98,000 men"]
+      - [Polish–Lithuanian field army, "About 37,000 men"]
+    markers:
+      - kind: event
+        side: pl
+        name: Constitution of 3 May
+        date: 3 May 1791
+        text: The Sejm adopted the constitution in the Royal Castle in Warsaw, passing it quickly while many opponents were away for Easter.
+        lonlat: [21.01, 52.25]
+      - kind: event
+        side: tg
+        name: Targowica
+        date: 14 May 1792
+        text: The confederates proclaimed their act here, on the Russian border, claiming to defend the old liberties of the nobility.
+        lonlat: [30.79, 48.66]
+    arrows:
+      - side: ru
+        label: Kakhovsky
+        via: [[29.6, 48.4], [28.3, 49.1], [27.0, 49.6]]
+      - side: ru
+        label: Krechetnikov
+        via: [[30.3, 53.9], [27.6, 53.9], [25.4, 54.65]]
+  - title: Zieleńce, Dubienka and the Second Partition
+    date: June 1792 – 1793
+    when: "1792-06"
+    borders: "1793-09-25"
+    countries: [pl, lt, ua, by, ru, de]
+    body:
+      - The smaller Polish army fell back in Ukraine. On 18 June Prince Józef Poniatowski, the king’s nephew, turned on a Russian column at Zieleńce and beat it, and the king founded the Virtuti Militari order to reward the victors. On 18 July Tadeusz Kościuszko held the line of the Bug at Dubienka against a Russian force several times larger before withdrawing. In Lithuania the Russians beat the defenders at Mir and took Vilnius. In late July King Stanisław August, believing the war lost, joined the Confederation of Targowica, and the army was ordered to stop fighting.
+      - The Targowica leaders had expected to rule under Russian protection. Instead, Prussia sent troops into Greater Poland in January 1793 and agreed a second partition with Russia. Surrounded by Russian soldiers, the last Sejm of the Commonwealth, at Grodno, approved it that summer and autumn. Russia took about 250,000 km² in Belarus and Ukraine, and Prussia about 58,000 km² with Poznań, Danzig and Toruń. The constitution was annulled.
+    facts:
+      - [Battle of Zieleńce, "18 June 1792, Polish victory"]
+      - [Battle of Dubienka, "18 July 1792, Polish withdrawal after a day’s fighting"]
+      - [Second Partition, "Russian–Prussian convention 23 January 1793, ratified at Grodno July–September 1793"]
+    markers:
+      - kind: battle
+        side: pl
+        name: Battle of Zieleńce
+        date: 18 June 1792
+        text: Poniatowski’s counterattack beat a Russian division under Irakly Morkov, the greatest Polish success of the war.
+        lonlat: [26.87, 49.53]
+      - kind: battle
+        side: pl
+        name: Battle of Dubienka
+        date: 18 July 1792
+        text: About 5,300 men under Kościuszko held off some 25,000 Russians under Mikhail Kakhovsky, then withdrew when outflanked.
+        lonlat: [23.87, 51.08]
+      - kind: battle
+        side: ru
+        name: Battle of Mir
+        date: 11 June 1792
+        text: The Russians beat the Lithuanian army, which fell back towards Grodno and Brest.
+        lonlat: [26.47, 53.45]
+      - kind: treaty
+        side: ru
+        name: Grodno Sejm
+        date: July – September 1793
+        text: Deputies who protested were arrested. The final vote on the treaty with Prussia passed by silence and is remembered as the “dumb sejm”.
+        lonlat: [23.83, 53.68]
+    arrows:
+      - side: ru
+        label: Kakhovsky
+        via: [[26.9, 49.6], [25.3, 50.4], [23.95, 51.05]]
+      - side: pr
+        via: [[16.0, 52.4], [16.6, 52.42], [16.9, 52.41]]
+    areas:
+      - style: gained
+        side: ru
+        label: Taken by Russia, 1793
+        atoms: [BY-MI, BY-HM, BY-HO!, BY-HO~pl1930, BY-MA!, BY-VI~pl1930, UA-05, UA-18, UA-32, UA-35, UA-56, UA-68, UA-71]
+      - style: gained
+        side: pr
+        label: Taken by Prussia, 1793
+        atoms: [PL-WP, PL-PM~danzig, PL-KP!, PL-KP~congress, PL-LD, PL-SL~congress, PL-SL~polLes~congress]

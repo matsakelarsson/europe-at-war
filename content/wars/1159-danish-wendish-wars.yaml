@@ -1,0 +1,134 @@
+id: danish-wendish-wars
+name: Danish–Wendish wars
+start: "1159"
+end: "1185"
+tier: B
+summary: A series of Danish seaborne campaigns under King Valdemar I and Bishop Absalon against the Slavic Wends of the southern Baltic coast, who had raided Denmark for decades. The Danes conquered and converted the island of Rügen in 1168 and in 1185 made the Duke of Pomerania a vassal of the Danish king.
+countries: [dk, de, pl]
+sides:
+  - id: dk
+    name: Denmark
+    polities: [denmark]
+    ink: red
+    moves: Danish moves
+    success: Danish success
+  - id: wend
+    name: Wends and Pomerania
+    polities: [wends, pomerania]
+    ink: olive
+    moves: Wendish and Pomeranian moves
+    success: Wendish and Pomeranian success
+notes:
+  - Almost everything known about these wars comes from Saxo Grammaticus’s Gesta Danorum, written for Absalon, which celebrates his deeds. Dates and numbers are often uncertain; the fall of Arkona is usually dated 1168, but some historians argue for 1169.
+  - Contemporaries saw the campaigns against the pagan Rani as crusades, like the German Wendish Crusade of 1147, though the Pomeranian dukes were already Christian.
+sources:
+  - title: Absalon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Absalon
+  - title: Siege of Arkona (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Arkona
+  - title: Valdemar I of Denmark (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Valdemar_I_of_Denmark
+  - title: Bogislaw I, Duke of Pomerania (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bogislaw_I,_Duke_of_Pomerania
+  - title: Absalon, archbishop of Lund (Britannica)
+    url: https://www.britannica.com/biography/Absalon
+steps:
+  - title: The fall of Arkona
+    date: 1159–1169
+    when: "1168"
+    borders: "1168"
+    countries: [dk, de]
+    body:
+      - During Denmark’s civil wars of the 1140s and 1150s, Wendish fleets from Rügen and the Pomeranian coast raided the Danish islands almost at will, and by one account a third of the kingdom lay waste when Valdemar I became sole king in 1157. With his foster brother Absalon, bishop of Roskilde from 1158, Valdemar struck back. From 1159 Danish fleets sailed against the Wendish coast almost every year, burning settlements and taking captives, at times in alliance with Duke Henry the Lion of Saxony and at times in rivalry with him.
+      - The main target was Rügen, home of the pagan Rani and their temple of Svantevit at Arkona. In 1168 Valdemar and Absalon, with Pomeranian allies, took the temple fortress after a siege of only a few days. The great four-headed idol was chopped up and burned. The other strongholds of the island then surrendered, its people were baptised, and their prince, Jaromar, became Valdemar’s vassal. To guard Zealand against raids, Absalon built a castle at Havn, the beginning of Copenhagen.
+    facts:
+      - [Leaders, "Valdemar I and Bishop Absalon"]
+      - [Fall of Arkona, "1168, after a siege of eight days according to Saxo"]
+      - [Outcome, "Rügen a Danish vassal principality until 1325"]
+    markers:
+      - kind: siege
+        side: dk
+        name: Arkona
+        date: "1168"
+        text: A fire under one of the towers distracted the defenders, and the Danes stormed the gate. The temple was plundered and destroyed.
+        lonlat: [13.438, 54.676]
+      - kind: taken
+        side: dk
+        name: Charenza (Garz)
+        date: "1168"
+        text: Rügen’s main stronghold surrendered without a fight. Absalon had the seven-headed idol of Rugievit cut down and burned.
+        lonlat: [13.35, 54.32]
+        lp: l
+      - kind: event
+        side: dk
+        name: Havn
+        date: "1167"
+        text: Absalon’s castle on a small island in the harbour of Havn protected the Sound against Wendish raiders. The town grew into Copenhagen.
+        lonlat: [12.58, 55.676]
+      - kind: event
+        side: dk
+        name: Roskilde
+        date: From 1158
+        text: Seat of Absalon, who led most of the expeditions in person as bishop and commander of the fleet.
+        lonlat: [12.083, 55.65]
+        lp: l
+    arrows:
+      - side: dk
+        label: Valdemar and Absalon
+        via: [[12.1, 55.0], [12.9, 54.85], [13.4, 54.7]]
+    areas:
+      - style: gained
+        side: dk
+        label: Principality of Rügen, a Danish vassal from 1168
+        atoms: [DE-MV~pomN]
+  - title: Pomerania submits
+    date: 1170–1185
+    when: "1184"
+    borders: "1185"
+    countries: [dk, de, pl]
+    body:
+      - The Danes now turned on the Christian dukes of Pomerania, whose lands at the mouth of the Oder were also bases for raiders. In 1170 they destroyed a stronghold at Dziwnów and fought their way past a Pomeranian army and fleet at the bridge of Wolin. In 1177 the dukes bought peace with heavy tribute. Valdemar also built a great castle at Vordingborg as a base for further raids.
+      - After Valdemar’s death in 1182 his son Canute VI refused to do homage to the emperor Frederick Barbarossa, who had made Duke Bogislaw I of Pomerania an imperial prince. In 1184 Bogislaw attacked Rügen on the emperor’s behalf, but Absalon, now archbishop of Lund, destroyed the Pomeranian fleet off the coast near Stralsund at Whitsun. Danish raids followed, and in 1185 Bogislaw submitted and took his duchy as a fief from Canute VI.
+    facts:
+      - [Peace of 1177, "Pomerania pays tribute to Denmark"]
+      - [Naval battle off Rügen, "Whitsun 1184, Danish victory"]
+      - [Bogislaw I submits, "1185"]
+    markers:
+      - kind: taken
+        side: dk
+        name: Dziwnów
+        date: "1170"
+        text: The Danes destroyed this stronghold on the island of Wolin, a base for raids across the Baltic.
+        lonlat: [14.75, 54.017]
+      - kind: battle
+        side: dk
+        name: Bridge of Wolin
+        date: "1170"
+        text: Duke Casimir of Pomerania tried to trap the Danish fleet at the bridge by the town of Wolin, but the Danes forced their way through.
+        lonlat: [14.5, 53.917]
+        lp: l
+      - kind: naval
+        side: dk
+        name: Naval battle off Rügen
+        date: Whitsun 1184
+        text: Absalon’s fleet surprised and destroyed the Pomeranian ships that had attacked Prince Jaromar of Rügen.
+        lonlat: [13.4, 54.2]
+      - kind: event
+        side: dk
+        name: Vordingborg
+        date: "1175"
+        text: King Valdemar’s new castle on the Zealand coast guarded the Danish islands and served as a base for raids on the German coast.
+        lonlat: [11.9, 55.0]
+        lp: l
+    arrows:
+      - side: wend
+        label: Bogislaw, 1184
+        via: [[14.0, 53.95], [13.7, 54.12], [13.45, 54.22]]
+      - side: dk
+        label: Absalon, 1184
+        via: [[12.6, 54.95], [13.0, 54.55], [13.35, 54.25]]
+    areas:
+      - style: outline
+        side: dk
+        label: Duchy of Pomerania, a Danish fief from 1185
+        atoms: [DE-MV~pomS, PL-ZP~pomO, PL-ZP~pomS, PL-ZP!]

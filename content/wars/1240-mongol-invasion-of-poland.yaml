@@ -1,0 +1,129 @@
+id: mongol-invasion-of-poland
+name: Mongol invasion of Poland
+start: "1240"
+end: "1241"
+tier: B
+summary: A Mongol raid on the divided Polish duchies, sent to protect the flank of the main Mongol invasion of Hungary. In early 1241 the Mongols sacked Sandomierz and Kraków and destroyed a Polish and allied army at Legnica on 9 April, killing Duke Henry II the Pious, before riding south to join the main army.
+sides:
+  - id: pl
+    name: Polish dukes and their allies
+    polities: [poland]
+    ink: magenta
+    moves: Polish and allied moves
+    success: Polish or allied success
+  - id: mn
+    name: Mongols
+    polities: [mongol-empire]
+    ink: olive
+    moves: Mongol moves
+    success: Mongol success
+notes:
+  - Much of the detail comes from Jan Długosz, writing more than two centuries later, and the sources often disagree on dates and numbers. Some give 3 March rather than 13 February for the fight at Tursko.
+  - Poland was then divided among several dukes of the Piast dynasty; Henry the Pious of Silesia also ruled Kraków as high duke.
+sources:
+  - title: First Mongol invasion of Poland (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Mongol_invasion_of_Poland
+  - title: Battle of Chmielnik (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Chmielnik
+  - title: Battle of Legnica (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Legnica
+steps:
+  - title: Sandomierz and Kraków
+    date: Winter 1240 – March 1241
+    when: "1241-02-13"
+    borders: "1241-03-24"
+    countries: [pl]
+    body:
+      - "In the winter of 1240–1241, as the main Mongol armies under Batu and Subutai prepared to invade Hungary, a smaller force under Baidar, Kadan and Orda turned on the Polish duchies to keep their princes from helping the Hungarians. Riding out of Volhynia, which the Mongols had just conquered, it destroyed the stronghold of Sutiejsk and sacked Lublin. In February 1241 it crossed the frozen Vistula, beat a Polish force near Tursko and took Sandomierz, which was sacked after it surrendered on 13 February."
+      - "The force then split. Orda’s men ravaged central Poland as far as Łęczyca, while Baidar and Kadan headed for Kraków. On 18 March at Chmielnik they destroyed the knightly levies of Kraków and Sandomierz, whose voivodes were killed; Duke Bolesław V had already withdrawn. Many people fled Kraków for the forests and hills, and the Mongols burned the nearly empty city by 24 March. They crossed the Oder near Racibórz and rode on towards Wrocław, where, according to tradition, the townspeople burned their own town and held out in the castle."
+    facts:
+      - [Sandomierz, "Sacked after surrendering on 13 February 1241"]
+      - [Battle of Chmielnik, "18 March 1241, Mongol victory"]
+      - [Kraków, Burned by 24 March 1241]
+    markers:
+      - kind: taken
+        side: mn
+        name: Lublin
+        date: Early 1241
+        text: Sacked on the Mongols’ way west from Volhynia.
+        lonlat: [22.5667, 51.25]
+      - kind: battle
+        side: mn
+        name: Tursko
+        date: February 1241
+        text: A Mongol force beat Polish troops near the Vistula crossing, before the sack of Sandomierz.
+        lonlat: [21.3881, 50.4664]
+        lp: b
+      - kind: taken
+        side: mn
+        name: Sandomierz
+        date: 13 February 1241
+        text: The town surrendered and was sacked.
+        lonlat: [21.75, 50.6833]
+      - kind: battle
+        side: mn
+        name: Battle of Chmielnik
+        date: 18 March 1241
+        text: A feigned retreat drew the Polish knights into an ambush. The voivodes of Kraków and Sandomierz were among the dead.
+        lonlat: [20.75, 50.62]
+      - kind: taken
+        side: mn
+        name: Kraków
+        date: c. 24 March 1241
+        text: Most of the townspeople had fled. The Mongols plundered and burned the city.
+        lonlat: [19.9372, 50.0614]
+      - kind: held
+        side: pl
+        name: Wrocław
+        date: Early April 1241
+        text: The town was abandoned and burned, but the castle held out until the Mongols left to meet Henry the Pious.
+        lonlat: [17.0325, 51.11]
+    arrows:
+      - side: mn
+        label: Baidar and Kadan
+        via: [[24.3, 50.85], [22.6, 51.2], [21.8, 50.72]]
+      - side: mn
+        via: [[21.7, 50.65], [20.75, 50.6], [19.98, 50.1]]
+      - side: mn
+        via: [[19.9, 50.05], [18.25, 50.1], [17.9, 50.7], [17.08, 51.08]]
+      - side: mn
+        label: Orda
+        via: [[21.6, 50.8], [19.85, 51.5], [19.2, 52.06], [18.73, 51.6]]
+  - title: Legnica, 9 April 1241
+    date: April 1241
+    when: "1241-04-09"
+    borders: "1241-04-09"
+    countries: [pl, cz]
+    body:
+      - "Duke Henry II the Pious of Silesia, the strongest of the Polish princes, gathered his Silesians, survivors from Kraków and levies from Greater Poland, troops from Opole under Mieszko II the Fat, Moravians, miners from Złotoryja and a few dozen Templars. Estimates of his army range from about 2,000 to 25,000. His brother-in-law, King Wenceslaus I of Bohemia, was marching to join him with a larger army. The Mongols left Wrocław to strike before the two could meet, and on 9 April they caught Henry at Legnickie Pole, south-east of Legnica."
+      - "Mongol horsemen drew the Polish cavalry out with feigned retreats, cut it off from the infantry behind a smokescreen and destroyed the army piece by piece. Henry was killed as he tried to escape, and his head was carried on a spear before the walls of Legnica. The Mongols did not stay. After a clash with Bohemian cavalry near Kłodzko they rode south through Moravia to join the main army, which had crushed the Hungarians at Mohi on 11 April. Henry’s death set back the reunification of Poland for decades."
+    facts:
+      - [Battle of Legnica, "9 April 1241, Mongol victory"]
+      - [Polish commander, "Henry II the Pious, Duke of Silesia, killed"]
+      - [Mongol commanders, Baidar and Kadan]
+    markers:
+      - kind: battle
+        side: mn
+        name: Battle of Legnica
+        date: 9 April 1241
+        text: Fought at Legnickie Pole, the “field of Legnica”, also known by its German name Wahlstatt. Two days later the Mongols’ main army won at Mohi in Hungary.
+        lonlat: [16.2228, 51.1453]
+      - kind: held
+        side: pl
+        name: Legnica
+        date: April 1241
+        text: The Mongols showed the townspeople Henry’s head but did not take the castle.
+        lonlat: [16.1603, 51.2083]
+        lp: t
+      - kind: battle
+        side: pl
+        name: Kłodzko
+        date: April 1241
+        text: Bohemian cavalry beat a Mongol vanguard that had followed Wenceslaus I’s withdrawing army.
+        lonlat: [16.65, 50.44]
+    arrows:
+      - side: mn
+        via: [[17.0, 51.1], [16.6, 51.15], [16.27, 51.15]]
+      - side: mn
+        label: To Hungary
+        via: [[16.25, 51.1], [16.7, 50.5], [17.25, 49.6], [17.9, 48.9]]

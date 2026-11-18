@@ -1,0 +1,158 @@
+id: november-uprising
+name: November Uprising
+start: "1830-11-29"
+end: "1831-10-21"
+tier: B
+summary: A rising in Russian-ruled Congress Poland that began with an attack by officer cadets in Warsaw on 29 November 1830 and grew into a full war between the kingdom’s army and the Russian Empire. After hard-fought battles at Olszynka Grochowska and Ostrołęka, Russian troops took Warsaw in September 1831; the kingdom lost its constitution and army, and thousands of Poles went into exile in the Great Emigration.
+countries: [pl, lt, fr]
+sides:
+  - id: pl
+    name: Polish insurgents
+    polities: [congress-poland]
+    ink: magenta
+    moves: Polish moves
+    success: Polish success
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+notes:
+  - Dates are New Style (Gregorian), as used in the Kingdom of Poland. Russia still used the Julian calendar, then 12 days behind.
+  - Casualty figures for the battles vary between sources and are given here as approximate.
+sources:
+  - title: November Uprising (Wikipedia)
+    url: https://en.wikipedia.org/wiki/November_Uprising
+  - title: Battle of Stoczek (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Stoczek
+  - title: Battle of Olszynka Grochowska (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Olszynka_Grochowska
+  - title: Battle of Iganie (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Iganie
+  - title: Battle of Ostrołęka (1831) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ostro%C5%82%C4%99ka_(1831)
+  - title: Battle of Warsaw (1831) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Warsaw_(1831)
+  - title: Organic Statute of the Kingdom of Poland (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Organic_Statute_of_the_Kingdom_of_Poland
+  - title: Great Emigration (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Great_Emigration
+steps:
+  - title: The cadets’ night and Grochów
+    date: November 1830 – February 1831
+    when: "1830-11-29"
+    borders: "1830-11-29"
+    countries: [pl]
+    body:
+      - Congress Poland, the kingdom created at the Congress of Vienna in 1815, had its own constitution, parliament and army, but its king was the Russian tsar, and his brother Grand Duke Constantine commanded the army. On the evening of 29 November 1830 officer cadets led by Piotr Wysocki attacked Constantine’s residence, the Belweder palace in Warsaw, while crowds seized the Arsenal. Constantine escaped and left the city with his Russian troops, and the Polish army went over to the rising.
+      - General Józef Chłopicki took power as dictator on 5 December and tried to negotiate, but Tsar Nicholas I demanded unconditional surrender. On 25 January 1831 the Sejm declared Nicholas dethroned, and on 4 February Field Marshal Hans Karl von Diebitsch crossed the border with about 115,000 men. Polish cavalry under Józef Dwernicki won at Stoczek, and on 25 February about 40,000 Poles held off some 60,000 Russians at Olszynka Grochowska outside Warsaw. Both sides lost more than 7,000 men.
+    facts:
+      - [Night of the cadets, "29 November 1830"]
+      - [Tsar dethroned by the Sejm, "25 January 1831"]
+      - [Olszynka Grochowska, "25 February 1831, indecisive"]
+    markers:
+      - kind: event
+        side: pl
+        name: Night of the cadets
+        date: 29 November 1830
+        text: Cadets attacked the Belweder palace and crowds took the Arsenal. By morning Warsaw was in Polish hands.
+        lonlat: [21.028, 52.213]
+        lp: l
+      - kind: battle
+        side: pl
+        name: Battle of Stoczek
+        date: 14 February 1831
+        text: Dwernicki’s cavalry beat General Geismar’s division in the first battle of the war.
+        lonlat: [21.967, 51.967]
+      - kind: battle
+        name: Battle of Olszynka Grochowska
+        date: 25 February 1831
+        text: The Poles held a wood east of Warsaw against repeated Russian attacks, then withdrew into the city. Diebitsch did not try to storm it.
+        lonlat: [21.108, 52.249]
+    arrows:
+      - side: ru
+        label: Diebitsch
+        via: [[23.6, 52.45], [22.6, 52.3], [21.7, 52.25], [21.18, 52.25]]
+  - title: Ostrołęka and the fall of Warsaw
+    date: March – October 1831
+    when: "1831-03-31"
+    borders: "1831-09-08"
+    countries: [pl]
+    body:
+      - In the spring the new Polish commander, General Jan Skrzynecki, won at Wawer and Dębe Wielkie on 31 March and at Iganie on 10 April, but did not follow up his successes. Risings broke out in Lithuania, where Countess Emilia Plater led a partisan unit, and in Volhynia and Podolia, but they were put down. On 26 May Diebitsch caught Skrzynecki’s army at Ostrołęka on the Narew; the Poles lost about 8,000 men and fell back on Warsaw.
+      - Diebitsch died of cholera in June. His successor, Ivan Paskevich, marched west and crossed the Vistula close to the Prussian border to attack Warsaw from the west, while Prussia and Austria stayed benevolently neutral towards Russia. On 6 September the suburb of Wola fell after General Józef Sowiński was killed defending it, and that night Count Jan Krukowiecki capitulated. The army withdrew to Modlin and Płock, and on 5 October more than 20,000 men crossed into Prussia and laid down their arms.
+    facts:
+      - [Battle of Ostrołęka, "26 May 1831, Russian victory"]
+      - [Warsaw capitulates, "night of 7–8 September 1831"]
+      - [Last fortress to yield, "Zamość, 21 October 1831"]
+    markers:
+      - kind: battle
+        side: pl
+        name: Wawer and Dębe Wielkie
+        date: 31 March 1831
+        text: Skrzynecki’s surprise attack beat the Russian forces east of Warsaw and took many prisoners.
+        lonlat: [21.45, 52.2]
+      - kind: battle
+        side: pl
+        name: Battle of Iganie
+        date: 10 April 1831
+        text: A Polish victory near Siedlce during the spring offensive.
+        lonlat: [22.211, 52.167]
+      - kind: battle
+        side: ru
+        name: Battle of Ostrołęka
+        date: 26 May 1831
+        text: Diebitsch caught the retreating Polish army at the Narew crossing. Both sides suffered heavily, and the Poles fell back towards Warsaw.
+        lonlat: [21.583, 53.083]
+      - kind: siege
+        side: ru
+        name: Warsaw
+        date: 6–8 September 1831
+        text: Paskevich stormed the western defences, including the Wola redoubt where Sowiński died. The city capitulated on the night of 7–8 September.
+        lonlat: [21.0, 52.23]
+        lp: l
+      - kind: event
+        name: Brodnica
+        date: 5 October 1831
+        text: The last Polish field army, more than 20,000 men, crossed into Prussia here rather than surrender to Russia.
+        lonlat: [19.396, 53.26]
+      - kind: held
+        side: pl
+        name: Zamość
+        date: until 21 October 1831
+        text: The fortress was the last place in the kingdom to give up.
+        lonlat: [23.253, 50.717]
+    arrows:
+      - side: ru
+        label: Paskevich
+        via: [[21.0, 52.85], [19.0, 52.95], [19.9, 52.15], [20.9, 52.22]]
+      - side: pl
+        label: Retreat into Prussia
+        via: [[20.95, 52.3], [20.4, 52.48], [19.7, 52.6], [19.42, 53.2]]
+  - title: Repression and the Great Emigration
+    date: 1831–1832
+    when: "1831-10"
+    borders: "1832-02-26"
+    countries: [pl, de, fr]
+    body:
+      - Nicholas I abolished the kingdom’s constitution. The Organic Statute of 1832 kept some separate institutions but ended the Sejm and the Polish army, and Warsaw University was closed. Estates of insurgents were confiscated, many participants were exiled to Siberia or conscripted into the Russian army, and a new citadel was built over Warsaw to hold the city down.
+      - Thousands of soldiers, politicians and writers chose exile rather than submission. They crossed the German states in small groups, greeted by enthusiastic crowds, and most settled in France. In Paris Prince Adam Czartoryski led a conservative government-in-exile, later known by his house, the Hôtel Lambert, while the historian Joachim Lelewel led the democrats. The poets Adam Mickiewicz and Juliusz Słowacki made the emigration the centre of Polish literature for a generation.
+    facts:
+      - [Organic Statute, "1832"]
+      - [Political exiles, "about 5,000–6,000 at any one time (estimate)"]
+    markers:
+      - kind: event
+        name: Warsaw Citadel
+        date: from 1832
+        text: A fortress built on the city’s northern edge after the rising, used to garrison troops and hold political prisoners.
+        lonlat: [21.0, 52.265]
+      - kind: event
+        name: Paris
+        date: from 1831
+        text: The main centre of the Polish emigration, where rival conservative and democratic camps worked for the restoration of Poland.
+        lonlat: [2.352, 48.857]
+    arrows:
+      - side: pl
+        label: Into exile
+        via: [[19.4, 53.2], [13.74, 51.05], [8.0, 49.6], [2.5, 48.86]]

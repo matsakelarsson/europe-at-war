@@ -1,0 +1,360 @@
+id: polish-soviet-war
+name: Polish–Soviet War
+start: "1919-02-14"
+end: "1921-03-18"
+tier: A
+summary: A war between the reborn Polish state and Soviet Russia for the lands between them, today in Belarus, Lithuania and Ukraine. After Polish forces reached Kyiv and the Red Army reached the gates of Warsaw, Poland won the Battle of Warsaw in August 1920, and the Peace of Riga in March 1921 divided Belarus and Ukraine between Poland and the Soviet republics.
+countries: [pl, by, ua, lt, lv, ru]
+sides:
+  - id: pl
+    name: Poland
+    polities: [poland]
+    ink: magenta
+    moves: Polish and allied moves
+    success: Polish success
+  - id: ua
+    name: Ukrainian People’s Republic
+    polities: [ukraine]
+    ink: gold
+    moves: Ukrainian moves
+    success: Ukrainian success
+  - id: ru
+    name: Soviet Russia
+    polities: [ussr]
+    ink: red
+    moves: Red Army moves
+    success: Soviet success
+notes:
+  - Also called the Polish–Bolshevik War. Soviet Russia had adopted the Gregorian calendar in February 1918, so all dates are New Style.
+  - Lwów is today’s Lviv in Ukraine, and Vilnius was Wilno to Poles. Other places are named in their present-day forms.
+  - The base map does not follow the moving front, which is shown instead by approximate front lines drawn from general accounts.
+sources:
+  - title: Polish–Soviet War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Polish%E2%80%93Soviet_War
+  - title: Kiev offensive (1920) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kiev_offensive_(1920)
+  - title: Battle of Warsaw (1920) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Warsaw_(1920)
+  - title: Battle of Radzymin (1920) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Radzymin_(1920)
+  - title: Battle of Zadwórze (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Zadw%C3%B3rze
+  - title: Battle of Komarów (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Komar%C3%B3w
+  - title: Battle of the Niemen River (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Niemen_River
+  - title: Peace of Riga (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peace_of_Riga
+  - title: Pinsk massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pinsk_massacre
+steps:
+  - title: Into Belarus and Ukraine
+    date: February 1919 – May 1920
+    when: "1919-02-14"
+    borders: "1920-05-07"
+    countries: [pl, by, ua, lt, lv]
+    body:
+      - As German troops withdrew from the east after the First World War, Polish and Soviet forces moved into the lands between them, and they first clashed at Bereza Kartuska on 14 February 1919. Poland’s head of state, Józef Piłsudski, hoped to build a federation with Lithuania, Belarus and Ukraine that would keep Russia at a distance. Polish troops took Vilnius in April 1919 and Minsk in August, and in January 1920, with Latvian forces, Daugavpils on the Daugava.
+      - On 21 April 1920 Piłsudski allied with Symon Petliura’s Ukrainian People’s Republic, which gave up its claim to eastern Galicia in return for military help against the Soviets. Polish and Ukrainian troops attacked four days later, took Zhytomyr on 26 April and entered Kyiv on 7 May. Many towns fell without a fight, because the Red Army withdrew rather than give battle. Its forces had not been destroyed, and few Ukrainians came forward to join Petliura.
+    facts:
+      - [First clash, "Bereza Kartuska, 14 February 1919"]
+      - [Treaty of Warsaw, "21 April 1920, Poland and the Ukrainian People’s Republic"]
+      - [Kyiv entered, "7 May 1920"]
+    markers:
+      - kind: battle
+        name: Bereza Kartuska
+        date: 14 February 1919
+        text: The first fighting between Polish and Soviet troops, as both moved into the area left by the Germans.
+        lonlat: [24.967, 52.55]
+      - kind: taken
+        side: pl
+        name: Vilnius
+        date: 19–21 April 1919
+        text: Polish troops took the city from the Red Army in a surprise attack led by Piłsudski, who was born nearby.
+        lonlat: [25.28, 54.687]
+      - kind: taken
+        side: pl
+        name: Minsk
+        date: 8 August 1919
+        text: Taken by Polish forces, who held it until July 1920.
+        lonlat: [27.559, 53.901]
+      - kind: taken
+        side: pl
+        name: Daugavpils
+        date: 3 January 1920
+        text: About 30,000 Polish and 10,000 Latvian troops took the town and handed it to Latvia.
+        lonlat: [26.536, 55.875]
+      - kind: treaty
+        name: Treaty of Warsaw
+        date: 21 April 1920
+        text: Piłsudski and Petliura agreed a border on the Zbruch and an alliance against Soviet Russia.
+        lonlat: [21.01, 52.23]
+      - kind: event
+        side: ua
+        name: Vinnytsia
+        date: from 13 May 1920
+        text: Petliura set up his government here after the Polish 6th Army and his Ukrainian forces drove the Soviet 14th Army out of central Ukraine.
+        lonlat: [28.483, 49.233]
+      - kind: taken
+        side: pl
+        name: Kyiv
+        date: 7 May 1920
+        text: Polish and Ukrainian troops entered the city unopposed and set up a bridgehead east of the Dnieper.
+        lonlat: [30.523, 50.45]
+    arrows:
+      - side: pl
+        label: Piłsudski
+        via: [[25.3, 53.9], [25.3, 54.3], [25.28, 54.62]]
+      - side: pl
+        label: Rydz-Śmigły
+        via: [[26.6, 50.65], [28.0, 50.35], [29.4, 50.4], [30.45, 50.45]]
+      - side: ua
+        label: Petliura’s forces
+        via: [[26.6, 49.45], [27.6, 49.3], [28.4, 49.25]]
+    areas:
+      - style: front
+        side: pl
+        label: Polish front, early May 1920 (approximate)
+        line: [[27.94, 55.78], [28.5, 55.55], [28.75, 55.3], [28.6, 54.75], [28.5, 54.23], [29.0, 53.6], [29.25, 53.15], [29.9, 52.05], [30.3, 51.4], [30.75, 50.45], [30.75, 50.15], [30.12, 49.8], [29.3, 49.3], [28.6, 48.75], [28.28, 48.24]]
+  - title: The Red Army advances
+    date: May – August 1920
+    when: "1920-05-14"
+    borders: "1920-08-01"
+    countries: [pl, by, ua, lt]
+    body:
+      - On 14 May Mikhail Tukhachevsky’s Western Front attacked in northern Belarus and drove about 100 km into Polish-held territory before a Polish counter-attack pushed it back by 8 June. In the south Semyon Budyonny’s First Cavalry Army broke the Polish front on 5 June and wrecked Zhytomyr behind it. The Poles abandoned Kyiv on 10 June, destroying its bridges and power stations, and fell back west with Petliura’s army.
+      - Tukhachevsky attacked again on 4 July with a much larger force. His order of the day declared that “over the corpse of White Poland lies the path to world conflagration”. Minsk fell on 11 July, Vilnius on 14 July, Grodno on 19 July and Brest on 29 July. On 11 July Britain proposed an armistice along a line later named after its foreign secretary, Lord Curzon, but the Soviet leadership pressed on. A Provisional Polish Revolutionary Committee, set up on 23 July, began to govern captured Polish territory from Białystok.
+    facts:
+      - [Tukhachevsky’s second offensive, "from 4 July 1920"]
+      - [Curzon note, "11 July 1920"]
+      - [Brody–Berestechko, "29 July – 3 August 1920"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Kyiv
+        date: 10 June 1920
+        text: The Poles evacuated the city as Budyonny’s cavalry threatened to cut them off.
+        lonlat: [30.523, 50.45]
+      - kind: taken
+        side: ru
+        name: Zhytomyr
+        date: 7 June 1920
+        text: Budyonny’s cavalry broke into the town far behind the Polish front.
+        lonlat: [28.667, 50.25]
+      - kind: taken
+        side: ru
+        name: Minsk
+        date: 11 July 1920
+        text: Retaken by the Red Army a week after Tukhachevsky’s second offensive began.
+        lonlat: [27.559, 53.901]
+      - kind: taken
+        side: ru
+        name: Vilnius
+        date: 14 July 1920
+        text: Taken by the Red Army, which handed the city to Lithuania in August under the Soviet–Lithuanian peace treaty.
+        lonlat: [25.28, 54.687]
+      - kind: taken
+        side: ru
+        name: Grodno
+        date: 19 July 1920
+        text: The Soviet advance crossed the Niemen here on its way towards Warsaw.
+        lonlat: [23.833, 53.667]
+      - kind: event
+        side: ru
+        name: Białystok
+        date: 30 July 1920
+        text: The Provisional Polish Revolutionary Committee, led by the communist Julian Marchlewski, declared the end of the Polish government here.
+        lonlat: [23.146, 53.135]
+      - kind: taken
+        side: ru
+        name: Brest
+        date: 29 July 1920
+        text: The quick fall of the fortress wrecked Polish plans to hold the line of the Bug.
+        lonlat: [23.657, 52.135]
+      - kind: battle
+        name: Battle of Brody
+        date: 29 July – 3 August 1920
+        text: Polish forces fought Budyonny’s cavalry for several days but failed to destroy it.
+        lonlat: [25.148, 50.083]
+    arrows:
+      - side: ru
+        label: Tukhachevsky
+        via: [[28.6, 54.9], [27.0, 54.1], [24.8, 53.75], [22.6, 53.3]]
+      - side: ru
+        label: 16th Army
+        via: [[28.6, 53.4], [26.2, 52.75], [23.8, 52.15]]
+      - side: ru
+        label: Budyonny
+        via: [[29.6, 49.9], [28.0, 50.3], [26.2, 50.4], [25.3, 50.1]]
+    areas:
+      - style: front
+        side: ru
+        label: Soviet front, about 1 August 1920 (approximate)
+        line: [[22.3, 53.75], [22.35, 53.25], [22.65, 52.8], [23.1, 52.4], [23.65, 52.1], [24.2, 51.6], [24.6, 51.1], [25.0, 50.6], [25.1, 50.1], [25.3, 49.6], [25.6, 49.1], [25.75, 48.7]]
+  - title: The Battle of Warsaw
+    date: 12–25 August 1920
+    when: "1920-08-12"
+    borders: "1920-08-13"
+    countries: [pl]
+    body:
+      - By mid-August three Soviet armies were closing on Warsaw from the east and north-east, while the 4th Army and a cavalry corps swung west along the East Prussian border towards the lower Vistula. Piłsudski and his chief of staff, Tadeusz Rozwadowski, planned to hold the bridgehead before the capital while a strike force gathered to the south-east on the Wieprz. Polish codebreakers were reading Soviet radio messages. The assault began on 12 August. Radzymin changed hands several times, and on 14 August General Władysław Sikorski’s 5th Army counter-attacked across the Wkra.
+      - On 16 August Piłsudski’s strike force attacked north from the Wieprz into the thinly held Soviet flank, scattered the Mozyr Group and cut behind the armies before Warsaw. The Red Army fell back in disorder. By 25 August the pursuit had reached the East Prussian border, where the Soviet 4th Army and the cavalry corps crossed and were interned. Poland took more than 50,000 prisoners. Piłsudski’s political opponents called the victory the “Miracle on the Vistula”, crediting providence rather than him.
+    facts:
+      - [Battle of Warsaw, "12–25 August 1920, Polish victory"]
+      - [Counter-offensive from the Wieprz, "16 August 1920"]
+      - [Interned in East Prussia, "about 45,000 Soviet troops"]
+    markers:
+      - kind: battle
+        side: pl
+        name: Battle of Radzymin
+        date: 13–15 August 1920
+        text: The town on Warsaw’s north-eastern approaches was lost and retaken several times before the Poles held it.
+        lonlat: [21.17, 52.401]
+        lp: t
+      - kind: battle
+        side: pl
+        name: Battle of Ossów
+        date: 14 August 1920
+        text: Polish infantry, many of them young volunteers, stopped a Soviet attack just outside Warsaw’s outer defences.
+        lonlat: [21.217, 52.3]
+      - kind: battle
+        side: pl
+        name: The Wkra
+        date: 14–16 August 1920
+        text: Sikorski’s 5th Army attacked across the river near Nasielsk, drawing Soviet forces away from the capital.
+        lonlat: [20.813, 52.587]
+        lp: l
+      - kind: held
+        side: pl
+        name: Płock
+        date: 18–19 August 1920
+        text: Soldiers and townspeople drove the Soviet 4th Army out of the town after it broke in.
+        lonlat: [19.7, 52.55]
+        lp: l
+      - kind: battle
+        side: ru
+        name: Battle of Zadwórze
+        date: 17 August 1920
+        text: A small Polish force blocking Budyonny’s cavalry outside Lwów fought until it was almost wiped out.
+        lonlat: [24.436, 49.889]
+      - kind: event
+        name: Into East Prussia
+        date: about 25 August 1920
+        text: Cut off by the Polish advance, the Soviet 4th Army and Gai’s cavalry corps crossed into German territory and were interned.
+        lonlat: [21.0, 53.6]
+        lp: t
+    arrows:
+      - side: pl
+        label: Piłsudski
+        via: [[22.25, 51.45], [22.3, 52.0], [22.6, 52.6], [23.0, 53.1]]
+      - side: pl
+        label: Sikorski
+        via: [[20.7, 52.45], [20.8, 52.72], [20.6, 53.0]]
+      - side: ru
+        label: 4th Army
+        via: [[21.6, 53.3], [20.5, 53.15], [19.6, 52.9], [19.65, 52.62]]
+      - side: ru
+        label: 15th and 3rd Armies
+        via: [[22.0, 52.95], [21.55, 52.65], [21.22, 52.44]]
+      - side: ru
+        label: 16th Army
+        via: [[22.8, 52.25], [21.9, 52.2], [21.35, 52.2]]
+    areas:
+      - style: front
+        side: ru
+        label: Soviet front, about 13 August 1920 (approximate)
+        lines:
+          - [[19.4, 53.25], [19.65, 52.9], [20.1, 52.7], [20.5, 52.6], [20.8, 52.55], [21.05, 52.48], [21.18, 52.4], [21.3, 52.25], [21.45, 52.1], [21.62, 51.9], [22.0, 51.78], [22.5, 51.68], [23.0, 51.6], [23.55, 51.55]]
+          - [[23.9, 50.85], [24.25, 50.48], [24.35, 50.1], [24.45, 49.85], [24.6, 49.45], [24.75, 49.1]]
+  - title: Komarów and the Niemen
+    date: August – October 1920
+    when: "1920-08-29"
+    borders: "1920-10-12"
+    countries: [pl, by, lt, ua]
+    body:
+      - Budyonny’s cavalry army, ordered north too late to help at Warsaw, turned on Zamość, which a Ukrainian division and Polish units held from 29 to 31 August. On 31 August Polish cavalry under Juliusz Rómmel beat Budyonny at Komarów, often called the greatest cavalry battle of the 20th century. In the north Tukhachevsky, reinforced, tried to hold a new line on the Niemen. From 20 September the Poles attacked at Grodno, while a flanking force marched through Lithuanian-held ground to Druskininkai and on towards Lida, behind the Soviet lines.
+      - Grodno fell on 26 September and the Western Front fell back east in disorder, some of its divisions breaking up; Polish troops entered Minsk in mid-October. Both governments were exhausted. A preliminary peace was signed in Riga on 12 October and an armistice came into force on 18 October, with the front far east of the Curzon Line. Meanwhile, on 9 October, Polish troops under General Lucjan Żeligowski staged a “mutiny” and seized Vilnius from Lithuania.
+    facts:
+      - [Battle of Komarów, "31 August 1920, Polish victory"]
+      - [Battle of the Niemen, "September 1920, Polish victory"]
+      - [Armistice, "18 October 1920"]
+    markers:
+      - kind: held
+        side: ua
+        name: Zamość
+        date: 29–31 August 1920
+        text: Ukrainian troops under Colonel Marko Bezruchko and Polish units held the town against Budyonny’s cavalry.
+        lonlat: [23.253, 50.717]
+        lp: l
+      - kind: battle
+        side: pl
+        name: Battle of Komarów
+        date: 31 August 1920
+        text: Rómmel’s cavalry division broke Budyonny’s cavalry army in a day of charges, and it withdrew east.
+        lonlat: [23.483, 50.633]
+        lp: b
+      - kind: battle
+        side: pl
+        name: Grodno
+        date: 20–26 September 1920
+        text: After days of evenly balanced fighting the Poles took the city, the anchor of the Soviet line on the Niemen.
+        lonlat: [23.833, 53.667]
+        lp: l
+      - kind: taken
+        side: pl
+        name: Druskininkai
+        date: 23 September 1920
+        text: The Polish flanking force took the town and cut the railway supplying the Soviet 3rd Army.
+        lonlat: [23.967, 54.017]
+      - kind: taken
+        side: pl
+        name: Lida
+        date: end of September 1920
+        text: Polish cavalry of the outflanking force reached the town behind the Soviet line, which then collapsed.
+        lonlat: [25.296, 53.896]
+      - kind: taken
+        side: pl
+        name: Vilnius
+        date: 9 October 1920
+        text: Żeligowski’s division took the city, two days after the Suwałki Agreement had left it on the Lithuanian side.
+        lonlat: [25.28, 54.687]
+      - kind: taken
+        side: pl
+        name: Minsk
+        date: mid-October 1920
+        text: Polish troops entered the city shortly before the armistice and withdrew under the peace terms.
+        lonlat: [27.559, 53.901]
+    arrows:
+      - side: pl
+        label: Rydz-Śmigły
+        via: [[23.35, 54.1], [24.0, 54.02], [24.8, 53.95], [25.25, 53.9]]
+      - side: pl
+        via: [[25.6, 53.75], [26.5, 53.8], [27.45, 53.88]]
+  - title: The Peace of Riga
+    date: 18 March 1921
+    when: "1921-03-18"
+    borders: "1921-03-18"
+    countries: [pl, by, ua, lv]
+    body:
+      - The Peace of Riga was signed on 18 March 1921 by Poland and by Soviet Russia, acting also for Soviet Belarus, and Soviet Ukraine. It fixed a border far east of the Curzon Line, leaving western Belarus and western Volhynia in Poland, while Minsk and central Ukraine stayed Soviet. Poland recognised the Soviet republics and abandoned its alliance with Petliura, whose soldiers in Poland were interned. Belarusians and Ukrainians, who had hoped for states of their own, were divided between Poland and the Soviet Union.
+      - About 100,000 Polish soldiers had been killed or gone missing, and Soviet losses were also heavy. Prisoners on both sides died in large numbers of disease, hunger and neglect, among them some 16,000–20,000 of about 80,000 Soviet prisoners held in Polish camps. Jewish communities suffered pogroms by soldiers of several armies, among them the shooting of 35 Jews by Polish troops in Pinsk in April 1919 and massacres by Budyonny’s cavalry in Ukraine.
+    facts:
+      - [Peace of Riga, "18 March 1921"]
+      - [Polish dead and missing, "about 100,000"]
+      - [Soviet prisoners who died in Polish camps, "about 16,000–20,000"]
+    markers:
+      - kind: treaty
+        name: Peace of Riga
+        date: 18 March 1921
+        text: Negotiated by Jan Dąbski for Poland and Adolph Joffe for the Soviet side. The border it drew lasted until 1939.
+        lonlat: [24.106, 56.949]
+      - kind: event
+        name: Pinsk massacre
+        date: 5 April 1919
+        text: Polish troops shot 35 Jewish residents of the town, whom their commander accused of supporting the Bolsheviks.
+        lonlat: [26.103, 52.115]
+    areas:
+      - style: gained
+        side: pl
+        label: Left in Poland by the Riga border
+        atoms: [BY-BR, BY-HR, BY-MI~pl1930, BY-HO~pl1930, UA-07, UA-56]

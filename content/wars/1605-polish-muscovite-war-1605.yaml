@@ -1,0 +1,277 @@
+id: polish-muscovite-war-1605
+name: Polish–Muscovite War, 1605–1618
+start: "1605"
+end: "1618"
+tier: A
+summary: During Russia’s Time of Troubles, Polish and Lithuanian backers of two pretenders, and then King Sigismund III himself, intervened in Muscovy. They won at Klushino and held the Moscow Kremlin for two years before being driven out, and the Truce of Deulino in 1618 left Smolensk and the Chernihiv–Seversk lands with the Commonwealth.
+countries: [pl, lt, ru, ua, by]
+sides:
+  - id: pl
+    name: Poland–Lithuania
+    polities: [poland, lithuania, poland-lithuania]
+    ink: magenta
+    moves: Polish–Lithuanian moves
+    success: Polish–Lithuanian success
+  - id: dm
+    name: The pretenders (False Dmitry I and II)
+    ink: orange
+    moves: The pretenders’ moves
+    success: Success for the pretenders
+  - id: ru
+    name: Tsardom of Russia
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: se
+    name: Swedish auxiliaries
+    polities: [sweden]
+    ink: blue
+    moves: Swedish moves
+    success: Swedish success
+notes:
+  - Russia used the Julian calendar, ten days behind the Gregorian calendar used in Poland–Lithuania. Dates are New Style unless marked; Russian accounts of the same events are often ten days earlier.
+  - Polish historians often treat the pretenders’ campaigns of 1604–1609 (the “Dymitriads”) as separate from the royal war of 1609–1618.
+sources:
+  - title: Polish–Russian War (1609–1618) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Polish%E2%80%93Russian_War_(1609%E2%80%931618)
+  - title: Time of Troubles (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Time_of_Troubles
+  - title: False Dmitry I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/False_Dmitry_I
+  - title: Siege of Smolensk (1609–1611) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Smolensk_(1609%E2%80%931611)
+  - title: Battle of Klushino (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Klushino
+  - title: Truce of Deulino (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Truce_of_Deulino
+steps:
+  - title: The first False Dmitry
+    date: 1604–1606
+    when: "1604-10"
+    borders: "1605"
+    countries: [ru, pl, ua]
+    body:
+      - Russia’s old ruling dynasty died out in 1598, and a terrible famine in 1601–1603 undermined the elected tsar, Boris Godunov. In 1603 a young man appeared in Poland–Lithuania claiming to be Dmitry, the son of Ivan the Terrible who had died at Uglich in 1591. Magnates such as Jerzy Mniszech, whose daughter Marina he promised to marry, raised private troops for him. King Sigismund III gave quiet encouragement but kept the Commonwealth officially out of it.
+      - In the autumn of 1604 “Dmitry” crossed into Muscovy with about 3,500 men from magnates’ private armies and hired troops, later joined by Cossacks. Beaten at Dobrynichi in January 1605, he was saved when Tsar Boris Godunov died that April and the tsar’s army went over to him. He entered Moscow on 30 June 1605 and was crowned, but his Polish entourage made him unpopular. On 27 May 1606, soon after his wedding to Marina, boyars led by Vasily Shuisky killed him, and several hundred Poles in Moscow were massacred. Shuisky became tsar.
+    facts:
+      - [Pretender, "False Dmitry I, usually identified as the runaway monk Grigory Otrepyev"]
+      - [Reign in Moscow, June 1605 – May 1606]
+    markers:
+      - kind: held
+        side: ru
+        name: Novhorod-Siverskyi
+        date: November–December 1604
+        text: The tsar’s commander Pyotr Basmanov held the fortress against the pretender, though Chernihiv, Putyvl and other border towns went over to him.
+        lonlat: [33.27, 52.00]
+        lp: l
+      - kind: battle
+        side: ru
+        name: Battle of Dobrynichi
+        date: January 1605
+        text: The tsar’s army routed the pretender, whose cause nearly collapsed. He fell back to Putyvl.
+        lonlat: [34.34, 52.28]
+      - kind: event
+        side: dm
+        name: The army changes sides
+        date: May 1605
+        text: After Boris Godunov’s death the army besieging Kromy, led by Basmanov, declared for “Dmitry”, opening the road to Moscow.
+        lonlat: [35.77, 52.69]
+      - kind: event
+        name: Moscow
+        date: June 1605 – May 1606
+        text: “Dmitry” entered Moscow on 30 June 1605. Eleven months later he was murdered in the Kremlin and his Polish guests were hunted down in the streets.
+        lonlat: [37.62, 55.75]
+    arrows:
+      - side: dm
+        label: False Dmitry
+        via: [[30.6, 50.5], [32.0, 51.3], [33.2, 51.95]]
+      - side: dm
+        via: [[33.87, 51.34], [35.6, 52.6], [37.0, 54.3], [37.55, 55.7]]
+  - title: Tushino and the siege of Smolensk
+    date: 1607–1610
+    when: "1607"
+    borders: "1609"
+    countries: [ru, pl, lt, by]
+    body:
+      - A second pretender, the “Thief of Tushino”, appeared in 1607 and was again backed by Polish and Lithuanian adventurers such as Roman Różyński and Jan Piotr Sapieha, and by Cossacks. From 1608 his camp at Tushino, just outside Moscow, rivalled the tsar’s court, and Marina Mniszech recognised him as her husband. Sapieha besieged the fortified Trinity Monastery north of Moscow for sixteen months, without success.
+      - Tsar Vasily Shuisky turned to Sweden, Poland’s enemy, and in February 1609 hired an army under Jacob De la Gardie. Sigismund III answered by invading Russia openly. On 29 September 1609 his army laid siege to Smolensk, the great fortress Lithuania had lost in 1514, defended by Mikhail Shein. The Tushino camp broke up, while Prince Mikhail Skopin-Shuisky and De la Gardie fought their way down from Novgorod and relieved Moscow in March 1610.
+    facts:
+      - [Siege of Smolensk, 29 September 1609 – 13 June 1611]
+      - [Russian commander at Smolensk, Mikhail Shein]
+    markers:
+      - kind: event
+        side: dm
+        name: Tushino camp
+        date: 1608–1610
+        text: The second pretender’s army camp, about 12 km from the Kremlin, had its own court, boyars and even a patriarch.
+        lonlat: [37.44, 55.83]
+        lp: l
+      - kind: held
+        side: ru
+        name: Trinity Monastery
+        date: September 1608 – January 1610
+        text: Monks and soldiers held the walled Trinity Lavra of St Sergius against Sapieha and Lisowski through two winters.
+        lonlat: [38.13, 56.31]
+      - kind: siege
+        name: Siege of Smolensk begins
+        date: 29 September 1609
+        text: Sigismund III and Hetman Stanisław Żółkiewski began a siege that would last twenty months.
+        lonlat: [32.05, 54.78]
+      - kind: event
+        side: ru
+        name: Moscow relieved
+        date: March 1610
+        text: Skopin-Shuisky’s Russian army and De la Gardie’s mercenaries entered Moscow. The young prince died suddenly a few weeks later.
+        lonlat: [37.65, 55.76]
+    arrows:
+      - side: pl
+        label: Sigismund III
+        via: [[30.43, 54.51], [31.2, 54.7], [31.95, 54.77]]
+      - side: ru
+        label: Skopin and De la Gardie
+        via: [[31.27, 58.52], [34.0, 57.6], [35.9, 56.86], [37.6, 55.85]]
+  - title: Klushino and a Polish tsar
+    date: 1610
+    when: "1610"
+    borders: "1610"
+    countries: [ru, pl]
+    body:
+      - Shuisky’s brother Dmitry marched west with a large Russian army and De la Gardie’s mercenaries to relieve Smolensk. Hetman Żółkiewski left the siege with a small, mostly cavalry force and met them at Klushino on 4 July 1610. About 7,000 Poles and Lithuanians, led by winged hussars, routed an army several times larger, by some estimates 30,000 or more, and many of the unpaid mercenaries changed sides or went home.
+      - Tsar Vasily lost all support. The boyars deposed him in July and forced him to become a monk, and in August they agreed to make Sigismund’s son Władysław tsar, provided he became Orthodox. In early October Polish–Lithuanian troops were let into Moscow and garrisoned the Kremlin. Sigismund, still at Smolensk, then refused to let his son convert and began to claim the throne for himself, and Russian goodwill drained away.
+    facts:
+      - [Battle of Klushino, "4 July 1610, Polish–Lithuanian victory"]
+      - [Polish commander, Hetman Stanisław Żółkiewski]
+      - [Elected tsar, "Władysław Vasa, aged 15, never crowned"]
+    markers:
+      - kind: battle
+        side: pl
+        name: Battle of Klushino
+        date: 4 July 1610
+        text: Żółkiewski’s hussars charged again and again until the Russian army broke. The foreign mercenaries negotiated their own terms.
+        lonlat: [34.93, 55.66]
+      - kind: event
+        side: pl
+        name: Tsaryovo-Zaymishche
+        date: July 1610
+        text: The Russian force blockaded here surrendered after Klushino and swore allegiance to Władysław.
+        lonlat: [34.82, 55.43]
+        lp: b
+      - kind: taken
+        side: pl
+        name: Garrison in the Kremlin
+        date: October 1610
+        text: The boyars let a Polish–Lithuanian garrison into Moscow. The deposed tsar was taken to Poland as a prisoner.
+        lonlat: [37.62, 55.75]
+      - kind: siege
+        name: Smolensk
+        date: 1609–1611
+        text: Shein’s garrison still held out against the king’s army.
+        lonlat: [32.05, 54.78]
+    arrows:
+      - side: pl
+        label: Żółkiewski
+        via: [[32.1, 54.85], [33.5, 55.2], [34.5, 55.5], [34.9, 55.64]]
+      - side: pl
+        via: [[35.05, 55.62], [36.03, 55.52], [37.0, 55.62], [37.55, 55.73]]
+      - side: ru
+        label: Dmitry Shuisky
+        via: [[36.03, 55.55], [35.5, 55.66], [35.0, 55.68]]
+  - title: Smolensk falls, Moscow rises
+    date: 1611–1612
+    when: "1611"
+    borders: "1611-06-13"
+    countries: [ru, pl, lt]
+    body:
+      - In March 1611 Muscovites rose against the garrison. The Poles held the Kremlin, and the fighting set large parts of Moscow on fire. A first Russian militia then besieged the Kremlin, but quarrels among its leaders broke it up. On 13 June 1611 Smolensk finally fell to an assault after twenty months, when a mine blew a breach in its walls. Many of the last defenders died when the powder stored in the cathedral exploded, and Shein was taken prisoner.
+      - In the autumn of 1611 the merchant Kuzma Minin and Prince Dmitry Pozharsky raised a second militia at Nizhny Novgorod. It reached Moscow in August 1612 and drove off Hetman Jan Karol Chodkiewicz’s relief army in hard fighting in early September. The starving garrison, reduced according to its own diarists to cannibalism, surrendered in early November 1612. Early in 1613 an assembly of the land elected the 16-year-old Michael Romanov tsar.
+    facts:
+      - [Smolensk taken, "13 June 1611 (3 June Old Style)"]
+      - [Kremlin surrendered, "Early November 1612; dates between 1 and 7 November are given"]
+      - [New tsar, "Michael Romanov, elected early in 1613"]
+    markers:
+      - kind: siege
+        side: pl
+        name: Smolensk stormed
+        date: 13 June 1611
+        text: The Polish–Lithuanian army broke in after a mine breached the walls. Smolensk stayed in the Commonwealth until 1654.
+        lonlat: [32.05, 54.78]
+      - kind: event
+        side: ru
+        name: Minin and Pozharsky
+        date: Autumn 1611
+        text: Nizhny Novgorod’s townspeople paid for a new army, led by Prince Pozharsky with the merchant Minin managing its funds.
+        lonlat: [44.0, 56.33]
+      - kind: battle
+        side: ru
+        name: Battle of Moscow
+        date: Early September 1612
+        text: Chodkiewicz tried to fight a supply convoy through to the Kremlin but was driven back by Pozharsky’s militia and the Cossacks.
+        lonlat: [37.56, 55.72]
+        lp: l
+      - kind: taken
+        side: ru
+        name: Kremlin surrenders
+        date: November 1612
+        text: The garrison gave up after a siege of more than a year. Russia now marks 4 November as National Unity Day in memory of the expulsion.
+        lonlat: [37.62, 55.75]
+    arrows:
+      - side: ru
+        label: Minin and Pozharsky
+        via: [[44.0, 56.33], [39.9, 57.63], [38.4, 56.4], [37.66, 55.8]]
+      - side: pl
+        label: Chodkiewicz
+        via: [[34.3, 55.21], [36.0, 55.5], [37.5, 55.71]]
+    areas:
+      - style: occupied
+        side: pl
+        label: Taken by Poland–Lithuania
+        atoms: [RU-SMO]
+  - title: Władysław’s march and the Truce of Deulino
+    date: 1617–1618
+    when: "1617"
+    borders: "1618-12-11"
+    countries: [ru, pl, lt, ua]
+    body:
+      - Władysław still claimed the Russian crown, and in 1617 the Sejm finally paid for one more campaign. With Chodkiewicz in real command, his army took Dorogobuzh and Vyazma that autumn but stalled before Mozhaysk. In 1618 Hetman Petro Sahaidachny’s Zaporozhian Cossacks swept up from the south, sacking Livny and Yelets, and joined the prince outside Moscow. A night assault on 10–11 October failed.
+      - Both sides were exhausted. At Deulino, near the Trinity Monastery, they signed a truce on 11 December 1618 for fourteen and a half years. The Commonwealth kept Smolensk and gained the Chernihiv and Seversk lands, and reached its greatest extent. Prisoners were exchanged in 1619, among them the tsar’s father Filaret. Władysław did not give up his claim, and the next war came in 1632.
+    facts:
+      - [Truce of Deulino, "11 December 1618, for 14½ years"]
+      - [Gained, "Smolensk, Chernihiv and Seversk lands"]
+    markers:
+      - kind: taken
+        side: pl
+        name: Vyazma
+        date: October 1617
+        text: Dorogobuzh and Vyazma surrendered to Władysław and recognised him as tsar.
+        lonlat: [34.30, 55.21]
+      - kind: taken
+        side: pl
+        name: Yelets
+        date: 1618
+        text: Sahaidachny’s Cossacks sacked Livny and Yelets on their way north.
+        lonlat: [38.50, 52.62]
+      - kind: held
+        side: ru
+        name: Moscow
+        date: 10–11 October 1618
+        text: The night assault on the Arbat Gate was beaten off, and the besiegers soon offered talks.
+        lonlat: [37.60, 55.75]
+      - kind: treaty
+        side: pl
+        name: Truce of Deulino
+        date: 11 December 1618
+        text: Signed at a village near the Trinity Monastery. It left Poland–Lithuania larger than ever before or after.
+        lonlat: [38.10, 56.34]
+    arrows:
+      - side: pl
+        label: Władysław
+        via: [[32.05, 54.78], [34.3, 55.21], [36.03, 55.52], [37.5, 55.73]]
+      - side: pl
+        label: Sahaidachny
+        via: [[33.87, 51.34], [37.61, 52.42], [38.5, 52.62], [37.7, 55.6]]
+    areas:
+      - style: gained
+        side: pl
+        label: Gained by Poland–Lithuania
+        atoms: [RU-SMO, UA-74]

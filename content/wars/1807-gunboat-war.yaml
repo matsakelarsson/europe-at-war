@@ -1,0 +1,286 @@
+id: gunboat-war
+name: Gunboat War
+start: "1807-08-16"
+end: "1814-01-14"
+tier: A
+summary: A naval war between Denmark–Norway and Britain, begun by the British seizure of the Danish fleet at Copenhagen in 1807 and fought with gunboats, privateers and blockade until the Treaty of Kiel in 1814. It cut Norway off from Denmark, brought famine to Norway and ended with Norway ceded to the king of Sweden.
+countries: [dk, "no", gb, de]
+sides:
+  - id: dk
+    name: Denmark–Norway
+    polities: [denmark-norway, danish-duchies]
+    ink: red
+    moves: Danish–Norwegian moves
+    success: Danish–Norwegian success
+  - id: gb
+    name: Britain
+    polities: [united-kingdom]
+    ink: navy
+    moves: British moves
+    success: British success
+  - id: se
+    name: Sweden and its allies
+    polities: [sweden]
+    ink: blue
+    moves: Swedish and allied moves
+    success: Swedish and allied success
+notes:
+  - Dates are New Style.
+  - In Denmark and Norway the years 1801–1814 are called the English Wars (Englandskrigene); the Gunboat War is their second, longer part.
+sources:
+  - title: Gunboat War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Gunboat_War
+  - title: Battle of Copenhagen, 1807 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Copenhagen_(1807)
+  - title: Battle of Anholt (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Anholt
+  - title: Battle of Lyngør (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Lyng%C3%B8r
+  - title: HMS St George, 1785 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/HMS_St_George_(1785)
+  - title: Treaty of Kiel (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Kiel
+  - title: Norge under Napoleonskrigene (Norwegian Wikipedia)
+    url: https://no.wikipedia.org/wiki/Norge_under_Napoleonskrigene
+steps:
+  - title: Copenhagen bombarded, the fleet taken
+    date: August – October 1807
+    when: "1807-08"
+    borders: "1807-09-07"
+    countries: [dk, "no", gb, de]
+    body:
+      - After the Peace of Tilsit in July 1807, the British government feared that Napoleon would force Denmark–Norway into his camp and take over its navy, one of the largest in Europe. Britain demanded that the fleet be handed over for safekeeping until the war was over. Crown Prince Frederick, who ruled for his ailing father, refused. Most of the Danish army was in Holstein, watching the French, when British troops began landing at Vedbæk, north of Copenhagen, on 16 August.
+      - Copenhagen had about 5,000 regular soldiers and as many militiamen. On 29 August Arthur Wellesley, the future Duke of Wellington, scattered a relief force of militia at Køge. From 2 to 5 September British guns and Congreve rockets bombarded the city, killing roughly 195 civilians and burning over a thousand buildings, among them the Church of Our Lady. On 7 September the city surrendered. The British sailed home in October with almost the whole Danish–Norwegian fleet, and Denmark–Norway allied itself with France.
+    facts:
+      - [British force, "About 25,000 troops under Lord Cathcart, with Admiral Gambier’s fleet"]
+      - [Taken to Britain, "18 ships of the line, 11 frigates and many smaller vessels"]
+      - [Civilian casualties, "Roughly 195 killed and 768 injured"]
+    markers:
+      - kind: event
+        side: gb
+        name: Landing at Vedbæk
+        date: 16 August 1807
+        text: The army came ashore unopposed north of the capital, while the fleet cut Zealand off from the rest of the kingdom.
+        lonlat: [12.565, 55.853]
+      - kind: battle
+        side: gb
+        name: Battle of Køge
+        date: 29 August 1807
+        text: Wellesley’s troops routed a Danish relief force made up largely of poorly armed militia.
+        lonlat: [12.18, 55.456]
+      - kind: siege
+        side: gb
+        name: Bombardment of Copenhagen
+        date: 2–5 September 1807
+        text: Three nights of shelling set much of the city on fire. The capitulation handed over the warships in the naval harbour.
+        lonlat: [12.568, 55.676]
+        lp: l
+      - kind: taken
+        side: gb
+        name: Heligoland
+        date: September 1807
+        text: A British squadron took the Danish island in the North Sea. It became a base for smuggling British goods into Napoleon’s Europe.
+        lonlat: [7.885, 54.183]
+    arrows:
+      - side: gb
+        label: Gambier and Cathcart
+        via: [[8.6, 57.6], [11.0, 57.75], [12.45, 56.3], [12.57, 55.87]]
+      - side: gb
+        label: Wellesley
+        via: [[12.47, 55.66], [12.3, 55.55], [12.2, 55.47]]
+    areas:
+      - style: occupied
+        side: gb
+        label: Held by British troops, August–October 1807
+        atoms: [DK-84!]
+  - title: Gunboats against the Royal Navy
+    date: 1808–1810
+    when: "1808"
+    borders: "1809"
+    countries: [dk, "no", gb]
+    body:
+      - With its battle fleet gone, Denmark–Norway built gunboats instead, well over 200 of them, rowed by crews of 20 to 80 men and armed with one or two heavy guns. They were cheap, quick to build and hard to hit, and in calm, shallow water they could swarm a becalmed warship. On 22 March 1808 the last Danish ship of the line, Prinds Christian Frederik, was destroyed by two British ships off Zealand Point. After that the war at sea was fought by gunboats, brigs and privateers.
+      - The gunboats captured several British brigs, and on 9 June 1809 a flotilla off Saltholm took a dozen merchant ships from a British convoy. In Norway, gunboats drove off a British frigate at Bergen. But they could not break British control of Danish waters. Guarded by Admiral Saumarez’s Baltic fleet, convoys of hundreds of merchant ships passed the Sound and the Great Belt every summer, while privateers from Danish and Norwegian ports preyed on British and neutral shipping.
+    facts:
+      - [Gunboats built, "More than 200, in several types"]
+      - [Last ship of the line lost, "Prinds Christian Frederik, 22 March 1808"]
+      - [Off Saltholm, "9 June 1809: 12 or 13 merchant ships and the escort Turbulent taken"]
+    markers:
+      - kind: naval
+        side: gb
+        name: Battle of Zealand Point
+        date: 22 March 1808
+        text: HMS Nassau and HMS Stately drove the 64-gun Prinds Christian Frederik ashore, where she was burned. The Danes lost 55 killed and 88 wounded.
+        lonlat: [11.15, 55.88]
+        lp: l
+      - kind: naval
+        side: dk
+        name: Battle of Alvøen
+        date: 16 May 1808
+        text: The British frigate Tartar tried to seize ships in Bergen harbour. Norwegian gunboats and the schooner Odin drove her off, and her captain was killed.
+        lonlat: [5.17, 60.36]
+      - kind: naval
+        side: dk
+        name: Seagull captured
+        date: 19 June 1808
+        text: Off Kristiansand the brig Lougen and six gunboats shot the British brig Seagull to pieces and forced her to surrender.
+        lonlat: [8.0, 58.1]
+      - kind: naval
+        side: dk
+        name: Convoy attacked off Saltholm
+        date: 9 June 1809
+        text: Twenty-one gunboats and seven mortar boats fell on a convoy of 70 merchant ships in the Sound.
+        lonlat: [12.77, 55.63]
+    arrows:
+      - side: gb
+        label: Baltic convoys
+        via: [[10.75, 57.3], [11.0, 56.3], [10.95, 55.35], [11.35, 54.75]]
+  - title: Blockade and hunger in Norway
+    date: 1807–1813
+    when: "1809"
+    borders: "1810"
+    countries: ["no", dk, gb]
+    body:
+      - The war cut Norway off from Denmark. Norway relied on Danish grain and lived by selling timber and fish abroad, above all to Britain; now British warships patrolled the Skagerrak. For the first time in centuries Norway had to be governed from within, by a government commission in Christiania, with Prince Christian August as its president, ran the country from 1807 to 1810. Small boats tried to slip grain across from Jutland at night. Many were taken, and their crews spent years in British prisons.
+      - Hunger turned into famine in 1808–1809 and again after the harvest failed in 1812, when spring came late and frost early. People in many districts mixed bark into their bread. Henrik Ibsen later set his poem Terje Vigen in these years, about a man who rows to Denmark for grain. The isolation also strengthened Norwegians’ sense of being a country of their own. A Norwegian university was founded in Christiania in 1811.
+    facts:
+      - [Government commission, "1807–1810, led by Prince Christian August"]
+      - [Famine years, "1808–1809 and 1812–1813"]
+      - [University of Christiania, "Founded 1811"]
+    markers:
+      - kind: event
+        side: dk
+        name: Government commission
+        date: 1807–1810
+        text: Cut off from Copenhagen, Norway was run by a commission of officials in the king’s name, with the commanding general as its president.
+        lonlat: [10.74, 59.91]
+      - kind: naval
+        side: gb
+        name: Convoy at Fladstrand
+        date: 22 April 1808
+        text: British boats cut out ten vessels of a convoy loading supplies for Norway at Fladstrand, today’s Frederikshavn.
+        lonlat: [10.534, 57.441]
+      - kind: event
+        side: none
+        name: Terje Vigen’s coast
+        date: 1807–1814
+        text: Ibsen’s poem tells of a pilot from near Grimstad who rowed to Denmark for barley, was caught by a British ship and lost his family while he sat in prison.
+        lonlat: [8.59, 58.34]
+        lp: b
+      - kind: event
+        side: dk
+        name: Privateers of Kristiansand
+        date: 1807–1813
+        text: Privateers sailed from Kristiansand and other southern ports against British and neutral merchant ships, and their prizes brought money and goods into the blockaded country.
+        lonlat: [7.996, 58.147]
+        lp: l
+      - kind: naval
+        side: gb
+        name: Battle of Silda
+        date: 23 July 1810
+        text: Two British frigates attacked the pilot station on the island of Silda and defeated the gun schooners guarding it.
+        lonlat: [5.184, 62.015]
+    arrows:
+      - side: dk
+        label: Grain boats
+        via: [[9.95, 57.1], [9.7, 57.6], [9.0, 58.15], [8.62, 58.32]]
+    areas:
+      - style: front
+        side: gb
+        label: British blockade of the Skagerrak
+        line: [[7.0, 57.75], [8.3, 57.85], [9.6, 58.0], [10.75, 58.2]]
+  - title: Anholt and Lyngør
+    date: 1809–1812
+    when: "1811"
+    borders: "1812-07-06"
+    countries: [dk, "no", gb]
+    body:
+      - The British needed the Kattegat to be safe for their convoys. In May 1809 they took the small island of Anholt and relit its lighthouse, which the Danes had put out. On 27 March 1811 about 1,000 Danish soldiers crossed from Jutland in gunboats to retake it. They attacked Fort York without artillery or supplies and were beaten off by some 380 Royal Marines, helped by two frigates. Their commander was killed and more than 500 men were taken prisoner.
+      - Denmark–Norway’s last frigate, Najaden, was sent to Norway in 1812 to protect the grain traffic. On 6 July a British squadron led by the 64-gun Dictator trapped her among the skerries at Lyngør, and she blew up and sank; 133 of her crew were killed. The weather was a deadlier enemy to the British than the Danes. On 24 December 1811 the ships of the line St George and Defence were wrecked on the Jutland coast, and nearly 1,400 drowned men washed ashore.
+    facts:
+      - [Battle of Anholt, "27 March 1811, British victory"]
+      - [Battle of Lyngør, "6 July 1812: Najaden destroyed, 133 killed"]
+      - [Wrecks off Jutland, "St George and Defence, 24 December 1811"]
+    markers:
+      - kind: battle
+        side: gb
+        name: Battle of Anholt
+        date: 27 March 1811
+        text: Taken by the British in 1809. The Danish landing in 1811 failed for lack of planning, water and field guns; Major Melstedt was killed leading the last charge on Fort York.
+        lonlat: [11.58, 56.71]
+      - kind: naval
+        side: dk
+        name: Manly captured
+        date: 2 September 1811
+        text: Three Danish–Norwegian brigs took the British gun-brig Manly off Arendal after shooting away her rigging.
+        lonlat: [8.85, 58.4]
+      - kind: naval
+        side: gb
+        name: Battle of Lyngør
+        date: 6 July 1812
+        text: Najaden, sheltering in the skerries off Tvedestrand, was cornered and set on fire. The British lost 9 killed and 26 wounded.
+        lonlat: [9.13, 58.633]
+        lp: t
+      - kind: event
+        side: none
+        name: St George and Defence wrecked
+        date: 24 December 1811
+        text: Escorting the last homeward convoy of the year, both ships were driven ashore by a north-westerly storm off Thorsminde. Only a handful of men survived; the Danes treated them well.
+        lonlat: [8.12, 56.36]
+    arrows:
+      - side: dk
+        label: Danish landing force
+        via: [[10.78, 56.5], [11.2, 56.62], [11.53, 56.69]]
+  - title: "Kiel: the end of Denmark–Norway"
+    date: 1812–1814
+    when: "1813"
+    borders: "1814-01-14"
+    countries: [dk, "no", de, gb]
+    body:
+      - By 1813 Denmark–Norway was isolated. The war had ruined its trade and its finances, and in January 1813 the state went bankrupt. Sweden, under its new crown prince Charles John, had been promised Norway by Russia in 1812 and by Britain in 1813. Frederick VI refused to give Norway up and kept his alliance with Napoleon. After Napoleon’s defeat at Leipzig in October 1813, Charles John led a Swedish, Russian and German army north against the Danes in Holstein.
+      - At Sehested on 10 December the Danish corps fought its way through to the fortress of Rendsburg, but Holstein and much of Schleswig were overrun. By the Treaty of Kiel on 14 January 1814, Denmark made peace with Sweden and Britain. Frederick VI ceded Norway, though not Iceland, Greenland or the Faroes, to the king of Sweden, and Heligoland to Britain, and received Swedish Pomerania. The Norwegians rejected the treaty and adopted their own constitution at Eidsvoll on 17 May 1814.
+    facts:
+      - [Treaty of Kiel, "14 January 1814"]
+      - [Ceded, "Norway to the king of Sweden, Heligoland to Britain"]
+      - [Received, "Swedish Pomerania, exchanged with Prussia for Lauenburg in 1815"]
+    markers:
+      - kind: battle
+        side: se
+        name: Battle of Bornhöved
+        date: 7 December 1813
+        text: Swedish cavalry attacked the Danish rearguard as it fell back towards Kiel.
+        lonlat: [10.2, 54.067]
+      - kind: battle
+        side: dk
+        name: Battle of Sehested
+        date: 10 December 1813
+        text: The Danish auxiliary corps under Prince Frederick of Hesse broke through the allied troops barring its way to Rendsburg.
+        lonlat: [9.82, 54.37]
+        lp: l
+      - kind: treaty
+        side: none
+        name: Treaty of Kiel
+        date: 14 January 1814
+        text: Denmark’s peace with Sweden and Britain ended the union of Denmark and Norway, which had lasted since 1380.
+        lonlat: [10.139, 54.323]
+        lp: t
+      - kind: event
+        side: none
+        name: Eidsvoll
+        date: 17 May 1814
+        text: A Norwegian assembly adopted a constitution and chose the Danish prince Christian Frederick as king, defying the treaty.
+        lonlat: [11.26, 60.33]
+    arrows:
+      - side: se
+        label: Charles John
+        via: [[10.69, 53.87], [10.35, 54.05], [10.15, 54.28]]
+      - side: dk
+        label: Danish corps
+        via: [[10.12, 54.35], [9.95, 54.38], [9.71, 54.31]]
+    areas:
+      - style: lost
+        label: Ceded by Denmark–Norway in this peace
+        atoms: [NO-01, NO-02, NO-03, NO-04, NO-05, NO-06, NO-07, NO-08, NO-09, NO-10, NO-11, NO-12, NO-14, NO-15, NO-16, NO-17, NO-18~no, NO-19, NO-20]
+      - style: gained
+        label: Gained by Denmark (exchanged for Lauenburg in 1815)
+        atoms: [DE-MV~pomN]

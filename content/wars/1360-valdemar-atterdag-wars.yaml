@@ -1,9 +1,9 @@
 id: valdemar-atterdag-wars
 name: Valdemar Atterdag’s wars with Sweden
 start: "1360"
-end: "1361"
+end: "1370"
 tier: B
-summary: ""
+summary: Valdemar IV Atterdag of Denmark took Scania, Blekinge and Halland back from Sweden in 1360 and conquered Gotland and Visby in 1361. The Hanseatic towns, allied with Sweden, then fought him until the Peace of Stralsund in 1370, which confirmed their hold on Baltic trade.
 sides:
   - id: se
     name: Sweden
@@ -19,12 +19,22 @@ sides:
     ink: red
     moves: Danish moves
     success: Danish success
+  - id: hansa
+    name: Hanseatic towns and allies
+    polities: [hanseatic-league, lubeck]
+    ink: brown
+    moves: Hanseatic and allied moves
+    success: Hanseatic success
 notes:
   - Medieval dates are as given in the chronicles.
   - Migrated from Sweden at War, so the story is told from Sweden’s side.
 sources:
   - url: https://en.wikipedia.org/wiki/Valdemar_Atterdag%27s_invasion_of_Gotland
     title: Valdemar Atterdag’s invasion of Gotland (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Danish%E2%80%93Hanseatic_War_(1361%E2%80%931370)
+    title: Danish–Hanseatic War, 1361–1370 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Treaty_of_Stralsund_(1370)
+    title: Treaty of Stralsund, 1370 (Wikipedia)
 steps:
   - title: Scania won and lost, Visby taken
     date: 1332–1361
@@ -121,3 +131,49 @@ steps:
           - SE-K
           - SE-M
           - SE-N
+  - title: The Hanseatic war and the Peace of Stralsund
+    date: 1362–1370
+    when: "1368"
+    borders: "1370-05-24"
+    countries: [dk, de, "no"]
+    body:
+      - Valdemar’s conquest of Visby and his heavy dues on the Sound and the Scanian herring markets threatened the trade of the Hanseatic towns. In April 1362 a Hanseatic fleet under Johann Wittenborg of Lübeck laid siege to Helsingborg, but Valdemar fell on the ships and captured a dozen of them; Wittenborg was later executed by his own city. In 1367 the towns, from the Baltic to the Netherlands, formed the Confederation of Cologne and allied with King Albert of Sweden, the dukes of Mecklenburg and the counts of Holstein.
+      - In 1368 their fleets sacked Copenhagen and raided the coasts of Denmark and Norway, whose king, Valdemar’s son-in-law Haakon VI, soon made a truce. Swedish and German troops overran most of Scania while the Holsteiners marched into Jutland. Valdemar left the country to seek allies, and when Helsingborg fell in 1369 his council sued for peace. By the Peace of Stralsund on 24 May 1370 the towns kept their privileges and held the Scanian castles of Skanör, Falsterbo, Malmö and Helsingborg, with two-thirds of their revenues, for fifteen years.
+    facts:
+      - [Battle of Helsingborg, "1362, Danish victory"]
+      - [Confederation of Cologne, "1367"]
+      - [Peace of Stralsund, "24 May 1370"]
+    markers:
+      - kind: naval
+        side: dk
+        name: Battle of Helsingborg
+        date: "1362"
+        text: While the Hanseatic troops besieged the castle, the Danish fleet attacked their lightly guarded ships.
+        lonlat: [12.717, 56.05]
+      - kind: taken
+        side: hansa
+        name: Copenhagen sacked
+        date: "1368"
+        text: The allied fleet plundered the town and damaged its harbour so badly that it could not be used for the rest of the war.
+        lonlat: [12.568, 55.676]
+      - kind: siege
+        side: hansa
+        name: Helsingborg
+        date: 1368–1369
+        text: The castle commanding the Sound held out against the allies until September 1369.
+        lonlat: [12.717, 56.05]
+        lp: l
+      - kind: treaty
+        name: Peace of Stralsund
+        date: 24 May 1370
+        text: Negotiated for Denmark by the drost Henning Podebusk and for the towns by the mayors of Lübeck and Stralsund. It marked the height of Hanseatic power.
+        lonlat: [13.082, 54.309]
+    arrows:
+      - side: hansa
+        label: Hanseatic fleet, 1368
+        via: [[10.75, 54.0], [11.9, 54.6], [12.45, 55.3], [12.58, 55.64]]
+    areas:
+      - style: pledged
+        side: hansa
+        label: Castles of western Scania held by the Hansa, 1370–1385
+        polygon: [[12.6, 56.12], [12.95, 56.08], [13.2, 55.75], [13.25, 55.45], [12.95, 55.33], [12.78, 55.37], [12.9, 55.62], [12.75, 55.95]]

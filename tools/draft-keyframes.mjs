@@ -81,6 +81,7 @@ function formatKeyframe(kf) {
 
 async function main() {
   const atoms = await readJSON(join(CONTENT, 'borders/atoms.json'));
+  const byAtom = new Map(atoms.map((a) => [a.id, a]));
   const { alias, byId } = await loadPolities();
   const autoPath = join(CONTENT, 'polities.auto.yaml');
   const autoList = (await exists(autoPath)) ? (YAML.parse(await (await import('node:fs/promises')).readFile(autoPath, 'utf8')) || []) : [];
@@ -114,14 +115,19 @@ async function main() {
     let polys = null;
     if (!job.today) polys = prepare(await readJSON(join(ROOT, `.cache/hb/world_${job.year}.geojson`)));
     let added = 0;
-    for (const a of atoms) {
-      if (have.has(a.id) || a.parent) continue; // split atoms inherit from their parent
-      const pol = job.today ? resolve(a.country, job.year) : resolve(lookup(polys, a.ll), job.year);
-      assign[a.id] = pol || '-';
+    // Parents before their split-off children (children of children last).
+    const depth = (a) => a.id.split('~').length;
+    const ownerOf = (id) => { for (let x = id; x; x = byAtom.get(x)?.parent) if (assign[x] !== undefined) return assign[x]; return undefined; };
+    for (const a of [...atoms].sort((p, q) => depth(p) - depth(q))) {
+      if (have.has(a.id)) continue;
+      const pol = (job.today ? resolve(a.country, job.year) : resolve(lookup(polys, a.ll), job.year)) || '-';
+      // A split atom inherits from its parent; list it only where its own draft differs.
+      if (a.parent && ownerOf(a.parent) === pol) continue;
+      assign[a.id] = pol;
       added++;
     }
     const kf = {
-      date: job.today ? TODAY.date : String(job.year),
+      date: existing?.date ?? (job.today ? TODAY.date : String(job.year)),   // keep hand-set dates (1945 → Potsdam)
       source: existing?.source || (job.today ? TODAY.note : `historical-basemaps world_${job.year} (automatic draft, needs checking)`),
       owners: groupOwners(assign),
     };

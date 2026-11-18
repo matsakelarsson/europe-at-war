@@ -3,7 +3,7 @@ name: Livonian War
 start: "1558"
 end: "1583"
 tier: B
-summary: ""
+summary: A war for Old Livonia, today’s Estonia and Latvia, between Russia, Poland–Lithuania, Sweden and Denmark–Norway. Ivan IV’s early conquests broke up the Livonian Confederation, but Polish–Lithuanian and Swedish offensives from 1578 reversed them, and the truces of Jam Zapolski (1582) and Plussa (1583) divided Livonia between Poland–Lithuania and Sweden.
 sides:
   - id: se
     name: Sweden
@@ -21,14 +21,33 @@ sides:
       - russia
       - poland
       - lithuania
+  - id: pl
+    name: Poland–Lithuania
+    polities:
+      - poland-lithuania
+      - poland
+      - lithuania
+    ink: magenta
+    moves: Polish–Lithuanian moves
+    success: Polish–Lithuanian success
 notes:
-  - Dates in Germany and Poland are New Style (Gregorian); Scandinavian dates are mostly Old Style (Julian), as usually cited, which ran ten days behind.
-  - Migrated from Sweden at War, so the story is told from Sweden’s side.
+  - Dates are Old Style (Julian), the only calendar in the region until Poland adopted the Gregorian calendar in October 1582. Russian sources give some dates differently.
+  - The first steps are migrated from Sweden at War and told from Sweden’s side; the last two follow Poland–Lithuania.
 sources:
   - url: https://en.wikipedia.org/wiki/Treaty_of_Plussa
     title: Treaty of Plussa (Wikipedia)
   - url: https://hhogman.se/swe_wars-1500s.htm
     title: Swedish wars in the 1500s (Hans Högman)
+  - url: https://en.wikipedia.org/wiki/Livonian_War
+    title: Livonian War (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Siege_of_Polotsk_(1563)
+    title: Siege of Polotsk, 1563 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Union_of_Lublin
+    title: Union of Lublin (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Siege_of_Pskov
+    title: Siege of Pskov (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Truce_of_Yam-Zapolsky
+    title: Truce of Jam Zapolski (Wikipedia)
 steps:
   - title: Estonia and the Livonian War
     date: 1558–1583
@@ -36,6 +55,8 @@ steps:
     borders: "1583"
     countries:
       - se
+      - ee
+      - ru
     view:
       center:
         - 27.0595
@@ -155,3 +176,109 @@ steps:
           - RU-LEN~kex
           - RU-SPE
           - RU-SPE~kex
+  - title: Polotsk lost, Lublin united
+    date: 1562–1570
+    when: "1563"
+    borders: "1569-07-01"
+    countries: [pl, lt, by, ru]
+    side_names: {foe: Russian success}
+    move_names: {foe: Russian moves}
+    body:
+      - "Lithuania had taken southern Livonia under its protection in 1559, and in 1561 the Livonian Order was dissolved: its last master became Duke of Courland as a vassal of Sigismund II Augustus, and the rest of its land passed to the Grand Duchy. When a truce ran out in 1562, Ivan IV struck at Lithuania itself. A large Russian army laid siege to Polotsk on the Dvina at the end of January 1563, and after a heavy bombardment the town surrendered on 15 February. According to widely repeated accounts, Jews of Polotsk who refused baptism were drowned in the river on Ivan’s orders."
+      - "On 26 January 1564 a Lithuanian army under Mikołaj Radziwiłł the Red surprised and destroyed a Russian force on the Ula river, but Polotsk stayed Russian for sixteen years. The war convinced the Lithuanian nobles that they could not hold out alone. At a joint diet in Lublin in 1569 King Sigismund II Augustus moved Podlasie, Volhynia and the Kiev region from Lithuania to the Polish crown, and on 1 July the two states became one Commonwealth, with a single elected king and parliament but separate armies, treasuries and laws. A truce with Russia followed in 1570."
+    facts:
+      - [Fall of Polotsk, 15 February 1563]
+      - [Battle of the Ula, "26 January 1564, Lithuanian victory"]
+      - [Union of Lublin, 1 July 1569]
+    markers:
+      - kind: treaty
+        side: pl
+        name: Treaty of Vilnius
+        date: 28 November 1561
+        text: The Livonian Order was dissolved. Gotthard Kettler became Duke of Courland, and Livonia north of the Dvina passed to Lithuania.
+        lonlat: [25.28, 54.6872]
+      - kind: siege
+        side: foe
+        name: Polotsk
+        date: January–February 1563
+        text: Ivan IV took the old capital of a Ruthenian principality after a two-week siege. It was Ivan’s greatest gain at Lithuania’s expense.
+        lonlat: [28.8, 55.4833]
+      - kind: battle
+        side: pl
+        name: Battle of the Ula
+        date: 26 January 1564
+        text: Radziwiłł caught a Russian army on the march and routed it. Its commander, Pyotr Shuisky, was killed.
+        lonlat: [29.155, 54.8975]
+      - kind: treaty
+        side: pl
+        name: Union of Lublin
+        date: 1 July 1569
+        text: Poland and Lithuania became the Polish–Lithuanian Commonwealth, one of the largest states in Europe.
+        lonlat: [22.5667, 51.25]
+    arrows:
+      - side: foe
+        label: Ivan IV
+        via: [[30.53, 56.33], [29.9, 56.0], [28.88, 55.53]]
+    areas:
+      - style: occupied
+        side: foe
+        label: Polotsk land, held by Russia 1563–1579
+        polygon: [[27.6, 56.0], [28.6, 56.2], [29.6, 55.9], [29.4, 55.2], [28.4, 55.0], [27.6, 55.3]]
+  - title: Báthory’s campaigns and the Truce of Jam Zapolski
+    date: 1579–1582
+    when: "1579"
+    borders: "1582-01-15"
+    countries: [pl, lt, by, ru, lv, ee]
+    side_names: {foe: Russian success}
+    move_names: {foe: Russian moves}
+    body:
+      - "Stefan Báthory, Prince of Transylvania, was elected king of Poland and grand duke of Lithuania in 1576. With Polish hussars, Hungarian and German mercenary infantry and Lithuanian troops, he struck not at Livonia, which Ivan IV had largely overrun in 1577, but at the Russian strongholds behind it. On 30 August 1579 he took Polotsk back after a three-week siege. In 1580 his army took Velizh and Usvyaty, and on 5 September the burning fortress of Velikiye Luki."
+      - "In August 1581 Báthory laid siege to Pskov, one of the strongest towns in Russia. Its garrison and townspeople under Prince Ivan Shuisky beat off every assault, and through the winter Jan Zamoyski kept up a blockade while Polish raiders ranged deep into Russia. With the papal envoy Antonio Possevino as mediator, a ten-year truce was signed at Jam Zapolski on 15 January 1582. Ivan gave up all his Livonian conquests and Polotsk, and Báthory handed back Velikiye Luki and lifted the siege."
+    facts:
+      - [Polotsk retaken, 30 August 1579]
+      - [Siege of Pskov, August 1581 – February 1582]
+      - [Truce of Jam Zapolski, "15 January 1582, for ten years"]
+    markers:
+      - kind: siege
+        side: pl
+        name: Polotsk
+        date: 30 August 1579
+        text: Báthory’s army set fire to the wooden walls and forced the garrison to surrender.
+        lonlat: [28.8, 55.4833]
+      - kind: siege
+        side: pl
+        name: Velikiye Luki
+        date: 5 September 1580
+        text: The wooden fortress caught fire under bombardment and surrendered on 5 September. As the attackers looted it, the fire reached the powder store, which blew up and killed many on both sides. It was returned to Russia in 1582.
+        lonlat: [30.5333, 56.3333]
+      - kind: held
+        side: foe
+        name: Siege of Pskov
+        date: August 1581 – February 1582
+        text: Prince Ivan Shuisky’s defenders repelled more than thirty assaults. The last Polish–Lithuanian troops left on 4 February 1582.
+        lonlat: [28.3333, 57.8167]
+      - kind: treaty
+        side: pl
+        name: Truce of Jam Zapolski
+        date: 15 January 1582
+        text: Signed at the village of Kiverova Gora near Jam Zapolski, south-east of Pskov; Russian sources date it 6 January, Old Style. Russia gave up its claims to Livonia and Polotsk.
+        lonlat: [29.67, 57.3]
+    arrows:
+      - side: pl
+        label: Báthory, 1579
+        via: [[26.44, 54.85], [27.6, 55.3], [28.72, 55.47]]
+      - side: pl
+        label: "1580"
+        via: [[30.2, 55.2], [31.0, 55.62], [30.6, 56.27]]
+      - side: pl
+        label: "1581"
+        via: [[29.0, 55.8], [28.9, 56.6], [28.4, 57.3], [28.35, 57.75]]
+    areas:
+      - style: gained
+        side: pl
+        label: Polotsk, back to Lithuania
+        polygon: [[27.6, 56.0], [28.6, 56.2], [29.6, 55.9], [29.4, 55.2], [28.4, 55.0], [27.6, 55.3]]
+      - style: gained
+        side: pl
+        label: Livonia, given up by Russia to Poland–Lithuania
+        atoms: [EE-49, EE-65, EE-67, EE-78, EE-82, EE-84, EE-86, LV-001, LV-002, LV-005, LV-007, LV-008, LV-009, LV-011, LV-014, LV-015, LV-017, LV-019, LV-020, LV-021, LV-022, LV-023, LV-024, LV-030, LV-031, LV-033, LV-035, LV-037, LV-039, LV-044, LV-045, LV-046, LV-047, LV-048, LV-049, LV-053, LV-054, LV-055, LV-056, LV-057, LV-058, LV-059, LV-060, LV-061, LV-064, LV-067, LV-070, LV-072, LV-073, LV-075, LV-076, LV-078, LV-080, LV-082, LV-084, LV-085, LV-087, LV-089, LV-090, LV-091, LV-092, LV-094, LV-095, LV-096, LV-101, LV-102, LV-103, LV-104, LV-108, LV-109, LV-110, LV-DGV!, LV-REZ, LV-RIX, LV-VMR, LVA-4851]

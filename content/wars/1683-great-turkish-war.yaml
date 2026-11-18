@@ -1,0 +1,137 @@
+id: great-turkish-war
+name: Great Turkish War
+start: "1683"
+end: "1699"
+tier: B
+summary: After the failed Ottoman siege of Vienna in 1683, the Habsburg Monarchy, Poland–Lithuania, Venice and later Russia formed the Holy League against the Ottoman Empire. Sixteen years of war ended at Karlowitz in 1699 with the Ottomans giving up Hungary and Transylvania to the Habsburgs and Podolia to Poland–Lithuania.
+countries: [at, hu, sk, cz, hr, si, rs, de, pl, lt, ua, md, ro, tr, it, gr, ru]
+sides:
+  - id: hb
+    name: Habsburg Monarchy and the Empire
+    polities: [habsburg]
+    ink: purple
+    moves: Imperial moves
+    success: Imperial success
+  - id: pl
+    name: Poland–Lithuania
+    polities: [poland, lithuania, poland-lithuania]
+    ink: magenta
+    moves: Polish–Lithuanian moves
+    success: Polish–Lithuanian success
+  - id: ve
+    name: Republic of Venice
+    polities: [venice]
+    ink: red
+    moves: Venetian moves
+    success: Venetian success
+  - id: ru
+    name: Tsardom of Russia
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: ot
+    name: Ottoman Empire and its vassals
+    polities: [ottoman, crimean-khanate]
+    ink: teal
+    moves: Ottoman and Tatar moves
+    success: Ottoman success
+notes:
+  - Dates are New Style (Gregorian).
+sources:
+  - title: Great Turkish War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Great_Turkish_War
+  - title: Battle of Vienna (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Vienna
+  - title: Battle of Párkány (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_P%C3%A1rk%C3%A1ny
+  - title: Treaty of Karlowitz (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Karlowitz
+  - title: Battle of Podhajce (1698) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Podhajce_(1698)
+steps:
+  - title: The relief of Vienna
+    date: 1683
+    when: "1683-07"
+    borders: "1683-09-12"
+    countries: [at, pl, tr, de, sk]
+    body:
+      - In 1683 the grand vizier Kara Mustafa Pasha marched up the Danube with the main Ottoman army and on 14 July laid siege to Vienna, the Habsburg capital. Count Ernst Rüdiger von Starhemberg held the city with soldiers and armed citizens through two months of mining and assaults, while disease and hunger spread inside the walls. Emperor Leopold I had signed an alliance with Poland–Lithuania in March, and John III Sobieski came south with his army to join Imperial, Bavarian, Saxon and other German troops at Tulln.
+      - The relief army, some 70,000–80,000 men under Sobieski’s overall command, came down from the Kahlenberg on 12 September. Late in the afternoon a huge cavalry charge, led by the Polish hussars, broke the Ottoman army, which fled leaving its camp behind. Sobieski followed up with a victory at Párkány on the Danube in October, after a defeat there two days before. Kara Mustafa was executed at Belgrade on the sultan’s orders that December, and in 1684 the Emperor, Poland, Venice and the Pope formed the Holy League.
+    facts:
+      - [Battle of Vienna, "12 September 1683, allied victory"]
+      - [Relief army, "About 70,000–80,000, roughly a quarter to a third of them Polish"]
+    markers:
+      - kind: held
+        side: hb
+        name: Siege of Vienna
+        date: 14 July – 12 September 1683
+        text: The garrison and citizens held out for two months against Ottoman mines and assaults.
+        lonlat: [16.37, 48.21]
+        lp: b
+      - kind: event
+        name: Allies meet at Tulln
+        date: Early September 1683
+        text: Polish and German armies joined Charles of Lorraine’s Imperial army on the Danube west of Vienna.
+        lonlat: [16.05, 48.33]
+        lp: l
+      - kind: battle
+        side: pl
+        name: Battle of Vienna
+        date: 12 September 1683
+        text: The relief army attacked down the wooded slopes of the Kahlenberg. By evening the Ottoman army was in flight.
+        lonlat: [16.33, 48.27]
+        lp: t
+      - kind: battle
+        side: pl
+        name: Battle of Párkány
+        date: 7 and 9 October 1683
+        text: Beaten in a first clash, Sobieski and Charles of Lorraine destroyed the Ottoman force two days later, opening the way to Esztergom.
+        lonlat: [18.72, 47.80]
+    arrows:
+      - side: pl
+        label: Sobieski
+        via: [[19.94, 50.06], [18.0, 49.9], [16.6, 49.2], [16.1, 48.4]]
+      - side: ot
+        label: Kara Mustafa
+        via: [[19.04, 47.5], [17.9, 47.75], [16.5, 48.15]]
+  - title: Podolia regained
+    date: 1684–1699
+    when: "1684"
+    borders: "1699-01-26"
+    countries: [pl, ua, tr, md, ro]
+    body:
+      - Poland–Lithuania gained much less than its allies from the long war that followed. Its armies blockaded Ottoman-held Kamianets but could not take it, and Sobieski’s campaigns into Moldavia in 1686 and 1691 achieved little. To bring Russia into the League, the Commonwealth signed the Eternal Peace of 1686, giving up its claim to Kyiv. Sobieski died in 1696, and in 1698 Feliks Potocki beat a large Tatar army at Podhajce in one of the last battles of the war.
+      - The great victories were Habsburg ones, in Hungary and the Balkans, and the war ended with the Treaty of Karlowitz on 26 January 1699. The Ottomans returned Podolia and Kamianets to Poland–Lithuania and gave up their claims to Ukraine west of the Dnieper. The Habsburgs gained almost all of Hungary and Transylvania, and Venice the Morea. It was the first time the Ottoman Empire had given up so much territory by treaty.
+    facts:
+      - [Treaty of Karlowitz, "26 January 1699"]
+      - [Regained by Poland–Lithuania, "Podolia, with Kamianets"]
+    markers:
+      - kind: event
+        side: pl
+        name: Iași
+        date: 1686
+        text: Sobieski’s army reached the Moldavian capital but had to retreat, harried by Tatars and short of supplies.
+        lonlat: [27.59, 47.16]
+      - kind: held
+        side: ot
+        name: Kamianets
+        date: 1684–1699
+        text: The Ottoman garrison held out against a long Polish blockade. The fortress was handed back only after the peace.
+        lonlat: [26.56, 48.67]
+      - kind: battle
+        side: pl
+        name: Battle of Podhajce
+        date: 9 September 1698
+        text: Feliks Kazimierz Potocki’s army beat a large Tatar raiding force.
+        lonlat: [25.14, 49.27]
+      - kind: treaty
+        name: Treaty of Karlowitz
+        date: 26 January 1699
+        text: Signed at Karlowitz (Sremski Karlovci) on the Danube after English and Dutch mediation.
+        lonlat: [19.93, 45.20]
+    areas:
+      - style: gained
+        side: pl
+        label: Regained by Poland–Lithuania
+        atoms: [UA-68]

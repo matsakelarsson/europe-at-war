@@ -59,6 +59,8 @@ async function buildBorders(pol, topo) {
   for (const a of atomsMeta) if (a.parent) (children.get(a.parent) || children.set(a.parent, []).get(a.parent)).push(a.id);
   /** An atom id means the original region, including any split-off children. */
   const expand = (id, where) => {
+    // "X!" means only what is left of X itself, without its split-off children.
+    if (id.endsWith('!')) { const x = id.slice(0, -1); if (aidx.has(x)) return [aidx.get(x)]; err(`${where}: unknown atom ${x}`); return []; }
     const out = [];
     const walk = (x) => { if (aidx.has(x)) out.push(aidx.get(x)); for (const c of children.get(x) || []) walk(c); };
     walk(id);
@@ -107,7 +109,8 @@ async function buildBorders(pol, topo) {
       for (const [p, ids] of Object.entries(ev.owners || {})) {
         // "-" in an event means: no curated owner, use the latest keyframe.
         const pi = p === '-' ? 'kf' : polIdx(p, where);
-        for (const id of ids) for (const i of expand(id, where)) set.set(i, pi);
+        // As in keyframes: an atom listed itself beats one reached through its parent.
+        for (const id of ids) for (const i of expand(id, where)) if (!set.has(i) || order[i] === id) set.set(i, pi);
       }
       entries.push({ key: dateKey(ev.date), date: String(ev.date), src: ev.note || f, kind: 'event', war: ev.war, set });
     }
@@ -147,7 +150,7 @@ async function buildBorders(pol, topo) {
       }
     }
   }
-  if (flips.length) warn(`borders: ${flips.length} flip-flop(s) between curated events and draft keyframes, check them:\n    ` + flips.slice(0, 12).join('\n    ') + (flips.length > 12 ? `\n    … and ${flips.length - 12} more` : ''));
+  if (flips.length) warn(`borders: ${flips.length} flip-flop(s) between curated events and draft keyframes, check them:\n    ` + flips.slice(0, process.env.ALL_FLIPS ? Infinity : 12).join('\n    ') + (flips.length > 12 ? `\n    … and ${flips.length - 12} more` : ''));
   return { order, aidx, expand, timeline, meta };
 }
 
@@ -200,6 +203,8 @@ function buildWar(w, file, ctx) {
   if (!dateKey(w.start)) err(`${where}: bad start ${w.start}`);
   if (w.end !== undefined && w.end !== 'ongoing' && !dateKey(w.end)) err(`${where}: bad end ${w.end}`);
   if (!['A', 'B', 'C'].includes(w.tier)) err(`${where}: tier must be A, B or C`);
+  if (w.tier !== 'C' && !w.steps?.length) err(`${where}: tier ${w.tier} needs steps (or make it tier C)`);
+  if (w.tier === 'C' && !w.summary) err(`${where}: a tier C entry needs a summary`);
   if (!w.sources?.length) err(`${where}: no sources`);
   const sides = (w.sides || []).map((s, i) => {
     for (const p of s.polities || []) if (!ctx.pol.index.has(p)) err(`${where}: side ${s.id}: unknown polity ${p}`);
@@ -259,7 +264,19 @@ function buildWar(w, file, ctx) {
       if (ar.side && !sideIds.has(ar.side)) err(`${aw}: unknown side ${ar.side}`);
       const atoms = [...new Set((ar.atoms || []).flatMap((id) => ctx.borders.expand(id, aw)))];
       for (const i of atoms) { const m = ctx.borders.meta.get(ctx.borders.order[i]); if (m) pts.push(m.xy); }
-      return { style: ar.style, side: ar.side || null, label: ar.label || null, atoms };
+      // Free-form shapes, for lines and zones that do not follow atoms (fronts,
+      // occupation zones): polygon (one ring), polygons (several), line(s) (open).
+      const ring = (r, what) => {
+        if (!Array.isArray(r) || r.length < 2) { err(`${aw}: ${what} needs at least two [lon, lat] points`); return []; }
+        return r.map((ll) => { validLonLat(ll, aw); const xy = project(ll); pts.push(xy); return xy; });
+      };
+      const rings = [...(ar.polygon ? [ar.polygon] : []), ...(ar.polygons || [])].map((r) => ring(r, 'polygon')).filter((r) => r.length >= 3);
+      const shape = rings.length ? rings.map((r) => `M${r.join('L')}Z`).join('') : null;
+      const lines = [...(ar.line ? [ar.line] : []), ...(ar.lines || [])].map((r) => ring(r, 'line')).filter((r) => r.length >= 2);
+      const line = lines.length ? lines.map((r) => `M${r.join('L')}`).join('') : null;
+      if (!atoms.length && !shape && !line) err(`${aw}: needs atoms, polygon(s) or line(s)`);
+      if (ar.style === 'front' && !line) err(`${aw}: a front needs line or lines`);
+      return { style: ar.style, side: ar.side || null, label: ar.label || null, atoms, ...(shape ? { shape } : {}), ...(line ? { line } : {}) };
     });
     // View box
     let view;
@@ -282,17 +299,25 @@ function buildWar(w, file, ctx) {
       sideNames: s.side_names || null, moveNames: s.move_names || null,
     };
   });
+  // A step tagged with a country puts the war in that country's view.
+  for (const st of steps) for (const c of st.countries || []) countries.add(c);
   return {
     war: { id: w.id, name: w.name, start: String(w.start), end: w.end !== undefined ? String(w.end) : null, tier: w.tier, summary: w.summary || '', sides, notes: w.notes || [], sources: w.sources || [], steps },
-    index: { id: w.id, name: w.name, start: String(w.start), end: w.end !== undefined ? String(w.end) : null, sk: dateKey(w.start), ek: dateKey(w.end === 'ongoing' ? '9999' : w.end ?? w.start), tier: w.tier, summary: w.summary || '', countries: [...countries].sort(), steps: steps.map((s) => ({ t: s.title, d: s.date, c: s.countries, w: s.when })), polities: [...new Set(sides.flatMap((s) => s.polities))] },
+    index: { id: w.id, name: w.name, start: String(w.start), end: w.end !== undefined ? String(w.end) : null, sk: dateKey(w.start), ek: dateKey(w.end === 'ongoing' ? '9999' : w.end ?? w.start), tier: w.tier, summary: w.summary || '', countries: [...countries].sort(), steps: steps.map((s) => ({ t: s.title, d: s.date, c: s.countries, w: s.when })), polities: [...new Set(sides.flatMap((s) => s.polities))], ...(steps.length ? {} : { sources: w.sources || [] }) },
   };
 }
 
 // ---------------------------------------------------------------- main
+// `--check`: validate only, write nothing (safe to run alongside a dev build).
+const CHECK = process.argv.includes('--check');
+const emit = (f, data) => (CHECK ? null : writeFile(join(DIST, f), data));
+
 async function main() {
-  await rm(DIST, { recursive: true, force: true });
-  await mkdir(join(DIST, 'data/wars'), { recursive: true });
-  await cp(join(ROOT, 'site'), DIST, { recursive: true });
+  if (!CHECK) {
+    await rm(DIST, { recursive: true, force: true });
+    await mkdir(join(DIST, 'data/wars'), { recursive: true });
+    await cp(join(ROOT, 'site'), DIST, { recursive: true });
+  }
 
   const topoText = await readFile(join(ROOT, 'site-data/atoms.topo.json'), 'utf8');
   const topo = JSON.parse(topoText);
@@ -308,7 +333,7 @@ async function main() {
     seen.add(w.id);
     const { war, index } = buildWar(w, f, { pol, borders });
     wars.push(index);
-    await writeFile(join(DIST, 'data/wars', `${w.id}.json`), JSON.stringify(war));
+    await emit(`data/wars/${w.id}.json`, JSON.stringify(war));
   }
   wars.sort((a, b) => (a.sk < b.sk ? -1 : a.sk > b.sk ? 1 : a.name.localeCompare(b.name)));
 
@@ -324,19 +349,19 @@ async function main() {
     }),
     timeline: borders.timeline.map((t) => ({ d: t.d, k: t.k, s: t.s, c: t.c })),
   };
-  await writeFile(join(DIST, 'data/atoms.topo.json'), topoText);
-  await writeFile(join(DIST, 'data/borders.json'), JSON.stringify(bordersOut));
-  await writeFile(join(DIST, 'data/polities.css'), pol.css);
-  await writeFile(join(DIST, 'data/wars.json'), JSON.stringify(wars));
-  await writeFile(join(DIST, 'data/labels.json'), JSON.stringify(labels));
+  await emit('data/atoms.topo.json', topoText);
+  await emit('data/borders.json', JSON.stringify(bordersOut));
+  await emit('data/polities.css', pol.css);
+  await emit('data/wars.json', JSON.stringify(wars));
+  await emit('data/labels.json', JSON.stringify(labels));
 
   // Size report: what a first visit downloads.
   const first = ['index.html', 'app.js', 'style.css', 'vendor/topojson-client.min.js', 'data/atoms.topo.json', 'data/borders.json', 'data/polities.css', 'data/wars.json', 'data/labels.json'];
   let raw = 0, gz = 0;
   for (const f of first) { try { const b = await readFile(join(DIST, f)); raw += b.length; gz += gzipSync(b).length; } catch {} }
   console.log(`polities ${pol.list.length}, atoms ${borders.order.length}, timeline entries ${borders.timeline.length}, wars ${wars.length}`);
-  console.log(`first load: ${(raw / 1e6).toFixed(2)} MB raw, ${(gz / 1e6).toFixed(2)} MB gzip`);
-  if (gz > 1.2e6) warn(`first load is over budget (${(gz / 1e6).toFixed(2)} MB gzip > 1.2 MB)`);
+  if (!CHECK) console.log(`first load: ${(raw / 1e6).toFixed(2)} MB raw, ${(gz / 1e6).toFixed(2)} MB gzip`);
+  if (!CHECK && gz > 1.2e6) warn(`first load is over budget (${(gz / 1e6).toFixed(2)} MB gzip > 1.2 MB)`);
   for (const w of warnings) console.warn('warning:', w);
   for (const e of errors) console.error('ERROR:', e);
   if (errors.length) { console.error(`${errors.length} error(s)`); process.exit(1); }

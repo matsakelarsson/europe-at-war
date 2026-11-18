@@ -1,0 +1,158 @@
+id: valdemar-ii-baltic-wars
+name: Wars of Valdemar II
+start: "1201"
+end: "1227-07-22"
+tier: B
+summary: The wars by which Valdemar II of Denmark built a Baltic empire stretching from Holstein and Lübeck to northern Estonia, and then lost most of it. After his kidnapping by a German count in 1223, his north German lands broke away, and his defeat at Bornhöved in 1227 pushed Denmark’s border back to the Eider.
+countries: [dk, de, ee]
+sides:
+  - id: dk
+    name: Denmark
+    polities: [denmark]
+    ink: red
+    moves: Danish moves
+    success: Danish success
+  - id: nde
+    name: North German princes and cities
+    polities: [holstein, lubeck]
+    ink: slate
+    moves: North German moves
+    success: North German success
+  - id: est
+    name: Estonians
+    polities: [ests]
+    ink: olive
+    moves: Estonian moves
+    success: Estonian success
+notes:
+  - Valdemar is remembered in Denmark as Valdemar Sejr, “the Victorious”. The main sources are German chronicles, Henry of Livonia’s chronicle for Estonia, and later Danish annals; numbers in them are unreliable.
+  - The legend that the Danish flag, the Dannebrog, fell from the sky at Lyndanisse is first recorded about three centuries after the battle.
+sources:
+  - title: Valdemar II of Denmark (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Valdemar_II_of_Denmark
+  - title: Battle of Lyndanisse (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Lyndanisse
+  - title: Battle of Bornhöved, 1227 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Bornh%C3%B6ved_(1227)
+  - title: Valdemar II, king of Denmark (Britannica)
+    url: https://www.britannica.com/biography/Valdemar-II
+steps:
+  - title: North of the Elbe
+    date: 1201–1216
+    when: "1201"
+    borders: "1214"
+    countries: [dk, de]
+    body:
+      - In 1201 Duke Valdemar of Schleswig, younger brother of King Canute VI, defeated Count Adolf III of Holstein at Stellau and captured him at Hamburg. Holstein and Lübeck submitted to Danish rule, and the count only bought his freedom in 1203 by giving up his claims. Valdemar became king on his brother’s death in November 1202 and set his nephew Albert of Orlamünde over Holstein.
+      - Taking advantage of the struggle for the German crown, Valdemar extended Danish power along the coast as far as Pomerania, and fought for control of the lower Elbe and Hamburg. In 1214 the young emperor Frederick II, in need of allies, formally granted Denmark all the lands north of the Elbe and the Elde. Denmark was then the leading power of the Baltic.
+    facts:
+      - [Battle of Stellau, "1201, Danish victory"]
+      - [Valdemar II king, "November 1202"]
+      - [Golden Bull of Eger, "1214: Frederick II recognises Danish rule north of the Elbe"]
+    markers:
+      - kind: battle
+        side: dk
+        name: Battle of Stellau
+        date: "1201"
+        text: Duke Valdemar’s army beat Count Adolf of Holstein near Wrist, in western Holstein.
+        lonlat: [9.78, 53.94]
+      - kind: taken
+        side: dk
+        name: Hamburg
+        date: "1201"
+        text: Adolf fell back on Hamburg, where Valdemar besieged and captured him.
+        lonlat: [10.0, 53.55]
+      - kind: taken
+        side: dk
+        name: Lübeck
+        date: "1201"
+        text: The young trading city submitted to the Danish king and kept its privileges.
+        lonlat: [10.686, 53.87]
+    arrows:
+      - side: dk
+        label: Duke Valdemar
+        via: [[9.55, 54.5], [9.7, 54.2], [9.78, 53.96]]
+    areas:
+      - style: gained
+        side: dk
+        label: Under Danish rule from 1201
+        atoms: [DE-SH~holstein, DE-SH!, DE-HH]
+  - title: Lyndanisse and Estonia
+    date: "1219"
+    when: "1219-06-15"
+    borders: "1219-06-15"
+    countries: [dk, ee]
+    body:
+      - German crusaders and the Livonian Brothers of the Sword had been fighting the pagan Estonians for more than a decade when the bishop of Riga asked Valdemar for help. With the pope’s blessing, Valdemar sailed to northern Estonia in June 1219 with a large fleet, Archbishop Anders Sunesen of Lund, Prince Vitslav of Rügen and Count Albert. They camped at Lyndanisse, a hill-fort by the sea, and began to build a castle.
+      - On 15 June the Estonians attacked the camp from several sides and took the crusaders by surprise. Bishop Theoderich, mistaken for the king, was killed. A counterattack by Vitslav’s men turned the battle, and many Estonians were killed. The Danes built their castle on the hill of Toompea; the town that grew up around it is today’s Tallinn. Over the next years northern Estonia was conquered and baptised, in rivalry with the Sword Brothers advancing from the south.
+    facts:
+      - [Battle of Lyndanisse, "15 June 1219, Danish victory"]
+      - [Danish castle, "Castrum Danorum, later Reval (Tallinn)"]
+      - [Danish Estonia, "1219–1346, with a break in 1227–1238"]
+    markers:
+      - kind: battle
+        side: dk
+        name: Battle of Lyndanisse
+        date: 15 June 1219
+        text: In legend, the Dannebrog fell from the sky as the Danes were about to break, and gave them victory.
+        lonlat: [24.74, 59.437]
+      - kind: event
+        side: dk
+        name: Saaremaa
+        date: "1222"
+        text: Valdemar landed on Saaremaa and began a stone fort, but the islanders captured it after he had left.
+        lonlat: [22.5, 58.42]
+    arrows:
+      - side: dk
+        label: Valdemar’s fleet
+        via: [[15.0, 55.4], [19.5, 58.5], [24.7, 59.5]]
+    areas:
+      - style: gained
+        side: dk
+        label: Northern Estonia, conquered by the Danes from 1219
+        atoms: [EE-37, EE-44, EE-51, EE-59, EE-70]
+  - title: Captivity and Bornhöved
+    date: 1223–1227
+    when: "1227-07-22"
+    borders: "1227-07-22"
+    countries: [dk, de, ee]
+    body:
+      - In May 1223 Count Henry of Schwerin, one of Valdemar’s German vassals, kidnapped the king and his eldest son while they were hunting on the island of Lyø and carried them off to his castles in Germany. The north German princes and cities rose against Danish rule, and a Danish army under Albert of Orlamünde was beaten at Mölln in 1225. To be freed, Valdemar had to give up his German conquests, pay 44,000 marks of silver and swear not to take revenge.
+      - The pope released him from his oath, and Valdemar tried to win his lands back. On 22 July 1227 he met Count Adolf IV of Holstein and his allies, among them Lübeck, Hamburg, the Duke of Saxony and Henry of Schwerin, at Bornhöved. The peasant army of Dithmarschen, fighting for the king, changed sides in mid-battle and the Danes were routed; Valdemar lost an eye. Denmark’s southern border went back to the Eider, and only Rügen was kept. In the same year the Sword Brothers took Danish Estonia, which was returned to Denmark in 1238.
+    facts:
+      - [Kidnapping on Lyø, "May 1223"]
+      - [Ransom, "44,000 marks of silver (sources differ)"]
+      - [Battle of Bornhöved, "22 July 1227, north German victory"]
+    markers:
+      - kind: event
+        side: nde
+        name: Lyø
+        date: May 1223
+        text: Henry of Schwerin seized the sleeping king and his son at night during a hunting trip and took them by boat to Germany.
+        lonlat: [10.167, 55.033]
+      - kind: event
+        side: nde
+        name: Schwerin and Dannenberg
+        date: 1223–1225
+        text: The king was held prisoner in Henry’s castles for two and a half years.
+        lonlat: [11.417, 53.633]
+      - kind: battle
+        side: nde
+        name: Battle of Mölln
+        date: "1225"
+        text: The north German princes defeated the Danish army sent to free the king, and captured its commander, Albert of Orlamünde.
+        lonlat: [10.685, 53.627]
+      - kind: battle
+        side: nde
+        name: Battle of Bornhöved
+        date: 22 July 1227
+        text: A long, bloody battle in eastern Holstein ended Danish rule north of the Eider. Duke Otto of Brunswick, fighting for Valdemar, was taken prisoner.
+        lonlat: [10.2, 54.067]
+    arrows:
+      - side: nde
+        label: Henry of Schwerin
+        via: [[10.17, 55.03], [10.6, 54.4], [11.3, 53.65]]
+    areas:
+      - style: lost
+        label: Lost by Denmark in 1227
+        atoms: [DE-SH~holstein, DE-SH!, DE-HH]

@@ -62,7 +62,12 @@ npm run draft        # fill keyframe gaps for new atoms (never overwrites existi
 | --- | --- |
 | `node tools/set-owner.mjs 1530,1600 russia RU-PSK` | Hand-correct atoms in drafted keyframes |
 | `node tools/rename-polity.mjs muscovy russia` | Rename or merge a polity id across all content |
+| `node tools/split-from-hb.mjs 30-poland 1880 Germany memel "Memel land" LT-KL` | Cut atoms along a historical-basemaps border |
+| `node tools/owners-at.mjs 1772-08-06 poland prussia` | Who owns which atoms on a date (after a build) |
+| `node tools/owner-history.mjs '^PL-PM'` | Every owner change of matching atoms, with its source |
+| `node tools/box.mjs 21 52 1500` | A `?box=` value for opening the map on an area |
 | `node tools/migrate/sweden.mjs` | One-off import from Sweden at War (already run; refuses to overwrite without `--force`) |
+| `tools/migrate/*.mjs` (others) | One-off corrections, already applied; kept as a record |
 
 ## Deploying
 

@@ -1,0 +1,116 @@
+id: norwegian-invasion-of-england-1066
+name: Norwegian invasion of England
+start: "1066-09"
+end: "1066-09-25"
+tier: B
+summary: King Harald Hardrada of Norway invaded England in September 1066 to claim its throne, together with the exiled Earl Tostig. He won at Fulford but was killed with most of his army at Stamford Bridge by King Harold Godwinson, three weeks before Harold’s own defeat at Hastings.
+countries: ["no", gb]
+sides:
+  - id: nor
+    name: Norway and Tostig
+    polities: [norway]
+    ink: red
+    moves: Norwegian moves
+    success: Norwegian success
+  - id: eng
+    name: England
+    polities: [england]
+    ink: navy
+    moves: English moves
+    success: English success
+notes:
+  - The English sources are the Anglo-Saxon Chronicle and later Anglo-Norman writers; the Norwegian story is told in Snorri Sturluson’s saga of Harald Hardrada, written about 170 years later. Numbers of ships and men are uncertain.
+  - The battle is traditionally seen as the end of the Viking Age, though Danish and Norwegian kings still sent fleets to Britain and Ireland in the following decades.
+sources:
+  - title: Battle of Stamford Bridge (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Stamford_Bridge
+  - title: Battle of Fulford (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Fulford
+  - title: Harald III Sigurdsson (Britannica)
+    url: https://www.britannica.com/biography/Harald-III-Sigurdsson
+  - title: Battle of Stamford Bridge (Britannica)
+    url: https://www.britannica.com/event/Battle-of-Stamford-Bridge
+steps:
+  - title: Hardrada lands; Fulford
+    date: September 1066
+    when: "1066-09-20"
+    borders: "1066-09-20"
+    countries: ["no", gb]
+    body:
+      - When Edward the Confessor died in January 1066, the English chose Harold Godwinson as king. Two foreign rulers also claimed the throne, William of Normandy and Harald Hardrada of Norway, a veteran warrior who had served the Byzantine emperor. Harold’s brother Tostig, driven out as earl of Northumbria in 1065, had raided the English coast that spring and now joined Hardrada. In September a Norwegian fleet, 300 ships according to the Chronicle, sailed by way of Orkney to the coast of Yorkshire.
+      - The fleet rowed up the Humber and the Ouse to Riccall, south of York. On 20 September the northern earls, Edwin of Mercia and Morcar of Northumbria, met the invaders at Fulford, just outside the city. After heavy fighting on both sides the English broke. York surrendered on condition that it would not be sacked, and agreed to hand over hostages and supplies. The Norwegians went back to their ships to wait.
+    facts:
+      - [Norwegian fleet, "300 ships according to the Anglo-Saxon Chronicle"]
+      - [Norwegian army, "Probably 7,000–9,000 men, with Orkney and Tostig’s contingents"]
+      - [Battle of Fulford, "20 September 1066, Norwegian victory"]
+    markers:
+      - kind: event
+        side: nor
+        name: Orkney
+        date: September 1066
+        text: Hardrada collected men from the earldom of Orkney, then under Norwegian rule, and left his queen and daughters there.
+        lonlat: [-2.96, 58.981]
+      - kind: taken
+        side: nor
+        name: Scarborough
+        date: September 1066
+        text: According to the sagas the Norwegians burned the town when it refused to submit.
+        lonlat: [-0.4, 54.283]
+      - kind: held
+        side: nor
+        name: Riccall
+        date: September 1066
+        text: The fleet was beached here on the Ouse, about 15 kilometres south of York.
+        lonlat: [-1.059, 53.833]
+        lp: l
+      - kind: battle
+        side: nor
+        name: Battle of Fulford
+        date: 20 September 1066
+        text: The earls’ army was trapped between the Ouse and a marsh. Both Edwin and Morcar escaped.
+        lonlat: [-1.071, 53.933]
+    arrows:
+      - side: nor
+        label: Hardrada’s fleet
+        via: [[4.85, 61.0], [-1.2, 60.1], [-2.6, 58.9], [-0.3, 54.3]]
+      - side: nor
+        label: Up the Ouse
+        via: [[0.2, 53.6], [-0.75, 53.7], [-1.06, 53.83]]
+  - title: Stamford Bridge
+    date: 25 September 1066
+    when: "1066-09-25"
+    borders: "1066-09-25"
+    countries: ["no", gb]
+    body:
+      - King Harold had spent the summer guarding the south coast against William. Hearing of the invasion, he marched north from London, covering some 185 miles in about four days, and passed through York on the morning of 25 September. The Norwegians had gone to Stamford Bridge on the Derwent to collect the hostages, many of them without their mail shirts in the warm weather. They were taken completely by surprise.
+      - The fighting lasted most of the day. Hardrada was killed early, struck in the throat by an arrow according to the sagas, and Tostig soon after. Men from the ships at Riccall under Eystein Orre ran to join the battle and were cut down in turn. Harold let the survivors, among them Hardrada’s son Olaf and the earl of Orkney, sail home; only 24 ships were needed to carry them. Three days later William landed in Sussex, and on 14 October Harold was killed at Hastings.
+    facts:
+      - [Battle of Stamford Bridge, "25 September 1066, English victory"]
+      - [Killed, "Harald Hardrada and Tostig Godwinson"]
+      - [Ships needed for the survivors, "24, of about 300"]
+    markers:
+      - kind: battle
+        side: eng
+        name: Battle of Stamford Bridge
+        date: 25 September 1066
+        text: Legend tells of a lone Norwegian who held the bridge over the Derwent until an Englishman floated beneath it and speared him through the planks.
+        lonlat: [-0.9125, 53.9925]
+      - kind: event
+        side: eng
+        name: Tadcaster
+        date: 24 September 1066
+        text: Harold’s army reached Tadcaster, south-west of York, and marched through the city at dawn the next day.
+        lonlat: [-1.262, 53.885]
+      - kind: event
+        name: Departure of the survivors
+        date: Autumn 1066
+        text: Olaf and Earl Paul sailed to Orkney, where they spent the winter before Olaf returned to Norway, which he then shared with his brother Magnus.
+        lonlat: [-1.059, 53.833]
+        lp: l
+    arrows:
+      - side: eng
+        label: Harold
+        via: [[-1.262, 53.885], [-1.08, 53.96], [-0.93, 53.99]]
+      - side: nor
+        label: Eystein Orre
+        via: [[-1.059, 53.833], [-0.98, 53.92], [-0.92, 53.985]]

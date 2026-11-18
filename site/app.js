@@ -498,8 +498,9 @@ function buildStepLayers(war, step) {
   const inkOf = (sid) => (war.sides.find((s) => s.id === sid) || { ink: 'none' }).ink;
   const sideIdx = (sid) => Math.max(0, war.sides.findIndex((s) => s.id === sid));
   for (const ar of step.areas) {
-    if (!ar.atoms.length) continue;
-    const d = pathD(topojson.merge(topo, ar.atoms.map((i) => geoms[i])));
+    if (ar.line) el('path', { d: ar.line, class: `front side-${inkOf(ar.side)}` }, gOv);
+    if (ar.style === 'front' || (!ar.atoms.length && !ar.shape)) continue;
+    const d = (ar.atoms.length ? pathD(topojson.merge(topo, ar.atoms.map((i) => geoms[i]))) : '') + (ar.shape || '');
     let cls = 'ov', fill = null;
     if (ar.style === 'gained') cls += ' ov-gained';
     else if (ar.style === 'pledged') { cls += ' ov-pledged'; fill = hatch('gold', 45, 'hatch-gold', 2.6, 7); }
@@ -600,7 +601,7 @@ function renderWarList() {
   const cc = countryEl.value, q = qEl.value.trim().toLowerCase();
   let list, head;
   if (q) {
-    list = WARS.filter((w) => (!cc || w.countries.includes(cc)) && (w.name.toLowerCase().includes(q) || w.steps.some((s) => s.t.toLowerCase().includes(q))));
+    list = WARS.filter((w) => (!cc || w.countries.includes(cc)) && (w.name.toLowerCase().includes(q) || w.summary.toLowerCase().includes(q) || w.steps.some((s) => s.t.toLowerCase().includes(q))));
     head = `Search results (${list.length})`;
   } else {
     const k0 = `${String(year).padStart(4, '0')}-00-00`, k1 = `${String(year).padStart(4, '0')}-99-99`;
@@ -610,7 +611,9 @@ function renderWarList() {
   $('listHead').textContent = head;
   $('warList').innerHTML = list.length ? list.map((w) => {
     const n = w.steps.length;
-    return `<li><a href="#/war/${encodeURIComponent(w.id)}"><span class="wn">${esc(w.name)}</span>${w.tier === 'C' ? '<span class="tier">brief</span>' : ''}<span class="wd">${fmtYears(w)}${n ? ` · ${n} step${n > 1 ? 's' : ''}` : ''}</span>${w.summary ? `<span class="ws">${esc(w.summary)}</span>` : ''}</a></li>`;
+    const inner = `<span class="wn">${esc(w.name)}</span>${w.tier === 'C' ? '<span class="tier">brief</span>' : ''}<span class="wd">${fmtYears(w)}${n ? ` · ${n} step${n > 1 ? 's' : ''}` : ''}</span>${w.summary ? `<span class="ws">${esc(w.summary)}</span>` : ''}`;
+    // A catalogue entry without steps has nothing to open: show it as a card.
+    return n ? `<li><a href="#/war/${encodeURIComponent(w.id)}">${inner}</a></li>` : `<li><div class="wcard">${inner}${w.sources?.length ? `<span class="wsrc">${w.sources.map((s) => `<a href="${esc(s.url)}">${esc(s.title)}</a>`).join(' · ')}</span>` : ''}</div></li>`;
   }).join('') : `<li class="empty">${q ? 'No wars match your search.' : 'No wars in the catalogue for this year yet.'}</li>`;
   const lens = $('lensLink');
   if (cc) {
@@ -649,8 +652,10 @@ function explore(y) {
   document.title = 'Europe at War';
   if (entering) renderTimelineBars();
   setYear(y ?? year, { noHash: true });
-  if (entering) { targetBox = FRAME.slice(); animateTo(fit(targetBox), vb[2] === FRAME[2] ? 0 : 800); }
+  if (entering) { targetBox = START_BOX || FRAME.slice(); animateTo(fit(targetBox), vb[2] === FRAME[2] ? 0 : 800); START_BOX = null; }
 }
+// `?box=x,y,w,h` (map km) opens explore mode on that box; used for review screenshots.
+let START_BOX = (() => { const b = new URLSearchParams(location.search).get('box'); const v = b ? b.split(',').map(Number) : []; return v.length === 4 && v.every(Number.isFinite) ? v : null; })();
 
 // ---------- Story mode (one war, or one country's wars) ----------
 const storyEl = $('story'), legendEl = $('legend'), jumpEl = $('jump'), progEl = $('progress');
@@ -706,6 +711,7 @@ function renderLegend(war, step, own) {
     if (ar.style === 'gained') sw = swatch('var(--gold-fill)');
     else if (ar.style === 'pledged') sw = swatch(hatch('gold', 45, 'hatch-gold', 2.6, 7), 'var(--gold)');
     else if (ar.style === 'lost') sw = swatch(hatch('lost', 45, 'hatch-lost', 1.6, 8), 'var(--ink)');
+    else if (ar.style === 'front') sw = `<svg class="side-${ink}" width="18" height="12" aria-hidden="true"><path d="M1,8 C6,2 11,10 17,4" style="fill:none;stroke:var(--mc);stroke-width:2.6;stroke-linecap:round"/></svg>`;
     else if (ar.style === 'outline') sw = '<svg width="18" height="12" aria-hidden="true"><rect x="1" y="1" width="16" height="10" rx="2" style="fill:none;stroke:var(--ink);stroke-width:1.6;stroke-dasharray:4 2"/></svg>';
     else { const rot = HATCH_ROT[Math.max(0, war.sides.indexOf(s)) % 4]; sw = `<span class="side-${ink}" style="display:inline-flex">${swatch(hatch(`${ink}-${rot}`, rot, 'hatch', 2.4, 7), 'var(--mc)')}</span>`; }
     const html = `<span>${sw}${esc(lab)}</span>`;
@@ -781,7 +787,13 @@ async function go(i, instant) {
 }
 function openStory(kind, id, i) {
   let items;
-  if (kind === 'war') { const w = warById.get(id); if (!w) return explore(); items = w.steps.map((_, k) => ({ w: id, s: k })); }
+  if (kind === 'war') {
+    const w = warById.get(id);
+    if (!w) return explore();
+    // A catalogue entry with no steps: show its years and list it there.
+    if (!w.steps.length) { location.replace(`#/year/${yearOf(w.sk)}`); return; }
+    items = w.steps.map((_, k) => ({ w: id, s: k }));
+  }
   else items = lensSteps(id);
   if (!items.length) return explore();
   const same = story && story.kind === kind && story.id === id;

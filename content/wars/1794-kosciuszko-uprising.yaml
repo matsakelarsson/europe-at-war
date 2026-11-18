@@ -1,0 +1,215 @@
+id: kosciuszko-uprising
+name: Kościuszko Uprising
+start: "1794"
+end: "1794"
+tier: A
+summary: A national rising led by Tadeusz Kościuszko against Russian control after the Second Partition. It won at Racławice and drove the Russians out of Warsaw and Vilnius, but Russian and Prussian armies crushed it by November 1794, and in 1795 the Third Partition divided what was left of Poland–Lithuania between Russia, Prussia and Austria.
+countries: [pl, lt, by, ua, ru, de, at]
+sides:
+  - id: pl
+    name: Polish and Lithuanian insurgents
+    polities: [poland, lithuania, poland-lithuania]
+    ink: magenta
+    moves: Insurgent moves
+    success: Insurgent success
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: pr
+    name: Prussia
+    polities: [prussia]
+    ink: slate
+    moves: Prussian moves
+    success: Prussian success
+  - id: at
+    name: Habsburg Monarchy
+    polities: [habsburg]
+    ink: purple
+    moves: Austrian moves
+    success: Austrian success
+notes:
+  - Dates are New Style (Gregorian).
+sources:
+  - title: Kościuszko Uprising (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ko%C5%9Bciuszko_Uprising
+  - title: Battle of Racławice (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Rac%C5%82awice
+  - title: Warsaw Uprising (1794) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Warsaw_Uprising_(1794)
+  - title: Battle of Maciejowice (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Maciejowice
+  - title: Battle of Praga (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Praga
+  - title: Third Partition of Poland (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Third_Partition_of_Poland
+steps:
+  - title: Kraków and Racławice
+    date: March – April 1794
+    when: "1794-03"
+    borders: "1794-04-04"
+    countries: [pl, ru]
+    body:
+      - After the Second Partition, Russian troops garrisoned what was left of Poland–Lithuania, and its army was ordered to shrink. In March 1794 General Antoni Madaliński refused to disband his cavalry brigade and marched it south towards Kraków. On 24 March, in Kraków’s market square, Tadeusz Kościuszko, a veteran of the American War of Independence and of the war of 1792, proclaimed an Act of Insurrection and took supreme command.
+      - He called up peasants as well as soldiers. On 4 April, at Racławice north of Kraków, his army of about 4,000 regulars and some 2,000 peasants armed with scythes beat a Russian corps. A charge by the scythemen took the Russian guns, and one of them, Wojciech Bartosz Głowacki, became a national hero. The victory was small in military terms but spread the rising across the country.
+    facts:
+      - [Act of Insurrection, "24 March 1794, Kraków"]
+      - [Battle of Racławice, "4 April 1794, insurgent victory"]
+    markers:
+      - kind: event
+        side: pl
+        name: Act of Insurrection
+        date: 24 March 1794
+        text: Kościuszko swore his oath to the nation in the market square and was named commander-in-chief of the rising.
+        lonlat: [19.94, 50.06]
+      - kind: battle
+        side: pl
+        name: Battle of Racławice
+        date: 4 April 1794
+        text: Kościuszko’s regulars and scythe-armed peasants beat the Russian corps of Generals Tormasov and Denisov.
+        lonlat: [20.23, 50.31]
+    arrows:
+      - side: pl
+        label: Madaliński
+        via: [[21.57, 53.08], [21.1, 51.9], [20.3, 50.8], [19.98, 50.12]]
+  - title: Warsaw and Vilnius rise
+    date: April – June 1794
+    when: "1794-04-17"
+    borders: "1794-06-15"
+    countries: [pl, lt, ru, de]
+    body:
+      - On 17 April the people of Warsaw, led among others by the shoemaker Jan Kiliński, rose against the Russian garrison. After two days of street fighting the Russians had lost 2,000–4,000 of about 5,000 men killed, wounded or captured, and their commander Iosif Igelström fled. On the night of 22–23 April Colonel Jakub Jasiński led a rising in Vilnius, and Lithuania joined the insurrection. Leaders of the Targowica Confederation were hanged in both cities, some after trials and some by mobs.
+      - On 7 May, at Połaniec, Kościuszko freed the peasants from personal serfdom and cut their labour dues, though many nobles ignored the decree. Prussia now joined Russia. On 6 June a Russian and Prussian army, with King Frederick William II present, beat Kościuszko at Szczekociny, and on 15 June the Prussians occupied Kraków without a fight.
+    facts:
+      - [Warsaw rising, "17–18 April 1794"]
+      - [Proclamation of Połaniec, "7 May 1794"]
+      - [Battle of Szczekociny, "6 June 1794, Russian and Prussian victory"]
+    markers:
+      - kind: event
+        side: pl
+        name: Warsaw rises
+        date: 17–18 April 1794
+        text: Townspeople and soldiers drove the Russian garrison out of the capital after two days of fighting.
+        lonlat: [21.01, 52.23]
+      - kind: event
+        side: pl
+        name: Vilnius rises
+        date: 22–23 April 1794
+        text: Jasiński’s insurgents captured the Russian garrison. The Targowica hetman Szymon Kossakowski was hanged on 25 April.
+        lonlat: [25.28, 54.69]
+      - kind: event
+        side: pl
+        name: Proclamation of Połaniec
+        date: 7 May 1794
+        text: Issued from Kościuszko’s camp, it promised peasants personal freedom and protection against their lords.
+        lonlat: [21.28, 50.43]
+      - kind: battle
+        side: pr
+        name: Battle of Szczekociny
+        date: 6 June 1794
+        text: Kościuszko was outnumbered by the joined Russian and Prussian armies and fell back towards Warsaw.
+        lonlat: [19.83, 50.63]
+        lp: l
+      - kind: taken
+        side: pr
+        name: Kraków
+        date: 15 June 1794
+        text: The city surrendered to the Prussians without a fight.
+        lonlat: [19.94, 50.06]
+  - title: The siege of Warsaw and Maciejowice
+    date: July – October 1794
+    when: "1794-07"
+    borders: "1794-10-10"
+    countries: [pl, lt, by, ru, de]
+    body:
+      - From 13 July about 41,000 Russians and 25,000 Prussians, the latter led by Frederick William II, besieged Warsaw, defended by Kościuszko behind earthworks. In August Greater Poland rose behind the Prussian lines, and on 6 September the besiegers withdrew. Jan Henryk Dąbrowski led a raid into Greater Poland and took Bydgoszcz on 2 October. In Lithuania, though, the Russians took back Vilnius on 12 August.
+      - Catherine II sent her best general, Alexander Suvorov, north from Ukraine. He beat the Lithuanian corps of Karol Sierakowski near Brest in September. To stop Ivan Fersen’s army joining him, Kościuszko moved to block it at Maciejowice, where Fersen attacked on 10 October before Polish reinforcements arrived. The Polish army was beaten, and Kościuszko was wounded and taken prisoner. He was held in St Petersburg until 1796.
+    facts:
+      - [Siege of Warsaw, "13 July – 6 September 1794"]
+      - [Battle of Maciejowice, "10 October 1794, Russian victory; Kościuszko captured"]
+    markers:
+      - kind: held
+        side: pl
+        name: Siege of Warsaw
+        date: 13 July – 6 September 1794
+        text: The Russian and Prussian armies gave up the siege after the rising in Greater Poland threatened Prussian supply lines.
+        lonlat: [21.01, 52.23]
+      - kind: taken
+        side: ru
+        name: Vilnius retaken
+        date: 12 August 1794
+        text: The city capitulated to Russian troops after a short siege.
+        lonlat: [25.28, 54.69]
+      - kind: taken
+        side: pl
+        name: Bydgoszcz
+        date: 2 October 1794
+        text: Dąbrowski’s corps stormed the Prussian-held town.
+        lonlat: [18.00, 53.12]
+      - kind: battle
+        side: ru
+        name: Battle of Terespol
+        date: 19 September 1794
+        text: Suvorov destroyed Sierakowski’s corps near Brest.
+        lonlat: [23.65, 52.07]
+      - kind: battle
+        side: ru
+        name: Battle of Maciejowice
+        date: 10 October 1794
+        text: Kościuszko’s army was overwhelmed. He fell wounded from his horse and was captured by Cossacks.
+        lonlat: [21.60, 51.71]
+    arrows:
+      - side: ru
+        label: Suvorov
+        via: [[26.0, 50.6], [24.9, 51.5], [24.4, 52.15], [23.75, 52.08]]
+      - side: pl
+        label: Dąbrowski
+        via: [[20.9, 52.3], [19.4, 52.75], [18.05, 53.1]]
+      - side: ru
+        label: Fersen
+        via: [[21.05, 51.45], [21.4, 51.62], [21.57, 51.7]]
+  - title: Praga and the Third Partition
+    date: November 1794 – 1795
+    when: "1794-11"
+    borders: "1795-10-24"
+    countries: [pl, lt, by, ua, ru, de, at]
+    body:
+      - Suvorov joined Fersen and on 4 November stormed Praga, the fortified suburb of Warsaw on the east bank of the Vistula. Russian troops then killed defenders and inhabitants alike; some estimates put the dead, soldiers and civilians together, at up to 20,000. Warsaw capitulated the next day to avoid the same fate. The last insurgent army, under Tomasz Wawrzecki, surrendered near Radoszyce on 16 November.
+      - Russia, Prussia and Austria divided what remained. Russia and Austria agreed terms in January 1795, and the final convention was signed on 24 October. Russia took Lithuania, western Belarus, western Volhynia and Courland; Prussia took Warsaw, Masovia and Podlasie; Austria took Kraków, Lublin and the lands between. Stanisław August abdicated at Grodno on 25 November 1795. Poland–Lithuania disappeared from the map, and no Polish state existed again until 1807.
+    facts:
+      - [Storming of Praga, "4 November 1794"]
+      - [Third Partition, "Final convention 24 October 1795"]
+      - [Abdication of the last king, "25 November 1795"]
+    markers:
+      - kind: battle
+        side: ru
+        name: Storming of Praga
+        date: 4 November 1794
+        text: The assault took a few hours. The killing that followed, of civilians as well as soldiers, became notorious across Europe.
+        lonlat: [21.04, 52.25]
+      - kind: event
+        side: ru
+        name: Radoszyce
+        date: 16 November 1794
+        text: Wawrzecki’s remaining troops laid down their arms, ending the rising.
+        lonlat: [20.25, 51.07]
+      - kind: event
+        name: The king abdicates
+        date: 25 November 1795
+        text: Stanisław August, living under Russian supervision in Grodno, signed his abdication. He died in St Petersburg in 1798.
+        lonlat: [23.83, 53.68]
+    areas:
+      - style: gained
+        side: ru
+        label: Taken by Russia, 1795
+        atoms: [LT-VL, LT-UT, LT-PN, LT-SA, LT-TE, LT-TA, LT-KU, LT-AL, BY-BR, BY-HR, UA-07]
+      - style: gained
+        side: pr
+        label: Taken by Prussia, 1795
+        atoms: [PL-MZ, PL-PD, LT-MR]
+      - style: gained
+        side: at
+        label: Taken by Austria, 1795
+        atoms: [PL-LU, PL-SK, PL-MA~krakow, PL-MA!]

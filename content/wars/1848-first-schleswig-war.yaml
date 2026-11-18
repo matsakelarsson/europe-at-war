@@ -1,0 +1,240 @@
+id: first-schleswig-war
+name: First Schleswig War
+start: "1848-03-24"
+end: "1851-04-01"
+tier: A
+summary: A war over the duchies of Schleswig and Holstein, fought between Denmark and a German-minded provisional government in the duchies, which Prussia and the German Confederation backed until 1850. Denmark won on the battlefield, and the great powers’ London Protocol of 1852 kept the duchies under the Danish king.
+countries: [dk, de]
+sides:
+  - id: dk
+    name: Denmark
+    polities: [denmark, danish-duchies]
+    ink: red
+    moves: Danish moves
+    success: Danish success
+  - id: sh
+    name: Schleswig-Holstein
+    polities: [schleswig-holstein-1848]
+    ink: teal
+    moves: Schleswig-Holstein moves
+    success: Schleswig-Holstein success
+  - id: de
+    name: Prussia and the German Confederation
+    polities: [prussia, german-confederation]
+    ink: slate
+    moves: Prussian and federal moves
+    success: Prussian and federal success
+notes:
+  - Known in Denmark as the Three Years’ War (Treårskrigen) and in Germany as the Schleswig-Holstein uprising (Schleswig-Holsteinische Erhebung).
+  - Place names are given in the form most used in English; most have both a Danish and a German name (Idstedt/Isted, Flensburg/Flensborg).
+sources:
+  - title: First Schleswig War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Schleswig_War
+  - title: Battle of Bov (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Bov
+  - title: Battle of Eckernförde (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Eckernf%C3%B6rde
+  - title: Battle of Fredericia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Fredericia
+  - title: Battle of Isted (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Isted
+  - title: London Protocol, 1852 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/London_Protocol_(1852)
+  - title: Schleswig-Holstein question (Britannica)
+    url: https://www.britannica.com/event/Schleswig-Holstein-question
+steps:
+  - title: The March rising and Bov
+    date: March – April 1848
+    when: "1848-03"
+    borders: "1848-04-09"
+    countries: [dk, de]
+    body:
+      - The Danish king ruled the duchies of Schleswig and Holstein, but they were not part of the kingdom. Holstein, entirely German-speaking, belonged to the German Confederation; Schleswig had Danish, German and Frisian speakers. Danish liberals wanted Schleswig joined to Denmark up to the river Eider, while German nationalists wanted the two duchies kept together, inside Germany. In March 1848, as revolution swept Europe, a new government in Copenhagen took up the Eider programme.
+      - On 24 March German-minded leaders in Kiel formed a provisional government for Schleswig-Holstein, and the Prince of Noer walked into the fortress of Rendsburg with a rifle corps and some Kiel students and won its garrison over. A volunteer army of about 7,000 moved north and took Flensburg. On 9 April a Danish army landed east of the town and beat it at Bov, and the Schleswig-Holsteiners fell back to Rendsburg.
+    facts:
+      - [Provisional government, "Formed at Kiel on 24 March 1848"]
+      - [Battle of Bov, "9 April 1848, Danish victory"]
+      - [Losses at Bov, "About 16% of the Schleswig-Holstein force; under 1% of the Danish"]
+    markers:
+      - kind: event
+        side: sh
+        name: Provisional government
+        date: 24 March 1848
+        text: Its leaders claimed to act for the duke, the Danish king, whom they called unfree in the hands of the Copenhagen crowd.
+        lonlat: [10.139, 54.323]
+      - kind: taken
+        side: sh
+        name: Rendsburg
+        date: 24 March 1848
+        text: The gates of the duchies’ main fortress and armoury were open. Its soldiers went over to the provisional government, and the Danish officers were allowed to leave.
+        lonlat: [9.667, 54.3]
+        lp: l
+      - kind: event
+        side: dk
+        name: The March ministry
+        date: 21–22 March 1848
+        text: After a mass demonstration in Copenhagen, Frederick VII appointed a liberal ministry committed to joining Schleswig to Denmark.
+        lonlat: [12.568, 55.676]
+      - kind: battle
+        side: dk
+        name: Battle of Bov
+        date: 9 April 1848
+        text: The Danes caught the Schleswig-Holstein army as it was preparing to withdraw from Flensburg, and routed it.
+        lonlat: [9.4, 54.83]
+        lp: l
+    arrows:
+      - side: sh
+        label: Krohn
+        via: [[9.67, 54.3], [9.55, 54.52], [9.44, 54.77]]
+      - side: dk
+        label: Hedemann
+        via: [[9.79, 54.91], [9.64, 54.86], [9.47, 54.82]]
+    areas:
+      - style: occupied
+        side: sh
+        label: Held by the provisional government after Bov
+        atoms: [DE-SH~holstein]
+  - title: Prussia intervenes; the Malmö armistice
+    date: April – August 1848
+    when: "1848-04-23"
+    borders: "1848-08-26"
+    countries: [dk, de]
+    body:
+      - On 12 April the German Confederation recognised the provisional government and asked Prussia to act for it. A much larger Prussian and federal army under General Wrangel crossed into Schleswig, beat the Danes at Schleswig town on 23 April, and pushed on into Jutland, occupying Fredericia in early May and demanding money from the Jutland towns. The Danish army withdrew to the islands of Als and Funen, from where it struck back, winning at Dybbøl on 5 June.
+      - The Danish navy blockaded German ports, and the other powers would not see Denmark broken up. Russia sent warships and warned Prussia, Britain threatened to step in, and a Swedish–Norwegian force landed on Funen to back the Danes. Prussia gave way. On 26 August it signed a seven-month armistice at Malmö which met most Danish demands, to the fury of the German National Assembly in Frankfurt, which nonetheless had to accept it.
+    facts:
+      - [German commander, "Friedrich von Wrangel"]
+      - [Battle of Schleswig, "23 April 1848, Prussian and federal victory"]
+      - [Armistice of Malmö, "26 August 1848, for seven months"]
+    markers:
+      - kind: battle
+        side: de
+        name: Battle of Schleswig
+        date: 23 April 1848
+        text: Wrangel’s Prussian and federal troops drove the Danes from their positions around the Danevirke and Schleswig town.
+        lonlat: [9.55, 54.515]
+      - kind: taken
+        side: de
+        name: Fredericia
+        date: 2 May 1848
+        text: Prussian troops marched beyond Schleswig into Jutland proper, which alarmed Russia and Britain more than anything else in the war.
+        lonlat: [9.753, 55.568]
+      - kind: battle
+        side: dk
+        name: Battle of Dybbøl
+        date: 5 June 1848
+        text: Wrangel’s attack on the Danish positions in Sundeved was halted, and a Danish counterattack drove his troops back to Nybøl.
+        lonlat: [9.758, 54.907]
+      - kind: treaty
+        name: Armistice of Malmö
+        date: 26 August 1848
+        text: Prussia agreed to withdraw, and a joint commission was to replace the provisional government until peace was made.
+        lonlat: [13.005, 55.605]
+    arrows:
+      - side: de
+        label: Wrangel
+        via: [[9.67, 54.3], [9.55, 54.52], [9.44, 54.79], [9.6, 55.45]]
+    areas:
+      - style: occupied
+        side: de
+        label: Held by Prussian, federal and Schleswig-Holstein troops, May 1848
+        atoms: [DE-SH~schleswig, DE-SH~holstein, DK-83~jut]
+  - title: "1849: Eckernförde and Fredericia"
+    date: April – July 1849
+    when: "1849-04"
+    borders: "1849-07-10"
+    countries: [dk, de]
+    body:
+      - Talks in London failed, and fighting resumed on 3 April 1849, this time with a reorganised Schleswig-Holstein army alongside Prussian and federal troops. Two days later a Danish squadron attacked the shore batteries at Eckernförde. It was a disaster. The ship of the line Christian VIII caught fire and blew up, the frigate Gefion was captured, and over a thousand Danes were killed, wounded or taken prisoner, against a handful of German casualties.
+      - On land the Schleswig-Holsteiners won at Kolding on 23 April and laid siege to the fortress of Fredericia, while Prussian troops pushed north through Jutland. Then on 6 July the Danish garrison, reinforced by sea, broke out of Fredericia and stormed the siege lines. The besiegers lost about 3,000 men, many of them taken prisoner, and the Danes about 1,900; General Rye, one of the Danish commanders, was killed. Four days later Prussia signed a new armistice.
+    facts:
+      - [Battle of Eckernförde, "5 April 1849: Christian VIII destroyed, Gefion taken"]
+      - [Battle of Fredericia, "6 July 1849, Danish victory"]
+      - [Armistice, "10 July 1849; Schleswig under a mixed commission"]
+    markers:
+      - kind: naval
+        side: sh
+        name: Battle of Eckernförde
+        date: 5 April 1849
+        text: Two shore batteries manned by 91 Schleswig-Holstein gunners beat a Danish squadron of a ship of the line, a frigate and two steamers that had sailed into the bay.
+        lonlat: [9.838, 54.474]
+      - kind: battle
+        side: sh
+        name: Battle of Kolding
+        date: 23 April 1849
+        text: The Schleswig-Holstein army took the town of Kolding, on the border of the kingdom, after a day’s fighting.
+        lonlat: [9.5, 55.492]
+      - kind: naval
+        name: Battle of Heligoland
+        date: 4 June 1849
+        text: The new German federal fleet met a Danish frigate and steamers. The clash was indecisive, and the Danish blockade went on.
+        lonlat: [7.95, 54.1]
+      - kind: battle
+        side: dk
+        name: Battle of Fredericia
+        date: 6 July 1849
+        text: Danish troops sallied from the fortress at night and overran the besiegers’ lines, ending the siege.
+        lonlat: [9.753, 55.568]
+        lp: t
+    arrows:
+      - side: dk
+        label: Troops by sea from Funen
+        via: [[10.0, 55.42], [9.88, 55.5], [9.77, 55.56]]
+      - side: de
+        label: Prussian advance
+        via: [[9.55, 55.52], [9.6, 55.8], [9.95, 56.1]]
+    areas:
+      - style: occupied
+        side: de
+        label: Held by German forces, summer 1849
+        atoms: [DE-SH~schleswig, DE-SH~holstein, DK-83~jut~nschleswig]
+  - title: Idstedt and the London Protocol
+    date: July 1850 – May 1852
+    when: "1850-07-25"
+    borders: "1852-05-08"
+    countries: [dk, de]
+    body:
+      - Under heavy pressure from Russia, Prussia made peace with Denmark in Berlin on 2 July 1850 and withdrew, leaving Schleswig-Holstein to fight alone. Three weeks later about 37,000 Danish troops met some 27,000 Schleswig-Holsteiners at Idstedt, north of Schleswig town. It was the largest battle ever fought in the Nordic countries until the Winter War of 1939–1940. In fog and rain the fighting swung back and forth for two days before the Schleswig-Holsteiners retreated.
+      - The Danish victory was costly and the war dragged on into the autumn, with failed Schleswig-Holstein attacks on Missunde and Friedrichstadt. In January 1851 Austria and Prussia, acting for the restored German Confederation, made the duchies give up the fight, and their army was disbanded on 1 April.
+      - The London Protocol of 8 May 1852, signed by the great powers, Sweden–Norway and Denmark, kept the Danish monarchy whole and named Christian of Glücksburg heir to it and to the duchies. Denmark promised not to bind Schleswig more closely to the kingdom than Holstein. The question was left unsolved.
+    facts:
+      - [Battle of Idstedt, "24–25 July 1850, Danish victory"]
+      - [Prisoners taken by the Danes, "1,483"]
+      - [London Protocol, "8 May 1852"]
+    markers:
+      - kind: battle
+        side: dk
+        name: Battle of Idstedt
+        date: 24–25 July 1850
+        text: The Danes lost more men than the Schleswig-Holsteiners, including General Schleppegrell, but held the field. The defeated army escaped to Rendsburg.
+        lonlat: [9.52, 54.58]
+      - kind: battle
+        side: dk
+        name: Missunde
+        date: 12 September 1850
+        text: A Schleswig-Holstein attack on the Danish bridgehead over the Schlei was beaten off.
+        lonlat: [9.717, 54.517]
+        lp: r
+      - kind: siege
+        side: dk
+        name: Friedrichstadt
+        date: Late September – 4 October 1850
+        text: The Schleswig-Holstein army besieged and bombarded the Danish-held town, causing heavy damage, but its storm on 4 October failed.
+        lonlat: [9.067, 54.367]
+        lp: l
+      - kind: event
+        side: de
+        name: Rendsburg
+        date: 1 April 1851
+        text: With Austrian and Prussian commissioners in the duchies, the Schleswig-Holstein army was disbanded.
+        lonlat: [9.667, 54.3]
+        lp: b
+    arrows:
+      - side: dk
+        label: Danish army
+        via: [[9.44, 54.79], [9.5, 54.68], [9.52, 54.6]]
+    areas:
+      - style: occupied
+        side: sh
+        label: Held by Schleswig-Holstein after Idstedt
+        atoms: [DE-SH~holstein]

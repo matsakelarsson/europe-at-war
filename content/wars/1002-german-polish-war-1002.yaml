@@ -1,0 +1,142 @@
+id: german-polish-war-1002
+name: German–Polish War, 1002–1018
+start: "1002"
+end: "1018"
+tier: B
+summary: A series of wars between Bolesław I the Brave of Poland and the German king Henry II over Lusatia, Meissen and Bohemia. Bolesław briefly ruled Bohemia and lost Lusatia in 1005, but held off three German invasions and kept Lusatia and Milsko under the Peace of Bautzen in 1018.
+sides:
+  - id: pl
+    name: Poland
+    polities: [poland]
+    ink: magenta
+    moves: Polish moves
+    success: Polish success
+  - id: de
+    name: Henry II and his allies
+    polities: [hre, east-francia, bohemia]
+    ink: gold
+    moves: Moves by Henry II and his allies
+    success: Success for Henry II and his allies
+notes:
+  - Most of what is known comes from the chronicle of Thietmar, bishop of Merseburg, a contemporary who was hostile to Bolesław. Dates and details are often uncertain.
+  - Milsko (Milzenerland) was the land around Bautzen, later called Upper Lusatia; Lusatia proper was later Lower Lusatia.
+sources:
+  - title: German–Polish War, 1002–1018 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/German%E2%80%93Polish_War_(1002%E2%80%931018)
+  - title: Peace of Bautzen (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peace_of_Bautzen
+  - title: Bolesław I the Brave (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Boles%C5%82aw_I_the_Brave
+steps:
+  - title: Meissen, Lusatia and Bohemia
+    date: 1002–1005
+    when: "1002"
+    borders: "1005"
+    countries: [pl, de, cz]
+    body:
+      - "Bolesław had been a friend and ally of Emperor Otto III, who visited him at Gniezno in 1000. When Otto died without an heir in January 1002 and Margrave Eckard of Meissen, a claimant to the throne, was murdered that April, Bolesław moved into the eastern marches. He occupied Lusatia and Milsko, the land around Bautzen, and took Meissen. At Merseburg in July the new king, Henry II, let him keep Lusatia and Milsko as fiefs but not Meissen. As Bolesław left, armed men attacked him; he blamed Henry."
+      - "Early in 1003 Bolesław intervened in Bohemia, had its duke, Boleslaus III, blinded and ruled the country himself, refusing to do homage to Henry for it. Henry made an alliance with the pagan Lutici, which shocked many Saxon churchmen, and in 1004 drove the Poles out of Bohemia, installed Duke Jaromír and took Bautzen. In 1005 he crossed the Oder and marched to Poznań. Bolesław avoided battle and harried the invaders, but in the peace that followed he gave up Lusatia and Milsko, though he kept Moravia."
+    facts:
+      - [Merseburg, 25 July 1002]
+      - [Bolesław in Bohemia, 1003–1004]
+      - [Peace of Poznań, "1005, Lusatia and Milsko given up"]
+    markers:
+      - kind: taken
+        side: pl
+        name: Meissen
+        date: "1002"
+        text: Bolesław took the seat of the murdered Margrave Eckard, but had to give it up at Merseburg that summer.
+        lonlat: [13.4833, 51.1667]
+        lp: l
+      - kind: event
+        name: Merseburg
+        date: 25 July 1002
+        text: Henry II granted Bolesław Lusatia and Milsko as fiefs. Afterwards Bolesław was ambushed and escaped only with the help of Saxon friends.
+        lonlat: [11.9928, 51.3544]
+      - kind: taken
+        side: pl
+        name: Prague
+        date: Early 1003
+        text: Bolesław took over Bohemia and ruled it in person until Henry II and Jaromír drove the Poles out in 1004.
+        lonlat: [14.4214, 50.0875]
+      - kind: siege
+        side: de
+        name: Bautzen
+        date: "1004"
+        text: Henry II besieged and took the Polish-held stronghold of Budziszyn.
+        lonlat: [14.4242, 51.1814]
+      - kind: treaty
+        side: de
+        name: Peace of Poznań
+        date: "1005"
+        text: Mediated by Archbishop Tagino of Magdeburg. Bolesław gave up Lusatia and Milsko, but did not submit to Henry.
+        lonlat: [16.9336, 52.4083]
+    arrows:
+      - side: pl
+        label: Bolesław, 1002
+        via: [[16.0, 51.7], [15.0, 51.4], [13.6, 51.2]]
+      - side: pl
+        label: Bolesław, 1003
+        via: [[16.8, 50.75], [15.9, 50.4], [14.55, 50.12]]
+      - side: de
+        label: Henry II, 1005
+        via: [[11.95, 52.06], [13.5, 52.0], [15.1, 52.05], [16.8, 52.38]]
+    areas:
+      - style: occupied
+        side: pl
+        label: Lusatia and Milsko, held by Bolesław 1002–1005
+        polygon: [[13.6, 52.1], [14.6, 52.15], [15.2, 51.8], [15.4, 51.2], [15.2, 50.9], [14.6, 50.85], [14.0, 51.05], [13.7, 51.4], [13.5, 51.75]]
+      - style: occupied
+        side: pl
+        label: Bohemia, ruled by Bolesław 1003–1004
+        atoms: [CZ-PR, CZ-ST, CZ-JC, CZ-PL, CZ-KA, CZ-US, CZ-LI, CZ-KR, CZ-PA]
+  - title: Niemcza and the Peace of Bautzen
+    date: 1007–1018
+    when: "1007"
+    borders: "1018-01-30"
+    countries: [pl, de]
+    body:
+      - "War broke out again in 1007. Bolesław retook Lusatia and Milsko and raided as far as the neighbourhood of Magdeburg, and German campaigns in 1010 and 1012 achieved little. At Merseburg in 1013 he did homage to Henry and kept the two lands as fiefs. But he did not help Henry in Italy as promised, and in 1015 the king, again with the Lutici, invaded once more. He got no further than Krosno on the Oder, and in the fighting Margrave Gero and some 200 knights were killed."
+      - "In 1017 Henry marched to Głogów, found it too strong to besiege and turned on Niemcza instead. Its defenders held out, and with sickness in his army he withdrew through Bohemia. Peace was made at Bautzen on 30 January 1018. Bolesław kept Lusatia and Milsko, whether as imperial fiefs or outright is still debated, and married Oda, a daughter of Eckard of Meissen. That summer, with German and Hungarian help, he marched on Kiev, entered it on 14 August and restored his son-in-law Sviatopolk to its throne."
+    facts:
+      - [Peace of Merseburg, "1013, Bolesław does homage to Henry"]
+      - [Siege of Niemcza, "1017, held by the Poles"]
+      - [Peace of Bautzen, 30 January 1018]
+    markers:
+      - kind: battle
+        side: pl
+        name: Krosno
+        date: "1015"
+        text: Henry II’s invasion stalled here on the Oder. In the fighting Margrave Gero and some 200 German knights were killed, many by Polish bowmen.
+        lonlat: [15.1, 52.05]
+      - kind: held
+        side: pl
+        name: Głogów
+        date: "1017"
+        text: Bolesław waited here with his army. Henry judged the town too strongly fortified to attack.
+        lonlat: [16.0803, 51.6589]
+        lp: l
+      - kind: held
+        side: pl
+        name: Siege of Niemcza
+        date: Late summer 1017
+        text: Reinforcements twice slipped into the besieged town. Even Thietmar, no friend of the Poles, praised the defenders’ courage.
+        lonlat: [16.8333, 50.7167]
+      - kind: treaty
+        side: pl
+        name: Peace of Bautzen
+        date: 30 January 1018
+        text: Agreed by Henry’s envoys and Bolesław. Thietmar called it a peace “not as it should have been, but as it could be made”.
+        lonlat: [14.4242, 51.1814]
+    arrows:
+      - side: de
+        label: Henry II, 1015
+        via: [[11.65, 52.13], [13.0, 51.95], [14.3, 51.95], [15.0, 52.03]]
+      - side: de
+        label: Henry II, 1017
+        via: [[12.0, 52.05], [14.5, 51.7], [16.0, 51.6], [16.8, 50.77]]
+    areas:
+      - style: gained
+        side: pl
+        label: Lusatia and Milsko, kept by Bolesław in 1018
+        polygon: [[13.6, 52.1], [14.6, 52.15], [15.2, 51.8], [15.4, 51.2], [15.2, 50.9], [14.6, 50.85], [14.0, 51.05], [13.7, 51.4], [13.5, 51.75]]

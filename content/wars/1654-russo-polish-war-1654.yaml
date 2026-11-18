@@ -1,0 +1,152 @@
+id: russo-polish-war-1654
+name: Russo-Polish War, 1654–1667
+start: "1654"
+end: "1667"
+tier: B
+summary: After the Cossack Hetmanate accepted the tsar’s protection, Russia invaded Poland–Lithuania, took Smolensk and Vilnius and occupied much of the Grand Duchy. The Commonwealth fought back from 1658, but at Andrusovo in 1667 it gave up Smolensk, Kyiv and Ukraine east of the Dnieper.
+countries: [pl, lt, ru, by, ua]
+sides:
+  - id: pl
+    name: Poland–Lithuania
+    polities: [poland, lithuania, poland-lithuania]
+    ink: magenta
+    moves: Polish–Lithuanian moves
+    success: Polish–Lithuanian success
+  - id: ru
+    name: Tsardom of Russia
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: zc
+    name: Cossack Hetmanate
+    polities: [cossack-hetmanate]
+    ink: gold
+    moves: Cossack moves
+    success: Cossack success
+notes:
+  - Dates are New Style (Gregorian), as used in Poland–Lithuania. Russian sources, in the Julian calendar, give dates ten days earlier.
+  - The Cossacks fought on Russia’s side until 1658, then split, some hetmans siding with Poland and others with Russia.
+sources:
+  - title: Russo-Polish War (1654–1667) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russo-Polish_War_(1654%E2%80%931667)
+  - title: Battle of Vilnius (1655) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Vilnius_(1655)
+  - title: Battle of Polonka (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Polonka
+  - title: Battle of Chudniv (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Chudniv
+  - title: Truce of Andrusovo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Truce_of_Andrusovo
+steps:
+  - title: The tsar invades
+    date: 1654–1656
+    when: "1654"
+    borders: "1655-08-08"
+    countries: [ru, by, lt, pl, ua]
+    body:
+      - Having taken the Cossack Hetmanate under his protection at Pereiaslav, Tsar Alexis went to war with Poland–Lithuania in 1654. Russian armies, joined by Cossacks under Ivan Zolotarenko, poured into the Grand Duchy of Lithuania. They beat Janusz Radziwiłł at Shepeleviche in August, and Smolensk, lost to Lithuania in 1611, surrendered that autumn after a long siege. Polotsk, Vitebsk and Mogilev fell too.
+      - In 1655 the invaders took Minsk, and on 8 August Vilnius, the capital, fell for the first time in its history. For days soldiers and Cossacks looted the city and killed its people, and the Jewish quarter was burned; an eyewitness’s figures of a 17-day fire and over 20,000 dead are thought exaggerated. Alexis styled himself Grand Duke of Lithuania. When Sweden overran the rest of the Commonwealth that summer, Russia came to see it as the greater threat, and in November 1656 the two sides agreed a truce near Vilnius.
+    facts:
+      - [Vilnius taken, "8 August 1655 (29 July Old Style)"]
+      - [Truce of Vilnius, "November 1656, against Sweden"]
+    markers:
+      - kind: battle
+        side: ru
+        name: Battle of Shepeleviche
+        date: August 1654
+        text: Janusz Radziwiłł’s Lithuanian army was routed, leaving eastern Lithuania open.
+        lonlat: [29.56, 54.13]
+      - kind: siege
+        side: ru
+        name: Smolensk
+        date: July – autumn 1654
+        text: The fortress surrendered to the tsar after a siege of more than two months. It never returned to Poland–Lithuania.
+        lonlat: [32.05, 54.78]
+      - kind: taken
+        side: ru
+        name: Vilnius
+        date: 8 August 1655
+        text: Russian troops and Cossacks under Yakov Cherkassky and Ivan Zolotarenko took the capital and sacked it. Russian forces held it until 1661.
+        lonlat: [25.29, 54.69]
+    arrows:
+      - side: ru
+        label: Alexis
+        via: [[34.3, 55.2], [33.3, 54.95], [32.15, 54.8]]
+      - side: ru
+        label: Cherkassky and Zolotarenko
+        via: [[27.56, 53.9], [26.5, 54.3], [25.4, 54.66]]
+    areas:
+      - style: occupied
+        side: ru
+        label: Occupied by Russia, 1655
+        atoms: [RU-SMO, BY-VI, BY-MA, BY-HO, BY-MI, BY-HM, BY-HR, LT-VL, LT-UT, LT-AL, LT-KU]
+  - title: The tide turns
+    date: 1658–1661
+    when: "1658"
+    borders: "1661"
+    countries: [ua, by, lt, pl, ru]
+    body:
+      - War resumed in 1658. That September Hetman Ivan Vyhovsky signed the Treaty of Hadiach, which was to make the Cossack lands a third member of the Commonwealth, and in 1659 his Cossacks and their Tatar allies inflicted a heavy defeat on a Russian army at Konotop. The Hetmanate soon split again, but the Commonwealth, at peace with Sweden from May 1660, could now turn east.
+      - On 27 June 1660 Stefan Czarniecki and Paweł Sapieha crushed Ivan Khovansky’s army at Polonka in Lithuania. In Ukraine Stanisław Potocki and Jerzy Lubomirski, with Tatar help, surrounded Vasily Sheremetev’s army at Chudniv; the Cossacks of Yurii Khmelnytsky changed sides, and Sheremetev surrendered in early November. In December 1661 the Russian garrison in Vilnius castle gave up after a long siege.
+    facts:
+      - [Polonka, "27 June 1660, Polish–Lithuanian victory"]
+      - [Chudniv, "September – November 1660, Russian army surrendered"]
+    markers:
+      - kind: battle
+        side: zc
+        name: Battle of Konotop
+        date: Summer 1659
+        text: Vyhovsky’s Cossacks and the Crimean Tatars routed a Russian army besieging Konotop.
+        lonlat: [33.16, 51.22]
+      - kind: battle
+        side: pl
+        name: Battle of Polonka
+        date: 27 June 1660
+        text: Czarniecki and Sapieha destroyed Khovansky’s army, ending the Russian threat to central Lithuania.
+        lonlat: [25.71, 53.15]
+      - kind: battle
+        side: pl
+        name: Battle of Chudniv
+        date: September – November 1660
+        text: Sheremetev’s army, abandoned by its Cossack allies, surrendered. He spent more than twenty years in Tatar captivity.
+        lonlat: [28.18, 50.06]
+      - kind: taken
+        side: pl
+        name: Vilnius castle
+        date: December 1661
+        text: The starving Russian garrison surrendered. Its commander, Danila Myshetsky, was tried and executed.
+        lonlat: [25.29, 54.69]
+    arrows:
+      - side: ru
+        label: Sheremetev
+        via: [[30.5, 50.45], [29.4, 50.25], [28.3, 50.08]]
+  - title: The Truce of Andrusovo
+    date: 1662–1667
+    when: "1662"
+    borders: "1667-02-09"
+    countries: [ru, pl, lt, ua, by]
+    body:
+      - Neither side could finish the war. John II Casimir led an army across the Dnieper in the winter of 1663–1664 but failed before Hlukhiv and had to retreat with heavy losses. Ukraine was now split between rival hetmans on the two banks of the Dnieper, a time Ukrainians call the Ruin, and in 1665–1666 the Commonwealth was paralysed by Jerzy Lubomirski’s rebellion against the king.
+      - At the village of Andrusovo near Smolensk the two sides signed a truce for thirteen and a half years in January 1667. Russia kept Smolensk and the Chernihiv–Seversk lands and gained Ukraine east of the Dnieper, while the Commonwealth kept the right bank and got back Vitebsk, Polotsk and Daugavpils. Kyiv, on the right bank, was to stay Russian for two years only, but it was never returned, and the Eternal Peace of 1686 made the settlement permanent.
+    facts:
+      - [Truce of Andrusovo, "30 January 1667 Old Style (9 February New Style)"]
+      - [Ceded to Russia, "Smolensk, Chernihiv–Seversk lands, left-bank Ukraine, Kyiv"]
+    markers:
+      - kind: held
+        side: ru
+        name: Hlukhiv
+        date: January – February 1664
+        text: The town held out against the king’s army, which retreated through the winter.
+        lonlat: [33.92, 51.68]
+      - kind: treaty
+        side: ru
+        name: Truce of Andrusovo
+        date: January 1667
+        text: Signed in a village south-west of Smolensk after months of talks. The border it drew lasted until the partitions of Poland.
+        lonlat: [31.51, 54.30]
+    areas:
+      - style: gained
+        side: ru
+        label: Gained by Russia
+        atoms: [RU-SMO, UA-74, UA-53, UA-30]

@@ -1,0 +1,196 @@
+id: great-heathen-army
+name: Great Heathen Army
+start: "865"
+end: "880"
+tier: B
+summary: A large Scandinavian army, mostly Danish, which invaded England in 865 and over fifteen years destroyed the kingdoms of Northumbria, East Anglia and Mercia. Stopped by Alfred of Wessex at Edington in 878, its leaders settled the conquered lands, the area later called the Danelaw.
+countries: [gb, dk]
+sides:
+  - id: dane
+    name: Great Heathen Army
+    polities: [danelaw]
+    ink: red
+    moves: Viking moves
+    success: Viking success
+  - id: eng
+    name: English kingdoms
+    polities: [england, mercia, northumbria, east-anglia]
+    ink: navy
+    moves: English moves
+    success: English success
+notes:
+  - The main source is the Anglo-Saxon Chronicle, written at Alfred’s court and partisan to Wessex. Its years began at Christmas or in September, so some events are a year earlier or later in other reckonings.
+  - The name comes from the Chronicle’s “mycel hæþen here”. The army’s size is unknown; estimates range from a few hundred to several thousand men.
+sources:
+  - title: Great Heathen Army (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Great_Heathen_Army
+  - title: Battle of Edington (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Edington
+  - title: Treaty of Alfred and Guthrum (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Alfred_and_Guthrum
+  - title: Danelaw (Britannica)
+    url: https://www.britannica.com/place/Danelaw
+  - title: Alfred, king of Wessex (Britannica)
+    url: https://www.britannica.com/biography/Alfred-king-of-Wessex
+steps:
+  - title: York and East Anglia
+    date: 865–870
+    when: "865"
+    borders: "870"
+    countries: [gb, dk]
+    body:
+      - Viking raids on England had gone on for seventy years, but the force that landed in East Anglia in 865 came to stay. The Chronicle calls it the “great heathen army”; its leaders are said to have included Ivar the Boneless and Halfdan, sons of the legendary Ragnar Lothbrok. The East Anglians bought peace with horses. In November 866 the army rode north and took York, while the Northumbrians were divided by civil war. In March 867 the two rival kings, Osberht and Ælla, attacked the city together and were both killed.
+      - The Vikings set up an English puppet king in Northumbria and moved into Mercia, taking Nottingham. A joint army of Mercia and Wessex besieged them there without result, and the Mercians paid them to leave. In 869 the army returned to East Anglia and took up winter quarters at Thetford. King Edmund fought it and was defeated, captured and killed. He was soon venerated as a martyr, St Edmund.
+    facts:
+      - [York taken, "November 866"]
+      - [Kings killed, "Osberht and Ælla of Northumbria (867), Edmund of East Anglia (869)"]
+      - [Leaders, "Ivar the Boneless, Halfdan and Ubba, according to later sources"]
+    markers:
+      - kind: taken
+        side: dane
+        name: York
+        date: November 866
+        text: The Roman city on the Ouse became the army’s base and later the capital of a Viking kingdom.
+        lonlat: [-1.08, 53.96]
+      - kind: battle
+        side: dane
+        name: Battle at York
+        date: 21 March 867
+        text: The Northumbrian kings broke into the city, but the Danes fought back. Osberht and Ælla were both killed.
+        lonlat: [-1.08, 53.96]
+        lp: l
+      - kind: siege
+        name: Nottingham
+        date: 867–868
+        text: Burgred of Mercia and his brothers-in-law Æthelred and Alfred of Wessex besieged the army. Neither side would risk a battle, and Mercia made peace.
+        lonlat: [-1.15, 52.96]
+      - kind: battle
+        side: dane
+        name: Thetford
+        date: 869–870
+        text: From their winter camp the Danes defeated King Edmund of East Anglia, who was killed on 20 November 869. His kingdom passed under Danish control.
+        lonlat: [0.74, 52.41]
+    arrows:
+      - side: dane
+        label: The army, 866
+        via: [[0.8, 52.5], [-0.3, 53.1], [-1.08, 53.96]]
+      - side: dane
+        label: To Nottingham, 867
+        via: [[-1.1, 53.9], [-1.2, 53.4], [-1.15, 52.96]]
+      - side: dane
+        label: To Thetford, 869
+        via: [[-1.0, 53.9], [-0.3, 53.0], [0.74, 52.41]]
+    areas:
+      - style: occupied
+        side: dane
+        label: Under Danish control by 870
+        atoms: [GB-YOR, GB-NYK, GB-ERY, GB-KHL, GB-LDS, GB-BRD, GB-WKF, GB-KIR, GB-CLD, GB-SHF, GB-ROT, GB-BNS, GB-DNC, GB-MDB, GB-RCC, GB-STT, GB-NFK, GB-SFK, GB-CAM, GB-PTE]
+  - title: Wessex resists; Mercia falls
+    date: 870–877
+    when: "871"
+    borders: "877"
+    countries: [gb, dk]
+    body:
+      - In late 870 the army invaded Wessex and fortified a camp at Reading. In the winter of 871 the West Saxons fought it again and again. King Æthelred and his brother Alfred won at Ashdown in January but lost several other battles, and in April Æthelred died. Alfred, now king, paid the Vikings to leave. They wintered in London, then at Torksey and in 873 at Repton, in the heart of Mercia, where they drove King Burgred into exile and put Ceolwulf, a Mercian thegn, in his place.
+      - In 874 the army split. Halfdan took his men north, and in 876 he shared out the land of Northumbria among them; the Chronicle says they “were ploughing and providing for themselves”. Guthrum and two other kings went to Cambridge, then slipped into Wessex, holding Wareham and Exeter in 875–877. In 877 they divided Mercia, settling its eastern half and leaving the west to Ceolwulf.
+    facts:
+      - [Battle of Ashdown, "January 871, West Saxon victory"]
+      - [Alfred becomes king, "April 871"]
+      - [Mercia divided, "877"]
+    markers:
+      - kind: held
+        side: dane
+        name: Reading
+        date: 870–871
+        text: The army built a rampart between the Thames and the Kennet. The West Saxons failed to storm it.
+        lonlat: [-0.973, 51.454]
+      - kind: battle
+        side: eng
+        name: Battle of Ashdown
+        date: January 871
+        text: Æthelred and Alfred defeated the Danes on the Berkshire Downs; one of the Viking kings, Bagsecg, was killed.
+        lonlat: [-1.216, 51.529]
+        lp: l
+      - kind: taken
+        side: dane
+        name: Repton
+        date: 873–874
+        text: The army wintered at the Mercian royal monastery. A mass grave of at least 249 people found there may hold some of its dead.
+        lonlat: [-1.549, 52.838]
+      - kind: held
+        side: dane
+        name: Torksey
+        date: 872–873
+        text: Excavations at the winter camp on the Trent have found traces of trading, metalworking and gaming.
+        lonlat: [-0.745, 53.299]
+      - kind: held
+        side: dane
+        name: Wareham and Exeter
+        date: 875–877
+        text: Guthrum’s men twice seized fortified places deep in Wessex and swore peace with Alfred, then broke it.
+        lonlat: [-2.11, 50.69]
+    arrows:
+      - side: dane
+        label: Halfdan, 874
+        via: [[-1.55, 52.84], [-1.3, 54.0], [-1.45, 55.0]]
+      - side: dane
+        label: Guthrum, 874–875
+        via: [[-1.55, 52.84], [-0.5, 52.4], [0.12, 52.2]]
+      - side: dane
+        label: Guthrum, 875
+        via: [[0.12, 52.2], [-1.1, 51.3], [-2.11, 50.69]]
+    areas:
+      - style: occupied
+        side: dane
+        label: Settled or ruled by the Danes, 877
+        atoms: [GB-YOR, GB-NYK, GB-ERY, GB-KHL, GB-LDS, GB-BRD, GB-WKF, GB-KIR, GB-CLD, GB-SHF, GB-ROT, GB-BNS, GB-DNC, GB-MDB, GB-RCC, GB-STT, GB-NFK, GB-SFK, GB-CAM, GB-PTE, GB-LIN, GB-NEL, GB-NLN, GB-NTT, GB-NGM, GB-DBY, GB-DER, GB-LEC, GB-LCE, GB-RUT]
+  - title: Edington and the Danelaw
+    date: 878–880
+    when: "878-05"
+    borders: "880"
+    countries: [gb, dk]
+    body:
+      - In midwinter 878, just after Twelfth Night, Guthrum fell on the royal estate of Chippenham. Much of Wessex submitted and Alfred fled with a small band to the marshes of Athelney in Somerset, from where he raided the Danes. In May he called out the men of Somerset, Wiltshire and part of Hampshire, and at Edington he defeated Guthrum’s army, then besieged it in Chippenham until it surrendered.
+      - Guthrum agreed to leave Wessex and to be baptised, with Alfred as his godfather. In 879 his army moved to East Anglia, where he ruled as king under his baptismal name, Æthelstan. A treaty between the two kings, probably from the 880s, set the border along the Thames, the Lea and Watling Street. North and east of it lay the region of Danish law and settlement later called the Danelaw, where Scandinavian place names such as those ending in -by and -thorpe still abound.
+    facts:
+      - [Battle of Edington, "May 878, West Saxon victory"]
+      - [Guthrum baptised, "878, at Aller, as Æthelstan"]
+      - [Border, "The Thames, the Lea, the Ouse at Bedford and Watling Street"]
+    markers:
+      - kind: taken
+        side: dane
+        name: Chippenham
+        date: January 878
+        text: A surprise attack in midwinter drove Alfred out of his own royal estate.
+        lonlat: [-2.116, 51.459]
+        lp: t
+      - kind: held
+        side: eng
+        name: Athelney
+        date: Spring 878
+        text: Alfred fortified an island in the Somerset Levels. Here later legend has him burning a peasant woman’s cakes.
+        lonlat: [-2.937, 51.059]
+      - kind: battle
+        side: eng
+        name: Battle of Edington
+        date: May 878
+        text: The decisive battle of Alfred’s reign. The Danes fled to Chippenham and surrendered after a siege of two weeks.
+        lonlat: [-2.143, 51.264]
+      - kind: event
+        name: Baptism of Guthrum
+        date: "878"
+        text: Guthrum and about thirty of his leading men were baptised at Aller, near Athelney.
+        lonlat: [-2.857, 51.059]
+        lp: b
+    arrows:
+      - side: eng
+        label: Alfred
+        via: [[-2.937, 51.059], [-2.4, 51.15], [-2.143, 51.264]]
+      - side: dane
+        label: Guthrum, 879
+        via: [[-1.97, 51.72], [-0.6, 52.1], [0.74, 52.41]]
+    areas:
+      - style: outline
+        side: dane
+        label: Ruled and settled by the Danes, c. 880 (the later Danelaw)
+        atoms: [GB-YOR, GB-NYK, GB-ERY, GB-KHL, GB-LDS, GB-BRD, GB-WKF, GB-KIR, GB-CLD, GB-SHF, GB-ROT, GB-BNS, GB-DNC, GB-MDB, GB-RCC, GB-STT, GB-NFK, GB-SFK, GB-CAM, GB-PTE, GB-LIN, GB-NEL, GB-NLN, GB-NTT, GB-NGM, GB-DBY, GB-DER, GB-LEC, GB-LCE, GB-RUT, GB-NTH, GB-BDF, GB-ESS, GB-SOS, GB-THR, GB-HAV, GB-BDG, GB-RDB, GB-NWM, GB-WFT]

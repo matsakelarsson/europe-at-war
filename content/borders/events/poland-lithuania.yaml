@@ -1,0 +1,304 @@
+# Poland, Lithuania and the eastern Baltic.
+#
+# Before 1772 these lands follow Sweden at War's events (sweden-at-war.yaml),
+# corrected here. From 1772 the atoms of today's Poland, Lithuania, Latvia,
+# Estonia, Belarus, Kaliningrad and right-bank Ukraine are curated
+# (curated.yaml): keyframes do not apply, so every change must be listed here.
+#
+# Atoms split for these borders (splits/30-poland.geojson) are named after the
+# line they follow: ~congress (Congress Poland, 1815), ~de1930 and ~pl1930 (the
+# interwar borders), ~ru1772 (the First Partition), ~galicia, ~krakow, ~netze,
+# ~danzig, ~eprussia, ~memel.
+
+# ---- Before 1772: the Teutonic Order, Lithuania and Moscow
+- date: "1230"
+  note: Treaty of Kruszwica. Duke Konrad of Masovia grants Chełmno Land to the Teutonic Order as a base against the Prussians.
+  owners:
+    teutonic-order: [PL-KP!]
+- date: "1252"
+  note: The Livonian Order founds Memel castle (Klaipėda). The Memel land stays with the Order and its successors until 1920.
+  owners:
+    teutonic-order: [LT-KL~memel]
+- date: "1308-11-13"
+  note: The Teutonic Order seizes Danzig, and Pomerelia within a year. Brandenburg sells its claims at Soldin (1309); Poland recognises the loss at Kalisz (1343).
+  owners:
+    teutonic-order: [PL-PM!, PL-PM~danzig, PL-PM~de1930, PL-PM~eprussia]
+- date: "1329"
+  note: The Teutonic Order occupies Dobrzyń Land, and Kuyavia in 1332.
+  owners:
+    teutonic-order: [PL-KP~congress]
+- date: "1343-07-08"
+  note: Treaty of Kalisz. The Order returns Dobrzyń Land and Kuyavia to Poland and keeps Pomerelia and Chełmno Land.
+  owners:
+    poland: [PL-KP~congress]
+- date: "1392"
+  note: Duke Władysław of Opole pawns Dobrzyń Land to the Teutonic Order.
+  owners:
+    teutonic-order: [PL-KP~congress]
+- date: "1404-05-22"
+  note: Peace of Raciąż. Poland and Lithuania confirm the cession of Samogitia to the Teutonic Order (first agreed at Salynas in 1398); Poland buys back Dobrzyń Land.
+  owners:
+    teutonic-order: [LT-TE, LT-TA, LT-SA, LT-KL!]
+    poland: [PL-KP~congress]
+- date: "1411-02-01"
+  note: First Peace of Thorn. After Grunwald, Samogitia returns to Lithuania for the lifetimes of Jogaila and Vytautas; the Treaty of Melno (1422) makes it permanent.
+  owners:
+    lithuania: [LT-TE, LT-TA, LT-SA, LT-KL!]
+- date: "1466-10-19"
+  note: Second Peace of Thorn. Royal Prussia (Pomerelia with Danzig, Chełmno Land, Marienburg and Warmia) passes to the Polish crown. The Teutonic Order keeps eastern Prussia as a Polish fief.
+  owners:
+    poland: [PL-PM!, PL-PM~danzig, PL-PM~de1930, PL-PM~eprussia, PL-KP!, PL-WN~warm]
+- date: "1503-03-25"
+  note: Truce of Moscow. Lithuania cedes Chernihiv–Siveria and the upper Oka lands, about a third of its territory, to Moscow.
+  owners:
+    russia: [UA-74, UA-59, RU-BRY, RU-KRS, RU-ORL, RU-KLU, BY-HO~ru1772]
+- date: "1525-04-10"
+  note: Prussian Homage. The last grand master in Prussia, Albert of Brandenburg, becomes the first Duke of Prussia, a Lutheran duchy under the Polish crown.
+  owners:
+    ducal-prussia: [RU-KGD, PL-WN!, PL-WN~pl1930, LT-KL~memel]
+- date: "1537"
+  note: Truce of Moscow. Lithuania recovers Homel.
+  owners:
+    lithuania: [BY-HO~ru1772]
+- date: "1561-11-28"
+  note: Union of Vilnius. The Livonian Order is dissolved; its last master, Gotthard Kettler, becomes Duke of Courland and Semigallia under the Grand Duchy of Lithuania.
+  owners:
+    courland: [LV-003, LV-004, LV-006, LV-010, LV-012, LV-013, LV-016, LV-018, LV-026, LV-027, LV-028, LV-029, LV-032, LV-034, LV-036, LV-038, LV-040, LV-043, LV-050, LV-051, LV-052, LV-062, LV-063, LV-065, LV-066, LV-068, LV-069, LV-071, LV-074, LV-079, LV-081, LV-083, LV-086, LV-087, LV-088, LV-093, LV-097, LV-098, LV-099, LV-100, LV-105, LV-107, LV-JEL, LV-JKB, LV-JUR, LV-LPX, LV-VEN, LV-DGV~cour, LVA-4849, LVA-4852, LVA-1085]
+- date: "1563-02-15"
+  note: Ivan IV takes Polotsk from Lithuania during the Livonian War.
+  owners:
+    russia: [BY-VI!]
+- date: "1569-07-01"
+  note: Union of Lublin. The Crown of Poland and the Grand Duchy of Lithuania become one Commonwealth; Podlasie, Volhynia, Bracław and Kyiv pass from the Grand Duchy to the Crown.
+  owners:
+    poland: [PL-PD, UA-07, UA-56, UA-18, UA-30, UA-32, UA-05, UA-71, UA-35, UA-53, UA-12]
+- date: "1579-08-30"
+  note: Stefan Báthory retakes Polotsk.
+  owners:
+    lithuania: [BY-VI!]
+- date: "1618-08-27"
+  note: Duke Albert Frederick dies, and Ducal Prussia passes to the electors of Brandenburg. It stays a Polish fief until the Treaty of Wehlau (1657).
+  owners:
+    prussia: [RU-KGD, PL-WN!, PL-WN~pl1930, LT-KL~memel]
+
+- date: "1611-06-13"
+  note: Sigismund III takes Smolensk after a siege of twenty months.
+  owners:
+    lithuania: [RU-SMO]
+- date: "1618-12-11"
+  note: Truce of Deulino. Moscow cedes Smolensk, Chernihiv and Siveria to the Commonwealth, which is now at its largest.
+  owners:
+    poland: [UA-74]
+- date: "1649-08-18"
+  note: Treaty of Zboriv. The king recognises Cossack self-rule in the Kyiv, Bracław and Chernihiv voivodeships, which Khmelnytsky's Hetmanate has held since 1648.
+  owners:
+    cossack-hetmanate: [UA-30, UA-32, UA-71, UA-05, UA-74, UA-53]
+- date: "1672-10-18"
+  note: Treaty of Buchach. Poland cedes Podolia to the Ottoman Empire; the right-bank Cossacks under Doroshenko accept the sultan's protection.
+  owners:
+    ottoman: [UA-68]
+- date: "1699-01-26"
+  note: Treaty of Karlowitz. The Ottomans return Podolia, and right-bank Ukraine comes back under Polish rule.
+  owners:
+    poland: [UA-68, UA-05, UA-32, UA-35, UA-71]
+
+# ---- The Cossack Hetmanate
+- date: "1764"
+  note: Catherine II abolishes the office of hetman. The Hetmanate becomes the Little Russia Governorate of the Russian Empire; its last institutions go in 1781.
+  owners:
+    russia: [UA-30, UA-53, UA-74]
+
+# ---- The Partitions
+- date: "1772-08-05"
+  note: First Partition of Poland. Prussia takes Royal Prussia (without Danzig and Thorn) and the Netze District, Austria takes Galicia, and Russia takes Polish Livonia and the lands east of the Dvina and Dnieper.
+  owners:
+    prussia: [PL-PM!, PL-PM~de1930, PL-PM~eprussia, PL-KP!, PL-KP~netze, PL-WP~de1930, PL-WN~warm]
+    habsburg: [PL-MA~galicia, PL-PK, PL-SL~polLes!, UA-46, UA-26, UA-61]
+    russia: [LV-001, LV-014, LV-015, LV-023, LV-024, LV-044, LV-047, LV-049, LV-056, LV-058, LV-073, LV-078, LV-082, LV-102, LV-103, LV-108, LV-109, LV-110, LV-REZ, LV-DGV!, LV-059!, LV-007~latg, LVA-4850, LVA-4851, BY-HO~ru1772, BY-MA~ru1772, BY-VI!]
+- date: "1793-01-23"
+  note: Second Partition of Poland. Prussia takes Greater Poland, Danzig and Thorn; Russia takes central Belarus and right-bank Ukraine.
+  owners:
+    prussia: [PL-PM~danzig, PL-WP!, PL-WP~congress, PL-KP~congress, PL-LD, PL-SL~congress]
+    russia: [BY-MI!, BY-HM, BY-HO!, BY-MA!, UA-56, UA-18, UA-32, UA-05, UA-68, UA-71, UA-35]
+- date: "1795-10-24"
+  note: Third Partition of Poland. The Commonwealth disappears from the map. Russia also annexes the Duchy of Courland.
+  owners:
+    prussia: [PL-MZ, PL-PD, LT-MR, LT-AL!, PL-SL~polLes~congress]
+    habsburg: [PL-MA!, PL-MA~krakow, PL-SK, PL-LU]
+    russia: [LT-AL~pl1930, LT-KL!, LT-KU, LT-PN, LT-SA, LT-TA, LT-TE, LT-UT, LT-VL, BY-BR, BY-HR, BY-MI~pl1930, BY-VI~pl1930, BY-HO~pl1930, UA-07, LV-003, LV-004, LV-006, LV-010, LV-012, LV-013, LV-016, LV-018, LV-026, LV-027, LV-028, LV-029, LV-032, LV-034, LV-036, LV-038, LV-040, LV-043, LV-050, LV-051, LV-052, LV-062, LV-063, LV-065, LV-066, LV-068, LV-069, LV-071, LV-074, LV-079, LV-081, LV-083, LV-086, LV-087, LV-088, LV-093, LV-097, LV-098, LV-099, LV-100, LV-105, LV-107, LV-JEL, LV-JKB, LV-JUR, LV-LPX, LV-VEN, LV-DGV~cour, LVA-4849, LVA-4852, LVA-1085]
+
+# ---- Napoleon and the Congress of Vienna
+- date: "1807-07-09"
+  note: Treaties of Tilsit. Napoleon makes the Duchy of Warsaw out of Prussia's partition gains; Danzig becomes a free city and Białystok goes to Russia.
+  owners:
+    duchy-of-warsaw: [PL-WP, PL-KP, PL-LD, PL-MZ, PL-PD~congress, PL-SL~congress, PL-SL~polLes~congress, LT-MR, LT-AL!]
+    danzig: [PL-PM~danzig]
+    russia: [PL-PD!]
+- date: "1809-10-14"
+  note: Treaty of Schönbrunn. After the Austro-Polish War, the Duchy of Warsaw gains West Galicia with Kraków; Russia takes the Tarnopol district.
+  owners:
+    duchy-of-warsaw: [PL-MA!, PL-MA~krakow, PL-SK, PL-LU]
+    russia: [UA-61]
+- date: "1815-06-09"
+  note: Final Act of the Congress of Vienna. The Kingdom of Poland (Congress Poland) is created in union with Russia, Kraków becomes a free city, and Prussia keeps Posen and Danzig.
+  owners:
+    congress-poland: [PL-MZ, PL-LD, PL-SK, PL-LU, PL-MA!, PL-PD~congress, PL-WP~congress, PL-KP~congress, PL-SL~congress, PL-SL~polLes~congress, LT-MR, LT-AL!]
+    krakow: [PL-MA~krakow]
+    prussia: [PL-WP!, PL-WP~de1930, PL-KP!, PL-KP~netze, PL-PM~danzig]
+    habsburg: [UA-61]
+- date: "1846-11-16"
+  note: After the Kraków Uprising, Austria annexes the Free City as the Grand Duchy of Kraków.
+  owners:
+    habsburg: [PL-MA~krakow]
+- date: "1867"
+  note: After the January Uprising, the Kingdom of Poland loses its separate administration and is governed as provinces of the Russian Empire (the "Vistula Land").
+  owners:
+    russia: [PL-MZ, PL-LD, PL-SK, PL-LU, PL-MA!, PL-PD~congress, PL-WP~congress, PL-KP~congress, PL-SL~congress, PL-SL~polLes~congress, LT-MR, LT-AL!]
+- date: "1867"
+  note: The Austro-Hungarian Compromise.
+  owners:
+    austria-hungary: [PL-MA~galicia, PL-MA~krakow, PL-PK, PL-SL~polLes!, PL-SL~austria, UA-46, UA-26, UA-61]
+- date: "1871-01-18"
+  note: The German Empire is proclaimed; Prussia's Polish provinces become part of it.
+  owners:
+    germany: [PL-PM, PL-WN, PL-OP, PL-DS, PL-LB, PL-ZP, RU-KGD, LT-KL~memel, PL-WP!, PL-WP~de1930, PL-KP!, PL-KP~netze, PL-SL!, PL-SL~de1930]
+
+# ---- 1918–1922: new states and their borders
+- date: "1918-01-22"
+  note: The Fourth Universal. The Ukrainian People's Republic declares independence.
+  owners:
+    ukraine: [UA-07, UA-56, UA-18, UA-32, UA-30, UA-05, UA-68, UA-71, UA-35]
+- date: "1918-02-16"
+  note: Act of Independence of Lithuania, signed in German-occupied Vilnius.
+  owners:
+    lithuania: [LT-AL, LT-KL!, LT-KU, LT-MR, LT-PN, LT-SA, LT-TA, LT-TE, LT-UT, LT-VL]
+- date: "1918-02-24"
+  note: Estonia declares independence, a day before German troops take Tallinn. Its borders are settled by the Treaty of Tartu (1920).
+  owners:
+    estonia: [EE-37, EE-39, EE-44, EE-49, EE-51, EE-57, EE-59, EE-65, EE-67, EE-70, EE-74, EE-78, EE-82, EE-84, EE-86]
+- date: "1918-11-01"
+  note: Ukrainians take power in Lviv and proclaim the West Ukrainian People's Republic; the Polish–Ukrainian War follows.
+  owners:
+    west-ukrainian-pr: [UA-46, UA-26, UA-61]
+- date: "1918-11-11"
+  note: Poland regains independence as Germany and Austria-Hungary collapse. Its borders are fought over until 1921.
+  owners:
+    poland: [PL-MZ, PL-LD, PL-SK, PL-LU, PL-MA, PL-PK, PL-PD, PL-WP~congress, PL-KP~congress, PL-SL~congress, PL-SL~polLes, PL-SL~austria]
+- date: "1918-11-18"
+  note: Latvia proclaims independence. Its War of Independence lasts until 1920.
+  owners:
+    latvia: [LV-001, LV-002, LV-003, LV-004, LV-005, LV-006, LV-007, LV-008, LV-009, LV-010, LV-011, LV-012, LV-013, LV-014, LV-015, LV-016, LV-017, LV-018, LV-019, LV-020, LV-021, LV-022, LV-023, LV-024, LV-026, LV-027, LV-028, LV-029, LV-030, LV-031, LV-032, LV-033, LV-034, LV-035, LV-036, LV-037, LV-038, LV-039, LV-040, LV-043, LV-044, LV-045, LV-046, LV-047, LV-048, LV-049, LV-050, LV-051, LV-052, LV-053, LV-054, LV-055, LV-056, LV-057, LV-058, LV-059, LV-060, LV-061, LV-062, LV-063, LV-064, LV-065, LV-066, LV-067, LV-068, LV-069, LV-070, LV-071, LV-072, LV-073, LV-074, LV-075, LV-076, LV-078, LV-079, LV-080, LV-081, LV-082, LV-083, LV-084, LV-085, LV-086, LV-087, LV-088, LV-089, LV-090, LV-091, LV-092, LV-093, LV-094, LV-095, LV-096, LV-097, LV-098, LV-099, LV-100, LV-101, LV-102, LV-103, LV-104, LV-105, LV-107, LV-108, LV-109, LV-110, LV-DGV, LV-JEL, LV-JKB, LV-JUR, LV-LPX, LV-REZ, LV-RIX, LV-VEN, LV-VMR, LVA-4849, LVA-4852, LVA-1085, LVA-4850, LVA-4851]
+- date: "1919-01-01"
+  note: The Socialist Soviet Republic of Byelorussia is proclaimed as the Red Army moves west behind the withdrawing Germans.
+  owners:
+    ussr: [BY-BR, BY-HM, BY-HO, BY-HR, BY-MA, BY-MI, BY-VI]
+- date: "1919-02-16"
+  note: Truce of Trier. The Greater Poland Uprising has won most of the Province of Posen for Poland.
+  owners:
+    poland: [PL-WP!]
+- date: "1919-04-19"
+  note: Polish forces take Vilnius. By mid-1919 Poland holds western Belarus up to the line of the later Riga border; the front moves east and back again in 1920.
+  owners:
+    poland: [LT-VL~pl1930, LT-UT~pl1930, LT-AL~pl1930, BY-BR, BY-HR, BY-MI~pl1930, BY-VI~pl1930, BY-HO~pl1930]
+- date: "1919-07-17"
+  note: The Polish–Ukrainian War ends with all of Eastern Galicia under Polish control; Polish forces also hold western Volhynia.
+  owners:
+    poland: [UA-46, UA-26, UA-61, UA-07, UA-56]
+- date: "1920-01-10"
+  note: The Treaty of Versailles comes into force. Poland receives most of West Prussia (the "Polish Corridor"), Danzig becomes a free city under the League of Nations, and the Memel Territory is put under Allied administration.
+  owners:
+    poland: [PL-PM!, PL-PM~pomE!, PL-KP!, PL-KP~netze, PL-WN~pl1930]
+    danzig: [PL-PM~danzig]
+    memel-territory: [LT-KL~memel]
+- date: "1920-08-26"
+  note: Under the Soviet–Lithuanian Peace Treaty, the retreating Red Army hands Vilnius to Lithuania.
+  owners:
+    lithuania: [LT-VL~pl1930, LT-UT~pl1930, LT-AL~pl1930]
+- date: "1920-10-12"
+  note: After Żeligowski's staged mutiny, the Republic of Central Lithuania is proclaimed in Vilnius under Polish protection.
+  owners:
+    central-lithuania: [LT-VL~pl1930, LT-UT~pl1930, LT-AL~pl1930, BY-VI~pl1930]
+- date: "1921-03-18"
+  note: Peace of Riga. Poland, Soviet Russia and Soviet Ukraine fix a border that leaves western Belarus and western Volhynia in Poland. Soviet Ukraine and Belarus join the USSR in 1922.
+  owners:
+    poland: [UA-07, UA-56, BY-BR, BY-HR, BY-MI~pl1930, BY-HO~pl1930]
+    ussr: [UA-18, UA-32, UA-30, UA-05, UA-68, UA-71, UA-35, BY-MI!, BY-HM, BY-HO!, BY-MA, BY-VI!]
+- date: "1922-04-18"
+  note: Central Lithuania is incorporated into Poland. Lithuania does not recognise the loss of Vilnius until 1938.
+  owners:
+    poland: [LT-VL~pl1930, LT-UT~pl1930, LT-AL~pl1930, BY-VI~pl1930]
+- date: "1922-06-20"
+  note: After the plebiscite and the Silesian Uprisings, Polish troops enter the eastern part of Upper Silesia awarded to Poland.
+  owners:
+    poland: [PL-SL!]
+- date: "1923-02-16"
+  note: After the Klaipėda Revolt, the Allied Conference of Ambassadors transfers the Memel Territory to Lithuania.
+  owners:
+    lithuania: [LT-KL~memel]
+
+# ---- 1939–1945
+- date: "1939-03-23"
+  note: Under a German ultimatum, Lithuania cedes the Memel Territory to Germany.
+  owners:
+    germany: [LT-KL~memel]
+- date: "1939-09-28"
+  note: German–Soviet Boundary and Friendship Treaty. Germany annexes western Poland and sets up the General Government in the centre; the Soviet Union annexes the east.
+  owners:
+    germany: [PL-PM, PL-KP, PL-WP, PL-LD, PL-SL, PL-WN~pl1930]
+    general-government: [PL-MZ, PL-SK, PL-LU, PL-MA, PL-PK]
+    ussr: [PL-PD, BY-BR, BY-HR, BY-MI~pl1930, BY-VI~pl1930, BY-HO~pl1930, UA-07, UA-56, UA-46, UA-26, UA-61, LT-VL~pl1930, LT-UT~pl1930, LT-AL~pl1930]
+- date: "1939-10-10"
+  note: Soviet–Lithuanian Mutual Assistance Treaty. Lithuania receives Vilnius and part of its region and accepts Soviet bases.
+  owners:
+    lithuania: [LT-VL~pl1930, LT-UT~pl1930, LT-AL~pl1930]
+- date: "1940-08-03"
+  note: Lithuania, occupied by the Red Army in June, is annexed by the Soviet Union.
+  owners:
+    ussr: [LT-AL, LT-KL!, LT-KU, LT-MR, LT-PN, LT-SA, LT-TA, LT-TE, LT-UT, LT-VL]
+- date: "1940-08-05"
+  note: Latvia is annexed by the Soviet Union.
+  owners:
+    ussr: [LV-001, LV-002, LV-003, LV-004, LV-005, LV-006, LV-007, LV-008, LV-009, LV-010, LV-011, LV-012, LV-013, LV-014, LV-015, LV-016, LV-017, LV-018, LV-019, LV-020, LV-021, LV-022, LV-023, LV-024, LV-026, LV-027, LV-028, LV-029, LV-030, LV-031, LV-032, LV-033, LV-034, LV-035, LV-036, LV-037, LV-038, LV-039, LV-040, LV-043, LV-044, LV-045, LV-046, LV-047, LV-048, LV-049, LV-050, LV-051, LV-052, LV-053, LV-054, LV-055, LV-056, LV-057, LV-058, LV-059, LV-060, LV-061, LV-062, LV-063, LV-064, LV-065, LV-066, LV-067, LV-068, LV-069, LV-070, LV-071, LV-072, LV-073, LV-074, LV-075, LV-076, LV-078, LV-079, LV-080, LV-081, LV-082, LV-083, LV-084, LV-085, LV-086, LV-087, LV-088, LV-089, LV-090, LV-091, LV-092, LV-093, LV-094, LV-095, LV-096, LV-097, LV-098, LV-099, LV-100, LV-101, LV-102, LV-103, LV-104, LV-105, LV-107, LV-108, LV-109, LV-110, LV-DGV, LV-JEL, LV-JKB, LV-JUR, LV-LPX, LV-REZ, LV-RIX, LV-VEN, LV-VMR, LVA-4849, LVA-4852, LVA-1085, LVA-4850, LVA-4851]
+- date: "1940-08-06"
+  note: Estonia is annexed by the Soviet Union.
+  owners:
+    ussr: [EE-37, EE-39, EE-44, EE-49, EE-51, EE-57, EE-59, EE-65, EE-67, EE-70, EE-74, EE-78, EE-82, EE-84, EE-86]
+- date: "1941-08-01"
+  note: After the German invasion of the Soviet Union, Eastern Galicia is added to the General Government and the Białystok district is put under East Prussian administration. The Reichskommissariats further east are occupation regimes and are not shown as border changes.
+  owners:
+    general-government: [UA-46, UA-26, UA-61]
+    germany: [PL-PD, BY-HR]
+- date: "1944-07-27"
+  note: The Red Army takes Lviv and Białystok. A Soviet agreement with the Polish Committee of National Liberation (Lublin) sets the new border close to the Curzon Line.
+  owners:
+    ussr: [UA-46, UA-26, UA-61, BY-HR]
+    poland: [PL-PD, PL-LU, PL-PK]
+- date: "1945-01-17"
+  note: The Vistula–Oder Offensive. Soviet and Polish troops take Warsaw (17 January), Kraków and Łódź (19 January).
+  owners:
+    poland: [PL-MZ, PL-LD, PL-SK, PL-MA]
+- date: "1945-08-02"
+  note: Potsdam Agreement. German lands east of the Oder and Neisse go to Polish administration, and northern East Prussia to the Soviet Union. Most Germans there are expelled.
+  owners:
+    poland: [PL-PM, PL-KP, PL-WP, PL-SL, PL-DS, PL-OP, PL-LB, PL-ZP, PL-WN]
+    ussr: [RU-KGD, LT-KL~memel]
+
+# ---- 1991
+- date: "1991-08-24"
+  note: Ukraine declares independence (confirmed by referendum on 1 December).
+  owners:
+    ukraine: [UA-07, UA-56, UA-18, UA-32, UA-30, UA-05, UA-68, UA-71, UA-35, UA-46, UA-26, UA-61]
+- date: "1991-08-25"
+  note: Belarus declares independence.
+  owners:
+    belarus: [BY-BR, BY-HM, BY-HO, BY-HR, BY-MA, BY-MI, BY-VI]
+- date: "1991-09-06"
+  note: The Soviet Union recognises the independence of Estonia, Latvia and Lithuania.
+  owners:
+    lithuania: [LT-AL, LT-KL, LT-KU, LT-MR, LT-PN, LT-SA, LT-TA, LT-TE, LT-UT, LT-VL]
+    latvia: [LV-001, LV-002, LV-003, LV-004, LV-005, LV-006, LV-007, LV-008, LV-009, LV-010, LV-011, LV-012, LV-013, LV-014, LV-015, LV-016, LV-017, LV-018, LV-019, LV-020, LV-021, LV-022, LV-023, LV-024, LV-026, LV-027, LV-028, LV-029, LV-030, LV-031, LV-032, LV-033, LV-034, LV-035, LV-036, LV-037, LV-038, LV-039, LV-040, LV-043, LV-044, LV-045, LV-046, LV-047, LV-048, LV-049, LV-050, LV-051, LV-052, LV-053, LV-054, LV-055, LV-056, LV-057, LV-058, LV-059, LV-060, LV-061, LV-062, LV-063, LV-064, LV-065, LV-066, LV-067, LV-068, LV-069, LV-070, LV-071, LV-072, LV-073, LV-074, LV-075, LV-076, LV-078, LV-079, LV-080, LV-081, LV-082, LV-083, LV-084, LV-085, LV-086, LV-087, LV-088, LV-089, LV-090, LV-091, LV-092, LV-093, LV-094, LV-095, LV-096, LV-097, LV-098, LV-099, LV-100, LV-101, LV-102, LV-103, LV-104, LV-105, LV-107, LV-108, LV-109, LV-110, LV-DGV, LV-JEL, LV-JKB, LV-JUR, LV-LPX, LV-REZ, LV-RIX, LV-VEN, LV-VMR, LVA-4849, LVA-4852, LVA-1085, LVA-4850, LVA-4851]
+    estonia: [EE-37, EE-39, EE-44, EE-49, EE-51, EE-57, EE-59, EE-65, EE-67, EE-70, EE-74, EE-78, EE-82, EE-84, EE-86]
+- date: "1991-12-26"
+  note: The Soviet Union is dissolved; the Kaliningrad region stays with Russia.
+  owners:
+    russia: [RU-KGD]

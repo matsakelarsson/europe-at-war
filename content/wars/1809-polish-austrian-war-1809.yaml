@@ -1,0 +1,160 @@
+id: polish-austrian-war-1809
+name: Polish–Austrian War
+start: "1809-04-14"
+end: "1809-10-14"
+tier: B
+summary: A campaign of the War of the Fifth Coalition in which an Austrian corps invaded the Duchy of Warsaw and took its capital, while the Polish army under Prince Józef Poniatowski struck south into Austrian Galicia. At the Peace of Schönbrunn the Duchy gained West Galicia with Kraków, and Russia, nominally France’s ally, took the Tarnopol district.
+countries: [pl, ua, at]
+sides:
+  - id: pl
+    name: Duchy of Warsaw
+    polities: [duchy-of-warsaw]
+    ink: magenta
+    moves: Polish and Saxon moves
+    success: Polish success
+  - id: at
+    name: Austrian Empire
+    polities: [habsburg]
+    ink: purple
+    moves: Austrian moves
+    success: Austrian success
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+notes:
+  - The result of Raszyn is disputed. The Austrians took Warsaw, which was their aim; Polish historians stress that the Polish army escaped intact and went on to win the campaign.
+  - Russia entered the war in June 1809 as France’s ally under the Treaty of Tilsit, but its commander in Galicia had orders to help the Poles as little as possible.
+sources:
+  - title: Austro-Polish War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Austro-Polish_War
+  - title: Battle of Raszyn (1809) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Raszyn_(1809)
+  - title: Treaty of Schönbrunn (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Sch%C3%B6nbrunn
+  - title: Duchy of Warsaw (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Duchy_of_Warsaw
+steps:
+  - title: Raszyn and the fall of Warsaw
+    date: April – May 1809
+    when: "1809-04-14"
+    borders: "1809-04-14"
+    countries: [pl]
+    body:
+      - When Austria went to war with Napoleon in April 1809, it sent Archduke Ferdinand of Austria-Este with an army corps into the Duchy of Warsaw, the Polish state Napoleon had created two years earlier. On 19 April Prince Józef Poniatowski met him at Raszyn, just south-west of Warsaw, with Polish and Saxon troops numbering about half as many. The Poles held their positions along the marshy Utrata until nightfall, then withdrew, and neither side was decisively beaten.
+      - Poniatowski judged Warsaw too hard to defend. He let the Austrians occupy the capital and took his army across the Vistula, keeping it whole. On the east bank General Michał Sokolnicki beat the Austrians besieging the suburb of Praga at Grochów on 26 April, and on 2–3 May routed them at Góra Kalwaria, destroying their half-built bridge. An Austrian thrust down the Vistula towards the fortress of Toruń also came to nothing.
+    facts:
+      - [Battle of Raszyn, "19 April 1809, indecisive"]
+      - [Warsaw, "Austrian-held, April – 1 June 1809"]
+      - [Góra Kalwaria, "2–3 May 1809, Polish victory"]
+    markers:
+      - kind: battle
+        name: Battle of Raszyn
+        date: 19 April 1809
+        text: Poniatowski’s Polish and Saxon troops held off an Austrian force about twice their size for a day, then fell back towards Warsaw.
+        lonlat: [20.926, 52.159]
+        lp: l
+      - kind: taken
+        side: at
+        name: Warsaw
+        date: April – 1 June 1809
+        text: Poniatowski left the capital without a fight after Raszyn. The Austrians held it until 1 June, when the Polish advance into Galicia drew them south.
+        lonlat: [21.01, 52.23]
+        lp: t
+      - kind: battle
+        side: pl
+        name: Battle of Grochów
+        date: 26 April 1809
+        text: Sokolnicki’s Poles beat the Austrian troops besieging Praga, on the east bank of the Vistula opposite Warsaw.
+        lonlat: [21.108, 52.249]
+      - kind: battle
+        side: pl
+        name: Battle of Góra Kalwaria
+        date: 2–3 May 1809
+        text: The Poles routed an Austrian force trying to cross the Vistula and destroyed its bridge and engineering equipment.
+        lonlat: [21.214, 51.973]
+      - kind: held
+        side: pl
+        name: Toruń
+        date: May 1809
+        text: The Polish-held fortress on the lower Vistula was besieged, and the Austrians gave up the siege as Poniatowski threatened their supply lines.
+        lonlat: [18.611, 53.022]
+    arrows:
+      - side: at
+        label: Ferdinand
+        via: [[20.0, 51.15], [20.55, 51.75], [20.9, 52.12]]
+      - side: at
+        label: Towards Toruń
+        via: [[20.8, 52.33], [19.8, 52.72], [18.75, 53.0]]
+  - title: Into Galicia and the Peace of Schönbrunn
+    date: May – October 1809
+    when: "1809-05-14"
+    borders: "1809-10-14"
+    countries: [pl, ua]
+    body:
+      - Instead of retaking Warsaw, Poniatowski marched south-east into Austrian Galicia, the lands Austria had taken in the partitions. His troops took Lublin on 14 May, Sandomierz on 18 May and the fortress of Zamość on 20 May, and a cavalry force reached Lwów on 27 May. Archduke Ferdinand left Warsaw on 1 June and came south. He beat General Józef Zajączek at Jedlińsk on 11 June and retook Sandomierz and Lwów.
+      - On 3 June a Russian army entered Galicia as France’s ally, though its commander, Prince Sergei Golitsyn, did little to help the Poles. After Napoleon’s victory at Wagram in early July Austria sought an armistice, and on 15 July Poniatowski entered Kraków. By the Peace of Schönbrunn on 14 October, Austria ceded West Galicia with Kraków to the Duchy of Warsaw and the Tarnopol district to Russia. The two states also shared the income of the Wieliczka salt mines.
+    facts:
+      - [Peace of Schönbrunn, "14 October 1809"]
+      - [Gained by the Duchy, "West Galicia, Kraków and Zamość"]
+      - [Duchy’s area, "about 104,000 to 155,000 km²"]
+    markers:
+      - kind: taken
+        side: pl
+        name: Lublin
+        date: 14 May 1809
+        text: The first major Galician town taken by the Poles as they marched south-east.
+        lonlat: [22.567, 51.25]
+      - kind: siege
+        side: at
+        name: Sandomierz
+        date: 18 May – 18 June 1809
+        text: Taken by the Poles on 18 May, then besieged and retaken by Archduke Ferdinand’s army a month later.
+        lonlat: [21.75, 50.683]
+        lp: l
+      - kind: taken
+        side: pl
+        name: Zamość
+        date: 20 May 1809
+        text: The fortress fell to a Polish assault and was kept by the Duchy at the peace.
+        lonlat: [23.253, 50.717]
+      - kind: taken
+        side: pl
+        name: Lwów
+        date: 27 May 1809
+        text: Polish cavalry reached the Galician capital, but Austrian troops soon took it back.
+        lonlat: [24.032, 49.843]
+      - kind: battle
+        side: at
+        name: Battle of Jedlińsk
+        date: 11 June 1809
+        text: Archduke Ferdinand’s army beat General Zajączek’s division near Radom on its way south from Warsaw.
+        lonlat: [21.117, 51.517]
+      - kind: taken
+        side: pl
+        name: Kraków
+        date: 15 July 1809
+        text: Poniatowski entered the old royal capital just ahead of the Russians, and the peace left it to the Duchy.
+        lonlat: [19.937, 50.061]
+    arrows:
+      - side: pl
+        label: Poniatowski
+        via: [[21.15, 52.15], [22.0, 51.55], [22.5, 51.3]]
+      - side: pl
+        via: [[22.6, 51.15], [23.2, 50.75], [23.95, 49.9]]
+      - side: at
+        label: Ferdinand
+        via: [[20.95, 52.15], [21.15, 51.45], [21.7, 50.75]]
+      - side: pl
+        via: [[21.5, 50.75], [20.6, 50.35], [20.0, 50.1]]
+    areas:
+      - style: gained
+        side: pl
+        label: West Galicia, gained by the Duchy at Schönbrunn
+        atoms: [PL-LU, PL-SK, PL-MA~krakow, PL-MA!]
+      - style: gained
+        side: ru
+        label: Tarnopol district, ceded to Russia
+        atoms: [UA-61]

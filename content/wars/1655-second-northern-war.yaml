@@ -3,7 +3,7 @@ name: Second Northern War
 start: "1655"
 end: "1660"
 tier: A
-summary: ""
+summary: "Charles X Gustav’s invasion of Poland–Lithuania in 1655, the Deluge, drew in Russia, Brandenburg, Transylvania, the Habsburgs, Denmark–Norway and the Dutch. Sweden could not hold Poland, but after marching across the frozen Danish straits it won Scania, Halland, Blekinge and Bohuslän from Denmark–Norway, which it kept at the peace of 1660."
 sides:
   - id: se
     name: Sweden
@@ -38,6 +38,11 @@ sides:
     ink: orange
     moves: Dutch fleet
     success: Dutch success
+  - id: ru
+    name: Tsardom of Russia
+    ink: green
+    moves: Russian moves
+    success: Russian success
 notes:
   - Dates in Germany and Poland are New Style (Gregorian); Scandinavian dates are mostly Old Style (Julian), as usually cited, which ran ten days behind.
   - Migrated from Sweden at War, so the story is told from Sweden’s side.
@@ -73,6 +78,8 @@ steps:
     borders: "1654"
     countries:
       - se
+      - pl
+      - lt
     view:
       center:
         - 20.2341
@@ -237,12 +244,124 @@ steps:
         label: Swedish on a 30-year pledge
         atoms:
           - SE-N
+  - title: Lithuania between Russia and Sweden
+    date: 1655–1656
+    when: "1655-08"
+    borders: "1655"
+    countries: [lt, by, pl, ru]
+    side_names:
+      foe: Polish–Lithuanian success
+    body:
+      - Lithuania was invaded from two sides. Russian armies and Cossacks had taken Smolensk, Vitebsk and Mogilev in 1654, and in the summer of 1655 they took Minsk, Grodno and Kaunas. On 8 August they captured Vilnius, the capital, and looted and burned it for days, killing many of its people. Tsar Alexis took the title Grand Duke of Lithuania. It was in the shadow of these defeats that Janusz Radziwiłł turned to Sweden at Kėdainiai.
+      - Many Lithuanian nobles rejected his union with Sweden and stayed loyal to John II Casimir, led by Paweł Sapieha, voivode of Vitebsk. Radziwiłł died on 31 December 1655 in his castle at Tykocin while Sapieha’s troops besieged it, and in 1656 Samogitia rose against its Swedish garrisons. Alarmed by Swedish gains, Russia turned on Sweden, and in November 1656 Russian and Polish–Lithuanian envoys agreed a truce at Niemież near Vilnius. Russian troops stayed in much of the Grand Duchy until 1661.
+    facts:
+      - [Vilnius taken by Russia, "8 August 1655 (29 July Old Style)"]
+      - [Truce of Niemież, "November 1656, between Russia and Poland–Lithuania"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Vilnius sacked
+        date: 8 August 1655
+        lonlat: [25.29, 54.69]
+        lp: l
+        text: Russian troops and Cossacks under Yakov Cherkassky and Ivan Zolotarenko took the Lithuanian capital, which had never fallen to an enemy before.
+      - kind: event
+        side: foe
+        name: Tykocin
+        date: 31 December 1655
+        lonlat: [22.77, 53.20]
+        text: Janusz Radziwiłł died in his besieged castle. His garrison surrendered to the loyalists soon afterwards.
+      - kind: treaty
+        name: Truce of Niemież
+        date: November 1656
+        lonlat: [25.37, 54.64]
+        text: Russia and Poland–Lithuania stopped fighting each other to face Sweden. The Poles even held out the prospect of electing the tsar as John Casimir’s successor.
+    arrows:
+      - side: ru
+        label: Cherkassky and Zolotarenko
+        via: [[27.56, 53.9], [26.5, 54.3], [25.4, 54.66]]
+    areas:
+      - style: occupied
+        side: ru
+        label: Occupied by Russia, 1655
+        atoms: [RU-SMO, BY-VI, BY-MA, BY-HO, BY-MI, BY-HM, BY-HR, LT-VL, LT-UT, LT-AL, LT-KU]
+      - style: occupied
+        side: se
+        label: Under Swedish protection after Kėdainiai
+        atoms: [LT-SA, LT-TE, LT-PN, LT-TA]
+  - title: The Commonwealth rallies
+    date: Dec 1655 – Jul 1656
+    when: "1655-12"
+    borders: "1655"
+    countries: [pl, ua]
+    side_names:
+      foe: Polish–Lithuanian success
+    move_names:
+      foe: Polish–Lithuanian moves
+    body:
+      - Swedish requisitions and plunder, and the attack on Jasna Góra, turned many Poles who had submitted against Charles X Gustav. On 29 December 1655 nobles and soldiers loyal to John II Casimir formed the Confederation of Tyszowce and called the country to arms, and the Crown hetmans went back to the king. John Casimir returned from Silesia through the mountains to Lwów. In its cathedral, on 1 April 1656, he vowed to place the kingdom under the protection of the Virgin Mary and to ease the burdens of the peasants.
+      - Charles X Gustav struck deep into the south-east that winter. He beat Stefan Czarniecki at Gołąb in February, but failed to take Zamość, and in late March he was nearly trapped where the San meets the Vistula, escaping with heavy losses. Czarniecki’s raids and ambushes wore down the Swedish columns, and on 1 July 1656 a Polish–Lithuanian army retook Warsaw, capturing the Swedish commander Arvid Wittenberg.
+    facts:
+      - [Confederation of Tyszowce, 29 December 1655]
+      - [Lwów Oath, 1 April 1656]
+      - [Warsaw retaken, 1 July 1656]
+    markers:
+      - kind: event
+        side: foe
+        name: Confederation of Tyszowce
+        date: 29 December 1655
+        lonlat: [23.71, 50.62]
+        text: The confederates declared their loyalty to John Casimir and called for a general rising against the Swedes.
+      - kind: event
+        side: foe
+        name: Lwów Oath
+        date: 1 April 1656
+        lonlat: [24.03, 49.84]
+        text: The king made his vows in the Latin cathedral, naming the Virgin Mary Queen of Poland.
+      - kind: battle
+        side: se
+        name: Battle of Gołąb
+        date: 18 February 1656
+        lonlat: [21.88, 51.49]
+        text: Charles X Gustav scattered Czarniecki’s cavalry, but could not catch it.
+      - kind: held
+        side: foe
+        name: Zamość
+        date: February 1656
+        lonlat: [23.25, 50.72]
+        text: The fortress refused to open its gates, and the Swedish king, without siege guns, moved on.
+      - kind: event
+        side: foe
+        name: Trap at the San
+        date: March – April 1656
+        lonlat: [21.80, 50.70]
+        lp: l
+        text: Hemmed in between the rivers and Polish troops, the Swedish army broke out after about two weeks and retreated north.
+      - kind: taken
+        side: foe
+        name: Warsaw retaken
+        date: 1 July 1656
+        lonlat: [21.01, 52.23]
+        text: After a siege of more than a month the Swedish garrison surrendered.
+    arrows:
+      - side: foe
+        label: John Casimir
+        via: [[17.85, 50.35], [20.69, 49.3], [22.5, 49.6], [23.95, 49.83]]
+      - side: se
+        label: Charles X Gustav
+        via: [[21.0, 52.15], [21.9, 51.45], [23.1, 50.75], [22.7, 50.1]]
   - title: Victory at Warsaw, and Russia attacks
     date: "1656"
     when: "1656"
     borders: "1654"
     countries:
       - se
+      - pl
+      - lt
+      - ru
+      - de
+      - lv
+      - ee
     view:
       center:
         - 24.7945
@@ -387,6 +506,8 @@ steps:
       - se
       - dk
       - no
+      - pl
+      - de
     view:
       center:
         - 15.4443
@@ -968,6 +1089,8 @@ steps:
       - se
       - dk
       - no
+      - pl
+      - de
     view:
       center:
         - 11.6075
@@ -1101,6 +1224,11 @@ steps:
       - se
       - dk
       - no
+      - pl
+      - lt
+      - ru
+      - lv
+      - ee
     body:
       - Charles X Gustav died at Gothenburg on 13 February 1660, aged 37, while planning yet another campaign. His son Charles XI was four, and the regency quickly made peace. At Oliva near Danzig on 3 May 1660, Poland–Lithuania recognised Swedish Livonia, John II Casimir gave up his claim to the Swedish crown, and all occupied land was returned.
       - In the Treaty of Copenhagen on 27 May 1660, Sweden gave back Trøndelag and Bornholm but kept Scania, Halland, Blekinge and Bohuslän. Peace with Russia followed at Cardis in 1661, restoring the borders of 1617.

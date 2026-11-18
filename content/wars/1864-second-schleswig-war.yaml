@@ -1,0 +1,253 @@
+id: second-schleswig-war
+name: Second Schleswig War
+start: "1864-02-01"
+end: "1864-10-30"
+tier: A
+summary: A war in which Prussia and Austria defeated Denmark after it tried to tie Schleswig more closely to the kingdom. By the Treaty of Vienna Denmark gave up Schleswig, Holstein and Lauenburg, about two-fifths of its territory, and some 200,000 Danish speakers came under German rule.
+countries: [dk, de, at]
+sides:
+  - id: dk
+    name: Denmark
+    polities: [denmark, danish-duchies]
+    ink: red
+    moves: Danish moves
+    success: Danish success
+  - id: pr
+    name: Prussia
+    polities: [prussia]
+    ink: slate
+    moves: Prussian moves
+    success: Prussian success
+  - id: at
+    name: Austria
+    polities: [habsburg]
+    ink: purple
+    moves: Austrian moves
+    success: Austrian success
+notes:
+  - Known in Denmark simply as “1864” and in Germany as the German–Danish War (Deutsch-Dänischer Krieg).
+  - Most places have a Danish and a German name (Dybbøl/Düppel, Als/Alsen, Danevirke/Danewerk).
+sources:
+  - title: Second Schleswig War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Schleswig_War
+  - title: November Constitution (Wikipedia)
+    url: https://en.wikipedia.org/wiki/November_Constitution
+  - title: Battle of Dybbøl (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Dybb%C3%B8l
+  - title: Battle of Heligoland, 1864 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Heligoland_(1864)
+  - title: Battle of Als (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Als
+  - title: Treaty of Vienna, 1864 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Vienna_(1864)
+  - title: Schleswig-Holstein question (Britannica)
+    url: https://www.britannica.com/event/Schleswig-Holstein-question
+steps:
+  - title: The November Constitution
+    date: November 1863 – January 1864
+    when: "1863-11-18"
+    borders: "1864-01-16"
+    countries: [dk, de]
+    body:
+      - Frederick VII, the last king of the old line, died on 15 November 1863. Three days later his successor, Christian IX, signed a new constitution for Denmark and Schleswig together, leaving Holstein and Lauenburg outside. Danish nationalists had long wanted this, but it broke the promise of 1852 not to bind Schleswig more closely to the kingdom than Holstein. In the duchies many backed a rival heir, Frederick of Augustenburg, and German opinion was outraged.
+      - The German Confederation ordered a “federal execution” against Holstein and Lauenburg, which were its members. On 24 December Saxon and Hanoverian troops marched in, and the Danish army withdrew behind the Eider without a fight. Prussia’s chief minister, Otto von Bismarck, then went further. On 16 January 1864 Prussia and Austria gave Denmark 48 hours to withdraw the constitution in Schleswig. The Danish government refused, trusting in help from Britain or Sweden that never came.
+    facts:
+      - [November Constitution, "Signed 18 November 1863"]
+      - [Federal execution, "Saxon and Hanoverian troops in Holstein from 24 December 1863"]
+      - [Ultimatum, "16 January 1864, from Prussia and Austria"]
+    markers:
+      - kind: event
+        side: dk
+        name: November Constitution
+        date: 18 November 1863
+        text: Christian IX signed the joint constitution for Denmark and Schleswig in his first days as king, under strong pressure from the government and the Copenhagen public.
+        lonlat: [12.568, 55.676]
+      - kind: taken
+        name: Federal execution
+        date: 24 December 1863
+        text: Federal troops occupied Holstein and Lauenburg, where many welcomed Frederick of Augustenburg as their duke.
+        lonlat: [10.139, 54.323]
+      - kind: event
+        side: dk
+        name: Danevirke
+        date: January 1864
+        text: The Danish army, about 38,000 strong, waited behind the old earthwork, rebuilt at great cost across the neck of the peninsula.
+        lonlat: [9.45, 54.467]
+        lp: l
+    areas:
+      - style: occupied
+        label: Held by federal troops from December 1863
+        atoms: [DE-SH~holstein]
+  - title: The Danevirke abandoned
+    date: February 1864
+    when: "1864-02-01"
+    borders: "1864-02-18"
+    countries: [dk, de, at]
+    body:
+      - On 1 February 1864 Prussian and Austrian troops under the elderly Field Marshal Wrangel crossed the Eider into Schleswig. The Danes stopped a Prussian attempt to cross the Schlei at Mysunde on 2 February, and the Austrians pushed up to the Danevirke the next day. But the line was too long to hold with the troops available, the frozen marshes and inlets could be crossed, and the Prussians were preparing to cross the Schlei further east.
+      - On the night of 5 February the Danish commander, General de Meza, abandoned the Danevirke and retreated north in snow and frost, leaving his heavy guns behind. The Austrians caught the rearguard at Oeversee on 6 February, but the army escaped to Dybbøl and Fredericia. The retreat saved the army but shocked the Danish public, which had been taught to see the Danevirke as the country’s shield, and de Meza was dismissed. On 18 February Prussian troops crossed into Jutland at Kolding.
+    facts:
+      - [Danish army, "About 38,000 men under General de Meza"]
+      - [Invading armies, "About 38,000 Prussians and 23,000 Austrians, later reinforced"]
+      - [Danevirke abandoned, "Night of 5–6 February 1864"]
+    markers:
+      - kind: battle
+        side: dk
+        name: Mysunde
+        date: 2 February 1864
+        text: Prussian troops under Prince Frederick Charles tried to take the crossing over the Schlei and were driven off.
+        lonlat: [9.72, 54.52]
+      - kind: battle
+        side: at
+        name: Königshügel
+        date: 3 February 1864
+        text: Austrian troops drove the Danish outposts back onto the Danevirke south of Schleswig town.
+        lonlat: [9.55, 54.48]
+        lp: l
+      - kind: event
+        side: none
+        name: Danevirke abandoned
+        date: 5–6 February 1864
+        text: The army slipped away at night. Many guns were spiked and left in the earthworks.
+        lonlat: [9.45, 54.467]
+        lp: b
+      - kind: battle
+        side: at
+        name: Oeversee
+        date: 6 February 1864
+        text: The Danish rearguard was beaten in heavy fighting at Sankelmark Lake, but it held the Austrians long enough for the army to get away.
+        lonlat: [9.44, 54.71]
+        lp: l
+      - kind: taken
+        side: pr
+        name: Kolding
+        date: 18 February 1864
+        text: Prussian hussars, carried away by a cavalry skirmish, rode over the border of Schleswig and occupied Kolding, in the kingdom itself.
+        lonlat: [9.5, 55.492]
+    arrows:
+      - side: at
+        label: Gablenz
+        via: [[9.67, 54.3], [9.56, 54.46], [9.44, 54.7]]
+      - side: pr
+        label: Frederick Charles
+        via: [[10.13, 54.33], [9.9, 54.45], [9.74, 54.51]]
+      - side: dk
+        label: Danish retreat
+        via: [[9.48, 54.5], [9.44, 54.78], [9.75, 54.9]]
+    areas:
+      - style: occupied
+        side: pr
+        label: Held by Prussian and Austrian troops, February 1864
+        atoms: [DE-SH~schleswig]
+  - title: Dybbøl
+    date: March – April 1864
+    when: "1864-04-18"
+    borders: "1864-04-29"
+    countries: [dk, de, at]
+    body:
+      - The Danish army dug in at Dybbøl, a line of ten redoubts covering the bridge to the island of Als. The Prussians besieged it from February, and their rifled guns, firing from across the inlet at Broager, shelled the position and the town of Sønderborg day and night, the bombardment growing heavier from early April. The redoubts had too few shelters, and the defenders were worn down. In the north the Austrians and Prussians pushed into Jutland and invested the fortress of Fredericia.
+      - At 10 o’clock on 18 April the guns fell silent and Prussian columns stormed the redoubts. Within a quarter of an hour the forward line was taken; a counterattack by the Danish 8th Brigade bought time for the rest to escape to Als. By one count about 3,600 Danes and 1,200 Prussians were killed, wounded or missing, and thousands of Danes were taken prisoner. The government had ordered the army to hold on so that Denmark could bargain from strength at the coming peace conference. Within two weeks the Danes had evacuated Fredericia.
+    facts:
+      - [Storm of Dybbøl, "18 April 1864, Prussian victory"]
+      - [Casualties, "About 3,600 Danish and 1,200 Prussian killed, wounded or missing"]
+      - [Fredericia evacuated, "Late April 1864"]
+    markers:
+      - kind: siege
+        side: pr
+        name: Battle of Dybbøl
+        date: 18 April 1864
+        text: The decisive battle of the war. The Danish ironclad Rolf Krake shelled the attackers from the sea but could not stop them.
+        lonlat: [9.758, 54.907]
+      - kind: naval
+        side: dk
+        name: Battle of Jasmund
+        date: 17 March 1864
+        text: A Danish squadron fought a Prussian one off Rügen and drove it back into port, keeping the Danish blockade of the Baltic coast in place.
+        lonlat: [13.85, 54.3]
+      - kind: battle
+        side: at
+        name: Vejle
+        date: 8 March 1864
+        text: The Austrians took the town after fierce house-to-house fighting, and the Danish troops in Jutland fell back northwards.
+        lonlat: [9.533, 55.717]
+      - kind: taken
+        side: at
+        name: Fredericia
+        date: Late April 1864
+        text: After Dybbøl, the Danish garrison was ordered to retreat over the Little Belt to Funen, and the fortress was left to the Austrians.
+        lonlat: [9.753, 55.568]
+    arrows:
+      - side: pr
+        label: Prussian storm
+        via: [[9.7, 54.89], [9.73, 54.9], [9.755, 54.905]]
+    areas:
+      - style: occupied
+        side: pr
+        label: Held by Prussian and Austrian troops, April 1864
+        atoms: [DE-SH~schleswig, DK-83~jut]
+  - title: Heligoland, London and Als
+    date: May – June 1864
+    when: "1864-06-29"
+    borders: "1864-06-29"
+    countries: [dk, de, at]
+    body:
+      - On 25 April a peace conference opened in London. On 9 May Danish and Austrian–Prussian squadrons fought off Heligoland, then a British island. The Austrian flagship Schwarzenberg caught fire and the allied squadron withdrew, but Denmark had to give up its blockade of the German North Sea coast. An armistice began on 12 May. In London, Britain and others proposed splitting Schleswig along a national line. The Danish government would not accept the lines on offer, and the conference broke up on 25 June.
+      - The fighting resumed at once. In the early hours of 29 June Prussian troops crossed the narrow sound to Als in rowing boats and took the island from its 9,000 Danish defenders, who lost nearly 3,000 men killed, wounded or captured. With Als gone and no help from abroad, the Danish islands themselves now seemed open to attack.
+    facts:
+      - [Battle of Heligoland, "9 May 1864"]
+      - [London Conference, "25 April – 25 June 1864"]
+      - [Battle of Als, "29 June 1864, Prussian victory"]
+    markers:
+      - kind: naval
+        side: dk
+        name: Battle of Heligoland
+        date: 9 May 1864
+        text: Commodore Suenson’s frigates beat off Tegetthoff’s two Austrian frigates, which took refuge in neutral waters. Both sides claimed success.
+        lonlat: [7.85, 54.05]
+      - kind: battle
+        side: pr
+        name: Battle of Als
+        date: 29 June 1864
+        text: The Prussians crossed under fire before dawn and the Danish defence collapsed. Some of the defenders surrendered; others were taken off by sea.
+        lonlat: [9.917, 54.983]
+    arrows:
+      - side: pr
+        label: Herwarth
+        via: [[9.76, 54.95], [9.83, 54.96], [9.9, 54.98]]
+  - title: Jutland overrun; the Treaty of Vienna
+    date: July – October 1864
+    when: "1864-07"
+    borders: "1864-10-30"
+    countries: [dk, de, at]
+    body:
+      - In July Prussian and Austrian troops crossed the Limfjord and occupied all of Jutland, reaching Skagen on 14 July. At Lundby on 3 July a Danish company charged a Prussian position and was shot down, in the last fight of the war. In Copenhagen the government fell, and its successor asked for peace. Preliminary terms were signed on 1 August.
+      - By the Treaty of Vienna on 30 October 1864 the king of Denmark gave up Schleswig, Holstein and Lauenburg to the emperor of Austria and the king of Prussia jointly. Denmark lost about two-fifths of its territory, and its population fell from about 2.6 to 1.6 million. Some 200,000 Danish speakers in Schleswig came under German rule; the northern part returned to Denmark after a plebiscite in 1920. Within two years Prussia had taken the duchies for itself, after defeating Austria in the war of 1866.
+    facts:
+      - [Treaty of Vienna, "30 October 1864"]
+      - [Ceded, "Schleswig, Holstein and Lauenburg"]
+      - [Population of Denmark, "From about 2.6 to 1.6 million"]
+    markers:
+      - kind: battle
+        side: pr
+        name: Lundby
+        date: 3 July 1864
+        text: A Danish bayonet charge against a Prussian company behind a dyke was stopped 20 metres short, with heavy Danish losses.
+        lonlat: [10.007, 56.966]
+      - kind: taken
+        side: pr
+        name: Skagen
+        date: 14 July 1864
+        text: Prussian troops reached the northern tip of Jutland. The whole peninsula was occupied until the peace.
+        lonlat: [10.583, 57.717]
+    arrows:
+      - side: pr
+        label: Vogel von Falckenstein
+        via: [[9.6, 56.45], [9.9, 57.0], [10.58, 57.7]]
+    areas:
+      - style: lost
+        label: Ceded by Denmark to Prussia and Austria
+        atoms: [DE-SH~schleswig, DE-SH~holstein, DK-83~jut~nschleswig]
+      - style: occupied
+        side: pr
+        label: Occupied by Prussian and Austrian troops until the peace
+        atoms: [DK-81, DK-82, DK-83~jut!]

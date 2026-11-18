@@ -1,6 +1,6 @@
 // One-off migration of ~/projects/sweden-at-war into Europe at War content.
 //
-//   node tools/migrate/sweden.mjs splits    -> content/borders/splits/sweden-at-war.geojson
+//   node tools/migrate/sweden.mjs splits    -> content/borders/splits/10-sweden-at-war.geojson
 //   (then: npm run geo)
 //   node tools/migrate/sweden.mjs content   -> border events, curated ranges, labels, war files
 //
@@ -18,7 +18,7 @@ import YAML from 'yaml';
 import { project, projectRaw, unproject } from '../projection.mjs';
 
 const phase = process.argv[2];
-const OUT = phase === 'splits' ? ['content/borders/splits/sweden-at-war.geojson'] : ['content/borders/events/sweden-at-war.yaml', 'content/borders/curated.yaml', 'content/labels.yaml'];
+const OUT = phase === 'splits' ? ['content/borders/splits/10-sweden-at-war.geojson'] : ['content/borders/events/sweden-at-war.yaml', 'content/borders/curated.yaml', 'content/labels.yaml'];
 if (!process.argv.includes('--force') && OUT.some((f) => existsSync(f))) {
   console.error(`Refusing to overwrite migrated content (${OUT.filter((f) => existsSync(f)).join(', ')}), which may have hand edits. Pass --force to regenerate it.`);
   process.exit(1);
@@ -147,7 +147,7 @@ if (phase === 'splits') {
   const n1 = features.length;
   round(overlayShapes, 'overlay');
   mkdirSync('content/borders/splits', { recursive: true });
-  writeFileSync('content/borders/splits/sweden-at-war.geojson', JSON.stringify({ type: 'FeatureCollection', features }));
+  writeFileSync('content/borders/splits/10-sweden-at-war.geojson', JSON.stringify({ type: 'FeatureCollection', features }));
   console.log(`${features.length} splits written (${n1} from regions, ${features.length - n1} from overlays)`);
   for (const f of features) console.log('  ', f.properties.id, '·', f.properties.name);
   process.exit(0);

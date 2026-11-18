@@ -27,6 +27,38 @@ whose 67 steps are included here as the Sweden view (`#/country/se`).
 See [CONTENT_GUIDE.md](CONTENT_GUIDE.md) for the data formats and how to write
 a war.
 
+## What the map shows
+
+The same rules apply to every border and every war:
+
+- **Recognised borders on the base map.** The coloured map shows the borders
+  states recognised at the time, by treaty or in practice. Military
+  occupations, breakaway regions and front lines are drawn as shaded areas in
+  a war's steps, not on the base map. So Crimea after 2014, the occupied parts
+  of Ukraine, Abkhazia, South Ossetia, Transnistria and Karabakh stay with the
+  state they are recognised as part of. The few exceptions, where an occupation
+  lasted long enough to be the map of its time, are listed under
+  [Borders](CONTENT_GUIDE.md#borders) in the content guide.
+- **Neutral wording.** Wars are described plainly, giving every side its due,
+  without national framing. The stories migrated from Sweden at War are told
+  from Sweden's side and say so.
+- **Sourced.** Every war lists sources a reader can open. Where sources
+  disagree on a date or number, the text says so.
+- **Approximate.** Modern regions are used as building blocks, so lines that
+  cut across today's regions are simplified unless a split has been added.
+
+A correction that applies these rules is welcome as an issue. A case for
+changing a rule itself belongs in
+[Discussions](https://github.com/matsakelarsson/europe-at-war/discussions),
+because it changes the map everywhere.
+
+## Corrections and contributions
+
+Found a wrong border, date or fact? Open a
+[correction](https://github.com/matsakelarsson/europe-at-war/issues/new/choose)
+with a source. To change the content yourself, see
+[CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Working on it
 
 Needs Node 20 or newer.
@@ -78,12 +110,10 @@ and deploys `dist/` to GitHub Pages.
 
 Code and content are licensed under the GNU GPL v3.0 or later (see `LICENSE`),
 because the border drafts are derived from historical-basemaps (GPL-3.0).
+Contributions are accepted under the same licence.
 
 - Borders: [historical-basemaps](https://github.com/aourednik/historical-basemaps)
   by André Ourednik and contributors, GPL-3.0, corrected by hand.
 - Regions, coasts, lakes and rivers: [Natural Earth](https://www.naturalearthdata.com/),
   public domain.
 - [topojson-client](https://github.com/topojson/topojson-client), ISC licence.
-
-Borders are approximate: modern regions are used as building blocks, so lines
-that cut across today's regions are simplified unless a split has been added.

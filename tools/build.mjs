@@ -196,6 +196,14 @@ function validLonLat(ll, where) {
   return true;
 }
 
+// Links in content end up in href attributes on the live site. Text is escaped,
+// but a `javascript:` or `data:` URL would still run when clicked, so only web
+// links (and, for step links, links inside the site) are allowed.
+function validLink(u, where, internal = false) {
+  const ok = typeof u === 'string' && (/^https?:\/\/[^\s"<>]+$/.test(u) || (internal && /^#\/[^\s"<>]*$/.test(u)));
+  if (!ok) err(`${where}: link must be a web link (https://…)${internal ? ' or a link inside the site (#/…)' : ''}, got ${JSON.stringify(u)}`);
+}
+
 function buildWar(w, file, ctx) {
   const where = `war ${file}`;
   for (const k of ['id', 'name', 'start', 'tier']) if (w[k] === undefined) err(`${where}: missing ${k}`);
@@ -206,6 +214,10 @@ function buildWar(w, file, ctx) {
   if (w.tier !== 'C' && !w.steps?.length) err(`${where}: tier ${w.tier} needs steps (or make it tier C)`);
   if (w.tier === 'C' && !w.summary) err(`${where}: a tier C entry needs a summary`);
   if (!w.sources?.length) err(`${where}: no sources`);
+  (w.sources || []).forEach((s, i) => {
+    if (!s?.title) err(`${where}: source ${i + 1} has no title`);
+    if (s?.url !== undefined) validLink(s.url, `${where}: source ${i + 1}`);
+  });
   const sides = (w.sides || []).map((s, i) => {
     for (const p of s.polities || []) if (!ctx.pol.index.has(p)) err(`${where}: side ${s.id}: unknown polity ${p}`);
     const first = ctx.pol.list[ctx.pol.index.get((s.polities || [])[0])];
@@ -221,6 +233,7 @@ function buildWar(w, file, ctx) {
     const sw = `${where} step ${si + 1}`;
     if (!s.title) err(`${sw}: missing title`);
     if (!s.body?.length && w.tier !== 'C') err(`${sw}: missing body`);
+    if (s.link) validLink(s.link.href, `${sw} link`, true);
     const bkey = dateKey(s.borders ?? s.date);
     if (!bkey) err(`${sw}: bad date/borders ${s.borders ?? s.date}`);
     const pts = [];

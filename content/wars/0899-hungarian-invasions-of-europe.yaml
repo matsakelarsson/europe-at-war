@@ -1,0 +1,166 @@
+id: hungarian-invasions-of-europe
+name: Hungarian invasions of Europe
+start: "899"
+end: "955"
+tier: B
+summary: The raids of the Magyars (Hungarians), who settled in the Danube basin in the 890s and for over half a century raided Germany, Italy, Burgundy and France almost every year. After destroying a Bavarian army at Pressburg in 907 they were held off in Saxony by Henry I at Riade in 933, and Otto I’s victory on the Lechfeld in 955 ended their raids to the west.
+countries: [hu, de, at, sk, cz, it, fr, ch]
+sides:
+  - id: mag
+    name: Magyars
+    polities: [hungary]
+    ink: olive
+    moves: Hungarian moves
+    success: Hungarian success
+  - id: ef
+    name: East Francia
+    polities: [east-francia, hre]
+    ink: gold
+    moves: East Frankish moves
+    success: East Frankish success
+notes:
+  - The sources are almost all written by the Magyars’ victims, above all Liutprand of Cremona, Widukind of Corvey and the annals of Bavarian and Swabian monasteries; numbers and many places are uncertain. Hungarian accounts were written down only centuries later.
+  - East Francia, the eastern kingdom of the Franks, is the medieval German kingdom; its kings were crowned emperors from 962. The Magyars also raided the Byzantine Empire, until 970; those raids are not told here.
+sources:
+  - title: Hungarian invasions of Europe (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hungarian_invasions_of_Europe
+  - title: Battle of Pressburg (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Pressburg
+  - title: Battle of Riade (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Riade
+  - title: Battle of Lechfeld (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Lechfeld
+steps:
+  - title: The raids begin
+    date: 899–910
+    when: "899"
+    borders: "910"
+    countries: [hu, sk, at, de, it, cz]
+    body:
+      - The Magyars were a federation of tribes of mounted archers from the steppes north of the Black Sea. In the 890s, pushed west by the Pechenegs and the Bulgarians, they crossed the Carpathians and took over the plains of the Danube basin. In 899 they rode into Italy and on 24 September routed the army of King Berengar I on the river Brenta. In 900 they took Pannonia from Bavaria, and by about 906 they had broken up Great Moravia, the Slav state to their north.
+      - In 907 Margrave Luitpold of Bavaria led a large army down the Danube to drive them out. Near a place called Brezalauspurc, traditionally identified with Pressburg (Bratislava), it was destroyed in fighting that began on 4 July; Luitpold, Archbishop Theotmar of Salzburg and the bishops of Freising and Säben were among the dead. Bavaria lost everything east of the Enns. The Magyars beat the Thuringians near Eisenach in 908 and the army of the young King Louis the Child near Augsburg in 910, and for decades they raided almost at will.
+    facts:
+      - [Brenta, "24 September 899, Berengar I of Italy defeated"]
+      - [Pressburg, "4 July 907, Bavarian army destroyed"]
+      - [Near Augsburg, "910, Louis the Child defeated"]
+    markers:
+      - kind: battle
+        side: mag
+        name: Battle of the Brenta
+        date: 24 September 899
+        text: The retreating Magyars offered to give back their plunder. When Berengar refused, they attacked his resting army and routed it, then ranged across the Po plain.
+        lonlat: [11.77, 45.55]
+      - kind: battle
+        side: mag
+        name: Battle of Pressburg
+        date: 4 July 907
+        text: The site is uncertain; some historians place Brezalauspurc near Lake Balaton instead. Few of the Bavarians escaped, and the Magyars followed up with raids deep into Bavaria.
+        lonlat: [17.11, 48.14]
+      - kind: battle
+        side: mag
+        name: Battle of Eisenach
+        date: 3 August 908
+        text: A Thuringian army was beaten; Duke Burchard of Thuringia and Bishop Rudolf of Würzburg were killed.
+        lonlat: [10.32, 50.98]
+      - kind: battle
+        side: mag
+        name: First battle of the Lechfeld
+        date: "910"
+        text: The Magyars drew the army of Louis the Child, then sixteen, into a trap near Augsburg and destroyed it.
+        lonlat: [10.88, 48.27]
+    arrows:
+      - side: mag
+        label: "899"
+        via: [[16.4, 46.5], [14.5, 46.05], [13.2, 45.95], [11.85, 45.58]]
+      - side: ef
+        label: Luitpold, 907
+        via: [[14.48, 48.21], [15.6, 48.33], [16.4, 48.22], [17.0, 48.15]]
+      - side: mag
+        label: "910"
+        via: [[16.2, 48.1], [13.6, 48.55], [12.0, 48.45], [10.95, 48.3]]
+    areas:
+      - style: gained
+        side: mag
+        label: East of the Enns, lost by Bavaria in 907
+        atoms: [AT-3, AT-9, AT-1]
+  - title: Henry the Fowler’s truce and Riade
+    date: 924–933
+    when: "924"
+    borders: "933-03-15"
+    countries: [de, ch, fr, hu]
+    body:
+      - In 924 a Magyar army rode into Saxony. King Henry I, the Saxon duke who had been elected king of East Francia in 919, took refuge in the fortress of Werla, but his men captured a Hungarian leader, and in 926 Henry bought a nine-year truce with his release and a yearly tribute. The truce protected Henry’s Saxony, not the south. That spring the raiders crossed Swabia, plundered the abbey of St. Gallen and rode on into Alsace and France.
+      - Henry used the truce to build and garrison strongholds and to train a force of armoured horsemen, which he tried out against the Slavs east of the Elbe. In 932, backed by a church synod at Erfurt, he stopped the tribute. The Magyars invaded the next year, and on 15 March 933 Henry’s army routed them at a place called Riade, somewhere near the Unstrut. Most of the Magyars fled before the horsemen could close with them. Raids on Saxony became rare, but the Magyars went on raiding elsewhere, reaching Reims in 937 and Catalonia in 942.
+    facts:
+      - [Truce, "926, for nine years, with yearly tribute"]
+      - [Battle of Riade, "15 March 933, Hungarian defeat"]
+    markers:
+      - kind: held
+        side: ef
+        name: Werla
+        date: "924"
+        text: Henry sheltered in this royal fortress north of the Harz. The capture of a Hungarian leader nearby gave him the means to bargain for a truce.
+        lonlat: [10.55, 52.05]
+      - kind: event
+        side: mag
+        name: St. Gallen
+        date: May 926
+        text: The monks had fled with their books and treasures. A party of raiders found the recluse Wiborada, who had refused to leave her cell nearby, and killed her.
+        lonlat: [9.37, 47.42]
+      - kind: event
+        name: Synod of Erfurt
+        date: "932"
+        text: Bishops and nobles backed Henry’s decision to stop paying tribute, which meant war.
+        lonlat: [11.03, 50.98]
+        lp: l
+      - kind: battle
+        side: ef
+        name: Battle of Riade
+        date: 15 March 933
+        text: The site is unknown. Widukind of Corvey names Riade as Henry’s camp, and several villages on the Unstrut claim the battle.
+        lonlat: [11.34, 51.36]
+    arrows:
+      - side: mag
+        label: "926"
+        via: [[12.2, 48.5], [10.5, 48.05], [9.42, 47.45]]
+      - side: mag
+        label: "933"
+        via: [[14.3, 50.7], [13.3, 51.15], [12.2, 51.3], [11.42, 51.36]]
+  - title: The Lechfeld
+    date: 954–955
+    when: "954"
+    borders: "955-08-10"
+    countries: [de, hu, cz, at, fr, be]
+    body:
+      - The last great raids exploited a German civil war. In 954, during the revolt of Otto I’s son Liudolf and son-in-law Conrad the Red against him, a Hungarian army crossed Bavaria and Franconia. Conrad received it at Worms and sent it on into Lorraine against his enemies, and it went on to plunder what is now Belgium and northern France before going home through Burgundy and Italy. The rebels were blamed for inviting it, and the revolt collapsed. In the summer of 955 the Magyars, perhaps 8,000–10,000 strong, invaded Bavaria again and besieged Augsburg, which its bishop, Ulrich, held.
+      - Otto came south with a small Saxon force, gathered Bavarians, Swabians, Franconians and a Bohemian contingent, and moved to relieve the city. On 10 August, on the Lechfeld plain by the river Lech, the Magyars routed his rearguard, but Conrad, now reconciled with Otto, drove them off, and Otto’s armoured horsemen broke the main Hungarian army. Conrad was killed by an arrow. Many fleeing Magyars were cut down over the next days, and their leaders were hanged at Regensburg. The raids to the west were over; Otto was crowned emperor in Rome in 962, and Hungary became a Christian kingdom under Stephen I around 1000.
+    facts:
+      - [Battle of Lechfeld, "10 August 955, German victory"]
+      - [Commanders, "Otto I; Bulcsú, Lehel and Súr"]
+      - [Otto crowned emperor, 2 February 962]
+    markers:
+      - kind: event
+        side: mag
+        name: Worms
+        date: March 954
+        text: The Hungarian army camped at Worms, the seat of Conrad the Red, who sent it west against his enemies in Lorraine.
+        lonlat: [8.36, 49.63]
+      - kind: battle
+        side: ef
+        name: Battle of Lechfeld
+        date: 10 August 955
+        text: Otto relieved Augsburg, whose defenders had beaten off a Hungarian assault two days before. The Magyars lost heavily in the battle and even more in the flight that followed.
+        lonlat: [10.92, 48.33]
+      - kind: event
+        side: ef
+        name: Regensburg
+        date: August 955
+        text: The captured Hungarian leaders Bulcsú, Lehel and Súr were hanged here.
+        lonlat: [12.08, 49.02]
+    arrows:
+      - side: mag
+        label: "955"
+        via: [[16.3, 48.2], [14.3, 48.3], [12.5, 48.45], [11.0, 48.36]]
+      - side: ef
+        label: Otto I
+        via: [[9.99, 48.4], [10.45, 48.38], [10.85, 48.34]]

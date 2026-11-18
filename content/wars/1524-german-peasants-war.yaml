@@ -1,0 +1,218 @@
+id: german-peasants-war
+name: German Peasants’ War
+start: "1524"
+end: "1526"
+tier: B
+summary: The largest popular rising in Europe before the French Revolution, in which peasants, miners and townspeople across southern and central Germany and the Austrian Alps rose against their lords in 1524–1525, many of them inspired by the Reformation and the Twelve Articles. The armies of the Swabian League and the princes crushed the bands one after another, and by common estimates about 100,000 people were killed.
+countries: [de, at, it, fr]
+sides:
+  - id: peas
+    name: Rebel peasants and townspeople
+    ink: red
+    moves: Rebel moves
+    success: Rebel success
+  - id: lords
+    name: Swabian League and the princes
+    polities: [bavaria, habsburg, hesse, saxony, brunswick, salzburg]
+    ink: navy
+    moves: Moves of the League and the princes
+    success: Success for the League and the princes
+notes:
+  - The rebel armies were known as Haufen, “bands”, named after their home districts. Numbers of rebels and of dead are uncertain; about 100,000 dead is the figure most often given.
+  - Württemberg was ruled by the Habsburgs from 1520 to 1534, after the Swabian League had driven out Duke Ulrich, and Archduke Ferdinand governed it at the time of the war.
+sources:
+  - title: German Peasants’ War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/German_Peasants%27_War
+  - title: Twelve Articles (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Twelve_Articles
+  - title: Battle of Frankenhausen (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Frankenhausen
+  - title: Thomas Müntzer (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Thomas_M%C3%BCntzer
+  - title: Michael Gaismair (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Michael_Gaismair
+  - title: Salzburger Bauernkrieg (German Wikipedia)
+    url: https://de.wikipedia.org/wiki/Salzburger_Bauernkrieg
+steps:
+  - title: Swabia and the Twelve Articles
+    date: Summer 1524 – April 1525
+    when: "1524-06"
+    borders: "1525-04-17"
+    countries: [de]
+    body:
+      - In the summer of 1524 peasants in the landgraviate of Stühlingen, on the southern edge of the Black Forest, refused the services their lord demanded, and over the winter unrest spread through the Black Forest and the Hegau. Behind it lay rising dues, a tightening of serfdom and lords’ claims on common woods and pastures, sharpened by Reformation preaching that measured every authority against Scripture. In February 1525 Upper Swabia rose, and on 7 March the Baltringen, Lake Constance and Allgäu bands, tens of thousands strong, formed a Christian Association at Memmingen.
+      - There they adopted the Twelve Articles, which demanded that each community choose its own pastor, that serfdom end, and that woods, water and game be free to all. Printed some 25,000 times in two months, they became the programme of the rising. The Swabian League’s army under Georg Truchsess von Waldburg routed the Leipheim band on 4 April, and on 17 April he made peace with the Lake Constance and Allgäu bands at Weingarten. The day before, the Neckar valley band had taken Weinsberg and made the Count of Helfenstein and his companions run a gauntlet of pikes to their deaths.
+    facts:
+      - [Twelve Articles, "Adopted at Memmingen, March 1525"]
+      - [League commander, Georg Truchsess von Waldburg]
+      - [Treaty of Weingarten, "17 April 1525"]
+    markers:
+      - kind: event
+        side: peas
+        name: Stühlingen
+        date: Summer 1524
+        text: Peasants here refused their lord’s demands for labour, the first spark of the war. Under Hans Müller of Bulgenbach the Black Forest bands later spread the rising to the Breisgau.
+        lonlat: [8.446, 47.746]
+      - kind: event
+        side: peas
+        name: Memmingen
+        date: 7 March 1525
+        text: The three Upper Swabian bands formed a Christian Association in the imperial city and adopted the Twelve Articles, probably drafted by the furrier Sebastian Lotzer and the preacher Christoph Schappeler.
+        lonlat: [10.181, 47.988]
+      - kind: battle
+        side: lords
+        name: Leipheim
+        date: 4 April 1525
+        text: The League’s army, some 7,000 foot and 1,500 horse, scattered the band camped by the Danube. Hundreds were cut down or drowned trying to escape across the river.
+        lonlat: [10.221, 48.449]
+        lp: l
+      - kind: taken
+        side: peas
+        name: Weinsberg
+        date: 16 April 1525
+        text: On Easter Sunday the band under Jäcklein Rohrbach stormed the town and killed the Habsburg governor, Count Ludwig of Helfenstein, with the nobles captured with him. The killings turned many, including Luther, against the rebels.
+        lonlat: [9.286, 49.152]
+      - kind: treaty
+        name: Treaty of Weingarten
+        date: 17 April 1525
+        text: Facing the bands’ larger numbers, the Truchsess promised to hear their grievances, and the Lake Constance and Allgäu bands went home.
+        lonlat: [9.638, 47.81]
+    arrows:
+      - side: lords
+        label: Truchsess
+        via: [[9.99, 48.4], [10.1, 48.43], [10.2, 48.445]]
+      - side: lords
+        via: [[10.15, 48.36], [9.9, 48.1], [9.66, 47.83]]
+    areas:
+      - style: contested
+        side: peas
+        label: Main areas of revolt, April 1525 (approximate)
+        polygons:
+          - [[7.95, 47.62], [8.15, 48.0], [8.6, 48.15], [9.3, 48.3], [9.85, 48.5], [10.45, 48.52], [10.75, 48.1], [10.65, 47.58], [10.0, 47.55], [9.5, 47.55], [9.0, 47.68], [8.5, 47.62]]
+          - [[8.95, 49.05], [9.05, 49.55], [9.45, 49.72], [10.05, 49.62], [10.05, 49.2], [9.55, 49.0]]
+  - title: Frankenhausen and the defeat of the bands
+    date: May – June 1525
+    when: "1525-05"
+    borders: "1525-06-04"
+    countries: [de, fr]
+    body:
+      - By late April the rising had spread to Franconia, Alsace and Thuringia. At Mühlhausen the radical preacher Thomas Müntzer, who had broken with Luther, called for a holy war against the godless. On 15 May the armies of Landgrave Philip of Hesse, Duke George of Saxony and Duke Henry of Brunswick-Wolfenbüttel attacked some 6,000 rebels in their wagon fort above Frankenhausen during a truce. Thousands were killed while the princes lost only a handful of men. Müntzer was captured, tortured and beheaded outside Mühlhausen on 27 May.
+      - In the south the Truchsess destroyed the Württemberg band at Böblingen on 12 May, then marched north into Franconia, where the bands had besieged the Marienberg fortress at Würzburg in vain. He beat them at Königshofen on 2 June and near Würzburg two days later. In Alsace, Duke Antoine of Lorraine massacred thousands of peasants at Saverne after they had surrendered. By midsummer only the Alpine risings were left, and victorious lords punished their subjects with executions, fines and the burning of villages.
+    facts:
+      - [Battle of Frankenhausen, "15 May 1525, princely victory"]
+      - [Thomas Müntzer, "Executed 27 May 1525"]
+      - [Battle of Königshofen, "2 June 1525, League victory"]
+    markers:
+      - kind: battle
+        side: lords
+        name: Frankenhausen
+        date: 15 May 1525
+        text: The princes’ cannon broke the wagon fort and their cavalry hunted the fleeing rebels into the town. Estimates of the dead range from 3,000 to more than 7,000.
+        lonlat: [11.103, 51.366]
+      - kind: event
+        side: peas
+        name: Mühlhausen
+        date: 1525
+        text: The imperial city where Müntzer and the preacher Heinrich Pfeiffer had set up a new council. It surrendered after Frankenhausen, and both men were executed nearby.
+        lonlat: [10.454, 51.209]
+        lp: l
+      - kind: battle
+        side: lords
+        name: Böblingen
+        date: 12 May 1525
+        text: The League’s cavalry surrounded the Württemberg band between Böblingen and Sindelfingen. Perhaps 3,000 peasants were killed, for the loss of a few dozen soldiers.
+        lonlat: [9.015, 48.686]
+        lp: l
+      - kind: held
+        side: lords
+        name: Marienberg, Würzburg
+        date: May 1525
+        text: The Franconian bands took the town but failed to storm the bishop’s fortress above it.
+        lonlat: [9.921, 49.79]
+      - kind: battle
+        side: lords
+        name: Königshofen
+        date: 2 June 1525
+        text: The Truchsess attacked the Odenwald and Neckar bands from front and rear on the Turmberg hill and broke them.
+        lonlat: [9.737, 49.546]
+        lp: l
+      - kind: battle
+        side: lords
+        name: Saverne
+        date: Mid-May 1525
+        text: The Duke of Lorraine’s army slaughtered the Alsatian peasants who had come out of the town to surrender, and beat another band at Scherwiller on 20 May.
+        lonlat: [7.363, 48.741]
+      - kind: taken
+        side: peas
+        name: Freiburg im Breisgau
+        date: 23 May 1525
+        text: The Black Forest bands forced the Habsburg town to join their Christian Union, one of the last rebel successes in the south-west.
+        lonlat: [7.842, 47.999]
+        lp: l
+    arrows:
+      - side: lords
+        label: Philip of Hesse
+        via: [[9.68, 50.55], [10.32, 50.98], [11.05, 51.35]]
+      - side: lords
+        label: George of Saxony
+        via: [[12.37, 51.34], [11.8, 51.4], [11.17, 51.37]]
+      - side: lords
+        label: Truchsess
+        via: [[9.02, 48.72], [9.25, 49.15], [9.7, 49.52], [9.9, 49.76]]
+  - title: Tyrol and Salzburg
+    date: May 1525 – July 1526
+    when: "1525-05-29"
+    borders: "1526-07-03"
+    countries: [at, it]
+    body:
+      - In May 1525 the rising reached the Alps. In Tyrol peasants and miners sacked the bishop’s palace at Brixen and the abbey of Neustift, and chose as their leader Michael Gaismair, the bishop’s former secretary. Archduke Ferdinand calmed the county by calling a diet at Innsbruck and making concessions. In Salzburg, miners from Hallein and peasants from the mountain valleys entered the city at the end of May and besieged Archbishop Matthäus Lang in the Hohensalzburg fortress. On 3 July they beat a Styrian army at Schladming, the only large battle won by rebels in the war.
+      - A Swabian League army faced the Salzburg rebels in August, but instead of a battle there was a truce on 31 August. In the spring of 1526 the Pinzgau rose again, and Gaismair, who had escaped to Switzerland and drafted a constitution for a Tyrolean peasant republic without nobles or church lords, came to lead it. The rebels failed to take Radstadt, which the League relieved, and in July Gaismair led the last 2,000 fighters over the Tauern into Venetian territory. Ferdinand put a price on his head, and he was murdered in Padua in 1532.
+    facts:
+      - [Battle of Schladming, "3 July 1525, rebel victory"]
+      - [Salzburg truce, "31 August 1525"]
+      - [Michael Gaismair, "Rebel leader, murdered in Padua in 1532"]
+    markers:
+      - kind: taken
+        side: peas
+        name: Brixen
+        date: May 1525
+        text: The rising in Tyrol began with the plundering of the prince-bishop’s town and the nearby abbey of Neustift.
+        lonlat: [11.658, 46.717]
+      - kind: event
+        side: lords
+        name: Innsbruck
+        date: June – July 1525
+        text: Ferdinand met the Tyrolean diet here, with peasant deputies present, and won over most of the county with reforms. Gaismair was arrested in the town in August but escaped in October.
+        lonlat: [11.404, 47.269]
+        lp: l
+      - kind: held
+        side: lords
+        name: Hohensalzburg
+        date: June – August 1525
+        text: The archbishop held out in his fortress above the city while the rebels set up their own government below. Miners began to dig under its walls but stopped work when they were not paid.
+        lonlat: [13.047, 47.795]
+      - kind: battle
+        side: peas
+        name: Schladming
+        date: 3 July 1525
+        text: Miners and peasants under Michael Gruber surprised and beat the army of Siegmund von Dietrichstein, governor of Styria, who was taken prisoner.
+        lonlat: [13.689, 47.393]
+      - kind: held
+        side: lords
+        name: Radstadt
+        date: Spring – summer 1526
+        text: The walled town resisted the rebels’ siege until a Swabian League army relieved it, and many miners then left the rebel army.
+        lonlat: [13.459, 47.383]
+        lp: l
+    arrows:
+      - side: lords
+        label: Dietrichstein
+        via: [[14.35, 47.55], [14.0, 47.48], [13.72, 47.4]]
+      - side: peas
+        label: Gaismair, July 1526
+        via: [[12.95, 47.3], [12.95, 47.05], [12.77, 46.83], [12.45, 46.62]]
+    areas:
+      - style: occupied
+        side: peas
+        label: Under the Salzburg rebels, June – August 1525
+        atoms: [AT-5]

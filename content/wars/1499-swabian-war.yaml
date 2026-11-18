@@ -1,0 +1,133 @@
+id: swabian-war
+name: Swabian War
+start: "1499-01-20"
+end: "1499-09-22"
+tier: B
+summary: The last great war between the Swiss Confederacy and the Habsburgs, fought from the Grisons to Basel against King Maximilian I and the Swabian League. The Swiss and their allies of the Three Leagues won almost every battle, ending at Dornach, and the Peace of Basel freed them from the imperial reforms of 1495, so that in practice they stood outside the Empire.
+countries: [ch, at, de, it, fr]
+sides:
+  - id: ch
+    name: Swiss Confederates and the Three Leagues
+    polities: [switzerland, three-leagues]
+    ink: red
+    moves: Confederate moves
+    success: Confederate success
+  - id: sw
+    name: Maximilian I and the Swabian League
+    polities: [habsburg, hre]
+    ink: purple
+    moves: Habsburg and Swabian moves
+    success: Habsburg and Swabian success
+notes:
+  - Dates are Julian, as usual for the period. The war is called the Schwabenkrieg (Swabian War) in Switzerland and the Schweizerkrieg (Swiss War) in Germany; in Austria it was also called the Engadine War.
+  - The Swabian League, founded in 1488, joined the Swabian imperial cities and knights with the Habsburg lands and the Count of Württemberg. Maximilian I had been king of the Romans since 1486 and ruled all the Habsburg lands from 1493.
+sources:
+  - title: Swabian War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Swabian_War
+  - title: Battle of Calven (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Calven
+  - title: Battle of Dornach (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Dornach
+  - title: Treaty of Basel, 1499 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Basel_(1499)
+  - title: Schwabenkrieg (Historical Dictionary of Switzerland)
+    url: https://hls-dhs-dss.ch/de/articles/008888/
+steps:
+  - title: From the Val Müstair to Calven
+    date: January–May 1499
+    when: "1499-01-20"
+    borders: "1499-05-22"
+    countries: [ch, at, de, it]
+    body:
+      - The Swiss had refused the reforms of the Diet of Worms in 1495, with its new imperial court and tax, and would not join the Swabian League on their northern border. The spark came in the Grisons, whose Three Leagues had allied with the Confederates in 1497–98. On 20 January 1499 Habsburg troops from Tyrol occupied the Val Müstair, on the route from Tyrol to Milan, and plundered its convent. They were driven out and a truce was made, but troops from Uri, coming to help the Leagues, clashed with Habsburg soldiers on the Rhine, and within weeks the war had spread along the whole frontier.
+      - The Swabian League called up its forces, and Maximilian placed the Confederates under the imperial ban. The war became a series of raids, burnings and plundering expeditions by both sides, broken by battles that the experienced Swiss infantry nearly always won, at Hard on Lake Constance on 20 February, Bruderholz near Basel on 22 March, Schwaderloh near Constance on 11 April and Frastanz near Feldkirch on 20 April. On 22 May the men of the Three Leagues stormed the Habsburg entrenchments at the Calven gorge near Glurns and ravaged the Vinschgau before Maximilian could arrive.
+    facts:
+      - [Battle of Schwaderloh, "11 April 1499, over 1,000 Swabians killed"]
+      - [Battle of Calven, "22 May 1499, victory for the Three Leagues"]
+    markers:
+      - kind: taken
+        side: sw
+        name: Val Müstair
+        date: 20 January 1499
+        text: Habsburg troops occupied the valley and plundered the Benedictine convent of St John, but the Leagues soon drove them out.
+        lonlat: [10.45, 46.62]
+        lp: l
+      - kind: battle
+        side: ch
+        name: Battle of Hard
+        date: 20 February 1499
+        text: A Confederate army that had marched down the Rhine valley beat a Habsburg and Swabian force on the shore of Lake Constance near the river’s mouth.
+        lonlat: [9.68, 47.48]
+      - kind: battle
+        side: ch
+        name: Battle of Bruderholz
+        date: 22 March 1499
+        text: Swabian troops returning from a raid on Dornach were beaten by a smaller Swiss force on the hill south of Basel.
+        lonlat: [7.59, 47.51]
+      - kind: battle
+        side: ch
+        name: Battle of Schwaderloh
+        date: 11 April 1499
+        text: Swabian raiders on the south shore of Lake Constance were caught near Triboltingen by Swiss troops from their camp at Schwaderloh and fled, leaving their guns.
+        lonlat: [9.11, 47.66]
+      - kind: battle
+        side: ch
+        name: Battle of Frastanz
+        date: 20 April 1499
+        text: The Confederates beat a Habsburg army in the Ill valley below Feldkirch, in what is now Vorarlberg.
+        lonlat: [9.62, 47.22]
+      - kind: battle
+        side: ch
+        name: Battle of Calven
+        date: 22 May 1499
+        text: The Leagues overran the fortified camp in the gorge, routed the Tyrolean army and plundered the upper Vinschgau for three days.
+        lonlat: [10.51, 46.67]
+    arrows:
+      - side: ch
+        label: Three Leagues
+        via: [[10.1, 46.7], [10.29, 46.64], [10.45, 46.62], [10.5, 46.66]]
+      - side: ch
+        via: [[9.53, 46.85], [9.55, 47.0], [9.6, 47.25], [9.67, 47.46]]
+  - title: Dornach and the Peace of Basel
+    date: July–September 1499
+    when: "1499-07-22"
+    borders: "1499-09-22"
+    countries: [ch, de, at, fr]
+    body:
+      - Maximilian came to Lake Constance to take command, but the Swabian League refused to send its troops to the Grisons, and for weeks little happened. By July his unpaid mercenaries and the League’s peasant soldiers, eager to bring in the harvest, were close to leaving. On 21 July a Swabian force crossed the lake and burned Rheineck and Rorschach. The next day an army of about 16,000 under Count Heinrich von Fürstenberg, besieging the castle of Dorneck above Dornach near Basel, was attacked by a hurriedly gathered Confederate army. Fürstenberg was killed early on, and after a long, hard fight the Swabians fled, leaving about 3,000 dead and all their guns.
+      - Neither side wanted to go on, and the Duke of Milan, who needed both Swiss soldiers and Maximilian’s help against France, mediated. The Peace of Basel, signed on 22 September 1499, treated the war as one between the Confederates and the Habsburgs rather than the Empire. The imperial ban was quietly dropped, and the Confederates stayed outside the new imperial court and taxes. No land changed hands, but the Confederates took over the high court of the Thurgau from the city of Constance. Formally the Swiss stayed in the Empire until 1648; in practice they had left it.
+    facts:
+      - [Battle of Dornach, "22 July 1499, Confederate victory"]
+      - [Losses at Dornach, "about 3,000 Swabian and 500 Swiss dead"]
+      - [Peace of Basel, 22 September 1499]
+    markers:
+      - kind: taken
+        side: sw
+        name: Rheineck and Rorschach
+        date: 21 July 1499
+        text: One of the few Swabian successes. Troops crossed Lake Constance by boat, surprised the small Swiss garrison and burned the two places.
+        lonlat: [9.58, 47.47]
+      - kind: battle
+        side: ch
+        name: Battle of Dornach
+        date: 22 July 1499
+        text: The last battle of the war. The Swabian army was surprised in its camp below Dorneck castle; Fürstenberg fell early in the fighting.
+        lonlat: [7.62, 47.48]
+      - kind: treaty
+        name: Peace of Basel
+        date: 22 September 1499
+        text: Mediated by Milan. Basel, which had stayed neutral, joined the Confederacy two years later, as did Schaffhausen.
+        lonlat: [7.59, 47.56]
+        lp: l
+    arrows:
+      - side: sw
+        label: Fürstenberg
+        via: [[7.33, 47.75], [7.45, 47.6], [7.6, 47.5]]
+      - side: ch
+        label: Confederates
+        via: [[7.53, 47.21], [7.62, 47.35], [7.63, 47.46]]
+    areas:
+      - style: gained
+        side: ch
+        label: Thurgau, where the Confederates gained the high court
+        atoms: [CH-TG]

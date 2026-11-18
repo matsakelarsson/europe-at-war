@@ -1,0 +1,106 @@
+id: sempach-war
+name: Sempach War
+start: "1386"
+end: "1389-04-01"
+tier: B
+summary: A war between the Swiss Confederates and the Habsburg dukes of Austria, set off by Lucerne’s expansion into Habsburg lands. Duke Leopold III was killed with many of his nobles at Sempach in 1386, Glarus won its freedom at Näfels in 1388, and the peace of 1389 left the Confederates their gains.
+countries: [ch, at]
+sides:
+  - id: ch
+    name: Swiss Confederates
+    polities: [switzerland]
+    ink: red
+    moves: Confederate moves
+    success: Confederate success
+  - id: hb
+    name: Habsburg
+    polities: [habsburg]
+    ink: purple
+    moves: Habsburg moves
+    success: Habsburg success
+notes:
+  - Dates are Julian, as usual for the period. Few accounts of the battles were written before about 1470, and many details, including the story of Arnold von Winkelried, come from Swiss chronicles of around 1500.
+  - The Confederacy then had eight members, Uri, Schwyz, Unterwalden, Lucerne, Zurich, Glarus, Zug and Bern. Bern took no part at Sempach but used the war to take Habsburg lands around it.
+sources:
+  - title: Battle of Sempach (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sempach
+  - title: Battle of Näfels (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_N%C3%A4fels
+  - title: Battle of Sempach (Britannica)
+    url: https://www.britannica.com/event/Battle-of-Sempach
+steps:
+  - title: Sempach
+    date: 1385–1386
+    when: "1386"
+    borders: "1386-07-09"
+    countries: [ch, at]
+    body:
+      - Lucerne had joined the Confederacy in 1332 but was still ringed by Habsburg lands, and in the 1380s it set out to build a territory of its own. In 1385 its men and those of Zurich and Zug attacked Habsburg strongholds such as Rothenburg and Wolhusen. Lucerne had already taken the people of the Entlebuch into its citizenship, and in January 1386 it did the same for the town of Sempach. Duke Leopold III of Austria gathered knights from the Aargau, Alsace, Swabia and Tyrol, with mercenaries, at Brugg. Instead of attacking Zurich, as the Confederates expected, he marched south, burning Willisau and the harvest on his way.
+      - On 9 July 1386 the men of Lucerne, Uri, Schwyz and Unterwalden, hurrying back from Zurich, met Leopold’s army near Sempach, by the village of Hildisrieden. On ground unsuited to horses the knights fought on foot. After hard fighting the Confederates broke their line, and Leopold and a great many nobles were killed. Swiss tradition later credited the breakthrough to Arnold von Winkelried, who gathered the enemy’s spears into his own body. The defeat broke Habsburg power west of the Rhine, and Lucerne, Bern and Solothurn took over many of its towns and lands.
+    facts:
+      - [Battle of Sempach, "9 July 1386, Confederate victory"]
+      - [Killed, Duke Leopold III and many Habsburg nobles]
+    markers:
+      - kind: event
+        name: Brugg
+        date: June 1386
+        text: Leopold mustered his army here, near the castle of Habsburg, his family’s ancestral seat.
+        lonlat: [8.21, 47.49]
+      - kind: battle
+        side: hb
+        name: Meienberg
+        date: 28 January 1386
+        text: A local Habsburg force overran the Confederate garrison of this small town, killing over 140 men.
+        lonlat: [8.38, 47.2]
+      - kind: taken
+        side: hb
+        name: Willisau
+        date: July 1386
+        text: Leopold’s army plundered and burned the town, which had made a pact with Lucerne.
+        lonlat: [8.0, 47.12]
+        lp: l
+      - kind: battle
+        side: ch
+        name: Battle of Sempach
+        date: 9 July 1386
+        text: The armies blundered into each other on the march about 2 km from the town. A battle chapel was built on the site the next year.
+        lonlat: [8.21, 47.15]
+        lp: b
+    arrows:
+      - side: hb
+        label: Leopold
+        via: [[8.21, 47.48], [7.95, 47.28], [8.02, 47.13], [8.17, 47.15]]
+      - side: ch
+        label: Confederates
+        via: [[8.54, 47.37], [8.5, 47.17], [8.4, 47.12], [8.25, 47.15]]
+  - title: Näfels and the peace
+    date: 1386–1389
+    when: "1388"
+    borders: "1389-04-01"
+    countries: [ch, at]
+    body:
+      - Leopold’s brother Albert III carried on the war on behalf of Leopold’s young sons. The Confederates took Weesen on the Walensee in August 1386, and in March 1387 the people of Glarus declared themselves free of Habsburg rule. Bern, which had stayed out of the fighting at Sempach, seized Habsburg towns and castles around it. On the night of 21–22 February 1388, remembered as the Murder Night of Weesen, Habsburg troops took Weesen back by surprise.
+      - In early April two Habsburg columns set out to subdue Glarus. On 9 April 1388 the main army, perhaps 5,000 strong, stormed the earthwork wall at Näfels, held by about 400 men of Glarus and a few from Schwyz and Uri. As the attackers scattered to plunder, the defenders fell on them from the hillside. The Habsburg troops fled towards Weesen, a bridge collapsed under them, and many drowned; Glarus lost 54 men. On 1 April 1389 Albert agreed to a seven-year peace, extended in 1394 for twenty years, which left the Confederates what they had won.
+    facts:
+      - [Battle of Näfels, "9 April 1388, victory for Glarus"]
+      - [Peace, "1 April 1389, for seven years; extended in 1394"]
+      - [Habsburg losses at Näfels, "several hundred to 1,700, by different estimates"]
+    markers:
+      - kind: taken
+        side: hb
+        name: Weesen
+        date: 21–22 February 1388
+        text: Habsburg troops retook the town in a night attack; the Confederate garrison was killed or driven out.
+        lonlat: [9.1, 47.135]
+        lp: l
+      - kind: battle
+        side: ch
+        name: Battle of Näfels
+        date: 9 April 1388
+        text: Glarus still marks the battle with a pilgrimage, the Näfelser Fahrt, on the first Thursday in April.
+        lonlat: [9.07, 47.1]
+    areas:
+      - style: gained
+        side: ch
+        label: Glarus, free of Habsburg rule from 1388
+        atoms: [CH-GL]

@@ -1,0 +1,119 @@
+id: war-of-the-julich-succession
+name: War of the Jülich Succession
+start: "1609"
+end: "1614-11-12"
+tier: B
+summary: A war over the inheritance of the united duchies of Jülich, Cleves and Berg on the lower Rhine, claimed by Brandenburg and Palatinate-Neuburg after the last duke died in 1609, which drew in the Emperor, France, the Dutch Republic and Spain. The Treaty of Xanten in 1614 divided the lands, giving the Hohenzollerns of Brandenburg their first territories in western Germany.
+countries: [de, nl, fr, es]
+sides:
+  - id: bra
+    name: Brandenburg
+    polities: [prussia]
+    ink: slate
+    moves: Brandenburg moves
+    success: Brandenburg success
+  - id: pn
+    name: Palatinate-Neuburg
+    polities: [palatinate-neuburg]
+    ink: olive
+    moves: Neuburg moves
+    success: Neuburg success
+  - id: nl
+    name: The Dutch Republic and France
+    polities: [dutch-republic, france]
+    ink: orange
+    moves: Dutch and French moves
+    success: Dutch and French success
+  - id: hab
+    name: The Emperor and Spain
+    polities: [hre, habsburg, habsburg-netherlands, spain]
+    ink: gold
+    moves: Imperial and Spanish moves
+    success: Imperial and Spanish success
+notes:
+  - The two claimants first fought together as the “possessing princes” against the Emperor’s commissioner in 1609–1610, then fell out. In 1614 Spain backed Neuburg and the Dutch backed Brandenburg, though the Spanish and Dutch armies avoided fighting each other during their Twelve Years’ Truce.
+  - Catholic and Protestant territories used different calendars, ten days apart; dates are as usually given. The partition was provisional and was confirmed by the Treaty of Cleves in 1666.
+sources:
+  - title: War of the Jülich Succession (Wikipedia)
+    url: https://en.wikipedia.org/wiki/War_of_the_J%C3%BClich_Succession
+  - title: Treaty of Xanten (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Xanten
+  - title: United Duchies of Jülich-Cleves-Berg (Wikipedia)
+    url: https://en.wikipedia.org/wiki/United_Duchies_of_J%C3%BClich-Cleves-Berg
+  - title: Siege of Aachen (1614) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Aachen_(1614)
+steps:
+  - title: Jülich, Wesel and the partition of Xanten
+    date: 1609–1614
+    when: "1609-06-10"
+    borders: "1614-11-12"
+    countries: [de, nl, fr, es]
+    body:
+      - When the mentally ill Duke John William of Jülich-Cleves-Berg died childless on 25 March 1609, two Lutheran princes claimed his rich lands through his sisters, Elector John Sigismund of Brandenburg and Wolfgang William of Palatinate-Neuburg. On 10 June they agreed at Dortmund to rule jointly, but Emperor Rudolf II sent Archduke Leopold, who took over the fortress of Jülich. France, the Dutch Republic and the Protestant Union backed the claimants. Henry IV of France was preparing to intervene in force when he was assassinated on 14 May 1610, yet Dutch, French, English and Union troops besieged Jülich, which surrendered on 1 September.
+      - The two princes then fell out. In 1613 Wolfgang William became a Catholic and married a sister of Maximilian of Bavaria, and John Sigismund turned Calvinist. In 1614 the Dutch seized Jülich and Wolfgang William took Düsseldorf. Spain’s army under Ambrogio Spinola restored Aachen’s Catholic council in August and took Wesel, while Maurice of Nassau occupied Cleves and Mark. The two armies did not fight, and on 12 November the Treaty of Xanten divided the inheritance, giving Cleves, Mark and Ravensberg to Brandenburg and Jülich and Berg to Neuburg. Spanish and Dutch garrisons stayed on.
+    facts:
+      - [Treaty of Dortmund, "10 June 1609"]
+      - [Siege of Jülich, "Surrendered 1 September 1610"]
+      - [Treaty of Xanten, "12 November 1614"]
+    markers:
+      - kind: event
+        side: pn
+        name: Düsseldorf
+        date: 1609 and 1614
+        text: The capital of the united duchies, where Duke John William died in 1609. Wolfgang William seized it in 1614 and made it the seat of his new duchy of Jülich-Berg.
+        lonlat: [6.774, 51.228]
+      - kind: treaty
+        name: Treaty of Dortmund
+        date: 10 June 1609
+        text: Brandenburg and Neuburg agreed to hold the duchies jointly until their claims were settled, in defiance of the Emperor.
+        lonlat: [7.465, 51.514]
+      - kind: siege
+        side: nl
+        name: Siege of Jülich
+        date: July – 1 September 1610
+        text: Archduke Leopold’s garrison surrendered to an army of more than 30,000 Dutch, French, English and German Protestant troops under Maurice of Nassau.
+        lonlat: [6.358, 50.922]
+        lp: l
+      - kind: siege
+        side: hab
+        name: Aachen
+        date: August 1614
+        text: Spinola enforced the Emperor’s order to restore the Catholic council of the imperial city, where Protestants had taken power in 1611.
+        lonlat: [6.084, 50.775]
+        lp: l
+      - kind: taken
+        side: hab
+        name: Wesel
+        date: September 1614
+        text: The loss of this Rhine crossing near their border shocked the Dutch. Spain kept it, with Orsoy and Rheinberg, after the treaty.
+        lonlat: [6.618, 51.659]
+      - kind: treaty
+        name: Treaty of Xanten
+        date: 12 November 1614
+        text: Negotiated by Spanish and Dutch envoys for the two princes, with English and French mediation. Both armies stayed close by while the talks went on.
+        lonlat: [6.454, 51.662]
+        lp: l
+    arrows:
+      - side: nl
+        label: Maurice, 1610
+        via: [[5.9, 51.55], [6.05, 51.25], [6.32, 50.96]]
+      - side: hab
+        label: Spinola, 1614
+        via: [[5.69, 50.85], [5.9, 50.8], [6.05, 50.78]]
+      - side: hab
+        via: [[6.2, 50.9], [6.55, 51.2], [6.62, 51.62]]
+      - side: nl
+        label: Maurice, 1614
+        via: [[5.9, 51.95], [6.15, 51.85], [6.38, 51.77]]
+    areas:
+      - style: gained
+        side: bra
+        label: Cleves, Mark and Ravensberg, to Brandenburg at Xanten
+        atoms: [DE-NW~kleve, DE-NW~lb~kleve, DE-NW~mark]
+        polygon: [[8.1, 52.03], [8.3, 52.13], [8.55, 52.24], [8.75, 52.22], [8.9, 52.15], [8.75, 52.03], [8.55, 51.97], [8.3, 51.98]]
+      - style: outline
+        side: pn
+        label: Jülich and Berg, to Palatinate-Neuburg at Xanten (approximate)
+        polygons:
+          - [[6.08, 51.27], [6.45, 51.25], [6.62, 51.12], [6.68, 50.95], [6.82, 50.72], [6.8, 50.5], [6.55, 50.48], [6.25, 50.5], [6.15, 50.65], [6.2, 50.78], [6.0, 50.9], [5.95, 51.05]]
+          - [[6.75, 51.43], [6.95, 51.42], [7.1, 51.33], [7.3, 51.25], [7.42, 51.17], [7.45, 51.02], [7.55, 50.82], [7.35, 50.75], [7.15, 50.77], [7.02, 50.9], [6.95, 51.03], [6.82, 51.13], [6.72, 51.28]]

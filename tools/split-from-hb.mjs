@@ -2,6 +2,7 @@
 //
 //   node tools/split-from-hb.mjs <splits-file> <year> "<NAME>[|<NAME>…]" <suffix> "<name>" <atom> [<atom> …]
 //   node tools/split-from-hb.mjs 20-schleswig 1880 Germany nschleswig "North Schleswig" DK-83
+//   node tools/split-from-hb.mjs 60-german-lands my-lines.geojson "Upper Palatinate" opf "Upper Palatinate" DE-BY~bav
 //
 // For each atom, the part inside the named historical-basemaps polygon(s) of
 // that year becomes a new atom `<atom>~<suffix>`, appended to
@@ -74,7 +75,9 @@ for (const f of files) {
   }
 }
 
-const hb = await readJSON(join(ROOT, `.cache/hb/world_${year}.geojson`));
+// A path to a .geojson file (features with a NAME property) can stand in for the year, for hand-drawn cuts.
+const handFile = /\.geojson$/.test(year);
+const hb = await readJSON(handFile ? year : join(ROOT, `.cache/hb/world_${year}.geojson`));
 const wanted = new Set(names.split('|'));
 const hbPolys = hb.features.filter((f) => f.geometry && wanted.has(f.properties.NAME)).flatMap((f) => toMulti(f.geometry));
 if (!hbPolys.length) { console.error(`no historical-basemaps ${year} feature named ${[...wanted].join(' or ')}`); process.exit(1); }
@@ -87,7 +90,7 @@ for (const id of targets) {
   const [x0, y0, x1, y1] = bbox(geom);
   const box = [[[x0 - 0.1, y0 - 0.1], [x1 + 0.1, y0 - 0.1], [x1 + 0.1, y1 + 0.1], [x0 - 0.1, y1 + 0.1], [x0 - 0.1, y0 - 0.1]]];
   const near = hbPolys.filter((p) => { const b = bbox([p]); return b[0] <= x1 && b[2] >= x0 && b[1] <= y1 && b[3] >= y0; });
-  const zone = near.length ? polygonClipping.intersection(box, ...near.map((p) => [p])) : [];
+  const zone = near.length ? polygonClipping.intersection(box, polygonClipping.union(...near.map((p) => [p]))) : [];
   let inside = zone.length ? polygonClipping.intersection(geom, zone) : [];
   let outside = zone.length ? polygonClipping.difference(geom, zone) : geom;
   // Fold slivers into the other side.
@@ -98,7 +101,7 @@ for (const id of targets) {
   if (inDrop.length || outDrop.length) inside = inside.length ? polygonClipping.union(...inside.map((p) => [p])) : [];
   const ai = total(inside), ao = total(outside);
   if (ai < MIN_SIDE || ao < MIN_SIDE || !inKeep.length || !outKeep.length) { console.log(`${id}: ${Math.round(ai)} km² inside, ${Math.round(ao)} km² outside, no split`); continue; }
-  out.features.push({ type: 'Feature', properties: { id: newId, from: id, name: label, source: `historical-basemaps ${year}: ${[...wanted].join(' | ')}` }, geometry: fromMulti(inside) });
+  out.features.push({ type: 'Feature', properties: { id: newId, from: id, name: label, source: handFile ? `hand-drawn: ${[...wanted].join(' | ')}` : `historical-basemaps ${year}: ${[...wanted].join(' | ')}` }, geometry: fromMulti(inside) });
   atoms.set(newId, inside); atoms.set(id, outside);
   console.log(`${newId}: ${Math.round(ai)} km² split off, ${Math.round(ao)} km² stay in ${id}`);
 }

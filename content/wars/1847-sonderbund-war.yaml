@@ -1,0 +1,161 @@
+id: sonderbund-war
+name: Sonderbund War
+start: "1847-11-03"
+end: "1847-11-29"
+tier: B
+summary: A short civil war in Switzerland between the Federal Diet and the Sonderbund, a defensive league of seven Catholic and conservative cantons. The federal army under General Guillaume Henri Dufour forced the league’s members to surrender one by one in under four weeks, with fewer than 100 dead, and the constitution of 1848 turned the loose confederation into a federal state.
+countries: [ch]
+sides:
+  - id: fed
+    name: Federal Diet (the Confederation)
+    polities: [switzerland]
+    ink: red
+    moves: Federal moves
+    success: Federal success
+  - id: sb
+    name: Sonderbund
+    polities: [sonderbund]
+    ink: navy
+    moves: Sonderbund moves
+    success: Sonderbund success
+notes:
+  - The Sonderbund (“separate alliance”) was its opponents’ name for the league, which called itself a protective union (Schutzvereinigung). Unterwalden is today the two cantons of Obwalden and Nidwalden.
+  - Neuchâtel, then both a Swiss canton and a principality of the King of Prussia, and Appenzell Innerrhoden stayed neutral and sent no troops.
+sources:
+  - title: Sonderbund War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sonderbund_War
+  - title: Sonderbund (Historisches Lexikon der Schweiz, in German)
+    url: https://hls-dhs-dss.ch/de/articles/017241/
+  - title: Guillaume Henri Dufour (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Guillaume_Henri_Dufour
+  - title: Swiss Federal Constitution (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Swiss_Federal_Constitution
+steps:
+  - title: The separate alliance and the fall of Fribourg
+    date: 1845 – 14 November 1847
+    when: "1845-12-11"
+    borders: "1847-11-14"
+    countries: [ch]
+    body:
+      - Switzerland in the 1840s was a loose league of sovereign cantons under the Federal Treaty of 1815. Liberals and radicals, strongest in the Protestant and urban cantons, wanted a federal state; Catholic conservatives defended cantonal sovereignty and the Church. Aargau closed its monasteries in 1841, and Lucerne called in the Jesuits to run its schools in 1844. Bands of radical volunteers twice attacked Lucerne and were beaten off. On 11 December 1845 seven Catholic cantons, Lucerne, Uri, Schwyz, Unterwalden, Zug, Fribourg and Valais, formed a defensive league with its own council of war.
+      - After elections in St Gallen gave the liberals a majority in the Federal Diet, it declared the league illegal under the Federal Treaty on 20 July 1847 and ordered it dissolved. Both sides mobilised in October. The Sonderbund struck first, seizing the St Gotthard on 3 November, and on 4 November the Diet resolved to dissolve it by force. General Guillaume Henri Dufour of Geneva, a moderate conservative, led about 100,000 federal troops. He turned first on isolated Fribourg, which surrendered on 14 November after a brief fight at one of its redoubts.
+    facts:
+      - [Sonderbund founded, "11 December 1845, in Lucerne"]
+      - [Federal commander, General Guillaume Henri Dufour]
+      - [Fribourg surrenders, "14 November 1847"]
+    markers:
+      - kind: event
+        side: fed
+        name: Bern
+        date: 20 July and 4 November 1847
+        text: The Federal Diet, meeting in Bern, ordered the Sonderbund dissolved in July and decided in November to enforce its decision by arms.
+        lonlat: [7.447, 46.948]
+        lp: l
+      - kind: event
+        side: sb
+        name: Lucerne
+        date: 11 December 1845
+        text: The league was founded here, and its council of war was led by Constantin Siegwart-Müller of Lucerne.
+        lonlat: [8.3, 47.05]
+      - kind: taken
+        side: sb
+        name: St Gotthard Pass
+        date: 3 November 1847
+        text: Troops from Uri seized the pass to keep open the Sonderbund’s routes to Valais and to Austrian Lombardy, and the first deaths of the war followed the next day.
+        lonlat: [8.568, 46.556]
+      - kind: battle
+        side: fed
+        name: Geltwil
+        date: 12 November 1847
+        text: A Sonderbund thrust into the Freiamt of Aargau, meant to split the federal forces and relieve Fribourg, was stopped here and fell back into Lucerne.
+        lonlat: [8.333, 47.25]
+      - kind: taken
+        side: fed
+        name: Fribourg
+        date: 13–14 November 1847
+        text: Surrounded by federal divisions and heavy guns, the cantonal government voted to surrender after a mistaken Vaudois attack on the Bertigny redoubt had been beaten off.
+        lonlat: [7.15, 46.8]
+    arrows:
+      - side: fed
+        label: Rilliet (Vaud)
+        via: [[6.75, 46.62], [6.95, 46.72], [7.12, 46.78]]
+      - side: fed
+        label: Bernese reserve
+        via: [[7.44, 46.94], [7.3, 46.88], [7.19, 46.82]]
+      - side: sb
+        label: Uri troops
+        via: [[8.63, 46.86], [8.6, 46.68], [8.568, 46.565]]
+    areas:
+      - style: outline
+        side: sb
+        label: The Sonderbund cantons
+        atoms: [CH-LU, CH-UR, CH-SZ, CH-OW, CH-NW, CH-ZG, CH-FR, CH-VS]
+  - title: Gisikon and the federal state
+    date: 15 November 1847 – 12 September 1848
+    when: "1847-11-17"
+    borders: "1848-09-12"
+    countries: [ch]
+    body:
+      - Dufour now marched his army against central Switzerland. On 17 November troops from Uri pushed down into Ticino and took Airolo, but the advance stalled near Biasca. Zug voted to surrender on 21 November without a fight. On 23 November five federal columns converged on Lucerne, and the Sonderbund council and Lucerne’s government withdrew to Uri. At Gisikon on the Reuss the Sonderbund army held a wooded height against two assaults before Colonel Eduard Ziegler led his division up it. It was the bloodiest fight of the war and the last pitched battle fought by Swiss troops.
+      - Federal troops entered Lucerne on 24 November. The Sonderbund council broke up at Flüelen two days later; Unterwalden, Schwyz and Uri gave in, and Valais, the last, surrendered on 29 November. Later research counts about 60 federal and 33 Sonderbund dead. Dufour had ordered his men to spare the wounded and prisoners, and the war left less bitterness than many had feared. The defeated cantons were charged the war costs and got liberal governments. The Federal Constitution, adopted on 12 September 1848, made Switzerland a federal state and banned the Jesuits.
+    facts:
+      - [Battle of Gisikon, "23 November 1847, federal victory"]
+      - [Last surrender, "Valais, 29 November 1847"]
+      - [Dead, "about 60 federal and 33 Sonderbund soldiers"]
+    markers:
+      - kind: battle
+        side: sb
+        name: Airolo
+        date: 17 November 1847
+        text: Troops from Uri and Nidwalden drove the Ticinese out of Airolo and advanced down the Leventina, the Sonderbund’s only real success.
+        lonlat: [8.617, 46.533]
+      - kind: taken
+        side: fed
+        name: Zug
+        date: 21–22 November 1847
+        text: The cantonal parliament voted to surrender by a large majority, and federal troops entered the town unopposed.
+        lonlat: [8.517, 47.168]
+        lp: t
+      - kind: battle
+        side: fed
+        name: Battle of Gisikon
+        date: 23 November 1847
+        text: Federal troops crossed the Reuss on pontoon bridges and took the Sonderbund’s position after two hours’ fighting, in which 37 men were killed.
+        lonlat: [8.4, 47.117]
+        lp: l
+      - kind: battle
+        side: fed
+        name: Meierskappel
+        date: 23 November 1847
+        text: The 5th Division drove back troops from Schwyz, cutting Lucerne off from its allies east of Lake Zug.
+        lonlat: [8.45, 47.133]
+      - kind: taken
+        side: fed
+        name: Lucerne
+        date: 24 November 1847
+        text: Federal troops entered the city unopposed the morning after its leaders and the Jesuits had fled.
+        lonlat: [8.3, 47.05]
+        lp: b
+      - kind: taken
+        side: fed
+        name: Sion
+        date: 29 November 1847
+        text: Valais, the last member of the Sonderbund, surrendered, and federal troops moved in without resistance.
+        lonlat: [7.359, 46.231]
+    arrows:
+      - side: fed
+        label: Ziegler
+        via: [[8.32, 47.33], [8.38, 47.22], [8.4, 47.125]]
+      - side: fed
+        label: Gmür
+        via: [[8.52, 47.3], [8.47, 47.2], [8.45, 47.14]]
+      - side: fed
+        label: Burckhardt
+        via: [[7.79, 47.21], [7.98, 47.1], [8.2, 47.06], [8.29, 47.055]]
+      - side: sb
+        via: [[8.6, 46.6], [8.65, 46.52], [8.8, 46.43], [8.95, 46.36]]
+    areas:
+      - style: occupied
+        side: fed
+        label: Occupied by federal troops, November 1847
+        atoms: [CH-LU, CH-UR, CH-SZ, CH-OW, CH-NW, CH-ZG, CH-FR, CH-VS]

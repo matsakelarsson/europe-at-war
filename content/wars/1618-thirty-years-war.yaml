@@ -27,9 +27,27 @@ sides:
     ink: red
     moves: Danish–Norwegian moves
     success: Danish–Norwegian success
+  - id: pal
+    name: Bohemian estates and the Palatinate
+    polities: [bohemia, palatinate]
+    ink: orange
+    moves: Bohemian and Palatine moves
+    success: Bohemian and Palatine success
+  - id: fr
+    name: France
+    polities: [france]
+    ink: navy
+    moves: French and allied moves
+    success: French and allied success
+  - id: es
+    name: Spain
+    polities: [spain, habsburg-netherlands]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
 notes:
   - Dates in Germany and Poland are New Style (Gregorian); Scandinavian dates are mostly Old Style (Julian), as usually cited, which ran ten days behind.
-  - The Swedish phase (1630–1648) was migrated from Sweden at War and is told from Sweden’s side. The Danish phase (1625–1629) was added for Europe at War; the war’s Bohemian and Palatine phases (1618–1623) are not yet told here.
+  - The Swedish phase (1630–1648) was migrated from Sweden at War and is told from Sweden’s side. The Danish phase (1625–1629), the Bohemian and Palatine phases (1618–1623) and France’s war against Spain and Bavaria (1635–1645) were added for Europe at War.
 sources:
   - url: https://en.wikipedia.org/wiki/Treaty_of_Stettin_(1630)
     title: Treaty of Stettin, 1630 (Wikipedia)
@@ -57,7 +75,249 @@ sources:
     title: Battle of Wolgast (Wikipedia)
   - url: https://en.wikipedia.org/wiki/Treaty_of_L%C3%BCbeck
     title: Treaty of Lübeck (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Defenestrations_of_Prague
+    title: Defenestrations of Prague (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Bohemian_Revolt
+    title: Bohemian Revolt (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_White_Mountain
+    title: Battle of White Mountain (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Wimpfen
+    title: Battle of Wimpfen (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Siege_of_Heidelberg_(1622)
+    title: Siege of Heidelberg, 1622 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Stadtlohn
+    title: Battle of Stadtlohn (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Franco-Spanish_War_(1635%E2%80%931659)
+    title: Franco-Spanish War, 1635–1659 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Crossing_of_the_Somme
+    title: Crossing of the Somme, 1636 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Tuttlingen
+    title: Battle of Tuttlingen (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Freiburg
+    title: Battle of Freiburg (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_N%C3%B6rdlingen_(1645)
+    title: Second Battle of Nördlingen, 1645 (Wikipedia)
 steps:
+  - title: Defenestration and the Bohemian Revolt
+    date: 1618–1619
+    when: "1618-05-23"
+    borders: "1619-11-04"
+    countries: [cz, at, de, sk]
+    side_names:
+      foe: Imperial success
+    move_names:
+      foe: Imperial moves
+    body:
+      - The mostly Protestant estates of Bohemia had won religious freedom from Rudolf II in his Letter of Majesty of 1609, but the choice of the strictly Catholic Ferdinand of Styria as their next king, and quarrels over Protestant churches on church land, convinced them that their rights were in danger. On 23 May 1618 Protestant nobles led by Count Heinrich Matthias Thurn threw two of the king’s regents and their secretary from a window of Prague Castle. All three survived. The estates set up a government of thirty directors and raised an army.
+      - In November the mercenary general Ernst von Mansfeld took the Catholic stronghold of Plzeň for the rebels. After Emperor Matthias died in March 1619, Thurn marched through Moravia, which now joined the revolt, to the edge of Vienna, but turned back when the imperial general Bucquoy beat Mansfeld at Sablat on 10 June. On 31 July Bohemia, Moravia, Silesia and the two Lusatias formed a confederation, and in August the estates deposed Ferdinand and elected the Calvinist Elector Palatine, Frederick V. He was crowned in Prague on 4 November, two months after Ferdinand had been elected Emperor.
+    facts:
+      - [Defenestration of Prague, "23 May 1618"]
+      - [Bohemian Confederation, "31 July 1619"]
+      - [Frederick V crowned, "4 November 1619, in St Vitus Cathedral"]
+    markers:
+      - kind: event
+        side: pal
+        name: Defenestration of Prague
+        date: 23 May 1618
+        text: The regents Vilém Slavata and Jaroslav Bořita of Martinice and the secretary Philipp Fabricius fell some 20 metres from a window of the Bohemian Chancellery into the castle moat and escaped with their lives. Catholics called it a miracle.
+        lonlat: [14.4, 50.091]
+      - kind: taken
+        side: pal
+        name: Plzeň
+        date: 21 November 1618
+        text: Mansfeld, whose army was paid by the Duke of Savoy, stormed the royal town after a two-month siege.
+        lonlat: [13.378, 49.748]
+      - kind: battle
+        side: foe
+        name: Battle of Sablat
+        date: 10 June 1619
+        text: Bucquoy’s imperial army caught Mansfeld’s smaller force on the march in southern Bohemia and destroyed it. Mansfeld escaped, but the defeat forced Thurn to leave Vienna.
+        lonlat: [14.276, 49.132]
+      - kind: held
+        side: foe
+        name: Vienna
+        date: June and November 1619
+        text: Ferdinand held out in his capital when Thurn reached its suburbs in June, and again in November, when Thurn and Gabriel Bethlen of Transylvania besieged it for a few days.
+        lonlat: [16.374, 48.208]
+      - kind: taken
+        side: pal
+        name: Pressburg
+        date: October 1619
+        text: Gabriel Bethlen, Prince of Transylvania, took the seat of the Hungarian diet as an ally of the Bohemians. The town is today’s Bratislava.
+        lonlat: [17.108, 48.149]
+        lp: b
+    arrows:
+      - side: pal
+        label: Thurn, 1619
+        via: [[15.0, 49.35], [16.0, 49.1], [16.4, 48.6], [16.37, 48.27]]
+      - side: foe
+        label: Bucquoy
+        via: [[14.47, 48.97], [14.38, 49.05], [14.29, 49.12]]
+      - side: pal
+        label: Bethlen
+        via: [[18.4, 48.3], [17.6, 48.2], [17.15, 48.16], [16.55, 48.2]]
+    areas:
+      - style: outline
+        side: pal
+        label: The Bohemian Confederation, 1619
+        atoms: [CZ-PR, CZ-ST, CZ-JC, CZ-PL, CZ-KA, CZ-US, CZ-LI, CZ-KR, CZ-PA, CZ-VY, CZ-JM, CZ-OL, CZ-ZL, CZ-MO, PL-DS, PL-OP, PL-SL~de1930, PL-SL~austria, PL-SL!, DE-SN~olaus, DE-BB~sax~nlaus, PL-LB~sax]
+  - title: White Mountain
+    date: 1620–1621
+    when: "1620"
+    borders: "1620-11-08"
+    countries: [cz, at, de]
+    side_names:
+      foe: Imperial and Catholic League success
+    move_names:
+      foe: Imperial and Catholic League moves
+    body:
+      - Ferdinand found allies where Frederick found none. In the Treaty of Munich of October 1619 Duke Maximilian of Bavaria put the army of the Catholic League at his disposal in return for his costs and, secretly, Frederick’s electoral title. Lutheran Saxony joined the Emperor for the promise of Lusatia, and Spain sent money and troops. In July 1620 the Protestant Union agreed at Ulm to stay neutral. Maximilian and his general Tilly then occupied Upper Austria, whose estates had joined the rebels, while John George of Saxony took Lusatia and a Spanish army invaded the Rhenish Palatinate.
+      - The League and imperial armies under Tilly and Bucquoy marched into Bohemia, and on 8 November 1620 they attacked the Bohemian army under Christian of Anhalt on the White Mountain outside Prague. Within two hours it was routed, and Frederick fled, mocked ever after as the “Winter King”. On 21 June 1621 twenty-seven leaders of the revolt were executed on Prague’s Old Town Square. The rebels’ estates were confiscated, Bohemia became a hereditary Habsburg kingdom, Protestant worship was banned, and tens of thousands of Protestants went into exile.
+    facts:
+      - [Battle of White Mountain, "8 November 1620, Imperial and League victory"]
+      - [Armies, "About 23,000 Imperial and League troops against about 21,000"]
+      - [Executions in Prague, "27 leaders of the revolt, 21 June 1621"]
+    markers:
+      - kind: taken
+        side: foe
+        name: Linz
+        date: August 1620
+        text: Maximilian’s League army occupied Upper Austria, which Ferdinand pledged to him for his war costs. Bavaria ruled it until 1628, and its harsh rule led to a great peasant rising in 1626.
+        lonlat: [14.286, 48.306]
+      - kind: siege
+        side: foe
+        name: Bautzen
+        date: September – October 1620
+        text: John George of Saxony, a Lutheran fighting for the Emperor, besieged and took the capital of Upper Lusatia.
+        lonlat: [14.424, 51.181]
+      - kind: battle
+        side: foe
+        name: Battle of White Mountain
+        date: 8 November 1620
+        text: The Bohemian army lost some 2,800 men and its opponents about 650. Prague surrendered the next day without a fight.
+        lonlat: [14.321, 50.078]
+        lp: l
+      - kind: event
+        side: foe
+        name: Old Town Square
+        date: 21 June 1621
+        text: Three lords, seven knights and seventeen burghers were beheaded or hanged, and the heads of twelve of them were displayed on the Charles Bridge tower for ten years.
+        lonlat: [14.421, 50.087]
+        lp: b
+      - kind: event
+        side: pal
+        name: Breslau
+        date: Winter 1620–1621
+        text: Frederick fled to the Silesian capital, today’s Wrocław, and from there by way of Brandenburg into exile in the Dutch Republic.
+        lonlat: [17.039, 51.108]
+    arrows:
+      - side: foe
+        label: Tilly and Bucquoy
+        via: [[14.29, 48.32], [14.47, 48.97], [14.2, 49.5], [14.3, 50.04]]
+      - side: foe
+        label: John George
+        via: [[13.74, 51.05], [14.1, 51.12], [14.4, 51.17]]
+      - side: pal
+        label: Frederick’s flight
+        via: [[14.45, 50.1], [15.5, 50.45], [16.4, 50.9], [16.98, 51.1]]
+    areas:
+      - style: pledged
+        side: foe
+        label: Upper Austria, pledged to Bavaria 1620–1628
+        atoms: [AT-4!]
+      - style: occupied
+        side: foe
+        label: Lusatia, occupied by Saxony
+        atoms: [DE-SN~olaus, PL-DS~sax, DE-BB~sax~nlaus, PL-LB~sax]
+  - title: The Palatinate lost
+    date: 1621–1623
+    when: "1621"
+    borders: "1623-02-25"
+    countries: [de, be, nl, es]
+    side_names:
+      foe: Imperial and Catholic League success
+      pal: Success for Frederick’s allies
+    move_names:
+      foe: Imperial and Catholic League moves
+      pal: Moves by Frederick’s allies
+    body:
+      - Frederick was placed under the imperial ban in January 1621, and the Protestant Union dissolved itself that spring. Spanish troops already held the Palatinate west of the Rhine, and in the autumn Maximilian’s army took the Upper Palatinate. Frederick’s cause was kept alive by three commanders, Mansfeld, Margrave George Frederick of Baden-Durlach and Christian of Brunswick, the Protestant administrator of Halberstadt. In 1622 Mansfeld beat Tilly at Mingolsheim on 27 April, but Tilly, joined by Spanish troops under Gonzalo de Córdoba, routed Baden-Durlach at Wimpfen on 6 May and caught Christian crossing the Main at Höchst on 20 June.
+      - Tilly took Heidelberg in September after a two-month siege, and Mannheim in November. Mansfeld and Christian cut their way through a Spanish army at Fleurus and went into Dutch service. On 25 February 1623, at an assembly of princes at Regensburg, Ferdinand transferred Frederick’s electoral title to Maximilian of Bavaria, despite Protestant protests and Spanish misgivings. When Christian marched again that summer, Tilly caught him at Stadtlohn near the Dutch border on 6 August and destroyed his army. The war in the Empire seemed over, and Frederick lived on in exile in The Hague.
+    facts:
+      - [Electorate transferred, "25 February 1623, to Maximilian of Bavaria"]
+      - [Battle of Wimpfen, "6 May 1622, Catholic victory"]
+      - [Battle of Stadtlohn, "6 August 1623; about 6,000 of Christian’s men killed and 4,000 captured"]
+    markers:
+      - kind: battle
+        side: pal
+        name: Mingolsheim
+        date: 27 April 1622
+        text: Mansfeld beat Tilly south of Heidelberg, the only victory of Frederick’s allies in the campaign.
+        lonlat: [8.658, 49.217]
+        lp: l
+      - kind: battle
+        side: foe
+        name: Battle of Wimpfen
+        date: 6 May 1622
+        text: Tilly and Córdoba broke the Baden army after an explosion among its powder wagons.
+        lonlat: [9.172, 49.197]
+      - kind: battle
+        side: foe
+        name: Battle of Höchst
+        date: 20 June 1622
+        text: Christian got across the Main with his cavalry and part of his army, but lost his baggage and many men.
+        lonlat: [8.547, 50.099]
+      - kind: siege
+        side: foe
+        name: Heidelberg
+        date: 23 July – 19 September 1622
+        text: The capital of the Palatinate fell to Tilly. Maximilian sent its famous library, the Bibliotheca Palatina, to Rome as a gift to the pope.
+        lonlat: [8.705, 49.41]
+      - kind: taken
+        side: foe
+        name: Amberg
+        date: "1621"
+        text: Bavarian troops occupied the capital of the Upper Palatinate. In 1628 Ferdinand granted the region to Maximilian, and it stayed Bavarian.
+        lonlat: [11.858, 49.445]
+      - kind: event
+        side: foe
+        name: Regensburg
+        date: 25 February 1623
+        text: Ferdinand invested Maximilian with the Palatine electorate, at first for his lifetime only, giving the Catholics a clear majority among the electors.
+        lonlat: [12.102, 49.013]
+      - kind: battle
+        side: es
+        name: Battle of Fleurus
+        date: 29 August 1622
+        text: Córdoba’s Spanish army failed to stop Mansfeld and Christian on their way to the Dutch Republic, but they lost thousands of men, and Christian lost his left arm.
+        lonlat: [4.55, 50.483]
+      - kind: battle
+        side: foe
+        name: Battle of Stadtlohn
+        date: 6 August 1623
+        text: Tilly overtook Christian’s retreating army some 15 km from the Dutch border and destroyed it. Christian himself escaped into the Dutch Republic.
+        lonlat: [6.947, 52.02]
+    arrows:
+      - side: pal
+        label: Christian of Brunswick
+        via: [[8.75, 51.72], [8.8, 50.8], [8.58, 50.15]]
+      - side: foe
+        label: Tilly
+        via: [[9.1, 49.25], [8.85, 49.7], [8.6, 50.05]]
+      - side: pal
+        label: Mansfeld and Christian
+        via: [[6.2, 49.4], [5.3, 49.9], [4.6, 50.45], [4.8, 51.3]]
+      - side: foe
+        via: [[8.9, 51.8], [7.9, 51.95], [7.05, 52.0]]
+    areas:
+      - style: occupied
+        side: foe
+        label: Occupied by Bavaria and the League
+        atoms: [DE-BY~bav~opf, DE-BW~baden~kpf]
+      - style: occupied
+        side: es
+        label: Occupied by Spain
+        atoms: [DE-RP~pfalz, DE-SL~pfalz]
   - title: Christian IV enters the war
     date: 1625 – spring 1626
     when: "1625"
@@ -601,6 +861,7 @@ steps:
       - se
       - de
       - pl
+      - es
     view:
       center:
         - 13.4599
@@ -695,6 +956,79 @@ steps:
           - PL-ZP
           - PL-ZP~pomO
           - PL-ZP~pomS
+  - title: France enters the war, and the Year of Corbie
+    date: 1635–1636
+    when: "1635-05-19"
+    borders: "1636-11-14"
+    countries: [fr, be, es, de]
+    side_names:
+      foe: Imperial and Bavarian success
+    move_names:
+      foe: Imperial and Bavarian moves
+    body:
+      - After the Swedish defeat at Nördlingen and the Peace of Prague, Cardinal Richelieu could no longer fight the Habsburgs only through allies and subsidies. When Spanish troops seized Trier in March 1635 and carried off its archbishop-elector, who was under French protection, France declared war on Spain on 19 May. A French army won at Les Avins in the Spanish Netherlands the next day, but with its Dutch allies it failed before Leuven and melted away through disease and desertion. In October France took Bernhard of Saxe-Weimar’s German army into its pay.
+      - In July 1636 the Cardinal-Infante Ferdinand, governor of the Spanish Netherlands, invaded Picardy with Spanish troops and imperial cavalry under Ottavio Piccolomini and the Bavarian general Johann von Werth. They took La Capelle and Le Catelet, forced the Somme on 5 August and took Corbie on 15 August, while their horsemen raided as far as Compiègne and panic spread in Paris, about 120 km away. Louis XIII raised a new army, the invaders withdrew, and Corbie was retaken on 14 November. In the east an imperial invasion of Burgundy under Matthias Gallas stalled at Saint-Jean-de-Losne.
+    facts:
+      - [France declares war on Spain, "19 May 1635"]
+      - [Corbie, "Taken by Spain 15 August, retaken 14 November 1636"]
+      - [Known in France as, "l’année de Corbie, the Year of Corbie"]
+    markers:
+      - kind: taken
+        side: es
+        name: Trier
+        date: 26 March 1635
+        text: Spanish troops from Luxembourg surprised the city and captured Archbishop-Elector Philipp Christoph von Sötern, who had put himself under French protection. He was held prisoner for ten years.
+        lonlat: [6.637, 49.75]
+      - kind: event
+        side: fr
+        name: Brussels
+        date: 19 May 1635
+        text: A French herald brought the declaration of war to the capital of the Spanish Netherlands, opening a war with Spain that lasted until 1659.
+        lonlat: [4.352, 50.847]
+        lp: l
+      - kind: battle
+        side: fr
+        name: Battle of Les Avins
+        date: 20 May 1635
+        text: Marshals Châtillon and Brézé beat a smaller Spanish army under Prince Thomas of Savoy near Huy.
+        lonlat: [5.283, 50.4]
+      - kind: held
+        side: es
+        name: Leuven
+        date: June – July 1635
+        text: The French and Dutch besieged the city for about ten days and then withdrew, their armies wasted by disease, hunger and desertion.
+        lonlat: [4.701, 50.879]
+      - kind: taken
+        side: es
+        name: La Capelle
+        date: 8 July 1636
+        text: The frontier fortress surrendered after a short siege, opening the road into Picardy.
+        lonlat: [3.916, 49.973]
+      - kind: siege
+        side: es
+        name: Corbie
+        date: 15 August 1636
+        text: The fortress on the Somme above Amiens surrendered after a week. A French army of some 50,000 men won it back on 14 November after a six-week siege.
+        lonlat: [2.508, 49.91]
+      - kind: held
+        side: fr
+        name: Saint-Jean-de-Losne
+        date: November 1636
+        text: The small Burgundian town on the Saône held out against Gallas’s army, which then retreated, weakened by hunger and disease.
+        lonlat: [5.264, 47.103]
+    arrows:
+      - side: es
+        label: Cardinal-Infante
+        via: [[3.95, 50.45], [3.92, 50.0], [3.0, 49.92], [2.55, 49.91]]
+      - side: foe
+        label: Imperial cavalry
+        via: [[2.75, 49.85], [2.79, 49.7], [2.83, 49.44]]
+      - side: fr
+        label: Louis XIII
+        via: [[2.35, 48.88], [2.45, 49.4], [2.52, 49.84]]
+      - side: foe
+        label: Gallas
+        via: [[6.4, 47.8], [5.8, 47.4], [5.3, 47.12]]
   - title: Banér holds on
     date: 1636–1641
     when: "1636"
@@ -834,6 +1168,7 @@ steps:
       - se
       - de
       - cz
+      - at
     view:
       center:
         - 14.0685
@@ -953,6 +1288,77 @@ steps:
           - PL-ZP
           - PL-ZP~pomO
           - PL-ZP~pomS
+  - title: France against Bavaria in the south
+    date: 1643–1645
+    when: "1643-11-24"
+    borders: "1645-08-03"
+    countries: [de, fr]
+    side_names:
+      foe: Bavarian and Imperial success
+    move_names:
+      foe: Bavarian and Imperial moves
+    body:
+      - In 1638 Bernhard of Saxe-Weimar, a German Protestant general in French pay, took the Habsburg fortress of Breisach on the upper Rhine, and after his death in 1639 France took over his army and his conquests. It fought Bavaria for south-west Germany. In November 1643 Marshal Guébriant took Rottweil but died of his wounds, and on 24 November the Bavarian general Franz von Mercy, with Johann von Werth and Lorraine troops, surprised the French army in its winter quarters at Tuttlingen and captured most of it. In July 1644 Mercy took Freiburg im Breisgau.
+      - The young Duke of Enghien, the future Great Condé, joined Turenne with fresh troops, and on 3, 5 and 9 August they stormed Mercy’s entrenchments on the wooded hills around Freiburg in some of the bloodiest fighting of the war. Mercy withdrew in good order, but the French went on to take Philippsburg, Speyer, Worms and Mainz. In May 1645 Mercy surprised Turenne at Herbsthausen, but on 3 August Enghien, Turenne and their Hessian allies beat the Bavarians at Allerheim near Nördlingen. Mercy was killed, and both armies were so badly mauled that the French fell back to the Rhine.
+    facts:
+      - [Battle of Tuttlingen, "24 November 1643, Bavarian victory"]
+      - [Battle of Freiburg, "3–9 August 1644, indecisive"]
+      - [Battle of Allerheim, "3 August 1645, French victory; Mercy killed"]
+    markers:
+      - kind: held
+        side: fr
+        name: Breisach
+        date: 1638–1648
+        text: Bernhard of Saxe-Weimar starved the Rhine fortress into surrender in December 1638. France kept it in the Peace of Westphalia, together with the Habsburg lands in Alsace.
+        lonlat: [7.584, 48.033]
+        lp: l
+      - kind: taken
+        side: fr
+        name: Rottweil
+        date: 19 November 1643
+        text: Guébriant took the imperial city but was mortally wounded during the siege, leaving the army to the less able Josias Rantzau.
+        lonlat: [8.625, 48.168]
+      - kind: battle
+        side: foe
+        name: Battle of Tuttlingen
+        date: 24 November 1643
+        text: Mercy’s and Werth’s cavalry fell on the scattered French quarters. Some 7,000 men were captured, Rantzau among them, and the French army in Germany ceased to exist for a time.
+        lonlat: [8.821, 47.981]
+      - kind: battle
+        name: Battle of Freiburg
+        date: 3–9 August 1644
+        text: Three days of assaults on Mercy’s fortified lines cost the French perhaps 8,000 men and the Bavarians about half as many. Mercy then withdrew through the Black Forest.
+        lonlat: [7.87, 47.98]
+      - kind: taken
+        side: fr
+        name: Philippsburg
+        date: 12 September 1644
+        text: The capture of this fortress, and of the cities of the middle Rhine, gave France control of the river. The Peace of Westphalia let it keep a garrison here.
+        lonlat: [8.455, 49.237]
+      - kind: battle
+        side: foe
+        name: Battle of Herbsthausen
+        date: 5 May 1645
+        text: Mercy surprised Turenne’s army near Mergentheim in Franconia and destroyed most of his infantry.
+        lonlat: [9.829, 49.402]
+      - kind: battle
+        side: fr
+        name: Battle of Allerheim
+        date: 3 August 1645
+        text: Also called the Second Battle of Nördlingen. Each side lost about 4,000 men killed, wounded or captured, and Mercy was killed in the fighting.
+        lonlat: [10.617, 48.85]
+    arrows:
+      - side: foe
+        label: Mercy and Werth
+        via: [[9.4, 48.2], [9.1, 48.05], [8.86, 47.98]]
+      - side: fr
+        label: Enghien
+        via: [[7.6, 48.06], [7.72, 48.02], [7.83, 47.99]]
+      - side: fr
+        via: [[7.95, 48.15], [8.2, 48.75], [8.43, 49.2]]
+      - side: fr
+        label: Enghien and Turenne, 1645
+        via: [[8.6, 49.2], [9.5, 49.05], [10.2, 48.9], [10.58, 48.86]]
   - title: The last campaigns and the Peace of Westphalia
     date: 1646–1648
     when: "1646"
@@ -961,6 +1367,7 @@ steps:
       - se
       - de
       - cz
+      - fr
     view:
       center:
         - 11.3785

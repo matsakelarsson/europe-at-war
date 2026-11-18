@@ -2,7 +2,7 @@ id: seven-years-war
 name: Seven Years’ War
 start: "1756"
 end: "1763"
-tier: B
+tier: A
 summary: A war in which Prussia and Great Britain, with Hanover, fought Austria, France, Russia, Sweden and most of the Holy Roman Empire, while Britain and France, joined by Spain in 1762, fought at sea and in North America, the Caribbean, West Africa and India. Prussia survived invasions from all sides and kept Silesia at the Peace of Hubertusburg in 1763, and the Treaty of Paris left Britain the leading colonial power.
 sides:
   - id: pr
@@ -19,7 +19,7 @@ sides:
     success: British and Hanoverian success
   - id: at
     name: Austria and the Empire
-    polities: [habsburg, saxony]
+    polities: [habsburg, saxony, hre]
     ink: purple
     moves: Austrian and Imperial moves
     success: Austrian success
@@ -44,7 +44,8 @@ sides:
 notes:
   - Dates are New Style (Gregorian). Russia used the Julian calendar, eleven days behind, so Russian sources date Elizabeth’s death 25 December 1761.
   - Sweden’s part in the war is told separately, as the Pomeranian War.
-  - The steps so far follow the war between Russia and Prussia.
+  - The steps follow the war in central Europe, between Prussia and Austria and on the Russian front, with an outline of the war in western Germany. The war at sea, in North America, the Caribbean, West Africa and India is not yet told here.
+  - Places in Silesia, Bohemia and Moravia are named in their German forms of the time; the markers give today’s names.
 sources:
   - title: Seven Years’ War (Wikipedia)
     url: https://en.wikipedia.org/wiki/Seven_Years%27_War
@@ -62,7 +63,136 @@ sources:
     url: https://en.wikipedia.org/wiki/Treaty_of_Saint_Petersburg_(1762)
   - title: Miracle of the House of Brandenburg (Wikipedia)
     url: https://en.wikipedia.org/wiki/Miracle_of_the_House_of_Brandenburg
+  - title: Diplomatic Revolution (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Diplomatic_Revolution
+  - title: Battle of Lobositz (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Lobositz
+  - title: Battle of Prague (1757) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Prague_(1757)
+  - title: Battle of Kolín (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kol%C3%ADn
+  - title: Battle of Rossbach (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Rossbach
+  - title: Battle of Leuthen (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Leuthen
+  - title: Battle of Hochkirch (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Hochkirch
+  - title: Battle of Minden (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Minden
+  - title: Battle of Liegnitz (1760) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Liegnitz_(1760)
+  - title: Battle of Torgau (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Torgau
+  - title: Battle of Freiberg (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Freiberg
+  - title: Treaty of Hubertusburg (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Hubertusburg
 steps:
+  - title: Saxony overrun, Lobositz and Pirna
+    date: August – October 1756
+    when: "1756-08-29"
+    borders: "1756-10-16"
+    countries: [de, cz, at]
+    body:
+      - In 1756 Europe’s alliances were turned upside down. Britain, anxious for Hanover, made a treaty with Prussia at Westminster in January, and Austria, which wanted Silesia back, then allied with its old enemy France. Russia was arming to join them. Frederick II decided to strike first. On 29 August his army, over 60,000 strong, marched into Saxony, whose elector, Augustus III, was also king of Poland and leaned towards Austria. The Prussians occupied Dresden on 9 September, and the Saxon army of some 18,000 men shut itself up in a fortified camp at Pirna, on the Elbe above the capital.
+      - An Austrian army under Field Marshal Maximilian Ulysses Browne marched north to rescue the Saxons. Frederick met it with about 28,000 men on 1 October at Lobositz, on the Elbe in northern Bohemia. After a long and confused day Browne fell back in good order, but he could not break through to Pirna. Starving after five weeks of blockade, the Saxons tried to cross the Elbe, were trapped beneath the Lilienstein rock and surrendered in mid-October. Frederick forced the men into Prussian regiments, from which many deserted, and Saxony was occupied and squeezed for money and recruits for the rest of the war.
+    facts:
+      - [Prussian invasion of Saxony, 29 August 1756]
+      - [Battle of Lobositz, "1 October 1756, Prussian victory"]
+      - [Saxon surrender at Pirna, "Mid-October 1756, about 18,000 men"]
+    markers:
+      - kind: taken
+        side: pr
+        name: Dresden
+        date: 9 September 1756
+        text: The Prussians occupied the Saxon capital. Augustus III soon left for Warsaw, and his electorate was run from Berlin until 1763.
+        lonlat: [13.74, 51.05]
+        lp: l
+      - kind: siege
+        side: pr
+        name: Pirna
+        date: September – October 1756
+        text: Blockaded in their camp between Pirna and the fortress of Königstein, the Saxons surrendered beneath the Lilienstein after a failed attempt to escape across the Elbe.
+        lonlat: [14.085, 50.931]
+      - kind: battle
+        side: pr
+        name: Battle of Lobositz
+        date: 1 October 1756
+        text: Today’s Lovosice. Frederick claimed the victory, but Browne’s army withdrew intact and the Prussians lost as many men as the Austrians.
+        lonlat: [14.033, 50.513]
+    arrows:
+      - side: pr
+        label: Frederick II
+        via: [[13.0, 51.56], [13.74, 51.05], [13.95, 50.75], [14.03, 50.54]]
+      - side: at
+        label: Browne
+        via: [[15.2, 50.03], [14.6, 50.25], [14.13, 50.4], [14.06, 50.5]]
+    areas:
+      - style: occupied
+        side: pr
+        label: Occupied by Prussia from 1756
+        atoms: [DE-SN, DE-BB~sax, PL-LB~sax, PL-DS~sax, DE-ST~sax, DE-TH~sax, DE-TH~pr1815~sax]
+  - title: Prague, Kolín, Rossbach and Leuthen
+    date: 1757
+    when: "1757-04-18"
+    borders: "1757-12-05"
+    countries: [cz, de, pl, at, fr]
+    body:
+      - Frederick invaded Bohemia in April 1757. On 6 May he attacked Prince Charles of Lorraine’s army east of Prague and drove it into the city, losing some 14,000 men; Field Marshal Schwerin was killed carrying a regimental flag, and Browne was mortally wounded. But on 18 June at Kolín Frederick attacked an Austrian relief army under Leopold von Daun and was badly beaten, losing about 14,000 of his 34,000 men, and he had to leave Bohemia. Over the summer the French overran Hanover, the Russians invaded East Prussia and the Swedes Pomerania, and in October an Austrian raid briefly held Berlin to ransom.
+      - Frederick saved himself with two famous victories. On 5 November at Rossbach in Saxony, a French and Imperial army of about 41,000 under the Prince of Soubise and Saxe-Hildburghausen tried to march round his flank, and Friedrich Wilhelm von Seydlitz’s cavalry routed it in ninety minutes, for the loss of fewer than 600 Prussians. The Austrians took Schweidnitz and Breslau. Frederick marched east, and on 5 December at Leuthen his 36,000 men rolled up the flank of Charles of Lorraine’s army of about 65,000. The Austrians lost some 22,000 men, more than half of them captured, and Breslau was retaken before Christmas.
+    facts:
+      - [Battle of Kolín, "18 June 1757, Austrian victory"]
+      - [Battle of Rossbach, "5 November 1757, Prussian victory"]
+      - [Battle of Leuthen, "5 December 1757, Prussian victory"]
+    markers:
+      - kind: battle
+        side: pr
+        name: Battle of Prague
+        date: 6 May 1757
+        text: Fought around Štěrboholy, east of the city. A costly Prussian victory that left the Austrian army besieged in Prague.
+        lonlat: [14.55, 50.083]
+        lp: l
+      - kind: battle
+        side: at
+        name: Battle of Kolín
+        date: 18 June 1757
+        text: Frederick’s first defeat. Daun’s victory saved Prague and forced the Prussians out of Bohemia.
+        lonlat: [15.122, 50.029]
+      - kind: taken
+        side: at
+        name: Berlin
+        date: 16 October 1757
+        text: An Austrian raiding force under András Hadik held the Prussian capital for a day and left with a ransom.
+        lonlat: [13.4, 52.52]
+      - kind: battle
+        side: pr
+        name: Battle of Rossbach
+        date: 5 November 1757
+        text: Seydlitz’s cavalry and a few battalions of infantry routed the French and the Imperial army. It made Frederick a hero in much of Germany and in Britain.
+        lonlat: [11.894, 51.269]
+      - kind: battle
+        side: at
+        name: Battle of Breslau
+        date: 22 November 1757
+        text: Prince Charles beat the Duke of Brunswick-Bevern’s Prussians outside the city, which surrendered soon afterwards.
+        lonlat: [17.03, 51.11]
+      - kind: battle
+        side: pr
+        name: Battle of Leuthen
+        date: 5 December 1757
+        text: Today’s Lutynia. Frederick hid his march behind low hills and fell on the Austrian left wing. Many consider it his masterpiece.
+        lonlat: [16.753, 51.152]
+        lp: l
+    arrows:
+      - side: fr
+        label: Soubise and Hildburghausen
+        via: [[10.9, 50.98], [11.5, 51.15], [11.86, 51.26]]
+      - side: at
+        label: Charles of Lorraine
+        via: [[14.8, 50.9], [15.6, 51.0], [16.5, 50.92], [16.97, 51.08]]
+      - side: pr
+        label: Frederick II
+        via: [[12.37, 51.34], [14.42, 51.18], [16.16, 51.21], [16.72, 51.15]]
   - title: Gross-Jägersdorf and Zorndorf
     date: 1757–1758
     when: "1757-07"
@@ -123,6 +253,57 @@ steps:
         side: ru
         label: Held by Russia, 1758–1762
         atoms: [RU-KGD, LT-KL~memel, PL-WN!, PL-WN~pl1930]
+  - title: Hochkirch and Minden
+    date: 1758–1759
+    when: "1758-05"
+    borders: "1759-08-01"
+    countries: [cz, de, at, fr, gb]
+    body:
+      - In 1758 Frederick invaded Moravia and in May laid siege to Olmütz. On 30 June the Austrian general Ernst Gideon von Laudon destroyed a great Prussian supply convoy at Domstadtl, and Frederick had to give up the siege and retreat through Bohemia. After fighting the Russians at Zorndorf in August he hurried back to Saxony, where Daun’s army had moved close to his own. Before dawn on 14 October the Austrians surprised the Prussian camp at Hochkirch, near Bautzen. Frederick lost over 9,000 men and much of his artillery, and Field Marshal James Keith was killed, but Daun did not follow up his victory.
+      - In the west, the French had beaten the Duke of Cumberland’s Hanoverian army at Hastenbeck in July 1757 and occupied Hanover. Britain then paid for a new army of Hanoverians, Hessians and Brunswickers under Duke Ferdinand of Brunswick, joined by British troops in 1758. It drove the French back over the Rhine early in 1758 and beat them at Krefeld on 23 June. On 1 August 1759 at Minden on the Weser, British and Hanoverian infantry, advancing through a misunderstood order, broke charge after charge of the French cavalry, and the French retreated. Ferdinand’s army shielded Hanover and Prussia’s western flank until the end of the war.
+    facts:
+      - [Battle of Hochkirch, "14 October 1758, Austrian victory"]
+      - [Battle of Krefeld, "23 June 1758, allied victory"]
+      - [Battle of Minden, "1 August 1759, allied victory"]
+    markers:
+      - kind: siege
+        side: at
+        name: Olmütz
+        date: May – July 1758
+        text: The Moravian fortress, today’s Olomouc, held out until the loss of his supply convoy forced Frederick to give up the siege.
+        lonlat: [17.251, 49.594]
+        lp: l
+      - kind: battle
+        side: at
+        name: Battle of Domstadtl
+        date: 30 June 1758
+        text: Laudon ambushed the huge wagon train bringing supplies and money to the siege, at today’s Domašov nad Bystřicí.
+        lonlat: [17.44, 49.74]
+      - kind: battle
+        side: at
+        name: Battle of Hochkirch
+        date: 14 October 1758
+        text: Daun’s night march and dawn attack caught the Prussians in their camp. Keith and Prince Francis of Brunswick were among the dead.
+        lonlat: [14.57, 51.149]
+      - kind: battle
+        side: gb
+        name: Battle of Krefeld
+        date: 23 June 1758
+        text: Ferdinand of Brunswick beat a larger French army under the Count of Clermont on the left bank of the Rhine.
+        lonlat: [6.567, 51.333]
+      - kind: battle
+        side: gb
+        name: Battle of Minden
+        date: 1 August 1759
+        text: The allied victory saved Hanover. The British cavalry commander, Lord George Sackville, refused to charge and was court-martialled.
+        lonlat: [8.891, 52.328]
+    arrows:
+      - side: pr
+        label: Frederick II
+        via: [[17.33, 50.47], [17.6, 49.95], [17.3, 49.63]]
+      - side: fr
+        label: Contades
+        via: [[8.77, 50.81], [8.75, 51.7], [8.87, 52.27]]
   - title: Kunersdorf
     date: 1759
     when: "1759-07"
@@ -171,6 +352,59 @@ steps:
         side: ru
         label: Held by Russia, 1758–1762
         atoms: [RU-KGD, LT-KL~memel, PL-WN!, PL-WN~pl1930]
+  - title: Liegnitz and Torgau
+    date: June – November 1760
+    when: "1760-06-23"
+    borders: "1760-11-03"
+    countries: [pl, de, at, ru]
+    body:
+      - By 1760 Prussia was short of men and money, and the Austrians took the initiative. On 23 June Laudon destroyed Fouqué’s Prussian corps at Landeshut in Silesia, and in July he took Glatz. Frederick besieged Dresden, and his guns burned much of the city, but he could not take it. He marched to Silesia, where Laudon, Daun and a Russian army were closing in. At dawn on 15 August near Liegnitz he caught Laudon’s corps on its own and beat it before the others could come up. The Austrians lost some 8,500 men, more than half of them captured, and the Russians drew back across the Oder.
+      - In October, while Frederick was still in Silesia, Russian and Austrian troops briefly occupied Berlin. He turned back to Saxony, and on 3 November attacked Daun’s army, dug in on the Süptitz heights outside Torgau. His columns went in piecemeal and were shot down, and by nightfall he thought the battle lost, until Hans Joachim von Zieten’s corps stormed the heights from the south. Daun, wounded, withdrew across the Elbe in the night. Torgau was one of the bloodiest battles of the war, with by some counts up to 16,000 Prussian and 15,000 Austrian casualties, and it left the Austrians little of Saxony beyond Dresden.
+    facts:
+      - [Battle of Landeshut, "23 June 1760, Austrian victory"]
+      - [Battle of Liegnitz, "15 August 1760, Prussian victory"]
+      - [Battle of Torgau, "3 November 1760, Prussian victory"]
+    markers:
+      - kind: battle
+        side: at
+        name: Battle of Landeshut
+        date: 23 June 1760
+        text: Today’s Kamienna Góra. Laudon’s much larger force stormed Fouqué’s entrenchments, and most of the Prussian corps was killed or captured.
+        lonlat: [16.03, 50.78]
+      - kind: taken
+        side: at
+        name: Glatz
+        date: 26 July 1760
+        text: Laudon took the fortress, today’s Kłodzko, which the Austrians held until the peace.
+        lonlat: [16.65, 50.44]
+      - kind: held
+        side: at
+        name: Dresden
+        date: July 1760
+        text: The Austrian garrison held out against Frederick’s siege. His bombardment destroyed much of the old town, including the Kreuzkirche.
+        lonlat: [13.74, 51.05]
+      - kind: battle
+        side: pr
+        name: Battle of Liegnitz
+        date: 15 August 1760
+        text: Fought north-east of today’s Legnica. Frederick’s victory stopped the Austrian and Russian armies from joining forces.
+        lonlat: [16.188, 51.225]
+      - kind: battle
+        side: pr
+        name: Battle of Torgau
+        date: 3 November 1760
+        text: A costly victory won only at dusk. Frederick was hit in the chest by a spent musket ball.
+        lonlat: [12.93, 51.575]
+    arrows:
+      - side: pr
+        label: Frederick, August
+        via: [[13.74, 51.05], [14.98, 51.15], [16.1, 51.2]]
+      - side: at
+        label: Laudon
+        via: [[16.05, 50.8], [16.15, 51.05], [16.2, 51.2]]
+      - side: pr
+        label: Frederick, October
+        via: [[16.16, 51.21], [14.7, 51.95], [13.3, 51.8], [12.97, 51.6]]
   - title: Berlin, Kolberg and the peace of 1762
     date: 1760–1762
     when: "1760-10"
@@ -216,3 +450,46 @@ steps:
         side: ru
         label: Held by Russia, 1758–1762
         atoms: [RU-KGD, LT-KL~memel, PL-WN!, PL-WN~pl1930]
+  - title: Exhaustion and the Peace of Hubertusburg
+    date: 1761 – February 1763
+    when: "1761-08"
+    borders: "1763-02-15"
+    countries: [de, pl, at]
+    body:
+      - Prussia could no longer win the war, only avoid losing it. In August 1761 Frederick dug his army in at Bunzelwitz in Silesia, and the far larger Austrian and Russian armies did not dare attack; but once he had moved away, Laudon stormed Schweidnitz on 1 October. Britain stopped its subsidies in 1762. Then Russia made peace. On 21 July Frederick drove the Austrians from the heights of Burkersdorf, while a Russian corps, ordered home after Peter III’s overthrow, stood by in his lines. He retook Schweidnitz in October, and on 29 October Prince Henry beat the Austrians and the Imperial army at Freiberg in Saxony.
+      - Britain and France agreed peace terms in November 1762, and Austria, on its own, could not hope to defeat Prussia. Envoys of Austria, Prussia and Saxony met at the Saxon hunting lodge of Hubertusburg, and on 15 February 1763, five days after the Treaty of Paris, they agreed to restore the borders of 1756. Prussia kept Silesia and Glatz and left Saxony, and Frederick promised his vote to Maria Theresa’s son Joseph at the next imperial election. The war had cost Prussia, by some estimates, a tenth of its people, and left Saxony ruined, but it made Prussia one of Europe’s great powers.
+    facts:
+      - [Battle of Freiberg, "29 October 1762, Prussian victory"]
+      - [Peace of Hubertusburg, 15 February 1763]
+      - [Result, "The borders of 1756; Silesia stays Prussian"]
+    markers:
+      - kind: held
+        side: pr
+        name: Bunzelwitz
+        date: August – September 1761
+        text: For three weeks Laudon’s Austrians and Alexander Buturlin’s Russians faced Frederick’s entrenched camp, today in Bolesławice, without attacking.
+        lonlat: [16.464, 50.893]
+        lp: t
+      - kind: siege
+        name: Schweidnitz
+        date: 1761–1762
+        text: Today’s Świdnica. Laudon took the fortress by storm on 1 October 1761, and Frederick won it back after a two-month siege on 9 October 1762.
+        lonlat: [16.483, 50.85]
+      - kind: battle
+        side: pr
+        name: Battle of Burkersdorf
+        date: 21 July 1762
+        text: Frederick’s troops stormed Daun’s positions on the hills south of Schweidnitz, near today’s Burkatów.
+        lonlat: [16.466, 50.793]
+        lp: b
+      - kind: battle
+        side: pr
+        name: Battle of Freiberg
+        date: 29 October 1762
+        text: Prince Henry’s victory, the last great battle of the war in Germany, secured most of Saxony for Prussia.
+        lonlat: [13.343, 50.912]
+      - kind: treaty
+        name: Peace of Hubertusburg
+        date: 15 February 1763
+        text: Austria, Prussia and Saxony made peace on the basis of the borders of 1756 at this hunting lodge near Wermsdorf.
+        lonlat: [12.94, 51.278]

@@ -1,0 +1,132 @@
+id: war-of-rudolf-and-ottokar
+name: War of Rudolf I and Ottokar II
+start: "1276"
+end: "1278-08-26"
+tier: B
+summary: The war in which Rudolf of Habsburg, elected king of the Romans in 1273, took Austria, Styria, Carinthia and Carniola from King Ottokar II of Bohemia. Ottokar submitted at Vienna in 1276, tried to win the lands back and was killed at the battle on the Marchfeld in 1278; the Habsburgs held Austria from then until 1918.
+countries: [at, cz, de, hu, si, sk, pl]
+sides:
+  - id: de
+    name: Rudolf I
+    polities: [hre]
+    ink: gold
+    moves: Moves by Rudolf and his German allies
+    success: Success for Rudolf
+  - id: hu
+    name: Hungary
+    polities: [hungary]
+    ink: olive
+    moves: Hungarian moves
+    success: Hungarian success
+  - id: cz
+    name: Ottokar II
+    polities: [bohemia]
+    ink: purple
+    moves: Bohemian moves
+    success: Bohemian success
+notes:
+  - Dates are Julian, as usual for the period. The war took place in the duchies of Austria, Styria and Carinthia and the March of Carniola, today divided between Austria and Slovenia; their medieval borders are shown only approximately.
+  - Rudolf was king of the Romans, the elected German king, but was never crowned emperor.
+sources:
+  - title: Battle on the Marchfeld (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_on_the_Marchfeld
+  - title: Ottokar II of Bohemia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ottokar_II_of_Bohemia
+  - title: Rudolf I of Germany (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rudolf_I_of_Germany
+steps:
+  - title: The ban and the surrender at Vienna
+    date: 1273–1276
+    when: "1276"
+    borders: "1276-11-21"
+    countries: [at, cz, de, si]
+    body:
+      - Ottokar II, king of Bohemia since 1253, had built up the largest realm in the Empire. He took Austria in 1251, Styria after beating the Hungarians in 1260, the Egerland in 1266, and Carinthia and Carniola in 1269. When the electors chose Count Rudolf of Habsburg as king of the Romans in 1273, Ottokar refused to recognise him. A diet at Nuremberg in 1274 ordered all imperial lands taken since 1250 to be given back; Ottokar ignored the summons to answer for his, was placed under the imperial ban, and in June 1276 Rudolf declared war.
+      - Rudolf won over Duke Henry XIII of Lower Bavaria, Ottokar’s ally, and marched down the Danube into Austria, where towns and nobles came over to him, while Count Meinhard II of Tyrol led a second army through Carinthia into Styria. In Bohemia the powerful Vítkovci clan rose against Ottokar. With Vienna under siege and his support crumbling, Ottokar gave in. On 21 November 1276 he renounced Austria, Styria, Carinthia, Carniola and the Egerland, and he received Bohemia and Moravia back from Rudolf as fiefs. His son Wenceslaus was betrothed to Rudolf’s daughter Judith.
+    facts:
+      - [Rudolf elected, "1 October 1273, at Frankfurt"]
+      - [War declared, June 1276]
+      - [Treaty of Vienna, 21 November 1276]
+    markers:
+      - kind: event
+        name: Diet of Nuremberg
+        date: November 1274
+        text: Rudolf’s first diet ruled that all crown lands seized since the death of Frederick II in 1250 must be returned, and summoned Ottokar to answer for his.
+        lonlat: [11.08, 49.45]
+      - kind: event
+        name: Rising of the Vítkovci
+        date: "1276"
+        text: Led by Záviš of Falkenstein, the great noble clan of southern Bohemia turned against Ottokar just as Rudolf invaded Austria.
+        lonlat: [14.32, 48.81]
+      - kind: taken
+        side: de
+        name: Styria and Carinthia
+        date: Autumn 1276
+        text: Meinhard of Tyrol, Rudolf’s ally, occupied Carinthia and moved into Styria, whose nobles had sworn to support Rudolf.
+        lonlat: [15.44, 47.07]
+      - kind: treaty
+        side: de
+        name: Vienna
+        date: 21 November 1276
+        text: In the camp before the besieged city, Ottokar gave up all his lands outside Bohemia and Moravia. Rudolf then entered Vienna.
+        lonlat: [16.37, 48.21]
+    arrows:
+      - side: de
+        label: Rudolf
+        via: [[12.1, 49.02], [13.46, 48.57], [15.0, 48.25], [16.3, 48.22]]
+      - side: de
+        label: Meinhard
+        via: [[11.4, 47.27], [13.4, 46.75], [14.3, 46.64], [15.4, 47.05]]
+    areas:
+      - style: lost
+        side: cz
+        label: Given up by Ottokar, 21 November 1276
+        atoms: [AT-3, AT-9, AT-4!, AT-6, AT-2]
+        polygons:
+          - [[13.72, 46.5], [14.4, 46.44], [14.8, 46.62], [15.45, 46.72], [16.05, 46.66], [16.3, 46.45], [15.75, 46.2], [15.65, 45.95], [15.35, 45.62], [14.85, 45.47], [14.3, 45.5], [14.0, 45.75], [13.95, 46.05], [13.7, 46.3]]
+          - [[12.1, 50.25], [12.55, 50.3], [12.65, 50.05], [12.45, 49.9], [12.1, 50.0]]
+  - title: The Marchfeld
+    date: 1277–1278
+    when: "1278"
+    borders: "1278-08-26"
+    countries: [at, cz, hu, sk, pl]
+    body:
+      - Ottokar soon quarrelled with Rudolf over how the treaty was carried out, and he found allies among the margraves of Brandenburg, the Polish and Silesian princes and, again, Henry XIII of Lower Bavaria. Rudolf won over the Viennese with new privileges and allied with the young King Ladislaus IV of Hungary. In the summer of 1278 Ottokar invaded Lower Austria and besieged Drosendorf and then Laa an der Thaya. Rudolf left Vienna and marched north-east into the Marchfeld, the plain along the river Morava, where Hungarian and Cuman horsemen joined him.
+      - On 26 August the two armies, both almost entirely mounted, met between Dürnkrut and Jedenspeigen. Cuman horse archers harried Ottokar’s left, and the Hungarians drove it from the field; in the centre Rudolf, aged 60, was unhorsed and nearly killed. Around midday a reserve of heavy cavalry under Ulrich von Kapellen, hidden until then, struck Ottokar’s flank, and his army broke. Ottokar was killed in the rout. Rudolf held Moravia for five years, and Margrave Otto of Brandenburg became regent of Bohemia for the six-year-old Wenceslaus II. In 1282 Rudolf gave Austria and Styria to his sons.
+    facts:
+      - [Battle on the Marchfeld, "26 August 1278, victory for Rudolf and Ladislaus IV"]
+      - [Ottokar II, Killed in the battle]
+      - [Austria and Styria, "granted to Rudolf’s sons Albert and Rudolf, 1282"]
+    markers:
+      - kind: siege
+        name: Drosendorf
+        date: Summer 1278
+        text: Ottokar’s invasion of Lower Austria began with the siege of this border town.
+        lonlat: [15.62, 48.87]
+      - kind: held
+        side: de
+        name: Laa an der Thaya
+        date: August 1278
+        text: The town held out. Ottokar gave up the siege when he learned that Rudolf had marched into the Marchfeld.
+        lonlat: [16.38, 48.72]
+      - kind: battle
+        side: de
+        name: Battle on the Marchfeld
+        date: 26 August 1278
+        text: Also called the battle of Dürnkrut and Jedenspeigen. A hidden reserve decided the day; such an ambush was thought dishonourable, and its commander apologised to his men in advance.
+        lonlat: [16.88, 48.48]
+      - kind: event
+        name: Vienna
+        date: August 1278
+        text: Rudolf had Ottokar’s body laid out in the Minorite church. It was taken to Prague only in 1297.
+        lonlat: [16.37, 48.21]
+    arrows:
+      - side: cz
+        label: Ottokar
+        via: [[16.61, 49.19], [16.39, 48.74], [16.7, 48.58], [16.86, 48.5]]
+      - side: de
+        label: Rudolf
+        via: [[16.37, 48.21], [16.62, 48.3], [16.84, 48.45]]
+      - side: hu
+        label: Ladislaus IV
+        via: [[17.11, 48.15], [16.97, 48.27], [16.89, 48.45]]

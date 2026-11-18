@@ -1,0 +1,396 @@
+id: war-of-the-austrian-succession
+name: War of the Austrian Succession
+start: "1740-12-16"
+end: "1748-10-18"
+tier: A
+summary: A European war over the inheritance of Maria Theresa, in which Prussia seized Silesia and France, Bavaria, Spain and Saxony tried to divide the Habsburg lands, while Britain, Hanover, the Dutch Republic and Sardinia supported Austria. It spread to Italy, the Low Countries, the seas and the colonies, and the Treaty of Aix-la-Chapelle in 1748 confirmed Maria Theresa’s inheritance but left Silesia to Prussia.
+countries: [de, at, cz, pl, sk, hu, fr, be, nl, gb, it, es]
+sides:
+  - id: pr
+    name: Prussia
+    polities: [prussia]
+    ink: slate
+    moves: Prussian moves
+    success: Prussian success
+  - id: at
+    name: Austria
+    polities: [habsburg, austrian-netherlands]
+    ink: purple
+    moves: Austrian moves
+    success: Austrian success
+  - id: fr
+    name: France, Bavaria and their allies
+    polities: [france, bavaria, palatinate]
+    ink: navy
+    moves: French and Bavarian moves
+    success: French and Bavarian success
+  - id: gb
+    name: Great Britain, Hanover and the Dutch Republic
+    polities: [united-kingdom, hanover, dutch-republic]
+    ink: red
+    moves: Pragmatic Army moves
+    success: British and allied success
+  - id: sx
+    name: Saxony
+    polities: [saxony]
+    ink: brown
+    moves: Saxon moves
+    success: Saxon success
+notes:
+  - Dates are New Style (Gregorian). Britain still used the Julian calendar, eleven days behind, so British sources of the time date Dettingen 16 June 1743.
+  - The First (1740–1742) and Second (1744–1745) Silesian Wars between Prussia and Austria were part of this war. Saxony fought against Austria in 1741–1742 and on its side in 1744–1745.
+  - Places in Silesia, Bohemia and Moravia are named in their German forms of the time; the markers give today’s names.
+  - The war in the Low Countries and Italy, at sea and overseas is only outlined here.
+sources:
+  - title: War of the Austrian Succession (Wikipedia)
+    url: https://en.wikipedia.org/wiki/War_of_the_Austrian_Succession
+  - title: First Silesian War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Silesian_War
+  - title: Second Silesian War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Silesian_War
+  - title: Battle of Mollwitz (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Mollwitz
+  - title: Charles VII, Holy Roman Emperor (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Charles_VII,_Holy_Roman_Emperor
+  - title: Battle of Chotusitz (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Chotusitz
+  - title: Treaty of Breslau (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Breslau
+  - title: Battle of Dettingen (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Dettingen
+  - title: Battle of Hohenfriedberg (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Hohenfriedberg
+  - title: Battle of Kesselsdorf (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kesselsdorf
+  - title: Treaty of Dresden (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Dresden
+  - title: Treaty of Aix-la-Chapelle (1748) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Aix-la-Chapelle_(1748)
+steps:
+  - title: Frederick seizes Silesia
+    date: December 1740 – May 1741
+    when: "1740-12-16"
+    borders: "1741-04-10"
+    countries: [pl, de, at]
+    body:
+      - When the Emperor Charles VI died on 20 October 1740, his 23-year-old daughter Maria Theresa inherited the Habsburg lands under the Pragmatic Sanction, a settlement that most of Europe had promised to respect. Frederick II, king of Prussia for only five months, saw his chance. Pressing old and doubtful Hohenzollern claims to Silesian duchies, he marched about 27,000 men into Silesia on 16 December without declaring war. The rich province was weakly garrisoned, and its capital, Breslau, let the Prussians in without a fight early in January 1741.
+      - Only the fortresses of Glogau, Brieg and Neisse held out, and Glogau was stormed on 9 March. Late that month an Austrian army under Wilhelm Reinhard von Neipperg crossed the mountains from Moravia and relieved Neisse. On 10 April the two armies met in the snow at Mollwitz, near Brieg. The Austrian cavalry routed the Prussian horse, and Frederick, urged by Field Marshal Kurt von Schwerin, rode from the field; but Schwerin’s infantry held and drove the Austrians off with its steady fire. Each side lost some 4,500 to 5,000 men, and the victory encouraged France, Bavaria and Saxony to join the attack on Austria.
+    facts:
+      - [Invasion of Silesia, 16 December 1740]
+      - [Battle of Mollwitz, "10 April 1741, Prussian victory"]
+      - [Frederick’s claims, "The duchies of Liegnitz, Brieg, Wohlau and Jägerndorf"]
+    markers:
+      - kind: taken
+        side: pr
+        name: Breslau
+        date: January 1741
+        text: The Silesian capital, today’s Wrocław, agreed to stay neutral and opened its gates to the Prussians.
+        lonlat: [17.03, 51.11]
+      - kind: siege
+        side: pr
+        name: Glogau
+        date: 9 March 1741
+        text: Prince Leopold of Anhalt-Dessau the younger took the fortress, today’s Głogów, in a night assault.
+        lonlat: [16.08, 51.66]
+      - kind: battle
+        side: pr
+        name: Battle of Mollwitz
+        date: 10 April 1741
+        text: Today’s Małujowice. Frederick’s first battle was won by his infantry after he had left the field.
+        lonlat: [17.41, 50.85]
+        lp: l
+      - kind: siege
+        side: pr
+        name: Brieg
+        date: April – May 1741
+        text: After Mollwitz the Prussians besieged the fortress, today’s Brzeg, which surrendered in early May.
+        lonlat: [17.48, 50.87]
+      - kind: held
+        side: at
+        name: Neisse
+        date: January – November 1741
+        text: The fortress, today’s Nysa, held out and was relieved by Neipperg on 5 April. Austria gave it up after a sham siege in the autumn, under a secret truce.
+        lonlat: [17.33, 50.47]
+    arrows:
+      - side: pr
+        label: Frederick II
+        via: [[15.1, 52.05], [16.08, 51.66], [17.0, 51.15], [17.35, 50.95]]
+      - side: at
+        label: Neipperg
+        via: [[17.5, 50.0], [17.33, 50.5], [17.4, 50.82]]
+    areas:
+      - style: occupied
+        side: pr
+        label: Held by Prussia, spring 1741 (approximate)
+        atoms: [PL-DS!, PL-LB!, PL-OP]
+  - title: Bavaria and France invade
+    date: July 1741 – February 1742
+    when: "1741-07"
+    borders: "1742-02-12"
+    countries: [de, at, cz, fr, sk, hu]
+    body:
+      - Charles Albert, Elector of Bavaria, who was married to a daughter of the Emperor Joseph I, claimed the Habsburg lands for himself, and France backed him in the hope of breaking Habsburg power for good. Bavarian troops seized Passau at the end of July 1741 and French armies began crossing the Rhine on 15 August. At Linz, taken in September, Charles Albert received homage as Archduke of Austria. Saxony joined the allies, and Spain attacked the Habsburg lands in Italy. On 11 September Maria Theresa appealed for help to the Hungarian Diet at Pressburg, and the nobles voted her troops.
+      - In October she bought a secret truce from Frederick at Klein-Schnellendorf by handing over Neisse, and the allies, instead of marching on Vienna, turned north into Bohemia. In late November French, Bavarian and Saxon troops stormed Prague, and on 19 December Charles Albert received homage there as King of Bohemia. On 24 January 1742 the electors chose him as emperor, the first from outside the House of Habsburg in three centuries, and he was crowned at Frankfurt as Charles VII on 12 February. By then an Austrian army under Count Khevenhüller had retaken Linz and overrun Bavaria, and on 13 February it entered Munich.
+    facts:
+      - [Klein-Schnellendorf truce, 9 October 1741]
+      - [Prague stormed, 26 November 1741]
+      - [Charles VII, "Elected emperor 24 January 1742, crowned 12 February"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Passau
+        date: July 1741
+        text: Bavarian troops seized the prince-bishop’s city on the Danube, the gateway to Upper Austria.
+        lonlat: [13.465, 48.574]
+        lp: l
+      - kind: taken
+        side: fr
+        name: Linz
+        date: 14 September 1741
+        text: The French and Bavarians took the capital of Upper Austria, whose estates paid homage to Charles Albert. Khevenhüller won it back in January 1742.
+        lonlat: [14.29, 48.31]
+      - kind: event
+        side: at
+        name: Diet at Pressburg
+        date: 11 September 1741
+        text: Maria Theresa, as Queen of Hungary, asked the Hungarian nobles for help in today’s Bratislava. They voted troops, and Hungarian hussars and border regiments were soon fighting for her.
+        lonlat: [17.11, 48.144]
+      - kind: treaty
+        name: Klein-Schnellendorf
+        date: 9 October 1741
+        text: Frederick secretly agreed to stop fighting in return for Neisse, which the Austrians surrendered after a sham siege. He broke the truce in December.
+        lonlat: [17.6, 50.667]
+      - kind: taken
+        side: fr
+        name: Prague
+        date: 26 November 1741
+        text: In a night assault, with Maurice de Saxe leading the way over the walls, French, Bavarian and Saxon troops took the city with little bloodshed.
+        lonlat: [14.42, 50.09]
+      - kind: event
+        side: fr
+        name: Charles VII crowned
+        date: 12 February 1742
+        text: Elected on 24 January, Charles Albert was crowned emperor in Frankfurt. He spent much of his short reign in exile there.
+        lonlat: [8.68, 50.11]
+      - kind: taken
+        side: at
+        name: Munich
+        date: 13 February 1742
+        text: Austrian troops occupied the Bavarian capital the day after its elector was crowned emperor.
+        lonlat: [11.575, 48.138]
+    arrows:
+      - side: fr
+        label: Franco-Bavarian army
+        via: [[13.46, 48.57], [14.29, 48.31], [15.4, 48.65], [14.5, 50.0]]
+      - side: sx
+        label: Saxons
+        via: [[13.74, 51.05], [14.13, 50.5], [14.42, 50.13]]
+      - side: at
+        label: Khevenhüller
+        via: [[16.37, 48.21], [14.3, 48.28], [13.0, 48.3], [11.62, 48.15]]
+    areas:
+      - style: occupied
+        side: fr
+        label: Held by the French, Bavarians and Saxons, early 1742 (approximate)
+        atoms: [CZ-PR, CZ-ST, CZ-PL, CZ-US, CZ-KA]
+      - style: occupied
+        side: at
+        label: Occupied by Austria, from February 1742
+        atoms: [DE-BY~bav!]
+  - title: Chotusitz and the Peace of Breslau
+    date: 1742 – January 1743
+    when: "1742-02"
+    borders: "1742-06-11"
+    countries: [cz, pl, de, at, fr]
+    body:
+      - Frederick repudiated the truce at the end of 1741, accusing Austria of letting it become known, and his troops took Olmütz in Moravia. In February 1742 he led Prussians, Saxons and French through Moravia towards Vienna, but the advance stalled before Brünn for lack of supplies, and in April he fell back into Bohemia. Prince Charles of Lorraine, Maria Theresa’s brother-in-law, followed with about 30,000 men and attacked him at Chotusitz, near Čáslav, on 17 May. The Austrians broke into the Prussian lines and set the village on fire, but were driven off. Each side lost some 5,000 to 7,000 men.
+      - Maria Theresa now needed peace with Prussia to deal with France and Bavaria. By the preliminary Peace of Breslau on 11 June, confirmed in Berlin on 28 July, she gave up most of Silesia and the county of Glatz, keeping only Teschen and parts of Troppau, Jägerndorf and Neisse. Saxony made peace too, and the French in Prague were left besieged. On 16 December Marshal Belle-Isle broke out with 14,000 men and marched them through the snow to Eger in ten days, losing many to cold and sickness. The 6,000 left behind under François de Chevert, mostly sick or wounded, then marched out with the honours of war.
+    facts:
+      - [Battle of Chotusitz, "17 May 1742, Prussian victory"]
+      - [Peace of Breslau, "11 June 1742, confirmed in Berlin on 28 July"]
+      - [Austria keeps, "Teschen and parts of Troppau, Jägerndorf and Neisse"]
+    markers:
+      - kind: taken
+        side: pr
+        name: Olmütz
+        date: 27 December 1741
+        text: Schwerin’s Prussians occupied the Moravian capital, today’s Olomouc, after the truce broke down.
+        lonlat: [17.251, 49.594]
+      - kind: battle
+        side: pr
+        name: Battle of Chotusitz
+        date: 17 May 1742
+        text: Today’s Chotusice. A hard-fought Prussian victory that persuaded Maria Theresa to make peace with Frederick.
+        lonlat: [15.394, 49.949]
+      - kind: treaty
+        side: pr
+        name: Peace of Breslau
+        date: 11 June 1742
+        text: Austria gave up most of Silesia and the county of Glatz, and Prussia left the war. The terms were confirmed in Berlin on 28 July.
+        lonlat: [17.03, 51.11]
+      - kind: siege
+        side: at
+        name: Prague
+        date: June 1742 – January 1743
+        text: The Austrians besieged the French in Prague, and a French relief army from Westphalia was halted on the Bohemian border. Belle-Isle broke out on 16 December.
+        lonlat: [14.42, 50.09]
+      - kind: event
+        side: fr
+        name: Eger
+        date: 26 December 1742
+        text: Belle-Isle’s column reached the French-held fortress, today’s Cheb, after a ten-day winter march.
+        lonlat: [12.371, 50.079]
+    arrows:
+      - side: pr
+        label: Frederick, February 1742
+        via: [[17.25, 49.59], [16.6, 49.2], [16.05, 48.86]]
+      - side: at
+        label: Charles of Lorraine
+        via: [[16.6, 49.3], [15.9, 49.6], [15.45, 49.92]]
+      - side: fr
+        label: Belle-Isle
+        via: [[14.42, 50.09], [13.8, 50.2], [13.1, 50.15], [12.42, 50.08]]
+    areas:
+      - style: gained
+        label: Ceded to Prussia, 1742
+        atoms: [PL-DS!, PL-LB!, PL-OP, PL-SL!, PL-SL~de1930]
+  - title: Dettingen and the fall of Bavaria
+    date: 1743
+    when: "1743-05-09"
+    borders: "1743-06-27"
+    countries: [de, at, fr, gb]
+    body:
+      - In 1743 the war turned against Charles VII. Prince Charles of Lorraine invaded Bavaria again, beat the Bavarians at Simbach on the Inn on 9 May, and drove them and their French allies out of the country. The emperor fled to Frankfurt, and on 27 June his generals agreed at Niederschönenfeld to keep the Bavarian army neutral while Austria governed Bavaria. Charles VII was left an emperor without lands, dependent on French subsidies.
+      - Britain, which was paying subsidies to Austria, sent an army to Germany. The Pragmatic Army of British, Hanoverian and Austrian troops, led by King George II, marched up the Main and was nearly trapped by a larger French army under Marshal Noailles. On 27 June at Dettingen a French force under the Duke of Gramont left its strong position to attack and was driven back across the river. It was the last battle in which a British monarch led his troops in person. In September Britain, Austria and Sardinia allied at Worms, and in the spring of 1744 France declared war on Britain and Austria.
+    facts:
+      - [Battle of Simbach, "9 May 1743, Austrian victory"]
+      - [Battle of Dettingen, "27 June 1743, Pragmatic Army victory"]
+      - [Treaty of Worms, "13 September 1743, Britain, Austria and Sardinia"]
+    markers:
+      - kind: battle
+        side: at
+        name: Battle of Simbach
+        date: 9 May 1743
+        text: Prince Charles of Lorraine’s Austrians routed a Bavarian corps, which lost some 4,000 men killed or captured. The town was almost entirely destroyed.
+        lonlat: [13.02, 48.27]
+      - kind: battle
+        side: gb
+        name: Battle of Dettingen
+        date: 27 June 1743
+        text: George II’s army beat the French on the Main between Aschaffenburg and Hanau. Handel wrote his Dettingen Te Deum to celebrate it.
+        lonlat: [9.036, 50.041]
+    arrows:
+      - side: at
+        label: Charles of Lorraine
+        via: [[13.6, 48.3], [13.02, 48.27], [12.1, 48.3], [11.62, 48.15]]
+      - side: gb
+        label: George II
+        via: [[8.55, 50.1], [8.95, 49.98], [9.14, 49.97]]
+    areas:
+      - style: occupied
+        side: at
+        label: Occupied by Austria, 1743–1744
+        atoms: [DE-BY~bav, DE-BY~oger~bav]
+  - title: The Second Silesian War
+    date: August 1744 – December 1745
+    when: "1744-08-15"
+    borders: "1745-12-25"
+    countries: [cz, pl, de, at]
+    body:
+      - Austria’s successes alarmed Frederick, who feared that it would take back Silesia once it had beaten Bavaria and France. In August 1744 he invaded Bohemia with some 70,000 men and took Prague on 16 September, while the main Austrian army was across the Rhine in Alsace. It hurried back, and Field Marshal Otto Ferdinand von Traun, refusing battle, cut the Prussian supply lines until Frederick retreated to Silesia, losing thousands of men to hunger and desertion. Charles VII died on 20 January 1745, and in April his son made peace at Füssen, giving up his father’s claims in return for Bavaria.
+      - At the end of May an Austrian and Saxon army under Prince Charles crossed the mountains into Silesia. At dawn on 4 June Frederick attacked it at Hohenfriedberg; the Bayreuth Dragoons broke the Austrian infantry, and the allies lost more than 10,000 men. He won again at Soor in Bohemia at the end of September, soon after Maria Theresa’s husband was elected emperor as Francis I. When they planned a winter march on Berlin, the old Prince Leopold of Anhalt-Dessau beat the Saxons at Kesselsdorf on 15 December, and Dresden fell. By the Peace of Dresden on 25 December Austria again gave up Silesia, and Prussia recognised Francis I.
+    facts:
+      - [Battle of Hohenfriedberg, "4 June 1745, Prussian victory"]
+      - [Battle of Kesselsdorf, "15 December 1745, Prussian victory"]
+      - [Peace of Dresden, 25 December 1745]
+    markers:
+      - kind: taken
+        side: pr
+        name: Prague
+        date: 16 September 1744
+        text: The city surrendered after a week of bombardment, but the Prussians had to give it up in November.
+        lonlat: [14.42, 50.09]
+      - kind: treaty
+        side: at
+        name: Peace of Füssen
+        date: 22 April 1745
+        text: Maximilian III Joseph of Bavaria renounced his father’s claims and promised his vote to Maria Theresa’s husband, and Austria gave Bavaria back.
+        lonlat: [10.7, 47.567]
+      - kind: battle
+        side: pr
+        name: Battle of Hohenfriedberg
+        date: 4 June 1745
+        text: Fought near Striegau, today’s Strzegom. One of Frederick’s most complete victories.
+        lonlat: [16.33, 50.95]
+      - kind: battle
+        side: pr
+        name: Battle of Kesselsdorf
+        date: 15 December 1745
+        text: The Prussians stormed the Saxon position west of Dresden, opening the way to the capital.
+        lonlat: [13.6, 51.033]
+        lp: l
+      - kind: treaty
+        side: pr
+        name: Peace of Dresden
+        date: 25 December 1745
+        text: Austria and Saxony made peace with Prussia, which kept Silesia and Glatz and recognised Francis I as emperor.
+        lonlat: [13.74, 51.05]
+    arrows:
+      - side: pr
+        label: Frederick, 1744
+        via: [[13.74, 51.05], [14.13, 50.55], [14.42, 50.13]]
+      - side: at
+        label: Charles of Lorraine, 1745
+        via: [[15.95, 50.55], [16.08, 50.8], [16.3, 50.93]]
+      - side: pr
+        label: Leopold of Anhalt-Dessau
+        via: [[12.37, 51.34], [13.2, 51.17], [13.57, 51.04]]
+  - title: The Peace of Aachen
+    date: 1745–1748
+    when: "1745-05-11"
+    borders: "1748-10-18"
+    countries: [be, nl, fr, de, at, gb, it, es]
+    body:
+      - Away from Silesia the war was fought above all in the Low Countries and Italy, and there it went on after Prussia made peace. In Flanders the French under Marshal Maurice de Saxe beat the allied armies at Fontenoy in May 1745, Rocoux in 1746 and Lauffeld in 1747, and conquered the Austrian Netherlands. In Italy Austrian and Sardinian troops fought the Spanish and French. Britain and France also fought at sea, in North America and in India. In 1748, as the French besieged Maastricht, a Russian corps paid for by Britain and the Dutch was marching west across Germany.
+      - A peace congress opened at Aachen (Aix-la-Chapelle) in April 1748, and the treaty was signed on 18 October. It confirmed Maria Theresa’s inheritance and her husband’s title as emperor, and guaranteed Silesia to Prussia. France gave back the Austrian Netherlands, and Britain and France returned each other’s colonial conquests. The Spanish Infante Philip received Parma, Piacenza and Guastalla, and Sardinia gained land in Lombardy. Silesia was the only great change north of the Alps, and Maria Theresa never accepted its loss; within a few years she had reformed her army and found new allies to win it back.
+    facts:
+      - [Treaty of Aix-la-Chapelle, 18 October 1748]
+      - [Prussia, "Silesia guaranteed"]
+      - ["Parma, Piacenza and Guastalla", To the Spanish Infante Philip]
+    markers:
+      - kind: battle
+        side: fr
+        name: Battle of Fontenoy
+        date: 11 May 1745
+        text: Maurice de Saxe beat a British, Hanoverian, Dutch and Austrian army under the Duke of Cumberland, opening the way into Flanders.
+        lonlat: [3.48, 50.566]
+      - kind: battle
+        side: fr
+        name: Battle of Rocoux
+        date: 11 October 1746
+        text: A French victory outside Liège. By then France held almost all of the Austrian Netherlands.
+        lonlat: [5.55, 50.68]
+        lp: b
+      - kind: battle
+        side: fr
+        name: Battle of Lauffeld
+        date: 2 July 1747
+        text: Saxe beat Cumberland’s allied army west of Maastricht, though it escaped across the Meuse.
+        lonlat: [5.58, 50.83]
+        lp: l
+      - kind: siege
+        side: fr
+        name: Maastricht
+        date: April – May 1748
+        text: Saxe’s last siege of the war. The Dutch fortress was handed over in May, after the preliminary peace had been agreed.
+        lonlat: [5.69, 50.85]
+      - kind: treaty
+        name: Treaty of Aix-la-Chapelle
+        date: 18 October 1748
+        text: The peace confirmed Maria Theresa’s inheritance and restored almost all conquests except Silesia.
+        lonlat: [6.084, 50.776]
+    areas:
+      - style: occupied
+        side: fr
+        label: Occupied by France by 1748 (approximate)
+        atoms: [BE-VWV, BE-VOV, BE-VAN, BE-VBR, BE-BRU, BE-WBR, BE-WHT, BE-WNA]

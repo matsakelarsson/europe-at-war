@@ -1,0 +1,176 @@
+id: schmalkaldic-war
+name: Schmalkaldic War
+start: "1546-07"
+end: "1547-05"
+tier: B
+summary: A war in which the Emperor Charles V, allied with the Lutheran Duke Maurice of Saxony, defeated the Schmalkaldic League of Protestant princes and cities. After the Elector John Frederick of Saxony was captured at Mühlberg in April 1547, the Saxon electorate passed from his Ernestine line of the House of Wettin to Maurice’s Albertine line.
+countries: [de, at, cz, es, it]
+sides:
+  - id: league
+    name: Schmalkaldic League
+    polities: [thuringia, hesse, wurttemberg]
+    ink: orange
+    moves: Moves of the League
+    success: Success for the League
+  - id: emp
+    name: Charles V and Maurice of Saxony
+    polities: [hre, habsburg, saxony, spain]
+    ink: purple
+    moves: Imperial and allied moves
+    success: Imperial and allied success
+notes:
+  - The League’s leaders were John Frederick, Elector of Saxony, of the Ernestine branch of the Wettins, which ruled Wittenberg and most of Thuringia, and Landgrave Philip of Hesse. Maurice, of the Albertine branch, ruled the duchy of Saxony around Dresden, Meissen and Leipzig.
+  - Pope Paul III sent troops and money for the campaign of 1546 but withdrew his troops early in 1547.
+sources:
+  - title: Schmalkaldic War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Schmalkaldic_War
+  - title: Schmalkaldic League (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Schmalkaldic_League
+  - title: Siege of Ingolstadt (1546) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Ingolstadt_(1546)
+  - title: Battle of Mühlberg (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_M%C3%BChlberg
+  - title: Capitulation of Wittenberg (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Capitulation_of_Wittenberg
+  - title: Battle of Drakenburg (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Drakenburg
+  - title: Augsburg Interim (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Augsburg_Interim
+steps:
+  - title: The Danube campaign
+    date: July – December 1546
+    when: "1546-07"
+    borders: "1546-11"
+    countries: [de, at, es, it]
+    body:
+      - The Schmalkaldic League, the alliance of Lutheran princes and cities formed in 1531 under Elector John Frederick of Saxony and Landgrave Philip of Hesse, had grown strong while Charles V was busy with France and the Ottomans. Once he had made peace with France at Crépy in 1544, Charles prepared to break it, with papal money and troops and a secret pact with the Lutheran Duke Maurice of Saxony, who was promised his cousin John Frederick’s electoral title. In July 1546 League troops seized Füssen and the passes towards Tyrol, and on 20 July Charles outlawed John Frederick and Philip.
+      - The League’s army, at first larger than the Emperor’s, was led by a divided council and missed its chance. At the end of August it bombarded Charles’s entrenched camp at Ingolstadt but did not storm it, and papal and Netherlands troops then joined him. Through the autumn the armies manoeuvred along the Danube without a battle. In late October Maurice and King Ferdinand invaded Electoral Saxony, John Frederick hurried home, and the League’s southern army broke up. That winter Ulm, Augsburg, Württemberg and the Elector Palatine submitted to Charles one by one and paid heavy fines.
+    facts:
+      - [Imperial ban, "20 July 1546, on John Frederick and Philip of Hesse"]
+      - [Emperor’s army, "About 52,000 Germans, Italians, Spaniards and Netherlanders"]
+      - [League’s army, "About 50,000 in 1546"]
+    markers:
+      - kind: event
+        side: league
+        name: Schmalkalden
+        date: "1531"
+        text: The Thuringian town, then shared by Hesse and the counts of Henneberg, where the Protestant princes and cities founded their defensive league in February 1531.
+        lonlat: [10.446, 50.721]
+      - kind: taken
+        side: league
+        name: Füssen
+        date: July 1546
+        text: Troops of the Protestant imperial cities under Sebastian Schertlin opened the war by seizing the bishop of Augsburg’s town and the Ehrenberg pass beyond it, to bar the way from Italy. The League’s princes would not let them push on into Tyrol.
+        lonlat: [10.702, 47.571]
+      - kind: event
+        side: emp
+        name: Regensburg
+        date: 20 July 1546
+        text: Charles, who had gathered his first troops here during the imperial diet, put the League’s leaders under the imperial ban.
+        lonlat: [12.102, 49.013]
+      - kind: held
+        side: emp
+        name: Ingolstadt
+        date: Late August – September 1546
+        text: The League’s guns pounded the Emperor’s fortified camp outside the Bavarian fortress for days, but its leaders could not agree to attack, and Charles held on until reinforcements arrived.
+        lonlat: [11.426, 48.766]
+        lp: l
+      - kind: taken
+        side: emp
+        name: Ulm
+        date: December 1546
+        text: The leading Protestant city of Swabia made its submission and paid a large fine, followed by Augsburg in January 1547.
+        lonlat: [9.992, 48.398]
+        lp: l
+    arrows:
+      - side: league
+        label: Schertlin
+        via: [[10.9, 48.37], [10.85, 47.95], [10.72, 47.6]]
+      - side: emp
+        label: Papal army
+        via: [[11.4, 47.3], [12.1, 47.86], [12.15, 48.5]]
+      - side: emp
+        label: Charles V
+        via: [[12.1, 48.98], [12.15, 48.56], [11.8, 48.7], [11.47, 48.75]]
+      - side: emp
+        label: Buren
+        via: [[8.7, 50.1], [10.0, 49.6], [11.1, 48.95], [11.4, 48.79]]
+      - side: emp
+        label: Maurice
+        via: [[13.74, 51.05], [12.92, 50.83], [12.45, 50.75]]
+    areas:
+      - style: outline
+        side: league
+        label: Lands of John Frederick and Philip of Hesse (approximate)
+        atoms: [DE-TH!, DE-ST~sax, DE-BB~sax, DE-HE~hk, DE-HE!]
+  - title: Mühlberg and the Saxon electorate
+    date: January – June 1547
+    when: "1547-04-24"
+    borders: "1547-05-19"
+    countries: [de, cz, es]
+    body:
+      - John Frederick won back his lands over the winter and overran most of Maurice’s duchy, though Leipzig held out, and on 2 March he captured Margrave Albert Alcibiades of Brandenburg-Kulmbach, fighting for the Emperor, at Rochlitz. In April Charles marched north from Eger in Bohemia with the Duke of Alba’s Spanish veterans, joined by Ferdinand and Maurice. On 24 April, at Mühlberg on the Elbe, his cavalry crossed by a ford while Spanish soldiers swam out to seize boats. The Elector’s retreating army was overtaken and routed on the Lochau heath, and John Frederick, wounded in the face, was taken prisoner.
+      - Sentenced to death by a court martial, John Frederick signed the Capitulation of Wittenberg on 19 May. He gave up the electoral title and the lands around Wittenberg to Maurice, keeping only Thuringian territories for his sons, and stayed a prisoner until 1552. Philip of Hesse gave himself up at Halle in June and was imprisoned too. The League was finished, though Bremen and Magdeburg held out and a League army beat imperial troops at Drakenburg on the Weser. At the diet of Augsburg in 1548 Charles imposed the Augsburg Interim, a stopgap religious settlement that pleased neither side.
+    facts:
+      - [Battle of Mühlberg, "24 April 1547, imperial victory"]
+      - [Capitulation of Wittenberg, "19 May 1547"]
+      - [New elector, "Maurice of Saxony, proclaimed 4 June 1547"]
+    markers:
+      - kind: held
+        side: emp
+        name: Leipzig
+        date: January 1547
+        text: Maurice’s main city withstood a siege by John Frederick’s army.
+        lonlat: [12.373, 51.34]
+        lp: l
+      - kind: battle
+        side: league
+        name: Rochlitz
+        date: 2 March 1547
+        text: John Frederick surprised and captured the Margrave Albert Alcibiades, who had come to help Maurice.
+        lonlat: [12.804, 51.046]
+      - kind: event
+        side: emp
+        name: Eger
+        date: April 1547
+        text: Charles joined his brother Ferdinand here, on the border of Bohemia, before marching into Saxony. The town is today’s Cheb in the Czech Republic.
+        lonlat: [12.374, 50.08]
+      - kind: battle
+        side: emp
+        name: Battle of Mühlberg
+        date: 24 April 1547
+        text: Alba’s cavalry and Hungarian hussars caught the Saxon army on the march and destroyed it. Titian later painted Charles as the victor of Mühlberg in armour on horseback.
+        lonlat: [13.217, 51.433]
+      - kind: treaty
+        side: emp
+        name: Capitulation of Wittenberg
+        date: 19 May 1547
+        text: To save his life John Frederick gave up the electorate and the lands around Wittenberg, and his family moved its seat to Weimar.
+        lonlat: [12.648, 51.867]
+      - kind: event
+        side: emp
+        name: Halle
+        date: June 1547
+        text: Philip of Hesse came to submit to the Emperor here and was arrested, which outraged Maurice and Joachim II of Brandenburg, who had guaranteed his freedom.
+        lonlat: [11.97, 51.483]
+        lp: l
+      - kind: battle
+        side: league
+        name: Drakenburg
+        date: 23 May 1547
+        text: A Protestant army beat Duke Eric II of Brunswick-Calenberg, fresh from a failed siege of Bremen, and imperial troops left northern Germany.
+        lonlat: [9.213, 52.677]
+    arrows:
+      - side: emp
+        label: Charles V
+        via: [[12.37, 50.1], [12.2, 50.5], [12.6, 50.95], [13.15, 51.38]]
+      - side: league
+        label: John Frederick
+        via: [[13.47, 51.16], [13.32, 51.3], [13.22, 51.42]]
+      - side: emp
+        via: [[13.2, 51.47], [12.9, 51.72], [12.68, 51.85]]
+    areas:
+      - style: gained
+        side: emp
+        label: Electoral district of Wittenberg, to Maurice in 1547 (approximate)
+        atoms: [DE-ST~sax, DE-BB~sax]

@@ -1,0 +1,347 @@
+id: franco-prussian-war
+name: Franco-Prussian War
+start: "1870-07-19"
+end: "1871-05-10"
+tier: A
+summary: A war between France and the German states led by Prussia, which destroyed the armies of the Second Empire at Sedan and Metz, besieged Paris and defeated the new French republic’s armies in the provinces. The southern German states joined Prussia in a German Empire proclaimed at Versailles in January 1871, and by the Treaty of Frankfurt France ceded Alsace and part of Lorraine and paid an indemnity of five billion francs.
+countries: [fr, de, ch]
+sides:
+  - id: de
+    name: Prussia and the German states
+    polities: [prussia, germany, saxony, bavaria, wurttemberg, baden, hesse, mecklenburg, oldenburg, brunswick, anhalt]
+    ink: slate
+    moves: German moves
+    success: German success
+  - id: fr
+    name: France
+    polities: [france]
+    ink: blue
+    moves: French moves
+    success: French success
+notes:
+  - In France it is usually called the War of 1870 (la guerre de 1870), and in Germany the German–French War (Deutsch-Französischer Krieg). On the German side fought the North German Confederation, led by Prussia, with Bavaria, Württemberg, Baden and Hesse-Darmstadt as allies; together they formed the German Empire from 1 January 1871.
+  - Numbers of soldiers, prisoners and dead are estimates, and the sources differ, especially for the French side.
+sources:
+  - title: Franco-Prussian War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Franco-Prussian_War
+  - title: Franco-German War (Britannica)
+    url: https://www.britannica.com/event/Franco-German-War
+  - title: Ems Dispatch (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ems_Dispatch
+  - title: Battle of Wörth (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_W%C3%B6rth
+  - title: Battle of Gravelotte (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Gravelotte
+  - title: Siege of Metz (1870) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Metz_(1870)
+  - title: Battle of Sedan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sedan
+  - title: Siege of Paris (1870–1871) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Paris_(1870%E2%80%931871)
+  - title: Proclamation of the German Empire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Proclamation_of_the_German_Empire
+  - title: Treaty of Frankfurt (1871) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Frankfurt_(1871)
+  - title: Paris Commune (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Paris_Commune
+steps:
+  - title: The Ems dispatch and the frontier battles
+    date: July – 6 August 1870
+    when: "1870-07-13"
+    borders: "1870-08-06"
+    countries: [fr, de]
+    body:
+      - In July 1870 the Spanish throne was offered to Prince Leopold of Hohenzollern-Sigmaringen, a relative of the King of Prussia. France protested and the candidacy was withdrawn, but the French ambassador, Vincent Benedetti, then asked King William at the spa of Ems for a promise that it would never be renewed. William politely refused. Bismarck shortened the king’s telegraphed report of the meeting, the Ems dispatch, so that it read as a snub, and published it on 13 July. Outraged opinion in Paris pushed Napoleon III’s government into declaring war on 19 July, and the south German states joined Prussia under their alliances of 1866.
+      - The German armies mobilised faster and in greater numbers, carried to the frontier by rail and directed again by Moltke. On 4 August the Third Army under Crown Prince Frederick William surprised a French division at Wissembourg, and on 6 August it crushed Marshal Patrice de MacMahon’s corps at Frœschwiller and Wörth, while further west Prussian troops stormed the heights of Spicheren near Saarbrücken. MacMahon fell back across the Vosges towards Châlons. The French had the better rifle, the Chassepot, but the Germans’ steel Krupp breech-loading guns outclassed the French artillery.
+    facts:
+      - [Ems dispatch published, "13 July 1870"]
+      - [France declares war, "19 July 1870"]
+      - [Wörth and Spicheren, "6 August 1870, German victories"]
+    markers:
+      - kind: event
+        name: Ems
+        date: 13 July 1870
+        text: King William met the French ambassador on the spa promenade; Bismarck’s edited account of the meeting became the Ems dispatch.
+        lonlat: [7.711, 50.338]
+      - kind: battle
+        side: de
+        name: Wissembourg
+        date: 4 August 1870
+        text: The Third Army overwhelmed General Abel Douay’s division, and Douay was killed.
+        lonlat: [7.95, 49.04]
+      - kind: battle
+        side: de
+        name: Battle of Spicheren
+        date: 6 August 1870
+        text: Prussian troops of the First and Second Armies stormed the heights south of Saarbrücken, and General Charles Frossard’s corps withdrew.
+        lonlat: [6.971, 49.207]
+      - kind: battle
+        side: de
+        name: Battle of Wörth
+        date: 6 August 1870
+        text: Fighting around Frœschwiller cost each side about 10,000 killed and wounded, and MacMahon also lost some 9,000 men as prisoners.
+        lonlat: [7.723, 48.944]
+        lp: b
+    arrows:
+      - side: de
+        label: Third Army
+        via: [[8.12, 49.2], [7.97, 49.06], [7.78, 48.96]]
+      - side: de
+        label: Second Army
+        via: [[7.9, 49.6], [7.4, 49.35], [7.0, 49.23]]
+      - side: de
+        label: First Army
+        via: [[6.65, 49.75], [6.8, 49.42], [6.95, 49.23]]
+      - side: fr
+        label: MacMahon
+        via: [[7.68, 48.92], [7.3, 48.75], [6.4, 48.68], [5.2, 48.85], [4.4, 48.95]]
+  - title: Mars-la-Tour, Gravelotte and Metz
+    date: 14 August – 27 October 1870
+    when: "1870-08-14"
+    borders: "1870-10-27"
+    countries: [fr]
+    body:
+      - Marshal François Achille Bazaine, now in command of the main French army, the Army of the Rhine, began to withdraw from Metz towards Verdun, and the Germans caught up with him. On 16 August at Mars-la-Tour the Prussian III Corps under Constantin von Alvensleben blocked the road west in a day of costly fighting that included Bredow’s cavalry charge, the “death ride”. On 18 August, at Gravelotte and St Privat, in the largest battle of the war, the Germans attacked well-entrenched French positions and lost about 20,000 men against some 12,000 French. Bazaine then withdrew into the fortress of Metz instead of breaking out.
+      - Prince Frederick Charles’s army besieged Metz, and attempts to break out at Noisseville on 31 August and at Bellevue on 7 October failed. Further south, Strasbourg was bombarded from late August, which killed many civilians and burned the city’s library with its medieval manuscripts, and it surrendered on 28 September. In Metz the food ran out in October, and on 27 October Bazaine surrendered the fortress and his whole army, more than 140,000 men, the largest surrender of the war. In 1873 a French court martial sentenced him to death for it, a sentence commuted to imprisonment.
+    facts:
+      - [Battle of Mars-la-Tour, "16 August 1870"]
+      - [Battle of Gravelotte–St Privat, "18 August 1870, German victory"]
+      - [Metz surrenders, "27 October 1870"]
+    markers:
+      - kind: battle
+        side: de
+        name: Battle of Mars-la-Tour
+        date: 16 August 1870
+        text: Outnumbered German corps held the road to Verdun all day, cutting off Bazaine’s retreat to the west.
+        lonlat: [5.873, 49.103]
+        lp: l
+      - kind: battle
+        side: de
+        name: Gravelotte–St Privat
+        date: 18 August 1870
+        text: The Prussian Guards lost heavily attacking St Privat, but its fall in the evening turned the French right flank.
+        lonlat: [6.025, 49.165]
+        lp: t
+      - kind: siege
+        side: de
+        name: Metz
+        date: 19 August – 27 October 1870
+        text: Starved into surrender after ten weeks, with the whole Army of the Rhine inside.
+        lonlat: [6.178, 49.12]
+      - kind: siege
+        side: de
+        name: Strasbourg
+        date: 15 August – 28 September 1870
+        text: Besieged by a Baden and Prussian corps under General August von Werder and heavily bombarded before the garrison surrendered.
+        lonlat: [7.751, 48.585]
+    arrows:
+      - side: fr
+        label: Bazaine
+        via: [[6.17, 49.12], [6.03, 49.11], [5.93, 49.1]]
+      - side: de
+        label: Alvensleben
+        via: [[6.06, 48.9], [5.95, 49.0], [5.89, 49.09]]
+      - side: de
+        via: [[5.87, 49.12], [5.92, 49.2], [6.02, 49.2]]
+      - side: de
+        label: Werder
+        via: [[8.05, 48.8], [7.88, 48.66], [7.78, 48.6]]
+  - title: Sedan and the fall of the empire
+    date: 23 August – 4 September 1870
+    when: "1870-08-23"
+    borders: "1870-09-04"
+    countries: [fr]
+    body:
+      - At Châlons MacMahon gathered a new army of about 120,000 men, and Napoleon III joined it. Under pressure from Paris it set off on 23 August on a wide northern sweep to relieve Bazaine in Metz. Moltke turned the Third Army and a new Army of the Meuse north to meet it. The Germans surprised a French corps at Beaumont on 30 August and drove the army into a loop of the Meuse around the small fortress of Sedan, near the Belgian border. On 1 September they closed the ring. Their guns on the heights shelled the trapped army, and French cavalry charges at Floing failed to break out.
+      - In Bazeilles Bavarian troops fought French marines from house to house and burned most of the village, and dozens of civilians were killed or wounded. On 2 September Napoleon III surrendered with about 104,000 men and went into captivity in Germany. When the news reached Paris, crowds invaded the legislature on 4 September, and Léon Gambetta and others proclaimed a republic at the Hôtel de Ville. A Government of National Defence under General Louis Trochu resolved to fight on; its foreign minister, Jules Favre, declared that France would yield “not an inch of our territory, not a stone of our fortresses”.
+    facts:
+      - [Battle of Sedan, "1 September 1870, German victory"]
+      - [Napoleon III surrenders, "2 September 1870, with about 104,000 men"]
+      - [Republic proclaimed, "4 September 1870, in Paris"]
+    markers:
+      - kind: battle
+        side: de
+        name: Beaumont
+        date: 30 August 1870
+        text: The Army of the Meuse surprised General Pierre de Failly’s corps in its camp and drove it back towards Sedan.
+        lonlat: [5.058, 49.539]
+      - kind: battle
+        side: de
+        name: Battle of Sedan
+        date: 1–2 September 1870
+        text: Surrounded and shelled from all sides, the Army of Châlons surrendered with the emperor the next day.
+        lonlat: [4.946, 49.699]
+        lp: t
+      - kind: battle
+        side: de
+        name: Bazeilles
+        date: 1 September 1870
+        text: French marines held the village against Bavarian troops in hours of street fighting before it was burned.
+        lonlat: [4.977, 49.678]
+        lp: b
+      - kind: event
+        name: Paris
+        date: 4 September 1870
+        text: The republic was proclaimed at the Hôtel de Ville, and the Empress Eugénie fled to England.
+        lonlat: [2.353, 48.856]
+    arrows:
+      - side: fr
+        label: MacMahon
+        via: [[4.36, 48.96], [4.03, 49.26], [4.37, 49.51], [4.8, 49.58], [4.93, 49.69]]
+      - side: de
+        label: Army of the Meuse
+        via: [[5.39, 49.16], [5.2, 49.4], [5.07, 49.55], [5.0, 49.66]]
+      - side: de
+        label: Third Army
+        via: [[5.16, 48.77], [4.85, 49.2], [4.8, 49.5], [4.88, 49.68]]
+  - title: The siege of Paris and the war in the provinces
+    date: 19 September 1870 – January 1871
+    when: "1870-09-19"
+    borders: "1871-01-28"
+    countries: [fr, ch]
+    body:
+      - German armies surrounded Paris on 19 September, shutting in some two million people. Gambetta left the city by balloon on 7 October to raise new armies from Tours, and the republic called up hundreds of thousands of men, many of them barely trained. The Army of the Loire won at Coulmiers on 9 November and retook Orléans, but the fall of Metz freed Prince Frederick Charles’s army, which beat the French at Loigny on 2 December, took Orléans again and in January reached Le Mans. In the north General Louis Faidherbe fought on until his defeat at St Quentin on 19 January.
+      - Sorties from Paris failed, at Champigny in early December and at Buzenval on 19 January. Food ran short, and Parisians ate horses, cats, rats and the animals of the zoo; from 5 January German siege guns shelled the city. In the east General Charles Bourbaki’s army, sent to relieve besieged Belfort, was beaten on the Lisaine in mid-January. Driven against the Swiss border, about 87,000 of his men crossed into Switzerland on 1 February and were interned. Behind the German lines irregular francs-tireurs attacked supply lines, and the Germans answered with reprisals against villages and the taking of hostages.
+    facts:
+      - [Siege of Paris, "19 September 1870 – 28 January 1871"]
+      - [Battle of Coulmiers, "9 November 1870, French victory"]
+      - [Interned in Switzerland, "about 87,000 of Bourbaki’s men, 1 February 1871"]
+    markers:
+      - kind: siege
+        side: de
+        name: Paris
+        date: 19 September 1870 – 28 January 1871
+        text: Encircled for over four months. Balloons carried mail and passengers out over the German lines.
+        lonlat: [2.352, 48.857]
+      - kind: event
+        side: fr
+        name: Tours
+        date: September – December 1870
+        text: Seat of a delegation of the government, which Gambetta joined in October, until it moved on to Bordeaux.
+        lonlat: [0.689, 47.394]
+      - kind: battle
+        side: fr
+        name: Battle of Coulmiers
+        date: 9 November 1870
+        text: The Army of the Loire’s victory forced the Bavarians to give up Orléans.
+        lonlat: [1.65, 47.917]
+        lp: b
+      - kind: battle
+        side: de
+        name: Loigny
+        date: 2 December 1870
+        text: The Army of the Loire’s advance towards Paris was stopped; Orléans fell to the Germans two days later.
+        lonlat: [1.734, 48.124]
+      - kind: battle
+        side: de
+        name: Le Mans
+        date: 10–12 January 1871
+        text: Prince Frederick Charles’s army beat the Second Army of the Loire under General Antoine Chanzy.
+        lonlat: [0.197, 48.004]
+      - kind: battle
+        side: de
+        name: St Quentin
+        date: 19 January 1871
+        text: Faidherbe’s Army of the North was beaten in its last attempt to relieve Paris.
+        lonlat: [3.286, 49.849]
+      - kind: battle
+        side: de
+        name: The Lisaine
+        date: 15–17 January 1871
+        text: Werder’s outnumbered corps held its line on the river against Bourbaki’s attempt to relieve Belfort.
+        lonlat: [6.8, 47.5]
+        lp: l
+      - kind: held
+        side: fr
+        name: Belfort
+        date: 3 November 1870 – 18 February 1871
+        text: Colonel Pierre Denfert-Rochereau held the fortress until the government ordered him to surrender, and his garrison marched out with honours.
+        lonlat: [6.863, 47.638]
+      - kind: event
+        name: Les Verrières
+        date: 1 February 1871
+        text: Bourbaki’s army crossed into Switzerland here, gave up its arms and was interned until March.
+        lonlat: [6.483, 46.9]
+    arrows:
+      - side: de
+        label: Frederick Charles
+        via: [[6.15, 49.05], [4.4, 48.55], [2.7, 48.15], [1.98, 47.95]]
+      - side: fr
+        label: Army of the Loire
+        via: [[1.33, 47.59], [1.48, 47.78], [1.63, 47.9]]
+      - side: fr
+        label: Bourbaki
+        via: [[5.05, 47.3], [5.9, 47.45], [6.7, 47.52]]
+      - side: fr
+        via: [[6.6, 47.42], [6.4, 47.15], [6.47, 46.93]]
+    areas:
+      - style: occupied
+        side: de
+        label: Occupied by German forces, late January 1871 (approximate)
+        atoms: [FR-08, FR-02, FR-60, FR-80, FR-76, FR-27, FR-28, FR-78, FR-91, FR-92, FR-93, FR-94, FR-95, FR-77, FR-51, FR-55, FR-54, FR-57, FR-67, FR-68, FR-88, FR-52, FR-10, FR-89, FR-45, FR-41, FR-72]
+  - title: An empire proclaimed at Versailles
+    date: November 1870 – March 1871
+    when: "1870-11-15"
+    borders: "1871-01-18"
+    countries: [fr, de]
+    body:
+      - The war completed what 1866 had begun. In November 1870 Bismarck concluded treaties with Baden, Hesse-Darmstadt, Bavaria and Württemberg, which joined the North German Confederation in a German Empire from 1 January 1871. Bavaria and Württemberg kept special rights, among them their own railways and postal services, and Bavaria its own army in peacetime. King Ludwig II of Bavaria, secretly paid by Bismarck, wrote the letter inviting William to take the imperial title. On 18 January 1871, the anniversary of the first Prussian coronation in 1701, William was proclaimed German Emperor in the Hall of Mirrors of the palace of Versailles, before princes and officers.
+      - Ten days later, with Paris starving, the French government signed an armistice at Versailles. Paris paid 200 million francs and gave up its forts, but German troops stayed outside the city. Elections on 8 February returned a National Assembly with a monarchist majority, which met in Bordeaux and chose Adolphe Thiers to lead the government. Thiers negotiated the preliminary peace signed at Versailles on 26 February, and German troops held a short victory parade in Paris on 1 March. Belfort, whose garrison had surrendered with honours, stayed French; by many accounts Thiers accepted the parade as its price.
+    facts:
+      - [Proclamation of the German Empire, "18 January 1871, Versailles"]
+      - [Armistice, "28 January 1871"]
+      - [Preliminary peace of Versailles, "26 February 1871"]
+    markers:
+      - kind: event
+        side: de
+        name: Versailles
+        date: 18 January 1871
+        text: The German headquarters during the siege of Paris. William was proclaimed emperor in the Hall of Mirrors, and the armistice and preliminary peace were signed here.
+        lonlat: [2.12, 48.805]
+        lp: l
+      - kind: event
+        side: fr
+        name: Bordeaux
+        date: February – March 1871
+        text: The newly elected National Assembly met here, chose Thiers as head of the government and ratified the preliminary peace.
+        lonlat: [-0.58, 44.84]
+      - kind: held
+        side: fr
+        name: Belfort
+        date: 18 February 1871
+        text: The garrison marched out with the honours of war, and the town and its territory remained French in the peace.
+        lonlat: [6.863, 47.638]
+  - title: The Treaty of Frankfurt
+    date: 10 May 1871
+    when: "1871-05-10"
+    borders: "1871-05-10"
+    countries: [fr, de]
+    body:
+      - The Treaty of Frankfurt, signed on 10 May 1871, confirmed the preliminary peace. France ceded Alsace, except Belfort, and the north-east of Lorraine with Metz, with about 1.5 million inhabitants, to the German Empire as the imperial territory of Alsace-Lorraine. People there could keep French nationality until 1 October 1872 if they moved to France, and tens of thousands did. France had to pay an indemnity of five billion francs, and German troops occupied the north-east of the country until it was paid. France paid ahead of time, and the last German troops left in September 1873.
+      - The war had cost about 139,000 French and 45,000 German lives, counting deaths from disease, and some 380,000 French soldiers had been taken prisoner. While the peace was being negotiated, Paris rose against the government in March 1871 and formed the Commune. Government troops retook the city in the “Bloody Week” of 21–28 May, and thousands of Communards were killed in the fighting and in mass shootings, with estimates from about 7,000 to 20,000 or more. The loss of Alsace-Lorraine left a lasting bitterness in France, and the new German Empire was now the strongest power on the continent.
+    facts:
+      - [Treaty of Frankfurt, "10 May 1871"]
+      - [Indemnity, "five billion francs, paid by September 1873"]
+      - [Dead, "about 139,000 French and 45,000 Germans"]
+    markers:
+      - kind: treaty
+        name: Treaty of Frankfurt
+        date: 10 May 1871
+        text: Signed at the Hotel Zum Schwan by Bismarck and the French foreign minister, Jules Favre.
+        lonlat: [8.682, 50.111]
+      - kind: event
+        side: de
+        name: Strasbourg
+        date: from 1871
+        text: Became the capital of the imperial territory of Alsace-Lorraine, governed from Berlin.
+        lonlat: [7.746, 48.583]
+      - kind: event
+        name: Paris Commune
+        date: 18 March – 28 May 1871
+        text: The rising began when troops tried to remove the National Guard’s cannon from Montmartre, and ended in the Bloody Week.
+        lonlat: [2.341, 48.887]
+    areas:
+      - style: gained
+        side: de
+        label: Ceded to Germany as Alsace-Lorraine
+        atoms: [FR-67, FR-68, FR-57]

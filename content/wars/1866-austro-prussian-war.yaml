@@ -1,0 +1,340 @@
+id: austro-prussian-war
+name: Austro-Prussian War
+start: "1866-06-14"
+end: "1866-08-23"
+tier: A
+summary: A seven-week war in which Prussia and Italy defeated Austria and most of the German middle states. After the Prussian victory at Königgrätz, the Peace of Prague dissolved the German Confederation and shut Austria out of Germany; Prussia annexed Hanover, Hesse-Kassel, Nassau, Frankfurt and Schleswig-Holstein and led a new North German Confederation, and Austria ceded Venetia to Italy.
+countries: [de, at, cz, it, hr, sk]
+sides:
+  - id: pr
+    name: Prussia and its allies
+    polities: [prussia, mecklenburg, oldenburg, brunswick, anhalt]
+    ink: slate
+    moves: Prussian moves
+    success: Prussian success
+  - id: it
+    name: Italy
+    polities: [italy]
+    ink: green
+    moves: Italian moves
+    success: Italian success
+  - id: at
+    name: Austria and its allies
+    polities: [habsburg, saxony, hanover, bavaria, wurttemberg, baden, hesse, hesse-kassel, nassau]
+    ink: purple
+    moves: Austrian and allied moves
+    success: Austrian and allied success
+notes:
+  - Also called the Seven Weeks’ War, in German often the German War (Deutscher Krieg), and in Italy the Third War of Independence.
+  - Places in Bohemia and Moravia are named in the German forms used in most accounts of the war; Königgrätz is today’s Hradec Králové, Nikolsburg is Mikulov, Pressburg is Bratislava and Lissa is the Croatian island of Vis.
+sources:
+  - title: Austro-Prussian War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Austro-Prussian_War
+  - title: Seven Weeks’ War (Britannica)
+    url: https://www.britannica.com/event/Seven-Weeks-War
+  - title: Battle of Langensalza (1866) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Langensalza_(1866)
+  - title: Battle of Königgrätz (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_K%C3%B6niggr%C3%A4tz
+  - title: Battle of Custoza (1866) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Custoza_(1866)
+  - title: Battle of Lissa (1866) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Lissa_(1866)
+  - title: Battle of Kissingen (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kissingen
+  - title: Peace of Prague (1866) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peace_of_Prague_(1866)
+  - title: Treaty of Vienna (1866) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Vienna_(1866)
+steps:
+  - title: Holstein and the north German states
+    date: June 1866
+    when: "1866-06-07"
+    borders: "1866-06-29"
+    countries: [de]
+    body:
+      - After their joint victory over Denmark in 1864, Prussia and Austria fell out over Schleswig and Holstein. The Gastein Convention of August 1865 gave Prussia Schleswig and Austria Holstein to administer, but Otto von Bismarck, Prussia’s chief minister, meant to end Austria’s leading role in Germany. On 8 April 1866 he made a secret alliance with Italy, which wanted Venetia. When Austria put the duchies’ future before the Federal Diet, Prussian troops marched into Holstein on 7 June and the Austrians withdrew. On 14 June the Diet voted, nine votes to six, to mobilise federal forces against Prussia, which declared the German Confederation dissolved.
+      - Most of the middle-sized states sided with Austria. On 15 June Prussia demanded that Saxony, Hanover and Hesse-Kassel disarm, and the next day its troops invaded all three. The Saxon army withdrew into Bohemia to join the Austrians, and the Prussians entered Dresden on 18 June. The Elector of Hesse was taken prisoner to Stettin. The Hanoverian army, about 19,000 men with King George V, marched south to join the Bavarians. At Langensalza on 27 June it beat off an attacking Prussian detachment, but converging Prussian forces surrounded it, and it surrendered two days later.
+    facts:
+      - [Prussians enter Holstein, "7 June 1866"]
+      - [Federal Diet vote, "14 June 1866, nine to six against Prussia"]
+      - [Battle of Langensalza, "27 June 1866, Hanoverian victory; surrender on 29 June"]
+    markers:
+      - kind: taken
+        side: pr
+        name: Kiel
+        date: 7 June 1866
+        text: Seat of the Austrian governor of Holstein, Ludwig von Gablenz, who withdrew his brigade south when Prussian troops under Edwin von Manteuffel marched in.
+        lonlat: [10.139, 54.323]
+      - kind: event
+        side: at
+        name: Frankfurt
+        date: 14 June 1866
+        text: The Federal Diet voted for Austria’s motion to mobilise the federal army against Prussia, whose envoy declared the Confederation at an end.
+        lonlat: [8.682, 50.111]
+        lp: l
+      - kind: taken
+        side: pr
+        name: Hanover
+        date: June 1866
+        text: Prussian troops entered the capital unopposed after the Hanoverian army had marched south.
+        lonlat: [9.717, 52.367]
+      - kind: taken
+        side: pr
+        name: Kassel
+        date: June 1866
+        text: Occupied by Prussian troops. The Elector, who refused to negotiate, was sent as a prisoner to Stettin.
+        lonlat: [9.498, 51.316]
+        lp: l
+      - kind: taken
+        side: pr
+        name: Dresden
+        date: 18 June 1866
+        text: The Elbe Army entered the Saxon capital without a fight; the Saxon army had already left for Bohemia.
+        lonlat: [13.74, 51.05]
+      - kind: battle
+        side: at
+        name: Battle of Langensalza
+        date: 27 June 1866
+        text: The Hanoverians drove back General Eduard von Flies’s detachment and took more than 900 prisoners, but were surrounded and capitulated on 29 June.
+        lonlat: [10.647, 51.108]
+    arrows:
+      - side: pr
+        label: Manteuffel
+        via: [[9.95, 53.55], [9.95, 53.1], [9.76, 52.42]]
+      - side: pr
+        label: Goeben
+        via: [[8.92, 52.29], [9.3, 52.34], [9.66, 52.37]]
+      - side: pr
+        label: Beyer
+        via: [[8.5, 50.57], [8.95, 50.95], [9.45, 51.28]]
+      - side: pr
+        label: Elbe Army
+        via: [[13.0, 51.56], [13.4, 51.3], [13.7, 51.08]]
+      - side: at
+        label: Hanoverian army
+        via: [[9.73, 52.33], [9.93, 51.53], [10.35, 51.3], [10.62, 51.13]]
+      - side: at
+        label: Saxon army
+        via: [[13.78, 50.98], [13.9, 50.78], [14.05, 50.6]]
+    areas:
+      - style: occupied
+        side: pr
+        label: Occupied by Prussia, June 1866
+        atoms: [DE-SH~holstein, DE-NI!, DE-NI~oger!, DE-NI~oger~ofr, DE-NI~bv, DE-HE~hk, DE-SN!, DE-SN~olaus!]
+  - title: Königgrätz
+    date: 22 June – 3 July 1866
+    when: "1866-06-22"
+    borders: "1866-07-03"
+    countries: [cz, de, at]
+    body:
+      - Prussia’s chief of staff, Helmuth von Moltke, used the railways to bring three armies to the Bohemian border and sent them through the mountain passes separately, to unite on the battlefield. The Elbe Army and the First Army came from Saxony and Lusatia, the Second Army under Crown Prince Frederick William from Silesia. Ludwig von Benedek, commanding the Austrian North Army and the Saxons, failed to strike at either group alone. In a week of battles from 26 June the Austrians lost at Náchod, Skalitz, Münchengrätz and Gitschin, winning only at Trautenau, as the fast-firing Prussian breech-loading needle gun cut down their attacking columns.
+      - On 3 July Benedek stood before the fortress of Königgrätz, by the village of Sadowa, with the Elbe at his back. Close to half a million men took part, more than in any battle in Europe since Leipzig in 1813. Prince Frederick Charles’s First Army attacked across the Bistritz in the morning and was held by the Austrian artillery until the Second Army reached the Austrian right flank in the afternoon and took the heights at Chlum. Benedek’s army escaped across the Elbe, covered by its cavalry and guns, but lost about 31,000 men killed, wounded, missing or captured, against about 9,000 Prussians.
+    facts:
+      - [Battle of Königgrätz (Sadowa), "3 July 1866, Prussian victory"]
+      - [Commanders, "King William I and Moltke; Benedek"]
+      - [Austrian and Saxon losses, "about 31,000, over 9,000 of them prisoners"]
+    markers:
+      - kind: battle
+        side: at
+        name: Trautenau
+        date: 27 June 1866
+        text: Ludwig von Gablenz’s corps drove back a Prussian corps of the Second Army, the only Austrian victory in Bohemia, at a heavy cost in men.
+        lonlat: [15.915, 50.556]
+      - kind: battle
+        side: pr
+        name: Náchod
+        date: 27 June 1866
+        text: General Karl von Steinmetz’s corps beat the Austrian VI Corps as the Second Army came out of the mountains; it won again at Skalitz the next day.
+        lonlat: [16.194, 50.426]
+      - kind: battle
+        side: pr
+        name: Münchengrätz
+        date: 28 June 1866
+        text: The Elbe Army and the First Army forced the Austrian I Corps and the Saxons back from the Iser.
+        lonlat: [14.974, 50.521]
+      - kind: battle
+        side: pr
+        name: Gitschin
+        date: 29 June 1866
+        text: The First Army defeated Count Clam-Gallas’s I Corps and the Saxons, opening the way to a junction with the Second Army.
+        lonlat: [15.352, 50.437]
+      - kind: battle
+        side: pr
+        name: Battle of Königgrätz
+        date: 3 July 1866
+        text: The decisive battle of the war. The beaten Austrian army fell back towards Olmütz and could no longer defend Bohemia.
+        lonlat: [15.75, 50.285]
+        lp: b
+    arrows:
+      - side: pr
+        label: Elbe Army
+        via: [[13.9, 51.0], [14.35, 50.85], [14.75, 50.6], [14.95, 50.53]]
+      - side: pr
+        label: First Army
+        via: [[14.95, 51.0], [15.06, 50.77], [15.3, 50.5], [15.66, 50.32]]
+      - side: pr
+        label: Second Army
+        via: [[16.5, 50.55], [16.2, 50.43], [15.88, 50.4], [15.78, 50.31]]
+      - side: pr
+        via: [[16.05, 50.75], [15.92, 50.56], [15.82, 50.42]]
+      - side: at
+        label: Benedek
+        via: [[17.25, 49.59], [16.6, 49.95], [16.05, 50.28], [15.85, 50.3]]
+  - title: Custoza and Lissa
+    date: 20 June – 12 August 1866
+    when: "1866-06-24"
+    borders: "1866-08-12"
+    countries: [it, hr, at]
+    body:
+      - Italy declared war on Austria on 20 June and sent two armies against Venetia. On 24 June the larger, under General Alfonso La Marmora with King Victor Emmanuel II, crossed the Mincio and was beaten at Custoza by the smaller South Army of Archduke Albrecht, based on the fortresses around Verona. The day after Königgrätz Francis Joseph offered Venetia to Napoleon III of France in return for his mediation, to free troops for the defence of Vienna, but Italy, bound by its alliance with Prussia, fought on. Giuseppe Garibaldi’s volunteers pushed into Trentino and beat the Austrians at Bezzecca on 21 July.
+      - At sea the larger and more modern Italian fleet under Admiral Carlo Persano attacked the Austrian island of Lissa in the Adriatic. On 20 July Wilhelm von Tegetthoff’s squadron came to its relief and, in the first battle between fleets of ironclads, rammed and sank the Re d’Italia, while the armoured gunboat Palestro blew up; 612 Italians were killed, against 38 Austrians. As Austrian troops went north, General Enrico Cialdini’s army advanced across Venetia. Garibaldi, ordered on 9 August to leave Trentino, replied with one word, “Obbedisco” (“I obey”), and the armistice of Cormons ended the fighting on 12 August.
+    facts:
+      - [Battle of Custoza, "24 June 1866, Austrian victory"]
+      - [Battle of Lissa, "20 July 1866, Austrian victory"]
+      - [Armistice of Cormons, "12 August 1866"]
+    markers:
+      - kind: battle
+        side: at
+        name: Battle of Custoza
+        date: 24 June 1866
+        text: Archduke Albrecht’s South Army attacked the Italians as they advanced from the Mincio and drove them back across the river.
+        lonlat: [10.796, 45.379]
+      - kind: battle
+        side: it
+        name: Bezzecca
+        date: 21 July 1866
+        text: Garibaldi’s volunteers, the Hunters of the Alps, won the hardest fight of their campaign in the valleys west of Lake Garda.
+        lonlat: [10.717, 45.9]
+      - kind: naval
+        side: at
+        name: Battle of Lissa
+        date: 20 July 1866
+        text: Tegetthoff’s weaker fleet broke up the Italian line, and his flagship Erzherzog Ferdinand Max rammed and sank the Re d’Italia.
+        lonlat: [16.053, 43.176]
+      - kind: treaty
+        name: Armistice of Cormons
+        date: 12 August 1866
+        text: Ended the fighting between Italy and Austria; peace followed at Vienna on 3 October.
+        lonlat: [13.467, 45.95]
+    arrows:
+      - side: it
+        label: La Marmora
+        via: [[10.55, 45.25], [10.7, 45.33], [10.78, 45.37]]
+      - side: it
+        label: Cialdini
+        via: [[11.62, 44.84], [11.85, 45.4], [12.6, 45.8], [13.3, 46.0]]
+      - side: it
+        label: Garibaldi
+        via: [[10.22, 45.55], [10.5, 45.75], [10.7, 45.89]]
+      - side: at
+        label: Tegetthoff
+        via: [[13.85, 44.88], [14.8, 44.0], [15.95, 43.25]]
+      - side: it
+        label: Persano
+        via: [[13.52, 43.62], [14.8, 43.4], [16.0, 43.2]]
+  - title: The Main campaign
+    date: 1–27 July 1866
+    when: "1866-07-04"
+    borders: "1866-07-27"
+    countries: [de]
+    body:
+      - After Langensalza the Prussian forces in the west became the Army of the Main under General Eduard Vogel von Falckenstein. Against them stood two federal corps that never joined up, the Bavarians under Prince Charles of Bavaria and the troops of Württemberg, Baden, Hesse-Darmstadt, Nassau and Austria under Prince Alexander of Hesse. Falckenstein beat the Bavarians at Dermbach on 4 July and at Kissingen on the Franconian Saale on 10 July, then turned west and beat Prince Alexander’s corps at Laufach and Aschaffenburg on 13 and 14 July. On 16 July his troops entered Frankfurt; the Federal Diet had fled to Augsburg.
+      - Frankfurt, which had taken no part in the fighting, was ordered to pay huge war contributions, and its mayor, Karl Fellner, hanged himself rather than enforce them. General Edwin von Manteuffel, who took over the army, beat the Württembergers at Tauberbischofsheim on 24 July and the Bavarians around Helmstadt and Rossbrunn over the next two days. On 27 July Prussian guns shelled the fortress of Würzburg, which held out. Armistices with the southern states followed in early August. In separate peace treaties they paid indemnities and secretly allied with Prussia, and Bavaria and Hesse-Darmstadt gave up small territories.
+    facts:
+      - [Battle of Kissingen, "10 July 1866, Prussian victory"]
+      - [Frankfurt occupied, "16 July 1866"]
+      - [Battle of Tauberbischofsheim, "24 July 1866, Prussian victory"]
+    markers:
+      - kind: battle
+        side: pr
+        name: Dermbach
+        date: 4 July 1866
+        text: The Army of the Main’s first clash with the Bavarians, in the Rhön hills.
+        lonlat: [10.12, 50.716]
+      - kind: battle
+        side: pr
+        name: Battle of Kissingen
+        date: 10 July 1866
+        text: The Prussians forced the crossings of the Franconian Saale and drove the Bavarians from the spa town.
+        lonlat: [10.067, 50.2]
+      - kind: battle
+        side: pr
+        name: Aschaffenburg
+        date: 14 July 1866
+        text: Falckenstein’s troops broke into the town held by Austrian and Hessian troops, opening the road to Frankfurt.
+        lonlat: [9.15, 49.967]
+      - kind: taken
+        side: pr
+        name: Frankfurt
+        date: 16 July 1866
+        text: The free city, seat of the Federal Diet, was occupied and ordered to pay contributions of many millions of guilders.
+        lonlat: [8.682, 50.111]
+        lp: l
+      - kind: battle
+        side: pr
+        name: Tauberbischofsheim
+        date: 24 July 1866
+        text: The Prussians crossed the Tauber against the Württemberg division of the VIII Federal Corps.
+        lonlat: [9.663, 49.623]
+        lp: b
+      - kind: siege
+        name: Würzburg
+        date: 27 July 1866
+        text: Prussian artillery shelled the Marienberg fortress, but the Bavarian garrison held out until the armistice.
+        lonlat: [9.933, 49.783]
+    arrows:
+      - side: pr
+        label: Falckenstein
+        via: [[10.32, 50.98], [10.13, 50.7], [10.07, 50.24]]
+      - side: pr
+        via: [[9.95, 50.18], [9.6, 50.05], [9.18, 49.98], [8.74, 50.1]]
+      - side: pr
+        label: Manteuffel
+        via: [[8.75, 50.05], [9.2, 49.75], [9.62, 49.63], [9.9, 49.76]]
+  - title: Nikolsburg and the Peace of Prague
+    date: 22 July – 12 October 1866
+    when: "1866-07-22"
+    borders: "1866-10-12"
+    countries: [de, at, cz, sk, it]
+    body:
+      - By mid-July the Prussian armies had occupied Prague and Brno and reached the Marchfeld, a day’s march from Vienna, while Austria brought troops north from Italy. On 22 July, during a last action at Blumenau outside Pressburg, an armistice came into force at noon. King William wanted to march into Vienna and annex Austrian and Saxon land, but Bismarck, threatening to resign, insisted on a mild peace that would neither make Austria a lasting enemy nor give France a reason to intervene. The preliminary peace was signed at Nikolsburg on 26 July and the final Peace of Prague on 23 August.
+      - Austria accepted the end of the German Confederation and its own exclusion from German affairs, gave up its rights in Schleswig and Holstein, and paid an indemnity. Prussia annexed Hanover, Hesse-Kassel, Nassau and the free city of Frankfurt, then Schleswig-Holstein, and led the states north of the Main in a new North German Confederation; Saxony kept its king but had to join it. By the Treaty of Vienna of 3 October Austria ceded Venetia, through France, to Italy. Many in the annexed states resented Prussian rule, and in 1871 a party loyal to the deposed King of Hanover won almost half the vote there.
+    facts:
+      - [Armistice, "22 July 1866"]
+      - [Preliminary peace of Nikolsburg, "26 July 1866"]
+      - [Peace of Prague, "23 August 1866"]
+    markers:
+      - kind: battle
+        name: Blumenau
+        date: 22 July 1866
+        text: Prussian troops were outflanking the Austrian position before Pressburg when the fighting stopped at noon under the armistice.
+        lonlat: [17.054, 48.192]
+      - kind: treaty
+        name: Nikolsburg
+        date: 26 July 1866
+        text: Bismarck and the Austrian envoys signed the preliminary peace at the castle, the Prussian headquarters.
+        lonlat: [16.638, 48.806]
+      - kind: treaty
+        name: Peace of Prague
+        date: 23 August 1866
+        text: Confirmed the terms of Nikolsburg and dissolved the German Confederation.
+        lonlat: [14.421, 50.087]
+      - kind: treaty
+        name: Treaty of Vienna
+        date: 3 October 1866
+        text: Austria made peace with Italy and ceded Venetia, which Napoleon III handed on to Italy; a plebiscite approved the union later in October.
+        lonlat: [16.372, 48.208]
+    areas:
+      - style: occupied
+        side: pr
+        label: Occupied by Prussia, late July 1866 (approximate)
+        atoms: [CZ-LI, CZ-US, CZ-KR, CZ-PA, CZ-ST, CZ-PR, CZ-VY, CZ-JM, CZ-OL]
+      - style: gained
+        side: pr
+        label: Annexed by Prussia, 1866–1867
+        atoms: [DE-NI!, DE-NI~oger!, DE-NI~oger~ofr, DE-NI~bv, DE-HE~hk, DE-HE~nassau, DE-RP~nassau, DE-SH~holstein]
+      - style: gained
+        side: it
+        label: Ceded to Italy, through France
+        atoms: [IT-BL, IT-UD, IT-VE, IT-PD, IT-RO, IT-VI, IT-VR, IT-TV, IT-PN, IT-MN]

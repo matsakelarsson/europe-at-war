@@ -1,0 +1,87 @@
+id: war-of-the-bavarian-succession
+name: War of the Bavarian Succession
+start: "1778-07-03"
+end: "1779-05-13"
+tier: B
+summary: A war between Austria and Prussia, allied with Saxony, over Joseph II’s attempt to acquire much of Bavaria when its ruling line died out in 1777. The armies faced each other in Bohemia without fighting a major battle, and the Peace of Teschen in 1779 left Austria only the Innviertel.
+countries: [at, de, cz, pl]
+sides:
+  - id: at
+    name: Austria
+    polities: [habsburg]
+    ink: purple
+    moves: Austrian moves
+    success: Austrian success
+  - id: pr
+    name: Prussia and Saxony
+    polities: [prussia, saxony]
+    ink: slate
+    moves: Prussian and Saxon moves
+    success: Prussian success
+notes:
+  - Known in Prussia and Saxony as the Potato War (Kartoffelkrieg) and in Austria as the Plum Fuss (Zwetschgenrummel).
+  - Places in Bohemia and Silesia are named in their German forms of the time; the markers give today’s names.
+sources:
+  - title: War of the Bavarian Succession (Wikipedia)
+    url: https://en.wikipedia.org/wiki/War_of_the_Bavarian_Succession
+  - title: Treaty of Teschen (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Teschen
+  - title: Innviertel (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Innviertel
+steps:
+  - title: The Potato War
+    date: July 1778 – May 1779
+    when: "1778-07-03"
+    borders: "1779-05-13"
+    countries: [cz, de, at, pl]
+    body:
+      - When Maximilian III Joseph, the last elector of the Bavarian line of the Wittelsbachs, died childless on 30 December 1777, his heir was the Elector Palatine, Charles Theodore. Within days Charles Theodore agreed to hand Lower Bavaria to the Emperor Joseph II, who hoped to round off the Austrian lands, and Austrian troops marched in. Frederick II of Prussia, unwilling to see Austria grow, backed the protests of Charles Theodore’s own heir, Duke Charles August of Zweibrücken, and of Saxony. In early July 1778 he led a Prussian army into Bohemia, while his brother Prince Henry invaded from Saxony with Prussian and Saxon troops.
+      - Joseph II and Field Marshal Franz Moritz von Lacy waited behind redoubts on the heights above the upper Elbe, and Laudon fell back behind the Iser before Prince Henry. Neither side attacked. The armies stripped the countryside bare, and thousands of soldiers died of disease or deserted; the Prussians named the campaign after the potatoes they dug up to eat. The Prussians withdrew in the autumn, and after a winter of raids Maria Theresa, against her son’s wishes, accepted French and Russian mediation. By the Peace of Teschen on 13 May 1779 Austria kept only the Innviertel, a strip along the Inn, and Saxony received six million gulden.
+    facts:
+      - [Losses, "About 10,000 on each side, mostly from disease"]
+      - [Peace of Teschen, "13 May 1779, mediated by France and Russia"]
+      - [Austria gains, "The Innviertel, about 2,200 km²"]
+    markers:
+      - kind: event
+        side: pr
+        name: Prussians enter Bohemia
+        date: Early July 1778
+        text: Frederick’s army crossed the mountains from the county of Glatz and occupied Náchod, but advanced little further.
+        lonlat: [16.163, 50.417]
+      - kind: held
+        side: at
+        name: Austrian lines on the Elbe
+        date: July – September 1778
+        text: Joseph II and Lacy fortified the heights along the upper Elbe around Jaroměř, and Frederick judged them too strong to attack.
+        lonlat: [15.918, 50.35]
+        lp: l
+      - kind: event
+        side: pr
+        name: Prince Henry in Bohemia
+        date: July – September 1778
+        text: Prince Henry’s Prussians and Saxons crossed from Saxony and pushed Laudon back behind the Iser, today’s Jizera, near Mnichovo Hradiště, but got no further.
+        lonlat: [14.974, 50.521]
+        lp: l
+      - kind: battle
+        side: at
+        name: Habelschwerdt
+        date: 17–18 January 1779
+        text: In one of the winter raids, Austrian troops surrounded and stormed the Prussian-held town in the county of Glatz, today’s Bystrzyca Kłodzka, and much of it burned.
+        lonlat: [16.65, 50.3]
+      - kind: treaty
+        side: at
+        name: Peace of Teschen
+        date: 13 May 1779
+        text: Signed in today’s Cieszyn. Austria kept the Innviertel and gave up its other claims, and Prussia’s right to inherit Ansbach and Bayreuth was recognised.
+        lonlat: [18.633, 49.748]
+    arrows:
+      - side: pr
+        label: Frederick II
+        via: [[16.55, 50.43], [16.163, 50.417], [15.97, 50.42]]
+      - side: pr
+        label: Prince Henry
+        via: [[13.74, 51.05], [14.4, 50.88], [14.6, 50.7], [14.93, 50.55]]
+    areas:
+      - style: gained
+        label: Gained by Austria at Teschen
+        atoms: [AT-4~inn]

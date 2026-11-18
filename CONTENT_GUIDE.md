@@ -176,7 +176,8 @@ date, from two sources merged by date:
 
   | Range | Atoms | Events in |
   | --- | --- | --- |
-  | 1240–1815 | Sweden at War's map (Nordic, Baltic, Polish and Russian lands) | `sweden-at-war.yaml` |
+  | 1240–1815 | Sweden at War's map (Nordic, Baltic, Polish and Russian lands; in Germany only Swedish Pomerania, Bremen-Verden and Schleswig-Holstein) | `sweden-at-war.yaml` |
+  | 1240–today | Germany, Austria, the Czech lands, Switzerland, Liechtenstein, South Tyrol and Trentino (from 1815 also Swedish Pomerania and Bremen-Verden) | `german-lands.yaml` |
   | 1815–today | Sweden, Norway, Denmark | `denmark.yaml` |
   | 800–today | Iceland, the Faroes, Greenland, Svalbard, Jan Mayen | `denmark.yaml` |
   | 1815–1945 | Schleswig-Holstein | `denmark.yaml` |
@@ -192,9 +193,14 @@ date, from two sources merged by date:
   `british-isles.yaml`, and `rus-and-russia.yaml` before 1236) correct
   drafts outside any curated range; there, the next keyframe can still
   override an event. `balkans.yaml`, `italy.yaml`, `central-europe.yaml`
-  and `turkey.yaml` are first passes made for the Russia wave's maps
-  (historical-basemaps has no snapshot between 1815 and 1880); the later
-  waves replace them with curated ranges.
+  (now only Belgium, Austria-Hungary and Alsace-Lorraine) and `turkey.yaml`
+  are first passes made for the Russia wave's maps (historical-basemaps has
+  no snapshot between 1815 and 1880); the later waves replace them with
+  curated ranges. For the German lands wave, `italy.yaml` gained the
+  Napoleonic Kingdom of Italy and Habsburg Lombardy–Venetia (1797–1866), and
+  `balkans.yaml` the Illyrian Provinces (1809–1814). `german-lands.yaml` also
+  opens with a few events before 1240 (907, 948, 962, 976, 983) that correct
+  the drafts until the next keyframe.
 - **What the base map shows.** The base map follows the borders states
   recognised at the time, by treaty or in practice. Military occupation,
   breakaway regions and front lines are drawn as areas in a war's steps,
@@ -204,6 +210,15 @@ date, from two sources merged by date:
   and the military zone), and the Finnish reconquest of 1941–1944. Abkhazia,
   South Ossetia, Transnistria, Karabakh, Crimea after 2014 and the occupied
   parts of Ukraine stay with the state they are recognised as part of.
+  Germany's 1938–1939 annexations, the Protectorate of Bohemia and Moravia,
+  the Napoleonic satellites and annexations, and the Allied occupation zones
+  of 1945–1949 are on the base map.
+- **The Holy Roman Empire.** Until 1500 the Empire is one polity (`hre`), with
+  Bohemia, Habsburg Austria (from 1282) and the Swiss Confederacy (from 1291)
+  separate. From the Diet of Augsburg (1500-07-02) the larger territorial
+  states are shown; the many small states (ecclesiastical states, imperial
+  cities, counts) stay grouped as `hre` until 1803–1806. Habsburg Hungary,
+  Bohemia and the Austrian lands are one polity (`habsburg`) from 1526.
 - **Checking borders.** After a build, `node tools/owners-at.mjs <date>
   [polities…] [--atoms <regex>]` lists who owns what on a date, and
   `node tools/owner-history.mjs <regex> [from] [to]` lists every change to the
@@ -226,12 +241,21 @@ date, from two sources merged by date:
   `~fi1938` (Finnish Karelia and Petsamo, in `RU-LEN`, `RU-KR`, `RU-MUR`),
   `~ee1938` and `~lv1938` (Petseri, Narva-taga, Abrene), `~ro1938` (Budjak,
   with `~ro1938~1856` for the part Moldavia held 1856–1878), `~pl1930`,
-  `~de1930` and so on.
+  `~de1930`, `~sax1783`-style `~sax`, `~pr1815` (Saxon until 1815, Prussian
+  from 1815), `~sud` (the Sudetenland), `~us1945` (the American zone in
+  Baden-Württemberg) and so on. The German splits are historical regions:
+  `DE-BY~bav` Old Bavaria, `DE-BY~bav~opf` Upper Palatinate, `DE-SN~olaus` Upper
+  Lusatia, `DE-NW~lb` the left bank of the Rhine, `DE-NW~mark`, `DE-HE~hk`
+  Hesse-Kassel, `DE-BW~baden~vorder` the Breisgau, and so on (see atoms.json).
 - **Splits.** `content/borders/splits/*.geojson`, applied in file-name order:
   polygons in lon/lat with `{id: "<atom>~<name>", from: "<atom>", name}`. The
   part of the atom inside the polygon becomes the new atom (it may cut an atom
   made by an earlier split). To cut along a historical-basemaps border, use
   `node tools/split-from-hb.mjs <file> <year> "<NAME>" <suffix> "<name>" <atoms…>`.
+  For a hand-drawn line, pass a GeoJSON file of polygons (each with a `NAME`)
+  instead of the year; the tool folds slivers the same way. The 1783
+  snapshot is unreliable in western Germany (its Prussia, Baden and a second
+  "Bavaria" are later shapes); check a snapshot's polygon sizes first.
   Run `npm run geo` and `npm run draft` after adding splits (needs
   `npm run fetch-data` once); the draft gives a split atom its own owner only
   where it differs from its parent's.

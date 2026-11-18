@@ -1,0 +1,328 @@
+id: hussite-wars
+name: Hussite Wars
+start: "1419-07-30"
+end: "1436-07-05"
+tier: A
+summary: The wars that followed the burning of the Czech reformer Jan Hus in 1415, in which his followers in Bohemia defended their faith against King Sigismund and five crusades from across the Empire. Using wagon forts and early firearms, Hussite armies under Jan Žižka and Prokop the Great beat every crusade and raided deep into neighbouring lands, until moderate Hussites and Catholics crushed the radicals at Lipany in 1434 and made peace with the Church and Sigismund in the Compacts of 1436.
+countries: [cz, de, pl, hu, sk, at, ch, lt]
+sides:
+  - id: hus
+    name: Hussites
+    polities: [bohemia]
+    ink: red
+    moves: Hussite moves
+    success: Hussite success
+  - id: cru
+    name: Sigismund and the crusaders
+    polities: [hre, hungary]
+    ink: gold
+    moves: Royalist and crusader moves
+    success: Royalist and crusader success
+  - id: lea
+    name: Bohemian League
+    polities: []
+    ink: navy
+    moves: Moves by the Bohemian League
+    success: Success for the Bohemian League
+notes:
+  - Dates are Julian, as usual for the period. The chronicles give huge numbers for the armies, often tens of thousands; modern historians think they were much smaller.
+  - The Hussites soon split into moderates (Utraquists or Calixtines, strongest in Prague and among the nobles) and radicals (the Taborites, the eastern Bohemian brotherhood known after Žižka’s death as the Orphans, and others). Historians number the crusades differently, and the Hussites fought each other as well as the crusaders.
+  - Places are named in Czech, with the German name where it is often used in English (Kutná Hora/Kuttenberg, Německý Brod/Deutschbrod, Ústí nad Labem/Aussig, Stříbro/Mies, Domažlice/Taus).
+sources:
+  - title: Hussite Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hussite_Wars
+  - title: Jan Žižka (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jan_%C5%BDi%C5%BEka
+  - title: Battle of Vítkov Hill (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_V%C3%ADtkov_Hill
+  - title: Battle of Německý Brod (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_N%C4%9Bmeck%C3%BD_Brod
+  - title: Battle of Aussig (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Aussig
+  - title: Battle of Tachov (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tachov
+  - title: Battle of Domažlice (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Doma%C5%BElice
+  - title: Battle of Lipany (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Lipany
+  - title: Compacts of Basel (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Compacts_of_Basel
+  - title: Germany, the Hussite wars (Britannica)
+    url: https://www.britannica.com/place/Germany/The-Hussite-wars
+steps:
+  - title: The defenestration and Vítkov
+    date: 1419–1420
+    when: "1419-07-30"
+    borders: "1420-11-01"
+    countries: [cz, de, hu, pl]
+    body:
+      - Jan Hus, the Prague preacher who had attacked the wealth and corruption of the Church, was burned as a heretic at the Council of Constance on 6 July 1415, although King Sigismund had given him a safe conduct. Hundreds of Bohemian and Moravian nobles protested, and his followers took up communion in both kinds, bread and wine; the chalice became their sign. On 30 July 1419 a Hussite crowd led by the priest Jan Želivský stormed Prague’s New Town Hall and threw the councillors from the windows. When King Wenceslaus IV died on 16 August, his heir was his brother Sigismund, king of Hungary and of the Romans.
+      - On 17 March 1420 a papal bull calling a crusade against the Hussites was proclaimed at Breslau, and Sigismund led an army of Germans, Hungarians and others into Bohemia. Radicals gathered at the new hilltop town of Tábor, and their captain, the veteran soldier Jan Žižka, used wagons as a fort to beat royalist cavalry at Sudoměř. The crusaders besieged Prague, but on 14 July Žižka’s men on Vítkov hill threw back their attack and the army broke up. Sigismund had himself crowned in Prague Castle and withdrew; on 1 November the Hussites beat him again below Vyšehrad.
+    facts:
+      - [Defenestration of Prague, 30 July 1419]
+      - [Battle of Vítkov Hill, "14 July 1420, Hussite victory"]
+      - [Four Articles of Prague, "free preaching, communion in both kinds, no worldly wealth for the clergy, punishment of public sins"]
+    markers:
+      - kind: event
+        side: cru
+        name: Breslau
+        date: 17 March 1420
+        text: The papal legate proclaimed the crusade in the Silesian capital, where Sigismund had just had a leader of the city’s Hussite-minded rising of 1418 executed.
+        lonlat: [17.03, 51.11]
+      - kind: battle
+        side: hus
+        name: Battle of Sudoměř
+        date: 25 March 1420
+        text: With a few hundred followers and a dozen wagons, Žižka held a dyke between two fishponds against royalist cavalry. It was the first pitched battle of the wars.
+        lonlat: [14.06, 49.24]
+      - kind: event
+        side: hus
+        name: Tábor
+        date: "1420"
+        text: Radical Hussites founded a new town on a hill above the Lužnice and named it after the biblical Mount Tabor. It became their capital.
+        lonlat: [14.66, 49.41]
+      - kind: held
+        side: cru
+        name: Kutná Hora
+        date: "1420"
+        text: The rich silver-mining town, with many German townspeople, held for Sigismund and was his base.
+        lonlat: [15.27, 49.95]
+      - kind: battle
+        side: hus
+        name: Battle of Vítkov Hill
+        date: 14 July 1420
+        text: A small force on the hill, joined by men from Prague’s New Town, drove German and Austrian horsemen down the steep slopes. The hill is now called Žižkov.
+        lonlat: [14.45, 50.09]
+    arrows:
+      - side: cru
+        label: Sigismund
+        via: [[16.48, 50.84], [15.83, 50.21], [15.27, 49.95], [14.55, 50.08]]
+      - side: hus
+        label: Žižka
+        via: [[14.66, 49.41], [14.7, 49.75], [14.47, 50.06]]
+  - title: Kutná Hora and Německý Brod
+    date: 1421–1422
+    when: "1421"
+    borders: "1422-01-10"
+    countries: [cz, de, hu]
+    body:
+      - By the summer of 1421 the Hussites held most of Bohemia, and in June a diet at Čáslav refused to accept Sigismund as king and set up a provisional government. Žižka, already blind in one eye, lost the other at the siege of Rabí castle but went on commanding. A second crusade, from the Rhineland and Saxony, besieged Žatec in September and fled when a Hussite army approached. In December Sigismund invaded from Moravia with Hungarians and Germans. Žižka was camped outside Kutná Hora when its mainly German townspeople turned against the Hussites, and the royal army closed in.
+      - On the night of 21–22 December Žižka broke out, his wagons rolling forward with guns firing, and withdrew to Kolín. Sigismund thought the Hussites beaten and sent his troops into winter quarters. Reinforced, Žižka struck back on 6 January 1422, routing the royal army at Nebovidy, and pursued it south. On 10 January he caught it at Německý Brod. Hundreds of fleeing soldiers drowned when the ice of the Sázava broke, and against Žižka’s orders his men stormed the town and killed many of its people.
+    facts:
+      - [Breakout at Kutná Hora, 21–22 December 1421]
+      - [Battle of Německý Brod, "10 January 1422, Hussite victory"]
+    markers:
+      - kind: held
+        side: hus
+        name: Žatec
+        date: September 1421
+        text: The crusaders failed to storm the Hussite town and retreated in disorder on hearing that a relief army was coming.
+        lonlat: [13.54, 50.33]
+      - kind: event
+        name: Rabí
+        date: June 1421
+        text: Žižka was wounded while besieging the castle and lost the sight of his remaining eye.
+        lonlat: [13.62, 49.28]
+      - kind: battle
+        side: hus
+        name: Battle of Kutná Hora
+        date: 21–22 December 1421
+        text: Trapped between the town and the royal army, Žižka broke through at night, using guns on the moving wagons as his main weapon.
+        lonlat: [15.27, 49.95]
+        lp: l
+      - kind: battle
+        side: hus
+        name: Battle of Německý Brod
+        date: 10 January 1422
+        text: The end of a pursuit from Nebovidy and Habry. The town was sacked and most of the royal army’s rearguard was killed or drowned.
+        lonlat: [15.58, 49.61]
+    arrows:
+      - side: cru
+        label: Sigismund
+        via: [[16.61, 49.19], [15.59, 49.4], [15.3, 49.85]]
+      - side: hus
+        label: Žižka
+        via: [[15.2, 50.03], [15.32, 49.9], [15.48, 49.75], [15.57, 49.63]]
+      - side: cru
+        label: Second crusade
+        via: [[12.37, 50.08], [13.0, 50.25], [13.5, 50.32]]
+  - title: Žižka’s last years and Ústí
+    date: 1422–1426
+    when: "1422"
+    borders: "1426-06-16"
+    countries: [cz, de, pl, lt]
+    body:
+      - Without a common enemy in the field, the Hussites fell out. In Prague the radical preacher Želivský was arrested and beheaded in March 1422. Seeking a king of their own faith, the Hussites offered the crown to Władysław II Jagiełło of Poland and then to Grand Duke Vytautas of Lithuania, who sent his nephew Sigismund Korybut to govern. Žižka, now leading the radicals of Tábor and the eastern Bohemian brotherhood of Orebites, beat the Prague Utraquists and their noble allies at Hořice in 1423 and at Malešov on 7 June 1424. He died of illness on 11 October 1424 while besieging Přibyslav; his followers called themselves the Orphans.
+      - Prokop the Great, a married priest, became the leading commander of the radicals. In 1426 an army from Saxony and Meissen came to relieve Ústí nad Labem, an Elbe town that Sigismund had pledged to the Margrave of Meissen and which the Hussites were besieging. On 16 June it attacked the Hussite wagon fort on a hill near the town, broke through the chains between the wagons and was surrounded and cut down. The Hussites gave no quarter. The chronicles speak of tens of thousands; modern historians think the armies were much smaller, but the crusaders’ losses were heavy.
+    facts:
+      - [Battle of Malešov, "7 June 1424, Žižka defeats the Prague Utraquists"]
+      - [Death of Žižka, "11 October 1424, near Přibyslav"]
+      - [Battle of Ústí nad Labem, "16 June 1426, Hussite victory"]
+    markers:
+      - kind: battle
+        name: Battle of Hořice
+        date: April 1423
+        text: In the first battle between Hussite factions, Žižka beat the Utraquist lords under Čeněk of Wartenberg.
+        lonlat: [15.63, 50.37]
+      - kind: battle
+        name: Battle of Malešov
+        date: 7 June 1424
+        text: Žižka let the army of Prague and its noble allies advance up a valley, then attacked downhill and routed it.
+        lonlat: [15.22, 49.91]
+      - kind: event
+        name: Přibyslav
+        date: 11 October 1424
+        text: Žižka died in the camp during the siege of the castle. Plague used to be blamed, but historians now think a carbuncle more likely.
+        lonlat: [15.74, 49.58]
+      - kind: battle
+        side: hus
+        name: Battle of Ústí nad Labem
+        date: 16 June 1426
+        text: The Saxon relief army, led by Boso of Vitzthum, broke into the wagon fort, but Hussite horsemen took it from behind and it was destroyed.
+        lonlat: [13.96, 50.66]
+    arrows:
+      - side: cru
+        label: Saxon army
+        via: [[13.74, 51.05], [13.85, 50.85], [13.95, 50.69]]
+      - side: hus
+        label: Prokop and Korybut
+        via: [[14.45, 50.15], [14.2, 50.4], [14.0, 50.62]]
+  - title: Tachov and the beautiful rides
+    date: 1427–1430
+    when: "1427"
+    borders: "1430-02-06"
+    countries: [cz, de, pl, at, sk, hu]
+    body:
+      - In 1427 a new crusade under the papal legate Cardinal Henry Beaufort and the Elector Frederick of Brandenburg crossed into western Bohemia and besieged Stříbro. When a Hussite army under Prokop approached, the crusaders panicked and fled; on 4 August Beaufort tried and failed to rally them at Tachov. Later that year the Hussites imprisoned Korybut, suspected of plotting with Sigismund. No crusade came again for four years.
+      - The Hussites now carried the war abroad, in campaigns they called the beautiful or glorious rides. From 1428 Prokop and other captains led armies into Silesia and Lusatia, Austria, Upper Hungary and Saxony, burning towns and monasteries, taking ransoms and loot and punishing the lands that had sent men to the crusades; they made no attempt at lasting conquest. The greatest ride, in the winter of 1429–30, went through Saxony into Franconia, sacking Plauen and burning Hof and Bayreuth. At Kulmbach on 6 February 1430 Frederick of Brandenburg, burgrave of Nuremberg, agreed terms with Prokop, and the Hussites went home.
+    facts:
+      - [Battle of Tachov, "4 August 1427, crusaders flee"]
+      - [Beautiful rides, 1428–1433]
+      - [Agreement of Kulmbach, 6 February 1430]
+    markers:
+      - kind: held
+        side: hus
+        name: Stříbro
+        date: July–August 1427
+        text: The crusaders besieged the Hussite-held town and fled when the relief army came near.
+        lonlat: [13.0, 49.75]
+        lp: b
+      - kind: battle
+        side: hus
+        name: Battle of Tachov
+        date: 4 August 1427
+        text: Beaufort, the English cardinal who led the crusade for the pope, could not stop the flight.
+        lonlat: [12.63, 49.8]
+        lp: l
+      - kind: taken
+        side: hus
+        name: Plauen
+        date: January 1430
+        text: The Hussites stormed the town and its castle and killed many of the defenders and townspeople.
+        lonlat: [12.12, 50.49]
+      - kind: taken
+        side: hus
+        name: Bayreuth
+        date: February 1430
+        text: The town was burned, like Hof before it, as the Hussites moved through Franconia.
+        lonlat: [11.58, 49.95]
+      - kind: treaty
+        side: hus
+        name: Kulmbach
+        date: 6 February 1430
+        text: Frederick of Brandenburg, whose Franconian lands were being ravaged, came to terms with Prokop, and the Hussites agreed to leave.
+        lonlat: [11.45, 50.1]
+        lp: l
+    arrows:
+      - side: cru
+        label: Beaufort
+        via: [[12.17, 49.85], [12.6, 49.82], [12.95, 49.76]]
+      - side: hus
+        label: Silesia, 1428
+        via: [[15.83, 50.21], [16.4, 50.43], [17.0, 50.62]]
+      - side: hus
+        label: Prokop, 1429–30
+        via: [[14.1, 50.6], [13.0, 51.0], [12.12, 50.52], [11.6, 49.98]]
+  - title: Domažlice and the Council of Basel
+    date: 1431–1433
+    when: "1431"
+    borders: "1431-08-14"
+    countries: [cz, de, ch, pl]
+    body:
+      - Talks between Sigismund and the Hussites came to nothing, and the pope called another crusade. On 1 August 1431 a large army under Frederick of Brandenburg, with the papal legate Cardinal Giuliano Cesarini, crossed into western Bohemia, and on 8 August it began to besiege Domažlice. When a Hussite relief army under Prokop came up on 14 August, the crusaders broke and fled back over the border forest before the battle had properly begun, by tradition at the sound of the Hussite hymn “Ye who are warriors of God”. Cesarini barely escaped, leaving behind his baggage and the papal bull.
+      - Cesarini drew his own conclusion. As president of the new Council of Basel he worked for talks, and in May 1432, at Cheb, the council’s envoys accepted the Hussite demand that the Bible and the practice of the early Church should judge between them. A Hussite embassy led by Prokop debated at Basel from January 1433; a council delegation then went to Prague, and in November it agreed terms with the Bohemian diet allowing communion in both kinds. The moderates accepted them; the radicals did not. That year Hussite troops also fought for Poland against the Teutonic Order and reached the Baltic.
+    facts:
+      - [Battle of Domažlice, "14 August 1431, crusaders flee"]
+      - [Judge of Cheb, "May 1432, the Bible as judge in the talks"]
+      - [Hussite embassy at Basel, from 4 January 1433]
+    markers:
+      - kind: battle
+        side: hus
+        name: Battle of Domažlice
+        date: 14 August 1431
+        text: The last crusade against the Hussites collapsed without a real fight. The Hussites reportedly captured thousands of wagons and all the crusaders’ baggage.
+        lonlat: [12.99, 49.41]
+      - kind: event
+        name: Cheb
+        date: May 1432
+        text: The council’s envoys agreed that Scripture and the practice of Christ, the apostles and the early Church would judge in the coming debate.
+        lonlat: [12.37, 50.08]
+      - kind: event
+        name: Basel
+        date: January–April 1433
+        text: The Hussite envoys, among them Prokop, John of Rokycany and the Englishman Peter Payne, debated the Four Articles with the council’s theologians.
+        lonlat: [7.59, 47.56]
+    arrows:
+      - side: cru
+        label: Crusaders, 1431
+        via: [[12.16, 49.68], [12.6, 49.62], [12.93, 49.43]]
+      - side: hus
+        label: Prokop
+        via: [[13.6, 49.72], [13.25, 49.55], [13.03, 49.43]]
+  - title: Lipany and the Compacts
+    date: 1434–1436
+    when: "1434"
+    borders: "1436-07-05"
+    countries: [cz]
+    side_names:
+      hus: Taborites and Orphans
+    move_names:
+      hus: Taborite and Orphan moves
+    body:
+      - The radicals, unwilling to compromise, had besieged Catholic Plzeň since July 1433 without success. In the spring of 1434 the Utraquist and Catholic lords formed a league, took the New Town of Prague from the radicals in May and forced Prokop to lift the siege. The Taborites and Orphans joined forces east of Prague. On 30 May 1434, near Lipany, the League’s army pretended to retreat and drew them out of their wagon fort; its hidden cavalry then broke in. Prokop the Great and Prokop the Lesser were killed, and hundreds of prisoners were burned to death in barns.
+      - Lipany broke the radicals, and the moderates came to terms with Sigismund and the Church. On 5 July 1436 at Jihlava the Compacts of Basel were proclaimed, allowing communion in both kinds in Bohemia and Moravia, and the estates accepted Sigismund as king. He entered Prague that August and died the next year. The wars had devastated Bohemia and many neighbouring lands, but the Hussites kept their church; the Utraquist church remained Bohemia’s largest until after the battle of the White Mountain in 1620.
+    facts:
+      - [Battle of Lipany, "30 May 1434, victory for the Bohemian League"]
+      - [Compacts of Basel, "proclaimed at Jihlava, 5 July 1436"]
+      - [Sigismund enters Prague, August 1436]
+    markers:
+      - kind: held
+        side: lea
+        name: Plzeň
+        date: July 1433 – May 1434
+        text: The Catholic city held out for ten months against the radical armies. Prokop lifted the siege after the League took Prague.
+        lonlat: [13.38, 49.75]
+      - kind: taken
+        side: lea
+        name: Prague
+        date: May 1434
+        text: The League’s forces took the New Town, the radicals’ stronghold in the capital.
+        lonlat: [14.42, 50.08]
+      - kind: battle
+        side: lea
+        name: Battle of Lipany
+        date: 30 May 1434
+        text: Also called the battle of Český Brod. Sigismund is said to have remarked that the Bohemians could be beaten only by Bohemians.
+        lonlat: [14.94, 50.03]
+      - kind: treaty
+        name: Jihlava
+        date: 5 July 1436
+        text: Sigismund, the council’s envoys and the estates of Bohemia and Moravia proclaimed the Compacts in this Moravian town.
+        lonlat: [15.59, 49.4]
+    arrows:
+      - side: hus
+        label: Prokop
+        via: [[13.4, 49.76], [14.1, 49.9], [14.7, 49.98], [14.91, 50.02]]
+      - side: lea
+        label: League
+        via: [[14.45, 50.08], [14.7, 50.07], [14.9, 50.04]]

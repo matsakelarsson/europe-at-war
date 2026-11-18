@@ -2,8 +2,8 @@ id: napoleonic-wars
 name: Napoleonic Wars
 start: "1803"
 end: "1815"
-tier: B
-summary: Sweden’s part in the coalitions against Napoleon, from the loss of Swedish Pomerania in 1807 to Crown Prince Charles John’s Army of the North in 1813 and his campaign against Denmark–Norway, which ended with the Treaty of Kiel in 1814 and the cession of Norway to the Swedish king.
+tier: A
+summary: The wars between Napoleon’s France and its allies and changing coalitions of Britain, Austria, Prussia, Russia, Sweden and others. Napoleon’s victories over Austria and Prussia ended the Holy Roman Empire and remade the map of Germany until the allies drove him back across the Rhine in 1813; Sweden lost Swedish Pomerania in 1807 and, after the campaign of 1813, gained Norway from Denmark at Kiel in 1814.
 sides:
   - id: se
     name: Sweden
@@ -27,9 +27,34 @@ sides:
     success: Success for Sweden’s other enemies
     polities:
       - france
+  - id: fr
+    name: France and its allies
+    polities: [france, bavaria, wurttemberg, baden, saxony, westphalia, berg]
+    ink: navy
+    moves: French and allied moves
+    success: French success
+  - id: at
+    name: Austria
+    polities: [habsburg]
+    ink: purple
+    moves: Austrian moves
+    success: Austrian success
+  - id: pr
+    name: Prussia
+    polities: [prussia]
+    ink: slate
+    moves: Prussian moves
+    success: Prussian success
+  - id: ru
+    name: Russia
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
 notes:
   - Dates are New Style.
   - Migrated from Sweden at War, so the story is told from Sweden’s side.
+  - The steps on the war in Germany and Austria were added for Europe at War. Bavaria, Württemberg, Baden and, from December 1806, Saxony fought on France’s side until 1813.
 sources:
   - url: https://en.wikipedia.org/wiki/Franco-Swedish_War
     title: Franco-Swedish War (Wikipedia)
@@ -37,6 +62,34 @@ sources:
     title: Jean-Baptiste Bernadotte (History of War)
   - url: https://en.wikipedia.org/wiki/Treaty_of_Kiel
     title: Treaty of Kiel (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Ulm_campaign
+    title: Ulm campaign (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Austerlitz
+    title: Battle of Austerlitz (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Peace_of_Pressburg_(1805)
+    title: Peace of Pressburg, 1805 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Confederation_of_the_Rhine
+    title: Confederation of the Rhine (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Dissolution_of_the_Holy_Roman_Empire
+    title: Dissolution of the Holy Roman Empire (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Jena%E2%80%93Auerstedt
+    title: Battle of Jena–Auerstedt (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Treaties_of_Tilsit
+    title: Treaties of Tilsit (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/War_of_the_Fifth_Coalition
+    title: War of the Fifth Coalition (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Aspern-Essling
+    title: Battle of Aspern-Essling (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Wagram
+    title: Battle of Wagram (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Treaty_of_Sch%C3%B6nbrunn
+    title: Treaty of Schönbrunn (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/German_campaign_of_1813
+    title: German campaign of 1813 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_L%C3%BCtzen_(1813)
+    title: Battle of Lützen, 1813 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Bautzen_(1813)
+    title: Battle of Bautzen, 1813 (Wikipedia)
 steps:
   - title: War with Napoleon in Pomerania
     date: 1805–1807
@@ -127,6 +180,183 @@ steps:
         label: Occupied by France, 1807–1810
         atoms:
           - DE-MV~pomN
+  - title: Ulm and Austerlitz
+    date: September – December 1805
+    when: "1805-09-10"
+    borders: "1805-12-26"
+    countries: [de, at, cz, sk, fr, ru]
+    body:
+      - In 1805 Austria joined Britain, Russia and Sweden in the Third Coalition against Napoleon, who had crowned himself Emperor of the French the year before. On 10 September an Austrian army under Karl Mack crossed the Inn into Bavaria, whose elector sided with France, and advanced to Ulm to wait for the Russians. Napoleon marched his Grande Armée from the Channel coast to the Rhine and in early October swung it across Württemberg to the Danube behind Mack, while Bavaria, Württemberg and Baden joined him. Surrounded, Mack surrendered at Ulm on 20 October; in all the campaign cost Austria some 60,000 men taken prisoner.
+      - The French entered Vienna on 13 November, and Kutuzov’s Russians and the remaining Austrians fell back into Moravia, where Tsar Alexander I and Emperor Francis II joined them. On 2 December near Austerlitz the allies attacked Napoleon’s right, which he had left weak on purpose, and he broke through their centre on the Pratzen heights. The allies lost at least 27,000 men, about a third of their army, against some 9,000 French. At Pressburg on 26 December Austria gave up Venetia, Istria and Dalmatia to Napoleon’s Kingdom of Italy, and Tyrol, Vorarlberg and its Swabian lands to Bavaria, Württemberg and Baden. It received Salzburg in return.
+    facts:
+      - [Capitulation of Ulm, 20 October 1805]
+      - [Battle of Austerlitz, "2 December 1805, French victory"]
+      - [Peace of Pressburg, "26 December 1805; the electors of Bavaria and Württemberg became kings"]
+    markers:
+      - kind: siege
+        side: fr
+        name: Capitulation of Ulm
+        date: 20 October 1805
+        text: Cut off from Austria, Mack’s army laid down its arms before Napoleon outside the city.
+        lonlat: [9.991, 48.399]
+      - kind: taken
+        side: fr
+        name: Vienna
+        date: 13 November 1805
+        text: The French took the Habsburg capital without a fight and seized the Danube bridge intact by a bluff.
+        lonlat: [16.372, 48.208]
+        lp: l
+      - kind: battle
+        side: fr
+        name: Battle of Austerlitz
+        date: 2 December 1805
+        text: Today’s Slavkov u Brna. The Battle of the Three Emperors, Napoleon’s most celebrated victory, broke the Third Coalition.
+        lonlat: [16.763, 49.128]
+      - kind: treaty
+        side: fr
+        name: Peace of Pressburg
+        date: 26 December 1805
+        text: Signed in today’s Bratislava. Austria lost its lands in Italy and south-western Germany and paid an indemnity of 40 million francs.
+        lonlat: [17.11, 48.144]
+    arrows:
+      - side: at
+        label: Mack
+        via: [[13.03, 48.26], [11.6, 48.15], [10.05, 48.4]]
+      - side: fr
+        label: Grande Armée
+        via: [[8.2, 49.0], [9.2, 48.9], [10.8, 48.72], [10.15, 48.45]]
+      - side: ru
+        label: Kutuzov
+        via: [[13.03, 48.26], [15.6, 48.41], [16.65, 49.1]]
+      - side: fr
+        label: Napoleon
+        via: [[10.9, 48.7], [13.46, 48.57], [16.3, 48.25], [16.7, 49.08]]
+    areas:
+      - style: lost
+        label: Lost by Austria to Bavaria and Baden (Tyrol, Vorarlberg, the Breisgau)
+        atoms: [AT-7, AT-8, IT-BZ, IT-TN, DE-BW~baden~vorder]
+  - title: Jena, Auerstedt and the end of the Empire
+    date: July 1806 – July 1807
+    when: "1806-07-12"
+    borders: "1807-08-18"
+    countries: [de, at, fr, pl, ru]
+    body:
+      - After Austerlitz Napoleon reshaped Germany. On 12 July 1806 sixteen princes, led by the new kings of Bavaria and Württemberg, formed the Confederation of the Rhine under his protection and left the Holy Roman Empire. Under a French ultimatum Francis II laid down the imperial crown on 6 August, ending an empire that had lasted, in some form, for a thousand years; he kept the title of Emperor of Austria he had taken in 1804. Prussia, neutral in 1805, was angered by Napoleon’s offer to return Hanover to Britain, and in October it went to war with Saxony at its side.
+      - On 14 October Napoleon beat Prince Hohenlohe’s Prussians and Saxons at Jena, while 20 km to the north Marshal Davout’s corps of 26,000 routed the main Prussian army, twice its size, at Auerstedt. Napoleon entered Berlin on 27 October, and Hohenlohe surrendered at Prenzlau the next day. Saxony changed sides and became a kingdom. After further fighting in Poland, Russia and Prussia made peace with Napoleon at Tilsit in July 1807. Prussia lost about half its land and people. Its lands west of the Elbe went to the new Kingdom of Westphalia and other French clients, and most of its Polish lands to the Duchy of Warsaw.
+    facts:
+      - [Confederation of the Rhine, "12 July 1806, 16 founding states"]
+      - [End of the Holy Roman Empire, 6 August 1806]
+      - [Prussian and Saxon losses, "About 41,000 at Jena and Auerstedt"]
+    markers:
+      - kind: event
+        name: Imperial Diet at Regensburg
+        date: 1 August 1806
+        text: The members of the Confederation of the Rhine told the Imperial Diet that they had left the Empire. Francis II abdicated in Vienna five days later.
+        lonlat: [12.083, 49.017]
+      - kind: battle
+        side: fr
+        name: Battle of Saalfeld
+        date: 10 October 1806
+        text: Marshal Lannes beat a Prussian and Saxon advance guard. Its commander, Prince Louis Ferdinand of Prussia, was killed.
+        lonlat: [11.36, 50.65]
+      - kind: battle
+        side: fr
+        name: Battle of Jena
+        date: 14 October 1806
+        text: Napoleon, who thought he faced the main Prussian army, beat Hohenlohe’s Prussians and Saxons on the plateau west of the town.
+        lonlat: [11.51, 50.95]
+        lp: l
+      - kind: battle
+        side: fr
+        name: Battle of Auerstedt
+        date: 14 October 1806
+        text: Davout’s corps held off and then routed the main Prussian army. Its commander, the Duke of Brunswick, was mortally wounded.
+        lonlat: [11.62, 51.115]
+        lp: t
+      - kind: taken
+        side: fr
+        name: Berlin
+        date: 27 October 1806
+        text: Napoleon entered the Prussian capital. Here in November he decreed a blockade of Britain, the Continental System.
+        lonlat: [13.4, 52.52]
+      - kind: battle
+        side: fr
+        name: Battle of Prenzlau
+        date: 28 October 1806
+        text: Hohenlohe surrendered the remains of his army, some 10,000 men, to Murat’s cavalry.
+        lonlat: [13.867, 53.317]
+      - kind: siege
+        side: fr
+        name: Magdeburg
+        date: 8 November 1806
+        text: Prussia’s greatest fortress surrendered to Marshal Ney with a garrison of some 25,000 men after a two-week siege.
+        lonlat: [11.627, 52.131]
+    arrows:
+      - side: fr
+        label: Napoleon
+        via: [[11.1, 49.95], [11.45, 50.45], [11.55, 50.9]]
+      - side: fr
+        label: Pursuit
+        via: [[11.9, 51.45], [12.65, 51.87], [13.35, 52.45]]
+  - title: Aspern-Essling and Wagram
+    date: April – October 1809
+    when: "1809-04-10"
+    borders: "1809-10-14"
+    countries: [at, de, fr, si, hr, it]
+    body:
+      - Hoping to rouse the Germans while Napoleon’s best troops were in Spain, Austria went to war again in April 1809. Archduke Charles invaded Bavaria on 10 April, but Napoleon hurried from Paris and beat him in five days of fighting around Abensberg, Landshut, Eckmühl and Regensburg, and Charles withdrew into Bohemia. Napoleon took Vienna on 13 May. On 21 May he crossed the Danube below the city by the island of Lobau, but Charles attacked the bridgehead at Aspern and Essling, and the swollen river broke the French bridges. Napoleon had to fall back to the island, his first major defeat in more than ten years.
+      - Six weeks later, reinforced from Italy, he crossed again and on 5–6 July beat Charles at Wagram, on the Marchfeld plain north-east of Vienna, in one of the largest battles yet fought in Europe, with some 300,000 men engaged. Charles agreed an armistice at Znaim on 12 July. By the Peace of Schönbrunn on 14 October Austria lost about 3.5 million subjects. Salzburg, Berchtesgaden and the Innviertel went to Bavaria. Carniola, western Carinthia, Trieste and Croatia south of the Sava went to France as the Illyrian Provinces, cutting Austria off from the sea, and Galician lands went to the Duchy of Warsaw and Russia.
+    facts:
+      - [Battle of Aspern-Essling, "21–22 May 1809, Austrian victory"]
+      - [Battle of Wagram, "5–6 July 1809, French victory"]
+      - [Peace of Schönbrunn, 14 October 1809]
+    markers:
+      - kind: battle
+        side: fr
+        name: Battle of Eckmühl
+        date: 22 April 1809
+        text: The climax of Napoleon’s counter-attack in Bavaria. Charles retreated across the Danube at Regensburg into Bohemia.
+        lonlat: [12.182, 48.844]
+      - kind: battle
+        side: at
+        name: Battle of Aspern-Essling
+        date: 21–22 May 1809
+        text: The Austrians drove the French back across the Danube to the island of Lobau. Marshal Lannes was mortally wounded.
+        lonlat: [16.503, 48.213]
+        lp: b
+      - kind: battle
+        side: fr
+        name: Battle of Wagram
+        date: 5–6 July 1809
+        text: After two days of fighting on the Marchfeld, Charles withdrew his beaten army in good order towards Moravia.
+        lonlat: [16.558, 48.296]
+        lp: t
+      - kind: treaty
+        name: Armistice of Znaim
+        date: 12 July 1809
+        text: The armistice agreed at today’s Znojmo ended the fighting between France and Austria.
+        lonlat: [16.049, 48.856]
+      - kind: treaty
+        side: fr
+        name: Peace of Schönbrunn
+        date: 14 October 1809
+        text: Napoleon, who had made the Habsburg palace his headquarters, imposed the peace there. Austria also paid a heavy indemnity and joined the blockade of Britain.
+        lonlat: [16.312, 48.185]
+        lp: l
+    arrows:
+      - side: at
+        label: Archduke Charles
+        via: [[13.45, 48.45], [12.15, 48.55], [12.15, 48.83]]
+      - side: fr
+        label: Napoleon
+        via: [[12.1, 48.95], [13.46, 48.57], [14.29, 48.31], [16.25, 48.22]]
+      - side: at
+        label: Charles, May
+        via: [[12.1, 49.05], [14.5, 49.0], [16.45, 48.33]]
+    areas:
+      - style: lost
+        label: Ceded by Austria to Bavaria, 1809
+        atoms: [AT-5, AT-4~inn]
   - title: Bernadotte and the Army of the North
     date: 1810–1813
     when: "1810"
@@ -212,6 +442,73 @@ steps:
             - 51.5
           - - 12.4577
             - 51.4403
+  - title: Prussia rises, Lützen and Bautzen
+    date: December 1812 – August 1813
+    when: "1812-12-30"
+    borders: "1813-06-04"
+    countries: [de, pl, ru, fr]
+    side_names:
+      ru: Russian and Prussian success
+    move_names:
+      ru: Russian and Prussian moves
+    body:
+      - Napoleon’s Grande Armée was destroyed in Russia in 1812. On 30 December General Ludwig Yorck, commanding the Prussian corps that had marched with it, agreed at Tauroggen to stand aside, without his king’s permission. Frederick William III hesitated, then allied with Russia at Kalisz on 28 February 1813 and declared war on France in March. Prussia called up volunteers and a militia, the Landwehr, and many young men joined free corps such as Lützow’s. Russian and Prussian troops entered Berlin, Dresden and Hamburg. Napoleon raised a new army, made up largely of young conscripts and short of cavalry, and marched into Saxony.
+      - On 2 May he beat the Russians and Prussians under Wittgenstein and Blücher at Lützen and retook Dresden, and the King of Saxony rejoined him. On 20–21 May he won again at Bautzen, but the allies escaped into Silesia in good order, and his army had lost more men than theirs. On 4 June both sides agreed an armistice at Pläswitz and used it, until August, to rebuild their armies. Austria, which had offered to mediate, promised at Reichenbach to join the allies if Napoleon refused its terms. He did, and Austria declared war on 12 August; the autumn campaign ended with his defeat at Leipzig in October.
+    facts:
+      - [Treaty of Kalisz, "28 February 1813, Prussia allies with Russia"]
+      - [Battle of Lützen, "2 May 1813, French victory"]
+      - [Battle of Bautzen, "20–21 May 1813, French victory"]
+    markers:
+      - kind: treaty
+        side: ru
+        name: Treaty of Kalisz
+        date: 28 February 1813
+        text: Russia and Prussia allied against Napoleon. Russia promised to help Prussia regain its strength of 1806.
+        lonlat: [18.08, 51.758]
+      - kind: taken
+        side: ru
+        name: Berlin
+        date: 4 March 1813
+        text: The French garrison left, and Russian Cossacks rode into the Prussian capital, followed by Wittgenstein’s army.
+        lonlat: [13.4, 52.52]
+      - kind: taken
+        side: fr
+        name: Hamburg
+        date: 30 May 1813
+        text: Russian troops under Friedrich Karl von Tettenborn entered the city in March, but Marshal Davout retook it in May and held it until 1814.
+        lonlat: [10.0, 53.55]
+      - kind: battle
+        side: fr
+        name: Battle of Lützen
+        date: 2 May 1813
+        text: Fought around Grossgörschen. Napoleon’s young conscripts held, and the allies withdrew. Gerhard von Scharnhorst, the reformer of the Prussian army, died of his wounds weeks later.
+        lonlat: [12.183, 51.217]
+      - kind: battle
+        side: fr
+        name: Battle of Bautzen
+        date: 20–21 May 1813
+        text: Napoleon forced the allies from their positions on the Spree, but a slow flank attack let them get away.
+        lonlat: [14.42, 51.18]
+      - kind: treaty
+        name: Armistice of Pläswitz
+        date: 4 June 1813
+        text: The armistice, first to 20 July and then extended into August, gave the allies time to bring Austria in.
+        lonlat: [16.511, 51.044]
+        lp: t
+      - kind: treaty
+        side: ru
+        name: Reichenbach
+        date: 27 June 1813
+        text: In today’s Dzierżoniów Austria agreed with Russia and Prussia to join the war if Napoleon rejected its peace terms.
+        lonlat: [16.651, 50.728]
+        lp: b
+    arrows:
+      - side: fr
+        label: Napoleon
+        via: [[11.03, 50.98], [12.1, 51.22], [13.74, 51.05], [14.4, 51.18]]
+      - side: ru
+        label: Allied retreat
+        via: [[14.5, 51.2], [15.5, 51.15], [16.35, 51.05]]
   - title: "Kiel: Norway for Pomerania"
     date: 1813–1814
     when: "1813"

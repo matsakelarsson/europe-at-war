@@ -1,0 +1,139 @@
+id: franco-flemish-war
+name: Franco-Flemish War
+start: "1297-01-07"
+end: "1305-06-23"
+tier: B
+summary: A war between Philip IV of France and the County of Flanders, whose count had allied with England. France overran Flanders and annexed it by 1300, but in 1302 the towns rose and their militias destroyed a French army of knights at Courtrai, the Battle of the Golden Spurs. After the hard-fought battle of Mons-en-Pévèle in 1304, the Treaty of Athis-sur-Orge restored the count as a French vassal at the price of heavy payments and the towns of Walloon Flanders.
+countries: [be, fr, nl]
+sides:
+  - id: fla
+    name: Flanders
+    polities: [flanders]
+    ink: gold
+    moves: Flemish moves
+    success: Flemish success
+  - id: fra
+    name: France and its allies
+    polities: [france]
+    ink: navy
+    moves: French moves
+    success: French and allied success
+notes:
+  - Dates are Julian. Places in Belgium are given their Dutch names, with the French form where it is common in English, such as Courtrai for Kortrijk and Furnes for Veurne.
+  - In Flanders the battle of Courtrai is known as the Guldensporenslag, and 11 July is the official holiday of the Flemish Community in Belgium.
+  - The war ran alongside the Anglo-French Gascon War of 1294–1303 and the first years of the First War of Scottish Independence.
+sources:
+  - title: Franco-Flemish War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Franco-Flemish_War
+  - title: Matins of Bruges (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Matins_of_Bruges
+  - title: Battle of the Golden Spurs (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Golden_Spurs
+  - title: Battle of the Golden Spurs (Britannica)
+    url: https://www.britannica.com/event/Battle-of-the-Golden-Spurs
+  - title: Battle of Zierikzee (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Zierikzee
+  - title: Battle of Mons-en-Pévèle (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Mons-en-P%C3%A9v%C3%A8le
+  - title: Treaty of Athis-sur-Orge (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Athis-sur-Orge
+steps:
+  - title: Annexation and the Golden Spurs
+    date: 1297–1302
+    when: "1297-01-07"
+    borders: "1302-07-11"
+    countries: [be, fr]
+    body:
+      - Guy of Dampierre, Count of Flanders, was caught between his overlord Philip IV, who pressed royal justice and taxes on the county, and its great cloth towns, which lived on English wool. In January 1297 he allied with Edward I of England and renounced his homage. A French army besieged Lille, Robert of Artois beat the Flemish at Furnes on 20 August, and Lille, Bruges and Kortrijk gave in. Edward landed with a small army but, with Scotland in revolt, made a truce and went home. When it ran out in 1300, Charles of Valois overran the rest of the county; Guy surrendered and was imprisoned, and Philip annexed Flanders to the royal domain.
+      - The new governor, Jacques de Châtillon, ruled harshly with the support of the town patricians, the Leliaerts or “men of the lily”, and raised new taxes. At dawn on 18 May 1302, in the Matins of Bruges, the guildsmen of Bruges led by the weaver Pieter de Coninck killed the French soldiers quartered in the town; tradition says that anyone who could not say the Flemish words “schild en vriend” was cut down. Led by Guy’s son Guy of Namur and his grandson William of Jülich, the rebels then besieged the French garrison in the castle of Kortrijk.
+      - On 11 July Robert of Artois attacked them outside the town with a royal army of about 8,000, including some 2,500 mounted men-at-arms. The Flemish, perhaps 9,000 townsmen and peasants on foot, armed with pikes and the spiked club called the goedendag, stood behind streams and ditches. The French cavalry floundered in the marshy ground and was slaughtered, since the militiamen took few prisoners. Robert and hundreds of knights were killed, and some 500 pairs of golden spurs were hung in the Church of Our Lady in Kortrijk.
+    facts:
+      - [Matins of Bruges, 18 May 1302]
+      - [Battle of the Golden Spurs, "11 July 1302, Flemish victory"]
+      - [Commanders, "Guy of Namur and William of Jülich; Robert II of Artois"]
+    markers:
+      - kind: battle
+        side: fra
+        name: Battle of Furnes
+        date: 20 August 1297
+        text: Robert of Artois, back from fighting the English in Gascony, beat a Flemish force near Veurne.
+        lonlat: [2.67, 51.07]
+      - kind: taken
+        side: fra
+        name: Lille
+        date: 1 September 1297
+        text: Robert of Béthune, Guy’s eldest son, surrendered the town after a two-month siege when no relief came.
+        lonlat: [3.058, 50.628]
+      - kind: event
+        side: fla
+        name: Bruges
+        date: 18 May 1302
+        text: The guilds rose before dawn and killed many of Châtillon’s soldiers in their beds. The governor escaped to Kortrijk.
+        lonlat: [3.224, 51.209]
+      - kind: battle
+        side: fla
+        name: Battle of the Golden Spurs
+        date: 11 July 1302
+        text: One of the first great defeats of mounted knights by infantry in the Middle Ages. The French castle garrison surrendered soon after.
+        lonlat: [3.276, 50.829]
+    arrows:
+      - side: fra
+        label: Robert of Artois
+        via: [[2.83, 50.43], [3.06, 50.63], [3.25, 50.8]]
+      - side: fla
+        label: Bruges militia
+        via: [[3.22, 51.2], [3.24, 51.0], [3.27, 50.85]]
+      - side: fra
+        label: Charles of Valois, 1300
+        via: [[2.83, 50.43], [3.0, 50.85], [3.2, 51.18]]
+  - title: Mons-en-Pévèle and the Treaty of Athis
+    date: 1302–1305
+    when: "1303-04-04"
+    borders: "1305-06-23"
+    countries: [be, fr, nl]
+    body:
+      - After Courtrai the rebels took Lille, Douai and the rest of Flanders, and the guilds took over the town governments. Philip led an army to the border in September 1302 but withdrew without fighting, and in April 1303 the Flemish held off a French attack at Arques near Saint-Omer. Guy of Namur took the war into Zeeland, which the counts of Flanders claimed against the counts of Holland, but on 10–11 August 1304 a French fleet under the Genoese Rainier Grimaldi, with ships from Holland, defeated his fleet off Zierikzee and took him prisoner.
+      - A week later, on 18 August 1304, Philip IV fought the Flemish militias at Mons-en-Pévèle, south of Lille. After a long, hot day in which the king himself was nearly killed, the Flemish left the field, with William of Jülich among the dead. Both sides claimed victory, and when the Flemish raised a new army to relieve Lille, Philip agreed a truce. By the Treaty of Athis-sur-Orge, sealed on 23 June 1305, Guy’s son Robert of Béthune was restored as count, but Flanders had to pay huge fines, pull down the walls of its great towns, send 3,000 men of Bruges on pilgrimage and hand Lille, Douai and Orchies to the king. A further agreement in 1312 made the cession permanent.
+    facts:
+      - [Battle of Zierikzee, "10–11 August 1304, French and Hollandish victory"]
+      - [Battle of Mons-en-Pévèle, "18 August 1304, claimed by both sides"]
+      - [Treaty of Athis-sur-Orge, 23 June 1305]
+    markers:
+      - kind: battle
+        side: fla
+        name: Battle of Arques
+        date: 4 April 1303
+        text: William of Jülich’s men, mostly from Ypres, held their ground against repeated French attacks, at a heavy cost.
+        lonlat: [2.303, 50.736]
+      - kind: naval
+        side: fra
+        name: Battle of Zierikzee
+        date: 10–11 August 1304
+        text: The French galleys and the Hollanders broke the Flemish fleet besieging the town, and Zeeland went back to the Count of Holland.
+        lonlat: [3.916, 51.65]
+      - kind: battle
+        side: fra
+        name: Battle of Mons-en-Pévèle
+        date: 18 August 1304
+        text: Late in the day the Flemish broke into the royal camp, and Philip had to fight for his life. The French held the field.
+        lonlat: [3.103, 50.48]
+      - kind: treaty
+        name: Athis-sur-Orge
+        date: 23 June 1305
+        text: The peace was sealed at Athis, south of Paris, three months after the old count Guy had died a prisoner at Compiègne.
+        lonlat: [2.389, 48.707]
+    arrows:
+      - side: fra
+        label: Philip IV
+        via: [[2.78, 50.29], [3.0, 50.4], [3.09, 50.47]]
+      - side: fla
+        label: Guy of Namur
+        via: [[3.38, 51.34], [3.6, 51.55], [3.9, 51.63]]
+      - side: fla
+        label: Flemish militias
+        via: [[3.25, 50.82], [3.12, 50.62], [3.11, 50.5]]
+    areas:
+      - style: gained
+        side: fra
+        label: Lille, Douai and Orchies, to the French crown 1305–1312
+        polygon: [[2.8, 50.68], [2.98, 50.78], [3.2, 50.74], [3.28, 50.58], [3.32, 50.45], [3.18, 50.33], [3.0, 50.32], [2.92, 50.42], [2.82, 50.52]]

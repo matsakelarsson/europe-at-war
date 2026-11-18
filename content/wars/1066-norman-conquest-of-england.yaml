@@ -1,0 +1,363 @@
+id: norman-conquest-of-england
+name: Norman Conquest of England
+start: "1066-09-28"
+end: "1071"
+tier: A
+summary: The conquest of England by William, duke of Normandy, who landed in Sussex in September 1066, defeated and killed King Harold at Hastings and was crowned at Westminster on Christmas Day. Over the next five years he put down a series of English risings, some backed by the Danes and the Welsh, laid waste to the north and took the last rebel stronghold, the Isle of Ely, in 1071. A French-speaking Norman aristocracy and church replaced the English ruling class.
+countries: [gb, fr, dk]
+sides:
+  - id: nor
+    name: William and the Normans
+    polities: []
+    ink: blue
+    moves: Norman moves
+    success: Norman success
+  - id: eng
+    name: English
+    polities: [england]
+    ink: red
+    moves: English moves
+    success: English success
+  - id: dan
+    name: Denmark
+    polities: [denmark]
+    ink: gold
+    moves: Danish moves
+    success: Danish success
+notes:
+  - The main sources are the Anglo-Saxon Chronicle and, on the Norman side, William of Poitiers and William of Jumièges, both writing to justify the conquest; Orderic Vitalis and the chroniclers of the next generation add detail. The Bayeux Tapestry, made in England probably in the 1070s for William’s half-brother Odo, tells the Norman story in pictures.
+  - Numbers are uncertain. Writers of the time give impossible figures; modern estimates for each army at Hastings range from about 5,000 to more than 10,000 men.
+  - The Norwegian invasion of September 1066 and the Battle of Stamford Bridge are told in their own story, the Norwegian invasion of England.
+sources:
+  - title: Norman Conquest (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Norman_Conquest
+  - title: Battle of Hastings (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Hastings
+  - title: William the Conqueror (Wikipedia)
+    url: https://en.wikipedia.org/wiki/William_the_Conqueror
+  - title: Siege of Exeter (1068) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Exeter_(1068)
+  - title: Robert de Comines (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Robert_de_Comines
+  - title: Danish attacks on Norman England (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Danish_attacks_on_Norman_England
+  - title: Harrying of the North (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Harrying_of_the_North
+  - title: Ely Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ely_Rebellion
+  - title: Hereward the Wake (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hereward_the_Wake
+  - title: Norman Conquest (Britannica)
+    url: https://www.britannica.com/event/Norman-Conquest
+  - title: Battle of Hastings (Britannica)
+    url: https://www.britannica.com/event/Battle-of-Hastings
+steps:
+  - title: The claim and the landing
+    date: January–September 1066
+    when: "1066-09-28"
+    borders: "1066-09-28"
+    countries: [gb, fr]
+    body:
+      - Edward the Confessor died childless on 5 January 1066, and the next day Harold Godwinson, earl of Wessex and the most powerful man in England, was crowned king. William, duke of Normandy, a great-nephew of Edward’s Norman mother, Emma, claimed that Edward had promised him the throne, probably in 1051, and that Harold had sworn on holy relics to support him during a visit to Normandy around 1064. Norman writers later said the pope had blessed the invasion with a banner, but no other source supports this. A third claimant, Harald Hardrada of Norway, invaded the north in September; that story is told in the Norwegian invasion of England.
+      - William gathered knights from Normandy, Brittany, Flanders and other parts of France and built a fleet of several hundred ships. The army was ready by August, but contrary winds, and perhaps caution, kept it waiting at the mouth of the Dives and then at Saint-Valery-sur-Somme. Harold guarded the south coast all summer but sent his levies home on 8 September when their supplies ran out, then hurried north to destroy the Norwegians at Stamford Bridge on 25 September. Three days later William landed unopposed at Pevensey. He built a timber castle at Hastings and ravaged the countryside around it, much of it Harold’s own land.
+    facts:
+      - [William’s landing, "28 September 1066, at Pevensey"]
+      - [William’s fleet, "Several hundred ships; one contemporary list gives 776"]
+      - [William’s army, "Perhaps 7,000–12,000 men, by modern estimates"]
+    markers:
+      - kind: event
+        side: nor
+        name: Dives-sur-Mer
+        date: August 1066
+        text: According to William of Poitiers the fleet was built and the army gathered at the mouth of the Dives.
+        lonlat: [-0.1, 49.287]
+      - kind: event
+        side: nor
+        name: Saint-Valery-sur-Somme
+        date: September 1066
+        text: The fleet waited here for a southerly wind and sailed on the night of 27 September.
+        lonlat: [1.633, 50.186]
+      - kind: taken
+        side: nor
+        name: Pevensey
+        date: 28 September 1066
+        text: The Normans came ashore inside the old Roman fort, where there was no one to oppose them.
+        lonlat: [0.334, 50.819]
+        lp: b
+      - kind: held
+        side: nor
+        name: Hastings
+        date: October 1066
+        text: William moved his army a few miles east and threw up a wooden castle, a scene shown in the Bayeux Tapestry.
+        lonlat: [0.573, 50.856]
+      - kind: battle
+        side: eng
+        name: Stamford Bridge
+        date: 25 September 1066
+        text: Harold destroyed the Norwegian army near York three days before William landed.
+        lonlat: [-0.913, 53.993]
+    arrows:
+      - side: nor
+        label: William’s fleet
+        via: [[1.6, 50.2], [1.0, 50.55], [0.36, 50.79]]
+      - side: eng
+        label: Harold, to the north
+        via: [[-0.13, 51.5], [-1.0, 52.7], [-0.95, 53.95]]
+  - title: Hastings
+    date: 14 October 1066
+    when: "1066-10-14"
+    borders: "1066-10-14"
+    countries: [gb, fr]
+    body:
+      - Harold came back to London and stayed about a week gathering men, then marched into Sussex, perhaps hoping to surprise William as he had surprised the Norwegians. Norman scouts gave warning, and on the morning of 14 October William led his army out of Hastings. Harold had taken up position on a ridge about ten kilometres to the north-west, where the town of Battle now stands. The armies were probably of similar size, but the English all fought on foot, the housecarls and the fyrd levies, with few archers, while William had archers, infantry and mounted knights.
+      - The battle lasted from about nine in the morning until dusk. The English shield wall held against arrows and charges, and part of William’s army, the Bretons on the left, broke and fled until William showed himself to quell a rumour that he was dead; the English who ran after them were cut down. Norman writers say the knights twice more feigned flight to draw men out of the line. Late in the day Harold was killed, with his brothers Gyrth and Leofwine. How he died is not known; the arrow in the eye may be a later story. The English broke, though many of the housecarls fought on around their dead king.
+    facts:
+      - [Battle of Hastings, "14 October 1066, Norman victory"]
+      - [Killed, "King Harold and his brothers Gyrth and Leofwine"]
+      - [Battle Abbey, "Founded by William on the battlefield, its altar where Harold fell"]
+    markers:
+      - kind: battle
+        side: nor
+        name: Battle of Hastings
+        date: 14 October 1066
+        text: Fought on Senlac Hill, eleven kilometres from Hastings. William later built Battle Abbey on the site.
+        lonlat: [0.487, 50.913]
+      - kind: held
+        side: nor
+        name: Hastings
+        date: October 1066
+        text: William’s base and castle, which he left early on the morning of the battle.
+        lonlat: [0.573, 50.856]
+        lp: b
+      - kind: event
+        side: eng
+        name: London
+        date: Early October 1066
+        text: Harold waited here for about a week, gathering troops, before marching south. Many levies had not arrived when he left.
+        lonlat: [-0.093, 51.51]
+    arrows:
+      - side: eng
+        label: Harold
+        via: [[-0.1, 51.49], [0.15, 51.2], [0.46, 50.94]]
+      - side: nor
+        label: William
+        via: [[0.57, 50.86], [0.53, 50.88], [0.5, 50.905]]
+  - title: Submission and coronation
+    date: October–December 1066
+    when: "1066-10-15"
+    borders: "1066-12-25"
+    countries: [gb]
+    body:
+      - No one came to submit. In London the leading men, with the earls Edwin and Morcar and the archbishops Stigand and Ealdred, chose as king Edgar Ætheling, a teenage great-nephew of Edward the Confessor. William waited at Hastings for some days, then moved along the Kent coast, punishing Romney, where some of his men had been killed. Dover castle surrendered and Canterbury submitted, while a detachment took the submission of Winchester, the old royal city. At Southwark William beat off an English force and burned the suburb, but he could not cross London Bridge.
+      - Instead he circled London to the west, ravaging the land as he went, crossed the Thames at Wallingford, where Archbishop Stigand submitted, and turned east. At Berkhamsted Edgar, Ealdred, Edwin, Morcar and the leading Londoners came to submit. William was crowned in Westminster Abbey on Christmas Day 1066 by Ealdred. When the congregation shouted their acclamation in English and French, Norman guards outside took it for a riot and set fire to houses nearby. In March 1067 William went back to Normandy, taking Edgar, the earls and Stigand with him, and left his half-brother Odo and William FitzOsbern in charge.
+    facts:
+      - [Edgar Ætheling chosen king, "October 1066, never crowned"]
+      - [Submission at Berkhamsted, "December 1066"]
+      - [Coronation of William, "25 December 1066, Westminster Abbey"]
+    markers:
+      - kind: taken
+        side: nor
+        name: Dover
+        date: October 1066
+        text: The garrison of the fortified town on the cliffs surrendered. Many of William’s men fell ill with dysentery here.
+        lonlat: [1.32, 51.128]
+      - kind: taken
+        side: nor
+        name: Canterbury
+        date: October–November 1066
+        text: The men of Canterbury came out to submit before William reached the city.
+        lonlat: [1.08, 51.28]
+      - kind: battle
+        side: nor
+        name: Southwark
+        date: November 1066
+        text: Norman knights drove back an English sortie and burned the suburb at the south end of London Bridge.
+        lonlat: [-0.09, 51.502]
+        lp: b
+      - kind: event
+        side: nor
+        name: Wallingford
+        date: Late 1066
+        text: William crossed the Thames at this fortified town. Stigand, archbishop of Canterbury, came to submit.
+        lonlat: [-1.125, 51.6]
+      - kind: event
+        side: nor
+        name: Berkhamsted
+        date: December 1066
+        text: Edgar Ætheling and the English leaders submitted to William and gave hostages.
+        lonlat: [-0.563, 51.76]
+      - kind: event
+        side: nor
+        name: Westminster Abbey
+        date: 25 December 1066
+        text: William was crowned in Edward the Confessor’s new abbey church, where Harold had been crowned less than a year before.
+        lonlat: [-0.128, 51.499]
+        lp: l
+    arrows:
+      - side: nor
+        label: William
+        via: [[0.57, 50.86], [0.94, 50.98], [1.3, 51.12], [1.08, 51.27]]
+      - side: nor
+        via: [[1.08, 51.28], [0.5, 51.38], [-0.07, 51.49]]
+      - side: nor
+        via: [[-0.2, 51.44], [-0.8, 51.38], [-1.12, 51.59], [-0.6, 51.75]]
+  - title: The first risings
+    date: 1067–1068
+    when: "1067"
+    borders: "1068-12"
+    countries: [gb, fr]
+    side_names:
+      eng: English rebels
+    move_names:
+      eng: Rebel moves
+    body:
+      - William rewarded his followers with the lands of the English who had fought at Hastings, and his men built castles to hold down the towns. Resistance broke out while he was away. In 1067 Eadric the Wild, a Shropshire thegn, joined the Welsh kings of Gwynedd and Powys to ravage Herefordshire, and rebels in Kent called in Count Eustace of Boulogne, who attacked Dover castle and was beaten off. William returned in December. Early in 1068 Exeter, where Harold’s mother Gytha had taken refuge, refused to take an oath to him; he besieged it for eighteen days, with heavy losses, before it surrendered on terms. Gytha escaped by boat.
+      - In the summer of 1068 Earls Edwin and Morcar rose in Mercia with Welsh help, while the north, not yet occupied, stirred under its new earl, Gospatric. William marched north, building castles at Warwick and Nottingham, and York submitted without a fight. Edwin and Morcar gave in again, and Gospatric and Edgar Ætheling fled to King Malcolm III in Scotland. On the way south William ordered castles at Lincoln, Huntingdon and Cambridge. Meanwhile Harold’s sons, who had fled to Ireland, raided Somerset and Devon from the sea.
+    facts:
+      - [Siege of Exeter, "Early 1068, eighteen days"]
+      - [Castles of 1068, "Exeter, Warwick, Nottingham, York, Lincoln, Huntingdon and Cambridge"]
+    markers:
+      - kind: held
+        side: nor
+        name: Dover
+        date: Autumn 1067
+        text: Eustace of Boulogne, who had fought for William at Hastings, crossed with a small force at the invitation of Kentish rebels but failed to take the castle.
+        lonlat: [1.32, 51.128]
+      - kind: event
+        side: eng
+        name: Hereford
+        date: "1067"
+        text: Eadric the Wild and his Welsh allies attacked the Normans based in Hereford and ravaged the land up to the River Lugg.
+        lonlat: [-2.716, 52.056]
+      - kind: siege
+        side: nor
+        name: Exeter
+        date: Early 1068
+        text: The city held out for eighteen days and then surrendered on generous terms. William built Rougemont Castle inside its walls.
+        lonlat: [-3.53, 50.726]
+      - kind: event
+        side: nor
+        name: Warwick
+        date: Summer 1068
+        text: The first of the castles William built on his march north. Edwin and Morcar submitted soon after.
+        lonlat: [-1.585, 52.282]
+      - kind: taken
+        side: nor
+        name: York
+        date: Summer 1068
+        text: The northern capital submitted as William approached. He built a castle there and left a garrison.
+        lonlat: [-1.08, 53.96]
+    arrows:
+      - side: nor
+        label: William, early 1068
+        via: [[-0.13, 51.5], [-1.3, 51.07], [-2.5, 50.83], [-3.48, 50.73]]
+      - side: nor
+        label: William, summer 1068
+        via: [[-0.2, 51.55], [-1.58, 52.28], [-1.15, 52.95], [-1.1, 53.92]]
+  - title: The Danes and the Harrying of the North
+    date: 1069–1070
+    when: "1069-01-28"
+    borders: "1070-03"
+    countries: [gb, dk]
+    side_names:
+      eng: English rebels
+    move_names:
+      eng: Rebel moves
+    body:
+      - On 28 January 1069 the Northumbrians broke into Durham and killed the new Norman earl, Robert de Comines, and many of his several hundred men. Rebels joined by Edgar Ætheling besieged York’s castle until William hurried north, relieved it and built a second one. In late summer a Danish fleet of 240 or 300 ships, sent by King Sweyn Estridsson, a nephew of Cnut, came down the coast under his brother Asbjørn and his sons. Beaten off at Dover, Sandwich, Ipswich and Norwich, it entered the Humber, where Edgar, Gospatric and Earl Waltheof joined it with the men of Yorkshire. In September they stormed York and destroyed the garrisons of both castles. Risings followed at Shrewsbury, Exeter and Montacute.
+      - William dealt with them in turn. He drove the Danes back across the Humber, beat the Mercian rebels at Stafford, forced the crossing of the Aire at Pontefract and retook York, where he wore his crown at Christmas. He paid the Danes, who agreed to leave in the spring. Through the winter his troops laid waste the land between the Humber and the Tees and beyond, burning villages, crops and livestock so that the north could not feed another rebellion. Famine followed. Orderic Vitalis, writing some fifty years later, said that more than 100,000 people died, a figure historians treat as rhetoric, and in 1086 Domesday Book still recorded much of Yorkshire as waste. Early in 1070 William crossed the Pennines in deep winter and built castles at Chester and Stafford.
+    facts:
+      - [Danish fleet, "240 or 300 ships, August–September 1069"]
+      - [York taken by the Danes and English, "September 1069"]
+      - [Harrying of the North, "Winter 1069–1070"]
+    markers:
+      - kind: taken
+        side: eng
+        name: Durham
+        date: 28 January 1069
+        text: Robert de Comines ignored the bishop’s warning and entered the city. The rebels burned the bishop’s house, where he had taken refuge.
+        lonlat: [-1.575, 54.775]
+      - kind: taken
+        side: eng
+        name: York
+        date: September 1069
+        text: The Danes and the English rebels took the city together and killed or captured the Norman garrisons. William retook it before Christmas.
+        lonlat: [-1.08, 53.96]
+      - kind: siege
+        side: nor
+        name: Shrewsbury
+        date: Autumn 1069
+        text: Eadric the Wild, the Welsh and the men of Cheshire burned the town but could not take the Norman castle.
+        lonlat: [-2.75, 52.708]
+      - kind: battle
+        side: nor
+        name: Stafford
+        date: Late 1069
+        text: William defeated the Mercian rebels here before turning north again.
+        lonlat: [-2.117, 52.806]
+        lp: b
+      - kind: taken
+        side: nor
+        name: Chester
+        date: Early 1070
+        text: The last major English town to be occupied. William reached it after a winter march across the Pennines and built a castle.
+        lonlat: [-2.89, 53.19]
+        lp: l
+    arrows:
+      - side: dan
+        label: Danish fleet
+        via: [[1.9, 52.95], [0.9, 53.55], [0.0, 53.65], [-0.85, 53.75]]
+      - side: nor
+        label: William
+        via: [[-2.1, 52.85], [-1.31, 53.69], [-1.1, 53.93]]
+      - side: nor
+        label: Across the Pennines
+        via: [[-1.1, 53.95], [-2.0, 53.72], [-2.85, 53.22]]
+    areas:
+      - style: outline
+        side: nor
+        label: Laid waste in the Harrying of the North
+        atoms: [GB-YOR, GB-NYK, GB-ERY, GB-KHL, GB-LDS, GB-BRD, GB-WKF, GB-KIR, GB-CLD, GB-SHF, GB-ROT, GB-BNS, GB-DNC, GB-MDB, GB-RCC, GB-STT, GB-DUR, GB-DAL, GB-HPL]
+  - title: Ely and Hereward
+    date: 1070–1072
+    when: "1070"
+    borders: "1071"
+    countries: [gb, dk]
+    side_names:
+      eng: English rebels
+    move_names:
+      eng: Rebel moves
+    body:
+      - In the spring of 1070 King Sweyn came to England himself. His men went into the fens around the Isle of Ely, then an island in the marshes, and joined local rebels led by Hereward, a Lincolnshire landholder. Together they plundered Peterborough Abbey, whose new abbot was a Norman, and carried its treasure to the ships. Sweyn then made peace with William, took a payment and sailed home with the loot, leaving the English in the fens on their own.
+      - In 1071 Edwin and Morcar fled from William’s court. Edwin was betrayed and killed by his own men; Morcar reached Ely, where Bishop Æthelwine of Durham and other exiles had joined Hereward. William came with an army and a fleet. According to later accounts his first causeway sank into the marsh, and the Normans got across only when the monks showed them a way; the island surrendered. Morcar spent the rest of his life in prison, while Hereward escaped into legend. In 1072 William marched into Scotland, and at Abernethy Malcolm III submitted to him. By the time of Domesday Book in 1086 almost all the great estates and bishoprics of England were held by Normans and other Frenchmen.
+    facts:
+      - [Danes at Ely, "Spring–summer 1070"]
+      - [Siege of Ely, "1071, Norman victory"]
+      - [Treaty of Abernethy, "1072, Malcolm III submits to William"]
+    markers:
+      - kind: taken
+        side: eng
+        name: Peterborough
+        date: "1070"
+        text: Hereward and the Danes sacked the abbey to keep its treasure from the new Norman abbot, Turold. The town was burned.
+        lonlat: [-0.244, 52.572]
+      - kind: siege
+        side: nor
+        name: Isle of Ely
+        date: "1071"
+        text: The last English stronghold, ringed by fens. The abbey on the island was the rebels’ base.
+        lonlat: [0.263, 52.399]
+      - kind: event
+        side: nor
+        name: Aldreth
+        date: "1071"
+        text: Tradition places William’s causeway here, on the old route from Cambridge. An earthwork nearby is still called Belsar’s Hill after one of his knights.
+        lonlat: [0.115, 52.35]
+        lp: l
+    arrows:
+      - side: dan
+        label: Sweyn’s Danes
+        via: [[0.35, 52.95], [0.3, 52.7], [0.27, 52.43]]
+      - side: nor
+        label: William
+        via: [[0.12, 52.2], [0.1, 52.32], [0.23, 52.39]]

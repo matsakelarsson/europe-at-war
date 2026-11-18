@@ -1,0 +1,468 @@
+id: french-wars-of-religion
+name: French Wars of Religion
+start: "1562-03-01"
+end: "1598-05-02"
+tier: A
+summary: A series of civil wars between French Catholics and Protestants (Huguenots), tangled with the rivalry of great noble families and foreign intervention by Spain, England and German princes. Begun with the massacre at Vassy in 1562 and marked by the St Bartholomew’s Day massacre of 1572, they ended when the Protestant Henry of Navarre, heir to the throne from 1584, became a Catholic, won over the Catholic League, granted the Huguenots toleration in the Edict of Nantes and made peace with Spain at Vervins in 1598.
+countries: [fr, es, gb, be, de, ch]
+sides:
+  - id: hug
+    name: Huguenots
+    polities: [bearn]
+    ink: orange
+    moves: Huguenot moves
+    success: Huguenot success
+  - id: roy
+    name: The crown and the Catholics
+    polities: [france]
+    ink: navy
+    moves: Royal and Catholic moves
+    success: Royal and Catholic success
+  - id: lea
+    name: Catholic League
+    polities: []
+    ink: purple
+    moves: League moves
+    success: League success
+  - id: es
+    name: Spain
+    polities: [spain, habsburg-netherlands]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+  - id: en
+    name: England
+    polities: [england]
+    ink: red
+    moves: English moves
+    success: English success
+notes:
+  - Historians usually count eight wars between 1562 and 1598, separated by edicts of pacification that rarely held for long. The Huguenot risings of the 1620s, ended by the Peace of Alès in 1629, are sometimes counted as a continuation.
+  - France adopted the Gregorian calendar in December 1582; dates after that are New Style. Contemporary English accounts are ten days behind.
+  - The Huguenots’ princely leaders came from the house of Bourbon, kings of Navarre and lords of Béarn, which is shown as their land. After Henry of Navarre became king in 1589, his royalists and the Huguenots fought on the same side against the League and Spain.
+  - Numbers killed in the massacres and sieges are uncertain and disputed. The wars as a whole are thought to have cost between two and four million lives, through violence, famine and disease.
+sources:
+  - title: French Wars of Religion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/French_Wars_of_Religion
+  - title: Wars of Religion (Britannica)
+    url: https://www.britannica.com/event/Wars-of-Religion
+  - title: Massacre of Vassy (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Massacre_of_Vassy
+  - title: Battle of Dreux (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Dreux
+  - title: Battle of Jarnac (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Jarnac
+  - title: Battle of Moncontour (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Moncontour
+  - title: Peace of Saint-Germain-en-Laye (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peace_of_Saint-Germain-en-Laye
+  - title: St. Bartholomew’s Day massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/St._Bartholomew%27s_Day_massacre
+  - title: War of the Three Henrys (Wikipedia)
+    url: https://en.wikipedia.org/wiki/War_of_the_Three_Henrys
+  - title: Battle of Coutras (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Coutras
+  - title: Battle of Ivry (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ivry
+  - title: Siege of Paris (1590) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Paris_(1590)
+  - title: Edict of Nantes (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Edict_of_Nantes
+  - title: Peace of Vervins (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peace_of_Vervins
+steps:
+  - title: Vassy, Dreux and the first war
+    date: 1562–1563
+    when: "1562-03-01"
+    borders: "1563-03-19"
+    countries: [fr, gb]
+    body:
+      - By 1560 perhaps a tenth of the French, among them many nobles, belonged to the Reformed church founded on John Calvin’s teaching; its members were called Huguenots. After Henry II’s death in 1559 the crown passed to boy kings, and the Catholic Guise family and the Protestant Bourbon princes competed for power, while the queen mother, Catherine de’ Medici, sought a compromise. Her Edict of January 1562 allowed Protestants to worship outside town walls. On 1 March the Duke of Guise’s men attacked a Protestant service in a barn at Vassy in Champagne and killed about fifty people. Louis, Prince of Condé, called the Huguenots to arms and seized Orléans on 2 April.
+      - Protestants took Rouen, Lyon and many other towns, and both sides looked abroad. Condé promised Le Havre to Elizabeth I of England in return for troops and money; Spain and the pope helped the crown. The royal army retook Rouen in October. On 19 December the armies met at Dreux, where the Catholics won a hard battle in which each side’s commander was captured, Condé by the royalists and Constable Montmorency by the Huguenots. Guise then besieged Orléans, and there a Huguenot shot him in February 1563. The Edict of Amboise (19 March) allowed limited Protestant worship, and in July French Catholics and Protestants together drove the English from Le Havre.
+    facts:
+      - [Massacre of Vassy, "1 March 1562"]
+      - [Battle of Dreux, "19 December 1562, royal and Catholic victory"]
+      - [Edict of Amboise, "19 March 1563"]
+    markers:
+      - kind: event
+        name: Vassy
+        date: 1 March 1562
+        text: The Duke of Guise, passing through, found Protestants worshipping in a barn near the church. His men forced their way in; about fifty people were killed and many more wounded.
+        lonlat: [4.949, 48.499]
+      - kind: held
+        side: hug
+        name: Orléans
+        date: April 1562 – March 1563
+        text: Condé made the Loire city the Huguenot headquarters. Guise was shot by Jean de Poltrot de Méré while besieging it and died six days later.
+        lonlat: [1.909, 47.903]
+      - kind: event
+        name: Toulouse
+        date: May 1562
+        text: Huguenots tried to seize the city and were beaten in days of street fighting. Some 3,000 people died, most of them Protestants.
+        lonlat: [1.444, 43.605]
+      - kind: taken
+        side: roy
+        name: Rouen
+        date: 26 October 1562
+        text: The royal army stormed the Huguenot-held city and sacked it. Antoine of Navarre, a Bourbon who had joined the Catholics, was mortally wounded in the siege.
+        lonlat: [1.089, 49.443]
+      - kind: held
+        side: en
+        name: Le Havre
+        date: October 1562 – July 1563
+        text: English troops held the port, which Elizabeth hoped to exchange for Calais. Weakened by plague, they surrendered to a French army on 28 July 1563.
+        lonlat: [0.1, 49.49]
+        lp: l
+      - kind: battle
+        side: roy
+        name: Battle of Dreux
+        date: 19 December 1562
+        text: One of the bloodiest battles of the wars. The royal commander Marshal Saint-André was killed, and Guise’s late charge won the day.
+        lonlat: [1.389, 48.675]
+      - kind: treaty
+        name: Amboise
+        date: 19 March 1563
+        text: The edict let Protestant nobles worship on their estates and allowed one place of worship in each bailiwick.
+        lonlat: [0.986, 47.414]
+    arrows:
+      - side: hug
+        label: Condé
+        via: [[1.91, 47.9], [2.16, 48.43], [1.8, 48.72], [1.43, 48.68]]
+      - side: roy
+        label: Royal army
+        via: [[2.35, 48.85], [1.9, 48.8], [1.42, 48.7]]
+      - side: en
+        label: English
+        via: [[-1.1, 50.78], [-0.5, 50.05], [0.06, 49.5]]
+  - title: Jarnac, Moncontour and Saint-Germain
+    date: 1567–1570
+    when: "1569-03-13"
+    borders: "1570-08-08"
+    countries: [fr]
+    body:
+      - The peace did not last. In 1567 the Huguenot leaders tried to seize the young Charles IX at Meaux, and after an indecisive battle at Saint-Denis a second war ended in March 1568. That summer the crown moved to arrest Condé and Admiral Gaspard de Coligny, who escaped to La Rochelle, and a third war began. On 13 March 1569, at Jarnac on the Charente, the royal army under the king’s brother Henry, Duke of Anjou, routed the Huguenots. Condé, injured and captured, was shot dead by one of Anjou’s officers. Coligny took command in the name of two boys, Condé’s son and Henry of Navarre.
+      - Joined by German mercenaries, Coligny won at La Roche-l’Abeille in June and besieged Poitiers, which held out under the young Henry of Guise. On 3 October Anjou crushed the Huguenot army at Moncontour. Coligny led its remnant on a long march through the south, wintered in Languedoc, and came back north up the Rhône into Burgundy, where he beat a royal army at Arnay-le-Duc in June 1570. The court, short of money, made peace at Saint-Germain-en-Laye on 8 August. The Huguenots gained freedom of worship in named places and, for two years, the fortified towns of La Rochelle, Cognac, Montauban and La Charité.
+    facts:
+      - [Battle of Jarnac, "13 March 1569, royal victory; Condé killed"]
+      - [Battle of Moncontour, "3 October 1569, royal victory"]
+      - [Peace of Saint-Germain, "8 August 1570"]
+    markers:
+      - kind: battle
+        side: roy
+        name: Battle of Jarnac
+        date: 13 March 1569
+        text: Anjou’s army caught the Huguenot rearguard as it fell back along the Charente. Condé’s death left Coligny as the leader of the cause.
+        lonlat: [-0.175, 45.681]
+      - kind: held
+        side: hug
+        name: La Rochelle
+        date: 1568–1570
+        text: The rich Atlantic port was the Huguenot capital, their link to England and the sea.
+        lonlat: [-1.15, 46.16]
+      - kind: battle
+        side: hug
+        name: Battle of La Roche-l’Abeille
+        date: 25 June 1569
+        text: Coligny, reinforced by German reiters, beat part of Anjou’s army south of Limoges.
+        lonlat: [1.242, 45.597]
+      - kind: held
+        side: roy
+        name: Poitiers
+        date: July – September 1569
+        text: Coligny besieged the city for seven weeks without success. Henry of Guise, aged eighteen, made his name in its defence.
+        lonlat: [0.34, 46.58]
+      - kind: battle
+        side: roy
+        name: Battle of Moncontour
+        date: 3 October 1569
+        text: The Huguenot army, short of pay and forced to fight, was routed with very heavy losses, especially among its foot soldiers.
+        lonlat: [-0.016, 46.883]
+      - kind: held
+        side: hug
+        name: Montauban
+        date: 1569–1570
+        text: The Protestant city on the Tarn was Coligny’s base in the south, and one of the four towns granted to the Huguenots in 1570.
+        lonlat: [1.356, 44.018]
+      - kind: battle
+        side: hug
+        name: Battle of Arnay-le-Duc
+        date: 27 June 1570
+        text: Coligny beat a royal army under Marshal Cossé. Henry of Navarre, sixteen, fought in his first battle.
+        lonlat: [4.49, 47.122]
+      - kind: held
+        side: hug
+        name: La Charité-sur-Loire
+        date: "1570"
+        text: The bridge town on the Loire was the fourth Huguenot security town.
+        lonlat: [3.02, 47.178]
+      - kind: treaty
+        name: Saint-Germain-en-Laye
+        date: 8 August 1570
+        text: The peace, signed at the royal palace west of Paris, was the most generous the Huguenots had yet won.
+        lonlat: [2.094, 48.899]
+    arrows:
+      - side: hug
+        label: Coligny, 1569–1570
+        via: [[-0.6, 45.75], [1.36, 44.0], [4.0, 43.95], [4.47, 47.1]]
+      - side: roy
+        label: Anjou
+        via: [[0.34, 46.58], [0.15, 46.0], [-0.15, 45.7]]
+  - title: St Bartholomew’s Day massacre
+    date: 1572–1573
+    when: "1572-08-24"
+    borders: "1572-08-24"
+    countries: [fr]
+    body:
+      - Coligny returned to court after the peace, gained the young king’s ear and urged war on Spain in the Netherlands. To seal the peace, Catherine arranged the marriage of her daughter Margaret to the Protestant Henry of Navarre, and Huguenot nobles crowded into Catholic Paris for the wedding on 18 August 1572. On 22 August a gunman wounded Coligny. Fearing Huguenot revenge, the king and his council decided to kill their leaders. Before dawn on 24 August, St Bartholomew’s Day, Guise’s men murdered Coligny in his lodgings, and the killing spread as Paris militiamen and crowds murdered Protestant men, women and children over several days.
+      - In the following weeks there were massacres in Orléans, Lyon, Rouen, Bordeaux, Toulouse and other towns. Modern estimates put the dead at about 3,000 in Paris and several thousand more elsewhere, though figures vary widely; many survivors converted or fled abroad, Navarre and the young Condé among those who converted to save their lives. Protestant Europe was horrified, while the pope had a Te Deum sung. The Huguenots of the south and west took up arms again. La Rochelle withstood a royal siege until July 1573, and Sancerre was starved into surrender in August; the Edict of Boulogne allowed Protestant worship only in La Rochelle, Montauban and Nîmes.
+    facts:
+      - [Attempt on Coligny, "22 August 1572"]
+      - [Massacre in Paris, "from 24 August 1572"]
+      - [Siege of La Rochelle, "November 1572 – July 1573, royal failure"]
+    markers:
+      - kind: event
+        name: Paris
+        date: 24 August 1572
+        text: The killings began near the Louvre, where the king lived and his Protestant guests were lodged. Coligny’s body was thrown from a window, mutilated and dragged through the streets.
+        lonlat: [2.34, 48.86]
+      - kind: event
+        name: Orléans
+        date: late August 1572
+        text: One of the first provincial massacres, with hundreds killed.
+        lonlat: [1.909, 47.903]
+      - kind: event
+        name: Rouen
+        date: September 1572
+        text: Some hundreds were killed. The city’s Protestant community shrank from about 16,500 to fewer than 3,000 as survivors converted or left.
+        lonlat: [1.089, 49.443]
+      - kind: event
+        name: Lyon
+        date: 31 August 1572
+        text: Protestants held in the city’s prisons were murdered and their bodies thrown into the Rhône.
+        lonlat: [4.835, 45.767]
+      - kind: event
+        name: Bordeaux
+        date: October 1572
+        text: The killings here came almost two months after Paris, encouraged by a Jesuit preacher and the city’s governor.
+        lonlat: [-0.58, 44.84]
+      - kind: event
+        name: Toulouse
+        date: October 1572
+        text: Prisoners taken in the Protestant community were killed in the city’s jails.
+        lonlat: [1.444, 43.605]
+      - kind: held
+        side: hug
+        name: La Rochelle
+        date: November 1572 – July 1573
+        text: Anjou’s army lost thousands of men in assaults and to disease. He lifted the siege after being elected king of Poland.
+        lonlat: [-1.15, 46.16]
+      - kind: siege
+        side: roy
+        name: Sancerre
+        date: January – August 1573
+        text: The hilltop town held out for months; the pastor Jean de Léry described the famine inside. It surrendered on terms in August.
+        lonlat: [2.84, 47.332]
+    arrows:
+      - side: roy
+        label: Anjou
+        via: [[0.34, 46.58], [-0.6, 46.35], [-1.1, 46.18]]
+  - title: The Catholic League and the War of the Three Henrys
+    date: 1584–1589
+    when: "1584-06-10"
+    borders: "1589-08-02"
+    countries: [fr, es, de]
+    body:
+      - Charles IX died in 1574, and his brother Henry of Anjou came home from Poland to reign as Henry III; wars and uneasy peaces followed. When the king’s last brother, Francis, died on 10 June 1584, the heir to the childless king became the Protestant Henry of Navarre. Catholic nobles led by Henry, Duke of Guise, revived the Catholic League, made a secret treaty with Philip II of Spain at Joinville on 31 December 1584 and raised the towns. In July 1585, by the Treaty of Nemours, Henry III gave in to them, outlawed Protestantism and excluded Navarre from the succession. The War of the Three Henrys, the king, Guise and Navarre, had begun.
+      - On 20 October 1587 Navarre won his first great victory at Coutras, where the king’s favourite, the Duke of Joyeuse, was killed, but Guise destroyed a German army coming to help the Huguenots. Guise was now the hero of Catholic Paris, and on 12 May 1588, the Day of the Barricades, the city rose against royal troops and the king fled. At the Estates-General in Blois Henry III had Guise killed by his guards on 23 December, and his brother the cardinal the next day. The League declared the king deposed; he allied with Navarre, and the two besieged Paris. On 1 August 1589 a friar, Jacques Clément, stabbed Henry III; dying, he recognised Navarre as his heir.
+    facts:
+      - [Treaty of Joinville, "31 December 1584, the League and Spain"]
+      - [Battle of Coutras, "20 October 1587, Huguenot victory"]
+      - [Murder of the Duke of Guise, "23 December 1588, Blois"]
+    markers:
+      - kind: treaty
+        side: lea
+        name: Joinville
+        date: 31 December 1584
+        text: In the Guise family’s castle, the League’s leaders and Philip II’s envoys agreed to exclude Navarre and fight heresy; Spain promised money.
+        lonlat: [5.139, 48.443]
+      - kind: treaty
+        side: lea
+        name: Nemours
+        date: 7 July 1585
+        text: Catherine de’ Medici negotiated the king’s surrender to the League’s demands. Protestants were given six months to convert or leave.
+        lonlat: [2.697, 48.267]
+      - kind: battle
+        side: hug
+        name: Battle of Coutras
+        date: 20 October 1587
+        text: Navarre’s smaller army beat the royal army under Joyeuse, who was killed as he tried to surrender. It was the first great Protestant victory in the field.
+        lonlat: [-0.127, 45.042]
+      - kind: battle
+        side: lea
+        name: Battle of Auneau
+        date: 24 November 1587
+        text: Guise surprised the German and Swiss mercenaries coming to join Navarre, after an earlier blow at Vimory. The invasion collapsed.
+        lonlat: [1.773, 48.462]
+      - kind: event
+        side: lea
+        name: Paris
+        date: 12 May 1588
+        text: When the king brought Swiss troops into the city, Parisians blocked the streets with barricades. Henry III slipped away the next day.
+        lonlat: [2.35, 48.857]
+      - kind: event
+        side: roy
+        name: Blois
+        date: 23 December 1588
+        text: Summoned to the king’s chamber in the château, Guise was stabbed to death by members of the royal guard known as the Forty-Five.
+        lonlat: [1.331, 47.586]
+      - kind: treaty
+        name: Plessis-lès-Tours
+        date: 30 April 1589
+        text: Henry III and Henry of Navarre met and joined forces against the League.
+        lonlat: [0.661, 47.383]
+      - kind: event
+        name: Saint-Cloud
+        date: 1 August 1589
+        text: Jacques Clément, a Dominican friar who had gained an audience, stabbed the king in his camp outside Paris. Henry III died the next day, the last of the Valois kings.
+        lonlat: [2.22, 48.84]
+        lp: l
+    arrows:
+      - side: hug
+        label: German army
+        via: [[6.6, 48.6], [5.2, 48.3], [3.4, 48.0], [1.85, 48.42]]
+      - side: roy
+        label: Joyeuse
+        via: [[0.34, 46.58], [0.0, 45.7], [-0.11, 45.07]]
+  - title: Arques, Ivry and the siege of Paris
+    date: 1589–1594
+    when: "1589-09-21"
+    borders: "1594-03-22"
+    countries: [fr, es, be, gb]
+    side_names:
+      roy: Success for Henry IV
+    move_names:
+      roy: Moves by Henry IV
+    body:
+      - Most Catholics would not accept a Protestant king. The League proclaimed Navarre’s elderly uncle, the Cardinal of Bourbon, king as “Charles X”, and Guise’s brother, the Duke of Mayenne, marched to crush Henry IV in Normandy. Henry beat him at Arques near Dieppe in September 1589, and on 14 March 1590 won a full victory at Ivry. He then blockaded Paris, burning the mills and cutting off its food. The city, ruled by radical Leaguers, held out through the summer; an estimated 40,000–50,000 people died, most of starvation. In late August Spain’s commander in the Netherlands, the Duke of Parma, marched in, took Lagny and reopened supply routes, and Henry withdrew.
+      - The war spread across France. Spanish troops landed in Brittany to help the League’s governor, the Duke of Mercœur, Savoy invaded Provence, and England sent soldiers to Normandy and Brittany. Parma relieved Rouen too in 1592, but died that December. Weary of war and of Spain’s influence, many Catholics drifted to Henry, especially when the League’s Estates in Paris discussed a Spanish princess for the throne. On 25 July 1593 Henry heard Mass at Saint-Denis and abjured Protestantism. He was crowned at Chartres in February 1594, and on 22 March Paris opened its gates; the Spanish garrison marched out.
+    facts:
+      - [Battle of Arques, "September 1589, royal victory"]
+      - [Battle of Ivry, "14 March 1590, royal victory"]
+      - [Henry IV enters Paris, "22 March 1594"]
+    markers:
+      - kind: battle
+        side: roy
+        name: Battle of Arques
+        date: 15–29 September 1589
+        text: Entrenched around the castle of Arques, Henry’s small army beat off Mayenne’s much larger one, which then gave up the campaign.
+        lonlat: [1.127, 49.882]
+      - kind: battle
+        side: roy
+        name: Battle of Ivry
+        date: 14 March 1590
+        text: Fought on the plain north of Ivry. Henry told his men to follow his white plume; the League army broke and its Swiss surrendered.
+        lonlat: [1.462, 48.884]
+      - kind: held
+        side: lea
+        name: Paris
+        date: May – September 1590
+        text: The city of perhaps 200,000 people was blockaded for four months, and the poor were reduced to eating grass and dogs.
+        lonlat: [2.35, 48.857]
+        lp: l
+      - kind: taken
+        side: es
+        name: Lagny
+        date: 7 September 1590
+        text: Parma stormed the town on the Marne, opening the river route for food to Paris, and Henry lifted the siege.
+        lonlat: [2.708, 48.879]
+      - kind: event
+        side: es
+        name: Blavet
+        date: October 1590
+        text: Spanish troops under Juan del Águila landed and fortified the port, later Port-Louis, as a base for helping Mercœur and threatening England.
+        lonlat: [-3.352, 47.707]
+      - kind: held
+        side: lea
+        name: Rouen
+        date: November 1591 – April 1592
+        text: Henry, with English troops under the Earl of Essex, besieged the city until Parma came to its relief.
+        lonlat: [1.089, 49.443]
+      - kind: event
+        side: roy
+        name: Chartres
+        date: 27 February 1594
+        text: Henry was crowned in Chartres Cathedral, because Reims, where kings were traditionally crowned, was still held by the League.
+        lonlat: [1.488, 48.448]
+    arrows:
+      - side: lea
+        label: Mayenne
+        via: [[2.3, 48.92], [1.7, 49.4], [1.17, 49.86]]
+      - side: es
+        label: Parma
+        via: [[3.52, 50.36], [3.3, 49.6], [2.9, 48.98], [2.72, 48.89]]
+      - side: en
+        label: Essex
+        via: [[-1.1, 50.78], [0.8, 50.3], [1.08, 49.93], [1.09, 49.47]]
+  - title: The Edict of Nantes and Vervins
+    date: 1595–1598
+    when: "1595-01-17"
+    borders: "1598-05-02"
+    countries: [fr, es, be]
+    side_names:
+      roy: Success for Henry IV
+    move_names:
+      roy: Moves by Henry IV
+    body:
+      - In January 1595 Henry declared war on Spain, hoping to unite the French against a foreign enemy. On 5 June he routed a Spanish and League force at Fontaine-Française in Burgundy, the pope lifted his excommunication that autumn, and Mayenne made his peace. In the north Spain did better. It took Cambrai in 1595 and Calais in April 1596, and in March 1597 Spanish soldiers disguised as peasants surprised Amiens. Henry besieged Amiens with a large army and retook it in September. One by one the League’s leaders made terms, the last, Mercœur in Brittany, in March 1598.
+      - At Nantes in April 1598 Henry issued an edict for the Huguenots. It gave them freedom of conscience, public worship in named places, equal civil rights, special courts and, for eight years, control of many fortified towns. On 2 May the Peace of Vervins with Spain restored the borders of 1559; Spain gave back Calais and the other towns it had taken. The edict ended the wars but not the conflict. Huguenot risings in the 1620s ended with the loss of their fortresses, and Louis XIV revoked the edict in 1685.
+    facts:
+      - [Battle of Fontaine-Française, "5 June 1595, royal victory"]
+      - [Edict of Nantes, "13 April 1598"]
+      - [Peace of Vervins, "2 May 1598"]
+    markers:
+      - kind: battle
+        side: roy
+        name: Battle of Fontaine-Française
+        date: 5 June 1595
+        text: Henry charged the vanguard of the Spanish army from Milan under the Constable of Castile, with only a few hundred horsemen, and drove it back over the Saône.
+        lonlat: [5.371, 47.526]
+      - kind: taken
+        side: es
+        name: Cambrai
+        date: October 1595
+        text: The Spanish army of the Netherlands took the city from its French governor after a siege.
+        lonlat: [3.236, 50.177]
+      - kind: taken
+        side: es
+        name: Calais
+        date: April 1596
+        text: Archduke Albert, the new governor of the Spanish Netherlands, stormed the port that France had taken from England in 1558.
+        lonlat: [1.856, 50.948]
+      - kind: siege
+        side: roy
+        name: Amiens
+        date: March – September 1597
+        text: Spanish soldiers dressed as peasants, carrying sacks of nuts, took the gate by surprise. Henry’s six-month siege won the city back on 25 September.
+        lonlat: [2.299, 49.892]
+      - kind: treaty
+        name: Nantes
+        date: 13 April 1598
+        text: Henry signed the edict in the Breton capital, just after Mercœur’s submission had ended the League’s last resistance.
+        lonlat: [-1.553, 47.218]
+      - kind: treaty
+        name: Vervins
+        date: 2 May 1598
+        text: France and Spain made peace in this small town in Picardy, confirming the borders of the Peace of Cateau-Cambrésis.
+        lonlat: [3.91, 49.836]
+    arrows:
+      - side: es
+        label: Archduke Albert
+        via: [[3.52, 50.36], [2.6, 50.55], [1.88, 50.93]]
+      - side: roy
+        label: Henry IV
+        via: [[2.35, 48.86], [2.45, 49.4], [2.32, 49.86]]
+    areas:
+      - style: occupied
+        side: es
+        label: Held by Spain, 1596–1598
+        atoms: [FR-62~calais]

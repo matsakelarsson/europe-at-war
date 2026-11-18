@@ -1,0 +1,192 @@
+id: irish-rebellion-of-1798
+name: Irish Rebellion of 1798
+start: "1798-05-23"
+end: "1798-10-12"
+tier: B
+summary: A rising led by the Society of United Irishmen against British rule in the Kingdom of Ireland, aiming at an independent republic with French help. Risings in Leinster and Ulster in May and June 1798 were crushed, most bloodily in County Wexford, and a small French force that landed in Mayo in August surrendered at Ballinamuck. Tens of thousands died, and the rebellion led to the union of Ireland with Great Britain in 1801.
+countries: [ie, gb, fr]
+sides:
+  - id: ui
+    name: United Irishmen
+    polities: []
+    ink: green
+    moves: Rebel moves
+    success: Rebel success
+  - id: gb
+    name: The government
+    polities: [ireland, united-kingdom]
+    ink: red
+    moves: Government moves
+    success: Government success
+  - id: fr
+    name: France
+    polities: [france]
+    ink: navy
+    moves: French moves
+    success: French and rebel success
+notes:
+  - The government forces were mostly Irish militia and yeomanry, with British regular and fencible regiments and German mercenaries. The rebels were mostly Catholic in Leinster and Connacht and mostly Presbyterian in Ulster; sectarian killings took place on both sides.
+  - Estimates of the dead range from about 10,000 to 50,000, most of them rebels and civilians.
+sources:
+  - title: Irish Rebellion of 1798 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Irish_Rebellion_of_1798
+  - title: Battle of Vinegar Hill (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Vinegar_Hill
+  - title: Scullabogue Barn massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Scullabogue_Barn_massacre
+  - title: Battle of Castlebar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Castlebar
+  - title: Battle of Ballinamuck (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ballinamuck
+  - title: Battle of Tory Island (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tory_Island
+steps:
+  - title: Leinster and Ulster rise
+    date: May – July 1798
+    when: "1798-05-23"
+    borders: "1798-06-21"
+    countries: [ie, gb]
+    body:
+      - The Society of United Irishmen, founded in Belfast in 1791 mainly by Presbyterian radicals, had turned from reform to republican revolution and sought help from France; a French fleet with Wolfe Tone on board reached Bantry Bay in December 1796 but could not land in the storms. In 1797 and 1798 the government broke up the movement in Ulster and Leinster under martial law, with house-burnings, floggings and pitch-capping, and in March 1798 it arrested most of the Leinster leaders. The rising began on the night of 23 May with attacks around Dublin and in Kildare, Meath and Carlow, which were quickly crushed; prisoners were shot at Dunlavin and Carnew, and the rebels were routed at Tara Hill on 26 May.
+      - In County Wexford, where Catholic priests such as Father John Murphy led many of them, the rising became a mass revolt. The rebels destroyed a militia detachment at Oulart Hill on 27 May, took Enniscorthy and Wexford town and held most of the county for three weeks. Their attacks on New Ross and Arklow failed with heavy losses. On the day of New Ross rebels killed at least 100 loyalist prisoners, most of them Protestants, at Scullabogue, and more on Wexford bridge on 20 June. In Ulster the rebels of Antrim and Down were beaten at Antrim on 7 June and Ballynahinch on 13 June. On 21 June General Gerard Lake’s army stormed the main rebel camp on Vinegar Hill above Enniscorthy, and government troops killed rebels and civilians in great numbers in the weeks that followed.
+    facts:
+      - [Rising begins, "23–24 May 1798"]
+      - [Battle of New Ross, "5 June 1798, government victory"]
+      - [Battle of Vinegar Hill, "21 June 1798, government victory"]
+    markers:
+      - kind: battle
+        side: gb
+        name: Battle of Tara Hill
+        date: 26 May 1798
+        text: Yeomanry and Scottish fencibles dispersed some 4,000 rebels gathered on the ancient hill in County Meath.
+        lonlat: [-6.612, 53.578]
+      - kind: battle
+        side: ui
+        name: Oulart Hill
+        date: 27 May 1798
+        text: Wexford rebels under Father John Murphy killed almost all of a detachment of the North Cork Militia, the first rebel victory.
+        lonlat: [-6.39, 52.505]
+      - kind: taken
+        side: ui
+        name: Wexford
+        date: 30 May 1798
+        text: The garrison abandoned the town after a rebel victory at Three Rocks. A rebel committee governed the county from here until 21 June.
+        lonlat: [-6.462, 52.338]
+      - kind: battle
+        side: gb
+        name: Battle of New Ross
+        date: 5 June 1798
+        text: Several thousand rebels broke into the town but were driven out after a day of street fighting, with very heavy losses.
+        lonlat: [-6.945, 52.396]
+        lp: l
+      - kind: event
+        name: Scullabogue
+        date: 5 June 1798
+        text: Rebel guards killed their loyalist prisoners, most of them Protestants but some Catholics, shooting some and burning the rest in a barn.
+        lonlat: [-6.83, 52.36]
+        lp: b
+      - kind: battle
+        side: gb
+        name: Battle of Arklow
+        date: 9 June 1798
+        text: The rebels’ attempt to break north towards Dublin failed against the town’s garrison.
+        lonlat: [-6.141, 52.798]
+      - kind: battle
+        side: gb
+        name: Battle of Antrim
+        date: 7 June 1798
+        text: Henry Joy McCracken’s rebels attacked the town and were beaten. McCracken was hanged in Belfast in July.
+        lonlat: [-6.211, 54.717]
+      - kind: battle
+        side: gb
+        name: Battle of Ballynahinch
+        date: 12–13 June 1798
+        text: Henry Munro’s County Down rebels were routed, and Munro was hanged at his own door in Lisburn.
+        lonlat: [-5.897, 54.403]
+      - kind: battle
+        side: gb
+        name: Battle of Vinegar Hill
+        date: 21 June 1798
+        text: Government columns closed on the camp from several sides. Most of the rebels escaped, but many of their followers, including women, were killed in the camp and in Enniscorthy.
+        lonlat: [-6.548, 52.503]
+    arrows:
+      - side: ui
+        label: Wexford rebels
+        via: [[-6.55, 52.5], [-6.78, 52.43], [-6.93, 52.4]]
+      - side: ui
+        via: [[-6.45, 52.6], [-6.3, 52.7], [-6.16, 52.79]]
+      - side: gb
+        label: Lake
+        via: [[-6.38, 52.86], [-6.55, 52.7], [-6.55, 52.52]]
+      - side: gb
+        via: [[-6.93, 52.42], [-6.75, 52.48], [-6.57, 52.5]]
+    areas:
+      - style: occupied
+        side: ui
+        label: Held by the Wexford rebels, June 1798
+        atoms: [IE-WX]
+  - title: The French at Killala
+    date: August – November 1798
+    when: "1798-08-22"
+    borders: "1798-10-12"
+    countries: [ie, fr, gb]
+    body:
+      - The French Directory sent help too late. On 22 August 1798 General Jean Humbert landed about 1,000 French soldiers at Kilcummin near Killala in County Mayo, and some thousands of local men joined him. On 27 August he routed a larger force of militia and regulars under General Lake at Castlebar, where the government troops fled so fast that the battle became known as the “Races of Castlebar”. A Republic of Connacht was proclaimed, with John Moore as its president. Humbert then marched north-east through County Sligo and turned towards the midlands, where new risings broke out in Longford and Westmeath.
+      - The new Lord Lieutenant, Lord Cornwallis, closed in with much larger forces. Humbert fought his way past a militia force at Collooney on 5 September, but on 8 September, surrounded at Ballinamuck in County Longford, he surrendered. The French were treated as prisoners of war and sent home; the Irish who had joined them were cut down or hanged. On 12 October a British squadron defeated a second French expedition off Tory Island, and Wolfe Tone, captured on board, was sentenced to death in Dublin and died of a self-inflicted wound on 19 November. The British government now pressed for union, and under the Acts of Union Ireland and Great Britain became the United Kingdom on 1 January 1801.
+    facts:
+      - [French landing, "22 August 1798, about 1,000 men under General Humbert"]
+      - [Battle of Castlebar, "27 August 1798, French and rebel victory"]
+      - [Battle of Ballinamuck, "8 September 1798, French surrender"]
+    markers:
+      - kind: event
+        side: fr
+        name: French landing
+        date: 22 August 1798
+        text: Humbert’s three frigates put his troops ashore at Kilcummin strand, and they took Killala the same day.
+        lonlat: [-9.2, 54.26]
+      - kind: battle
+        side: fr
+        name: Battle of Castlebar
+        date: 27 August 1798
+        text: Humbert’s French and Irish attacked by an unexpected mountain road, and Lake’s army broke and fled, leaving its guns.
+        lonlat: [-9.299, 53.861]
+      - kind: battle
+        side: fr
+        name: Battle of Collooney
+        date: 5 September 1798
+        text: Humbert pushed aside a force of militia trying to block his way through County Sligo.
+        lonlat: [-8.489, 54.187]
+      - kind: battle
+        side: gb
+        name: Battle of Ballinamuck
+        date: 8 September 1798
+        text: After a short fight Humbert surrendered to Cornwallis. Several hundred Irish rebels were killed in the battle and after it.
+        lonlat: [-7.717, 53.867]
+      - kind: battle
+        side: gb
+        name: Killala retaken
+        date: 23 September 1798
+        text: The last open battle of the rising. Government troops stormed the town held by rebels and a few French officers.
+        lonlat: [-9.221, 54.212]
+        lp: l
+      - kind: naval
+        side: gb
+        name: Battle of Tory Island
+        date: 12 October 1798
+        text: Sir John Borlase Warren’s squadron captured the flagship Hoche and several of the frigates carrying French troops to Ireland.
+        lonlat: [-8.5, 55.3]
+    arrows:
+      - side: fr
+        label: Humbert
+        via: [[-9.22, 54.21], [-9.3, 53.87], [-8.49, 54.18], [-7.72, 53.87]]
+      - side: gb
+        label: Cornwallis
+        via: [[-7.94, 53.42], [-7.85, 53.7], [-7.73, 53.85]]
+      - side: fr
+        label: Bompart
+        via: [[-10.6, 55.65], [-9.4, 55.45], [-8.56, 55.31]]
+    areas:
+      - style: occupied
+        side: fr
+        label: Held by the French and the rebels, late August 1798
+        atoms: [IE-MO]

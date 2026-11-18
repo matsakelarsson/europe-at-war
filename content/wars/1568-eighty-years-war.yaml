@@ -1,0 +1,700 @@
+id: eighty-years-war
+name: Eighty Years’ War
+start: "1568-05-23"
+end: "1648-05-15"
+tier: A
+summary: The revolt of the Netherlands against Philip II of Spain, which grew out of Calvinist iconoclasm and the Duke of Alba’s repression into a long war between Spain and the northern provinces, interrupted by the Twelve Years’ Truce of 1609–1621. The Peace of Münster in 1648 recognised the independence of the Dutch Republic, while the southern provinces stayed under Spanish rule.
+countries: [nl, be, es, fr, de, gb, lu]
+sides:
+  - id: nl
+    name: Dutch rebels and the Dutch Republic
+    polities: [dutch-republic]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+  - id: es
+    name: Spain and the royal Netherlands
+    polities: [spain, habsburg-netherlands]
+    ink: gold
+    moves: Spanish and royal moves
+    success: Spanish and royal success
+  - id: en
+    name: England (allied with the Dutch 1585–1604)
+    polities: [england]
+    ink: red
+    moves: English moves
+    success: English success
+  - id: fr
+    name: France (allied with the Dutch from 1635)
+    polities: [france]
+    ink: navy
+    moves: French moves
+    success: French success
+notes:
+  - The war is usually dated from the Battle of Heiligerlee on 23 May 1568 to the ratification of the Peace of Münster on 15 May 1648. It paused during the Twelve Years’ Truce of 1609–1621, and from 1621 it merged with the Thirty Years’ War and, from 1635, the Franco-Spanish War.
+  - Dates are New Style (Gregorian). The Spanish Netherlands, Holland and Zeeland adopted it in 1582–1583, but several northern provinces and England kept the Julian calendar, ten days behind, until 1700 or later.
+  - Places are named in the forms usual in English, with the Dutch name where it differs, such as Brill (Den Briel), Flushing (Vlissingen) and ’s-Hertogenbosch (Den Bosch). The “States General” was the assembly of the provinces’ delegates; the “States” of a province was its own assembly.
+sources:
+  - title: Eighty Years’ War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Eighty_Years%27_War
+  - title: Eighty Years’ War (Britannica)
+    url: https://www.britannica.com/event/Eighty-Years-War
+  - title: Beeldenstorm (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Beeldenstorm
+  - title: Council of Troubles (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Council_of_Troubles
+  - title: Capture of Brielle (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Capture_of_Brielle
+  - title: Siege of Haarlem (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Haarlem
+  - title: Siege of Leiden (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Leiden
+  - title: Sack of Antwerp (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sack_of_Antwerp
+  - title: Pacification of Ghent (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pacification_of_Ghent
+  - title: Union of Utrecht (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Union_of_Utrecht
+  - title: Act of Abjuration (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Act_of_Abjuration
+  - title: Fall of Antwerp (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fall_of_Antwerp
+  - title: Battle of Nieuwpoort (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Nieuwpoort
+  - title: Siege of Ostend (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Ostend
+  - title: Twelve Years’ Truce (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Twelve_Years%27_Truce
+  - title: Siege of Breda (1624) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Breda_(1624)
+  - title: Siege of ’s-Hertogenbosch (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_%27s-Hertogenbosch
+  - title: Battle of the Downs (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Downs
+  - title: Peace of Münster (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peace_of_M%C3%BCnster
+steps:
+  - title: Iconoclasm, Alba and Heiligerlee
+    date: 1566–1568
+    when: "1566-08-10"
+    borders: "1568-07-21"
+    countries: [nl, be, fr, de, es]
+    body:
+      - In the 1560s the seventeen provinces of the Netherlands were governed from Brussels for Philip II of Spain, who enforced harsh laws against Protestants and sidelined the great nobles. In April 1566 several hundred lesser nobles petitioned the regent, Margaret of Parma, to suspend the heresy laws; a courtier is said to have called them beggars (gueux), and they took up the name. That summer Calvinist preachers drew huge crowds, and on 10 August a sermon near Steenvoorde in Flanders was followed by an attack on a church. Within weeks the Beeldenstorm, the iconoclastic fury, had stripped hundreds of churches of their images from Flanders to Groningen.
+      - Philip sent the Duke of Alba, who reached Brussels in August 1567 with about 10,000 veteran troops. His Council of Troubles condemned almost 9,000 people, most in their absence, and about 1,000 were executed, among them the counts of Egmont and Horn. William of Orange, the greatest noble of the Netherlands, had withdrawn to Germany and raised armies. His brother Louis of Nassau beat a royal force at Heiligerlee on 23 May 1568, usually taken as the start of the war, but Alba destroyed Louis’s army at Jemmingen on the Ems on 21 July, and William’s invasion of Brabant that autumn ran out of money.
+    facts:
+      - [Battle of Heiligerlee, "23 May 1568, rebel victory"]
+      - [Battle of Jemmingen, "21 July 1568, Spanish victory"]
+      - [Council of Troubles, "almost 9,000 condemned, about 1,000 executed"]
+    markers:
+      - kind: event
+        name: Steenvoorde
+        date: 10 August 1566
+        text: After an open-air Calvinist sermon, a crowd broke into a nearby church and smashed its images, the start of the Beeldenstorm.
+        lonlat: [2.581, 50.811]
+      - kind: event
+        name: Antwerp
+        date: 20 August 1566
+        text: Iconoclasts wrecked the interior of the great Church of Our Lady, now the cathedral, and dozens of other churches and convents in the city.
+        lonlat: [4.401, 51.221]
+      - kind: battle
+        side: es
+        name: Battle of Oosterweel
+        date: 13 March 1567
+        text: Government troops destroyed a Calvinist force outside Antwerp, while William of Orange kept the city gates shut to prevent a rising inside.
+        lonlat: [4.385, 51.244]
+        lp: t
+      - kind: event
+        side: es
+        name: Brussels
+        date: 5 June 1568
+        text: The counts of Egmont and Horn, Catholic nobles who had opposed Philip’s policies, were beheaded on the Grand Place.
+        lonlat: [4.353, 50.847]
+      - kind: battle
+        side: nl
+        name: Battle of Heiligerlee
+        date: 23 May 1568
+        text: Louis of Nassau’s army, raised in East Frisia, beat the royal stadtholder of Friesland, the Count of Aremberg, who was killed, as was Louis’s brother Adolf.
+        lonlat: [7.003, 53.157]
+        lp: b
+      - kind: battle
+        side: es
+        name: Battle of Jemmingen
+        date: 21 July 1568
+        text: Alba trapped Louis’s army against the Ems, and thousands of rebels were killed or drowned.
+        lonlat: [7.385, 53.266]
+    arrows:
+      - side: es
+        label: Alba
+        via: [[6.13, 49.61], [5.2, 50.2], [4.4, 50.8]]
+      - side: nl
+        label: Louis of Nassau
+        via: [[7.206, 53.367], [7.12, 53.25], [7.03, 53.17]]
+      - side: es
+        label: Alba
+        via: [[6.57, 53.21], [6.95, 53.2], [7.36, 53.26]]
+  - title: Brill and the revolt of Holland
+    date: 1572
+    when: "1572-04-01"
+    borders: "1572-12-01"
+    countries: [nl, be, es]
+    body:
+      - Alba’s demand for a permanent sales tax, the Tenth Penny, turned even loyal towns against him. On 1 April 1572 the Sea Beggars, Calvinist privateers sailing under William’s commission who had just been expelled from English ports, seized the little port of Brill at the mouth of the Maas. Flushing rose within days, and over the summer most towns of Holland and Zeeland let the rebels in, often under pressure from armed Calvinist minorities. In July the States of Holland met at Dordrecht and recognised William as their stadtholder.
+      - The rebels counted on France. Louis of Nassau surprised Mons in Hainaut on 24 May with Huguenot help, and William invaded Brabant from Germany. But the Massacre of St Bartholomew in Paris on 24 August killed the Huguenot leaders and any hope of French aid. Mons surrendered to Alba in September, and his son Don Fadrique marched north to punish the rebel towns. Mechelen was sacked in October, and many of the people of Zutphen and Naarden were massacred in November and December. William withdrew to Holland, resolved, he wrote, to make his grave there.
+    facts:
+      - [Capture of Brill, "1 April 1572"]
+      - [Massacre of St Bartholomew, "24 August 1572, Paris"]
+      - [Siege of Mons, "May–September 1572, retaken by Alba"]
+    markers:
+      - kind: taken
+        side: nl
+        name: Brill
+        date: 1 April 1572
+        text: About 600 Sea Beggars under the Lord of Lumey took the undefended port. Its capture is still celebrated every 1 April in Brielle.
+        lonlat: [4.167, 51.9]
+        lp: l
+      - kind: taken
+        side: nl
+        name: Flushing
+        date: April 1572
+        text: The town rose against the government, giving the rebels control of the mouth of the Scheldt.
+        lonlat: [3.567, 51.45]
+        lp: l
+      - kind: event
+        side: nl
+        name: Dordrecht
+        date: July 1572
+        text: The first free meeting of the States of Holland recognised William of Orange as stadtholder and voted money for the war.
+        lonlat: [4.678, 51.796]
+      - kind: siege
+        side: es
+        name: Mons
+        date: May–September 1572
+        text: Louis of Nassau held the town with French Huguenots until William’s relief army was driven off, then surrendered on terms.
+        lonlat: [3.95, 50.45]
+      - kind: taken
+        side: es
+        name: Mechelen
+        date: October 1572
+        text: Don Fadrique’s troops sacked the town for days because it had admitted a garrison of William’s.
+        lonlat: [4.481, 51.028]
+      - kind: taken
+        side: es
+        name: Zutphen
+        date: November 1572
+        text: After the rebel garrison fled, Spanish troops killed many of the townspeople.
+        lonlat: [6.195, 52.14]
+      - kind: taken
+        side: es
+        name: Naarden
+        date: 1 December 1572
+        text: The town surrendered, but the soldiers killed most of the inhabitants and burned it.
+        lonlat: [5.162, 52.295]
+    arrows:
+      - side: nl
+        label: Sea Beggars
+        via: [[1.6, 51.2], [2.8, 51.65], [4.05, 51.9]]
+      - side: nl
+        label: William
+        via: [[6.0, 51.2], [5.0, 50.85], [4.05, 50.48]]
+      - side: es
+        label: Don Fadrique
+        via: [[4.48, 51.05], [5.86, 51.84], [6.17, 52.12]]
+      - side: es
+        via: [[6.17, 52.15], [5.39, 52.16], [5.16, 52.3], [4.68, 52.38]]
+    areas:
+      - style: occupied
+        side: nl
+        label: Held by the rebels, end of 1572 (approximate)
+        atoms: [NL-NH, NL-ZH, NL-ZE!]
+  - title: Haarlem, Leiden and the Pacification of Ghent
+    date: 1573–1576
+    when: "1573"
+    borders: "1576-11-08"
+    countries: [nl, be, es]
+    body:
+      - Haarlem held out for seven months. When hunger forced it to surrender on 13 July 1573, the townspeople bought themselves free, but most of the garrison was executed. Alkmaar then beat off Don Fadrique after the rebels flooded the land around his camp, the Sea Beggars beat a royal fleet on the Zuiderzee in October, and Alba was recalled. His successor, Luis de Requesens, destroyed a relief army at Mookerheyde on 14 April 1574, where Louis and Henry of Nassau were killed. But Leiden, besieged from May, was saved on 3 October when the rebels cut the dykes and sailed flat-bottomed boats across the flooded fields.
+      - Unpaid for years, the Spanish troops mutinied again and again. Requesens died in March 1576, leaving no one in charge, and on 4 November mutineers sacked Antwerp, the richest city in northern Europe; at least 7,000 people were killed in the “Spanish Fury”. Four days later the States General of the loyal provinces and the rebels of Holland and Zeeland signed the Pacification of Ghent. They agreed to drive out the Spanish troops together and to suspend the heresy laws, leaving the question of religion for later.
+    facts:
+      - [Siege of Haarlem, "December 1572 – 13 July 1573"]
+      - [Relief of Leiden, "3 October 1574"]
+      - [Pacification of Ghent, "8 November 1576"]
+    markers:
+      - kind: siege
+        side: es
+        name: Haarlem
+        date: December 1572 – July 1573
+        text: After a seven-month siege the town surrendered. Its governor was beheaded and most of the garrison killed; the townspeople paid 240,000 guilders to escape a sack.
+        lonlat: [4.633, 52.383]
+        lp: l
+      - kind: held
+        side: nl
+        name: Alkmaar
+        date: August–October 1573
+        text: The defenders beat off an assault, and the rebels opened the sluices to flood the land around the Spanish camp. “Victory begins at Alkmaar”, runs the Dutch saying.
+        lonlat: [4.75, 52.63]
+        lp: l
+      - kind: naval
+        side: nl
+        name: Battle on the Zuiderzee
+        date: 11 October 1573
+        text: Rebel ships beat the royal fleet and captured its commander, the Count of Bossu.
+        lonlat: [5.167, 52.55]
+      - kind: battle
+        side: es
+        name: Battle of Mookerheyde
+        date: 14 April 1574
+        text: Requesens’s army destroyed the relief force of Louis of Nassau by the Maas near Mook; Louis and his brother Henry were among the dead.
+        lonlat: [5.9, 51.75]
+      - kind: held
+        side: nl
+        name: Leiden
+        date: May – 3 October 1574
+        text: After four months of hunger the Sea Beggars reached the town across the floods, and the besiegers fled. The next year William founded Leiden University.
+        lonlat: [4.483, 52.15]
+        lp: l
+      - kind: siege
+        side: es
+        name: Zierikzee
+        date: 1575–1576
+        text: Spanish troops waded through the shallows to the island of Duiveland in September 1575 and starved the town into surrender in July 1576, but then mutinied for their pay.
+        lonlat: [3.916, 51.65]
+        lp: l
+      - kind: taken
+        side: es
+        name: Spanish Fury
+        date: 4 November 1576
+        text: Mutinous soldiers sacked Antwerp for three days. At least 7,000 people died; an English witness put the toll at 17,000.
+        lonlat: [4.403, 51.213]
+      - kind: treaty
+        name: Pacification of Ghent
+        date: 8 November 1576
+        text: The provinces agreed to expel the Spanish troops and to suspend the persecution of Protestants.
+        lonlat: [3.725, 51.054]
+        lp: b
+    arrows:
+      - side: nl
+        label: Louis of Nassau
+        via: [[6.45, 51.2], [6.15, 51.5], [5.93, 51.73]]
+      - side: nl
+        label: Sea Beggars
+        via: [[4.48, 51.92], [4.53, 52.04], [4.5, 52.14]]
+    areas:
+      - style: occupied
+        side: nl
+        label: Held by the rebels, 1574 (approximate)
+        atoms: [NL-NH, NL-ZH, NL-ZE!]
+  - title: The Unions of Arras and Utrecht
+    date: 1577–1581
+    when: "1577-02-12"
+    borders: "1581-07-26"
+    countries: [nl, be, fr, es]
+    body:
+      - The new governor, Philip’s half-brother Don John of Austria, accepted the Pacification in February 1577 and sent the Spanish troops away, but soon seized the citadel of Namur and called them back. On 31 January 1578 he and his nephew Alexander Farnese, later Duke of Parma, routed the army of the States General at Gembloux. Don John died that October, and Parma, a skilled soldier and diplomat, took over. The rebels were divided too. Calvinists seized power in Ghent, Brussels and other cities, alarming the Catholic nobles and the Walloon provinces.
+      - On 6 January 1579 Artois, Hainaut and the town of Douai formed the Union of Arras, and in May they made peace with Philip on condition that only Catholicism be allowed. On 23 January Holland, Zeeland, Utrecht, Guelders and the Groningen countryside formed the Union of Utrecht, later joined by Friesland, Overijssel, Drenthe and the great cities of Flanders and Brabant. Parma took Maastricht by storm in June after a four-month siege. Philip outlawed William in 1580, and on 26 July 1581 the States General renounced Philip as their sovereign in the Act of Abjuration.
+    facts:
+      - [Battle of Gembloux, "31 January 1578, Spanish victory"]
+      - [Union of Utrecht, "23 January 1579"]
+      - [Act of Abjuration, "26 July 1581"]
+    markers:
+      - kind: battle
+        side: es
+        name: Battle of Gembloux
+        date: 31 January 1578
+        text: Don John’s cavalry caught the States army on the march and scattered it.
+        lonlat: [4.75, 50.55]
+      - kind: treaty
+        side: es
+        name: Union of Arras
+        date: 6 January 1579
+        text: The Walloon provinces of Artois and Hainaut and the town of Douai united to defend the Catholic faith; their peace with Philip followed in May.
+        lonlat: [2.78, 50.292]
+      - kind: treaty
+        side: nl
+        name: Union of Utrecht
+        date: 23 January 1579
+        text: The northern provinces agreed to act together in war, taxation and foreign affairs “as if they were one province”. The union became the constitution of the Dutch Republic.
+        lonlat: [5.122, 52.091]
+      - kind: siege
+        side: es
+        name: Maastricht
+        date: March–June 1579
+        text: Parma’s army stormed the city on 29 June after a four-month siege, and many of the inhabitants were killed in the sack.
+        lonlat: [5.683, 50.85]
+      - kind: event
+        side: nl
+        name: Act of Abjuration
+        date: 26 July 1581
+        text: Meeting in The Hague, the States General declared that a prince who oppressed his subjects could be deposed, and renounced Philip II.
+        lonlat: [4.31, 52.08]
+        lp: l
+    areas:
+      - style: outline
+        side: nl
+        label: Union of Utrecht, northern provinces (approximate)
+        atoms: [NL-NH, NL-ZH, NL-ZE!, NL-UT, NL-GE, NL-OV, NL-FR, NL-GR, NL-DR]
+      - style: outline
+        side: es
+        label: Union of Arras (approximate)
+        atoms: [FR-62!, FR-59!, FR-59~flandre, BE-WHT]
+  - title: Parma’s reconquest and the fall of Antwerp
+    date: 1582–1585
+    when: "1582"
+    borders: "1585-08-17"
+    countries: [be, nl, gb, es]
+    body:
+      - With Spanish troops back from 1582, Parma took the rebel towns of Flanders and Brabant one by one, by siege, blockade and generous terms. The States had invited Francis, Duke of Anjou, brother of the French king, to be their sovereign, but his attempt to seize Antwerp by force, the “French Fury” of 17 January 1583, failed and discredited him. On 10 July 1584 William of Orange was shot dead in his house in Delft by Balthasar Gérard, a Catholic who hoped for the reward Philip had offered. Ypres, Bruges and Ghent fell to Parma in 1584, Brussels and Mechelen in 1585.
+      - Parma cut Antwerp off from the sea with a fortified bridge of boats across the Scheldt. In April 1585 the defenders sent fireships packed with explosives, the “hellburners”, against it, killing hundreds of soldiers, but the bridge was repaired, and the city surrendered on 17 August. Protestants were given four years to leave, and of about 100,000 inhabitants only some 40,000 remained; many merchants and craftsmen moved north to Amsterdam and Middelburg. Alarmed, Elizabeth I of England agreed in the Treaty of Nonsuch to send several thousand soldiers under the Earl of Leicester, bringing England openly into the war with Spain.
+    facts:
+      - [William of Orange assassinated, "10 July 1584, Delft"]
+      - [Fall of Antwerp, "17 August 1585"]
+      - [Treaty of Nonsuch, "August 1585, England allies with the States"]
+    markers:
+      - kind: event
+        name: Delft
+        date: 10 July 1584
+        text: Balthasar Gérard shot William on the stairs of his residence, the Prinsenhof. The bullet holes can still be seen in the wall.
+        lonlat: [4.359, 52.012]
+        lp: l
+      - kind: taken
+        side: es
+        name: Ghent
+        date: 17 September 1584
+        text: The Calvinist city, heart of the revolt in Flanders, surrendered to Parma after a long blockade.
+        lonlat: [3.725, 51.054]
+        lp: b
+      - kind: taken
+        side: es
+        name: Brussels
+        date: 10 March 1585
+        text: The hungry city surrendered on terms after a blockade of several months.
+        lonlat: [4.353, 50.847]
+      - kind: siege
+        side: es
+        name: Antwerp
+        date: July 1584 – 17 August 1585
+        text: Parma’s bridge across the Scheldt cut the city off from the sea. Its surrender ended Antwerp’s golden age.
+        lonlat: [4.4, 51.218]
+    arrows:
+      - side: es
+        label: Parma
+        via: [[3.39, 50.61], [3.6, 50.85], [3.72, 51.03], [4.3, 51.2]]
+      - side: en
+        label: Leicester
+        via: [[1.4, 51.36], [2.5, 51.5], [3.52, 51.45]]
+  - title: Maurice’s campaigns and Nieuwpoort
+    date: 1588–1600
+    when: "1588"
+    borders: "1600-07-02"
+    countries: [nl, be, de, gb, es]
+    body:
+      - In 1588 Parma’s army waited on the Flemish coast to cross to England, but the Spanish Armada, beaten off Gravelines and scattered by storms, never collected it, and Dutch flyboats blockaded the shallow coast. Philip then sent Parma into France against Henry IV, which gave the Dutch a breathing space. William’s son Maurice of Nassau and his cousin William Louis drilled their small, regularly paid army in volley fire and siege work. In March 1590 soldiers hidden in a peat barge took Breda; Zutphen, Deventer and Nijmegen fell in 1591, Steenwijk and Coevorden in 1592, and Groningen in July 1594.
+      - In January 1597 Maurice’s cavalry routed a Spanish force at Turnhout, and that summer he took the towns along the eastern border, from Rheinberg to Lingen. In 1598, shortly before his death, Philip II handed the Netherlands to his daughter Isabella and her husband, Archduke Albert. In 1600 the States General sent Maurice into Flanders to take Dunkirk, the base of the privateers who preyed on Dutch shipping. Albert caught him on the beach at Nieuwpoort on 2 July; the Dutch and English won a hard-fought battle, but Maurice had to withdraw, and Dunkirk was never taken.
+    facts:
+      - [Capture of Breda, "4 March 1590"]
+      - [Battle of Turnhout, "24 January 1597, Dutch victory"]
+      - [Battle of Nieuwpoort, "2 July 1600, Dutch and English victory"]
+    markers:
+      - kind: naval
+        side: en
+        name: Battle of Gravelines
+        date: 8 August 1588
+        text: After fireships drove the Armada from its anchorage off Calais, the English fleet broke its formation. The Spanish ships fled north around Scotland and Ireland, losing many in storms.
+        lonlat: [2.0, 51.1]
+        lp: l
+      - kind: taken
+        side: nl
+        name: Breda
+        date: 4 March 1590
+        text: About 70 soldiers hidden under the turf in a peat barge were taken into the castle and opened it to Maurice.
+        lonlat: [4.776, 51.589]
+      - kind: siege
+        side: nl
+        name: Nijmegen
+        date: October 1591
+        text: Maurice took the city after a short bombardment, ending a year of rapid conquests along the rivers.
+        lonlat: [5.862, 51.847]
+      - kind: siege
+        side: nl
+        name: Coevorden
+        date: 1592
+        text: The fortress, key to the north-east, surrendered to Maurice in September.
+        lonlat: [6.75, 52.667]
+      - kind: siege
+        side: nl
+        name: Groningen
+        date: May–July 1594
+        text: Its capture brought the city and its countryside into the Union of Utrecht and secured the north-east for the Republic.
+        lonlat: [6.567, 53.219]
+      - kind: battle
+        side: nl
+        name: Battle of Turnhout
+        date: 24 January 1597
+        text: Maurice’s cavalry caught a retreating Spanish army on the heath and routed it.
+        lonlat: [4.9, 51.27]
+      - kind: battle
+        side: nl
+        name: Battle of Nieuwpoort
+        date: 2 July 1600
+        text: Fought on the beach and in the dunes as the tide went out. Albert was beaten, but Maurice’s expedition had failed.
+        lonlat: [2.738, 51.156]
+        lp: b
+    arrows:
+      - side: nl
+        label: Maurice
+        via: [[3.75, 51.28], [3.5, 51.18], [3.0, 51.17], [2.79, 51.15]]
+      - side: nl
+        label: Maurice, 1591–1594
+        via: [[5.86, 51.86], [6.15, 52.18], [6.4, 52.6], [6.55, 53.18]]
+  - title: Ostend and the Twelve Years’ Truce
+    date: 1601–1609
+    when: "1601-07-05"
+    borders: "1609-04-09"
+    countries: [be, nl, de, gb, es]
+    body:
+      - The siege of Ostend, the last rebel foothold on the Flemish coast, began on 5 July 1601 and became one of the longest and bloodiest of the age. Supplied by sea, the garrison was relieved in turns while the besiegers dug and stormed in the dunes; more than 100,000 people may have been killed, wounded or died of disease. The Genoese commander Ambrogio Spinola finally took the ruins on 20 September 1604, but Maurice had meanwhile captured Sluis, a better harbour. England, under James I, had made peace with Spain in the Treaty of London that August.
+      - Spinola carried the war across the great rivers in 1605–1606, taking Oldenzaal, Lingen, Groenlo and Rheinberg, but Spain’s money ran out. In April 1607 a Dutch fleet under Jacob van Heemskerk destroyed a Spanish fleet in the bay of Gibraltar, and that autumn the Spanish crown suspended its payments. On 9 April 1609 the two sides signed the Twelve Years’ Truce in Antwerp. Spain treated the United Provinces as free states over which it claimed no authority, though it did not formally recognise their independence, and each side kept what it held.
+    facts:
+      - [Siege of Ostend, "5 July 1601 – 20 September 1604"]
+      - [Battle of Gibraltar, "25 April 1607, Dutch naval victory"]
+      - [Twelve Years’ Truce, "signed 9 April 1609 at Antwerp"]
+    markers:
+      - kind: siege
+        side: es
+        name: Ostend
+        date: 1601–1604
+        text: Spinola took the ruined town after more than three years. Some estimates put the dead and wounded on both sides at over 100,000.
+        lonlat: [2.917, 51.233]
+      - kind: siege
+        side: nl
+        name: Sluis
+        date: May–August 1604
+        text: Maurice took the port in August, a month before Ostend fell, as a better base on the Flemish coast.
+        lonlat: [3.386, 51.308]
+        lp: t
+      - kind: taken
+        side: es
+        name: Lingen
+        date: 1605
+        text: Spinola’s first campaign across the rivers took Oldenzaal and the fortress of Lingen, which Maurice had captured in 1597.
+        lonlat: [7.323, 52.523]
+      - kind: siege
+        side: es
+        name: Groenlo
+        date: August 1606
+        text: Spinola took the border fortress; Maurice’s attempt to win it back that autumn failed.
+        lonlat: [6.617, 52.05]
+      - kind: siege
+        side: es
+        name: Rheinberg
+        date: 1606
+        text: Spinola took the fortress on the Rhine in the autumn, his last success before the truce.
+        lonlat: [6.601, 51.547]
+      - kind: treaty
+        name: Twelve Years’ Truce
+        date: 9 April 1609
+        text: Signed in Antwerp, the truce ended the fighting for twelve years and left each side what it held.
+        lonlat: [4.4, 51.218]
+    arrows:
+      - side: es
+        label: Spinola
+        via: [[6.45, 51.6], [6.8, 52.05], [6.93, 52.31], [7.3, 52.5]]
+  - title: Breda
+    date: 1621–1625
+    when: "1621-04-09"
+    borders: "1625-06-05"
+    countries: [nl, be, de, es]
+    body:
+      - The truce expired in April 1621, as the Thirty Years’ War was spreading through Germany. Spain’s chief minister, the Count-Duke of Olivares, hoped economic war would bring better terms. Dutch ships were banned from Spanish ports, and privateers from Dunkirk took hundreds of Dutch merchantmen and fishing boats. On land Spain took the Dutch-held fortress of Jülich in February 1622, but Spinola failed before Bergen op Zoom, which the Dutch supplied by water and relieved in October.
+      - In August 1624 Spinola laid siege to Breda, the Nassau family’s town in Brabant, surrounding it with lines too strong to break. Maurice died in The Hague on 23 April 1625, aged 57, while his armies tried in vain to relieve it, and his half-brother Frederick Henry succeeded him. Breda surrendered on 5 June 1625 after eleven months, and its garrison marched out with full honours, a scene Diego Velázquez painted about ten years later as The Surrender of Breda. It was the high point of Spanish fortunes in the later war.
+    facts:
+      - [Siege of Bergen op Zoom, "July–October 1622, relieved"]
+      - [Siege of Breda, "28 August 1624 – 5 June 1625"]
+      - [Maurice of Nassau dies, "23 April 1625"]
+    markers:
+      - kind: siege
+        side: es
+        name: Jülich
+        date: September 1621 – February 1622
+        text: Spanish troops under Hendrik van den Bergh took the Dutch-garrisoned fortress after a five-month siege.
+        lonlat: [6.36, 50.925]
+      - kind: held
+        side: nl
+        name: Bergen op Zoom
+        date: July–October 1622
+        text: Spinola’s siege failed when the town was supplied by water and a relief army arrived in October.
+        lonlat: [4.3, 51.5]
+        lp: l
+      - kind: siege
+        side: es
+        name: Breda
+        date: August 1624 – June 1625
+        text: Spinola starved the town into surrender. The governor, Justin of Nassau, handed over the keys outside the walls.
+        lonlat: [4.776, 51.589]
+      - kind: event
+        name: The Hague
+        date: 23 April 1625
+        text: Maurice of Nassau died, and Frederick Henry became captain-general and stadtholder of most of the provinces.
+        lonlat: [4.31, 52.08]
+        lp: l
+    arrows:
+      - side: es
+        label: Spinola
+        via: [[4.4, 51.22], [4.6, 51.42], [4.74, 51.56]]
+  - title: ’s-Hertogenbosch and Maastricht
+    date: 1626–1633
+    when: "1627"
+    borders: "1632-08-22"
+    countries: [nl, de, be, es]
+    body:
+      - Frederick Henry, who earned the name “taker of towns”, began with Groenlo in 1627. In September 1628 Piet Hein of the Dutch West India Company captured the Spanish silver fleet off Matanzas in Cuba, and the booty helped pay for the next campaign. In April 1629 Frederick Henry surrounded ’s-Hertogenbosch, a fortress city guarded by marshes, with miles of siege lines, and drained the water around it. A Spanish and imperial army struck into the Veluwe and took Amersfoort in August, but the Dutch surprised Wesel, its supply base, on 19 August, and ’s-Hertogenbosch surrendered on 14 September.
+      - In September 1631 a Spanish flotilla carrying troops to invade Zeeland was destroyed among the islands at the Slaak. The next summer Frederick Henry marched up the Maas, taking Venlo and Roermond and, on 22 August 1632, Maastricht, while nobles in the Spanish Netherlands plotted with him. The loyal provinces called their own States General and opened peace talks, which failed in 1633. Frederick Henry took Rheinberg that year, and the war in the north settled into a stalemate along the rivers.
+    facts:
+      - [Siege of ’s-Hertogenbosch, "30 April – 14 September 1629"]
+      - [Battle of the Slaak, "12–13 September 1631, Dutch victory"]
+      - [Maastricht taken, "22 August 1632"]
+    markers:
+      - kind: siege
+        side: nl
+        name: Groenlo
+        date: July–August 1627
+        text: Frederick Henry’s first great siege won back the fortress Spinola had taken in 1606.
+        lonlat: [6.617, 52.05]
+      - kind: siege
+        side: nl
+        name: ’s-Hertogenbosch
+        date: April–September 1629
+        text: Frederick Henry dammed the rivers, drained the marshes with mills and took the city after a five-month siege.
+        lonlat: [5.3, 51.683]
+        lp: l
+      - kind: taken
+        side: es
+        name: Amersfoort
+        date: August 1629
+        text: A Spanish and imperial army under Hendrik van den Bergh and Ernesto Montecuccoli crossed the IJssel and took the town, but turned back when Wesel fell.
+        lonlat: [5.383, 52.15]
+      - kind: taken
+        side: nl
+        name: Wesel
+        date: 19 August 1629
+        text: A surprise attack at night took the Spanish supply base on the Rhine.
+        lonlat: [6.618, 51.659]
+      - kind: naval
+        side: nl
+        name: Battle of the Slaak
+        date: 12–13 September 1631
+        text: Dutch ships caught the Spanish flotilla among the Zeeland islands and captured or sank most of it, taking thousands of prisoners.
+        lonlat: [4.2, 51.631]
+        lp: l
+      - kind: taken
+        side: nl
+        name: Venlo and Roermond
+        date: June 1632
+        text: Both towns on the Maas surrendered quickly as Frederick Henry advanced on Maastricht.
+        lonlat: [6.167, 51.367]
+      - kind: siege
+        side: nl
+        name: Maastricht
+        date: June–August 1632
+        text: Frederick Henry beat off a Spanish army and Pappenheim’s imperial relief army and took the city on 22 August.
+        lonlat: [5.683, 50.85]
+    arrows:
+      - side: nl
+        label: Frederick Henry
+        via: [[5.86, 51.82], [6.15, 51.4], [5.97, 51.18], [5.71, 50.88]]
+      - side: es
+        label: Van den Bergh
+        via: [[6.05, 51.96], [5.75, 52.1], [5.42, 52.15]]
+  - title: France joins, and the Downs
+    date: 1635–1639
+    when: "1635-02-08"
+    borders: "1639-10-21"
+    countries: [be, nl, fr, de, gb, es]
+    body:
+      - In February 1635 the Republic allied with France to conquer and divide the Spanish Netherlands. In May a French army beat the Spaniards at Les Avins and joined Frederick Henry, but their armies sacked Tienen and then failed before Leuven, and the people of the south rallied to the new governor, Philip IV’s brother, the Cardinal-Infante Ferdinand. Spanish troops even seized the Dutch fortress of Schenkenschans on the Rhine in July 1635; it took nine months to win back. Frederick Henry retook Breda in October 1637, but a Dutch attack on Antwerp ended in defeat at Kallo in June 1638.
+      - With French armies astride the Spanish Road through Alsace, Spain tried to reinforce Flanders by sea. In September 1639 a fleet under Antonio de Oquendo, about 50 warships and 30 transports carrying some 9,000 soldiers, was attacked in the Channel by Maarten Tromp and took shelter in the Downs off the Kent coast, in neutral English waters. Most of the troops were ferried to Dunkirk in small, fast ships, but on 21 October Tromp attacked with fireships. About ten Spanish ships were captured or destroyed and a dozen more ran aground. Spain never again sent a great fleet into the North Sea.
+    facts:
+      - [Battle of Les Avins, "20 May 1635, French victory"]
+      - [Breda retaken, "October 1637"]
+      - [Battle of the Downs, "21 October 1639, Dutch victory"]
+    markers:
+      - kind: battle
+        side: fr
+        name: Battle of Les Avins
+        date: 20 May 1635
+        text: A French army under the marshals Châtillon and Brézé beat the Spaniards near Huy and marched on to join the Dutch at Maastricht.
+        lonlat: [5.283, 50.4]
+      - kind: held
+        side: es
+        name: Leuven
+        date: June–July 1635
+        text: Students and townspeople helped the garrison hold out, and the French and Dutch armies, short of supplies after sacking Tienen, withdrew.
+        lonlat: [4.7, 50.883]
+      - kind: taken
+        side: es
+        name: Schenkenschans
+        date: 28 July 1635
+        text: A Spanish raiding force surprised the fort at the fork of the Rhine and the Waal. The Dutch besieged it until April 1636.
+        lonlat: [6.11, 51.836]
+      - kind: siege
+        side: nl
+        name: Breda
+        date: July–October 1637
+        text: Frederick Henry won back the Nassau town twelve years after its loss.
+        lonlat: [4.776, 51.589]
+      - kind: battle
+        side: es
+        name: Battle of Kallo
+        date: 20 June 1638
+        text: The Cardinal-Infante’s army beat a Dutch force that had crossed the Scheldt to attack Antwerp from the west.
+        lonlat: [4.286, 51.294]
+        lp: l
+      - kind: naval
+        side: nl
+        name: Battle of the Downs
+        date: 21 October 1639
+        text: Tromp’s fireships and gunners destroyed the Spanish fleet in the roadstead off Deal, while an English squadron looked on.
+        lonlat: [1.45, 51.22]
+        lp: l
+    arrows:
+      - side: fr
+        label: Châtillon and Brézé
+        via: [[4.75, 50.0], [5.15, 50.3], [5.4, 50.55], [5.65, 50.83]]
+      - side: es
+        label: Oquendo
+        via: [[0.3, 50.55], [1.15, 50.9], [1.42, 51.18]]
+  - title: The Peace of Münster
+    date: 1640–1648
+    when: "1640"
+    borders: "1648-05-15"
+    countries: [nl, be, es, de]
+    body:
+      - In 1640 Catalonia and Portugal rose against Philip IV, and Spain, fighting France on several fronts, could no longer hope to win in the Netherlands. The Dutch were tiring of the war too. Frederick Henry took Sas van Gent in 1644 and Hulst in 1645, winning the strip of Flanders south of the Scheldt, but Holland’s merchants now feared a powerful France more than a weakened Spain. Peace talks opened at Münster in Westphalia, beside the congress that was ending the Thirty Years’ War, and the Dutch envoys made peace without waiting for France.
+      - The treaty was signed on 30 January 1648 and sworn in Münster’s town hall on 15 May. Spain recognised the seven United Provinces as free and sovereign states. The Republic kept the lands it had conquered in Brabant, Flanders and around Maastricht, ruled directly by the States General as the Generality Lands. The Scheldt stayed closed to shipping, to Amsterdam’s benefit and Antwerp’s cost, and the Dutch kept their conquests in Asia and the Americas. Frederick Henry, who had died in March 1647, did not see the peace.
+    facts:
+      - [Peace of Münster, "signed 30 January 1648, sworn 15 May 1648"]
+      - [Hulst taken, "November 1645"]
+      - [Recognised, "the seven United Provinces, as free and sovereign states"]
+    markers:
+      - kind: siege
+        side: nl
+        name: Sas van Gent
+        date: 1644
+        text: Frederick Henry took the fortress on the canal from Ghent in September.
+        lonlat: [3.797, 51.228]
+      - kind: siege
+        side: nl
+        name: Hulst
+        date: October–November 1645
+        text: The last great siege of the war gave the Republic eastern Zeelandic Flanders.
+        lonlat: [4.05, 51.283]
+      - kind: treaty
+        name: Peace of Münster
+        date: 15 May 1648
+        text: Spanish and Dutch envoys swore to the treaty in the town hall, a scene painted by Gerard ter Borch.
+        lonlat: [7.628, 51.962]
+    areas:
+      - style: gained
+        side: nl
+        label: Generality Lands, kept by the Republic (approximate)
+        atoms: [NL-NB, NL-ZE~vlaanderen]

@@ -51,10 +51,17 @@ sides:
     ink: green
     moves: Russian moves
     success: Russian success
+  - id: gb
+    name: Britain and its allies
+    polities: [united-kingdom, netherlands, hanover, portugal]
+    ink: red
+    moves: British and allied moves
+    success: British and allied success
 notes:
   - Dates are New Style.
   - Migrated from Sweden at War, so the story is told from Sweden’s side.
   - The steps on the war in Germany and Austria were added for Europe at War. Bavaria, Württemberg, Baden and, from December 1806, Saxony fought on France’s side until 1813.
+  - The steps on the campaign of 1814 and the Hundred Days were also added for Europe at War. The war in Spain and Portugal, at sea and in Italy is only outlined.
 sources:
   - url: https://en.wikipedia.org/wiki/Franco-Swedish_War
     title: Franco-Swedish War (Wikipedia)
@@ -90,6 +97,26 @@ sources:
     title: Battle of Lützen, 1813 (Wikipedia)
   - url: https://en.wikipedia.org/wiki/Battle_of_Bautzen_(1813)
     title: Battle of Bautzen, 1813 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Campaign_in_north-east_France_(1814)
+    title: Campaign in north-east France, 1814 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Six_Days%27_Campaign
+    title: Six Days’ Campaign (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Paris_(1814)
+    title: Battle of Paris, 1814 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Treaty_of_Fontainebleau_(1814)
+    title: Treaty of Fontainebleau, 1814 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Treaty_of_Paris_(1814)
+    title: Treaty of Paris, 1814 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Hundred_Days
+    title: Hundred Days (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Ligny
+    title: Battle of Ligny (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Waterloo
+    title: Battle of Waterloo (Wikipedia)
+  - url: https://www.nam.ac.uk/explore/battle-waterloo
+    title: Battle of Waterloo (National Army Museum)
+  - url: https://en.wikipedia.org/wiki/Treaty_of_Paris_(1815)
+    title: Treaty of Paris, 1815 (Wikipedia)
 steps:
   - title: War with Napoleon in Pomerania
     date: 1805–1807
@@ -613,3 +640,174 @@ steps:
         label: Lost by Sweden in this peace
         atoms:
           - DE-MV~pomN
+  - title: The campaign of France and the first abdication
+    date: December 1813 – May 1814
+    when: "1814-01-25"
+    borders: "1814-05-30"
+    countries: [fr, de, at, ru, gb, es, pt]
+    side_names:
+      at: Success for Schwarzenberg’s Army of Bohemia
+      pr: Success for Blücher’s Army of Silesia
+    move_names:
+      at: Moves of the Army of Bohemia (Austrians, Russians and Germans)
+      pr: Moves of the Army of Silesia (Prussians and Russians)
+    body:
+      - After Leipzig the allies reached the Rhine, and Napoleon let slip their offer of peace with France’s “natural frontiers”. From late December 1813 Schwarzenberg’s Army of Bohemia crossed the upper Rhine through Switzerland and Blücher’s Army of Silesia crossed the middle Rhine, while Wellington, coming from Spain, had already crossed the Pyrenees into south-western France. Napoleon, with perhaps 70,000 men in the field, many of them young conscripts, struck at the allied armies in turn. He was beaten at La Rothière on 1 February 1814, but between 10 and 14 February he defeated Blücher’s scattered corps four times in five days, at Champaubert, Montmirail, Château-Thierry and Vauchamps, and on 18 February he drove Schwarzenberg back at Montereau.
+      - The allies held together, binding themselves in the Treaty of Chaumont in March not to make a separate peace. Blücher checked Napoleon at Laon on 9–10 March and Schwarzenberg at Arcis-sur-Aube on 20–21 March, and when Napoleon moved east to threaten their communications, they marched on Paris instead. After a day’s fighting on 30 March Marshal Marmont surrendered the city, and the allied monarchs rode in the next day. The Senate deposed Napoleon, his marshals refused to fight on, and on 6 April at Fontainebleau he abdicated. Napoleon was given the island of Elba, and Louis XVIII, a brother of Louis XVI, returned as king. By the Treaty of Paris on 30 May France kept its borders of 1792, with small additions.
+    facts:
+      - [Six Days’ Campaign, "10–14 February 1814, four French victories"]
+      - [Paris surrenders, "31 March 1814"]
+      - [Napoleon abdicates, "6 April 1814; Treaty of Paris, 30 May 1814"]
+    markers:
+      - kind: battle
+        side: pr
+        name: Battle of La Rothière
+        date: 1 February 1814
+        text: Blücher, with Austrian, Russian and Württemberg corps, attacked Napoleon in snowstorms near Brienne and forced him to retreat.
+        lonlat: [4.55, 48.33]
+      - kind: battle
+        side: fr
+        name: Champaubert, Montmirail and Vauchamps
+        date: 10–14 February 1814
+        text: The Six Days’ Campaign. Napoleon caught Blücher’s corps strung out along the Marne valley and beat them one by one, inflicting far heavier losses than he suffered.
+        lonlat: [3.65, 48.88]
+      - kind: battle
+        side: fr
+        name: Château-Thierry
+        date: 12 February 1814
+        text: The third victory of the Six Days, over the retreating Prussian corps of Yorck and the Russians of Sacken.
+        lonlat: [3.403, 49.046]
+        lp: t
+      - kind: battle
+        side: fr
+        name: Battle of Montereau
+        date: 18 February 1814
+        text: Napoleon stormed the bridges over the Seine and the Yonne, and Schwarzenberg fell back towards Troyes.
+        lonlat: [2.95, 48.4]
+        lp: l
+      - kind: battle
+        side: pr
+        name: Battle of Laon
+        date: 9–10 March 1814
+        text: Napoleon attacked Blücher’s much larger army on its hilltop and was repulsed; a night attack routed Marmont’s corps.
+        lonlat: [3.624, 49.564]
+      - kind: battle
+        side: at
+        name: Battle of Arcis-sur-Aube
+        date: 20–21 March 1814
+        text: Napoleon, expecting only a rearguard, ran into Schwarzenberg’s whole army and had to withdraw across the Aube.
+        lonlat: [4.142, 48.538]
+      - kind: taken
+        side: ru
+        name: Paris
+        date: 30–31 March 1814
+        text: After fighting on the heights of Montmartre and Belleville, Marmont signed the capitulation. Tsar Alexander I and King Frederick William III entered Paris on 31 March.
+        lonlat: [2.352, 48.857]
+        lp: l
+      - kind: event
+        name: Fontainebleau
+        date: 6 April 1814
+        text: Napoleon abdicated in the palace. By the Treaty of Fontainebleau he kept the title of emperor and received Elba.
+        lonlat: [2.701, 48.402]
+        lp: b
+      - kind: battle
+        side: gb
+        name: Battle of Toulouse
+        date: 10 April 1814
+        text: Wellington’s British, Portuguese and Spanish troops drove Soult out of the city, in a battle fought after the abdication.
+        lonlat: [1.444, 43.605]
+    arrows:
+      - side: at
+        label: Schwarzenberg
+        via: [[7.59, 47.56], [6.86, 47.64], [5.33, 47.86], [4.07, 48.3]]
+      - side: pr
+        label: Blücher
+        via: [[7.78, 50.1], [6.9, 49.3], [6.18, 48.69], [4.55, 48.4]]
+      - side: fr
+        label: Napoleon, March
+        via: [[4.14, 48.54], [4.6, 48.62], [4.95, 48.64]]
+      - side: at
+        label: On to Paris
+        via: [[4.1, 48.6], [3.5, 48.75], [2.55, 48.85]]
+      - side: gb
+        label: Wellington
+        via: [[-1.47, 43.49], [-0.78, 43.5], [0.5, 43.55], [1.42, 43.6]]
+  - title: The Hundred Days and Waterloo
+    date: March – November 1815
+    when: "1815-03-01"
+    borders: "1815-11-20"
+    countries: [fr, be, nl, de, gb]
+    side_names:
+      gb: Success for Wellington’s allied army
+    move_names:
+      gb: Moves of Wellington’s allied army
+    body:
+      - Napoleon left Elba with about 1,000 men and landed at Golfe-Juan near Cannes on 1 March 1815. He marched north through the Alps, avoiding royalist Provence, and at Laffrey, near Grenoble, the troops sent to stop him went over to him. Marshal Ney, who had promised Louis XVIII to bring him back in an iron cage, joined him too, and Napoleon entered Paris on 20 March as the king fled to Ghent. The powers meeting at the Congress of Vienna declared him an outlaw and each promised 150,000 men. Napoleon decided to strike first, at the two allied armies in Belgium, the British, Dutch and German army of the Duke of Wellington and the Prussian army of Blücher, before the Austrians and Russians could arrive.
+      - On 15 June the French crossed the Sambre at Charleroi. The next day Napoleon beat Blücher at Ligny while Ney held Wellington at Quatre Bras, but the Prussians fell back north to Wavre, staying within reach of Wellington. On 18 June Wellington’s army of about 68,000 held the ridge of Mont-Saint-Jean, south of Waterloo, against Napoleon’s 73,000 until the Prussians struck the French right in the afternoon; when the Imperial Guard’s last attack failed that evening, the French army broke. Napoleon abdicated again on 22 June, surrendered to the British on 15 July and was exiled to Saint Helena, where he died in 1821. The second Treaty of Paris on 20 November 1815 cut France back to its borders of 1790 and imposed an indemnity and an allied occupation.
+    facts:
+      - [Battle of Waterloo, "18 June 1815, allied victory"]
+      - [Losses at Waterloo, "About 24,000 allied and Prussian and some 30,000 or more French killed, wounded or captured (estimates vary)"]
+      - [Second Treaty of Paris, "20 November 1815"]
+    markers:
+      - kind: event
+        side: fr
+        name: Golfe-Juan
+        date: 1 March 1815
+        text: Napoleon came ashore with the soldiers of his guard from Elba and set off north on the mountain road through Digne and Gap.
+        lonlat: [7.074, 43.567]
+      - kind: event
+        side: fr
+        name: Laffrey
+        date: 7 March 1815
+        text: Napoleon walked up to the infantry sent to stop him and invited them to shoot their emperor. They joined him instead.
+        lonlat: [5.773, 45.025]
+      - kind: event
+        side: fr
+        name: Paris
+        date: 20 March 1815
+        text: Napoleon returned to the Tuileries the night after Louis XVIII had fled.
+        lonlat: [2.352, 48.857]
+      - kind: battle
+        side: fr
+        name: Battle of Ligny
+        date: 16 June 1815
+        text: Napoleon’s last victory. Blücher, unhorsed and nearly captured, rallied his army and led it north towards Wavre.
+        lonlat: [4.574, 50.511]
+      - kind: held
+        side: gb
+        name: Quatre Bras
+        date: 16 June 1815
+        text: Ney failed to take the crossroads from Wellington’s gathering army, which fell back to Mont-Saint-Jean the next day.
+        lonlat: [4.453, 50.571]
+        lp: l
+      - kind: battle
+        side: gb
+        name: Battle of Waterloo
+        date: 18 June 1815
+        text: Wellington’s British, Dutch, Belgian, Hanoverian, Brunswick and Nassau troops held their ridge all day; Blücher’s Prussians, attacking at Plancenoit, decided the battle.
+        lonlat: [4.412, 50.678]
+        lp: l
+      - kind: battle
+        side: fr
+        name: Battle of Wavre
+        date: 18–19 June 1815
+        text: Marshal Grouchy’s wing pushed back the Prussian rearguard but was too far away to help Napoleon.
+        lonlat: [4.607, 50.717]
+      - kind: event
+        side: gb
+        name: Rochefort
+        date: 15 July 1815
+        text: Unable to escape to America past the British blockade, Napoleon surrendered to Captain Maitland of HMS Bellerophon off the Île d’Aix.
+        lonlat: [-1.175, 46.012]
+    arrows:
+      - side: fr
+        label: Napoleon
+        via: [[7.07, 43.57], [6.24, 44.09], [6.08, 44.56], [5.72, 45.17]]
+      - side: fr
+        via: [[5.72, 45.19], [4.84, 45.76], [3.57, 47.8], [2.4, 48.83]]
+      - side: fr
+        label: Armée du Nord
+        via: [[4.2, 50.12], [4.45, 50.41], [4.56, 50.5]]
+      - side: pr
+        label: Blücher
+        via: [[4.57, 50.52], [4.6, 50.71], [4.44, 50.67]]

@@ -1,0 +1,208 @@
+id: nine-years-war-ireland
+name: Nine Years’ War in Ireland
+start: "1593-05"
+end: "1603-03-30"
+tier: B
+summary: A war between a confederacy of Gaelic Irish lords, led by Hugh O’Neill, Earl of Tyrone, and Hugh Roe O’Donnell, and the English crown, which was extending its rule into Ulster, the last part of Ireland under Gaelic lordship. The Irish won at Clontibret and the Yellow Ford, but after Lord Mountjoy’s scorched-earth campaign and the defeat of the Irish and their Spanish allies at Kinsale in 1601, O’Neill submitted at Mellifont in 1603, completing the Tudor conquest of Ireland.
+countries: [ie, gb, es]
+sides:
+  - id: ir
+    name: Irish confederacy
+    polities: [irish-lordships]
+    ink: green
+    moves: Irish moves
+    success: Irish success
+  - id: cr
+    name: English crown
+    polities: [england, ireland]
+    ink: red
+    moves: English moves
+    success: English success
+  - id: es
+    name: Spain
+    polities: [spain]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+notes:
+  - Also called Tyrone’s Rebellion. Dates are Old Style, as used by the English in Ireland; the Spanish at Kinsale used the Gregorian calendar, ten days ahead, so the battle there is also dated 3 January 1602.
+  - The war began with Hugh Maguire’s rising in Fermanagh in 1593; O’Neill joined openly only in 1595. It was also part of the wider Anglo-Spanish War of 1585–1604.
+sources:
+  - title: Nine Years’ War (Ireland) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nine_Years%27_War_(Ireland)
+  - title: Hugh O’Neill, 2nd earl of Tyrone (Britannica)
+    url: https://www.britannica.com/biography/Hugh-ONeill-2nd-Earl-of-Tyrone
+  - title: Battle of Clontibret (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Clontibret
+  - title: Battle of the Yellow Ford (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Yellow_Ford
+  - title: Battle of Curlew Pass (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Curlew_Pass
+  - title: Siege of Kinsale (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kinsale
+  - title: Siege of Dunboy (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Dunboy
+  - title: Treaty of Mellifont (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Mellifont
+steps:
+  - title: Clontibret and the Yellow Ford
+    date: 1593–1598
+    when: "1593-05"
+    borders: "1598-10-15"
+    countries: [ie, gb]
+    body:
+      - After the Tudor conquest of Munster and Connacht, English sheriffs, garrisons and officials pressed into Ulster, the last region still ruled by Gaelic lords. In 1593 Hugh Maguire of Fermanagh rose against a newly appointed sheriff, and in August 1594 his men ambushed a column bringing supplies to the English garrison of Enniskillen. Hugh O’Neill, Earl of Tyrone, brought up at the English court but the most powerful lord in Ulster, kept in the background while he trained a modern army of musketeers and pikemen. In 1595 he joined openly with Hugh Roe O’Donnell, lord of Tír Chonaill, and in May ambushed Sir Henry Bagenal’s column at Clontibret.
+      - Truces and talks alternated with fighting while O’Neill sought help from Spain. On 14 August 1598 Bagenal led about 4,000 men from Armagh to relieve the besieged Blackwater Fort. At the Yellow Ford O’Neill’s army cut the column apart; Bagenal was shot dead, a powder wagon exploded, and about 1,500 English soldiers were killed. It was the worst defeat English arms had suffered in Ireland. The fort surrendered, many lords who had stayed neutral joined O’Neill, and in October revolt swept through Munster. The English settlers there fled to the walled towns, among them the poet Edmund Spenser, whose castle at Kilcolman was burned.
+    facts:
+      - [Battle of Clontibret, "May 1595, Irish victory"]
+      - [Battle of the Yellow Ford, "14 August 1598, Irish victory"]
+      - [English losses at the Yellow Ford, "about 1,500 killed"]
+    markers:
+      - kind: battle
+        side: ir
+        name: Battle of the Ford of the Biscuits
+        date: 7 August 1594
+        text: Maguire’s men routed a column of about 650 men on its way to Enniskillen. The battle is named after the biscuits left floating in the river.
+        lonlat: [-7.639, 54.277]
+      - kind: battle
+        side: ir
+        name: Battle of Clontibret
+        date: May 1595
+        text: O’Neill’s larger army attacked Bagenal’s column on its way back from relieving Monaghan, and inflicted heavy losses. It was the first severe English setback of the war.
+        lonlat: [-6.853, 54.215]
+      - kind: event
+        side: ir
+        name: Dungannon
+        date: 1595–1602
+        text: O’Neill’s chief seat. In 1602, as Mountjoy advanced, he burned it and withdrew.
+        lonlat: [-6.77, 54.5]
+        lp: l
+      - kind: battle
+        side: ir
+        name: Battle of the Yellow Ford
+        date: 14 August 1598
+        text: The English column was split by Irish attacks and halted by a great trench dug across its path near the River Callan.
+        lonlat: [-6.686, 54.401]
+      - kind: event
+        side: ir
+        name: Kilcolman
+        date: October 1598
+        text: The rising destroyed the Munster plantation, settled on land confiscated after the Desmond Rebellions. Spenser’s castle was burned, and he fled to Cork.
+        lonlat: [-8.61, 52.25]
+    arrows:
+      - side: cr
+        label: Bagenal, 1595
+        via: [[-6.34, 54.18], [-6.62, 54.2], [-6.96, 54.25]]
+      - side: cr
+        label: Bagenal, 1598
+        via: [[-6.34, 54.18], [-6.65, 54.34], [-6.69, 54.39]]
+    areas:
+      - style: contested
+        side: ir
+        label: Rising in Munster, October 1598
+        atoms: [IE-CO, IE-KY, IE-LK, IE-TA, IE-WD]
+  - title: Mountjoy and Kinsale
+    date: 1599–1601
+    when: "1599-04-15"
+    borders: "1601-12-24"
+    countries: [ie, gb, es]
+    body:
+      - In 1599 Elizabeth sent the Earl of Essex with the largest English army yet seen in Ireland, about 16,000 men. He spent months in Leinster and Munster while his troops dwindled through disease and desertion, and on 15 August O’Donnell destroyed a column at the Curlew Pass. Essex agreed a truce with O’Neill and went home against orders. His successor, Lord Mountjoy, who arrived in 1600, waged a different war. He planted garrisons deep in Ulster, at Derry on Lough Foyle and along the Blackwater, campaigned through the winter, and destroyed crops and cattle so as to starve the country into submission.
+      - In September 1601 about 3,500 Spanish soldiers under Juan del Águila landed at Kinsale, at the far end of Ireland from O’Neill’s country. Mountjoy besieged them, and O’Neill and O’Donnell marched the length of the island in winter to relieve the town. On 24 December 1601 their army was caught as it moved into position, and Mountjoy’s cavalry broke it. Del Águila surrendered on terms and sailed home with his men in early 1602. O’Donnell went to Spain to plead for more help and died there that September.
+    facts:
+      - [Battle of Curlew Pass, "15 August 1599, Irish victory"]
+      - [Spanish landing at Kinsale, "September 1601, about 3,500 men"]
+      - [Battle of Kinsale, "24 December 1601, English victory"]
+    markers:
+      - kind: battle
+        side: ir
+        name: Battle of Curlew Pass
+        date: 15 August 1599
+        text: Sir Conyers Clifford’s column, marching to relieve a castle in Sligo, was ambushed in the Curlew Mountains near Boyle. Clifford was killed.
+        lonlat: [-8.312, 53.998]
+      - kind: held
+        side: cr
+        name: Derry
+        date: May 1600
+        text: Sir Henry Docwra landed about 4,000 men on Lough Foyle and fortified Derry, behind O’Neill’s and O’Donnell’s lands.
+        lonlat: [-7.32, 54.998]
+      - kind: battle
+        name: Battle of Moyry Pass
+        date: September – October 1600
+        text: O’Neill’s earthworks and barricades held Mountjoy’s army in the pass into Ulster for weeks, at heavy cost to both sides.
+        lonlat: [-6.385, 54.064]
+      - kind: event
+        side: es
+        name: Castlehaven
+        date: December 1601
+        text: A second Spanish force of about 700 men landed west of Kinsale and held Castlehaven, Baltimore and Dunboy with Irish allies.
+        lonlat: [-9.18, 51.52]
+      - kind: battle
+        side: cr
+        name: Battle of Kinsale
+        date: 24 December 1601
+        text: The Irish army, unused to fighting in open country, was routed before the Spaniards in the town could join in.
+        lonlat: [-8.512, 51.699]
+    arrows:
+      - side: cr
+        label: Essex, 1599
+        via: [[-6.26, 53.35], [-7.0, 52.85], [-7.92, 52.37]]
+      - side: es
+        label: Del Águila, from Lisbon
+        via: [[-9.8, 47.0], [-9.6, 50.0], [-8.53, 51.66]]
+      - side: ir
+        label: O’Neill
+        via: [[-6.77, 54.5], [-7.3, 53.5], [-7.9, 52.5], [-8.48, 51.74]]
+      - side: ir
+        label: O’Donnell
+        via: [[-8.48, 54.27], [-8.4, 53.3], [-8.3, 52.4], [-8.56, 51.75]]
+      - side: cr
+        label: Mountjoy
+        via: [[-6.26, 53.35], [-7.2, 52.6], [-8.46, 51.72]]
+  - title: Mellifont
+    date: 1602–1603
+    when: "1602-06-05"
+    borders: "1603-03-30"
+    countries: [ie, gb]
+    body:
+      - After Kinsale the confederacy fell apart. In the south Sir George Carew took Dunboy, the O’Sullivan castle on Bantry Bay, in June 1602 and hanged most of its defenders. In midwinter Donal Cam O’Sullivan Beare led about 1,000 of his people north from Glengarriff, fighting off attacks across Munster and Connacht, to O’Rourke’s country in Leitrim; about 35 arrived. In Ulster Mountjoy’s armies burned crops, killed cattle and broke the stone chair at Tullaghoge on which the O’Neills had been inaugurated. Famine killed many thousands, and O’Neill retreated into the woods of Glenconkeyne.
+      - On 30 March 1603, at Mellifont Abbey near Drogheda, O’Neill submitted to Mountjoy, not knowing that Elizabeth had died six days before. The terms were lenient. He kept most of his lands as Earl of Tyrone but gave up the Gaelic title of The O’Neill and his power over lesser lords, and Ulster came under English law and sheriffs, completing the Tudor conquest of Ireland. In 1607 O’Neill, O’Donnell’s brother and other northern lords left for the Continent in the Flight of the Earls, and their lands were confiscated for the Plantation of Ulster.
+    facts:
+      - [Siege of Dunboy, "5–18 June 1602, English victory"]
+      - [O’Sullivan Beare’s march, "about 1,000 set out, about 35 reached Leitrim"]
+      - [Treaty of Mellifont, "30 March 1603"]
+    markers:
+      - kind: taken
+        side: cr
+        name: Dunboy
+        date: 18 June 1602
+        text: About 140 defenders held the castle for eleven days against Carew’s army of several thousand. Most of the survivors were hanged.
+        lonlat: [-9.924, 51.633]
+      - kind: event
+        side: ir
+        name: Glengarriff
+        date: 31 December 1602
+        text: O’Sullivan Beare set out with his soldiers and their families, about 1,000 people, to join the northern lords still in arms.
+        lonlat: [-9.552, 51.75]
+        lp: t
+      - kind: event
+        side: ir
+        name: Leitrim
+        date: January 1603
+        text: After about two weeks and some 500 km, the survivors reached Brian Óg O’Rourke’s castle.
+        lonlat: [-8.064, 53.991]
+      - kind: event
+        side: cr
+        name: Tullaghoge
+        date: "1602"
+        text: Mountjoy had the inauguration stone of the O’Neills smashed, a blow at the old order in Ulster.
+        lonlat: [-6.723, 54.61]
+      - kind: treaty
+        name: Mellifont
+        date: 30 March 1603
+        text: O’Neill made his submission in the house of Mountjoy’s ally Sir Garret Moore, built in the ruins of the Cistercian abbey.
+        lonlat: [-6.466, 53.742]
+    arrows:
+      - side: ir
+        label: O’Sullivan Beare
+        via: [[-9.55, 51.75], [-8.8, 52.5], [-8.32, 53.29], [-8.07, 53.97]]

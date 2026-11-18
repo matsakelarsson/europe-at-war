@@ -1,0 +1,185 @@
+id: glyndwr-rising
+name: Glyndŵr Rising
+start: "1400-09-16"
+end: "1415"
+tier: B
+summary: The last great Welsh revolt against English rule, led by Owain Glyndŵr, who was proclaimed Prince of Wales in 1400. At its height in 1404–1405 he controlled most of Wales, held a parliament at Machynlleth and allied with France, but English armies and an economic blockade wore the rising down. After Harlech fell in 1409 Glyndŵr became a fugitive, and he disappeared around 1415.
+countries: [gb, fr]
+sides:
+  - id: wal
+    name: Glyndŵr’s Welsh
+    polities: [wales]
+    ink: green
+    moves: Welsh moves
+    success: Welsh success
+  - id: eng
+    name: England
+    polities: [england]
+    ink: red
+    moves: English moves
+    success: English success
+  - id: fra
+    name: France
+    polities: [france]
+    ink: navy
+    moves: French moves
+    success: French success
+notes:
+  - Dates are Julian. Many events of the rising are known only from a few chronicles, above all that of Adam of Usk, and several dates are uncertain, among them those of the battles of Grosmont and Pwll Melyn, usually put in March and May 1405.
+  - Owain’s name is also written Owen Glendower in older English. The date and place of his death are unknown; a Welsh annal records it under 1415.
+sources:
+  - title: Glyndŵr Rising (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Glynd%C5%B5r_Rising
+  - title: Owain Glyndŵr (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Owain_Glynd%C5%B5r
+  - title: Owain Glyn Dŵr (Britannica)
+    url: https://www.britannica.com/biography/Owain-Glyn-Dwr
+  - title: Battle of Bryn Glas (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Bryn_Glas
+  - title: Battle of Shrewsbury (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Shrewsbury
+  - title: Tripartite Indenture (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tripartite_Indenture
+  - title: Battle of Pwll Melyn (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Pwll_Melyn
+steps:
+  - title: Prince of Wales
+    date: 1400–1403
+    when: "1400-09-16"
+    borders: "1403-07-21"
+    countries: [gb]
+    body:
+      - Owain Glyndŵr, lord of Glyndyfrdwy and Cynllaith and a descendant of the princes of Powys and Deheubarth, had served English kings in war. A land dispute with his neighbour Reginald Grey, Lord of Ruthin, came to a head after Henry IV deposed Richard II, who had been well liked in Wales. On 16 September 1400 a small band of followers proclaimed Owain Prince of Wales at Glyndyfrdwy. Two days later they sacked Ruthin, and within a week they had burned the English towns of north-east Wales from Denbigh and Flint to Oswestry and Welshpool. Henry IV marched round north Wales but found no one to fight.
+      - The revolt spread in 1401. Owain’s cousins Rhys and Gwilym ap Tudur seized Conwy Castle on Good Friday while most of its garrison was at church, and Owain beat a much larger force from Pembrokeshire at Mynydd Hyddgen. Parliament answered with harsh laws barring Welshmen from office, from bearing arms and from buying land in England. In 1402 Owain captured Grey and held him for ransom, and on 22 June at Bryn Glas, near Pilleth, he routed the levies of Herefordshire and took Sir Edmund Mortimer prisoner. Mortimer married Owain’s daughter Catrin and joined him.
+      - In July 1403 Owain swept down the Tywi valley, where castles and towns fell or surrendered, and took Carmarthen. That month Henry “Hotspur” Percy, who had fought the Welsh for the king, rebelled in Cheshire with Welsh support, but he was killed fighting Henry IV and his son Prince Henry at Shrewsbury on 21 July. Owain, far away in the south, took no part in the battle.
+    facts:
+      - [Owain proclaimed Prince of Wales, "16 September 1400, Glyndyfrdwy"]
+      - [Battle of Bryn Glas, "22 June 1402, Welsh victory"]
+      - [Battle of Shrewsbury, "21 July 1403, Hotspur killed"]
+    markers:
+      - kind: event
+        side: wal
+        name: Glyndyfrdwy
+        date: 16 September 1400
+        text: Owain was proclaimed Prince of Wales on his own estate in the Dee valley, by followers who included his eldest son and the Dean of St Asaph.
+        lonlat: [-3.267, 52.975]
+        lp: b
+      - kind: taken
+        side: wal
+        name: Ruthin
+        date: 18 September 1400
+        text: Owain’s men sacked and burned the town of his enemy Reginald Grey, but could not take the castle.
+        lonlat: [-3.312, 53.115]
+      - kind: taken
+        side: wal
+        name: Conwy Castle
+        date: 1 April 1401
+        text: A man posing as a carpenter came to the gate, attacked the guards and let in about forty rebels. They gave it up in June in return for pardons.
+        lonlat: [-3.826, 53.28]
+      - kind: battle
+        side: wal
+        name: Mynydd Hyddgen
+        date: Summer 1401
+        text: A few hundred Welsh, caught in the valley below Pumlumon, turned on a force of English and Flemish settlers from Pembrokeshire and drove it off.
+        lonlat: [-3.797, 52.506]
+      - kind: battle
+        side: wal
+        name: Battle of Bryn Glas
+        date: 22 June 1402
+        text: Welsh archers in Mortimer’s army are said to have turned on their own side. English chroniclers later accused Welsh women of mutilating the dead.
+        lonlat: [-3.097, 52.307]
+      - kind: taken
+        side: wal
+        name: Carmarthen
+        date: July 1403
+        text: The chief English town in south-west Wales fell to Owain and was sacked.
+        lonlat: [-4.313, 51.859]
+      - kind: battle
+        side: eng
+        name: Battle of Shrewsbury
+        date: 21 July 1403
+        text: Hotspur was killed and his uncle, the Earl of Worcester, executed. The sixteen-year-old Prince Henry was badly wounded in the face by an arrow.
+        lonlat: [-2.719, 52.748]
+    arrows:
+      - side: wal
+        label: Owain, 1400
+        via: [[-3.31, 53.11], [-3.14, 53.25], [-3.05, 52.86], [-3.15, 52.67]]
+      - side: eng
+        label: Henry IV, 1400
+        via: [[-2.75, 52.71], [-3.4, 52.95], [-4.1, 53.22], [-4.3, 53.28]]
+      - side: wal
+        label: Owain, 1403
+        via: [[-3.85, 52.55], [-3.85, 52.05], [-4.29, 51.87]]
+      - side: eng
+        label: Hotspur
+        via: [[-2.89, 53.19], [-2.8, 52.95], [-2.73, 52.76]]
+  - title: Machynlleth, the French and defeat
+    date: 1404–1415
+    when: "1404"
+    borders: "1409-02"
+    countries: [gb, fr]
+    body:
+      - In 1404 Owain took the great castles of Harlech and Aberystwyth, held a parliament of all Wales at Machynlleth and made a treaty with Charles VI of France. In February 1405, in the Tripartite Indenture, he, Mortimer and the Earl of Northumberland agreed to divide England and Wales between them, with Wales stretching to the Severn and the Mersey. That August a French army of some 2,500 men landed at Milford Haven, took Carmarthen with the Welsh and marched into England as far as Woodbury Hill near Worcester, where it faced the king’s army for several days before turning back.
+      - But the tide was turning. Owain’s forces were beaten at Grosmont in March 1405 and at Pwll Melyn near Usk in May, where his brother Tudur was killed and his son Gruffudd captured; Adam of Usk says 300 prisoners were beheaded. In 1406 Owain’s letter from Pennal offered to bring the Welsh church under the pope at Avignon and set out plans for two Welsh universities, but French help was drying up. Prince Henry, the future Henry V, used the castles still in English hands to blockade the country, and one district after another submitted and paid fines.
+      - Anglesey was lost in 1406, Aberystwyth fell in 1408 and Harlech in February 1409, where Mortimer died and Owain’s wife and daughters were captured; Catrin and her children died in captivity in London. After a failed raid into Shropshire in 1410 Owain went into hiding. He never accepted Henry V’s offers of pardon and probably died around 1415; his son Maredudd accepted a pardon in 1421.
+    facts:
+      - [Parliament at Machynlleth, "1404"]
+      - [French expedition, "August 1405, from Milford Haven to Woodbury Hill"]
+      - [Fall of Harlech, "February 1409"]
+    markers:
+      - kind: taken
+        side: wal
+        name: Harlech Castle
+        date: 1404 – February 1409
+        text: Owain held court and his family lived in the castle, which fell to the English after a long siege with heavy guns.
+        lonlat: [-4.11, 52.86]
+      - kind: taken
+        side: wal
+        name: Aberystwyth Castle
+        date: 1404–1408
+        text: Taken by Owain in 1404. Prince Henry besieged it with cannon, one of the first uses of artillery in Britain, and it surrendered in 1408.
+        lonlat: [-4.09, 52.413]
+      - kind: event
+        side: wal
+        name: Machynlleth
+        date: "1404"
+        text: Owain held his first parliament here, attended by envoys from France, Scotland and Castile according to later tradition.
+        lonlat: [-3.849, 52.591]
+        lp: l
+      - kind: event
+        side: fra
+        name: Milford Haven
+        date: August 1405
+        text: The French force under Jean de Rieux landed here, took the town of Haverfordwest but not its castle, and joined Owain.
+        lonlat: [-5.043, 51.714]
+      - kind: event
+        side: fra
+        name: Woodbury Hill
+        date: August 1405
+        text: The furthest point of the Franco-Welsh advance into England, about 14 km north-west of Worcester. Neither army attacked.
+        lonlat: [-2.369, 52.278]
+      - kind: battle
+        side: eng
+        name: Grosmont
+        date: 11 March 1405
+        text: A Welsh force burning the town was beaten by a smaller English force sent by Prince Henry.
+        lonlat: [-2.867, 51.915]
+      - kind: battle
+        side: eng
+        name: Pwll Melyn
+        date: 5 May 1405
+        text: The first English victory in a pitched battle of the rising. The Welsh attacked Usk Castle and were routed by its garrison.
+        lonlat: [-2.954, 51.718]
+        lp: b
+    arrows:
+      - side: fra
+        label: French and Welsh, 1405
+        via: [[-5.04, 51.71], [-4.31, 51.86], [-3.2, 52.0], [-2.39, 52.27]]
+      - side: eng
+        label: Prince Henry, 1407–1408
+        via: [[-2.75, 52.71], [-3.4, 52.55], [-4.07, 52.41]]
+    areas:
+      - style: occupied
+        side: wal
+        label: Largely under Glyndŵr’s control, 1404–1405
+        atoms: [GB-GWN, GB-AGY, GB-CWY, GB-DEN, GB-POW, GB-CGN, GB-CMN]

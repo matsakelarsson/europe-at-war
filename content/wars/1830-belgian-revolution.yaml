@@ -1,0 +1,152 @@
+id: belgian-revolution
+name: Belgian Revolution
+start: "1830-08-25"
+end: "1832-12-23"
+tier: B
+summary: The rising of the southern provinces of the United Kingdom of the Netherlands that created the Kingdom of Belgium. Street fighting drove the Dutch army out of Brussels in September 1830 and a provisional government declared independence; a Dutch invasion in August 1831 was halted by a French army, which also took the citadel of Antwerp in December 1832, and the Netherlands recognised Belgium by the Treaty of London of 1839.
+countries: [be, nl, fr, lu]
+sides:
+  - id: be
+    name: Belgian revolutionaries and Belgium
+    polities: [belgium]
+    ink: gold
+    moves: Belgian moves
+    success: Belgian success
+  - id: fr
+    name: France
+    polities: [france]
+    ink: blue
+    moves: French moves
+    success: French success
+  - id: nl
+    name: United Kingdom of the Netherlands
+    polities: [netherlands]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+notes:
+  - The United Kingdom of the Netherlands, created in 1815, joined the former Dutch Republic with the former Austrian Netherlands and the Prince-Bishopric of Liège. Its king, William I of Orange-Nassau, was also Grand Duke of Luxembourg. Its army and government are called “Dutch” here, as in most accounts.
+  - The fighting ended in 1832, but the Netherlands accepted Belgian independence only by the Treaty of London of 19 April 1839, which also divided Limburg and Luxembourg. Until then Belgium held most of both.
+sources:
+  - title: Belgian Revolution (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Belgian_Revolution
+  - title: London Conference of 1830 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/London_Conference_of_1830
+  - title: Ten Days’ Campaign (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ten_Days%27_Campaign
+  - title: Siege of Antwerp (1832) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Antwerp_(1832)
+  - title: Treaty of London (1839) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_London_(1839)
+  - title: Luxembourg and the Belgian Revolution (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Luxembourg_and_the_Belgian_Revolution
+steps:
+  - title: The September Days and independence
+    date: August – December 1830
+    when: "1830-08-25"
+    borders: "1830-12-20"
+    countries: [be, nl, lu]
+    body:
+      - The south of the United Kingdom of the Netherlands had more people than the north but no more seats in the States General, most officials and officers were Dutch, Catholics resented King William I’s control of schools, and French-speakers his promotion of Dutch. Catholics and liberals made common cause against him. Weeks after the July Revolution in Paris, on 25 August 1830, the audience at Brussels’ opera house, the Monnaie, poured into the streets after a performance of Auber’s La Muette de Portici, and rioting spread to Liège and other towns.
+      - The king’s heir, the Prince of Orange, came to Brussels and accepted that north and south should be governed separately, but his father chose force. From 23 to 26 September several thousand troops under his younger son, Prince Frederick, held the park in the city centre against volunteers firing from barricades and houses, then withdrew. Several hundred insurgents were killed; they lie under today’s Place des Martyrs. A provisional government declared independence on 4 October.
+      - The Dutch army fell back to the citadel of Antwerp and the fortress of Maastricht. On 27 October, as Belgian volunteers entered Antwerp, General David Chassé’s guns in the citadel bombarded the city, setting warehouses and houses on fire. A National Congress, elected in November, declared Belgium independent and barred the House of Orange from its throne, and on 20 December a conference of the great powers in London accepted that the United Kingdom of the Netherlands was dissolved.
+    facts:
+      - [Riot at the Monnaie, "25 August 1830"]
+      - [Fighting in Brussels, "23–26 September 1830, Dutch withdrawal"]
+      - [Independence declared, "4 October 1830, by the provisional government"]
+    markers:
+      - kind: battle
+        side: be
+        name: Brussels Park
+        date: 23–26 September 1830
+        text: Prince Frederick’s troops broke into the city and held the park beside the royal palace for four days under fire, then withdrew in the night of 26–27 September.
+        lonlat: [4.364, 50.844]
+      - kind: held
+        side: nl
+        name: Antwerp citadel
+        date: 27 October 1830
+        text: Chassé’s garrison shelled the city when Belgian volunteers entered it, burning warehouses and houses. The citadel stayed in Dutch hands for two more years.
+        lonlat: [4.393, 51.208]
+      - kind: held
+        side: nl
+        name: Maastricht
+        date: 1830–1839
+        text: The Dutch garrison under General Bernard Dibbets held the fortress throughout the revolution, which is why the Netherlands kept eastern Limburg.
+        lonlat: [5.691, 50.851]
+    arrows:
+      - side: be
+        label: Liège volunteers
+        via: [[5.57, 50.63], [5.1, 50.78], [4.7, 50.88], [4.38, 50.85]]
+      - side: nl
+        label: Prince Frederick
+        via: [[4.43, 50.93], [4.39, 50.88], [4.366, 50.848]]
+      - side: nl
+        via: [[4.37, 50.87], [4.47, 51.03], [4.4, 51.19]]
+    areas:
+      - style: occupied
+        side: be
+        label: Held by the revolution, late 1830 (except the federal fortress of Luxembourg)
+        atoms: [LU-D, LU-G, LU-L]
+  - title: The Ten Days’ Campaign and the siege of Antwerp
+    date: August 1831 – December 1832
+    when: "1831-08-02"
+    borders: "1832-12-23"
+    countries: [be, nl, fr]
+    body:
+      - The National Congress chose Leopold of Saxe-Coburg as king, and he took the oath on 21 July 1831, now Belgium’s national day. William I had not accepted the terms set in London, and on 2 August a Dutch army of about 50,000 under the Prince of Orange crossed the border near Poppel. The Belgians had about 24,000 regulars and militia, split between an Army of the Scheldt around Antwerp and an Army of the Meuse in Limburg. The Dutch beat them at Turnhout, at Houthalen and Hasselt, and on 12 August before Leuven.
+      - Leopold had appealed to France, and on 9 August Marshal Étienne Gérard crossed the border with about 70,000 men. Rather than fight the French, the Dutch agreed to a ceasefire on 12 August and withdrew, keeping only the citadel of Antwerp. The powers then offered terms less favourable to Belgium, the Twenty-Four Articles, which Belgium accepted and William refused. In November 1832 British and French warships blockaded the Dutch coast and Gérard returned to besiege the citadel. His engineers under General François Haxo dug their trenches up to the walls and pounded the fort with heavy mortars until Chassé surrendered on 23 December.
+      - The Dutch still held the forts of Lillo and Liefkenshoek on the Scheldt below Antwerp, and an agreement in May 1833 left matters as they stood. In 1838 William at last accepted the Twenty-Four Articles. By the Treaty of London of 19 April 1839 the Netherlands recognised Belgium, whose independence and perpetual neutrality the great powers guaranteed, the guarantee Germany broke in 1914. Belgium gave up eastern Limburg, with Maastricht and Venlo, to the Netherlands, and the eastern, German-speaking part of Luxembourg, which remained a grand duchy under the Dutch king.
+    facts:
+      - [Ten Days’ Campaign, "2–12 August 1831, Dutch victories"]
+      - [Siege of the Antwerp citadel, "15 November – 23 December 1832, French victory"]
+      - [Treaty of London, "19 April 1839"]
+    markers:
+      - kind: battle
+        side: nl
+        name: Turnhout
+        date: 3 August 1831
+        text: The Prince of Orange’s main force routed the Belgian troops defending the town, many of whose people had already fled towards Antwerp.
+        lonlat: [4.949, 51.323]
+      - kind: battle
+        side: nl
+        name: Hasselt
+        date: 8 August 1831
+        text: The Dutch routed General Nicolas Daine’s Army of the Meuse, which had already been beaten at Houthalen, and it fell apart.
+        lonlat: [5.333, 50.917]
+      - kind: battle
+        side: nl
+        name: Leuven
+        date: 12 August 1831
+        text: Leopold’s troops were beaten outside the town, where he had his headquarters, as the ceasefire was being arranged; the Dutch occupied it briefly and then withdrew.
+        lonlat: [4.7, 50.879]
+      - kind: siege
+        side: fr
+        name: Antwerp citadel
+        date: 15 November – 23 December 1832
+        text: The French Army of the North took the citadel after 24 days of siege and handed it to Belgium. Chassé and his garrison became prisoners of war.
+        lonlat: [4.393, 51.208]
+        lp: l
+      - kind: held
+        side: nl
+        name: Lillo
+        date: 1832–1839
+        text: The Dutch kept the forts of Lillo and Liefkenshoek, which controlled the Scheldt below Antwerp, until the treaty of 1839.
+        lonlat: [4.29, 51.303]
+        lp: l
+    arrows:
+      - side: nl
+        label: Prince of Orange
+        via: [[5.04, 51.45], [4.95, 51.32], [5.05, 51.0], [4.72, 50.88]]
+      - side: nl
+        via: [[5.62, 51.2], [5.4, 51.04], [5.34, 50.93]]
+      - side: fr
+        label: Gérard, 1831
+        via: [[3.55, 50.35], [3.95, 50.45], [4.4, 50.75], [4.68, 50.86]]
+      - side: fr
+        label: Gérard, 1832
+        via: [[4.35, 50.87], [4.44, 51.03], [4.4, 51.19]]
+    areas:
+      - style: lost
+        side: be
+        label: Given up by Belgium by the Treaty of London, 1839
+        atoms: [NL-LI, LU-D, LU-G, LU-L]

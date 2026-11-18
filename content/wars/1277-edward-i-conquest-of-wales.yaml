@@ -1,0 +1,168 @@
+id: edward-i-conquest-of-wales
+name: Edward I’s conquest of Wales
+start: "1276-11"
+end: "1283-06"
+tier: B
+summary: The wars in which Edward I of England conquered the principality of Wales. In 1277 he forced Llywelyn ap Gruffudd, Prince of Wales, back into western Gwynedd; when Llywelyn and his brother Dafydd rose in 1282, Edward overran Snowdonia, Llywelyn was killed and Dafydd executed, and the Statute of Rhuddlan of 1284 annexed their lands to the English crown, held down by a ring of great castles.
+countries: [gb]
+sides:
+  - id: eng
+    name: England
+    polities: [england]
+    ink: red
+    moves: English moves
+    success: English success
+  - id: wal
+    name: Wales
+    polities: [wales]
+    ink: green
+    moves: Welsh moves
+    success: Welsh success
+notes:
+  - Much of Wales, notably the south and the border, was already held by Anglo-Norman marcher lords; the wars were fought over the principality that Llywelyn had built up and that Henry III had recognised in 1267.
+  - The Welsh chronicle Brut y Tywysogion and English royal records are the main sources. The circumstances of Llywelyn’s death were told differently on each side and remain unclear.
+sources:
+  - title: Conquest of Wales by Edward I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Conquest_of_Wales_by_Edward_I
+  - title: Llywelyn ap Gruffudd (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Llywelyn_ap_Gruffudd
+  - title: Treaty of Aberconwy (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Aberconwy
+  - title: Battle of Moel-y-don (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Moel-y-don
+  - title: Battle of Orewin Bridge (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Orewin_Bridge
+  - title: Castell y Bere (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Castell_y_Bere
+  - title: Statute of Rhuddlan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Statute_of_Rhuddlan
+  - title: Llywelyn ap Gruffudd (Britannica)
+    url: https://www.britannica.com/biography/Llywelyn-ap-Gruffudd
+steps:
+  - title: The war of 1277 and the Treaty of Aberconwy
+    date: 1276–1277
+    when: "1276-11"
+    borders: "1277-11-10"
+    countries: [gb]
+    body:
+      - By the Treaty of Montgomery of 1267 Henry III recognised Llywelyn ap Gruffudd of Gwynedd as Prince of Wales and overlord of the other Welsh rulers. Relations with Henry’s son Edward I soon broke down. Llywelyn would not come to do homage, quarrelled with the marcher lords over the border, and objected that Edward sheltered his brother Dafydd and Gruffudd ap Gwenwynwyn of Powys, who had plotted against his life. When Llywelyn married Eleanor de Montfort, the daughter of Edward’s old enemy Simon, by proxy, Edward had her ship seized at sea on her way from France in 1275. In November 1276 he declared Llywelyn a rebel.
+      - In 1277 royal armies advanced from Chester, Montgomery and Carmarthen, and the lords of Powys and Deheubarth submitted. In July Edward led the main army west from Chester along the coast, with hundreds of woodcutters clearing a road and new castles begun at Flint and Rhuddlan, while his fleet landed troops on Anglesey to take its harvest, the granary of Gwynedd. Facing a winter of hunger in the mountains, Llywelyn gave in. By the Treaty of Aberconwy in November he kept his title but only Gwynedd west of the Conwy; the land between the Conwy and the Dee went to Edward and to Dafydd, and the other Welsh lords became Edward’s vassals.
+    facts:
+      - [Llywelyn declared a rebel, "November 1276"]
+      - [Treaty of Aberconwy, "November 1277"]
+      - [Left to Llywelyn, "Anglesey and Gwynedd west of the Conwy"]
+    markers:
+      - kind: event
+        side: eng
+        name: Chester
+        date: July 1277
+        text: The main English army gathered here, with knights, Welsh allies, archers and a great force of labourers.
+        lonlat: [-2.89, 53.19]
+      - kind: event
+        side: eng
+        name: Flint
+        date: "1277"
+        text: The first of Edward’s new castles in Wales, built with a planted English town beside it on the Dee estuary.
+        lonlat: [-3.13, 53.247]
+        lp: b
+      - kind: event
+        side: eng
+        name: Rhuddlan
+        date: "1277"
+        text: Edward’s base for the advance. His engineers cut a new course for the River Clwyd so that ships could reach the castle.
+        lonlat: [-3.465, 53.29]
+        lp: b
+      - kind: taken
+        side: eng
+        name: Anglesey
+        date: August–September 1277
+        text: Troops brought by sea occupied the island and gathered its grain harvest, cutting off Llywelyn’s food supply.
+        lonlat: [-4.33, 53.27]
+      - kind: treaty
+        side: eng
+        name: Aberconwy
+        date: November 1277
+        text: Llywelyn submitted at the Cistercian abbey on the Conwy, the burial place of the princes of Gwynedd. He was also fined 50,000 marks, which Edward later remitted.
+        lonlat: [-3.83, 53.28]
+        lp: t
+    arrows:
+      - side: eng
+        label: Edward I
+        via: [[-2.89, 53.19], [-3.13, 53.25], [-3.46, 53.29], [-3.78, 53.29]]
+      - side: eng
+        label: Fleet to Anglesey
+        via: [[-3.3, 53.47], [-3.9, 53.4], [-4.2, 53.31]]
+      - side: eng
+        label: Edmund of Lancaster
+        via: [[-4.31, 51.86], [-4.2, 52.15], [-4.09, 52.4]]
+    areas:
+      - style: outline
+        side: wal
+        label: Left to Llywelyn, 1277
+        atoms: [GB-GWN, GB-AGY, GB-CWY]
+  - title: Dafydd’s rising and the fall of Gwynedd
+    date: 1282–1283
+    when: "1282-03-22"
+    borders: "1283-10-03"
+    countries: [gb]
+    body:
+      - English officials and English law in the lands taken in 1277 caused bitter resentment, and Dafydd felt poorly rewarded for his help. On Palm Sunday, 22 March 1282, he attacked Hawarden castle and went on to besiege Rhuddlan; risings followed in Deheubarth and northern Powys, and Llywelyn joined the war. Edward advanced along the north coast once more and sent a force to Anglesey. On 6 November, while Archbishop Peckham of Canterbury was trying to make peace, Luke de Tany led a surprise attack across a bridge of boats over the Menai Strait and was routed at Moel-y-don; many of his knights drowned.
+      - Llywelyn went south to raise mid-Wales, and on 11 December he was killed near Cilmeri, by Builth, apparently cut off from his army by English troops at Orewin Bridge. His head was sent to London and set up at the Tower. In January 1283 Edward pushed into Snowdonia and took Dolwyddelan, and Castell y Bere fell on 25 April. Dafydd, who had taken the title of prince, was captured in June and hanged, drawn and quartered at Shrewsbury on 3 October. By the Statute of Rhuddlan of 1284 the principality was annexed to the English crown and divided into shires, and Edward began great castles at Conwy, Caernarfon and Harlech to hold it.
+    facts:
+      - [Attack on Hawarden, "22 March 1282"]
+      - [Death of Llywelyn, "11 December 1282, near Cilmeri"]
+      - [Statute of Rhuddlan, "3 March 1284"]
+    markers:
+      - kind: taken
+        side: wal
+        name: Hawarden
+        date: 22 March 1282
+        text: Dafydd’s men took the castle by night and captured its lord, Roger de Clifford, opening the war.
+        lonlat: [-3.03, 53.18]
+      - kind: battle
+        side: wal
+        name: Battle of Moel-y-don
+        date: 6 November 1282
+        text: The Welsh fell on the English as they came ashore from the bridge of boats. Caught by the tide, many in heavy armour drowned.
+        lonlat: [-4.154, 53.23]
+        lp: l
+      - kind: battle
+        side: eng
+        name: Cilmeri
+        date: 11 December 1282
+        text: Llywelyn, the last native Prince of Wales, was killed here. According to English accounts the soldier who struck him did not at first know who he was.
+        lonlat: [-3.462, 52.152]
+      - kind: taken
+        side: eng
+        name: Dolwyddelan
+        date: January 1283
+        text: The castle guarding the pass into the heart of Snowdonia fell to Edward’s winter campaign.
+        lonlat: [-3.908, 53.053]
+      - kind: taken
+        side: eng
+        name: Castell y Bere
+        date: 25 April 1283
+        text: The last major Welsh castle surrendered after a short siege by forces from south Wales and Shropshire.
+        lonlat: [-3.972, 52.658]
+      - kind: event
+        side: eng
+        name: Caernarfon
+        date: From 1283
+        text: Edward’s grandest castle, near the Roman fort of Segontium, with banded walls thought to echo those of Constantinople. His son, the future Edward II, was born there in 1284.
+        lonlat: [-4.276, 53.139]
+      - kind: event
+        side: eng
+        name: Shrewsbury
+        date: 3 October 1283
+        text: Dafydd was tried before a parliament summoned to the town and executed as a traitor.
+        lonlat: [-2.75, 52.708]
+    arrows:
+      - side: wal
+        label: Dafydd
+        via: [[-3.55, 53.1], [-3.3, 53.17], [-3.05, 53.18]]
+      - side: eng
+        label: Edward I, 1283
+        via: [[-3.46, 53.29], [-3.8, 53.27], [-3.9, 53.07]]
+      - side: wal
+        label: Llywelyn
+        via: [[-3.95, 52.95], [-3.7, 52.5], [-3.47, 52.17]]

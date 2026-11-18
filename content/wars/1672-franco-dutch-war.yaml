@@ -1,0 +1,248 @@
+id: franco-dutch-war
+name: Franco-Dutch War
+start: "1672-04-06"
+end: "1678-09-17"
+tier: B
+summary: A war launched by Louis XIV against the Dutch Republic, which nearly fell in the disaster year of 1672 before flooding Holland and finding allies in Spain, the Emperor and Brandenburg. The war spread to the Rhine, the Spanish Netherlands and the Baltic, where it was fought as the Scanian War. The Peace of Nijmegen in 1678 left the Republic intact but gave France Franche-Comté and a string of towns in the Spanish Netherlands.
+countries: [nl, fr, be, de, es, gb]
+sides:
+  - id: fr
+    name: France and its allies
+    polities: [france]
+    ink: navy
+    moves: French and allied moves
+    success: French and allied success
+  - id: nl
+    name: Dutch Republic
+    polities: [dutch-republic]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+  - id: al
+    name: Spain, the Emperor and their allies
+    polities: [spain, habsburg-netherlands, habsburg, hre, prussia]
+    ink: gold
+    moves: Spanish, imperial and allied moves
+    success: Spanish, imperial and allied success
+notes:
+  - France’s allies were England (until February 1674, in the Third Anglo-Dutch War), the Prince-Bishop of Münster and the Elector of Cologne (until 1674) and Sweden (from 1675). The Dutch were joined by Brandenburg (1672–1673 and again from 1674), the Emperor, Spain and the Duke of Lorraine (1673), the Empire (1674) and Denmark–Norway (1675). For the war in the north, see the Scanian War.
+  - Dates are New Style (Gregorian). Some Dutch provinces, such as Groningen, still used the Julian calendar, ten days behind.
+sources:
+  - title: Franco-Dutch War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Franco-Dutch_War
+  - title: Dutch War (Britannica)
+    url: https://www.britannica.com/event/Dutch-War
+  - title: Rampjaar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rampjaar
+  - title: Dutch Water Line (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dutch_Water_Line
+  - title: Siege of Maastricht (1673) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Maastricht_(1673)
+  - title: Battle of Seneffe (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Seneffe
+  - title: Battle of Turckheim (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Turckheim
+  - title: Battle of Cassel (1677) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Cassel_(1677)
+  - title: Treaties of Nijmegen (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaties_of_Nijmegen
+steps:
+  - title: The Rampjaar and the Water Line
+    date: 1672
+    when: "1672-04-06"
+    borders: "1672-08-28"
+    countries: [nl, de, be, gb]
+    body:
+      - Louis XIV meant to punish the Dutch for checking his conquests in the Spanish Netherlands in 1668. Having bought England’s alliance in the secret Treaty of Dover and isolated the Republic, he declared war on 6 April 1672 and marched down the Meuse with well over 100,000 men, bypassing Maastricht. On 12 June his army crossed the Rhine at Tolhuis near Lobith, outflanking the Dutch defences on the IJssel, and Utrecht opened its gates. France’s allies, the Bishop of Münster and the Elector of Cologne, overran Overijssel and Drenthe and laid siege to Groningen.
+      - The Dutch remember 1672 as the Rampjaar, the disaster year, when the people were said to be irrational, the government desperate and the country beyond saving. They saved Holland by opening the sluices of the Water Line from Muiden to Gorinchem, flooding a belt of land the French could not cross. At sea de Ruyter attacked the Anglo-French fleet at Solebay on 7 June and prevented a landing. In the panic the young William III was made stadtholder and captain-general, and on 20 August a mob in The Hague murdered Johan de Witt and his brother Cornelis.
+    facts:
+      - [Rhine crossing, "12 June 1672, at Tolhuis"]
+      - [Battle of Solebay, "7 June 1672, indecisive"]
+      - [Murder of the De Witt brothers, "20 August 1672"]
+    markers:
+      - kind: event
+        side: fr
+        name: Tolhuis
+        date: 12 June 1672
+        text: Louis’s cavalry forded and swam the Rhine under fire, outflanking the Dutch line on the IJssel.
+        lonlat: [6.118, 51.862]
+      - kind: taken
+        side: fr
+        name: Utrecht
+        date: June 1672
+        text: The city surrendered without a fight and became the French base in the occupied provinces.
+        lonlat: [5.122, 52.091]
+      - kind: held
+        side: nl
+        name: Muiden
+        date: June 1672
+        text: Dutch troops reached the fortress just ahead of French cavalry, securing the northern end of the Water Line and Amsterdam’s sluices.
+        lonlat: [5.067, 52.333]
+      - kind: held
+        side: nl
+        name: Groningen
+        date: July–August 1672
+        text: The city held out against the armies of Münster and Cologne, and the siege was lifted in late August, an event still celebrated on 28 August.
+        lonlat: [6.567, 53.219]
+      - kind: naval
+        name: Battle of Solebay
+        date: 7 June 1672
+        text: De Ruyter surprised the English and French fleets at anchor off Southwold. The battle was indecisive, but it stopped the allies from landing troops in Holland.
+        lonlat: [1.8, 52.33]
+      - kind: event
+        name: The Hague
+        date: 20 August 1672
+        text: Johan and Cornelis de Witt were dragged from the Gevangenpoort prison and killed by a mob.
+        lonlat: [4.309, 52.08]
+        lp: l
+    arrows:
+      - side: fr
+        label: Louis XIV
+        via: [[5.7, 50.75], [6.05, 51.3], [6.1, 51.84]]
+      - side: fr
+        via: [[6.1, 51.87], [5.6, 52.0], [5.15, 52.08]]
+      - side: fr
+        label: Münster and Cologne
+        via: [[7.63, 51.96], [6.9, 52.4], [6.6, 53.15]]
+    areas:
+      - style: occupied
+        side: fr
+        label: Occupied by France, Münster and Cologne, summer 1672 (approximate)
+        atoms: [NL-UT, NL-GE, NL-OV, NL-DR]
+      - style: front
+        side: nl
+        label: Hollandic Water Line, flooded from June 1672 (approximate)
+        line: [[5.07, 52.34], [5.02, 52.22], [4.88, 52.09], [4.85, 51.95], [4.97, 51.83]]
+  - title: Maastricht, Seneffe and Turenne’s winter campaign
+    date: 1673–1675
+    when: "1673-06-30"
+    borders: "1675-07-27"
+    countries: [nl, be, de, fr, es]
+    body:
+      - In June 1673 Louis took Maastricht after a siege directed by Vauban, in which the musketeer d’Artagnan was killed. But France’s gains alarmed Europe. The Emperor, Spain and the Duke of Lorraine allied with the Dutch, William retook Naarden and, with the imperial army, Bonn, and in 1674 the French left almost all of the Republic. England made peace in February 1674. That spring Louis conquered Franche-Comté from Spain, and in August William and the Prince of Condé fought the bloody battle of Seneffe, both claiming victory.
+      - On the Rhine Marshal Turenne faced larger imperial armies. He beat them at Sinsheim on 16 June 1674 and then laid waste much of the Palatinate. In the autumn the allies took up winter quarters in Alsace, but Turenne marched south behind the Vosges in midwinter, came out at Belfort and surprised them at Turckheim on 5 January 1675, driving them back over the Rhine. On 27 July 1675, while manoeuvring against the imperial general Raimondo Montecuccoli near Sasbach in Baden, Turenne was killed by a cannonball.
+    facts:
+      - [Siege of Maastricht, "surrendered 30 June 1673"]
+      - [Battle of Seneffe, "11 August 1674, indecisive"]
+      - [Battle of Turckheim, "5 January 1675, French victory"]
+    markers:
+      - kind: siege
+        side: fr
+        name: Maastricht
+        date: June 1673
+        text: Vauban’s systematic trenches took the fortress in under three weeks. D’Artagnan fell in an assault on 25 June.
+        lonlat: [5.683, 50.85]
+      - kind: siege
+        side: nl
+        name: Naarden
+        date: September 1673
+        text: William’s first success, retaking the fortress town on the edge of the Water Line.
+        lonlat: [5.162, 52.295]
+      - kind: siege
+        side: al
+        name: Bonn
+        date: November 1673
+        text: William and the imperial army took the Elector of Cologne’s capital, cutting the French supply line down the Rhine.
+        lonlat: [7.1, 50.73]
+      - kind: siege
+        side: fr
+        name: Besançon
+        date: May 1674
+        text: Louis took the capital of Franche-Comté in person; the rest of the province fell by July.
+        lonlat: [6.02, 47.24]
+      - kind: battle
+        name: Battle of Seneffe
+        date: 11 August 1674
+        text: Condé attacked William’s army on the march. After a day of slaughter, with some 15,000 or more killed and wounded, both sides claimed victory.
+        lonlat: [4.26, 50.53]
+      - kind: battle
+        side: fr
+        name: Battle of Sinsheim
+        date: 16 June 1674
+        text: Turenne beat an imperial force before the main allied army could gather.
+        lonlat: [8.808, 49.233]
+      - kind: battle
+        side: fr
+        name: Battle of Turckheim
+        date: 5 January 1675
+        text: Turenne surprised the allies near Colmar after his march behind the Vosges, and they withdrew across the Rhine.
+        lonlat: [7.27, 48.086]
+      - kind: event
+        name: Sasbach
+        date: 27 July 1675
+        text: Turenne was killed by a cannonball while reconnoitring. The French army retreated across the Rhine.
+        lonlat: [8.092, 48.638]
+    arrows:
+      - side: fr
+        label: Turenne
+        via: [[6.55, 48.6], [6.55, 48.05], [6.85, 47.66], [7.25, 48.06]]
+    areas:
+      - style: occupied
+        side: fr
+        label: Conquered by France, 1674
+        atoms: [FR-25, FR-39, FR-70]
+  - title: Valenciennes, Cassel and Nijmegen
+    date: 1676–1678
+    when: "1676"
+    borders: "1678-09-17"
+    countries: [fr, be, nl, es]
+    body:
+      - The war became a contest of sieges in the Spanish Netherlands, which Louis waged with Vauban’s engineering. Valenciennes was taken by storm on 17 March 1677, and Cambrai and Saint-Omer fell that spring. When William marched to relieve Saint-Omer, the King’s brother, Philippe of Orléans, beat him at Cassel on 11 April. In November 1677 William married Mary, daughter of the Duke of York, drawing England closer to the Dutch, and in March 1678 the French took Ghent and Ypres.
+      - Dutch merchants wanted peace, and the Republic made a separate treaty with France at Nijmegen on 10 August 1678. It lost no territory, Maastricht was handed back, and France lowered its tariffs. Four days later William, who may already have known of the peace, attacked the French at Saint-Denis near Mons. Spain made peace on 17 September and paid for the war. France gained Franche-Comté and a belt of towns in the south, among them Valenciennes, Cambrai, Maubeuge, Saint-Omer, Ypres and Cassel, but returned others such as Charleroi, Oudenaarde, Courtrai and Ghent. The Emperor followed in February 1679.
+    facts:
+      - [Battle of Cassel, "11 April 1677, French victory"]
+      - [Peace of Nijmegen, "10 August 1678 (the Dutch), 17 September 1678 (Spain)"]
+      - [Gained by France, "Franche-Comté, Valenciennes, Cambrai, Saint-Omer, Ypres and other towns"]
+    markers:
+      - kind: siege
+        side: fr
+        name: Valenciennes
+        date: March 1677
+        text: The musketeers broke into the town in a daylight assault planned by Vauban.
+        lonlat: [3.523, 50.358]
+      - kind: siege
+        side: fr
+        name: Cambrai
+        date: March–April 1677
+        text: The town fell in early April and the citadel soon after, ending Spanish rule in the Cambrésis.
+        lonlat: [3.236, 50.177]
+      - kind: battle
+        side: fr
+        name: Battle of Cassel
+        date: 11 April 1677
+        text: Philippe of Orléans beat William’s relief army at the Peene stream below Mont Cassel.
+        lonlat: [2.488, 50.801]
+      - kind: siege
+        side: fr
+        name: Saint-Omer
+        date: March–April 1677
+        text: The town surrendered after William’s defeat at Cassel.
+        lonlat: [2.262, 50.746]
+        lp: l
+      - kind: taken
+        side: fr
+        name: Ghent
+        date: March 1678
+        text: Louis took the great Flemish city in a surprise campaign, then returned it at the peace.
+        lonlat: [3.725, 51.054]
+      - kind: siege
+        side: fr
+        name: Ypres
+        date: March 1678
+        text: Taken within days of Ghent, and kept by France at the peace.
+        lonlat: [2.885, 50.851]
+      - kind: battle
+        name: Battle of Saint-Denis
+        date: 14 August 1678
+        text: William attacked Marshal Luxembourg’s army, which was blockading Mons; thousands fell on both sides in a battle fought after the peace was signed.
+        lonlat: [4.017, 50.483]
+      - kind: treaty
+        name: Peace of Nijmegen
+        date: 10 August and 17 September 1678
+        text: France made peace with the Dutch and then with Spain; the treaty with the Emperor followed in February 1679.
+        lonlat: [5.862, 51.847]
+    areas:
+      - style: gained
+        side: fr
+        label: Gained by France at Nijmegen (approximate)
+        atoms: [FR-25, FR-39, FR-70, FR-59!]

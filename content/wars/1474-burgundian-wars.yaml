@@ -1,0 +1,222 @@
+id: burgundian-wars
+name: Burgundian Wars
+start: "1474"
+end: "1477-01-05"
+tier: B
+summary: The wars between Charles the Bold, Duke of Burgundy, and the Swiss Confederates and their allies on the upper Rhine and in Lorraine. Swiss infantry beat the Burgundian army at Grandson and Morat in 1476, and Charles was killed at Nancy in January 1477; his death broke up the Burgundian state, divided between France and the Habsburgs through his daughter Mary’s marriage to Maximilian.
+countries: [ch, fr, de, be, nl, lu, at]
+sides:
+  - id: bur
+    name: Burgundy and Savoy
+    polities: [burgundy, savoy]
+    ink: purple
+    moves: Burgundian moves
+    success: Burgundian success
+  - id: ch
+    name: Swiss Confederates and their allies
+    polities: [switzerland, lorraine, habsburg]
+    ink: red
+    moves: Swiss and allied moves
+    success: Swiss and allied success
+  - id: emp
+    name: The Emperor
+    polities: [hre]
+    ink: gold
+    moves: Imperial moves
+    success: Imperial success
+  - id: fr
+    name: France
+    polities: [france]
+    ink: navy
+    moves: French moves
+    success: French success
+notes:
+  - The Swiss allies were Sigismund of Austria, ruler of Tyrol and the Habsburg lands on the upper Rhine; the Lower Union of Basel, Strasbourg, Colmar, Sélestat and other Alsatian towns; and, from 1475, René II of Lorraine. Louis XI of France paid subsidies but sent no army against Charles until after his death.
+  - Places in the Vaud are given their French names, with the German name where English accounts often use it (Morat/Murten).
+sources:
+  - title: Burgundian Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Burgundian_Wars
+  - title: Ewige Richtung (Historical Dictionary of Switzerland)
+    url: https://hls-dhs-dss.ch/en/articles/008886/
+  - title: Charles the Bold (Britannica)
+    url: https://www.britannica.com/biography/Charles-duke-of-Burgundy
+  - title: Peter von Hagenbach (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peter_von_Hagenbach
+  - title: Siege of Neuss (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Neuss
+  - title: Battle of Héricourt (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_H%C3%A9ricourt
+  - title: Battle of Grandson (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Grandson
+  - title: Battle of Morat (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Morat
+  - title: Battle of Nancy (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Nancy
+steps:
+  - title: Neuss and Héricourt
+    date: 1474–1475
+    when: "1474-05-09"
+    borders: "1475-11-30"
+    countries: [fr, de, ch, at]
+    body:
+      - Charles the Bold, Duke of Burgundy since 1467, ruled most of the Low Countries as well as the duchy and county of Burgundy, and hoped to join them into a kingdom. In 1469 Sigismund of Austria pledged him the Habsburg lands in Upper Alsace and the Breisgau for 50,000 florins. Charles’s bailiff there, Peter von Hagenbach, ruled harshly and harassed the trade of Basel, Strasbourg and Mulhouse, which turned to Bern for help. In 1474 Sigismund made a lasting peace with his old enemies the Swiss and joined them and the Alsatian towns against Burgundy. The pledged lands rose, and Hagenbach was tried and beheaded at Breisach on 9 May.
+      - That summer Charles laid siege to Neuss, on the Rhine, to support his ally Archbishop Ruprecht of Cologne against the chapter and towns that had rejected him. The town held out for almost eleven months, and when the Emperor Frederick III came with an imperial army, Charles came to terms and withdrew in June 1475. Meanwhile the Swiss declared war and, with their allies, beat a Burgundian army at Héricourt on 13 November 1474, and in 1475 Bern overran the Vaud, which belonged to Charles’s ally Savoy. Charles made a truce with Louis XI and turned on Lorraine, whose young duke René II had joined his enemies. Nancy fell on 30 November 1475.
+    facts:
+      - [Execution of Hagenbach, "9 May 1474, Breisach"]
+      - [Siege of Neuss, "July 1474 – June 1475"]
+      - [Battle of Héricourt, "13 November 1474, Swiss and allied victory"]
+    markers:
+      - kind: event
+        side: ch
+        name: Breisach
+        date: 9 May 1474
+        text: Hagenbach was tried by judges sent from the towns of the upper Rhine for the crimes of his rule and beheaded. The trial is sometimes called the first international war crimes trial.
+        lonlat: [7.583, 48.033]
+      - kind: held
+        side: emp
+        name: Neuss
+        date: July 1474 – June 1475
+        text: The small, well-fortified town beat off repeated assaults and was finally relieved by the approach of the imperial army.
+        lonlat: [6.69, 51.2]
+      - kind: battle
+        side: ch
+        name: Battle of Héricourt
+        date: 13 November 1474
+        text: Swiss, Austrian and Alsatian troops besieging the Burgundian castle of Héricourt routed a relief army sent from Franche-Comté.
+        lonlat: [6.767, 47.583]
+      - kind: taken
+        side: bur
+        name: Nancy
+        date: 30 November 1475
+        text: Charles took the capital of Lorraine after a short siege, making it the link between his northern and southern lands.
+        lonlat: [6.185, 48.694]
+    arrows:
+      - side: bur
+        label: Charles the Bold
+        via: [[4.6, 50.75], [5.7, 50.95], [6.62, 51.17]]
+      - side: emp
+        label: Frederick III
+        via: [[7.6, 50.36], [7.05, 50.8], [6.76, 51.15]]
+      - side: ch
+        label: Swiss and allies
+        via: [[7.59, 47.56], [7.15, 47.62], [6.8, 47.59]]
+      - side: bur
+        label: Charles the Bold
+        via: [[6.13, 49.61], [6.17, 49.12], [6.18, 48.73]]
+    areas:
+      - style: pledged
+        side: bur
+        label: Pledged to Burgundy, 1469–1474
+        atoms: [FR-68, FR-90, DE-BW~baden~vorder]
+      - style: occupied
+        side: bur
+        label: Lorraine, occupied by Burgundy from November 1475
+        atoms: [FR-54, FR-88, FR-57!]
+  - title: Grandson and Morat
+    date: "1476"
+    when: "1476-02-28"
+    borders: "1476-06-22"
+    countries: [ch, fr]
+    body:
+      - In February 1476 Charles crossed the Jura with a large army and besieged Grandson, on Lake Neuchâtel, which the Bernese had taken from its Savoyard lord. The garrison of about 400 men surrendered on 28 February, and Charles had them hanged from the trees or drowned in the lake. On 2 March the Swiss army marching to relieve the town ran into the Burgundians a few kilometres to the north-east. As the Swiss columns of pikemen came on, Charles tried to redeploy; the movement turned into panic and his army fled, leaving its guns, tents and the duke’s treasure. Pieces of this “Burgundian booty” are still kept in Swiss museums.
+      - Charles raised a new army in camp near Lausanne and in June besieged Morat (Murten), held by a Bernese garrison under Adrian von Bubenberg. The Confederates gathered with René of Lorraine and contingents from Alsace and Austria, and on 22 June, after a morning of rain, they stormed the palisade the Burgundians had built facing east. Charles had not expected an attack that day, and his army was caught strung out between its camp and the lake. Thousands were cut down or drowned in Lake Morat; some estimates put the Burgundian dead at 10,000 or more. Savoy soon made its peace with the Swiss and France.
+    facts:
+      - [Garrison of Grandson, "about 400 men killed after surrendering, 28 February 1476"]
+      - [Battle of Grandson, "2 March 1476, Swiss victory"]
+      - [Battle of Morat, "22 June 1476, Swiss and allied victory"]
+    markers:
+      - kind: taken
+        side: bur
+        name: Grandson
+        date: 28 February 1476
+        text: After a short siege the castle surrendered. The garrison, expecting mercy, was put to death on the duke’s orders.
+        lonlat: [6.646, 46.809]
+        lp: l
+      - kind: battle
+        side: ch
+        name: Battle of Grandson
+        date: 2 March 1476
+        text: The Swiss vanguard met the Burgundians between Concise and Grandson. Their army scattered with few losses, but abandoned everything it carried.
+        lonlat: [6.715, 46.85]
+      - kind: event
+        side: bur
+        name: Lausanne
+        date: March – May 1476
+        text: Charles rebuilt and drilled his army in a great camp above the town.
+        lonlat: [6.633, 46.52]
+      - kind: event
+        side: ch
+        name: Bern
+        date: June 1476
+        text: The leading city of the confederates gathered the relief army for its threatened outpost at Morat.
+        lonlat: [7.447, 46.948]
+      - kind: battle
+        side: ch
+        name: Battle of Morat
+        date: 22 June 1476
+        text: The town held out for nearly two weeks of siege until the Confederates attacked. The Burgundian army was destroyed as a fighting force.
+        lonlat: [7.117, 46.93]
+        lp: l
+    arrows:
+      - side: bur
+        label: Charles the Bold
+        via: [[6.02, 47.24], [6.39, 46.76], [6.53, 46.72], [6.63, 46.8]]
+      - side: ch
+        label: Confederates
+        via: [[6.93, 46.99], [6.8, 46.92], [6.73, 46.86]]
+      - side: bur
+        label: Charles the Bold
+        via: [[6.63, 46.53], [6.95, 46.72], [7.1, 46.91]]
+      - side: ch
+        label: Confederates
+        via: [[7.44, 46.95], [7.25, 46.96], [7.14, 46.94]]
+  - title: Nancy
+    date: 1476–1477
+    when: "1477-01-05"
+    borders: "1477-01-04"
+    countries: [fr, ch, be, nl, lu]
+    body:
+      - René II won back Nancy in October 1476, and Charles, against advice, besieged it again with a much weakened army through a hard winter. René raised an army of Swiss mercenaries, Alsatians and Lorrainers, paid partly with French money, and on 5 January 1477 attacked the Burgundian lines south of the town in snow. While part of the Swiss held the Burgundians in front, a column marched round through the woods and fell on their flank, and the army broke. Charles was killed in the rout. His body, stripped and with the head split open, was found two days later frozen in a pond.
+      - His only child, Mary, aged nineteen, inherited his lands. Louis XI at once occupied the duchy of Burgundy and sent troops into Picardy, Artois and Franche-Comté. In Ghent the estates made Mary grant them the Great Privilege, restoring the local liberties her father and grandfather had curbed. In August 1477 she married Maximilian of Habsburg, the Emperor’s son, who took up the war with France. The Swiss gained little land, but their victories made their pikemen the most sought-after mercenaries in Europe.
+    facts:
+      - [Battle of Nancy, "5 January 1477, victory for Lorraine and the Swiss; Charles the Bold killed"]
+      - [Great Privilege, "11 February 1477"]
+      - [Mary of Burgundy marries Maximilian, "19 August 1477, Ghent"]
+    markers:
+      - kind: battle
+        side: ch
+        name: Battle of Nancy
+        date: 5 January 1477
+        text: The far outnumbered Burgundians were overwhelmed. A Swiss saying sums up the war — Charles lost his goods at Grandson, his courage at Morat and his blood at Nancy.
+        lonlat: [6.199, 48.677]
+      - kind: event
+        side: ch
+        name: Saint-Nicolas-de-Port
+        date: 4 January 1477
+        text: René’s army gathered here on the Meurthe, a few kilometres from the Burgundian siege lines.
+        lonlat: [6.3, 48.633]
+        lp: b
+      - kind: taken
+        side: fr
+        name: Dijon
+        date: early 1477
+        text: Royal troops occupied the capital of the duchy of Burgundy, which Louis XI claimed had reverted to the crown for lack of a male heir.
+        lonlat: [5.017, 47.317]
+      - kind: event
+        side: bur
+        name: Ghent
+        date: 11 February 1477
+        text: The estates of the Low Countries, meeting in Ghent, forced Mary to grant the Great Privilege before they would help her.
+        lonlat: [3.72, 51.05]
+    arrows:
+      - side: ch
+        label: René and the Swiss
+        via: [[7.59, 47.56], [6.9, 48.12], [6.3, 48.62], [6.21, 48.67]]
+      - side: fr
+        label: French army
+        via: [[3.9, 47.85], [4.55, 47.5], [4.98, 47.33]]
+    areas:
+      - style: occupied
+        side: fr
+        label: Occupied by France, early 1477
+        atoms: [FR-21, FR-71, FR-89]

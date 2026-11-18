@@ -1,0 +1,191 @@
+id: the-anarchy
+name: The Anarchy
+start: "1138"
+end: "1153-11"
+tier: B
+summary: A civil war in England and Normandy over the succession to Henry I, fought between his nephew King Stephen and his daughter, the Empress Matilda, with King David I of Scotland taking her side and seizing the north. Neither side could win, and in 1153 Stephen recognised Matilda’s son Henry as his heir; Henry II succeeded him in 1154.
+countries: [gb, fr]
+sides:
+  - id: ste
+    name: King Stephen
+    polities: [england]
+    ink: red
+    moves: Stephen’s moves
+    success: Success for Stephen
+  - id: mat
+    name: Empress Matilda and the Angevins
+    polities: []
+    ink: purple
+    moves: Angevin moves
+    success: Angevin success
+  - id: sco
+    name: Scotland
+    polities: [scotland]
+    ink: navy
+    moves: Scottish moves
+    success: Scottish success
+notes:
+  - The name “the Anarchy” was given by Victorian historians; contemporaries wrote of the troubles of Stephen’s reign. The main chronicles, the Gesta Stephani, William of Malmesbury and Henry of Huntingdon, each lean to one side.
+  - Matilda is called the Empress because her first husband was the Emperor Henry V. To avoid confusion with her, Stephen’s queen is called Matilda of Boulogne.
+sources:
+  - title: The Anarchy (Wikipedia)
+    url: https://en.wikipedia.org/wiki/The_Anarchy
+  - title: Battle of the Standard (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Standard
+  - title: Treaty of Durham (1139) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Durham_(1139)
+  - title: Battle of Lincoln (1141) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Lincoln_(1141)
+  - title: Rout of Winchester (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rout_of_Winchester
+  - title: Siege of Oxford (1142) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Oxford_(1142)
+  - title: Treaty of Wallingford (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Wallingford
+  - title: Empress Matilda (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Empress_Matilda
+  - title: Stephen, king of England (Britannica)
+    url: https://www.britannica.com/biography/Stephen-king-of-England
+steps:
+  - title: Stephen’s coup and the Standard
+    date: 1135–1139
+    when: "1138"
+    borders: "1139-04-09"
+    countries: [gb]
+    body:
+      - Henry I’s only legitimate son drowned in the wreck of the White Ship in 1120, and Henry made his barons swear to accept his daughter Matilda, the widowed empress, now married to Count Geoffrey of Anjou. When Henry died on 1 December 1135, his nephew Stephen of Blois crossed from Boulogne, won over London and, with the help of his brother Henry, bishop of Winchester, the royal treasury, and was crowned that month. Matilda’s uncle, King David I of Scotland, invaded the north and was allowed to keep Carlisle. In 1138 Robert, earl of Gloucester, Matilda’s half-brother and one of the richest barons, renounced his loyalty to Stephen, and revolts broke out in Kent and the south-west.
+      - That year David invaded again, and his army plundered Northumberland and Durham. Archbishop Thurstan of York rallied the northern barons and levies, who gathered round a cart carrying a ship’s mast hung with the banners of northern saints, the Standard. On 22 August 1138, on Cowton Moor near Northallerton, they routed the Scots. Even so, by the Treaty of Durham of 9 April 1139 Stephen made David’s son Henry earl of Northumberland, leaving the Scots in control almost to the Tees. On 30 September Matilda and Robert landed at Arundel; Stephen let her join her brother at Bristol, and the west of England became her stronghold.
+    facts:
+      - [Battle of the Standard, "22 August 1138, English victory"]
+      - [Treaty of Durham, "9 April 1139, Northumberland to David’s son Henry"]
+      - [Matilda lands, "30 September 1139, at Arundel"]
+    markers:
+      - kind: battle
+        side: ste
+        name: Battle of the Standard
+        date: 22 August 1138
+        text: William of Aumale, Walter Espec and the Yorkshire barons beat David’s army, whose Galwegian spearmen charged the English archers and men-at-arms in vain.
+        lonlat: [-1.447, 54.374]
+      - kind: held
+        side: sco
+        name: Carlisle
+        date: From 1136
+        text: David held the city from the start of the war and made it his base in the north. He died there in 1153.
+        lonlat: [-2.935, 54.893]
+      - kind: treaty
+        side: sco
+        name: Durham
+        date: 9 April 1139
+        text: Stephen’s queen, Matilda of Boulogne, negotiated the peace with David, which gave his son the earldom of Northumberland except Bamburgh and Newcastle.
+        lonlat: [-1.575, 54.775]
+      - kind: event
+        side: mat
+        name: Arundel
+        date: 30 September 1139
+        text: The Empress landed with Robert and a small force and was received at the castle by Henry I’s widow, Adeliza.
+        lonlat: [-0.553, 50.856]
+      - kind: held
+        side: mat
+        name: Bristol
+        date: 1139–1153
+        text: Robert of Gloucester’s castle and port, the Angevin capital in England throughout the war.
+        lonlat: [-2.59, 51.454]
+    arrows:
+      - side: sco
+        label: David I, 1138
+        via: [[-2.3, 55.75], [-1.85, 55.15], [-1.6, 54.65], [-1.47, 54.4]]
+      - side: mat
+        label: Matilda, 1139
+        via: [[-0.55, 50.86], [-1.5, 51.25], [-2.56, 51.45]]
+  - title: Lincoln and the rout of Winchester
+    date: 1141–1142
+    when: "1141-02-02"
+    borders: "1142-12"
+    countries: [gb, fr]
+    body:
+      - Early in 1141 Stephen besieged Lincoln castle, which Ranulf, earl of Chester, had seized. Ranulf and Robert of Gloucester came to its relief with their men, the disinherited and Welsh troops, and on 2 February Stephen fought on foot after his earls had fled, until he was captured; he was imprisoned at Bristol. Bishop Henry, now papal legate, went over to the Empress, and in April a church council at Winchester accepted her as Lady of the English. But when she came to London in June to be crowned, her demands for money angered the citizens, who rose and drove her out.
+      - Stephen’s queen, Matilda of Boulogne, kept his cause alive with William of Ypres and his Flemish mercenaries. When the Empress besieged Bishop Henry, who had changed sides again, in Winchester, the queen’s army besieged her in turn. On 14 September the Angevins broke out and were routed; Robert of Gloucester was captured covering the retreat at Stockbridge and exchanged for Stephen in November. In 1142 Stephen besieged the Empress in Oxford castle. In December she escaped across the frozen Thames, dressed in white against the snow, to Wallingford. Meanwhile her husband Geoffrey conquered Normandy, entering Rouen in January 1144.
+    facts:
+      - [Battle of Lincoln, "2 February 1141, Stephen captured"]
+      - [Rout of Winchester, "14 September 1141, Robert of Gloucester captured"]
+      - [Matilda escapes from Oxford, "December 1142"]
+    markers:
+      - kind: battle
+        side: mat
+        name: Battle of Lincoln
+        date: 2 February 1141
+        text: Stephen fought with a battle-axe and then a sword until he was struck down and taken prisoner.
+        lonlat: [-0.555, 53.235]
+      - kind: event
+        side: ste
+        name: London
+        date: 24 June 1141
+        text: The Londoners, who favoured Stephen and resented the Empress’s demands, rose and drove her from Westminster before her coronation.
+        lonlat: [-0.093, 51.51]
+      - kind: battle
+        side: ste
+        name: Rout of Winchester
+        date: 14 September 1141
+        text: The besiegers of the bishop’s castle became the besieged. Their retreat towards Salisbury turned into a rout.
+        lonlat: [-1.313, 51.063]
+      - kind: siege
+        side: ste
+        name: Oxford
+        date: September–December 1142
+        text: The castle surrendered the day after the Empress slipped out and crossed the Thames on the ice.
+        lonlat: [-1.263, 51.752]
+      - kind: held
+        side: mat
+        name: Wallingford
+        date: 1139–1153
+        text: Brian FitzCount’s castle on the Thames, the Angevins’ furthest outpost towards London, held out through the whole war.
+        lonlat: [-1.125, 51.6]
+        lp: b
+    arrows:
+      - side: mat
+        label: Robert and Ranulf
+        via: [[-2.24, 51.86], [-1.6, 52.6], [-0.6, 53.2]]
+      - side: mat
+        label: The Empress escapes
+        via: [[-1.26, 51.75], [-1.3, 51.67], [-1.14, 51.6]]
+  - title: Stalemate and the Treaty of Winchester
+    date: 1143–1154
+    when: "1143"
+    borders: "1153-11"
+    countries: [gb, fr]
+    body:
+      - Neither side could win, and the war became one of castles, sieges and raids. Barons built castles without the king’s leave, and some, like Geoffrey de Mandeville in the fens, plundered at will until he was killed in 1144. The Peterborough chronicler wrote that men said openly that Christ and his saints slept. Robert of Gloucester died in 1147, and the Empress left England in 1148, leaving the cause to her son, Henry FitzEmpress. Henry became duke of Normandy in 1150 and count of Anjou in 1151, and in 1152 he married Eleanor, duchess of Aquitaine.
+      - In January 1153 Henry crossed to England with a small army. In July his forces and Stephen’s faced each other across the Thames at Wallingford, but the barons on both sides would not fight, and the church arranged a truce. Stephen’s son Eustace died in August. In November, at Winchester, Stephen recognised Henry as his adopted son and heir, keeping the crown for life. Stephen died on 25 October 1154, and Henry II was crowned on 19 December, ruling lands from the Scottish border to the Pyrenees. In 1157 he made David’s grandson Malcolm IV hand back the northern counties.
+    facts:
+      - [Henry lands in England, "January 1153"]
+      - [Treaty of Winchester (or Wallingford), "November 1153, Henry recognised as heir"]
+      - [Henry II crowned, "19 December 1154"]
+    markers:
+      - kind: event
+        name: Burwell
+        date: September 1144
+        text: Geoffrey de Mandeville, who had terrorised the fens from Ely and Ramsey, was mortally wounded attacking one of Stephen’s new castles.
+        lonlat: [0.329, 52.271]
+      - kind: siege
+        name: Malmesbury
+        date: Early 1153
+        text: Henry besieged Stephen’s castle. When Stephen came to relieve it, heavy rain and a flooded river kept the armies apart.
+        lonlat: [-2.098, 51.584]
+      - kind: event
+        name: Wallingford
+        date: July 1153
+        text: Henry came to relieve the long siege of the castle. The two armies faced each other across the river, but their leaders agreed a truce instead of fighting.
+        lonlat: [-1.125, 51.6]
+      - kind: treaty
+        side: mat
+        name: Winchester
+        date: November 1153
+        text: Stephen announced the settlement in the cathedral. Henry did homage to him, and Stephen’s younger son William renounced the throne.
+        lonlat: [-1.313, 51.063]
+    arrows:
+      - side: mat
+        label: Henry, 1153
+        via: [[-2.1, 51.58], [-1.6, 51.62], [-1.16, 51.6]]
+      - side: ste
+        label: Stephen
+        via: [[-1.26, 51.75], [-1.17, 51.66], [-1.12, 51.62]]

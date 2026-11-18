@@ -1,0 +1,229 @@
+id: williamite-war-in-ireland
+name: Williamite War in Ireland
+start: "1688-11-05"
+end: "1691-10-03"
+tier: B
+summary: The war that followed the Glorious Revolution of 1688, when William of Orange landed in England and James II fled to France. Backed by France, James held Ireland until William’s victory at the Boyne in 1690 and Ginkel’s at Aughrim in 1691. The Treaty of Limerick sent the Jacobite army to France and opened a century of Protestant Ascendancy in Ireland.
+countries: [ie, gb, nl, fr]
+sides:
+  - id: wil
+    name: William III and his allies
+    polities: [england, scotland, dutch-republic]
+    ink: orange
+    moves: Williamite moves
+    success: Williamite success
+  - id: jac
+    name: James II, the Irish Jacobites and France
+    polities: [ireland, france]
+    ink: green
+    moves: Jacobite moves
+    success: Jacobite success
+notes:
+  - Dates are Old Style (Julian), as used in Britain and Ireland, ten days behind the New Style used in France and the Dutch Republic. The Boyne was fought on 1 July 1690 Old Style (11 July New Style) and is commemorated on 12 July.
+  - The war in Ireland was part of the Nine Years’ War between France and the Grand Alliance. For the rising in Scotland, see the Jacobite rising of 1689.
+sources:
+  - title: Williamite War in Ireland (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Williamite_War_in_Ireland
+  - title: Glorious Revolution (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Glorious_Revolution
+  - title: Glorious Revolution (Britannica)
+    url: https://www.britannica.com/event/Glorious-Revolution
+  - title: Siege of Derry (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Derry
+  - title: Battle of the Boyne (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Boyne
+  - title: Battle of Aughrim (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Aughrim
+  - title: Treaty of Limerick (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Limerick
+steps:
+  - title: Torbay and James’s flight
+    date: 1688–1689
+    when: "1688-06-10"
+    borders: "1689-02-13"
+    countries: [gb, nl, ie]
+    body:
+      - James II, a Catholic, had alarmed his Protestant subjects by appointing Catholics to the army and government and suspending the laws against them. The birth of his son on 10 June 1688 promised a Catholic dynasty, and on 30 June seven English politicians invited William of Orange, stadtholder of the Dutch Republic and husband of James’s Protestant daughter Mary, to intervene. William, expecting war with France, wanted England on his side. He sailed with a fleet of over 400 ships and about 15,000 soldiers and landed at Brixham in Torbay on 5 November 1688.
+      - James’s army, larger on paper, melted away as officers such as John Churchill went over to William, and after a skirmish at Reading on 9 December James tried to flee. Fishermen caught him near Faversham, but William let him escape, and he reached France on 25 December. A Convention declared that James had abandoned the throne and on 13 February 1689 offered the crown to William and Mary jointly, with a Declaration of Rights; Scotland followed in April. In Ireland, however, the Lord Deputy, the Earl of Tyrconnell, held the country for James, and only Protestant towns in Ulster, led by Derry, defied him.
+    facts:
+      - [William lands, "5 November 1688, Brixham"]
+      - [James reaches France, "25 December 1688"]
+      - [Crown offered to William and Mary, "13 February 1689"]
+    markers:
+      - kind: event
+        side: wil
+        name: Brixham
+        date: 5 November 1688
+        text: William’s army came ashore unopposed; an easterly “Protestant wind” had carried his fleet down the Channel and kept the English fleet in the Thames.
+        lonlat: [-3.516, 50.394]
+      - kind: event
+        side: wil
+        name: Salisbury
+        date: November 1688
+        text: James joined his army here, but as officers deserted to William he fell back towards London without a battle.
+        lonlat: [-1.795, 51.07]
+      - kind: battle
+        side: wil
+        name: Reading
+        date: 9 December 1688
+        text: William’s advance guard drove Irish troops of James’s army out of the town, the only real fight of the invasion.
+        lonlat: [-0.97, 51.456]
+      - kind: event
+        name: Faversham
+        date: December 1688
+        text: James was recognised and held by local fishermen as he tried to sail for France, and was brought back to London.
+        lonlat: [0.893, 51.318]
+      - kind: event
+        side: wil
+        name: Banqueting House
+        date: 13 February 1689
+        text: The Convention offered the crown to William and Mary, who accepted it with the Declaration of Rights.
+        lonlat: [-0.126, 51.504]
+      - kind: event
+        side: wil
+        name: Derry
+        date: 7 December 1688
+        text: Thirteen apprentice boys shut the city gates against a Jacobite regiment sent to garrison it.
+        lonlat: [-7.326, 54.994]
+    arrows:
+      - side: wil
+        label: Dutch fleet
+        via: [[4.13, 51.82], [1.5, 51.05], [-1.5, 50.5], [-3.45, 50.38]]
+      - side: wil
+        label: William
+        via: [[-3.51, 50.42], [-3.53, 50.72], [-1.8, 51.1], [-0.18, 51.5]]
+      - side: jac
+        label: James II
+        via: [[-0.13, 51.48], [-1.0, 51.25], [-1.75, 51.06]]
+  - title: Derry and the Boyne
+    date: 1689–1690
+    when: "1689-03-12"
+    borders: "1690-10-15"
+    countries: [ie, gb, fr, nl]
+    body:
+      - James landed at Kinsale on 12 March 1689 with French officers, money and arms, and the Irish Parliament he called to Dublin restored land confiscated from Catholics. From April his army besieged Derry. Crowded with Protestant refugees, the city held out for 105 days through famine and disease until on 28 July the ship Mountjoy broke the boom across the River Foyle and brought food; the siege was lifted on 1 August. On 31 July men from Enniskillen had beaten a Jacobite force at Newtownbutler. In August the Duke of Schomberg landed with a Williamite army, but disease ravaged it in camp near Dundalk.
+      - William came himself, landing at Carrickfergus on 14 June 1690 with an army of English, Dutch, Danish, German and Huguenot troops, some 36,000 men. On 1 July he forced the crossing of the Boyne near Drogheda against James’s smaller Irish and French army. Schomberg was killed, but the Jacobites retreated in good order, and James fled to France. William entered Dublin, but in August his siege of Limerick failed after Patrick Sarsfield’s cavalry destroyed his siege train at Ballyneety. In the autumn John Churchill, now Earl of Marlborough, took Cork and Kinsale.
+    facts:
+      - [Siege of Derry, "18 April – 1 August 1689"]
+      - [Battle of the Boyne, "1 July 1690 (11 July New Style), Williamite victory"]
+      - [First siege of Limerick, "August 1690, abandoned"]
+    markers:
+      - kind: event
+        side: jac
+        name: Kinsale
+        date: 12 March 1689
+        text: James landed with French officers and arms, sent by Louis XIV.
+        lonlat: [-8.522, 51.706]
+        lp: l
+      - kind: held
+        side: wil
+        name: Derry
+        date: April–August 1689
+        text: The defenders refused all terms, crying “No surrender”. Thousands died of hunger and disease before the relief ships broke through.
+        lonlat: [-7.326, 54.994]
+      - kind: battle
+        side: wil
+        name: Battle of Newtownbutler
+        date: 31 July 1689
+        text: The Protestant garrison of Enniskillen routed a Jacobite army under Justin MacCarthy, Lord Mountcashel.
+        lonlat: [-7.366, 54.184]
+      - kind: event
+        side: wil
+        name: Carrickfergus
+        date: 14 June 1690
+        text: William landed here to take command of the war himself.
+        lonlat: [-5.808, 54.714]
+      - kind: battle
+        side: wil
+        name: Battle of the Boyne
+        date: 1 July 1690
+        text: Two kings commanded in person. William’s troops forded the river at Oldbridge and upstream, and James’s army withdrew towards Dublin.
+        lonlat: [-6.424, 53.723]
+      - kind: held
+        side: jac
+        name: Limerick
+        date: August 1690
+        text: The Jacobites beat off an assault on 27 August, and William raised the siege as the autumn rains began.
+        lonlat: [-8.624, 52.665]
+      - kind: event
+        side: jac
+        name: Ballyneety
+        date: 12 August 1690
+        text: Sarsfield’s horsemen surprised William’s siege train at night and blew up its guns and powder.
+        lonlat: [-8.53, 52.6]
+        lp: b
+      - kind: siege
+        side: wil
+        name: Cork
+        date: September 1690
+        text: Marlborough landed with an expedition from England and took the city, then Kinsale in October.
+        lonlat: [-8.47, 51.897]
+    arrows:
+      - side: jac
+        label: James II
+        via: [[-8.52, 51.72], [-8.47, 51.92], [-7.3, 52.7], [-6.3, 53.33]]
+      - side: jac
+        via: [[-6.27, 53.37], [-6.65, 53.9], [-7.1, 54.5], [-7.3, 54.96]]
+      - side: wil
+        label: William
+        via: [[-5.82, 54.7], [-6.3, 54.18], [-6.4, 54.0], [-6.42, 53.75]]
+      - side: wil
+        via: [[-6.42, 53.71], [-6.29, 53.36], [-7.5, 52.85], [-8.58, 52.66]]
+    areas:
+      - style: occupied
+        side: jac
+        label: Still held by the Jacobites, end of 1690 (approximate)
+        atoms: [IE-G, IRL-5568, IE-MO, IE-SO, IE-RN, IE-LM, IE-CE, IE-LK, IRL-5570, IE-KY]
+  - title: Aughrim and Limerick
+    date: 1691
+    when: "1691-06-19"
+    borders: "1691-10-03"
+    countries: [ie, fr, gb]
+    body:
+      - In 1691 William’s Dutch general, Godert de Ginkel, took command in Ireland. After a ten-day bombardment his troops forded the Shannon and stormed Athlone on 30 June. The French general the Marquis de Saint-Ruth, sent by Louis XIV with officers and supplies, made a stand at Aughrim on 12 July. The Jacobites held until Saint-Ruth was killed by a cannonball and their left wing gave way. Estimates of the Jacobite dead run from 4,000 to 7,000, making Aughrim the bloodiest battle ever fought in Ireland. Galway surrendered on 21 July.
+      - Limerick, besieged again from late August, negotiated a surrender, and the Treaty of Limerick was signed on 3 October 1691. Its military articles let Jacobite soldiers go to France, and some 12,000 to 14,000 sailed with Sarsfield to serve Louis XIV, the “Flight of the Wild Geese”. Its civil articles promised Catholics the religious freedom they had had under Charles II and protected the estates of those who submitted. But the Protestant-controlled Irish Parliament ratified only part of them, in 1697, and passed the Penal Laws, which barred Catholics from public office and most professions and restricted their right to own land for much of the 18th century.
+    facts:
+      - [Battle of Aughrim, "12 July 1691, Williamite victory"]
+      - [Treaty of Limerick, "3 October 1691"]
+      - [Flight of the Wild Geese, "about 12,000–14,000 soldiers to France"]
+    markers:
+      - kind: siege
+        side: wil
+        name: Athlone
+        date: June 1691
+        text: Ginkel’s grenadiers forded the Shannon on 30 June and took the Irish town by surprise.
+        lonlat: [-7.942, 53.424]
+      - kind: battle
+        side: wil
+        name: Battle of Aughrim
+        date: 12 July 1691
+        text: Saint-Ruth’s death at the height of the battle left the Jacobites without a commander, and their army broke.
+        lonlat: [-8.312, 53.295]
+      - kind: taken
+        side: wil
+        name: Galway
+        date: 21 July 1691
+        text: The town surrendered on terms that let its garrison march to Limerick.
+        lonlat: [-9.049, 53.272]
+      - kind: taken
+        side: wil
+        name: Sligo
+        date: September 1691
+        text: The last Jacobite stronghold in the north-west surrendered.
+        lonlat: [-8.483, 54.267]
+      - kind: treaty
+        name: Treaty of Limerick
+        date: 3 October 1691
+        text: Signed, tradition says, on a stone by the Shannon now displayed as the Treaty Stone.
+        lonlat: [-8.624, 52.665]
+    arrows:
+      - side: wil
+        label: Ginkel
+        via: [[-7.34, 53.52], [-7.94, 53.43], [-8.31, 53.3], [-9.0, 53.27]]
+      - side: wil
+        via: [[-9.0, 53.24], [-8.93, 52.95], [-8.65, 52.69]]
+    areas:
+      - style: occupied
+        side: jac
+        label: Held by the Jacobites, spring 1691 (approximate)
+        atoms: [IE-G, IRL-5568, IE-MO, IE-SO, IE-RN, IE-LM, IE-CE, IE-LK, IRL-5570, IE-KY]

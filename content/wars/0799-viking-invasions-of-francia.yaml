@@ -1,0 +1,201 @@
+id: viking-invasions-of-francia
+name: Viking invasions of Francia
+start: "799"
+end: "911"
+tier: B
+summary: A century of Scandinavian raids on the Frankish lands, from the first attacks on the coast around 800 to the great fleets that sacked Rouen, Nantes and Paris and the long siege of Paris in 885–886. It ended in 911, when King Charles the Simple granted the lower Seine to the Viking leader Rollo, whose county became the Duchy of Normandy.
+countries: [fr, nl, be]
+sides:
+  - id: vik
+    name: Vikings
+    polities: []
+    ink: red
+    moves: Viking moves
+    success: Viking success
+  - id: fra
+    name: Franks
+    polities: [carolingian, west-francia]
+    ink: navy
+    moves: Frankish moves
+    success: Frankish success
+notes:
+  - The main sources are Frankish annals, chiefly the Annals of St-Bertin and of St-Vaast, and the monk Abbo’s poem on the siege of Paris. They give large and often exaggerated numbers of ships and men, and they rarely say where the raiders came from; most seem to have been Danes, with Norwegians among them.
+  - The story of Rollo and the grant of 911 comes mostly from Dudo of Saint-Quentin, who wrote about a century later for Rollo’s descendants. No text of the agreement survives, and its date and place are traditional; a royal charter of 918 confirms that Charles had granted land on the lower Seine to the Northmen.
+sources:
+  - title: Viking expansion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Viking_expansion
+  - title: Siege of Paris (845) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Paris_(845)
+  - title: Siege of Paris (885–886) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Paris_(885%E2%80%93886)
+  - title: Battle of Brissarthe (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Brissarthe
+  - title: Edict of Pîtres (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Edict_of_P%C3%AEtres
+  - title: Siege of Chartres (911) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Chartres_(911)
+  - title: Treaty of Saint-Clair-sur-Epte (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Saint-Clair-sur-Epte
+  - title: Rollo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rollo
+  - title: Viking (Britannica)
+    url: https://www.britannica.com/topic/Viking-people
+steps:
+  - title: Frisia, the Seine and the Loire
+    date: 799–866
+    when: "834"
+    borders: "866-07-02"
+    countries: [fr, nl]
+    body:
+      - Scandinavian raiders first struck the coast of the Frankish empire around 799, and Charlemagne ordered fleets and coastguards along the Channel and the North Sea. In 810 the Danish king Godfred sent some 200 ships against Frisia, which paid tribute. After Louis the Pious lost control of his sons in the 830s the attacks grew. Dorestad, the great trading town on the Rhine, was raided in 834 and in several years after. In 841 a fleet sailed up the Seine and burned Rouen and the abbey of Jumièges, and in 843 raiders took Nantes on the feast of St John and killed its bishop in the cathedral.
+      - The fleets then began to winter in Francia, on islands such as Noirmoutier at the mouth of the Loire and Oissel in the Seine. In March 845 about 120 ships under a leader the annals call Reginherus reached Paris at Easter and plundered it, and Charles the Bald paid 7,000 pounds of silver and gold to make them leave, the first of many such payments. In 864 he ordered fortified bridges across the rivers, and one was built at Pont-de-l’Arche on the Seine. On 2 July 866 Vikings under the chieftain Hastein and their Breton allies killed Robert the Strong, the Frankish commander in the west, at Brissarthe.
+    facts:
+      - [Paris sacked, "March 845, after about 120 ships came up the Seine"]
+      - [Tribute paid, "7,000 pounds of silver and gold"]
+      - [Battle of Brissarthe, "2 July 866, Robert the Strong killed"]
+    markers:
+      - kind: taken
+        side: vik
+        name: Dorestad
+        date: 834–837
+        text: The largest port of the Frankish north, on a branch of the Rhine. It was attacked again and again and never recovered its trade.
+        lonlat: [5.348, 51.98]
+      - kind: taken
+        side: vik
+        name: Rouen
+        date: May 841
+        text: A fleet led by a chieftain the annals call Oscherus burned the town and the abbeys along the lower Seine.
+        lonlat: [1.099, 49.443]
+      - kind: taken
+        side: vik
+        name: Nantes
+        date: 24 June 843
+        text: Raiders took the city during the feast of St John and killed Bishop Gunhard and many townspeople in the cathedral.
+        lonlat: [-1.553, 47.218]
+      - kind: held
+        side: vik
+        name: Noirmoutier
+        date: From 843
+        text: The island at the mouth of the Loire, already raided for its monastery, became a base where Viking fleets spent the winter.
+        lonlat: [-2.249, 47.009]
+        lp: l
+      - kind: taken
+        side: vik
+        name: Paris
+        date: March 845
+        text: Reginherus’s men plundered the city at Easter. Charles the Bald, whose army had been split by the river, paid them to leave.
+        lonlat: [2.347, 48.854]
+      - kind: event
+        side: fra
+        name: Pîtres and Pont-de-l’Arche
+        date: 25 June 864
+        text: At an assembly at Pîtres Charles ordered fortified bridges to bar the rivers. The one at Pont-de-l’Arche blocked the Seine above Rouen.
+        lonlat: [1.155, 49.304]
+        lp: b
+      - kind: battle
+        side: vik
+        name: Battle of Brissarthe
+        date: 2 July 866
+        text: Robert the Strong and Count Ranulf of Poitiers were killed fighting Hastein’s Bretons and Vikings, who had sacked Le Mans. Robert was the forefather of the Capetian kings.
+        lonlat: [-0.45, 47.70]
+    arrows:
+      - side: vik
+        label: Reginherus, 845
+        via: [[0.15, 49.47], [0.82, 49.43], [1.2, 49.3], [2.3, 48.87]]
+      - side: vik
+        label: Loire fleet, 843
+        via: [[-2.7, 47.05], [-2.1, 47.27], [-1.6, 47.22]]
+  - title: The great army and the siege of Paris
+    date: 879–887
+    when: "885-11-24"
+    borders: "886-11"
+    countries: [fr, be]
+    body:
+      - In 879 a large Viking army that had gathered on the Thames, finding no opening in Wessex after Alfred’s victory at Edington, crossed from England to the Low Countries. From camps at Ghent and elsewhere it ravaged the lands between the Scheldt and the Seine for years. King Louis III beat part of it at Saucourt-en-Vimeu on 3 August 881, a victory celebrated in the Old High German Ludwigslied, but the raids went on. In November 885 a fleet the monk Abbo puts at 700 ships came up the Seine under Sigfred and Sinric and found the way blocked by the fortified bridges of Paris, then confined to the Île de la Cité.
+      - Count Odo of Paris and Bishop Gozlin held the city through a siege of almost a year, against towers, rams, fire and mining. In February 886 a flood swept away one bridge, and the twelve defenders of its tower were killed. Sigfred took 60 pounds of silver and left in the spring, but others stayed. The emperor Charles the Fat arrived only in October, camped at Montmartre and, instead of fighting, paid 700 pounds and let the Vikings sail on to plunder Burgundy, which was in revolt. Odo’s defence made his name; when Charles was deposed in 887, the West Franks chose Odo as their king.
+    facts:
+      - [Battle of Saucourt, "3 August 881, Frankish victory"]
+      - [Siege of Paris, "24 or 25 November 885 – October 886"]
+      - [Paid to the Vikings, "700 pounds of silver, with leave to raid Burgundy"]
+    markers:
+      - kind: battle
+        side: fra
+        name: Battle of Saucourt
+        date: 3 August 881
+        text: The young king Louis III routed a Viking army in the Vimeu, killing, it was said, several thousand. The raiders soon returned.
+        lonlat: [1.616, 50.104]
+      - kind: held
+        side: vik
+        name: Ghent
+        date: 879–880
+        text: The army that had crossed from England spent its first winter in the Low Countries at the abbey town on the Scheldt.
+        lonlat: [3.72, 51.054]
+      - kind: siege
+        side: fra
+        name: Siege of Paris
+        date: November 885 – October 886
+        text: A few hundred defenders on the island city held the two fortified bridges and their towers. Bishop Gozlin, who fought on the walls, died during the siege.
+        lonlat: [2.347, 48.854]
+      - kind: event
+        name: Montmartre
+        date: October 886
+        text: Charles the Fat camped on the hill north of Paris with an imperial army, then bought the Vikings off instead of attacking them.
+        lonlat: [2.342, 48.887]
+        lp: t
+    arrows:
+      - side: vik
+        label: Great army, 879
+        via: [[0.4, 51.45], [2.0, 51.25], [3.7, 51.06]]
+      - side: vik
+        label: Sigfred, 885
+        via: [[0.15, 49.47], [1.1, 49.4], [1.75, 49.08], [2.3, 48.87]]
+      - side: vik
+        label: To Burgundy, 886
+        via: [[2.4, 48.83], [2.95, 48.4], [3.3, 48.18]]
+  - title: Rollo and the grant of Normandy
+    date: "911"
+    when: "911-07-20"
+    borders: "911"
+    countries: [fr]
+    body:
+      - Viking settlers had been living along the lower Seine for years when a band led by Rollo besieged Chartres in 911. On 20 July a Frankish army under Robert, marquis of Neustria and brother of the late King Odo, with Duke Richard of Burgundy and Count Ebles of Poitiers, came to the city’s relief. Bishop Gantelme led a sortie from the walls, by later tradition displaying the Virgin’s tunic, the cathedral’s relic, and the Vikings were beaten.
+      - King Charles the Simple chose to make the Vikings defenders of the realm rather than fight them every year. According to Dudo, he met Rollo at Saint-Clair-sur-Epte and granted him the land from the Epte to the sea around Rouen; Rollo became the king’s man, agreed to defend the Seine against other raiders and was baptised, taking the name Robert. Further grants in 924 and 933 added the land around Bayeux and the Cotentin. Rollo’s descendants ruled as counts and then dukes of Normandy, and within a few generations the Normans spoke French.
+    facts:
+      - [Battle of Chartres, "20 July 911, Frankish victory"]
+      - [Grant to Rollo, "911, traditionally at Saint-Clair-sur-Epte"]
+      - [Later grants, "924 (around Bayeux) and 933 (the Cotentin and Avranchin)"]
+    markers:
+      - kind: battle
+        side: fra
+        name: Battle of Chartres
+        date: 20 July 911
+        text: Robert of Neustria and Richard of Burgundy relieved the besieged city. Rollo’s army withdrew to the Seine.
+        lonlat: [1.484, 48.456]
+      - kind: treaty
+        name: Saint-Clair-sur-Epte
+        date: "911"
+        text: Here, on the river that became Normandy’s eastern border, Rollo is said to have done homage to Charles the Simple.
+        lonlat: [1.68, 49.208]
+      - kind: event
+        side: vik
+        name: Rouen
+        date: From 911
+        text: The old Roman city on the Seine became the capital of Rollo’s county. He was buried in its cathedral.
+        lonlat: [1.099, 49.443]
+        lp: l
+    arrows:
+      - side: vik
+        label: Rollo
+        via: [[1.1, 49.4], [1.2, 48.95], [1.45, 48.5]]
+      - side: fra
+        label: Robert and Richard
+        via: [[2.3, 48.82], [1.85, 48.6], [1.52, 48.47]]
+    areas:
+      - style: gained
+        side: vik
+        label: Granted to Rollo, 911
+        atoms: [FR-76, FR-27]
+      - style: outline
+        side: vik
+        label: Added in 924 and 933
+        atoms: [FR-14, FR-61, FR-50]

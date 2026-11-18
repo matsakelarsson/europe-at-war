@@ -1,0 +1,152 @@
+id: first-barons-war
+name: First Barons’ War
+start: "1215-09"
+end: "1217-09-20"
+tier: B
+summary: A civil war in England that broke out after King John repudiated Magna Carta. The rebel barons offered the crown to Prince Louis of France, who invaded in 1216 and held London and much of the south-east, but after John’s death the regents of the boy king Henry III won the barons back, beat Louis’s forces at Lincoln and at sea off Sandwich in 1217, and paid him to leave.
+countries: [gb, fr]
+sides:
+  - id: roy
+    name: King John and Henry III
+    polities: [england]
+    ink: red
+    moves: Royalist moves
+    success: Royalist success
+  - id: reb
+    name: Rebel barons and Louis of France
+    polities: []
+    ink: navy
+    moves: Moves by the rebels and Louis
+    success: Success for the rebels and Louis
+notes:
+  - The rebels were also joined by Alexander II of Scotland, who took Carlisle in 1216, and by Llywelyn ab Iorwerth of Gwynedd, who took castles in south Wales. Philip II officially disowned his son’s expedition, and the pope excommunicated Louis.
+  - The chief chronicler of the war, Roger of Wendover, was hostile to John. The peace of September 1217 is called the Treaty of Lambeth or of Kingston, after the places where it was negotiated and confirmed.
+sources:
+  - title: First Barons’ War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Barons%27_War
+  - title: Magna Carta (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Magna_Carta
+  - title: Battle of Lincoln (1217) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Lincoln_(1217)
+  - title: Battle of Sandwich (1217) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sandwich_(1217)
+  - title: Treaty of Lambeth (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Lambeth
+  - title: Barons’ War (Britannica)
+    url: https://www.britannica.com/event/Barons-War
+steps:
+  - title: Magna Carta and Louis’s invasion
+    date: 1215–1216
+    when: "1215-09"
+    borders: "1216-10-19"
+    countries: [gb, fr]
+    body:
+      - The loss of Normandy and Anjou, heavy taxes and a long quarrel with the church turned many barons against King John. At Runnymede in June 1215 they forced him to accept Magna Carta, but neither side kept to it. Pope Innocent III annulled the charter in August, and by September the country was at war. The rebels held London. John besieged Rochester castle from 11 October; his miners brought down a corner of the keep by burning its props with the fat of forty pigs, and the starving garrison surrendered on 30 November. Over the winter John’s mercenaries ravaged the rebels’ lands in the north and East Anglia, and the rebels offered the crown to Prince Louis, son of Philip II of France.
+      - Louis landed in Kent in May 1216. John fell back to Winchester, and Louis entered London without a fight and was proclaimed king at St Paul’s, though never crowned. He took Winchester after a ten-day siege and soon held more than half the kingdom, and Alexander II of Scotland came south to do homage to him. But Dover castle, defended by Hubert de Burgh, held out against a long siege, and so did Windsor. In October John, campaigning in the east, lost part of his baggage crossing the estuaries of the Wash, fell ill with dysentery and died at Newark on the night of 18–19 October.
+    facts:
+      - [Magna Carta, "Agreed at Runnymede, 15 June 1215"]
+      - [Siege of Rochester, "11 October – 30 November 1215, royalist victory"]
+      - [Louis enters London, "June 1216"]
+    markers:
+      - kind: event
+        name: Runnymede
+        date: 15 June 1215
+        text: John met the barons in a meadow by the Thames between his castle at Windsor and their camp at Staines, and agreed the charter.
+        lonlat: [-0.565, 51.444]
+        lp: b
+      - kind: siege
+        side: roy
+        name: Rochester
+        date: 11 October – 30 November 1215
+        text: The castle commanded the road from Dover to London. John hanged only one of the garrison, a young bowman, after a captain warned him against killing men who had surrendered.
+        lonlat: [0.501, 51.39]
+      - kind: event
+        side: reb
+        name: Sandwich
+        date: May 1216
+        text: Louis’s fleet came ashore on the coast of Kent. John’s army watched from nearby but withdrew without fighting.
+        lonlat: [1.339, 51.275]
+      - kind: taken
+        side: reb
+        name: London
+        date: June 1216
+        text: The barons and citizens welcomed Louis, and London was his capital for the rest of the war.
+        lonlat: [-0.093, 51.51]
+      - kind: held
+        side: roy
+        name: Dover
+        date: July–October 1216
+        text: Hubert de Burgh held the great castle against Louis’s siege engines and mining, and agreed only a truce.
+        lonlat: [1.321, 51.129]
+      - kind: held
+        side: roy
+        name: Windsor
+        date: Summer 1216
+        text: About sixty loyal knights held the castle through a two-month siege.
+        lonlat: [-0.604, 51.483]
+        lp: l
+      - kind: event
+        side: reb
+        name: Newark
+        date: 18–19 October 1216
+        text: John died in the castle. He was buried, as he had asked, in Worcester Cathedral.
+        lonlat: [-0.813, 53.076]
+    arrows:
+      - side: reb
+        label: Louis
+        via: [[1.6, 51.33], [1.0, 51.36], [0.3, 51.42], [-0.07, 51.5]]
+      - side: roy
+        label: John, October 1216
+        via: [[0.4, 52.75], [0.16, 52.67], [-0.2, 52.95], [-0.78, 53.07]]
+  - title: Lincoln, Sandwich and the peace
+    date: 1216–1217
+    when: "1216-10-28"
+    borders: "1217-09-20"
+    countries: [gb, fr]
+    side_names:
+      roy: Henry III
+    body:
+      - John’s son Henry III, aged nine, was crowned at Gloucester on 28 October 1216, since London was in Louis’s hands. The elderly William Marshal became regent, and on 12 November Magna Carta was reissued in Henry’s name. With John gone, the barons began to drift back to the crown. Louis went to France for reinforcements early in 1217 and on his return began a second siege of Dover. Meanwhile a rebel and French army was besieging Lincoln castle, held for the king by its castellan, Nicola de la Haye. On 20 May Marshal’s army broke into the city and routed it. Its commander, the count of Perche, was killed, many rebel barons were captured, and the royalists sacked the city.
+      - On 24 August a French fleet under the former monk and pirate Eustace sailed to bring Louis reinforcements. Off Sandwich, Hubert de Burgh’s ships attacked from windward and captured the flagship, and Eustace was beheaded on its deck. Louis had to negotiate. By the treaty agreed near Kingston and confirmed at Lambeth on 20 September 1217, he gave up his claim and left England, the rebels were pardoned, and he was paid 10,000 marks. In November the charter was issued again, with a new Charter of the Forest.
+    facts:
+      - [Battle of Lincoln, "20 May 1217, royalist victory"]
+      - [Battle of Sandwich, "24 August 1217, English victory"]
+      - [Treaty of Lambeth, "September 1217, Louis paid 10,000 marks to leave"]
+    markers:
+      - kind: event
+        side: roy
+        name: Gloucester
+        date: 28 October 1216
+        text: The papal legate Guala presided at Henry’s hurried coronation in the abbey church, now the cathedral.
+        lonlat: [-2.246, 51.867]
+      - kind: battle
+        side: roy
+        name: Battle of Lincoln
+        date: 20 May 1217
+        text: The royalists got into the city through a disused gate and attacked the besiegers of the castle in the streets. The plunder that followed was mocked as the Lincoln Fair.
+        lonlat: [-0.539, 53.234]
+      - kind: siege
+        side: roy
+        name: Dover
+        date: May–August 1217
+        text: Louis’s second siege tied down much of his army while the decisive blows fell elsewhere.
+        lonlat: [1.321, 51.129]
+        lp: b
+      - kind: naval
+        side: roy
+        name: Battle of Sandwich
+        date: 24 August 1217
+        text: According to the chroniclers, the English blinded the French crews by throwing powdered lime into the wind. Most of the convoy was taken or sunk.
+        lonlat: [1.42, 51.275]
+      - kind: treaty
+        name: Kingston and Lambeth
+        date: September 1217
+        text: Louis met the regents on an island in the Thames near Kingston, and the terms were confirmed at Lambeth.
+        lonlat: [-0.305, 51.41]
+    arrows:
+      - side: roy
+        label: William Marshal
+        via: [[-0.81, 53.07], [-0.75, 53.17], [-0.56, 53.22]]
+      - side: reb
+        label: Eustace the Monk
+        via: [[1.85, 50.96], [1.75, 51.15], [1.47, 51.27]]

@@ -1,0 +1,116 @@
+id: second-anglo-dutch-war
+name: Second Anglo-Dutch War
+start: "1665-03-04"
+end: "1667-07-31"
+tier: B
+summary: A naval war between England and the Dutch Republic over trade and colonies, in which France and Denmark–Norway joined the Dutch and the Bishop of Münster attacked them by land. After an English victory off Lowestoft and a Dutch one in the Four Days’ Battle, the Dutch raid on the Medway in 1667 hastened the Treaty of Breda, which left England with New York and the Dutch with Suriname.
+countries: [gb, nl]
+sides:
+  - id: en
+    name: England
+    polities: [england]
+    ink: red
+    moves: English moves
+    success: English success
+  - id: nl
+    name: Dutch Republic
+    polities: [dutch-republic]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+notes:
+  - Dates are New Style (Gregorian), as used in the Dutch Republic. English accounts usually give Old Style dates, ten days earlier; the Four Days’ Battle, for example, was 1–4 June 1666 Old Style.
+  - The war was also fought off West Africa, in North America and in the Caribbean, which are not shown on the map.
+sources:
+  - title: Second Anglo-Dutch War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Anglo-Dutch_War
+  - title: Anglo-Dutch Wars (Britannica)
+    url: https://www.britannica.com/event/Anglo-Dutch-Wars
+  - title: Battle of Lowestoft (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Lowestoft
+  - title: Four Days’ Battle (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Four_Days%27_Battle
+  - title: Holmes’s Bonfire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Holmes%27s_Bonfire
+  - title: Raid on the Medway (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Raid_on_the_Medway
+  - title: Treaty of Breda (1667) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Breda_(1667)
+steps:
+  - title: Lowestoft and the Four Days’ Battle
+    date: 1664–1666
+    when: "1665-03-04"
+    borders: "1666-08-20"
+    countries: [gb, nl]
+    body:
+      - Rivalry over trade in Africa, Asia and America brought the two Protestant sea powers back to war, eleven years after their first. English ships seized Dutch trading posts in West Africa in 1664 and New Amsterdam, which became New York, in September, and England declared war in March 1665. On 13 June 1665 the fleets met off Lowestoft. The English, under the King’s brother James, Duke of York, won. The Dutch flagship blew up with Lieutenant-Admiral van Wassenaer van Obdam, and the Dutch lost about 17 ships. The Grand Pensionary, Johan de Witt, rebuilt the fleet under Michiel de Ruyter, while England was struck by the Great Plague.
+      - France and Denmark–Norway joined the Dutch in 1666, though France did little. On 11–14 June 1666 de Ruyter beat the English fleet under George Monck and Prince Rupert in the Four Days’ Battle, one of the longest sea battles ever fought; the English lost about ten ships and thousands of men killed or captured. The English replied by winning the St James’s Day Battle on 4–5 August, and on 19–20 August Sir Robert Holmes burned about 150 merchant ships in the Vlie and the town of West-Terschelling, a raid remembered as Holmes’s Bonfire. Weeks later the Great Fire destroyed much of London.
+    facts:
+      - [Battle of Lowestoft, "13 June 1665, English victory"]
+      - [Four Days’ Battle, "11–14 June 1666, Dutch victory"]
+      - [Holmes’s Bonfire, "19–20 August 1666"]
+    markers:
+      - kind: naval
+        side: en
+        name: Battle of Lowestoft
+        date: 13 June 1665
+        text: The worst Dutch naval defeat of the century. Obdam’s flagship Eendracht exploded, killing almost all on board.
+        lonlat: [2.3, 52.35]
+      - kind: naval
+        side: nl
+        name: Four Days’ Battle
+        date: 11–14 June 1666
+        text: Fought from the Flemish coast to the Thames estuary. Rupert’s squadron arrived on the third day but could not turn the battle.
+        lonlat: [2.0, 51.55]
+      - kind: naval
+        side: en
+        name: St James’s Day Battle
+        date: 4–5 August 1666
+        text: Monck and Rupert beat de Ruyter off the North Foreland, and he retreated to the Dutch coast.
+        lonlat: [1.6, 51.367]
+        lp: l
+      - kind: event
+        side: en
+        name: Holmes’s Bonfire
+        date: 19–20 August 1666
+        text: English boats burned a merchant fleet sheltering in the Vlie, then landed and set fire to West-Terschelling.
+        lonlat: [5.216, 53.361]
+    arrows:
+      - side: en
+        label: Holmes
+        via: [[4.3, 53.5], [4.85, 53.43], [5.18, 53.37]]
+  - title: The Medway and the Peace of Breda
+    date: 1667
+    when: "1667-06-19"
+    borders: "1667-07-31"
+    countries: [gb, nl]
+    body:
+      - Short of money after the plague and the fire, Charles II laid up his largest ships at Chatham while peace talks went on at Breda. Johan de Witt decided to force the issue. In June 1667 a Dutch fleet under de Ruyter, with de Witt’s brother Cornelis on board, entered the Thames estuary, took the unfinished fort at Sheerness on 20 June and pushed up the Medway. On 22–23 June Dutch sailors broke the chain across the river at Gillingham, burned several of the greatest English warships off Chatham and towed away the flagship Royal Charles.
+      - It was one of the worst defeats in the history of the Royal Navy, and the Dutch fleet blockaded the Thames for weeks, causing panic in London. The Treaty of Breda was signed on 31 July 1667. Each side kept what it held, so England kept New York and the Dutch kept Suriname, which they had taken that year, and the spice island of Run in the East Indies. The Navigation Acts were eased to let Dutch ships carry goods from Germany to England. The stern of the Royal Charles is still on show in the Rijksmuseum in Amsterdam.
+    facts:
+      - [Raid on the Medway, "20–24 June 1667, Dutch victory"]
+      - [Treaty of Breda, "31 July 1667"]
+      - [Kept by England, "New York (New Netherland)"]
+    markers:
+      - kind: taken
+        side: nl
+        name: Sheerness
+        date: 20 June 1667
+        text: Dutch marines took the unfinished fort at the mouth of the Medway after a short bombardment.
+        lonlat: [0.76, 51.441]
+      - kind: naval
+        side: nl
+        name: Chatham
+        date: 22–23 June 1667
+        text: The Dutch broke the chain at Gillingham, burned the Royal Oak, Loyal London and Royal James and captured the Royal Charles.
+        lonlat: [0.53, 51.4]
+        lp: l
+      - kind: treaty
+        name: Treaty of Breda
+        date: 31 July 1667
+        text: England made peace with the Dutch, France and Denmark–Norway.
+        lonlat: [4.776, 51.589]
+    arrows:
+      - side: nl
+        label: De Ruyter
+        via: [[2.6, 51.75], [1.5, 51.55], [0.85, 51.46], [0.6, 51.41]]

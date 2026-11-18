@@ -1,0 +1,152 @@
+id: anglo-french-war-1202
+name: Anglo-French War of 1202–1214
+start: "1202-04-28"
+end: "1214-09-18"
+tier: B
+summary: The war in which Philip II of France took Normandy, Anjou, Maine and Touraine from King John of England in 1202–1205, ending the Angevin hold on northern France. John’s attempt to win them back with a coalition led by Emperor Otto IV failed at La Roche-aux-Moines and Bouvines in 1214.
+countries: [fr, gb, be, de]
+sides:
+  - id: fra
+    name: France
+    polities: [france]
+    ink: navy
+    moves: French moves
+    success: French success
+  - id: eng
+    name: King John
+    polities: [england]
+    ink: red
+    moves: John’s moves
+    success: Success for John
+  - id: coa
+    name: Otto IV and Flanders
+    polities: [hre, flanders]
+    ink: gold
+    moves: Moves by Otto and his allies
+    success: Success for Otto’s coalition
+notes:
+  - Philip’s side of the story was told by his chaplain William the Breton, who also wrote a long poem on the king’s deeds; on John’s side the main sources are English chroniclers such as Roger of Wendover, who disliked him. Numbers at Bouvines are uncertain; modern estimates give each army between about 6,000 and 9,000 men.
+sources:
+  - title: Anglo-French War (1202–1214) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Anglo-French_War_(1202%E2%80%931214)
+  - title: Siege of Château Gaillard (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Ch%C3%A2teau_Gaillard
+  - title: Arthur I, Duke of Brittany (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Arthur_I,_Duke_of_Brittany
+  - title: Battle of Damme (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Damme
+  - title: Battle of Roche-au-Moine (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Roche-au-Moine
+  - title: Battle of Bouvines (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Bouvines
+  - title: Philip II, king of France (Britannica)
+    url: https://www.britannica.com/biography/Philip-II-king-of-France
+  - title: John, king of England (Britannica)
+    url: https://www.britannica.com/biography/John-king-of-England
+steps:
+  - title: The fall of Normandy and Anjou
+    date: 1202–1206
+    when: "1202-04-28"
+    borders: "1206-10-26"
+    countries: [fr, gb]
+    body:
+      - In 1200 King John married Isabella of Angoulême, who had been promised to Hugh of Lusignan, and the Lusignans appealed to Philip II, John’s overlord for his lands in France. John refused to answer a summons to the French king’s court, which in April 1202 declared his French fiefs forfeit. Philip invaded Normandy and recognised John’s young nephew, Arthur of Brittany, as lord of Anjou, Maine, Touraine and Poitou. On 1 August, after a forced march from Le Mans, John surprised Arthur and the Lusignans besieging his mother, Eleanor of Aquitaine, at Mirebeau and captured them all. Arthur disappeared in prison in 1203, almost certainly killed on John’s orders, and many of John’s barons turned against him.
+      - In the late summer of 1203 Philip laid siege to Château Gaillard, the great castle Richard I had built above the Seine to guard Normandy. John failed to relieve it and left the duchy in December. The castle fell on 6 March 1204, after French soldiers got in through a latrine chute, and on 24 June Rouen surrendered. Normandy, ruled with England since 1066, was lost. Philip went on to take Anjou, Maine, Touraine and much of Poitou; Chinon and Loches held out until 1205. John landed at La Rochelle in 1206, but the truce agreed at Thouars that October left him only Gascony, part of Poitou and, off the Norman coast, the Channel Islands.
+    facts:
+      - [Château Gaillard falls, "6 March 1204"]
+      - [Rouen surrenders, "24 June 1204"]
+      - [Left to John, "Gascony, part of Poitou and the Channel Islands"]
+    markers:
+      - kind: battle
+        side: eng
+        name: Mirebeau
+        date: 1 August 1202
+        text: John’s surprise attack freed his mother and captured Arthur, Hugh of Lusignan and some 250 knights. It was the high point of his war.
+        lonlat: [0.183, 46.787]
+      - kind: siege
+        side: fra
+        name: Château Gaillard
+        date: 1203 – 6 March 1204
+        text: Philip starved and stormed Richard I’s castle on its cliff above Les Andelys. The townspeople who had taken refuge there were driven out and many died of cold and hunger between the lines.
+        lonlat: [1.403, 49.238]
+      - kind: taken
+        side: fra
+        name: Rouen
+        date: 24 June 1204
+        text: With no hope of help from John, the Norman capital opened its gates to Philip.
+        lonlat: [1.099, 49.443]
+      - kind: taken
+        side: fra
+        name: Chinon
+        date: June 1205
+        text: Hubert de Burgh defended the great Angevin castle on the Vienne until the French took it by storm.
+        lonlat: [0.242, 47.167]
+      - kind: treaty
+        name: Thouars
+        date: 26 October 1206
+        text: A two-year truce left Philip in possession of the lands north of the Loire.
+        lonlat: [-0.215, 46.976]
+    arrows:
+      - side: eng
+        label: John, 1202
+        via: [[0.2, 48.0], [0.3, 47.4], [0.2, 46.82]]
+      - side: fra
+        label: Philip II
+        via: [[2.3, 48.87], [1.85, 49.1], [1.43, 49.23], [1.12, 49.43]]
+    areas:
+      - style: gained
+        side: fra
+        label: Taken by Philip II, 1204–1205
+        atoms: [FR-14, FR-27, FR-50, FR-61, FR-76, FR-72, FR-53, FR-49, FR-37]
+  - title: La Roche-aux-Moines and Bouvines
+    date: 1213–1214
+    when: "1213-05-30"
+    borders: "1214-09-18"
+    countries: [fr, gb, be, de]
+    body:
+      - John spent years raising money and allies to win back his lands. In 1213 Philip prepared to invade England, but on 30–31 May an English fleet under William Longespée, earl of Salisbury, caught the French fleet at Damme in Flanders with most of its crews ashore, captured some 300 ships and burned about 100 more. John then joined a coalition with his nephew, the Emperor Otto IV, Count Ferrand of Flanders, Count Renaud of Boulogne and princes of the Low Countries. The plan was to attack from two sides. John landed at La Rochelle in February 1214, won over some Poitevin lords and crossed into Anjou, but when Prince Louis came to relieve the castle of La Roche-aux-Moines on 2 July, the Poitevins would not fight and John retreated.
+      - In the north Otto gathered the allied army at Valenciennes. On 27 July 1214, near the bridge of Bouvines between Lille and Tournai, Philip turned and gave battle. The allied infantry broke into the French centre and Philip was unhorsed, but the French knights routed the allied wings and centre; Otto fled, and Ferrand, Renaud and Salisbury were taken prisoner. On 18 September John agreed a five-year truce at Chinon and gave up hope of recovering the north. Otto lost his throne to Frederick II, and John came home weakened to face his rebellious barons, the beginning of the First Barons’ War.
+    facts:
+      - [Battle of Damme, "30–31 May 1213, English victory"]
+      - [La Roche-aux-Moines, "2 July 1214, John retreats"]
+      - [Battle of Bouvines, "27 July 1214, French victory"]
+    markers:
+      - kind: naval
+        side: eng
+        name: Battle of Damme
+        date: 30–31 May 1213
+        text: The English fleet found the French ships at anchor in the harbour of Bruges and destroyed the invasion fleet. Philip burned what was left.
+        lonlat: [3.267, 51.25]
+      - kind: event
+        side: eng
+        name: La Rochelle
+        date: February 1214
+        text: John landed in the port that had stayed loyal to him and spent the spring winning over the lords of Poitou.
+        lonlat: [-1.152, 46.16]
+      - kind: siege
+        side: fra
+        name: La Roche-aux-Moines
+        date: 19 June – 2 July 1214
+        text: John abandoned the siege of the castle on the Loire when Prince Louis approached, and his rearguard suffered in the retreat.
+        lonlat: [-0.656, 47.384]
+      - kind: battle
+        side: fra
+        name: Battle of Bouvines
+        date: 27 July 1214
+        text: One of the few great pitched battles of the age. The French took the imperial eagle standard, which Philip sent to Frederick II.
+        lonlat: [3.225, 50.58]
+      - kind: treaty
+        name: Chinon
+        date: 18 September 1214
+        text: John and Philip agreed a truce for five years, which left Philip’s conquests in his hands.
+        lonlat: [0.242, 47.167]
+    arrows:
+      - side: eng
+        label: John, 1214
+        via: [[-1.15, 46.16], [-0.6, 46.7], [-0.64, 47.36]]
+      - side: fra
+        label: Prince Louis
+        via: [[0.24, 47.17], [-0.2, 47.3], [-0.62, 47.38]]
+      - side: coa
+        label: Otto IV
+        via: [[3.52, 50.36], [3.4, 50.5], [3.26, 50.57]]

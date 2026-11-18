@@ -1,0 +1,568 @@
+id: wars-of-the-three-kingdoms
+name: Wars of the Three Kingdoms
+start: "1639"
+end: "1653"
+tier: A
+summary: The linked wars in Scotland, Ireland and England under Charles I and the Commonwealth, from the Scottish Covenanters’ revolt and the Irish rising of 1641 to the English Civil Wars between King and Parliament. They ended with the execution of Charles I in 1649, the abolition of the monarchy and the conquest of Ireland and Scotland by the English Commonwealth.
+countries: [gb, ie]
+sides:
+  - id: roy
+    name: Royalists
+    polities: []
+    ink: red
+    moves: Royalist moves
+    success: Royalist success
+  - id: parl
+    name: Parliament and the Commonwealth
+    polities: [england]
+    ink: orange
+    moves: Parliamentarian moves
+    success: Parliamentarian success
+  - id: sco
+    name: Scottish Covenanters
+    polities: [scotland]
+    ink: navy
+    moves: Scottish moves
+    success: Scottish success
+  - id: irl
+    name: Irish Confederates
+    polities: [ireland]
+    ink: green
+    moves: Irish Confederate moves
+    success: Irish Confederate success
+notes:
+  - Also called the British Civil Wars. The fighting in England is usually called the English Civil War (the First, 1642–1646, and the Second, 1648), and the war in Ireland the Irish Confederate Wars.
+  - Alliances shifted. The Scots fought Charles I in 1639–1640 and 1644–1646, invaded England for him in 1648 (the Engagers), and fought for Charles II in 1650–1651. The Irish Confederates, Catholic rebels who governed most of Ireland from Kilkenny, made truces and treaties with the King’s Lord Lieutenant, the Marquis of Ormond, and joined him against the Commonwealth in 1649.
+  - Dates are Old Style (Julian), as usual in British history, ten days behind the calendar used on the Continent, with the year starting on 1 January.
+sources:
+  - title: Wars of the Three Kingdoms (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Wars_of_the_Three_Kingdoms
+  - title: English Civil Wars (Britannica)
+    url: https://www.britannica.com/event/English-Civil-Wars
+  - title: Bishops’ Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bishops%27_Wars
+  - title: Irish Rebellion of 1641 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Irish_Rebellion_of_1641
+  - title: First English Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_English_Civil_War
+  - title: Battle of Edgehill (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Edgehill
+  - title: Battle of Marston Moor (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Marston_Moor
+  - title: Battle of Naseby (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Naseby
+  - title: Second English Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_English_Civil_War
+  - title: Execution of Charles I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Execution_of_Charles_I
+  - title: Cromwellian conquest of Ireland (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cromwellian_conquest_of_Ireland
+  - title: Siege of Drogheda (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Drogheda
+  - title: Battle of Dunbar (1650) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Dunbar_(1650)
+  - title: Battle of Worcester (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Worcester
+  - title: Act for the Settlement of Ireland 1652 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Act_for_the_Settlement_of_Ireland_1652
+  - title: Tender of Union (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tender_of_Union
+steps:
+  - title: The Covenant and the Irish rising
+    date: 1637–1641
+    when: "1637-07-23"
+    borders: "1641-12-31"
+    countries: [gb, ie]
+    body:
+      - Charles I ruled three kingdoms with three different churches. In 1637 he imposed a new prayer book on Scotland without consulting its Parliament or Kirk, and on 23 July its first reading in St Giles’ in Edinburgh set off a riot. In February 1638 thousands signed the National Covenant to defend the Reformed Kirk, and that December the General Assembly in Glasgow abolished the bishops. In the Bishops’ Wars Charles twice failed to force the Scots back into line, and in August 1640 a Covenanter army routed his troops at Newburn and occupied Newcastle.
+      - To pay the Scots to leave, Charles had to summon the Long Parliament in November 1640, which sent his minister Strafford to the block and dismantled his personal rule. Irish Catholics feared a Puritan Parliament would take their land and religion. On 23 October 1641 a plot to seize Dublin Castle was betrayed, but in Ulster the rising led by Sir Phelim O’Neill spread fast. Thousands of Protestant settlers were robbed, driven out or killed, about 4,000 in the attacks and perhaps up to 12,000 with those who died of cold and disease, and settlers and soldiers killed Catholics in revenge. Exaggerated reports of massacre inflamed England and Scotland.
+    facts:
+      - [National Covenant, "28 February 1638"]
+      - [Battle of Newburn, "28 August 1640, Scottish victory"]
+      - [Irish rising, "from 23 October 1641"]
+    markers:
+      - kind: event
+        side: sco
+        name: St Giles’, Edinburgh
+        date: 23 July 1637
+        text: Tradition says that Jenny Geddes threw her stool at the dean when he began to read from the new prayer book.
+        lonlat: [-3.191, 55.949]
+      - kind: battle
+        side: sco
+        name: Battle of Newburn
+        date: 28 August 1640
+        text: Alexander Leslie’s guns drove the English from the fords of the Tyne, and the Scots entered Newcastle two days later.
+        lonlat: [-1.751, 54.983]
+      - kind: event
+        name: Dublin Castle
+        date: 23 October 1641
+        text: Conspirators planned to seize the castle, seat of the English government in Ireland, but the plot was betrayed the night before.
+        lonlat: [-6.268, 53.343]
+      - kind: event
+        name: Portadown
+        date: November 1641
+        text: Insurgents forced about 100 Protestant prisoners off the bridge into the River Bann and shot those who tried to swim to safety.
+        lonlat: [-6.458, 54.421]
+      - kind: battle
+        side: irl
+        name: Battle of Julianstown
+        date: 29 November 1641
+        text: Insurgents routed a government column marching to relieve Drogheda. Soon afterwards the Catholic lords of the Pale joined the rising.
+        lonlat: [-6.28, 53.67]
+    arrows:
+      - side: sco
+        label: Leslie
+        via: [[-2.25, 55.65], [-2.0, 55.25], [-1.77, 54.99]]
+    areas:
+      - style: occupied
+        side: sco
+        label: Occupied by the Scots, 1640–1641
+        atoms: [GB-NBL, GB-NET, GB-NTY, GB-GAT, GB-STY, GB-SND, GB-DUR, GB-DAL, GB-HPL, GB-STT]
+      - style: occupied
+        side: irl
+        label: Held by the Irish insurgents, end of 1641 (approximate)
+        atoms: [GB-ARM, GB-DGN, GB-CKT, GB-OMH, GB-MFT, GB-STB, GB-FER, GB-NYM, GB-BNB, GB-CGV, IE-MN, IE-CN, IE-LM, IE-LD, IE-LH]
+  - title: Edgehill
+    date: 1642
+    when: "1642-01-04"
+    borders: "1642-11-13"
+    countries: [gb]
+    body:
+      - In London, King and Parliament quarrelled over who should command the army needed to crush the Irish rising. On 4 January 1642 Charles came to the House of Commons with soldiers to arrest five members, who had fled, and soon afterwards he left the capital. In April the governor of Hull shut its gates and its arsenal against him, and on 22 August Charles raised his standard at Nottingham. Most of the north, the west and Wales sided with the King, and London, the south-east, East Anglia and the navy with Parliament, though almost every county was divided.
+      - The King recruited in the Welsh borders and marched on London. At Edgehill in Warwickshire on 23 October he met Parliament’s army under the Earl of Essex. Prince Rupert’s cavalry swept away the horse in front of them but rode off in pursuit, and the infantry fought to a bloody draw. Charles took Banbury and Oxford and pressed on, and his troops sacked Brentford on 12 November. The next day some 24,000 Parliamentarian soldiers and London trained bands barred the road at Turnham Green, and he fell back to Oxford, his capital for the rest of the war.
+    facts:
+      - [Battle of Edgehill, "23 October 1642, indecisive"]
+      - [Commanders, "Charles I and Prince Rupert; the Earl of Essex"]
+      - [Turnham Green, "13 November 1642, the King turns back"]
+    markers:
+      - kind: held
+        side: parl
+        name: Hull
+        date: 23 April 1642
+        text: Sir John Hotham refused the King entry to the town and its great arsenal.
+        lonlat: [-0.332, 53.744]
+      - kind: event
+        side: roy
+        name: Nottingham
+        date: 22 August 1642
+        text: Charles raised the royal standard at the castle, in effect declaring war on Parliament.
+        lonlat: [-1.155, 52.949]
+      - kind: battle
+        name: Battle of Edgehill
+        date: 23 October 1642
+        text: The first pitched battle of the war. Both sides claimed victory, but the road to London lay open to the King.
+        lonlat: [-1.482, 52.151]
+      - kind: event
+        side: roy
+        name: Oxford
+        date: October 1642 – June 1646
+        text: The King’s headquarters and capital, where he held court and his own Parliament.
+        lonlat: [-1.258, 51.752]
+        lp: l
+      - kind: taken
+        side: roy
+        name: Brentford
+        date: 12 November 1642
+        text: Rupert’s men drove two Parliamentarian regiments out of the town and plundered it.
+        lonlat: [-0.309, 51.478]
+        lp: b
+      - kind: held
+        side: parl
+        name: Turnham Green
+        date: 13 November 1642
+        text: Facing a much larger army, the King withdrew without a battle.
+        lonlat: [-0.26, 51.49]
+        lp: t
+    arrows:
+      - side: roy
+        label: Charles I
+        via: [[-2.75, 52.71], [-1.9, 52.48], [-1.5, 52.17]]
+      - side: roy
+        via: [[-1.45, 52.1], [-1.26, 51.77], [-0.97, 51.46], [-0.33, 51.48]]
+      - side: parl
+        label: Essex
+        via: [[-2.22, 52.19], [-1.85, 52.18], [-1.52, 52.15]]
+  - title: The Solemn League and Marston Moor
+    date: 1643–1644
+    when: "1643"
+    borders: "1644-07-16"
+    countries: [gb, ie]
+    body:
+      - The year 1643 went the King’s way. The Earl of Newcastle beat the Fairfaxes at Adwalton Moor in June and took most of Yorkshire, Royalist cavalry won at Roundway Down in July, and Rupert stormed Bristol, England’s second city, on 26 July. Essex saved Gloucester in September and fought his way home at Newbury. Both sides looked for allies. Charles made a truce with the Irish Confederates so that he could bring troops home, and Parliament agreed the Solemn League and Covenant with the Scots, promising to reform the Church of England on Presbyterian lines in return for an army.
+      - In January 1644 about 20,000 Scots under the Earl of Leven crossed the Tweed, and with the Fairfaxes and the Earl of Manchester’s army they besieged York. Rupert relieved the city, then attacked them at Marston Moor on 2 July. More than 40,000 men fought, and Oliver Cromwell’s cavalry broke the Royalist right and won the battle; about 4,000 Royalists were killed. York surrendered on 16 July, and the north was lost to the King. In the south he did better, trapping Essex’s army in Cornwall, where its infantry surrendered at Lostwithiel in September.
+    facts:
+      - [Battle of Marston Moor, "2 July 1644, Parliamentarian and Scottish victory"]
+      - [Solemn League and Covenant, "September 1643"]
+      - [Lostwithiel, "2 September 1644, Essex’s infantry surrenders"]
+    markers:
+      - kind: battle
+        side: roy
+        name: Battle of Adwalton Moor
+        date: 30 June 1643
+        text: The Earl of Newcastle beat Lord Fairfax and his son Sir Thomas, who fell back to Hull.
+        lonlat: [-1.664, 53.751]
+        lp: l
+      - kind: battle
+        side: roy
+        name: Battle of Roundway Down
+        date: 13 July 1643
+        text: Royalist cavalry routed Sir William Waller’s army near Devizes, some of it driven over a steep escarpment.
+        lonlat: [-1.98, 51.385]
+      - kind: taken
+        side: roy
+        name: Bristol
+        date: 26 July 1643
+        text: Rupert stormed England’s second city and greatest western port, at a heavy cost in men.
+        lonlat: [-2.587, 51.455]
+        lp: l
+      - kind: held
+        side: parl
+        name: Gloucester
+        date: August–September 1643
+        text: The city held out against the King until Essex’s relief army arrived in early September.
+        lonlat: [-2.244, 51.864]
+      - kind: siege
+        side: parl
+        name: York
+        date: April–July 1644
+        text: Besieged by the Scots and Parliamentarians, relieved by Rupert, and surrendered after Marston Moor.
+        lonlat: [-1.082, 53.958]
+      - kind: battle
+        side: parl
+        name: Battle of Marston Moor
+        date: 2 July 1644
+        text: The largest battle of the wars. Cromwell’s and Leslie’s cavalry broke the Royalist right, and the Royalist infantry in the centre was cut down.
+        lonlat: [-1.254, 53.962]
+        lp: l
+      - kind: battle
+        side: roy
+        name: Lostwithiel
+        date: 2 September 1644
+        text: Trapped in Cornwall, Essex escaped by boat and his infantry surrendered to the King.
+        lonlat: [-4.667, 50.408]
+    arrows:
+      - side: sco
+        label: Leven
+        via: [[-2.0, 55.77], [-1.65, 55.0], [-1.5, 54.5], [-1.15, 54.0]]
+      - side: roy
+        label: Rupert
+        via: [[-2.6, 53.6], [-2.02, 53.96], [-1.47, 54.01], [-1.15, 53.99]]
+    areas:
+      - style: occupied
+        side: roy
+        label: Held by the Royalists, end of 1643 (approximate)
+        atoms: [GB-GWN, GB-AGY, GB-CWY, GB-DEN, GB-FLN, GB-WRX, GB-POW, GB-CGN, GB-CMN, GB-PEM, GB-SWA, GB-NTL, GB-BGE, GB-VGL, GB-CRF, GB-RCT, GB-MTY, GB-CAY, GB-BGW, GB-TOF, GB-NWP, GB-MON, GB-CON, GB-DEV, GB-TOB, GB-SOM, GB-BAS, GB-NSM, GB-BST, GB-SGC, GB-DOR, GB-BMH, GB-WIL, GB-SWD, GB-GLS, GB-HEF, GB-WOR, GB-SHR, GB-TFW, GB-OXF, GB-CMA, GB-NBL, GB-NET, GB-NTY, GB-GAT, GB-STY, GB-SND, GB-DUR, GB-DAL, GB-HPL, GB-STT, GB-MDB, GB-RCC, GB-NYK, GB-YOR, GB-ERY, GB-LDS, GB-BRD, GB-WKF, GB-KIR, GB-CLD, GB-DNC, GB-BNS, GB-ROT, GB-SHF]
+  - title: Naseby
+    date: 1645–1646
+    when: "1645-02-15"
+    borders: "1646-06-24"
+    countries: [gb, ie]
+    body:
+      - Parliament reorganised its forces as the New Model Army under Sir Thomas Fairfax, with Cromwell commanding the cavalry. On 14 June 1645, at Naseby in Northamptonshire, it destroyed the King’s main field army. Some 4,500 Royalist infantry were captured, and so was the King’s correspondence, which showed him seeking Irish and foreign troops; Parliament published it. Fairfax beat the western Royalists at Langport in July, and in September Rupert surrendered Bristol. The remaining Royalist garrisons fell one by one.
+      - In Scotland, James Graham, Marquis of Montrose, leading Highlanders and Irish troops sent from Ulster, won six victories in a year, the last at Kilsyth on 15 August 1645. At Philiphaugh on 13 September a Covenanter army destroyed his force, and prisoners and camp followers were massacred. In Ireland Owen Roe O’Neill beat the Scottish army in Ulster at Benburb in June 1646. By then the war in England was over. On 5 May 1646 Charles gave himself up to the Scottish army besieging Newark, and Oxford surrendered on 24 June.
+    facts:
+      - [Battle of Naseby, "14 June 1645, Parliamentarian victory"]
+      - [Montrose’s victories, "Tippermuir to Kilsyth, September 1644 – August 1645"]
+      - [Charles surrenders, "5 May 1646, to the Scots"]
+    markers:
+      - kind: battle
+        side: parl
+        name: Battle of Naseby
+        date: 14 June 1645
+        text: The New Model Army destroyed the King’s infantry after Cromwell’s cavalry beat the Royalist horse on its wing.
+        lonlat: [-0.96, 52.41]
+      - kind: battle
+        side: parl
+        name: Battle of Langport
+        date: 10 July 1645
+        text: Fairfax broke Lord Goring’s army, the last Royalist field army in the west.
+        lonlat: [-2.801, 51.042]
+      - kind: taken
+        side: parl
+        name: Bristol
+        date: 10 September 1645
+        text: Rupert surrendered the city after the New Model Army stormed its outer defences. The King dismissed him.
+        lonlat: [-2.583, 51.45]
+        lp: t
+      - kind: battle
+        side: roy
+        name: Battle of Kilsyth
+        date: 15 August 1645
+        text: Montrose’s last and greatest victory left him briefly master of Scotland.
+        lonlat: [-4.019, 55.984]
+      - kind: battle
+        side: sco
+        name: Battle of Philiphaugh
+        date: 13 September 1645
+        text: David Leslie surprised and destroyed Montrose’s small army in the Borders.
+        lonlat: [-2.886, 55.54]
+      - kind: battle
+        side: irl
+        name: Battle of Benburb
+        date: 5 June 1646
+        text: Owen Roe O’Neill’s Confederate army routed Robert Monro’s Scots, and thousands were killed in the pursuit.
+        lonlat: [-6.746, 54.412]
+      - kind: event
+        name: Southwell
+        date: 5 May 1646
+        text: Charles rode in disguise from Oxford and gave himself up to the Scottish army besieging nearby Newark.
+        lonlat: [-0.955, 53.078]
+      - kind: taken
+        side: parl
+        name: Oxford
+        date: 24 June 1646
+        text: The Royalist capital surrendered on terms, ending the First Civil War.
+        lonlat: [-1.258, 51.752]
+    arrows:
+      - side: parl
+        label: Fairfax
+        via: [[-0.97, 52.39], [-1.9, 51.75], [-2.75, 51.06], [-2.6, 51.42]]
+    areas:
+      - style: occupied
+        side: roy
+        label: Held by the Royalists, spring 1645 (approximate)
+        atoms: [GB-GWN, GB-AGY, GB-CWY, GB-DEN, GB-FLN, GB-WRX, GB-POW, GB-CGN, GB-CMN, GB-PEM, GB-SWA, GB-NTL, GB-BGE, GB-VGL, GB-CRF, GB-RCT, GB-MTY, GB-CAY, GB-BGW, GB-TOF, GB-NWP, GB-MON, GB-CON, GB-DEV, GB-TOB, GB-SOM, GB-BAS, GB-NSM, GB-BST, GB-SGC, GB-DOR, GB-BMH, GB-HEF, GB-WOR, GB-OXF]
+  - title: The Second Civil War and Preston
+    date: 1647–1648
+    when: "1647-01-30"
+    borders: "1648-12-06"
+    countries: [gb]
+    body:
+      - The Scots handed Charles over to Parliament in January 1647 on payment of part of the money owed to their army. Parliament’s Presbyterian majority then tried to disband the New Model Army without its arrears of pay, and the army seized the King and marched on London; at Putney its officers and the radical Levellers debated who should have the vote. Charles escaped in November but was held at Carisbrooke Castle on the Isle of Wight, where he signed a secret Engagement with Scottish nobles, who would restore him in return for three years of Presbyterianism in England.
+      - In 1648 risings broke out in South Wales, Kent and Essex, and part of the navy mutinied. The army crushed them one by one, the Welsh at St Fagans in May, Kent at Maidstone on 1 June, and Colchester after a siege of eleven weeks, after which two Royalist commanders were shot. On 8 July the Duke of Hamilton led the Engagers’ army into England, and on 17–19 August Cromwell, with fewer men, destroyed it around Preston. On 6 December soldiers under Colonel Thomas Pride kept out of the Commons the members who still wanted a settlement with the King.
+    facts:
+      - [Battle of Preston, "17–19 August 1648, Parliamentarian victory"]
+      - [Siege of Colchester, "13 June – 28 August 1648"]
+      - [Pride’s Purge, "6 December 1648"]
+    side_names:
+      roy: Royalists and the Scottish Engagers
+    markers:
+      - kind: event
+        name: Carisbrooke Castle
+        date: November 1647 – September 1648
+        text: Charles was held here after his escape from Hampton Court and twice tried to get away.
+        lonlat: [-1.313, 50.687]
+      - kind: battle
+        side: parl
+        name: Battle of St Fagans
+        date: 8 May 1648
+        text: Colonel Horton’s troops routed the Welsh rebels, many of them former Parliamentarian soldiers angry at being disbanded unpaid.
+        lonlat: [-3.27, 51.49]
+      - kind: siege
+        side: parl
+        name: Pembroke
+        date: May–July 1648
+        text: Cromwell starved the castle into surrender on 11 July.
+        lonlat: [-4.921, 51.677]
+      - kind: battle
+        side: parl
+        name: Battle of Maidstone
+        date: 1 June 1648
+        text: Fairfax took the town in a fight from street to street, breaking the Kentish rising.
+        lonlat: [0.524, 51.27]
+      - kind: siege
+        side: parl
+        name: Colchester
+        date: 13 June – 28 August 1648
+        text: The Royalists held out until the townspeople were starving. Sir Charles Lucas and Sir George Lisle were shot after the surrender.
+        lonlat: [0.9, 51.89]
+      - kind: battle
+        side: parl
+        name: Battle of Preston
+        date: 17–19 August 1648
+        text: Cromwell fell on Hamilton’s strung-out army from the flank and destroyed it in three days of fighting and pursuit.
+        lonlat: [-2.679, 53.753]
+      - kind: event
+        side: parl
+        name: Pride’s Purge
+        date: 6 December 1648
+        text: Soldiers at the door of the Commons arrested or turned away more than 100 members, leaving the “Rump”.
+        lonlat: [-0.125, 51.5]
+    arrows:
+      - side: roy
+        label: Hamilton
+        via: [[-2.94, 54.89], [-2.75, 54.33], [-2.68, 53.78]]
+      - side: parl
+        label: Cromwell
+        via: [[-1.47, 54.0], [-2.02, 53.96], [-2.39, 53.87], [-2.66, 53.77]]
+      - side: parl
+        label: Fairfax
+        via: [[0.52, 51.27], [0.37, 51.44], [0.6, 51.7], [0.88, 51.88]]
+  - title: The regicide and Cromwell in Ireland
+    date: 1649–1650
+    when: "1649-01-30"
+    borders: "1650-05-26"
+    countries: [gb, ie]
+    body:
+      - A High Court of Justice set up by the purged Commons tried Charles for treason against his people, and he was beheaded outside the Banqueting House in Whitehall on 30 January 1649. England abolished the monarchy and the House of Lords and became a Commonwealth. The Scots, who had not been consulted, proclaimed his son King Charles II. In Ireland the Confederates and the Royalists under the Marquis of Ormond joined forces and held almost all the country except Dublin and Derry.
+      - On 2 August Colonel Michael Jones routed Ormond’s army at Rathmines, outside Dublin, and on 15 August Cromwell landed with about 12,000 veterans. He stormed Drogheda on 11 September, and his troops killed most of the garrison, many after they had surrendered, together with Catholic clergy and an unknown number of civilians. At Wexford in October between 1,500 and 2,000 soldiers and townspeople died in the sack. At Clonmel in May 1650 Hugh O’Neill’s garrison inflicted the New Model Army’s heaviest losses before slipping away. Cromwell returned to England that month, leaving the war to his son-in-law Henry Ireton.
+    facts:
+      - [Execution of Charles I, "30 January 1649"]
+      - [Storming of Drogheda, "11 September 1649"]
+      - [Cromwell in Ireland, "15 August 1649 – 26 May 1650"]
+    side_names:
+      roy: Royalists and Irish Confederates
+    markers:
+      - kind: event
+        side: parl
+        name: Whitehall
+        date: 30 January 1649
+        text: Charles I was beheaded on a scaffold outside the Banqueting House.
+        lonlat: [-0.126, 51.504]
+      - kind: battle
+        side: parl
+        name: Battle of Rathmines
+        date: 2 August 1649
+        text: Michael Jones’s Dublin garrison surprised and routed Ormond’s besieging army, letting Cromwell land unopposed.
+        lonlat: [-6.27, 53.32]
+        lp: b
+      - kind: siege
+        side: parl
+        name: Drogheda
+        date: 3–11 September 1649
+        text: Cromwell listed about 2,800 of the garrison killed after the storm. How many civilians died is not known.
+        lonlat: [-6.35, 53.714]
+      - kind: siege
+        side: parl
+        name: Wexford
+        date: 11 October 1649
+        text: The town was stormed during negotiations, and soldiers and civilians were killed in the streets or drowned fleeing across the River Slaney.
+        lonlat: [-6.457, 52.334]
+      - kind: taken
+        side: parl
+        name: Kilkenny
+        date: March 1650
+        text: The former Confederate capital surrendered to Cromwell on terms.
+        lonlat: [-7.251, 52.651]
+      - kind: siege
+        side: parl
+        name: Clonmel
+        date: April–May 1650
+        text: The defenders trapped the stormers in a lane behind the breach and killed perhaps 2,000 of them, then left by night.
+        lonlat: [-7.712, 52.354]
+    arrows:
+      - side: parl
+        label: Cromwell
+        via: [[-6.26, 53.36], [-6.27, 53.55], [-6.33, 53.69]]
+      - side: parl
+        via: [[-6.25, 53.33], [-6.12, 52.95], [-6.44, 52.36]]
+      - side: parl
+        via: [[-6.47, 52.37], [-6.94, 52.42], [-7.25, 52.62], [-7.68, 52.37]]
+  - title: Dunbar and Worcester
+    date: 1650–1651
+    when: "1650-06-23"
+    borders: "1651-09-03"
+    countries: [gb]
+    body:
+      - Charles II landed in Scotland in June 1650 after swearing to the Covenants, and the Commonwealth struck first. Cromwell invaded in July, but David Leslie’s army blocked him outside Edinburgh until, short of food and sick, the English fell back to Dunbar. On 3 September Cromwell attacked the Scots as they came down from the hills and routed them. Estimates of the Scottish dead range from a few hundred to several thousand, and at least 6,000 were captured; thousands of the prisoners died on the march south and in captivity at Durham, and many survivors were sent to the colonies.
+      - Charles was crowned at Scone on 1 January 1651. In July an English army crossed the Firth of Forth and won at Inverkeithing, and Charles gambled on invading England with a mainly Scottish army, hoping English Royalists would rise. Few did. Cromwell caught him at Worcester on 3 September 1651, a year to the day after Dunbar, and destroyed his army. Charles escaped, hiding at one point in an oak tree at Boscobel, and reached France six weeks later. In Scotland General George Monck took Stirling and stormed Dundee, and the country was occupied.
+    facts:
+      - [Battle of Dunbar, "3 September 1650, English victory"]
+      - [Charles II crowned, "1 January 1651, Scone"]
+      - [Battle of Worcester, "3 September 1651, Parliamentarian victory"]
+    side_names:
+      sco: Scots and Charles II
+    move_names:
+      sco: Scottish and Royalist moves
+    markers:
+      - kind: battle
+        side: parl
+        name: Battle of Dunbar
+        date: 3 September 1650
+        text: Cromwell attacked at dawn before the Scots had deployed and rolled up their line.
+        lonlat: [-2.484, 55.984]
+      - kind: taken
+        side: parl
+        name: Edinburgh Castle
+        date: December 1650
+        text: The castle surrendered to Cromwell on 24 December after a three-month siege.
+        lonlat: [-3.201, 55.949]
+        lp: b
+      - kind: event
+        side: sco
+        name: Scone
+        date: 1 January 1651
+        text: Charles II was crowned King of Scots, the last coronation in Scotland.
+        lonlat: [-3.438, 56.423]
+      - kind: battle
+        side: parl
+        name: Battle of Inverkeithing
+        date: 20 July 1651
+        text: An English force under John Lambert beat the Scots in Fife, outflanking the Scottish army at Stirling.
+        lonlat: [-3.416, 56.048]
+        lp: b
+      - kind: siege
+        side: parl
+        name: Dundee
+        date: 1 September 1651
+        text: Monck stormed the town, and many of the garrison and townspeople were killed.
+        lonlat: [-2.97, 56.461]
+      - kind: battle
+        side: parl
+        name: Battle of Worcester
+        date: 3 September 1651
+        text: Cromwell’s much larger army attacked across the Severn and Teme and broke into the city. It was the last major battle of the wars.
+        lonlat: [-2.221, 52.189]
+      - kind: event
+        name: Boscobel
+        date: September 1651
+        text: Charles hid in an oak tree in the grounds of Boscobel House while Parliamentarian soldiers searched the woods.
+        lonlat: [-2.242, 52.672]
+    arrows:
+      - side: parl
+        label: Cromwell
+        via: [[-2.0, 55.77], [-2.5, 55.98], [-3.15, 55.94]]
+      - side: sco
+        label: Charles II
+        via: [[-3.94, 56.12], [-2.93, 54.89], [-2.59, 53.39], [-2.23, 52.21]]
+      - side: parl
+        label: Cromwell
+        via: [[-3.2, 56.0], [-1.6, 54.97], [-1.1, 53.96], [-2.17, 52.2]]
+  - title: The Cromwellian settlement
+    date: 1651–1653
+    when: "1651-10-27"
+    borders: "1653-12-16"
+    countries: [ie, gb]
+    body:
+      - In Ireland, Ireton took Limerick in October 1651 after a long siege and died of plague a month later. Galway, the last city, surrendered on 12 May 1652, and the last organised Irish force gave up at Cloughoughter in County Cavan on 27 April 1653, though guerrillas fought on. War, famine and plague had cost Ireland perhaps a fifth of its people. Tens of thousands of Irish soldiers left to serve in Spain and France, and thousands of prisoners and destitute people were shipped as servants to the colonies, Barbados above all.
+      - The Act for the Settlement of Ireland of August 1652 confiscated the land of those who had fought against Parliament, to pay the soldiers and the investors who had financed the war. Catholic landowners allowed to keep any land were to be moved west of the Shannon, to Connacht and Clare, and by some estimates Catholic ownership fell to about 8%. Scotland was declared united with the Commonwealth in February 1652 and held down by Monck’s garrisons. In England Cromwell dissolved the Rump in April 1653, and on 16 December he became Lord Protector of England, Scotland and Ireland.
+    facts:
+      - [Galway surrenders, "12 May 1652"]
+      - [Act for the Settlement of Ireland, "12 August 1652"]
+      - [Lord Protector, "Oliver Cromwell, from 16 December 1653"]
+    markers:
+      - kind: siege
+        side: parl
+        name: Limerick
+        date: June–October 1651
+        text: Ireton’s army starved the city into surrender on 27 October; plague killed many inside and outside the walls.
+        lonlat: [-8.624, 52.665]
+      - kind: siege
+        side: parl
+        name: Galway
+        date: August 1651 – May 1652
+        text: The last city held by Irish Catholic forces surrendered after hunger and plague.
+        lonlat: [-9.042, 53.273]
+      - kind: taken
+        side: parl
+        name: Cloughoughter
+        date: 27 April 1653
+        text: Philip O’Reilly and the remnant of the Ulster army surrendered at the island castle in Lough Oughter.
+        lonlat: [-7.45, 54.02]
+      - kind: event
+        side: parl
+        name: Edinburgh
+        date: 4 February 1652
+        text: Commonwealth commissioners proclaimed the Tender of Union at the Mercat Cross, ending Scotland’s separate Parliament.
+        lonlat: [-3.19, 55.95]
+      - kind: event
+        side: parl
+        name: Westminster
+        date: 16 December 1653
+        text: Cromwell was installed as Lord Protector under the Instrument of Government, a written constitution drawn up by army officers.
+        lonlat: [-0.125, 51.5]
+    areas:
+      - style: outline
+        side: irl
+        label: Connacht and Clare, set aside for transplanted Catholic landowners
+        atoms: [IE-G, IRL-5568, IE-MO, IE-SO, IE-RN, IE-LM, IE-CE]

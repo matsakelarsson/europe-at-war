@@ -1,0 +1,177 @@
+id: albigensian-crusade
+name: Albigensian Crusade
+start: "1209-06-24"
+end: "1229-04-12"
+tier: B
+summary: A crusade called by Pope Innocent III against the Cathar heretics of Languedoc and the southern lords who tolerated them. Northern French barons led by Simon de Montfort massacred Béziers and took the lands of the Trencavel family and most of the County of Toulouse, but the southerners fought back, and only the royal crusade of Louis VIII forced Count Raymond VII to accept the Treaty of Paris in 1229, which brought Languedoc under the French crown.
+countries: [fr, es]
+sides:
+  - id: cru
+    name: Crusaders and France
+    polities: [france]
+    ink: navy
+    moves: Crusader moves
+    success: Crusader success
+  - id: tou
+    name: Toulouse and its allies
+    polities: [toulouse, aragon]
+    ink: orange
+    moves: Southern moves
+    success: Southern success
+notes:
+  - The Cathars, whom their enemies called Albigensians after the town of Albi, held that the material world was the work of an evil principle and rejected the Catholic Church and its sacraments; their leaders, the perfects, were known to their followers as good men and good women. How organised and widespread the movement was is debated by historians.
+  - The chief sources are the crusade’s chronicler Peter of Vaux-de-Cernay, the Song of the Albigensian Crusade (in Occitan, its first part by a pro-crusade author and its second by a southern one) and William of Puylaurens.
+sources:
+  - title: Albigensian Crusade (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Albigensian_Crusade
+  - title: Massacre at Béziers (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Massacre_at_B%C3%A9ziers
+  - title: Siege of Minerve (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Minerve
+  - title: Battle of Muret (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Muret
+  - title: Siege of Toulouse (1217–1218) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Toulouse_(1217%E2%80%931218)
+  - title: Siege of Avignon (1226) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Avignon_(1226)
+  - title: Treaty of Paris (1229) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Paris_(1229)
+  - title: Albigensian Crusade (Britannica)
+    url: https://www.britannica.com/event/Albigensian-Crusade
+steps:
+  - title: Béziers and Carcassonne
+    date: 1208–1211
+    when: "1209-07-22"
+    borders: "1211-05"
+    countries: [fr]
+    body:
+      - In the towns and castles of Languedoc many people followed the Cathars, and local lords, among them Count Raymond VI of Toulouse, tolerated them. On 14 January 1208 the papal legate Pierre de Castelnau was murdered near Saint-Gilles by a man thought to be in Raymond’s service, and Pope Innocent III called a crusade, promising the crusaders the lands of heretics and their protectors. Raymond did public penance at Saint-Gilles and joined the crusade himself, so the army of northern barons that left Lyon on 24 June 1209 turned against his nephew, Raymond-Roger Trencavel, viscount of Béziers and Carcassonne.
+      - On 22 July, after a sortie by the defenders, the crusaders’ camp followers broke into Béziers and the army sacked it, killing men, women and children, many of them in the churches where they had taken refuge. The legates told the pope that almost 20,000 died, surely an exaggeration. A generation later a German monk put in the mouth of the abbot Arnaud Amalric the words “Kill them all; God will know his own.” Carcassonne was besieged from 1 August; Trencavel was seized while negotiating, and the city surrendered on 15 August. Simon de Montfort, a baron from near Paris, took his lands. At Minerve in 1210 and Lavaur in 1211 hundreds of Cathars were burned.
+    facts:
+      - [Massacre at Béziers, 22 July 1209]
+      - [Carcassonne surrenders, 15 August 1209]
+      - [Cathars burned, "140 at Minerve (1210), some 300–400 at Lavaur (1211)"]
+    markers:
+      - kind: event
+        name: Saint-Gilles
+        date: 14 January 1208
+        text: Pierre de Castelnau was killed on the banks of the Rhône after a stormy meeting with Raymond VI. In June 1209 Raymond was scourged before the abbey church here as a penitent.
+        lonlat: [4.431, 43.678]
+      - kind: taken
+        side: cru
+        name: Béziers
+        date: 22 July 1209
+        text: The townspeople had refused to hand over some 200 named heretics. The city was plundered and burned.
+        lonlat: [3.219, 43.348]
+      - kind: taken
+        side: cru
+        name: Carcassonne
+        date: 15 August 1209
+        text: Short of water and crowded with refugees, the city surrendered after two weeks. Its people were allowed to leave with only the clothes they wore. Trencavel died in his own prison that November.
+        lonlat: [2.364, 43.207]
+      - kind: taken
+        side: cru
+        name: Minerve
+        date: 22 July 1210
+        text: The hilltop town surrendered when a siege engine destroyed its main well. The 140 perfects who refused to recant were burned.
+        lonlat: [2.746, 43.354]
+      - kind: taken
+        side: cru
+        name: Lavaur
+        date: 3 May 1211
+        text: After the town was stormed, its lady, Giraude, was thrown into a well and stoned, her brother and some 80 knights were killed, and several hundred Cathars were burned.
+        lonlat: [1.819, 43.699]
+    arrows:
+      - side: cru
+        label: Crusaders, 1209
+        via: [[4.83, 45.76], [4.75, 44.7], [3.88, 43.62], [3.25, 43.36]]
+      - side: cru
+        via: [[3.2, 43.34], [2.8, 43.25], [2.39, 43.21]]
+    areas:
+      - style: occupied
+        side: cru
+        label: Trencavel lands taken by the crusaders, 1209
+        atoms: [FR-34, FR-11, FR-81]
+  - title: Muret and the death of Simon de Montfort
+    date: 1211–1218
+    when: "1213-09-12"
+    borders: "1218-06-25"
+    countries: [fr, es]
+    body:
+      - Simon turned on Raymond VI himself, whom the legates had excommunicated again. He failed to take Toulouse in 1211, but by 1212 he held most of the county outside the city. King Peter II of Aragon, fresh from the great victory over the Almohads at Las Navas de Tolosa, was overlord of many of the southern lords and Raymond’s brother-in-law, and he crossed the Pyrenees to defend them. In September 1213 he and Raymond, with the counts of Foix and Comminges, were besieging the little town of Muret when Simon slipped in with his knights. On 12 September they charged out, Peter was killed in the mêlée, and the southern army broke; many men drowned in the Garonne.
+      - In 1215 the Fourth Lateran Council gave Raymond’s lands to Simon. But Raymond and his son, the future Raymond VII, came back. In 1216 the young Raymond took Beaucaire on the Rhône and held it against Simon, and in September 1217 Raymond VI was welcomed back into Toulouse. Simon besieged the city for nine months. On 25 June 1218, as he went to help his wounded brother, he was killed by a stone from a siege engine, worked, says the Song of the crusade, by the ladies, girls and women of Toulouse. His son Amaury lifted the siege a month later.
+    facts:
+      - [Battle of Muret, "12 September 1213, Peter II of Aragon killed"]
+      - [Fourth Lateran Council, "1215, gives Toulouse to Simon de Montfort"]
+      - [Death of Simon de Montfort, "25 June 1218, outside Toulouse"]
+    markers:
+      - kind: battle
+        side: cru
+        name: Battle of Muret
+        date: 12 September 1213
+        text: Simon’s much smaller army, most of it mounted knights, routed the coalition. The death of Peter II ended Aragon’s ambitions north of the Pyrenees.
+        lonlat: [1.333, 43.467]
+      - kind: held
+        side: tou
+        name: Beaucaire
+        date: May–August 1216
+        text: The young Raymond besieged the crusader garrison in the castle while Simon besieged him in the town. Simon gave up, his first real defeat.
+        lonlat: [4.644, 43.808]
+      - kind: siege
+        side: tou
+        name: Toulouse
+        date: September 1217 – July 1218
+        text: The townspeople rebuilt their walls and held off the crusaders until Simon’s death broke the siege.
+        lonlat: [1.444, 43.604]
+    arrows:
+      - side: tou
+        label: Peter II
+        via: [[0.9, 42.75], [1.1, 43.1], [1.31, 43.44]]
+      - side: cru
+        label: Simon
+        via: [[2.03, 43.19], [1.6, 43.27], [1.36, 43.46]]
+  - title: The king’s crusade and the Treaty of Paris
+    date: 1219–1229
+    when: "1226-06-10"
+    borders: "1229-04-12"
+    countries: [fr]
+    body:
+      - In 1219 Prince Louis of France led an army south and took Marmande, where the crusaders massacred the townspeople, but he failed before Toulouse. Raymond VI died in 1222, and his son Raymond VII and the count of Foix won back most of the south; in 1224 Amaury de Montfort gave up Carcassonne and ceded his claims to the crown. In 1226 Louis, now King Louis VIII, came again with a royal crusade down the Rhône. Avignon, an imperial city, closed its gates and was besieged from 10 June until it surrendered on 9 September, and most of Languedoc submitted without a fight. On the way home Louis died of dysentery at Montpensier on 8 November.
+      - The royal commander Humbert de Beaujeu kept up the war, laying waste the country around Toulouse, until Raymond VII made peace. By the Treaty of Paris, agreed at Meaux and sealed in Paris on 12 April 1229, the day Raymond did penance at Notre-Dame, he kept Toulouse for life but gave up his eastern lands to the crown, and his daughter Joan was to marry Alphonse, a brother of Louis IX, with the rest of the county to pass to them. When both died childless in 1271, it went to the crown. The Inquisition, set up in the early 1230s, hunted the remaining Cathars; in 1244 more than 200 were burned after the fall of their fortress of Montségur.
+    facts:
+      - [Siege of Avignon, "10 June – 9 September 1226"]
+      - [Treaty of Paris, "12 April 1229"]
+      - [Montségur falls, "March 1244, more than 200 Cathars burned"]
+    markers:
+      - kind: taken
+        side: cru
+        name: Marmande
+        date: June 1219
+        text: After the town surrendered to Prince Louis and Amaury de Montfort, its people were massacred, though its commander was spared.
+        lonlat: [0.165, 44.5]
+      - kind: siege
+        side: cru
+        name: Avignon
+        date: 10 June – 9 September 1226
+        text: The city on the Rhône, then in the Empire, refused to let the royal army pass. It surrendered on terms after three months, and its walls were pulled down.
+        lonlat: [4.808, 43.95]
+      - kind: event
+        name: Montpensier
+        date: 8 November 1226
+        text: Louis VIII died here in Auvergne on his way back to Paris, leaving the twelve-year-old Louis IX as king.
+        lonlat: [3.215, 46.04]
+      - kind: taken
+        side: cru
+        name: Montségur
+        date: 16 March 1244
+        text: The mountain stronghold of the last Cathar leaders surrendered after a ten-month siege. Those who would not recant were burned below the castle.
+        lonlat: [1.832, 42.876]
+    arrows:
+      - side: cru
+        label: Louis VIII, 1226
+        via: [[4.83, 45.76], [4.8, 44.9], [4.81, 43.98]]
+    areas:
+      - style: gained
+        side: cru
+        label: Ceded to the French crown, 1229
+        atoms: [FR-11, FR-34, FR-30]

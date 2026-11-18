@@ -1,0 +1,175 @@
+id: war-in-the-vendee
+name: War in the Vendée
+start: "1793-03"
+end: "1796-07"
+tier: B
+summary: A royalist and Catholic rising in western France, south of the lower Loire, against the French Republic. Sparked by conscription in March 1793, the Catholic and Royal Army won a string of victories that summer but was destroyed after crossing the Loire, and the Republic’s repression killed tens of thousands of prisoners and civilians before the last leaders were captured and shot in 1796.
+countries: [fr, gb]
+sides:
+  - id: ve
+    name: Vendéans and royalists
+    polities: []
+    ink: red
+    moves: Vendéan moves
+    success: Vendéan success
+  - id: fr
+    name: The French Republic
+    polities: [france]
+    ink: navy
+    moves: Republican moves
+    success: Republican success
+notes:
+  - The insurgent region, the “Vendée militaire”, took in parts of four départements, Vendée, Maine-et-Loire, Loire-Inférieure (today Loire-Atlantique) and Deux-Sèvres. North of the Loire a related guerrilla war, the Chouannerie, went on in Brittany, Maine and Normandy until 1800, and smaller risings followed in the Vendée in 1799, 1815 and 1832.
+  - Estimates of the dead have varied widely and are still debated. One recent estimate is about 200,000 in all, some 170,000 of them people of the insurgent region, a fifth or more of its population.
+sources:
+  - title: War in the Vendée (Wikipedia)
+    url: https://en.wikipedia.org/wiki/War_in_the_Vend%C3%A9e
+  - title: Virée de Galerne (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Vir%C3%A9e_de_Galerne
+  - title: Drownings at Nantes (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Drownings_at_Nantes
+  - title: Infernal columns (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Infernal_columns
+steps:
+  - title: The Catholic and Royal Army
+    date: March – December 1793
+    when: "1793-03-10"
+    borders: "1793-12-23"
+    countries: [fr]
+    body:
+      - In March 1793, when the Republic ordered a levy of 300,000 men for its armies, the countryside south of the lower Loire rose in revolt. Its peasants already resented the Revolution’s treatment of the Church, which had driven out the priests who refused to swear the oath to the new constitution. At Machecoul insurgents killed well over a hundred republicans in the first weeks. The rebels chose leaders from among themselves, such as the carter Jacques Cathelineau and the gamekeeper Jean-Nicolas Stofflet, and from the local nobles, such as Charette, Bonchamps, d’Elbée and Henri de La Rochejaquelein. Their Catholic and Royal Army took Thouars, Fontenay, Saumur and Angers in May and June, but its attack on Nantes on 29 June failed, and Cathelineau was mortally wounded.
+      - The Convention ordered the Vendée to be destroyed and sent in the veteran Army of Mainz, freed by that city’s surrender. The Vendéans won at Torfou in September but were beaten at Cholet on 17 October, where d’Elbée and Bonchamps were mortally wounded; Bonchamps, dying, ordered his men to spare some 5,000 republican prisoners. Perhaps 60,000 to 100,000 people, soldiers with women, children and old people, then crossed the Loire at Saint-Florent-le-Vieil, hoping to meet a British fleet. They failed to take the port of Granville in November and turned back, and were destroyed at Le Mans on 12–13 December and at Savenay on 23 December, where thousands were killed in the fighting and the massacres that followed.
+    facts:
+      - [Battle of Saumur, "9 June 1793, Vendéan victory"]
+      - [Battle of Cholet, "17 October 1793, republican victory"]
+      - [Battle of Savenay, "23 December 1793, the Catholic and Royal Army destroyed"]
+    markers:
+      - kind: event
+        name: Machecoul
+        date: March – April 1793
+        text: In one of the first acts of the rising, insurgents imprisoned and then killed republican townspeople and supporters of the constitutional clergy.
+        lonlat: [-1.822, 46.994]
+      - kind: taken
+        side: ve
+        name: Saumur
+        date: 9 June 1793
+        text: The Vendéans stormed the town and its castle, taking thousands of prisoners and many guns, and went on to take Angers.
+        lonlat: [-0.077, 47.26]
+      - kind: held
+        side: fr
+        name: Nantes
+        date: 29 June 1793
+        text: The Vendéans and Charette’s men attacked the city from several sides and were beaten off. Cathelineau, chosen as the army’s first general-in-chief, died of his wounds.
+        lonlat: [-1.553, 47.218]
+        lp: l
+      - kind: battle
+        side: ve
+        name: Battle of Torfou
+        date: 19 September 1793
+        text: The Vendéans beat the advance guard of the Army of Mainz under Kléber.
+        lonlat: [-1.124, 47.036]
+        lp: b
+      - kind: battle
+        side: fr
+        name: Battle of Cholet
+        date: 17 October 1793
+        text: The decisive republican victory south of the Loire. The beaten army and its followers fled to the river.
+        lonlat: [-0.878, 47.06]
+      - kind: event
+        side: ve
+        name: Saint-Florent-le-Vieil
+        date: 18 October 1793
+        text: The crossing of the Loire, the start of the march known as the Virée de Galerne. Here Bonchamps pardoned the republican prisoners before he died.
+        lonlat: [-1.015, 47.362]
+        lp: t
+      - kind: held
+        side: fr
+        name: Granville
+        date: 14 November 1793
+        text: The Vendéans failed to storm the walls of the port, where they had hoped for British help.
+        lonlat: [-1.594, 48.837]
+        lp: l
+      - kind: battle
+        side: fr
+        name: Battle of Le Mans
+        date: 12–13 December 1793
+        text: The republicans broke into the town, and thousands of Vendéans, many of them women and children, were killed in the streets and on the roads out.
+        lonlat: [0.198, 48.008]
+      - kind: battle
+        side: fr
+        name: Battle of Savenay
+        date: 23 December 1793
+        text: The remains of the army were cut to pieces short of the Loire, and many prisoners were shot.
+        lonlat: [-1.941, 47.362]
+        lp: l
+    arrows:
+      - side: ve
+        label: Virée de Galerne
+        via: [[-1.02, 47.36], [-0.77, 48.07], [-1.36, 48.68], [-1.57, 48.82]]
+      - side: ve
+        via: [[-1.57, 48.8], [-1.2, 48.35], [-0.55, 47.5], [0.17, 47.99]]
+      - side: ve
+        via: [[0.15, 48.0], [-0.77, 48.07], [-1.2, 47.37], [-1.9, 47.36]]
+    areas:
+      - style: occupied
+        side: ve
+        label: The insurgent region (Vendée militaire), 1793
+        polygon: [[-2.17, 47.12], [-1.6, 47.17], [-1.0, 47.34], [-0.55, 47.38], [-0.2, 47.05], [-0.25, 46.75], [-0.75, 46.5], [-1.3, 46.42], [-1.8, 46.5], [-2.1, 46.85]]
+  - title: Terror and pacification
+    date: December 1793 – July 1796
+    when: "1793-12-24"
+    borders: "1796-03-29"
+    countries: [fr, gb]
+    body:
+      - The Republic’s revenge fell on prisoners and civilians alike. In Nantes the representative on mission Jean-Baptiste Carrier had prisoners, among them priests, women and children, drowned in the Loire from November 1793 to February 1794, perhaps 4,000 or more, and thousands more were shot or guillotined there and at Angers. From January 1794 General Louis-Marie Turreau sent twelve “infernal columns” across the region with orders to burn villages and kill the rebels, and they killed tens of thousands of people, many of them not rebels at all; at Les Lucs-sur-Boulogne in February some hundreds of villagers were massacred. The killing revived the revolt, and Charette and Stofflet fought on in the bocage.
+      - After the fall of Robespierre in July 1794 the Republic changed course. By the Treaty of La Jaunaye on 17 February 1795 Charette made peace in return for an amnesty, freedom of worship and exemption from conscription, and Stofflet followed in May. But in June 1795 British ships landed émigré regiments on the Quiberon peninsula in Brittany, and Charette took up arms again. General Lazare Hoche crushed the landing in July and set about pacifying the west with both force and concessions. Stofflet was captured and shot at Angers on 25 February 1796, and Charette, taken in the woods near La Chabotterie, was shot at Nantes on 29 March. By the summer the west was at peace.
+    facts:
+      - [Drownings at Nantes, "November 1793 – February 1794"]
+      - [Treaty of La Jaunaye, "17 February 1795"]
+      - [Charette shot at Nantes, "29 March 1796"]
+    markers:
+      - kind: event
+        name: Drownings at Nantes
+        date: November 1793 – February 1794
+        text: Prisoners were packed into boats that were scuttled in the Loire, on the orders of Carrier, who was himself tried and guillotined in December 1794.
+        lonlat: [-1.553, 47.218]
+        lp: l
+      - kind: event
+        name: Les Lucs-sur-Boulogne
+        date: 28 February 1794
+        text: One of the worst massacres by the infernal columns. Several hundred villagers, many of them women and children, were killed.
+        lonlat: [-1.492, 46.845]
+        lp: b
+      - kind: treaty
+        name: Treaty of La Jaunaye
+        date: 17 February 1795
+        text: Signed at a manor outside Nantes by Charette and representatives of the Convention.
+        lonlat: [-1.5, 47.19]
+        lp: b
+      - kind: battle
+        side: fr
+        name: Quiberon
+        date: 27 June – 21 July 1795
+        text: Hoche’s troops trapped the émigré regiments and Chouans on the peninsula. More than 700 of the captured émigrés were shot.
+        lonlat: [-3.119, 47.484]
+      - kind: event
+        side: fr
+        name: Stofflet shot
+        date: 25 February 1796
+        text: Stofflet, betrayed and captured, was tried and shot in Angers.
+        lonlat: [-0.552, 47.471]
+      - kind: taken
+        side: fr
+        name: Charette captured
+        date: 23 March 1796
+        text: Hunted for months, Charette was wounded and taken near the manor of La Chabotterie. He was shot in Nantes six days later.
+        lonlat: [-1.419, 46.894]
+    arrows:
+      - side: fr
+        label: Infernal columns
+        via: [[-0.3, 47.1], [-0.75, 47.0], [-1.2, 46.95]]
+      - side: fr
+        via: [[-0.45, 46.65], [-0.9, 46.72], [-1.35, 46.8]]
+      - side: ve
+        label: Émigré landing
+        via: [[-3.55, 47.05], [-3.3, 47.33], [-3.14, 47.48]]

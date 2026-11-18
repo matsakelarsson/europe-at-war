@@ -183,24 +183,27 @@ date, from two sources merged by date:
   | 1815–1945 | Schleswig-Holstein | `denmark.yaml` |
   | 1772–today | Poland, Lithuania, Latvia, Estonia, Belarus, Kaliningrad, right-bank Ukraine | `poland-lithuania.yaml` |
   | 800–today | Outer Hebrides, Orkney, Shetland, the Isle of Man | `british-isles.yaml` |
+  | 800–today | Great Britain, Ireland, Jersey, Sark | `british-isles.yaml` |
+  | 1066–today | France, Belgium, the Netherlands, Luxembourg | `france-low-countries.yaml` (also `central-europe.yaml` for Alsace-Lorraine, `italy.yaml` for Savoy and Nice 1860) |
   | 1236–today | European Russia and left-bank and southern Ukraine | `rus-and-russia.yaml`, `russia.yaml`, `ww2-east.yaml` |
   | 1801–today | Georgia, Armenia, Azerbaijan, the northern Caucasus, Kars–Ardahan–Artvin | `caucasus.yaml` |
   | 1809–today | Finland and Åland | `finland.yaml` |
   | 1812–today | Bessarabia and Transnistria (Moldova, Budjak, Khotyn) | `bessarabia.yaml` |
 
-  Other event files (`france.yaml`, `turkey.yaml`, `balkans.yaml`,
-  `italy.yaml`, `central-europe.yaml`, the England part of
-  `british-isles.yaml`, and `rus-and-russia.yaml` before 1236) correct
+  Other event files (`turkey.yaml`, `balkans.yaml`, `italy.yaml`,
+  `central-europe.yaml`, and `rus-and-russia.yaml` before 1236) correct
   drafts outside any curated range; there, the next keyframe can still
   override an event. `balkans.yaml`, `italy.yaml`, `central-europe.yaml`
-  (now only Belgium, Austria-Hungary and Alsace-Lorraine) and `turkey.yaml`
+  (now only Austria-Hungary and Alsace-Lorraine) and `turkey.yaml`
   are first passes made for the Russia wave's maps (historical-basemaps has
   no snapshot between 1815 and 1880); the later waves replace them with
   curated ranges. For the German lands wave, `italy.yaml` gained the
   Napoleonic Kingdom of Italy and Habsburg Lombardy–Venetia (1797–1866), and
   `balkans.yaml` the Illyrian Provinces (1809–1814). `german-lands.yaml` also
   opens with a few events before 1240 (907, 948, 962, 976, 983) that correct
-  the drafts until the next keyframe.
+  the drafts until the next keyframe, and `france-low-countries.yaml` does the
+  same before 1066 (Verdun 843, Brittany 851, the kingdoms of Burgundy 879/888,
+  Ribemont 880, Lotharingia in the Empire 962, Burgundy in the Empire 1033).
 - **What the base map shows.** The base map follows the borders states
   recognised at the time, by treaty or in practice. Military occupation,
   breakaway regions and front lines are drawn as areas in a war's steps,
@@ -219,6 +222,22 @@ date, from two sources merged by date:
   states are shown; the many small states (ecclesiastical states, imperial
   cities, counts) stay grouped as `hre` until 1803–1806. Habsburg Hungary,
   Bohemia and the Austrian lands are one polity (`habsburg`) from 1526.
+  The Low Countries follow the same rule until they pass to Burgundy
+  (1384–1443); Liège, Lorraine and Habsburg Upper Alsace are shown from 1500.
+- **France** is one kingdom: the great fiefs (Normandy, Aquitaine, Champagne…)
+  are not shown, except the lands of the English crown (Normandy 1066–1144, the
+  Angevin lands 1154–1204/24, Gascony to 1453, the Brétigny lands 1360–1372,
+  Lancastrian France 1419–1450, Calais 1347–1558), Brittany (to 1532), Flanders
+  (to 1384), Toulouse (to 1229/1271) and the Valois Burgundian state
+  (1363–1477). Imperial and foreign lands are separate until they joined France.
+- **The British Isles.** The Anglo-Saxon kingdoms and the Danelaw until England
+  (927/954; Mercian client kingdoms are shown as Mercia); Wales until 1283, with
+  the Marcher lordships under the English crown from 1070/1093; Pictland, Dál
+  Riata and Strathclyde becoming Alba/Scotland; Viking Dublin; the Lordship of
+  Ireland and the Irish lordships (Gaelicised Anglo-Norman lordships such as
+  Desmond count as Irish) until the Tudor conquest (1556–1603); the
+  Commonwealth union 1653/54–1660; Great Britain 1707; the United Kingdom 1801;
+  the Irish Free State 1922.
 - **Checking borders.** After a build, `node tools/owners-at.mjs <date>
   [polities…] [--atoms <regex>]` lists who owns what on a date, and
   `node tools/owner-history.mjs <regex> [from] [to]` lists every change to the
@@ -247,6 +266,10 @@ date, from two sources merged by date:
   `DE-BY~bav` Old Bavaria, `DE-BY~bav~opf` Upper Palatinate, `DE-SN~olaus` Upper
   Lusatia, `DE-NW~lb` the left bank of the Rhine, `DE-NW~mark`, `DE-HE~hk`
   Hesse-Kassel, `DE-BW~baden~vorder` the Breisgau, and so on (see atoms.json).
+  In the west: `FR-62~calais` the Pale of Calais, `FR-59~flandre` Walloon and
+  maritime Flanders (Lille, Douai, Dunkirk; the rest of `FR-59` is Hainaut and
+  the Cambrésis), `FR-57~metz`, `FR-64~bearn`, `NL-ZE~vlaanderen` Zeelandic
+  Flanders and `BE-WLG~eupen` Eupen-Malmedy.
 - **Splits.** `content/borders/splits/*.geojson`, applied in file-name order:
   polygons in lon/lat with `{id: "<atom>~<name>", from: "<atom>", name}`. The
   part of the atom inside the polygon becomes the new atom (it may cut an atom

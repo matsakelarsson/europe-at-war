@@ -1,0 +1,340 @@
+id: crimean-war
+name: Crimean War
+start: "1853-10"
+end: "1856-03-30"
+tier: A
+summary: A war in which the Ottoman Empire, Britain, France and later Sardinia fought the Russian Empire, fearing Russian power over the declining Ottoman state. Fought on the Danube, in the Caucasus, in the Baltic and above all in Crimea, where Sevastopol fell after a siege of nearly a year, it ended with the Treaty of Paris in 1856, which barred warships from the Black Sea.
+countries: [ua, ru, tr, ro, bg, ge, fi, md, gb, fr, it]
+sides:
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: tr
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+  - id: al
+    name: Britain, France and Sardinia
+    polities: [united-kingdom, france, savoy]
+    ink: navy
+    moves: British and French moves
+    success: British and French success
+notes:
+  - Dates are New Style (Gregorian). Russia used the Julian calendar, then 12 days behind, so Russian sources date the Battle of Sinop to 18 November 1853 and the fall of the Malakhov to 27 August 1855.
+  - Numbers of dead are estimates. Most of the soldiers who died were killed by cholera, dysentery, typhus and the cold rather than in battle.
+  - Places in Crimea are given their usual English names of the time. Crimea is part of Ukraine; Sevastopol, Balaklava and Yevpatoria were then Russian.
+sources:
+  - title: Crimean War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Crimean_War
+  - title: Crimean War (Britannica)
+    url: https://www.britannica.com/event/Crimean-War
+  - title: Battle of Sinop (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sinop
+  - title: Battle of Oltenița (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Olteni%C8%9Ba
+  - title: Siege of Silistria (1854) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Silistria_(1854)
+  - title: Battle of Bomarsund (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Bomarsund
+  - title: Battle of Suomenlinna (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Suomenlinna
+  - title: Åland War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/%C3%85land_War
+  - title: Battle of the Alma (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Alma
+  - title: Battle of Balaclava (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Balaclava
+  - title: Battle of Inkerman (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Inkerman
+  - title: Siege of Sevastopol (1854–1855) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Sevastopol_(1854%E2%80%931855)
+  - title: Siege of Kars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kars
+  - title: Treaty of Paris (1856) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Paris_(1856)
+steps:
+  - title: From the holy places to Sinop
+    date: 1853
+    when: "1853-07"
+    borders: "1853-11-30"
+    countries: [ro, tr, ge, ru]
+    body:
+      - A quarrel between Catholic and Orthodox monks over the holy places in Palestine, backed by France and Russia, grew into a crisis when Nicholas I demanded the right to protect all the Orthodox subjects of the sultan. When the Ottomans refused, Russian troops occupied Moldavia and Wallachia in July 1853, and Britain and France sent fleets to the Dardanelles. The Ottoman Empire declared war in October. Omar Pasha’s army crossed the Danube and on 4 November held off a Russian attack at Oltenița.
+      - On 30 November Admiral Pavel Nakhimov’s squadron attacked an Ottoman squadron at anchor in Sinop on the Anatolian coast and destroyed it with explosive shells. Nearly 3,000 Ottomans were killed, and part of the town burned. In the Caucasus Russian forces defeated Ottoman armies at Akhaltsikhe and Başgedikler. In Britain the press called Sinop a massacre. In January 1854 the British and French fleets entered the Black Sea, and at the end of March both countries declared war on Russia.
+    facts:
+      - [Russian occupation of Moldavia and Wallachia, "July 1853 – August 1854"]
+      - [Battle of Sinop, "30 November 1853, Russian victory"]
+      - [Britain and France declare war, "27–28 March 1854"]
+    markers:
+      - kind: battle
+        side: tr
+        name: Battle of Oltenița
+        date: 4 November 1853
+        text: The first battle of the war. A Russian attack on Omar Pasha’s bridgehead was called off with heavy losses.
+        lonlat: [26.637, 44.087]
+      - kind: event
+        side: ru
+        name: Bucharest
+        date: July 1853
+        text: Russian troops under Prince Mikhail Gorchakov occupied the Wallachian capital.
+        lonlat: [26.104, 44.432]
+        lp: l
+      - kind: naval
+        side: ru
+        name: Battle of Sinop
+        date: 30 November 1853
+        text: Nakhimov’s ships sank or burned every Ottoman frigate and corvette in the harbour; only one steamer escaped.
+        lonlat: [35.15, 42.02]
+      - kind: battle
+        side: ru
+        name: Akhaltsikhe
+        date: 26 November 1853
+        text: A Russian force beat an Ottoman army advancing on the fortress from the south-west.
+        lonlat: [42.993, 41.643]
+      - kind: battle
+        side: ru
+        name: Battle of Başgedikler
+        date: 1 December 1853
+        text: About 10,000 Russians routed an Ottoman army more than three times their number near Kars.
+        lonlat: [43.559, 40.652]
+    arrows:
+      - side: ru
+        label: Gorchakov
+        via: [[28.0, 47.15], [27.3, 46.4], [26.6, 45.3], [26.15, 44.5]]
+      - side: ru
+        label: Nakhimov
+        via: [[33.5, 44.6], [34.3, 43.3], [35.1, 42.08]]
+    areas:
+      - style: occupied
+        side: ru
+        label: Occupied by Russia, July 1853 – 1854
+        atoms: [RO-AG, RO-B, RO-BR, RO-BZ, RO-CL, RO-DB, RO-DJ, RO-GJ, RO-GR, RO-IF, RO-IL, RO-MH, RO-OT, RO-PH, RO-TR, RO-VL, RO-BC, RO-BT, RO-GL, RO-IS, RO-NT, RO-VN, RO-VS]
+  - title: The Danube and Silistra
+    date: March – August 1854
+    when: "1854-03"
+    borders: "1854-08-01"
+    countries: [bg, ro, tr, ru, gb, fr]
+    body:
+      - In March 1854 Russian troops crossed the lower Danube into Dobruja, and in May an army of up to 90,000 under Field Marshal Ivan Paskevich laid siege to Silistra. The fortress was held by 12,000–18,000 Ottoman and Egyptian troops, helped by a few British officers, and it held out for six weeks. Meanwhile British and French troops landed at Varna, and Austria, alarmed by a Russian advance towards the Balkans, massed troops on its borders and demanded that Russia leave the principalities.
+      - On 23 June, hours before a planned assault, the Russians lifted the siege on Nicholas I’s orders and withdrew north of the Danube. Ottoman troops beat a Russian force on the islands at Giurgiu in July. By August the Russians had left Moldavia and Wallachia, which Austrian troops occupied until 1857. Cholera killed thousands of British and French soldiers around Varna and in a French expedition into Dobruja. With the Danube secure, the allies decided to attack Sevastopol, the base of Russia’s Black Sea Fleet.
+    facts:
+      - [Siege of Silistra, "11 May – 23 June 1854, Ottoman victory"]
+      - [Russian withdrawal from the principalities, "July – August 1854"]
+      - [Allied base at Varna, "from May 1854"]
+    markers:
+      - kind: siege
+        side: tr
+        name: Siege of Silistra
+        date: 11 May – 23 June 1854
+        text: The garrison beat off attacks for six weeks. Paskevich was injured, and the siege was lifted before the final assault.
+        lonlat: [27.261, 44.117]
+      - kind: battle
+        side: tr
+        name: Battle of Giurgiu
+        date: 3–8 July 1854
+        text: Ottoman troops crossed to the Danube islands and drove off the Russians, who were already withdrawing from Wallachia.
+        lonlat: [25.97, 43.9]
+      - kind: event
+        side: al
+        name: Varna
+        date: May – August 1854
+        text: The British and French armies gathered here. Cholera swept through their camps in the summer heat.
+        lonlat: [27.917, 43.208]
+    arrows:
+      - side: ru
+        label: Russian army
+        via: [[27.96, 45.25], [28.2, 44.9], [27.8, 44.4], [27.32, 44.14]]
+      - side: al
+        label: British and French
+        via: [[29.0, 41.2], [28.4, 42.2], [27.98, 43.15]]
+  - title: Bomarsund and Sveaborg in the Baltic
+    date: 1854–1855
+    when: "1854-05"
+    borders: "1855-08-11"
+    countries: [fi, ru, gb, fr]
+    body:
+      - In 1854 a large British fleet under Admiral Sir Charles Napier, joined by a French squadron, sailed into the Baltic to blockade Russia’s ports. It judged Kronstadt, the sea fortress guarding Saint Petersburg, too strong to attack. In the Gulf of Bothnia British ships burned tar, timber and shipping at Oulu and Raahe in Finland, but at Kokkola local men and soldiers drove off their boats. In August about 10,000 French troops and British marines landed in the Åland Islands and besieged the unfinished fortress of Bomarsund, which surrendered on 16 August and was blown up.
+      - The allies returned in 1855 under Admiral Richard Dundas and Rear-Admiral Charles Pénaud. Near Kronstadt several British ships were damaged by Russian sea mines, among the first used in war. On 9–11 August 1855 the fleet bombarded Sveaborg, the island fortress off Helsinki, for two days with mortars and rockets, causing fires and explosions, but made no attempt to land. Sweden, invited to join the allies, stayed neutral. After the war a convention attached to the Treaty of Paris forbade fortifications on Åland, and the islands remain demilitarised.
+    facts:
+      - [Fall of Bomarsund, "16 August 1854"]
+      - [Bombardment of Sveaborg, "9–11 August 1855"]
+      - [Åland demilitarised, "1856"]
+    markers:
+      - kind: held
+        side: ru
+        name: Kronstadt
+        date: 1854–1855
+        text: The allied admirals found the forts and minefields guarding Saint Petersburg too strong to attack.
+        lonlat: [29.775, 59.991]
+      - kind: siege
+        side: al
+        name: Bomarsund
+        date: 8–16 August 1854
+        text: French troops and British marines landed and took the towers one by one. The garrison of about 2,000 surrendered.
+        lonlat: [20.238, 60.212]
+      - kind: naval
+        name: Bombardment of Sveaborg
+        date: 9–11 August 1855
+        text: Allied mortar vessels shelled the fortress from beyond the range of its guns, but it did not surrender.
+        lonlat: [24.986, 60.148]
+      - kind: event
+        side: al
+        name: Oulu
+        date: June 1854
+        text: British landing parties burned ships, tar stores and the shipyards of the port, as they had a few days before at Raahe.
+        lonlat: [25.472, 65.014]
+      - kind: battle
+        side: ru
+        name: Kokkola
+        date: 7 June 1854
+        text: Townspeople and a small garrison drove off British boats at Halkokari and captured one of them.
+        lonlat: [23.08, 63.86]
+    arrows:
+      - side: al
+        label: Allied fleet, 1854
+        via: [[19.0, 58.8], [19.8, 59.6], [20.2, 60.15]]
+      - side: al
+        label: Allied fleet, 1855
+        via: [[22.0, 59.6], [23.8, 59.95], [24.95, 60.12]]
+  - title: The Alma, Balaclava and Inkerman
+    date: September – November 1854
+    when: "1854-09-14"
+    borders: "1854-11-05"
+    countries: [ua, ru, gb, fr, tr]
+    body:
+      - On 14 September 1854 more than 50,000 British, French and Ottoman troops landed at Kalamita Bay, north of Sevastopol. Six days later they drove Prince Aleksandr Menshikov’s army from the heights above the Alma, with some 9,000 killed and wounded on both sides. Instead of attacking at once, the allies marched round to the south of the city, the British taking Balaklava as their base and the French the bays near Kamiesch. The Russians sank ships across the harbour mouth, and sailors, soldiers and townspeople guided by the engineer Eduard Totleben built earthworks around the city. The siege began in October.
+      - On 25 October Russian forces attacked towards Balaklava. They took redoubts held by Ottoman troops, but the 93rd Highlanders, the “thin red line”, and the Heavy Brigade stopped their cavalry. A misunderstood order then sent the British Light Brigade charging down a valley into Russian guns, with heavy losses. On 5 November, in thick fog, Russian columns attacked the British on the heights at Inkerman. The fighting broke up into a “soldiers’ battle” until French troops arrived, and the Russians lost some 11,000 men. Then winter came, and a storm on 14 November sank supply ships at Balaklava.
+    facts:
+      - [Allied landing, "14 September 1854"]
+      - [Battle of the Alma, "20 September 1854, allied victory"]
+      - [Battle of Inkerman, "5 November 1854, allied victory"]
+    markers:
+      - kind: event
+        side: al
+        name: Kalamita Bay
+        date: 14 September 1854
+        text: The allied armies landed unopposed on the beaches south of Yevpatoria.
+        lonlat: [33.467, 45.05]
+      - kind: battle
+        side: al
+        name: Battle of the Alma
+        date: 20 September 1854
+        text: French troops climbed cliffs on the Russian left and British infantry stormed the heights, forcing Menshikov to retreat.
+        lonlat: [33.669, 44.831]
+      - kind: siege
+        name: Sevastopol
+        date: from October 1854
+        text: Russia’s main Black Sea naval base. Allied guns opened the first bombardment on 17 October.
+        lonlat: [33.523, 44.605]
+        lp: l
+      - kind: battle
+        name: Battle of Balaclava
+        date: 25 October 1854
+        text: The Russians kept the redoubts they had taken but failed to reach the British base. The Charge of the Light Brigade took place here.
+        lonlat: [33.602, 44.535]
+        lp: b
+      - kind: battle
+        side: al
+        name: Battle of Inkerman
+        date: 5 November 1854
+        text: British troops held the ridge in fog against much larger Russian forces until French reinforcements came up.
+        lonlat: [33.592, 44.585]
+    arrows:
+      - side: al
+        label: Allied armies
+        via: [[33.5, 45.0], [33.67, 44.85], [33.76, 44.65], [33.63, 44.53]]
+      - side: ru
+        label: Liprandi
+        via: [[33.82, 44.48], [33.72, 44.51], [33.64, 44.53]]
+  - title: The fall of Sevastopol
+    date: 1855
+    when: "1855-02"
+    borders: "1855-09-09"
+    countries: [ua, ru, gb, fr, tr, it]
+    body:
+      - Through the winter both armies suffered terribly from cold, hunger and disease. Reports by the war correspondent William Howard Russell turned British opinion against the government, which fell in January 1855, and Florence Nightingale led nurses at the army hospital at Scutari. Nicholas I died in March and was succeeded by Alexander II. The Kingdom of Sardinia joined the allies and sent some 18,000 men. Ottoman troops beat off a Russian attack on Yevpatoria in February, and in May an allied expedition took Kerch and opened the Sea of Azov.
+      - An allied assault on the Malakhov and the Redan on 18 June failed with heavy losses. Admiral Nakhimov was mortally wounded in July. A Russian attempt to break the siege was beaten by French and Sardinian troops on the Chernaya on 16 August. After a massive bombardment, French troops under General Patrice de MacMahon stormed the Malakhov on 8 September, while the British attack on the Redan failed. That night the Russians blew up their forts, sank their remaining ships and withdrew across a pontoon bridge to the north side of the harbour.
+    facts:
+      - [Siege of Sevastopol, "October 1854 – September 1855"]
+      - [Battle of the Chernaya, "16 August 1855, allied victory"]
+      - [Malakhov stormed, "8 September 1855"]
+    markers:
+      - kind: battle
+        side: tr
+        name: Battle of Yevpatoria
+        date: 17 February 1855
+        text: Omar Pasha’s Ottoman troops held the town against a Russian assault.
+        lonlat: [33.381, 45.212]
+      - kind: taken
+        side: al
+        name: Kerch
+        date: May 1855
+        text: An allied landing took the town and opened the Sea of Azov to raids on Russian supply ports.
+        lonlat: [36.471, 45.362]
+      - kind: battle
+        side: al
+        name: Battle of the Chernaya
+        date: 16 August 1855
+        text: French and Sardinian troops beat back a Russian attack across the river, the last Russian attempt to relieve the city.
+        lonlat: [33.647, 44.557]
+      - kind: taken
+        side: al
+        name: Malakhov
+        date: 8 September 1855
+        text: The French took the key bastion by surprise at midday, making the south side of Sevastopol untenable. The Russians evacuated it that night.
+        lonlat: [33.549, 44.604]
+        lp: l
+    arrows:
+      - side: ru
+        label: Gorchakov
+        via: [[33.78, 44.63], [33.72, 44.58], [33.66, 44.56]]
+      - side: al
+        label: Kerch expedition
+        via: [[33.6, 44.45], [35.2, 44.6], [36.42, 45.3]]
+  - title: Kars and the Treaty of Paris
+    date: 1855–1856
+    when: "1855-06"
+    borders: "1856-03-30"
+    countries: [tr, ge, md, ua, ru, gb, fr]
+    body:
+      - In June 1855 General Nikolay Muravyov besieged Kars, the main Ottoman fortress in eastern Anatolia, defended by Ottoman troops under the British general William Fenwick Williams. A Russian assault on 29 September was beaten off with heavy losses. Omar Pasha landed an army in Abkhazia to relieve the city by way of Mingrelia but advanced too slowly, and on 28 November the starving garrison surrendered. Facing an Austrian threat to join the allies, Alexander II agreed to make peace.
+      - By the Treaty of Paris, signed on 30 March 1856, the Black Sea was made neutral and closed to warships, with no naval arsenals on its shores. Russia returned Kars and gave the southern part of Bessarabia, at the mouths of the Danube, to Moldavia, and the allies returned Sevastopol. Moldavia and Wallachia were placed under the guarantee of all the powers instead of Russia’s protection. Hundreds of thousands of soldiers had died, most of them from disease. Defeat helped push Alexander II towards reforms, above all the abolition of serfdom in 1861.
+    facts:
+      - [Kars surrenders, "28 November 1855"]
+      - [Treaty of Paris, "30 March 1856"]
+      - [Black Sea, "neutralised; closed to warships until 1871"]
+    markers:
+      - kind: siege
+        side: ru
+        name: Siege of Kars
+        date: June – 28 November 1855
+        text: The garrison repulsed a seven-hour assault in September but was starved into surrender. Muravyov took the name Muravyov-Karsky.
+        lonlat: [43.1, 40.617]
+      - kind: event
+        side: tr
+        name: Sukhum
+        date: autumn 1855
+        text: Omar Pasha landed here with a large Ottoman army meant to relieve Kars, which never got near the city.
+        lonlat: [41.019, 43.004]
+      - kind: treaty
+        name: Southern Bessarabia
+        date: 30 March 1856
+        text: Under the Treaty of Paris, Russia gave this strip along the lower Danube to Moldavia, which cut Russia off from the river.
+        lonlat: [28.613, 45.667]
+    arrows:
+      - side: ru
+        label: Muravyov
+        via: [[43.85, 40.79], [43.45, 40.72], [43.15, 40.64]]
+      - side: tr
+        label: Omar Pasha
+        via: [[41.1, 42.95], [41.6, 42.6], [42.0, 42.35]]
+    areas:
+      - style: lost
+        side: ru
+        label: Southern Bessarabia, to Moldavia in this peace
+        atoms: [MD-CA, MD-TA, UA-51~ro1938~1856]

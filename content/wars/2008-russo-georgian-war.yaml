@@ -1,0 +1,177 @@
+id: russo-georgian-war
+name: Russo-Georgian War
+start: "2008-08-07"
+end: "2008-08-16"
+tier: B
+summary: A short war in August 2008 that began with a Georgian assault on Tskhinvali, capital of breakaway South Ossetia, and turned into a Russian counter-offensive deep into Georgia. After a ceasefire brokered by France, Russia recognised South Ossetia and Abkhazia as independent states and kept troops in both, while most ethnic Georgians were driven out of South Ossetia.
+countries: [ge, ru]
+sides:
+  - id: ge
+    name: Georgia
+    polities: [georgia]
+    ink: red
+    moves: Georgian moves
+    success: Georgian success
+  - id: ru
+    name: Russia
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: sep
+    name: South Ossetia and Abkhazia
+    polities: [south-ossetia, abkhazia]
+    ink: purple
+    moves: South Ossetian and Abkhaz moves
+    success: South Ossetian and Abkhaz success
+notes:
+  - South Ossetia and Abkhazia are shown as part of Georgia on the map, as they are internationally recognised. The outline of South Ossetia and the Russian-held zones are approximate.
+  - Exchanges of fire had escalated from 1 August, and some sources date the war from then. Each side’s casualty figures come from its own government.
+sources:
+  - title: Russo-Georgian War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russo-Georgian_War
+  - title: Battle of Tskhinvali (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tskhinvali
+  - title: Battle of the Kodori Valley (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Kodori_Valley
+  - title: Georgia ‘started unjustified war’ (BBC News, 2009)
+    url: http://news.bbc.co.uk/2/hi/europe/8281990.stm
+  - title: Russia/Georgia – All Parties in August War Violated Laws of War (Human Rights Watch, 2009)
+    url: https://www.hrw.org/news/2009/01/23/russia/georgia-all-parties-august/south-ossetia-conflict-violated-laws-war
+steps:
+  - title: Tskhinvali and the Roki Tunnel
+    date: 7–10 August 2008
+    when: "2008-08-07"
+    borders: "2008-08-08"
+    countries: [ge, ru]
+    body:
+      - Since the wars of the early 1990s South Ossetia and Abkhazia had been outside Georgian control, with Russian peacekeepers in both. Mikheil Saakashvili, president from 2004, promised to restore Georgia’s territorial integrity and sought NATO membership, while Russia gave its passports to most people in the two regions. In early August 2008 exchanges of fire around Tskhinvali grew heavier. Late on 7 August, hours after declaring a unilateral ceasefire, Georgia began an artillery bombardment and ground assault on the town, saying it was answering attacks on Georgian villages and Russian troop movements through the Roki Tunnel. Russian peacekeepers were among those killed.
+      - On 8 August Russia sent units of its 58th Army through the tunnel and began bombing targets across Georgia. Georgian forces were driven out of Tskhinvali by 10 August. A second front opened in the west, where Russian warships sank a Georgian boat off Abkhazia and Abkhaz forces, backed by Russia, drove Georgian troops from the upper Kodori Gorge. An EU inquiry, the Tagliavini report of 2009, found that the war began with the Georgian attack, which it judged unjustified under international law, but that Russia’s response went far beyond reasonable defence and that the blame could not be laid on one side alone.
+    facts:
+      - [Georgian assault on Tskhinvali, "night of 7–8 August 2008"]
+      - [Russian troops through the Roki Tunnel, "8 August 2008"]
+      - [Georgian withdrawal from Tskhinvali, "by 10 August 2008"]
+    markers:
+      - kind: battle
+        side: ru
+        name: Battle of Tskhinvali
+        date: 7–10 August 2008
+        text: Georgian troops entered much of the town before Russian and South Ossetian forces drove them out. Large parts of it were damaged.
+        lonlat: [43.97, 42.225]
+      - kind: event
+        side: ru
+        name: Roki Tunnel
+        date: 8 August 2008
+        text: The only road tunnel from Russia into South Ossetia. Russian armour came through it from North Ossetia.
+        lonlat: [44.1, 42.617]
+      - kind: air
+        side: ru
+        name: Gori
+        date: 8–12 August 2008
+        text: Russian aircraft bombed the military base and the town, killing civilians.
+        lonlat: [44.1, 41.967]
+      - kind: naval
+        side: ru
+        name: Naval clash off Abkhazia
+        date: 10 August 2008
+        text: Russian Black Sea Fleet ships sank a Georgian boat and blockaded the Georgian coast.
+        lonlat: [41.25, 42.72]
+        lp: l
+      - kind: battle
+        side: sep
+        name: Kodori Gorge
+        date: 9–12 August 2008
+        text: The upper gorge, the last part of Abkhazia under Georgian control, was shelled and then taken by Abkhaz forces.
+        lonlat: [41.8, 43.1]
+    arrows:
+      - side: ru
+        label: 58th Army
+        via: [[44.12, 42.8], [44.1, 42.6], [44.0, 42.4], [43.97, 42.26]]
+      - side: ge
+        label: Georgian assault
+        via: [[44.08, 42.06], [44.02, 42.15], [43.98, 42.21]]
+      - side: sep
+        via: [[41.45, 43.02], [41.62, 43.07], [41.78, 43.1]]
+    areas:
+      - style: contested
+        side: sep
+        label: South Ossetia (former autonomous oblast, approximate)
+        polygon: [[43.56,42.46], [43.58,42.33], [43.72,42.24], [43.85,42.18], [44.05,42.21], [44.18,42.2], [44.45,42.05], [44.58,42.06], [44.66,42.17], [44.62,42.33], [44.3,42.62], [44.282,42.703], [44.197,42.629], [44.055,42.615], [43.94,42.552], [43.885,42.579], [43.751,42.599], [43.723,42.625], [43.725,42.645], [43.62,42.55]]
+      - style: occupied
+        side: sep
+        label: Held by Abkhaz forces, except the upper Kodori Gorge
+        atoms: [GE-AB]
+  - title: Gori, Poti and recognition
+    date: 11 August – 8 October 2008
+    when: "2008-08-11"
+    borders: "2008-08-26"
+    countries: [ge, ru]
+    body:
+      - On 11 August Russian forces moved beyond the conflict zones into the rest of Georgia. From Abkhazia they entered Zugdidi and the military base at Senaki and occupied the port of Poti, where they sank Georgian ships; from South Ossetia they took Gori on 13 August, cutting the country’s main east–west road. In and around South Ossetia militias burned and looted ethnic Georgian villages, and their inhabitants fled; the EU inquiry concluded that ethnic Georgians had been subjected to ethnic cleansing. About 192,000 people were displaced at the height of the war.
+      - France’s president Nicolas Sarkozy, holding the EU presidency, brokered a six-point ceasefire on 12 August, signed by Saakashvili on 15 August and by Russia’s president Dmitry Medvedev the next day. On 26 August Russia recognised Abkhazia and South Ossetia as independent states, which only a handful of other countries followed. Russian troops left Gori on 22 August and the “buffer zones” on 8 October, when EU monitors arrived, but stayed in both regions. Georgia counted about 400 dead, among them 224 civilians; Russia reported 67 soldiers killed, and South Ossetia said 365 of its people died.
+    facts:
+      - [Six-point ceasefire, "12 August 2008, signed 15–16 August"]
+      - [Russian recognition of Abkhazia and South Ossetia, "26 August 2008"]
+      - [Displaced, "about 192,000 at the height of the war"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Gori
+        date: 13–22 August 2008
+        text: Occupied by Russian troops, who left after nine days. The Dutch cameraman Stan Storimans was killed in a cluster bomb strike here on 12 August.
+        lonlat: [44.1, 41.967]
+      - kind: event
+        name: Kurta and Tamarasheni
+        date: August 2008
+        text: These and other ethnic Georgian villages near Tskhinvali were burned and looted after the fighting.
+        lonlat: [43.957, 42.27]
+        lp: l
+      - kind: taken
+        side: sep
+        name: Akhalgori
+        date: August 2008
+        text: The Georgian-controlled district in the east of South Ossetia was taken over by South Ossetian forces.
+        lonlat: [44.488, 42.119]
+      - kind: taken
+        side: ru
+        name: Zugdidi
+        date: 11 August 2008
+        text: Russian troops crossed from Abkhazia and took over the town’s police buildings.
+        lonlat: [41.867, 42.508]
+      - kind: taken
+        side: ru
+        name: Senaki
+        date: 11 August 2008
+        text: Russian forces seized the military base, one of Georgia’s largest.
+        lonlat: [42.079, 42.269]
+      - kind: taken
+        side: ru
+        name: Poti
+        date: 13 August 2008
+        text: Russian troops sank Georgian navy and coastguard boats in the harbour of Georgia’s main port.
+        lonlat: [41.667, 42.15]
+        lp: l
+      - kind: treaty
+        name: Tbilisi
+        date: 15 August 2008
+        text: Saakashvili signed the six-point ceasefire plan here, and Medvedev signed it in Moscow the next day.
+        lonlat: [44.792, 41.722]
+    arrows:
+      - side: ru
+        label: To Gori
+        via: [[43.97, 42.21], [44.02, 42.1], [44.09, 41.99]]
+      - side: ru
+        label: From Abkhazia
+        via: [[41.65, 42.72], [41.85, 42.52], [42.05, 42.29]]
+      - side: ru
+        via: [[41.85, 42.48], [41.72, 42.3], [41.68, 42.17]]
+    areas:
+      - style: occupied
+        side: ru
+        label: Held by Russian and separatist forces after the war
+        atoms: [GE-AB]
+        polygon: [[43.56,42.46], [43.58,42.33], [43.72,42.24], [43.85,42.18], [44.05,42.21], [44.18,42.2], [44.45,42.05], [44.58,42.06], [44.66,42.17], [44.62,42.33], [44.3,42.62], [44.282,42.703], [44.197,42.629], [44.055,42.615], [43.94,42.552], [43.885,42.579], [43.751,42.599], [43.723,42.625], [43.725,42.645], [43.62,42.55]]
+      - style: occupied
+        side: ru
+        label: Russian “buffer zone”, until 8 October 2008 (approximate)
+        polygon: [[43.7,42.22], [43.75,42.08], [43.95,41.98], [44.1,41.93], [44.3,41.94], [44.47,41.97], [44.52,42.03], [44.45,42.05], [44.18,42.2], [44.05,42.21], [43.85,42.18]]

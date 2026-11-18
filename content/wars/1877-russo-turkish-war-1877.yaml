@@ -1,0 +1,302 @@
+id: russo-turkish-war-1877
+name: Russo-Turkish War of 1877–1878
+start: "1877-04-24"
+end: "1878-03-03"
+tier: A
+summary: A war in which the Russian Empire, joined by Romania, Serbia and Montenegro, fought the Ottoman Empire after the bloody suppression of the Bulgarian April Uprising. Russian victories at Plevna, Shipka and Kars brought the Ottomans to the Treaty of San Stefano, revised at the Congress of Berlin in 1878, which created a Bulgarian principality and made Romania, Serbia and Montenegro independent.
+countries: [bg, ro, rs, me, tr, ge, am, md, ua, ru]
+sides:
+  - id: ru
+    name: Russian Empire and Bulgarian volunteers
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: ro
+    name: Romania
+    polities: [romania]
+    ink: navy
+    moves: Romanian moves
+    success: Romanian success
+  - id: sm
+    name: Serbia and Montenegro
+    polities: [serbia, montenegro]
+    ink: red
+    moves: Serbian and Montenegrin moves
+    success: Serbian and Montenegrin success
+  - id: tr
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Dates are New Style (Gregorian). Russia and the Balkan states used the Julian calendar, then 12 days behind, so the crossing of the Danube is 15 June 1877, the fall of Plevna 28 November 1877 and the Treaty of San Stefano 19 February 1878 in their sources. Bulgaria celebrates its liberation on 3 March.
+  - Numbers of dead and of refugees are estimates and vary widely between sources.
+  - Plevna is today’s Pleven, Adrianople is Edirne, and San Stefano is Yeşilköy, now part of Istanbul.
+sources:
+  - title: Russo-Turkish War (1877–1878) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russo-Turkish_War_(1877%E2%80%931878)
+  - title: Batak massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Batak_massacre
+  - title: Battle of Shipka Pass (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Shipka_Pass
+  - title: Stara Zagora massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Stara_Zagora_massacre
+  - title: Siege of Plevna (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Plevna
+  - title: Battle of Kars (1877) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kars_(1877)
+  - title: Treaty of San Stefano (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_San_Stefano
+  - title: Congress of Berlin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Congress_of_Berlin
+  - title: Congress of Berlin (Britannica)
+    url: https://www.britannica.com/event/Congress-of-Berlin
+steps:
+  - title: Across the Danube
+    date: April – July 1877
+    when: "1877-04-24"
+    borders: "1877-06-27"
+    countries: [bg, ro, rs, me, tr, ru]
+    body:
+      - In 1875 Christian peasants rose against Ottoman rule in Herzegovina and Bosnia, and in April 1876 the Bulgarians followed. Ottoman irregulars put down the April Uprising with massacres; at Batak alone some 5,000 people are thought to have been killed. Serbia and Montenegro went to war with the Ottomans in the summer of 1876, and Serbia was beaten. When a conference of the powers in Constantinople failed to impose reforms, Russia, having secured Austria-Hungary’s neutrality, declared war on 24 April 1877.
+      - Romania let Russian troops pass through its territory and on 21 May declared itself independent. On the night of 26–27 June General Mikhail Dragomirov’s division crossed the Danube in boats from Zimnicea and took Svishtov, and the army followed over a pontoon bridge. One column under General Iosif Gurko pushed south, took the old Bulgarian capital of Tarnovo on 7 July and crossed the Balkan mountains by a little-used pass, while another took the Danube fortress of Nikopol.
+    facts:
+      - [Russia declares war, "24 April 1877"]
+      - [Romania declares independence, "21 May 1877"]
+      - [Danube crossing at Svishtov, "26–27 June 1877"]
+    markers:
+      - kind: event
+        side: ru
+        name: Crossing of the Danube
+        date: 26–27 June 1877
+        text: Dragomirov’s men rowed across the river under fire, and Skobelev drove the Ottoman garrison out of Svishtov.
+        lonlat: [25.35, 43.617]
+      - kind: taken
+        side: ru
+        name: Tarnovo
+        date: 7 July 1877
+        text: Gurko’s advance guard entered the medieval Bulgarian capital, to the joy of its Christian inhabitants.
+        lonlat: [25.617, 43.078]
+      - kind: taken
+        side: ru
+        name: Nikopol
+        date: 16 July 1877
+        text: The Danube fortress surrendered to General Nikolai Kridener’s corps after two days of fighting.
+        lonlat: [24.9, 43.7]
+        lp: l
+      - kind: event
+        name: Batak
+        date: May 1876
+        text: Ottoman irregulars killed most of the townspeople after the rising. Reports of the “Bulgarian horrors” turned opinion in Europe against the Ottomans.
+        lonlat: [24.217, 41.95]
+    arrows:
+      - side: ru
+        label: Main Russian army
+        via: [[25.37, 43.9], [25.36, 43.6], [25.55, 43.25], [25.6, 43.1]]
+      - side: ru
+        label: Gurko
+        via: [[25.65, 43.0], [25.95, 42.8], [25.75, 42.55]]
+  - title: Shipka and the Balkan passes
+    date: July 1877 – January 1878
+    when: "1877-07-19"
+    borders: "1877-08-26"
+    countries: [bg, tr, ru]
+    body:
+      - Gurko took the Shipka Pass from the south on 19 July and raided into the valley beyond, but he was driven back after the battle of Stara Zagora at the end of July. Ottoman troops then burned the town and killed thousands of its Bulgarian inhabitants; some estimates put the dead at about 14,000. As the Russians withdrew, many Bulgarians fled north with them. The pass was left to a small force of Russians and Bulgarian volunteers, the opalchentsi, while the main army was held at Plevna.
+      - On 21–26 August Suleiman Pasha’s army of some 30,000 men attacked the pass again and again. The defenders, about 5,000 Bulgarian volunteers and 2,500 Russians, ran out of ammunition and threw stones and the bodies of the dead before reinforcements arrived. A further attack in September also failed. Through the winter the defenders held the pass in snow and bitter cold, losing thousands to frostbite and disease. On 8–9 January 1878 Russian columns came down on both sides of the Ottoman camp at Sheynovo, and its army surrendered.
+    facts:
+      - [Shipka Pass taken, "19 July 1877"]
+      - [Main Ottoman assault, "21–26 August 1877, repulsed"]
+      - [Battle of Shipka–Sheynovo, "8–9 January 1878, Russian victory"]
+    markers:
+      - kind: held
+        side: ru
+        name: Shipka Pass
+        date: 21–26 August 1877
+        text: Russian troops and Bulgarian volunteers held the peak against a much larger Ottoman army until reinforcements reached them.
+        lonlat: [25.317, 42.767]
+      - kind: battle
+        side: tr
+        name: Battle of Stara Zagora
+        date: 31 July 1877
+        text: Suleiman Pasha’s army defeated Gurko’s force, which included Bulgarian volunteers. The town was then burned and many of its people massacred.
+        lonlat: [25.634, 42.426]
+      - kind: battle
+        side: ru
+        name: Battle of Shipka–Sheynovo
+        date: 8–9 January 1878
+        text: Generals Mikhail Skobelev and Nikolai Svyatopolk-Mirsky surrounded Wessel Pasha’s army below the pass, and it surrendered the same day.
+        lonlat: [25.3, 42.68]
+        lp: b
+    arrows:
+      - side: tr
+        label: Suleiman Pasha
+        via: [[26.1, 42.4], [25.65, 42.43], [25.4, 42.6], [25.33, 42.74]]
+      - side: ru
+        label: Gurko’s raid
+        via: [[25.9, 42.95], [26.0, 42.7], [25.75, 42.47]]
+  - title: Plevna
+    date: July – December 1877
+    when: "1877-07-20"
+    borders: "1877-12-10"
+    countries: [bg, ro, tr, ru]
+    body:
+      - Osman Pasha marched an Ottoman army from Vidin to Plevna, a road junction west of the Russian advance, and dug in. Two Russian assaults in July were beaten off with heavy losses, and the Russians had to ask Romania for help. On 11 September a combined Russian and Romanian army made a third assault, with Prince Carol of Romania in nominal command. The Romanians took the Grivitsa redoubt and Skobelev’s troops broke into the defences in the south, but the attack failed with very heavy Russian and Romanian losses.
+      - The allies then besieged the town under the engineer General Eduard Totleben, the defender of Sevastopol. Gurko cut its supply road at Gorni Dubnik in October. Starving and short of ammunition, Osman Pasha tried to break out on 10 December, was wounded and surrendered with about 40,000 men. The five-month siege had held up the Russian advance, but its end freed some 100,000 troops. Serbia re-entered the war a few days later, and in January Gurko crossed the mountains in deep snow and took Sofia.
+    facts:
+      - [Siege of Plevna, "20 July – 10 December 1877"]
+      - [Ottoman prisoners, "about 40,000"]
+      - [Third assault, "11 September 1877, failed"]
+    markers:
+      - kind: siege
+        side: ru
+        name: Siege of Plevna
+        date: 20 July – 10 December 1877
+        text: Osman Pasha’s earthworks threw back three assaults. Hunger forced his surrender after a failed breakout.
+        lonlat: [24.62, 43.408]
+      - kind: taken
+        side: ro
+        name: Grivitsa redoubt
+        date: 11 September 1877
+        text: Romanian and Russian troops took the redoubt, the only gain of the third assault that they kept.
+        lonlat: [24.7, 43.417]
+        lp: t
+      - kind: battle
+        side: ru
+        name: Battle of Gorni Dubnik
+        date: 24 October 1877
+        text: The Russian Guard stormed the fortified village, closing the road from Sofia that supplied Plevna.
+        lonlat: [24.352, 43.379]
+        lp: l
+      - kind: taken
+        side: ru
+        name: Sofia
+        date: 4 January 1878
+        text: Gurko entered the town after crossing the Balkan mountains in winter.
+        lonlat: [23.33, 42.7]
+    arrows:
+      - side: tr
+        label: Osman Pasha
+        via: [[22.87, 43.99], [23.6, 43.75], [24.3, 43.5], [24.58, 43.42]]
+      - side: ro
+        label: Romanian army
+        via: [[24.5, 43.78], [24.62, 43.62], [24.69, 43.45]]
+      - side: ru
+        label: Gurko, January 1878
+        via: [[24.0, 43.0], [23.75, 42.88], [23.38, 42.72]]
+  - title: Kars and the Caucasus
+    date: April – November 1877
+    when: "1877-04-24"
+    borders: "1877-11-18"
+    countries: [tr, ge, am, ru]
+    body:
+      - In the Caucasus Russian columns under General Mikhail Loris-Melikov crossed the border at the start of the war. They took Ardahan in May and laid siege to Kars, while another column took Bayazid. In June the Ottoman commander, Ahmed Muhtar Pasha, beat the Russians at Zivin and drove them back to the border, relieving Kars, and Russian troops were themselves besieged in Bayazid. An Ottoman landing on the Black Sea coast set off a rising in Abkhazia.
+      - With reinforcements, the Russians broke Ahmed Muhtar Pasha’s army in the Aladzha heights east of Kars in October. On the night of 17–18 November they stormed Kars, taking thousands of prisoners. Russian troops then advanced on Erzurum, which they did not take before the armistice, and failed to take Batumi. Many Armenians welcomed the Russian advance, and many Muslims fled the lands Russia conquered.
+    facts:
+      - [Ardahan taken, "May 1877"]
+      - [Battle of Aladzha, "October 1877, Russian victory"]
+      - [Kars stormed, "17–18 November 1877"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Ardahan
+        date: May 1877
+        text: The fortress fell to a Russian column after a bombardment.
+        lonlat: [42.702, 41.111]
+      - kind: battle
+        side: tr
+        name: Battle of Zivin
+        date: June 1877
+        text: Ahmed Muhtar Pasha halted the Russian advance on Erzurum and forced Loris-Melikov to lift the siege of Kars.
+        lonlat: [42.17, 40.13]
+      - kind: battle
+        side: ru
+        name: Battle of Aladzha
+        date: October 1877
+        text: The Russians broke the Ottoman lines on the Aladzha heights, opening the way to Kars.
+        lonlat: [43.416, 40.374]
+        lp: b
+      - kind: taken
+        side: ru
+        name: Kars
+        date: 17–18 November 1877
+        text: Russian columns stormed the forts in a night attack, and most of the garrison was killed or captured.
+        lonlat: [43.096, 40.608]
+      - kind: held
+        side: tr
+        name: Batumi
+        date: 1877–1878
+        text: Ottoman troops held the port against Russian attacks until the end of the war.
+        lonlat: [41.642, 41.646]
+    arrows:
+      - side: ru
+        label: Loris-Melikov
+        via: [[43.85, 40.79], [43.5, 40.65], [43.15, 40.62]]
+      - side: ru
+        via: [[43.1, 41.4], [42.85, 41.25], [42.73, 41.13]]
+      - side: tr
+        label: Ahmed Muhtar Pasha
+        via: [[41.3, 39.95], [42.2, 40.1], [42.9, 40.4]]
+  - title: San Stefano and Berlin
+    date: January – July 1878
+    when: "1878-01"
+    borders: "1878-07-13"
+    countries: [bg, ro, rs, me, tr, ge, md, ua, ru]
+    body:
+      - After Sheynovo the Russians advanced fast. Gurko took Plovdiv in January, and Adrianople fell without a fight. An armistice was signed on 31 January, with Russian troops close to Constantinople and a British fleet in the Sea of Marmara. Hundreds of thousands of Muslims fled before the Russian armies, and many were killed by Russian troops, Cossacks and Bulgarian bands. The Treaty of San Stefano, signed on 3 March 1878, created a large Bulgarian state stretching to the Aegean and Macedonia, and gave Russia southern Bessarabia and Kars, Ardahan, Batumi and Bayazid.
+      - Britain and Austria-Hungary feared that Bulgaria would be a Russian client, and the powers revised the treaty at the Congress of Berlin, which ended on 13 July. Bulgaria became a self-governing principality between the Danube and the Balkan mountains, with Sofia; Eastern Rumelia to the south stayed an autonomous Ottoman province, and Macedonia was returned to the sultan. Romania, Serbia and Montenegro became independent and gained land. Russia took back southern Bessarabia, giving Romania northern Dobruja instead, and kept Kars, Ardahan and Batumi. Austria-Hungary occupied Bosnia and Herzegovina, and Britain took Cyprus.
+    facts:
+      - [Treaty of San Stefano, "3 March 1878"]
+      - [Congress of Berlin, "13 June – 13 July 1878"]
+      - [Independent, "Romania, Serbia, Montenegro"]
+    markers:
+      - kind: treaty
+        name: Treaty of San Stefano
+        date: 3 March 1878
+        text: Signed in a village outside Constantinople, which Russian troops had reached. Its terms were revised at Berlin four months later.
+        lonlat: [28.825, 40.959]
+      - kind: taken
+        side: ru
+        name: Adrianople
+        date: 20 January 1878
+        text: The Ottomans abandoned the city to the advancing Russians.
+        lonlat: [26.556, 41.677]
+      - kind: taken
+        side: ru
+        name: Plovdiv
+        date: 16–17 January 1878
+        text: Gurko’s troops broke Suleiman Pasha’s army in three days of fighting around the city.
+        lonlat: [24.75, 42.15]
+      - kind: taken
+        side: sm
+        name: Niš
+        date: January 1878
+        text: The Serbian army took the town, which Serbia kept at Berlin.
+        lonlat: [21.896, 43.321]
+    arrows:
+      - side: ru
+        label: Russian advance
+        via: [[25.3, 42.6], [26.0, 42.1], [26.55, 41.75], [27.8, 41.2], [28.7, 41.0]]
+    areas:
+      - style: outline
+        side: ru
+        label: Principality of Bulgaria, 1878
+        atoms: [BG-03, BG-04, BG-05, BG-06, BG-07, BG-08, BG-10, BG-11, BG-12, BG-14, BG-15, BG-17, BG-18, BG-19, BG-22, BG-23, BG-25, BG-27]
+      - style: outline
+        side: tr
+        label: Eastern Rumelia, autonomous Ottoman province
+        atoms: [BG-02, BG-13, BG-16, BG-20, BG-24, BG-26, BG-28]
+      - style: gained
+        side: ru
+        label: Gained by Russia at Berlin
+        atoms: [TR-36, TR-75, TR-08, GE-AJ, MD-CA, MD-TA, UA-51~ro1938~1856]
+      - style: gained
+        side: ro
+        label: Northern Dobruja, to Romania
+        atoms: [RO-CT, RO-TL]
+      - style: gained
+        side: sm
+        label: Gained by Serbia and Montenegro (approximate)
+        atoms: [RS-20, RS-21, RS-22, RS-23, RS-24, ME-02, ME-12, ME-16, ME-09]

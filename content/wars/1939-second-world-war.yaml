@@ -8,7 +8,7 @@ countries: [pl, de, ru, by, ua, lt, dk, no, gb, fr]
 sides:
   - id: de
     name: Germany
-    polities: [germany, general-government]
+    polities: [germany, general-government, rk-ostland, rk-ukraine, german-occupied-ussr]
     ink: slate
     moves: German moves
     success: German success
@@ -42,10 +42,22 @@ sides:
     ink: orange
     moves: Danish moves
     success: Danish success
+  - id: fi
+    name: Finland
+    polities: [finland]
+    ink: blue
+    moves: Finnish moves
+    success: Finnish success
+  - id: ro
+    name: Romania
+    polities: [romania]
+    ink: purple
+    moves: Romanian moves
+    success: Romanian success
 notes:
   - The Soviet Union was Germany’s partner under the Molotov–Ribbentrop Pact from August 1939 until Germany invaded it on 22 June 1941, and then fought on the Allied side.
   - Numbers of dead are estimates, and the sources give ranges for most of them. Places in present-day Poland are named in their Polish forms, with German names of the time where useful.
-  - From 1941 the map does not show the German occupation of the Soviet-annexed lands as a border change; steps that need it draw it as an occupied area.
+  - The map shows the German annexations and the General Government in Poland, and the German and Romanian occupation of the Soviet Union at six dates between July 1941 and December 1944. Other occupations, such as those of Denmark, Norway and France, are drawn as areas in the steps.
 sources:
   - title: Invasion of Poland (Wikipedia)
     url: https://en.wikipedia.org/wiki/Invasion_of_Poland
@@ -133,6 +145,62 @@ sources:
     url: https://en.wikipedia.org/wiki/Flight_and_expulsion_of_Germans_from_Poland_during_and_after_World_War_II
   - title: Polish population transfers (1944–1946) (Wikipedia)
     url: https://en.wikipedia.org/wiki/Polish_population_transfers_(1944%E2%80%931946)
+  - title: Operation Barbarossa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Barbarossa
+  - title: Battle of Kiev (1941) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kiev_(1941)
+  - title: Babi Yar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Babi_Yar
+  - title: Siege of Odessa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Odessa
+  - title: 1941 Odessa massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1941_Odessa_massacre
+  - title: Battle of Moscow (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Moscow
+  - title: Siege of Leningrad (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Leningrad
+  - title: Operation Iskra (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Iskra
+  - title: Case Blue (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Case_Blue
+  - title: Battle of the Caucasus (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Caucasus
+  - title: Battle of Stalingrad (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Stalingrad
+  - title: German prisoners of war in the Soviet Union (Wikipedia)
+    url: https://en.wikipedia.org/wiki/German_prisoners_of_war_in_the_Soviet_Union
+  - title: Battle of Kursk (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kursk
+  - title: Battle of Prokhorovka (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Prokhorovka
+  - title: Operation Bagration (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Bagration
+  - title: Parade of the Vanquished (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Parade_of_the_Vanquished
+  - title: Battle of Tannenberg Line (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tannenberg_Line
+  - title: Tallinn offensive (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tallinn_offensive
+  - title: Riga offensive (1944) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Riga_offensive_(1944)
+  - title: Courland Pocket (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Courland_Pocket
+  - title: Second Jassy–Kishinev offensive (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Jassy%E2%80%93Kishinev_offensive
+  - title: 1944 Romanian coup d'état (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1944_Romanian_coup_d'%C3%A9tat
+  - title: Battle of Berlin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Berlin
+  - title: Battle of the Seelow Heights (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Seelow_Heights
+  - title: Battle of Halbe (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Halbe
+  - title: Elbe Day (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Elbe_Day
+  - title: German Instrument of Surrender (Wikipedia)
+    url: https://en.wikipedia.org/wiki/German_Instrument_of_Surrender
+  - title: World War II casualties of the Soviet Union (Wikipedia)
+    url: https://en.wikipedia.org/wiki/World_War_II_casualties_of_the_Soviet_Union
 steps:
   - title: The invasion of Poland
     date: 1 September 1939
@@ -453,6 +521,152 @@ steps:
         side: de
         label: Occupied by Germany by 10 June 1940
         atoms: [DK-81, DK-82, DK-83, DK-84, DK-85, NO-01, NO-02, NO-03, NO-04, NO-05, NO-06, NO-07, NO-08, NO-09, NO-10, NO-11, NO-12, NO-14, NO-15, NO-16, NO-17, NO-18~no, NO-19, NO-20]
+  - title: Barbarossa and the Battle of Moscow
+    date: June – December 1941
+    when: "1941-06-22"
+    borders: "1941-12-05"
+    countries: [ru, by, ua, lt, lv, ee, md, de, ro]
+    body:
+      - On 22 June 1941 Germany broke its pact with the Soviet Union and invaded it with more than three million German soldiers, soon joined by Romanian, Finnish, Hungarian, Italian and Slovak troops. Stalin had dismissed many warnings, and on the first day the Luftwaffe destroyed much of the Soviet air force on the ground. German armoured groups encircled whole Soviet armies, near Białystok and Minsk in June and July, at Smolensk in July and August, and east of Kyiv in September, where more than 600,000 Soviet soldiers were killed, captured or went missing. Romanian troops retook Bessarabia and besieged Odesa until October.
+      - Behind the front, SS Einsatzgruppen, German police battalions and local collaborators shot Jewish men, women and children by the hundreds of thousands, 33,771 of them at Babi Yar outside Kyiv on 29–30 September. Soviet prisoners of war were left to starve, and some 3.3 million of them died in German hands during the war. In October the Germans encircled more armies at Vyazma and Bryansk and pushed on towards Moscow, but autumn mud, then frost and stiffening resistance slowed them, and by early December they had stalled at the city’s outskirts. On 5 December the Red Army, reinforced with divisions from Siberia and the Far East, counter-attacked and drove them back.
+    facts:
+      - [Operation Barbarossa begins, "22 June 1941"]
+      - [Kyiv encirclement, "September 1941, more than 600,000 Soviet soldiers lost"]
+      - [Soviet counter-offensive at Moscow, "from 5 December 1941"]
+    markers:
+      - kind: held
+        side: su
+        name: Brest Fortress
+        date: 22 June – July 1941
+        text: Cut off on the first day, the border fortress held out much longer than the Germans expected, and its last defenders fought on in the ruins for weeks.
+        lonlat: [23.657, 52.083]
+      - kind: taken
+        side: de
+        name: Minsk
+        date: 28 June 1941
+        text: The Belarusian capital fell within a week, as German armour closed a vast pocket around the Soviet armies to the west.
+        lonlat: [27.567, 53.9]
+      - kind: battle
+        side: de
+        name: Kyiv
+        date: August – September 1941
+        text: The largest encirclement in history by number of troops. Kyiv itself fell on 19 September.
+        lonlat: [30.523, 50.45]
+        lp: l
+      - kind: event
+        side: de
+        name: Babi Yar
+        date: 29–30 September 1941
+        text: SS and police units shot 33,771 Jews in this ravine in two days. Tens of thousands more people were killed here during the occupation.
+        lonlat: [30.449, 50.471]
+        lp: t
+      - kind: siege
+        side: ro
+        name: Odesa
+        date: 8 August – 16 October 1941
+        text: Romanian and German troops besieged the port until the Soviets evacuated it by sea. On 22–24 October Romanian and German forces shot or burned some 25,000–34,000 of the city’s Jews.
+        lonlat: [30.733, 46.483]
+      - kind: battle
+        side: de
+        name: Vyazma
+        date: October 1941
+        text: Two great encirclements, at Vyazma and Bryansk, trapped hundreds of thousands of Soviet soldiers and opened the road to Moscow.
+        lonlat: [34.291, 55.211]
+      - kind: battle
+        side: su
+        name: Moscow
+        date: October 1941 – January 1942
+        text: The Germans came within sight of the city. The Soviet counter-offensive from 5 December pushed them back and ended hopes of a quick victory.
+        lonlat: [37.617, 55.756]
+    arrows:
+      - side: de
+        label: Army Group North
+        via: [[21.8, 55.2], [25.0, 56.1], [28.3, 57.8], [29.9, 59.2]]
+      - side: de
+        label: Army Group Centre
+        via: [[23.8, 52.2], [27.6, 53.9], [32.0, 54.8], [35.8, 55.5]]
+      - side: de
+        label: Army Group South
+        via: [[24.0, 50.5], [27.5, 50.0], [30.5, 50.2], [36.0, 50.0]]
+      - side: ro
+        via: [[27.0, 47.3], [29.0, 46.9], [30.55, 46.55]]
+      - side: su
+        label: 5 December
+        via: [[37.6, 55.95], [36.6, 55.85], [35.4, 55.65]]
+    areas:
+      - style: front
+        side: de
+        label: Front, 5 December 1941 (approximate)
+        lines:
+          - [[29.15, 59.87], [29.3, 59.79], [29.55, 59.76], [29.75, 59.82], [29.88, 59.88]]
+          - [[30.18, 59.85], [30.3, 59.79], [30.42, 59.75], [30.58, 59.71], [30.75, 59.75], [30.9, 59.8], [31.0, 59.9], [31.04, 59.95]]
+          - [[31.25, 59.98], [31.45, 59.78], [32.0, 59.52], [32.6, 59.45], [33.2, 59.75], [33.75, 59.62], [33.3, 59.3], [32.4, 59.1], [31.75, 58.75], [31.4, 58.4], [31.65, 58.0], [32.3, 57.85], [32.75, 57.5], [33.0, 57.05], [33.6, 56.7], [34.5, 56.5], [35.3, 56.75], [36.1, 56.85], [36.6, 56.55], [37.35, 56.3], [37.4, 56.0], [37.05, 55.85], [36.8, 55.55], [36.75, 55.35], [36.95, 54.95], [37.07, 54.5], [37.5, 54.35], [37.8, 54.4], [38.2, 54.65], [38.5, 54.5], [39.0, 54.2], [38.5, 53.4], [38.55, 52.6], [37.6, 52.2], [37.0, 51.6], [36.9, 50.9], [36.9, 50.3], [36.75, 49.85], [37.1, 49.4], [37.6, 48.9], [38.05, 48.55], [38.6, 48.15], [38.85, 47.6], [38.95, 47.25]]
+          - [[33.6, 44.49], [33.75, 44.56], [33.77, 44.66], [33.66, 44.74], [33.55, 44.79]]
+  - title: The siege of Leningrad
+    date: September 1941 – January 1944
+    when: "1941-09-08"
+    borders: "1942-11-18"
+    countries: [ru, fi, de]
+    body:
+      - Army Group North swept through the Baltic states in the summer of 1941 and reached the approaches to Leningrad in August, while the Finnish army advanced towards the city from the north. On 8 September German troops took Shlisselburg at the source of the Neva and cut Leningrad off by land. Hitler decided not to storm the city but to starve it and then raze it. The Germans shelled and bombed it almost daily, and with food stocks small, rations were cut again and again. From November 1941 to February 1942 many people received only 125 grams of bread a day, much of it sawdust and other fillers.
+      - In the hunger winter that followed, deaths peaked at about 100,000 a month in January and February 1942, and people died at home, at work and in the streets. Supplies came only across Lake Ladoga, by boat in summer and from November on the ice road known as the Road of Life. Some 1.4 million people, mainly women and children, were evacuated during the siege. In August 1942 the city’s radio orchestra performed Shostakovich’s Seventh Symphony in the besieged city. The Red Army opened a narrow land corridor along the lake shore in January 1943 and drove the Germans back on 27 January 1944, after 872 days.
+    facts:
+      - [Siege of Leningrad, "8 September 1941 – 27 January 1944 (872 days)"]
+      - [Lowest bread ration, "125 grams a day, November 1941 – February 1942"]
+      - [Civilian dead, "about 1 million by one count, 640,000 in the city and 400,000 during evacuation"]
+    markers:
+      - kind: siege
+        side: su
+        name: Leningrad
+        date: 8 September 1941 – 27 January 1944
+        text: Besieged by German troops from the south and Finnish troops from the north, the city never fell.
+        lonlat: [30.309, 59.938]
+        lp: l
+      - kind: taken
+        side: de
+        name: Shlisselburg
+        date: 8 September 1941
+        text: German troops took the fortress town at the source of the Neva, cutting Leningrad’s last land link.
+        lonlat: [31.038, 59.954]
+      - kind: event
+        side: su
+        name: Road of Life
+        date: 1941–1943
+        text: In winter lorries crossed the frozen lake to the city under German air attack; in summer barges and boats carried supplies.
+        lonlat: [31.4, 60.08]
+        lp: t
+      - kind: battle
+        side: su
+        name: Tikhvin
+        date: 9 December 1941
+        text: The Red Army retook the railway town, ending the German attempt to close a second ring east of Lake Ladoga and meet the Finns on the Svir.
+        lonlat: [33.533, 59.65]
+      - kind: battle
+        side: su
+        name: Operation Iskra
+        date: 12–18 January 1943
+        text: Soviet troops attacking from the city and from the east met south of Lake Ladoga, opening a land corridor 8–10 km wide, still under German guns.
+        lonlat: [31.1, 59.9]
+        lp: b
+    arrows:
+      - side: su
+        label: Iskra
+        via: [[31.7, 59.85], [31.4, 59.89], [31.15, 59.91]]
+      - side: su
+        label: January 1944
+        via: [[30.3, 59.75], [29.8, 59.45], [29.2, 59.2]]
+    areas:
+      - style: front
+        side: de
+        label: German siege lines, autumn 1942 (approximate)
+        lines:
+          - [[29.15, 59.87], [29.3, 59.79], [29.55, 59.76], [29.75, 59.82], [29.88, 59.88]]
+          - [[30.18, 59.85], [30.3, 59.79], [30.42, 59.75], [30.58, 59.71], [30.75, 59.75], [30.9, 59.8], [31.0, 59.9], [31.04, 59.95]]
+          - [[31.25, 59.98], [31.42, 59.87], [31.5, 59.7], [31.8, 59.55], [32.03, 59.45], [31.9, 59.2], [31.55, 58.85], [31.3, 58.55]]
+      - style: front
+        side: fi
+        label: Finnish front, 1941–1944 (approximate)
+        line: [[29.92, 60.12], [30.02, 60.16], [30.1, 60.25], [30.25, 60.35], [30.35, 60.42], [30.6, 60.45], [30.85, 60.42]]
   - title: The Holocaust and the Warsaw Ghetto Uprising
     date: 1940–1943
     when: "1942-07-22"
@@ -517,6 +731,131 @@ steps:
         side: de
         label: Eastern Poland, under German occupation from 1941
         atoms: [BY-BR, BY-MI~pl1930, BY-VI~pl1930, BY-HO~pl1930, UA-07, UA-56, LT-VL~pl1930, LT-UT~pl1930, LT-AL~pl1930]
+  - title: Stalingrad
+    date: August 1942 – February 1943
+    when: "1942-08-23"
+    borders: "1942-11-18"
+    countries: [ru, ua, de, ro]
+    body:
+      - In the summer of 1942 Germany struck south-east instead of at Moscow, aiming for the oil of the Caucasus. The offensive began on 28 June, after a Soviet attack near Kharkiv had been crushed in May. German armies, with Romanian, Italian and Hungarian armies guarding their long northern flank on the Don, took Rostov on 23 July and pushed into the Caucasus, where they took the wrecked oilfields at Maykop and raised their flag on Mount Elbrus, but were stopped short of Grozny. Further north the 6th Army reached the Volga at Stalingrad on 23 August, the day a massive air raid reduced much of the city to rubble.
+      - In the ruins Vasily Chuikov’s 62nd Army held a narrow strip along the river, fighting for every factory, street and house, while reinforcements crossed the Volga under fire. By November the Germans held about 90 per cent of the city. On 19 November the Red Army struck the Romanian armies on either side of it in Operation Uranus, and on 23 November its pincers met near Kalach, trapping the 6th Army and other units, some 250,000–330,000 men by different counts. Hitler forbade a breakout, a relief attack failed in December, and the last troops surrendered on 2 February 1943. Of about 91,000 prisoners, only some 6,000 ever returned home.
+    facts:
+      - [Germans reach the Volga, "23 August 1942"]
+      - [Operation Uranus, "19–23 November 1942"]
+      - [German surrender, "31 January – 2 February 1943, about 91,000 prisoners"]
+    markers:
+      - kind: battle
+        side: su
+        name: Stalingrad
+        date: 23 August 1942 – 2 February 1943
+        text: The city, now Volgograd, was almost entirely destroyed. The defeat of the 6th Army was the turning point of the war in the east.
+        lonlat: [44.516, 48.708]
+        lp: l
+      - kind: event
+        side: su
+        name: Kalach
+        date: 23 November 1942
+        text: The two arms of Operation Uranus met near here on the Don, closing the ring around the 6th Army.
+        lonlat: [43.517, 48.7]
+        lp: l
+      - kind: taken
+        side: de
+        name: Rostov
+        date: 23 July 1942
+        text: Taken for the second time, opening the way across the Don into the Caucasus.
+        lonlat: [39.71, 47.222]
+      - kind: taken
+        side: de
+        name: Maykop
+        date: 9 August 1942
+        text: The Germans reached the oilfields, but the Soviets had wrecked them before withdrawing.
+        lonlat: [40.083, 44.6]
+      - kind: event
+        side: de
+        name: Mount Elbrus
+        date: 21 August 1942
+        text: German mountain troops planted their flag on the highest peak of the Caucasus.
+        lonlat: [42.439, 43.355]
+    arrows:
+      - side: de
+        label: 6th Army
+        via: [[39.7, 49.6], [42.0, 49.1], [44.3, 48.75]]
+      - side: de
+        label: To the Caucasus
+        via: [[39.9, 47.0], [40.6, 45.6], [42.5, 44.4], [44.3, 43.75]]
+      - side: su
+        label: Uranus
+        via: [[42.75, 49.5], [43.2, 49.05], [43.5, 48.75]]
+      - side: su
+        via: [[44.4, 48.2], [44.0, 48.45], [43.6, 48.68]]
+    areas:
+      - style: front
+        side: de
+        label: Front, 18 November 1942 (approximate)
+        lines:
+          - [[38.85, 51.95], [39.2, 51.67], [39.45, 51.05], [40.05, 50.5], [40.6, 50.15], [41.5, 49.85], [42.5, 49.6], [43.05, 49.35], [43.6, 49.05], [44.2, 48.88], [44.58, 48.82], [44.53, 48.7], [44.5, 48.55], [44.3, 48.3], [44.25, 47.9], [44.4, 47.3], [45.0, 46.7]]
+          - [[45.0, 46.4], [44.9, 45.6], [44.75, 44.4], [44.65, 43.75], [44.5, 43.55], [44.55, 43.15], [43.9, 43.3], [43.4, 43.4], [42.5, 43.3], [41.5, 43.6], [40.4, 44.0], [39.4, 44.3], [38.6, 44.55], [37.8, 44.72]]
+  - title: Kursk and the road to the Dnieper
+    date: July – December 1943
+    when: "1943-07-05"
+    borders: "1943-12-31"
+    countries: [ru, ua, by, de]
+    body:
+      - After Stalingrad the Red Army pushed west, and the Germans gave up the Caucasus, but in March 1943 Erich von Manstein’s counter-attack retook Kharkiv and left a large Soviet salient around Kursk. Hitler launched Operation Citadel against it on 5 July, attacking its northern and southern sides with the new Tiger and Panther tanks. Warned in advance, the Soviets had built deep belts of minefields, trenches and anti-tank guns. The northern attack stalled within days. In the south German armour pushed further, and on 12 July Soviet tank armies met the SS panzer corps near Prokhorovka in one of the largest tank battles in history.
+      - In mid-July Hitler called off the offensive, partly because the Western Allies had landed in Sicily on 10 July. The Red Army had already gone over to the attack north of the salient, and it freed Oryol and Belgorod on 5 August, celebrated with the first artillery salute in Moscow, and Kharkiv on 23 August. From then on it held the initiative. Through the autumn it advanced across eastern Ukraine to the Dnieper, crossed the river and on 6 November took Kyiv. The retreating Germans burned villages and drove civilians west, and the freed lands bore the marks of two years of mass murder, hunger and deportation for forced labour.
+    facts:
+      - [Operation Citadel, "5 July 1943"]
+      - [Battle of Prokhorovka, "12 July 1943"]
+      - [Kyiv retaken, "6 November 1943"]
+    markers:
+      - kind: battle
+        side: su
+        name: Prokhorovka
+        date: 12 July 1943
+        text: The 5th Guards Tank Army attacked the II SS Panzer Corps here. Soviet losses were heavy, but the German drive from the south soon came to a halt.
+        lonlat: [36.736, 51.036]
+      - kind: held
+        side: su
+        name: Ponyri
+        date: 5–12 July 1943
+        text: The German attack on the northern side of the salient stalled in the Soviet defences around this railway village.
+        lonlat: [36.3, 52.3]
+      - kind: taken
+        side: su
+        name: Oryol
+        date: 5 August 1943
+        text: Freed on the same day as Belgorod. Moscow fired its first artillery salute of the war to mark the victories.
+        lonlat: [36.067, 52.967]
+      - kind: taken
+        side: su
+        name: Kharkiv
+        date: 23 August 1943
+        text: The city changed hands for the last time after heavy fighting.
+        lonlat: [36.231, 49.993]
+      - kind: taken
+        side: su
+        name: Kyiv
+        date: 6 November 1943
+        text: Retaken from a bridgehead north of the city after crossing the Dnieper.
+        lonlat: [30.523, 50.45]
+    arrows:
+      - side: de
+        via: [[36.2, 52.7], [36.28, 52.45], [36.32, 52.25]]
+      - side: de
+        via: [[36.45, 50.55], [36.5, 50.85], [36.68, 51.0]]
+      - side: su
+        label: Kutuzov
+        via: [[36.7, 53.6], [36.3, 53.2], [36.1, 53.0]]
+      - side: su
+        label: Rumyantsev
+        via: [[36.5, 50.85], [36.5, 50.4], [36.28, 50.05]]
+      - side: su
+        via: [[30.9, 50.85], [30.6, 50.68], [30.52, 50.5]]
+    areas:
+      - style: front
+        side: de
+        label: Front, 5 July 1943 (approximate)
+        line: [[34.1, 54.6], [34.35, 54.1], [34.8, 53.75], [35.5, 53.65], [36.0, 53.55], [36.6, 53.4], [36.95, 53.1], [37.05, 52.9], [36.75, 52.55], [36.35, 52.42], [35.7, 52.33], [35.0, 52.25], [34.55, 52.1], [34.75, 51.6], [34.95, 51.2], [35.25, 50.85], [35.9, 50.7], [36.45, 50.65], [36.65, 50.55], [36.75, 50.2], [36.75, 49.85], [37.05, 49.45], [37.25, 49.2], [37.8, 49.0], [38.4, 48.9], [38.85, 48.6], [38.85, 48.1], [38.85, 47.6], [38.95, 47.25]]
   - title: Occupation and resistance in Denmark and Norway
     date: 1940–1944
     when: "1943-08-29"
@@ -569,6 +908,103 @@ steps:
         side: de
         label: Occupied by Germany
         atoms: [DK-81, DK-82, DK-83, DK-84, DK-85, NO-01, NO-02, NO-03, NO-04, NO-05, NO-06, NO-07, NO-08, NO-09, NO-10, NO-11, NO-12, NO-14, NO-15, NO-16, NO-17, NO-18~no, NO-19, NO-20]
+  - title: Bagration and the Baltic
+    date: June – December 1944
+    when: "1944-06-22"
+    borders: "1944-12-31"
+    countries: [by, lt, lv, ee, ru, pl, md, ro, de]
+    body:
+      - By the spring of 1944 the Red Army had freed most of Ukraine and the Crimea and lifted the siege of Leningrad. On 22 June, three years to the day after the German invasion and two weeks after the Allied landings in Normandy, it opened Operation Bagration against Army Group Centre in Belarus, where the Germans had not expected the main blow. Their front collapsed. Soviet armies encircled German forces at Vitebsk and Bobruisk and east of Minsk, which they took on 3 July, and destroyed 28 German divisions. On 17 July some 57,000 German prisoners were marched through Moscow. By August the Red Army stood on the Vistula and at the border of East Prussia.
+      - In the north the Red Army pushed into the Baltic states. German troops and Estonian units held the Narva isthmus at the Tannenberg Line in July and August, but in September the Germans left Estonia, and Soviet troops entered Tallinn on 22 September and Riga on 13 October. Tens of thousands of Estonians and Latvians fled by sea to Sweden and Germany, and the returning Soviet rule brought new arrests and deportations. Army Group North, cut off in western Latvia, held out in the Courland pocket until the end of the war. In the south the Jassy–Kishinev offensive broke through in August, and on 23 August King Michael of Romania deposed Ion Antonescu and changed sides.
+    facts:
+      - [Operation Bagration, "22 June – 19 August 1944"]
+      - [German divisions destroyed, "28, from Army Group Centre"]
+      - [Tallinn and Riga retaken, "22 September and 13 October 1944"]
+    markers:
+      - kind: battle
+        side: su
+        name: Vitebsk
+        date: 23–27 June 1944
+        text: The German corps holding the city was encircled in the first days of the offensive and almost entirely killed or captured.
+        lonlat: [30.206, 55.192]
+      - kind: battle
+        side: su
+        name: Bobruisk
+        date: June 1944
+        text: Soviet armour and aircraft destroyed the German forces trapped around the town on the Berezina.
+        lonlat: [29.233, 53.15]
+      - kind: taken
+        side: su
+        name: Minsk
+        date: 3 July 1944
+        text: Freed after three years of occupation. The day is now Belarus’s Independence Day.
+        lonlat: [27.567, 53.9]
+        lp: l
+      - kind: taken
+        side: su
+        name: Vilnius
+        date: 13 July 1944
+        text: Taken by the Red Army with the help of the Polish Home Army, whose soldiers the Soviets then disarmed and arrested.
+        lonlat: [25.28, 54.687]
+      - kind: battle
+        side: de
+        name: Tannenberg Line
+        date: 25 July – 10 August 1944
+        text: German and Estonian troops held the Blue Hills (Sinimäed) on the Narva isthmus against repeated Soviet attacks.
+        lonlat: [27.867, 59.375]
+      - kind: taken
+        side: su
+        name: Tallinn
+        date: 22 September 1944
+        text: The Germans had already left. An Estonian government that had raised the national flag in the city was swept aside by the Soviet troops.
+        lonlat: [24.745, 59.437]
+      - kind: taken
+        side: su
+        name: Riga
+        date: 13 October 1944
+        text: Taken by the 3rd Baltic Front as the German army withdrew into Courland.
+        lonlat: [24.106, 56.949]
+      - kind: held
+        side: de
+        name: Courland pocket
+        date: October 1944 – May 1945
+        text: Army Group North, cut off in western Latvia, held out against six Soviet offensives and surrendered only after Germany’s capitulation.
+        lonlat: [22.3, 56.85]
+        lp: l
+      - kind: taken
+        side: su
+        name: Chișinău
+        date: 24 August 1944
+        text: The Jassy–Kishinev offensive trapped German and Romanian armies, and Romania changed sides the day before the city fell.
+        lonlat: [28.835, 47.023]
+    arrows:
+      - side: su
+        label: Bagration
+        via: [[30.9, 54.9], [29.4, 54.4], [27.75, 53.95]]
+      - side: su
+        via: [[30.0, 53.0], [29.0, 53.2], [27.75, 53.8]]
+      - side: su
+        via: [[27.4, 54.05], [26.0, 54.5], [25.3, 54.7], [23.95, 54.9]]
+      - side: su
+        label: To Riga
+        via: [[27.8, 57.4], [26.3, 57.2], [24.3, 56.97]]
+      - side: su
+        label: To Tallinn
+        via: [[27.3, 58.4], [26.0, 58.9], [24.9, 59.38]]
+    areas:
+      - style: front
+        side: de
+        label: German front, 22 June 1944 (approximate)
+        lines:
+          - [[28.05, 59.45], [28.2, 59.35], [28.05, 59.2], [27.75, 59.0]]
+          - [[28.05, 57.75], [28.4, 57.6], [28.55, 57.25], [28.95, 56.9], [29.45, 56.5], [29.75, 56.15], [30.15, 55.6], [30.55, 55.3], [30.75, 55.0], [30.85, 54.6], [30.6, 54.2], [30.55, 53.85], [30.3, 53.4], [30.1, 53.1], [29.95, 52.75], [29.6, 52.35], [29.1, 52.15], [28.3, 52.15], [27.5, 52.05], [26.6, 51.85], [25.6, 51.55], [24.95, 51.25], [25.0, 50.75], [25.3, 50.2], [25.25, 49.7], [25.15, 49.15], [24.9, 48.6], [24.7, 48.25]]
+          - [[26.0, 47.75], [26.6, 47.4], [27.2, 47.3], [27.6, 47.25], [28.0, 47.25], [28.6, 47.3], [29.15, 47.2], [29.55, 46.85], [29.7, 46.5], [30.1, 46.2], [30.3, 46.05]]
+      - style: front
+        side: su
+        label: Soviet front, 31 December 1944 (approximate)
+        lines:
+          - [[23.3, 57.05], [23.15, 56.85], [22.85, 56.65], [22.4, 56.55], [21.9, 56.45], [21.5, 56.4], [21.05, 56.35]]
+          - [[21.25, 55.3], [21.75, 55.1], [22.3, 55.0], [22.6, 54.65], [22.55, 54.3], [22.4, 53.9], [21.95, 53.45], [21.45, 53.0], [21.1, 52.65], [21.05, 52.3], [21.25, 52.0], [21.25, 51.75], [21.75, 51.5], [21.85, 51.2], [21.6, 50.95], [21.2, 50.75], [21.1, 50.5], [21.45, 50.25], [21.6, 49.7], [21.7, 49.4]]
   - title: The Warsaw Uprising
     date: 1 August – 2 October 1944
     when: "1944-08-01"
@@ -735,3 +1171,68 @@ steps:
         side: su
         label: Northern East Prussia, to the Soviet Union
         atoms: [RU-KGD]
+  - title: The fall of Berlin
+    date: April – May 1945
+    when: "1945-04-16"
+    borders: "1945-05-08"
+    countries: [de, pl]
+    body:
+      - By the spring of 1945 the Red Army stood on the Oder and the Neisse, about 70 km from Berlin, while the Western Allies were advancing across western Germany. On 16 April Georgy Zhukov’s 1st Belorussian Front attacked across the Oder at the Seelow Heights, and Ivan Konev’s 1st Ukrainian Front across the Neisse further south. The heights cost Zhukov days and heavy losses, but by 25 April the two fronts had encircled Berlin, and on the same day Soviet and American soldiers met on the Elbe near Torgau, cutting Germany in two. In the city the remnants of the army and the SS, old men of the Volkssturm militia and boys of the Hitler Youth fought on street by street.
+      - Hitler killed himself in his bunker on 30 April, as Soviet soldiers stormed the Reichstag, and the Berlin garrison surrendered on 2 May. Germany’s armed forces surrendered unconditionally at Reims on 7 May and again, at Soviet insistence, in Berlin-Karlshorst late on 8 May, when it was already 9 May in Moscow. The battle had cost some 80,000 Soviet soldiers their lives, and tens of thousands of German civilians died. Soviet troops raped very large numbers of women in Berlin and across eastern Germany. The Soviet Union had lost about 27 million people in the war, more than any other country.
+    facts:
+      - [Battle of Berlin, "16 April – 2 May 1945"]
+      - [Soviet and American troops meet at Torgau, "25 April 1945"]
+      - [German surrender, "8 May 1945 (9 May in Moscow)"]
+    markers:
+      - kind: battle
+        side: su
+        name: Seelow Heights
+        date: 16–19 April 1945
+        text: Zhukov’s frontal assault on the fortified heights above the Oder broke through only after heavy losses on both sides.
+        lonlat: [14.426, 52.53]
+      - kind: event
+        name: Torgau
+        date: 25 April 1945
+        text: American and Soviet soldiers met at the damaged Elbe bridge, celebrated since as Elbe Day.
+        lonlat: [13.006, 51.56]
+        lp: l
+      - kind: battle
+        side: su
+        name: Halbe
+        date: 24 April – 1 May 1945
+        text: The German 9th Army, trapped south-east of Berlin, was destroyed as a fighting force trying to break out to the west.
+        lonlat: [13.701, 52.107]
+      - kind: taken
+        side: su
+        name: Reichstag
+        date: 30 April – 2 May 1945
+        text: The photograph of a Soviet flag raised over the building became the best-known image of the victory.
+        lonlat: [13.376, 52.519]
+        lp: l
+      - kind: treaty
+        name: Karlshorst
+        date: 8 May 1945
+        text: German commanders signed the final unconditional surrender before Soviet, British, American and French representatives.
+        lonlat: [13.54, 52.486]
+        lp: b
+    arrows:
+      - side: su
+        label: Zhukov
+        via: [[14.65, 52.6], [14.0, 52.57], [13.5, 52.53]]
+      - side: su
+        label: Konev
+        via: [[14.85, 51.55], [14.1, 51.85], [13.45, 52.35]]
+      - side: su
+        via: [[14.0, 51.75], [13.5, 51.62], [13.08, 51.57]]
+      - side: su
+        label: Rokossovsky
+        via: [[14.5, 53.3], [13.6, 53.5], [12.4, 53.85]]
+    areas:
+      - style: front
+        side: su
+        label: Soviet front, 16 April 1945 (approximate)
+        line: [[14.25, 53.9], [14.6, 53.6], [14.45, 53.3], [14.15, 52.95], [14.45, 52.65], [14.55, 52.35], [14.65, 52.1], [14.75, 51.9], [14.75, 51.6], [14.95, 51.2], [14.85, 50.9]]
+      - style: front
+        side: allies
+        label: Western Allied front, 25 April 1945 (approximate)
+        line: [[10.0, 53.45], [10.57, 53.37], [11.25, 53.14], [11.75, 52.99], [11.95, 52.6], [11.65, 52.15], [12.25, 51.83], [12.59, 51.59], [12.74, 51.37], [12.7, 50.95], [12.4, 50.5]]

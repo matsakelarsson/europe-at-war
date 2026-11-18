@@ -1,0 +1,288 @@
+id: mongol-invasion-of-rus
+name: Mongol invasion of Rus’
+start: "1237"
+end: "1240"
+tier: A
+summary: The conquest of the Rus’ principalities by the Mongol armies of Batu Khan, who sacked Ryazan, Vladimir, Chernigov and Kiev between 1237 and 1240. The principalities kept their own princes but became tributaries of the Golden Horde, whose khans confirmed each prince with a patent, the yarlik, for more than two centuries.
+countries: [ru, ua]
+sides:
+  - id: mn
+    name: Mongols
+    polities: [mongol-empire, golden-horde]
+    ink: olive
+    moves: Mongol moves
+    success: Mongol success
+  - id: rus
+    name: Rus’ principalities
+    polities: [russia, ryazan, novgorod, chernigov, smolensk, principality-of-kyiv, galicia-volhynia, other-rus-principalities, pskov]
+    ink: green
+    moves: Rus’ moves
+    success: Rus’ success
+  - id: st
+    name: Volga Bulgars, Cumans and Alans
+    polities: [volga-bulgars, cuman-kipchak-confederation, alans]
+    ink: purple
+    moves: Moves by the Volga and steppe peoples
+    success: Success for the Volga and steppe peoples
+notes:
+  - The dates come from the Rus’ chronicles, which use the Julian calendar and often contradict one another; Persian and Chinese sources, such as Rashid al-Din, add some details from the Mongol side. Numbers in all of them are unreliable.
+  - The Rus’ chroniclers called the invaders Tatars. The raid on Poland and Hungary that followed in 1241 is told under the Mongol invasion of Poland.
+  - Rus’ was divided into many principalities ruled by branches of the Rurikid dynasty. The strongest were Vladimir-Suzdal in the north-east, Novgorod in the north, and Chernigov, Kiev and Galicia–Volhynia in the south.
+sources:
+  - title: Mongol invasion of Kievan Rus’ (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mongol_invasion_of_Kievan_Rus%27
+  - title: Siege of Ryazan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Ryazan
+  - title: Siege of Vladimir (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Vladimir
+  - title: Battle of the Sit River (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Sit_River
+  - title: Siege of Kozelsk (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kozelsk
+  - title: Siege of Kiev, 1240 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kiev_(1240)
+  - title: Golden Horde (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Golden_Horde
+  - title: Jarlig (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jarlig
+  - title: Batu Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Batu_Khan
+steps:
+  - title: Volga Bulgaria and Ryazan
+    date: 1236–1237
+    when: "1237-12-16"
+    borders: "1237-12-21"
+    countries: [ru]
+    body:
+      - "In 1235 a kurultai, the great council of the Mongols, sent Batu, a grandson of Genghis Khan, with the veteran general Subutai and many princes of Genghis’s line to conquer the lands to the west. Their armies, which included many Turkic troops, gathered on the lower Volga in 1236. That autumn they destroyed Volga Bulgaria and its great trading city of Bilär. In 1237 they fought the Cumans and Alans in the steppe and subdued the Mordvins and Burtas on the forest edge, and by the end of the year they stood on the border of Ryazan, the southernmost Rus’ principality."
+      - "According to the Novgorod chronicle, Mongol envoys demanded a tenth of everything: people, horses and goods. The princes of Ryazan refused, and Grand Prince Yuri II of Vladimir sent no help. The Mongols beat Ryazan’s forces on the Voronezh river and on 16 December 1237 surrounded its capital. Catapults broke the wooden walls, and on 21 December the city was stormed. Prince Yuri Igorevich and his family were killed with most of the inhabitants, and archaeologists have found mass graves from the sack. Old Ryazan never fully recovered; its princes later moved to Pereyaslavl-Ryazansky, today’s Ryazan."
+    facts:
+      - [Volga Bulgaria, "Conquered in 1236–1237"]
+      - [Ryazan stormed, "21 December 1237"]
+      - [Mongol army, "Batu and Subutai; estimates range from a few tens of thousands to more than 100,000 men"]
+    markers:
+      - kind: taken
+        side: mn
+        name: Bilär
+        date: Autumn 1236
+        text: The largest city of Volga Bulgaria was stormed and burned. The whole country was in Mongol hands by the spring of 1237.
+        lonlat: [50.398, 54.985]
+      - kind: siege
+        side: mn
+        name: Ryazan
+        date: 16–21 December 1237
+        text: The first Rus’ city to be besieged. It fell after five days and was burned; the chronicler wrote that there was “none left to groan and cry”.
+        lonlat: [40.428, 54.397]
+    arrows:
+      - side: st
+        via: [[48.6, 52.6], [49.9, 54.0], [50.35, 54.9]]
+      - side: mn
+        label: Batu
+        via: [[44.5, 51.0], [41.6, 51.6], [40.5, 53.2], [40.42, 54.3]]
+    areas:
+      - style: occupied
+        side: mn
+        label: Volga Bulgaria, conquered by the Mongols in 1236–1237
+        atoms: [RU-TA, RU-ULY, RU-SAM, RU-CU]
+  - title: Vladimir and the Sit
+    date: January – March 1238
+    when: "1238-01"
+    borders: "1238-03-04"
+    countries: [ru]
+    body:
+      - "From Ryazan the Mongols moved up the frozen rivers into the grand principality of Vladimir. In January 1238 they beat Yuri II’s army under his son Vsevolod at Kolomna, where Kulkan, a son of Genghis Khan, was killed. Moscow, then a small fortified town, was burned and Yuri’s son Vladimir taken prisoner. Yuri had left his capital to raise troops in the north. On 3 February the Mongols reached Vladimir and on 7 February they stormed it. The grand prince’s wife and family, who had taken refuge in the Dormition Cathedral, died when it was set on fire."
+      - "Suzdal fell the same week, and Mongol columns spread out across the north-east. The chronicles list fourteen towns taken that February, from Rostov and Yaroslavl to Tver; some, such as Rostov and Uglich, seem to have submitted and escaped the worst. Yuri gathered his army on the Sit, a river north of the Volga. On 4 March 1238 a Mongol force under Burundai caught it unprepared and destroyed it, and Yuri was killed. His brother Yaroslav, prince of Kiev, came north to take over the ruined principality."
+    facts:
+      - [Vladimir stormed, "7 February 1238 (8 February in some accounts)"]
+      - [Battle of the Sit River, "4 March 1238, Mongol victory"]
+      - [Grand Prince, "Yuri II of Vladimir, killed at the Sit"]
+    markers:
+      - kind: battle
+        side: mn
+        name: Kolomna
+        date: January 1238
+        text: The army of Vladimir was beaten on the Oka. Kulkan, killed here, was the only son of Genghis Khan to die in the western campaign.
+        lonlat: [38.783, 55.083]
+      - kind: taken
+        side: mn
+        name: Moscow
+        date: January 1238
+        text: A small town on the Moskva river, burned after a siege of a few days.
+        lonlat: [37.618, 55.756]
+      - kind: taken
+        side: mn
+        name: Vladimir
+        date: 7 February 1238
+        text: The capital of the grand principality fell after a short siege. Bishop Mitrofan and the grand prince’s family died in the burning cathedral.
+        lonlat: [40.406, 56.129]
+      - kind: taken
+        side: mn
+        name: Suzdal
+        date: February 1238
+        text: The old princely city near Vladimir was taken and burned.
+        lonlat: [40.45, 56.417]
+        lp: t
+      - kind: taken
+        side: mn
+        name: Yaroslavl
+        date: February 1238
+        text: One of the fourteen towns of the north-east taken that month.
+        lonlat: [39.893, 57.626]
+      - kind: taken
+        side: mn
+        name: Tver
+        date: February 1238
+        text: Taken and burned in the same month.
+        lonlat: [35.924, 56.863]
+      - kind: battle
+        side: mn
+        name: Battle of the Sit River
+        date: 4 March 1238
+        text: Yuri II’s hastily gathered army was surrounded and destroyed. The battle ended organised resistance in the north-east.
+        lonlat: [37.852, 58.069]
+    arrows:
+      - side: mn
+        via: [[40.35, 54.45], [39.4, 54.85], [38.9, 55.05]]
+      - side: mn
+        via: [[38.7, 55.15], [38.1, 55.5], [37.72, 55.72]]
+      - side: mn
+        via: [[37.85, 55.8], [39.0, 56.0], [40.3, 56.12]]
+      - side: mn
+        label: Burundai
+        via: [[39.7, 57.65], [38.8, 57.95], [37.95, 58.06]]
+      - side: rus
+        label: Yuri II
+        via: [[40.35, 56.2], [39.6, 57.3], [38.5, 57.95]]
+  - title: Kozelsk, and Novgorod spared
+    date: March – May 1238
+    when: "1238-03-05"
+    borders: "1238-05"
+    countries: [ru]
+    body:
+      - "Another Mongol force besieged Torzhok, Novgorod’s outpost on the road to the grain lands of the south. It held out for two weeks, hoping for help from Novgorod that never came, and fell on 5 March. The Mongols then rode north-west towards Novgorod itself, but about a hundred versts from the city, at a place the chronicles call the Ignach Cross, they turned back. The spring thaw was coming, which would turn the forests and marshes into a morass, and the army had suffered heavy losses. Novgorod, the richest city of the north, was spared."
+      - "Heading south, the Mongols passed east of Smolensk, which was also spared, and at the end of March reached Kozelsk, a small town of the Chernigov lands whose prince, Vasily, was a boy of about twelve. Protected by its ramparts and the flooded rivers, the town held out for seven weeks and is said to have killed 4,000 of the besiegers. When it fell in May, the Mongols killed everyone; the chronicle says the young prince drowned in blood, and that the Mongols called Kozelsk the “evil town”. They then withdrew into the steppe to rest."
+    facts:
+      - [Torzhok, "Taken 5 March 1238 after a two-week siege"]
+      - [Ignach Cross, "About 100 versts (100 km) short of Novgorod; the site is unknown"]
+      - [Kozelsk, "Besieged for seven weeks, spring 1238"]
+    markers:
+      - kind: siege
+        side: mn
+        name: Torzhok
+        date: February – 5 March 1238
+        text: Novgorod’s southern outpost fell the day after the battle on the Sit, and its people were killed.
+        lonlat: [34.967, 57.033]
+      - kind: held
+        side: rus
+        name: Novgorod
+        date: Spring 1238
+        text: The Mongols turned back about a hundred versts away. Novgorod escaped the invasion, but later had to pay tribute like the rest of Rus’.
+        lonlat: [31.267, 58.55]
+      - kind: siege
+        side: mn
+        name: Kozelsk
+        date: Late March – May 1238
+        text: The small town held out for seven weeks, longer than any other in the campaign, and was destroyed when it fell.
+        lonlat: [35.777, 54.035]
+    arrows:
+      - side: mn
+        label: Towards Novgorod
+        via: [[34.95, 57.1], [33.6, 57.55], [32.45, 57.85]]
+      - side: mn
+        via: [[32.4, 57.7], [32.6, 56.3], [34.4, 54.6], [35.68, 54.1]]
+      - side: mn
+        label: To the steppe
+        via: [[35.9, 53.9], [37.5, 52.5], [39.5, 51.0]]
+  - title: Chernigov and Pereyaslavl
+    date: 1239
+    when: "1239-03-03"
+    borders: "1239-10-18"
+    countries: [ua, ru]
+    body:
+      - "The Mongols spent 1238 and 1239 subduing the steppe. They drove the Cumans west, and their khan Köten fled to Hungary with, it is said, 40,000 families. Other forces conquered the Alans in the north Caucasus and the Crimean steppe, and raiding parties struck the north again in 1239, burning Murom and Gorokhovets and fighting along the Klyazma. By then most of the princes of Rus’ were quarrelling over Kiev and Galicia rather than preparing to defend themselves."
+      - "On 3 March 1239 the Mongols stormed Pereyaslavl, south-east of Kiev, burned it and killed Bishop Simeon and many of the townspeople. In the autumn they besieged Chernigov, one of the largest cities of Rus’. A relief army under Prince Mstislav Glebovich was beaten outside the walls, and the city was taken and burned on 18 October 1239. Its bishop was taken prisoner and later let go. The left bank of the Dnieper was now in Mongol hands, and Kiev lay across the river."
+    facts:
+      - [Pereyaslavl, "Stormed 3 March 1239"]
+      - [Chernigov, "Taken 18 October 1239"]
+      - [Cumans, "Driven west; Khan Köten fled to Hungary"]
+    markers:
+      - kind: taken
+        side: mn
+        name: Pereyaslavl
+        date: 3 March 1239
+        text: The fortress town guarding Kiev against the steppe was stormed and burned.
+        lonlat: [31.445, 50.065]
+      - kind: taken
+        side: mn
+        name: Chernigov
+        date: 18 October 1239
+        text: The Mongols beat a relief army outside the walls and took the city. The chronicle says their catapults threw stones that four strong men could barely lift.
+        lonlat: [31.295, 51.494]
+      - kind: taken
+        side: mn
+        name: Murom
+        date: "1239"
+        text: Burned by a Mongol raiding force that also took the Mordvin lands and Gorokhovets.
+        lonlat: [42.033, 55.567]
+    arrows:
+      - side: mn
+        via: [[34.6, 48.6], [33.0, 49.5], [31.6, 50.0]]
+      - side: mn
+        via: [[34.0, 50.7], [32.6, 51.2], [31.45, 51.45]]
+      - side: mn
+        via: [[44.8, 54.3], [43.2, 55.0], [42.15, 55.5]]
+  - title: Kiev, and the Golden Horde
+    date: 1240–1243
+    when: "1240-11-28"
+    borders: "1243"
+    countries: [ua, ru]
+    body:
+      - "Batu’s cousin Möngke had demanded Kiev’s surrender, and his envoys were killed. Its prince, Michael of Chernigov, fled to Hungary, and by 1240 the city was held for Prince Daniel of Galicia by his commander, Dmytro. In late November 1240, once the river had frozen, Batu’s whole army crossed and surrounded Kiev. Catapults battered the walls, and on 6 December the Mongols broke in. The last defenders crowded into the Church of the Tithes, which collapsed under their weight. Most of the people were killed; a papal envoy who passed in 1246 saw countless skulls and bones and only about 200 houses."
+      - "The Mongols moved on through Volhynia and Galicia in the winter of 1240–1241, taking Volodymyr and Halych, though Kremenets and a few other strongholds held out. In 1241 they invaded Poland and Hungary. News of the death of the Great Khan Ögedei reached them, and in 1242 Batu led his army back to the lower Volga, leaving Rus’ in ruins. Many towns had been burned, many thousands of people killed or carried off, and stone building stopped for decades."
+      - "Batu’s realm, the ulus of Jochi, later known as the Golden Horde, held the steppe from the lower Danube to beyond the Urals, with its capital at Sarai on the Volga. The Rus’ principalities kept their own princes, but each prince had to travel to the khan, and sometimes on to Karakorum in Mongolia, to receive a patent to rule, the yarlik. In 1243 Yaroslav of Vladimir was the first to be confirmed as senior prince of Rus’. Censuses were taken in the 1250s, and tribute was paid to the Horde for more than two centuries."
+    facts:
+      - [Siege of Kiev, "28 November – 6 December 1240 by one recent reconstruction; older accounts give other dates"]
+      - [First yarlik, "1243, to Yaroslav II of Vladimir"]
+      - [Golden Horde, "Capital at Sarai on the lower Volga"]
+    markers:
+      - kind: taken
+        side: mn
+        name: Kiev
+        date: 6 December 1240
+        text: The old capital of Rus’ was stormed and sacked. Dmytro, wounded in the fighting, was spared for his courage.
+        lonlat: [30.523, 50.45]
+      - kind: taken
+        side: mn
+        name: Volodymyr
+        date: Winter 1240–1241
+        text: The chief city of Volhynia was stormed, and the chronicle says no one was left alive.
+        lonlat: [24.322, 50.848]
+      - kind: held
+        side: rus
+        name: Kremenets
+        date: Early 1241
+        text: One of the few Rus’ strongholds that the Mongols failed to take and had to bypass.
+        lonlat: [25.728, 50.108]
+      - kind: taken
+        side: mn
+        name: Halych
+        date: Early 1241
+        text: The capital of Galicia was taken while Prince Daniel was in Hungary seeking help.
+        lonlat: [24.729, 49.125]
+      - kind: event
+        side: mn
+        name: Sarai
+        date: From the 1240s
+        text: Batu’s camp and capital on the lower Volga. Rus’ princes came here to submit and receive the yarlik.
+        lonlat: [47.452, 47.169]
+    arrows:
+      - side: mn
+        label: Batu
+        via: [[31.6, 50.1], [31.0, 50.35], [30.6, 50.43]]
+      - side: mn
+        via: [[30.3, 50.45], [27.5, 50.6], [24.45, 50.82]]
+      - side: mn
+        via: [[24.4, 50.7], [24.6, 49.9], [24.7, 49.2]]
+      - side: mn
+        label: To Poland and Hungary
+        via: [[24.6, 49.05], [23.5, 49.3], [22.4, 50.3]]

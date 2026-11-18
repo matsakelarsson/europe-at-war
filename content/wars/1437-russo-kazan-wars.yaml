@@ -1,0 +1,201 @@
+id: russo-kazan-wars
+name: Russo-Kazan Wars
+start: "1437"
+end: "1552"
+tier: B
+summary: A series of wars between Moscow and the Kazan khanate on the middle Volga, founded by Ulugh Muhammad after he beat a Muscovite army at Belyov in 1437. For a century they fought mostly over who should rule in Kazan, with Moscow installing friendly khans whenever it could, until Ivan IV besieged and took Kazan in 1552 and annexed the khanate.
+countries: [ru, ua]
+sides:
+  - id: ru
+    name: Moscow
+    polities: [russia]
+    ink: green
+    moves: Muscovite moves
+    success: Muscovite success
+  - id: kaz
+    name: Kazan khanate
+    polities: [kazan-khanate]
+    ink: navy
+    moves: Kazan moves
+    success: Kazan success
+  - id: cr
+    name: Crimean khanate
+    polities: [crimean-khanate]
+    ink: olive
+    moves: Crimean moves
+    success: Crimean success
+notes:
+  - Dates are Julian (Old Style), as in the Russian chronicles, which are the main source; Tatar accounts are few. The khanate’s founding is dated variously from 1438 to 1445.
+  - Moscow was allied with the Crimean khans from the 1470s until about 1519 and backed the candidates they favoured in Kazan. Later the Crimean Girays put their own relatives on the Kazan throne and the two khanates fought Moscow together.
+  - Rebellions in the countryside after the fall of Kazan lasted until 1556.
+sources:
+  - title: Russo-Kazan Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russo-Kazan_Wars
+  - title: Battle of Belyov (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Belyov
+  - title: Battle of Suzdal (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Suzdal
+  - title: Siege of Kazan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kazan
+  - title: Khanate of Kazan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Khanate_of_Kazan
+  - title: Sviyazhsk (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sviyazhsk
+steps:
+  - title: Belyov and Suzdal
+    date: 1437–1445
+    when: "1437-12-05"
+    borders: "1445-07-07"
+    countries: [ru]
+    body:
+      - "Ulugh Muhammad, once khan of the Golden Horde, lost the struggle for its throne and came north with a small army in 1437. When his Tatars, camped near Belyov on the upper Oka, began raiding, Vasily II of Moscow sent his cousins Dmitry Shemyaka and Dmitry Krasny to drive them off. The Tatars held out in a fort of wicker walls packed with snow and frozen with water, and on 5 December 1437, during peace talks, they attacked through a fog and routed the larger Russian army. Ulugh Muhammad moved to the middle Volga and made Kazan the capital of a new khanate."
+      - "In 1439 his Tatars ravaged the outskirts of Moscow while Vasily fled across the Volga, and in 1445 they took Nizhny Novgorod. On 7 July 1445, near the Monastery of St Euthymius at Suzdal, the khan’s sons Mahmud and Yakub beat Vasily’s hastily gathered army and took him prisoner. He was freed in the autumn for an enormous ransom, which weakened him in his war with Shemyaka. Two other sons of the khan later entered Vasily’s service, and in 1452 one of them, Qasim, was given the town later named Kasimov, the seat of a Tatar khanate loyal to Moscow."
+    facts:
+      - [Battle of Belyov, "5 December 1437, Tatar victory"]
+      - [Battle of Suzdal, "7 July 1445; Vasily II captured"]
+      - [Kazan khanate, "Founded by Ulugh Muhammad, c. 1438–1445"]
+    markers:
+      - kind: battle
+        side: kaz
+        name: Battle of Belyov
+        date: 5 December 1437
+        text: The Russians failed to storm the khan’s ice fort and were surprised during negotiations the next morning.
+        lonlat: [36.133, 53.81]
+      - kind: event
+        side: kaz
+        name: Kazan
+        date: c. 1438
+        text: Ulugh Muhammad made the town on the Kazanka his capital. The khanate covered much of the old Volga Bulgar lands.
+        lonlat: [49.109, 55.796]
+      - kind: event
+        side: kaz
+        name: Moscow
+        date: "1439"
+        text: The Tatars ravaged the outskirts for ten days and burned Kolomna on their way home.
+        lonlat: [37.618, 55.756]
+      - kind: taken
+        side: kaz
+        name: Nizhny Novgorod
+        date: "1445"
+        text: The Muscovite commanders set the fortress on fire and abandoned it to the Tatars.
+        lonlat: [44.008, 56.327]
+      - kind: battle
+        side: kaz
+        name: Battle of Suzdal
+        date: 7 July 1445
+        text: Fought by the Kamenka near the monastery walls. Vasily II was wounded and captured with several other princes.
+        lonlat: [40.439, 56.433]
+      - kind: event
+        side: ru
+        name: Kasimov
+        date: "1452"
+        text: Granted to the Tatar prince Qasim, whose khanate on the Oka served Moscow until the 17th century.
+        lonlat: [41.4, 54.933]
+    arrows:
+      - side: kaz
+        label: Ulugh Muhammad
+        via: [[36.4, 53.95], [41.0, 54.6], [45.5, 55.5], [48.9, 55.78]]
+      - side: kaz
+        via: [[48.9, 55.85], [46.5, 56.15], [44.15, 56.3]]
+      - side: kaz
+        via: [[43.9, 56.35], [42.0, 56.45], [40.55, 56.43]]
+  - title: Khans from Moscow
+    date: 1467–1530
+    when: "1487-06"
+    borders: "1521"
+    countries: [ru, ua]
+    body:
+      - "Moscow and Kazan fought a string of short wars, usually over who should be khan. In 1469 Prince Daniil Kholmsky besieged Kazan and forced Khan Ibrahim to free his Russian captives, and nearly twenty years of peace followed. When Ibrahim died, Ivan III, allied with Mengli Giray of Crimea, backed Ibrahim’s son Muhammad Amin, Mengli’s stepson, against his half-brother Ilham. In 1487 Kholmsky took Kazan after a siege of several weeks. Ilham was sent in chains to Vologda, and for most of the next thirty years Kazan was ruled by khans who were allies or protégés of Moscow."
+      - "Muhammad Amin himself broke with Moscow in 1505. The Russian merchants at the Kazan fair were massacred, a Tatar and Nogai army besieged Nizhny Novgorod, and in 1506 a Russian army was routed outside Kazan. In 1521 Sahib Giray, a brother of the Crimean khan, took the throne, and that summer Crimean and Kazan Tatars raided to the outskirts of Moscow and carried off many thousands of captives. Vasily III answered by founding Vasilsursk on the Volga in 1523, banning his subjects from the Kazan fair and sending large armies against Kazan in 1524 and 1530."
+    facts:
+      - [Kazan taken, "1487, Muhammad Amin installed as khan"]
+      - [Arsk Field, "25 June 1506, Tatar victory"]
+      - [Crimean and Kazan raid on Moscow, "Summer 1521"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Kazan
+        date: "1487"
+        text: Kholmsky’s army took the city and put Muhammad Amin on the throne.
+        lonlat: [49.109, 55.796]
+        lp: l
+      - kind: battle
+        side: kaz
+        name: Arsk Field
+        date: 25 June 1506
+        text: Muhammad Amin’s men fell on a Russian army celebrating an earlier victory outside the city and routed it.
+        lonlat: [49.15, 55.82]
+      - kind: held
+        side: ru
+        name: Nizhny Novgorod
+        date: "1505"
+        text: The town held out against the Tatar and Nogai army, helped, it is said, by Lithuanian prisoners of war who manned the walls.
+        lonlat: [44.008, 56.327]
+      - kind: event
+        side: cr
+        name: Moscow
+        date: July 1521
+        text: Mehmed I Giray of Crimea and Sahib Giray of Kazan raided the outskirts; Vasily III left the city, which was not attacked.
+        lonlat: [37.618, 55.756]
+      - kind: event
+        side: ru
+        name: Vasilsursk
+        date: "1523"
+        text: Founded where the Sura meets the Volga as a forward base against Kazan.
+        lonlat: [46.007, 56.128]
+    arrows:
+      - side: ru
+        label: Kholmsky, 1487
+        via: [[44.1, 56.3], [46.5, 56.1], [48.95, 55.8]]
+      - side: cr
+        label: Mehmed Giray, 1521
+        via: [[37.2, 52.0], [37.4, 53.6], [37.6, 55.5]]
+      - side: kaz
+        label: "1521"
+        via: [[48.9, 55.75], [45.0, 55.3], [41.0, 55.4], [38.0, 55.6]]
+  - title: The fall of Kazan
+    date: 1545–1552
+    when: "1552-08"
+    borders: "1552-10-02"
+    countries: [ru, ua]
+    body:
+      - "When Ivan IV came of age, Moscow set out to end the threat from Kazan for good. His winter campaigns of 1547–1548 and 1549–1550 failed for lack of supplies. In 1551 a wooden fortress, cut and fitted at Uglich, was floated down the Volga and put up in four weeks at Sviyazhsk, about 30 kilometres above Kazan. The peoples on the right bank of the Volga went over to Moscow, and the pro-Russian Shah Ali was briefly restored as khan, but the Kazan nobles soon drove him out and called in a new khan, Yadegar Muhammad, who brought Nogai horsemen."
+      - "In June 1552 Ivan led a large army, said to number 150,000, from Moscow. A Crimean attack meant to divert him was beaten off at Tula, and in late August the Russians surrounded Kazan. Their engineers built a wooden siege tower carrying cannon, and sappers blew up the passage to the city’s water source. On 2 October mines brought down the walls, and after hard street fighting the city was taken. Many defenders and inhabitants were killed, and Yadegar Muhammad was captured. Resistance in the countryside lasted until 1556, and Ivan celebrated the victory by building St Basil’s Cathedral in Moscow."
+    facts:
+      - [Sviyazhsk, "Built in 1551, about 30 km above Kazan"]
+      - [Siege of Kazan, "Late August – 2 October 1552"]
+      - [Last khan, "Yadegar Muhammad, captured"]
+    markers:
+      - kind: event
+        side: ru
+        name: Sviyazhsk
+        date: "1551"
+        text: The fortress on an island in the Volga became the Russian base for the final campaign.
+        lonlat: [48.653, 55.77]
+        lp: l
+      - kind: held
+        side: ru
+        name: Tula
+        date: June 1552
+        text: Devlet I Giray of Crimea attacked the town to draw Ivan’s army south, but was driven off.
+        lonlat: [37.617, 54.2]
+      - kind: siege
+        side: ru
+        name: Kazan
+        date: Late August – 2 October 1552
+        text: Mines blew breaches in the walls near the Nogai Gate, and the city was stormed and sacked. Most of its buildings, mosques included, were destroyed.
+        lonlat: [49.109, 55.796]
+    arrows:
+      - side: ru
+        label: Ivan IV
+        via: [[38.8, 55.05], [42.0, 55.55], [46.5, 54.85], [48.55, 55.72]]
+      - side: ru
+        via: [[44.1, 56.3], [46.5, 56.1], [48.6, 55.8]]
+      - side: cr
+        label: Devlet Giray
+        via: [[37.3, 52.4], [37.5, 53.4], [37.6, 54.1]]
+    areas:
+      - style: gained
+        side: ru
+        label: The Kazan khanate, annexed by Moscow (approximate)
+        atoms: [RU-TA, RU-CU, RU-ME, RU-UD]

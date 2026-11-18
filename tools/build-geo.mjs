@@ -15,6 +15,8 @@ import polygonClipping from 'polygon-clipping';
 import { projectRaw, unproject, mapCoords, DATA_CLIP } from './projection.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+// Natural Earth names that are wrong for the polygon they label.
+const NAME_FIX = { 'MD-RE': 'Rîbnița', 'AZ-LAN': 'Lachin' };
 const CACHE = join(ROOT, '.cache');
 const PREFILTER = [-75, 0, 130, 90]; // lon/lat box that covers DATA_CLIP
 
@@ -56,7 +58,7 @@ async function main() {
     if (seen.has(id)) id = p.adm1_code;
     if (seen.has(id)) throw new Error('duplicate atom id ' + id);
     seen.set(id, true);
-    atoms.push({ id, name: p.name_en || p.name || id, country: p.adm0_a3, admin: p.admin, geometry: ft.geometry });
+    atoms.push({ id, name: NAME_FIX[id] || p.name_en || p.name || id, country: p.adm0_a3, admin: p.admin, geometry: ft.geometry });
   }
 
   // Apply splits (in lon/lat, before projecting).

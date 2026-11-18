@@ -1,0 +1,161 @@
+id: russo-turkish-war-1828
+name: Russo-Turkish War of 1828–1829
+start: "1828-04-26"
+end: "1829-09-14"
+tier: B
+summary: A war between the Russian Empire and the Ottoman Empire that grew out of the Greek War of Independence. After the capture of Varna and Akhaltsikhe in 1828, Diebitsch’s march over the Balkan mountains to Adrianople in 1829 forced the Ottomans to make peace, giving Russia the mouths of the Danube, the eastern Black Sea coast and Akhaltsikhe, and opening the way to Greek independence.
+countries: [ro, bg, tr, ge, ru]
+sides:
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: tr
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Dates are New Style (Gregorian). Russian accounts use the Julian calendar, then 12 days behind, so the fall of Varna is 29 September 1828 and the Treaty of Adrianople 2 September 1829 in Russian sources.
+  - Adrianople is today’s Edirne, and Shumla is Shumen in Bulgaria.
+sources:
+  - title: Russo-Turkish War (1828–1829) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russo-Turkish_War_(1828%E2%80%931829)
+  - title: Siege of Varna (1828) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Varna_(1828)
+  - title: Battle of Kulevicha (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kulevicha
+  - title: Treaty of Adrianople (1829) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Adrianople_(1829)
+  - title: Treaty of Edirne (Britannica)
+    url: https://www.britannica.com/event/Treaty-of-Edirne
+steps:
+  - title: Varna and Akhaltsikhe
+    date: 1828
+    when: "1828-04-26"
+    borders: "1828-10-11"
+    countries: [ro, bg, tr, ge, ru]
+    body:
+      - At Navarino in October 1827 British, French and Russian squadrons destroyed the Ottoman and Egyptian fleet that was fighting the Greek rising. Sultan Mahmud II answered by repudiating his recent agreements with Russia and closing the Bosporus to Russian ships, and on 26 April 1828 Russia declared war. The Ottomans had abolished the Janissaries only two years before, and their new army was still being formed. Field Marshal Peter Wittgenstein’s army occupied Moldavia and Wallachia, and in June, with Nicholas I present, it crossed the Danube into Dobruja.
+      - Brăila surrendered in June, but Shumla was too strong to take and Silistra held out. Varna, besieged from the land and from the sea by Admiral Aleksey Greig’s Black Sea Fleet, surrendered on 11 October. Disease and hunger killed many Russian soldiers, and the army fell back for the winter. In the Caucasus General Ivan Paskevich, with fewer than 20,000 men, took Kars in July and Akhalkalaki, then defeated a relief army and stormed Akhaltsikhe in late August. The burning town was taken street by street. Anapa and Poti on the Black Sea coast also fell.
+    facts:
+      - [War declared, "26 April 1828"]
+      - [Varna surrenders, "11 October 1828"]
+      - [Akhaltsikhe stormed, "late August 1828"]
+    markers:
+      - kind: event
+        side: ru
+        name: Crossing of the Danube
+        date: June 1828
+        text: The main Russian army crossed into Dobruja near Isaccea, with the emperor watching.
+        lonlat: [28.46, 45.27]
+      - kind: taken
+        side: ru
+        name: Brăila
+        date: June 1828
+        text: The Danube fortress surrendered after a costly failed assault.
+        lonlat: [27.957, 45.269]
+        lp: l
+      - kind: held
+        side: tr
+        name: Shumla
+        date: 1828
+        text: The fortress, held by about 40,000 Ottoman troops, could not be taken, and the Russians withdrew from it in the autumn.
+        lonlat: [26.933, 43.283]
+      - kind: siege
+        side: ru
+        name: Siege of Varna
+        date: August – 11 October 1828
+        text: Besieged by land and blockaded by the fleet, the port surrendered after its commander, Yusuf Pasha, went over to the Russians.
+        lonlat: [27.917, 43.208]
+      - kind: taken
+        side: ru
+        name: Anapa
+        date: June 1828
+        text: The Ottoman fortress on the Circassian coast fell to a Russian landing force supported by the fleet.
+        lonlat: [37.317, 44.894]
+      - kind: taken
+        side: ru
+        name: Kars
+        date: July 1828
+        text: The fortress fell almost by accident, when an unauthorised attack by a company of riflemen drew in the whole army.
+        lonlat: [43.096, 40.608]
+      - kind: taken
+        side: ru
+        name: Akhaltsikhe
+        date: late August 1828
+        text: Paskevich stormed the town after beating Kios Pasha’s relief army. Thousands of defenders and townspeople died, and the citadel surrendered.
+        lonlat: [42.986, 41.639]
+    arrows:
+      - side: ru
+        label: Wittgenstein
+        via: [[28.46, 45.22], [28.4, 44.6], [27.85, 43.6], [27.85, 43.27]]
+      - side: ru
+        label: Paskevich
+        via: [[43.85, 40.79], [43.15, 40.63], [43.45, 41.37], [43.02, 41.63]]
+    areas:
+      - style: occupied
+        side: ru
+        label: Occupied by Russia, 1828–1834
+        atoms: [RO-AG, RO-B, RO-BR, RO-BZ, RO-CL, RO-DB, RO-DJ, RO-GJ, RO-GR, RO-IF, RO-IL, RO-MH, RO-OT, RO-PH, RO-TR, RO-VL, RO-BC, RO-BT, RO-GL, RO-IS, RO-NT, RO-VN, RO-VS]
+  - title: Over the Balkans to Adrianople
+    date: 1829
+    when: "1829-05"
+    borders: "1829-09-14"
+    countries: [bg, tr, ro, ge, ru]
+    body:
+      - In 1829 General Hans Karl von Diebitsch replaced Wittgenstein and laid siege to Silistra. On 11 June he defeated the grand vizier, Reshid Mehmed Pasha, at Kulevcha as the Ottoman army marched out of Shumla, and Silistra surrendered at the end of the month. In July Diebitsch led about 35,000 men across the Balkan mountains, bypassing Shumla, took Burgas and the coastal towns with the help of the fleet, and on 20 August entered Adrianople, the second city of the empire, without a fight. His army was dwindling from disease, but the Ottomans did not know how weak it was.
+      - In the east Paskevich beat the Ottoman army in the Saganlug mountains and entered Erzurum on 9 July. By the Treaty of Adrianople, signed on 14 September 1829, Russia returned Kars, Erzurum and its other conquests in Anatolia and Europe, but gained the mouths of the Danube, Akhaltsikhe and Akhalkalaki, and the Black Sea coast from the Kuban to Adjara. Moldavia and Wallachia became self-governing under Russian protection, and Russian troops stayed there until 1834. The sultan accepted the powers’ settlement for Greece, which became independent in 1830, and confirmed Serbia’s self-rule. Some 90,000 Armenians moved from Ottoman to Russian territory.
+    facts:
+      - [Battle of Kulevcha, "11 June 1829, Russian victory"]
+      - [Adrianople entered, "20 August 1829"]
+      - [Treaty of Adrianople, "14 September 1829"]
+    markers:
+      - kind: battle
+        side: ru
+        name: Battle of Kulevcha
+        date: 11 June 1829
+        text: Diebitsch caught the grand vizier’s army in the hills east of Shumla and routed it.
+        lonlat: [27.116, 43.257]
+      - kind: taken
+        side: ru
+        name: Silistra
+        date: late June 1829
+        text: The fortress surrendered after a six-week siege, freeing Diebitsch to march south.
+        lonlat: [27.261, 44.117]
+      - kind: taken
+        side: ru
+        name: Burgas
+        date: July 1829
+        text: Taken with the coastal towns of Mesembria (Nesebar) and Ahioli, which gave the army a port for supplies by sea.
+        lonlat: [27.47, 42.503]
+      - kind: treaty
+        name: Treaty of Adrianople
+        date: 14 September 1829
+        text: Signed in the old Ottoman capital, which Diebitsch had entered on 20 August. He was given the honorary surname Zabalkansky, “beyond the Balkans”.
+        lonlat: [26.556, 41.677]
+      - kind: taken
+        side: ru
+        name: Erzurum
+        date: 9 July 1829
+        text: The chief city of eastern Anatolia surrendered to Paskevich. It was handed back under the peace.
+        lonlat: [41.277, 39.909]
+    arrows:
+      - side: ru
+        label: Diebitsch
+        via: [[27.3, 43.15], [27.3, 42.7], [26.8, 42.2], [26.6, 41.73]]
+      - side: ru
+        label: Paskevich
+        via: [[43.0, 40.55], [42.2, 40.12], [41.33, 39.92]]
+    areas:
+      - style: gained
+        side: ru
+        label: Akhaltsikhe and Akhalkalaki, to Russia in this peace
+        atoms: [GE-SJ]
+      - style: gained
+        side: ru
+        label: Black Sea coast, ceded by the Ottomans but held by the Circassians until 1864 (approximate)
+        polygon: [[37.45, 45.05], [37.9, 44.85], [38.45, 44.55], [39.2, 44.25], [39.9, 43.75], [40.3, 43.45], [40.0, 43.36], [39.7, 43.57], [39.07, 44.08], [38.06, 44.56], [37.77, 44.7], [37.3, 44.9], [37.2, 45.1]]

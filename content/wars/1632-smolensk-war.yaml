@@ -2,7 +2,7 @@ id: smolensk-war
 name: Smolensk War
 start: "1632"
 end: "1634"
-tier: C
+tier: B
 summary: In 1632, during the interregnum after the death of Sigismund III and as the Truce of Deulino neared its end, Russia sent an army under Mikhail Shein to retake Smolensk. The new Polish king, Władysław IV, relieved the city in 1633 and surrounded Shein’s army, which surrendered early in 1634. At Polyanovka that June Russia accepted the Deulino border with small changes and paid Władysław to give up his claim to the Russian throne.
 countries: [pl, lt, ru]
 sides:
@@ -10,14 +10,113 @@ sides:
     name: Poland–Lithuania
     polities: [poland, lithuania, poland-lithuania]
     ink: magenta
+    moves: Polish–Lithuanian moves
+    success: Polish–Lithuanian success
   - id: ru
     name: Tsardom of Russia
     polities: [russia]
     ink: green
+    moves: Russian moves
+    success: Russian success
 notes:
   - Dates are New Style (Gregorian); Russian sources give them ten days earlier.
+  - Smolensk, Dorogobuzh, Bely (Belaya) and Vyazma are today in Russia; Polotsk and Orsha are in Belarus.
 sources:
   - title: Smolensk War (Wikipedia)
     url: https://en.wikipedia.org/wiki/Smolensk_War
   - title: Treaty of Polyanovka (Wikipedia)
     url: https://en.wikipedia.org/wiki/Treaty_of_Polyanovka
+  - title: Mikhail Shein (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mikhail_Shein
+  - title: Truce of Deulino (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Truce_of_Deulino
+  - title: Smolensk War, 1632–1634 (History of War)
+    url: http://www.historyofwar.org/articles/wars_smolensk.html
+steps:
+  - title: The siege of Smolensk
+    date: October 1632 – October 1633
+    when: "1632-10"
+    borders: "1633-10-04"
+    countries: [ru, by, pl, lt]
+    body:
+      - The Truce of Deulino of 1618 had left Smolensk and the Chernihiv and Siverian lands to Poland–Lithuania, and it was due to run out in 1633. When King Sigismund III died in April 1632, Russia decided not to wait for a new king to be elected. The war was pressed by Patriarch Filaret, the tsar’s father, and in early October an army of some 30,000–35,000 men crossed the border under Mikhail Shein, who had defended Smolensk against the Poles in 1609–1611. Eight of its regiments, about half the army, had been raised and drilled on the Western model under foreign officers.
+      - Shein took Dorogobuzh and other border towns and on 28 October began the siege of Smolensk, held by about 3,000 soldiers and local nobles. His heavy guns came only in December and March. Mines brought down part of the wall, but assaults failed, and Lithuanian troops under Krzysztof Radziwiłł raided his supply lines and slipped men into the city. In August 1633 the new king, Władysław IV, arrived with a relief army of about 20,000–25,000, joined in September by thousands of Zaporozhian Cossacks. His troops took the Russian siege works one by one, and by 4 October the siege was broken.
+    facts:
+      - [Siege of Smolensk, "28 October 1632 – 4 October 1633"]
+      - [Russian army, "Some 30,000–35,000, with about 160 guns"]
+      - [Relief army, "About 20,000–25,000 under Władysław IV, with Cossack reinforcements"]
+    markers:
+      - kind: held
+        side: pl
+        name: Siege of Smolensk
+        date: 28 October 1632 – 4 October 1633
+        text: The garrison held out for almost a year behind walls recently strengthened with Italian-style bastions, until the king’s army broke the Russian siege lines.
+        lonlat: [32.045, 54.782]
+      - kind: taken
+        side: ru
+        name: Dorogobuzh
+        date: 28 October 1632
+        text: Taken by the Russians on the day the siege began. It became their supply base until Polish–Lithuanian troops retook it in the autumn of 1633.
+        lonlat: [33.29, 54.915]
+      - kind: taken
+        side: ru
+        name: Polotsk
+        date: July 1633
+        text: Russian troops took the town and part of its castle after heavy fighting, but attacks on Vitebsk and Mstsislaw failed.
+        lonlat: [28.79, 55.485]
+      - kind: event
+        side: pl
+        name: Orsha
+        date: 17 August 1633
+        text: Władysław IV’s relief army reached Orsha on the Dnieper and advanced from there on Smolensk.
+        lonlat: [30.42, 54.51]
+        lp: b
+    arrows:
+      - side: ru
+        label: Shein
+        via: [[36.03, 55.5], [34.3, 55.21], [33.29, 54.93], [32.2, 54.8]]
+      - side: pl
+        label: Władysław IV
+        via: [[30.42, 54.51], [31.15, 54.62], [31.9, 54.76]]
+  - title: Shein’s surrender and the Peace of Polyanovka
+    date: October 1633 – June 1634
+    when: "1633-10"
+    borders: "1634-06-14"
+    countries: [ru, pl, lt]
+    body:
+      - Shein pulled his army back into its fortified camp, and by mid-October it was surrounded. No help came. Polish and Cossack cavalry raided far behind his lines, and Polish–Lithuanian troops retook Dorogobuzh with its stores. Crimean Tatar raids on southern Russia led many servicemen from the south to desert to defend their homes, the foreign officers quarrelled, and disease spread through the camp. Shein opened talks in January. Under the surrender signed on 25 February 1634 his men marched out on 1 March, laid their banners before the king and left most of their guns behind. Over 4,000 of the 12,000 or so who were left, most of the foreigners among them, entered Polish service.
+      - In Moscow Shein and his deputy Artemy Izmailov were accused of treason and beheaded in April. Władysław marched east, but his siege of Belaya failed, an Ottoman army was gathering on the Commonwealth’s southern border, and the Sejm wanted peace. Talks began on 30 April, and the treaty was signed on 14 June at Semlevo on the Polyanovka river. Russia gave up its claim to Smolensk and paid 20,000 rubles, and Władysław renounced the Russian throne, to which he had been elected in 1610. He also handed over the border town of Serpeysk. Smolensk stayed Polish–Lithuanian for another twenty years.
+    facts:
+      - [Shein’s surrender, "Signed 25 February 1634; the army left its camp on 1 March"]
+      - [Treaty of Polyanovka, "14 June 1634"]
+      - [Russia paid, "20,000 rubles, for Władysław’s renunciation of the Russian throne"]
+    markers:
+      - kind: event
+        side: pl
+        name: Shein’s surrender
+        date: 25 February – 1 March 1634
+        text: The surrounded Russian army marched out of its camp, laid its banners before Władysław IV and left most of its artillery behind.
+        lonlat: [32.045, 54.782]
+      - kind: taken
+        side: pl
+        name: Dorogobuzh
+        date: Autumn 1633
+        text: Retaken by Polish–Lithuanian troops together with the stores meant for Shein’s army.
+        lonlat: [33.29, 54.915]
+        lp: b
+      - kind: held
+        side: ru
+        name: Siege of Belaya
+        date: Spring 1634
+        text: The king’s army besieged this Russian fortress after Shein’s surrender but failed to take it.
+        lonlat: [32.86, 55.835]
+      - kind: treaty
+        name: Treaty of Polyanovka
+        date: 14 June 1634
+        text: Signed at Semlevo on the Polyanovka river, between Vyazma and Dorogobuzh.
+        lonlat: [33.74, 55.14]
+      - kind: event
+        name: Moscow
+        date: April 1634
+        text: Shein and Artemy Izmailov were tried for treason and beheaded, and their families were exiled.
+        lonlat: [37.62, 55.75]

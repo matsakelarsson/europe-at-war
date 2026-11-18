@@ -9,7 +9,7 @@
 //   dist/data/labels.json                          seas, regions, capitals
 //
 // Exit code 1 on validation errors; warnings are printed but do not fail.
-import { mkdir, writeFile, cp, rm, readFile, stat } from 'node:fs/promises';
+import { mkdir, writeFile, cp, rm, readFile, stat, rename } from 'node:fs/promises';
 import { join } from 'node:path';
 import { gzipSync } from 'node:zlib';
 import { ROOT, CONTENT, readJSON, readYAML, listFiles, exists, loadPolities, darkFill, hexToOklch, oklchToHex } from './lib.mjs';
@@ -309,14 +309,17 @@ function buildWar(w, file, ctx) {
 
 // ---------------------------------------------------------------- main
 // `--check`: validate only, write nothing (safe to run alongside a dev build).
+// A full build writes to a temporary folder and replaces dist/ only when it
+// succeeds, so a failed build leaves the served site as it was.
 const CHECK = process.argv.includes('--check');
-const emit = (f, data) => (CHECK ? null : writeFile(join(DIST, f), data));
+const OUT = join(ROOT, '.dist-tmp');
+const emit = (f, data) => (CHECK ? null : writeFile(join(OUT, f), data));
 
 async function main() {
   if (!CHECK) {
-    await rm(DIST, { recursive: true, force: true });
-    await mkdir(join(DIST, 'data/wars'), { recursive: true });
-    await cp(join(ROOT, 'site'), DIST, { recursive: true });
+    await rm(OUT, { recursive: true, force: true });
+    await mkdir(join(OUT, 'data/wars'), { recursive: true });
+    await cp(join(ROOT, 'site'), OUT, { recursive: true });
   }
 
   const topoText = await readFile(join(ROOT, 'site-data/atoms.topo.json'), 'utf8');
@@ -358,13 +361,25 @@ async function main() {
   // Size report: what a first visit downloads.
   const first = ['index.html', 'app.js', 'style.css', 'vendor/topojson-client.min.js', 'data/atoms.topo.json', 'data/borders.json', 'data/polities.css', 'data/wars.json', 'data/labels.json'];
   let raw = 0, gz = 0;
-  for (const f of first) { try { const b = await readFile(join(DIST, f)); raw += b.length; gz += gzipSync(b).length; } catch {} }
+  for (const f of first) { try { const b = await readFile(join(OUT, f)); raw += b.length; gz += gzipSync(b).length; } catch {} }
   console.log(`polities ${pol.list.length}, atoms ${borders.order.length}, timeline entries ${borders.timeline.length}, wars ${wars.length}`);
   if (!CHECK) console.log(`first load: ${(raw / 1e6).toFixed(2)} MB raw, ${(gz / 1e6).toFixed(2)} MB gzip`);
   if (!CHECK && gz > 1.2e6) warn(`first load is over budget (${(gz / 1e6).toFixed(2)} MB gzip > 1.2 MB)`);
   for (const w of warnings) console.warn('warning:', w);
   for (const e of errors) console.error('ERROR:', e);
-  if (errors.length) { console.error(`${errors.length} error(s)`); process.exit(1); }
+  if (errors.length) {
+    if (!CHECK) await rm(OUT, { recursive: true, force: true });
+    console.error(`${errors.length} error(s)${CHECK ? '' : '; dist/ left unchanged'}`);
+    process.exit(1);
+  }
+  if (!CHECK) {
+    await rm(DIST, { recursive: true, force: true });
+    await rename(OUT, DIST);
+  }
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
+main().catch(async (e) => {
+  console.error(e);
+  if (!CHECK) await rm(OUT, { recursive: true, force: true }).catch(() => {});
+  process.exit(1);
+});

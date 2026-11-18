@@ -1,0 +1,282 @@
+id: winter-war
+name: Winter War
+start: "1939-11-30"
+end: "1940-03-13"
+tier: A
+summary: A war in which the Soviet Union invaded Finland after Finland refused to cede territory near Leningrad and lease a naval base. The Finnish army held out for three and a half months against a much larger Red Army, but in the Moscow Peace of March 1940 Finland ceded about a tenth of its territory, including Viipuri, and more than 400,000 Karelians lost their homes.
+countries: [fi, ru]
+sides:
+  - id: fi
+    name: Finland
+    polities: [finland]
+    ink: teal
+    moves: Finnish moves
+    success: Finnish success
+  - id: su
+    name: Soviet Union
+    polities: [ussr]
+    ink: red
+    moves: Soviet moves
+    success: Soviet success
+notes:
+  - Places are named in Finnish as they were then. Viipuri is now Vyborg, Terijoki is Zelenogorsk, Koivisto is Primorsk and Käkisalmi is Priozersk, all in Russia.
+  - Losses are estimates. Finnish dead and missing numbered about 26,000; Soviet figures range from about 127,000 to 168,000 dead and missing.
+  - Front lines and the area ceded around Salla are approximate.
+sources:
+  - title: Winter War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Winter_War
+  - title: Shelling of Mainila (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Shelling_of_Mainila
+  - title: Finnish Democratic Republic (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Finnish_Democratic_Republic
+  - title: Battle of Tolvajärvi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tolvaj%C3%A4rvi
+  - title: Battle of Suomussalmi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Suomussalmi
+  - title: Battle of Raate Road (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Raate_Road
+  - title: Battle of Kollaa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kollaa
+  - title: Mannerheim Line (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mannerheim_Line
+  - title: Battle of Summa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Summa
+  - title: Battle of Taipale (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Taipale
+  - title: Moscow Peace Treaty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Moscow_Peace_Treaty
+  - title: Evacuation of Finnish Karelia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Evacuation_of_Finnish_Karelia
+steps:
+  - title: Mainila and the invasion
+    date: October – December 1939
+    when: "1939-11-26"
+    borders: "1939-11-30"
+    countries: [fi, ru]
+    body:
+      - Under the secret protocol of the Molotov–Ribbentrop Pact, Finland fell in the Soviet sphere. In October 1939 Stalin demanded that Finland move its border on the Karelian Isthmus back from Leningrad, cede islands in the Gulf of Finland and its part of the Rybachy peninsula, and lease the Hanko peninsula as a naval base, offering larger but remote lands in East Karelia in return. Finland offered smaller concessions and refused Hanko. On 26 November the Soviet Union claimed that Finnish artillery had shelled its troops at the border village of Mainila. Finnish border posts reported that the shots came from the Soviet side, and most historians regard the incident as staged.
+      - On 30 November the Red Army invaded along the whole border with about 450,000 men, and Soviet aircraft bombed Helsinki, killing about 100 people. The next day a puppet “Finnish Democratic Republic” under the exiled communist Otto Wille Kuusinen was proclaimed at Terijoki, the first town the Soviets took. The League of Nations expelled the Soviet Union on 14 December. Finland did not collapse, as Moscow had expected. The government was widened, Mannerheim took command, and the army fell back on the Isthmus to its main defences, while smaller forces met the Soviet columns in the northern forests.
+    facts:
+      - [Shelling of Mainila, "26 November 1939"]
+      - [Soviet invasion, "30 November 1939"]
+      - [Soviet Union expelled from the League of Nations, "14 December 1939"]
+    markers:
+      - kind: event
+        name: Mainila
+        date: 26 November 1939
+        text: The Soviet Union said Finnish shells had killed Soviet soldiers here and used the incident as its pretext for war. Finland denied firing.
+        lonlat: [29.853, 60.252]
+        lp: b
+      - kind: air
+        side: su
+        name: Helsinki
+        date: 30 November 1939
+        text: Soviet bombers struck the capital on the first day of the war, killing about 100 civilians.
+        lonlat: [24.941, 60.171]
+      - kind: event
+        side: su
+        name: Terijoki
+        date: 1 December 1939
+        text: Kuusinen’s puppet government was proclaimed here. Moscow dropped it at the end of January 1940 to negotiate with the Finnish government.
+        lonlat: [29.7, 60.2]
+        lp: l
+      - kind: taken
+        side: su
+        name: Petsamo
+        date: December 1939
+        text: The Soviet 14th Army took Finland’s Arctic port and the area around it in the first days of the war.
+        lonlat: [31.228, 69.561]
+    arrows:
+      - side: su
+        label: 7th Army
+        via: [[30.25, 60.05], [29.9, 60.3], [29.4, 60.52]]
+      - side: su
+        label: 8th Army
+        via: [[32.7, 61.75], [32.1, 61.9], [31.5, 62.15]]
+      - side: su
+        label: 9th Army
+        via: [[30.4, 64.95], [29.6, 64.9], [29.0, 64.88]]
+      - side: su
+        via: [[30.5, 66.95], [29.7, 66.9], [28.85, 66.84]]
+      - side: su
+        label: 14th Army
+        via: [[32.3, 69.65], [31.7, 69.62], [31.3, 69.57]]
+  - title: Suomussalmi and the Raate road
+    date: December 1939 – January 1940
+    when: "1939-12-07"
+    borders: "1940-01-08"
+    countries: [fi, ru]
+    body:
+      - In the wilderness along the eastern border, from Lake Ladoga to Lapland, Soviet divisions trained for open country advanced along the few roads in long columns. The Finns, on skis and at home in the forest, cut them into isolated pockets they called motti, after the word for a stacked cubic metre of firewood, and destroyed them piece by piece in temperatures that fell below –40 °C. On 12 December a much smaller Finnish force under Paavo Talvela beat two Soviet divisions at Tolvajärvi, the first Finnish victory, and on the Kollaa river the Finns held their line throughout the war.
+      - At Suomussalmi the Soviet 163rd Division was trying to cut Finland in half at its narrow waist and reach Oulu on the Gulf of Bothnia. Colonel Hjalmar Siilasvuo’s troops surrounded and destroyed it by the end of December, and in the first week of January they destroyed the 44th Division, sent to relieve it, along the Raate road. Thousands of Soviet soldiers were killed or froze to death, and the Finns captured tanks, guns and lorries they badly needed. In Lapland the Soviet advance on Kemijärvi was stopped at Salla and Pelkosenniemi. The victories made Finland’s fight famous abroad, and volunteers came to help, among them about 8,000 Swedes.
+    facts:
+      - [Battle of Tolvajärvi, "12 December 1939, Finnish victory"]
+      - [Battle of Suomussalmi, "7 December 1939 – 8 January 1940, Finnish victory"]
+      - [Raate road, "1–8 January 1940, Soviet 44th Division destroyed"]
+    markers:
+      - kind: battle
+        side: fi
+        name: Battle of Suomussalmi
+        date: 7 December 1939 – 8 January 1940
+        text: Siilasvuo’s troops cut the Soviet 163rd Division into pockets and destroyed it.
+        lonlat: [28.889, 64.888]
+        lp: l
+      - kind: battle
+        side: fi
+        name: Raate road
+        date: 1–8 January 1940
+        text: The Soviet 44th Division, strung out along the forest road towards Suomussalmi, was cut up and destroyed.
+        lonlat: [29.326, 64.848]
+      - kind: battle
+        side: fi
+        name: Tolvajärvi
+        date: 12 December 1939
+        text: Talvela’s small force beat two Soviet divisions in the first Finnish victory of the war.
+        lonlat: [31.488, 62.288]
+      - kind: held
+        side: fi
+        name: Kollaa
+        date: December 1939 – March 1940
+        text: “Kollaa holds” became a Finnish byword. The line on the river held against repeated attacks until the end of the war.
+        lonlat: [32.256, 62.028]
+      - kind: battle
+        side: fi
+        name: Salla
+        date: December 1939
+        text: Finnish troops stopped the Soviet divisions advancing west from the border towards Kemijärvi and pushed them back.
+        lonlat: [28.667, 66.833]
+      - kind: battle
+        side: fi
+        name: Pelkosenniemi
+        date: 17 December 1939
+        text: Finnish troops turned back a second Soviet column heading for Kemijärvi from the north-east.
+        lonlat: [27.517, 67.108]
+    arrows:
+      - side: fi
+        label: Siilasvuo
+        via: [[28.45, 64.72], [28.8, 64.82], [29.2, 64.85]]
+  - title: The Mannerheim Line
+    date: December 1939 – February 1940
+    when: "1939-12-17"
+    borders: "1940-02-15"
+    countries: [fi, ru]
+    body:
+      - On the Karelian Isthmus the main Soviet effort ran into the Mannerheim Line, a chain of trenches, concrete bunkers and anti-tank obstacles from the Gulf of Finland to Taipale on Lake Ladoga. It was weaker than its later fame, but in December the Red Army attacked it in poorly coordinated waves and lost heavily, at Summa and at Taipale, where Finnish artillery broke assaults across the frozen river. Soviet tanks broke through at Summa on 19 December, but without infantry following they were destroyed or turned back.
+      - Stalin replaced the commanders and gave the front to Semyon Timoshenko, who brought up fresh divisions, heavy artillery and tanks, until by February about 460,000 Soviet soldiers faced the Finns on the Isthmus. The new offensive opened on 1 February with days of bombardment, and on 11 February the Red Army broke through at Lähde near Summa. The exhausted Finnish troops fell back to an intermediate line and then, by the end of the month, to a rear line covering Viipuri. They were short of shells and reserves, and the help discussed in Britain and France had not come.
+    facts:
+      - [First Soviet offensive on the Isthmus, "December 1939, repulsed"]
+      - [Breakthrough at Summa, "11 February 1940"]
+      - [Soviet troops on the Isthmus, "about 460,000 by February 1940"]
+    markers:
+      - kind: battle
+        side: su
+        name: Summa
+        date: December 1939 – 11 February 1940
+        text: The Finns held here in December, but Timoshenko’s February offensive broke through at Lähde on 11 February.
+        lonlat: [29.012, 60.507]
+      - kind: held
+        side: fi
+        name: Taipale
+        date: December 1939 – March 1940
+        text: Finnish troops at the eastern end of the line held out under constant shelling until the end of the war.
+        lonlat: [30.52, 60.62]
+    arrows:
+      - side: su
+        label: Timoshenko
+        via: [[29.65, 60.25], [29.25, 60.38], [29.03, 60.55]]
+    areas:
+      - style: front
+        side: fi
+        label: Mannerheim Line (approximate)
+        line: [[29.05, 60.33], [29.0, 60.45], [29.05, 60.52], [29.3, 60.55], [29.57, 60.58], [29.62, 60.68], [29.9, 60.7], [30.2, 60.66], [30.52, 60.62]]
+  - title: The Bay of Viipuri
+    date: February – March 1940
+    when: "1940-02-28"
+    borders: "1940-03-12"
+    countries: [fi, ru]
+    body:
+      - By the end of February the Finns held a last line from Viipuri to the Vuoksi river and Taipale. The Red Army attacked Viipuri from the south and in early March sent troops across the frozen Bay of Viipuri, from the Koivisto islands the Finns had given up, to land on the western shore behind the city. Finnish coastal troops and hastily gathered units fought them on the ice and in the shore villages, while Viipuri itself, bombed almost to ruins, held out. Further east Soviet troops crossed the Vuoksi at Vuosalmi, and the defence was close to breaking.
+      - At the end of January Moscow had let it be known, through Sweden, that it would negotiate with the Finnish government after all. Britain and France offered an expedition, but it would have had to cross Norway and Sweden, which refused transit, and the Finnish government judged it too small and too late. A delegation under Prime Minister Risto Ryti travelled to Moscow and accepted terms harsher than those Finland had refused in the autumn. The peace was signed late on 12 March, and the fighting ended the next day, with Viipuri still in Finnish hands.
+    facts:
+      - [Soviet landings across the Bay of Viipuri, "early March 1940"]
+      - [Peace signed, "12 March 1940, Moscow"]
+      - [Ceasefire, "13 March 1940"]
+    markers:
+      - kind: held
+        side: fi
+        name: Viipuri
+        date: February – 13 March 1940
+        text: Bombed almost to ruins, the city was still held by Finnish troops at the ceasefire, but it was ceded in the peace.
+        lonlat: [28.767, 60.717]
+      - kind: battle
+        side: su
+        name: Bay of Viipuri
+        date: early March 1940
+        text: Soviet troops crossed the ice from the Koivisto islands and gained a foothold on the western shore.
+        lonlat: [28.517, 60.583]
+        lp: l
+      - kind: taken
+        side: su
+        name: Koivisto
+        date: late February 1940
+        text: The Finns gave up the fortified islands off the coast as the front fell back.
+        lonlat: [28.617, 60.367]
+      - kind: battle
+        side: su
+        name: Vuosalmi
+        date: March 1940
+        text: Soviet troops crossed the Vuoksi here in the last days of the war.
+        lonlat: [29.575, 60.718]
+    arrows:
+      - side: su
+        label: Across the ice
+        via: [[28.62, 60.4], [28.5, 60.52], [28.45, 60.63]]
+      - side: su
+        via: [[29.1, 60.55], [28.95, 60.65], [28.8, 60.7]]
+    areas:
+      - style: front
+        side: fi
+        label: Front at the ceasefire, 13 March 1940 (approximate)
+        line: [[28.42, 60.66], [28.6, 60.66], [28.75, 60.69], [28.9, 60.75], [29.2, 60.73], [29.55, 60.72], [29.9, 60.7], [30.2, 60.66], [30.52, 60.62]]
+  - title: The Moscow Peace
+    date: 13 March 1940
+    when: "1940-03-13"
+    borders: "1940-03-13"
+    countries: [fi, ru]
+    body:
+      - Under the Moscow Peace Finland ceded the Karelian Isthmus with Viipuri, the northern shores of Lake Ladoga with Sortavala and Käkisalmi, the area around Salla and part of Kuusamo in the north, its part of the Rybachy peninsula and islands in the Gulf of Finland. It also leased Hanko to the Soviet Union for 30 years as a naval base. The ceded lands were about a tenth of Finland’s territory and held much of its industry. Rather than live under Soviet rule, almost all their inhabitants, more than 400,000 people, moved to the rest of Finland, many of them already evacuated during the fighting.
+      - Finland had kept its independence and avoided occupation, but at a heavy cost. About 26,000 Finns were dead or missing, and Soviet losses were several times higher, by different counts from about 127,000 to 168,000 dead or missing. The Red Army’s poor showing strengthened Hitler’s belief that it could be quickly beaten, while in Moscow it led to reforms. In Finland the loss, the resettlement of the Karelians and continued Soviet pressure pushed the government towards Germany, and in June 1941 Finland joined the German war against the Soviet Union.
+    facts:
+      - [Moscow Peace, "signed 12 March, in force 13 March 1940"]
+      - [Territory ceded, "about 9 per cent of Finland"]
+      - [Karelians resettled, "about 420,000–450,000"]
+    markers:
+      - kind: event
+        name: Viipuri
+        date: March 1940
+        text: Finland’s second-largest city by some counts was handed over, and almost all its people left.
+        lonlat: [28.767, 60.717]
+      - kind: event
+        name: Sortavala
+        date: March 1940
+        text: The main town of Ladoga Karelia, ceded with the northern shore of the lake.
+        lonlat: [30.696, 61.706]
+      - kind: event
+        side: su
+        name: Hanko
+        date: March 1940 – December 1941
+        text: Leased to the Soviet Union for 30 years as a naval base. The Soviet garrison left by sea in December 1941.
+        lonlat: [22.966, 59.828]
+    areas:
+      - style: lost
+        side: fi
+        label: Ceded to the Soviet Union
+        atoms: [RU-LEN~vib~fi1938, RU-LEN~kex~fi1938, RU-KR~kex~fi1938, RU-KR~fi1938]
+      - style: lost
+        side: fi
+        label: Salla and part of Kuusamo, ceded (approximate)
+        polygon: [[29.52, 67.3], [29.43, 67.23], [29.1, 66.99], [29.05, 66.91], [29.09, 66.84], [29.36, 66.63], [29.55, 66.43], [29.79, 66.18], [29.96, 65.97], [30.35, 66.1], [30.45, 66.4], [30.25, 66.75], [30.1, 67.0], [29.85, 67.2]]
+      - style: pledged
+        side: su
+        label: Hanko, leased to the Soviet Union
+        polygon: [[22.85, 59.76], [22.82, 59.84], [22.95, 59.9], [23.15, 59.93], [23.3, 59.93], [23.32, 59.86], [23.2, 59.78], [23.0, 59.74]]

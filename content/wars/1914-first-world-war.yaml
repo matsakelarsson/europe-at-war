@@ -1,0 +1,474 @@
+id: first-world-war
+name: First World War
+start: "1914-07-28"
+end: "1918-11-11"
+tier: A
+summary: A world war fought from 1914 to 1918 between the Entente powers, among them France, Britain, Russia, Italy and later the United States, and the Central Powers, Germany, Austria-Hungary, the Ottoman Empire and Bulgaria. It killed some nine to ten million soldiers and millions of civilians, and brought down the Russian, German, Austro-Hungarian and Ottoman empires.
+countries: [ru, pl, ua, by, lt, lv, ee, fi, tr, am, ge, ro, de, at]
+sides:
+  - id: entente
+    name: Entente powers
+    polities: [russia, france, united-kingdom, serbia, montenegro, belgium, italy, romania, greece]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: central
+    name: Central Powers
+    polities: [germany, austria-hungary, ottoman, bulgaria]
+    ink: slate
+    moves: Central Powers’ moves
+    success: Central Powers’ success
+  - id: sr
+    name: Soviet Russia
+    polities: [ussr]
+    ink: red
+    moves: Soviet moves
+    success: Soviet success
+notes:
+  - This version covers the Eastern Front and the Caucasus front, where the Russian Empire fought Germany, Austria-Hungary and the Ottoman Empire. The Western, Italian, Balkan and Middle Eastern fronts are not yet told here.
+  - Dates are New Style (Gregorian). Russia used the Julian calendar, 13 days behind, until February 1918, so its revolutions of 1917 are named after February and October although they took place in March and November by the Western calendar.
+  - Numbers of dead, prisoners and refugees are estimates and vary widely between sources.
+sources:
+  - title: Eastern Front (World War I) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Eastern_Front_(World_War_I)
+  - title: Caucasus campaign (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Caucasus_campaign
+  - title: World War I (Britannica)
+    url: https://www.britannica.com/event/World-War-I
+  - title: Battle of Tannenberg (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tannenberg
+  - title: Siege of Przemyśl (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Przemy%C5%9Bl
+  - title: Battle of Sarikamish (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sarikamish
+  - title: Armenian genocide (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Armenian_genocide
+  - title: Gorlice–Tarnów offensive (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Gorlice%E2%80%93Tarn%C3%B3w_offensive
+  - title: Great Retreat (Russia) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Great_Retreat_(Russia)
+  - title: Brusilov offensive (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Brusilov_offensive
+  - title: Kerensky offensive (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kerensky_offensive
+  - title: Riga offensive (1917) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Riga_offensive_(1917)
+  - title: Treaty of Brest-Litovsk (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Brest-Litovsk
+  - title: Treaties of Brest-Litovsk (Britannica)
+    url: https://www.britannica.com/event/treaties-of-Brest-Litovsk
+steps:
+  - title: Tannenberg and the Masurian Lakes
+    date: August – September 1914
+    when: "1914-08-17"
+    borders: "1914-08-30"
+    countries: [pl, ru, de]
+    side_names:
+      entente: Russian success
+      central: German success
+    move_names:
+      entente: Russian moves
+      central: German moves
+    body:
+      - After the assassination of Archduke Franz Ferdinand in Sarajevo, Austria-Hungary declared war on Serbia on 28 July 1914. Russia mobilised in support of Serbia, and Germany declared war on Russia on 1 August and on France two days later. To help France, Russia invaded East Prussia before its mobilisation was complete. General Paul von Rennenkampf’s First Army advanced from the east and won a battle at Gumbinnen on 20 August, while General Alexander Samsonov’s Second Army marched north from Russian Poland.
+      - The new German commanders, Paul von Hindenburg and Erich Ludendorff, moved most of their troops by rail against Samsonov. Russian radio orders sent without code helped them. Near Tannenberg on 26–30 August the Second Army was surrounded and destroyed; some 90,000 Russians were captured, and Samsonov shot himself. In September the Germans turned on Rennenkampf at the Masurian Lakes and drove him out of East Prussia with heavy losses. Hundreds of thousands of East Prussians had fled from the invasion.
+    facts:
+      - [Battle of Gumbinnen, "20 August 1914, Russian victory"]
+      - [Battle of Tannenberg, "26–30 August 1914, German victory"]
+      - [Russian prisoners at Tannenberg, "about 90,000"]
+    markers:
+      - kind: battle
+        side: entente
+        name: Battle of Gumbinnen
+        date: 20 August 1914
+        text: The first big battle in the east. The German Eighth Army attacked the Russian First Army and was beaten back.
+        lonlat: [22.2, 54.6]
+      - kind: battle
+        side: central
+        name: Battle of Tannenberg
+        date: 26–30 August 1914
+        text: German troops encircled the centre of Samsonov’s army in the forests south of Allenstein. The Germans named the battle after a medieval defeat nearby.
+        lonlat: [20.5, 53.75]
+      - kind: battle
+        side: central
+        name: First Battle of the Masurian Lakes
+        date: 7–14 September 1914
+        text: The Germans outflanked Rennenkampf’s army, which escaped across the border but lost about 100,000 men.
+        lonlat: [22.0, 54.0]
+    arrows:
+      - side: entente
+        label: Rennenkampf
+        via: [[23.9, 54.85], [23.0, 54.7], [22.3, 54.6]]
+      - side: entente
+        label: Samsonov
+        via: [[20.9, 52.6], [20.6, 53.1], [20.4, 53.6]]
+      - side: central
+        label: Hindenburg
+        via: [[21.9, 54.5], [21.2, 54.0], [20.75, 53.75]]
+  - title: Galicia and Przemyśl
+    date: August 1914 – March 1915
+    when: "1914-08-23"
+    borders: "1915-03-22"
+    countries: [ua, pl, ru, at, de]
+    side_names:
+      entente: Russian success
+      central: German and Austro-Hungarian success
+    move_names:
+      entente: Russian moves
+      central: German and Austro-Hungarian moves
+    body:
+      - In Galicia the Austro-Hungarian army attacked into Russian Poland and won early battles at Kraśnik and Komarów, but the Russians broke its eastern wing and took Lemberg on 3 September 1914. Austria-Hungary lost perhaps 400,000 men killed, wounded or captured in the first weeks and fell back to the Carpathians, leaving the fortress of Przemyśl besieged. In the autumn German and Austro-Hungarian offensives towards Warsaw and around Łódź were held, and the front in Poland settled along the Bzura and the Rawka.
+      - Through the winter the Austro-Hungarians tried to relieve Przemyśl by attacking over the Carpathian passes in snow and ice, and lost hundreds of thousands of men. On 22 March 1915 the starving garrison destroyed its guns and surrendered, and some 120,000 men went into captivity. In occupied Galicia the Russian authorities treated the land as a future part of Russia, pressed the Greek Catholic church and deported many Jews and Ukrainian activists; Jews also suffered pogroms by Russian troops.
+    facts:
+      - [Lemberg taken by Russia, "3 September 1914"]
+      - [Siege of Przemyśl, "September 1914 – 22 March 1915"]
+      - [Garrison of Przemyśl, "about 120,000 captured"]
+    markers:
+      - kind: battle
+        side: central
+        name: Battle of Kraśnik
+        date: 23–25 August 1914
+        text: The Austro-Hungarian First Army defeated a Russian army advancing on its flank.
+        lonlat: [22.217, 50.933]
+        lp: l
+      - kind: battle
+        side: central
+        name: Battle of Komarów
+        date: 26 August – 2 September 1914
+        text: An Austro-Hungarian victory that nearly encircled the Russian Fifth Army, soon undone by defeats further east.
+        lonlat: [23.5, 50.63]
+      - kind: taken
+        side: entente
+        name: Lemberg
+        date: 3 September 1914
+        text: The capital of Austrian Galicia, today’s Lviv, fell to the Russians after battles on the Gnila Lipa and at Rava Ruska.
+        lonlat: [24.032, 49.843]
+      - kind: siege
+        side: entente
+        name: Siege of Przemyśl
+        date: 1914 – 22 March 1915
+        text: The largest siege of the war. Cut off from 9 November, the fortress was starved into surrender.
+        lonlat: [22.767, 49.783]
+      - kind: battle
+        name: Battle of Łódź
+        date: 11 November – 6 December 1914
+        text: A German attack nearly encircled two Russian armies, but the Germans had to fight their way out. The Russians then gave up Łódź.
+        lonlat: [19.455, 51.777]
+    arrows:
+      - side: entente
+        label: Russian armies
+        via: [[25.9, 50.3], [25.0, 50.0], [24.1, 49.86]]
+      - side: entente
+        via: [[24.0, 49.8], [23.2, 49.8], [22.85, 49.8]]
+    areas:
+      - style: occupied
+        side: entente
+        label: Occupied by Russia, spring 1915 (approximate)
+        atoms: [UA-46, UA-26, UA-61, UA-77!, PL-PK]
+  - title: Sarikamish and the Caucasus front
+    date: November 1914 – 1916
+    when: "1914-11"
+    borders: "1915-01-17"
+    countries: [tr, am, ge, ru]
+    side_names:
+      entente: Russian success
+      central: Ottoman success
+    move_names:
+      entente: Russian moves
+      central: Ottoman moves
+    body:
+      - The Ottoman Empire entered the war beside Germany in November 1914. Its war minister, Enver Pasha, led the Third Army through the snow-covered mountains to encircle the Russian army at Sarikamish. Many of his men lacked winter clothing, and about 25,000 are thought to have frozen to death before the main battle. Between 22 December 1914 and 17 January 1915 the Russians beat off the attack and destroyed most of the Ottoman force. Enver blamed the Armenians for the defeat.
+      - From April 1915 the Ottoman government arrested Armenian leaders and deported the Armenian population of Anatolia towards the Syrian desert, with mass killings and death marches. Around a million Armenians died in what most historians and many states recognise as the Armenian genocide; the Turkish government rejects the term. Armenians in Van resisted until Russian troops arrived in May. In 1916 General Nikolai Yudenich’s army took Erzurum in February and Trabzon in April, and by the summer it held much of eastern Anatolia.
+    facts:
+      - [Battle of Sarikamish, "22 December 1914 – 17 January 1915, Russian victory"]
+      - [Erzurum taken by Russia, "16 February 1916"]
+      - [Armenian genocide, "1915–1916, around a million dead"]
+    markers:
+      - kind: battle
+        side: entente
+        name: Battle of Sarikamish
+        date: 22 December 1914 – 17 January 1915
+        text: The Ottoman Third Army was destroyed by Russian troops, cold and hunger.
+        lonlat: [42.573, 40.338]
+      - kind: battle
+        side: central
+        name: Köprüköy
+        date: November 1914
+        text: An Ottoman counter-attack drove back the first Russian advance into Anatolia.
+        lonlat: [41.871, 39.976]
+      - kind: held
+        name: Van
+        date: April – May 1915
+        text: Armenians defended the city against Ottoman forces until Russian troops and Armenian volunteers relieved them.
+        lonlat: [43.38, 38.494]
+      - kind: taken
+        side: entente
+        name: Erzurum
+        date: 16 February 1916
+        text: Yudenich stormed the forts of the main Ottoman fortress in eastern Anatolia in winter.
+        lonlat: [41.277, 39.909]
+      - kind: taken
+        side: entente
+        name: Trabzon
+        date: 18 April 1916
+        text: The Black Sea port fell to Russian troops supported by landings from the sea.
+        lonlat: [39.722, 41.005]
+    arrows:
+      - side: central
+        label: Enver Pasha
+        via: [[41.6, 40.1], [42.0, 40.45], [42.5, 40.38]]
+      - side: entente
+        label: Yudenich, 1916
+        via: [[42.6, 40.3], [42.0, 40.0], [41.35, 39.93]]
+    areas:
+      - style: occupied
+        side: entente
+        label: Held by Russia, summer 1916 (approximate)
+        atoms: [TR-25, TR-61, TR-53, TR-29, TR-69, TR-24, TR-04, TR-65, TR-13, TR-49]
+  - title: Gorlice–Tarnów and the Great Retreat
+    date: May – September 1915
+    when: "1915-05-02"
+    borders: "1915-09-19"
+    countries: [pl, ua, lt, lv, by, ru, de, at]
+    side_names:
+      entente: Russian success
+      central: German and Austro-Hungarian success
+    move_names:
+      entente: Russian moves
+      central: German and Austro-Hungarian moves
+    body:
+      - On 2 May 1915 a German and Austro-Hungarian army under General August von Mackensen broke through the Russian front between Gorlice and Tarnów after a heavy bombardment. The Russian armies, short of shells and rifles, fell back across Galicia. Przemyśl was retaken on 3 June and Lemberg on 22 June. In July the Central Powers attacked Russian Poland from the north and south, and the Russian command ordered a withdrawal.
+      - Warsaw fell on 5 August, followed by the fortresses of Kovno, Novogeorgievsk and Brest-Litovsk. Vilna was lost in September, when the front settled from the Gulf of Riga to the Romanian border. By some estimates Russia lost about two million men killed, wounded or captured in 1915, and Nicholas II took over as commander-in-chief. Retreating Russian troops burned villages and forced people east, and the army deported hundreds of thousands of Jews and ethnic Germans. Some estimates put the number of refugees in Russia at over three million by the end of 1915.
+    facts:
+      - [Gorlice–Tarnów breakthrough, "2 May 1915"]
+      - [Warsaw taken, "5 August 1915"]
+      - [Front settled, "September – October 1915"]
+    markers:
+      - kind: battle
+        side: central
+        name: Gorlice–Tarnów
+        date: 2 May 1915
+        text: Mackensen’s guns smashed the Russian lines on a narrow front, opening the way back across Galicia.
+        lonlat: [21.16, 49.655]
+      - kind: taken
+        side: central
+        name: Lemberg
+        date: 22 June 1915
+        text: Austro-Hungarian troops re-entered the Galician capital.
+        lonlat: [24.032, 49.843]
+      - kind: taken
+        side: central
+        name: Warsaw
+        date: 5 August 1915
+        text: German troops entered the city after the Russians had evacuated it and blown up the Vistula bridges.
+        lonlat: [21.011, 52.23]
+      - kind: siege
+        side: central
+        name: Novogeorgievsk
+        date: August 1915
+        text: The fortress north of Warsaw surrendered on 20 August with its large garrison.
+        lonlat: [20.682, 52.438]
+        lp: l
+      - kind: taken
+        side: central
+        name: Brest-Litovsk
+        date: 26 August 1915
+        text: The Russians abandoned the fortress as they retreated east.
+        lonlat: [23.657, 52.135]
+      - kind: taken
+        side: central
+        name: Vilna
+        date: 19 September 1915
+        text: The Germans took the Lithuanian city, today’s Vilnius, near the end of their advance.
+        lonlat: [25.28, 54.687]
+    arrows:
+      - side: central
+        label: Mackensen
+        via: [[21.1, 49.7], [22.8, 49.8], [24.0, 49.85]]
+      - side: central
+        via: [[20.8, 53.3], [21.0, 52.7], [21.05, 52.3]]
+      - side: entente
+        label: Great Retreat
+        via: [[22.0, 52.3], [23.8, 52.6], [25.5, 52.9]]
+    areas:
+      - style: occupied
+        side: central
+        label: Occupied by the Central Powers, autumn 1915 (approximate)
+        atoms: [PL-MZ, PL-LD, PL-SK, PL-LU, PL-MA!, PL-PD~congress, PL-WP~congress, PL-KP~congress, PL-SL~congress, PL-SL~polLes~congress, LT-MR, LT-AL, LT-KL!, LT-KU, LT-PN, LT-SA, LT-TA, LT-TE, LT-UT, LT-VL, BY-HR, BY-BR]
+      - style: front
+        side: central
+        label: Front, October 1915
+        line: [[23.49, 56.94], [24.0, 56.85], [24.5, 56.8], [25.2, 56.6], [25.9, 56.45], [26.35, 55.88], [26.6, 55.4], [26.75, 54.85], [26.4, 54.45], [26.0, 53.9], [25.95, 53.15], [26.15, 52.6], [26.2, 52.1], [25.9, 51.6], [25.7, 51.1], [25.55, 50.75], [25.6, 50.2], [25.45, 49.6], [25.38, 49.05], [25.6, 48.75], [26.1, 48.4]]
+  - title: The Brusilov offensive
+    date: March – September 1916
+    when: "1916-03-18"
+    borders: "1916-09-20"
+    countries: [ua, by, ru, at, de, ro]
+    side_names:
+      entente: Russian success
+      central: German and Austro-Hungarian success
+    move_names:
+      entente: Russian moves
+      central: German and Austro-Hungarian moves
+    body:
+      - In March 1916 a Russian offensive at Lake Naroch, launched to relieve the French at Verdun, failed with heavy losses. In the south-west General Aleksei Brusilov prepared a different kind of attack, striking on a wide front after short bombardments so that the enemy could not tell where the main blow would fall. On 4 June his four armies broke the Austro-Hungarian lines. Lutsk fell within days, and in the south the Russians took Chernivtsi and most of Bukovina and advanced to the Carpathians.
+      - German reserves stopped the advance short of Kovel and Lemberg, and the offensive ended in late September. The Austro-Hungarian army lost hundreds of thousands of men, among them some 400,000 prisoners, and never fully recovered; Russian losses were also enormous and drained the army’s strength. The victory encouraged Romania to enter the war on the Entente side in August, but by December German, Austro-Hungarian, Bulgarian and Ottoman forces had taken Bucharest and most of the country.
+    facts:
+      - [Brusilov offensive, "4 June – late September 1916"]
+      - [Austro-Hungarian prisoners, "about 400,000"]
+      - [Romania enters the war, "27 August 1916"]
+    markers:
+      - kind: battle
+        side: central
+        name: Lake Naroch
+        date: 18–30 March 1916
+        text: A Russian offensive against the German lines gained almost nothing at a cost of some 100,000 casualties.
+        lonlat: [26.776, 54.853]
+      - kind: taken
+        side: entente
+        name: Lutsk
+        date: 7 June 1916
+        text: Brusilov’s Eighth Army broke through and took the town in the first days of the offensive.
+        lonlat: [25.336, 50.75]
+      - kind: taken
+        side: entente
+        name: Chernivtsi
+        date: June 1916
+        text: The capital of Austrian Bukovina fell to the Russian Ninth Army.
+        lonlat: [25.933, 48.3]
+      - kind: taken
+        side: entente
+        name: Brody
+        date: 28 July 1916
+        text: Taken after heavy fighting as the Russians pushed towards Lemberg.
+        lonlat: [25.148, 50.083]
+      - kind: held
+        side: central
+        name: Kovel
+        date: July – October 1916
+        text: German and Austro-Hungarian troops held the railway junction against repeated Russian attacks, including the Russian Guard.
+        lonlat: [24.717, 51.217]
+    arrows:
+      - side: entente
+        label: Brusilov
+        via: [[26.2, 50.6], [25.7, 50.7], [25.2, 50.9]]
+      - side: entente
+        via: [[26.6, 48.5], [26.2, 48.4], [25.6, 48.3], [25.05, 48.5]]
+    areas:
+      - style: front
+        side: central
+        label: Front, September 1916
+        line: [[23.49, 56.94], [24.0, 56.85], [24.5, 56.8], [25.2, 56.6], [25.9, 56.45], [26.35, 55.88], [26.6, 55.4], [26.75, 54.85], [26.4, 54.45], [26.0, 53.9], [25.95, 53.15], [26.15, 52.6], [26.2, 52.1], [25.6, 51.55], [25.1, 51.3], [24.95, 50.9], [24.95, 50.4], [24.85, 49.9], [24.85, 49.4], [24.55, 49.0], [24.45, 48.75], [24.6, 48.3], [24.9, 47.85], [25.3, 47.7]]
+  - title: Revolution, Kerensky’s offensive and Riga
+    date: 1917
+    when: "1917-03-08"
+    borders: "1917-09-03"
+    countries: [ua, lv, ee, ru, de, at]
+    side_names:
+      entente: Russian success
+      central: German and Austro-Hungarian success
+    move_names:
+      entente: Russian moves
+      central: German and Austro-Hungarian moves
+    body:
+      - Hunger, war-weariness and the losses at the front led to strikes and mutinies in Petrograd in March 1917, and on 15 March Nicholas II abdicated. The Provisional Government kept Russia in the war. On 1 July its war minister, Alexander Kerensky, launched an offensive in Galicia. General Lavr Kornilov’s Eighth Army broke through and took Kalush and Halych, but many units refused to fight on, and a German counter-attack from 19 July drove the Russians out of nearly all of eastern Galicia and Bukovina.
+      - On 1 September the German Eighth Army crossed the Daugava at Ikšķile using new infiltration tactics, and on 3 September it entered Riga; most of the Russian army escaped. In October German landings took the islands of Saaremaa, Muhu and Hiiumaa. On 7 November the Bolsheviks seized power in Petrograd and called for an immediate peace. Fighting stopped with a ceasefire, and an armistice was signed at Brest-Litovsk on 15 December.
+    facts:
+      - [Abdication of Nicholas II, "15 March 1917"]
+      - [Kerensky offensive, "1–19 July 1917"]
+      - [Riga taken, "3 September 1917"]
+    markers:
+      - kind: event
+        name: Petrograd
+        date: March and November 1917
+        text: The February Revolution brought down the monarchy, and the October Revolution brought the Bolsheviks to power.
+        lonlat: [30.309, 59.938]
+      - kind: taken
+        side: entente
+        name: Kalush
+        date: July 1917
+        text: Kornilov’s Eighth Army broke the Austro-Hungarian lines and took the town, the last Russian success of the war.
+        lonlat: [24.37, 49.02]
+      - kind: taken
+        side: central
+        name: Ternopil
+        date: July 1917
+        text: The German counter-offensive from Zolochiv retook the town as Russian units fled east.
+        lonlat: [25.6, 49.567]
+      - kind: taken
+        side: central
+        name: Riga
+        date: 3 September 1917
+        text: German troops entered the city two days after crossing the Daugava upstream at Ikšķile.
+        lonlat: [24.106, 56.949]
+      - kind: taken
+        side: central
+        name: Saaremaa
+        date: October 1917
+        text: In Operation Albion German troops landed from the sea and took the islands at the mouth of the Gulf of Riga.
+        lonlat: [22.5, 58.417]
+    arrows:
+      - side: entente
+        label: Kerensky offensive
+        via: [[24.95, 48.9], [24.65, 48.98], [24.42, 49.02]]
+      - side: central
+        label: German counter-attack
+        via: [[24.9, 49.8], [25.3, 49.65], [25.65, 49.55]]
+      - side: central
+        label: Hutier
+        via: [[24.6, 56.7], [24.5, 56.83], [24.25, 56.93]]
+  - title: The Treaty of Brest-Litovsk
+    date: December 1917 – March 1918
+    when: "1917-12-22"
+    borders: "1918-03-03"
+    countries: [pl, lt, lv, ee, by, ua, fi, tr, ge, am, ru, de, at]
+    side_names:
+      central: Central Powers’ success
+    body:
+      - Peace talks opened at Brest-Litovsk in December 1917. The Central Powers demanded that Russia give up the lands they occupied, and in February 1918 they signed a separate peace with the Ukrainian People’s Republic. When Leon Trotsky broke off the talks without accepting their terms, German and Austro-Hungarian troops advanced from 18 February almost unopposed, taking Dvinsk, Minsk, Pskov and Tallinn and entering Kyiv on 1 March.
+      - Lenin insisted on accepting the even harsher terms that followed. By the treaty signed on 3 March 1918, Soviet Russia gave up Poland, Lithuania, Courland and Riga, agreed to leave Livonia and Estonia, recognised the independence of Finland and Ukraine, and ceded Kars, Ardahan and Batumi to the Ottoman Empire, whose troops took them in April. The lost lands held about a third of the empire’s population. Germany’s defeat in November 1918 brought the annulment of the treaty, but the new states it had helped to create remained.
+    facts:
+      - [Armistice on the Eastern Front, "15 December 1917"]
+      - [Treaty of Brest-Litovsk, "3 March 1918"]
+      - [Share of the empire’s population lost, "about a third"]
+    markers:
+      - kind: treaty
+        name: Treaty of Brest-Litovsk
+        date: 3 March 1918
+        text: Signed in the German army headquarters in the old fortress by Soviet Russia and Germany, Austria-Hungary, the Ottoman Empire and Bulgaria.
+        lonlat: [23.657, 52.135]
+      - kind: taken
+        side: central
+        name: Pskov
+        date: 24 February 1918
+        text: German troops took the city, less than 300 kilometres from Petrograd. The Soviet government moved to Moscow in March.
+        lonlat: [28.333, 57.817]
+      - kind: taken
+        side: central
+        name: Minsk
+        date: 21 February 1918
+        text: German troops entered the city without a fight. A Belarusian People’s Republic was declared there in March.
+        lonlat: [27.559, 53.901]
+      - kind: taken
+        side: central
+        name: Kyiv
+        date: 1 March 1918
+        text: Forces of the Ukrainian People’s Republic, backed by German troops, retook the city from the Bolsheviks.
+        lonlat: [30.523, 50.45]
+    arrows:
+      - side: central
+        via: [[24.6, 57.2], [26.5, 57.6], [28.2, 57.8]]
+      - side: central
+        label: German advance, February 1918
+        via: [[26.2, 54.0], [26.9, 53.95], [27.5, 53.9]]
+      - side: central
+        via: [[25.4, 50.8], [27.6, 50.6], [30.4, 50.45]]
+    areas:
+      - style: lost
+        side: sr
+        label: Given up by Soviet Russia at Brest-Litovsk (approximate)
+        atoms: [PL-MZ, PL-LD, PL-SK, PL-LU, PL-MA!, PL-PD~congress, PL-WP~congress, PL-KP~congress, PL-SL~congress, PL-SL~polLes~congress, LT-MR, LT-AL, LT-KL!, LT-KU, LT-PN, LT-SA, LT-TA, LT-TE, LT-UT, LT-VL, LV-001, LV-002, LV-003, LV-004, LV-005, LV-006, LV-007, LV-008, LV-009, LV-010, LV-011, LV-012, LV-013, LV-014, LV-015, LV-016, LV-017, LV-018, LV-019, LV-020, LV-021, LV-022, LV-023, LV-024, LV-026, LV-027, LV-028, LV-029, LV-030, LV-031, LV-032, LV-033, LV-034, LV-035, LV-036, LV-037, LV-038, LV-039, LV-040, LV-043, LV-044, LV-045, LV-046, LV-047, LV-048, LV-049, LV-050, LV-051, LV-052, LV-053, LV-054, LV-055, LV-056, LV-057, LV-058, LV-059, LV-060, LV-061, LV-062, LV-063, LV-064, LV-065, LV-066, LV-067, LV-068, LV-069, LV-070, LV-071, LV-072, LV-073, LV-074, LV-075, LV-076, LV-078, LV-079, LV-080, LV-081, LV-082, LV-083, LV-084, LV-085, LV-086, LV-087, LV-088, LV-089, LV-090, LV-091, LV-092, LV-093, LV-094, LV-095, LV-096, LV-097, LV-098, LV-099, LV-100, LV-101, LV-102, LV-103, LV-104, LV-105, LV-107, LV-108, LV-109, LV-110, LV-DGV, LV-JEL, LV-JKB, LV-JUR, LV-LPX, LV-REZ, LV-RIX, LV-VEN, LV-VMR, EE-37, EE-39, EE-44, EE-49, EE-51, EE-57, EE-59, EE-65, EE-67, EE-70, EE-74, EE-78, EE-82, EE-84, EE-86, BY-HR, BY-BR]
+      - style: gained
+        side: central
+        label: Kars, Ardahan and Batumi, ceded to the Ottoman Empire
+        atoms: [TR-36, TR-75, TR-08, GE-AJ]

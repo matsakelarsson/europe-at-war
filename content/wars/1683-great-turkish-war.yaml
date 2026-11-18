@@ -36,8 +36,15 @@ sides:
     ink: teal
     moves: Ottoman and Tatar moves
     success: Ottoman success
+  - id: zc
+    name: Cossack Hetmanate
+    polities: [cossack-hetmanate]
+    ink: gold
+    moves: Cossack moves
+    success: Cossack success
 notes:
   - Dates are New Style (Gregorian).
+  - Russia still used the Julian calendar, so Russian sources give the dates of the Crimean and Azov campaigns ten days earlier (eleven days from March 1700).
 sources:
   - title: Great Turkish War (Wikipedia)
     url: https://en.wikipedia.org/wiki/Great_Turkish_War
@@ -49,6 +56,16 @@ sources:
     url: https://en.wikipedia.org/wiki/Treaty_of_Karlowitz
   - title: Battle of Podhajce (1698) (Wikipedia)
     url: https://en.wikipedia.org/wiki/Battle_of_Podhajce_(1698)
+  - title: Russo-Turkish War (1686–1700) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russo-Turkish_War_(1686%E2%80%931700)
+  - title: Polish–Russian Peace Treaty (1686) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Polish%E2%80%93Russian_Peace_Treaty_(1686)
+  - title: Crimean campaigns (1687–1689) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Crimean_campaigns_(1687%E2%80%931689)
+  - title: Azov campaigns (1695–1696) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Azov_campaigns_(1695%E2%80%931696)
+  - title: Treaty of Constantinople (1700) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Constantinople_(1700)
 steps:
   - title: The relief of Vienna
     date: 1683
@@ -135,3 +152,102 @@ steps:
         side: pl
         label: Regained by Poland–Lithuania
         atoms: [UA-68]
+  - title: Golitsyn’s Crimean campaigns
+    date: 1687 and 1689
+    when: "1687-05"
+    borders: "1689-05-30"
+    countries: [ru, ua]
+    body:
+      - Russia joined the Holy League through the Eternal Peace of May 1686, in which Poland–Lithuania recognised Russian rule over Kyiv and left-bank Ukraine. Its task was to tie down the Crimean Tatars. In May 1687 Prince Vasily Golitsyn, chief minister of the regent Sophia, set out from Okhtyrka with about 90,000 men, and some 50,000 Cossacks under Hetman Ivan Samoilovych joined him on the Dnieper. The huge column of men, wagons and horses crawled south in the summer heat. The Tatars set fire to the steppe, and with the horses starving and water short the army turned back in late June, still far from Perekop.
+      - Samoilovych was made the scapegoat and exiled to Siberia, and the Cossack officers elected Ivan Mazepa hetman in his place. Golitsyn set out again in the spring of 1689 with about 112,000 men and 350 guns, joined by 30,000–40,000 Cossacks under Mazepa. Marching in separate columns, they beat off Tatar attacks in late May and reached the Perekop isthmus on 30 May. There was no grass or drinking water, and a deep ditch barred the way into the peninsula, so Golitsyn turned back the next day. The failure helped to bring down Sophia’s government later that year, when the young Peter I took power and Golitsyn was exiled.
+    facts:
+      - [Eternal Peace, "6 May 1686, Russia joins the Holy League"]
+      - [First campaign, "1687, about 140,000 Russians and Cossacks; turned back in June"]
+      - [Second campaign, "1689, reached Perekop on 30 May and turned back"]
+    markers:
+      - kind: event
+        side: ru
+        name: Okhtyrka
+        date: May 1687
+        text: Golitsyn’s army set out from this town on the Belgorod defensive line.
+        lonlat: [34.91, 50.31]
+      - kind: event
+        side: ru
+        name: Novobohorodytska fortress
+        date: 1687–1688
+        text: Built by Golitsyn where the Samara joins the Dnieper, as a base for the next campaign.
+        lonlat: [35.13, 48.5]
+        lp: l
+      - kind: event
+        name: Kolomak
+        date: August 1687
+        text: In the army’s camp on the way home, Samoilovych was deposed and Ivan Mazepa elected hetman of left-bank Ukraine.
+        lonlat: [35.27, 49.83]
+      - kind: held
+        side: ot
+        name: Konskie Vody
+        date: June 1687
+        text: On burnt steppe near this river, short of water and fodder, the first expedition gave up and turned back.
+        lonlat: [35.35, 47.55]
+      - kind: held
+        side: ot
+        name: Perekop
+        date: 30–31 May 1689
+        text: The second expedition reached the fortified isthmus but found no water or grazing and turned back the next day.
+        lonlat: [33.7, 46.16]
+    arrows:
+      - side: ru
+        label: Golitsyn, 1687
+        via: [[34.91, 50.31], [35.15, 49.4], [35.1, 48.55], [35.3, 47.65]]
+      - side: zc
+        label: Samoilovych
+        via: [[32.88, 51.34], [33.8, 50.1], [34.95, 48.65]]
+      - side: ru
+        label: Golitsyn, 1689
+        via: [[35.1, 48.45], [34.95, 47.5], [34.3, 46.75], [33.75, 46.25]]
+  - title: Peter the Great takes Azov
+    date: 1695–1700
+    when: "1695-06"
+    borders: "1700-07-14"
+    countries: [ru, ua]
+    body:
+      - In 1695 the young Peter I turned instead against Azov, the Ottoman fortress at the mouth of the Don. About 31,000 men under Franz Lefort, Patrick Gordon and Avtonom Golovin besieged it from midsummer, with Peter himself serving as a bombardier. They could not stop supplies coming in by river, two assaults failed, and the siege was lifted in October. A larger army under Boris Sheremetev, with Mazepa’s Cossacks, took the Ottoman forts on the lower Dnieper, among them Gazi-Kerman, whose powder magazine blew up.
+      - Over the winter Peter had galleys, fire ships and two ships of the line built at Voronezh. In May 1696 about 75,000 men under Aleksei Shein came down the Don, and the new fleet under Lefort closed the river mouth and drove off an Ottoman relief squadron. After a heavy bombardment and a Cossack attack on the outer rampart, the garrison surrendered on 29 July. It was the first great Russian victory over the Ottomans, and it showed Peter what a fleet could do.
+      - Peter chose Taganrog, along the coast, for a naval base. When his allies made peace with the Ottomans at Karlowitz in 1699, Russia agreed only a truce. But in the Treaty of Constantinople of 14 July 1700 the sultan recognised Russian rule over Azov and Taganrog. The Dnieper forts, razed by the Russians, went back to the Ottomans, and Russia no longer had to pay a yearly tribute to the Crimean khan.
+    facts:
+      - [Azov surrendered, "29 July 1696 (19 July Old Style)"]
+      - [Peter’s fleet in 1696, "2 ships of the line, 23 galleys, 4 fire ships and smaller craft"]
+      - [Treaty of Constantinople, "14 July 1700, a thirty-year truce"]
+    markers:
+      - kind: event
+        side: ru
+        name: Voronezh
+        date: Winter 1695–1696
+        text: Peter’s first fleet was built at shipyards here and floated down the Don in the spring.
+        lonlat: [39.2, 51.67]
+      - kind: taken
+        side: ru
+        name: Azov
+        date: 1695–1696
+        text: The first siege failed in 1695. In 1696 the fleet cut the fortress off from the sea, and the garrison surrendered on 29 July.
+        lonlat: [39.42, 47.11]
+      - kind: event
+        side: ru
+        name: Taganrog
+        date: 1696–1698
+        text: Chosen by Peter as a harbour for his fleet in 1696 and founded in 1698. The Ottomans recognised it as Russian in 1700.
+        lonlat: [38.9, 47.21]
+        lp: l
+      - kind: taken
+        side: ru
+        name: Gazi-Kerman
+        date: 1695
+        text: The main Ottoman fort on the lower Dnieper fell to Sheremetev and Mazepa when its powder magazine blew up. It was given back, razed, in 1700.
+        lonlat: [33.42, 46.84]
+    arrows:
+      - side: ru
+        label: Shein and Peter, 1696
+        via: [[39.2, 51.6], [40.6, 49.9], [41.9, 47.75], [39.5, 47.13]]
+      - side: ru
+        label: Sheremetev and Mazepa, 1695
+        via: [[34.55, 49.6], [34.2, 48.1], [33.5, 46.95]]

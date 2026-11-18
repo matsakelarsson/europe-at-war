@@ -1,0 +1,218 @@
+id: seven-years-war
+name: Seven Years’ War
+start: "1756"
+end: "1763"
+tier: B
+summary: A war in which Prussia and Great Britain, with Hanover, fought Austria, France, Russia, Sweden and most of the Holy Roman Empire, while Britain and France, joined by Spain in 1762, fought at sea and in North America, the Caribbean, West Africa and India. Prussia survived invasions from all sides and kept Silesia at the Peace of Hubertusburg in 1763, and the Treaty of Paris left Britain the leading colonial power.
+sides:
+  - id: pr
+    name: Prussia
+    polities: [prussia]
+    ink: slate
+    moves: Prussian moves
+    success: Prussian success
+  - id: gb
+    name: Great Britain and Hanover
+    polities: [united-kingdom, hanover]
+    ink: red
+    moves: British and Hanoverian moves
+    success: British and Hanoverian success
+  - id: at
+    name: Austria and the Empire
+    polities: [habsburg, saxony]
+    ink: purple
+    moves: Austrian and Imperial moves
+    success: Austrian success
+  - id: fr
+    name: France
+    polities: [france]
+    ink: navy
+    moves: French moves
+    success: French success
+  - id: ru
+    name: Russia
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: sw
+    name: Sweden
+    polities: [sweden]
+    ink: blue
+    moves: Swedish moves
+    success: Swedish success
+notes:
+  - Dates are New Style (Gregorian). Russia used the Julian calendar, eleven days behind, so Russian sources date Elizabeth’s death 25 December 1761.
+  - Sweden’s part in the war is told separately, as the Pomeranian War.
+  - The steps so far follow the war between Russia and Prussia.
+sources:
+  - title: Seven Years’ War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Seven_Years%27_War
+  - title: Battle of Gross-Jägersdorf (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Gross-J%C3%A4gersdorf
+  - title: Battle of Zorndorf (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Zorndorf
+  - title: Battle of Kunersdorf (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kunersdorf
+  - title: 1760 raid on Berlin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1760_raid_on_Berlin
+  - title: Siege of Kolberg (1761) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kolberg_(1761)
+  - title: Treaty of Saint Petersburg (1762) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Saint_Petersburg_(1762)
+  - title: Miracle of the House of Brandenburg (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Miracle_of_the_House_of_Brandenburg
+steps:
+  - title: Gross-Jägersdorf and Zorndorf
+    date: 1757–1758
+    when: "1757-07"
+    borders: "1758-08-25"
+    countries: [ru, lt, pl, de]
+    body:
+      - Russia joined Austria and France against Prussia in 1757. Empress Elizabeth’s army, about 55,000 strong under Field Marshal Stepan Apraksin, invaded East Prussia, and a detachment took the port of Memel in July. On 30 August Hans von Lehwaldt’s 28,000 Prussians attacked Apraksin at Gross-Jägersdorf and were beaten off after Pyotr Rumyantsev led reserve regiments through a wood into the fight. Instead of following up, Apraksin fell back to the Neman. He was short of supplies, and perhaps feared that the ailing empress would die and be succeeded by her pro-Prussian nephew Peter. He was dismissed and arrested.
+      - His successor, William Fermor, marched into East Prussia in January 1758 almost unopposed. Königsberg surrendered on 22 January, and the province swore allegiance to Elizabeth and stayed under Russian rule for four years. In August Fermor advanced into Brandenburg and bombarded the Oder fortress of Küstrin, setting the town on fire. Frederick II hurried north and on 25 August attacked the Russian army at Zorndorf. With about 11,000 Prussian and some 16,000 Russian casualties it was one of the bloodiest battles of the century. Both sides claimed victory, but Fermor withdrew.
+    facts:
+      - [Battle of Gross-Jägersdorf, "30 August 1757, Russian victory"]
+      - [Königsberg occupied, 22 January 1758]
+      - [Battle of Zorndorf, "25 August 1758, indecisive"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Memel
+        date: July 1757
+        text: Russian troops and ships took the Prussian port, today’s Klaipėda, at the start of the invasion.
+        lonlat: [21.13, 55.71]
+      - kind: battle
+        side: ru
+        name: Battle of Gross-Jägersdorf
+        date: 30 August 1757
+        text: Lehwaldt’s Prussians attacked the larger Russian army and were driven off. Apraksin did not pursue.
+        lonlat: [21.48, 54.62]
+      - kind: taken
+        side: ru
+        name: Königsberg
+        date: 22 January 1758
+        text: The capital of East Prussia surrendered without a fight. Its people, the philosopher Immanuel Kant among them, became subjects of the Russian empress.
+        lonlat: [20.51, 54.71]
+        lp: l
+      - kind: event
+        side: ru
+        name: Küstrin
+        date: 15 August 1758
+        text: Russian guns set the town on fire, but its fortress held out.
+        lonlat: [14.65, 52.58]
+        lp: b
+      - kind: battle
+        name: Battle of Zorndorf
+        date: 25 August 1758
+        text: A day of slaughter in which both armies lost about a third of their men. The Russians held their ground, then withdrew.
+        lonlat: [14.654, 52.672]
+        lp: t
+    arrows:
+      - side: ru
+        label: Apraksin
+        via: [[23.9, 54.9], [22.7, 54.75], [21.6, 54.63]]
+      - side: ru
+        label: Fermor
+        via: [[17.95, 53.1], [16.9, 52.42], [15.6, 52.6], [14.75, 52.62]]
+      - side: pr
+        label: Frederick II
+        via: [[16.2, 51.2], [15.1, 52.0], [14.6, 52.6]]
+    areas:
+      - style: occupied
+        side: ru
+        label: Held by Russia, 1758–1762
+        atoms: [RU-KGD, LT-KL~memel, PL-WN!, PL-WN~pl1930]
+  - title: Kunersdorf
+    date: 1759
+    when: "1759-07"
+    borders: "1759-08-12"
+    countries: [pl, de, ru, at]
+    body:
+      - In 1759 a new commander, Pyotr Saltykov, led the Russian army west through Poland towards the Oder to join the Austrians. On 23 July he beat a smaller Prussian force under Carl Heinrich von Wedel at Kay, near Paltzig, then took Frankfurt an der Oder, where Austrian troops under Ernst Gideon von Laudon joined him. Frederick gathered about 50,000 men, crossed the Oder north of Frankfurt and on 12 August attacked the allied army of some 60,000, dug in on the hills by the village of Kunersdorf.
+      - His first attacks drove in the Russian left, but his tired troops were thrown back again and again from the heights, and Laudon’s cavalry finally broke them. About 19,000 Prussians were killed, wounded or captured, more than a third of the army, and the allies lost some 16,000. That night Frederick wrote that all was lost. But Saltykov, whose army had suffered terribly, and the Austrian commander Leopold von Daun did not march on Berlin, and their armies drew apart. Frederick called his escape the “miracle of the House of Brandenburg”.
+    facts:
+      - [Battle of Kay, "23 July 1759, Russian victory"]
+      - [Battle of Kunersdorf, "12 August 1759, Russian and Austrian victory"]
+      - [Prussian losses at Kunersdorf, "About 19,000 of some 50,000"]
+    markers:
+      - kind: battle
+        side: ru
+        name: Battle of Kay
+        date: 23 July 1759
+        text: Wedel attacked Saltykov’s stronger army on Frederick’s orders and was beaten, opening the way to the Oder.
+        lonlat: [15.55, 52.16]
+      - kind: taken
+        side: ru
+        name: Frankfurt an der Oder
+        date: 31 July 1759
+        text: Occupied by the Russians, who joined the Austrians here.
+        lonlat: [14.55, 52.35]
+        lp: l
+      - kind: battle
+        side: ru
+        name: Battle of Kunersdorf
+        date: 12 August 1759
+        text: Frederick’s worst defeat. His army was scattered, and for a few days he had only a few thousand men left under arms.
+        lonlat: [14.63, 52.34]
+        lp: b
+    arrows:
+      - side: ru
+        label: Saltykov
+        via: [[16.9, 52.42], [15.9, 52.2], [15.0, 52.3], [14.7, 52.34]]
+      - side: at
+        label: Laudon
+        via: [[15.0, 51.55], [14.75, 51.95], [14.64, 52.28]]
+      - side: pr
+        label: Frederick II
+        via: [[14.3, 52.22], [14.55, 52.52], [14.72, 52.42], [14.66, 52.36]]
+    areas:
+      - style: occupied
+        side: ru
+        label: Held by Russia, 1758–1762
+        atoms: [RU-KGD, LT-KL~memel, PL-WN!, PL-WN~pl1930]
+  - title: Berlin, Kolberg and the peace of 1762
+    date: 1760–1762
+    when: "1760-10"
+    borders: "1762-05-05"
+    countries: [de, pl, ru, at]
+    body:
+      - In October 1760, while Frederick was in Silesia, a Russian corps under Gottlob Totleben and Zakhar Chernyshev and an Austrian corps under Franz Moritz von Lacy marched on Berlin. The small garrison withdrew, and the city surrendered on 9 October. The occupiers took a heavy ransom and destroyed arms works, then left three days later as Frederick approached. The Russians had twice besieged the Pomeranian port of Kolberg without success. In 1761 Pyotr Rumyantsev besieged it again by land and sea, and on 16 December its garrison surrendered, giving Russia a harbour for its army in Pomerania.
+      - Prussia was close to exhaustion when Empress Elizabeth died on 5 January 1762. Her nephew and heir, Peter III, admired Frederick. He made peace at once, and in the Treaty of Saint Petersburg on 5 May handed back East Prussia and Pomerania, asking nothing in return. In June he allied with Frederick and placed Chernyshev’s corps under his command. Sweden made peace at Hamburg on 22 May. In July Peter was overthrown by his wife, Catherine II, who kept the peace but ended the alliance. Without Russia, Austria could not win, and the Peace of Hubertusburg in February 1763 left Prussia with Silesia.
+    facts:
+      - [Berlin occupied, "9–12 October 1760"]
+      - [Kolberg surrendered, 16 December 1761]
+      - [Treaty of Saint Petersburg, "5 May 1762, Russia gives back its conquests"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Berlin
+        date: 9–12 October 1760
+        text: Russian and Austrian troops held the Prussian capital for three days and took a ransom before Frederick’s approach drove them out.
+        lonlat: [13.4, 52.52]
+      - kind: taken
+        side: ru
+        name: Kolberg
+        date: 16 December 1761
+        text: After sieges in 1758 and 1760 had failed, Rumyantsev starved the fortress into surrender.
+        lonlat: [15.58, 54.18]
+      - kind: event
+        name: Königsberg
+        date: 1762
+        text: Under the Treaty of Saint Petersburg, East Prussia, held by Russia since 1758, went back to Prussia.
+        lonlat: [20.51, 54.71]
+    arrows:
+      - side: ru
+        label: Chernyshev and Totleben
+        via: [[14.55, 52.35], [14.0, 52.45], [13.5, 52.5]]
+      - side: at
+        label: Lacy
+        via: [[13.75, 51.05], [13.6, 51.8], [13.42, 52.45]]
+      - side: ru
+        label: Rumyantsev
+        via: [[16.6, 54.2], [16.0, 54.15], [15.62, 54.17]]
+    areas:
+      - style: occupied
+        side: ru
+        label: Held by Russia, 1758–1762
+        atoms: [RU-KGD, LT-KL~memel, PL-WN!, PL-WN~pl1930]

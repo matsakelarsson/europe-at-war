@@ -182,10 +182,28 @@ date, from two sources merged by date:
   | 1815–1945 | Schleswig-Holstein | `denmark.yaml` |
   | 1772–today | Poland, Lithuania, Latvia, Estonia, Belarus, Kaliningrad, right-bank Ukraine | `poland-lithuania.yaml` |
   | 800–today | Outer Hebrides, Orkney, Shetland, the Isle of Man | `british-isles.yaml` |
+  | 1236–today | European Russia and left-bank and southern Ukraine | `rus-and-russia.yaml`, `russia.yaml`, `ww2-east.yaml` |
+  | 1801–today | Georgia, Armenia, Azerbaijan, the northern Caucasus, Kars–Ardahan–Artvin | `caucasus.yaml` |
+  | 1809–today | Finland and Åland | `finland.yaml` |
+  | 1812–today | Bessarabia and Transnistria (Moldova, Budjak, Khotyn) | `bessarabia.yaml` |
 
-  Other event files (`russia.yaml`, `france.yaml`, the England part of
-  `british-isles.yaml`) correct drafts outside any curated range; there,
-  the next keyframe can still override an event.
+  Other event files (`france.yaml`, `turkey.yaml`, `balkans.yaml`,
+  `italy.yaml`, `central-europe.yaml`, the England part of
+  `british-isles.yaml`, and `rus-and-russia.yaml` before 1236) correct
+  drafts outside any curated range; there, the next keyframe can still
+  override an event. `balkans.yaml`, `italy.yaml`, `central-europe.yaml`
+  and `turkey.yaml` are first passes made for the Russia wave's maps
+  (historical-basemaps has no snapshot between 1815 and 1880); the later
+  waves replace them with curated ranges.
+- **What the base map shows.** The base map follows the borders states
+  recognised at the time, by treaty or in practice. Military occupation,
+  breakaway regions and front lines are drawn as areas in a war's steps,
+  not on the base map. Exceptions, where an occupation lasted long enough to
+  be the map of the time: the German and Romanian occupation of the Soviet
+  Union in 1941–1944 (at six dates in `ww2-east.yaml`, as the Reichskommissariats
+  and the military zone), and the Finnish reconquest of 1941–1944. Abkhazia,
+  South Ossetia, Transnistria, Karabakh, Crimea after 2014 and the occupied
+  parts of Ukraine stay with the state they are recognised as part of.
 - **Checking borders.** After a build, `node tools/owners-at.mjs <date>
   [polities…] [--atoms <regex>]` lists who owns what on a date, and
   `node tools/owner-history.mjs <regex> [from] [to]` lists every change to the
@@ -204,7 +222,11 @@ date, from two sources merged by date:
 - **Atoms.** Ids are ISO 3166-2 codes where Natural Earth has them (`SE-M`,
   `PL-MA`), otherwise its adm1 codes. `content/borders/atoms.json` lists them
   all with names and coordinates. A split atom is `<parent>~<name>`, such as
-  `DK-84~bornholm`.
+  `DK-84~bornholm`. Splits named after a year are the land a state held then:
+  `~fi1938` (Finnish Karelia and Petsamo, in `RU-LEN`, `RU-KR`, `RU-MUR`),
+  `~ee1938` and `~lv1938` (Petseri, Narva-taga, Abrene), `~ro1938` (Budjak,
+  with `~ro1938~1856` for the part Moldavia held 1856–1878), `~pl1930`,
+  `~de1930` and so on.
 - **Splits.** `content/borders/splits/*.geojson`, applied in file-name order:
   polygons in lon/lat with `{id: "<atom>~<name>", from: "<atom>", name}`. The
   part of the atom inside the polygon becomes the new atom (it may cut an atom

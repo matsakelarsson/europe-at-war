@@ -1,0 +1,99 @@
+id: muscovite-novgorodian-war
+name: Muscovite–Novgorodian War
+start: "1471"
+end: "1478"
+tier: B
+summary: The war in which Ivan III of Moscow ended the independence of the Novgorod Republic. After Novgorod turned to Lithuania for support, Ivan’s army routed the Novgorodians on the Shelon in 1471, and in January 1478 a second campaign forced the city to surrender; its assembly was abolished and its vast northern lands passed to Moscow.
+countries: [ru]
+sides:
+  - id: mos
+    name: Moscow and its allies
+    polities: [russia, pskov, tver]
+    ink: green
+    moves: Muscovite and allied moves
+    success: Muscovite success
+  - id: nov
+    name: Novgorod
+    polities: [novgorod]
+    ink: navy
+    moves: Novgorodian moves
+    success: Novgorodian success
+notes:
+  - Dates are Julian (Old Style). Most of the chronicles were written or revised in Moscow after the conquest and are hostile to Novgorod; the Moscow account claims a Novgorodian army of 40,000 at the Shelon and 12,000 dead, figures historians consider exaggerated.
+  - Novgorod, called “Lord Novgorod the Great”, was governed by its assembly, the veche, its archbishop and its boyars. Its princes, by then the grand princes of Moscow, were bound by treaty and had limited powers.
+sources:
+  - title: Battle of Shelon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Shelon
+  - title: Novgorod Republic (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Novgorod_Republic
+  - title: Marfa Boretskaya (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Marfa_Boretskaya
+  - title: Ivan III of Russia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ivan_III_of_Russia
+steps:
+  - title: The Shelon
+    date: May – August 1471
+    when: "1471-07-14"
+    borders: "1471-08-11"
+    countries: [ru]
+    body:
+      - "Novgorod, the great trading republic of the north, accepted the grand princes of Moscow as its princes but ran its own affairs. After Vasily II imposed the Treaty of Yazhelbitsy on it in 1456, a party led by the Boretsky family and the widow Marfa Boretskaya looked to Lithuania for protection. In 1470 Novgorod invited the Lithuanian prince Mikhailo Olelkovich, and a treaty was drafted placing the city under King Casimir IV, who probably never ratified it. Ivan III called this treason and apostasy from Orthodoxy, and in May 1471 he went to war, joined by Pskov and Tver."
+      - "Muscovite armies converged on Novgorod from several sides. Prince Daniil Kholmsky’s vanguard burned Staraya Russa and on 14 July met the Novgorodian army on the Shelon river, west of Lake Ilmen. The Novgorodians, at least 10,000 men and many of them untrained townsmen, outnumbered Kholmsky’s 4,000–5,000, but a charge by Tatar horsemen from Kasimov broke them and they were pursued for miles. Their commander, Dmitry Boretsky, was captured and beheaded on Ivan’s orders. Another Muscovite force won on the Shilenga in the Dvina land. By the Treaty of Korostyn in August, Novgorod gave up Lithuania and recognised itself as Ivan’s patrimony."
+    facts:
+      - [Battle of the Shelon, "14 July 1471, Muscovite victory"]
+      - [Commanders, "Daniil Kholmsky; Dmitry Boretsky and Vasily Kazimer for Novgorod"]
+      - [Treaty of Korostyn, "11 August 1471"]
+    markers:
+      - kind: taken
+        side: mos
+        name: Staraya Russa
+        date: July 1471
+        text: The salt-making town south of Lake Ilmen was burned by Kholmsky’s vanguard. Ivan III later made his headquarters here.
+        lonlat: [31.333, 58.0]
+      - kind: battle
+        side: mos
+        name: Battle of the Shelon
+        date: 14 July 1471
+        text: The Muscovites crossed the Shelon and the Dryan and routed the larger Novgorodian army. Some 1,700–2,000 Novgorodians were taken prisoner.
+        lonlat: [30.767, 58.2]
+      - kind: treaty
+        side: mos
+        name: Treaty of Korostyn
+        date: 11 August 1471
+        text: Signed in Ivan’s camp on the south shore of Lake Ilmen. Novgorod kept its institutions but renounced any tie with Lithuania and paid an indemnity.
+        lonlat: [30.989, 58.188]
+    arrows:
+      - side: mos
+        label: Kholmsky
+        via: [[32.9, 57.7], [31.5, 57.95], [30.85, 58.17]]
+      - side: mos
+        label: Pskovians
+        via: [[28.4, 57.85], [29.2, 57.95], [29.95, 58.05]]
+  - title: The fall of Novgorod
+    date: 1475–1478
+    when: "1477-10"
+    borders: "1478-01-15"
+    countries: [ru]
+    body:
+      - "Moscow’s hold tightened. In 1475 Ivan came to Novgorod to hear lawsuits and had leading boyars of the anti-Muscovite party arrested and sent to Moscow. In 1477 two envoys from Novgorod addressed him as gosudar, “sovereign”, instead of the customary “lord”. Novgorod said they had no authority to do so, but Ivan took them at their word and demanded the powers the title implied. When the veche refused, he set out with a large army in October 1477, accusing the city of breaking its oath."
+      - "By late November Ivan’s troops surrounded Novgorod and cut off its supplies. Divided and short of food, the city did not fight, and on 15 January 1478 it submitted to his terms. The veche was abolished, its bell was taken down and carried to Moscow, and Ivan’s governors replaced the elected officials. Marfa Boretskaya was arrested and her lands taken, and in the 1480s thousands of boyars, merchants and landowners were deported to central Russia, their estates given to Ivan’s servitors. Novgorod’s lands, stretching to the White Sea and the Urals, became part of the Muscovite state."
+    facts:
+      - [Surrender of Novgorod, "15 January 1478"]
+      - [Veche bell, "Taken to Moscow"]
+      - [Grand Prince, "Ivan III of Moscow (r. 1462–1505)"]
+    markers:
+      - kind: taken
+        side: mos
+        name: Novgorod
+        date: 15 January 1478
+        text: Surrounded since November, the city accepted Ivan’s rule without a battle. Its republic, which had lasted for more than three centuries, was ended.
+        lonlat: [31.267, 58.55]
+    arrows:
+      - side: mos
+        label: Ivan III
+        via: [[37.6, 55.8], [35.6, 56.9], [33.5, 57.8], [31.45, 58.48]]
+    areas:
+      - style: gained
+        side: mos
+        label: Novgorod’s lands, annexed by Moscow in 1478 (approximate)
+        atoms: [RU-NGR, RU-LEN!, RU-LEN~ingria, RU-LEN~kex, RU-SPE, RU-KR, RU-ARK]

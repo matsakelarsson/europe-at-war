@@ -1,0 +1,141 @@
+id: first-chechen-war
+name: First Chechen War
+start: "1994-12-11"
+end: "1996-08-31"
+tier: B
+summary: A war in which Russia tried to end the independence that Chechnya had declared in 1991. Russian forces took a ruined Grozny in early 1995 at a heavy cost in civilian lives, but Chechen fighters fought on, and after they retook Grozny in August 1996 the Khasavyurt Accord brought a Russian withdrawal and left Chechnya’s status undecided.
+countries: [ru]
+sides:
+  - id: ru
+    name: Russia
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: ich
+    name: Chechen Republic of Ichkeria
+    polities: [ichkeria]
+    ink: purple
+    moves: Chechen moves
+    success: Chechen success
+notes:
+  - Chechnya is shown as part of Russia on the map, as it is internationally recognised; no member of the United Nations recognised Ichkeria.
+  - Casualty figures vary widely. Russia’s official count of its military dead is about 5,500; estimates of civilian deaths range from about 30,000 to 100,000.
+sources:
+  - title: First Chechen War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Chechen_War
+  - title: Battle of Grozny (1994–1995) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Grozny_(1994%E2%80%931995)
+  - title: Samashki massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Samashki_massacre
+  - title: Budyonnovsk hospital hostage crisis (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Budyonnovsk_hospital_hostage_crisis
+  - title: Battle of Grozny (August 1996) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Grozny_(August_1996)
+  - title: Khasavyurt Accord (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Khasavyurt_Accord
+  - title: Chechnya (Britannica)
+    url: https://www.britannica.com/place/Chechnya
+steps:
+  - title: The storming of Grozny
+    date: December 1994 – June 1995
+    when: "1994-12-11"
+    borders: "1995-03-06"
+    countries: [ru]
+    body:
+      - In November 1991, as the Soviet Union broke up, the former Soviet air force general Dzhokhar Dudayev, newly elected president of Chechnya, declared it independent. Russia never accepted this, and three years of uneasy separation followed. In 1994 Moscow armed an anti-Dudayev opposition, but its attack on Grozny on 26 November, with Russian soldiers secretly hired as tank crews, failed, and some of the Russians were captured. On 11 December Boris Yeltsin sent about 40,000 troops into Chechnya from the north, the west and the east.
+      - The assault on Grozny on New Year’s Eve was a disaster for Russia. Armoured columns sent into the city with little infantry were destroyed in its streets, among them the 131st Maikop Brigade at the railway station. Russia then pounded the city with artillery and bombing, took the ruins of the presidential palace on 19 January 1995 and the last districts in early March. Yeltsin’s human rights adviser Sergei Kovalev estimated that about 27,000 civilians died in the first five weeks. In April interior troops killed scores of civilians in the village of Samashki, and in June Russian forces took Vedeno and Shatoy in the mountains.
+    facts:
+      - [Russian invasion, "11 December 1994, about 40,000 troops"]
+      - [Presidential palace taken, "19 January 1995"]
+      - [Civilian deaths in Grozny, "about 27,000 in five weeks (Kovalev’s estimate)"]
+    markers:
+      - kind: battle
+        side: ru
+        name: Battle of Grozny
+        date: 31 December 1994 – 6 March 1995
+        text: After the failed New Year’s Eve assault Russian forces took the city district by district, leaving much of it in ruins.
+        lonlat: [45.699, 43.312]
+      - kind: event
+        side: ru
+        name: Mozdok
+        date: December 1994
+        text: The main Russian base for the invasion, just north of Chechnya in North Ossetia.
+        lonlat: [44.653, 43.736]
+      - kind: event
+        name: Samashki massacre
+        date: 7–8 April 1995
+        text: Russian interior troops and police killed more than 100 civilians, by some counts up to 300, and burned houses during a “cleansing” operation in the village.
+        lonlat: [45.304, 43.292]
+        lp: b
+      - kind: taken
+        side: ru
+        name: Vedeno
+        date: June 1995
+        text: Taken in a summer offensive that drove the Chechen fighters deeper into the mountains.
+        lonlat: [46.11, 42.957]
+      - kind: taken
+        side: ru
+        name: Shatoy
+        date: June 1995
+        text: The capture of the southern mountain towns left the Chechen forces without a fixed base.
+        lonlat: [45.691, 42.87]
+    arrows:
+      - side: ru
+        label: From Mozdok
+        via: [[44.7, 43.72], [45.15, 43.6], [45.62, 43.38]]
+      - side: ru
+        label: Via Ingushetia
+        via: [[44.68, 43.04], [44.77, 43.22], [45.2, 43.29], [45.62, 43.31]]
+      - side: ru
+        label: From Dagestan
+        via: [[46.58, 43.25], [46.2, 43.3], [45.78, 43.31]]
+    areas:
+      - style: outline
+        label: Chechnya
+        atoms: [RU-CE]
+  - title: Budyonnovsk, Grozny and Khasavyurt
+    date: June 1995 – August 1996
+    when: "1995-06-14"
+    borders: "1996-08-31"
+    countries: [ru]
+    body:
+      - On 14 June 1995 Shamil Basayev and more than 100 fighters drove into Budyonnovsk in southern Russia and seized its hospital with well over 1,500 hostages. Two assaults by special forces failed; Prime Minister Viktor Chernomyrdin then negotiated with Basayev by telephone, promised a ceasefire and talks, and let the gunmen return to Chechnya with volunteer hostages. At least 129 people died. The talks broke down by the end of the year, and in January 1996 Salman Raduyev’s raid on Kizlyar in Dagestan ended in a battle at Pervomayskoye. On 21 April Dudayev was killed by a Russian missile.
+      - On 6 August 1996, days before Yeltsin began his second term, Chechen fighters under Aslan Maskhadov infiltrated Grozny and cut off the Russian garrisons there. Yeltsin’s new security chief, Alexander Lebed, then negotiated with Maskhadov, and on 31 August they agreed the Khasavyurt Accord in Dagestan. Russian forces withdrew by the end of the year, and the question of Chechnya’s status was put off until the end of 2001. More than half a million people had been driven from their homes.
+    facts:
+      - [Budyonnovsk hospital hostage crisis, "14–19 June 1995"]
+      - [Chechen recapture of Grozny, "from 6 August 1996"]
+      - [Khasavyurt Accord, "31 August 1996"]
+    markers:
+      - kind: event
+        name: Budyonnovsk
+        date: 14–19 June 1995
+        text: Basayev’s men shot people in the town as they took it, then held the hospital for six days; many hostages died in the failed assaults.
+        lonlat: [44.167, 44.783]
+      - kind: event
+        name: Kizlyar
+        date: 9–18 January 1996
+        text: Raduyev’s fighters took hostages in the town’s hospital and were then trapped by Russian forces in the village of Pervomayskoye.
+        lonlat: [46.714, 43.855]
+      - kind: taken
+        side: ich
+        name: Grozny
+        date: 6–20 August 1996
+        text: Chechen fighters retook the city in a surprise attack and besieged the Russian posts inside it.
+        lonlat: [45.699, 43.312]
+      - kind: treaty
+        name: Khasavyurt Accord
+        date: 31 August 1996
+        text: Signed by Lebed and Maskhadov. The Moscow peace treaty of May 1997 followed, but Chechnya’s status was never settled.
+        lonlat: [46.583, 43.25]
+    arrows:
+      - side: ich
+        label: Basayev
+        via: [[45.25, 43.55], [44.75, 44.1], [44.2, 44.75]]
+      - side: ich
+        label: Maskhadov
+        via: [[45.75, 43.1], [45.72, 43.22], [45.7, 43.3]]
+    areas:
+      - style: outline
+        label: Chechnya
+        atoms: [RU-CE]

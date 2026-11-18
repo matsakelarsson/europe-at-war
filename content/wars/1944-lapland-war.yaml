@@ -1,0 +1,130 @@
+id: lapland-war
+name: Lapland War
+start: "1944-09-15"
+end: "1945-04-27"
+tier: B
+summary: A war between Finland and Germany in northern Finland, fought because the Moscow Armistice required Finland to drive out the German troops still in the country. The Germans withdrew to Norway, burning much of Lapland as they went, and the last of them left Finnish soil in April 1945.
+countries: [fi, de]
+sides:
+  - id: fi
+    name: Finland
+    polities: [finland]
+    ink: teal
+    moves: Finnish moves
+    success: Finnish success
+  - id: de
+    name: Germany
+    polities: [germany]
+    ink: slate
+    moves: German moves
+    success: German success
+notes:
+  - The war began with a German attempt to seize the island of Suursaari (Gogland) in the Gulf of Finland on 15 September 1944, which failed. Fighting in Lapland began at the end of September.
+  - Finnish dead numbered 774, with 262 missing; the Germans lost about 1,000 dead and some 1,300 missing or captured.
+sources:
+  - title: Lapland War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Lapland_War
+  - title: Battle of Tornio (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tornio
+  - title: Operation Tanne Ost (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Tanne_Ost
+  - title: Operation Nordlicht (1944–1945) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Nordlicht_(1944%E2%80%931945)
+steps:
+  - title: From allies to enemies
+    date: September – October 1944
+    when: "1944-09-15"
+    borders: "1944-10-16"
+    countries: [fi, de]
+    body:
+      - Under the Moscow Armistice Finland had to disarm or expel the German 20th Mountain Army, some 200,000 men under General Lothar Rendulic, which held northern Finland. At first the two armies kept up a staged “autumn manoeuvre”, the Germans pulling back north and the Finns following without fighting, while most of Lapland’s civilians were evacuated, some 56,000 of them to Sweden. The Germans’ attempt to seize the island of Suursaari on 15 September, which the Finns beat off, and pressure from the Soviet Control Commission ended the pretence. The first shots in Lapland were fired near Pudasjärvi on 28 September.
+      - On 1 October Finnish troops landed at Tornio, at the head of the Gulf of Bothnia, behind the German lines. A week of hard fighting followed around Tornio and Kemi before the Germans withdrew. On 13 October German commanders ordered the burning of everything of military use, which in practice meant whole towns and villages. When Finnish troops reached Rovaniemi, the capital of Lapland, on 16 October, almost all of it was in ashes, and the roads and bridges behind the retreating Germans had been mined and blown up.
+    facts:
+      - [German attack on Suursaari, "15 September 1944, repulsed"]
+      - [Landing at Tornio, "1 October 1944"]
+      - [Rovaniemi reached, "16 October 1944, burned"]
+    markers:
+      - kind: battle
+        side: fi
+        name: Suursaari
+        date: 15 September 1944
+        text: Finnish troops beat off a German landing on the island in the Gulf of Finland, the first clash of the war.
+        lonlat: [26.983, 60.05]
+      - kind: battle
+        side: fi
+        name: Pudasjärvi
+        date: 28 September 1944
+        text: The first shots between Finnish and German troops in the north were fired near here.
+        lonlat: [27.0, 65.358]
+      - kind: battle
+        side: fi
+        name: Tornio
+        date: 1–8 October 1944
+        text: Finnish troops landed by sea behind the German lines and held the town against German counter-attacks.
+        lonlat: [24.15, 65.85]
+        lp: l
+      - kind: taken
+        side: fi
+        name: Kemi
+        date: 8 October 1944
+        text: Taken after fighting around the port and its industrial plants.
+        lonlat: [24.564, 65.736]
+        lp: b
+      - kind: event
+        side: de
+        name: Rovaniemi
+        date: October 1944
+        text: The retreating Germans burned the capital of Lapland. When the Finns entered it on 16 October, an estimated 90 per cent of the town had been destroyed.
+        lonlat: [25.733, 66.5]
+    arrows:
+      - side: fi
+        label: Tornio landing
+        via: [[24.55, 65.6], [24.35, 65.75], [24.18, 65.84]]
+      - side: fi
+        via: [[24.25, 65.9], [24.9, 66.15], [25.6, 66.45]]
+      - side: fi
+        via: [[27.0, 65.4], [26.4, 65.95], [25.85, 66.42]]
+      - side: de
+        label: 20th Mountain Army
+        via: [[25.8, 66.6], [25.3, 67.6], [24.0, 68.3]]
+      - side: de
+        via: [[28.6, 66.9], [27.4, 68.0], [27.5, 69.0]]
+  - title: Retreat to Norway
+    date: October 1944 – April 1945
+    when: "1944-10-17"
+    borders: "1945-04-27"
+    countries: [fi, de]
+    body:
+      - After Rovaniemi the Germans withdrew along two roads, north-west through Muonio towards Norway and north through Ivalo towards the Norwegian Arctic. The Red Army, meanwhile, drove them out of Petsamo in October and followed them some way into Finnish territory along Lake Inari. The Finnish army followed slowly. Under the armistice it also had to demobilise much of its own force, and the retreating Germans destroyed the roads, bridges and buildings as they left. By November most German troops had left Finland, but from late November a rearguard held a fortified line on the Lätäseno river in the far north-west, and later positions near Kilpisjärvi, through the winter.
+      - On 27 April 1945 the last German troops left Finnish soil near Kilpisjärvi, and Finnish soldiers raised the flag on the cairn where Finland, Sweden and Norway meet. About 1,000 Finns had been killed or gone missing, and some 1,300 German prisoners were handed over to the Soviet Union under the armistice. Lapland was devastated. Around 40 per cent of its buildings had been destroyed, with hundreds of bridges and thousands of kilometres of road, Rovaniemi had to be rebuilt almost from scratch, and the clearing of mines and explosives went on for decades.
+    facts:
+      - [Last Germans leave Finland, "27 April 1945"]
+      - [Finnish dead and missing, "about 1,000"]
+      - [People evacuated from Lapland, "about 168,000"]
+    markers:
+      - kind: battle
+        side: de
+        name: Muonio
+        date: 26 October 1944
+        text: The German SS Mountain Division Nord held off a Finnish attempt to trap it here before withdrawing along the road towards Norway.
+        lonlat: [23.683, 67.958]
+      - kind: battle
+        side: de
+        name: Tankavaara
+        date: 26 October 1944
+        text: Finnish troops failed to dislodge a German division from its fortified positions south of Ivalo. The Germans then withdrew north into Norway, leaving north-eastern Lapland by 25 November.
+        lonlat: [27.15, 68.18]
+      - kind: event
+        side: fi
+        name: Three-Country Cairn
+        date: 27 April 1945
+        text: Finnish soldiers raised their flag where Finland, Sweden and Norway meet, marking the end of the war.
+        lonlat: [20.549, 69.06]
+        lp: l
+    arrows:
+      - side: de
+        via: [[23.9, 67.6], [22.6, 68.5], [21.0, 69.05]]
+      - side: de
+        via: [[27.4, 68.8], [27.6, 69.4], [28.3, 69.85]]
+      - side: fi
+        via: [[24.5, 67.2], [23.6, 68.1], [22.3, 68.7]]

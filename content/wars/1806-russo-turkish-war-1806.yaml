@@ -1,0 +1,179 @@
+id: russo-turkish-war-1806
+name: Russo-Turkish War of 1806–1812
+start: "1806"
+end: "1812-05-28"
+tier: B
+summary: A war between the Russian Empire and the Ottoman Empire, fought mainly on the lower Danube, at sea in the Aegean and in the Caucasus, in which Russia occupied Moldavia and Wallachia. Kutuzov’s victory at Ruse and Slobozia in 1811 led to the Treaty of Bucharest, signed weeks before Napoleon’s invasion of Russia, which gave Russia Bessarabia, the land between the Prut and the Dniester.
+countries: [ro, md, ua, bg, rs, tr, gr, ge, am, ru]
+sides:
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: rs
+    name: Serbian rebels
+    polities: [serbia]
+    ink: red
+    moves: Serbian moves
+    success: Serbian success
+  - id: tr
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Dates are New Style (Gregorian). Russian accounts use the Julian calendar, then 12 days behind, so the Treaty of Bucharest is dated 16 May 1812 in Russian sources. Some dates of the Danube campaigns are given in either style in the literature; uncertain ones are given here only by month.
+  - The Serbian rising of 1804–1813 under Karađorđe is a war of its own; it appears here only where it joined the Russian war.
+sources:
+  - title: Russo-Turkish War (1806–1812) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russo-Turkish_War_(1806%E2%80%931812)
+  - title: Battle of Athos (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Athos
+  - title: Battle of the Dardanelles (1807) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Dardanelles_(1807)
+  - title: Battle of Slobozia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Slobozia
+  - title: Treaty of Bucharest (1812) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Bucharest_(1812)
+  - title: First Serbian Uprising (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Serbian_Uprising
+  - title: Bessarabia (Britannica)
+    url: https://www.britannica.com/place/Bessarabia
+steps:
+  - title: Into the Principalities and the Dardanelles
+    date: 1806–1809
+    when: "1806-11"
+    borders: "1807-07-01"
+    countries: [ro, md, ua, rs, tr, gr, am, ru]
+    body:
+      - In August 1806 Sultan Selim III, encouraged by France after Napoleon’s victory at Austerlitz, deposed the pro-Russian princes of Moldavia and Wallachia. In November a Russian army under General Ivan Michelson crossed the Dniester, took Khotyn and Bender and occupied both principalities, and in December the Ottomans declared war. In Serbia, where rebels led by Karađorđe had been fighting Ottoman forces since 1804, Russia found an ally. The rebels took Belgrade that winter, and Russian troops fought beside them from 1807.
+      - In June 1807 a small Russian force under Mikhail Miloradovich stopped an Ottoman army marching on Bucharest at Obilești, and in the Caucasus Count Ivan Gudovich routed a much larger Ottoman army on the Arpachay. At sea, Vice-Admiral Dmitry Senyavin’s squadron blockaded the Dardanelles and beat the Ottoman fleet off the straits in May and near Mount Athos in July. After making peace with Napoleon at Tilsit, Russia agreed to an armistice in August 1807. When fighting resumed in 1809, Prince Pyotr Bagration took Izmail but failed before Silistra.
+    facts:
+      - [Russian occupation of Moldavia and Wallachia, "from November 1806"]
+      - [Battle of Athos, "1–2 July 1807, Russian victory"]
+      - [Armistice of Slobozia, "August 1807 – 1809"]
+    markers:
+      - kind: event
+        side: ru
+        name: Bucharest
+        date: December 1806
+        text: Russian troops entered the Wallachian capital and held it until 1812.
+        lonlat: [26.104, 44.432]
+        lp: l
+      - kind: battle
+        side: ru
+        name: Battle of Obilești
+        date: June 1807
+        text: About 4,500 Russians under Miloradovich turned back an Ottoman army advancing on Bucharest.
+        lonlat: [26.783, 44.35]
+      - kind: taken
+        side: rs
+        name: Belgrade
+        date: December 1806 – January 1807
+        text: Karađorđe’s rebels took the town and then its fortress, the seat of the Ottoman pasha.
+        lonlat: [20.457, 44.818]
+      - kind: naval
+        side: ru
+        name: Battle of the Dardanelles
+        date: 22 May 1807
+        text: Senyavin’s squadron, blockading the straits from the island of Tenedos, drove the Ottoman fleet back into the Dardanelles.
+        lonlat: [26.158, 40.013]
+      - kind: naval
+        side: ru
+        name: Battle of Athos
+        date: 1–2 July 1807
+        text: Senyavin defeated the Ottoman fleet, which lost several ships in the battle and the retreat. Russia held command of the Aegean until the armistice.
+        lonlat: [24.932, 40.069]
+      - kind: battle
+        side: ru
+        name: Battle of Arpachay
+        date: June 1807
+        text: Gudovich’s 7,000 men defeated more than 20,000 Ottoman troops under Yusuf Pasha on the river near Gyumri.
+        lonlat: [43.78, 40.72]
+    arrows:
+      - side: ru
+        label: Michelson
+        via: [[28.9, 47.2], [27.6, 47.1], [27.1, 45.7], [26.2, 44.5]]
+    areas:
+      - style: occupied
+        side: ru
+        label: Occupied by Russia, 1806–1812
+        atoms: [RO-AG, RO-B, RO-BR, RO-BZ, RO-CL, RO-DB, RO-DJ, RO-GJ, RO-GR, RO-IF, RO-IL, RO-MH, RO-OT, RO-PH, RO-TR, RO-VL, RO-BC, RO-BT, RO-GL, RO-IS, RO-NT, RO-VN, RO-VS, MD-AN, MD-BA, MD-BR, MD-BS, MD-CA, MD-CL, MD-CM, MD-CR, MD-CS, MD-CT, MD-CU, MD-DO, MD-DR, MD-ED, MD-FA, MD-FL, MD-GA, MD-GL, MD-HI, MD-IA, MD-LE, MD-NI, MD-OC, MD-OR, MD-RI, MD-SD, MD-SI, MD-SO, MD-ST, MD-SV, MD-TA, MD-TE, MD-UN, MDA-1644, UA-51~ro1938, UA-77~bess]
+  - title: Kutuzov and the Treaty of Bucharest
+    date: 1810–1812
+    when: "1810"
+    borders: "1812-05-28"
+    countries: [bg, ro, md, ua, ge, tr, ru]
+    body:
+      - In 1810 General Nikolay Kamensky crossed into Bulgaria and took Silistra, but his assaults on Shumla and Ruse failed with heavy losses. After he routed an Ottoman force at Batin in September, Ruse surrendered. In the Caucasus Russian forces took Sukhum on the Abkhazian coast, and Russia deposed King Solomon II of Imereti and annexed his kingdom. Kamensky fell ill and died early in 1811. With war against Napoleon looming, Alexander I gave the command to Mikhail Kutuzov and told him to make peace quickly.
+      - Kutuzov beat the grand vizier, Ahmed Pasha, outside Ruse on 4 July 1811, then gave up the fortress and drew back across the Danube. When some 36,000 Ottoman troops followed him over the river, a Russian force crossed behind them, took their camp and cut them off at Slobozia. Hungry and sick, the survivors surrendered at the end of the year. By the Treaty of Bucharest, signed on 28 May 1812, Russia handed back Wallachia, western Moldavia and its gains in the Caucasus except Sukhum, but kept the eastern half of Moldavia, which it named Bessarabia. The Serbs were promised self-government, but in 1813 Ottoman forces reconquered Serbia.
+    facts:
+      - [Battle of Ruse, "4 July 1811, Russian victory"]
+      - [Slobozia, "Ottoman army trapped and starved into surrender, autumn 1811"]
+      - [Treaty of Bucharest, "28 May 1812, Bessarabia to Russia"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Silistra
+        date: June 1810
+        text: The fortress surrendered after Kamensky beat a relief force at Bazargic (Dobrich).
+        lonlat: [27.261, 44.117]
+      - kind: battle
+        side: ru
+        name: Battle of Batin
+        date: September 1810
+        text: Kamensky stormed a fortified Ottoman camp on the Danube, and the garrison of Ruse surrendered soon afterwards.
+        lonlat: [25.667, 43.667]
+        lp: l
+      - kind: battle
+        side: ru
+        name: Battle of Ruse
+        date: 4 July 1811
+        text: Kutuzov repulsed Ahmed Pasha’s larger army, then abandoned the town to lure the Ottomans across the Danube.
+        lonlat: [25.954, 43.823]
+        lp: b
+      - kind: siege
+        side: ru
+        name: Slobozia
+        date: September – November 1811
+        text: The Ottoman bridgehead on the north bank was surrounded and shelled for weeks until its starving troops gave up.
+        lonlat: [25.9, 43.867]
+        lp: t
+      - kind: treaty
+        name: Treaty of Bucharest
+        date: 28 May 1812
+        text: Signed at Manuc’s Inn. Russia gained Bessarabia and the Ottomans recognised its annexation of Imereti.
+        lonlat: [26.104, 44.432]
+      - kind: taken
+        side: ru
+        name: Akhalkalaki
+        date: December 1811
+        text: Pyotr Kotlyarevsky took the fortress by a night attack after a march over snowbound mountains. It was handed back in 1812.
+        lonlat: [43.486, 41.406]
+      - kind: taken
+        side: ru
+        name: Sukhum
+        date: 1810
+        text: The Ottoman fortress on the Abkhazian coast fell to a Russian landing. Russia kept it under the peace.
+        lonlat: [41.019, 43.004]
+      - kind: event
+        side: ru
+        name: Kutaisi
+        date: 1810
+        text: Russia deposed Solomon II, the last king of Imereti, and annexed his kingdom in western Georgia.
+        lonlat: [42.7, 42.25]
+    arrows:
+      - side: ru
+        label: Kamensky, 1810
+        via: [[27.9, 44.65], [27.3, 44.15], [27.6, 43.65], [27.05, 43.32]]
+      - side: tr
+        label: Ahmed Pasha
+        via: [[26.85, 43.3], [26.3, 43.6], [25.95, 43.86]]
+    areas:
+      - style: gained
+        side: ru
+        label: Bessarabia, to Russia in this peace
+        atoms: [MD-AN, MD-BA, MD-BR, MD-BS, MD-CA, MD-CL, MD-CM, MD-CR, MD-CS, MD-CT, MD-CU, MD-DO, MD-DR, MD-ED, MD-FA, MD-FL, MD-GA, MD-GL, MD-HI, MD-IA, MD-LE, MD-NI, MD-OC, MD-OR, MD-RI, MD-SD, MD-SI, MD-SO, MD-ST, MD-SV, MD-TA, MD-TE, MD-UN, MDA-1644, UA-51~ro1938, UA-77~bess]

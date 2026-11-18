@@ -1,0 +1,203 @@
+id: estonian-war-of-independence
+name: Estonian War of Independence
+start: "1918-11-28"
+end: "1920-02-02"
+tier: B
+summary: A war in which the newly proclaimed Republic of Estonia, helped by Finnish volunteers and the British navy, drove out the Red Army in 1918–1919 and defeated the Baltic German Landeswehr in northern Latvia. It ended with the Treaty of Tartu of 2 February 1920, in which Soviet Russia recognised Estonia’s independence in perpetuity.
+countries: [ee, ru, lv]
+sides:
+  - id: ee
+    name: Estonia
+    polities: [estonia]
+    ink: navy
+    moves: Estonian and allied moves
+    success: Estonian success
+  - id: ru
+    name: Soviet Russia
+    polities: [ussr]
+    ink: red
+    moves: Red Army moves
+    success: Soviet success
+  - id: lw
+    name: Landeswehr and Iron Division
+    polities: [baltic-landeswehr]
+    ink: slate
+    moves: German moves
+    success: German success
+notes:
+  - Known in Estonia as the War of Independence or War of Liberation (Vabadussõda). Dates are New Style.
+  - Places in Latvia are named in Latvian. The Battle of Cēsis is Võnnu lahing in Estonian. Petseri is today Pechory in Russia.
+  - The front line is approximate, drawn from general accounts.
+sources:
+  - title: Estonian War of Independence (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Estonian_War_of_Independence
+  - title: Commune of the Working People of Estonia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Commune_of_the_Working_People_of_Estonia
+  - title: British campaign in the Baltic (1918–1919) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/British_campaign_in_the_Baltic_(1918%E2%80%931919)
+  - title: Pohjan Pojat (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pohjan_Pojat
+  - title: Battle of Paju (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Paju
+  - title: Battle of Cēsis (1919) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_C%C4%93sis_(1919)
+  - title: Treaty of Tartu (Russian–Estonian) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Tartu_(Russian%E2%80%93Estonian)
+steps:
+  - title: The Red invasion and the counter-attack
+    date: November 1918 – February 1919
+    when: "1918-11-28"
+    borders: "1919-02-24"
+    countries: [ee, ru, lv]
+    body:
+      - Estonia had declared independence on 24 February 1918, a day before German troops entered Tallinn, and its Provisional Government took over only as the Germans began to leave in November. On 28 November the Red Army attacked Narva, where Estonian Bolsheviks proclaimed the Estonian Workers’ Commune. Soviet forces, many of them Latvian Riflemen, took Valga and Tartu at Christmas and by early January stood about 34 km from Tallinn. The new Estonian army, short of men and weapons, relied on volunteers, armoured trains and outside help. A British squadron reached Tallinn on 31 December with rifles and guns, and Finnish volunteers arrived from early January.
+      - Under Colonel Johan Laidoner, the Estonians counter-attacked on 7 January 1919. Armoured trains and partisan units retook Tartu on 14 January, and Narva fell on 18 January after Estonian and Finnish troops landed behind the Soviet lines at Utria. At Paju near Valga on 31 January, Julius Kuperjanov’s partisans and Finnish volunteers drove back the Red Latvian Riflemen in a hard fight in which Kuperjanov was mortally wounded. By late February the Red Army had been pushed out of almost all of Estonia, and the front settled along the Narva river and the south-eastern border.
+    facts:
+      - [Soviet attack on Narva, "28 November 1918"]
+      - [Estonian counter-offensive, "from 7 January 1919"]
+      - [Battle of Paju, "31 January 1919, Estonian victory"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Narva
+        date: 28–29 November 1918
+        text: The Red Army took the border town, where the Estonian Workers’ Commune was proclaimed. Estonian and Finnish troops retook it on 18 January.
+        lonlat: [28.196, 59.376]
+      - kind: event
+        side: ee
+        name: Tallinn
+        date: 31 December 1918
+        text: A British squadron under Rear Admiral Edwyn Alexander-Sinclair arrived with rifles, machine guns and field guns for the Estonian army.
+        lonlat: [24.745, 59.437]
+        lp: b
+      - kind: naval
+        name: Spartak and Avtroil
+        date: 26–27 December 1918
+        text: British cruisers captured two Soviet destroyers off Tallinn and handed them to Estonia, which renamed them Vambola and Lennuk.
+        lonlat: [24.55, 59.62]
+        lp: t
+      - kind: taken
+        side: ee
+        name: Tartu
+        date: 14 January 1919
+        text: Retaken by Estonian armoured trains and partisans after three weeks of Soviet rule.
+        lonlat: [26.723, 58.38]
+      - kind: event
+        side: ee
+        name: Utria landing
+        date: 17 January 1919
+        text: About 1,000 Estonian and Finnish troops landed on the coast behind the Soviet 6th Rifle Division, and Narva fell the next day.
+        lonlat: [27.9, 59.44]
+        lp: l
+      - kind: battle
+        side: ee
+        name: Battle of Paju
+        date: 31 January 1919
+        text: Estonian partisans and Finnish volunteers beat the Red Latvian Riflemen near Valga. Their commander, Julius Kuperjanov, died of his wounds.
+        lonlat: [26.112, 57.82]
+    arrows:
+      - side: ru
+        label: 7th Army
+        via: [[28.6, 59.38], [27.3, 59.36], [25.95, 59.27]]
+      - side: ee
+        label: Armoured trains
+        via: [[25.95, 59.05], [26.4, 58.7], [26.7, 58.42]]
+    areas:
+      - style: front
+        side: ru
+        label: Soviet front, early January 1919 (approximate)
+        line: [[25.35, 59.55], [25.45, 59.3], [25.7, 59.05], [26.0, 58.7], [26.35, 58.42], [26.0, 58.05], [25.4, 57.95], [24.6, 57.9], [24.36, 57.87]]
+  - title: Pskov and Cēsis
+    date: May – July 1919
+    when: "1919-05-13"
+    borders: "1919-07-03"
+    countries: [ee, lv, ru]
+    body:
+      - In the spring the Red Army attacked again along the Narva river and in the south-east, and Narva was heavily shelled, but the Estonian lines held. On 13 May the White Russian Northern Corps, based in Estonia and under Estonian command, went on the offensive along the Gulf of Finland, and Estonian forces took Pskov on 25 May. Estonian divisions also advanced into northern Latvia as the Red Army withdrew. There they met a new enemy, the Baltische Landeswehr of Baltic Germans and the German Iron Division under General Rüdiger von der Goltz, which had taken Riga on 22 May and was pushing north.
+      - The Germans attacked Estonian armoured trains on 5 June and took Cēsis the next day. After a short truce, the Iron Division and the Landeswehr attacked the Estonian 3rd Division and the North Latvian Brigade near Cēsis on 19 June. On 23 June the Estonians and Latvians counter-attacked, took Cēsis and drove the Germans back towards Riga; the day is Estonia’s Victory Day. On 3 July, with Estonian troops on the outskirts of Riga, an armistice was signed at Strazdumuiža under Allied pressure, and Kārlis Ulmanis’s Latvian government returned to Riga a few days later.
+    facts:
+      - [Pskov taken, "25 May 1919"]
+      - [Battle of Cēsis, "19–23 June 1919, Estonian and Latvian victory"]
+      - [Armistice of Strazdumuiža, "3 July 1919"]
+    markers:
+      - kind: held
+        side: ee
+        name: Narva
+        date: spring 1919
+        text: Soviet shelling left about 2,000 people homeless, but the Estonian 1st Division and the Northern Corps held the town.
+        lonlat: [28.196, 59.376]
+      - kind: taken
+        side: ee
+        name: Pskov
+        date: 25 May 1919
+        text: Estonian troops took the city and left it to the Northern Corps. The Red Army retook it in August.
+        lonlat: [28.333, 57.817]
+      - kind: battle
+        side: ee
+        name: Battle of Cēsis
+        date: 19–23 June 1919
+        text: Estonian and Latvian troops beat the Landeswehr and the Iron Division, ending German hopes of controlling Latvia.
+        lonlat: [25.275, 57.313]
+      - kind: taken
+        side: lw
+        name: Riga
+        date: 22 May 1919
+        text: Taken from the Soviets by the Landeswehr and the Iron Division, who then shot suspected Bolsheviks, by different counts from under 200 to several thousand.
+        lonlat: [24.106, 56.949]
+        lp: b
+      - kind: treaty
+        name: Strazdumuiža
+        date: 3 July 1919
+        text: The armistice on Riga’s outskirts required the German troops to leave Latvia; many of them did not.
+        lonlat: [24.2, 57.0]
+        lp: t
+    arrows:
+      - side: ee
+        label: Northern Corps
+        via: [[28.1, 59.3], [28.6, 59.35], [29.2, 59.4]]
+      - side: ee
+        via: [[27.6, 57.85], [27.95, 57.86], [28.28, 57.82]]
+      - side: lw
+        label: Iron Division
+        via: [[24.3, 57.05], [24.75, 57.2], [25.2, 57.3]]
+      - side: ee
+        label: 3rd Division
+        via: [[25.35, 57.38], [24.85, 57.2], [24.32, 57.02]]
+  - title: Narva and the Treaty of Tartu
+    date: October 1919 – February 1920
+    when: "1919-10-10"
+    borders: "1920-02-02"
+    countries: [ee, ru]
+    body:
+      - In October 1919 Nikolai Yudenich’s Northwestern Army advanced from Estonia on Petrograd, while Estonian forces attacked the coastal fort of Krasnaya Gorka, but the Whites were beaten back in November and fled to the Estonian border, where they were disarmed and interned; thousands of soldiers and refugees died of typhus that winter. Soviet Russia had offered Estonia peace talks. As they went on in Tartu, the Red 7th and 15th Armies attacked the fortified lines at Narva through November and December, and on 16 December some units crossed the river, but the Estonian defence held.
+      - A ceasefire came into force on 3 January 1920, and on 2 February the Treaty of Tartu was signed. Soviet Russia recognised Estonia’s independence, renounced all claims to its territory in perpetuity and agreed to pay 15 million gold roubles from the old empire’s reserves. Estonia kept a strip east of the Narva river and the Petseri district in the south-east, both with many Russian or Setu inhabitants. About 3,600 Estonian soldiers had been killed. A land reform passed during the war broke up the estates of the Baltic German nobility, and much of the land went to veterans.
+    facts:
+      - [Ceasefire, "3 January 1920"]
+      - [Treaty of Tartu, "2 February 1920"]
+      - [Estonian dead, "about 3,600"]
+    markers:
+      - kind: held
+        side: ee
+        name: Narva
+        date: November – December 1919
+        text: The Red Army attacked the town’s defences for weeks while the peace talks went on in Tartu.
+        lonlat: [28.196, 59.376]
+      - kind: treaty
+        name: Treaty of Tartu
+        date: 2 February 1920
+        text: Soviet Russia recognised Estonia’s independence in perpetuity. The border it drew lasted until 1940.
+        lonlat: [26.723, 58.38]
+      - kind: event
+        name: Petseri
+        date: 1920
+        text: The district around the Pskov-Caves Monastery passed to Estonia under the treaty. It is now Pechory in Russia.
+        lonlat: [27.617, 57.817]
+    arrows:
+      - side: ru
+        label: 15th Army
+        via: [[29.0, 59.2], [28.55, 59.3], [28.25, 59.36]]
+    areas:
+      - style: gained
+        side: ee
+        label: To Estonia under the Treaty of Tartu
+        atoms: [RU-PSK~ee1938, RU-LEN~ingria~ee1938]

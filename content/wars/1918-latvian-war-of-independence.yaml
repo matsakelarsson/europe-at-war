@@ -1,0 +1,200 @@
+id: latvian-war-of-independence
+name: Latvian War of Independence
+start: "1918-12-05"
+end: "1920-08-11"
+tier: B
+summary: A war for the new Republic of Latvia, proclaimed in November 1918, against Soviet Russia and its Latvian Soviet Republic and against German Freikorps, the Baltic German Landeswehr and the Bermontians, who sought to keep the country under German control. With Estonian, Polish and British help, Latvia drove out its enemies by early 1920, and Soviet Russia recognised its independence in the Treaty of Riga of 11 August 1920.
+countries: [lv, ru, ee, pl]
+sides:
+  - id: lv
+    name: Latvia
+    polities: [latvia]
+    ink: purple
+    moves: Latvian moves
+    success: Latvian success
+  - id: ee
+    name: Estonia
+    polities: [estonia]
+    ink: navy
+    moves: Estonian moves
+    success: Estonian success
+  - id: pl
+    name: Poland
+    polities: [poland]
+    ink: magenta
+    moves: Polish moves
+    success: Polish success
+  - id: ru
+    name: Soviet Russia and Soviet Latvia
+    polities: [ussr]
+    ink: red
+    moves: Red Army moves
+    success: Soviet success
+  - id: lw
+    name: Landeswehr and Iron Division
+    polities: [baltic-landeswehr]
+    ink: slate
+    moves: German moves
+    success: German success
+  - id: bm
+    name: Bermontians
+    polities: [west-russian-army]
+    ink: brown
+    moves: Bermontian moves
+    success: Bermontian success
+notes:
+  - Also called Latvia’s freedom battles (brīvības cīņas). Dates are New Style.
+  - The Landeswehr fought the Red Army alongside the Latvians in early 1919 and fought them at Cēsis in June; from July 1919 it served under Latvian command.
+  - The taking of Daugavpils in January 1920 was also part of the Polish–Soviet War, which has its own entry. Front lines are approximate.
+sources:
+  - title: Latvian War of Independence (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Latvian_War_of_Independence
+  - title: Latvian Socialist Soviet Republic (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Latvian_Socialist_Soviet_Republic
+  - title: Battle of Cēsis (1919) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_C%C4%93sis_(1919)
+  - title: West Russian Volunteer Army (Wikipedia)
+    url: https://en.wikipedia.org/wiki/West_Russian_Volunteer_Army
+  - title: Lāčplēsis Day (Wikipedia)
+    url: https://en.wikipedia.org/wiki/L%C4%81%C4%8Dpl%C4%93sis_Day
+  - title: Battle of Daugavpils (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Daugavpils
+  - title: Latvian–Soviet Peace Treaty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Latvian%E2%80%93Soviet_Peace_Treaty
+steps:
+  - title: Soviet Latvia, Riga and Cēsis
+    date: December 1918 – July 1919
+    when: "1918-12-05"
+    borders: "1919-07-03"
+    countries: [lv, ee]
+    body:
+      - Latvia was proclaimed independent in Riga on 18 November 1918, with Kārlis Ulmanis as head of a provisional government, but it had almost no army. The Red Army, with the Latvian Riflemen at its core, invaded in December and took Riga on 3 January 1919. Pēteris Stučka’s Latvian Socialist Soviet Republic ruled most of the country through revolutionary tribunals, requisitions and terror, and Riga went hungry. Ulmanis’s government fell back to Liepāja, where the remaining German troops, the Baltic German volunteers of the Landeswehr and a small Latvian force held the line of the Venta.
+      - In March the Germans under General Rüdiger von der Goltz and the Latvians counter-attacked. On 16 April Baltic Germans staged a coup in Liepāja and set up a puppet government under Andrievs Niedra, and Ulmanis’s ministers took refuge on the steamer Saratov under British protection. The Landeswehr and the Iron Division took Riga on 22 May and shot suspected Bolsheviks, then pushed north, where Estonian troops and the North Latvian Brigade beat them at Cēsis on 19–23 June. Under the armistice of 3 July the Germans were to leave Latvia, and Ulmanis returned to Riga on 8 July.
+    facts:
+      - [Independence proclaimed, "18 November 1918"]
+      - [Riga taken by the Red Army, "3 January 1919"]
+      - [Battle of Cēsis, "19–23 June 1919, Estonian and Latvian victory"]
+    markers:
+      - kind: taken
+        side: lw
+        name: Riga
+        date: 22 May 1919
+        text: Held by the Soviets from 3 January, the capital fell to the Landeswehr and the Iron Division, who then shot suspected Bolsheviks, by different counts from under 200 to several thousand.
+        lonlat: [24.106, 56.949]
+        lp: b
+      - kind: event
+        side: lv
+        name: Liepāja
+        date: January – June 1919
+        text: The Ulmanis government held out in the port. After the coup of 16 April its ministers sheltered on the steamer Saratov in the harbour.
+        lonlat: [21.014, 56.512]
+      - kind: battle
+        side: ee
+        name: Battle of Cēsis
+        date: 19–23 June 1919
+        text: Estonian troops and the North Latvian Brigade beat the Landeswehr and the Iron Division and drove them back towards Riga.
+        lonlat: [25.275, 57.313]
+      - kind: treaty
+        name: Strazdumuiža
+        date: 3 July 1919
+        text: The armistice on Riga’s outskirts required the German troops to leave Latvia; many of them did not.
+        lonlat: [24.2, 57.0]
+        lp: t
+    arrows:
+      - side: ru
+        label: Latvian Riflemen
+        via: [[27.4, 57.4], [26.3, 57.35], [25.3, 57.3], [24.35, 57.0]]
+      - side: lw
+        label: von der Goltz
+        via: [[22.0, 56.7], [23.0, 56.72], [23.68, 56.66]]
+      - side: lw
+        via: [[23.75, 56.7], [23.95, 56.85], [24.08, 56.93]]
+      - side: ee
+        via: [[25.35, 57.38], [24.85, 57.2], [24.32, 57.03]]
+    areas:
+      - style: front
+        side: ru
+        label: Soviet front, February 1919 (approximate)
+        line: [[21.55, 57.3], [21.85, 57.05], [21.97, 56.97], [22.02, 56.68], [22.35, 56.35]]
+  - title: Bermondt’s attack on Riga
+    date: October – December 1919
+    when: "1919-10-08"
+    borders: "1919-11-11"
+    countries: [lv, lt]
+    body:
+      - The German troops did not leave. Many joined the West Russian Volunteer Army of Pavel Bermondt-Avalov, some 30,000 men or more, most of them German Freikorps soldiers with Russian former prisoners of war. Nominally it was to fight the Bolsheviks for the Whites, but its aim was to keep the Baltic under German control. On 8 October 1919 it attacked Riga from Jelgava and took Pārdaugava, the part of the city on the left bank of the Daugava. The Latvian government left the city, but the army held the right bank and the bridges, helped by British and French warships at the river mouth.
+      - Estonian armoured trains came to help, and after a month of fighting the Latvians counter-attacked. On 11 November they drove the Bermontians out of Pārdaugava; the day is now Lāčplēsis Day, when Latvia remembers its soldiers. The Latvians pursued the Bermontians south and took Jelgava on 21 November, while Lithuanian troops beat them at Radviliškis on 21–22 November. By mid-December the last of Bermondt’s troops had withdrawn to Germany under Allied supervision.
+    facts:
+      - [Attack on Riga, "8 October 1919"]
+      - [Pārdaugava retaken, "11 November 1919 (Lāčplēsis Day)"]
+      - [Bermondt’s army, "some 30,000 or more, mostly Germans"]
+    markers:
+      - kind: battle
+        side: lv
+        name: Riga
+        date: 8 October – 11 November 1919
+        text: The Latvians held the right bank for a month and then drove the Bermontians out of the left-bank suburbs.
+        lonlat: [24.106, 56.949]
+      - kind: naval
+        name: Daugava mouth
+        date: October – November 1919
+        text: British and French warships shelled the Bermontians’ positions in support of the Latvians.
+        lonlat: [24.03, 57.05]
+        lp: l
+      - kind: taken
+        side: lv
+        name: Jelgava
+        date: 21 November 1919
+        text: Latvian troops took the town, Bermondt’s headquarters, as his army retreated south.
+        lonlat: [23.714, 56.648]
+      - kind: battle
+        name: Radviliškis
+        date: 21–22 November 1919
+        text: Lithuanian troops beat the Bermontians here, hastening their withdrawal from Lithuania.
+        lonlat: [23.55, 55.8]
+    arrows:
+      - side: bm
+        label: Bermondt
+        via: [[23.68, 56.7], [23.85, 56.85], [24.05, 56.92]]
+      - side: lv
+        via: [[24.18, 56.9], [24.02, 56.75], [23.78, 56.66]]
+  - title: Latgale and the Treaty of Riga
+    date: January – August 1920
+    when: "1920-01-03"
+    borders: "1920-08-11"
+    countries: [lv, pl, ru]
+    body:
+      - The Red Army still held Latgale, Latvia’s eastern province. In January 1920 Latvian troops and Polish forces under Edward Rydz-Śmigły attacked together, crossing the frozen Daugava, and Daugavpils fell on 3 January. Poland handed the town to Latvia. By the end of January the Latvians had cleared the rest of Latgale, and on 1 February a ceasefire with Soviet Russia came into force. Latvia and Lithuania, meanwhile, disputed the border between them, which a British arbitrator settled in 1921.
+      - Peace talks began in April, and on 11 August 1920, as the Red Army was advancing on Warsaw, Soviet Russia and Latvia signed the Treaty of Riga. Soviet Russia recognised Latvia’s independence and renounced all claims to its territory for ever, and Latvia received the Abrene district around Pytalovo, formerly part of Pskov province. About 3,000 Latvian soldiers had been killed in the war. As in Estonia, a land reform broke up the large estates, most of them owned by Baltic German nobles, and gave the land to soldiers and landless peasants.
+    facts:
+      - [Daugavpils taken, "3 January 1920"]
+      - [Ceasefire with Soviet Russia, "1 February 1920"]
+      - [Treaty of Riga, "11 August 1920"]
+    markers:
+      - kind: taken
+        side: pl
+        name: Daugavpils
+        date: 3 January 1920
+        text: About 30,000 Polish and 10,000 Latvian troops took the town across the frozen river, and Poland handed it to Latvia.
+        lonlat: [26.536, 55.875]
+      - kind: treaty
+        name: Treaty of Riga
+        date: 11 August 1920
+        text: Soviet Russia recognised Latvia’s independence. Not to be confused with the Polish–Soviet Peace of Riga of 1921.
+        lonlat: [24.106, 56.949]
+      - kind: event
+        name: Abrene
+        date: 1920
+        text: The district around the railway town of Pytalovo went to Latvia under the treaty. It is now part of Russia’s Pskov region.
+        lonlat: [27.917, 57.067]
+    arrows:
+      - side: pl
+        label: Rydz-Śmigły
+        via: [[25.7, 55.35], [26.15, 55.62], [26.48, 55.84]]
+      - side: lv
+        via: [[26.0, 56.45], [26.8, 56.5], [27.6, 56.5]]
+    areas:
+      - style: gained
+        side: lv
+        label: To Latvia under the Treaty of Riga
+        atoms: [RU-PSK~lv1938]

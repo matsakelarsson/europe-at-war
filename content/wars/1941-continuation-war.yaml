@@ -1,0 +1,319 @@
+id: continuation-war
+name: Continuation War
+start: "1941-06-25"
+end: "1944-09-19"
+tier: A
+summary: A war between Finland and the Soviet Union fought alongside Germany’s war in the east, in which Finland retook the lands lost in the Winter War and occupied much of East Karelia in 1941. A Soviet offensive in 1944 drove the Finns back until it was stopped at Tali-Ihantala, and in the Moscow Armistice of 19 September 1944 Finland restored the 1940 border, ceded Petsamo and leased Porkkala to the Soviet Union.
+countries: [fi, ru]
+sides:
+  - id: fi
+    name: Finland
+    polities: [finland]
+    ink: teal
+    moves: Finnish moves
+    success: Finnish success
+  - id: su
+    name: Soviet Union
+    polities: [ussr]
+    ink: red
+    moves: Soviet moves
+    success: Soviet success
+  - id: de
+    name: Germany
+    polities: [germany, german-occupied-ussr]
+    ink: slate
+    moves: German moves
+    success: German success
+notes:
+  - Finland was never formally allied to Germany. It fought as a co-belligerent and coordinated its operations with the German army, and Finnish writers long presented the war as a separate conflict that continued the Winter War.
+  - Places in the lands ceded in 1940 are given their Finnish names. Viipuri is now Vyborg in Russia. The Finnish administration called Petrozavodsk Äänislinna and Medvezhyegorsk Karhumäki.
+  - The base map shows the lands retaken in 1941 as Finnish until 1944. The occupation of East Karelia beyond the 1939 border is drawn as an area, and it and the front lines are approximate.
+sources:
+  - title: Continuation War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Continuation_War
+  - title: Operation Silver Fox (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Silver_Fox
+  - title: Finnish occupation of East Karelia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Finnish_occupation_of_East_Karelia
+  - title: Siege of Leningrad (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Leningrad
+  - title: Vyborg–Petrozavodsk offensive (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Vyborg%E2%80%93Petrozavodsk_offensive
+  - title: Battle of Tali–Ihantala (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tali%E2%80%93Ihantala
+  - title: Battle of Ilomantsi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ilomantsi
+  - title: Moscow Armistice (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Moscow_Armistice
+  - title: Porkkala Naval Base (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Porkkala_Naval_Base
+  - title: Evacuation of Finnish Karelia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Evacuation_of_Finnish_Karelia
+steps:
+  - title: June 1941 and the reconquest
+    date: June – September 1941
+    when: "1941-06-25"
+    borders: "1941-09-01"
+    countries: [fi, ru, de]
+    body:
+      - Finland’s leaders had secretly coordinated with Germany since late 1940, and German troops were already in northern Finland when Germany invaded the Soviet Union on 22 June 1941. When Soviet aircraft bombed Finnish towns and airfields on 25 June, the government declared that Finland was at war. In the far north, German and Finnish troops attacked towards Murmansk and the railway south of it in Operation Silver Fox, but they were stopped on the Litsa river and in the forests east of Salla, short of their goals. The Soviet base at Hanko, cut off, was besieged until its garrison left by sea in December.
+      - The Finnish Army of Karelia attacked north of Lake Ladoga on 10 July, reached the lake’s shore within a week and took Sortavala in mid-August. On the Karelian Isthmus the Finns attacked in August, surrounded Soviet divisions on the north-western shore of Ladoga, which escaped by boat, and retook Viipuri on 29 August. By the end of the month they had reached the 1939 border and in places gone beyond it. Most Finns saw this as winning back what had been taken in 1940. The army, however, went further.
+    facts:
+      - [Finland at war, "25 June 1941"]
+      - [Viipuri retaken, "29 August 1941"]
+      - [Hanko evacuated by the Soviets, "December 1941"]
+    markers:
+      - kind: air
+        side: su
+        name: Helsinki
+        date: 25 June 1941
+        text: Soviet aircraft bombed Helsinki, Turku and other towns and airfields, and the government declared that Finland was at war.
+        lonlat: [24.941, 60.171]
+      - kind: taken
+        side: fi
+        name: Sortavala
+        date: 16 August 1941
+        text: Retaken by the Army of Karelia as it cleared the northern shore of Lake Ladoga.
+        lonlat: [30.696, 61.706]
+      - kind: taken
+        side: fi
+        name: Viipuri
+        date: 29 August 1941
+        text: Retaken by the Finnish IV Corps. Many of its former inhabitants returned over the next three years.
+        lonlat: [28.767, 60.717]
+      - kind: held
+        side: su
+        name: Hanko
+        date: June – December 1941
+        text: The Soviet naval base held out under siege until its garrison was evacuated by sea.
+        lonlat: [22.966, 59.828]
+      - kind: held
+        side: su
+        name: Litsa river
+        date: July – September 1941
+        text: The German drive on Murmansk was stopped here, some 60 km short of the city, and the front stayed on the river until 1944.
+        lonlat: [32.281, 69.427]
+    arrows:
+      - side: fi
+        label: VI Corps
+        via: [[30.85, 62.25], [31.2, 61.9], [31.55, 61.55]]
+      - side: fi
+        via: [[30.5, 61.95], [30.65, 61.8], [30.7, 61.72]]
+      - side: fi
+        label: IV Corps
+        via: [[28.2, 61.05], [28.5, 60.88], [28.73, 60.75]]
+      - side: de
+        label: Silver Fox
+        via: [[31.0, 69.47], [31.7, 69.45], [32.22, 69.43]]
+  - title: East Karelia and the Svir
+    date: September – December 1941
+    when: "1941-09-09"
+    borders: "1941-12-06"
+    countries: [fi, ru]
+    body:
+      - The Finnish army did not stop at the old border. In September the Army of Karelia advanced into Soviet East Karelia, reached the Svir river between Lakes Ladoga and Onega and crossed it to hold a bridgehead on the southern bank, where it expected to meet German troops coming from the south. They never arrived. The German drive took Tikhvin in November but was thrown back in December. The Finns took Petrozavodsk, the Karelian capital, on 1 October and Medvezhyegorsk at the northern end of Lake Onega in early December, after which Mannerheim halted the offensive.
+      - Many Finnish leaders hoped to annex East Karelia, home to Finnic Karelians and Vepsians, as part of a Greater Finland. A military administration ran the occupied area. Its Finnic inhabitants were favoured, while many of its ethnic Russians, nearly a third of those who had stayed, were held in internment camps, where thousands died of hunger and disease, most of them in 1942. Of about 64,000 Soviet prisoners of war taken by Finland, at least 18,000 died in Finnish camps. From 1942 the front settled into trench warfare that lasted until the summer of 1944.
+    facts:
+      - [Petrozavodsk taken, "1 October 1941"]
+      - [Medvezhyegorsk taken, "early December 1941"]
+      - [Soviet prisoners who died in Finnish camps, "at least 18,000 of about 64,000"]
+    markers:
+      - kind: held
+        side: fi
+        name: Svir river
+        date: September 1941 – June 1944
+        text: The Finnish front ran along the Svir for almost three years, with a bridgehead on its southern bank.
+        lonlat: [33.55, 60.75]
+      - kind: taken
+        side: fi
+        name: Petrozavodsk
+        date: 1 October 1941
+        text: The capital of Soviet Karelia, renamed Äänislinna by the Finnish administration. Several internment camps for Russian civilians were set up here.
+        lonlat: [34.333, 61.783]
+      - kind: taken
+        side: fi
+        name: Medvezhyegorsk
+        date: December 1941
+        text: Taken after heavy fighting in the cold. Soviet attempts to retake it in 1942 failed.
+        lonlat: [34.467, 62.9]
+      - kind: held
+        side: fi
+        name: Rukajärvi
+        date: 1941–1944
+        text: The northernmost Finnish front in East Karelia, near the village of Rugozero, held until the armistice.
+        lonlat: [32.783, 64.083]
+      - kind: taken
+        side: de
+        name: Tikhvin
+        date: 8 November 1941
+        text: German troops took the railway town on their way towards the Svir but were driven out on 9 December.
+        lonlat: [33.533, 59.65]
+    arrows:
+      - side: fi
+        label: Army of Karelia
+        via: [[32.5, 61.3], [33.0, 60.98], [33.5, 60.8]]
+      - side: fi
+        via: [[33.3, 61.3], [33.85, 61.6], [34.28, 61.76]]
+      - side: de
+        label: To Tikhvin
+        via: [[31.7, 59.4], [32.6, 59.55], [33.45, 59.64]]
+    areas:
+      - style: occupied
+        side: fi
+        label: Finnish-occupied East Karelia, 1941–1944 (approximate)
+        polygon: [[32.05, 61.3], [32.5, 61.48], [32.84, 61.6], [31.37, 62.65], [31.57, 62.91], [31.25, 63.12], [30.98, 63.29], [30.49, 63.46], [30.24, 63.58], [30.0, 63.75], [30.26, 63.83], [30.51, 63.99], [30.56, 64.22], [32.5, 64.2], [33.15, 63.95], [33.5, 63.45], [34.0, 63.15], [34.4, 63.05], [34.85, 62.85], [35.2, 62.7], [35.75, 62.3], [35.6, 61.75], [35.5, 61.25], [35.45, 61.0], [34.9, 60.92], [34.3, 60.82], [33.9, 60.78], [33.55, 60.74], [33.2, 60.6], [32.9, 60.5], [32.75, 60.75], [32.62, 60.98], [32.43, 61.18]]
+  - title: The blockade of Leningrad from the north
+    date: September 1941 – January 1944
+    when: "1941-09-08"
+    borders: "1942-11-18"
+    countries: [fi, ru, de]
+    body:
+      - On the Karelian Isthmus the Finnish army halted at the end of August 1941, roughly at the old border and some 30 km from the centre of Leningrad. On 8 September German troops took Shlisselburg on the southern shore of Lake Ladoga, closing the land blockade of the city. Hitler wanted the Finns to attack Leningrad from the north, but Mannerheim and the government refused, and the Finnish line stayed where it was until 1944. Whether Finland thereby spared the city or helped to starve it is still debated. Its army closed the northern side of the ring and tied down Soviet troops.
+      - Leningrad’s only link with the rest of the country ran across Lake Ladoga, between the German and Finnish lines, by boat in summer and over the ice, on the “Road of Life”, in winter. Finnish, German and Italian boats tried to cut the lake route in 1942 without success. By one widely cited count about 640,000 civilians died in the city and some 400,000 more during evacuation, most of them of hunger in the winter of 1941–1942. The Red Army opened a narrow land corridor south of the lake in January 1943 and broke the German siege lines in January 1944, after 872 days.
+    facts:
+      - [Land blockade closed, "8 September 1941"]
+      - [Finnish line on the Isthmus, "about 30 km from the centre of Leningrad"]
+      - [Siege lifted, "27 January 1944, after 872 days"]
+    markers:
+      - kind: siege
+        side: su
+        name: Leningrad
+        date: 8 September 1941 – 27 January 1944
+        text: Besieged by German troops from the south and Finnish troops from the north, the city never fell.
+        lonlat: [30.309, 59.938]
+      - kind: taken
+        side: de
+        name: Shlisselburg
+        date: 8 September 1941
+        text: German troops took the fortress town at the source of the Neva, cutting Leningrad’s last land link.
+        lonlat: [31.038, 59.954]
+      - kind: held
+        side: fi
+        name: Valkeasaari
+        date: 1941–1944
+        text: The Finnish line on the Isthmus ran through this sector near the 1939 border until the Soviet offensive of June 1944.
+        lonlat: [30.0, 60.17]
+        lp: l
+    arrows:
+      - side: su
+        label: Road of Life
+        via: [[31.73, 60.03], [31.4, 60.08], [31.08, 60.12]]
+    areas:
+      - style: front
+        side: fi
+        label: Finnish front, 1941–1944 (approximate)
+        line: [[29.92, 60.12], [30.02, 60.16], [30.1, 60.25], [30.25, 60.35], [30.35, 60.42], [30.6, 60.45], [30.85, 60.42]]
+      - style: front
+        side: de
+        label: German siege lines, autumn 1942 (approximate)
+        lines:
+          - [[29.87, 59.89], [29.8, 59.8], [29.55, 59.74], [29.32, 59.79], [29.18, 59.9]]
+          - [[30.18, 59.85], [30.3, 59.79], [30.42, 59.75], [30.58, 59.71], [30.75, 59.75], [30.9, 59.8], [31.0, 59.9], [31.04, 59.95]]
+          - [[31.25, 59.98], [31.42, 59.87], [31.5, 59.7], [31.8, 59.55], [32.03, 59.45], [31.9, 59.2], [31.55, 58.85], [31.3, 58.55]]
+  - title: The Vyborg–Petrozavodsk offensive and Tali-Ihantala
+    date: June – August 1944
+    when: "1944-06-09"
+    borders: "1944-07-15"
+    countries: [fi, ru, de]
+    body:
+      - On 9 June 1944, three days after the Allied landings in Normandy, the Red Army opened a massive offensive on the Karelian Isthmus with one of the heaviest bombardments of the war, at Valkeasaari. It broke the first Finnish line at once and the second, the VT line, at Kuuterselkä within a week, and on 20 June retook Viipuri almost without a fight. President Risto Ryti then gave Germany his personal pledge not to make a separate peace, in return for German anti-tank weapons, assault guns and aircraft. Further north the Red Army attacked in East Karelia from 21 June, and the Finns withdrew, giving up Petrozavodsk on 28 June.
+      - North-east of Viipuri, between Tali and Ihantala, Finnish troops with German air support stopped the Soviet advance in the largest battle in Nordic history, fought from 25 June to 9 July. The Finns also held the Vuoksi at Vuosalmi and the Bay of Viipuri, and in August they encircled and mauled two Soviet divisions at Ilomantsi. The front stabilised, and with its forces needed for the advance on Germany, the Soviet leadership agreed to talks. Ryti resigned on 1 August and Mannerheim became president, which freed Finland from Ryti’s pledge.
+    facts:
+      - [Soviet offensive, "from 9 June 1944"]
+      - [Viipuri lost, "20 June 1944"]
+      - [Battle of Tali-Ihantala, "25 June – 9 July 1944, Finnish defensive victory"]
+    markers:
+      - kind: battle
+        side: su
+        name: Valkeasaari
+        date: 9–10 June 1944
+        text: The offensive opened here with a huge bombardment and broke the Finnish front line.
+        lonlat: [30.0, 60.17]
+      - kind: taken
+        side: su
+        name: Viipuri
+        date: 20 June 1944
+        text: Taken by the Red Army almost without a fight as the Finns fell back to their last line.
+        lonlat: [28.767, 60.717]
+        lp: l
+      - kind: battle
+        side: fi
+        name: Tali-Ihantala
+        date: 25 June – 9 July 1944
+        text: Finnish troops, helped by German aircraft and anti-tank weapons, stopped the Soviet breakthrough towards the interior of Finland.
+        lonlat: [28.883, 60.767]
+        lp: t
+      - kind: held
+        side: fi
+        name: Vuosalmi
+        date: July 1944
+        text: The Finns held the line of the Vuoksi against Soviet attempts to cross it.
+        lonlat: [29.575, 60.718]
+      - kind: taken
+        side: su
+        name: Petrozavodsk
+        date: 28 June 1944
+        text: Retaken by the Red Army as the Finns withdrew from East Karelia.
+        lonlat: [34.333, 61.783]
+      - kind: battle
+        side: fi
+        name: Ilomantsi
+        date: 26 July – 13 August 1944
+        text: Finnish troops encircled and mauled two Soviet divisions in the last major battle of the war.
+        lonlat: [30.933, 62.667]
+    arrows:
+      - side: su
+        label: Leningrad Front
+        via: [[30.05, 60.22], [29.6, 60.42], [29.0, 60.64]]
+      - side: su
+        label: Karelian Front
+        via: [[33.5, 60.82], [33.65, 61.3], [34.2, 61.74]]
+    areas:
+      - style: front
+        side: fi
+        label: Finnish front, mid-July 1944 (approximate)
+        lines:
+          - [[28.5, 60.55], [28.62, 60.7], [28.75, 60.78], [28.9, 60.8], [29.15, 60.79], [29.55, 60.72], [29.9, 60.7], [30.2, 60.66], [30.52, 60.62]]
+          - [[31.55, 61.56], [31.85, 61.8], [32.05, 62.05], [31.75, 62.35], [31.4, 62.6], [31.5, 62.85]]
+  - title: The Moscow Armistice
+    date: September 1944
+    when: "1944-09-19"
+    borders: "1944-09-19"
+    countries: [fi, ru]
+    body:
+      - Finland broke off relations with Germany on 2 September, and a ceasefire came into force on 4–5 September. The armistice, signed in Moscow on 19 September, restored the border of 1940 and gave Petsamo, Finland’s outlet to the Arctic Ocean, to the Soviet Union. Porkkala, a peninsula just west of Helsinki, was leased to the Soviet Union for 50 years as a naval base in place of Hanko. Finland agreed to pay reparations, later fixed at 300 million US dollars in goods over six years, and to disarm or expel the German troops still in the country, which led to the Lapland War.
+      - Finland also had to legalise the Communist Party, ban organisations the Soviet Union considered fascist, put its wartime leaders on trial and accept an Allied Control Commission led by the Soviet Union. About 63,000 Finns had been killed or gone missing in the war, and Soviet losses are put at 250,000–305,000 dead or missing. The Karelians who had returned home, some 260,000 people, had to leave again. Finland was not occupied and kept its democratic institutions. The Paris Peace Treaty of 1947 confirmed the new border, and the Soviet Union gave Porkkala back in January 1956.
+    facts:
+      - [Ceasefire, "4–5 September 1944"]
+      - [Moscow Armistice, "19 September 1944"]
+      - [Finnish dead and missing, "about 63,000"]
+    markers:
+      - kind: event
+        name: Petsamo
+        date: 19 September 1944
+        text: Ceded to the Soviet Union with its nickel mines, ending Finland’s access to the Arctic Ocean.
+        lonlat: [31.228, 69.561]
+      - kind: event
+        side: su
+        name: Porkkala
+        date: 1944–1956
+        text: Leased to the Soviet Union as a naval base, within artillery range of Helsinki. It was returned in January 1956.
+        lonlat: [24.433, 59.983]
+      - kind: event
+        name: Viipuri
+        date: 1944
+        text: Lost for the second time. Its Finnish inhabitants left again, and the city became Vyborg.
+        lonlat: [28.767, 60.717]
+    areas:
+      - style: lost
+        side: fi
+        label: Ceded to the Soviet Union (the 1940 border and Petsamo)
+        atoms: [RU-LEN~vib~fi1938, RU-LEN~kex~fi1938, RU-KR~kex~fi1938, RU-KR~fi1938, RU-MUR~fi1938]
+      - style: lost
+        side: fi
+        label: Salla and part of Kuusamo, ceded again (approximate)
+        polygon: [[29.52, 67.3], [29.43, 67.23], [29.1, 66.99], [29.05, 66.91], [29.09, 66.84], [29.36, 66.63], [29.55, 66.43], [29.79, 66.18], [29.96, 65.97], [30.35, 66.1], [30.45, 66.4], [30.25, 66.75], [30.1, 67.0], [29.85, 67.2]]
+      - style: pledged
+        side: su
+        label: Porkkala, leased to the Soviet Union until 1956
+        polygon: [[24.0, 60.0], [23.98, 60.1], [24.15, 60.2], [24.35, 60.22], [24.55, 60.14], [24.6, 60.03], [24.45, 59.93], [24.2, 59.95]]

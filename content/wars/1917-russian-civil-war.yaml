@@ -1,0 +1,446 @@
+id: russian-civil-war
+name: Russian Civil War
+start: "1917-11-07"
+end: "1922-10-25"
+tier: A
+summary: A war for control of the former Russian Empire after the Bolshevik seizure of power in November 1917, fought between the Red Army and the anti-Bolshevik Whites, with peasant armies, national movements and foreign troops drawn in. The Reds had won in European Russia by the end of 1920 and in the Far East by 1922; with terror, famine and epidemics the war cost an estimated 7–12 million lives, most of them civilians, and ended in the founding of the Soviet Union.
+countries: [ru, ua]
+sides:
+  - id: ru
+    name: Soviet Russia (Reds)
+    polities: [ussr]
+    ink: red
+    moves: Red Army moves
+    success: Red success
+  - id: wh
+    name: Whites
+    polities: [white-movement]
+    ink: blue
+    moves: White moves
+    success: White success
+  - id: cz
+    name: Czechoslovak Legion
+    polities: [czechoslovak-legion]
+    ink: olive
+    moves: Czechoslovak moves
+    success: Czechoslovak success
+  - id: al
+    name: Allied intervention
+    polities: [united-kingdom, france]
+    ink: navy
+    moves: Allied moves
+    success: Allied success
+  - id: de
+    name: Central Powers
+    polities: [germany, austria-hungary]
+    ink: slate
+    moves: German and Austro-Hungarian moves
+    success: Central Powers success
+notes:
+  - Russia used the Julian (Old Style) calendar until 31 January 1918, which was followed by 14 February. The October Revolution of 25 October Old Style fell on 7 November New Style. Dates here are New Style.
+  - The map shows European Russia and the Urals. The war in Siberia and the Far East, where Kolchak governed from Omsk and Japanese and American troops held Vladivostok, is described in the text.
+  - The base map does not follow the moving fronts. Front lines are approximate, drawn from general accounts.
+  - The Polish–Soviet War, the Finnish Civil War and the wars of independence of Estonia, Latvia and Lithuania have their own entries.
+sources:
+  - title: Russian Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russian_Civil_War
+  - title: October Revolution (Wikipedia)
+    url: https://en.wikipedia.org/wiki/October_Revolution
+  - title: Treaty of Brest-Litovsk (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Brest-Litovsk
+  - title: Operation Faustschlag (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Faustschlag
+  - title: Czechoslovak Legion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Czechoslovak_Legion
+  - title: Eastern Front of the Russian Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Eastern_Front_of_the_Russian_Civil_War
+  - title: Execution of the Romanov family (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Execution_of_the_Romanov_family
+  - title: Ice March (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ice_March
+  - title: Red Terror (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Red_Terror
+  - title: Pogroms during the Russian Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pogroms_during_the_Russian_Civil_War
+  - title: Allied intervention in the Russian Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Allied_intervention_in_the_Russian_Civil_War
+  - title: North Russia intervention (Wikipedia)
+    url: https://en.wikipedia.org/wiki/North_Russia_intervention
+  - title: Advance on Moscow (1919) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Advance_on_Moscow_(1919)
+  - title: Northwestern Army (Russia) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Northwestern_Army_(Russia)
+  - title: Evacuation of Novorossiysk (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Evacuation_of_Novorossiysk
+  - title: Siege of Perekop (1920) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Perekop_(1920)
+  - title: Evacuation of the Crimea (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Evacuation_of_the_Crimea
+  - title: Kronstadt rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kronstadt_rebellion
+  - title: Tambov Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tambov_Rebellion
+  - title: Russian famine of 1921–1922 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russian_famine_of_1921%E2%80%931922
+  - title: Treaty on the Creation of the USSR (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_on_the_Creation_of_the_USSR
+steps:
+  - title: October 1917 and Brest-Litovsk
+    date: November 1917 – March 1918
+    when: "1917-11-07"
+    borders: "1918-03-03"
+    countries: [ru, ua, by, ee, lv]
+    body:
+      - On the night of 6–7 November 1917, 24–25 October in the Russian calendar of the time, the Bolsheviks’ Military Revolutionary Committee seized Petrograd’s bridges, stations and telegraph office, and then the Winter Palace, where the ministers of Alexander Kerensky’s Provisional Government were arrested. A Congress of Soviets approved a new government, the Council of People’s Commissars under Vladimir Lenin. In Moscow the Bolsheviks won only after a week of street fighting. Elections to a Constituent Assembly gave the Socialist Revolutionaries the most votes, and when the Assembly met in January 1918 the Bolsheviks dispersed it after a single day.
+      - Lenin wanted peace with the Central Powers almost at any price. When talks at Brest-Litovsk stalled, German and Austro-Hungarian armies advanced from 18 February 1918 against little resistance, taking Minsk, Tallinn and Pskov and entering Kyiv on 1 March. In the treaty signed on 3 March, Soviet Russia gave up Poland, Lithuania and Courland, left Livonia and Estonia under German occupation, and recognised Finland and Ukraine, lands with about a third of the old empire’s population. The government moved to Moscow. On the Don, former tsarist generals were raising a Volunteer Army, which set out in February on its “Ice March” into the Kuban.
+    facts:
+      - [October Revolution, "7 November 1917 (25 October Old Style)"]
+      - [Constituent Assembly dispersed, "19 January 1918"]
+      - [Treaty of Brest-Litovsk, "3 March 1918"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Winter Palace
+        date: 7–8 November 1917
+        text: Red Guards, soldiers and sailors took the palace during the night and arrested the ministers of the Provisional Government.
+        lonlat: [30.314, 59.94]
+      - kind: battle
+        side: ru
+        name: Moscow
+        date: 7–15 November 1917
+        text: A week of street fighting between Bolshevik forces and officer cadets loyal to the Provisional Government. The city became the Soviet capital in March 1918.
+        lonlat: [37.618, 55.751]
+      - kind: treaty
+        name: Treaty of Brest-Litovsk
+        date: 3 March 1918
+        text: Signed in the fortress, then the German eastern headquarters. Germany’s defeat in November 1918 voided it.
+        lonlat: [23.658, 52.082]
+      - kind: taken
+        side: de
+        name: Pskov
+        date: 24 February 1918
+        text: Taken in the German advance of February 1918, which met little organised resistance from the disintegrating Russian army.
+        lonlat: [28.333, 57.817]
+      - kind: taken
+        side: de
+        name: Kyiv
+        date: 1 March 1918
+        text: German troops entered the city with soldiers of the Ukrainian People’s Republic, which had made its own peace with the Central Powers on 9 February.
+        lonlat: [30.523, 50.45]
+      - kind: event
+        side: wh
+        name: Novocherkassk
+        date: December 1917
+        text: Generals Mikhail Alekseyev and Lavr Kornilov began to form the anti-Bolshevik Volunteer Army here, in the capital of the Don Cossacks.
+        lonlat: [40.094, 47.422]
+    arrows:
+      - side: de
+        label: To Pskov
+        via: [[24.3, 57.0], [26.3, 57.5], [28.2, 57.8]]
+      - side: de
+        label: To Minsk
+        via: [[26.1, 54.45], [26.9, 54.15], [27.5, 53.93]]
+      - side: de
+        label: To Kyiv
+        via: [[25.4, 50.8], [27.9, 50.5], [30.4, 50.45]]
+    areas:
+      - style: front
+        side: de
+        label: German line, March 1918 (approximate)
+        line: [[28.2, 59.38], [28.05, 58.6], [28.35, 57.85], [28.6, 56.8], [28.8, 55.5], [30.2, 54.6], [30.4, 53.9], [30.1, 52.9], [30.5, 51.5], [30.6, 50.5]]
+  - title: The Czechoslovak Legion and the Whites
+    date: May – November 1918
+    when: "1918-05-25"
+    borders: "1918-08-07"
+    countries: [ru]
+    body:
+      - About 40,000 Czech and Slovak soldiers, most of them former Austro-Hungarian prisoners of war, were travelling east along the Trans-Siberian Railway to sail from Vladivostok to the Western Front. After a brawl at Chelyabinsk in May 1918, Leon Trotsky, the commissar for war, ordered them disarmed, and the Legion rose instead, seizing the railway towns from the Volga to the Pacific. Behind its lines anti-Bolshevik governments formed, among them the Socialist Revolutionaries’ Komuch at Samara. In early August Czechoslovak and Komuch troops took Kazan, with much of the imperial gold reserve.
+      - As the Legion neared Yekaterinburg, local Bolsheviks shot the former tsar Nicholas II, his wife, their five children and four servants in the cellar of the Ipatiev House on the night of 16–17 July. Trotsky rebuilt the Red Army with conscripts and former tsarist officers watched by political commissars, and it retook Kazan on 10 September and Samara in October. In the south the Volunteer Army lost Kornilov, killed outside Yekaterinodar in April, but took the city in August under Anton Denikin, while Don Cossacks besieged Tsaritsyn on the Volga. In November Admiral Alexander Kolchak seized power over the Whites in Siberia at Omsk.
+    facts:
+      - [Legion’s revolt, "late May 1918"]
+      - [Kazan, "taken 7 August, retaken by the Reds 10 September 1918"]
+      - [Romanovs killed, "Yekaterinburg, night of 16–17 July 1918"]
+    markers:
+      - kind: event
+        side: cz
+        name: Chelyabinsk
+        date: May 1918
+        text: A clash with Hungarian prisoners at the station led to Trotsky’s order to disarm the Legion, which refused and turned on the Bolsheviks.
+        lonlat: [61.376, 55.155]
+      - kind: taken
+        side: cz
+        name: Samara
+        date: 8 June 1918
+        text: Taken by the Legion. The Committee of Members of the Constituent Assembly (Komuch) set up its government here.
+        lonlat: [50.141, 53.203]
+      - kind: taken
+        side: cz
+        name: Kazan
+        date: 7 August 1918
+        text: Czechoslovak and Komuch troops, with Vladimir Kappel, took the city and much of the imperial gold reserve stored there.
+        lonlat: [49.109, 55.796]
+      - kind: held
+        side: ru
+        name: Sviyazhsk
+        date: August – September 1918
+        text: Trotsky arrived here by armoured train to stop the retreat from Kazan and prepare the counter-attack that retook the city.
+        lonlat: [48.653, 55.77]
+        lp: l
+      - kind: event
+        name: Ipatiev House
+        date: 16–17 July 1918
+        text: The former tsar and his family were shot here, eight days before the Czechoslovaks and Whites took Yekaterinburg.
+        lonlat: [60.61, 56.844]
+      - kind: battle
+        side: ru
+        name: Yekaterinodar
+        date: 9–13 April 1918
+        text: Kornilov was killed by a shell during the Volunteer Army’s failed assault. Denikin’s army took the city in August.
+        lonlat: [38.967, 45.033]
+      - kind: held
+        side: ru
+        name: Tsaritsyn
+        date: July 1918 – February 1919
+        text: Held by the Reds, with Joseph Stalin among its defenders, against the Don Cossacks of Pyotr Krasnov. The city was later renamed Stalingrad.
+        lonlat: [44.515, 48.709]
+    arrows:
+      - side: cz
+        label: Kappel
+        via: [[50.1, 53.25], [48.9, 54.3], [49.05, 55.7]]
+      - side: cz
+        via: [[61.4, 55.2], [61.0, 56.0], [60.65, 56.75]]
+      - side: wh
+        label: Denikin
+        via: [[40.1, 47.4], [39.5, 46.5], [39.0, 45.1]]
+  - title: The Red Terror and the intervention
+    date: 1918–1919
+    when: "1918-09-05"
+    borders: "1918-12-31"
+    countries: [ru, ua]
+    body:
+      - On 30 August 1918 a young officer cadet shot Moisei Uritsky, head of the Petrograd Cheka, and the same day Lenin was badly wounded by shots blamed on the Socialist Revolutionary Fanny Kaplan. On 5 September the government decreed a Red Terror. The Cheka, the political police under Felix Dzerzhinsky, shot hostages and “class enemies” and set up concentration camps; 10,000–15,000 people were executed in the first two months alone, and estimates for the whole war run from about 50,000 to 200,000 or more. White forces also shot prisoners and suspected Bolsheviks, and in Ukraine soldiers of several armies, most often Ukrainian nationalist troops, murdered tens of thousands of Jews in pogroms.
+      - The Allies first landed to keep war supplies from the Germans and to revive the Eastern Front, and after Germany’s defeat they stayed to help the Whites. British marines landed at Murmansk in March 1918, and British, French and American troops at Arkhangelsk in August. Japanese and American troops occupied Vladivostok, the Japanese eventually with some 70,000 men, and French and Greek troops held Odessa from December 1918 to April 1919. The Allies sent the Whites large stocks of weapons, but their own soldiers fought only in a few places, mainly in the north. Most had left by the end of 1919; the Japanese stayed in the Far East until 1922.
+    facts:
+      - [Red Terror decreed, "5 September 1918"]
+      - [Executions, "estimates from about 50,000 to 200,000 or more"]
+      - [Jews killed in pogroms, "estimates from about 35,000 to 250,000, 1918–1920"]
+    markers:
+      - kind: event
+        name: Moscow
+        date: 30 August 1918
+        text: Lenin was shot and badly wounded after a speech at a factory. The Red Terror was decreed six days later.
+        lonlat: [37.618, 55.751]
+      - kind: event
+        name: Petrograd
+        date: 30 August 1918
+        text: Uritsky was assassinated outside the headquarters of the city’s Cheka. Hundreds of hostages were shot in reprisal.
+        lonlat: [30.31, 59.94]
+      - kind: event
+        side: al
+        name: Murmansk
+        date: March 1918
+        text: British marines landed to guard Allied war stores and the railway south, at first with the agreement of the local soviet.
+        lonlat: [33.075, 68.971]
+      - kind: taken
+        side: al
+        name: Arkhangelsk
+        date: 2 August 1918
+        text: Allied troops landed after an anti-Bolshevik coup and fought along the Northern Dvina until they withdrew in the autumn of 1919.
+        lonlat: [40.538, 64.543]
+      - kind: event
+        side: al
+        name: Odessa
+        date: December 1918 – April 1919
+        text: French and Greek troops held the port until a Red advance and unrest in their own ranks led to a hurried evacuation.
+        lonlat: [30.733, 46.484]
+      - kind: event
+        name: Proskurov
+        date: 15 February 1919
+        text: Soldiers of the Ukrainian People’s Republic murdered at least 1,500 Jews here in a few hours, one of the worst pogroms of the war.
+        lonlat: [27.0, 49.417]
+    arrows:
+      - side: al
+        label: Along the Dvina
+        via: [[40.55, 64.5], [41.9, 63.6], [43.3, 62.7]]
+  - title: "1919: Kolchak, Denikin and Yudenich"
+    date: March – November 1919
+    when: "1919-03-04"
+    borders: "1919-10-14"
+    countries: [ru, ua, ee]
+    body:
+      - In 1919 the Whites attacked from three sides. In March Kolchak’s armies advanced from Siberia across the Urals, took Ufa and came within reach of the Volga, but a Red counter-offensive under Mikhail Frunze retook Ufa on 9 June and Yekaterinburg and Chelyabinsk in July. In the south Denikin’s Armed Forces of South Russia, supplied by Britain, took Kharkiv and, under Pyotr Wrangel, Tsaritsyn at the end of June. On 3 July Denikin ordered an advance on Moscow. His armies took Kyiv, Kursk and Voronezh, and on 14 October entered Oryol, about 360 km from the capital.
+      - In October Nikolai Yudenich’s Northwestern Army, based in Estonia, reached Gatchina and the Pulkovo Heights on the edge of Petrograd before Trotsky rallied the city’s defence and drove it back. In the south the Reds, who held the railway hub of central Russia and more men, counter-attacked. They retook Oryol on 20 October, and Semyon Budyonny’s cavalry took Voronezh on 24 October, while behind the White lines Nestor Makhno’s anarchist insurgents cut supply routes in Ukraine. Kolchak lost Omsk on 14 November; handed over at Irkutsk, he was shot by the Bolsheviks there on 7 February 1920.
+    facts:
+      - [Denikin’s Moscow directive, "3 July 1919"]
+      - [Oryol, "taken by the Whites 14 October, retaken 20 October 1919"]
+      - [Kolchak shot, "Irkutsk, 7 February 1920"]
+    markers:
+      - kind: taken
+        side: wh
+        name: Ufa
+        date: March 1919
+        text: Kolchak’s Western Army took the city at the start of its spring offensive. The Reds retook it on 9 June.
+        lonlat: [55.947, 54.726]
+      - kind: taken
+        side: ru
+        name: Yekaterinburg
+        date: 14 July 1919
+        text: Retaken by the Red Army as Kolchak’s forces fell back east of the Urals.
+        lonlat: [60.613, 56.836]
+      - kind: taken
+        side: wh
+        name: Tsaritsyn
+        date: end of June 1919
+        text: Wrangel’s Caucasian Army took the city, using tanks supplied by the British.
+        lonlat: [44.515, 48.709]
+      - kind: taken
+        side: wh
+        name: Kyiv
+        date: 31 August 1919
+        text: Denikin’s troops entered the city and forced out the Ukrainian republican forces that had reached it at the same time.
+        lonlat: [30.523, 50.45]
+      - kind: battle
+        side: ru
+        name: Oryol
+        date: 14–20 October 1919
+        text: The furthest point of the White advance on Moscow. The Reds retook the city after six days.
+        lonlat: [36.069, 52.969]
+      - kind: taken
+        side: ru
+        name: Voronezh
+        date: 24 October 1919
+        text: Budyonny’s cavalry beat the Cossacks of Konstantin Mamontov and Andrei Shkuro and took the city.
+        lonlat: [39.211, 51.672]
+      - kind: taken
+        side: wh
+        name: Gatchina
+        date: 16 October 1919
+        text: Taken by Yudenich’s army on its advance on Petrograd.
+        lonlat: [30.133, 59.583]
+        lp: l
+      - kind: held
+        side: ru
+        name: Pulkovo Heights
+        date: 20–21 October 1919
+        text: The Northwestern Army came within sight of Petrograd here before being driven back to the Estonian border.
+        lonlat: [30.326, 59.772]
+    arrows:
+      - side: wh
+        label: Kolchak
+        via: [[58.5, 55.0], [55.9, 54.7], [53.4, 54.0], [52.0, 53.6]]
+      - side: ru
+        label: Frunze
+        via: [[52.3, 53.3], [54.3, 54.3], [55.8, 54.7]]
+      - side: wh
+        label: Denikin
+        via: [[37.6, 50.0], [36.8, 51.2], [36.1, 52.85]]
+      - side: wh
+        label: Yudenich
+        via: [[28.6, 59.37], [29.6, 59.4], [30.1, 59.6], [30.28, 59.74]]
+      - side: ru
+        label: Budyonny
+        via: [[41.2, 52.2], [40.1, 51.95], [39.3, 51.72]]
+    areas:
+      - style: front
+        side: wh
+        label: Denikin’s front, mid-October 1919 (approximate)
+        line: [[31.3, 51.5], [33.3, 52.0], [34.6, 52.3], [36.1, 53.05], [37.0, 52.9], [38.2, 52.3], [39.2, 51.75], [39.9, 51.0], [40.2, 50.3], [41.5, 49.8], [43.0, 49.4], [44.5, 48.9]]
+      - style: front
+        side: wh
+        label: Yudenich’s front, about 20 October 1919 (approximate)
+        line: [[29.85, 59.86], [30.2, 59.82], [30.35, 59.75], [30.45, 59.66], [30.3, 59.45], [29.9, 59.2]]
+  - title: "1920: Wrangel and the Crimea"
+    date: March – November 1920
+    when: "1920-03-26"
+    borders: "1920-11-16"
+    countries: [ua, ru]
+    link: { href: "#/war/polish-soviet-war", text: The Polish–Soviet War }
+    body:
+      - Denikin’s armies fell back to the Black Sea in the winter of 1919–1920, and in late March tens of thousands of troops and refugees were shipped from Novorossiysk to the Crimea in chaos, leaving thousands behind. Denikin resigned, and Wrangel took command of what was left. While the Red Army was fighting Poland, Wrangel broke out of the Crimea in June 1920 into Northern Taurida, the grain lands north of the peninsula, and promised land to the peasants. The Reds held a bridgehead across the Dnieper at Kakhovka, where the fighting came close to the trench battles of the World War.
+      - After the armistice with Poland in October, Frunze’s Southern Front, with Makhno’s insurgents as temporary allies, attacked the Crimea. On the night of 7–8 November Red troops crossed the shallow Sivash lagoon in freezing wind to outflank the fortified Perekop isthmus, and by 11 November the White lines had broken. Wrangel had prepared an evacuation, and between 13 and 16 November about 146,000 soldiers and civilians left the Crimean ports on 126 ships for Constantinople. In the months that followed, the Cheka shot former White soldiers and civilians in the Crimea; estimates of the dead run from about 12,000 to more than 50,000.
+    facts:
+      - [Kakhovka bridgehead, "August – October 1920"]
+      - [Crossing of the Sivash, "night of 7–8 November 1920"]
+      - [Evacuated from the Crimea, "about 146,000 people on 126 ships"]
+    markers:
+      - kind: event
+        name: Novorossiysk
+        date: 26–27 March 1920
+        text: Denikin’s forces were shipped to the Crimea amid panic. Thousands of soldiers and refugees left on the quays were captured or killed.
+        lonlat: [37.77, 44.72]
+      - kind: held
+        side: ru
+        name: Kakhovka
+        date: August – October 1920
+        text: The Red bridgehead on the left bank of the Dnieper held against repeated attacks by Wrangel’s troops and tanks.
+        lonlat: [33.475, 46.798]
+      - kind: battle
+        side: ru
+        name: Perekop
+        date: 8–11 November 1920
+        text: Red troops stormed the Turkish Wall across the isthmus after others had outflanked it through the Sivash.
+        lonlat: [33.693, 46.162]
+        lp: l
+      - kind: battle
+        side: ru
+        name: Chonhar
+        date: 11–12 November 1920
+        text: Red troops forced the crossings on the eastern route into the Crimea.
+        lonlat: [34.546, 46.031]
+      - kind: event
+        side: wh
+        name: Sevastopol
+        date: 14 November 1920
+        text: The main port of the evacuation. Wrangel’s fleet sailed for Constantinople and was later interned at Bizerte in Tunisia.
+        lonlat: [33.523, 44.605]
+    arrows:
+      - side: wh
+        label: Wrangel
+        via: [[34.2, 46.1], [34.8, 46.6], [35.3, 47.2]]
+      - side: ru
+        label: Blyukher
+        via: [[33.72, 46.45], [33.69, 46.22], [33.75, 45.98]]
+      - side: ru
+        label: Across the Sivash
+        via: [[34.0, 46.4], [33.95, 46.2], [33.9, 46.02]]
+    areas:
+      - style: front
+        side: wh
+        label: Wrangel’s front, late September 1920 (approximate)
+        line: [[32.55, 46.55], [33.25, 46.72], [33.45, 46.66], [33.78, 46.72], [34.05, 47.0], [34.4, 47.5], [35.1, 47.8], [35.9, 47.55], [36.8, 47.3], [37.5, 47.1]]
+  - title: "The end: Kronstadt, the famine and the USSR"
+    date: 1921–1922
+    when: "1921-03-01"
+    borders: "1922-12-30"
+    countries: [ru, ua]
+    body:
+      - With the Whites beaten, the Bolsheviks faced revolt from their own supporters. Peasants rose against grain requisitioning, most widely in Tambov province under Alexander Antonov, where the Red Army under Mikhail Tukhachevsky crushed them in 1921 with mass hostage-taking and poison gas. In March 1921 the sailors of Kronstadt, once heroes of the revolution, demanded free elections and soviets without Bolshevik control. After failed first assaults, Red troops crossed the ice of the Gulf of Finland and took the fortress on 18 March. Thousands of rebels were shot or imprisoned, and about 8,000 escaped across the ice to Finland.
+      - The same month Lenin replaced requisitioning with a tax in kind, the start of the New Economic Policy. Drought and years of seizures brought a famine to the Volga region and southern Ukraine in 1921–1922 that killed about five million people, despite food aid from the American Relief Administration and others. In the Far East the Japanese left Vladivostok in October 1922. On 30 December 1922 Soviet Russia, Ukraine, Belarus and the Transcaucasian republic formed the Union of Soviet Socialist Republics. With terror, hunger and epidemics, the war had cost an estimated 7–12 million lives, and one to two million people had left the country.
+    facts:
+      - [Kronstadt rebellion, "1–18 March 1921"]
+      - [Famine deaths, "about 5 million, 1921–1922"]
+      - [Soviet Union founded, "30 December 1922"]
+    markers:
+      - kind: battle
+        side: ru
+        name: Kronstadt
+        date: 7–18 March 1921
+        text: Red troops attacked across the sea ice, and the fortress fell on 18 March after heavy losses on both sides.
+        lonlat: [29.775, 59.991]
+        lp: l
+      - kind: event
+        side: ru
+        name: Tambov
+        date: 1920–1921
+        text: Centre of the largest peasant uprising of the war, led by Alexander Antonov and crushed by the summer of 1921.
+        lonlat: [41.454, 52.723]
+      - kind: event
+        name: Samara
+        date: 1921–1922
+        text: Samara province on the Volga was among the regions worst hit by the famine.
+        lonlat: [50.141, 53.203]
+      - kind: event
+        name: Moscow
+        date: 30 December 1922
+        text: The First Congress of Soviets of the USSR approved the treaty creating the Soviet Union, meeting in the Bolshoi Theatre.
+        lonlat: [37.619, 55.76]

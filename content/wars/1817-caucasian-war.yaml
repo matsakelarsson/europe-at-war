@@ -1,0 +1,319 @@
+id: caucasian-war
+name: Caucasian War
+start: "1817"
+end: "1864-06-02"
+tier: A
+summary: The Russian Empire’s half-century war to conquer the peoples of the North Caucasus, from Yermolov’s fortified lines of 1817 to the surrender of Imam Shamil at Gunib in 1859 and the subjugation of Circassia in 1864. It ended with the killing and mass expulsion of the Circassians and other peoples of the western Caucasus to the Ottoman Empire, which many sources call a genocide.
+countries: [ru, ge, tr]
+sides:
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: im
+    name: Caucasian Imamate and its allies
+    polities: [caucasian-imamate]
+    ink: olive
+    moves: Moves by the imams’ forces
+    success: Success for the imams
+  - id: ci
+    name: Circassians, Ubykhs and Abaza
+    polities: [circassia]
+    ink: orange
+    moves: Circassian moves
+    success: Circassian success
+notes:
+  - Dates are New Style (Gregorian). Russian accounts use the Julian calendar, then 12 days behind, so Shamil’s surrender at Gunib is 25 August 1859 and the ceremony at Kbaade that marked the end of the war 21 May 1864 in Russian sources. Circassians mark 21 May as their day of mourning.
+  - Russian sources of the time called all the peoples of the North Caucasus “mountaineers”. They were many peoples, among them Chechens, Ingush, Avars, Dargins, Lezgins and Kumyks in the east, and in the west Kabardians, Circassians (Adyghe), Abaza, Ubykhs and Karachays.
+  - Numbers of dead and expelled are estimates, and they differ very widely between sources, above all for the expulsion of the Circassians in the 1860s.
+  - The base map does not show the shifting zones of Russian control in the mountains, which steps show with lines and areas drawn from general accounts.
+sources:
+  - title: Caucasian War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Caucasian_War
+  - title: Russian conquest of Chechnya and Dagestan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russian_conquest_of_Chechnya_and_Dagestan
+  - title: Aleksey Yermolov (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Aleksey_Yermolov
+  - title: Caucasian Imamate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Caucasian_Imamate
+  - title: Ghazi Muhammad (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ghazi_Muhammad
+  - title: Siege of Akhoulgo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Akhoulgo
+  - title: Battle of Dargo (1845) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Dargo_(1845)
+  - title: Imam Shamil (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Imam_Shamil
+  - title: Shamil (Britannica)
+    url: https://www.britannica.com/biography/Shamil
+  - title: Russo-Circassian War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russo-Circassian_War
+  - title: Battle of Qbaada (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Qbaada
+  - title: Circassian genocide (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Circassian_genocide
+  - title: Circassian (Britannica)
+    url: https://www.britannica.com/topic/Circassian
+steps:
+  - title: Yermolov’s line
+    date: 1817–1827
+    when: "1817"
+    borders: "1825"
+    countries: [ru]
+    body:
+      - By 1815 Russia ruled Georgia and the khanates south of the mountains, but the peoples of the North Caucasus had never accepted its rule, and the one road over the mountains to Tiflis ran past their lands. Cossack settlements along the Terek and the Kuban suffered raids, and the Russians answered with punitive expeditions. In 1816 General Aleksey Yermolov, a hero of Borodino, took command in the Caucasus, convinced that only fear would bring peace. In 1817 he began to push the line of forts forward from the Terek to the Sunzha, and in 1818 he founded the fortress of Groznaya, “the Menacing”, today’s Grozny.
+      - Forts at Vnezapnaya and Burnaya followed in Dagestan, and a line of posts across Kabarda in the early 1820s. Yermolov’s troops burned villages that resisted, destroyed crops, took hostages and cut wide clearings through the Chechen forests, while families were driven from the lowlands into the mountains. In 1819 his soldiers stormed the Chechen village of Dadi-Yurt house by house and killed most of its people. A rising in Chechnya in 1825 was put down, and in 1827 Yermolov was dismissed, distrusted after the Decembrist revolt and blamed for setbacks against Persia.
+    facts:
+      - [Fortress of Groznaya, "founded 1818"]
+      - [Destruction of Dadi-Yurt, "September 1819"]
+      - [Yermolov in command, "1816–1827"]
+    markers:
+      - kind: event
+        side: ru
+        name: Groznaya
+        date: 1818
+        text: Founded as the anchor of the new Sunzha line. It became the city of Grozny.
+        lonlat: [45.689, 43.312]
+      - kind: event
+        side: ru
+        name: Vnezapnaya
+        date: 1819
+        text: A fortress near the Kumyk town of Endirey, built to watch the passes from Chechnya and Dagestan.
+        lonlat: [46.644, 43.156]
+      - kind: event
+        side: ru
+        name: Burnaya
+        date: 1821
+        text: A fort above Tarki, on the Caspian coast road to Derbent.
+        lonlat: [47.445, 42.941]
+      - kind: event
+        name: Dadi-Yurt
+        date: September 1819
+        text: Russian troops destroyed the village on the Terek after a day of house-to-house fighting, and most of its defenders and inhabitants died.
+        lonlat: [46.21, 43.412]
+      - kind: event
+        side: ru
+        name: Nalchik
+        date: 1818–1822
+        text: A fort at the heart of the Kabardian line, which cut Kabarda off from the mountains and from Chechnya.
+        lonlat: [43.617, 43.483]
+    arrows:
+      - side: ru
+        label: Yermolov, 1818
+        via: [[44.65, 43.74], [45.2, 43.55], [45.66, 43.33]]
+    areas:
+      - style: front
+        side: ru
+        label: Russian lines of forts, mid-1820s (approximate)
+        line: [[37.4, 45.25], [38.97, 45.03], [39.7, 45.2], [40.55, 45.4], [41.1, 45.0], [41.93, 44.63], [42.05, 44.2], [42.72, 43.9], [43.6, 43.5], [44.68, 43.05], [44.77, 43.22], [45.69, 43.31], [46.1, 43.3], [46.64, 43.15], [47.45, 42.94]]
+  - title: Ghazi Muhammad and Shamil’s imamate
+    date: 1829–1840
+    when: "1829"
+    borders: "1839-09-03"
+    countries: [ru]
+    body:
+      - In the highlands of Dagestan, Naqshbandi Sufi teachers preached that Muslims should live by Islamic law, not local custom, and resist Russian rule. In 1829 the scholar Ghazi Muhammad of Gimry was proclaimed imam, and from 1830 he waged holy war. In 1831 he besieged Russian forts and sacked Kizlyar, carrying off some 200 captives. On 29 October 1832 Russian troops stormed Gimry and he was killed. His successor, Hamzat Bek, murdered the ruling family of the Avar khanate at Khunzakh in 1834 and was himself killed in revenge that year.
+      - The next imam was Shamil, an Avar who had escaped from Gimry badly wounded. He built a state with its own law, taxes and standing army, ruling through deputies called naibs. In the summer of 1839 General Pavel Grabbe besieged him in the rock fortress of Akhulgo for 80 days. When it fell, most of the defenders were killed, along with many of the women and children sheltering there, but Shamil escaped with a few followers. In 1840 the Chechens, fearing that the Russians would disarm them, rose and accepted him as imam.
+    facts:
+      - [Ghazi Muhammad proclaimed imam, "1829"]
+      - [Shamil imam, "1834–1859"]
+      - [Siege of Akhulgo, "summer 1839, 80 days"]
+    markers:
+      - kind: taken
+        side: im
+        name: Kizlyar
+        date: November 1831
+        text: Ghazi Muhammad’s men sacked the town on the lower Terek and carried off about 200 prisoners.
+        lonlat: [46.714, 43.855]
+      - kind: battle
+        side: ru
+        name: Battle of Gimry
+        date: 29–30 October 1832
+        text: Russian troops climbed down into the gorge and stormed the village. Ghazi Muhammad was killed; Shamil escaped.
+        lonlat: [46.846, 42.757]
+      - kind: event
+        name: Khunzakh
+        date: August – September 1834
+        text: Hamzat Bek killed the Avar khans and took their capital, and was murdered in its mosque weeks later by Hadji Murad and his companions.
+        lonlat: [46.707, 42.546]
+      - kind: siege
+        side: ru
+        name: Siege of Akhulgo
+        date: June – September 1839
+        text: Grabbe’s army took the rock fortress after 80 days and heavy losses on both sides. Shamil got away the night it fell.
+        lonlat: [46.743, 42.778]
+        lp: l
+      - kind: battle
+        name: Battle of the Valerik
+        date: July 1840
+        text: A bloody clash in the Chechen forest, remembered through a poem by the Russian officer and poet Mikhail Lermontov, who fought in it.
+        lonlat: [45.409, 43.169]
+    arrows:
+      - side: im
+        label: Ghazi Muhammad, 1831
+        via: [[46.85, 42.8], [46.8, 43.3], [46.72, 43.82]]
+      - side: ru
+        label: Grabbe, 1839
+        via: [[46.64, 43.14], [46.6, 42.95], [46.72, 42.8]]
+  - title: Dargo
+    date: 1843–1847
+    when: "1843"
+    borders: "1845-07-18"
+    countries: [ru]
+    body:
+      - In 1843 Shamil struck in Dagestan. Moving his forces faster than the Russians could follow, he took almost every Russian post in Avaria within weeks and besieged the garrisons that were left. The campaign cost the Russians some 2,600 men and a dozen forts. Nicholas I sent large reinforcements and appointed Count Mikhail Vorontsov viceroy, with orders to destroy the imamate. In June 1845 Vorontsov marched south into the mountains with about 18,000 men, waited for weeks at Andi for supplies, and on 18 July took Shamil’s capital, Dargo, which the imam had set on fire.
+      - In the forests around Dargo the Chechens felled trees across the paths and attacked the strung-out columns from cover. A column sent to fetch a supply convoy lost hundreds of men and General Passek. Starving and burdened with wounded, Vorontsov’s army fought its way north for a week until relief troops met it. The campaign cost about 3,600 killed and wounded, among them three generals. Afterwards the Russians turned to slower methods, building forts and roads and clearing the forests, while Shamil moved his capital to Vedeno and beat off a Russian assault on Gergebil in 1847.
+    facts:
+      - [Shamil’s offensive in Dagestan, "August – December 1843"]
+      - [Dargo taken, "18 July 1845"]
+      - [Russian losses in the Dargo campaign, "about 3,600 killed and wounded"]
+    markers:
+      - kind: taken
+        side: im
+        name: Untsukul
+        date: September 1843
+        text: Shamil’s forces converged on the village and wiped out the Russian garrisons that came to its help, opening his campaign in Avaria.
+        lonlat: [46.789, 42.709]
+      - kind: event
+        side: ru
+        name: Andi
+        date: June – July 1845
+        text: Vorontsov’s army waited here for three weeks, eating its supplies almost as fast as they arrived.
+        lonlat: [46.263, 42.785]
+        lp: l
+      - kind: battle
+        side: im
+        name: Battle of Dargo
+        date: July 1845
+        text: Vorontsov took the burning capital, but the fighting in the forest on the way in and on the way out nearly destroyed his army.
+        lonlat: [46.233, 42.95]
+      - kind: event
+        side: ru
+        name: Gerzel
+        date: 1 August 1845
+        text: Relief troops from Grozny met the survivors of Vorontsov’s army in the forest south of this fort.
+        lonlat: [46.396, 43.25]
+      - kind: held
+        side: im
+        name: Gergebil
+        date: June 1847
+        text: The fortified village beat off Vorontsov’s assaults, its defenders trapping the attackers under false roofs. It fell to a second siege in 1848.
+        lonlat: [47.068, 42.503]
+    arrows:
+      - side: ru
+        label: Vorontsov
+        via: [[46.64, 43.14], [46.5, 42.9], [46.3, 42.79]]
+      - side: ru
+        via: [[46.25, 42.82], [46.235, 42.93]]
+      - side: ru
+        label: Retreat
+        via: [[46.24, 42.97], [46.3, 43.12], [46.38, 43.23]]
+    areas:
+      - style: occupied
+        side: im
+        label: Shamil’s imamate at its height, about 1845 (approximate)
+        polygon: [[45.15, 43.12], [45.7, 43.22], [46.3, 43.2], [46.62, 43.05], [46.95, 42.85], [47.1, 42.55], [47.0, 42.25], [46.65, 42.0], [46.2, 42.08], [45.75, 42.42], [45.3, 42.65], [45.05, 42.9]]
+  - title: Gunib
+    date: 1854–1859
+    when: "1854"
+    borders: "1859-09-06"
+    countries: [ru, ge]
+    body:
+      - During the Crimean War Shamil hoped for help from the Ottomans and the British, which never came in strength. In July 1854 his son Ghazi Muhammad raided the Georgian estate of Tsinandali and carried off two princesses and their children, who were later exchanged for Shamil’s eldest son, held by the Russians since Akhulgo. After the war Prince Aleksandr Baryatinsky, the new viceroy, brought some 200,000 troops to bear. Roads and clearings closed in on Chechnya, and in 1858 the Russians took the Argun gorge and cut it in two.
+      - Many villages, worn out by war, hunger and Shamil’s harsh rule, now made their peace with the Russians. Vedeno fell in April 1859 and the imamate collapsed. Shamil retreated with some 400 followers to the mountain village of Gunib in Dagestan, where Russian troops surrounded and stormed it. On 6 September 1859 he surrendered to Baryatinsky. He was taken to Saint Petersburg, lived in honourable exile in Kaluga, and died on pilgrimage in Medina in 1871. Resistance went on in places, but the war in the eastern Caucasus was over.
+    facts:
+      - [Raid on Tsinandali, "July 1854"]
+      - [Vedeno taken, "April 1859"]
+      - [Shamil surrenders at Gunib, "6 September 1859"]
+    markers:
+      - kind: event
+        side: im
+        name: Tsinandali
+        date: July 1854
+        text: Shamil’s raiders seized Princesses Anna Chavchavadze and Varvara Orbeliani with their children and household.
+        lonlat: [45.576, 41.895]
+      - kind: taken
+        side: ru
+        name: Argun gorge
+        date: 1858
+        text: Russian columns built a road up the gorge to Shatoy, splitting the imamate’s Chechen lands.
+        lonlat: [45.691, 42.872]
+      - kind: taken
+        side: ru
+        name: Vedeno
+        date: April 1859
+        text: Shamil’s last capital in Chechnya was taken after a short siege by General Nikolay Yevdokimov.
+        lonlat: [46.11, 42.957]
+      - kind: siege
+        side: ru
+        name: Gunib
+        date: August – 6 September 1859
+        text: Russian troops climbed the cliffs and stormed the outer defences. Shamil came out to surrender to Baryatinsky.
+        lonlat: [46.962, 42.387]
+    arrows:
+      - side: ru
+        label: Yevdokimov
+        via: [[45.9, 43.3], [46.0, 43.1], [46.09, 42.98]]
+      - side: im
+        label: Shamil
+        via: [[46.15, 42.94], [46.55, 42.68], [46.93, 42.4]]
+      - side: ru
+        label: Baryatinsky
+        via: [[47.12, 42.8], [47.1, 42.6], [46.99, 42.41]]
+  - title: The conquest of Circassia and the expulsion
+    date: 1859–1864
+    when: "1860"
+    borders: "1864-06-02"
+    countries: [ru, ge, tr]
+    body:
+      - With the east subdued, the Russian army turned on the Circassians, Ubykhs and Abaza of the western Caucasus, who had fought it for decades and had never been ruled by the Ottomans, although the sultan had claimed their coast. In 1861 their leaders formed an assembly at Sochi and appealed to Britain and the Ottoman Empire, without result. Alexander II approved a plan to drive the highland peoples out of the mountains and the coast and settle Cossacks there. From 1862 Russian columns under Yevdokimov moved through the valleys, burning villages and crops, and told the people to move to the Kuban plain or leave for the Ottoman Empire.
+      - On 2 June 1864 a parade at Kbaade, today’s Krasnaya Polyana, marked the end of the war. By then hundreds of thousands of people were crowded on the coast, waiting for ships. Thousands died there of hunger, cold and disease, on overloaded boats and after landing at Trabzon, Samsun and other ports. Estimates vary widely, but several hundred thousand to more than a million people were killed or driven out, and only a small part of the Circassian people remained. Many sources call this a genocide. Georgia recognised it as one in 2011; Russia rejects the term.
+    facts:
+      - [End of the war, "Kbaade, 2 June 1864"]
+      - [Expelled to the Ottoman Empire, "several hundred thousand to more than a million (estimates)"]
+      - [Ubykhs, "almost all expelled; their language died out in 1992"]
+    markers:
+      - kind: event
+        side: ci
+        name: Sochi
+        date: 1861
+        text: Circassian and Ubykh leaders set up an assembly to govern their lands and sought foreign help against Russia.
+        lonlat: [39.72, 43.585]
+      - kind: event
+        side: ru
+        name: Maykop
+        date: 1857
+        text: A fortress founded as a base for the conquest of the western Circassian valleys.
+        lonlat: [40.083, 44.6]
+      - kind: event
+        side: ru
+        name: Kbaade
+        date: 2 June 1864
+        text: Grand Duke Michael held a victory parade in the valley of the Ahchypsy, now Krasnaya Polyana, one of the last Circassian communities to hold out.
+        lonlat: [40.206, 43.679]
+      - kind: event
+        name: Tuapse
+        date: 1864
+        text: One of the coastal camps where expelled families waited, often for weeks and without food or shelter, for ships to Ottoman ports.
+        lonlat: [39.077, 44.104]
+      - kind: event
+        name: Trabzon
+        date: 1864
+        text: Tens of thousands of refugees landed here, and many died of typhus and smallpox in the camps outside the town.
+        lonlat: [39.722, 41.005]
+    arrows:
+      - side: ru
+        label: Russian columns
+        via: [[40.1, 44.55], [39.6, 44.3], [39.15, 44.12]]
+      - side: ru
+        via: [[40.8, 44.1], [40.5, 43.85], [40.23, 43.7]]
+      - side: ci
+        label: Expelled to the Ottoman Empire
+        via: [[39.5, 43.5], [39.6, 42.3], [39.7, 41.1]]
+    areas:
+      - style: outline
+        side: ci
+        label: Western Circassia and the Black Sea coast, emptied of most of their people (approximate)
+        polygon: [[37.3, 45.05], [38.0, 45.08], [38.97, 45.02], [39.7, 45.15], [40.5, 45.2], [41.1, 44.95], [41.9, 44.2], [42.1, 43.7], [41.5, 43.4], [40.6, 43.5], [40.0, 43.38], [39.7, 43.58], [39.1, 44.1], [38.1, 44.55], [37.6, 44.72], [37.3, 44.9]]

@@ -1,0 +1,169 @@
+id: pugachevs-rebellion
+name: Pugachev’s Rebellion
+start: "1773-09-28"
+end: "1775-01-21"
+tier: B
+summary: The largest popular rising in the history of the Russian Empire, led by the Don Cossack Yemelyan Pugachev, who claimed to be the overthrown emperor Peter III. Begun by the Yaik Cossacks in 1773 and joined by Bashkirs, Tatars, Ural factory serfs and finally peasants of the Volga lands, it besieged Orenburg, burned Kazan and killed many landowners before it was crushed in 1774. Pugachev was executed in Moscow in January 1775.
+sides:
+  - id: reb
+    name: Pugachev’s rebels
+    ink: brown
+    moves: Rebel moves
+    success: Rebel success
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: green
+    moves: Government moves
+    success: Government success
+notes:
+  - Dates are New Style (Gregorian). Russia used the Julian calendar, eleven days behind, and Russian accounts give the Old Style dates, such as 17 September 1773 for the start of the rising and 10 January 1775 for Pugachev’s execution.
+  - Also called the Peasants’ War of 1773–1775. Yaitsk is today’s Oral in Kazakhstan, and Tsaritsyn is Volgograd.
+sources:
+  - title: Pugachev’s Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pugachev%27s_Rebellion
+  - title: Yemelyan Pugachev (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yemelyan_Pugachev
+  - title: Battle of Kazan (1774) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kazan_(1774)
+  - title: Salawat Yulayev (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Salawat_Yulayev
+steps:
+  - title: The false Peter III
+    date: September 1773 – April 1774
+    when: "1773-09-28"
+    borders: "1774-04-02"
+    countries: [kz, ru]
+    body:
+      - Yemelyan Pugachev, a Don Cossack who had deserted from the army, appeared among the Yaik Cossacks in 1773 claiming to be Peter III, Catherine II’s husband, who had been overthrown and killed in 1762. The Yaik Cossacks, many of them Old Believers, had risen in 1772 against the government’s inroads on their freedoms and been harshly punished. In September 1773 a small band of them followed Pugachev against Yaitsk. He could not take its fortress, but he swept up the line of small forts along the Yaik, whose garrisons often went over to him. Officers who resisted were hanged.
+      - In October he laid siege to Orenburg, the seat of government in the region, and set up his camp and his own “War College” at nearby Berda. Bashkirs under Salawat Yulayev, Tatars, Kalmyks and serfs from the Ural ironworks joined him, his bands besieged Ufa, and the revolt spread into the Urals and western Siberia. A government force was beaten in November. Orenburg went hungry for six months, until a larger army under General Aleksandr Bibikov arrived. On 2 April 1774 Prince Pyotr Golitsyn crushed Pugachev at the Tatishchev fortress, Orenburg and Ufa were relieved, and Pugachev fled into the southern Urals.
+    facts:
+      - [Rising begins, "28 September 1773, on the Yaik"]
+      - [Siege of Orenburg, "October 1773 – April 1774"]
+      - [Battle of Tatishchev fortress, "2 April 1774, government victory"]
+    markers:
+      - kind: event
+        side: reb
+        name: Yaitsk
+        date: September 1773
+        text: The rising began among the Yaik Cossacks outside the town, today’s Oral. The garrison held the fortress through the rebellion.
+        lonlat: [51.37, 51.23]
+      - kind: held
+        side: ru
+        name: Siege of Orenburg
+        date: October 1773 – April 1774
+        text: The town held out through a hungry winter while Pugachev ruled his followers from his camp at Berda nearby.
+        lonlat: [55.1, 51.78]
+      - kind: battle
+        side: ru
+        name: Tatishchev fortress
+        date: 2 April 1774
+        text: Golitsyn’s troops stormed Pugachev’s defences and killed or captured thousands of rebels, ending the siege of Orenburg.
+        lonlat: [54.31, 51.73]
+        lp: l
+      - kind: held
+        side: ru
+        name: Ufa
+        date: November 1773 – April 1774
+        text: Besieged by rebel bands under Ivan Zarubin until a relief column scattered them.
+        lonlat: [55.95, 54.73]
+    arrows:
+      - side: reb
+        label: Pugachev
+        via: [[51.37, 51.3], [52.6, 51.45], [54.0, 51.7], [55.0, 51.78]]
+      - side: ru
+        label: Golitsyn
+        via: [[52.3, 52.6], [53.4, 52.0], [54.25, 51.75]]
+  - title: Kazan
+    date: April – July 1774
+    when: "1774-04"
+    borders: "1774-07-23"
+    countries: [ru]
+    body:
+      - In the Urals and Bashkiria Pugachev raised a new army. Bibikov died of fever in April, and the government’s troops were spread thin over a vast country. The rebels, joined by Bashkirs and ironworkers, burned factories and took towns and works such as Krasnoufimsk, Osa and Izhevsk, and Pugachev turned west towards the Volga with a large but poorly armed host. On 23 July he stormed Kazan, one of the empire’s largest cities, and burned much of it, though the garrison held out in the kremlin.
+      - Ivan Mikhelson, who had chased Pugachev through the Urals, arrived the same day and beat the rebels in three days of fighting outside the city. Pugachev’s army was killed, captured or scattered, but he escaped and crossed the Volga with a few hundred men on 28 July. Across the river, in the lands of the serf-owning nobility, he found a new following.
+    facts:
+      - [Kazan stormed, "23 July 1774 (12 July Old Style)"]
+      - [Government commander, Ivan Mikhelson]
+    markers:
+      - kind: taken
+        side: reb
+        name: Krasnoufimsk
+        date: June 1774
+        text: One of several towns and ironworks in the Urals taken by the rebels after their defeat at Orenburg.
+        lonlat: [57.77, 56.62]
+      - kind: taken
+        side: reb
+        name: Osa
+        date: Early July 1774
+        text: The town on the Kama surrendered after a week’s siege, opening the way west towards Kazan.
+        lonlat: [55.47, 57.3]
+      - kind: taken
+        side: reb
+        name: Kazan
+        date: 23 July 1774
+        text: The rebels broke into the city and burned much of it. Mikhelson’s troops then routed them outside the walls.
+        lonlat: [49.11, 55.8]
+    arrows:
+      - side: reb
+        label: Pugachev
+        via: [[57.6, 56.5], [55.5, 57.2], [52.5, 56.5], [49.3, 55.85]]
+      - side: ru
+        label: Mikhelson
+        via: [[56.0, 55.2], [53.0, 55.7], [49.5, 55.75]]
+  - title: Down the Volga
+    date: July 1774 – January 1775
+    when: "1774-07-26"
+    borders: "1774-09-05"
+    countries: [ru, kz]
+    body:
+      - On the right bank of the Volga, among the serf villages, the rising became a peasant war. On 11 August Pugachev issued a manifesto granting the serfs their freedom and calling on them to deal with their landlords, and hundreds of manor houses were burned and many noble families killed. Penza and Saratov fell as he swept south along the river, and there was alarm in Moscow. But the Treaty of Küçük Kaynarca had ended the Turkish war in July, and regular troops were coming back to deal with him, among them Alexander Suvorov.
+      - On 1 September Pugachev failed to take Tsaritsyn, and on 5 September Mikhelson caught and destroyed his army at Solenikova Vataga, downstream from the town. Pugachev fled into the steppe east of the Volga, where his own Cossack lieutenants seized him and handed him over at Yaitsk later that month. He was taken to Moscow in a cage and executed on Bolotnaya Square on 21 January 1775. Troops under Count Pyotr Panin hanged rebels across the Volga lands. The Yaik was renamed the Ural, and Yaitsk became Uralsk.
+    facts:
+      - [Manifesto freeing the serfs, "11 August 1774 (31 July Old Style)"]
+      - [Last battle, "Solenikova Vataga, 5 September 1774"]
+      - [Pugachev executed, "21 January 1775, Moscow"]
+    markers:
+      - kind: taken
+        side: reb
+        name: Penza
+        date: August 1774
+        text: Taken by the rebels as the peasant war spread through the Volga provinces.
+        lonlat: [45.0, 53.2]
+      - kind: taken
+        side: reb
+        name: Saratov
+        date: 17 August 1774
+        text: The town fell after its garrison went over to the rebels, and nobles and officials were killed.
+        lonlat: [46.03, 51.53]
+      - kind: held
+        side: ru
+        name: Tsaritsyn
+        date: 1 September 1774
+        text: The fortress beat off Pugachev’s attack, and he moved on down the Volga.
+        lonlat: [44.51, 48.71]
+      - kind: battle
+        side: ru
+        name: Solenikova Vataga
+        date: 5 September 1774
+        text: Mikhelson destroyed Pugachev’s last army near this fishing settlement below Tsaritsyn.
+        lonlat: [45.35, 48.4]
+      - kind: event
+        side: ru
+        name: Yaitsk
+        date: September 1774
+        text: Pugachev’s Cossack companions handed him over to the authorities here, where the rising had begun.
+        lonlat: [51.37, 51.23]
+      - kind: event
+        side: ru
+        name: Moscow
+        date: 21 January 1775
+        text: Pugachev was beheaded and quartered on Bolotnaya Square.
+        lonlat: [37.62, 55.75]
+    arrows:
+      - side: reb
+        label: Pugachev
+        via: [[48.3, 55.4], [45.2, 53.1], [46.0, 51.6], [44.7, 48.8]]
+      - side: ru
+        label: Mikhelson
+        via: [[46.3, 51.4], [45.2, 49.6], [45.4, 48.5]]

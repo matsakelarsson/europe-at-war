@@ -1,0 +1,147 @@
+id: russo-persian-war-1804
+name: Russo-Persian War of 1804–1813
+start: "1804"
+end: "1813-10-24"
+tier: B
+summary: A war between the Russian Empire and Qajar Persia over eastern Georgia, which Russia had annexed in 1801, and the khanates of the eastern Caucasus. After a long and mostly indecisive struggle, Russian victories at Aslanduz and Lankaran forced Persia to accept the Treaty of Gulistan in 1813, which gave Russia Dagestan, eastern Georgia and most of today’s Azerbaijan.
+countries: [az, am, ge, ru]
+sides:
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: ir
+    name: Qajar Persia
+    polities: [persia]
+    ink: orange
+    moves: Persian moves
+    success: Persian success
+notes:
+  - Dates are New Style (Gregorian). Russian accounts use the Julian calendar, then 12 days behind, so the storming of Ganja is 3 January 1804 and the Battle of Aslanduz 19–20 October 1812 in Russian sources.
+  - The khanates were local Muslim principalities under Persian overlordship. Persia did not accept their loss until 1813, so the base map shows them as Persian until the Treaty of Gulistan.
+  - Ganja, renamed Yelizavetpol by the Russians, is shown under its present name.
+sources:
+  - title: Russo-Persian War (1804–1813) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russo-Persian_War_(1804%E2%80%931813)
+  - title: Siege of Ganja (1804) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Ganja_(1804)
+  - title: Battle of Aslanduz (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Aslanduz
+  - title: Siege of Lankaran (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Lankaran
+  - title: Treaty of Gulistan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Gulistan
+  - title: Golestān Treaty (Encyclopædia Iranica)
+    url: https://www.iranicaonline.org/articles/golestan-treaty
+steps:
+  - title: Ganja and the khanates
+    date: 1804–1806
+    when: "1804-01-15"
+    borders: "1806-10-01"
+    countries: [az, am, ge, ru]
+    body:
+      - Russia annexed the eastern Georgian kingdom of Kartli-Kakheti in 1801, and its new commander in the Caucasus, the Georgian-born Prince Pavel Tsitsianov, set out to bring the neighbouring khanates under Russian rule. On 15 January 1804 he stormed Ganja after a month’s siege. Javad Khan died fighting on the walls, and between 1,500 and 3,000 of the defenders and townspeople were killed. Fath-Ali Shah demanded that the Russians leave the Caucasus, and in June his heir, Abbas Mirza, marched on Erivan with a large army.
+      - Tsitsianov fought Abbas Mirza at Echmiadzin and besieged Erivan, but ran short of food and fell back to Tiflis in September, having lost about half his men. In 1805 the khans of Karabakh, Sheki and Shirvan accepted Russian overlordship, and small Russian detachments held off Persian attacks in Karabakh. In February 1806 Tsitsianov was shot dead outside Baku while receiving the keys of the city, but later that year Russian troops took Derbent, Quba and Baku. War with the Ottomans from December 1806 then drew Russian forces west.
+    facts:
+      - [Storming of Ganja, "15 January 1804"]
+      - [Siege of Erivan, "July – September 1804, Russian withdrawal"]
+      - [Under Russian rule by 1806, "Ganja, Karabakh, Sheki, Shirvan, Baku, Quba and Derbent"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Ganja
+        date: 15 January 1804
+        text: Tsitsianov’s troops stormed the fortress and killed many of its people. The city was renamed Yelizavetpol and its main mosque made a church.
+        lonlat: [46.361, 40.683]
+      - kind: battle
+        name: Echmiadzin
+        date: July 1804
+        text: The first battle between Tsitsianov and Abbas Mirza, at the seat of the Armenian Church. Both sides claimed victory.
+        lonlat: [44.292, 40.173]
+        lp: l
+      - kind: siege
+        side: ir
+        name: Erivan
+        date: July – September 1804
+        text: Tsitsianov could not storm the citadel. With his supply lines cut, he lifted the siege and retreated to Tiflis.
+        lonlat: [44.513, 40.178]
+        lp: b
+      - kind: held
+        side: ru
+        name: Shusha
+        date: 1805
+        text: The capital of the Karabakh khanate, whose khan accepted Russian rule in May 1805. A Russian garrison held it against Abbas Mirza.
+        lonlat: [46.748, 39.758]
+      - kind: event
+        side: ir
+        name: Baku
+        date: February 1806
+        text: Tsitsianov was killed by the khan’s men as he came to accept the city’s surrender. Baku submitted to Russia later in 1806.
+        lonlat: [49.833, 40.376]
+      - kind: taken
+        side: ru
+        name: Derbent
+        date: 1806
+        text: Taken by Russian troops who marched south along the Caspian from the North Caucasus, followed by Quba.
+        lonlat: [48.289, 42.058]
+    arrows:
+      - side: ru
+        label: Tsitsianov
+        via: [[44.79, 41.72], [45.6, 41.2], [46.3, 40.72]]
+      - side: ru
+        via: [[44.75, 41.6], [44.45, 41.0], [44.5, 40.28]]
+      - side: ir
+        label: Abbas Mirza
+        via: [[46.3, 38.1], [45.4, 39.25], [44.62, 40.08]]
+    areas:
+      - style: occupied
+        side: ru
+        label: Taken by Russia, 1804–1806
+        atoms: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-SUS, AZ-XA, AZ-XCI, AZ-AGM, AZ-XVD, AZ-FUZ, AZ-CAB, AZ-ZAN, AZ-QBI, AZ-LAN, AZ-KAL, AZ-TAR, AZ-BAR, AZ-AGC, AZ-BEY, AZ-SA, AZE-5564, AZ-QAX, AZ-OGU, AZ-QAB, AZ-ZAQ, AZ-BAL, AZ-YEV, AZE-5566, AZ-MI, AZ-AGS, AZ-SMI, AZ-ISM, AZ-AGU, AZ-GOY, AZ-KUR, AZ-UCA, AZ-ZAR, AZ-HAC, AZ-QOB, AZ-SR, AZ-SAB, AZ-IMI, AZ-SAT, AZ-BA, AZ-ABS, AZ-SM, AZ-QBA, AZ-QUS, AZ-XAC, AZ-SBN, AZ-SIY, AZ-XIZ, AZ-SAL, AZ-NEF]
+  - title: Aslanduz and the Treaty of Gulistan
+    date: 1812–1813
+    when: "1812-10-31"
+    borders: "1813-10-24"
+    countries: [az, am, ge, ru]
+    body:
+      - For six years neither side could win. Abbas Mirza modernised his army with French and then British officers, a Russian assault on Erivan failed in 1808, and early in 1812 a Persian force captured a whole Russian battalion near Sultanabad in Karabakh. Peace with the Ottomans at Bucharest in May 1812 freed Russian troops. On the night of 31 October General Pyotr Kotlyarevsky, with about 2,000 men, crossed the Aras and routed Abbas Mirza’s much larger army at Aslanduz.
+      - Kotlyarevsky then marched across the snow-covered Mughan steppe and on 13 January 1813 stormed the new Persian fort at Lankaran. Almost all of its garrison of about 4,000 were killed, and the Russians lost some two-thirds of their attacking force. With Napoleon in retreat, Britain urged its Persian ally to make peace. The Treaty of Gulistan, signed on 24 October 1813 with a British envoy as mediator, gave Russia Dagestan, eastern Georgia and the khanates north of the Aras, and the sole right to keep warships on the Caspian Sea.
+    facts:
+      - [Battle of Aslanduz, "31 October – 1 November 1812, Russian victory"]
+      - [Storming of Lankaran, "13 January 1813"]
+      - [Treaty of Gulistan, "24 October 1813"]
+    markers:
+      - kind: battle
+        side: ru
+        name: Battle of Aslanduz
+        date: 31 October – 1 November 1812
+        text: Kotlyarevsky’s small force crossed the Aras by night and scattered the Persian army in its camp.
+        lonlat: [47.406, 39.444]
+      - kind: siege
+        side: ru
+        name: Lankaran
+        date: 7–13 January 1813
+        text: After a short bombardment the fort was stormed and its defenders killed almost to a man. Kotlyarevsky was found badly wounded among the dead.
+        lonlat: [48.851, 38.754]
+      - kind: treaty
+        name: Treaty of Gulistan
+        date: 24 October 1813
+        text: Signed in a village in Karabakh. Its vague borders, above all north of Erivan and in Talysh, led to a new war in 1826.
+        lonlat: [46.579, 40.358]
+      - kind: event
+        side: ir
+        name: Tabriz
+        date: 1804–1813
+        text: The seat of Abbas Mirza, governor of Persian Azerbaijan, where French and then British officers trained his new regular army.
+        lonlat: [46.3, 38.067]
+    arrows:
+      - side: ru
+        label: Kotlyarevsky
+        via: [[47.15, 39.75], [47.4, 39.47], [48.3, 39.1], [48.82, 38.78]]
+    areas:
+      - style: gained
+        side: ru
+        label: Khanates and Dagestan, ceded to Russia in this peace
+        atoms: [RU-DA, AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-SUS, AZ-XA, AZ-XCI, AZ-AGM, AZ-XVD, AZ-FUZ, AZ-CAB, AZ-ZAN, AZ-QBI, AZ-LAN, AZ-KAL, AZ-TAR, AZ-BAR, AZ-AGC, AZ-BEY, AZ-SA, AZE-5564, AZ-QAX, AZ-OGU, AZ-QAB, AZ-ZAQ, AZ-BAL, AZ-YEV, AZE-5566, AZ-MI, AZ-AGS, AZ-SMI, AZ-ISM, AZ-AGU, AZ-GOY, AZ-KUR, AZ-UCA, AZ-ZAR, AZ-HAC, AZ-QOB, AZ-SR, AZ-SAB, AZ-IMI, AZ-SAT, AZ-BA, AZ-ABS, AZ-SM, AZ-QBA, AZ-QUS, AZ-XAC, AZ-SBN, AZ-SIY, AZ-XIZ, AZ-SAL, AZ-NEF, AZ-LA, AZE-5562, AZ-AST, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL]

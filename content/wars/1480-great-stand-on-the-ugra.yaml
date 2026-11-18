@@ -1,0 +1,113 @@
+id: great-stand-on-the-ugra
+name: Great Stand on the Ugra
+start: "1480"
+end: "1480"
+tier: B
+summary: A standoff in the autumn of 1480 between Ivan III of Moscow and Khan Akhmat of the Great Horde, who had marched north to restore the Horde’s overlordship. After failing to cross the Ugra river, Akhmat waited in vain for his Lithuanian allies and withdrew in November; the event is traditionally seen as the end of Mongol rule over Russia.
+countries: [ru]
+sides:
+  - id: mos
+    name: Moscow
+    polities: [russia]
+    ink: green
+    moves: Muscovite moves
+    success: Muscovite success
+  - id: gh
+    name: Great Horde
+    polities: [great-horde]
+    ink: olive
+    moves: Moves by the Great Horde
+    success: Success for the Great Horde
+notes:
+  - Dates are Julian (Old Style). The Russian sources disagree on many details, and the size of both armies is unknown.
+  - The Great Horde was the core of the old Golden Horde on the lower Volga, after the Kazan, Crimean and other khanates had broken away. Moscow was allied with the Crimean khan Mengli Giray, and Akhmat with King Casimir IV of Poland and Lithuania, whose lands then began just west of the Ugra.
+sources:
+  - title: Great Stand on the Ugra River (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Great_Stand_on_the_Ugra_River
+  - title: Akhmat Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Akhmat_Khan
+  - title: Great Horde (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Great_Horde
+  - title: Ivan III of Russia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ivan_III_of_Russia
+steps:
+  - title: To the Ugra
+    date: June – October 1480
+    when: "1480-10-08"
+    borders: "1480-10-08"
+    countries: [ru]
+    body:
+      - "Ivan III of Moscow had stopped paying tribute to the Horde in the 1470s and allied with the Crimean khan, Mengli Giray. Khan Akhmat of the Great Horde allied in turn with Casimir IV of Poland and Lithuania, and in 1480, while Ivan was quarrelling with two of his brothers, he led north what may have been the largest Tatar army of the century. Ivan held the line of the Oka, the river that had long been Moscow’s southern frontier, with his son Ivan the Young at Serpukhov and himself at Kolomna."
+      - "Akhmat did not try the Oka but moved west between the upper Don and the Oka, towards the mouth of the Ugra near Kaluga, hoping to meet Casimir’s army. Casimir never came; he was tied down by a Crimean raid on Podolia and unrest at home. Ivan sent his treasury and family north to Beloozero and set up his headquarters at Kremenets, behind the Ugra. On 8 October the Tatars tried to force a crossing near the river’s mouth. For four days they were driven back by Russian guns and arrows, and a later attempt to cross upstream at Opakov was also blocked."
+    facts:
+      - [Battle on the Ugra, "8–11 October 1480, Muscovite success"]
+      - [Commanders, "Ivan III and Ivan the Young against Khan Akhmat"]
+      - [Ivan’s headquarters, "Kremenets, from 3 October"]
+    markers:
+      - kind: event
+        side: mos
+        name: Kolomna
+        date: June 1480
+        text: Ivan III’s base while the army watched the crossings of the Oka.
+        lonlat: [38.783, 55.083]
+      - kind: battle
+        side: mos
+        name: Ugra
+        date: 8–11 October 1480
+        text: The Tatars fought for four days to cross the river along a five-kilometre stretch above its mouth, but the Russian fire kept them back.
+        lonlat: [36.05, 54.567]
+      - kind: held
+        side: mos
+        name: Opakov
+        date: October 1480
+        text: Akhmat tried to slip troops across the Ugra here, but the Russians spotted the move and blocked the crossing.
+        lonlat: [35.363, 54.753]
+      - kind: event
+        side: mos
+        name: Kremenets
+        date: From 3 October 1480
+        text: Ivan III’s headquarters, today’s Kremenskoye, from where he watched the front.
+        lonlat: [35.951, 55.105]
+    arrows:
+      - side: gh
+        label: Akhmat
+        via: [[38.6, 51.5], [37.4, 52.8], [36.5, 53.8], [36.05, 54.45]]
+      - side: mos
+        via: [[38.7, 55.05], [37.4, 54.95], [36.4, 54.68]]
+      - side: mos
+        label: Ivan III
+        via: [[37.6, 55.72], [36.8, 55.4], [36.02, 55.12]]
+  - title: The stand
+    date: October 1480 – January 1481
+    when: "1480-10-26"
+    borders: "1481-01-06"
+    countries: [ru]
+    body:
+      - "For a month the two armies watched each other across the river while envoys came and went. Ivan made peace with his brothers, whose troops came to join him, and sent the exiled Crimean prince Nur Devlet and Prince Vasily Nozdrovaty down the Volga to raid the Horde’s lands behind Akhmat. Archbishop Vassian of Rostov urged Ivan in a famous letter to stand firm. As the river began to freeze and could no longer stop cavalry, Ivan pulled his troops back on 26 October to Kremenets and then to Borovsk, where they could cover Moscow and strike wherever the Tatars crossed."
+      - "Akhmat did not follow. With winter coming, his horses short of fodder and no sign of Casimir, he began to withdraw on 8 November, plundering a dozen Lithuanian towns, among them Mtsensk, on his way. Ivan returned to Moscow on 28 November. On 6 January 1481 Akhmat was killed in the steppe by Ibak, khan of Tyumen, and the Nogais. No khan again claimed a say over who ruled in Moscow, and Russian historians have long dated the end of the “Tatar yoke” to the Ugra, though some modern historians think the standoff itself changed little."
+    facts:
+      - [Russian withdrawal, "From 26 October 1480, to Kremenets and Borovsk"]
+      - [Akhmat’s retreat, "From 8 November 1480"]
+      - [Death of Akhmat, "6 January 1481"]
+    markers:
+      - kind: event
+        side: mos
+        name: Borovsk
+        date: November 1480
+        text: Ivan III concentrated his army here, in a strong position covering the road to Moscow.
+        lonlat: [36.5, 55.2]
+      - kind: taken
+        side: gh
+        name: Mtsensk
+        date: November 1480
+        text: One of about twelve towns of the Grand Duchy of Lithuania that Akhmat plundered as he withdrew, in revenge for Casimir’s absence.
+        lonlat: [36.567, 53.283]
+    arrows:
+      - side: mos
+        via: [[36.05, 54.62], [35.95, 55.05], [36.42, 55.18]]
+      - side: gh
+        label: Akhmat withdraws
+        via: [[36.0, 54.4], [36.45, 53.5], [37.0, 52.5]]
+      - side: mos
+        label: Nur Devlet
+        via: [[44.0, 56.3], [48.5, 55.7], [47.6, 53.0], [46.2, 51.5]]

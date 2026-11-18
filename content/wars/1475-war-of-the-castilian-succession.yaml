@@ -1,0 +1,123 @@
+id: war-of-the-castilian-succession
+name: War of the Castilian Succession
+start: "1475-05-10"
+end: "1479-09-04"
+tier: B
+summary: The war for the throne of Castile after the death of Henry IV in 1474, between his half-sister Isabella, married to Ferdinand of Aragon, and his daughter Joanna, called la Beltraneja, backed by her uncle and betrothed, Afonso V of Portugal, and by Louis XI of France. The indecisive battle of Toro in 1476 turned into a political victory for Isabella, while Portugal won the war at sea. By the Treaty of Alcáçovas in 1479 Afonso gave up his claim, Castile kept the Canary Islands and Portugal the rest of the Atlantic islands and the trade of Africa. Ferdinand had become king of Aragon that January, and the two crowns were now joined under the Catholic Monarchs.
+countries: [es, pt, fr]
+sides:
+  - id: isa
+    name: Isabella and Ferdinand
+    polities: [castile, aragon]
+    ink: gold
+    moves: Moves by Isabella and Ferdinand
+    success: Success for Isabella and Ferdinand
+  - id: jua
+    name: Joanna, Portugal and France
+    polities: [portugal, france]
+    ink: green
+    moves: Portuguese and allied moves
+    success: Success for Joanna’s side
+notes:
+  - Joanna’s enemies claimed that she was not Henry IV’s daughter but that of his favourite, Beltrán de la Cueva, hence the nickname la Beltraneja. Historians still debate it; her supporters called her the Excellent Lady. Some historians prefer the neutral name War of 1475–1479.
+  - Both sides claimed Toro as a victory, and historians still disagree about who won the battle itself. Dates are Julian.
+sources:
+  - title: War of the Castilian Succession (Wikipedia)
+    url: https://en.wikipedia.org/wiki/War_of_the_Castilian_Succession
+  - title: Battle of Toro (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Toro
+  - title: Battle of Guinea (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Guinea
+  - title: Treaty of Alcáçovas (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Alc%C3%A1%C3%A7ovas
+  - title: Joanna la Beltraneja (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Joanna_la_Beltraneja
+  - title: Isabella I, queen of Spain (Britannica)
+    url: https://www.britannica.com/biography/Isabella-I-queen-of-Spain
+steps:
+  - title: Toro
+    date: 1474–1476
+    when: "1474-12-13"
+    borders: "1476-03-01"
+    countries: [es, pt, fr]
+    body:
+      - When Henry IV of Castile died in December 1474, his half-sister Isabella had herself proclaimed queen at Segovia. Her rival was Henry’s daughter Joanna, aged twelve. Joanna’s supporters, led by the Marquis of Villena and the Archbishop of Toledo, turned to her uncle, Afonso V of Portugal. He invaded on 10 May 1475, was betrothed to Joanna at Plasencia, where the two were proclaimed king and queen of Castile, and won over Toro and Zamora. In September Louis XI of France allied with him, and the next spring a French army attacked Fuenterrabía in the Basque country but was beaten off.
+      - Ferdinand gathered an army and in December 1475 won back the town of Zamora, though not its castle. In February 1476 Afonso, reinforced by his son, Prince John, besieged Ferdinand there in vain. On 1 March, as the Portuguese fell back, Ferdinand caught them near Toro, at Peleagonzalo, and they fought in the rain as darkness fell. Ferdinand’s wing broke Afonso’s, while Prince John beat the Castilians facing him and held the field. Both claimed the victory, but Isabella made the most of it. Zamora castle surrendered, nobles came over to her, and in the autumn Afonso sailed for France to beg Louis XI for help.
+    facts:
+      - [Isabella proclaimed queen, "13 December 1474, at Segovia"]
+      - [Afonso V invades, "10 May 1475"]
+      - [Battle of Toro, "1 March 1476, indecisive"]
+    markers:
+      - kind: event
+        side: isa
+        name: Segovia
+        date: 13 December 1474
+        text: Isabella was proclaimed queen in the town where she was staying when her half-brother died.
+        lonlat: [-4.118, 40.948]
+      - kind: event
+        side: jua
+        name: Plasencia
+        date: May 1475
+        text: Afonso and Joanna were betrothed and proclaimed king and queen of Castile. The pope later withdrew his dispensation for the marriage of uncle and niece.
+        lonlat: [-6.091, 40.028]
+      - kind: battle
+        name: Battle of Toro
+        date: 1 March 1476
+        text: Fought at Peleagonzalo, east of Toro. Ferdinand’s men took the Portuguese royal standard, but Prince John’s wing was unbeaten.
+        lonlat: [-5.482, 41.482]
+      - kind: taken
+        side: isa
+        name: Zamora
+        date: December 1475 – March 1476
+        text: The town went over to Ferdinand in December 1475, and its castle surrendered in March 1476.
+        lonlat: [-5.756, 41.499]
+        lp: l
+      - kind: held
+        side: isa
+        name: Fuenterrabía
+        date: March – June 1476
+        text: A French army under Alain of Albret failed to break through at this Basque border town, today’s Hondarribia.
+        lonlat: [-1.796, 43.367]
+    arrows:
+      - side: jua
+        label: Afonso V, 1475
+        via: [[-7.0, 39.25], [-6.09, 40.03], [-5.7, 40.9], [-5.43, 41.48]]
+      - side: isa
+        label: Ferdinand
+        via: [[-5.73, 41.5], [-5.6, 41.49], [-5.49, 41.48]]
+      - side: jua
+        label: Albret
+        via: [[-1.47, 43.49], [-1.65, 43.42], [-1.78, 43.37]]
+  - title: The war at sea and the Treaty of Alcáçovas
+    date: 1476–1479
+    when: "1477"
+    borders: "1479-09-04"
+    countries: [es, pt]
+    body:
+      - Louis XI gave Afonso nothing, and in 1478 he made peace with Castile. In Castile Isabella’s troops took the castle of Toro and reduced the remaining nobles of Joanna’s party one by one. The war went on along the frontier and at sea, where Castilian ships challenged Portugal’s hold on the trade of West Africa and the Atlantic islands. In 1478 a Portuguese fleet captured a Castilian fleet trading at the gold coast of Mina, in the Gulf of Guinea. On land, the last Portuguese invasion was beaten at La Albuera, near Badajoz, on 24 February 1479 by the Master of Santiago, Alonso de Cárdenas.
+      - The peace was arranged by Isabella’s aunt, Beatrice, Duchess of Viseu, who was also Afonso’s sister-in-law, in talks at Alcántara, and signed at Alcáçovas on 4 September 1479. Afonso gave up his claim to Castile, and Isabella and Ferdinand theirs to Portugal. Castile kept the Canary Islands; Portugal kept Madeira, the Azores and Cape Verde, the trade and conquest of the African coast and the right to conquer Fez. Joanna had to choose between a convent and a betrothal to Isabella’s infant son. She chose the convent, and lived on in Portugal until 1530, still signing herself “I, the Queen”.
+    facts:
+      - [Battle of Guinea, "1478, Portuguese victory"]
+      - [Battle of La Albuera, "24 February 1479, Castilian victory"]
+      - [Treaty of Alcáçovas, "4 September 1479"]
+    markers:
+      - kind: battle
+        side: isa
+        name: Battle of La Albuera
+        date: 24 February 1479
+        text: Alonso de Cárdenas beat a Portuguese army and Castilian supporters of Joanna on their way to reinforce Mérida and Medellín.
+        lonlat: [-6.824, 38.716]
+      - kind: event
+        name: Alcántara
+        date: Spring 1479
+        text: Beatrice of Portugal met her Castilian relatives here to agree the outlines of the peace.
+        lonlat: [-6.884, 39.719]
+      - kind: treaty
+        name: Alcáçovas
+        date: 4 September 1479
+        text: The treaty was signed in this Alentejo town. Castile ratified it at Toledo in March 1480.
+        lonlat: [-8.157, 38.395]
+    arrows:
+      - side: jua
+        label: Portuguese army, 1479
+        via: [[-7.59, 38.84], [-7.15, 38.82], [-6.84, 38.73]]

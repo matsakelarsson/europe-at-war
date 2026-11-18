@@ -2,18 +2,22 @@ id: war-of-the-polish-succession
 name: War of the Polish Succession
 start: "1733"
 end: "1735"
-tier: C
+tier: B
 summary: After Augustus II died in 1733, most of the Polish nobility elected Stanisław Leszczyński with French backing, while Russia and Austria put Augustus III of Saxony on the throne. Russian troops took Danzig, where Stanisław had taken refuge, in 1734, and the war between France, Spain and Sardinia and the Emperor was fought mostly in the Rhineland and Italy. The peace agreed at Vienna in 1735 left Augustus III king of Poland and gave Stanisław the Duchy of Lorraine for life.
 countries: [pl, de, ru, at, fr, it, es]
 sides:
   - id: aug
     name: Augustus III, Russia and the Emperor
-    polities: [saxony, russia, habsburg]
+    polities: [saxony, russia, habsburg, milan]
     ink: green
+    moves: Moves by Augustus III’s allies
+    success: Success for Augustus III’s allies
   - id: sta
     name: Stanisław Leszczyński, France and allies
-    polities: [france, spain, savoy]
+    polities: [france, spain, savoy, parma]
     ink: navy
+    moves: French, Spanish and Sardinian moves
+    success: French, Spanish and Sardinian success
 notes:
   - The preliminary peace of 1735 was confirmed in the Treaty of Vienna in 1738.
 sources:
@@ -21,3 +25,162 @@ sources:
     url: https://en.wikipedia.org/wiki/War_of_the_Polish_Succession
   - title: Siege of Danzig (1734) (Wikipedia)
     url: https://en.wikipedia.org/wiki/Siege_of_Danzig_(1734)
+  - title: Siege of Philippsburg (1734) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Philippsburg_(1734)
+  - title: Battle of San Pietro (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_San_Pietro
+  - title: Battle of Guastalla (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Guastalla
+  - title: Battle of Bitonto (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Bitonto
+  - title: Treaty of Vienna (1738) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Vienna_(1738)
+steps:
+  - title: Danzig and Philippsburg
+    date: February 1733 – July 1734
+    when: "1733-02-01"
+    borders: "1734-07-18"
+    countries: [pl, ru, de, fr, at]
+    body:
+      - When Augustus II, king of Poland and elector of Saxony, died on 1 February 1733, the Polish nobles gathered near Warsaw elected Stanisław Leszczyński, who had been king under Swedish protection in 1704–1709 and whose daughter was married to Louis XV. Russia and Austria backed Augustus’s son, Frederick Augustus of Saxony; a Russian army crossed the border, and on 5 October a minority of nobles under its protection elected him Augustus III. Stanisław took refuge in Danzig, which Russian troops under Field Marshal Münnich, later joined by the Saxons, besieged from February 1734. A French force of about 2,000 men landed at the mouth of the Vistula in May but had to surrender, and the city capitulated at the end of June. Stanisław had escaped days before, disguised as a peasant.
+      - France declared war on the Emperor Charles VI on 10 October 1733, allied with Spain and with Charles Emmanuel III of Sardinia, who was promised Milan. A French army crossed the Rhine and took Kehl at the end of October, and in 1734 it besieged Philippsburg. Prince Eugene, now seventy, could not gather an army strong enough to relieve it. The French commander, the Duke of Berwick, was killed by a cannonball in the trenches on 12 June, but the fortress surrendered on 18 July. After that the Rhine saw little fighting, and the war was decided in Italy.
+    facts:
+      - [Elections, "Stanisław on 12 September, Augustus III on 5 October 1733"]
+      - [Siege of Danzig, "February – June 1734"]
+      - [Siege of Philippsburg, "1734; Berwick killed on 12 June"]
+    markers:
+      - kind: event
+        name: Royal elections
+        date: September – October 1733
+        text: Most of the nobility chose Stanisław at the electoral field of Wola. A smaller assembly, protected by Russian troops, elected Augustus III across the Vistula.
+        lonlat: [21.01, 52.23]
+      - kind: siege
+        side: aug
+        name: Danzig
+        date: February – June 1734
+        text: The great Baltic port held out for Stanisław for four months. After its surrender it had to accept Augustus III.
+        lonlat: [18.646, 54.352]
+      - kind: taken
+        side: sta
+        name: Kehl
+        date: October 1733
+        text: The fortress across the Rhine from Strasbourg fell within days of France’s declaration of war.
+        lonlat: [7.81, 48.573]
+        lp: l
+      - kind: siege
+        side: sta
+        name: Philippsburg
+        date: May – July 1734
+        text: Berwick, the victor of Almansa, was killed here. The fortress fell to the French under Marshal d’Asfeld.
+        lonlat: [8.455, 49.234]
+    arrows:
+      - side: aug
+        label: Münnich
+        via: [[21.0, 52.3], [19.8, 53.3], [18.7, 54.28]]
+      - side: sta
+        via: [[7.75, 48.58], [8.15, 48.95], [8.42, 49.2]]
+  - title: Bitonto, Parma and Guastalla
+    date: November 1733 – July 1735
+    when: "1733-11-03"
+    borders: "1735-07-03"
+    countries: [it, at, fr, es]
+    body:
+      - In Italy the Austrians were caught unprepared. In the autumn of 1733 a French and Sardinian army under Charles Emmanuel and the aged Marshal Villars overran the Duchy of Milan, and only the fortress of Mantua held out. In 1734 the Austrians under Count Mercy came back over the Alps and pressed the allies back to Parma, but on 29 June Mercy was killed attacking their lines outside the city, at San Pietro or La Crocetta, in a battle that cost both sides heavily. On 19 September his successor, Count Königsegg, attacked the allies again at Guastalla on the Po and was beaten, and the Austrians fell back on Mantua and the Tyrol.
+      - Meanwhile Elisabeth Farnese’s son Don Carlos, Duke of Parma since 1731, led a Spanish army of some 21,000 men south through the Papal States to claim Naples. He entered the city in May 1734, and on 25 May the Count of Montemar beat the outnumbered Austrians at Bitonto in Apulia. Gaeta fell in August and Capua in November, and Spanish troops crossed to Sicily, where the last Austrian fortresses fell in 1735. Philip V gave his son both kingdoms, and Carlos was crowned king of Sicily at Palermo on 3 July 1735. For the first time in more than two centuries Naples had a king who lived there.
+    facts:
+      - [Battle of San Pietro, "29 June 1734, Franco-Sardinian victory"]
+      - [Battle of Bitonto, "25 May 1734, Spanish victory"]
+      - [Battle of Guastalla, "19 September 1734, Franco-Sardinian victory"]
+    markers:
+      - kind: taken
+        side: sta
+        name: Milan
+        date: November – December 1733
+        text: The allies entered the city on 3 November; its castle held out until the turn of the year.
+        lonlat: [9.19, 45.464]
+      - kind: held
+        side: aug
+        name: Mantua
+        date: 1733–1735
+        text: The great fortress on the Mincio was the only important stronghold in Lombardy the Austrians kept.
+        lonlat: [10.792, 45.156]
+      - kind: battle
+        side: sta
+        name: Battle of San Pietro
+        date: 29 June 1734
+        text: Mercy, in poor health and half-blind, led the attack on the French and Sardinian lines north of Parma and was killed early in the fighting.
+        lonlat: [10.31, 44.82]
+        lp: l
+      - kind: battle
+        side: sta
+        name: Battle of Guastalla
+        date: 19 September 1734
+        text: Königsegg, who had surprised the allies at Quistello four days earlier, attacked thinking he faced only a rearguard, and was driven off.
+        lonlat: [10.655, 44.92]
+      - kind: taken
+        side: sta
+        name: Naples
+        date: May 1734
+        text: Don Carlos entered the city with hardly any resistance; the Austrian viceroy had withdrawn to Apulia.
+        lonlat: [14.25, 40.85]
+      - kind: battle
+        side: sta
+        name: Battle of Bitonto
+        date: 25 May 1734
+        text: Montemar’s Spanish army routed the Austrians, ending organised resistance on the mainland outside a few fortresses.
+        lonlat: [16.69, 41.108]
+      - kind: siege
+        side: sta
+        name: Gaeta
+        date: May – August 1734
+        text: The sea fortress was blockaded from the start of the campaign and surrendered after a short siege.
+        lonlat: [13.57, 41.21]
+        lp: l
+    arrows:
+      - side: sta
+        label: Charles Emmanuel and Villars
+        via: [[7.68, 45.07], [8.62, 45.45], [9.15, 45.46]]
+      - side: aug
+        label: Mercy
+        via: [[11.12, 46.07], [10.99, 45.44], [10.6, 45.0], [10.35, 44.84]]
+      - side: sta
+        label: Don Carlos
+        via: [[10.33, 44.8], [11.9, 43.2], [12.9, 41.8], [14.2, 40.88]]
+      - side: sta
+        label: Montemar
+        via: [[14.3, 40.88], [15.5, 41.1], [16.65, 41.1]]
+  - title: The Peace of Vienna
+    date: 1735–1738
+    when: "1735-10-03"
+    borders: "1738-11-18"
+    countries: [fr, pl, it, at, de, es, ru]
+    body:
+      - By 1735 Austria, with no help from Britain or the Dutch Republic, had lost almost all its Italian lands except Mantua, and a Russian corps sent to help it reached the Rhine too late to fight. Preliminaries of peace were agreed at Vienna on 3 October 1735, and after long negotiations the Treaty of Vienna was signed on 18 November 1738. Augustus III kept Poland. Stanisław gave up the crown and received the duchies of Lorraine and Bar for life, after which they were to pass to France, as they did when he died in 1766. Lorraine’s own duke, Francis Stephen, who married Maria Theresa in 1736, received Tuscany instead when the last Medici grand duke died in 1737.
+      - Don Carlos was recognised as king of Naples and Sicily, and gave up Parma and Piacenza to the Emperor, though he took the Farnese art collections to Naples with him. Charles Emmanuel of Sardinia gained Novara and Tortona from the Duchy of Milan, which returned to Austria. France also recognised the Pragmatic Sanction, the law by which Charles VI wanted his daughter Maria Theresa to inherit all his lands. When he died in 1740, that promise did not hold.
+    facts:
+      - [Preliminary peace, "Vienna, 3 October 1735"]
+      - [Treaty of Vienna, "18 November 1738"]
+      - [Changes, "Lorraine to Stanisław (then France), Tuscany to Francis Stephen, Naples and Sicily to Don Carlos, Parma to Austria"]
+    markers:
+      - kind: treaty
+        name: Treaty of Vienna
+        date: 18 November 1738
+        text: It confirmed the preliminaries of 1735, which had settled the war three years before, after long haggling over the details.
+        lonlat: [16.37, 48.21]
+      - kind: event
+        name: Lunéville
+        date: 1737–1766
+        text: Stanisław held court here as Duke of Lorraine. When he died in 1766 Lorraine became part of France.
+        lonlat: [6.496, 48.591]
+      - kind: event
+        name: Florence
+        date: July 1737
+        text: Gian Gastone, the last Medici grand duke, died, and Tuscany passed to Francis Stephen of Lorraine.
+        lonlat: [11.256, 43.77]
+    areas:
+      - style: gained
+        label: To Stanisław for life, then to France (approximate)
+        atoms: [FR-54, FR-55, FR-88, FR-57!]
+      - style: gained
+        label: Novara, to Sardinia
+        atoms: [IT-NO]

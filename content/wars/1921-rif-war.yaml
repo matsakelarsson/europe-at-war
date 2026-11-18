@@ -1,0 +1,151 @@
+id: rif-war
+name: Rif War
+start: "1921"
+end: "1926-05-27"
+tier: B
+summary: A colonial war in northern Morocco in which the Berber tribes of the Rif, led by Abd el-Krim, destroyed a Spanish army at Annual in 1921 and set up the Republic of the Rif. After the Rifians attacked the French zone in 1925, France joined Spain; a Spanish landing at Alhucemas and a French offensive from the south forced Abd el-Krim to surrender in May 1926.
+countries: [ma, es, fr]
+sides:
+  - id: es
+    name: Spain
+    polities: [spain]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+  - id: rif
+    name: Republic of the Rif
+    polities: [rif-republic]
+    ink: olive
+    moves: Rifian moves
+    success: Rifian success
+  - id: fr
+    name: France
+    polities: [france]
+    ink: blue
+    moves: French moves
+    success: French success
+notes:
+  - Northern Morocco had been a Spanish protectorate since 1912, while the rest of the country was a French protectorate; the base map cannot show the protectorates, so the areas in the steps show approximate zones of control. Some accounts date the war from Spain’s campaigns in the Rif in 1920, and fighting against the last Rifian holdouts went on until July 1927.
+  - Spain and France lost tens of thousands of men killed, wounded, missing or sick, Spain about 43,500–63,000 and France 10,000–18,000 by different counts; Rifian losses were about 30,000, some 10,000 of them dead. Civilian deaths are not known. Sources give 26 or 27 May 1926 for Abd el-Krim’s surrender.
+sources:
+  - title: Rif War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rif_War
+  - title: Battle of Annual (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Annual
+  - title: Republic of the Rif (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Republic_of_the_Rif
+  - title: Alhucemas landing (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Alhucemas_landing
+  - title: Spanish use of chemical weapons in the Rif War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Spanish_use_of_chemical_weapons_in_the_Rif_War
+steps:
+  - title: Annual
+    date: June – August 1921
+    when: "1921-06-01"
+    borders: "1921-08-09"
+    countries: [ma, es]
+    body:
+      - In 1920–21 General Manuel Fernández Silvestre, the commander at Melilla, pushed west into the Rif with a chain of small, badly supplied outposts, aiming for the bay of Alhucemas. The tribes of the central Rif united under Abd el-Krim, a former official of the Spanish administration and a leader of the Aith Waryaghar. On 1 June 1921 they overran a new outpost on Mount Abarrán, and in July they besieged Igueriben, which fell on 21 July. The next day, with water and ammunition running out, Silvestre ordered the main camp at Annual to retreat, and the retreat turned into a rout in which he was killed.
+      - The whole Spanish line east of Annual collapsed as outposts fell one after another and local tribes rose. Survivors gathered at Monte Arruit, 35 km south of Melilla, which surrendered on 9 August; most of its garrison was then massacred. By the official count about 13,000 soldiers of the Spanish army died. Melilla itself was almost undefended, but the Rifians did not attack it, and reinforcements from the Spanish Legion arrived by sea. Abd el-Krim proclaimed the Republic of the Rif in September. In Spain the disaster and the inquiry into it shook the monarchy and helped bring about General Miguel Primo de Rivera’s coup of 1923.
+    facts:
+      - [Battle of Annual, "22 July – 9 August 1921, Rifian victory"]
+      - [Spanish dead, "about 13,000 (official count)"]
+      - [Republic of the Rif proclaimed, "18 September 1921"]
+    markers:
+      - kind: battle
+        side: rif
+        name: Annual
+        date: 22 July 1921
+        text: About 3,000 Rifian fighters attacked the camp; Silvestre’s retreat collapsed and he died, perhaps by his own hand. His body was never found.
+        lonlat: [-3.583, 35.12]
+      - kind: siege
+        side: rif
+        name: Monte Arruit
+        date: 29 July – 9 August 1921
+        text: General Felipe Navarro’s column held out until surrendering; about 3,000 soldiers were killed after laying down their arms.
+        lonlat: [-3.017, 35.0]
+      - kind: held
+        side: es
+        name: Melilla
+        date: August 1921
+        text: The Spanish city on the coast held out as reinforcements under General José Sanjurjo arrived; it was never attacked.
+        lonlat: [-2.94, 35.29]
+        lp: t
+      - kind: event
+        side: rif
+        name: Ajdir
+        date: 18 September 1921
+        text: Abd el-Krim’s home village became the capital of the Republic of the Rif.
+        lonlat: [-3.917, 35.2]
+        lp: l
+    arrows:
+      - side: es
+        label: Silvestre
+        via: [[-2.95, 35.2], [-3.3, 35.15], [-3.56, 35.12]]
+      - side: es
+        via: [[-3.56, 35.1], [-3.3, 35.05], [-3.04, 35.0]]
+    areas:
+      - style: occupied
+        side: rif
+        label: Under Rifian control, August 1921 (approximate)
+        polygons:
+          - [[-4.45, 34.9], [-4.45, 35.17], [-4.328, 35.155], [-4.269, 35.185], [-4.13, 35.205], [-3.962, 35.25], [-3.93, 35.243], [-3.889, 35.208], [-3.822, 35.207], [-3.765, 35.218], [-3.726, 35.283], [-3.673, 35.288], [-3.591, 35.233], [-3.413, 35.198], [-3.319, 35.202], [-3.195, 35.238], [-3.129, 35.288], [-3.077, 35.288], [-3.045, 35.315], [-3, 35.402], [-3, 35.25], [-3.049, 35.12], [-3, 34.95], [-3.4, 34.75], [-3.95, 34.75], [-4.45, 34.9]]
+  - title: Alhucemas and Abd el-Krim’s surrender
+    date: 1924 – May 1926
+    when: "1924-09"
+    borders: "1926-05-27"
+    countries: [ma, es, fr]
+    body:
+      - The Spanish retook the country around Melilla but could not defeat the Rif, and from 1924 their army used chemical weapons, among them mustard gas, which aircraft dropped on villages, markets and rivers as well as on fighters. In late 1924 Primo de Rivera withdrew the troops in the west from Chefchaouen to a fortified line nearer the coast, a retreat that cost heavy losses. In April 1925 Abd el-Krim, at the height of his power, attacked the French posts on the Ouergha river, overran many of them and threatened Fez. France then sent Marshal Philippe Pétain with a large army and agreed to act together with Spain.
+      - On 8 September 1925 about 13,000 Spanish troops, supported by the Spanish and French fleets, aircraft and tanks, landed on the beaches west of Alhucemas Bay, in what is considered the first amphibious landing to use tanks and aircraft, and on 2 October they took Ajdir. French forces advanced from the south. Surrounded and short of supplies, Abd el-Krim surrendered to the French on 27 May 1926 and was exiled to the island of Réunion. The last resistance ended in 1927. Many officers who later led the Nationalists in the Spanish Civil War, Francisco Franco among them, made their careers in this war.
+    facts:
+      - [Alhucemas landing, "8 September 1925"]
+      - [Ajdir taken, "2 October 1925"]
+      - [Abd el-Krim surrenders, "27 May 1926"]
+    markers:
+      - kind: event
+        side: rif
+        name: Chefchaouen
+        date: November – December 1924
+        text: The Spanish evacuated the town and the posts around it under constant attack and lost heavily on the way back.
+        lonlat: [-5.27, 35.17]
+      - kind: battle
+        side: rif
+        name: Ouergha
+        date: April – June 1925
+        text: Rifian forces broke the line of French posts north of the river; the French lost more than 1,000 killed and many more wounded and missing.
+        lonlat: [-4.6, 34.72]
+      - kind: event
+        side: es
+        name: Alhucemas landing
+        date: 8 September 1925
+        text: Troops of the Spanish Legion and Moroccan regulares came ashore at Cebadilla and Ixdain, under cover of naval guns and aircraft.
+        lonlat: [-3.96, 35.23]
+        lp: l
+      - kind: taken
+        side: es
+        name: Ajdir
+        date: 2 October 1925
+        text: The Spanish took the Rifian capital less than a month after the landing.
+        lonlat: [-3.917, 35.2]
+        lp: b
+      - kind: event
+        side: fr
+        name: Targuist
+        date: 27 May 1926
+        text: Abd el-Krim gave himself up to the French near here rather than to the Spanish.
+        lonlat: [-4.3, 34.95]
+    arrows:
+      - side: es
+        via: [[-4.6, 35.7], [-4.3, 35.4], [-3.98, 35.24]]
+      - side: fr
+        label: Pétain
+        via: [[-4.95, 34.2], [-4.75, 34.5], [-4.4, 34.85]]
+      - side: rif
+        via: [[-4.2, 35.0], [-4.5, 34.85], [-4.7, 34.6]]
+    areas:
+      - style: occupied
+        side: rif
+        label: Approximate extent of the Republic of the Rif, 1925
+        polygons:
+          - [[-5.45, 34.9], [-5.5, 35.25], [-5.2, 35.55], [-5.066, 35.417], [-5.009, 35.399], [-4.91, 35.314], [-4.81, 35.26], [-4.376, 35.152], [-3.962, 35.25], [-3.889, 35.208], [-3.822, 35.207], [-3.765, 35.218], [-3.726, 35.283], [-3.673, 35.288], [-3.591, 35.233], [-3.413, 35.198], [-3.35, 35.201], [-3.45, 35], [-3.75, 34.75], [-4.3, 34.62], [-4.95, 34.68], [-5.45, 34.9]]

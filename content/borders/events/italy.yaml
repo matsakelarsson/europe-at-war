@@ -1,58 +1,725 @@
-# Italy, 1797–1870: a first pass until the Iberia and Italy wave. The drafts
-# have no snapshot between 1815 and 1880. The Napoleonic Kingdom of Italy and
-# Habsburg Lombardy–Venetia were added in the German lands wave, for the wars
-# of 1796–1815 and 1866; the 1800 and 1815 keyframes were corrected to match.
+# Italy, Sardinia, Malta, San Marino and Monaco, 800–today (curated range "Italy"
+# in curated.yaml). Generated from a group list for wave 4 (scratchpad
+# gen-south.mjs); edit by hand from here on. Trentino and South Tyrol are in
+# german-lands.yaml; Istria and Dalmatia (listed here for 1797–1814) belong to
+# the Balkan wave; Nice, Savoy and Corsica are in france-low-countries.yaml.
+#
+# How the map is drawn:
+# - Atoms are provinces, with splits for the Neapolitan parts of Lazio
+#   (IT-LT~gaeta, IT-FR~sora, IT-RI~cittaducale) and for Montferrat (IT-AL~casale).
+#   A province changes hands with its main city, so lines are approximate.
+# - The north is Carolingian to 888, the Kingdom of Italy to 962, then `hre`
+#   until Frederick II’s death (1250-12-13), except Venice, the Papal States and,
+#   from 1100, Genoa and Pisa. After 1250 the north and centre are shown as
+#   regional states; cities not yet under a bigger neighbour are grouped as
+#   `italian-communes`.
+# - Naples, Sicily, Sardinia and Milan keep their own polities while ruled by
+#   Aragon, Spain or Austria.
+# - Occupations (French Piedmont 1536–59, Agnadello 1509, the wars of 1799 and
+#   1848–49, the world wars) are war-step areas.
 
-- date: "1797-10-17"
-  note: Treaty of Campo Formio. Austria recognises the Cisalpine Republic (Lombardy, Modena and the Papal Legations) and receives Venice with the Venetian mainland, Istria and Dalmatia.
+# ---- Italy in 800 (start of the curated range)
+- date: "800"
+  note: "About 800. Charlemagne, crowned emperor in Rome this Christmas, rules the Lombard kingdom of Italy with the Duchy of Spoleto. The pope holds Rome, the old Exarchate of Ravenna and the Pentapolis; the Lombard Duchy of Benevento holds the south; Byzantium keeps Sicily, Sardinia, Calabria, Otranto and Gaeta, and Naples and Venice are Byzantine duchies that go their own way."
   owners:
-    napoleonic-italy: [IT-VA, IT-CO, IT-SO, IT-BG, IT-BS, IT-CR, IT-MI, IT-LC, IT-MB, IT-LO, IT-MN, IT-BO, IT-FE, IT-RA, IT-FC, IT-RN, IT-MO, IT-RE]
-    habsburg: [IT-BL, IT-UD, IT-VE, IT-PD, IT-RO, IT-VI, IT-VR, IT-TV, IT-PN, SI-050, SI-040, SI-090, HR-18, HR-13, HR-15, HR-17]
-- date: "1801-02-09"
-  note: Treaty of Lunéville. After Marengo the Cisalpine Republic is restored, now with Novara.
+    carolingian: [IT-TO, IT-CN, IT-AT, IT-VC, IT-BI, IT-AL~casale, IT-AL!, IT-AO, IT-NO, IT-VB, IT-VA, IT-CO, IT-SO, IT-LC, IT-MB, IT-MI, IT-LO, IT-CR, IT-BG, IT-BS, IT-PV~pavese, IT-PV!, IT-MN, IT-PC, IT-PR, IT-RE, IT-MO, IT-VR, IT-VI, IT-PD, IT-TV, IT-BL, IT-RO, IT-UD, IT-PN, IT-GO, IT-TS, IT-GE, IT-SV, IT-IM, IT-SP, IT-FI, IT-PO, IT-PT, IT-AR, IT-SI, IT-GR, IT-PI, IT-LI, IT-LU, IT-MS, IT-AQ, IT-TE, IT-PE, IT-CH, IT-RI~cittaducale, IT-MC, IT-FM, IT-AP, MCO+00?]
+    papal-states: [IT-RM, IT-VT, IT-LT!, IT-FR!, IT-RI!, IT-TR, IT-PG, IT-BO, IT-FE, IT-RA, IT-FC, IT-RN, IT-PU, IT-AN, SM-03, SM-05, SM-06, SM-07, SM-09]
+    duchy-of-benevento: [IT-CS, IT-MT, IT-PZ, IT-SA, IT-AV, IT-BN, IT-CE, IT-TA, IT-BA, IT-BT, IT-FG, IT-CB, IT-IS, IT-BR, IT-FR~sora]
+    duchy-of-naples: [IT-NA]
+    byzantium: [IT-RC, IT-VV, IT-CZ, IT-KR, IT-LE, IT-LT~gaeta, IT-PA, IT-TP, IT-AG, IT-CL, IT-EN, IT-CT, IT-ME, IT-SR, IT-RG, IT-CA, IT-CI, IT-VS, IT-OG, IT-OR, IT-NU, IT-SS, IT-OT, MT-01, MT-05, MT-22, MT-30, MT-31, MT-37, MT-38, MT-46, MT-51, MT-55, MT-61, MT-64, MT-65, MT-66, MT-67, MT-68]
+    venice: [IT-VE]
+
+# ---- Lombards, Byzantines and Arabs in the south, 800–1130
+- date: "827"
+  note: "Arab and Berber forces from Ifriqiya land at Mazara at the invitation of the rebel Euphemius; the conquest of Sicily begins."
   owners:
-    napoleonic-italy: [IT-NO]
-- date: "1805-12-26"
-  note: Peace of Pressburg. Austria cedes Venetia, Venetian Istria and Dalmatia to the Kingdom of Italy.
+    emirate-of-sicily: [IT-TP]
+- date: "831"
+  note: "Palermo falls to the Arabs after a year-long siege and becomes the capital of Muslim Sicily."
   owners:
-    napoleonic-italy: [IT-BL, IT-UD, IT-VE, IT-PD, IT-RO, IT-VI, IT-VR, IT-TV, IT-PN, SI-050, SI-040, SI-090, HR-18, HR-13, HR-15, HR-17]
-- date: "1808-01-31"
-  note: The French, who had occupied Ragusa in 1806, abolish the Republic and join it to the Kingdom of Italy.
+    emirate-of-sicily: [IT-PA]
+- date: "840"
+  note: "Arab forces hold Agrigento and the centre of the island, and seize Taranto on the mainland."
   owners:
-    napoleonic-italy: [HR-19]
-- date: "1808-04-02"
-  note: Napoleon annexes the Marches, taken from the Papal States, to the Kingdom of Italy.
+    emirate-of-sicily: [IT-AG, IT-CL]
+    emirate-of-bari: [IT-TA]
+- date: "843"
+  note: "Messina falls to the Arabs."
   owners:
-    napoleonic-italy: [IT-AN, IT-PU, IT-MC, IT-AP, IT-FM]
-- date: "1814-05-30"
-  note: First Peace of Paris. Austria, whose troops had occupied northern Italy in April, receives Lombardy and Venetia; Novara returns to Sardinia, and the Marches and the Legations to the pope.
+    emirate-of-sicily: [IT-ME]
+- date: "847"
+  note: "Arab mercenaries seize Bari, which becomes the seat of an emirate."
   owners:
-    habsburg: [IT-VA, IT-CO, IT-SO, IT-BG, IT-BS, IT-CR, IT-MI, IT-LC, IT-MB, IT-LO, IT-MN, IT-BL, IT-UD, IT-VE, IT-PD, IT-RO, IT-VI, IT-VR, IT-TV, IT-PN, IT-GO, IT-TS]
+    emirate-of-bari: [IT-BA, IT-BT]
+- date: "849"
+  note: "The Divisio Ducatus Beneventani. Emperor Louis II divides the Lombard south into the Principalities of Benevento and Salerno."
+  owners:
+    salerno: [IT-SA, IT-PZ, IT-CS, IT-CE, IT-FR~sora]
+- date: "859-01-24"
+  note: "Enna (Castrogiovanni), the central fortress of Byzantine Sicily, falls."
+  owners:
+    emirate-of-sicily: [IT-EN]
+- date: "867"
+  note: "Docibilis I rules Gaeta as an independent duke."
+  owners:
+    gaeta: [IT-LT~gaeta]
+- date: "848"
+  note: "The Arabs take Ragusa and the south-east."
+  owners:
+    emirate-of-sicily: [IT-RG]
+- date: "870-08-29"
+  note: "The Aghlabids take Malta."
+  owners:
+    emirate-of-sicily: [MT-01, MT-05, MT-22, MT-30, MT-31, MT-37, MT-38, MT-46, MT-51, MT-55, MT-61, MT-64, MT-65, MT-66, MT-67, MT-68]
+- date: "871-02-02"
+  note: "Emperor Louis II takes Bari from the Arabs."
+  owners:
+    carolingian: [IT-BA, IT-BT]
+- date: "876-12-25"
+  note: "Byzantine troops take over Bari."
+  owners:
+    byzantium: [IT-BA, IT-BT]
+- date: "878-05-21"
+  note: "Syracuse falls after a nine-month siege; only Taormina, Catania and a few strongholds in the north-east remain Byzantine."
+  owners:
+    emirate-of-sicily: [IT-SR]
+- date: "902-08-01"
+  note: "Ibrahim II takes Taormina; the last Byzantine strongholds in eastern Sicily fall."
+  owners:
+    emirate-of-sicily: [IT-CT]
+- date: "879-10-15"
+  note: "Boso is elected king of Provence; the coast around Monaco belongs to his kingdom."
+  owners:
+    arles: [MCO+00?]
+- date: "880"
+  note: "The Byzantines retake Taranto."
+  owners:
+    byzantium: [IT-TA]
+- date: "886"
+  note: "Nikephoros Phokas the Elder reconquers northern Calabria and much of Apulia and Lucania for Byzantium."
+  owners:
+    byzantium: [IT-CS, IT-BR, IT-MT]
+- date: "900"
+  note: "Atenulf I of Capua takes Benevento and unites the two principalities."
+  owners:
+    duchy-of-benevento: [IT-CE, IT-FR~sora]
+- date: "981"
+  note: "Pandulf Ironhead dies; Capua and Benevento separate again."
+  owners:
+    capua: [IT-CE, IT-FR~sora]
+- date: "1018"
+  note: "The Byzantine catepan Basil Boioannes defeats Melus and his Norman allies at Cannae and secures the Capitanata."
+  owners:
+    byzantium: [IT-FG]
+- date: "1042-09"
+  note: "The Normans at Melfi elect William Iron Arm count of Apulia."
+  owners:
+    apulia: [IT-PZ]
+- date: "1053-06-18"
+  note: "Battle of Civitate. The Normans defeat and capture Pope Leo IX; they hold the Capitanata."
+  owners:
+    apulia: [IT-FG]
+- date: "1059-08-23"
+  note: "Treaty of Melfi. Pope Nicholas II invests Robert Guiscard as Duke of Apulia and Calabria, and of Sicily to come."
+  owners:
+    apulia: [IT-CS, IT-CZ, IT-KR, IT-VV]
+- date: "1060"
+  note: "Robert Guiscard takes Reggio, completing the conquest of Calabria."
+  owners:
+    apulia: [IT-RC]
+- date: "1061"
+  note: "Roger and Robert Guiscard cross the strait and take Messina."
+  owners:
+    sicily: [IT-ME]
+- date: "1063"
+  note: "Richard of Capua takes Gaeta."
+  owners:
+    capua: [IT-LT~gaeta]
+- date: "1064"
+  note: "The Normans take Taranto and Matera."
+  owners:
+    apulia: [IT-TA, IT-MT]
+- date: "1070"
+  note: "The Normans take Brindisi and Otranto."
+  owners:
+    apulia: [IT-BR, IT-LE]
+- date: "1071"
+  note: "Catania falls to Count Roger."
+  owners:
+    sicily: [IT-CT]
+- date: "1071-04-16"
+  note: "Bari, the last Byzantine city in Italy, surrenders to Robert Guiscard after a siege of nearly three years."
+  owners:
+    apulia: [IT-BA, IT-BT]
+- date: "1072-01-10"
+  note: "Robert Guiscard and Roger take Palermo."
+  owners:
+    sicily: [IT-PA]
+- date: "1077"
+  note: "Count Roger takes Trapani."
+  owners:
+    sicily: [IT-TP]
+- date: "1076-12-13"
+  note: "Robert Guiscard takes Salerno (the citadel holds out until May 1077); the last Lombard principality ends, and Benevento city passes to the pope."
+  owners:
+    apulia: [IT-SA, IT-BN, IT-AV, IT-CB, IT-IS]
+- date: "1086-10"
+  note: "Count Roger takes Syracuse."
+  owners:
+    sicily: [IT-SR]
+- date: "1087"
+  note: "Count Roger takes Agrigento, and Enna surrenders."
+  owners:
+    sicily: [IT-AG, IT-EN]
+- date: "1088"
+  note: "Count Roger takes Butera."
+  owners:
+    sicily: [IT-CL]
+- date: "1091-02"
+  note: "Noto, the last Muslim stronghold in Sicily, surrenders. Later that year Roger raids Malta and makes it tributary."
+  owners:
+    sicily: [IT-RG]
+- date: "1127"
+  note: "Duke William of Apulia dies childless; Roger II of Sicily claims and conquers Apulia and Calabria. Roger also annexes Malta."
+  owners:
+    sicily: [IT-PZ, IT-FG, IT-CS, IT-CZ, IT-KR, IT-VV, IT-RC, IT-TA, IT-MT, IT-BR, IT-LE, IT-BA, IT-BT, IT-SA, IT-BN, IT-AV, IT-CB, IT-IS, MT-01, MT-05, MT-22, MT-30, MT-31, MT-37, MT-38, MT-46, MT-51, MT-55, MT-61, MT-64, MT-65, MT-66, MT-67, MT-68]
+
+# ---- The north and the centre, 800–1250
+- date: "888-01-13"
+  note: "Emperor Charles the Fat dies and the Carolingian empire breaks apart. Berengar of Friuli is crowned king of Italy; Rudolph of Upper Burgundy takes the Aosta valley."
+  owners:
+    kingdom-of-italy: [IT-TO, IT-CN, IT-AT, IT-VC, IT-BI, IT-AL~casale, IT-AL!, IT-NO, IT-VB, IT-VA, IT-CO, IT-SO, IT-LC, IT-MB, IT-MI, IT-LO, IT-CR, IT-BG, IT-BS, IT-PV~pavese, IT-PV!, IT-MN, IT-PC, IT-PR, IT-RE, IT-MO, IT-VR, IT-VI, IT-PD, IT-TV, IT-BL, IT-RO, IT-UD, IT-PN, IT-GO, IT-TS, IT-GE, IT-SV, IT-IM, IT-SP, IT-FI, IT-PO, IT-PT, IT-AR, IT-SI, IT-GR, IT-PI, IT-LI, IT-LU, IT-MS, IT-AQ, IT-TE, IT-PE, IT-CH, IT-RI~cittaducale, IT-MC, IT-FM, IT-AP]
+    arles: [IT-AO]
+- date: "962-02-02"
+  note: "Otto I is crowned emperor in Rome; the Kingdom of Italy becomes part of the Holy Roman Empire, and the emperors take over the Exarchate and the Pentapolis in practice."
+  owners:
+    hre: [IT-TO, IT-CN, IT-AT, IT-VC, IT-BI, IT-AL~casale, IT-AL!, IT-NO, IT-VB, IT-VA, IT-CO, IT-SO, IT-LC, IT-MB, IT-MI, IT-LO, IT-CR, IT-BG, IT-BS, IT-PV~pavese, IT-PV!, IT-MN, IT-PC, IT-PR, IT-RE, IT-MO, IT-VR, IT-VI, IT-PD, IT-TV, IT-BL, IT-RO, IT-UD, IT-PN, IT-GO, IT-TS, IT-GE, IT-SV, IT-IM, IT-SP, IT-FI, IT-PO, IT-PT, IT-AR, IT-SI, IT-GR, IT-PI, IT-LI, IT-LU, IT-MS, IT-AQ, IT-TE, IT-PE, IT-CH, IT-RI~cittaducale, IT-MC, IT-FM, IT-AP, IT-BO, IT-FE, IT-RA, IT-FC, IT-RN, IT-PU, IT-AN, IT-PG, SM-03, SM-05, SM-06, SM-07, SM-09]
+- date: "1033-02-02"
+  note: "Conrad II inherits the Kingdom of Burgundy; Humbert the White-Handed holds the Aosta valley, the start of the house of Savoy."
+  owners:
+    savoy: [IT-AO]
+- date: "1033-02-03"
+  note: "The county of Provence, with Monaco, is held by its own counts within the Kingdom of Burgundy."
+  owners:
+    provence: [MCO+00?]
+- date: "1100"
+  note: "Genoa and Pisa, the leading sea powers of the western Mediterranean, govern themselves as communes."
+  owners:
+    genoa: [IT-GE, IT-SV, IT-IM, IT-SP]
+    pisa: [IT-PI, IT-LI]
+- date: "1135"
+  note: "Roger II conquers the Principality of Capua."
+  owners:
+    sicily: [IT-CE, IT-FR~sora, IT-LT~gaeta]
+- date: "1139"
+  note: "After the Treaty of Mignano, in which Pope Innocent II recognises Roger II as king, Naples submits; the last independent duchy in the south ends."
+  owners:
+    sicily: [IT-NA]
+- date: "1140"
+  note: "Roger II’s sons conquer the Abruzzi."
+  owners:
+    sicily: [IT-AQ, IT-TE, IT-PE, IT-CH, IT-RI~cittaducale]
+- date: "1191"
+  note: "Emperor Henry VI grants Monaco to Genoa."
+  owners:
+    genoa: [MCO+00?]
+- date: "1198"
+  note: "Pope Innocent III takes over the Duchy of Spoleto and the March of Ancona."
+  owners:
+    papal-states: [IT-PG, IT-TR, IT-AN, IT-MC, IT-FM, IT-AP, IT-PU]
+
+# ---- States of Italy, 1250–1500
+- date: "1250-12-13"
+  note: "Emperor Frederick II dies and imperial power in Italy collapses. North and central Italy are a patchwork of city-states and lordships: Milan, Florence, Siena, Lucca, Genoa, Pisa and Venice, the Este at Ferrara, Savoy, Montferrat, the Patriarchate of Aquileia and many smaller communes."
+  owners:
+    italian-communes: [IT-TO, IT-CN, IT-AT, IT-VC, IT-BI, IT-NO, IT-VB, IT-CO, IT-LO, IT-CR, IT-PV, IT-BG, IT-BS, IT-SO, IT-PC, IT-PR, IT-RE, IT-MO, IT-BO, IT-RA, IT-FC, IT-RN, IT-MN, IT-VR, IT-VI, IT-PD, IT-TV, IT-BL, IT-TS, IT-PO, IT-PT, IT-AR, IT-MS, IT-AL!]
+    milan: [IT-MI, IT-MB, IT-VA, IT-LC]
+    montferrat: [IT-AL~casale]
+    modena: [IT-FE, IT-RO]
+    aquileia: [IT-UD, IT-PN]
+    gorizia: [IT-GO]
+    tuscany: [IT-FI]
+    siena: [IT-SI, IT-GR]
+    lucca: [IT-LU]
+    san-marino: [SM-03, SM-05, SM-06, SM-07, SM-09]
+- date: "900"
+  note: "Sardinia, cut off from Byzantium, is ruled by its own judges in four judicates."
+  owners:
+    sardinian-judicates: [IT-CA, IT-CI, IT-VS, IT-OG, IT-OR, IT-NU, IT-SS, IT-OT]
+- date: "1258"
+  note: "Pisa and its allies destroy the Judicate of Cagliari."
+  owners:
+    pisa: [IT-CA, IT-CI, IT-VS]
+- date: "1262"
+  note: "Mastino I della Scala is elected captain of the people of Verona."
+  owners:
+    verona: [IT-VR]
+- date: "1278"
+  note: "Rudolf of Habsburg recognises papal rule over Romagna and Bologna."
+  owners:
+    papal-states: [IT-BO, IT-RA, IT-FC, IT-RN]
+- date: "1280"
+  note: "Thomas III of Savoy takes Turin."
+  owners:
+    savoy: [IT-TO]
+- date: "1282-08-30"
+  note: "The Sicilian Vespers. Peter III of Aragon lands at Trapani and is acclaimed king of Sicily; Charles of Anjou keeps the mainland, called the Kingdom of Naples."
+  owners:
+    naples: [IT-AQ, IT-TE, IT-PE, IT-CH, IT-RI~cittaducale, IT-CB, IT-IS, IT-NA, IT-CE, IT-BN, IT-AV, IT-SA, IT-PZ, IT-MT, IT-CS, IT-CZ, IT-KR, IT-VV, IT-RC, IT-FG, IT-BT, IT-BA, IT-TA, IT-BR, IT-LE, IT-LT~gaeta, IT-FR~sora]
+- date: "1288"
+  note: "Pisa takes Gallura."
+  owners:
+    pisa: [IT-OT]
+- date: "1311"
+  note: "Cangrande della Scala takes Vicenza."
+  owners:
+    verona: [IT-VI]
+- date: "1318"
+  note: "Jacopo I da Carrara becomes lord of Padua."
+  owners:
+    padua: [IT-PD]
+- date: "1324-06-19"
+  note: "Pisa surrenders Cagliari to the Infante Alfonso of Aragon; the Aragonese Kingdom of Sardinia holds the south and the north, Arborea the centre-west."
+  owners:
+    sardinia: [IT-CA, IT-CI, IT-VS, IT-OT, IT-SS, IT-OG]
+- date: "1328-08-16"
+  note: "Luigi Gonzaga seizes Mantua."
+  owners:
+    mantua: [IT-MN]
+- date: "1328-09-10"
+  note: "Cangrande della Scala takes Padua."
+  owners:
+    verona: [IT-PD]
+- date: "1329"
+  note: "Cangrande takes Treviso, shortly before his death."
+  owners:
+    verona: [IT-TV]
+- date: "1335"
+  note: "Azzone Visconti rules Bergamo, Como, Lodi, Cremona, Novara, Vercelli and Piacenza; Brescia follows in 1337."
+  owners:
+    milan: [IT-BG, IT-CO, IT-LO, IT-CR, IT-NO, IT-VC, IT-PC, IT-BS, IT-SO, IT-VB]
+- date: "1336"
+  note: "Obizzo III d’Este becomes lord of Modena."
+  owners:
+    modena: [IT-MO]
+- date: "1337-08-03"
+  note: "The Carraresi recover Padua from the Scaligeri."
+  owners:
+    padua: [IT-PD]
+- date: "1339-01-24"
+  note: "Peace of Venice. Venice receives Treviso, its first mainland territory."
+  owners:
+    venice: [IT-TV]
+- date: "1342"
+  note: "Asti accepts Visconti lordship."
+  owners:
+    milan: [IT-AT]
+- date: "1346"
+  note: "Luchino Visconti buys Parma."
+  owners:
+    milan: [IT-PR]
+- date: "1348"
+  note: "Alessandria passes to the Visconti."
+  owners:
+    milan: [IT-AL!]
+- date: "1350-10-23"
+  note: "Archbishop Giovanni Visconti buys Bologna from the Pepoli."
+  owners:
+    milan: [IT-BO]
+- date: "1351"
+  note: "Florence buys Prato from the Angevins of Naples."
+  owners:
+    tuscany: [IT-PO]
+- date: "1359-11-13"
+  note: "Pavia surrenders to Galeazzo II Visconti."
+  owners:
+    milan: [IT-PV]
+- date: "1360"
+  note: "Cardinal Albornoz recovers Bologna for the pope."
+  owners:
+    papal-states: [IT-BO]
+- date: "1368"
+  note: "Mariano IV of Arborea, at war with Aragon, overruns most of Sardinia; Aragon holds only Cagliari and Alghero."
+  owners:
+    sardinian-judicates: [IT-SS, IT-OT, IT-OG, IT-VS, IT-CI, IT-NU, IT-OR]
+- date: "1379"
+  note: "Biella accepts the lordship of Savoy."
+  owners:
+    savoy: [IT-BI]
+- date: "1381-08-08"
+  note: "Peace of Turin ends the War of Chioggia; Venice gives Treviso to Duke Leopold III of Austria."
+  owners:
+    habsburg: [IT-TV]
+- date: "1382"
+  note: "Cuneo submits to Amadeus VI of Savoy; Trieste places itself under Leopold III of Austria."
+  owners:
+    savoy: [IT-CN]
+    habsburg: [IT-TS]
+- date: "1384"
+  note: "Arezzo submits to Florence; Francesco da Carrara buys Treviso."
+  owners:
+    tuscany: [IT-AR]
+    padua: [IT-TV]
+- date: "1387"
+  note: "Gian Galeazzo Visconti takes Verona and Vicenza, ending the Scaliger lordship; Asti goes to Louis of Orléans as the dowry of Valentina Visconti."
+  owners:
+    milan: [IT-VR, IT-VI]
+    france: [IT-AT]
+- date: "1388-11-23"
+  note: "Gian Galeazzo takes Padua and Treviso from the Carraresi; he passes Treviso to Venice."
+  owners:
+    milan: [IT-PD]
+    venice: [IT-TV]
+- date: "1390-06-19"
+  note: "Francesco Novello da Carrara recovers Padua."
+  owners:
+    padua: [IT-PD]
+- date: "1399"
+  note: "Gian Galeazzo buys Pisa and Livorno; Siena submits to him."
+  owners:
+    milan: [IT-PI, IT-LI, IT-SI, IT-GR]
+- date: "1400"
+  note: "Perugia submits to Gian Galeazzo."
+  owners:
+    milan: [IT-PG]
+- date: "1401"
+  note: "Florence takes direct rule of Pistoia."
+  owners:
+    tuscany: [IT-PT]
+- date: "1402-06-30"
+  note: "After the battle of Casalecchio, Gian Galeazzo takes Bologna; he dies of plague on 3 September."
+  owners:
+    milan: [IT-BO]
+- date: "1403"
+  note: "Bologna and Perugia return to the pope."
+  owners:
+    papal-states: [IT-BO, IT-PG]
+- date: "1404"
+  note: "Siena throws off Milanese rule. Vicenza, Belluno and Feltre give themselves to Venice."
+  owners:
+    siena: [IT-SI, IT-GR]
+    venice: [IT-VI, IT-BL]
+- date: "1405-06-22"
+  note: "Verona surrenders to Venice."
+  owners:
+    venice: [IT-VR]
+- date: "1405-11-17"
+  note: "Venice takes Padua; the Carraresi are executed."
+  owners:
+    venice: [IT-PD]
+- date: "1406-10-09"
+  note: "Pisa surrenders to Florence after a long siege."
+  owners:
+    tuscany: [IT-PI]
+- date: "1407"
+  note: "Genoa takes Livorno."
+  owners:
+    genoa: [IT-LI]
+- date: "1409"
+  note: "Niccolò III d’Este takes Reggio."
+  owners:
+    modena: [IT-RE]
+- date: "1409-06-30"
+  note: "Battle of Sanluri. Martin the Younger of Sicily defeats Arborea; Aragon recovers the south of Sardinia."
+  owners:
+    sardinia: [IT-OG, IT-VS, IT-CI]
+- date: "1410-03-29"
+  note: "Oristano surrenders; Leonardo Cubello holds it as the Marquisate of Oristano under the Crown of Aragon."
+  owners:
+    sardinia: [IT-OR]
+- date: "1419"
+  note: "The Grimaldi of Genoa take lasting possession of Monaco."
+  owners:
+    monaco: [MCO+00?]
+- date: "1420-06-07"
+  note: "Udine surrenders; Venice conquers the Friuli from the Patriarch of Aquileia."
+  owners:
+    venice: [IT-UD, IT-PN]
+- date: "1420-08-17"
+  note: "William III of Narbonne, the last judge of Arborea, sells his rights and Sassari to Alfonso V of Aragon."
+  owners:
+    sardinia: [IT-SS, IT-OT, IT-NU]
+- date: "1421-06-30"
+  note: "Florence buys Livorno from Genoa."
+  owners:
+    tuscany: [IT-LI]
+- date: "1426-12-30"
+  note: "Peace of Venice. Filippo Maria Visconti cedes Brescia to Venice."
+  owners:
+    venice: [IT-BS]
+- date: "1427-12-02"
+  note: "Filippo Maria Visconti cedes Vercelli to Savoy."
+  owners:
+    savoy: [IT-VC]
+- date: "1428-04-19"
+  note: "Peace of Ferrara, after the battle of Maclodio. Venice receives Bergamo."
+  owners:
+    venice: [IT-BG]
+- date: "1441-02-24"
+  note: "Venice takes Ravenna."
+  owners:
+    venice: [IT-RA]
+- date: "1442"
+  note: "Antonio Alberico Malaspina rules Massa."
+  owners:
+    massa: [IT-MS]
+- date: "1443"
+  note: "Oddantonio da Montefeltro is made Duke of Urbino by Pope Eugene IV."
+  owners:
+    urbino: [IT-PU]
+- date: "1484-08-07"
+  note: "Treaty of Bagnolo ends the War of Ferrara; Venice receives the Polesine of Rovigo."
+  owners:
+    venice: [IT-RO]
+- date: "1494-11-09"
+  note: "Pisa rebels against Florence when Charles VIII’s army arrives."
+  owners:
+    pisa: [IT-PI]
+- date: "1499"
+  note: "Venice receives Cremona as its share of Louis XII’s conquest of Milan."
+  owners:
+    venice: [IT-CR]
+- date: "1500-07-02"
+  note: "The County of Gorizia passes to Maximilian of Habsburg."
+  owners:
+    habsburg: [IT-GO]
+
+# ---- Italy under Spain and Austria, 1500–1796
+- date: "1503"
+  note: "Venice takes Rimini and Faenza after the fall of Cesare Borgia."
+  owners:
+    venice: [IT-RN]
+- date: "1509-05-14"
+  note: "Battle of Agnadello. Venice loses its mainland for a time; Julius II recovers Romagna, and the French take Cremona for Milan."
+  owners:
+    papal-states: [IT-RA, IT-RN]
+    milan: [IT-CR]
+- date: "1509-06-08"
+  note: "Pisa surrenders to Florence."
+  owners:
+    tuscany: [IT-PI]
+- date: "1512"
+  note: "The Swiss drive the French from Milan. The Grisons take the Valtellina; Julius II takes Parma, Piacenza and Reggio, the last from the Duke of Ferrara."
+  owners:
+    three-leagues: [IT-SO]
+    papal-states: [IT-PR, IT-PC, IT-RE]
+- date: "1514"
+  note: "Emperor Maximilian sells Modena, which his troops had held since 1510, to Pope Leo X."
+  owners:
+    papal-states: [IT-MO]
+- date: "1515-12-11"
+  note: "After Marignano, Leo X gives up Parma and Piacenza to Francis I as Duke of Milan."
+  owners:
+    milan: [IT-PR, IT-PC]
+- date: "1521"
+  note: "Papal and imperial troops retake Parma and Piacenza for Leo X."
+  owners:
+    papal-states: [IT-PR, IT-PC]
+- date: "1523"
+  note: "After the death of Pope Adrian VI, Alfonso I d’Este recovers Reggio."
+  owners:
+    modena: [IT-RE]
+- date: "1527-06"
+  note: "During the Sack of Rome, Alfonso I d’Este retakes Modena."
+  owners:
+    modena: [IT-MO]
+- date: "1530-03-24"
+  note: "Charles V grants Malta to the Knights of Saint John, expelled from Rhodes."
+  owners:
+    malta: [MT-01, MT-05, MT-22, MT-30, MT-31, MT-37, MT-38, MT-46, MT-51, MT-55, MT-61, MT-64, MT-65, MT-66, MT-67, MT-68]
+- date: "1531"
+  note: "Charles V grants Asti to Beatrice of Portugal, Duchess of Savoy."
+  owners:
+    savoy: [IT-AT]
+- date: "1545-08-26"
+  note: "Pope Paul III creates the Duchy of Parma and Piacenza for his son Pier Luigi Farnese."
+  owners:
+    parma: [IT-PR, IT-PC]
+- date: "1557-07-03"
+  note: "Philip II grants Siena, conquered in 1555, to Cosimo I de’ Medici, keeping the coastal State of the Presidi."
+  owners:
+    tuscany: [IT-SI, IT-GR]
+- date: "1598-01-28"
+  note: "Duke Alfonso II d’Este dies without a legitimate heir; Pope Clement VIII takes Ferrara, and the Este keep Modena and Reggio."
+  owners:
+    papal-states: [IT-FE]
+- date: "1631-04-28"
+  note: "Duke Francesco Maria II della Rovere dies; Urbino passes to the Papal States."
+  owners:
+    papal-states: [IT-PU]
+- date: "1708"
+  note: "Emperor Joseph I confiscates Mantua and grants Montferrat to Victor Amadeus II of Savoy."
+  owners:
+    habsburg: [IT-MN]
+    savoy: [IT-AL~casale]
+- date: "1713-04-11"
+  note: "Peace of Utrecht. Savoy keeps Alessandria and the Lomellina, occupied in 1707 (with the Oltrepò Pavese, ceded at Worms in 1743), and receives Sicily; Austria later receives Naples, Milan and Sardinia."
+  owners:
+    savoy: [IT-AL!, IT-PV!]
+- date: "1720-08-08"
+  note: "Treaty of The Hague. Savoy exchanges Sicily for Sardinia, and Victor Amadeus II becomes King of Sardinia."
+  owners:
+    savoy: [IT-CA, IT-CI, IT-VS, IT-OG, IT-OR, IT-NU, IT-SS, IT-OT]
+- date: "1735-10-03"
+  note: "Preliminary Peace of Vienna. Don Carlos keeps Naples and Sicily, conquered in 1734–35; Austria receives Parma and Piacenza."
+  owners:
+    habsburg: [IT-PR, IT-PC]
+- date: "1738-11-18"
+  note: "Treaty of Vienna. Savoy receives Novara and Tortona from Milan."
+  owners:
     savoy: [IT-NO]
-    papal-states: [IT-BO, IT-FE, IT-RA, IT-FC, IT-RN, IT-AN, IT-PU, IT-MC, IT-AP, IT-FM]
-    modena: [IT-MO, IT-RE]
-
-- date: "1859-11-10"
-  note: Treaty of Zürich. After the Second Italian War of Independence, Austria cedes Lombardy (without Mantua) to France, which passes it to Sardinia.
+- date: "1743-09-13"
+  note: "Treaty of Worms. Maria Theresa promises Savoy the Upper Novarese and Vigevano for its alliance."
   owners:
-    savoy: [IT-VA, IT-CO, IT-SO, IT-BG, IT-BS, IT-CR, IT-MI, IT-LC, IT-MB, IT-LO, IT-NO]
+    savoy: [IT-VB]
+- date: "1748-10-18"
+  note: "Treaty of Aachen. Parma and Piacenza go to the Spanish Infante Philip."
+  owners:
+    parma: [IT-PR, IT-PC]
+
+# ---- Revolution and Napoleon, 1796–1815
+- date: "1793-02-15"
+  note: "France annexes Monaco."
+  owners:
+    france: [MCO+00?]
+- date: "1797-10-17"
+  note: "Treaty of Campo Formio. Austria recognises the Cisalpine Republic (Lombardy, Mantua, Modena, Massa and the Papal Legations, with Venetian Bergamo, Brescia and Crema) and receives Venice with the Venetian mainland, Istria and Dalmatia."
+  owners:
+    napoleonic-italy: [IT-VA, IT-CO, IT-SO, IT-LC, IT-MB, IT-MI, IT-LO, IT-CR, IT-BG, IT-BS, IT-PV~pavese, IT-MN, IT-MO, IT-RE, IT-MS, IT-BO, IT-FE, IT-RA, IT-FC, IT-RN]
+    habsburg: [IT-VE, IT-PD, IT-VI, IT-VR, IT-TV, IT-BL, IT-RO, IT-UD, IT-PN, SI-050, SI-040, SI-090, HR-18, HR-13, HR-15, HR-17]
+- date: "1798-02-15"
+  note: "French troops proclaim the Roman Republic; Pius VI is taken into exile."
+  owners:
+    roman-republic: [IT-RM, IT-VT, IT-LT!, IT-FR!, IT-RI!, IT-PG, IT-TR, IT-AN, IT-MC, IT-FM, IT-AP, IT-PU]
+- date: "1798-06-12"
+  note: "Napoleon takes Malta from the Knights on his way to Egypt."
+  owners:
+    france: [MT-01, MT-05, MT-22, MT-30, MT-31, MT-37, MT-38, MT-46, MT-51, MT-55, MT-61, MT-64, MT-65, MT-66, MT-67, MT-68]
+- date: "1799-09-30"
+  note: "Neapolitan troops enter Rome; the Roman Republic ends and papal rule is restored in 1800."
+  owners:
+    papal-states: [IT-RM, IT-VT, IT-LT!, IT-FR!, IT-RI!, IT-PG, IT-TR, IT-AN, IT-MC, IT-FM, IT-AP, IT-PU]
+- date: "1800-09-05"
+  note: "The French garrison of Valletta surrenders to the British after a two-year siege."
+  owners:
+    united-kingdom: [MT-01, MT-05, MT-22, MT-30, MT-31, MT-37, MT-38, MT-46, MT-51, MT-55, MT-61, MT-64, MT-65, MT-66, MT-67, MT-68]
+- date: "1801-02-09"
+  note: "Treaty of Lunéville. After Marengo the Cisalpine Republic is restored, now with Novara, the Ossola and the Lomellina."
+  owners:
+    napoleonic-italy: [IT-NO, IT-VB, IT-PV!]
+- date: "1802-09-11"
+  note: "France annexes Piedmont."
+  owners:
+    france: [IT-TO, IT-CN, IT-AT, IT-VC, IT-BI, IT-AO, IT-AL~casale, IT-AL!]
+- date: "1805-06-04"
+  note: "France annexes the Ligurian Republic."
+  owners:
+    france: [IT-GE, IT-SV, IT-IM, IT-SP]
+- date: "1805-12-26"
+  note: "Peace of Pressburg. Austria cedes Venetia, Venetian Istria and Dalmatia to the Kingdom of Italy."
+  owners:
+    napoleonic-italy: [IT-VE, IT-PD, IT-VI, IT-VR, IT-TV, IT-BL, IT-RO, IT-UD, IT-PN, SI-050, SI-040, SI-090, HR-18, HR-13, HR-15, HR-17]
+- date: "1806-03-30"
+  note: "Napoleon joins Massa and Carrara to his sister Elisa’s Principality of Lucca."
+  owners:
+    lucca: [IT-MS]
+- date: "1808-04-02"
+  note: "Napoleon annexes the Marches, taken from the Papal States, to the Kingdom of Italy."
+  owners:
+    napoleonic-italy: [IT-AN, IT-MC, IT-FM, IT-AP, IT-PU]
+- date: "1808-05-24"
+  note: "France annexes Parma and Tuscany (the Kingdom of Etruria, dissolved in December 1807)."
+  owners:
+    france: [IT-PR, IT-PC, IT-FI, IT-PO, IT-PT, IT-AR, IT-SI, IT-GR, IT-PI, IT-LI]
+- date: "1809-05-17"
+  note: "Napoleon annexes Rome and the rest of the Papal States to France; Pius VII is arrested in July."
+  owners:
+    france: [IT-RM, IT-VT, IT-LT!, IT-FR!, IT-RI!, IT-PG, IT-TR]
+- date: "1814-04-11"
+  note: "Treaty of Fontainebleau. Parma and Piacenza go to Napoleon’s wife Marie Louise."
+  owners:
+    parma: [IT-PR, IT-PC]
+- date: "1814-04-26"
+  note: "Lord William Bentinck restores the Republic of Genoa."
+  owners:
+    genoa: [IT-GE, IT-SV, IT-IM, IT-SP]
+- date: "1814-05-30"
+  note: "First Peace of Paris. Austria, whose troops had occupied northern Italy in April, receives Lombardy and Venetia; Piedmont, Novara and Nice return to Sardinia, the Papal States to the pope, Tuscany to its grand duke, Modena to the Este, Massa to Maria Beatrice d’Este, and Monaco to its prince."
+  owners:
+    habsburg: [IT-VA, IT-CO, IT-SO, IT-LC, IT-MB, IT-MI, IT-LO, IT-CR, IT-BG, IT-BS, IT-PV~pavese, IT-MN, IT-VE, IT-PD, IT-VI, IT-VR, IT-TV, IT-BL, IT-RO, IT-UD, IT-PN, IT-GO, IT-TS]
+    savoy: [IT-TO, IT-CN, IT-AT, IT-VC, IT-BI, IT-AO, IT-AL~casale, IT-AL!, IT-NO, IT-VB, IT-PV!]
+    papal-states: [IT-RM, IT-VT, IT-LT!, IT-FR!, IT-RI!, IT-PG, IT-TR, IT-AN, IT-MC, IT-FM, IT-AP, IT-PU, IT-BO, IT-FE, IT-RA, IT-FC, IT-RN]
+    modena: [IT-MO, IT-RE]
+    tuscany: [IT-FI, IT-PO, IT-PT, IT-AR, IT-SI, IT-GR, IT-PI, IT-LI]
+    massa: [IT-MS]
+    monaco: [MCO+00?]
+- date: "1815-01-03"
+  note: "The Congress of Vienna gives Genoa and Liguria to the Kingdom of Sardinia."
+  owners:
+    savoy: [IT-GE, IT-SV, IT-IM, IT-SP]
+- date: "1816-12-08"
+  note: "Ferdinand IV of Naples, restored in 1815, unites his kingdoms as the Kingdom of the Two Sicilies."
+  owners:
+    two-sicilies: [IT-AQ, IT-TE, IT-PE, IT-CH, IT-RI~cittaducale, IT-CB, IT-IS, IT-NA, IT-CE, IT-BN, IT-AV, IT-SA, IT-PZ, IT-MT, IT-CS, IT-CZ, IT-KR, IT-VV, IT-RC, IT-FG, IT-BT, IT-BA, IT-TA, IT-BR, IT-LE, IT-LT~gaeta, IT-FR~sora, IT-PA, IT-TP, IT-AG, IT-CL, IT-EN, IT-CT, IT-ME, IT-SR, IT-RG]
+
+# ---- The Risorgimento and after, 1815–today
+- date: "1829-11-14"
+  note: "Maria Beatrice d’Este dies; Massa and Carrara pass to her son, Duke Francis IV of Modena."
+  owners:
+    modena: [IT-MS]
+- date: "1847-10-11"
+  note: "Duke Charles Louis hands Lucca to Tuscany."
+  owners:
+    tuscany: [IT-LU]
+- date: "1859-11-10"
+  note: "Treaty of Zürich. After the Second Italian War of Independence, Austria cedes Lombardy (without Mantua) to France, which passes it to Sardinia."
+  owners:
+    savoy: [IT-VA, IT-CO, IT-SO, IT-LC, IT-MB, IT-MI, IT-LO, IT-CR, IT-BG, IT-BS, IT-PV~pavese]
+- date: "1860-03-18"
+  note: "After plebiscites, Sardinia annexes Parma, Modena and the Papal Legations (Emilia and Romagna)."
+  owners:
+    savoy: [IT-PR, IT-PC, IT-MO, IT-RE, IT-MS, IT-BO, IT-FE, IT-RA, IT-FC, IT-RN]
+- date: "1860-03-22"
+  note: "Sardinia annexes Tuscany after a plebiscite."
+  owners:
+    savoy: [IT-FI, IT-PO, IT-PT, IT-AR, IT-SI, IT-GR, IT-PI, IT-LI, IT-LU]
 - date: "1860-03-24"
-  note: Treaty of Turin. Sardinia cedes Savoy and Nice to France in return for its support; plebiscites in April confirm it.
+  note: "Treaty of Turin. Sardinia cedes Savoy and Nice to France in return for its support in 1859; plebiscites in April confirm the transfer."
   owners:
     france: [FR-73, FR-74, FR-06]
+- date: "1860-12-17"
+  note: "Sardinia annexes the Two Sicilies, conquered by Garibaldi’s Thousand and the Sardinian army, and the Marche and Umbria, taken from the Papal States, after plebiscites. Gaeta holds out until February 1861."
+  owners:
+    savoy: [IT-AQ, IT-TE, IT-PE, IT-CH, IT-RI~cittaducale, IT-CB, IT-IS, IT-NA, IT-CE, IT-BN, IT-AV, IT-SA, IT-PZ, IT-MT, IT-CS, IT-CZ, IT-KR, IT-VV, IT-RC, IT-FG, IT-BT, IT-BA, IT-TA, IT-BR, IT-LE, IT-LT~gaeta, IT-FR~sora, IT-PA, IT-TP, IT-AG, IT-CL, IT-EN, IT-CT, IT-ME, IT-SR, IT-RG, IT-PG, IT-TR, IT-AN, IT-MC, IT-FM, IT-AP, IT-PU, IT-RI!]
 - date: "1861-03-17"
-  note: The Kingdom of Italy is proclaimed in Turin. In 1860 Tuscany, Modena, Parma and the Romagna had voted to join Sardinia, Garibaldi's Thousand had overthrown the Kingdom of the Two Sicilies, and Sardinian troops had taken the Marche and Umbria from the Papal States.
+  note: "The Kingdom of Italy is proclaimed in Turin, with Victor Emmanuel II as king."
   owners:
-    italy: [IT-AO, IT-VB, IT-IM, IT-CN, IT-TO, IT-SP, IT-GE, IT-SV, IT-CI, IT-SS, IT-NU, IT-OT, IT-OR, IT-VS, IT-CA, IT-OG, IT-AT, IT-VC, IT-PV, IT-AL, IT-BI, IT-VA, IT-CO, IT-SO, IT-BG, IT-BS, IT-CR, IT-MI, IT-LC, IT-MB, IT-LO, IT-NO, IT-LU, IT-MS, IT-RE, IT-MO, IT-PC, IT-PR, IT-FC, IT-GR, IT-LI, IT-PI, IT-SI, IT-AR, IT-FI, IT-PT, IT-PO, IT-BO, IT-FE, IT-RA, IT-RN, IT-PU, IT-AN, IT-MC, IT-FM, IT-AP, IT-PG, IT-TR, IT-RI, IT-TE, IT-AQ, IT-PE, IT-CH, IT-CB, IT-FG, IT-BT, IT-BA, IT-BR, IT-LE, IT-TA, IT-MT, IT-CS, IT-KR, IT-CZ, IT-RC, IT-VV, IT-PZ, IT-SA, IT-NA, IT-CE, IT-TP, IT-ME, IT-PA, IT-AG, IT-CL, IT-RG, IT-SR, IT-CT, IT-EN, IT-BN, IT-AV, IT-IS]
+    italy: [IT-AG, IT-AL!, IT-AL~casale, IT-AN, IT-AO, IT-AP, IT-AQ, IT-AR, IT-AT, IT-AV, IT-BA, IT-BG, IT-BI, IT-BN, IT-BO, IT-BR, IT-BS, IT-BT, IT-CA, IT-CB, IT-CE, IT-CH, IT-CI, IT-CL, IT-CN, IT-CO, IT-CR, IT-CS, IT-CT, IT-CZ, IT-EN, IT-FC, IT-FE, IT-FG, IT-FI, IT-FM, IT-FR~sora, IT-GE, IT-GR, IT-IM, IT-IS, IT-KR, IT-LC, IT-LE, IT-LI, IT-LO, IT-LT~gaeta, IT-LU, IT-MB, IT-MC, IT-ME, IT-MI, IT-MO, IT-MS, IT-MT, IT-NA, IT-NO, IT-NU, IT-OG, IT-OR, IT-OT, IT-PA, IT-PC, IT-PE, IT-PG, IT-PI, IT-PO, IT-PR, IT-PT, IT-PU, IT-PV!, IT-PV~pavese, IT-PZ, IT-RA, IT-RC, IT-RE, IT-RG, IT-RI!, IT-RI~cittaducale, IT-RN, IT-SA, IT-SI, IT-SO, IT-SP, IT-SR, IT-SS, IT-SV, IT-TA, IT-TE, IT-TO, IT-TP, IT-TR, IT-VA, IT-VB, IT-VC, IT-VS, IT-VV]
 - date: "1866-10-12"
-  note: Treaty of Vienna. After the Austro-Prussian War, in which Italy fought on Prussia's side, Austria cedes Venetia and Mantua (through France) to Italy.
+  note: "Treaty of Vienna. After the war of 1866, in which Italy fought on Prussia’s side, Austria cedes Venetia and Mantua (through France) to Italy."
   owners:
-    italy: [IT-BL, IT-UD, IT-VE, IT-PD, IT-RO, IT-VI, IT-VR, IT-TV, IT-PN, IT-MN]
+    italy: [IT-VE, IT-PD, IT-VI, IT-VR, IT-TV, IT-BL, IT-RO, IT-UD, IT-PN, IT-MN]
 - date: "1870-10-09"
-  note: Italian troops entered Rome on 20 September after the French garrison left; Lazio is annexed after a plebiscite, and Rome becomes the capital. The pope withdraws into the Vatican.
+  note: "Italian troops entered Rome on 20 September after the French garrison left; Lazio is annexed after a plebiscite, and Rome becomes the capital. The pope withdraws into the Vatican."
   owners:
-    italy: [IT-RM, IT-LT, IT-FR, IT-VT]
+    italy: [IT-RM, IT-VT, IT-LT!, IT-FR!]
+- date: "1912-10-18"
+  note: "Treaty of Ouchy (Lausanne) ends the Italo-Turkish War. The Ottoman Empire withdraws from Tripolitania and Cyrenaica, which Italy had annexed by decree in November 1911; Italian rule outside the coastal towns stays contested for twenty years."
+  owners:
+    libya-it: [LY-GD, LY-NQ, LY-MQ, LY-BU, LY-AJ, LY-WS, LY-GT, LY-SR, LY-MI, LY-MB, LY-TN, LY-ZA, LY-QB, LY-JA, LY-MJ, LY-BA, LY-JI, LY-MZ, LY-JU, LY-SB, LY-WD]
 - date: "1918-11-03"
-  note: Armistice of Villa Giusti. Italian troops occupy Trieste and Gorizia; the Treaty of Rapallo of 1920 confirms them as Italian.
+  note: "Armistice of Villa Giusti. Italian troops occupy Trieste and Gorizia; the Treaty of Rapallo of 1920 confirms them as Italian."
   owners:
     italy: [IT-GO, IT-TS]
+- date: "1947-09-15"
+  note: "The Paris peace treaty comes into force. Trieste becomes the Free Territory of Trieste, under Anglo-American (Zone A) and Yugoslav (Zone B) military administration."
+  owners:
+    trieste: [IT-TS]
+- date: "1954-10-26"
+  note: "London Memorandum. Zone A of the Free Territory, with Trieste, passes to Italy."
+  owners:
+    italy: [IT-TS]
+- date: "1964-09-21"
+  note: "Malta becomes independent of Britain."
+  owners:
+    malta: [MT-01, MT-05, MT-22, MT-30, MT-31, MT-37, MT-38, MT-46, MT-51, MT-55, MT-61, MT-64, MT-65, MT-66, MT-67, MT-68]

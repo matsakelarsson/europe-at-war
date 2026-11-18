@@ -1,0 +1,168 @@
+id: war-of-the-pyrenees
+name: War of the Pyrenees
+start: "1793-03-07"
+end: "1795-07-22"
+tier: B
+summary: The war between Revolutionary France and Spain, with a Portuguese contingent, fought on both ends of the Pyrenees in 1793–1795 as part of the War of the First Coalition. A Spanish army under Antonio Ricardos invaded Roussillon in 1793, but in 1794 the French drove it out, won the Battle of the Black Mountain and took Figueres, while in the west they overran the Basque provinces. Spain made peace at Basel in July 1795, giving up its half of Hispaniola.
+countries: [fr, es, pt]
+sides:
+  - id: fr
+    name: France
+    polities: [france]
+    ink: navy
+    moves: French moves
+    success: French success
+  - id: es
+    name: Spain and Portugal
+    polities: [spain, portugal]
+    ink: gold
+    moves: Spanish and Portuguese moves
+    success: Spanish success
+notes:
+  - Also called the War of Roussillon or the War of the Convention (in Spanish Guerra del Rosellón or Guerra de la Convención, in Catalan Guerra Gran). Spanish ships and troops also helped defend Toulon in 1793; that siege is told with the French Revolutionary Wars.
+  - Dates are Gregorian. French sources of the time use the Revolutionary calendar from late 1793.
+sources:
+  - title: War of the Pyrenees (Wikipedia)
+    url: https://en.wikipedia.org/wiki/War_of_the_Pyrenees
+  - title: Battle of Mas Deu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Mas_Deu
+  - title: Battle of Truillas (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Truillas
+  - title: Battle of Boulou (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Boulou
+  - title: Battle of the Black Mountain (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Black_Mountain
+  - title: Peace of Basel (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peace_of_Basel
+steps:
+  - title: Ricardos in Roussillon
+    date: March 1793 – March 1794
+    when: "1793-03-07"
+    borders: "1793-12-20"
+    countries: [fr, es, pt]
+    body:
+      - France declared war on Spain on 7 March 1793, six weeks after guillotining Louis XVI, a Bourbon cousin of Charles IV. In April Captain General Antonio Ricardos crossed the eastern Pyrenees into Roussillon with a small but well-led army. He beat the French at Mas Deu on 19 May and besieged the frontier fort of Bellegarde, which surrendered on 24 June. In September he sent two divisions to cut off Perpignan, the provincial capital, but they were stopped at Peyrestortes on 17 September; five days later Ricardos beat the main French army at Truillas and fell back to a strong position on the River Tech.
+      - French attacks on his lines failed through the autumn. A Portuguese division of some 5,000 men under John Forbes joined the Spanish, and on 20 December General Cuesta took the ports of Collioure and Port-Vendres, so that the Spanish wintered on French soil. On the Basque frontier the war was a matter of raids and outposts along the Bidasoa. The French Republic was harsh with its own people as well as its enemies: generals who lost battles risked the guillotine, royalist prisoners were shot, and in March 1794, after some of their young men fled across the border, the people of Sare and other French Basque villages were deported to the Landes, where some 1,600 died. Ricardos died in Madrid on 6 March 1794.
+    facts:
+      - [Battle of Mas Deu, "19 May 1793, Spanish victory"]
+      - [Battle of Truillas, "22 September 1793, Spanish victory"]
+      - [Collioure taken, "20 December 1793"]
+    markers:
+      - kind: battle
+        side: es
+        name: Battle of Mas Deu
+        date: 19 May 1793
+        text: Ricardos routed General de Flers’s army near Trouillas, opening the way to the frontier forts.
+        lonlat: [2.78, 42.6]
+        lp: l
+      - kind: siege
+        side: es
+        name: Bellegarde
+        date: 23 May – 24 June 1793
+        text: The fort above the pass of Le Perthus was the key to the main road from Spain. Its garrison surrendered after a month.
+        lonlat: [2.865, 42.462]
+      - kind: held
+        side: fr
+        name: Perpignan
+        date: 1793
+        text: The capital of Roussillon was never taken. The French victory at Peyrestortes on 17 September ended the Spanish attempt to cut it off.
+        lonlat: [2.895, 42.699]
+      - kind: battle
+        side: es
+        name: Battle of Truillas
+        date: 22 September 1793
+        text: Ricardos beat General Dagobert’s attack in a hard fight, his last great success.
+        lonlat: [2.84, 42.62]
+        lp: b
+      - kind: taken
+        side: es
+        name: Collioure
+        date: 20 December 1793
+        text: Cuesta’s troops took Collioure, Port-Vendres and Fort Saint-Elme, giving the Spanish ports on the coast of Roussillon.
+        lonlat: [3.083, 42.526]
+    arrows:
+      - side: es
+        label: Ricardos
+        via: [[2.96, 42.27], [2.86, 42.46], [2.83, 42.55], [2.8, 42.6]]
+      - side: es
+        via: [[2.73, 42.4], [2.66, 42.49], [2.74, 42.58]]
+    areas:
+      - style: occupied
+        side: es
+        label: Held by Spain, winter 1793–1794 (approximate)
+        polygon: [[2.53, 42.39], [2.62, 42.5], [2.85, 42.6], [3.05, 42.56], [3.17, 42.46], [3.0, 42.43], [2.86, 42.43], [2.7, 42.37]]
+  - title: Boulou, the Black Mountain and Basel
+    date: April 1794 – July 1795
+    when: "1794-04-29"
+    borders: "1795-07-22"
+    countries: [fr, es, pt]
+    body:
+      - The Republic, its internal revolts crushed, now sent larger armies south. General Dugommier, who had retaken Toulon, broke the Spanish lines on the Tech at Boulou on 29 April – 1 May 1794, and the Spanish fled over the border leaving their guns and baggage. Collioure fell in May with its 7,000-strong garrison, and Bellegarde was starved into surrender in September. From 17 to 20 November Dugommier attacked the Spanish entrenchments around the Black Mountain north of Figueres. Both commanders were killed, Dugommier and the Count of La Unión, and the Spanish army broke. The great fortress of Sant Ferran at Figueres surrendered within days with some 9,000 men, and Roses fell in February 1795.
+      - In the west General Moncey seized the Baztan valley in July 1794, then Fuenterrabía on 1 August and San Sebastián two days later, both with little resistance. In 1795 he pushed into Álava and Biscay, taking Vitoria on 17 July and Bilbao two days later, and crossed the Ebro. Spain, with its armies beaten and its treasury empty, made peace at Basel on 22 July 1795. France gave back all it had taken in Spain and received the Spanish half of the island of Hispaniola. Charles IV gave his minister Manuel Godoy the title “Prince of the Peace”, and in 1796 Spain allied itself with France against Britain.
+    facts:
+      - [Battle of the Black Mountain, "17–20 November 1794, French victory"]
+      - [Peace of Basel, "22 July 1795"]
+      - [Ceded by Spain, Santo Domingo (the eastern part of Hispaniola)]
+    markers:
+      - kind: battle
+        side: fr
+        name: Battle of Boulou
+        date: 29 April – 1 May 1794
+        text: Dugommier turned the Spanish position and drove the Count of La Unión’s army back over the pass, ending the Spanish occupation of Roussillon.
+        lonlat: [2.833, 42.525]
+      - kind: siege
+        side: fr
+        name: Collioure
+        date: May 1794
+        text: The Spanish garrison surrendered. French royalist volunteers serving with it escaped in fishing boats rather than face execution.
+        lonlat: [3.083, 42.526]
+      - kind: battle
+        side: fr
+        name: Battle of the Black Mountain
+        date: 17–20 November 1794
+        text: Dugommier was killed by a shell on the second day; General Pérignon took over and won the battle in which La Unión also died.
+        lonlat: [2.87, 42.36]
+        lp: l
+      - kind: taken
+        side: fr
+        name: Figueres
+        date: 28 November 1794
+        text: The fortress of Sant Ferran, one of the largest in Europe, surrendered almost without a fight.
+        lonlat: [2.96, 42.27]
+      - kind: siege
+        side: fr
+        name: Roses
+        date: November 1794 – 4 February 1795
+        text: General Sauret took the port after a winter siege.
+        lonlat: [3.176, 42.262]
+      - kind: taken
+        side: fr
+        name: San Sebastián
+        date: 3 August 1794
+        text: The port opened its gates two days after Fuenterrabía fell. The provincial assembly of Gipuzkoa offered to join France as a self-governing province, but the French refused.
+        lonlat: [-1.984, 43.318]
+      - kind: taken
+        side: fr
+        name: Vitoria and Bilbao
+        date: 17–19 July 1795
+        text: Moncey’s last offensive took the capitals of Álava and Biscay days before the peace.
+        lonlat: [-2.672, 42.847]
+    arrows:
+      - side: fr
+        label: Dugommier
+        via: [[2.9, 42.68], [2.83, 42.53], [2.87, 42.38], [2.95, 42.28]]
+      - side: fr
+        label: Moncey, 1794
+        via: [[-1.47, 43.18], [-1.6, 43.29], [-1.79, 43.36], [-1.98, 43.32]]
+      - side: fr
+        label: Moncey, 1795
+        via: [[-2.1, 43.13], [-2.47, 42.95], [-2.67, 42.85], [-2.93, 42.69]]
+    areas:
+      - style: occupied
+        side: fr
+        label: Held by France, July 1795 (approximate)
+        atoms: [ES-SS, ES-VI, ES-BI]
+      - style: occupied
+        side: fr
+        label: Held by France, July 1795 (approximate)
+        polygon: [[2.72, 42.44], [3.18, 42.44], [3.3, 42.3], [3.12, 42.13], [2.88, 42.12], [2.72, 42.25]]

@@ -1,0 +1,545 @@
+id: peninsular-war
+name: Peninsular War
+start: "1807-10-27"
+end: "1814-04-17"
+tier: A
+summary: The war for the Iberian Peninsula between Napoleonic France and the allied armies of Spain, Portugal and Britain. It began with the French occupation of Portugal in 1807 and grew into a national war in Spain when Napoleon put his brother Joseph on the Spanish throne in 1808. Spanish armies, guerrillas and sieges tied down hundreds of thousands of French troops, while Wellington’s British and Portuguese army, safe behind the Lines of Torres Vedras, wore the French down and then drove them out of Spain, winning at Salamanca in 1812 and Vitoria in 1813 and ending the war at Toulouse in April 1814.
+countries: [es, pt, fr, gb]
+sides:
+  - id: fr
+    name: France
+    polities: [france]
+    ink: navy
+    moves: French moves
+    success: French success
+  - id: es
+    name: Spain
+    polities: [spain]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+  - id: gb
+    name: Britain and Portugal
+    polities: [united-kingdom, portugal]
+    ink: red
+    moves: British and Portuguese moves
+    success: British and Portuguese success
+notes:
+  - In Spain the war is called the War of Independence (Guerra de la Independencia), in Portugal the French Invasions, and in Catalonia the War of the French. The wider Napoleonic Wars are told separately.
+  - The Spain side stands for the patriot juntas, the Regency and the Cortes that fought in Ferdinand VII’s name. Joseph Bonaparte’s Kingdom of Spain, recognised only by France and its allies, is counted with France.
+  - The war killed hundreds of thousands of soldiers and civilians, through battle, sieges, reprisals, famine and disease. Estimates vary widely.
+sources:
+  - title: Peninsular War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peninsular_War
+  - title: Battle of Bussaco (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Bussaco
+  - title: Invasion of Portugal (1807) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Invasion_of_Portugal_(1807)
+  - title: Dos de Mayo Uprising (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dos_de_Mayo_Uprising
+  - title: Battle of Bailén (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Bail%C3%A9n
+  - title: Battle of Corunna (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Corunna
+  - title: Battle of Talavera (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Talavera
+  - title: Lines of Torres Vedras (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Lines_of_Torres_Vedras
+  - title: Siege of Cádiz (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_C%C3%A1diz
+  - title: Battle of Albuera (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Albuera
+  - title: Siege of Badajoz (1812) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Badajoz_(1812)
+  - title: Battle of Salamanca (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Salamanca
+  - title: Spanish Constitution of 1812 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Spanish_Constitution_of_1812
+  - title: Battle of Vitoria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Vitoria
+  - title: Siege of San Sebastián (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_San_Sebasti%C3%A1n
+  - title: Battle of Toulouse (1814) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Toulouse_(1814)
+steps:
+  - title: Portugal occupied and Madrid rises
+    date: October 1807 – May 1808
+    when: "1807-10-27"
+    borders: "1808-05-02"
+    countries: [pt, es, fr]
+    body:
+      - Portugal, Britain’s oldest ally, would not join Napoleon’s blockade of British trade. On 27 October 1807, by the secret Treaty of Fontainebleau, France and Spain agreed to conquer it and divide it into three parts, one of them a principality for Charles IV’s chief minister, Manuel Godoy. General Junot marched across Spain and invaded Portugal on 19 November with three Spanish divisions in support. The Portuguese did not resist. On 29 November the Prince Regent John, his mentally ill mother, Queen Maria, and much of the court sailed for Brazil under British escort, and the next day Junot’s exhausted advance guard entered Lisbon.
+      - Meanwhile French troops poured into Spain, Napoleon’s ally, and in February and March 1808 seized the frontier fortresses of Pamplona, Barcelona, Figueres and San Sebastián by trickery. On 17–19 March a riot at the palace of Aranjuez toppled Godoy and forced Charles IV to abdicate in favour of his son Ferdinand VII. Napoleon summoned both to Bayonne, where in early May he made them give up the crown, which he handed to his brother Joseph. On 2 May, as the last members of the royal family were being taken from Madrid, the people of the city rose against Marshal Murat’s troops. The rising was crushed, and through the night and the next day the French shot hundreds of prisoners.
+    facts:
+      - [Treaty of Fontainebleau, "27 October 1807"]
+      - [Lisbon occupied, "30 November 1807"]
+      - [Dos de Mayo, "2–3 May 1808"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Lisbon
+        date: 30 November 1807
+        text: Junot arrived to see the Portuguese fleet, with the court, the treasury and thousands of courtiers aboard, sailing away down the Tagus.
+        lonlat: [-9.14, 38.72]
+      - kind: event
+        name: Tumult of Aranjuez
+        date: 17–19 March 1808
+        text: Soldiers and townspeople, stirred up by Ferdinand’s supporters, stormed Godoy’s house. Charles IV abdicated two days later.
+        lonlat: [-3.6, 40.03]
+        lp: b
+      - kind: event
+        name: Abdications of Bayonne
+        date: 5–7 May 1808
+        text: At the château of Marracq both Spanish kings renounced the throne in Napoleon’s favour. They spent the war as his prisoners in France.
+        lonlat: [-1.475, 43.49]
+      - kind: event
+        side: es
+        name: Dos de Mayo
+        date: 2–3 May 1808
+        text: Townspeople fought the French in the streets, and two artillery officers, Daoíz and Velarde, died defending the Monteleón barracks. Goya painted the executions of the third of May in 1814.
+        lonlat: [-3.7, 40.42]
+      - kind: taken
+        side: fr
+        name: Pamplona and Barcelona
+        date: February 1808
+        text: French troops took over the citadels of Pamplona and Barcelona by ruse, while still officially Spain’s allies.
+        lonlat: [-1.645, 42.817]
+    arrows:
+      - side: fr
+        label: Junot
+        via: [[-6.6, 40.6], [-7.5, 39.8], [-8.4, 39.4], [-9.1, 38.75]]
+      - side: fr
+        label: Murat
+        via: [[-1.6, 43.2], [-2.7, 42.85], [-3.7, 42.3], [-3.7, 40.5]]
+    areas:
+      - style: occupied
+        side: fr
+        label: Occupied by France and Spain, 1807–1808
+        atoms: [PT-01, PT-02, PT-03, PT-04, PT-05, PT-06, PT-07, PT-08, PT-09, PT-10, PT-11, PT-12, PT-13, PT-14, PT-15, PT-16, PT-17, PT-18]
+  - title: Bailén and Napoleon in Spain
+    date: May – December 1808
+    when: "1808-05-24"
+    borders: "1808-12-04"
+    countries: [es, pt, fr, gb]
+    body:
+      - The news from Madrid and Bayonne set Spain alight. Provincial juntas sprang up and declared war on France, and in June Portugal rose too. Zaragoza beat off a French siege through the summer. In Andalusia, General Dupont was surrounded at Bailén by General Castaños’s army, and on 22 July he surrendered with some 17,000 men, the first time a Napoleonic army had surrendered in open battle. Joseph fled Madrid after eleven days as king, and the French fell back behind the Ebro. In August a British army under Sir Arthur Wellesley landed in Portugal and beat Junot at Roliça and Vimeiro, but by the Convention of Cintra Junot’s army was shipped home to France in British ships.
+      - In the autumn Napoleon came to Spain himself with some 200,000 men, including much of his veteran Grande Armée. He scattered the badly coordinated Spanish armies one after another, and on 30 November forced the pass of Somosierra, where Polish light horse of the Imperial Guard charged straight up the road at the Spanish guns. Madrid surrendered on 4 December. Napoleon abolished the Inquisition and the feudal rights of the nobility, and put Joseph back on the throne. The prisoners of Bailén, promised repatriation, were instead held on the barren island of Cabrera in the Balearics, where thousands died.
+    facts:
+      - [Battle of Bailén, "16–19 July 1808, Spanish victory"]
+      - [Battle of Vimeiro, "21 August 1808, British victory"]
+      - [Madrid surrenders, "4 December 1808"]
+    markers:
+      - kind: battle
+        side: es
+        name: Battle of Bailén
+        date: 16–22 July 1808
+        text: Trapped in the summer heat without water, Dupont’s army failed to break through and surrendered, along with Vedel’s division, which could have escaped.
+        lonlat: [-3.78, 38.09]
+      - kind: siege
+        side: es
+        name: Zaragoza
+        date: 15 June – 14 August 1808
+        text: Under José de Palafox, soldiers and townspeople fought the French from house to house, and the siege was raised after Bailén.
+        lonlat: [-0.88, 41.65]
+      - kind: battle
+        side: gb
+        name: Battle of Vimeiro
+        date: 21 August 1808
+        text: Four days after Roliça, Wellesley’s infantry in line drove back Junot’s columns. It ended the first French invasion of Portugal.
+        lonlat: [-9.317, 39.177]
+        lp: l
+      - kind: treaty
+        name: Convention of Cintra
+        date: 30 August 1808
+        text: Junot’s men went home with their arms and their loot. The terms caused outrage in Britain, and the three British generals involved, Wellesley among them, were called before an inquiry.
+        lonlat: [-9.39, 38.8]
+        lp: b
+      - kind: battle
+        side: fr
+        name: Battle of Somosierra
+        date: 30 November 1808
+        text: The charge of the Polish chevau-légers up the pass against Benito de San Juan’s Spaniards opened the road to Madrid.
+        lonlat: [-3.58, 41.13]
+      - kind: taken
+        side: fr
+        name: Madrid
+        date: 4 December 1808
+        text: After a short bombardment the remaining Spanish troops surrendered, and the French entered the capital for the second time that year.
+        lonlat: [-3.7, 40.42]
+        lp: b
+    arrows:
+      - side: es
+        label: Castaños
+        via: [[-4.8, 37.6], [-4.3, 37.9], [-3.85, 38.06]]
+      - side: gb
+        label: Wellesley
+        via: [[-8.86, 40.15], [-9.1, 39.6], [-9.2, 39.32], [-9.3, 39.18]]
+      - side: fr
+        label: Napoleon
+        via: [[-1.8, 43.2], [-2.7, 42.85], [-3.7, 42.34], [-3.6, 41.15], [-3.7, 40.45]]
+  - title: Corunna and Zaragoza
+    date: December 1808 – February 1809
+    when: "1808-12-21"
+    borders: "1809-02-20"
+    countries: [es, gb, fr]
+    body:
+      - A British army under Sir John Moore had advanced from Portugal into León to help the Spanish, and on 21 December its cavalry routed a French force at Sahagún. When Moore learned that Madrid had fallen and that Napoleon was marching north to cut him off, he turned back towards the coast of Galicia. The retreat through the snowbound mountains became an ordeal. Discipline broke down, soldiers looted and drank, and stragglers by the hundred were left to the French cavalry. Napoleon followed as far as Astorga and then handed the pursuit to Marshal Soult, leaving for France to deal with Austria.
+      - Moore’s army reached Corunna on 11 January 1809, and when the transports arrived it began to embark. On 16 January Soult attacked, and was beaten off outside the town. Moore was mortally wounded by a cannonball and buried on the ramparts, and the army, some 26,000 men, sailed home that night and the next day; about 7,000 had been lost on the campaign. In Aragon the French had besieged Zaragoza again since 20 December. Its defenders held out street by street, while typhus raged in the city, until 20 February. By then a large part of the city lay in ruins, and some estimates put the dead, soldiers and civilians together, at over 50,000.
+    facts:
+      - [Battle of Sahagún, "21 December 1808, British victory"]
+      - [Battle of Corunna, "16 January 1809; Moore killed"]
+      - [Zaragoza surrenders, "20 February 1809"]
+    markers:
+      - kind: battle
+        side: gb
+        name: Battle of Sahagún
+        date: 21 December 1808
+        text: Lord Paget’s 400 hussars surprised and routed twice their number of French cavalry, taking more than 300 prisoners.
+        lonlat: [-5.03, 42.37]
+      - kind: event
+        side: fr
+        name: Astorga
+        date: 1–2 January 1809
+        text: Here Napoleon, hearing of Austrian war preparations, gave up the chase and turned back to France.
+        lonlat: [-6.06, 42.46]
+        lp: b
+      - kind: battle
+        side: gb
+        name: Battle of Corunna
+        date: 16 January 1809
+        text: Fought on the hills around Elviña outside the port. The British held their positions, and the last transports left under French fire.
+        lonlat: [-8.4, 43.37]
+      - kind: siege
+        side: fr
+        name: Zaragoza
+        date: 20 December 1808 – 20 February 1809
+        text: The French had to blow up and storm the city house by house. Palafox, sick with typhus, was taken prisoner to France.
+        lonlat: [-0.88, 41.65]
+    arrows:
+      - side: gb
+        label: Moore retreats
+        via: [[-5.03, 42.37], [-6.06, 42.46], [-6.9, 42.6], [-7.55, 43.0], [-8.38, 43.35]]
+      - side: fr
+        label: Soult
+        via: [[-5.4, 42.3], [-6.2, 42.5], [-7.2, 42.75], [-8.3, 43.3]]
+  - title: Porto and Talavera
+    date: March – December 1809
+    when: "1809-03-29"
+    borders: "1809-12-12"
+    countries: [pt, es, gb, fr]
+    body:
+      - In March 1809 Soult invaded northern Portugal and on 29 March stormed Porto. In the panic a bridge of boats over the Douro collapsed under the fleeing townspeople, and hundreds, perhaps thousands, drowned. Wellesley returned to Lisbon in April to command the British and Portuguese forces, and on 12 May he surprised Soult by ferrying troops across the Douro in wine barges above the city. Soult fled into the mountains, abandoning his guns and baggage. Meanwhile the Portuguese army was rebuilt under a British general, William Beresford, with British officers serving in its ranks.
+      - Wellesley then marched into Spain to join General Cuesta’s Spanish army in a drive on Madrid. At Talavera on 27–28 July the allies beat off the attacks of Marshal Victor and King Joseph, with heavy losses on both sides; many wounded burned to death when the dry grass caught fire. Wellesley, made Viscount Wellington for the victory, fell back to Portugal when more French armies closed in. In November the main Spanish army was destroyed at Ocaña, losing nearly 19,000 men. In Catalonia, Girona had resisted a French siege since May; starving and sick, it surrendered in December, after seven months.
+    facts:
+      - [Second Battle of Porto, "12 May 1809, Anglo-Portuguese victory"]
+      - [Battle of Talavera, "27–28 July 1809, allied victory"]
+      - [Battle of Ocaña, "19 November 1809, French victory"]
+    markers:
+      - kind: battle
+        side: gb
+        name: Second Battle of Porto
+        date: 12 May 1809
+        text: The crossing of the Douro caught Soult unprepared, and the French left the city in disorder, ending the second French invasion of Portugal.
+        lonlat: [-8.61, 41.15]
+      - kind: battle
+        side: gb
+        name: Battle of Talavera
+        date: 27–28 July 1809
+        text: Some 20,000 British and 33,000 Spaniards against 46,000 French. Each side lost about 7,000 men, and the French withdrew in the night.
+        lonlat: [-4.83, 39.96]
+      - kind: battle
+        side: fr
+        name: Battle of Ocaña
+        date: 19 November 1809
+        text: Soult’s cavalry encircled Aréizaga’s army, the worst defeat a Spanish army suffered on home soil. It opened the way to Andalusia.
+        lonlat: [-3.5, 39.96]
+        lp: b
+      - kind: siege
+        side: fr
+        name: Girona
+        date: 6 May – 12 December 1809
+        text: General Álvarez de Castro’s 9,000 men held some 32,000 French and Westphalian troops for an entire campaigning season.
+        lonlat: [2.82, 41.98]
+    arrows:
+      - side: fr
+        label: Soult
+        via: [[-7.6, 41.95], [-8.4, 41.55], [-8.6, 41.18]]
+      - side: gb
+        label: Wellesley
+        via: [[-9.1, 38.75], [-8.6, 40.2], [-8.6, 41.12]]
+      - side: gb
+        label: Wellesley and Cuesta
+        via: [[-6.4, 39.45], [-5.6, 39.85], [-4.85, 39.96]]
+  - title: Torres Vedras
+    date: January 1810 – March 1811
+    when: "1810-01-19"
+    borders: "1811-03-05"
+    countries: [es, pt, gb, fr]
+    body:
+      - In January 1810 the French overran Andalusia and took Seville on 1 February. The Spanish government fled to Cádiz, on its island off the coast, and from 5 February the French besieged it, but with British and Spanish ships holding the sea, they could not take it. Napoleon now sent Marshal Masséna with some 65,000 men to drive the British out of Portugal. Masséna took Ciudad Rodrigo in July, and at Almeida on 26 August a shell set off the great powder magazine, killing some 600 defenders and forcing the fortress to surrender. At Bussaco on 27 September Wellington beat off Masséna’s attacks, then fell back towards Lisbon, ordering the country to be stripped of food as he went.
+      - On 11 October the French came up against the Lines of Torres Vedras, chains of forts and earthworks across the peninsula north of Lisbon, built in secret by Portuguese labourers through the past year. Masséna judged them too strong to attack. His army starved in front of them through the winter, foraging in a land already emptied, while Portuguese refugees behind the lines also died in great numbers. In March 1811 Masséna retreated, burning towns as he went, having lost some 25,000 men in Portugal.
+    facts:
+      - [Siege of Cádiz, "5 February 1810 – 24 August 1812"]
+      - [Battle of Bussaco, "27 September 1810, Anglo-Portuguese victory"]
+      - [Lines of Torres Vedras, "French before them October 1810 – March 1811"]
+    markers:
+      - kind: siege
+        side: es
+        name: Cádiz
+        date: 1810–1812
+        text: The French bombarded the city but never took it. Behind its walls the Cortes met and governed what remained of free Spain.
+        lonlat: [-6.29, 36.53]
+      - kind: siege
+        side: fr
+        name: Almeida
+        date: July – August 1810
+        text: One French shell landed in a trail of spilt powder leading to the castle magazine. The explosion destroyed much of the town.
+        lonlat: [-6.906, 40.726]
+      - kind: battle
+        side: gb
+        name: Battle of Bussaco
+        date: 27 September 1810
+        text: Wellington’s men, hidden behind the crest of the ridge, threw back five French assaults. The French lost up to 4,500 men, the allies about 1,300.
+        lonlat: [-8.37, 40.345]
+      - kind: held
+        side: gb
+        name: Lines of Torres Vedras
+        date: October 1810 – March 1811
+        text: Some 150 forts and redoubts with hundreds of guns, linked by a semaphore system. The French never seriously attacked them.
+        lonlat: [-9.26, 39.09]
+        lp: l
+    arrows:
+      - side: fr
+        label: Masséna
+        via: [[-6.53, 40.6], [-6.9, 40.72], [-7.9, 40.5], [-8.37, 40.35], [-8.9, 39.4]]
+      - side: gb
+        label: Wellington
+        via: [[-8.3, 40.3], [-8.6, 39.75], [-9.0, 39.3], [-9.2, 38.98]]
+      - side: fr
+        label: Andalusia, 1810
+        via: [[-3.6, 38.6], [-4.8, 37.9], [-5.99, 37.39], [-6.2, 36.6]]
+    areas:
+      - style: front
+        side: gb
+        label: First line of Torres Vedras
+        line: [[-9.37, 39.08], [-9.26, 39.09], [-9.1, 39.03], [-8.99, 38.93]]
+  - title: Albuera, Fuentes and the sieges
+    date: March 1811 – April 1812
+    when: "1811-03-05"
+    borders: "1812-04-06"
+    countries: [es, pt, gb, fr]
+    body:
+      - With Portugal free, Wellington turned to the border fortresses that guarded the roads into Spain, Ciudad Rodrigo and Almeida in the north and Badajoz in the south. In March 1811 a British and Spanish force from Cádiz won a bloody fight at Barrosa but failed to lift the siege. In May Masséna tried to relieve Almeida and was beaten at Fuentes de Oñoro, and twelve days later, at Albuera near Badajoz, a British, Portuguese and Spanish army under Beresford held off Soult in one of the bloodiest battles of the war. In the east Marshal Suchet stormed Tarragona in June, massacring defenders and townspeople, and took Valencia in January 1812. Napoleon annexed Catalonia to France that same month.
+      - All over Spain guerrilla bands such as those of Francisco Espoz y Mina in Navarre and Juan Martín Díez, “El Empecinado”, in Castile ambushed convoys, killed couriers and stragglers, and tied down tens of thousands of French troops; the French answered with hostage-taking, hangings and burned villages. In January 1812 Wellington stormed Ciudad Rodrigo. On the night of 6 April his troops stormed the breaches of Badajoz, losing some 4,800 men in a few hours. Maddened, they then sacked the town for three days, raping, looting and killing its Spanish inhabitants.
+    facts:
+      - [Battle of Fuentes de Oñoro, "3–5 May 1811, Anglo-Portuguese victory"]
+      - [Battle of Albuera, "16 May 1811, allied victory"]
+      - [Storming of Badajoz, "6 April 1812"]
+    markers:
+      - kind: battle
+        side: gb
+        name: Battle of Barrosa
+        date: 5 March 1811
+        text: Sir Thomas Graham’s single division beat two French divisions and took a French eagle, but the Spanish commander did not follow up.
+        lonlat: [-6.15, 36.38]
+        lp: l
+      - kind: battle
+        side: gb
+        name: Battle of Fuentes de Oñoro
+        date: 3–5 May 1811
+        text: Wellington held the village and ridge against Masséna’s attempt to relieve Almeida. “If Boney had been there, we should have been beat,” he said.
+        lonlat: [-6.81, 40.59]
+      - kind: battle
+        side: gb
+        name: Battle of Albuera
+        date: 16 May 1811
+        text: Polish lancers cut a British brigade to pieces in a hailstorm. Each side lost some 6,000 men.
+        lonlat: [-6.82, 38.72]
+      - kind: siege
+        side: fr
+        name: Tarragona
+        date: 5 May – 29 June 1811
+        text: Suchet won a marshal’s baton for taking the city. In the final assault his men killed some 450 women and children.
+        lonlat: [1.25, 41.12]
+      - kind: siege
+        side: gb
+        name: Ciudad Rodrigo
+        date: 7–19 January 1812
+        text: Stormed by night after a twelve-day siege. Two British generals, Craufurd and Mackinnon, were killed.
+        lonlat: [-6.53, 40.6]
+      - kind: siege
+        side: gb
+        name: Badajoz
+        date: 16 March – 6 April 1812
+        text: One of the bloodiest sieges of the Napoleonic Wars, followed by a sack that took three days to bring under control.
+        lonlat: [-6.97, 38.88]
+        lp: l
+    arrows:
+      - side: fr
+        label: Masséna
+        via: [[-6.0, 40.95], [-6.53, 40.65], [-6.8, 40.6]]
+      - side: fr
+        label: Soult
+        via: [[-6.0, 37.4], [-6.4, 38.1], [-6.8, 38.68]]
+      - side: fr
+        label: Suchet
+        via: [[-0.52, 40.81], [0.52, 40.81], [1.2, 41.1]]
+    areas:
+      - style: occupied
+        side: fr
+        label: Annexed to France, 1812–1814
+        atoms: [ES-B, ES-GI, ES-L, ES-T]
+  - title: Salamanca and Madrid
+    date: March – November 1812
+    when: "1812-03-19"
+    borders: "1812-11-19"
+    countries: [es, pt, gb, fr]
+    body:
+      - On 19 March 1812 the Cortes at Cádiz proclaimed a constitution, nicknamed “La Pepa” after the feast of St Joseph. It declared the sovereignty of the nation, divided the powers of government, freed the press and gave the vote to most men, though it kept Catholicism as the only lawful religion. In the summer, with Napoleon’s best troops gone to Russia, Wellington advanced into León. At the Arapiles south of Salamanca on 22 July he caught Marshal Marmont’s army strung out on the march and broke it in a few hours, the victory that made his reputation as an attacking general.
+      - Joseph fled Madrid, and Wellington entered the capital on 12 August to wild celebrations. The French gave up the siege of Cádiz on 24 August and evacuated Andalusia. But Wellington then failed to take the castle of Burgos in a month-long siege, and with French armies converging on him from north and south he had to abandon Madrid and retreat to the Portuguese border in November. The retreat in the autumn rain cost him thousands of men. Still, the year had cleared the French from southern Spain for good.
+    facts:
+      - [Constitution of Cádiz, "19 March 1812"]
+      - [Battle of Salamanca, "22 July 1812, Anglo-Portuguese victory"]
+      - [Siege of Burgos, "19 September – 21 October 1812, failed"]
+    markers:
+      - kind: event
+        side: es
+        name: Constitution of Cádiz
+        date: 19 March 1812
+        text: One of the most liberal constitutions of its time, and a model for liberals across Europe and Latin America.
+        lonlat: [-6.29, 36.53]
+      - kind: battle
+        side: gb
+        name: Battle of Salamanca
+        date: 22 July 1812
+        text: Known in Spain and France as the Battle of the Arapiles, after two hills on the battlefield. Marmont was wounded early in the battle.
+        lonlat: [-5.64, 40.9]
+      - kind: taken
+        side: gb
+        name: Madrid
+        date: 12 August 1812
+        text: The allies were greeted with flowers and cheering crowds. They held the city for less than three months.
+        lonlat: [-3.7, 40.42]
+      - kind: siege
+        side: fr
+        name: Burgos
+        date: 19 September – 21 October 1812
+        text: General Dubreton’s small garrison beat off every assault on the castle. Wellington lacked heavy guns.
+        lonlat: [-3.7, 42.34]
+    arrows:
+      - side: gb
+        label: Wellington
+        via: [[-6.53, 40.6], [-5.66, 40.96], [-4.6, 40.8], [-3.75, 40.45]]
+      - side: gb
+        via: [[-3.75, 40.6], [-4.2, 41.4], [-3.75, 42.3]]
+      - side: gb
+        label: Retreat, November 1812
+        via: [[-3.75, 42.25], [-4.7, 41.6], [-5.6, 40.95], [-6.5, 40.62]]
+  - title: Vitoria and San Sebastián
+    date: May – September 1813
+    when: "1813-05-22"
+    borders: "1813-09-08"
+    countries: [es, pt, gb, fr]
+    body:
+      - In the spring of 1813 Napoleon, rebuilding his armies after Russia, drew men out of Spain. On 22 May Wellington, now commanding Spanish as well as British and Portuguese troops, advanced again. While he marched on Salamanca, the left wing under Sir Thomas Graham crossed the mountains of Trás-os-Montes, and the allies turned the French out of every line they tried to hold. On 21 June they caught King Joseph’s armies at Vitoria and broke them. The French lost 151 of their guns and their whole baggage train, “the loot of a kingdom”, which many British soldiers stopped to plunder instead of pursuing.
+      - The French fell back over the Pyrenees, leaving garrisons in San Sebastián and Pamplona. At the end of July Marshal Soult, sent to restore the situation, struck through the passes of Maya and Roncesvalles to relieve Pamplona, but was beaten back at Sorauren on 28 and 30 July. On 31 August, the day Spanish troops beat off a last French relief attempt at San Marcial, the British and Portuguese stormed San Sebastián. They then sacked and burned the town, killing perhaps 1,000 of its people. The castle held out until 8 September.
+    facts:
+      - [Battle of Vitoria, "21 June 1813, allied victory"]
+      - [Battle of Sorauren, "28 and 30 July 1813, allied victory"]
+      - [San Sebastián stormed, "31 August 1813"]
+    markers:
+      - kind: battle
+        side: gb
+        name: Battle of Vitoria
+        date: 21 June 1813
+        text: The allies attacked in four columns across the Zadorra. Joseph barely escaped, and the French lost some 8,000 men and almost all their artillery.
+        lonlat: [-2.67, 42.85]
+      - kind: battle
+        side: gb
+        name: Battle of Sorauren
+        date: 28 and 30 July 1813
+        text: The French attacked uphill against Wellington’s position on the Oricain ridge, a few miles from Pamplona, and failed.
+        lonlat: [-1.6, 42.87]
+        lp: l
+      - kind: siege
+        side: gb
+        name: San Sebastián
+        date: 7 July – 8 September 1813
+        text: The breach was stormed at low tide. In the sack that followed almost the whole town burned.
+        lonlat: [-1.984, 43.318]
+      - kind: battle
+        side: es
+        name: Battle of San Marcial
+        date: 31 August 1813
+        text: Spanish troops under General Freire threw back Soult’s last attempt to relieve San Sebastián.
+        lonlat: [-1.77, 43.33]
+        lp: t
+    arrows:
+      - side: gb
+        label: Wellington
+        via: [[-6.53, 40.6], [-5.66, 40.96], [-4.5, 42.0], [-3.7, 42.34], [-2.75, 42.8]]
+      - side: gb
+        label: Graham
+        via: [[-7.5, 41.3], [-6.8, 41.85], [-5.5, 42.3], [-3.9, 42.7], [-2.75, 42.88]]
+      - side: fr
+        label: Soult
+        via: [[-1.35, 43.15], [-1.35, 43.0], [-1.55, 42.9]]
+  - title: Into France
+    date: October 1813 – April 1814
+    when: "1813-10-07"
+    borders: "1814-04-17"
+    countries: [fr, es, pt, gb]
+    body:
+      - On 7 October Wellington crossed the Bidasoa into France, and on 31 October the starving French garrison of Pamplona surrendered. Soult was driven from his lines on the Nivelle on 10 November and from those south of Bayonne on the Nive in December. Napoleon, losing in Germany, released Ferdinand VII by the Treaty of Valençay in December, hoping to make peace with Spain, but the Regency refused to ratify it. In February 1814 Wellington left a corps to besiege Bayonne and pushed east, beating Soult at Orthez on 27 February, and on 12 March a British force entered Bordeaux, whose mayor declared for Louis XVIII.
+      - Soult made his last stand at Toulouse. On 10 April Wellington took the heights east of the city after a bloody fight, and Soult withdrew. Napoleon had already abdicated on 6 April, but the news reached the armies only on 12 April. Two days later the garrison of Bayonne made a sortie that cost both sides hundreds of men. Soult accepted an armistice on 17 April. Ferdinand came back to Spain in March and on 4 May annulled the constitution of Cádiz, restored absolute rule and had the leading liberals arrested.
+    facts:
+      - [Battle of the Nivelle, "10 November 1813, allied victory"]
+      - [Battle of Orthez, "27 February 1814, allied victory"]
+      - [Battle of Toulouse, "10 April 1814"]
+    markers:
+      - kind: battle
+        side: gb
+        name: Battle of the Bidasoa
+        date: 7 October 1813
+        text: Wellington’s army forded the river near its mouth at low tide and took the French positions on the heights beyond, setting foot on French soil.
+        lonlat: [-1.77, 43.36]
+        lp: l
+      - kind: taken
+        side: es
+        name: Pamplona
+        date: 31 October 1813
+        text: A Spanish army had blockaded the city since June. Its French garrison surrendered when its food ran out.
+        lonlat: [-1.645, 42.817]
+      - kind: battle
+        side: gb
+        name: Battle of the Nivelle
+        date: 10 November 1813
+        text: The allies broke through Soult’s fortified line between the mountains and the sea.
+        lonlat: [-1.6, 43.36]
+        lp: b
+      - kind: battle
+        side: gb
+        name: Battle of Orthez
+        date: 27 February 1814
+        text: Soult’s centre and left gave way, and his retreat ended in a rush in which many French soldiers were captured.
+        lonlat: [-0.77, 43.49]
+      - kind: battle
+        name: Battle of Toulouse
+        date: 10 April 1814
+        text: Fought four days after Napoleon’s abdication. The allies lost almost 3,000 more men than the French, but Soult left the city to them.
+        lonlat: [1.444, 43.604]
+      - kind: siege
+        side: gb
+        name: Bayonne
+        date: February – April 1814
+        text: The garrison’s sortie of 14 April, after news of the abdication had arrived, was the last battle of the war.
+        lonlat: [-1.475, 43.49]
+    arrows:
+      - side: gb
+        label: Wellington
+        via: [[-1.77, 43.33], [-1.6, 43.38], [-1.45, 43.42], [-0.77, 43.49], [0.5, 43.55], [1.4, 43.6]]
+      - side: gb
+        label: Beresford
+        via: [[-0.5, 43.9], [-0.55, 44.4], [-0.58, 44.82]]
+      - side: es
+        via: [[-1.75, 43.2], [-1.65, 42.98], [-1.645, 42.84]]

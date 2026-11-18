@@ -1,0 +1,168 @@
+id: war-of-the-mantuan-succession
+name: War of the Mantuan Succession
+start: "1628-03"
+end: "1631-06-19"
+tier: B
+summary: A war over the succession to Mantua and Montferrat after the last Gonzaga duke of the main line died in December 1627. France backed his heir, the French-born Duke of Nevers, while Spain, Savoy and the emperor tried to keep him out; the fighting, a side theatre of the Thirty Years’ War, centred on the fortress of Casale and ended with Nevers confirmed as duke and France holding Pinerolo.
+countries: [it, fr, es, at]
+sides:
+  - id: fr
+    name: France, Nevers and Venice
+    polities: [france, mantua, montferrat, venice]
+    ink: navy
+    moves: French and Venetian moves
+    success: French success
+  - id: sp
+    name: Spain and the emperor
+    polities: [spain, milan, habsburg]
+    ink: gold
+    moves: Spanish and imperial moves
+    success: Spanish and imperial success
+  - id: sav
+    name: Savoy
+    polities: [savoy]
+    ink: teal
+    moves: Savoyard moves
+    success: Savoyard success
+notes:
+  - Dates are Gregorian. Savoy fought with Spain in 1628, made peace with France at Susa in March 1629, and joined Spain again late that year.
+  - Plague, brought by the armies, killed perhaps a third of the people of northern Italy in 1629–1631; Milan and Venice lost about half their inhabitants. The epidemic is the background of Alessandro Manzoni’s novel The Betrothed.
+  - Wikipedia’s article dates the French capture of Pinerolo to March 1629; it fell to Richelieu’s army on 29 March 1630.
+sources:
+  - title: War of the Mantuan Succession (Wikipedia)
+    url: https://en.wikipedia.org/wiki/War_of_the_Mantuan_Succession
+  - title: Treaty of Cherasco (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Cherasco
+  - title: Charles I Gonzaga, Duke of Mantua (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Charles_I_Gonzaga,_Duke_of_Mantua
+  - title: Italian plague of 1629–1631 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Italian_plague_of_1629%E2%80%931631
+steps:
+  - title: Casale and the Pass of Susa
+    date: 1628–1629
+    when: "1627-12-26"
+    borders: "1629-03-11"
+    countries: [it, fr, es]
+    body:
+      - Vincenzo II Gonzaga died on 26 December 1627, three days after his niece Maria, heiress of Montferrat, had married the son of his cousin Charles Gonzaga, Duke of Nevers, a French peer. Nevers took over in Mantua in January 1628. The Spanish governor of Milan, Gonzalo Fernández de Córdoba, had already agreed with Charles Emmanuel I of Savoy to share Montferrat. The emperor had placed both duchies under sequestration until he decided the succession, but in March Córdoba laid siege to Casale, one of the strongest fortresses in Europe, and the Savoyards took Trino and Nizza Monferrato.
+      - Casale held out through the year, defended by Nevers’ troops with French volunteers, and a relief force Nevers raised in France was destroyed by the Savoyards in the Alps. Once the Huguenot stronghold of La Rochelle had surrendered in October 1628, France could act. In March 1629 Louis XIII and Cardinal Richelieu brought an army over the Montgenèvre and on 6 March stormed the barricades the Savoyards had built across the Pass of Susa. Charles Emmanuel came to terms at once, the Spanish lifted the siege of Casale, and French troops moved into Susa and Casale.
+    facts:
+      - [Death of Vincenzo II, 26 December 1627]
+      - [First siege of Casale, "March 1628 – March 1629"]
+      - [Pass of Susa, "6 March 1629, French victory"]
+    markers:
+      - kind: event
+        name: Mantua
+        date: 17 January 1628
+        text: Nevers arrived to take possession of the duchy and asked the emperor to recognise him.
+        lonlat: [10.79, 45.16]
+      - kind: held
+        side: fr
+        name: Casale
+        date: March 1628 – March 1629
+        text: The capital of Montferrat, with a modern citadel, held out for a year against Córdoba’s Spanish army.
+        lonlat: [8.45, 45.13]
+      - kind: taken
+        side: sav
+        name: Trino
+        date: April 1628
+        text: Savoy took this Montferrat town at the start of the war and was given it at the peace.
+        lonlat: [8.3, 45.19]
+        lp: t
+      - kind: taken
+        side: sav
+        name: Nizza Monferrato
+        date: June 1628
+        text: Taken by the Savoyards as they overran southern Montferrat.
+        lonlat: [8.36, 44.77]
+      - kind: battle
+        side: fr
+        name: Pass of Susa
+        date: 6 March 1629
+        text: French troops, with Louis XIII present, carried the Savoyard barricades in the narrow valley below Chiomonte and took the town of Susa.
+        lonlat: [7.02, 45.13]
+    arrows:
+      - side: sp
+        label: Córdoba
+        via: [[9.17, 45.45], [8.85, 45.3], [8.49, 45.15]]
+      - side: sav
+        label: Charles Emmanuel
+        via: [[7.69, 45.07], [8.05, 45.15], [8.27, 45.19]]
+      - side: fr
+        label: Louis XIII and Richelieu
+        via: [[6.72, 44.93], [6.85, 45.03], [7.0, 45.12]]
+      - side: fr
+        via: [[7.1, 45.12], [7.8, 45.13], [8.41, 45.13]]
+  - title: Mantua, the plague and Cherasco
+    date: 1629–1631
+    when: "1629-06"
+    borders: "1631-06-19"
+    countries: [it, fr, es, at]
+    body:
+      - Spain sent Ambrogio Spinola to try again, and Emperor Ferdinand II, now free of his war with Denmark, sent an army from Germany under Count Collalto. Spinola besieged Casale again, Savoy rejoined Spain, and the imperial army besieged Mantua from late 1629. A French army under Montmorency overran Savoy, and in March 1630 Richelieu took Pinerolo, the key to the western Alps. Plague came with the armies and killed perhaps a third of the people of northern Italy. The war grew savage. In April 1630, at Ostiglia, imperial soldiers killed about 600 villagers, women and children among them, in revenge for an attack by local bandits.
+      - On 29 May 1630 the imperialists routed a Venetian relief army at Villabuona, and on 18 July they stormed Mantua, whose garrison plague had cut to about 700 fit men. The city and the Gonzaga collections were plundered for three days. Casale held out, and in late October, as a French relief army arrived, the papal envoy Giulio Mazarin rode between the lines to arrange a truce. Ferdinand, now facing Gustavus Adolphus of Sweden in Germany, made peace at Cherasco on 6 April and 19 June 1631. Nevers kept Mantua and Montferrat, Savoy gained Trino and Alba, and by a secret agreement Savoy let France keep Pinerolo, which it held until 1696.
+    facts:
+      - [Sack of Mantua, 18 July 1630]
+      - [Plague of 1629–1631, "perhaps a third of northern Italians died"]
+      - [Treaty of Cherasco, "6 April and 19 June 1631"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Pinerolo
+        date: 29 March 1630
+        text: Richelieu’s army took the Savoyard fortress at the foot of the Alps. France kept it, with a road into Piedmont, until 1696.
+        lonlat: [7.33, 44.88]
+      - kind: battle
+        side: fr
+        name: Battle of Avigliana
+        date: 10 July 1630
+        text: Montmorency beat a Savoyard and Spanish army in the Susa valley west of Turin.
+        lonlat: [7.4, 45.08]
+        lp: t
+      - kind: event
+        name: Ostiglia
+        date: April 1630
+        text: After armed locals attacked an imperial foraging party and the garrison, imperial troops killed about 600 people in the town.
+        lonlat: [11.13, 45.07]
+      - kind: battle
+        side: sp
+        name: Battle of Villabuona
+        date: 29 May 1630
+        text: A Venetian army marching to relieve Mantua was surprised and routed by the imperialists under Gallas.
+        lonlat: [10.71, 45.26]
+        lp: l
+      - kind: taken
+        side: sp
+        name: Mantua
+        date: 18 July 1630
+        text: The lakes around the city had kept the imperialists out for months. The sack that followed was one of the worst of the century.
+        lonlat: [10.79, 45.16]
+      - kind: held
+        side: fr
+        name: Casale
+        date: May–October 1630
+        text: The French garrison held out against Spinola, who died during the siege. On 26 October Mazarin, riding out between the armies, announced the truce.
+        lonlat: [8.45, 45.13]
+      - kind: treaty
+        name: Treaty of Cherasco
+        date: 6 April and 19 June 1631
+        text: Signed by France, the emperor and Savoy, it confirmed Nevers as duke of Mantua and Montferrat.
+        lonlat: [7.87, 44.65]
+    arrows:
+      - side: sp
+        label: Collalto’s imperial army
+        via: [[11.12, 46.07], [10.99, 45.44], [10.83, 45.19]]
+      - side: fr
+        label: Richelieu, 1630
+        via: [[6.72, 44.93], [7.0, 44.95], [7.3, 44.89]]
+      - side: fr
+        label: Venetian relief
+        via: [[11.0, 45.3], [10.85, 45.28], [10.73, 45.26]]
+      - side: fr
+        label: Schomberg, October 1630
+        via: [[7.69, 45.07], [8.05, 45.1], [8.41, 45.13]]
+    areas:
+      - style: gained
+        side: fr
+        label: Pinerolo, kept by France 1631–1696
+        polygon: [[7.15, 44.98], [7.42, 44.95], [7.45, 44.84], [7.3, 44.8], [7.12, 44.88]]

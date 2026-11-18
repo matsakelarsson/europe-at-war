@@ -1,0 +1,136 @@
+id: french-invasion-of-spain
+name: French invasion of Spain (1823)
+start: "1823-04-07"
+end: "1823-11-02"
+tier: B
+summary: The French intervention of 1823, approved by the great powers at the Congress of Verona, which overthrew Spain’s liberal constitutional government and restored King Ferdinand VII as an absolute monarch. A French army under the Duke of Angoulême, popularly called the Hundred Thousand Sons of Saint Louis, met little resistance, took Madrid in May and forced the surrender of Cádiz, the last refuge of the Cortes, after storming the Trocadero fort in August.
+countries: [es, fr]
+sides:
+  - id: fr
+    name: France
+    polities: [france]
+    ink: blue
+    moves: French moves
+    success: French success
+  - id: roy
+    name: Spanish royalists
+    ink: gold
+    moves: Royalist moves
+    success: Royalist success
+  - id: lib
+    name: Spanish constitutional government
+    polities: [spain]
+    ink: purple
+    moves: Constitutional moves
+    success: Constitutional success
+notes:
+  - In French the campaign is called l’expédition d’Espagne. Despite its popular name, the French army had between 60,000 and 95,000 men. The years of liberal rule it ended, 1820–1823, are known in Spain as the Trienio Liberal, and the years of absolutism that followed, to 1833, as the Ominous Decade.
+sources:
+  - title: Hundred Thousand Sons of Saint Louis (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hundred_Thousand_Sons_of_Saint_Louis
+  - title: Trienio Liberal (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Trienio_Liberal
+  - title: Battle of Trocadero (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Trocadero
+steps:
+  - title: The Hundred Thousand Sons of Saint Louis
+    date: April – June 1823
+    when: "1823-04-07"
+    borders: "1823-06-15"
+    countries: [es, fr]
+    body:
+      - In January 1820 an army revolt led by Lieutenant Colonel Rafael del Riego forced King Ferdinand VII to restore the liberal constitution of 1812, and for three years Spain was governed by liberal ministers and an elected Cortes. Royalist bands, calling themselves the Army of the Faith, rose in the north and in 1822 set up a regency at La Seu d’Urgell, and Ferdinand secretly appealed to the other monarchies. At the Congress of Verona the great powers, over British objections, agreed that France should intervene, and in January 1823 Louis XVIII announced that a hundred thousand Frenchmen were ready to march to save the throne of Spain.
+      - On 7 April a French army under the king’s nephew, the Duke of Angoulême, crossed the Bidasoa together with Spanish royalist troops. Unlike in 1808, most Spaniards did not resist, and in many places they welcomed the French as defenders of the king and the Church. The French left the fortresses behind them under blockade and entered Madrid on 24 May, where a royalist regency was set up. The Cortes had already moved to Seville, taking the king with them. On 11 June, when he refused to go further, they declared him temporarily unfit to rule and carried him off to Cádiz.
+    facts:
+      - [French army crosses the Bidasoa, "7 April 1823"]
+      - [Madrid entered, "24 May 1823"]
+      - [Commander, "Louis Antoine, Duke of Angoulême"]
+    markers:
+      - kind: event
+        side: fr
+        name: The Bidasoa
+        date: 7 April 1823
+        text: The French crossed the border river at Behobia, scattering a few hundred French and Italian liberal exiles who called on them to change sides.
+        lonlat: [-1.76, 43.34]
+      - kind: taken
+        side: fr
+        name: Madrid
+        date: 24 May 1823
+        text: The French entered the capital without a fight; two days later Angoulême named a regency of royalist grandees.
+        lonlat: [-3.704, 40.417]
+      - kind: event
+        side: lib
+        name: Seville
+        date: 11 June 1823
+        text: The Cortes suspended the king’s powers and moved the government and Ferdinand to Cádiz.
+        lonlat: [-5.995, 37.389]
+    arrows:
+      - side: fr
+        label: Angoulême
+        via: [[-1.76, 43.3], [-2.67, 42.85], [-3.7, 42.3], [-3.7, 40.47]]
+      - side: fr
+        label: Moncey
+        via: [[2.87, 42.45], [2.82, 41.98], [2.25, 41.5]]
+      - side: lib
+        label: The Cortes
+        via: [[-5.99, 37.36], [-6.12, 36.9], [-6.27, 36.55]]
+  - title: Trocadero and Cádiz
+    date: June – November 1823
+    when: "1823-06-24"
+    borders: "1823-11-02"
+    countries: [es, fr]
+    body:
+      - French columns pursued the constitutional armies across the country. General Francisco Ballesteros surrendered in Andalusia on 4 August, and A Coruña, Pamplona and San Sebastián gave up in August and September. Cádiz, the refuge of the Cortes, was besieged from late June. On the night of 31 August French infantry waded across the channel in front of the Trocadero fort, which guarded the inner bay, and stormed it; the Place du Trocadéro in Paris is named after the victory. After the fort of Sancti Petri fell and the city was bombarded, the Cortes gave in and released the king, who crossed to the French camp at El Puerto de Santa María on 1 October.
+      - Ferdinand at once annulled every act of the constitutional government since 1820, despite his promise of an amnesty, and began a decade of repression. Riego, captured in September, was hanged in Madrid on 7 November. Thousands of liberals were imprisoned or executed, or went into exile, many of them to Britain. In Catalonia General Francisco Espoz y Mina held Barcelona until 2 November. French troops stayed in Spain until 1828, partly to restrain the king’s ultra-royalist supporters.
+    facts:
+      - [Trocadero stormed, "31 August 1823"]
+      - [Ferdinand VII released, "1 October 1823"]
+      - [Riego hanged, "7 November 1823"]
+    markers:
+      - kind: battle
+        side: fr
+        name: Trocadero
+        date: 31 August 1823
+        text: About 1,700 defenders held the fort; the French lost a few dozen killed and took about a thousand prisoners.
+        lonlat: [-6.24, 36.515]
+      - kind: siege
+        side: fr
+        name: Cádiz
+        date: 24 June – 30 September 1823
+        text: The city held out under blockade and bombardment until the Cortes dissolved itself.
+        lonlat: [-6.292, 36.527]
+        lp: l
+      - kind: event
+        side: roy
+        name: El Puerto de Santa María
+        date: 1 October 1823
+        text: Ferdinand crossed the bay to the French headquarters and the same day decreed the restoration of absolute rule.
+        lonlat: [-6.233, 36.6]
+        lp: t
+      - kind: taken
+        side: fr
+        name: A Coruña
+        date: 21 August 1823
+        text: The port surrendered after a siege by General Bourke’s division.
+        lonlat: [-8.411, 43.371]
+      - kind: taken
+        side: fr
+        name: Pamplona
+        date: 16 September 1823
+        text: The fortress capitulated after a siege and bombardment.
+        lonlat: [-1.645, 42.817]
+      - kind: taken
+        side: fr
+        name: Barcelona
+        date: 2 November 1823
+        text: Mina’s forces gave up the city after months of fighting in Catalonia, the last constitutional stronghold.
+        lonlat: [2.177, 41.383]
+      - kind: event
+        side: roy
+        name: Madrid
+        date: 7 November 1823
+        text: Riego was hanged in the Plaza de la Cebada before a hostile crowd.
+        lonlat: [-3.704, 40.417]
+    arrows:
+      - side: fr
+        via: [[-3.7, 40.35], [-3.8, 38.6], [-5.0, 37.4], [-6.15, 36.6]]

@@ -1,0 +1,134 @@
+id: great-siege-of-malta
+name: Great Siege of Malta
+start: "1565-05-18"
+end: "1565-09-13"
+tier: B
+summary: The Ottoman attempt to take Malta from the Knights of St John in 1565. A large Ottoman army besieged the knights, the Maltese and their Spanish and Italian soldiers for nearly four months, taking Fort St Elmo at great cost but failing against Birgu and Senglea, until a relief army from Sicily landed in September and the invaders sailed away.
+countries: [mt, tr, es, it]
+sides:
+  - id: kn
+    name: Knights of St John and the Maltese
+    polities: [malta]
+    ink: red
+    moves: Moves by the Knights and their allies
+    success: Success for the Knights and their allies
+  - id: sp
+    name: Spain and Sicily
+    polities: [spain, sicily]
+    ink: gold
+    moves: Spanish relief
+    success: Spanish success
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Dates are Julian, as usual for the period. In Malta the end of the siege is celebrated on 8 September, the day the Ottomans began to embark; their last attack came on 11 September, and their forces had left the islands by 13 September.
+  - The size of the Ottoman army is uncertain. One knight who fought in the siege, Francisco Balbi di Correggio, counted about 48,000; letters written during the siege give 22,000 or fewer, and most historians suggest 30,000–40,000 including sailors.
+  - The Knights Hospitaller, a military religious order, held Malta from 1530 as a fief of the Kingdom of Sicily, paying a yearly falcon to its king. The new capital, Valletta, is named after Grand Master Jean de Valette.
+sources:
+  - title: Great Siege of Malta (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Great_Siege_of_Malta
+  - title: Jean Parisot de Valette (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jean_Parisot_de_Valette
+  - title: Fort Saint Elmo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fort_Saint_Elmo
+steps:
+  - title: Fort St Elmo
+    date: 18 May – 23 June 1565
+    when: "1565-05-18"
+    borders: "1565-06-23"
+    countries: [mt, tr, es, it]
+    body:
+      - The Knights of St John, driven from Rhodes by the Ottomans in 1522, had held Malta since 1530, and their galleys preyed on Muslim shipping. In 1565 Sultan Suleiman sent a fleet of about 200 ships under Piyale Pasha with an army under Mustafa Pasha, perhaps 30,000 or more fighting men. Grand Master Jean de Valette had about 500 knights and some 6,000 soldiers, Maltese militia, Spanish and Italian troops, behind the walls of Birgu and Senglea, two promontories on the Grand Harbour, with Fort St Elmo guarding its mouth.
+      - The fleet anchored at Marsaxlokk, and the Ottomans chose to take St Elmo first, to open Marsamxett harbour to their ships. From late May guns on Mount Sciberras pounded the small fort to rubble, but Valette ferried in fresh men each night. The corsair Turgut Reis (Dragut) was mortally wounded by a cannon shot. St Elmo fell on 23 June; almost all of its more than 1,500 defenders were killed, and the Ottomans had lost perhaps 6,000 men. Mustafa is said to have floated the bodies of knights across the harbour, and Valette to have answered by firing the heads of Turkish prisoners from his guns.
+    facts:
+      - [Ottoman fleet arrives, 18 May 1565]
+      - [Fall of Fort St Elmo, 23 June 1565]
+      - [Defenders, "about 500 knights and 6,000 soldiers"]
+    markers:
+      - kind: event
+        name: Marsaxlokk
+        date: 20 May 1565
+        text: The Ottoman fleet anchored in this bay in the south-east of the island. The army set up its main camp at Marsa, at the head of the Grand Harbour.
+        lonlat: [14.545, 35.842]
+      - kind: taken
+        side: ot
+        name: Fort St Elmo
+        date: 23 June 1565
+        text: The star-shaped fort at the tip of Mount Sciberras held for a month against continuous bombardment and repeated assaults. Nine knights were taken alive by corsairs.
+        lonlat: [14.519, 35.902]
+        lp: t
+      - kind: held
+        side: kn
+        name: Birgu and Senglea
+        date: May–June 1565
+        text: Valette directed the defence from Birgu, at the foot of Fort St Angelo, and sent men across the harbour to St Elmo by night.
+        lonlat: [14.52, 35.887]
+        lp: b
+      - kind: held
+        side: kn
+        name: Mdina
+        date: 1565
+        text: The old walled capital in the centre of the island stayed in Maltese and Christian hands, and its cavalry raided the Ottoman lines.
+        lonlat: [14.403, 35.886]
+        lp: l
+    arrows:
+      - side: ot
+        label: Piyale Pasha
+        via: [[15.25, 35.65], [14.85, 35.76], [14.56, 35.835]]
+      - side: ot
+        label: Turgut Reis
+        via: [[14.35, 35.55], [14.45, 35.78], [14.51, 35.89]]
+  - title: Birgu, Senglea and the relief
+    date: July–September 1565
+    when: "1565-07-03"
+    borders: "1565-09-13"
+    countries: [mt, tr, es, it]
+    body:
+      - Next the Ottomans turned on Birgu and Senglea, ringing them with some 65 guns. A small relief of about 600 men slipped into Birgu in early July. On 15 July Mustafa sent boats, dragged overland into the Grand Harbour, against Senglea, while corsairs stormed Fort St Michael; a battery hidden at the foot of Fort St Angelo sank most of the boats. On 7 August, with the walls breached, a great double assault was close to success when cavalry from Mdina fell on the Ottoman camp at Marsa, and the attackers, thinking a relief army had come, drew back.
+      - Through August the defenders beat off assaults, mines and siege towers. Valette, about seventy, fought in the breach himself and refused to abandon the towns for Fort St Angelo. On 7 September García de Toledo, viceroy of Sicily, landed about 8,000 men in the north of the island. The Ottomans began to embark, turned back to attack the relief army, were routed near St Paul’s Bay on 11 September and sailed away. About a third of the knights and of Malta’s people had died; the Ottomans had lost perhaps 25,000 or more. In March 1566 Valette laid the first stone of a new fortified city on Mount Sciberras, Valletta.
+    facts:
+      - [Great assault on Birgu and Senglea, 7 August 1565]
+      - [Relief army lands, 7 September 1565]
+      - [Ottoman losses, "perhaps 25,000 or more, estimates vary"]
+    markers:
+      - kind: held
+        side: kn
+        name: Birgu and Senglea
+        date: July–September 1565
+        text: The two fortified towns, with Fort St Angelo and Fort St Michael, withstood four months of bombardment and assaults; at the end they were largely in ruins.
+        lonlat: [14.52, 35.887]
+      - kind: event
+        side: kn
+        name: Marsa
+        date: 7 August 1565
+        text: Cavalry from Mdina under Vincenzo Anastagi attacked the lightly guarded Ottoman camp and field hospital, killing the sick and wounded, and broke off the great assault.
+        lonlat: [14.495, 35.877]
+        lp: l
+      - kind: held
+        side: kn
+        name: Mdina
+        date: early September 1565
+        text: When the Ottomans marched on the old capital, its guns opened fire at long range, a bluff that made it seem well supplied, and they turned back.
+        lonlat: [14.403, 35.886]
+        lp: l
+      - kind: event
+        side: sp
+        name: The great relief
+        date: 7 September 1565
+        text: García de Toledo’s relief army, the Gran Soccorso, landed unopposed in the north of the island and marched inland to Mdina.
+        lonlat: [14.36, 35.96]
+        lp: t
+      - kind: battle
+        side: sp
+        name: St Paul’s Bay
+        date: 11 September 1565
+        text: Mustafa’s attack on the relief army failed, and his men were cut down as they fled to the boats.
+        lonlat: [14.4, 35.948]
+    arrows:
+      - side: sp
+        label: García de Toledo
+        via: [[15.27, 37.07], [14.8, 36.5], [14.38, 35.97]]

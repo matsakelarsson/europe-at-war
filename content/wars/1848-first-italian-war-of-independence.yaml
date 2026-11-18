@@ -1,0 +1,379 @@
+id: first-italian-war-of-independence
+name: First Italian War of Independence
+start: "1848-03-18"
+end: "1849-08-22"
+tier: A
+summary: The first war of the Risorgimento, fought in 1848–1849 by the Kingdom of Sardinia, Italian volunteers and the revolutionary governments of Milan, Venice, Rome and Sicily against Austria and the rulers it backed. Austria’s Field Marshal Radetzky defeated Sardinia at Custoza in 1848 and at Novara in 1849, France destroyed the Roman Republic, the Bourbons retook Sicily and Venice surrendered in August 1849. The old order returned everywhere, but Sardinia kept its constitution and became the hope of Italian liberals.
+countries: [it, at, fr, sm]
+sides:
+  - id: sa
+    name: Kingdom of Sardinia
+    polities: [savoy]
+    ink: navy
+    moves: Sardinian moves
+    success: Sardinian success
+  - id: rev
+    name: Italian revolutionaries and volunteers
+    polities: [roman-republic]
+    ink: red
+    moves: Revolutionary and volunteer moves
+    success: Revolutionary success
+  - id: at
+    name: Austria
+    polities: [habsburg]
+    ink: purple
+    moves: Austrian moves
+    success: Austrian success
+  - id: fr
+    name: France
+    polities: [france]
+    ink: blue
+    moves: French moves
+    success: French success
+  - id: ns
+    name: Kingdom of the Two Sicilies
+    polities: [two-sicilies]
+    ink: orange
+    moves: Neapolitan moves
+    success: Neapolitan success
+notes:
+  - Italian historians call Charles Albert’s two campaigns against Austria the “royal war” and the risings in Milan, Venice, Rome, Tuscany and Sicily the “popular war”. The Papal States, Tuscany and the Two Sicilies sent troops to fight Austria in spring 1848 but soon withdrew them; many of their volunteers fought on.
+  - The revolutions in Vienna and the German states are told in German revolutions of 1848–1849, and the revolution in Paris in French Revolution of 1848.
+sources:
+  - title: First Italian War of Independence (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Italian_War_of_Independence
+  - title: Five Days of Milan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Five_Days_of_Milan
+  - title: Battle of Custoza (1848) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Custoza_(1848)
+  - title: Battle of Novara (1849) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Novara_(1849)
+  - title: Ten Days of Brescia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ten_Days_of_Brescia
+  - title: Roman Republic (1849–1850) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Roman_Republic_(1849%E2%80%931850)
+  - title: Republic of San Marco (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Republic_of_San_Marco
+  - title: Sicilian revolution of 1848 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sicilian_revolution_of_1848
+  - title: Risorgimento (Britannica)
+    url: https://www.britannica.com/event/Risorgimento
+steps:
+  - title: The Five Days of Milan
+    date: 18 March – 30 April 1848
+    when: "1848-03-18"
+    borders: "1848-04-30"
+    countries: [it, at]
+    body:
+      - News of the revolution in Vienna reached Milan, the capital of Austrian Lombardy, on 17 March 1848, and the next day the city rose against its garrison. For five days the Milanese fought from barricades, directed by a council of war under the federalist Carlo Cattaneo, and on the night of 22 March Field Marshal Joseph Radetzky, then 81, withdrew his troops from the city. About 400 Milanese and 180 Austrian soldiers had been killed. In Venice crowds freed the lawyer Daniele Manin from prison, the Austrian garrison left, and on 22 March Manin proclaimed the Republic of San Marco. Towns across Lombardy and Venetia rose, and the dukes of Parma and Modena fled.
+      - On 23 March King Charles Albert of Sardinia declared war on Austria, partly to forestall a republican revolution, and his army crossed the Ticino into Lombardy. The Pope, the Grand Duke of Tuscany and the King of the Two Sicilies, pressed by liberal opinion, sent troops and volunteers. Radetzky fell back to the Quadrilateral, the fortresses of Peschiera, Verona, Mantua and Legnago, and waited for reinforcements down the Adige valley. The Piedmontese forced the Mincio at Goito on 8 April and drove the Austrians from Pastrengo on 30 April, but moved slowly. On 29 April Pope Pius IX declared that he could not make war on Catholic Austria.
+    facts:
+      - [Five Days of Milan, "18–22 March 1848"]
+      - [Republic of San Marco proclaimed, "Venice, 22 March 1848"]
+      - [Sardinia declares war, "23 March 1848"]
+    markers:
+      - kind: event
+        side: rev
+        name: Milan
+        date: 18–22 March 1848
+        text: The Five Days. The insurgents took the city gates one by one, and Radetzky’s troops withdrew on the night of 22 March.
+        lonlat: [9.19, 45.467]
+      - kind: event
+        side: rev
+        name: Venice
+        date: 22 March 1848
+        text: Workers of the Arsenal rose, the Austrian governor capitulated, and Daniele Manin proclaimed the Republic of San Marco.
+        lonlat: [12.336, 45.438]
+      - kind: held
+        side: at
+        name: Verona
+        date: from 2 April 1848
+        text: The largest fortress of the Quadrilateral and Radetzky’s base for the rest of the campaign.
+        lonlat: [10.993, 45.438]
+      - kind: battle
+        side: sa
+        name: Goito
+        date: 8 April 1848
+        text: Piedmontese troops, with the newly raised Bersaglieri, seized the partly demolished bridge over the Mincio.
+        lonlat: [10.675, 45.247]
+      - kind: battle
+        side: sa
+        name: Pastrengo
+        date: 30 April 1848
+        text: The Piedmontese drove an Austrian detachment back across the Adige; a charge of the royal Carabinieri decided the fight.
+        lonlat: [10.8, 45.495]
+      - kind: event
+        side: sa
+        name: Turin
+        date: 23 March 1848
+        text: Charles Albert, who had granted a constitution, the Statuto, on 4 March, declared war on Austria.
+        lonlat: [7.686, 45.07]
+    arrows:
+      - side: at
+        label: Radetzky
+        via: [[9.19, 45.44], [9.5, 45.31], [10.4, 45.4], [10.95, 45.43]]
+      - side: sa
+        label: Charles Albert
+        via: [[8.95, 45.22], [9.6, 45.26], [10.2, 45.22], [10.62, 45.26]]
+    areas:
+      - style: contested
+        side: rev
+        label: Risen against Austria, late March 1848 (approximate)
+        atoms: [IT-MI, IT-MB, IT-LO, IT-CO, IT-LC, IT-VA, IT-BG, IT-BS, IT-CR, IT-SO, IT-VE, IT-PD, IT-TV, IT-VI, IT-RO, IT-BL, IT-UD, IT-PN]
+  - title: Custoza
+    date: May – August 1848
+    when: "1848-05-29"
+    borders: "1848-08-09"
+    countries: [it, at]
+    body:
+      - In April and May an Austrian relief army under Laval Nugent marched from the Isonzo through Friuli and Venetia, retaking the towns that had risen, and joined Radetzky at Verona. Radetzky then swung south around the Piedmontese flank. On 29 May Tuscan and Neapolitan volunteers, many of them students, held him for a day at Curtatone and Montanara. On 30 May the Piedmontese beat him at Goito, and the same day the fortress of Peschiera surrendered to them; Lombardy, the duchies and later Venice voted to join Sardinia. But the King of the Two Sicilies, after crushing a rising in Naples on 15 May, recalled his army, and on 10 June Radetzky took Vicenza from Papal troops.
+      - In July Radetzky, now reinforced, attacked the Piedmontese line, which stretched for about 70 km along the Mincio. Around the hills of Custoza, south-west of Verona, he defeated Charles Albert’s main army on 24–25 July, and it fell back in disorder to Milan. Charles Albert agreed to give up the city on 4 August; crowds who felt betrayed fired on his residence, and he left under escort in the night. The armistice signed by General Carlo Canera di Salasco on 9 August returned Lombardy to Austria. Giuseppe Garibaldi, back from exile in South America, fought on with about a thousand volunteers near Lake Maggiore, winning a skirmish at Luino on 15 August, before escaping to Switzerland.
+    facts:
+      - [Battle of Goito, "30 May 1848, Sardinian victory"]
+      - [Battle of Custoza, "24–25 July 1848, Austrian victory"]
+      - [Armistice of Salasco, "9 August 1848"]
+    markers:
+      - kind: battle
+        side: at
+        name: Curtatone and Montanara
+        date: 29 May 1848
+        text: About 5,400 Tuscan and Neapolitan troops and volunteers were overwhelmed by a far larger Austrian force, but their stand gave the Piedmontese time to gather at Goito.
+        lonlat: [10.72, 45.14]
+      - kind: battle
+        side: sa
+        name: Battle of Goito
+        date: 30 May 1848
+        text: The Piedmontese threw back Radetzky’s attack; Charles Albert’s soldiers hailed him as King of Italy.
+        lonlat: [10.675, 45.247]
+        lp: l
+      - kind: taken
+        side: sa
+        name: Peschiera
+        date: 30 May 1848
+        text: The Austrian garrison of the lakeside fortress, besieged since April, surrendered on the day of the battle.
+        lonlat: [10.691, 45.439]
+        lp: l
+      - kind: taken
+        side: at
+        name: Vicenza
+        date: 10 June 1848
+        text: Radetzky stormed the hills above the city, which surrendered with its Papal garrison under General Giovanni Durando.
+        lonlat: [11.546, 45.548]
+      - kind: battle
+        side: at
+        name: Battle of Custoza
+        date: 24–25 July 1848
+        text: The decisive battle of the 1848 campaign; Radetzky’s attack broke the centre of the long Piedmontese line.
+        lonlat: [10.8, 45.383]
+      - kind: taken
+        side: at
+        name: Milan
+        date: 6 August 1848
+        text: Radetzky re-entered the city two days after Charles Albert agreed to give it up.
+        lonlat: [9.19, 45.467]
+      - kind: treaty
+        name: Vigevano
+        date: 9 August 1848
+        text: The armistice of Salasco, signed here, drew the line between the armies on the old border of the Ticino.
+        lonlat: [8.86, 45.317]
+        lp: l
+    arrows:
+      - side: at
+        label: Nugent
+        via: [[13.45, 45.95], [12.3, 45.85], [11.55, 45.55], [11.02, 45.45]]
+      - side: at
+        label: Radetzky
+        via: [[10.99, 45.41], [10.85, 45.22], [10.74, 45.15], [10.69, 45.22]]
+      - side: at
+        via: [[10.75, 45.36], [10.2, 45.33], [9.6, 45.4], [9.24, 45.46]]
+      - side: sa
+        label: Charles Albert
+        via: [[10.62, 45.3], [10.0, 45.18], [9.5, 45.3], [9.22, 45.44]]
+    areas:
+      - style: occupied
+        side: sa
+        label: Voted to join Sardinia, May–June 1848; held until August (approximate)
+        atoms: [IT-MI, IT-MB, IT-LO, IT-CO, IT-LC, IT-VA, IT-BG, IT-BS, IT-CR, IT-SO, IT-PC, IT-PR, IT-MO, IT-RE]
+  - title: Novara
+    date: March – August 1849
+    when: "1849-03-20"
+    borders: "1849-08-06"
+    countries: [it, at]
+    body:
+      - Under pressure from democrats at home, Charles Albert ended the armistice in March 1849 and sent his army, now under the Polish general Wojciech Chrzanowski, against Lombardy. Radetzky struck first. On 20 March he crossed the Ticino at Pavia, where a Piedmontese division under General Gerolamo Ramorino had failed to guard the crossings; Ramorino was later shot for disobedience. The Austrians beat the Piedmontese at Mortara on 21 March and at Novara on 23 March. That evening Charles Albert abdicated in favour of his son, Victor Emmanuel II, and left for exile in Portugal, where he died in July.
+      - Victor Emmanuel agreed an armistice with Radetzky at Vignale the next day, accepting an Austrian occupation of part of Piedmont until peace was made. In Lombardy the people of Brescia had risen on 23 March, not knowing of Novara, and held out for ten days until General Julius Haynau’s troops stormed the city; about 1,000 defenders and civilians were killed. In Genoa a republican revolt in April was crushed by Piedmontese troops under Alfonso La Marmora, who bombarded the city. By the Peace of Milan of 6 August 1849 Sardinia paid Austria an indemnity of 65 million francs but kept its territory and its constitution.
+    facts:
+      - [Battle of Novara, "23 March 1849, Austrian victory"]
+      - [Charles Albert abdicates, "evening of 23 March 1849"]
+      - [Peace of Milan, "6 August 1849"]
+    markers:
+      - kind: battle
+        side: at
+        name: Mortara
+        date: 21 March 1849
+        text: Two Austrian corps attacked the Piedmontese around the town in the evening and drove them out in confusion.
+        lonlat: [8.737, 45.25]
+      - kind: battle
+        side: at
+        name: Battle of Novara
+        date: 23 March 1849
+        text: Fought around the village of La Bicocca south-east of the city; by one count the Piedmontese lost nearly 6,000 men killed, wounded or captured.
+        lonlat: [8.66, 45.43]
+      - kind: treaty
+        name: Vignale
+        date: 24 March 1849
+        text: Victor Emmanuel II met Radetzky here and agreed the armistice terms.
+        lonlat: [8.64, 45.47]
+        lp: t
+      - kind: siege
+        side: at
+        name: Ten Days of Brescia
+        date: 23 March – 1 April 1849
+        text: The city fought on for ten days; after Haynau’s troops broke in, they killed prisoners and civilians, and he became known as the “Hyena of Brescia”.
+        lonlat: [10.211, 45.539]
+      - kind: taken
+        side: sa
+        name: Genoa
+        date: 5–11 April 1849
+        text: La Marmora’s troops bombarded and stormed the city, held by republicans who had risen against the armistice.
+        lonlat: [8.934, 44.407]
+      - kind: treaty
+        name: Peace of Milan
+        date: 6 August 1849
+        text: Restored the pre-war borders between Sardinia and Austria.
+        lonlat: [9.19, 45.467]
+    arrows:
+      - side: at
+        label: Radetzky
+        via: [[9.16, 45.18], [8.95, 45.2], [8.75, 45.27], [8.67, 45.41]]
+      - side: sa
+        label: Chrzanowski
+        via: [[8.45, 45.32], [8.55, 45.4], [8.62, 45.43]]
+  - title: The Roman Republic
+    date: November 1848 – August 1849
+    when: "1848-11-15"
+    borders: "1849-07-03"
+    countries: [it, fr, sm, at]
+    body:
+      - In Rome the Pope’s chief minister, Pellegrino Rossi, was stabbed to death on 15 November 1848, and Pius IX fled in disguise to the Neapolitan fortress of Gaeta. An elected assembly proclaimed the Roman Republic on 9 February 1849, and Giuseppe Mazzini led it in a triumvirate with Carlo Armellini and Aurelio Saffi. In Tuscany the Grand Duke Leopold II also fled, and a democratic government held Florence until April. The Pope appealed to the Catholic powers. France, whose president, Louis Napoleon Bonaparte, wanted Catholic support at home and to keep Austria out of central Italy, sent an army under General Charles Oudinot, which landed at Civitavecchia on 24 April.
+      - On 30 April Oudinot’s attack on Rome was beaten back by Giuseppe Garibaldi’s legion and other defenders, and in May Garibaldi drove off a Neapolitan army at Palestrina and Velletri, while Austrian troops took Bologna and Ancona. French reinforcements opened a siege on 3 June. After a month of shelling and fighting on the Janiculum hill, the assembly gave up the defence, and the French entered Rome on 3 July. Garibaldi left with about 4,000 men, hoping to reach Venice. Pursued by French and Austrian troops, he disbanded them in San Marino at the end of July, and his wife Anita died during his flight through the marshes near Ravenna.
+    facts:
+      - [Roman Republic proclaimed, "9 February 1849"]
+      - [French attack repulsed, "30 April 1849"]
+      - [French enter Rome, "3 July 1849"]
+    markers:
+      - kind: siege
+        side: fr
+        name: Siege of Rome
+        date: 3 June – 1 July 1849
+        text: About 30,000 French troops besieged the city; the hardest fighting was for the villas and walls on the Janiculum, around the Porta San Pancrazio.
+        lonlat: [12.48, 41.9]
+      - kind: battle
+        side: rev
+        name: Porta San Pancrazio
+        date: 30 April 1849
+        text: Garibaldi’s counter-attack drove Oudinot’s first assault back from the walls; the French lost several hundred men taken prisoner.
+        lonlat: [12.455, 41.884]
+        lp: l
+      - kind: battle
+        side: rev
+        name: Velletri
+        date: 19 May 1849
+        text: Garibaldi attacked King Ferdinand II’s army, which withdrew into the Kingdom of Naples.
+        lonlat: [12.777, 41.687]
+      - kind: event
+        name: Gaeta
+        date: from 24 November 1848
+        text: Pius IX stayed in the Neapolitan fortress until 1850, returning to Rome only in April of that year.
+        lonlat: [13.57, 41.21]
+      - kind: event
+        side: fr
+        name: Civitavecchia
+        date: 24–25 April 1849
+        text: Oudinot’s expeditionary force landed in the Papal port, at first claiming to come as a friend.
+        lonlat: [11.796, 42.093]
+      - kind: taken
+        side: at
+        name: Bologna
+        date: 16 May 1849
+        text: Taken by the Austrians after a siege and bombardment of eight days.
+        lonlat: [11.343, 44.494]
+      - kind: event
+        side: rev
+        name: San Marino
+        date: 31 July 1849
+        text: Garibaldi found refuge in the republic and released his men from service; he escaped with a few companions.
+        lonlat: [12.447, 43.936]
+    arrows:
+      - side: fr
+        label: Oudinot
+        via: [[11.8, 42.09], [12.2, 41.98], [12.44, 41.89]]
+      - side: ns
+        label: Ferdinand II
+        via: [[13.25, 41.3], [13.0, 41.55], [12.8, 41.67]]
+      - side: rev
+        label: Garibaldi
+        via: [[12.5, 41.93], [12.11, 42.72], [11.88, 43.46], [12.42, 43.92]]
+      - side: at
+        via: [[11.62, 44.84], [11.45, 44.65], [11.36, 44.52]]
+    areas:
+      - style: outline
+        side: rev
+        label: Roman Republic, February–July 1849
+        atoms: [IT-RN, IT-PU, IT-FE, IT-RA, IT-FC, IT-AN, IT-MC, IT-FM, IT-AP, IT-LT!, IT-RM, IT-VT, IT-RI!, IT-BO, IT-TR, IT-PG, IT-FR!]
+  - title: Venice and Sicily
+    date: September 1848 – August 1849
+    when: "1849-04-28"
+    borders: "1849-08-22"
+    countries: [it, at]
+    body:
+      - After the Salasco armistice Venice restored its republic under Manin and held out alone. Austrian troops under Haynau laid siege to the fort of Marghera on the mainland on 28 April 1849, and after more than three weeks of bombardment its 2,000 defenders withdrew to the city on 26 May. The Austrians then shelled Venice itself across the lagoon from late July; earlier they had launched balloons carrying bombs, an early attempt at bombing from the air, but the wind blew them away. Short of food and struck by cholera, which killed nearly 2,800 people, the city surrendered on 22 August. Manin and other leaders went into exile.
+      - Sicily had risen against Bourbon rule in January 1848 and declared King Ferdinand II deposed. In September his troops bombarded and stormed Messina, earning him the nickname “King Bomba”, and after a truce arranged by Britain and France broke down, General Carlo Filangieri took Catania on 7 April 1849 and entered Palermo on 15 May. Across Italy the old rulers returned, with Austrian garrisons in the Legations, Tuscany and the duchies and a French garrison in Rome. Piedmont alone kept a constitution, and thousands of exiles from the other states found refuge there.
+    facts:
+      - [Fort Marghera abandoned, "26 May 1849"]
+      - [Palermo retaken, "15 May 1849"]
+      - [Venice surrenders, "22 August 1849"]
+    markers:
+      - kind: siege
+        side: at
+        name: Marghera
+        date: 28 April – 26 May 1849
+        text: The fort guarding the mainland end of the railway bridge was abandoned after weeks of bombardment.
+        lonlat: [12.243, 45.476]
+        lp: l
+      - kind: siege
+        side: at
+        name: Venice
+        date: May – August 1849
+        text: Bombardment, hunger and cholera forced the last stronghold of the revolution to surrender.
+        lonlat: [12.336, 45.438]
+      - kind: taken
+        side: ns
+        name: Messina
+        date: 3–7 September 1848
+        text: The city was stormed after days of bombardment from the citadel and the fleet, with heavy loss of civilian life.
+        lonlat: [15.556, 38.193]
+      - kind: taken
+        side: ns
+        name: Catania
+        date: 7 April 1849
+        text: Filangieri’s troops took the city after fierce fighting, and the Sicilian resistance collapsed.
+        lonlat: [15.087, 37.502]
+      - kind: taken
+        side: ns
+        name: Palermo
+        date: 15 May 1849
+        text: The Bourbon army entered the capital of the revolution; its leaders fled to Malta.
+        lonlat: [13.361, 38.116]
+    arrows:
+      - side: at
+        label: Haynau
+        via: [[11.95, 45.4], [12.12, 45.45], [12.22, 45.47]]
+      - side: ns
+        label: Filangieri
+        via: [[15.55, 38.17], [15.12, 37.55], [14.2, 37.72], [13.42, 38.08]]
+    areas:
+      - style: contested
+        side: rev
+        label: Held by the Sicilian revolutionaries, 1848 – spring 1849 (approximate)
+        atoms: [IT-PA, IT-TP, IT-AG, IT-CL, IT-EN, IT-CT, IT-SR, IT-RG, IT-ME]

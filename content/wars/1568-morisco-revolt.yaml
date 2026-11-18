@@ -1,0 +1,129 @@
+id: morisco-revolt
+name: Rebellion of the Alpujarras
+start: "1568-12-24"
+end: "1571-03"
+tier: B
+summary: The revolt of the Moriscos of the Kingdom of Granada, descendants of Muslims forced to convert to Christianity, against Philip II’s ban on their language, dress and customs. Beginning in the Alpujarras, the mountain valleys south of the Sierra Nevada, it was fought with great cruelty on both sides and put down by Don John of Austria; afterwards about 80,000 of Granada’s Moriscos were deported to other parts of Castile.
+countries: [es, dz]
+sides:
+  - id: mor
+    name: Moriscos
+    polities: []
+    ink: green
+    moves: Morisco moves
+    success: Morisco success
+  - id: sp
+    name: Spain
+    polities: [spain]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+notes:
+  - Dates are Julian, as usual for the period. It is also called the War of the Alpujarras or the second rebellion of the Alpujarras, after the rising of 1499–1501.
+  - The three main chronicles, by Luis del Mármol Carvajal, Ginés Pérez de Hita and Diego Hurtado de Mendoza, were all written from the Christian side; there is no contemporary account by the Moriscos. Numbers of rebels and dead are uncertain.
+  - The Moriscos of all Spain were expelled in 1609–1614.
+sources:
+  - title: Rebellion of the Alpujarras (1568–1571) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rebellion_of_the_Alpujarras_(1568%E2%80%931571)
+  - title: Morisco (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Morisco
+  - title: John of Austria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/John_of_Austria
+  - title: Morisco (Britannica)
+    url: https://www.britannica.com/topic/Morisco
+steps:
+  - title: Christmas Eve 1568
+    date: December 1568 – 1569
+    when: "1568-12-24"
+    borders: "1569-10-01"
+    countries: [es]
+    body:
+      - Granada’s Muslims had been made to convert after the revolt of 1499–1501, but most of the Moriscos, as the converts were called, still spoke Arabic and kept their own dress and customs. Philip II’s Pragmatic Sanction of 1 January 1567 banned all of these, and appeals to suspend it failed. On Christmas Eve 1568 the mountain villages of the Alpujarras rose in arms and proclaimed a young nobleman, Fernando de Válor, king under the name Aben Humeya. An attempt to raise the Albaicín, Granada’s Morisco quarter, the same night failed.
+      - The rebels killed priests and many other Old Christians in the villages, often with great cruelty. In January 1569 the Marquis of Mondéjar marched in from Granada through the snow and broke the rising in the western Alpujarras, while the Marquis of Los Vélez attacked from Almería. Their troops, mostly unpaid volunteers, plundered, killed and enslaved, and in March a crowd murdered more than a hundred Morisco prisoners in Granada’s jail. The revolt flared up again and spread east to the Almanzora valley and west towards Málaga. In October Aben Humeya was murdered by rivals, and his cousin Aben Aboo took his place.
+    facts:
+      - [Pragmatic Sanction, 1 January 1567]
+      - [Rising in the Alpujarras, 24–25 December 1568]
+      - [Rebels under arms, "about 4,000 in January 1569, perhaps 25,000 by 1570"]
+    markers:
+      - kind: event
+        side: sp
+        name: Albaicín
+        date: 24–25 December 1568
+        text: Farax Aben Farax entered Granada’s Morisco quarter with a band of mountain men, but few townspeople joined him, and the capital never rose.
+        lonlat: [-3.59, 37.18]
+      - kind: taken
+        side: sp
+        name: Órgiva
+        date: January 1569
+        text: Mondéjar forced the broken bridge of Tablate and relieved the Christians besieged in Órgiva’s tower, then crossed into the high Alpujarras.
+        lonlat: [-3.42, 36.9]
+        lp: l
+      - kind: taken
+        side: sp
+        name: Juviles
+        date: January 1569
+        text: One of the rebel strongholds in the high Alpujarras. Many of its people were sold as slaves in Granada.
+        lonlat: [-3.22, 36.95]
+        lp: t
+      - kind: event
+        name: Laujar de Andarax
+        date: October 1569
+        text: Aben Humeya was killed here by rivals among the rebel leaders. His cousin Diego López, Aben Aboo, was chosen king in his place.
+        lonlat: [-2.88, 36.99]
+    arrows:
+      - side: sp
+        label: Mondéjar
+        via: [[-3.6, 37.16], [-3.55, 36.98], [-3.42, 36.92], [-3.25, 36.95]]
+      - side: sp
+        label: Los Vélez
+        via: [[-2.46, 36.84], [-2.68, 36.94], [-2.85, 36.98]]
+    areas:
+      - style: occupied
+        side: mor
+        label: The Alpujarras, heart of the revolt
+        polygon: [[-3.55, 36.86], [-3.45, 37.02], [-3.1, 37.06], [-2.75, 37.06], [-2.55, 36.99], [-2.75, 36.88], [-3.2, 36.83]]
+  - title: Don John and the deportations
+    date: 1570–1571
+    when: "1570-01"
+    borders: "1570-11-01"
+    countries: [es, dz]
+    body:
+      - Philip II replaced Mondéjar with his half-brother, Don John of Austria, aged twenty-two, and in October 1569 declared a war “of fire and blood”, letting soldiers keep the plunder and captives they took. A few thousand volunteers and some arms came from Algiers and Morocco, but the Ottomans sent their fleets against Tunis and Cyprus instead. In January 1570 Don John took the field with about 12,000 men and besieged Galera, a hill town near Huéscar. When it fell on 10 February most of its people were killed or enslaved, and the town was razed and its ground sown with salt.
+      - Serón fell in March, and in the spring Don John and the Duke of Sessa swept through the Alpujarras from both ends, burning crops and villages. Thousands of Moriscos surrendered; others fled to North Africa or hid in caves, where many were suffocated by fires lit at the entrances. From November 1570 the crown deported the Moriscos of Granada, rebels or not, to towns across Castile. About 80,000 were marched away in winter, and many died on the road. Aben Aboo was killed by his own men in a cave near Bérchules in March 1571, and settlers from the north were brought in to farm the emptied villages.
+    facts:
+      - [Fall of Galera, 10 February 1570]
+      - [Deportations from Granada, "from November 1570, about 80,000 people"]
+      - [Death of Aben Aboo, March 1571]
+    markers:
+      - kind: taken
+        side: sp
+        name: Galera
+        date: 10 February 1570
+        text: The hill town held out for two months. Don John ordered it destroyed after its capture.
+        lonlat: [-2.55, 37.74]
+      - kind: taken
+        side: sp
+        name: Serón
+        date: March 1570
+        text: A rebel stronghold in the Almanzora valley, taken in Don John’s advance from the north-east.
+        lonlat: [-2.5, 37.34]
+      - kind: event
+        name: Granada
+        date: November 1570
+        text: Moriscos from across the kingdom were gathered in churches and marched under escort to Córdoba, Toledo and other towns of Castile; those of the Almería region were shipped to Seville.
+        lonlat: [-3.6, 37.18]
+      - kind: event
+        name: Bérchules
+        date: March 1571
+        text: Aben Aboo, the last rebel king, was killed in a cave nearby by his own followers, who hoped for pardon.
+        lonlat: [-3.18, 36.97]
+    arrows:
+      - side: sp
+        label: Don John
+        via: [[-3.6, 37.18], [-3.14, 37.3], [-2.77, 37.49], [-2.57, 37.72]]
+      - side: sp
+        label: Sessa
+        via: [[-3.6, 37.14], [-3.42, 36.93], [-3.05, 36.97], [-2.8, 36.99]]
+      - side: sp
+        label: Deportations to Castile
+        via: [[-3.65, 37.22], [-4.1, 37.6], [-4.75, 37.86]]

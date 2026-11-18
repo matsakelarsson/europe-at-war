@@ -1,0 +1,223 @@
+id: reapers-war
+name: Reapers’ War
+start: "1640-06-07"
+end: "1659-11-07"
+tier: B
+summary: The revolt of Catalonia against the government of Philip IV and his minister Olivares, set off by the billeting of royal troops during the war with France. The Catalans placed themselves under the French king in 1641 and were ruled by France for over a decade, until Spanish troops retook Barcelona in 1652; at the Peace of the Pyrenees in 1659 Spain ceded Roussillon and northern Cerdanya to France.
+countries: [es, fr]
+sides:
+  - id: cat
+    name: Catalan rebels
+    polities: []
+    ink: red
+    moves: Catalan moves
+    success: Catalan success
+  - id: fr
+    name: France
+    polities: [france]
+    ink: navy
+    moves: French and Franco-Catalan moves
+    success: French and Franco-Catalan success
+  - id: sp
+    name: Spain
+    polities: [spain]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+notes:
+  - Dates are Gregorian. The revolt is named after the reapers, segadors, who sparked the riot of June 1640; the song Els Segadors is now the anthem of Catalonia.
+  - The revolt was part of the wider Franco-Spanish War of 1635–1659, which has its own entry. This entry follows events in Catalonia and Roussillon.
+  - On the base map Catalonia stays under Spain throughout; the rule of the rebel government and of France is drawn in areas.
+sources:
+  - title: Reapers’ War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Reapers%27_War
+  - title: Corpus de Sang (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Corpus_de_Sang
+  - title: Catalan Republic (1640–1641) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Catalan_Republic_(1640%E2%80%931641)
+  - title: Battle of Montjuïc (1641) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Montju%C3%AFc_(1641)
+  - title: Siege of Lleida (1644) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Lleida_(1644)
+  - title: Siege of Barcelona (1651) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Barcelona_(1651)
+  - title: Treaty of the Pyrenees (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_the_Pyrenees
+steps:
+  - title: Bloody Corpus and the Catalan Republic
+    date: 1640–1641
+    when: "1640-06-07"
+    borders: "1641-01-26"
+    countries: [es, fr]
+    body:
+      - Olivares wanted the other kingdoms of the Spanish crown to share the burden of Castile’s wars, and Catalonia, with its own laws and parliament, resisted. After the French took the border fortress of Salses in 1639, royal troops were sent to win it back and then quartered on Catalan villages through the winter, and quarrels over billeting turned into violence. In May 1640 peasants rose against the soldiers. On 7 June, Corpus Christi, reapers who had come to Barcelona for the harvest rioted, and the viceroy, the Count of Santa Coloma, was killed on the shore while trying to escape. Royal judges and officials were hunted down.
+      - The Diputació, Catalonia’s standing government, led by its president Pau Claris, raised troops and sought help from France. In December a royal army under the Marquis of Los Vélez marched up the coast from Tortosa. At Cambrils, on 16 December, hundreds of defenders were killed after they had surrendered. On 16 January 1641 Claris proclaimed a Catalan Republic under French protection, and a week later Louis XIII was declared Count of Barcelona. Los Vélez beat the Catalans at Martorell, but on 26 January his assault on the hill of Montjuïc above Barcelona was thrown back, and his army retreated to Tarragona.
+    facts:
+      - [Corpus de Sang, 7 June 1640]
+      - [Massacre at Cambrils, 16 December 1640]
+      - [Battle of Montjuïc, "26 January 1641, Catalan and French victory"]
+    markers:
+      - kind: taken
+        side: sp
+        name: Salses
+        date: 6 January 1640
+        text: The Spanish retook this fortress on the border of Roussillon after a hard winter siege. The troops were then quartered on Catalonia.
+        lonlat: [2.92, 42.83]
+      - kind: event
+        side: cat
+        name: Barcelona
+        date: 7 June 1640
+        text: The Corpus de Sang. Reapers and townspeople attacked royal officials. The viceroy was caught and killed as he tried to reach a galley in the harbour.
+        lonlat: [2.17, 41.39]
+        lp: t
+      - kind: taken
+        side: sp
+        name: Cambrils
+        date: 16 December 1640
+        text: The town surrendered after a short siege, and royal troops then killed hundreds of its defenders. The massacre hardened Catalan resistance.
+        lonlat: [1.06, 41.07]
+        lp: b
+      - kind: taken
+        side: sp
+        name: Tarragona
+        date: December 1640
+        text: The port submitted to Los Vélez and became the main Spanish base in Catalonia.
+        lonlat: [1.25, 41.12]
+      - kind: battle
+        side: sp
+        name: Battle of Martorell
+        date: 23 January 1641
+        text: Los Vélez broke the Catalan force barring the road to Barcelona.
+        lonlat: [1.93, 41.48]
+      - kind: battle
+        side: cat
+        name: Battle of Montjuïc
+        date: 26 January 1641
+        text: Catalan militia and French cavalry held the castle hill and counter-attacked from the city. Among the Spanish dead was John O’Neill, the exiled Earl of Tyrone.
+        lonlat: [2.16, 41.36]
+        lp: b
+    arrows:
+      - side: sp
+        label: Los Vélez
+        via: [[0.52, 40.81], [1.06, 41.07], [1.25, 41.12], [1.93, 41.46]]
+      - side: sp
+        via: [[1.95, 41.45], [2.08, 41.38], [2.14, 41.36]]
+    areas:
+      - style: occupied
+        side: cat
+        label: Under the Catalan government, January 1641
+        atoms: [ES-B, ES-GI, ES-L]
+  - title: French Catalonia
+    date: 1641–1648
+    when: "1641-02"
+    borders: "1648-12-31"
+    countries: [es, fr]
+    side_names:
+      fr: French and Franco-Catalan success
+    body:
+      - Claris died in February 1641, and by a treaty agreed at Péronne in September Catalonia accepted Louis XIII as its sovereign, keeping its own laws. In 1642 a French army besieged Perpignan, with Louis XIII and Cardinal Richelieu present for part of the time; the starving town surrendered on 9 September, leaving all Roussillon in French hands. On 7 October a Franco-Catalan army under Philippe de La Mothe-Houdancourt beat a larger Spanish army at Lleida. But French viceroys and troops soon made themselves as unpopular as the Castilians had been.
+      - After Olivares fell in 1643, Philip IV came to Aragon himself. His army retook Lleida on 30 July 1644, and he swore to respect Catalonia’s laws, which won back many Catalans. A French attack on Tarragona failed that year, and so did French sieges of Lleida in 1646 and 1647, the second led by the young Prince of Condé. The French took Roses on the coast in 1645 and Tortosa, near the mouth of the Ebro, in 1648. By then the front had settled across the middle of Catalonia, and both sides were exhausted.
+    facts:
+      - [Fall of Perpignan, 9 September 1642]
+      - [Battle of Lleida, "7 October 1642, Franco-Catalan victory"]
+      - [Spanish recapture of Lleida, 30 July 1644]
+    markers:
+      - kind: taken
+        side: fr
+        name: Perpignan
+        date: 9 September 1642
+        text: The capital of Roussillon surrendered after a blockade of several months. It has been French ever since.
+        lonlat: [2.9, 42.7]
+      - kind: taken
+        side: sp
+        name: Lleida
+        date: 30 July 1644
+        text: La Mothe-Houdancourt had beaten a Spanish army outside the town in October 1642. The Spanish took it back in 1644 after a two-month siege and held it against French sieges in 1646 and 1647.
+        lonlat: [0.63, 41.62]
+      - kind: held
+        side: sp
+        name: Tarragona
+        date: 1644
+        text: The Spanish garrison held out against a French siege, as it had in 1641.
+        lonlat: [1.25, 41.12]
+      - kind: taken
+        side: fr
+        name: Roses
+        date: 1645
+        text: The French took the fortified port on the Costa Brava, which gave their fleets a base on the Catalan coast.
+        lonlat: [3.18, 42.26]
+      - kind: taken
+        side: fr
+        name: Tortosa
+        date: 1648
+        text: Marshal Schomberg took the town guarding the lower Ebro. The Spanish recovered it in late 1650.
+        lonlat: [0.52, 40.81]
+    arrows:
+      - side: fr
+        label: French army, 1642
+        via: [[3.0, 43.18], [2.94, 42.85], [2.91, 42.73]]
+      - side: sp
+        label: Philip IV’s army, 1644
+        via: [[0.19, 41.91], [0.42, 41.76], [0.6, 41.64]]
+      - side: fr
+        label: Schomberg, 1648
+        via: [[1.6, 41.25], [1.0, 40.95], [0.56, 40.82]]
+    areas:
+      - style: occupied
+        side: fr
+        label: Under French rule, 1648
+        atoms: [FR-66, ES-B, ES-GI]
+      - style: contested
+        label: Divided between the two sides
+        atoms: [ES-L, ES-T]
+  - title: The fall of Barcelona and the Peace of the Pyrenees
+    date: 1650–1659
+    when: "1650"
+    borders: "1659-11-07"
+    countries: [es, fr]
+    body:
+      - From 1648 the Fronde, a series of revolts against the regency government, kept France from sending help, while famine and plague killed many in Catalonia from 1650. The Spanish retook Tortosa late that year, and in the summer of 1651 Don Juan José of Austria, Philip IV’s illegitimate son, laid siege to Barcelona by land and sea. After fifteen months the city surrendered on 11 October 1652. Philip pardoned most of the rebels and confirmed Catalonia’s laws, but kept a garrison in Barcelona and control over who could hold office. The French held on in the north and attacked Girona in 1653 without success.
+      - Fighting along the Pyrenees went on until the Franco-Spanish War ended. By the Treaty of the Pyrenees, signed on Pheasant Island in the Bidassoa on 7 November 1659, Spain ceded Roussillon and the northern part of Cerdanya to France, and the border was drawn along the crest of the mountains. The town of Llívia, which was not counted among the villages ceded, stayed Spanish as an enclave. In the ceded lands French institutions replaced the Catalan ones, and in 1700 Louis XIV made French compulsory in official documents.
+    facts:
+      - [Siege of Barcelona, "July 1651 – October 1652"]
+      - [Barcelona surrenders, 11 October 1652]
+      - [Treaty of the Pyrenees, 7 November 1659]
+    markers:
+      - kind: taken
+        side: sp
+        name: Tortosa
+        date: late 1650
+        text: Spanish troops retook the town, opening the way up the coast to Barcelona.
+        lonlat: [0.52, 40.81]
+      - kind: taken
+        side: sp
+        name: Barcelona
+        date: 11 October 1652
+        text: Starved by a fifteen-month siege and struck by plague, the city surrendered to Don Juan José. The French garrison under La Mothe-Houdancourt was allowed to leave.
+        lonlat: [2.17, 41.39]
+      - kind: held
+        side: sp
+        name: Girona
+        date: 1653
+        text: A French army besieged the city and withdrew when a Spanish relief army approached.
+        lonlat: [2.82, 41.98]
+      - kind: event
+        name: Llívia
+        date: 1660
+        text: Llívia was a town, not one of the villages handed over, and remained a Spanish enclave inside France.
+        lonlat: [1.98, 42.46]
+        lp: l
+      - kind: treaty
+        name: Treaty of the Pyrenees
+        date: 7 November 1659
+        text: Signed by Cardinal Mazarin and Luis de Haro on an island in the border river, it also arranged the marriage of Louis XIV and the Infanta Maria Theresa.
+        lonlat: [-1.77, 43.34]
+    arrows:
+      - side: sp
+        label: Don Juan José, 1651
+        via: [[1.25, 41.12], [1.7, 41.22], [2.08, 41.35]]
+    areas:
+      - style: gained
+        side: fr
+        label: Roussillon and northern Cerdanya, ceded to France
+        atoms: [FR-66]

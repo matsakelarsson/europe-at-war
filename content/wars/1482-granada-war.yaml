@@ -1,0 +1,293 @@
+id: granada-war
+name: Granada War
+start: "1482-02-28"
+end: "1492-01-02"
+tier: A
+summary: The ten-year war in which Isabella of Castile and Ferdinand of Aragon conquered the Nasrid emirate of Granada, the last Muslim state in western Europe. Helped by a civil war within the Nasrid family and by their siege artillery, the Catholic Monarchs took Granada’s towns one by one, among them Ronda, Málaga and Baza, until Boabdil surrendered the city and the Alhambra on 2 January 1492, completing the Reconquista.
+countries: [es]
+sides:
+  - id: cas
+    name: Castile and Aragon
+    polities: [castile, aragon]
+    ink: gold
+    moves: Castilian moves
+    success: Castilian success
+  - id: gra
+    name: Emirate of Granada
+    polities: [granada]
+    ink: green
+    moves: Granadan moves
+    success: Granadan success
+notes:
+  - Spanish sources call the emir Abu’l-Hasan Ali “Muley Hacén”, his son Abu Abdallah Muhammad “Boabdil” and his brother Muhammad “el Zagal”, the valiant. Historians number these last two differently as Muhammad XI, XII or XIII.
+  - The chronicles give the Castilian armies as 50,000 or more in the main campaigns and the Granadan ones as tens of thousands. Some modern historians think the real numbers were much smaller, perhaps 8,000–20,000 Castilian soldiers and a few thousand Granadans.
+  - Dates are Julian. The centuries before 1482 are told in the Reconquista.
+sources:
+  - title: Granada War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Granada_War
+  - title: Emirate of Granada (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Emirate_of_Granada
+  - title: Muhammad XII of Granada (Boabdil) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Muhammad_XII_of_Granada
+  - title: Battle of Lucena (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Lucena
+  - title: Siege of Málaga (1487) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_M%C3%A1laga_(1487)
+  - title: Treaty of Granada (1491) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Granada_(1491)
+  - title: Granada, historical kingdom (Britannica)
+    url: https://www.britannica.com/place/Granada-historical-kingdom-Spain
+steps:
+  - title: Zahara and Alhama
+    date: 1481–1482
+    when: "1481-12-26"
+    borders: "1482-07-15"
+    countries: [es]
+    body:
+      - By 1481 the Nasrid emirate of Granada was the last Muslim state in the Iberian Peninsula, a mountainous land with the ports of Málaga and Almería and the city of Granada itself, crowned by the Alhambra. Its emir, Abu’l-Hasan Ali, had stopped paying tribute to Castile. Isabella of Castile and Ferdinand of Aragon, married since 1469 and secure after the War of the Castilian Succession, were ready to end its independence. In late December 1481, in reprisal for a Christian raid, Granadan troops surprised the Castilian border town of Zahara by night and carried off its people as captives.
+      - Castile struck back on 28 February 1482, when Rodrigo Ponce de León, Marquis of Cádiz, scaled the walls of Alhama, a rich town on the road between Granada and Málaga, and took it after hard street fighting. Abu’l-Hasan besieged it twice, and the Catholic Monarchs made its defence a royal cause; Ferdinand himself took command there in May. In July he besieged Loja and was driven off. On the day Loja was relieved, Abu’l-Hasan’s son Abu Abdallah, Boabdil, rose against his father and took the Alhambra, splitting Granada between rival emirs.
+    facts:
+      - [Zahara taken by Granada, late December 1481]
+      - [Alhama taken by Castile, "28 February 1482"]
+      - [Ferdinand’s siege of Loja, "July 1482, failed"]
+    markers:
+      - kind: taken
+        side: gra
+        name: Zahara
+        date: December 1481
+        text: Granadan troops took the hilltop town in a night attack during a truce. Its people were led away to Ronda as captives.
+        lonlat: [-5.383, 36.833]
+      - kind: taken
+        side: cas
+        name: Alhama
+        date: 28 February 1482
+        text: The Marquis of Cádiz’s men climbed the walls at night. The townspeople fought on in the streets, and many were killed or enslaved.
+        lonlat: [-3.988, 37.003]
+      - kind: held
+        side: gra
+        name: Loja
+        date: July 1482
+        text: The town’s commander, Ali al-Attar, beat off Ferdinand’s army. The Master of Calatrava was among the Castilian dead.
+        lonlat: [-4.15, 37.167]
+      - kind: event
+        name: Granada
+        date: July 1482
+        text: Boabdil, backed by the powerful Abencerraje family, seized the Alhambra. His father held out in Málaga and the west.
+        lonlat: [-3.59, 37.178]
+    arrows:
+      - side: cas
+        label: Marquis of Cádiz
+        via: [[-5.42, 37.33], [-4.56, 37.02], [-4.1, 37.0], [-4.0, 37.0]]
+      - side: cas
+        label: Ferdinand
+        via: [[-4.78, 37.89], [-4.49, 37.41], [-4.18, 37.19]]
+  - title: The Ajarquía and Lucena
+    date: 1483
+    when: "1483-03-20"
+    borders: "1483-08-31"
+    countries: [es]
+    body:
+      - In March 1483 a large Castilian raiding force of nobles and knights of the military orders, led by the Master of Santiago and the Marquis of Cádiz, rode into the Ajarquía, the hill country east of Málaga, to plunder it. Lost in the ravines at night, they were ambushed by the local people and by troops under Abu’l-Hasan’s brother Muhammad, known as al-Zagal. Hundreds were killed and many more captured. It was the worst Castilian defeat of the war.
+      - A month later Boabdil, wanting a victory of his own, attacked Lucena with his father-in-law Ali al-Attar. The Count of Cabra and his nephew, the alcaide of the Donceles, beat his army near the town; Ali al-Attar was killed and Boabdil himself was captured. Ferdinand and Isabella saw the value of a divided Granada. By the Pact of Córdoba that August they freed him as their vassal, promising him help against his father and uncle in return for tribute and his son as a hostage. From then on the war ran alongside a Nasrid civil war.
+    facts:
+      - [Rout in the Ajarquía, "March 1483, Granadan victory"]
+      - [Battle of Lucena, "April 1483, Boabdil captured"]
+      - [Pact of Córdoba, August 1483]
+    markers:
+      - kind: battle
+        side: gra
+        name: Ajarquía
+        date: March 1483
+        text: The raiders were trapped in steep valleys and cut down or captured. Prisoners included many nobles, ransomed later at great cost.
+        lonlat: [-4.27, 36.79]
+      - kind: battle
+        side: cas
+        name: Battle of Lucena
+        date: April 1483
+        text: Boabdil was taken prisoner as his army retreated. He was held in the tower of Porcuna castle, still called the Torre de Boabdil.
+        lonlat: [-4.485, 37.409]
+      - kind: treaty
+        side: cas
+        name: Córdoba
+        date: August 1483
+        text: Boabdil agreed to rule as the vassal of Ferdinand and Isabella, who promised to help him win Granada from his father.
+        lonlat: [-4.78, 37.89]
+    arrows:
+      - side: cas
+        label: Master of Santiago
+        via: [[-4.56, 37.02], [-4.45, 36.88], [-4.3, 36.8]]
+      - side: gra
+        label: Boabdil
+        via: [[-3.6, 37.18], [-4.15, 37.17], [-4.35, 37.33], [-4.46, 37.4]]
+  - title: Ronda and Loja
+    date: 1484–1486
+    when: "1484"
+    borders: "1486-07-31"
+    countries: [es]
+    body:
+      - Castile now fought a war of sieges, town by town. Its decisive weapon was artillery. The Monarchs hired gunners and founders from France, Burgundy and Italy, and trains of heavy bombards were dragged along mountain roads that labourers built ahead of them. Álora fell in 1484 and Setenil that September. In May 1485, after a bombardment of about two weeks and talks with its leaders, Ronda surrendered, and Marbella and the western hills followed. That year al-Zagal pushed aside his ageing brother, who died soon after, and fought both the Christians and his nephew Boabdil.
+      - In May 1486 Ferdinand besieged Loja again, where Boabdil, who had come to terms with his uncle and broken with the Monarchs, had joined the defence. English volunteers under Lord Scales were among the besiegers. The town surrendered at the end of May, and Boabdil was captured and released once more. Íllora and Moclín, fortresses guarding the approaches to Granada, fell that summer. The western half of the emirate was gone, and Castile’s armies could reach the Vega, the fertile plain around the capital.
+    facts:
+      - [Ronda surrenders, May 1485]
+      - [Loja surrenders, May 1486]
+    markers:
+      - kind: taken
+        side: cas
+        name: Álora
+        date: June 1484
+        text: The castle above the Guadalhorce valley surrendered after its walls were battered by cannon.
+        lonlat: [-4.7, 36.817]
+      - kind: taken
+        side: cas
+        name: Setenil
+        date: September 1484
+        text: The town, built into the cliffs of a river gorge, had beaten off earlier sieges. The guns took it in days.
+        lonlat: [-5.181, 36.864]
+        lp: t
+      - kind: taken
+        side: cas
+        name: Ronda
+        date: May 1485
+        text: The Castilian army arrived while much of the garrison was away raiding, and the town gave up after about two weeks of bombardment. Its commander, Hamet el Zegrí, later defended Málaga.
+        lonlat: [-5.165, 36.737]
+      - kind: taken
+        side: cas
+        name: Marbella
+        date: June 1485
+        text: The port, a base of the Granadan fleet, surrendered after the fall of Ronda.
+        lonlat: [-4.883, 36.517]
+      - kind: taken
+        side: cas
+        name: Loja
+        date: May 1486
+        text: The key to the western Vega surrendered after a short siege. Boabdil, who had joined its defence, was taken and freed again.
+        lonlat: [-4.15, 37.167]
+      - kind: taken
+        side: cas
+        name: Moclín
+        date: Summer 1486
+        text: The castle on the northern edge of the Vega fell, like nearby Íllora, to Ferdinand’s guns.
+        lonlat: [-3.786, 37.34]
+    arrows:
+      - side: cas
+        label: Ferdinand, 1485
+        via: [[-5.99, 37.39], [-5.42, 37.0], [-5.18, 36.76]]
+      - side: cas
+        label: Ferdinand, 1486
+        via: [[-4.78, 37.89], [-4.49, 37.41], [-4.18, 37.19]]
+  - title: Vélez-Málaga and Málaga
+    date: 1487
+    when: "1487-04-17"
+    borders: "1487-08-18"
+    countries: [es]
+    body:
+      - In April 1487 Ferdinand marched on Málaga, the emirate’s great port, by way of Vélez-Málaga to the east. Al-Zagal came down from Granada to relieve Vélez, but while he was away Boabdil’s supporters seized the capital, and al-Zagal fell back to Guadix. Vélez surrendered on 27 April. With the coast road open, the Castilians besieged Málaga by land and sea from 7 May. Its commander, Hamet el Zegrí, with North African troops and Christian renegades, refused all terms, and the city held out for three months while famine set in.
+      - Málaga surrendered on 18 August 1487. Ferdinand refused terms, having offered them twice, and as punishment most of its people, many thousands, were enslaved; some were sold, some given away and some allowed to ransom themselves. The city’s Jews were ransomed by the Jews of Castile, and renegades were put to death. The fall of Málaga cut Granada off from North Africa. Boabdil held Granada as the Monarchs’ vassal, and al-Zagal was left with the east of the emirate around Guadix, Baza and Almería.
+    facts:
+      - [Vélez-Málaga surrenders, "27 April 1487"]
+      - [Siege of Málaga, "7 May – 18 August 1487"]
+    markers:
+      - kind: taken
+        side: cas
+        name: Vélez-Málaga
+        date: 27 April 1487
+        text: The town surrendered after al-Zagal’s relief army was driven off, with Boabdil’s supporters inside helping the besiegers.
+        lonlat: [-4.1, 36.783]
+      - kind: taken
+        side: cas
+        name: Málaga
+        date: 18 August 1487
+        text: The city surrendered after Hamet el Zegrí withdrew to the Gibralfaro fortress, which gave up the next day.
+        lonlat: [-4.42, 36.719]
+      - kind: event
+        name: Granada
+        date: April 1487
+        text: Boabdil’s supporters took the city while al-Zagal was away. He now ruled it as the vassal of Ferdinand and Isabella.
+        lonlat: [-3.59, 37.178]
+    arrows:
+      - side: cas
+        label: Ferdinand
+        via: [[-4.56, 37.02], [-4.3, 36.95], [-4.12, 36.8]]
+      - side: cas
+        via: [[-4.1, 36.77], [-4.28, 36.72], [-4.39, 36.72]]
+      - side: gra
+        label: Al-Zagal
+        via: [[-3.6, 37.17], [-3.9, 36.95], [-4.07, 36.8]]
+  - title: Baza, Almería and Guadix
+    date: 1488–1489
+    when: "1488"
+    borders: "1489-12-30"
+    countries: [es]
+    body:
+      - In 1488 the Monarchs turned east, where Vera, Mojácar and other towns submitted without a fight. In June 1489 a large army besieged Baza, al-Zagal’s strongest fortress, defended by his kinsman Sidi Yahya al-Nayar. The city was hard to surround and the guns were of little use against it, so the siege dragged on through the autumn rains, at enormous cost. Queen Isabella came to the camp in November to show that it would not be lifted, and Baza surrendered on generous terms on 4 December 1489.
+      - Sidi Yahya went over to the Christians and helped persuade al-Zagal that further resistance was hopeless. In December al-Zagal handed over Almería and Guadix in return for a lordship in the Alpujarras and a pension; he later left for North Africa. Now only the city of Granada and the mountains of the Alpujarras remained to Boabdil, who had promised to surrender Granada once his uncle was beaten. Unhappy with his rewards, he refused and broke with the Monarchs, and the war entered its last phase.
+    facts:
+      - [Siege of Baza, "June – 4 December 1489"]
+      - [Almería and Guadix surrender, December 1489]
+    markers:
+      - kind: taken
+        side: cas
+        name: Vera
+        date: June 1488
+        text: Vera and the towns of the coast around it submitted as the Monarchs’ army approached.
+        lonlat: [-1.867, 37.25]
+      - kind: taken
+        side: cas
+        name: Baza
+        date: 4 December 1489
+        text: The garrison, still largely unbeaten, surrendered after six months on terms that let its people stay or leave with their goods.
+        lonlat: [-2.773, 37.49]
+      - kind: taken
+        side: cas
+        name: Almería
+        date: December 1489
+        text: The great port was handed over under the agreement with al-Zagal.
+        lonlat: [-2.464, 36.842]
+      - kind: taken
+        side: cas
+        name: Guadix
+        date: December 1489
+        text: Al-Zagal’s capital in the east surrendered at the end of the year.
+        lonlat: [-3.135, 37.301]
+    arrows:
+      - side: cas
+        label: Ferdinand, 1489
+        via: [[-3.37, 38.01], [-3.0, 37.8], [-2.8, 37.52]]
+  - title: Santa Fe and the surrender of Granada
+    date: 1490–1492
+    when: "1490"
+    borders: "1492-01-02"
+    countries: [es]
+    body:
+      - Through 1490 Castilian armies burned the crops of the Vega, while Boabdil, hoping for help from North Africa and Egypt that never came, struck back at nearby castles and tried to win back an outlet to the sea. In April 1491 Ferdinand camped before Granada with a large army. When fire destroyed the camp that July, the Monarchs rebuilt it in stone as a town, Santa Fe, a sign that they would stay until the city fell. Hunger grew inside, Boabdil’s advisers quarrelled, and secret talks began.
+      - By the Treaty of Granada of 25 November 1491 the city was to surrender on generous terms. Its Muslims would keep their property, laws, mosques and religion, and could emigrate freely. Boabdil handed over the Alhambra on 2 January 1492, received a lordship in the Alpujarras and left for Morocco in October 1493. The terms did not last. The Jews of Castile and Aragon were ordered that March to convert or leave, and after forced conversions provoked a revolt in 1499–1501, the Muslims of Granada had to choose between baptism and exile.
+    facts:
+      - [Treaty of Granada, "25 November 1491"]
+      - [Surrender of Granada, "2 January 1492"]
+    markers:
+      - kind: held
+        side: cas
+        name: Salobreña
+        date: August 1490
+        text: Boabdil besieged the coastal castle to reopen a route to North Africa, but it held out until a relief army came.
+        lonlat: [-3.587, 36.747]
+      - kind: event
+        side: cas
+        name: Santa Fe
+        date: "1491"
+        text: The camp town built in about three months before Granada. Here, in April 1492, the Monarchs agreed terms with Christopher Columbus for his first voyage.
+        lonlat: [-3.718, 37.189]
+        lp: l
+      - kind: treaty
+        side: cas
+        name: Granada
+        date: 25 November 1491 – 2 January 1492
+        text: Boabdil surrendered the Alhambra and the city after the treaty’s terms were agreed. Ferdinand and Isabella entered on 6 January.
+        lonlat: [-3.59, 37.178]
+    arrows:
+      - side: cas
+        label: Ferdinand, 1491
+        via: [[-4.15, 37.17], [-3.9, 37.2], [-3.73, 37.19]]
+      - side: gra
+        label: Boabdil, 1490
+        via: [[-3.6, 37.16], [-3.6, 36.95], [-3.59, 36.77]]

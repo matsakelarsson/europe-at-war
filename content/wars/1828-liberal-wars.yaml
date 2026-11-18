@@ -1,0 +1,131 @@
+id: liberal-wars
+name: Liberal Wars
+start: "1828-05-16"
+end: "1834-05-26"
+tier: B
+summary: A civil war in Portugal between the liberal constitutionalists of Pedro IV and his daughter Maria II and the absolutists of Pedro’s brother Miguel, who had made himself king in 1828. Pedro’s small army, landed near Porto in 1832, survived a year-long siege, took Lisbon in 1833 and forced Miguel to give up the throne at Evoramonte in May 1834.
+countries: [pt, es]
+sides:
+  - id: lib
+    name: Liberals (Pedro IV and Maria II)
+    ink: blue
+    moves: Liberal moves
+    success: Liberal success
+  - id: mig
+    name: Miguelists
+    polities: [miguelists]
+    ink: brown
+    moves: Miguelist moves
+    success: Miguelist success
+notes:
+  - Also called the Portuguese Civil War or the War of the Two Brothers. Many foreign volunteers and mercenaries, British, French and Belgian among them, fought for the Liberals, and their fleet was commanded by British officers, George Sartorius and then Charles Napier.
+  - The base map shows Portugal unchanged throughout; who held what is told in the steps. Some sources date the start of the war to the Porto rising of 16 May 1828, others to 18 May.
+sources:
+  - title: Liberal Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Liberal_Wars
+  - title: Siege of Porto (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Porto
+  - title: Battle of Cape St. Vincent (1833) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Cape_St._Vincent_(1833)
+  - title: Battle of Asseiceira (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Asseiceira
+  - title: Concession of Evoramonte (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Concession_of_Evoramonte
+steps:
+  - title: Miguel’s usurpation and the siege of Porto
+    date: 1828 – 1833
+    when: "1828-05-16"
+    borders: "1833-06-01"
+    countries: [pt]
+    body:
+      - When King John VI died in 1826, his elder son Pedro, Emperor of Brazil, granted Portugal a Constitutional Charter and abdicated in favour of his seven-year-old daughter Maria, who was to marry his younger brother Miguel. Miguel returned from exile in February 1828 as regent and swore to uphold the Charter, but his supporters, backed by most of the nobility and the Church, acclaimed him absolute king, and a traditional Cortes of the three estates confirmed him that summer. A liberal rising in Porto in May 1828 collapsed, and thousands of liberals were imprisoned or fled abroad.
+      - Only the island of Terceira in the Azores held out for Maria, and in 1829 its defenders beat off a Miguelist landing at Praia. In 1831 Pedro abdicated the Brazilian throne, raised money and volunteers in Britain and France and gathered a small army in the Azores. On 8 July 1832 about 7,500 men landed at Mindelo, north of Porto, and occupied the city, which Miguel’s troops had abandoned. They were soon besieged by a much larger Miguelist army. For a year Porto was shelled and starved, and cholera broke out in 1833, but the defenders held their lines.
+    facts:
+      - [Liberal landing at Mindelo, "8 July 1832"]
+      - [Siege of Porto, "July 1832 – August 1833"]
+      - [Leaders, "Pedro IV (Dom Pedro); Miguel I"]
+    markers:
+      - kind: event
+        side: lib
+        name: Mindelo
+        date: 8 July 1832
+        text: Pedro’s expedition from the Azores landed unopposed on the beach; its veterans became known as the “Bravos do Mindelo”.
+        lonlat: [-8.72, 41.31]
+        lp: l
+      - kind: held
+        side: lib
+        name: Porto
+        date: July 1832 – August 1833
+        text: The Liberals entered the city on 9 July 1832 and held it through a year of siege, bombardment, hunger and cholera.
+        lonlat: [-8.611, 41.149]
+        lp: l
+      - kind: battle
+        name: Ponte Ferreira
+        date: 22–23 July 1832
+        text: An indecisive battle east of Porto, after which the Liberals fell back into the city and the siege began.
+        lonlat: [-8.43, 41.2]
+      - kind: event
+        side: mig
+        name: Lisbon
+        date: 1828
+        text: Miguel, acclaimed king by his supporters, ruled from the capital, and political prisons filled with liberals.
+        lonlat: [-9.139, 38.722]
+    arrows:
+      - side: lib
+        label: Dom Pedro
+        via: [[-9.6, 41.0], [-9.1, 41.25], [-8.74, 41.31]]
+      - side: lib
+        via: [[-8.72, 41.29], [-8.66, 41.2], [-8.62, 41.16]]
+  - title: Lisbon, Asseiceira and Evoramonte
+    date: June 1833 – May 1834
+    when: "1833-06-21"
+    borders: "1834-05-26"
+    countries: [pt, es]
+    body:
+      - To break the deadlock the Liberals sent a force under the Duke of Terceira by sea to the Algarve in June 1833. On 5 July Charles Napier’s small squadron captured most of the Miguelist fleet off Cape St Vincent, and Terceira marched north through the Alentejo, defeated a Miguelist force across the Tagus from the capital on 23 July and entered Lisbon the next day. Pedro moved his government there, and Miguelist attacks on Lisbon and Porto failed that summer and autumn. Miguel’s army still held much of the interior, with Santarém as his base, and guerrilla bands remained strong in the countryside.
+      - In 1833 the death of Ferdinand VII turned Spain against Miguel, who had sheltered the Spanish pretender Don Carlos. In April 1834 Britain, France, Spain and Portugal formed the Quadruple Alliance, and Spanish troops entered Portugal. On 16 May the Duke of Terceira beat the Miguelist army at Asseiceira near Tomar, and on 26 May, at Evoramonte, Miguel accepted a pension and exile in return for giving up his claim. Pedro restored the Charter and dissolved the religious orders, but died in September 1834, and Maria II, aged 15, began her personal rule.
+    facts:
+      - [Battle of Cape St Vincent, "5 July 1833, Liberal victory"]
+      - [Liberals enter Lisbon, "24 July 1833"]
+      - [Concession of Evoramonte, "26 May 1834"]
+    markers:
+      - kind: naval
+        side: lib
+        name: Cape St Vincent
+        date: 5 July 1833
+        text: Napier boarded and captured the Miguelist ships of the line with a smaller force, giving the Liberals command of the sea.
+        lonlat: [-9.2, 36.95]
+      - kind: taken
+        side: lib
+        name: Lisbon
+        date: 24 July 1833
+        text: Terceira entered the capital the day after defeating the Miguelists at Cova da Piedade, across the Tagus.
+        lonlat: [-9.139, 38.722]
+        lp: l
+      - kind: held
+        side: mig
+        name: Santarém
+        date: 1833–1834
+        text: Miguel’s headquarters during the last months of the war.
+        lonlat: [-8.685, 39.236]
+        lp: l
+      - kind: battle
+        side: lib
+        name: Asseiceira
+        date: 16 May 1834
+        text: The last battle of the war; Terceira’s army broke the Miguelists on the heights near Tomar and took some 1,400 prisoners.
+        lonlat: [-8.45, 39.53]
+      - kind: treaty
+        name: Evoramonte
+        date: 26 May 1834
+        text: Miguel’s generals accepted the concession here; Miguel left Portugal from Sines on 1 June and never returned.
+        lonlat: [-7.716, 38.773]
+    arrows:
+      - side: lib
+        label: Terceira
+        via: [[-7.6, 37.15], [-8.0, 37.9], [-8.6, 38.4], [-9.15, 38.66]]
+      - side: lib
+        label: Napier
+        via: [[-8.8, 41.0], [-9.7, 39.0], [-9.2, 36.98]]
+      - side: lib
+        via: [[-8.9, 39.15], [-8.55, 39.4], [-8.46, 39.52]]

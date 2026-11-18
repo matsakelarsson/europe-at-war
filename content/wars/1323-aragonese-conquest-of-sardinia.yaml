@@ -1,0 +1,166 @@
+id: aragonese-conquest-of-sardinia
+name: Aragonese conquest of Sardinia
+start: "1323-04-11"
+end: "1420"
+tier: B
+summary: The long conquest of Sardinia by the Crown of Aragon, to which the pope had granted the island in 1297. The Infante Alfonso took the Pisan lands in 1323–1324, creating the Kingdom of Sardinia, but Aragon then fought the Doria and Genoa and, from 1353, the native Judicate of Arborea, which at times held most of the island; Martin the Younger’s victory at Sanluri in 1409 broke Arborea, and its last judge sold his rights in 1420.
+countries: [it, es]
+sides:
+  - id: ara
+    name: Crown of Aragon
+    polities: [aragon, sardinia]
+    ink: gold
+    moves: Aragonese moves
+    success: Aragonese success
+  - id: arb
+    name: Arborea
+    polities: [sardinian-judicates]
+    ink: purple
+    moves: Arborean moves
+    success: Arborean success
+  - id: pis
+    name: Pisa
+    polities: [pisa]
+    ink: teal
+    moves: Pisan moves
+    success: Pisan success
+  - id: gen
+    name: Genoa and the Doria
+    polities: [genoa]
+    ink: red
+    moves: Genoese moves
+    success: Genoese success
+notes:
+  - Medieval Sardinia was divided into four judicates (giudicati), native kingdoms ruled by judges. By 1323 only Arborea survived; Pisa held the former judicates of Cagliari and Gallura, and the Genoese Doria and Malaspina families and the city of Sassari held most of the north.
+  - Arborea fought on Aragon’s side in 1323–1324 and against it from 1353. The war of 1353–1420 is often called the Sardinian–Catalan or Sardinian–Aragonese war, and was broken by several truces and peaces (1355, 1388).
+sources:
+  - title: Aragonese conquest of Sardinia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Aragonese_conquest_of_Sardinia
+  - title: Battle of Lucocisterna (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Lucocisterna
+  - title: Sardinian–Catalan war (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sardinian%E2%80%93Catalan_war
+  - title: Battle of Alghero (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Alghero
+  - title: Eleanor of Arborea (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Eleanor_of_Arborea
+  - title: Battle of Sanluri (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sanluri
+  - title: Judicate of Arborea (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Judicate_of_Arborea
+steps:
+  - title: Villa di Chiesa and Cagliari
+    date: 1323–1326
+    when: "1323-04-11"
+    borders: "1324-06-19"
+    countries: [it, es]
+    body:
+      - In 1297 Pope Boniface VIII had granted Sardinia and Corsica to James II of Aragon in return for his giving up Sicily, but the island was not his to take. Pisa ruled the south and east, the Genoese Doria and Malaspina families much of the north, and the Judicate of Arborea, the last of Sardinia’s native kingdoms, the west. In April 1323 Judge Hugh II of Arborea declared himself James’s vassal and attacked the Pisans. On 13 June an Aragonese fleet of some 300 ships under James’s heir, the Infante Alfonso, landed at Palma di Sulcis in the south-west.
+      - Alfonso besieged the silver-mining town of Villa di Chiesa (Iglesias), which held out for seven months until hunger forced it to surrender on 7 February 1324, while malaria took a heavy toll of his army. He then turned on Cagliari. On 29 February a Pisan relief army was beaten at Lucocisterna, near Elmas, and the same day the Aragonese fleet beat the Pisan ships off Cagliari. In the peace of June 1324 Pisa gave up its Sardinian lands, keeping only the castle of Cagliari as a fief; after another war it lost that too in 1326. Its Pisan people were expelled, and Cagliari, settled by Catalans, became the capital of the Kingdom of Sardinia.
+    facts:
+      - [Landing at Palma di Sulcis, 13 June 1323]
+      - [Surrender of Villa di Chiesa, 7 February 1324]
+      - [Battle of Lucocisterna, "29 February 1324, Aragonese victory"]
+    markers:
+      - kind: battle
+        side: arb
+        name: Villanovaforru
+        date: April 1323
+        text: Hugh II rose against Pisa and beat a Pisan force between Villanovaforru and Sanluri before the Aragonese arrived.
+        lonlat: [8.82, 39.62]
+      - kind: event
+        side: ara
+        name: Palma di Sulcis
+        date: 13 June 1323
+        text: The fleet, which had sailed from the Ebro delta by way of Menorca, landed the army in the bay of Palmas.
+        lonlat: [8.52, 39.11]
+      - kind: taken
+        side: ara
+        name: Villa di Chiesa
+        date: 7 February 1324
+        text: The Pisan mining town, today’s Iglesias, surrendered after a seven-month siege. Its silver mines made it a prize in itself.
+        lonlat: [8.54, 39.31]
+      - kind: battle
+        side: ara
+        name: Battle of Lucocisterna
+        date: 29 February 1324
+        text: The Pisan army under Manfredi della Gherardesca, landed near Capoterra, was routed as it marched on the Aragonese camp outside Cagliari.
+        lonlat: [9.06, 39.26]
+        lp: l
+      - kind: taken
+        side: ara
+        name: Cagliari
+        date: June 1326
+        text: Pisa handed over the Castello, its fortress city on the hill above the harbour, ending Pisan rule in Sardinia.
+        lonlat: [9.12, 39.22]
+    arrows:
+      - side: ara
+        label: Infante Alfonso, 1323
+        via: [[4.27, 39.89], [6.5, 39.4], [8.47, 39.1]]
+      - side: ara
+        label: To Cagliari, 1324
+        via: [[8.56, 39.3], [8.8, 39.28], [9.04, 39.25]]
+      - side: pis
+        label: Pisan relief
+        via: [[9.5, 40.92], [9.8, 40.0], [9.35, 39.1], [9.0, 39.13]]
+  - title: The war with Arborea
+    date: 1353–1420
+    when: "1353"
+    borders: "1420"
+    countries: [it, es]
+    body:
+      - Aragon struggled to hold the island. The Doria rebelled repeatedly with Genoese backing, and in 1353 Judge Marianus IV of Arborea, who wanted the whole of Sardinia for his own house, joined them. That August an Aragonese and Venetian fleet beat the Genoese off Porto Conte, and in 1354 King Peter IV took Alghero, expelled its people and resettled it with Catalans, whose language is still spoken there. Marianus’s armies overran most of the island in the 1360s, leaving Aragon little more than Cagliari and Alghero. His daughter Eleanor, who ruled for her sons from 1383, kept up the struggle and in about 1392 issued the Carta de Logu, a law code that stayed in force until 1827.
+      - In 1409 Martin the Younger, King of Sicily and heir to Aragon, brought an army to Sardinia. On 30 June at Sanluri he crushed the army of Arborea and its Genoese allies under the new judge, William III of Narbonne, a French grandson of Eleanor’s sister; thousands of Sardinians were killed. Martin died of malaria at Cagliari on 25 July, but Oristano surrendered in 1410, and its lord, Leonardo Cubello, became Marquis of Oristano under the crown. William held out in the north until 1420, when he sold his remaining rights to Alfonso V for 100,000 gold florins. Castelsardo, the last Doria stronghold, fell in 1448.
+    facts:
+      - [Battle of Porto Conte, "27 August 1353, Aragonese and Venetian victory"]
+      - [Battle of Sanluri, "30 June 1409, Aragonese victory"]
+      - [Arborean rights sold, "1420, for 100,000 florins"]
+    markers:
+      - kind: naval
+        side: ara
+        name: Battle of Porto Conte
+        date: 27 August 1353
+        text: An Aragonese and Venetian fleet, allied against Genoa, destroyed a Genoese fleet sent to help the Doria.
+        lonlat: [8.2, 40.6]
+        lp: l
+      - kind: taken
+        side: ara
+        name: Alghero
+        date: "1354"
+        text: Peter IV besieged the Doria port himself. After its surrender its Sardinian and Ligurian people were driven out and replaced by settlers from Catalonia.
+        lonlat: [8.32, 40.56]
+      - kind: battle
+        side: ara
+        name: Battle of Sanluri
+        date: 30 June 1409
+        text: Martin’s Aragonese, Sicilian and Catalan troops broke the Arborean army in a single day. Sardinians remember the battle as sa battalla.
+        lonlat: [8.9, 39.56]
+      - kind: event
+        name: Cagliari
+        date: 25 July 1409
+        text: Martin the Younger died here of fever, leaving his father Martin I of Aragon without a legitimate heir.
+        lonlat: [9.12, 39.22]
+      - kind: taken
+        side: ara
+        name: Oristano
+        date: 29 March 1410
+        text: The capital of the Judicate of Arborea surrendered after a siege, and its new marquisate became a vassal of the crown.
+        lonlat: [8.59, 39.9]
+      - kind: held
+        side: arb
+        name: Sassari
+        date: 1410–1420
+        text: The largest town in the north held for William of Narbonne until he sold his rights.
+        lonlat: [8.56, 40.73]
+    arrows:
+      - side: ara
+        label: Martin the Younger, 1409
+        via: [[9.12, 39.23], [9.0, 39.4], [8.93, 39.54]]
+      - side: arb
+        label: William III
+        via: [[8.6, 39.88], [8.75, 39.74], [8.87, 39.58]]
+    areas:
+      - style: occupied
+        side: arb
+        label: Held by Arborea at its height, about 1368–1388 (approximate)
+        atoms: [IT-SS, IT-OT, IT-NU, IT-OG, IT-VS, IT-CI]

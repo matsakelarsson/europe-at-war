@@ -1,0 +1,119 @@
+id: castilian-civil-war
+name: Castilian Civil War
+start: "1351"
+end: "1369-03-23"
+tier: B
+summary: The war between Peter I of Castile and his illegitimate half-brother Henry of Trastámara, which became a side theatre of the Hundred Years’ War. Henry, backed by France, Aragon and the Free Companies under Bertrand du Guesclin, drove Peter out in 1366; the Black Prince restored him by his victory at Nájera in 1367, but Henry returned, beat Peter at Montiel in 1369 and killed him, founding the Trastámara dynasty and making Castile an ally of France.
+countries: [es, fr, gb]
+sides:
+  - id: ped
+    name: Peter I and his allies
+    polities: [castile, england]
+    ink: gold
+    moves: Moves by Peter and his allies
+    success: Success for Peter
+  - id: tra
+    name: Henry of Trastámara and his allies
+    polities: [aragon, france]
+    ink: purple
+    moves: Moves by Henry and his allies
+    success: Success for Henry
+notes:
+  - Peter’s enemies called him the Cruel and his supporters the Just. The main chronicle of his reign was written by Pero López de Ayala, who changed sides to Henry in 1366; Froissart tells the story from the English and French side.
+  - Historians date the war differently. Some count it from the first noble revolts against Peter in the early 1350s, others only from Henry’s invasion of 1366. It overlapped with the War of the Two Peters (1356–1369) between Castile and Aragon, which has its own entry; Nájera and the Castilian alliance with France also appear in the Hundred Years’ War.
+  - Dates are Julian. Nájera is sometimes called the battle of Navarrete.
+sources:
+  - title: Castilian Civil War of 1351–1369 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Castilian_Civil_War_of_1351%E2%80%931369
+  - title: Peter of Castile (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peter_of_Castile
+  - title: Henry II of Castile (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Henry_II_of_Castile
+  - title: Battle of Nájera (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_N%C3%A1jera
+  - title: Battle of Montiel (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Montiel
+  - title: Peter, king of Castile and León (Britannica)
+    url: https://www.britannica.com/biography/Peter-king-of-Castile-and-Leon
+steps:
+  - title: Henry’s invasion and Nájera
+    date: 1351–1367
+    when: "1366"
+    borders: "1367-04-03"
+    countries: [es, fr, gb]
+    body:
+      - Peter I became king of Castile at fifteen in 1350. His father, Alfonso XI, had had ten children with his mistress Leonor de Guzmán, and in 1351 Peter’s mother had Leonor put to death; her son Henry, count of Trastámara, became his half-brother’s mortal enemy. Peter’s reign saw noble revolts and many executions, among them that of another half-brother, Fadrique, in 1358, and his abandoned French wife, Blanche of Bourbon, died in his custody in 1361, it was said on his orders. Henry fled abroad and fought for Aragon in the War of the Two Peters.
+      - In 1366, with French money and Aragonese support, Henry led the Free Companies, bands of soldiers left unemployed by the Hundred Years’ War, into Castile under Bertrand du Guesclin. Peter fled without a fight, and Henry was crowned at Burgos. Peter turned to Edward, the Black Prince, who ruled Aquitaine for England, and by the Treaty of Libourne promised him land and pay for his army. The prince crossed the Pyrenees at Roncesvalles in February 1367, and on 3 April, at Nájera, his English archers and men-at-arms routed Henry’s Castilian and French army. Du Guesclin was captured and Henry fled to France.
+    facts:
+      - [Henry crowned, "5 April 1366, at Burgos"]
+      - [Treaty of Libourne, "23 September 1366"]
+      - [Battle of Nájera, "3 April 1367, victory for Peter and the Black Prince"]
+    markers:
+      - kind: event
+        side: tra
+        name: Calahorra
+        date: 16 March 1366
+        text: Henry was proclaimed king here soon after crossing into Castile from Aragon.
+        lonlat: [-1.967, 42.3]
+      - kind: event
+        side: tra
+        name: Burgos
+        date: 5 April 1366
+        text: Henry was crowned in the royal monastery of Las Huelgas. Peter had abandoned the city and fled south to Seville, then to Portugal and Galicia.
+        lonlat: [-3.707, 42.35]
+      - kind: treaty
+        side: ped
+        name: Libourne
+        date: 23 September 1366
+        text: Peter promised the Black Prince Biscay and the pay of his army, and Charles II of Navarre lands on the Navarrese border, in return for their help.
+        lonlat: [-0.24, 44.92]
+      - kind: battle
+        side: ped
+        name: Battle of Nájera
+        date: 3 April 1367
+        text: The English longbowmen broke Henry’s light cavalry and then his men-at-arms. Many Castilians drowned in the river Najerilla as they fled.
+        lonlat: [-2.7, 42.428]
+    arrows:
+      - side: tra
+        label: Henry and Du Guesclin
+        via: [[-0.88, 41.65], [-1.6, 42.06], [-1.97, 42.3], [-3.66, 42.34]]
+      - side: ped
+        label: Black Prince
+        via: [[-1.47, 43.49], [-1.32, 43.01], [-1.65, 42.8], [-2.62, 42.45]]
+  - title: Montiel
+    date: 1367–1369
+    when: "1367"
+    borders: "1369-03-23"
+    countries: [es, fr]
+    body:
+      - Peter could not pay what he had promised, and the Black Prince, sick and in debt, went back to Aquitaine in the summer of 1367; he never recovered his health. Henry returned that autumn, and much of the north accepted him. In 1368 he made an alliance with Charles V of France, took León and laid siege to Toledo, which held out for Peter. Peter’s ally, Muhammad V of Granada, raided Henry’s towns in Andalusia and sacked Jaén.
+      - In March 1369 Peter marched to relieve Toledo with an army that included Granadan horsemen. Henry and Du Guesclin, now ransomed, surprised it at Montiel, in La Mancha, on 14 March and scattered it, and Peter took refuge in the castle. On the night of 23 March, lured out by an offer of escape, he was brought to Du Guesclin’s tent, where he fought with Henry and was stabbed to death. Henry II founded the Trastámara dynasty, and Castile became France’s ally. John of Gaunt, who married Peter’s daughter Constance, claimed the Castilian crown for years.
+    facts:
+      - [Battle of Montiel, "14 March 1369, victory for Henry"]
+      - [Death of Peter I, "23 March 1369"]
+    markers:
+      - kind: held
+        side: ped
+        name: Toledo
+        date: 1368–1369
+        text: The city held out for Peter through a long siege and famine, and surrendered only after his death.
+        lonlat: [-4.024, 39.857]
+      - kind: taken
+        side: ped
+        name: Jaén
+        date: "1368"
+        text: Muhammad V of Granada, Peter’s ally, sacked the town and carried off many of its people as captives.
+        lonlat: [-3.771, 37.767]
+      - kind: battle
+        side: tra
+        name: Battle of Montiel
+        date: 14 March 1369
+        text: Henry’s army caught Peter’s on the march and routed it. Peter shut himself in the castle, where he was besieged until his death nine days later.
+        lonlat: [-2.862, 38.696]
+    arrows:
+      - side: ped
+        label: Peter
+        via: [[-5.99, 37.39], [-4.78, 37.89], [-3.6, 38.35], [-2.9, 38.68]]
+      - side: tra
+        label: Henry and Du Guesclin
+        via: [[-4.02, 39.86], [-3.4, 39.3], [-2.88, 38.72]]

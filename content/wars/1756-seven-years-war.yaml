@@ -41,6 +41,18 @@ sides:
     ink: blue
     moves: Swedish moves
     success: Swedish success
+  - id: es
+    name: Spain
+    polities: [spain]
+    ink: gold
+    moves: Spanish and French moves
+    success: Spanish success
+  - id: pt
+    name: Portugal
+    polities: [portugal]
+    ink: teal
+    moves: Portuguese moves
+    success: Portuguese success
 notes:
   - Dates are New Style (Gregorian). Russia used the Julian calendar, eleven days behind, so Russian sources date Elizabeth’s death 25 December 1761.
   - Sweden’s part in the war is told separately, as the Pomeranian War.
@@ -87,6 +99,14 @@ sources:
     url: https://en.wikipedia.org/wiki/Battle_of_Freiberg
   - title: Treaty of Hubertusburg (Wikipedia)
     url: https://en.wikipedia.org/wiki/Treaty_of_Hubertusburg
+  - title: Siege of Fort St Philip (1756) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Fort_St_Philip_(1756)
+  - title: Battle of Minorca (1756) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Minorca_(1756)
+  - title: Spanish invasion of Portugal (1762) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Spanish_invasion_of_Portugal_(1762)
+  - title: Treaty of Paris (1763) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Paris_(1763)
 steps:
   - title: Saxony overrun, Lobositz and Pirna
     date: August – October 1756
@@ -493,3 +513,77 @@ steps:
         date: 15 February 1763
         text: Austria, Prussia and Saxony made peace on the basis of the borders of 1756 at this hunting lodge near Wermsdorf.
         lonlat: [12.94, 51.278]
+  - title: Minorca and Portugal
+    date: 1756–1763
+    when: "1762-05-05"
+    borders: "1763-02-10"
+    countries: [es, pt, gb, fr]
+    body:
+      - The war between Britain and France had begun in the Mediterranean, months before Frederick invaded Saxony. On 18 April 1756 a French army of some 15,000 men under the Duke of Richelieu landed on Minorca, British since 1708, and besieged Fort St Philip, which guarded Port Mahon. Admiral John Byng, sent with a fleet to relieve it, fought an indecisive battle with the French fleet off the island on 20 May and then sailed back to Gibraltar, and the garrison surrendered on 29 June. Byng was court-martialled for failing to do his utmost and shot on the deck of a warship at Portsmouth in March 1757, “to encourage the others”, as Voltaire put it in Candide.
+      - Spain joined France in January 1762 under the Bourbon Family Compact, and when Portugal, Britain’s ally, refused to close its ports to British ships, Spanish armies invaded it on 5 May. A first army of 22,000 took Miranda do Douro, Bragança and Chaves in Trás-os-Montes, but peasant bands cut its supplies and it fell back. Britain sent some 7,000 troops, and the Count of Schaumburg-Lippe took command of the reorganised Portuguese army. A second, Franco-Spanish army under the Count of Aranda took Almeida in August and pushed towards Abrantes. The allies raided the Spanish bases at Valencia de Alcántara and Vila Velha, peasants stripped the country bare, and hunger, sickness and desertion broke the invaders; a British report put their losses at 30,000. A truce followed in December. By the Treaty of Paris of 10 February 1763 Spain gave back its conquests, Britain returned Havana, taken from Spain in 1762, in exchange for Florida, and France handed Minorca back to Britain.
+    facts:
+      - [Fort St Philip surrenders, "29 June 1756"]
+      - [Spanish invasion of Portugal, "5 May – 24 November 1762"]
+      - [Treaty of Paris, "10 February 1763: Minorca returned to Britain"]
+    markers:
+      - kind: event
+        side: fr
+        name: French landing
+        date: 18 April 1756
+        text: Richelieu’s army came ashore at Ciutadella, at the western end of the island, and marched east to Mahon.
+        lonlat: [3.838, 40.0]
+      - kind: naval
+        name: Battle of Minorca
+        date: 20 May 1756
+        text: The British and French fleets fought an inconclusive action south-east of the island. Byng then held a council of war and sailed back to Gibraltar, leaving the garrison to its fate.
+        lonlat: [4.5, 39.72]
+        lp: b
+      - kind: siege
+        side: fr
+        name: Fort St Philip
+        date: 20 April – 29 June 1756
+        text: The garrison under Lieutenant-Governor William Blakeney, then in his eighties, held out for more than two months and marched out with the honours of war.
+        lonlat: [4.3, 39.871]
+      - kind: taken
+        side: es
+        name: Miranda do Douro
+        date: 9 May 1762
+        text: An accidental explosion of the castle’s powder magazine killed some 400 people and blew breaches in the walls, and the town surrendered.
+        lonlat: [-6.274, 41.495]
+      - kind: siege
+        side: es
+        name: Almeida
+        date: August 1762
+        text: The border fortress surrendered to Aranda on 25 August after a short siege.
+        lonlat: [-6.906, 40.726]
+      - kind: battle
+        side: gb
+        name: Valencia de Alcántara
+        date: 27 August 1762
+        text: Brigadier John Burgoyne’s British and Portuguese troops surprised this Spanish supply base after a forced march and took a Spanish general prisoner.
+        lonlat: [-7.243, 39.413]
+      - kind: battle
+        side: gb
+        name: Vila Velha
+        date: October 1762
+        text: A night attack led by Lieutenant-Colonel Charles Lee broke up a Spanish detachment guarding the crossing of the Tagus.
+        lonlat: [-7.67, 39.655]
+        lp: l
+    arrows:
+      - side: fr
+        label: Richelieu
+        via: [[5.93, 43.1], [4.7, 41.6], [3.87, 40.03]]
+      - side: gb
+        label: Byng
+        via: [[-5.35, 36.13], [-1.0, 37.1], [2.8, 39.2], [4.4, 39.72]]
+      - side: es
+        label: Sarria
+        via: [[-5.75, 41.5], [-6.27, 41.5], [-6.76, 41.8], [-7.47, 41.74]]
+      - side: es
+        label: Aranda
+        via: [[-6.53, 40.6], [-6.9, 40.72], [-7.2, 40.2], [-7.49, 39.82]]
+    areas:
+      - style: gained
+        side: gb
+        label: Minorca, back to Britain in 1763
+        atoms: [ES-PM~menorca]

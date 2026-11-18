@@ -1,0 +1,287 @@
+id: war-of-the-sicilian-vespers
+name: War of the Sicilian Vespers
+start: "1282-03-30"
+end: "1302-08-31"
+tier: A
+summary: The war that followed the rising of the Sicilians against Charles of Anjou in 1282, when the island gave its crown to Peter III of Aragon. Aragonese and Sicilian fleets under Roger of Lauria won almost every battle at sea; when Aragon made peace in 1295, the Sicilians crowned Peter’s son Frederick and fought on against the Angevins, the papacy and Aragon itself, until the Peace of Caltabellotta in 1302 left Sicily to Frederick and split the old kingdom in two.
+countries: [it, es, fr, mt, dz]
+sides:
+  - id: sic
+    name: Sicily
+    polities: [sicily]
+    ink: red
+    moves: Sicilian moves
+    success: Sicilian success
+  - id: ara
+    name: Crown of Aragon
+    polities: [aragon]
+    ink: gold
+    moves: Aragonese moves
+    success: Aragonese success
+  - id: ang
+    name: Angevins, France and the papacy
+    polities: [naples, france, papal-states]
+    ink: blue
+    moves: Angevin and allied moves
+    success: Angevin and allied success
+notes:
+  - After 1282 both kingdoms still called themselves the Kingdom of Sicily. Historians call the island kingdom Sicily (or, after 1302, Trinacria) and the mainland kingdom Naples, as the map does.
+  - Whether the rising was planned is disputed. Peter III and the Byzantine emperor Michael VIII, whom Charles was preparing to attack, had both been plotting against him, and later legend gave the leading role to the exile John of Procida.
+  - The French crusade against Aragon in 1284–1285 has its own entry, the Aragonese Crusade. Frederick of Sicily is usually numbered Frederick III, though some historians call him Frederick II.
+sources:
+  - title: War of the Sicilian Vespers (Wikipedia)
+    url: https://en.wikipedia.org/wiki/War_of_the_Sicilian_Vespers
+  - title: Sicilian Vespers (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sicilian_Vespers
+  - title: Siege of Messina (1282) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Messina_(1282)
+  - title: Battle of Malta (1283) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Malta_(1283)
+  - title: Battle of the Gulf of Naples (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Gulf_of_Naples
+  - title: Battle of the Counts (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Counts
+  - title: Treaty of Anagni (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Anagni
+  - title: Battle of Cape Orlando (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Cape_Orlando
+  - title: Battle of Falconaria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Falconaria
+  - title: Battle of Ponza (1300) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ponza_(1300)
+  - title: Peace of Caltabellotta (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peace_of_Caltabellotta
+  - title: Sicilian Vespers (Britannica)
+    url: https://www.britannica.com/event/Sicilian-Vespers
+steps:
+  - title: The Vespers
+    date: "1282"
+    when: "1282-03-30"
+    borders: "1282-10"
+    countries: [it, dz]
+    body:
+      - Charles of Anjou ruled the Kingdom of Sicily from Naples, and the island resented his heavy taxes, his French officials and the use of its wealth for his planned conquest of Constantinople. On Easter Monday, 30 March 1282, at the hour of vespers outside the church of Santo Spirito in Palermo, a French soldier is said to have insulted a Sicilian woman and was killed by her husband. The crowd turned on the French, and in the night and the days that followed, by the chroniclers’ count, some 2,000 French men, women and children were killed in Palermo. The rising spread across the island. Messina rose at the end of April and burned the ships gathered there for Charles’s expedition.
+      - The rebels formed communes and offered to place themselves under the pope, who refused. Charles crossed the strait with a large army and besieged Messina from July, but its people, women among them, held the walls. The Sicilians then offered the crown to Peter III of Aragon, whose wife Constance was Manfred’s daughter and heir. Peter, who had been waiting with a fleet at Collo on the African coast, landed at Trapani on 30 August and was proclaimed king in Palermo on 4 September. As his army marched on Messina, Charles, in danger of being cut off, withdrew to Calabria at the end of September.
+    facts:
+      - [Sicilian Vespers, "30 March 1282, Palermo"]
+      - [Siege of Messina, "July – September 1282"]
+      - [Peter III lands at Trapani, 30 August 1282]
+    markers:
+      - kind: event
+        side: sic
+        name: Palermo
+        date: 30 March 1282
+        text: The rising began at the church of Santo Spirito, outside the walls. Rebels are said to have made suspects say the word “ciciri”, which the French could not pronounce.
+        lonlat: [13.36, 38.1]
+      - kind: held
+        side: sic
+        name: Messina
+        date: July – September 1282
+        text: Led by Alaimo da Lentini, the townspeople beat off Charles’s assaults until the Aragonese approached.
+        lonlat: [15.55, 38.19]
+      - kind: event
+        side: ara
+        name: Collo
+        date: June – August 1282
+        text: Peter’s fleet and army had gathered here, officially to help a rebel against the ruler of Tunis, when the Sicilian envoys arrived.
+        lonlat: [6.56, 37.0]
+      - kind: event
+        side: ara
+        name: Trapani
+        date: 30 August 1282
+        text: Peter landed unopposed and marched to Palermo, where he was proclaimed king.
+        lonlat: [12.51, 38.02]
+    arrows:
+      - side: ara
+        label: Peter III
+        via: [[6.6, 37.05], [9.5, 37.65], [12.45, 38.02]]
+      - side: ang
+        label: Charles I
+        via: [[16.0, 38.7], [15.7, 38.25], [15.56, 38.16]]
+  - title: Roger of Lauria
+    date: 1283–1285
+    when: "1283"
+    borders: "1285-11"
+    countries: [it, mt, fr, es]
+    body:
+      - Pope Martin IV, a Frenchman and Charles’s ally, excommunicated Peter, declared him deposed from Aragon and granted that kingdom to Charles of Valois, son of Philip III of France. Charles of Anjou challenged Peter to settle the war by a combat of a hundred knights each at Bordeaux on 1 June 1283; it was never fought, and each king claimed that the other had failed to appear. The war was decided at sea. On 8 July 1283 the Aragonese and Sicilian fleet under its admiral Roger of Lauria, a southern Italian exile in Aragonese service, destroyed an Angevin fleet sent to relieve the French garrison of Malta, and Aragonese troops held much of the Calabrian coast.
+      - On 5 June 1284 Lauria lured the fleet of Charles’s son, Charles of Salerno, out of Naples and captured him with many of his ships. Charles of Anjou besieged Reggio that summer but had to withdraw, and he died at Foggia on 7 January 1285. In 1285 Philip III of France invaded Aragon itself in a crusade that ended in disaster. Lauria destroyed the French fleet at Les Formigues, and Philip died at Perpignan in October on the retreat. Peter III died in November. Aragon passed to his elder son Alfonso III, and Sicily to his younger son James.
+    facts:
+      - [Duel of Bordeaux, "1 June 1283, never fought"]
+      - [Battle of Malta, "8 July 1283, Aragonese victory"]
+      - [Battle of the Gulf of Naples, "5 June 1284, Charles of Salerno captured"]
+    markers:
+      - kind: naval
+        side: ara
+        name: Battle of Malta
+        date: 8 July 1283
+        text: Lauria attacked the Provençal galleys in the Grand Harbour at dawn. The Angevin garrison of the castle held out until 1284.
+        lonlat: [14.52, 35.9]
+      - kind: naval
+        side: ara
+        name: Battle of the Gulf of Naples
+        date: 5 June 1284
+        text: Charles of Salerno came out against orders and was taken. He was held prisoner in Catalonia until 1288.
+        lonlat: [14.48, 40.7]
+      - kind: held
+        side: ara
+        name: Reggio
+        date: summer 1284
+        text: Charles of Anjou gathered a large army to retake Sicily by way of Reggio, but the Aragonese held the town and Lauria cut his supplies.
+        lonlat: [15.65, 38.11]
+      - kind: event
+        name: Foggia
+        date: 7 January 1285
+        text: Charles of Anjou died here, with his son a prisoner and his plans in ruins.
+        lonlat: [15.55, 41.46]
+    arrows:
+      - side: ara
+        label: Lauria, 1284
+        via: [[15.55, 38.22], [14.5, 39.3], [14.42, 40.6]]
+      - side: ang
+        label: Charles I, 1284
+        via: [[16.3, 39.3], [15.95, 38.55], [15.7, 38.16]]
+    areas:
+      - style: occupied
+        side: ara
+        label: Held by Aragon and Sicily (approximate)
+        atoms: [IT-RC, IT-VV]
+  - title: James and the Treaty of Anagni
+    date: 1286–1296
+    when: "1286"
+    borders: "1295-06-20"
+    countries: [it, es]
+    body:
+      - James was crowned King of Sicily in Palermo in 1286, and the war went on. On 23 June 1287 Lauria destroyed another Angevin fleet in the Bay of Naples, in what became known as the Battle of the Counts after the many nobles taken prisoner. Charles of Salerno, now King Charles II, was released in 1288 under the Treaty of Canfranc, promising to work for peace, but the pope annulled the agreement and crowned him king of the whole kingdom in 1289. Aragon itself was under pressure from France and the papacy, and in 1291 Alfonso III agreed at Tarascon to abandon Sicily, but he died that June.
+      - James now became King of Aragon too, and left his younger brother Frederick to govern Sicily. To secure Aragon, James made peace with France, the pope and Charles II in the Treaty of Anagni of 20 June 1295. He gave Sicily up to the Church, to be returned to the Angevins, and married Charles’s daughter Blanche; Pope Boniface VIII later granted him Sardinia and Corsica instead. The Sicilians refused to be handed back. Their parliament proclaimed Frederick king, and he was crowned in Palermo on 25 March 1296.
+    facts:
+      - [Battle of the Counts, "23 June 1287, Aragonese victory"]
+      - [Treaty of Anagni, 20 June 1295]
+      - [Frederick crowned, "Palermo, 25 March 1296"]
+    markers:
+      - kind: naval
+        side: ara
+        name: Battle of the Counts
+        date: 23 June 1287
+        text: The Angevin fleet, crowded with barons who had come to see Lauria beaten, was routed in the bay.
+        lonlat: [14.25, 40.83]
+      - kind: event
+        side: ang
+        name: Rieti
+        date: 29 May 1289
+        text: Pope Nicholas IV crowned Charles II King of Sicily, still claiming the island as well as the mainland.
+        lonlat: [12.86, 42.4]
+      - kind: treaty
+        name: Anagni
+        date: 20 June 1295
+        text: Boniface VIII presided over the peace between Aragon, France and Naples, which the Sicilians rejected.
+        lonlat: [13.16, 41.74]
+      - kind: event
+        side: sic
+        name: Palermo
+        date: 25 March 1296
+        text: Frederick was crowned in the cathedral, defying his brother, the pope and the Angevins.
+        lonlat: [13.36, 38.12]
+    arrows:
+      - side: ara
+        label: Lauria, 1287
+        via: [[15.55, 38.22], [14.6, 39.5], [14.3, 40.75]]
+  - title: Frederick against his brother
+    date: 1296–1301
+    when: "1296"
+    borders: "1300-06-14"
+    countries: [it, es]
+    side_names:
+      ara: James II of Aragon, now with the Angevins
+    body:
+      - Frederick took the war to the mainland, invading Calabria and Apulia in 1296–1297. Roger of Lauria, who quarrelled with him, went over to James, now bound by the treaty to help the pope and the Angevins win back the island. In 1298 James and Lauria brought an Aragonese fleet to Sicily, and on 4 July 1299 off Cape Orlando they defeated Frederick’s fleet, though James then went home. Angevin troops under Charles II’s son Robert of Calabria landed and took Catania and other towns in the east of the island.
+      - On land the Sicilians held their own. On 1 December 1299 Frederick routed an Angevin army at Falconaria near Trapani and captured its commander, Charles II’s son Philip of Taranto, and in 1300 his Aragonese captain Blasco de Alagón won again at Gagliano. At sea Lauria was still the master, and on 14 June 1300 he destroyed a Sicilian and Genoese fleet off Ponza. But the Angevins could not conquer the island, and Robert’s siege of Messina in 1301 failed through hunger and disease.
+    facts:
+      - [Battle of Cape Orlando, "4 July 1299, Aragonese victory"]
+      - [Battle of Falconaria, "1 December 1299, Sicilian victory"]
+      - [Battle of Ponza, "14 June 1300, Angevin and Aragonese victory"]
+    markers:
+      - kind: naval
+        side: ara
+        name: Battle of Cape Orlando
+        date: 4 July 1299
+        text: Brother fought brother. Frederick escaped, but most of his galleys were taken, and Lauria had many of the prisoners killed.
+        lonlat: [14.73, 38.15]
+      - kind: taken
+        side: ang
+        name: Catania
+        date: "1299"
+        text: The city went over to Robert of Calabria, who made it his base in Sicily until the peace.
+        lonlat: [15.09, 37.5]
+      - kind: battle
+        side: sic
+        name: Battle of Falconaria
+        date: 1 December 1299
+        text: Philip of Taranto had landed at Marsala to attack Trapani. His army was destroyed and he was held prisoner until 1302.
+        lonlat: [12.53, 37.94]
+      - kind: battle
+        side: sic
+        name: Battle of Gagliano
+        date: "1300"
+        text: Blasco de Alagón ambushed and beat an Angevin force in the hills of central Sicily.
+        lonlat: [14.53, 37.71]
+        lp: l
+      - kind: naval
+        side: ara
+        name: Battle of Ponza
+        date: 14 June 1300
+        text: Lauria’s last great victory. The Sicilian admiral, the Genoese Corrado Doria, was captured.
+        lonlat: [12.97, 40.9]
+      - kind: held
+        side: sic
+        name: Messina
+        date: "1301"
+        text: The city held out against Robert’s siege, and the starving besiegers withdrew.
+        lonlat: [15.55, 38.19]
+    arrows:
+      - side: ara
+        label: James II and Lauria, 1299
+        via: [[14.35, 40.6], [14.6, 39.3], [14.72, 38.22]]
+      - side: ang
+        label: Robert of Calabria
+        via: [[15.65, 38.11], [15.4, 37.8], [15.12, 37.53]]
+    areas:
+      - style: occupied
+        side: ang
+        label: Held by the Angevins, 1299–1302 (approximate)
+        atoms: [IT-CT]
+  - title: Caltabellotta
+    date: "1302"
+    when: "1302-05"
+    borders: "1302-08-31"
+    countries: [it, fr]
+    body:
+      - In May 1302 Charles of Valois, brother of Philip IV of France, whom Boniface VIII had called to Italy, landed at Termini with a large army to join Robert of Calabria. Frederick avoided battle and let the invaders wear themselves out in the summer heat. Charles besieged Sciacca, on the south coast, where disease ravaged his army. With neither side able to win, Charles of Valois, Robert and Frederick met at Caltabellotta, a hill town above Sciacca, and agreed a peace on 31 August 1302.
+      - Frederick kept the island for life with the title King of Trinacria, the old Greek name for Sicily, and married Charles II’s daughter Eleanor. On his death the island was to return to the Angevins, and his heirs were to be compensated elsewhere. Each side gave back what it held in the other’s lands. Boniface VIII confirmed the peace in 1303. But Frederick never meant the island to go back, and when war broke out again in 1313–1314 the Sicilian parliament recognised his son Peter as heir. Sicily and Naples fought on and off until 1372.
+    facts:
+      - [Peace of Caltabellotta, 31 August 1302]
+      - [Frederick III, King of Trinacria for life]
+    markers:
+      - kind: event
+        side: ang
+        name: Termini
+        date: May 1302
+        text: Charles of Valois landed here with French knights and an Angevin fleet.
+        lonlat: [13.7, 37.98]
+      - kind: held
+        side: sic
+        name: Sciacca
+        date: summer 1302
+        text: The town held out against Charles of Valois while sickness spread through his camp.
+        lonlat: [13.08, 37.51]
+        lp: b
+      - kind: treaty
+        side: sic
+        name: Caltabellotta
+        date: 31 August 1302
+        text: The peace ended twenty years of war. The old kingdom of the Normans and Hohenstaufen was not formally reunited until 1816.
+        lonlat: [13.22, 37.58]
+    arrows:
+      - side: ang
+        label: Charles of Valois
+        via: [[13.7, 37.98], [13.35, 37.75], [13.12, 37.54]]

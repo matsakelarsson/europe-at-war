@@ -1,0 +1,187 @@
+id: wars-in-lombardy
+name: Wars in Lombardy
+start: "1423-05"
+end: "1454-04-09"
+tier: B
+summary: Thirty years of intermittent war between the Duchy of Milan under Filippo Maria Visconti and the Republics of Venice and Florence, fought largely by mercenary captains. Venice won Brescia and Bergamo after Maclodio (1427), Florence and the pope beat Milan at Anghiari (1440), and after Visconti’s death the condottiere Francesco Sforza beat Venice at Caravaggio (1448) and made himself duke; the Peace of Lodi in 1454 fixed the Venetian–Milanese border on the Adda and opened forty years of relative peace in Italy.
+countries: [it]
+sides:
+  - id: ven
+    name: Venice, Florence and their allies
+    polities: [venice, tuscany, papal-states]
+    ink: red
+    moves: Venetian and allied moves
+    success: Venetian and allied success
+  - id: mil
+    name: Milan and its allies
+    polities: [milan]
+    ink: purple
+    moves: Milanese moves
+    success: Milanese success
+notes:
+  - The armies were led by condottieri, mercenary captains hired by contract, who often changed employers. Francesco Sforza fought for and against both Milan and Venice before becoming Duke of Milan; Florence, his ally, then fought on Milan’s side.
+  - Historians divide the fighting into four or five wars between 1423 and 1454, separated by short-lived peaces (Venice 1426, Ferrara 1428 and 1433, Cremona 1441).
+sources:
+  - title: Wars in Lombardy (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Wars_in_Lombardy
+  - title: Battle of Maclodio (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Maclodio
+  - title: Battle of Anghiari (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Anghiari
+  - title: Battle of Caravaggio (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Caravaggio
+  - title: Golden Ambrosian Republic (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Golden_Ambrosian_Republic
+  - title: Treaty of Lodi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Lodi
+  - title: Francesco Sforza (Britannica)
+    url: https://www.britannica.com/biography/Francesco-Sforza-duke-of-Milan-1401-1466
+steps:
+  - title: Maclodio
+    date: 1423–1433
+    when: "1423-05"
+    borders: "1428-04-19"
+    countries: [it]
+    body:
+      - Filippo Maria Visconti, Duke of Milan, set out to rebuild the state of his father Gian Galeazzo, which had broken up on his death in 1402. In 1423 he intervened in Forlì, in the Romagna, and Florence, fearing encirclement, went to war; its army was routed at Zagonara in July 1424. In December 1425 Venice joined Florence, urged on by Francesco Bussone, known as Carmagnola, a condottiere who had left Milan’s service. Carmagnola took Brescia for Venice in 1426.
+      - On 11 October 1427 Carmagnola drew the Milanese army under Carlo Malatesta onto marshy ground near Maclodio, west of Brescia, and destroyed it. Some 8,000 prisoners were taken, and as was usual among the condottieri most were soon released. In the Peace of Ferrara of April 1428 Milan gave up Brescia and Bergamo, carrying Venice’s mainland state west to the Adda. War broke out again in 1431; after several defeats Carmagnola was suspected of double-dealing, lured to Venice, tried and beheaded on 5 May 1432. A second Peace of Ferrara in 1433 confirmed Venice’s gains.
+    facts:
+      - [Battle of Zagonara, "July 1424, Milanese victory"]
+      - [Battle of Maclodio, "11 October 1427, Venetian victory"]
+      - [Peace of Ferrara, "April 1428, Brescia and Bergamo to Venice"]
+    markers:
+      - kind: battle
+        side: mil
+        name: Battle of Zagonara
+        date: July 1424
+        text: The Florentine army was routed near Lugo in the Romagna and its commander, Carlo Malatesta, was captured; he went over to Milan.
+        lonlat: [11.92, 44.4]
+      - kind: taken
+        side: ven
+        name: Brescia
+        date: "1426"
+        text: The city opened its gates to Carmagnola in March, and the citadel fell in November after a long siege.
+        lonlat: [10.22, 45.54]
+      - kind: battle
+        side: ven
+        name: Battle of Maclodio
+        date: 11 October 1427
+        text: The Milanese were caught on a narrow causeway through the marshes and surrounded. Malatesta was among the prisoners.
+        lonlat: [10.05, 45.48]
+        lp: l
+      - kind: treaty
+        name: Ferrara
+        date: April 1428
+        text: The peace was mediated by the papal legate and the lord of Ferrara, Niccolò III d’Este.
+        lonlat: [11.62, 44.84]
+      - kind: event
+        name: Venice
+        date: 5 May 1432
+        text: Carmagnola was beheaded between the columns of the Piazzetta after a secret trial by the Council of Ten.
+        lonlat: [12.34, 45.43]
+    arrows:
+      - side: ven
+        label: Carmagnola
+        via: [[10.99, 45.44], [10.6, 45.5], [10.26, 45.53]]
+      - side: mil
+        label: Malatesta
+        via: [[9.6, 45.35], [9.85, 45.42], [10.02, 45.47]]
+    areas:
+      - style: gained
+        side: ven
+        label: Brescia and Bergamo, won by Venice in 1426–1428
+        atoms: [IT-BS, IT-BG]
+  - title: Anghiari
+    date: 1434–1441
+    when: "1434"
+    borders: "1441-11-20"
+    countries: [it]
+    body:
+      - War broke out again in 1434, and the rival condottieri dominated the campaigns, Niccolò Piccinino for Milan, Gattamelata and Francesco Sforza for the league. From 1438 Piccinino besieged Brescia, which held out for over two years, while Venice dragged a fleet of galleys overland from the Adige to Lake Garda to bring it help. In 1440 Piccinino crossed the Apennines with Florentine exiles to raise a revolt in Tuscany.
+      - On 29 June 1440, near Anghiari in the upper Tiber valley, the Florentine and papal army met Piccinino’s men as they came down from Sansepolcro and beat them after a long fight for a bridge. Machiavelli later mocked the battle, claiming that only one man died, crushed after falling from his horse; modern accounts give far higher losses. The war ended with the Peace of Cremona on 20 November 1441. Sforza married Filippo Maria’s only child, Bianca Maria, with Cremona as her dowry, and Venice kept Ravenna, which it had taken over that year.
+    facts:
+      - [Galleys to Lake Garda, "1439"]
+      - [Battle of Anghiari, "29 June 1440, Florentine and papal victory"]
+      - [Peace of Cremona, 20 November 1441]
+    markers:
+      - kind: held
+        side: ven
+        name: Brescia
+        date: 1438–1440
+        text: The city held out against Piccinino’s siege, suffering famine and plague, until Sforza relieved it.
+        lonlat: [10.22, 45.54]
+      - kind: event
+        side: ven
+        name: Torbole
+        date: "1439"
+        text: Galleys and smaller boats were hauled over the mountains on rollers by oxen and launched on Lake Garda here.
+        lonlat: [10.87, 45.87]
+      - kind: battle
+        side: ven
+        name: Battle of Anghiari
+        date: 29 June 1440
+        text: Florence later commissioned Leonardo da Vinci to paint the battle in its council hall; the unfinished mural is lost.
+        lonlat: [12.07, 43.55]
+      - kind: event
+        side: ven
+        name: Ravenna
+        date: "1441"
+        text: Venice took over the city from its last Polenta lord and held it until 1509.
+        lonlat: [12.2, 44.42]
+      - kind: treaty
+        name: Cremona
+        date: 20 November 1441
+        text: The peace was sealed with the wedding of Sforza and Bianca Maria Visconti in the city a few weeks earlier.
+        lonlat: [10.02, 45.13]
+    arrows:
+      - side: mil
+        label: Piccinino, 1440
+        via: [[11.6, 44.3], [11.6, 43.95], [11.95, 43.62], [12.05, 43.56]]
+      - side: ven
+        label: Galleys, 1439
+        via: [[11.05, 45.89], [10.96, 45.89], [10.89, 45.87]]
+  - title: Caravaggio and the Peace of Lodi
+    date: 1446–1454
+    when: "1446"
+    borders: "1454-04-09"
+    countries: [it]
+    side_names:
+      ven: Venice and its allies
+      mil: Milan and Francesco Sforza
+    body:
+      - When Filippo Maria died without a son on 13 August 1447, the Milanese proclaimed a republic, the Golden Ambrosian Republic, and hired Sforza to defend it against Venice, whose army was already advancing on the city. On 15 September 1448 Sforza routed the Venetians at Caravaggio. A month later he changed sides, made his own peace with Venice at Rivoltella and turned on Milan. He blockaded the starving city until it gave in, and on 26 February 1450 he entered it; in March he was proclaimed duke.
+      - Venice, alarmed, allied with Alfonso V of Naples against Sforza, who had the support of Cosimo de’ Medici’s Florence, and the war went on in 1452–1454 without decisive battles. The fall of Constantinople to the Ottomans in May 1453 and the exhaustion of all sides brought peace. On 9 April 1454 Venice and Milan signed the Peace of Lodi, which recognised Sforza as duke and fixed their border on the Adda, leaving Bergamo, Brescia and Crema to Venice. Florence, Naples and the pope soon joined them in an Italian League that kept the peace between the main Italian states, with interruptions, for forty years.
+    facts:
+      - [Battle of Caravaggio, "15 September 1448, victory for Milan under Sforza"]
+      - [Sforza enters Milan, 26 February 1450]
+      - [Peace of Lodi, 9 April 1454]
+    markers:
+      - kind: battle
+        side: mil
+        name: Battle of Caravaggio
+        date: 15 September 1448
+        text: Sforza surprised the Venetian army under Micheletto Attendolo, which had been besieging Caravaggio, and took most of it prisoner.
+        lonlat: [9.64, 45.5]
+      - kind: treaty
+        name: Rivoltella
+        date: 18 October 1448
+        text: Sforza agreed with Venice to give up Crema and the Ghiara d’Adda in return for its help in taking Milan for himself.
+        lonlat: [10.55, 45.47]
+      - kind: taken
+        side: mil
+        name: Milan
+        date: 26 February 1450
+        text: The hungry Milanese rose against the republic’s government and let Sforza in. His family ruled Milan, with interruptions, until 1535.
+        lonlat: [9.19, 45.46]
+      - kind: treaty
+        name: Lodi
+        date: 9 April 1454
+        text: The peace was agreed directly between Venice and Milan, without the allies, who joined later.
+        lonlat: [9.5, 45.31]
+    arrows:
+      - side: ven
+        label: Venetian army, 1448
+        via: [[10.22, 45.54], [9.95, 45.53], [9.68, 45.5]]
+      - side: mil
+        label: Sforza, 1449–50
+        via: [[9.69, 45.36], [9.45, 45.42], [9.23, 45.46]]

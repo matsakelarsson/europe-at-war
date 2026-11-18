@@ -36,6 +36,18 @@ sides:
     ink: brown
     moves: Saxon moves
     success: Saxon success
+  - id: es
+    name: Spain, Naples and Genoa
+    polities: [spain, naples, sicily, genoa]
+    ink: gold
+    moves: Spanish and allied moves
+    success: Spanish and allied success
+  - id: sa
+    name: Sardinia
+    polities: [savoy]
+    ink: teal
+    moves: Sardinian moves
+    success: Sardinian success
 notes:
   - Dates are New Style (Gregorian). Britain still used the Julian calendar, eleven days behind, so British sources of the time date Dettingen 16 June 1743.
   - The First (1740–1742) and Second (1744–1745) Silesian Wars between Prussia and Austria were part of this war. Saxony fought against Austria in 1741–1742 and on its side in 1744–1745.
@@ -66,6 +78,14 @@ sources:
     url: https://en.wikipedia.org/wiki/Treaty_of_Dresden
   - title: Treaty of Aix-la-Chapelle (1748) (Wikipedia)
     url: https://en.wikipedia.org/wiki/Treaty_of_Aix-la-Chapelle_(1748)
+  - title: Battle of Campo Santo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Campo_Santo
+  - title: Battle of Velletri (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Velletri
+  - title: Battle of Piacenza (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Piacenza
+  - title: Battle of Assietta (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Assietta
 steps:
   - title: Frederick seizes Silesia
     date: December 1740 – May 1741
@@ -254,6 +274,76 @@ steps:
       - style: gained
         label: Ceded to Prussia, 1742
         atoms: [PL-DS!, PL-LB!, PL-OP, PL-SL!, PL-SL~de1930]
+  - title: The war in Italy
+    date: 1742–1747
+    when: "1742-08-19"
+    borders: "1747-07-19"
+    countries: [it, es, at, fr, gb]
+    body:
+      - In Italy, Philip V’s queen, Elisabeth Farnese, hoped to win a duchy in the north for her younger son, Philip. From the winter of 1741–1742 Spanish armies landed in Tuscany, and another marched through southern France into Savoy, which Spain occupied until the peace. Charles Emmanuel III of Sardinia, who could bargain with both sides, joined Maria Theresa in 1742 in return for promises of land. In August a British squadron forced Naples out of the war by threatening to bombard the city. The Austrians and Sardinians fought the Spanish to a bloody draw at Campo Santo near Modena in February 1743, and in August 1744 King Charles of Naples, back in the war, threw back an Austrian night attack on his headquarters at Velletri, south of Rome. In 1745 Genoa joined the Bourbons, and after their victory at Bassignana in September the French and Spanish entered Milan.
+      - The tide turned in 1746. Austrian troops freed by the peace with Prussia beat the French and Spanish in a hard battle at Piacenza on 16 June, and the Bourbon armies fell back to Provence. Genoa, left on its own, surrendered in September and was made to pay a heavy indemnity. On 5 December the Genoese rose against the Austrian occupiers – by tradition the revolt began when a boy known as Balilla threw a stone at soldiers dragging a mortar through the streets – and drove them out within days, and an Austrian siege the next spring failed. On 19 July 1747 a French army trying to break into Piedmont attacked the Sardinians entrenched on the Assietta ridge and was thrown back with heavy losses; its commander, the Chevalier de Belle-Isle, was killed. At the peace the Infante Philip received Parma, Piacenza and Guastalla.
+    facts:
+      - [Battle of Piacenza, "16 June 1746, Austrian victory"]
+      - [Genoa revolt, "5 December 1746"]
+      - [Battle of the Assietta, "19 July 1747, Sardinian victory"]
+    markers:
+      - kind: event
+        side: gb
+        name: Naples
+        date: August 1742
+        text: A British squadron anchored in the bay and threatened to bombard the city unless King Charles withdrew his troops from the war. He agreed, but rejoined it in 1744.
+        lonlat: [14.25, 40.85]
+      - kind: battle
+        name: Battle of Campo Santo
+        date: 8 February 1743
+        text: The Spanish under the Count of Gages and the Austrians and Sardinians under Count Traun both claimed victory, but the Spanish lost more men and soon abandoned Bologna.
+        lonlat: [11.06, 44.79]
+      - kind: battle
+        side: es
+        name: Battle of Velletri
+        date: 10–11 August 1744
+        text: Austrian troops burst into the town at night and nearly captured King Charles, but were driven out, and the Austrian march on Naples was abandoned.
+        lonlat: [12.777, 41.687]
+      - kind: battle
+        side: es
+        name: Battle of Bassignana
+        date: 27 September 1745
+        text: Gages and Maillebois drew the Austrians away towards Piacenza and then overwhelmed the isolated Sardinian army.
+        lonlat: [8.73, 45.0]
+        lp: l
+      - kind: battle
+        side: at
+        name: Battle of Piacenza
+        date: 16 June 1746
+        text: The Franco-Spanish attack on Prince Liechtenstein’s Austrian army failed with heavy losses, and the Bourbon armies retreated to Genoa and then to France.
+        lonlat: [9.693, 45.052]
+      - kind: event
+        side: es
+        name: Genoa
+        date: 5–10 December 1746
+        text: The rising began in the Portoria quarter. Within five days the townspeople had driven the Austrian garrison out of the city.
+        lonlat: [8.934, 44.407]
+      - kind: battle
+        side: sa
+        name: Battle of the Assietta
+        date: 19 July 1747
+        text: Fought on a high Alpine ridge between the valleys of Susa and Chisone. The French lost several thousand men in repeated assaults on the Sardinian entrenchments.
+        lonlat: [7.089, 45.06]
+    arrows:
+      - side: es
+        label: Infante Philip, 1745
+        via: [[7.27, 43.7], [8.0, 43.95], [8.62, 44.35], [8.73, 44.95]]
+      - side: at
+        label: Lobkowitz, 1744
+        via: [[12.65, 42.5], [12.5, 41.95], [12.76, 41.72]]
+      - side: fr
+        label: Belle-Isle, 1747
+        via: [[6.64, 44.9], [6.86, 45.0], [7.06, 45.05]]
+    areas:
+      - style: occupied
+        side: es
+        label: Occupied by Spain, 1742–1749
+        atoms: [FR-73, FR-74]
   - title: Dettingen and the fall of Bavaria
     date: 1743
     when: "1743-05-09"

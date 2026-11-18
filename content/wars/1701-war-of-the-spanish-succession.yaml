@@ -61,6 +61,24 @@ sources:
     url: https://en.wikipedia.org/wiki/Treaty_of_Rastatt
   - title: Treaty of Baden (1714) (Wikipedia)
     url: https://en.wikipedia.org/wiki/Treaty_of_Baden_(1714)
+  - title: Capture of Gibraltar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Capture_of_Gibraltar
+  - title: Battle of Málaga (1704) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_M%C3%A1laga_(1704)
+  - title: Siege of Barcelona (1705) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Barcelona_(1705)
+  - title: Battle of Almansa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Almansa
+  - title: Nueva Planta decrees (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nueva_Planta_decrees
+  - title: Capture of Minorca (1708) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Capture_of_Minorca_(1708)
+  - title: Battle of Brihuega (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Brihuega
+  - title: Battle of Villaviciosa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Villaviciosa
+  - title: Siege of Barcelona (1713–1714) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Barcelona_(1713%E2%80%931714)
 steps:
   - title: Carpi, Chiari and Cremona
     date: November 1700 – August 1702
@@ -183,6 +201,54 @@ steps:
         side: at
         label: Bavaria under imperial occupation, 1704–1714
         atoms: [DE-BY~bav, DE-BY~oger~bav, DE-BY~bav~opf]
+  - title: Gibraltar and Barcelona
+    date: 1704–1706
+    when: "1704-08-04"
+    borders: "1706-10-01"
+    countries: [es, gb, nl, pt, fr, at]
+    body:
+      - Portugal joined the Grand Alliance in 1703, and in March 1704 Archduke Charles, proclaimed Charles III of Spain, landed at Lisbon. In May an Anglo-Dutch fleet under Admiral Sir George Rooke, carrying Prince George of Hesse-Darmstadt, a former viceroy of Catalonia, failed to raise Barcelona for Charles. Rooke then turned on Gibraltar. After a heavy bombardment, English and Dutch marines and sailors stormed the town, and on 4 August 1704 its governor surrendered his small garrison; most of the townspeople left. On 24 August the French fleet from Toulon fought Rooke off Málaga in the largest sea battle of the war. Neither side lost a ship, but the French battle fleet did not put to sea in strength again during the war, and a Franco-Spanish siege of Gibraltar by land was given up in April 1705.
+      - In 1705 the allies turned to the lands of the Crown of Aragon, where many feared that a Bourbon king would govern them as the kings of France governed their provinces. An allied army under the Earl of Peterborough landed near Barcelona in August, stormed the hill fort of Montjuïc on 14 September, where Prince George was killed, and forced the city to surrender on 9 October. Catalonia and Valencia, and in 1706 Aragon and Mallorca, accepted Charles III. In April 1706 Philip V besieged Barcelona, but when an English fleet arrived with reinforcements he abandoned his guns and retreated into France. An allied army from Portugal under the Earl of Galway and the Marquis of Minas then marched on Madrid and entered it in June, but Castile rose for Philip, and by the autumn the allies had fallen back to Valencia.
+    facts:
+      - [Capture of Gibraltar, "4 August 1704"]
+      - [Battle of Málaga, "24 August 1704, indecisive"]
+      - [Barcelona taken by the allies, "9 October 1705"]
+    markers:
+      - kind: taken
+        side: gb
+        name: Gibraltar
+        date: 4 August 1704
+        text: Taken in the name of Charles III after a bombardment by Rooke’s fleet. Most of the Spanish townspeople moved to nearby San Roque. A Franco-Spanish siege from October 1704 to April 1705 failed, and Britain kept Gibraltar at the peace.
+        lonlat: [-5.353, 36.14]
+      - kind: naval
+        name: Battle of Málaga
+        date: 24 August 1704
+        text: Also called the Battle of Vélez-Málaga. About fifty ships of the line on each side fought all day; the French then returned to Toulon.
+        lonlat: [-4.5, 36.45]
+      - kind: siege
+        side: gb
+        name: Barcelona
+        date: 1705–1706
+        text: Taken by the allies in October 1705 after the storming of Montjuïc. Charles III made it his capital, and Philip V’s siege in April and May 1706 failed.
+        lonlat: [2.17, 41.387]
+      - kind: taken
+        side: gb
+        name: Madrid
+        date: June 1706
+        text: Galway’s and Minas’s army from Portugal held the capital for a few weeks. Castilians stayed loyal to Philip, and the allies withdrew in August.
+        lonlat: [-3.703, 40.417]
+    arrows:
+      - side: gb
+        label: Rooke
+        via: [[-9.4, 38.6], [-9.2, 36.95], [-6.6, 36.15], [-5.4, 36.12]]
+      - side: gb
+        label: Galway and Minas
+        via: [[-6.88, 39.72], [-6.53, 40.6], [-5.66, 40.97], [-3.75, 40.45]]
+    areas:
+      - style: occupied
+        side: at
+        label: Held for Charles III, 1706 (approximate)
+        atoms: [ES-B, ES-GI, ES-L, ES-T, ES-V, ES-CS, ES-A, ES-Z, ES-HU, ES-TE, ES-PM]
   - title: Ramillies and Turin
     date: 1705–1706
     when: "1705"
@@ -308,6 +374,78 @@ steps:
         side: gb
         label: Held by the allies, end of 1708
         atoms: [BE-BRU, BE-VBR, BE-VAN, BE-VOV, BE-VWV, BE-WBR, BE-VLI, BE-WLG, FR-59~flandre]
+  - title: Almansa and Villaviciosa
+    date: 1707–1710
+    when: "1707-04-25"
+    borders: "1710-12-10"
+    countries: [es, gb, pt, nl, fr, at, it]
+    body:
+      - On 25 April 1707 the Duke of Berwick, an illegitimate son of James II of England and a marshal of France, met the allied army of Galway, a French Huguenot in British service, and the Marquis of Minas at Almansa, on the road from Valencia to Madrid. Berwick’s Franco-Spanish army broke the Portuguese, British and Dutch regiments; the allies lost some 4,000 killed and wounded and thousands of prisoners. Valencia and Aragon returned to Philip V, and Lleida fell in the autumn. By the decrees of Nueva Planta of June 1707 Philip abolished the separate laws and institutions of Valencia and Aragon as punishment for their rebellion, and the town of Xàtiva, which had resisted, was burned. The allies held on in Catalonia, and in 1708 their fleet took Sardinia for Charles, while General James Stanhope captured Minorca and its harbour of Port Mahon.
+      - In 1710 the allies tried once more. Under the Austrian general Guido Starhemberg and Stanhope they beat Philip at Almenar on 27 July and at Saragossa on 20 August, and Charles entered Madrid in September. Again the Castilians would not accept him. The city stayed sullen, guerrillas cut the roads, and a French army under the Duke of Vendôme came to join Philip. In December the allies retreated towards Catalonia in separate columns. On 8–9 December Vendôme trapped Stanhope’s British rearguard in the walled town of Brihuega and forced it to surrender, and then at Villaviciosa he fought Starhemberg in a bloody battle that both sides claimed. Starhemberg went on retreating, and only some 7,000 men reached Barcelona. Charles’s cause in Castile was finished.
+    facts:
+      - [Battle of Almansa, "25 April 1707, Bourbon victory"]
+      - [Nueva Planta decrees, "1707: Valencia and Aragon lose their own laws"]
+      - [Brihuega and Villaviciosa, "8–10 December 1710, Bourbon victories"]
+    markers:
+      - kind: battle
+        side: fr
+        name: Battle of Almansa
+        date: 25 April 1707
+        text: Perhaps the only battle in which an Englishman commanded the French and a Frenchman the English. It won back most of eastern Spain for Philip V.
+        lonlat: [-1.097, 38.869]
+      - kind: siege
+        side: fr
+        name: Lleida
+        date: September – November 1707
+        text: The Duke of Orléans took the town in October and its castle in November, opening the way into Catalonia.
+        lonlat: [0.62, 41.617]
+      - kind: taken
+        side: gb
+        name: Port Mahon
+        date: September 1708
+        text: Stanhope’s British and Dutch troops landed on 14 September and soon forced Fort St Philip to surrender. The harbour gave the Royal Navy a base in the western Mediterranean, and Britain kept Minorca at Utrecht.
+        lonlat: [4.265, 39.889]
+      - kind: taken
+        side: gb
+        name: Cagliari
+        date: August 1708
+        text: Admiral Leake’s fleet took Sardinia for Charles III almost without a fight.
+        lonlat: [9.11, 39.223]
+      - kind: battle
+        side: gb
+        name: Battle of Almenar
+        date: 27 July 1710
+        text: Stanhope’s cavalry broke Philip V’s army north of Lleida, which fell back behind the Ebro.
+        lonlat: [0.567, 41.794]
+      - kind: battle
+        side: at
+        name: Battle of Saragossa
+        date: 20 August 1710
+        text: Starhemberg beat Philip’s army outside the city, opening the road to Madrid.
+        lonlat: [-0.878, 41.649]
+      - kind: siege
+        side: fr
+        name: Brihuega
+        date: 8–9 December 1710
+        text: Some 4,000 British troops quartered in the town held out until the walls were breached, then surrendered with Stanhope.
+        lonlat: [-2.87, 40.761]
+        lp: t
+      - kind: battle
+        name: Battle of Villaviciosa
+        date: 10 December 1710
+        text: Starhemberg held his ground against Vendôme until nightfall, but the next day he abandoned his guns and retreated to Catalonia.
+        lonlat: [-2.94, 40.68]
+        lp: b
+    arrows:
+      - side: at
+        label: Charles and Starhemberg
+        via: [[-0.88, 41.65], [-1.64, 41.35], [-2.6, 40.9], [-3.68, 40.44]]
+      - side: fr
+        label: Vendôme
+        via: [[-4.72, 41.65], [-4.1, 41.0], [-3.6, 40.55], [-2.9, 40.74]]
+      - side: at
+        label: Retreat, December 1710
+        via: [[-2.94, 40.68], [-1.64, 41.35], [-0.6, 41.6], [1.9, 41.45]]
   - title: Malplaquet
     date: 1709
     when: "1709"
@@ -473,3 +611,43 @@ steps:
       - style: gained
         label: To Austria at Rastatt, now the Austrian Netherlands
         atoms: [BE-BRU, BE-VBR, BE-VAN, BE-VOV, BE-VWV, BE-WBR, BE-WHT, BE-WNA, BE-WLX, LU-L, LU-D, LU-G]
+  - title: The siege of Barcelona
+    date: July 1713 – July 1715
+    when: "1713-07-09"
+    borders: "1714-09-11"
+    countries: [es, fr, at, gb]
+    body:
+      - Under the peace the allied troops left Catalonia, and Charles VI, emperor since 1711, called his wife home from Barcelona. The Catalans were promised an amnesty, but not their own laws. In July 1713 the Junta de Braços, an assembly of the Catalan estates, voted to fight on alone to defend the country’s constitutions. A Bourbon army under the Duke of Popoli blockaded Barcelona from late July. The city’s defence was led by its chief councillor, Rafael Casanova, at the head of the Coronela, the citizen militia, and by the general Antonio de Villarroel. Catalan irregulars fought on in the countryside, and the castle of Cardona and the island of Mallorca also held out for Charles.
+      - In July 1714 Louis XIV sent the Duke of Berwick with French troops and a siege train, and the trenches crept towards the walls. The final assault began at half past four in the morning of 11 September. The attackers broke through in several places and fought their way into the streets; Casanova and Villarroel were both wounded, and that day the defenders asked for terms. Cardona surrendered a week later, and Mallorca and Ibiza in July 1715. Philip V abolished Catalonia’s government and laws by the Nueva Planta decree of 1716, and much of Barcelona’s Ribera quarter was pulled down to build a citadel to hold the city. Catalans mark 11 September as their national day, the Diada.
+    facts:
+      - [Siege of Barcelona, "July 1713 – 11 September 1714"]
+      - [Commanders, "Popoli, then Berwick; Villarroel and Casanova for Barcelona"]
+      - [Nueva Planta decree for Catalonia, "16 January 1716"]
+    markers:
+      - kind: siege
+        side: fr
+        name: Barcelona
+        date: 11 September 1714
+        text: The Bourbon assault broke into the city after a siege of more than a year. Terms were agreed the next day, and Berwick’s troops took over the city.
+        lonlat: [2.177, 41.385]
+      - kind: taken
+        side: fr
+        name: Cardona
+        date: 18 September 1714
+        text: The mountain castle, the last Catalan stronghold on the mainland, surrendered a week after Barcelona.
+        lonlat: [1.681, 41.914]
+      - kind: taken
+        side: fr
+        name: Mallorca
+        date: July 1715
+        text: A Bourbon expedition under the Chevalier d’Asfeld landed in June 1715, and Palma surrendered in early July, ending the war in Spain.
+        lonlat: [2.65, 39.57]
+    arrows:
+      - side: fr
+        label: Berwick
+        via: [[2.9, 42.69], [2.82, 41.98], [2.3, 41.5]]
+    areas:
+      - style: occupied
+        side: at
+        label: Held for Charles until July 1715
+        atoms: [ES-PM!]

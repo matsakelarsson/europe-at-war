@@ -1,0 +1,185 @@
+id: first-carlist-war
+name: First Carlist War
+start: "1833-10-01"
+end: "1840-07-06"
+tier: B
+summary: A civil war in Spain between the supporters of the child queen Isabella II and her mother, the regent Maria Christina, and those of Ferdinand VII’s brother Don Carlos, who claimed the throne as Carlos V and stood for absolute monarchy, the Church and the old regional rights (fueros). Fought mainly in the Basque provinces, Navarre, the Maestrazgo and Catalonia, it ended with the Convention of Vergara in 1839 and the defeat of the last Carlist armies in the east in 1840.
+countries: [es, gb, fr, pt]
+sides:
+  - id: lib
+    name: Liberals (Isabella II)
+    polities: [spain]
+    ink: blue
+    moves: Liberal moves
+    success: Liberal success
+  - id: car
+    name: Carlists
+    polities: [carlists]
+    ink: red
+    moves: Carlist moves
+    success: Carlist success
+notes:
+  - The Liberals were also called Cristinos or Isabelinos. Britain, France and Portugal backed them under the Quadruple Alliance of 1834 with loans, ships and troops, among them the British Legion of volunteers under George de Lacy Evans, the French Foreign Legion and a Portuguese division.
+  - Estimates of the dead vary widely, from about 100,000 to over 300,000 including civilians. Both sides shot prisoners and took reprisals on civilians, among them the mother of the Carlist general Ramón Cabrera, executed by the Liberals in 1836.
+sources:
+  - title: First Carlist War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Carlist_War
+  - title: Tomás de Zumalacárregui (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tom%C3%A1s_de_Zumalac%C3%A1rregui
+  - title: Battle of Luchana (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Luchana
+  - title: Royal Expedition (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Royal_Expedition
+  - title: Convention of Vergara (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Convention_of_Vergara
+steps:
+  - title: Zumalacárregui and the siege of Bilbao
+    date: October 1833 – July 1835
+    when: "1833-10-01"
+    borders: "1835-07-16"
+    countries: [es, pt]
+    body:
+      - In 1830 Ferdinand VII set aside the law that barred women from the throne so that his daughter Isabella could succeed him. When he died on 29 September 1833 she became queen at the age of three, with her mother Maria Christina as regent, and his brother Don Carlos, then in Portugal, proclaimed himself king. Carlist risings broke out in October in Talavera, Bilbao, Vitoria and across the north. Most of the army and the cities stayed loyal to Isabella, and the regent turned to the liberals for support, but Carlism took hold in the countryside of the Basque provinces and Navarre, where the fueros were at stake, and in parts of Aragon and Catalonia.
+      - In Navarre Colonel Tomás de Zumalacárregui turned the Carlist bands into a disciplined army, which used the mountains to ambush and defeat government columns. Don Carlos, shipped to Britain after the Liberal victory in Portugal, crossed France in disguise and joined him in July 1834. Both sides shot their prisoners until a British envoy, Lord Eliot, arranged an agreement on exchanging them in April 1835. Don Carlos wanted a city to win foreign recognition and ordered Zumalacárregui to besiege Bilbao. He was wounded there in June and died on 24 June 1835. In July the Liberals won at Mendigorría, but the Carlists kept their hold on the countryside.
+    facts:
+      - [Death of Ferdinand VII, "29 September 1833"]
+      - [Lord Eliot Convention, "April 1835"]
+      - [Death of Zumalacárregui, "24 June 1835"]
+    markers:
+      - kind: event
+        side: car
+        name: Talavera de la Reina
+        date: October 1833
+        text: One of the first Carlist risings, quickly put down; most of Castile stayed quiet.
+        lonlat: [-4.83, 39.96]
+      - kind: battle
+        side: car
+        name: Alsasua
+        date: 22 April 1834
+        text: Zumalacárregui routed a government force in the Sakana valley, one of the victories that made his name.
+        lonlat: [-2.17, 42.9]
+        lp: t
+      - kind: held
+        side: car
+        name: Estella
+        date: 1835–1839
+        text: The seat of Don Carlos’s court and government for most of the war.
+        lonlat: [-2.03, 42.67]
+        lp: l
+      - kind: siege
+        side: lib
+        name: Bilbao
+        date: June – July 1835
+        text: The city held out, and Zumalacárregui, wounded in the leg near Begoña on 14 June, died ten days later after poor treatment.
+        lonlat: [-2.935, 43.263]
+      - kind: battle
+        side: lib
+        name: Mendigorría
+        date: 16 July 1835
+        text: General Luis Fernández de Córdova defeated the main Carlist army, the first major Liberal victory, but could not follow it up.
+        lonlat: [-1.844, 42.621]
+    arrows:
+      - side: car
+        label: Zumalacárregui
+        via: [[-2.03, 42.67], [-2.45, 42.98], [-2.9, 43.22]]
+    areas:
+      - style: occupied
+        side: car
+        label: Countryside largely held by the Carlists, 1835 (approximate; most towns stayed Liberal)
+        atoms: [ES-SS, ES-BI, ES-VI, ES-NA!]
+  - title: Luchana and the Royal Expedition
+    date: 1836 – 1837
+    when: "1836-06"
+    borders: "1837-10-04"
+    countries: [es, gb, fr]
+    body:
+      - The Liberals were divided, and in August 1836 a mutiny of the guard at La Granja forced the regent to restore the constitution of 1812, while the minister Juan Álvarez Mendizábal sold off Church lands to pay for the war. The Carlists, unable to break out of the north, sent raiding columns across Spain. In 1836 General Miguel Gómez marched as far as Galicia and Andalusia and back, but held nothing. That autumn they besieged Bilbao again, and on the night of 23–24 December 1836 General Baldomero Espartero broke the siege in a snowstorm at the bridge of Luchana, with help from British ships and sailors.
+      - In May 1837 Don Carlos himself left Estella with his best troops in the Royal Expedition, hoping to take Madrid or force a settlement with the regent. He won at Huesca and Barbastro, crossed the Ebro to join Ramón Cabrera’s forces from the Maestrazgo, was checked at Chiva in July, and in September reached the outskirts of Madrid, while a second Carlist column had taken Segovia. Expected support in the capital never came, and when Espartero’s army approached, Don Carlos turned back. The retreat to the north, harried all the way, broke Carlist morale and prestige.
+    facts:
+      - [Battle of Luchana, "23–24 December 1836, Liberal victory"]
+      - [Royal Expedition, "May – October 1837"]
+      - [Carlists before Madrid, "September 1837"]
+    markers:
+      - kind: battle
+        side: lib
+        name: Luchana
+        date: 23–24 December 1836
+        text: Espartero’s troops stormed the Carlist positions on the Nervión and lifted the second siege of Bilbao; he was made Count of Luchana.
+        lonlat: [-2.971, 43.293]
+      - kind: battle
+        side: car
+        name: Huesca
+        date: 24 May 1837
+        text: The Royal Expedition defeated a Liberal army whose French Foreign Legion contingent lost heavily.
+        lonlat: [-0.408, 42.136]
+      - kind: battle
+        side: lib
+        name: Chiva
+        date: 15 July 1837
+        text: A smaller Liberal force nearly routed the Carlists near Valencia, forcing the expedition to turn north again.
+        lonlat: [-0.72, 39.47]
+      - kind: taken
+        side: car
+        name: Segovia
+        date: August 1837
+        text: Juan Antonio Zaratiegui’s column took the city in a raid from Navarre that briefly spread panic in Madrid.
+        lonlat: [-4.118, 40.948]
+        lp: l
+      - kind: event
+        side: lib
+        name: Madrid
+        date: 10–12 September 1837
+        text: The Carlist vanguard reached the outskirts of the capital, then withdrew towards Alcalá de Henares as Espartero arrived.
+        lonlat: [-3.704, 40.417]
+    arrows:
+      - side: car
+        label: Don Carlos
+        via: [[-2.03, 42.67], [-0.4, 42.1], [0.5, 40.9], [-0.7, 39.5]]
+      - side: car
+        via: [[-1.3, 40.2], [-2.5, 40.4], [-3.6, 40.4]]
+      - side: car
+        label: Gómez
+        via: [[-2.5, 43.0], [-7.5, 42.9], [-4.8, 37.9], [-5.4, 36.2]]
+  - title: Vergara and Morella
+    date: 1838 – July 1840
+    when: "1838-01-26"
+    borders: "1840-07-06"
+    countries: [es, fr]
+    body:
+      - In the east Cabrera, a former seminarian whose ruthlessness matched that of his enemies, made the mountain town of Morella his base in January 1838 and beat off a Liberal siege that summer. In the north the war ground on in exhaustion. The Carlist camp split between hardline courtiers and generals ready to make peace. In February 1839 the Carlist commander, General Rafael Maroto, had several of his rivals shot at Estella, and he then negotiated with Espartero.
+      - On 31 August 1839, by the Convention of Vergara, Maroto’s army laid down its arms. Its officers kept their ranks in the royal army, and Espartero promised to recommend that the government respect the fueros. The two generals embraced before their troops. Don Carlos crossed into France in September. Espartero then turned east, took Morella on 30 May 1840 and Berga in Catalonia in early July, and Cabrera led his last men into France. The fueros of the Basque provinces and Navarre were cut back in 1839–41, and Espartero soon replaced Maria Christina as regent.
+    facts:
+      - [Convention of Vergara, "31 August 1839"]
+      - [Morella taken by Espartero, "30 May 1840"]
+      - [Carlist commanders, "Rafael Maroto; Ramón Cabrera"]
+    markers:
+      - kind: held
+        side: car
+        name: Morella
+        date: January 1838 – May 1840
+        text: Cabrera’s fortress capital in the Maestrazgo; it fell to Espartero after a short siege and heavy bombardment.
+        lonlat: [-0.099, 40.619]
+      - kind: event
+        side: car
+        name: Estella
+        date: 18 February 1839
+        text: Maroto had four Carlist generals and other officers of the hardline faction shot.
+        lonlat: [-2.03, 42.67]
+      - kind: treaty
+        name: Vergara
+        date: 31 August 1839
+        text: Espartero and Maroto announced the agreement here before their troops, with an embrace that gave it its Spanish name, the Abrazo de Vergara.
+        lonlat: [-2.414, 43.117]
+      - kind: taken
+        side: lib
+        name: Berga
+        date: July 1840
+        text: The last Carlist stronghold in Catalonia; Cabrera crossed the Pyrenees into France soon after.
+        lonlat: [1.845, 42.104]
+    arrows:
+      - side: lib
+        label: Espartero
+        via: [[-1.0, 41.6], [-0.4, 41.0], [-0.12, 40.65]]
+      - side: car
+        label: Cabrera
+        via: [[0.3, 41.2], [1.2, 41.7], [1.85, 42.1], [1.9, 42.45]]

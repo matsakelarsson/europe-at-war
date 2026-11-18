@@ -1,0 +1,93 @@
+id: french-conquest-of-corsica
+name: French conquest of Corsica
+start: "1768-05-15"
+end: "1769-06"
+tier: B
+summary: The war in which France, having acquired Genoa’s rights to Corsica in 1768, conquered the island from Pasquale Paoli’s Corsican Republic. The Corsicans beat a French force at Borgo in October 1768, but a much larger French army under the Comte de Vaux broke their resistance at Ponte Novu in May 1769, and Paoli went into exile in Britain.
+countries: [fr]
+sides:
+  - id: co
+    name: Corsican Republic
+    polities: []
+    ink: red
+    moves: Corsican moves
+    success: Corsican success
+  - id: fr
+    name: France
+    polities: [france]
+    ink: navy
+    moves: French moves
+    success: French success
+notes:
+  - The Corsican Republic, proclaimed in 1755, was never recognised by the European powers, so the base map shows Corsica as Genoese until the Treaty of Versailles and French after it.
+  - Places are given in their Italian or French forms of the time; Ponte Novu is Corsican for “new bridge” (Ponte Nuovo in Italian).
+sources:
+  - title: French conquest of Corsica (Wikipedia)
+    url: https://en.wikipedia.org/wiki/French_conquest_of_Corsica
+  - title: Corsican Republic (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Corsican_Republic
+  - title: Treaty of Versailles (1768) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Versailles_(1768)
+  - title: Battle of Borgo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Borgo
+  - title: Battle of Ponte Novu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ponte_Novu
+  - title: Pasquale Paoli (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pasquale_Paoli
+steps:
+  - title: Borgo and Ponte Novu
+    date: May 1768 – June 1769
+    when: "1768-05-15"
+    borders: "1769-05-09"
+    countries: [fr]
+    body:
+      - Genoa had ruled Corsica since the Middle Ages, but from 1729 the islanders were in almost constant revolt, and in 1755 Pasquale Paoli set up an independent republic with its own constitution, written in Italian, and a capital and later a university at Corte. By the 1760s the Genoese held only a few walled coastal towns, garrisoned by French troops. Unable to subdue the island or to repay its debts to France, Genoa handed Corsica over by the Treaty of Versailles of 15 May 1768, and French troops began to occupy the interior. Paoli called the Corsicans to resist. On 8 October 1768 at Borgo, south of Bastia, his men surrounded a French garrison of some 700 men, beat off the troops sent from Bastia to relieve it, and forced it to surrender.
+      - Louis XV briefly considered giving up, but his minister Choiseul sent reinforcements that raised the French army on the island to about 24,000 men, under the Comte de Vaux. In May 1769 de Vaux advanced up the Golo valley towards Corte. On 8–9 May the Corsicans tried to hold the river crossing at Ponte Novu; caught between the French and the fire of foreign mercenaries holding the bridge behind them, they were cut down in large numbers. Resistance collapsed, and in June Paoli sailed into exile in Britain. France made Corsica a province in 1770, though guerrilla resistance went on for years. Napoleon Bonaparte was born at Ajaccio on 15 August 1769, to parents who had fought with Paoli.
+    facts:
+      - [Treaty of Versailles, "15 May 1768: Genoa cedes its rights to France"]
+      - [Battle of Borgo, "8 October 1768, Corsican victory"]
+      - [Battle of Ponte Novu, "8–9 May 1769, French victory"]
+    markers:
+      - kind: battle
+        side: co
+        name: Battle of Borgo
+        date: 8 October 1768
+        text: After ten hours of fighting the relief force fell back to Bastia and the French garrison surrendered. Corsicans still sing of the victory.
+        lonlat: [9.43, 42.555]
+        lp: l
+      - kind: held
+        side: fr
+        name: Bastia
+        date: 1768–1769
+        text: The old Genoese capital and main port was the French base for the conquest.
+        lonlat: [9.45, 42.7]
+      - kind: battle
+        side: fr
+        name: Battle of Ponte Novu
+        date: 8–9 May 1769
+        text: The defeat at the Genoese bridge over the Golo opened the road to Corte and ended the Corsican Republic. How the Corsicans came under fire from their own side is still disputed.
+        lonlat: [9.255, 42.48]
+      - kind: taken
+        side: fr
+        name: Corte
+        date: May 1769
+        text: Paoli’s capital in the mountains fell soon after Ponte Novu.
+        lonlat: [9.15, 42.306]
+        lp: l
+      - kind: event
+        name: Ajaccio
+        date: 15 August 1769
+        text: Napoleon Bonaparte was born here three months after Ponte Novu.
+        lonlat: [8.738, 41.919]
+    arrows:
+      - side: fr
+        label: Chauvelin, 1768
+        via: [[9.45, 42.7], [9.44, 42.62], [9.43, 42.565]]
+      - side: fr
+        label: De Vaux, 1769
+        via: [[9.45, 42.69], [9.38, 42.57], [9.26, 42.49], [9.16, 42.32]]
+    areas:
+      - style: contested
+        side: co
+        label: Held by Paoli’s republic until 1769, except coastal towns (approximate)
+        atoms: [FR-2A, FR-2B]

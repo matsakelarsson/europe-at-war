@@ -1,0 +1,516 @@
+# Iberia, 800–today (curated range "Iberia" in curated.yaml). Generated from a
+# group list for wave 4 (scratchpad gen-south.mjs); edit by hand from here on.
+#
+# How the map is drawn:
+# - Atoms are Spanish provinces and Portuguese districts, with splits for Upper
+#   Aragon (ES-HU~jaca), Urgell and Pallars (ES-L~pallars), Tudela (ES-NA~tudela),
+#   Menorca (ES-PM~menorca) and Olivenza (ES-BA~olivenza). Gibraltar is too small
+#   to be an atom.
+# - Each province changes hands when its main town was taken, so frontier lines
+#   are approximate. The Duero valley counts as Asturian/Leonese as it was resettled.
+# - León and Castile are one polity while one king held both (castile 1037–65,
+#   1072–1157, from 1230). Castile and Aragon become `spain` on 1516-01-23;
+#   Portugal stays Portugal during the Iberian Union (1580–1640).
+# - Occupations (the Napoleonic war, the Civil War fronts) are war-step areas.
+# - Roussillon (FR-66) is in france-low-countries.yaml.
+
+# ---- Iberia in 800 (start of the curated range)
+- date: "800"
+  note: "About 800. The Emirate of Córdoba rules most of the peninsula. The Kingdom of Asturias holds the north coast from Galicia to the Basque lands and the upper Ebro; the Frankish March of Spain holds Girona, Urgell and Aragon; the Balearics are still nominally Byzantine; the Duero valley is a thinly settled frontier."
+  owners:
+    leon: [ES-C, ES-LU, ES-OR, ES-PO, ES-O, ES-S, ES-BI, ES-VI]
+    carolingian: [ES-GI, ES-L~pallars, ES-HU~jaca, AD-02, AD-03, AD-04, AD-05, AD-06, AD-07, AD-08]
+    cordoba: [ES-NA!, ES-NA~tudela, ES-SS, ES-LO, ES-LE, ES-P, ES-ZA, ES-VA, ES-SO, ES-BU, ES-SA, ES-SG, ES-AV, ES-M, ES-TO, ES-GU, ES-CU, ES-CR, ES-AB, ES-Z, ES-TE, ES-B, ES-T, ES-CS, ES-V, ES-A, ES-MU, ES-CC, ES-H, ES-SE, ES-CA, ES-MA, ES-CO, ES-J, ES-GR, ES-AL, ES-HU!, ES-L!, ES-BA!, ES-BA~olivenza, PT-16, PT-03, PT-13, PT-04, PT-17, PT-01, PT-18, PT-09, PT-06, PT-05, PT-10, PT-11, PT-14, PT-15, PT-12, PT-07, PT-02, PT-08]
+    byzantium: [ES-PM!, ES-PM~menorca]
+    guanches: [ES-GC, ES-TF]
+    idrisid-caliphate: [ES-CE, ES-ML]
+
+# ---- The Christian north and the Emirate, 800–1031
+- date: "801"
+  note: "Louis the Pious takes Barcelona after a long siege; it becomes the seat of a Frankish county."
+  owners:
+    carolingian: [ES-B]
+- date: "806"
+  note: "Pamplona and the western Pyrenees accept Frankish overlordship."
+  owners:
+    carolingian: [ES-NA!, ES-SS]
+- date: "824"
+  note: "Second battle of Roncevaux. The Basques of Pamplona, allied with the Banu Qasi, defeat a Frankish army; Íñigo Arista rules Pamplona as an independent king, and the county of Aragon falls into its orbit."
+  owners:
+    navarre: [ES-NA!, ES-SS, ES-HU~jaca]
+- date: "843-08-10"
+  note: "Treaty of Verdun. The Catalan counties pass to West Francia."
+  owners:
+    west-francia: [ES-GI, ES-B, ES-L~pallars, AD-02, AD-03, AD-04, AD-05, AD-06, AD-07, AD-08]
+- date: "856"
+  note: "Ordoño I of Asturias resettles León and Astorga."
+  owners:
+    leon: [ES-LE, ES-P]
+- date: "868"
+  note: "Vímara Peres takes Porto for Alfonso III; the County of Portugal is founded between the Minho and the Douro."
+  owners:
+    leon: [PT-16, PT-03, PT-13]
+- date: "878"
+  note: "Alfonso III’s counts take Coimbra, Viseu and Lamego and settle Trás-os-Montes."
+  owners:
+    leon: [PT-04, PT-17, PT-01, PT-18, PT-09, PT-06]
+- date: "884"
+  note: "Count Diego Rodríguez Porcelos founds Burgos for Alfonso III of Asturias."
+  owners:
+    leon: [ES-BU]
+- date: "893"
+  note: "Alfonso III resettles Zamora on the Duero."
+  owners:
+    leon: [ES-ZA]
+- date: "902"
+  note: "Isam al-Khawlani conquers the Balearic Islands for the Emirate of Córdoba."
+  owners:
+    cordoba: [ES-PM!, ES-PM~menorca]
+- date: "912"
+  note: "The counts of Castile and León reach the Duero, resettling Roa, Osma, San Esteban de Gormaz and Simancas."
+  owners:
+    leon: [ES-VA, ES-SO]
+- date: "940"
+  note: "After the victory at Simancas in 939, Count Fernán González resettles Sepúlveda south of the Duero."
+  owners:
+    leon: [ES-SG]
+- date: "941"
+  note: "Ramiro II of León resettles Salamanca and Ledesma on the Tormes."
+  owners:
+    leon: [ES-SA]
+- date: "923"
+  note: "Ordoño II of León and Sancho Garcés I of Pamplona take Nájera and Viguera; La Rioja passes to Pamplona."
+  owners:
+    navarre: [ES-LO]
+- date: "927"
+  note: "Abd al-Rahman III takes Melilla."
+  owners:
+    cordoba: [ES-ML]
+- date: "931"
+  note: "Abd al-Rahman III takes Ceuta."
+  owners:
+    cordoba: [ES-CE]
+- date: "950"
+  note: "Count Fernán González has made Castile, with Álava and Biscay, all but independent of León."
+  owners:
+    castile: [ES-S, ES-BU, ES-SO, ES-SG, ES-VI, ES-BI]
+- date: "987-06-28"
+  note: "Almanzor takes Coimbra; the land south of the Douro returns to Córdoba."
+  owners:
+    cordoba: [PT-06]
+- date: "988"
+  note: "Count Borrell II of Barcelona no longer renews his allegiance to the new Capetian king; the Catalan counties are independent in practice."
+  owners:
+    barcelona: [ES-GI, ES-B, ES-L~pallars, AD-02, AD-03, AD-04, AD-05, AD-06, AD-07, AD-08]
+
+# ---- The taifas, León–Castile and the Almoravids, 1031–1145
+- date: "1029-05-13"
+  note: "Count García Sánchez of Castile is murdered in León; Sancho III of Pamplona takes Castile."
+  owners:
+    navarre: [ES-S, ES-BU, ES-SO, ES-SG, ES-VI, ES-BI]
+- date: "1031-11-30"
+  note: "The Caliphate of Córdoba is abolished. Al-Andalus breaks up into taifa kingdoms: Zaragoza (with Lleida and Tortosa), Toledo, Badajoz (with Lisbon), Seville, Granada (with Málaga and Jaén), Almería, Murcia, Valencia, Denia (with the Balearics), and Córdoba itself."
+  owners:
+    zaragoza: [ES-Z, ES-TE, ES-T, ES-HU!, ES-L!, ES-NA~tudela]
+    toledo: [ES-TO, ES-M, ES-GU, ES-CU, ES-CR, ES-AV]
+    badajoz: [ES-BA!, ES-BA~olivenza, ES-CC, PT-05, PT-12, PT-07, PT-15, PT-11, PT-14, PT-10, PT-06]
+    seville: [ES-SE, ES-H, ES-CA, PT-02, PT-08]
+    granada: [ES-GR, ES-MA, ES-J]
+    almeria: [ES-AL]
+    murcia: [ES-MU, ES-AB]
+    valencia: [ES-V, ES-CS]
+    denia: [ES-A, ES-PM!, ES-PM~menorca]
+    cordoba: [ES-CO]
+- date: "1035-10-18"
+  note: "Sancho III of Pamplona dies. His son Ferdinand rules Castile as king, Ramiro rules Aragon, and García keeps Pamplona with Álava and Biscay."
+  owners:
+    castile: [ES-S, ES-BU, ES-SO, ES-SG]
+    aragon: [ES-HU~jaca]
+- date: "1037-09-04"
+  note: "Battle of Tamarón. Ferdinand I of Castile defeats and kills Bermudo III of León and takes his kingdom."
+  owners:
+    castile: [ES-C, ES-LU, ES-OR, ES-PO, ES-O, ES-LE, ES-P, ES-ZA, ES-VA, ES-SA, PT-16, PT-03, PT-13, PT-04, PT-17, PT-01, PT-18, PT-09]
+- date: "1064-07-09"
+  note: "Ferdinand I takes Coimbra."
+  owners:
+    castile: [PT-06]
+- date: "1065-12-27"
+  note: "Ferdinand I dies and divides his realm: Sancho II takes Castile, Alfonso VI León with Portugal, and García Galicia."
+  owners:
+    leon: [ES-C, ES-LU, ES-OR, ES-PO, ES-O, ES-LE, ES-P, ES-ZA, ES-VA, ES-SA, PT-16, PT-03, PT-13, PT-04, PT-17, PT-01, PT-18, PT-09, PT-06]
+- date: "1069"
+  note: "Al-Mu’tamid of Seville annexes Córdoba."
+  owners:
+    seville: [ES-CO]
+- date: "1072-10-07"
+  note: "Sancho II is killed besieging Zamora; Alfonso VI reunites León and Castile."
+  owners:
+    castile: [ES-C, ES-LU, ES-OR, ES-PO, ES-O, ES-LE, ES-P, ES-ZA, ES-VA, ES-SA, PT-16, PT-03, PT-13, PT-04, PT-17, PT-01, PT-18, PT-09, PT-06]
+- date: "1076-06-04"
+  note: "Sancho IV of Pamplona is murdered at Peñalén. Alfonso VI takes La Rioja, Álava, Biscay and Gipuzkoa; Sancho Ramírez of Aragon becomes king of Pamplona."
+  owners:
+    castile: [ES-LO, ES-VI, ES-BI, ES-SS]
+    aragon: [ES-NA!]
+- date: "1076"
+  note: "Zaragoza annexes Denia; Mallorca becomes a taifa of its own."
+  owners:
+    zaragoza: [ES-A]
+    majorca: [ES-PM!, ES-PM~menorca]
+- date: "1085-05-25"
+  note: "Alfonso VI takes Toledo, the old Visigothic capital, and the land between the Sistema Central and the Tagus; the deposed al-Qadir is installed in Valencia."
+  owners:
+    castile: [ES-TO, ES-M, ES-GU, ES-CR, ES-AV]
+    valencia: [ES-CU]
+- date: "1090-09-08"
+  note: "The Almoravid emir Yusuf ibn Tashfin, who had defeated Alfonso VI at Sagrajas in 1086, deposes the taifa kings of Granada and Málaga."
+  owners:
+    almoravid-dynasty: [ES-GR, ES-MA, ES-J]
+- date: "1091-09-07"
+  note: "The Almoravids take Seville and send al-Mu’tamid into exile; Córdoba, Almería and Murcia fall the same year."
+  owners:
+    almoravid-dynasty: [ES-SE, ES-CO, ES-H, ES-CA, ES-AL, ES-MU, ES-AB, PT-02, PT-08]
+- date: "1084"
+  note: "The Almoravids take Ceuta and Melilla."
+  owners:
+    almoravid-dynasty: [ES-CE, ES-ML]
+- date: "1092"
+  note: "The Almoravids take Denia."
+  owners:
+    almoravid-dynasty: [ES-A]
+- date: "1094-06-15"
+  note: "Rodrigo Díaz, El Cid, takes Valencia after a twenty-month siege and rules it as his own."
+  owners:
+    valencia: [ES-V, ES-CS, ES-CU]
+- date: "1094"
+  note: "The Almoravids take Badajoz and its lands, including Lisbon."
+  owners:
+    almoravid-dynasty: [ES-BA!, ES-BA~olivenza, ES-CC, PT-05, PT-12, PT-07, PT-15, PT-11, PT-14, PT-10]
+- date: "1096-11-27"
+  note: "Peter I of Aragon takes Huesca after the battle of Alcoraz."
+  owners:
+    aragon: [ES-HU!]
+- date: "1102-05-05"
+  note: "Jimena, El Cid’s widow, abandons Valencia, which the Almoravids occupy."
+  owners:
+    almoravid-dynasty: [ES-V, ES-CS, ES-CU]
+- date: "1108-05-29"
+  note: "Battle of Uclés. The Almoravids defeat Castile and retake the land south-east of Toledo."
+  owners:
+    almoravid-dynasty: [ES-CR]
+- date: "1110-05-30"
+  note: "The Almoravids take Zaragoza, the last independent taifa."
+  owners:
+    almoravid-dynasty: [ES-Z, ES-TE, ES-T, ES-L!, ES-NA~tudela]
+- date: "1116"
+  note: "The Almoravids occupy Mallorca after the Pisan–Catalan raid of 1114–15."
+  owners:
+    almoravid-dynasty: [ES-PM!, ES-PM~menorca]
+- date: "1118-12-18"
+  note: "Alfonso I of Aragon, the Battler, takes Zaragoza."
+  owners:
+    aragon: [ES-Z]
+- date: "1119-02-25"
+  note: "Alfonso I takes Tudela."
+  owners:
+    aragon: [ES-NA~tudela]
+- date: "1128-06-24"
+  note: "Battle of São Mamede. Afonso Henriques defeats his mother’s party and rules the County of Portugal as his own."
+  owners:
+    portugal: [PT-16, PT-03, PT-13, PT-04, PT-17, PT-01, PT-18, PT-09, PT-06]
+- date: "1134-09-07"
+  note: "Alfonso I dies childless. Pamplona elects García Ramírez as king, with Tudela, Álava and Gipuzkoa; Aragon keeps Zaragoza."
+  owners:
+    navarre: [ES-NA!, ES-NA~tudela, ES-VI, ES-SS]
+- date: "1137-08-11"
+  note: "Petronilla of Aragon is betrothed to Count Ramon Berenguer IV of Barcelona, joining Aragon and the Catalan counties in the Crown of Aragon."
+  owners:
+    aragon: [ES-GI, ES-B, ES-L~pallars, AD-02, AD-03, AD-04, AD-05, AD-06, AD-07, AD-08]
+
+# ---- The Almohads and the great conquests, 1145–1266
+- date: "1147"
+  note: "The Almoravid state collapses. The Almohads take Seville and western al-Andalus; Ibn Mardanish, the “Wolf King”, rules Murcia and Valencia."
+  owners:
+    almohad-caliphate: [ES-SE, ES-H, ES-CA, ES-CO, ES-MA, ES-GR, ES-J, ES-BA!, ES-BA~olivenza, ES-CC, PT-02, PT-08, PT-05, PT-12, PT-07, PT-15]
+    murcia: [ES-MU, ES-AB, ES-V, ES-CS, ES-A, ES-TE, ES-CU]
+- date: "1146"
+  note: "The Almohads take Ceuta and Melilla."
+  owners:
+    almohad-caliphate: [ES-CE, ES-ML]
+- date: "1147-01-31"
+  note: "Alfonso VII of Castile takes Calatrava."
+  owners:
+    castile: [ES-CR]
+- date: "1147-03-15"
+  note: "Afonso Henriques takes Santarém."
+  owners:
+    portugal: [PT-14, PT-10]
+- date: "1147-10-17"
+  note: "Alfonso VII, with Genoese, Pisan and Catalan help, takes Almería."
+  owners:
+    castile: [ES-AL]
+- date: "1147-10-25"
+  note: "Afonso Henriques takes Lisbon with the help of crusaders sailing to the Holy Land."
+  owners:
+    portugal: [PT-11]
+- date: "1148"
+  note: "The Banu Ghaniya governors keep Mallorca as an independent Almoravid state."
+  owners:
+    majorca: [ES-PM!, ES-PM~menorca]
+- date: "1148-12-30"
+  note: "Ramon Berenguer IV takes Tortosa."
+  owners:
+    aragon: [ES-T]
+- date: "1149-10-24"
+  note: "Ramon Berenguer IV takes Lleida."
+  owners:
+    aragon: [ES-L!]
+- date: "1157-08-21"
+  note: "Alfonso VII dies; León (with Galicia and Salamanca) and Castile are divided between his sons. The Almohads retake Almería."
+  owners:
+    leon: [ES-C, ES-LU, ES-OR, ES-PO, ES-O, ES-LE, ES-ZA, ES-SA]
+    almohad-caliphate: [ES-AL]
+- date: "1165"
+  note: "Gerald the Fearless takes Évora for Portugal; the Portuguese settle the frontier to the Tagus and beyond."
+  owners:
+    portugal: [PT-07, PT-05, PT-12]
+- date: "1171"
+  note: "Alfonso II of Aragon founds Teruel."
+  owners:
+    aragon: [ES-TE]
+- date: "1172-03-28"
+  note: "Ibn Mardanish dies; Murcia and Valencia submit to the Almohads."
+  owners:
+    almohad-caliphate: [ES-MU, ES-AB, ES-V, ES-CS, ES-A, ES-CU]
+- date: "1177-09-21"
+  note: "Alfonso VIII of Castile takes Cuenca."
+  owners:
+    castile: [ES-CU]
+- date: "1191"
+  note: "The Almohad caliph Yaqub al-Mansur retakes Alcácer do Sal and the land south of the Tagus except Évora."
+  owners:
+    almohad-caliphate: [PT-15]
+- date: "1195-07-18"
+  note: "Battle of Alarcos. The Almohads defeat Alfonso VIII and retake Calatrava."
+  owners:
+    almohad-caliphate: [ES-CR]
+- date: "1200"
+  note: "Alfonso VIII of Castile takes Álava and Gipuzkoa from Navarre."
+  owners:
+    castile: [ES-VI, ES-SS]
+- date: "1212-07-01"
+  note: "The crusading army of Alfonso VIII retakes Calatrava on its march south; on 16 July Castile, Aragon and Navarre crush the Almohads at Las Navas de Tolosa."
+  owners:
+    castile: [ES-CR]
+- date: "1213-05-23"
+  note: "Alfonso VIII takes Alcaraz."
+  owners:
+    castile: [ES-AB]
+- date: "1203"
+  note: "The Almohads conquer Mallorca from the Banu Ghaniya."
+  owners:
+    almohad-caliphate: [ES-PM!, ES-PM~menorca]
+- date: "1217-10-18"
+  note: "Portugal, helped by crusaders, takes Alcácer do Sal."
+  owners:
+    portugal: [PT-15]
+- date: "1228"
+  note: "Almohad rule in al-Andalus collapses. Ibn Hud, proclaimed at Murcia, wins most of the south; Zayyan ibn Mardanish rules Valencia."
+  owners:
+    murcia: [ES-MU, ES-SE, ES-H, ES-CA, ES-CO, ES-MA, ES-GR, ES-J, ES-AL, ES-BA!, ES-BA~olivenza, ES-CC, PT-02, PT-08]
+    valencia: [ES-V, ES-CS, ES-A]
+    menorca: [ES-PM~menorca]
+- date: "1229-04-23"
+  note: "Alfonso IX of León takes Cáceres."
+  owners:
+    leon: [ES-CC]
+- date: "1229-12-31"
+  note: "James I of Aragon takes Madina Mayurqa (Palma); the conquest of Mallorca follows."
+  owners:
+    aragon: [ES-PM!]
+- date: "1230"
+  note: "Alfonso IX takes Mérida and Badajoz."
+  owners:
+    leon: [ES-BA!, ES-BA~olivenza]
+- date: "1230-09-24"
+  note: "Alfonso IX dies; his son Ferdinand III of Castile inherits León, and the two crowns are joined for good."
+  owners:
+    castile: [ES-C, ES-LU, ES-OR, ES-PO, ES-O, ES-LE, ES-ZA, ES-SA, ES-CC, ES-BA!, ES-BA~olivenza]
+- date: "1233"
+  note: "James I takes Burriana and Peñíscola, beginning the conquest of Valencia."
+  owners:
+    aragon: [ES-CS]
+- date: "1234"
+  note: "Ibn Mahfuz rules Niebla and the Algarve as an independent taifa."
+  owners:
+    niebla: [ES-H, PT-08]
+- date: "1236-06-29"
+  note: "Ferdinand III takes Córdoba."
+  owners:
+    castile: [ES-CO]
+- date: "1238"
+  note: "Muhammad ibn al-Ahmar, founder of the Nasrid dynasty, enters Granada; Málaga and Almería accept him. Portugal takes Mértola and the land around Beja."
+  owners:
+    granada: [ES-GR, ES-MA, ES-AL, ES-J]
+    portugal: [PT-02]
+- date: "1238-09-28"
+  note: "Zayyan surrenders Valencia to James I."
+  owners:
+    aragon: [ES-V]
+- date: "1243"
+  note: "Treaty of Alcaraz. The taifa of Murcia submits to Castile."
+  owners:
+    castile: [ES-MU]
+- date: "1245"
+  note: "James I takes Biar, completing the conquest of the Kingdom of Valencia to the line agreed at Almizra."
+  owners:
+    aragon: [ES-A]
+- date: "1246"
+  note: "Pact of Jaén. Muhammad I surrenders Jaén and becomes Ferdinand III’s vassal."
+  owners:
+    castile: [ES-J]
+- date: "1248-11-23"
+  note: "Seville surrenders to Ferdinand III after a sixteen-month siege."
+  owners:
+    castile: [ES-SE]
+- date: "1249"
+  note: "Afonso III of Portugal takes Faro and completes the conquest of the Algarve."
+  owners:
+    portugal: [PT-08]
+- date: "1262"
+  note: "Alfonso X of Castile takes Niebla and Cádiz."
+  owners:
+    castile: [ES-H, ES-CA]
+
+# ---- The late Middle Ages, 1266–1516
+- date: "1269"
+  note: "The Marinids, having taken Marrakesh, rule Morocco with its ports."
+  owners:
+    morocco: [ES-CE, ES-ML]
+- date: "1276-07-27"
+  note: "James I dies. His younger son James II rules the Kingdom of Majorca (Mallorca, Ibiza, Roussillon and Montpellier, with overlordship of Muslim Menorca) under Aragonese suzerainty."
+  owners:
+    majorca: [ES-PM!]
+- date: "1278-09-08"
+  note: "The first paréage makes the bishop of Urgell and the count of Foix joint lords of Andorra."
+  owners:
+    andorra: [AD-02, AD-03, AD-04, AD-05, AD-06, AD-07, AD-08]
+- date: "1286"
+  note: "In the Aragonese Crusade, James II of Majorca sided with France; his nephew Alfonso III of Aragon conquers Mallorca (November 1285) and Ibiza."
+  owners:
+    aragon: [ES-PM!]
+- date: "1287-01-17"
+  note: "Alfonso III of Aragon conquers Menorca and expels or enslaves its Muslim population."
+  owners:
+    aragon: [ES-PM~menorca]
+- date: "1296"
+  note: "James II of Aragon occupies the Kingdom of Murcia."
+  owners:
+    aragon: [ES-MU]
+- date: "1297-09-12"
+  note: "Treaty of Alcañices. Castile cedes Olivenza and the Riba-Côa to Portugal."
+  owners:
+    portugal: [ES-BA~olivenza]
+- date: "1298"
+  note: "Under the terms of the treaty of Anagni (1295), James II of Aragon restores the Balearics to James II of Majorca."
+  owners:
+    majorca: [ES-PM!, ES-PM~menorca]
+- date: "1304-08-08"
+  note: "Treaty of Torrellas. Aragon returns Murcia to Castile but keeps Alicante, Elche and Orihuela."
+  owners:
+    castile: [ES-MU]
+- date: "1343"
+  note: "Peter IV of Aragon conquers the Kingdom of Majorca and joins it to the Crown."
+  owners:
+    aragon: [ES-PM!, ES-PM~menorca]
+- date: "1405"
+  note: "Jean de Béthencourt completes the conquest of Lanzarote and Fuerteventura for Castile."
+  owners:
+    castile: [ES-GC]
+- date: "1415-08-21"
+  note: "Portugal takes Ceuta."
+  owners:
+    portugal: [ES-CE]
+- date: "1420"
+  note: "Portuguese settlers begin to colonise Madeira."
+  owners:
+    portugal: [PT-30]
+- date: "1432"
+  note: "Portugal begins to settle the Azores."
+  owners:
+    portugal: [PT-20]
+- date: "1487-08-18"
+  note: "Málaga surrenders to Ferdinand and Isabella after a siege."
+  owners:
+    castile: [ES-MA]
+- date: "1489-12-22"
+  note: "Almería and Guadix surrender to Castile after the fall of Baza."
+  owners:
+    castile: [ES-AL]
+- date: "1492-01-02"
+  note: "Muhammad XII hands over Granada to Ferdinand and Isabella; the last Muslim state in Iberia ends."
+  owners:
+    castile: [ES-GR]
+- date: "1496-09-29"
+  note: "The conquest of Tenerife completes Castile’s conquest of the Canary Islands."
+  owners:
+    castile: [ES-TF]
+- date: "1497-09-17"
+  note: "Castilian forces under the Duke of Medina Sidonia occupy Melilla."
+  owners:
+    castile: [ES-ML]
+- date: "1512-07-25"
+  note: "Ferdinand of Aragon’s army under the Duke of Alba takes Pamplona; Upper Navarre is annexed to Castile in 1515."
+  owners:
+    castile: [ES-NA!, ES-NA~tudela]
+- date: "1516-01-23"
+  note: "Ferdinand of Aragon dies; his grandson Charles inherits both Castile and Aragon, and the crowns are ruled together as Spain."
+  owners:
+    spain: [ES-A, ES-AB, ES-AL, ES-AV, ES-B, ES-BA!, ES-BI, ES-BU, ES-C, ES-CA, ES-CC, ES-CO, ES-CR, ES-CS, ES-CU, ES-GC, ES-GI, ES-GR, ES-GU, ES-H, ES-HU!, ES-HU~jaca, ES-J, ES-L!, ES-L~pallars, ES-LE, ES-LO, ES-LU, ES-M, ES-MA, ES-ML, ES-MU, ES-NA!, ES-NA~tudela, ES-O, ES-OR, ES-P, ES-PM!, ES-PM~menorca, ES-PO, ES-S, ES-SA, ES-SE, ES-SG, ES-SO, ES-SS, ES-T, ES-TE, ES-TF, ES-TO, ES-V, ES-VA, ES-VI, ES-Z, ES-ZA]
+
+# ---- Spain and Portugal after 1516
+- date: "1668-02-13"
+  note: "Treaty of Lisbon. Spain recognises Portugal’s independence; Ceuta, which had stayed loyal to Philip IV in 1640, remains Spanish."
+  owners:
+    spain: [ES-CE]
+- date: "1713-07-13"
+  note: "Treaty of Utrecht. Spain cedes Menorca (occupied since 1708) and Gibraltar to Great Britain."
+  owners:
+    united-kingdom: [ES-PM~menorca]
+- date: "1756-06-29"
+  note: "France takes Fort St Philip and occupies Menorca."
+  owners:
+    france: [ES-PM~menorca]
+- date: "1763-02-10"
+  note: "Treaty of Paris. France returns Menorca to Britain."
+  owners:
+    united-kingdom: [ES-PM~menorca]
+- date: "1782-02-05"
+  note: "A Franco-Spanish force takes Fort St Philip; Spain keeps Menorca at the Peace of Versailles in 1783."
+  owners:
+    spain: [ES-PM~menorca]
+- date: "1798-11-16"
+  note: "Britain occupies Menorca again."
+  owners:
+    united-kingdom: [ES-PM~menorca]
+- date: "1801-06-06"
+  note: "Treaty of Badajoz, after the War of the Oranges. Portugal cedes Olivenza to Spain."
+  owners:
+    spain: [ES-BA~olivenza]
+- date: "1802-03-25"
+  note: "Treaty of Amiens. Britain returns Menorca to Spain."
+  owners:
+    spain: [ES-PM~menorca]
+
+# ---- North Africa (outside the curated range: each event lasts until the next drafted keyframe)
+- date: "1031-11-30"
+  note: "With the end of the Caliphate of Córdoba, its protectorate in northern Morocco breaks up among Zenata Berber emirs at Fez, Sijilmasa and elsewhere."
+  owners:
+    zenata: [MA-01, MA-04, MA-06, DZ-45, DZ-13, DZ-02, DZ-27, DZ-31, DZ-46, MA-03, MA-02, MA-07, MA-09, MA-08, MA-10, MA-11, MA-05, MA-12, DZ-48, DZ-20, DZ-22, DZ-29, ES-CE, ES-ML]
+- date: "1069"
+  note: "The Almoravids take Fez; by 1083 they rule Morocco and western Algeria."
+  owners:
+    almoravid-dynasty: [MA-01, MA-04, MA-06, DZ-45, DZ-13, DZ-02, DZ-27, DZ-31, DZ-46, MA-03, MA-02, MA-07, MA-09, MA-08, MA-10, MA-11, MA-05, MA-12, DZ-48, DZ-20, DZ-22, DZ-29]
+- date: "1147"
+  note: "The Almohads take Marrakesh and end the Almoravid dynasty."
+  owners:
+    almohad-caliphate: [MA-01, MA-04, MA-06, MA-03, MA-02, MA-07, MA-09, MA-08, MA-10, MA-11, MA-05, MA-12]

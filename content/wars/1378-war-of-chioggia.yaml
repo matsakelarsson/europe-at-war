@@ -1,0 +1,116 @@
+id: war-of-chioggia
+name: War of Chioggia
+start: "1378"
+end: "1381-08-08"
+tier: B
+summary: The fourth war between Venice and Genoa, fought over the island of Tenedos at the mouth of the Dardanelles. Allied with Hungary and Padua, the Genoese destroyed the Venetian fleet off Pola and took Chioggia in the Venetian lagoon in 1379, but Venice blockaded them there and forced their surrender in June 1380; the Peace of Turin in 1381 gave neither side much, but Genoa never again threatened Venice at home.
+countries: [it, hr, tr]
+sides:
+  - id: ven
+    name: Venice and its allies
+    polities: [venice, milan]
+    ink: red
+    moves: Venetian moves
+    success: Venetian success
+  - id: gen
+    name: Genoa and its allies
+    polities: [genoa, hungary, padua, aquileia]
+    ink: green
+    moves: Genoese and allied moves
+    success: Genoese and allied success
+notes:
+  - Venice’s only ally of note was Bernabò Visconti of Milan, who attacked Genoa by land but gave little direct help. Genoa’s allies were Louis I of Hungary, Francesco da Carrara of Padua and the Patriarch of Aquileia.
+  - Guns were used on both sides, in the siege of Chioggia and on board ship, one of the first times in Italian warfare. Numbers of ships and men differ between sources.
+sources:
+  - title: War of Chioggia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/War_of_Chioggia
+  - title: Battle of Chioggia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Chioggia
+  - title: Treaty of Turin (1381) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Turin_(1381)
+  - title: Vettor Pisani (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Vettor_Pisani
+  - title: Carlo Zeno (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Carlo_Zeno
+steps:
+  - title: Pola and the fall of Chioggia
+    date: 1376–1379
+    when: "1378"
+    borders: "1379-08-16"
+    countries: [it, hr, tr]
+    body:
+      - Venice and Genoa, the great trading rivals of the eastern Mediterranean, had fought three wars since the 1250s. A fourth broke out over Tenedos, an island that guarded the entrance to the Dardanelles and the route to the Black Sea. In 1376 the Byzantine emperor John V Palaiologos granted it to Venice, and Genoa, backing his rebellious son Andronikos IV, tried to take it. Genoa gathered a strong coalition, with Louis I of Hungary, who had taken Dalmatia from Venice in 1358, Francesco da Carrara, lord of Padua, and the Patriarch of Aquileia.
+      - On 30 May 1378 the Venetian admiral Vettor Pisani beat a Genoese squadron off Anzio, but on 7 May 1379, off Pola in Istria, the Genoese under Luciano Doria destroyed his fleet. Doria was killed in the battle, and Pisani was imprisoned for his defeat. A new Genoese fleet under Pietro Doria entered the Adriatic and, with Paduan troops attacking from the mainland, broke into the lagoon and took Chioggia, at its southern end, on 16 August 1379. Venice was cut off by sea and land, and Doria rejected its offer of terms; he is said to have sworn to bridle the bronze horses of St Mark’s.
+    facts:
+      - [Battle of Anzio, "30 May 1378, Venetian victory"]
+      - [Battle of Pola, "7 May 1379, Genoese victory"]
+      - [Fall of Chioggia, 16 August 1379]
+    markers:
+      - kind: naval
+        side: ven
+        name: Battle of Anzio
+        date: 30 May 1378
+        text: Pisani’s ten galleys beat eleven Genoese galleys off the coast south of Rome and captured their commander, Luigi Fieschi.
+        lonlat: [12.63, 41.45]
+      - kind: naval
+        side: gen
+        name: Battle of Pola
+        date: 7 May 1379
+        text: Pisani, ordered out against his judgement, lost all but six of his galleys. Luciano Doria was killed early in the fighting.
+        lonlat: [13.85, 44.87]
+      - kind: taken
+        side: gen
+        name: Chioggia
+        date: 16 August 1379
+        text: The Genoese and Paduans stormed the town after occupying Brondolo, capturing its garrison of some 3,000.
+        lonlat: [12.28, 45.22]
+    arrows:
+      - side: gen
+        label: Pietro Doria
+        via: [[15.6, 43.7], [14.3, 44.6], [12.6, 45.05], [12.31, 45.2]]
+      - side: gen
+        label: Carrara
+        via: [[11.88, 45.41], [12.1, 45.3], [12.26, 45.23]]
+  - title: The besiegers besieged
+    date: 1379–1381
+    when: "1379-12-22"
+    borders: "1381-08-08"
+    countries: [it, hr, tr]
+    body:
+      - Venice released Pisani to popular acclaim and armed every vessel it could. On the night of 22 December 1379 Pisani and Doge Andrea Contarini sank barges loaded with stones in the channels around Chioggia, trapping the Genoese fleet inside the lagoon. On 1 January 1380 Carlo Zeno came back with his galleys from raiding Genoese shipping in the eastern Mediterranean, and the besiegers were themselves besieged. Pietro Doria was killed by a Venetian cannon ball, and a Genoese relief fleet failed to break through in May.
+      - On 24 June 1380 the starving Genoese in Chioggia surrendered, some 4,000 of them by most accounts. The war went on at sea and on the mainland, and in 1381 Venice handed Treviso to Duke Leopold III of Austria rather than let it fall to Padua. Exhausted, both sides accepted the mediation of Count Amadeus VI of Savoy. In the Peace of Turin of 8 August 1381 Tenedos was handed over to Savoy, its fortifications were razed and its people moved away, and Venice agreed to pay Hungary a yearly tribute and accepted the loss of Dalmatia. Genoa never again threatened Venice in its lagoon.
+    facts:
+      - [Blockade of the channels, 22 December 1379]
+      - [Genoese surrender at Chioggia, 24 June 1380]
+      - [Peace of Turin, 8 August 1381]
+    markers:
+      - kind: event
+        side: ven
+        name: Brondolo
+        date: 1 January 1380
+        text: Carlo Zeno’s fleet anchored off the southern entrance to the lagoon, closing the trap on the Genoese.
+        lonlat: [12.29, 45.18]
+        lp: b
+      - kind: taken
+        side: ven
+        name: Chioggia
+        date: 24 June 1380
+        text: The Genoese garrison, out of food, surrendered with its remaining galleys.
+        lonlat: [12.28, 45.22]
+      - kind: event
+        name: Treviso
+        date: May 1381
+        text: Venice gave the city to Leopold III to keep it from the Carraresi. Leopold sold it to Padua in 1384, and Venice won it back in 1388.
+        lonlat: [12.24, 45.67]
+      - kind: treaty
+        name: Turin
+        date: 8 August 1381
+        text: Amadeus VI, the Green Count, brought the envoys of Venice, Genoa, Hungary and Padua together at his court.
+        lonlat: [7.69, 45.07]
+    arrows:
+      - side: ven
+        label: Carlo Zeno
+        via: [[13.6, 44.5], [12.75, 45.0], [12.32, 45.17]]
+      - side: ven
+        label: Pisani and Contarini
+        via: [[12.34, 45.43], [12.33, 45.3], [12.3, 45.24]]

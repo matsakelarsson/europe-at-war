@@ -1,0 +1,189 @@
+id: portuguese-restoration-war
+name: Portuguese Restoration War
+start: "1640-12-01"
+end: "1668-02-13"
+tier: B
+summary: The war by which Portugal broke away from the Spanish monarchy after sixty years of union under the same kings. Begun by a coup in Lisbon on 1 December 1640 that made the Duke of Braganza King John IV, it was fought mostly along the border of the Alentejo and Spanish Extremadura, and ended after Portuguese victories at Elvas, Ameixial and Montes Claros with the Treaty of Lisbon of 1668, in which Spain recognised Portugal’s independence.
+countries: [pt, es]
+sides:
+  - id: pt
+    name: Portugal
+    polities: [portugal]
+    ink: green
+    moves: Portuguese moves
+    success: Portuguese success
+  - id: sp
+    name: Spain
+    polities: [spain]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+notes:
+  - Dates are Gregorian. Portuguese historians call the war the Guerra da Restauração, and 1 December is a public holiday in Portugal.
+  - Portugal stays a separate kingdom on the base map during the union with Spain, so the coup of 1640 does not change the map. Ceuta, which kept its loyalty to Philip IV in 1640, is shown as Spanish only from the treaty of 1668.
+  - France helped Portugal with money and officers, and England sent a brigade after the marriage of Charles II and Catherine of Braganza in 1662. Their soldiers fought under Portuguese command.
+sources:
+  - title: Portuguese Restoration War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Portuguese_Restoration_War
+  - title: Battle of Montijo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Montijo
+  - title: Battle of the Lines of Elvas (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Lines_of_Elvas
+  - title: Battle of Ameixial (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ameixial
+  - title: Battle of Castelo Rodrigo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Castelo_Rodrigo
+  - title: Battle of Montes Claros (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Montes_Claros
+  - title: Treaty of Lisbon (1668) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Lisbon_(1668)
+steps:
+  - title: The revolution of 1640
+    date: 1640–1656
+    when: "1640-12-01"
+    borders: "1644-05-26"
+    countries: [pt, es]
+    body:
+      - Under the Spanish kings Portugal had kept its own laws and institutions, but by the 1630s many Portuguese felt their empire was being lost to the Dutch while Olivares raised new taxes and tried to draw Portugal into Castile’s wars. In 1640, with Spain fighting France and facing revolt in Catalonia, Portuguese nobles struck. On 1 December a group of conspirators burst into the palace in Lisbon, killed the hated Secretary of State, Miguel de Vasconcelos, and arrested the vicereine, Margaret of Savoy. The Duke of Braganza was acclaimed King John IV, and almost all of the empire followed, except Ceuta.
+      - Spain could not spare a large army, and for years the war along the frontier of the Alentejo and Extremadura was one of raids, cattle-rustling and burnt villages. Portugal rebuilt its border fortresses, above all Elvas, facing the Spanish base at Badajoz. On 26 May 1644 Matias de Albuquerque, a veteran of the wars in Brazil, beat a Spanish army under the Marquis of Torrecuso at Montijo, and that autumn Elvas held out against a nine-day siege. Through the following decade neither side could mount a major campaign; Portugal used the time to win back north-eastern Brazil from the Dutch, who surrendered there in 1654.
+    facts:
+      - [Coup in Lisbon, 1 December 1640]
+      - [Battle of Montijo, "26 May 1644, Portuguese victory"]
+      - [King of Portugal, "John IV (1640–1656)"]
+    markers:
+      - kind: event
+        side: pt
+        name: Lisbon
+        date: 1 December 1640
+        text: The conspirators took the royal palace on the Terreiro do Paço and threw Vasconcelos’s body from a window. John IV was acclaimed on 15 December.
+        lonlat: [-9.14, 38.71]
+      - kind: battle
+        side: pt
+        name: Battle of Montijo
+        date: 26 May 1644
+        text: Torrecuso’s army caught Albuquerque’s men returning from a raid into Extremadura; after a hard fight the Spanish withdrew to Badajoz.
+        lonlat: [-6.6, 38.89]
+      - kind: held
+        side: pt
+        name: Elvas
+        date: late 1644
+        text: The main Portuguese border fortress, a few hours’ march from Badajoz, beat off a nine-day Spanish siege.
+        lonlat: [-7.16, 38.88]
+    arrows:
+      - side: pt
+        label: Albuquerque, 1644
+        via: [[-7.16, 38.88], [-6.9, 38.97], [-6.64, 38.91]]
+      - side: sp
+        label: Torrecuso
+        via: [[-6.97, 38.86], [-6.8, 38.86], [-6.65, 38.88]]
+  - title: Elvas, Évora and Ameixial
+    date: 1657–1663
+    when: "1657"
+    borders: "1663-06-08"
+    countries: [pt, es]
+    body:
+      - After John IV died in November 1656, leaving his widow Luisa de Guzmán as regent for the young Afonso VI, Spain went on the offensive and in 1657 took Olivença after a long siege. A Portuguese siege of Badajoz in 1658 failed, and Luis de Haro, Philip IV’s chief minister, besieged Elvas, whose garrison was dying of disease. On 14 January 1659 a relief army under António Luís de Meneses, Count of Cantanhede, stormed the Spanish siege lines and routed the besiegers. That November, however, the Peace of the Pyrenees ended the war with France and freed Spain’s armies, and France formally left Portugal to its fate.
+      - Portugal turned to England. In 1662 Charles II married Afonso’s sister Catherine of Braganza, who brought Tangier and Bombay as her dowry, and an English brigade came to Portugal, while the German-born Frederick Schomberg, a soldier in French service, came to train the Portuguese army. In May 1663 Don Juan José of Austria invaded the Alentejo with a large army and took Évora, alarming Lisbon. On 8 June, as he fell back towards the border, a Portuguese and English army under the Count of Vila Flor and Schomberg routed him at Ameixial, and Évora was soon retaken.
+    facts:
+      - [Battle of the Lines of Elvas, "14 January 1659, Portuguese victory"]
+      - [Marriage of Charles II and Catherine of Braganza, 1662]
+      - [Battle of Ameixial, "8 June 1663, Portuguese victory"]
+    markers:
+      - kind: taken
+        side: sp
+        name: Olivença
+        date: 1657
+        text: The Duke of San Germán took the border town after a long siege. Spain returned it in 1668.
+        lonlat: [-7.1, 38.69]
+      - kind: held
+        side: sp
+        name: Badajoz
+        date: 1658
+        text: The Spanish base on the Guadiana held out against a Portuguese siege.
+        lonlat: [-6.97, 38.88]
+      - kind: battle
+        side: pt
+        name: Battle of the Lines of Elvas
+        date: 14 January 1659
+        text: Cantanhede’s relief army broke through Haro’s siege works in a single day. The Spanish lost their guns and baggage.
+        lonlat: [-7.18, 38.89]
+        lp: t
+      - kind: taken
+        side: sp
+        name: Évora
+        date: May 1663
+        text: The Alentejo’s largest city surrendered to Don Juan José after a short siege. It was retaken in late June after Ameixial.
+        lonlat: [-7.9, 38.57]
+      - kind: battle
+        side: pt
+        name: Battle of Ameixial
+        date: 8 June 1663
+        text: Fought near Estremoz. Don Juan José’s army lost its artillery and baggage and retreated to Badajoz with heavy losses.
+        lonlat: [-7.65, 38.85]
+    arrows:
+      - side: pt
+        label: Cantanhede, 1659
+        via: [[-7.59, 38.84], [-7.38, 38.88], [-7.21, 38.89]]
+      - side: sp
+        label: Don Juan José, 1663
+        via: [[-6.97, 38.86], [-7.3, 38.78], [-7.6, 38.65], [-7.87, 38.58]]
+      - side: sp
+        via: [[-7.88, 38.6], [-7.78, 38.74], [-7.67, 38.83]]
+    areas:
+      - style: occupied
+        side: sp
+        label: Olivença, held by Spain from 1657
+        atoms: [ES-BA~olivenza]
+  - title: Montes Claros and the Treaty of Lisbon
+    date: 1664–1668
+    when: "1664-07-07"
+    borders: "1668-02-13"
+    countries: [pt, es]
+    body:
+      - In the north, on 7 July 1664, Pedro Jacques de Magalhães beat the Duke of Osuna, who was besieging Castelo Rodrigo, near the border of Beira. In June 1665 a new Spanish commander, the Marquis of Caracena, marched into the Alentejo with some 23,000 men and took the town of Vila Viçosa, though its citadel held out. On 17 June the Portuguese army under Meneses, now Marquis of Marialva, and Schomberg met him at Montes Claros, between Vila Viçosa and Estremoz. Their infantry and guns threw back repeated cavalry charges, and the Spanish army was destroyed.
+      - It was the last great battle of the war. Philip IV died that September, leaving a sickly three-year-old son, Charles II, and his regents wanted peace. In Portugal Afonso VI was pushed aside in 1667–1668 by his brother Peter, who became regent. With English mediation, the Treaty of Lisbon was signed on 13 February 1668. Spain recognised the House of Braganza and Portugal’s independence, and each side gave back what it had taken, except that Ceuta, which had stayed loyal to Philip IV, remained Spanish.
+    facts:
+      - [Battle of Castelo Rodrigo, "7 July 1664, Portuguese victory"]
+      - [Battle of Montes Claros, "17 June 1665, Portuguese victory"]
+      - [Treaty of Lisbon, 13 February 1668]
+    markers:
+      - kind: battle
+        side: pt
+        name: Battle of Castelo Rodrigo
+        date: 7 July 1664
+        text: About 3,000 Portuguese came to the rescue of the small garrison and routed Osuna’s 7,000, taking all their guns. Osuna is said to have escaped disguised as a monk.
+        lonlat: [-6.95, 40.87]
+      - kind: taken
+        side: sp
+        name: Vila Viçosa
+        date: June 1665
+        text: Caracena took the town, seat of the dukes of Braganza, but not its citadel; he hoped to go on to Setúbal and Lisbon. The Portuguese recovered the town after Montes Claros.
+        lonlat: [-7.42, 38.78]
+        lp: l
+      - kind: battle
+        side: pt
+        name: Battle of Montes Claros
+        date: 17 June 1665
+        text: Often counted the most important battle in Portuguese history. Thousands of Spanish soldiers were killed or captured, along with their guns.
+        lonlat: [-7.47, 38.76]
+        lp: b
+      - kind: treaty
+        name: Treaty of Lisbon
+        date: 13 February 1668
+        text: Signed under English mediation, it ended twenty-seven years of war and the union of the crowns.
+        lonlat: [-9.14, 38.71]
+    arrows:
+      - side: sp
+        label: Osuna
+        via: [[-6.53, 40.6], [-6.75, 40.75], [-6.92, 40.85]]
+      - side: sp
+        label: Caracena
+        via: [[-6.97, 38.86], [-7.18, 38.79], [-7.39, 38.78]]
+      - side: pt
+        label: Marialva and Schomberg
+        via: [[-7.59, 38.84], [-7.53, 38.8], [-7.49, 38.77]]
+    areas:
+      - style: gained
+        side: sp
+        label: Ceuta, left to Spain by the treaty
+        atoms: [ES-CE]

@@ -1,0 +1,134 @@
+id: messina-revolt
+name: Messina revolt
+start: "1674-07-07"
+end: "1678-03-13"
+tier: B
+summary: The rising of the Sicilian port of Messina against Spanish rule in 1674, which drew in France during the Franco-Dutch War. French squadrons broke the Spanish blockade, and the French fleet beat the Spanish and their Dutch allies off Sicily, killing the great Dutch admiral de Ruyter. But Louis XIV saw Sicily as a sideshow, and in March 1678 his troops sailed away, leaving Messina to Spanish reprisals.
+countries: [it, fr, es, nl]
+sides:
+  - id: me
+    name: Messina
+    polities: []
+    ink: orange
+    moves: Messinese moves
+    success: Messinese success
+  - id: fr
+    name: France
+    polities: [france]
+    ink: navy
+    moves: French moves
+    success: French success
+  - id: es
+    name: Spain and the Dutch Republic
+    polities: [spain, sicily, dutch-republic]
+    ink: gold
+    moves: Spanish and Dutch moves
+    success: Spanish and Dutch success
+notes:
+  - The unrest began in 1672 as a revolt of Messina’s artisans against the patricians who ran the city, which the Spanish authorities had at first encouraged. It turned against Spain in July 1674.
+  - The naval war off Sicily belongs to the Franco-Dutch War of 1672–1678, which is told separately; Sicily stayed Spanish at the Peace of Nijmegen.
+sources:
+  - title: Messina revolt (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Messina_revolt
+  - title: Battle of Stromboli (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Stromboli
+  - title: Battle of Augusta (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Augusta
+  - title: Battle of Palermo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Palermo
+steps:
+  - title: Messina rises
+    date: July 1674 – December 1675
+    when: "1674-07-07"
+    borders: "1675-08"
+    countries: [it, fr, es]
+    body:
+      - Messina, a city of some 120,000 people, proud of its privileges and run by a few patrician families, had been at odds with the Spanish viceroys of Sicily for years. On 7 July 1674 its trade guilds and patricians joined forces, besieged the Spanish governor in his palace and drove the garrison out of the city and four of its five forts. Spanish troops and galleys closed in by land and sea, and the city appealed to Louis XIV, then at war with Spain and the Dutch Republic. On 27 September a small French squadron under the Chevalier de Valbelle ran past the Spanish galleys into the harbour with provisions for about five weeks and helped take the last fort, at the harbour mouth.
+      - Valbelle came back in January 1675 with a few troops, and found the Spanish camped outside the city and about to take it. On 11 February the Duke of Vivonne arrived with more warships, and with a combined fleet of 20 sail the French beat Melchor de la Cueva’s Spanish fleet off the Lipari Islands and sailed into Messina with large convoys of food. Vivonne governed the city as Louis XIV’s viceroy. The French were too few to march inland, but in August they took the port of Augusta, south of Catania, and the war on Sicily became mainly a war at sea. Spain asked its Dutch allies for help, and Michiel de Ruyter sailed for the Mediterranean.
+    facts:
+      - [Revolt against Spain, "7 July 1674"]
+      - [First French relief, "27 September 1674"]
+      - [Battle off the Lipari Islands, "11 February 1675, French victory"]
+    markers:
+      - kind: event
+        side: me
+        name: Messina
+        date: 7 July 1674
+        text: The guilds and the nobles rose together and drove out the Spanish garrison, then asked France for protection.
+        lonlat: [15.554, 38.193]
+      - kind: naval
+        side: fr
+        name: Battle off the Lipari Islands
+        date: 11 February 1675
+        text: Vivonne’s fleet beat the Spanish north of the Strait of Messina and captured a 44-gun Spanish ship, ending the blockade of the city.
+        lonlat: [15.1, 38.45]
+        lp: t
+      - kind: taken
+        side: fr
+        name: Augusta
+        date: August 1675
+        text: The French took the port to deny the Spanish and Dutch a harbour on the east coast of Sicily.
+        lonlat: [15.22, 37.23]
+        lp: l
+    arrows:
+      - side: fr
+        label: Valbelle
+        via: [[15.1, 38.6], [15.45, 38.32], [15.56, 38.2]]
+      - side: fr
+        label: Vivonne
+        via: [[14.3, 38.8], [15.0, 38.48], [15.56, 38.2]]
+      - side: fr
+        via: [[15.45, 38.0], [15.32, 37.55], [15.24, 37.25]]
+    areas:
+      - style: outline
+        side: me
+        label: Messina in revolt
+        polygon: [[15.47, 38.15], [15.54, 38.29], [15.66, 38.27], [15.6, 38.14]]
+  - title: Stromboli, Augusta and Palermo
+    date: January 1676 – March 1678
+    when: "1676-01-08"
+    borders: "1678-03-13"
+    countries: [it, fr, es, nl]
+    body:
+      - De Ruyter, now nearly seventy, brought 18 Dutch warships, too lightly manned after years of war. On 8 January 1676 he fought Abraham Duquesne’s French fleet of 20 ships for eight hours off Stromboli and Alicudi, without result. On 22 April the Dutch and Spanish, under the Spanish admiral de la Cerda, met Duquesne again off Augusta. The Spanish centre hung back, the Dutch van bore the brunt, and de Ruyter was hit in the legs by a cannonball; he died at Syracuse a week later. On 2 June Vivonne caught the battered allied fleet at anchor in the bay of Palermo and sent fireships among it. Several Spanish and Dutch ships blew up, and both Spanish admirals and the Dutch commander, Jan den Haen, were killed.
+      - France now ruled the seas around Sicily, but Louis XIV had never meant to conquer the island. When England and the Dutch Republic allied in January 1678, he decided to pull out. The Duke of La Feuillade arrived in February, supposedly as the new viceroy, and on 13 March 1678 embarked the French troops on the pretext of an attack on Palermo, then told the city that the French were leaving for good. A few hundred leading families sailed with them. The Spanish viceroy returned unopposed, promising an amnesty that was not kept. Messina lost its privileges and its senate, and the Spanish built a citadel to hold it down. The Peace of Nijmegen that summer left Sicily Spanish.
+    facts:
+      - [Battle of Stromboli, "8 January 1676, inconclusive"]
+      - [Battle of Augusta, "22 April 1676; de Ruyter mortally wounded"]
+      - [Battle of Palermo, "2 June 1676, French victory"]
+    markers:
+      - kind: naval
+        name: Battle of Stromboli
+        date: 8 January 1676
+        text: Also called the Battle of Alicudi. Twenty French ships fought nineteen Dutch and Spanish ships, and the Dutch lost one.
+        lonlat: [14.5, 38.62]
+      - kind: naval
+        name: Battle of Augusta
+        date: 22 April 1676
+        text: Neither side lost a ship, but de Ruyter, the most famous admiral of his age, was mortally wounded.
+        lonlat: [15.3, 37.36]
+        lp: l
+      - kind: naval
+        side: fr
+        name: Battle of Palermo
+        date: 2 June 1676
+        text: French fireships destroyed the Spanish flagship and several other ships at anchor. Vivonne then broke off and returned to Messina.
+        lonlat: [13.38, 38.14]
+      - kind: event
+        side: es
+        name: Messina
+        date: 13 March 1678
+        text: The French left without warning, taking a few hundred leading families into exile, and the Spanish took back the city without a fight.
+        lonlat: [15.554, 38.193]
+    arrows:
+      - side: es
+        label: De Ruyter
+        via: [[12.4, 38.4], [13.6, 38.6], [14.45, 38.62]]
+      - side: fr
+        label: Vivonne
+        via: [[15.56, 38.2], [15.0, 38.4], [14.0, 38.3], [13.42, 38.15]]
+    areas:
+      - style: outline
+        side: me
+        label: Messina in revolt
+        polygon: [[15.47, 38.15], [15.54, 38.29], [15.66, 38.27], [15.6, 38.14]]

@@ -1,0 +1,230 @@
+id: expedition-of-the-thousand
+name: Expedition of the Thousand
+start: "1860-05-05"
+end: "1861-03-20"
+tier: B
+summary: The campaign in which Giuseppe Garibaldi and about a thousand volunteers landed in Sicily in May 1860 and, joined by Sicilian insurgents and thousands more volunteers, overthrew the Bourbon Kingdom of the Two Sicilies. The Sardinian army meanwhile took the Marche and Umbria from the Papal States and besieged King Francis II in Gaeta, which surrendered in February 1861; the south was joined to the new Kingdom of Italy, proclaimed on 17 March 1861.
+countries: [it]
+sides:
+  - id: gar
+    name: Garibaldi’s volunteers
+    polities: [garibaldini]
+    ink: red
+    moves: Garibaldi’s moves
+    success: Garibaldine success
+  - id: sa
+    name: Kingdom of Sardinia
+    polities: [savoy]
+    ink: navy
+    moves: Sardinian moves
+    success: Sardinian success
+  - id: ns
+    name: Kingdom of the Two Sicilies
+    polities: [two-sicilies]
+    ink: purple
+    moves: Neapolitan moves
+    success: Neapolitan success
+  - id: pap
+    name: Papal States
+    polities: [papal-states]
+    ink: gold
+    moves: Papal moves
+    success: Papal success
+notes:
+  - Garibaldi’s force grew from about 1,100 men at the start to tens of thousands, organised from July as the Southern Army; its volunteers wore the red shirts that gave them their name, the Redshirts. Sicily and Naples formally joined the Kingdom of Sardinia after the plebiscites of 21 October 1860.
+sources:
+  - title: Expedition of the Thousand (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Expedition_of_the_Thousand
+  - title: Expedition of the Thousand (Britannica)
+    url: https://www.britannica.com/event/Expedition-of-the-Thousand
+  - title: Battle of Calatafimi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Calatafimi
+  - title: Siege of Palermo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Palermo
+  - title: Battle of the Volturno (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Volturno
+  - title: Battle of Castelfidardo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Castelfidardo
+  - title: Siege of Gaeta (1860–1861) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Gaeta_(1860%E2%80%931861)
+steps:
+  - title: Sicily
+    date: May – July 1860
+    when: "1860-05-05"
+    borders: "1860-07-28"
+    countries: [it]
+    body:
+      - A revolt in Palermo on 4 April 1860 was quickly put down but lived on in the countryside. Garibaldi gathered volunteers near Genoa, and Cavour, Sardinia’s prime minister, neither stopped nor openly helped him. On the night of 5–6 May about 1,100 men, most of them from Lombardy, Venetia and Liguria and many of them students and artisans, sailed from Quarto in two steamers and landed at Marsala on 11 May. At Salemi Garibaldi declared himself dictator of Sicily in the name of King Victor Emmanuel II. On 15 May at Calatafimi his volunteers, with Sicilian irregulars, drove a larger Neapolitan force off a terraced hill.
+      - Garibaldi feinted towards Corleone, then broke into Palermo on 27 May. After three days of street fighting, while Bourbon warships and the fortress shelled the city, the garrison of some 20,000 men agreed to an armistice and in June left by sea. Volunteers poured in from the north, and on 20 July Garibaldi defeated the Neapolitans at Milazzo; Messina was given up at the end of July, though its citadel held out. Peasants who rose against their landlords in the hope of land met harsh repression, and at Bronte in August Garibaldi’s lieutenant Nino Bixio had five men shot after a summary trial.
+    facts:
+      - [Landing at Marsala, "11 May 1860"]
+      - [Battle of Calatafimi, "15 May 1860, Garibaldine victory"]
+      - [Battle of Milazzo, "20 July 1860, Garibaldine victory"]
+    markers:
+      - kind: event
+        side: gar
+        name: Marsala
+        date: 11 May 1860
+        text: The two steamers, Piemonte and Lombardo, landed the volunteers while Neapolitan warships arrived too late to stop them.
+        lonlat: [12.437, 37.799]
+        lp: l
+      - kind: battle
+        side: gar
+        name: Calatafimi
+        date: 15 May 1860
+        text: Garibaldi’s first victory in Sicily, won with the bayonet on the hill of Pianto Romano; the Neapolitans withdrew to Palermo.
+        lonlat: [12.863, 37.917]
+      - kind: taken
+        side: gar
+        name: Palermo
+        date: 27–30 May 1860
+        text: The volunteers and the city’s insurgents fought their way in from the Porta Termini; the garrison capitulated on 6 June.
+        lonlat: [13.361, 38.116]
+      - kind: battle
+        side: gar
+        name: Milazzo
+        date: 20 July 1860
+        text: A hard-fought victory that opened the way to Messina; the Neapolitan garrison of the castle left by sea a few days later.
+        lonlat: [15.243, 38.221]
+      - kind: event
+        name: Bronte
+        date: 4–10 August 1860
+        text: Bixio put down a peasant rising on an estate owned by the British Nelson family and had its alleged leaders shot.
+        lonlat: [14.83, 37.79]
+    arrows:
+      - side: gar
+        label: The Thousand
+        via: [[8.99, 44.39], [11.1, 42.5], [11.8, 39.5], [12.42, 37.82]]
+      - side: gar
+        label: Garibaldi
+        via: [[12.47, 37.8], [12.8, 37.82], [12.88, 37.93], [13.32, 38.1]]
+      - side: gar
+        via: [[13.5, 38.05], [14.5, 38.05], [15.2, 38.2]]
+    areas:
+      - style: occupied
+        side: gar
+        label: Held by Garibaldi, end of July 1860 (approximate)
+        atoms: [IT-PA, IT-TP, IT-AG, IT-CL, IT-EN, IT-CT, IT-SR, IT-RG, IT-ME]
+  - title: Naples and the Volturno
+    date: August – October 1860
+    when: "1860-08-19"
+    borders: "1860-10-26"
+    countries: [it]
+    body:
+      - On the night of 18–19 August Garibaldi crossed the Strait of Messina with about 3,700 men, landed near Melito and took Reggio on 21 August. The Bourbon army in Calabria, demoralised and badly led, surrendered or melted away, and Garibaldi advanced so fast that he outran most of his troops. King Francis II left Naples on 6 September for the fortress of Gaeta, and the next day Garibaldi arrived in the capital by train with a few companions and was greeted by cheering crowds.
+      - Francis II still had a large and loyal army on the Volturno, around the fortress of Capua. On 1–2 October it attacked Garibaldi’s volunteers along the river in the largest battle of the campaign, and was beaten back with help from Sardinian troops landed at Naples. Plebiscites on 21 October approved union with Sardinia by huge majorities, though voting was public and critics doubted the result. On 26 October Garibaldi met Victor Emmanuel near Teano and greeted him as King of Italy. He handed over his conquests and on 9 November sailed home to the island of Caprera.
+    facts:
+      - [Crossing of the Strait, "18–19 August 1860"]
+      - [Garibaldi enters Naples, "7 September 1860"]
+      - [Battle of the Volturno, "1–2 October 1860, Garibaldine victory"]
+    markers:
+      - kind: event
+        side: gar
+        name: Melito
+        date: 19 August 1860
+        text: Garibaldi landed on the beach here, south of Reggio, avoiding the Neapolitan fleet in the strait.
+        lonlat: [15.78, 37.92]
+      - kind: taken
+        side: gar
+        name: Reggio
+        date: 21 August 1860
+        text: The Neapolitan garrison surrendered after a day of fighting.
+        lonlat: [15.65, 38.11]
+        lp: l
+      - kind: taken
+        side: gar
+        name: Soveria Mannelli
+        date: 30 August 1860
+        text: About 10,000 Neapolitan troops under General Giuseppe Ghio laid down their arms without a fight.
+        lonlat: [16.377, 39.077]
+      - kind: taken
+        side: gar
+        name: Naples
+        date: 7 September 1860
+        text: Garibaldi entered the largest city in Italy with a handful of companions while Bourbon troops still held its forts.
+        lonlat: [14.268, 40.852]
+        lp: l
+      - kind: battle
+        side: gar
+        name: Battle of the Volturno
+        date: 1–2 October 1860
+        text: Fought along the river between Capua and Caserta; the Bourbon attack nearly broke through at Sant’Angelo and Maddaloni.
+        lonlat: [14.25, 41.08]
+      - kind: event
+        name: Teano
+        date: 26 October 1860
+        text: Garibaldi met Victor Emmanuel II, whose army had marched south, and handed him the south.
+        lonlat: [14.067, 41.25]
+        lp: l
+    arrows:
+      - side: gar
+        label: Garibaldi
+        via: [[15.75, 37.95], [16.25, 38.95], [15.8, 40.05], [14.4, 40.8]]
+      - side: ns
+        via: [[14.21, 41.12], [14.24, 41.1], [14.27, 41.08]]
+    areas:
+      - style: occupied
+        side: gar
+        label: Held by Garibaldi, mid-October 1860 (approximate)
+        atoms: [IT-PA, IT-TP, IT-AG, IT-CL, IT-EN, IT-CT, IT-SR, IT-RG, IT-ME, IT-RC, IT-VV, IT-CZ, IT-KR, IT-CS, IT-PZ, IT-MT, IT-TA, IT-BR, IT-LE, IT-BA, IT-BT, IT-FG, IT-SA, IT-AV, IT-NA, IT-BN]
+  - title: Castelfidardo and Gaeta
+    date: September 1860 – March 1861
+    when: "1860-09-11"
+    borders: "1861-03-17"
+    countries: [it]
+    body:
+      - To keep Garibaldi from marching on Rome, which would have meant war with France, and to take his revolution in hand, Cavour sent the Sardinian army into the Papal Marche and Umbria on 11 September, with Napoleon III’s tacit consent. On 18 September General Enrico Cialdini defeated the Papal army of the French general Christophe de Lamoricière, which included Catholic volunteers from France, Belgium and Ireland, at Castelfidardo near Loreto, and on 29 September Ancona surrendered after a siege by land and sea. Victor Emmanuel then led his army south through the Abruzzi into the Kingdom of Naples.
+      - Francis II and Queen Maria Sophia held out in Gaeta with what remained of the Bourbon army. Cialdini besieged the fortress from 5 November; a French squadron kept the sea open until January 1861, and on 13 February, short of supplies and struck by typhus after weeks of bombardment, the garrison surrendered. The royal couple went into exile in Rome. The first Italian parliament proclaimed Victor Emmanuel King of Italy on 17 March 1861, and the last Bourbon strongholds, the citadel of Messina and Civitella del Tronto, surrendered in March. Rome and Venetia remained outside the new kingdom, and in the south a long guerrilla war began.
+    facts:
+      - [Battle of Castelfidardo, "18 September 1860, Sardinian victory"]
+      - [Ancona surrenders, "29 September 1860"]
+      - [Gaeta surrenders, "13 February 1861"]
+    markers:
+      - kind: taken
+        side: sa
+        name: Perugia
+        date: 14 September 1860
+        text: General Manfredo Fanti’s troops stormed the city, held by foreign regiments of the Papal army.
+        lonlat: [12.389, 43.112]
+      - kind: battle
+        side: sa
+        name: Battle of Castelfidardo
+        date: 18 September 1860
+        text: Cialdini’s corps scattered Lamoricière’s army as it tried to reach Ancona; Lamoricière escaped to the fortress with a few hundred men.
+        lonlat: [13.56, 43.46]
+        lp: b
+      - kind: siege
+        side: sa
+        name: Ancona
+        date: 24–29 September 1860
+        text: Besieged from land and bombarded by the Sardinian fleet, the port surrendered with its garrison and Lamoricière.
+        lonlat: [13.51, 43.607]
+      - kind: siege
+        side: sa
+        name: Gaeta
+        date: 5 November 1860 – 13 February 1861
+        text: The last stand of the Bourbon kingdom; Queen Maria Sophia’s visits to the batteries made her a heroine to legitimists across Europe.
+        lonlat: [13.555, 41.222]
+      - kind: taken
+        side: sa
+        name: Civitella del Tronto
+        date: 20 March 1861
+        text: The fortress surrendered three days after the Kingdom of Italy was proclaimed, the last to fall.
+        lonlat: [13.67, 42.77]
+    arrows:
+      - side: sa
+        label: Cialdini
+        via: [[12.7, 43.95], [13.2, 43.72], [13.55, 43.48]]
+      - side: sa
+        label: Fanti
+        via: [[11.95, 43.3], [12.39, 43.13], [12.72, 42.75]]
+      - side: sa
+        label: Victor Emmanuel
+        via: [[13.5, 43.58], [13.95, 42.6], [14.25, 41.9], [14.08, 41.27]]
+      - side: sa
+        via: [[14.0, 41.24], [13.75, 41.24], [13.6, 41.23]]
+    areas:
+      - style: occupied
+        side: sa
+        label: Taken from the Papal States, September 1860
+        atoms: [IT-PU, IT-AN, IT-MC, IT-FM, IT-AP, IT-PG, IT-TR, IT-RI!]

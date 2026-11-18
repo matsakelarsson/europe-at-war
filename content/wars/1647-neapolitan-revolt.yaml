@@ -1,0 +1,82 @@
+id: neapolitan-revolt
+name: Neapolitan Revolt of 1647
+start: "1647-07-07"
+end: "1648-04-06"
+tier: B
+summary: A popular rising in Naples against Spanish rule and the taxes raised for Philip IV’s wars, first led by the young fisherman Masaniello. After his murder the revolt revived, and rebels proclaimed a Neapolitan Republic under French protection, led by the Duke of Guise; Spanish forces retook the city in April 1648.
+countries: [it, es, fr]
+sides:
+  - id: rev
+    name: Neapolitan rebels
+    polities: []
+    ink: red
+    moves: Rebel moves
+    success: Rebel success
+  - id: sp
+    name: Spain
+    polities: [spain, naples]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+notes:
+  - Dates are Gregorian. Sicily had risen first, in Palermo in May 1647, and the revolt in Naples spread to the provinces, where peasants rose against their barons.
+  - The Kingdom of Naples stays a separate polity on the base map, ruled by Spanish viceroys. The rebel republic held only the city and parts of the countryside and is not drawn.
+sources:
+  - title: Masaniello (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Masaniello
+  - title: Neapolitan Republic (1647–1648) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Neapolitan_Republic_(1647%E2%80%931648)
+  - title: Neapolitan Revolt of 1647 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Neapolitan_Revolt_of_1647
+  - title: Henry II, Duke of Guise (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Henry_II,_Duke_of_Guise
+steps:
+  - title: Masaniello and the Neapolitan Republic
+    date: 1647–1648
+    when: "1647-07-07"
+    borders: "1648-04-06"
+    countries: [it, es]
+    body:
+      - Naples, one of the largest cities in Europe, had been squeezed for decades to pay for Spain’s wars, and in 1647 the viceroy, the Duke of Arcos, put a new tax on fruit, the food of the poor. On 7 July a quarrel between fruit sellers and tax collectors in the market square turned into a riot. Led by Tommaso Aniello, called Masaniello, a 27-year-old fish seller, and advised by the old priest Giulio Genoino, crowds burned the tax offices and the houses of tax farmers, and Arcos took refuge in the castles. On 13 July he agreed to abolish the new taxes and pardon the rebels.
+      - Masaniello, now ‘captain-general of the people’, began to behave erratically, and on 16 July he was killed by a band of armed men. In October a Spanish fleet under Don Juan José of Austria bombarded the city, which rose again, and on 22 October the gunsmith Gennaro Annese proclaimed a republic. Henry, Duke of Guise, who claimed descent from the Angevin kings of Naples, arrived in November to lead it. But the Spanish held the castles, and the barons controlled the provinces. On 6 April 1648, while Guise was outside the walls, Spanish troops entered the city with the help of rebels who had changed sides. Guise was captured, and Annese was executed in June.
+    facts:
+      - [Rising in Naples, 7 July 1647]
+      - [Death of Masaniello, 16 July 1647]
+      - [Neapolitan Republic, "22 October 1647 – 6 April 1648"]
+    markers:
+      - kind: event
+        side: rev
+        name: Palermo
+        date: May 1647
+        text: A rising against bread prices and taxes forced the viceroy of Sicily to abolish duties on food. It was put down later in the year.
+        lonlat: [13.36, 38.12]
+      - kind: event
+        side: rev
+        name: Piazza del Mercato
+        date: 7 July 1647
+        text: The revolt began in the city’s market square, where Masaniello later spoke to the crowds. Annese was beheaded here in June 1648.
+        lonlat: [14.27, 40.85]
+      - kind: held
+        side: sp
+        name: Castel Nuovo
+        date: 1647–1648
+        text: The viceroy held out in the harbour castle and the other fortresses above the city throughout the revolt.
+        lonlat: [14.25, 40.84]
+        lp: l
+      - kind: taken
+        side: rev
+        name: Aversa
+        date: early 1648
+        text: Guise took the town, base of the nobles’ army north of Naples, but could not open the roads to bring food into the city.
+        lonlat: [14.21, 40.97]
+      - kind: taken
+        side: sp
+        name: Naples
+        date: 6 April 1648
+        text: Spanish troops under Don Juan José and the new viceroy, the Count of Oñate, took the city with little fighting.
+        lonlat: [14.24, 40.86]
+        lp: t
+    arrows:
+      - side: sp
+        label: Don Juan José’s fleet
+        via: [[13.9, 40.55], [14.1, 40.73], [14.23, 40.82]]

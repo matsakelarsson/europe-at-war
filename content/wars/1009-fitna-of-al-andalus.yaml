@@ -1,0 +1,130 @@
+id: fitna-of-al-andalus
+name: Fitna of al-Andalus
+start: "1009"
+end: "1031-11-30"
+tier: B
+summary: The civil war that destroyed the caliphate of Córdoba. A coup against Almanzor’s son in 1009 set the people of Córdoba, the Berber troops and the Slav generals against each other, with Castilian and Catalan armies hired by rival caliphs; Córdoba and the palace city of Madinat al-Zahra were sacked, and after two decades in which Umayyad and Hammudid caliphs came and went, the caliphate was abolished in 1031 and al-Andalus broke up into taifa kingdoms.
+countries: [es, ma]
+sides:
+  - id: cor
+    name: Córdoba and the Umayyad party
+    polities: [cordoba]
+    ink: green
+    moves: Moves by the Córdoban party
+    success: Success for the Córdoban party
+  - id: ber
+    name: The Berber troops and their caliphs
+    polities: []
+    ink: orange
+    moves: Berber moves
+    success: Berber success
+  - id: chr
+    name: Christian allies
+    polities: [castile, barcelona]
+    ink: gold
+    moves: Moves by Christian allies
+    success: Success for Christian allies
+notes:
+  - Fitna is Arabic for strife or civil war. The sources, written later and mostly by Andalusi authors hostile to the Berbers, disagree on many dates; those given here are the ones most historians accept.
+  - The Slavs (Saqaliba) were soldiers and officials of European, often slave, origin. The Berbers were North African troops brought over in large numbers by Almanzor.
+  - The war is part of the longer story told in the Reconquista.
+sources:
+  - title: Fitna of al-Andalus (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fitna_of_al-Andalus
+  - title: Caliphate of Córdoba (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Caliphate_of_C%C3%B3rdoba
+  - title: Madinat al-Zahra (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Madinat_al-Zahra
+  - title: Hammudid dynasty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hammudid_dynasty
+  - title: Taifa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Taifa
+steps:
+  - title: Coup, counter-coup and the sack of Córdoba
+    date: 1009–1013
+    when: "1009"
+    borders: "1013-05-31"
+    countries: [es]
+    body:
+      - Almanzor’s son Abd al-Malik ruled al-Andalus in the name of the caliph Hisham II until he died in 1008. His brother Abd al-Rahman, nicknamed Sanchuelo, went further and made the childless caliph name him heir, outraging the Umayyad family and the people of Córdoba. While he was campaigning against Castile early in 1009, an Umayyad prince, Muhammad, seized Córdoba, forced Hisham to abdicate and took the title al-Mahdi. Sanchuelo was killed in March, and the palace city of Almanzor’s family, Madinat al-Zahira, was plundered and destroyed.
+      - The Berber troops whom Almanzor had brought over were hated in the city, and they set up a caliph of their own, another Umayyad, Sulayman. With help from Count Sancho García of Castile they beat al-Mahdi outside Córdoba and took the city that autumn. Al-Mahdi and the Slav general Wadih then hired the counts of Barcelona and Urgell, whose troops helped retake Córdoba in 1010 and plundered it. Al-Mahdi was murdered that July and Hisham II restored, but the Berbers sacked Madinat al-Zahra and blockaded Córdoba until they stormed it in May 1013, killing and plundering. Sulayman was caliph again, and Hisham II disappeared.
+    facts:
+      - [Coup of al-Mahdi, early 1009]
+      - [Catalan expedition to Córdoba, "1010"]
+      - [Córdoba sacked by the Berbers, "May 1013"]
+    markers:
+      - kind: taken
+        side: ber
+        name: Córdoba
+        date: 1009–1013
+        text: The caliphal capital, perhaps the largest city in western Europe, changed hands four times in four years and was plundered each time, worst of all by the Berbers in 1013.
+        lonlat: [-4.78, 37.89]
+      - kind: taken
+        side: ber
+        name: Madinat al-Zahra
+        date: "1010"
+        text: The Berbers plundered and burned Abd al-Rahman III’s palace city. Its ruins were quarried for building stone for centuries.
+        lonlat: [-4.867, 37.888]
+        lp: l
+      - kind: event
+        side: chr
+        name: Barcelona
+        date: "1010"
+        text: Count Ramon Borrell led a Catalan army to Córdoba for al-Mahdi. His brother Ermengol, count of Urgell, was killed in the campaign.
+        lonlat: [2.177, 41.383]
+      - kind: event
+        side: chr
+        name: Gormaz
+        date: 1010–1011
+        text: Sancho García of Castile won back the Duero fortresses Almanzor had taken, among them Gormaz, Osma and San Esteban, as the price of his help or his neutrality.
+        lonlat: [-3.008, 41.494]
+    arrows:
+      - side: chr
+        label: Catalans, 1010
+        via: [[2.17, 41.38], [-2.43, 41.17], [-4.02, 39.86], [-4.75, 37.93]]
+      - side: ber
+        label: Sulayman and Sancho García, 1009
+        via: [[-2.43, 41.17], [-3.4, 40.5], [-4.2, 38.8], [-4.76, 37.92]]
+  - title: Hammudids and the end of the caliphate
+    date: 1016–1031
+    when: "1016"
+    borders: "1031-11-30"
+    countries: [es, ma]
+    body:
+      - Sulayman ruled a shrunken realm. Slav generals had taken over the east around Almería, Denia and Valencia, and Berber chiefs held much of the south. In 1016 Ali ibn Hammud, governor of Ceuta and a descendant of the Prophet’s family, claimed that the vanished Hisham II had named him heir, took Córdoba, executed Sulayman and made himself caliph. For fifteen years Hammudids and Umayyads followed one another on the throne, some for only weeks, while real power passed to local rulers.
+      - On 30 November 1031 the notables of Córdoba deposed the last Umayyad caliph, Hisham III, abolished the caliphate and governed the city as a council. Al-Andalus was left as a patchwork of taifa kingdoms. The Abbadids ruled Seville, the Aftasids Badajoz and the Dhul-Nunids Toledo; Zaragoza went to the Tujibids and then the Hudids, Granada to the Zirid Berbers, and the east to Slav rulers. Their rivalries let the Christian kingdoms demand tribute from them and, in time, conquer them.
+    facts:
+      - [Ali ibn Hammud takes Córdoba, "July 1016"]
+      - [End of the caliphate, "30 November 1031"]
+    markers:
+      - kind: event
+        side: ber
+        name: Ceuta
+        date: "1016"
+        text: Ali ibn Hammud set out from Ceuta, where he was governor. His brother al-Qasim held Algeciras across the Strait.
+        lonlat: [-5.316, 35.888]
+      - kind: taken
+        side: ber
+        name: Córdoba
+        date: July 1016
+        text: Ali ibn Hammud entered the palace and had Sulayman executed. The city deposed its last caliph in 1031.
+        lonlat: [-4.78, 37.89]
+      - kind: event
+        name: Seville
+        date: From 1023
+        text: The qadi Abu al-Qasim ibn Abbad took power in the city, founding the Abbadid dynasty, the strongest of the taifas.
+        lonlat: [-5.995, 37.389]
+      - kind: event
+        name: Granada
+        date: From 1013
+        text: The Zirid Berber chief Zawi ibn Ziri made Granada his seat, and his family ruled it until 1090.
+        lonlat: [-3.6, 37.175]
+      - kind: event
+        name: Denia
+        date: From 1014
+        text: The Slav ruler Mujahid made Denia a sea power, ruling the Balearic Islands and raiding Sardinia in 1015–1016.
+        lonlat: [0.106, 38.84]
+    arrows:
+      - side: ber
+        label: Ali ibn Hammud, 1016
+        via: [[-5.32, 35.89], [-4.42, 36.72], [-4.6, 37.3], [-4.78, 37.87]]

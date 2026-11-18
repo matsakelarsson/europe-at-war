@@ -1,0 +1,88 @@
+id: war-of-the-oranges
+name: War of the Oranges
+start: "1801-05-20"
+end: "1801-06-06"
+tier: B
+summary: A brief war in 1801 in which Spain, urged on by Napoleon, invaded Portugal to force it to break with Britain. Olivenza and Juromenha surrendered at once and Campo Maior after a siege, but Elvas held out, and by the Treaty of Badajoz Portugal closed its ports to British ships, paid an indemnity and ceded Olivenza to Spain.
+countries: [pt, es, fr]
+sides:
+  - id: es
+    name: Spain and France
+    polities: [spain, france]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+  - id: pt
+    name: Portugal
+    polities: [portugal]
+    ink: green
+    moves: Portuguese moves
+    success: Portuguese success
+notes:
+  - The fighting lasted less than three weeks. The name comes from the oranges Godoy picked under the walls of Elvas and sent to Queen Maria Luisa.
+  - Portugal later declared the Treaty of Badajoz void, and has never formally recognised Spanish sovereignty over Olivenza (Olivença in Portuguese).
+sources:
+  - title: War of the Oranges (Wikipedia)
+    url: https://en.wikipedia.org/wiki/War_of_the_Oranges
+  - title: Treaty of Badajoz (1801) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Badajoz_(1801)
+  - title: Olivenza (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Olivenza
+steps:
+  - title: Olivenza and the oranges of Elvas
+    date: May – June 1801
+    when: "1801-05-20"
+    borders: "1801-06-06"
+    countries: [pt, es, fr]
+    body:
+      - In 1800 and 1801 Napoleon, then First Consul, and Manuel Godoy, the chief minister of Charles IV of Spain, demanded that Portugal, Britain’s last ally on the Continent, break its alliance and close its ports to British ships. Portugal refused. At dawn on 20 May 1801 Godoy’s Spanish army of Extremadura crossed the border on the Guadiana. Olivenza and nearby Juromenha, their walls unfinished and held by a few hundred men, mostly militia, surrendered at once. The garrison of Campo Maior held two Spanish divisions for 17 days, and at Elvas the Portuguese threw back Godoy’s assault.
+      - The war then stalled, with the Spanish tied down in sieges and a French corps waiting in Spain. Godoy picked oranges outside Elvas and sent them to Queen Maria Luisa, with word that he would go on to Lisbon. Portugal, with no help from Britain, gave way. By the Treaty of Badajoz of 6 June it agreed to close its ports to the British, give trade concessions to France and pay an indemnity, and it ceded Olivenza and its district east of the Guadiana; Spain returned the other towns it had taken. Napoleon, who wanted more, imposed a harsher Treaty of Madrid on 29 September. Meanwhile in South America the Portuguese seized the Spanish missions east of the Uruguay River, and kept them.
+    facts:
+      - [Invasion, "20 May 1801"]
+      - [Treaty of Badajoz, "6 June 1801"]
+      - [Ceded to Spain, Olivenza and its district]
+    markers:
+      - kind: taken
+        side: es
+        name: Olivenza
+        date: 20 May 1801
+        text: The town surrendered on the first day. Ceded to Spain at Badajoz, it has been Spanish ever since, though Portugal still claims it.
+        lonlat: [-7.101, 38.686]
+        lp: l
+      - kind: taken
+        side: es
+        name: Juromenha
+        date: 20 May 1801
+        text: The small fortress on the Guadiana gave up without a fight and was returned at the peace.
+        lonlat: [-7.239, 38.742]
+        lp: b
+      - kind: held
+        side: pt
+        name: Elvas
+        date: May – June 1801
+        text: General Francisco de Noronha’s garrison beat off Godoy’s attack, and the Spanish did not try again.
+        lonlat: [-7.163, 38.881]
+      - kind: siege
+        side: es
+        name: Campo Maior
+        date: 20 May – 6 June 1801
+        text: Lieutenant-Colonel Dias Azevedo held out for 17 days before surrendering.
+        lonlat: [-7.07, 39.017]
+      - kind: treaty
+        name: Treaty of Badajoz
+        date: 6 June 1801
+        text: Signed across the border from Elvas. On the same day Portugal signed a separate treaty with France, which Napoleon refused to ratify.
+        lonlat: [-6.97, 38.879]
+    arrows:
+      - side: es
+        label: Godoy
+        via: [[-6.95, 38.86], [-7.06, 38.88], [-7.14, 38.88]]
+      - side: es
+        via: [[-6.98, 38.85], [-7.05, 38.76], [-7.09, 38.7]]
+      - side: es
+        via: [[-6.92, 38.93], [-6.99, 39.0], [-7.05, 39.01]]
+    areas:
+      - style: gained
+        side: es
+        label: Ceded to Spain at Badajoz
+        atoms: [ES-BA~olivenza]

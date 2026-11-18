@@ -1,0 +1,101 @@
+id: invasion-of-naples
+name: French invasion of Naples
+start: "1806-02-08"
+end: "1806-11"
+tier: B
+summary: The French conquest of the mainland Kingdom of Naples in 1806, after King Ferdinand IV had broken his neutrality and let British and Russian troops land. Marshal Masséna’s army took Naples in February and crushed the Neapolitan army at Campo Tenese, and Napoleon’s brother Joseph became king. Gaeta held out until July, a British force won at Maida, and a savage peasant war in Calabria went on for years, but Ferdinand kept only Sicily.
+countries: [it, fr, gb]
+sides:
+  - id: fr
+    name: France
+    polities: [france]
+    ink: navy
+    moves: French moves
+    success: French success
+  - id: bn
+    name: Bourbon Naples and Britain
+    polities: [naples, sicily, united-kingdom]
+    ink: red
+    moves: Neapolitan and British moves
+    success: Neapolitan and British success
+notes:
+  - Part of the War of the Third Coalition, told with the Napoleonic Wars. Ferdinand ruled Naples and Sicily as two kingdoms until 1816; the map keeps the Kingdom of Naples as one polity under its Bourbon and then its Napoleonic kings.
+  - The guerrilla war in Calabria lasted until about 1811. Atrocities on both sides were common, and numbers of dead are unknown.
+sources:
+  - title: Invasion of Naples (1806) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Invasion_of_Naples_(1806)
+  - title: Battle of Campo Tenese (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Campo_Tenese
+  - title: Siege of Gaeta (1806) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Gaeta_(1806)
+  - title: Battle of Maida (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Maida
+  - title: Michele Pezza (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Michele_Pezza
+steps:
+  - title: Campo Tenese, Gaeta and Maida
+    date: February – November 1806
+    when: "1806-02-08"
+    borders: "1806-07-18"
+    countries: [it, fr, gb]
+    body:
+      - In 1805 Ferdinand IV of Naples promised Napoleon to stay neutral, and then let some 20,000 British and Russian troops land at Naples. After Austerlitz the Russians sailed away and the British withdrew to Sicily, and on 27 December Napoleon declared that the Bourbon dynasty of Naples had ceased to reign. On 8 February 1806 a French army of more than 40,000 men under Marshal Masséna crossed the border. Ferdinand had already left for Palermo. Masséna entered Naples on 14 February, and on 9 March General Reynier routed the remains of the Neapolitan army in driving snow at Campo Tenese in the Calabrian mountains. Napoleon proclaimed his brother Joseph king of Naples on 30 March. But the fortress of Gaeta, under the hard-drinking Prince Louis of Hesse-Philippsthal, refused to surrender, and in Calabria, plunder and rape by French troops set off a peasant rising.
+      - On 1 July a British force of about 5,200 men under General John Stuart landed in the Gulf of Sant’Eufemia, and on 4 July it beat Reynier’s slightly larger force on the plain below Maida, with heavy French losses. But on 18 July Gaeta, its commander wounded and its walls breached, surrendered after a siege of nearly five months, freeing some 10,000 French troops. Stuart’s men took the French posts on the coast and went back to Sicily, leaving garrisons at Reggio and Scilla that held out until 1808. The French burned villages that resisted, and the guerrillas tortured and killed prisoners. On 8 August Masséna stormed Lauria, a guerrilla stronghold, and gave no quarter. The guerrilla leader Michele Pezza, known as Fra Diavolo, was caught and hanged in Naples in November 1806.
+    facts:
+      - [French enter Naples, "14 February 1806"]
+      - [Battle of Maida, "4 July 1806, British victory"]
+      - [Gaeta surrenders, "18 July 1806"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Naples
+        date: 14 February 1806
+        text: Masséna’s troops entered the city without a fight, and Joseph made his entry the next day. Ferdinand had left behind some 200 cannon and large stores of powder.
+        lonlat: [14.25, 40.85]
+      - kind: siege
+        side: fr
+        name: Gaeta
+        date: 26 February – 18 July 1806
+        text: Hesse shouted to the besiegers that Gaeta was not Ulm. The garrison, supplied by sea, held out until heavy French guns breached the walls, and was allowed to sail to Sicily.
+        lonlat: [13.57, 41.21]
+        lp: l
+      - kind: battle
+        side: fr
+        name: Battle of Campo Tenese
+        date: 9 March 1806
+        text: French light infantry climbed the cliffs on the Neapolitan flank. Some 2,000 Neapolitans were captured, and the army broke up.
+        lonlat: [16.06, 39.875]
+      - kind: battle
+        side: bn
+        name: Battle of Maida
+        date: 4 July 1806
+        text: Stuart’s infantry, in lines two deep, broke Reynier’s attack. The victory gave its name to Maida Vale in London.
+        lonlat: [16.3, 38.87]
+      - kind: taken
+        side: fr
+        name: Lauria
+        date: 8 August 1806
+        text: The guerrilla bands that had gathered here were almost wiped out in a fight without quarter, and the town was sacked.
+        lonlat: [15.836, 40.047]
+      - kind: held
+        side: bn
+        name: Scilla and Reggio
+        date: July 1806 – February 1808
+        text: Taken from the French in July 1806, these two places on the Strait of Messina were held by British garrisons for a year and a half.
+        lonlat: [15.716, 38.254]
+        lp: l
+    arrows:
+      - side: fr
+        label: Masséna
+        via: [[12.5, 41.9], [13.1, 41.5], [13.9, 41.15], [14.24, 40.87]]
+      - side: fr
+        label: Reynier
+        via: [[14.3, 40.8], [15.75, 40.1], [16.06, 39.87], [15.65, 38.12]]
+      - side: bn
+        label: Stuart
+        via: [[15.55, 38.19], [15.9, 38.6], [16.24, 38.92]]
+    areas:
+      - style: contested
+        side: bn
+        label: Calabrian rising, 1806 (approximate)
+        atoms: [IT-CS, IT-CZ, IT-VV, IT-KR, IT-RC]

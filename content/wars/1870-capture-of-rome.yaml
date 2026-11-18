@@ -1,0 +1,73 @@
+id: capture-of-rome
+name: Capture of Rome
+start: "1870-09-11"
+end: "1870-09-20"
+tier: B
+summary: The Italian conquest of Rome and the last of the Papal States in September 1870, after the French garrison that had protected the pope left for the Franco-Prussian War. Italian troops breached the city walls at Porta Pia on 20 September, Rome and Lazio voted to join Italy, and Rome became the capital in 1871, while Pius IX declared himself a “prisoner in the Vatican”.
+countries: [it, va]
+sides:
+  - id: it
+    name: Italy
+    polities: [italy]
+    ink: green
+    moves: Italian moves
+    success: Italian success
+  - id: pap
+    name: Papal States
+    polities: [papal-states]
+    ink: gold
+    moves: Papal moves
+    success: Papal success
+notes:
+  - The quarrel between Italy and the papacy that followed, the Roman Question, was settled only by the Lateran Treaty of 1929, which created the Vatican City State.
+sources:
+  - title: Capture of Rome (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Capture_of_Rome
+  - title: Roman Question (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Roman_Question
+steps:
+  - title: Porta Pia
+    date: September – October 1870
+    when: "1870-09-11"
+    borders: "1870-10-09"
+    countries: [it, va]
+    body:
+      - Since 1849 a French garrison had protected what was left of the Papal States, Rome and Lazio, and in 1867 French and Papal troops had beaten Garibaldi’s volunteers at Mentana. When the Franco-Prussian War broke out in July 1870, Napoleon III withdrew his troops, and after his defeat and capture at Sedan on 2 September the Italian government decided to act. Pope Pius IX rejected a last offer from King Victor Emmanuel II, and on 11 September some 50,000 Italian troops under General Raffaele Cadorna crossed the border. The Papal garrisons fell back on Rome, and Civitavecchia surrendered on 16 September.
+      - The pope had about 13,000 troops under General Hermann Kanzler, many of them foreign volunteers, but ordered only a token defence. On the morning of 20 September Italian artillery opened a breach in the Aurelian Walls near the Porta Pia, Bersaglieri and infantry stormed through, and a white flag was raised over St Peter’s; 49 Italian and 19 Papal soldiers were killed. A plebiscite on 2 October approved union with Italy by an overwhelming majority, and Rome became the capital in 1871. Pius IX refused the Law of Guarantees offered by the Italian parliament and called himself a prisoner in the Vatican.
+    facts:
+      - [Italian troops cross the border, "11 September 1870"]
+      - [Breach at Porta Pia, "20 September 1870"]
+      - [Plebiscite, "2 October 1870"]
+    markers:
+      - kind: battle
+        side: it
+        name: Porta Pia
+        date: 20 September 1870
+        text: After a few hours of shelling the walls were breached beside the gate, and the Papal troops surrendered the city except the Leonine City around the Vatican.
+        lonlat: [12.501, 41.909]
+      - kind: event
+        name: The Vatican
+        date: 20 September 1870
+        text: The pope stayed in the Vatican palace, which no pope left for almost sixty years.
+        lonlat: [12.453, 41.903]
+        lp: l
+      - kind: taken
+        side: it
+        name: Civitavecchia
+        date: 16 September 1870
+        text: The Papal port surrendered to General Nino Bixio’s division without a fight.
+        lonlat: [11.796, 42.093]
+    arrows:
+      - side: it
+        label: Cadorna
+        via: [[12.5, 42.45], [12.62, 42.15], [12.52, 41.93]]
+      - side: it
+        label: Bixio
+        via: [[11.55, 42.4], [11.7, 42.22], [11.8, 42.11]]
+      - side: it
+        via: [[13.35, 41.6], [12.9, 41.77], [12.55, 41.89]]
+    areas:
+      - style: gained
+        side: it
+        label: Annexed by Italy after the plebiscite, October 1870
+        atoms: [IT-RM, IT-LT!, IT-FR!, IT-VT]

@@ -1,0 +1,152 @@
+id: neapolitan-war
+name: Neapolitan War
+start: "1815-03-15"
+end: "1815-05-20"
+tier: B
+summary: The war of 1815 in which Joachim Murat, King of Naples, sided with Napoleon during the Hundred Days, attacked Austria and called on Italians to rise for a united Italy. Beaten at Occhiobello and Tolentino, he lost his kingdom to the restored Bourbon Ferdinand IV by the Treaty of Casalanza, and was shot after a failed landing in Calabria in October.
+countries: [it, at]
+sides:
+  - id: na
+    name: Murat’s Naples
+    polities: [naples]
+    ink: orange
+    moves: Neapolitan moves
+    success: Neapolitan success
+  - id: at
+    name: Austria and its allies
+    polities: [habsburg, sicily, united-kingdom]
+    ink: purple
+    moves: Austrian moves
+    success: Austrian success
+notes:
+  - Also called the Austro-Neapolitan War. Britain, which protected the Bourbon court in Sicily and had never recognised Murat, declared war on him in April 1815.
+  - Murat’s strength is uncertain; he claimed 82,000 men to encourage recruits, but the real figure was probably about 50,000.
+sources:
+  - title: Neapolitan War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Neapolitan_War
+  - title: Rimini Proclamation (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rimini_Proclamation
+  - title: Battle of Occhiobello (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Occhiobello
+  - title: Battle of Tolentino (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tolentino
+  - title: Treaty of Casalanza (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Casalanza
+  - title: Joachim Murat (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Joachim_Murat
+steps:
+  - title: The Rimini Proclamation
+    date: March – April 1815
+    when: "1815-03-15"
+    borders: "1815-04-12"
+    countries: [it, at]
+    body:
+      - Joachim Murat, Napoleon’s brother-in-law and King of Naples since 1808, had deserted Napoleon in January 1814 by a treaty with Austria that let him keep his throne. But at the Congress of Vienna the Bourbons, and Britain, which had never recognised him, pressed for his removal. When Napoleon escaped from Elba, Murat sided with him again and declared war on Austria on 15 March 1815. He sent his two Guard divisions through the Papal States, and Pope Pius VII fled to Genoa, while he led his main army up the Adriatic coast from Ancona. At Rimini on 30 March he called on all Italians to rise and fight for an independent and united Italy.
+      - Few answered. Murat’s troops took Bologna on 3 April and then beat the Austrian vanguard under General Bianchi on the Panaro near Modena, and his Guard divisions entered Florence. But the citadel of Ferrara held out against him, and when he tried to force a crossing of the Po at Occhiobello on 8–9 April, the main Austrian army under General Frimont threw him back with more than 2,000 casualties. Britain declared war and sent a fleet. On 12 April the Austrians drove the Neapolitans from their lines before Ferrara, and a few days later Murat ordered a general retreat.
+    facts:
+      - [Declaration of war, "15 March 1815"]
+      - [Rimini Proclamation, "30 March 1815"]
+      - [Battle of Occhiobello, "8–9 April 1815, Austrian victory"]
+    markers:
+      - kind: event
+        side: na
+        name: Rimini Proclamation
+        date: 30 March 1815
+        text: Murat appealed to Italians to rise and win their independence and unity. Some see it as the first call of the Risorgimento.
+        lonlat: [12.568, 44.06]
+      - kind: battle
+        side: na
+        name: Battle of the Panaro
+        date: April 1815
+        text: The Neapolitans forced the river line and drove Bianchi’s Austrians back towards the Po.
+        lonlat: [11.03, 44.6]
+        lp: b
+      - kind: taken
+        side: na
+        name: Florence
+        date: 8 April 1815
+        text: Murat’s Guard divisions occupied the Tuscan capital; Grand Duke Ferdinand III fled to Pisa.
+        lonlat: [11.256, 43.77]
+      - kind: held
+        side: at
+        name: Ferrara
+        date: April 1815
+        text: The Austrian garrison of the citadel held out until Murat had to lift the siege.
+        lonlat: [11.62, 44.836]
+      - kind: battle
+        side: at
+        name: Battle of Occhiobello
+        date: 8–9 April 1815
+        text: Murat’s attempt to cross the Po into Austrian Lombardy–Venetia failed after two days of fighting. It was the turning point of the war.
+        lonlat: [11.581, 44.92]
+        lp: l
+    arrows:
+      - side: na
+        label: Murat
+        via: [[13.52, 43.62], [12.57, 44.06], [11.8, 44.4], [11.36, 44.5]]
+      - side: na
+        via: [[11.4, 44.55], [11.55, 44.78], [11.58, 44.9]]
+      - side: na
+        label: Guard divisions
+        via: [[12.5, 41.9], [12.2, 42.9], [11.85, 43.45], [11.27, 43.75]]
+  - title: Tolentino and Pizzo
+    date: April – October 1815
+    when: "1815-04-16"
+    borders: "1815-05-20"
+    countries: [it, at]
+    body:
+      - Murat fell back down the Adriatic coast, with Neipperg’s Austrian corps following, while Bianchi marched through Florence and over the Apennines to Foligno to cut off his retreat. Hoping to beat Bianchi before Neipperg arrived, Murat attacked him near Tolentino on 2 May. After two days of indecisive fighting he learned that Neipperg had beaten his rearguard at Scapezzano and was close, and he ordered a retreat that became a rout. With another Austrian force under Nugent coming down from Rome, and a British fleet off Naples, Murat fled in disguise. On 20 May his generals signed the Treaty of Casalanza near Capua, and on 23 May the Austrians entered Naples for King Ferdinand.
+      - Murat escaped to France and then to Corsica. In October he sailed for Calabria with some 30 followers, hoping to repeat Napoleon’s return from Elba. He landed at Pizzo on 8 October, but the people did not rally to him; he was seized and handed to Bourbon troops, condemned by a military court, and shot in the castle of Pizzo on 13 October 1815. In December 1816 Ferdinand united his two kingdoms of Naples and Sicily as the Kingdom of the Two Sicilies and became Ferdinand I. Murat’s campaign had failed, but it was the first war fought, at least in name, for Italian unity.
+    facts:
+      - [Battle of Tolentino, "2–3 May 1815, Austrian victory"]
+      - [Treaty of Casalanza, "20 May 1815"]
+      - [Murat shot at Pizzo, "13 October 1815"]
+    markers:
+      - kind: battle
+        side: at
+        name: Battle of Tolentino
+        date: 2–3 May 1815
+        text: Bianchi’s Austrians held the hills east of the town against Murat’s attacks. The defeat broke the Neapolitan army’s morale.
+        lonlat: [13.284, 43.21]
+      - kind: battle
+        side: at
+        name: Battle of Scapezzano
+        date: May 1815
+        text: Neipperg outmanoeuvred and beat the Neapolitan division sent to hold him off near Senigallia.
+        lonlat: [13.17, 43.69]
+        lp: l
+      - kind: siege
+        side: at
+        name: Ancona
+        date: May 1815
+        text: Blockaded by an Austrian and British fleet from 5 May, the Neapolitan garrison surrendered.
+        lonlat: [13.519, 43.617]
+      - kind: battle
+        side: at
+        name: San Germano
+        date: mid-May 1815
+        text: Murat’s last attempt to stop Nugent’s advance on Naples, at today’s Cassino, was called off as Bianchi’s army closed in.
+        lonlat: [13.83, 41.49]
+      - kind: treaty
+        name: Treaty of Casalanza
+        date: 20 May 1815
+        text: Signed at the Lanza family’s villa near Capua by General Pietro Colletta for Naples, Count Neipperg for Austria and Lord Burghersh for Britain. Its terms were mild, but it handed the kingdom back to the Bourbons.
+        lonlat: [14.21, 41.1]
+      - kind: event
+        name: Pizzo
+        date: 8–13 October 1815
+        text: Murat landed here with 28 men and was captured within hours. Five days later he was shot in the town’s castle.
+        lonlat: [16.16, 38.735]
+    arrows:
+      - side: na
+        label: Murat retreats
+        via: [[11.8, 44.35], [12.57, 44.06], [13.0, 43.82], [13.5, 43.6]]
+      - side: at
+        label: Bianchi
+        via: [[11.26, 43.77], [12.39, 43.1], [12.9, 43.13], [13.24, 43.2]]
+      - side: at
+        label: Neipperg
+        via: [[12.57, 44.06], [13.0, 43.84], [13.16, 43.71]]
+      - side: at
+        label: Nugent
+        via: [[12.5, 41.9], [13.35, 41.6], [13.83, 41.49], [14.2, 41.12]]

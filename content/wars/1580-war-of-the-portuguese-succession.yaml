@@ -1,0 +1,139 @@
+id: war-of-the-portuguese-succession
+name: War of the Portuguese Succession
+start: "1580-06"
+end: "1583-08"
+tier: B
+summary: The war in which Philip II of Spain made good his claim to the Portuguese throne after the deaths of King Sebastian in 1578 and Cardinal-King Henry in 1580. The Duke of Alba defeated the rival claimant, António, Prior of Crato, at Alcântara outside Lisbon in 1580, and the Marquis of Santa Cruz won the Azores in 1582–1583, beginning sixty years of union between the Spanish and Portuguese crowns.
+countries: [pt, es, fr, gb]
+sides:
+  - id: sp
+    name: Philip II
+    polities: [spain]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+  - id: ant
+    name: Dom António and his supporters
+    polities: [portugal]
+    ink: green
+    moves: Moves by Dom António’s supporters
+    success: Success for Dom António’s supporters
+  - id: fr
+    name: French and English auxiliaries
+    polities: []
+    ink: navy
+    moves: French moves
+    success: French success
+notes:
+  - Dates up to early October 1582 are Julian. Spain and Portugal adopted the Gregorian calendar in October 1582, so the dates of 1583 are Gregorian.
+  - Under the Iberian Union Portugal kept its own laws, coinage, Cortes and empire, and was ruled by the Spanish kings as a separate kingdom. On the map it stays Portugal.
+sources:
+  - title: War of the Portuguese Succession (Wikipedia)
+    url: https://en.wikipedia.org/wiki/War_of_the_Portuguese_Succession
+  - title: Portuguese succession crisis of 1580 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Portuguese_succession_crisis_of_1580
+  - title: Battle of Alcântara (1580) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Alc%C3%A2ntara_(1580)
+  - title: Battle of Vila Franca do Campo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Vila_Franca_do_Campo
+  - title: António, Prior of Crato (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ant%C3%B3nio,_Prior_of_Crato
+steps:
+  - title: Alcântara
+    date: 1580–1581
+    when: "1580-01-31"
+    borders: "1580-08-25"
+    countries: [pt, es]
+    body:
+      - King Sebastian’s death at Alcácer Quibir left the throne to his great-uncle, Cardinal Henry, who was old and childless and died on 31 January 1580 without naming an heir. The strongest claimants were Philip II of Spain, a grandson of King Manuel I through his mother; Catherine, Duchess of Braganza, a granddaughter through a son; and António, Prior of Crato, Manuel’s grandson in the male line but born out of wedlock. Most of the nobles and higher clergy, many won over with Spanish money, accepted Philip. The common people of Lisbon and many towns favoured António, who was acclaimed king at Santarém on 24 July.
+      - Philip had already sent his army in. The aged Duke of Alba crossed the border near Elvas in late June with a large army, many of them German and Italian mercenaries, while a fleet under the Marquis of Santa Cruz took Setúbal and carried the troops round to Cascais. On 25 August Alba routed António’s hastily raised army of townsmen, peasants and freed slaves at the bridge of Alcântara, just west of Lisbon, and the city surrendered. Sancho Dávila took Porto in October; António hid for months and escaped to France. In April 1581 the Cortes at Tomar acclaimed Philip king, and he promised that Portugal would keep its own laws and offices.
+    facts:
+      - [Death of Cardinal-King Henry, 31 January 1580]
+      - [Battle of Alcântara, "25 August 1580, Spanish victory"]
+      - [Cortes of Tomar, "April 1581, Philip acclaimed king"]
+    markers:
+      - kind: event
+        side: sp
+        name: Elvas
+        date: late June 1580
+        text: Alba’s army crossed the border here from Badajoz and met little resistance in the Alentejo.
+        lonlat: [-7.16, 38.88]
+      - kind: event
+        side: ant
+        name: Santarém
+        date: 24 July 1580
+        text: António, Prior of Crato, was acclaimed king by the townspeople and then entered Lisbon.
+        lonlat: [-8.69, 39.23]
+      - kind: taken
+        side: sp
+        name: Setúbal
+        date: July 1580
+        text: The port surrendered to Alba and Santa Cruz, and the army embarked here for Cascais.
+        lonlat: [-8.89, 38.52]
+      - kind: taken
+        side: sp
+        name: Cascais
+        date: late July 1580
+        text: Alba’s troops landed nearby and took the town and its fortress; he had its commander executed.
+        lonlat: [-9.42, 38.7]
+        lp: l
+      - kind: battle
+        side: sp
+        name: Battle of Alcântara
+        date: 25 August 1580
+        text: António’s army held the line of the Alcântara stream but broke when Spanish troops crossed upstream. Lisbon surrendered two days later.
+        lonlat: [-9.18, 38.71]
+      - kind: taken
+        side: sp
+        name: Porto
+        date: October 1580
+        text: Sancho Dávila defeated António’s last forces at the Douro and took the city.
+        lonlat: [-8.61, 41.15]
+      - kind: event
+        side: sp
+        name: Tomar
+        date: April 1581
+        text: The Cortes acclaimed Philip as King Philip I of Portugal.
+        lonlat: [-8.41, 39.6]
+    arrows:
+      - side: sp
+        label: Alba
+        via: [[-6.97, 38.88], [-7.16, 38.88], [-8.0, 38.6], [-8.86, 38.53]]
+      - side: sp
+        label: Santa Cruz’s fleet
+        via: [[-8.89, 38.49], [-9.2, 38.42], [-9.42, 38.67]]
+      - side: sp
+        via: [[-9.4, 38.7], [-9.3, 38.71], [-9.2, 38.71]]
+      - side: sp
+        label: Sancho Dávila
+        via: [[-9.14, 38.72], [-8.7, 39.6], [-8.6, 40.6], [-8.61, 41.12]]
+  - title: The Azores
+    date: 1581–1583
+    when: "1581-07-25"
+    borders: "1583-08-01"
+    countries: [pt, es, fr, gb]
+    body:
+      - Only the Azores held out for António, above all Terceira, whose harbour at Angra was a port of call for the fleets returning from the Indies and America. On 25 July 1581 a Spanish landing at Salga Bay on Terceira was beaten off when the islanders drove half-wild cattle into the troops. Catherine de’ Medici, herself a claimant, backed a fleet of about 60 ships under the Florentine exile Filippo Strozzi, which reached the islands in July 1582. On 26 July, off São Miguel, Santa Cruz defeated it with fewer but larger ships. Strozzi was killed, and Santa Cruz had many prisoners executed as pirates, since France and Spain were not formally at war.
+      - António went back to France for more men, and in 1583 Santa Cruz returned with nearly 100 ships and about 15,000 men. On 26 July he landed at the Baía das Mós, away from the defended harbours, stormed the beach defences and took Angra within days. The French and English soldiers were allowed to leave, but leading Portuguese supporters of António were executed, and the other islands submitted. António lived on in exile in France and England, joined an English attempt on Lisbon in 1589 and died in Paris in 1595. Portugal remained united with Spain until 1640.
+    facts:
+      - [Battle of Salga, "25 July 1581, Spanish landing repulsed"]
+      - [Battle of Ponta Delgada, "26 July 1582, Spanish victory"]
+      - [Conquest of Terceira, "July–August 1583"]
+    markers:
+      - kind: event
+        name: Belle-Île
+        date: June 1582
+        text: Strozzi’s fleet of about 60 ships sailed from this island off Brittany for the Azores, which lie far out in the Atlantic, beyond the edge of this map.
+        lonlat: [-3.17, 47.33]
+      - kind: event
+        name: Lisbon
+        date: 1582–1583
+        text: Santa Cruz fitted out his fleets here. He sailed in July 1582 to meet Strozzi and in June 1583 with the invasion force, nearly 100 ships and more than 15,000 men, that took Terceira.
+        lonlat: [-9.14, 38.71]
+    arrows:
+      - side: fr
+        label: Strozzi, to the Azores
+        via: [[-3.3, 47.2], [-6.5, 45.9], [-11.8, 43.8]]
+      - side: sp
+        label: Santa Cruz, to the Azores
+        via: [[-9.25, 38.66], [-10.6, 38.5], [-12.0, 38.35]]

@@ -1,0 +1,114 @@
+id: anglo-spanish-war-1779
+name: Anglo-Spanish War of 1779–1783
+start: "1779-06-16"
+end: "1783-09-03"
+tier: B
+summary: Spain’s war with Britain as France’s ally during the American War of Independence, fought above all to win back Gibraltar and Minorca. A Franco-Spanish force took Minorca in February 1782, but Gibraltar held out through a siege of three and a half years, the Great Siege, and remained British at the peace of 1783, while Spain kept Minorca and regained Florida.
+countries: [gb, es, fr]
+sides:
+  - id: es
+    name: Spain and France
+    polities: [spain, france]
+    ink: gold
+    moves: Spanish and French moves
+    success: Spanish and French success
+  - id: gb
+    name: Great Britain
+    polities: [united-kingdom]
+    ink: red
+    moves: British moves
+    success: British success
+notes:
+  - Spain fought as an ally of France, which had been at war with Britain since 1778, and not formally of the United States. The fighting in the Americas, where Spanish forces took West Florida, and the Franco-Spanish attempt to invade England in the summer of 1779 are only mentioned here.
+  - The peace was signed at Versailles on 3 September 1783, the same day as the Treaty of Paris between Britain and the United States; together they are often called the Peace of Paris.
+sources:
+  - title: Spain and the American Revolutionary War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Spain_and_the_American_Revolutionary_War
+  - title: Great Siege of Gibraltar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Great_Siege_of_Gibraltar
+  - title: Battle of Cape St. Vincent (1780) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Cape_St._Vincent_(1780)
+  - title: Invasion of Minorca (1781) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Invasion_of_Minorca_(1781)
+  - title: Peace of Paris (1783) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peace_of_Paris_(1783)
+steps:
+  - title: The Rock blockaded
+    date: June 1779 – November 1781
+    when: "1779-06-16"
+    borders: "1781-11-27"
+    countries: [gb, es, fr]
+    body:
+      - Spain declared war on Britain on 16 June 1779, as France’s ally, with the recovery of Gibraltar as its chief aim. That summer a combined French and Spanish fleet of some 66 ships of the line sailed into the English Channel to cover an invasion of England, but sickness and indecision ended the attempt. At Gibraltar the Spanish closed the frontier, blockaded the bay and built siege lines across the isthmus. The garrison, some 5,400 men under General George Augustus Eliott, strengthened the batteries on the Rock, but as the winter went on its rations were cut again and again.
+      - In January 1780 Admiral Sir George Rodney, escorting a convoy, caught a Spanish squadron off Cape St Vincent and in a night action, the “Moonlight Battle”, captured four of its ships, while a fifth blew up; he reached Gibraltar on 25 January with men and supplies. A second convoy under Admiral Darby got through on 12 April 1781, and the Spanish then opened a bombardment that wrecked much of the town; most of the civilians left with Darby’s ships. On the night of 26–27 November 1781 the garrison made a surprise sortie and blew up the forward Spanish batteries, for the loss of a handful of men.
+    facts:
+      - [Siege begins, "June 1779"]
+      - [Moonlight Battle, "16 January 1780, British victory"]
+      - [Sortie, "27 November 1781"]
+    markers:
+      - kind: held
+        side: gb
+        name: Gibraltar
+        date: 1779–1783
+        text: Eliott’s garrison held the Rock throughout. The Spanish lines ran across the sandy isthmus to the north, where the frontier still runs today.
+        lonlat: [-5.353, 36.14]
+      - kind: battle
+        side: gb
+        name: Sortie from Gibraltar
+        date: 27 November 1781
+        text: Some 2,000 men left the fortress at night, spiked the guns and fired the magazines of the Spanish forward batteries, and were back before dawn.
+        lonlat: [-5.348, 36.162]
+        lp: t
+      - kind: naval
+        side: gb
+        name: Moonlight Battle
+        date: 16 January 1780
+        text: Juan de Lángara’s squadron was overtaken by Rodney’s larger fleet in stormy weather. Lángara was captured, and the Santo Domingo exploded with almost all its crew.
+        lonlat: [-9.05, 36.85]
+    arrows:
+      - side: gb
+        label: Rodney
+        via: [[-10.2, 38.4], [-9.3, 36.95], [-7.0, 36.1], [-5.42, 36.12]]
+  - title: Minorca and the grand assault
+    date: August 1781 – September 1783
+    when: "1781-08-19"
+    borders: "1783-09-03"
+    countries: [es, gb, fr]
+    body:
+      - On 19 August 1781 a Spanish army of some 8,000 men under the Duc de Crillon landed on Minorca, British since 1763, and besieged Fort St Philip, which guarded Port Mahon; French and German regiments later raised it to about 14,000. General James Murray’s garrison held out for five months, but shut inside the fort without fresh food it was ravaged by scurvy, and by February only a few hundred men were fit to stand. On 5 February 1782 Murray surrendered, and about 2,500 men marched out. Crillon then took command at Gibraltar, where French and Spanish forces prepared a grand assault by land and sea.
+      - The French engineer Jean d’Arçon had designed ten floating batteries, with thick walls of timber and wet sand meant to be proof against shot and fire. They attacked on 13 September 1782 while hundreds of guns fired from the isthmus. The garrison answered with red-hot shot, and by night the batteries were burning; all ten were lost, and of their crews some 700 were killed, wounded or drowned, though British boats under Roger Curtis rescued hundreds. In October Admiral Howe brought another convoy into the bay. Peace preliminaries ended the siege on 7 February 1783, and at Versailles on 3 September Spain kept Minorca and regained Florida, but not Gibraltar.
+    facts:
+      - [Fort St Philip surrenders, "5 February 1782"]
+      - [Grand assault on Gibraltar, "13 September 1782, failed"]
+      - [Peace of Versailles, "3 September 1783: Minorca and Florida to Spain"]
+    markers:
+      - kind: siege
+        side: es
+        name: Fort St Philip
+        date: 19 August 1781 – 5 February 1782
+        text: The great fort at the mouth of Port Mahon surrendered when scurvy had broken its garrison. Murray and his men were shipped home.
+        lonlat: [4.3, 39.871]
+      - kind: battle
+        side: gb
+        name: Grand assault
+        date: 13 September 1782
+        text: The floating batteries anchored off the sea walls, but red-hot shot set them on fire one after another, and their commanders scuttled them.
+        lonlat: [-5.36, 36.14]
+      - kind: naval
+        name: Battle of Cape Spartel
+        date: 20 October 1782
+        text: After landing his supplies, Howe’s fleet fought an inconclusive action with the larger Franco-Spanish fleet off the Moroccan coast.
+        lonlat: [-6.05, 35.85]
+        lp: l
+    arrows:
+      - side: es
+        label: Crillon
+        via: [[-0.9, 37.55], [1.4, 38.7], [3.0, 39.5], [4.25, 39.92]]
+      - side: gb
+        label: Howe
+        via: [[-9.2, 36.9], [-7.0, 36.0], [-5.42, 36.12]]
+    areas:
+      - style: gained
+        side: es
+        label: Minorca, Spanish again from 1782
+        atoms: [ES-PM~menorca]

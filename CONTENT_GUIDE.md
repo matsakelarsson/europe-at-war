@@ -185,21 +185,25 @@ date, from two sources merged by date:
   | 800–today | Outer Hebrides, Orkney, Shetland, the Isle of Man | `british-isles.yaml` |
   | 800–today | Great Britain, Ireland, Jersey, Sark | `british-isles.yaml` |
   | 1066–today | France, Belgium, the Netherlands, Luxembourg | `france-low-countries.yaml` (also `central-europe.yaml` for Alsace-Lorraine, `italy.yaml` for Savoy and Nice 1860) |
+  | 800–today | Spain, Portugal, Andorra | `iberia.yaml` (Roussillon is in `france-low-countries.yaml`) |
+  | 800–today | Italy (without Trentino and South Tyrol), San Marino, Malta, Monaco | `italy.yaml` |
   | 1236–today | European Russia and left-bank and southern Ukraine | `rus-and-russia.yaml`, `russia.yaml`, `ww2-east.yaml` |
   | 1801–today | Georgia, Armenia, Azerbaijan, the northern Caucasus, Kars–Ardahan–Artvin | `caucasus.yaml` |
   | 1809–today | Finland and Åland | `finland.yaml` |
   | 1812–today | Bessarabia and Transnistria (Moldova, Budjak, Khotyn) | `bessarabia.yaml` |
 
-  Other event files (`turkey.yaml`, `balkans.yaml`, `italy.yaml`,
+  Other event files (`turkey.yaml`, `balkans.yaml`,
   `central-europe.yaml`, and `rus-and-russia.yaml` before 1236) correct
   drafts outside any curated range; there, the next keyframe can still
-  override an event. `balkans.yaml`, `italy.yaml`, `central-europe.yaml`
+  override an event. `balkans.yaml`, `central-europe.yaml`
   (now only Austria-Hungary and Alsace-Lorraine) and `turkey.yaml`
   are first passes made for the Russia wave's maps (historical-basemaps has
   no snapshot between 1815 and 1880); the later waves replace them with
-  curated ranges. For the German lands wave, `italy.yaml` gained the
-  Napoleonic Kingdom of Italy and Habsburg Lombardy–Venetia (1797–1866), and
-  `balkans.yaml` the Illyrian Provinces (1809–1814). `german-lands.yaml` also
+  curated ranges. For the German lands wave, `balkans.yaml` gained the
+  Illyrian Provinces (1809–1814). `italy.yaml` still lists Venetian Istria and
+  Dalmatia for 1797–1814 and Italian Libya from 1912 (`libya-it`, also fixed in
+  the 1914 and 1938 keyframes by `tools/migrate/libya-keyframes.mjs`), and `iberia.yaml` ends with three North African
+  events (1031, 1069, 1147) that correct the drafts until the next keyframe. `german-lands.yaml` also
   opens with a few events before 1240 (907, 948, 962, 976, 983) that correct
   the drafts until the next keyframe, and `france-low-countries.yaml` does the
   same before 1066 (Verdun 843, Brittany 851, the kingdoms of Burgundy 879/888,
@@ -230,6 +234,23 @@ date, from two sources merged by date:
   Lancastrian France 1419–1450, Calais 1347–1558), Brittany (to 1532), Flanders
   (to 1384), Toulouse (to 1229/1271) and the Valois Burgundian state
   (1363–1477). Imperial and foreign lands are separate until they joined France.
+- **Iberia.** Córdoba (emirate, caliphate 929, taifa 1031); Asturias/León,
+  Castile (joined with León 1037–1065, 1072–1157 and from 1230), Pamplona/Navarre,
+  the Catalan counties (Frankish to 988) and Aragon (Crown of Aragon from 1137),
+  Portugal (1128); the taifas after 1031, the Almoravids (1086–1147), the
+  Almohads (1147–1228), Ibn Mardanish's and Ibn Hud's Murcia, Niebla and Nasrid
+  Granada (1238–1492). A province changes hands with its main town. Castile and
+  Aragon become `spain` on 1516-01-23; Portugal stays Portugal in 1580–1640.
+  Gibraltar is too small to be an atom (use a marker or a polygon area).
+- **Italy.** Carolingian to 888, the Kingdom of Italy to 962, then `hre` until
+  Frederick II's death (1250-12-13), except Venice, the Papal States and, from
+  1100, Genoa and Pisa; in the south Benevento, Salerno, Capua, Naples, Gaeta,
+  Byzantium, the emirates of Sicily and Bari, then the Normans (Apulia 1042/1059,
+  the County of Sicily 1061–91, the Kingdom of Sicily 1130). After 1250 the
+  regional states are shown, with the cities not yet under a bigger neighbour
+  grouped as `italian-communes`. After 1282 island Sicily and peninsular Naples
+  are separate (the Two Sicilies from 1816). Naples, Sicily, Sardinia and Milan
+  keep their own polities under Aragonese, Spanish or Austrian rule.
 - **The British Isles.** The Anglo-Saxon kingdoms and the Danelaw until England
   (927/954; Mercian client kingdoms are shown as Mercia); Wales until 1283, with
   the Marcher lordships under the English crown from 1070/1093; Pictland, Dál
@@ -269,7 +290,12 @@ date, from two sources merged by date:
   In the west: `FR-62~calais` the Pale of Calais, `FR-59~flandre` Walloon and
   maritime Flanders (Lille, Douai, Dunkirk; the rest of `FR-59` is Hainaut and
   the Cambrésis), `FR-57~metz`, `FR-64~bearn`, `NL-ZE~vlaanderen` Zeelandic
-  Flanders and `BE-WLG~eupen` Eupen-Malmedy.
+  Flanders and `BE-WLG~eupen` Eupen-Malmedy. In the south: `ES-HU~jaca` Upper
+  Aragon, `ES-L~pallars` Urgell and Pallars, `ES-NA~tudela` the Ribera of
+  Navarre, `ES-PM~menorca`, `ES-BA~olivenza`, the Neapolitan parts of Lazio
+  (`IT-LT~gaeta`, `IT-FR~sora`, `IT-RI~cittaducale`), `IT-AL~casale` Montferrat
+  and `IT-PV~pavese` (Pavia; the rest of `IT-PV` is the Lomellina and the
+  Oltrepò, Sardinian from 1713).
 - **Splits.** `content/borders/splits/*.geojson`, applied in file-name order:
   polygons in lon/lat with `{id: "<atom>~<name>", from: "<atom>", name}`. The
   part of the atom inside the polygon becomes the new atom (it may cut an atom

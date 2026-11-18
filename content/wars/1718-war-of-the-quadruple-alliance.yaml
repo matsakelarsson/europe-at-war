@@ -2,7 +2,7 @@ id: war-of-the-quadruple-alliance
 name: War of the Quadruple Alliance
 start: "1718-07"
 end: "1720-02-17"
-tier: C
+tier: B
 summary: A war in which Spain, led by Philip V’s minister Cardinal Giulio Alberoni and Queen Elisabeth Farnese, tried to win back the Italian lands lost at Utrecht, and Britain, France, Austria and Savoy, later joined by the Dutch Republic, combined to stop it. Spain had seized Austrian Sardinia in 1717, and in July 1718 it landed an army in Sicily, then ruled by Savoy; on 11 August Admiral George Byng destroyed the Spanish fleet off Cape Passaro. Austrian troops fought the Spaniards in Sicily, losing at Francavilla in June 1719 but taking Messina that autumn, while a French army under the Duke of Berwick invaded northern Spain and took Fuenterrabía and San Sebastián, and a British force raided Vigo. Spain also backed the Jacobite rising of 1719 in Scotland. Philip V dismissed Alberoni in December 1719 and accepted the allies’ terms in the Treaty of The Hague of 17 February 1720. Spain left Sicily and Sardinia; Austria took Sicily and Savoy received Sardinia in exchange, and the Emperor Charles VI gave up his claim to Spain, while Don Carlos, Elisabeth Farnese’s son, was promised the succession to Parma and Tuscany.
 countries: [es, it, fr, gb, at]
 sides:
@@ -14,7 +14,7 @@ sides:
     success: Spanish success
   - id: qa
     name: The Quadruple Alliance
-    polities: [united-kingdom, france, habsburg, savoy, dutch-republic]
+    polities: [united-kingdom, france, habsburg, savoy, dutch-republic, naples, sicily]
     ink: red
     moves: Allied moves
     success: Allied success
@@ -26,5 +26,128 @@ sources:
     url: https://en.wikipedia.org/wiki/War_of_the_Quadruple_Alliance
   - title: Battle of Cape Passaro (Wikipedia)
     url: https://en.wikipedia.org/wiki/Battle_of_Cape_Passaro
+  - title: Spanish conquest of Sardinia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Spanish_conquest_of_Sardinia
+  - title: Battle of Francavilla (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Francavilla
   - title: Treaty of The Hague (1720) (Wikipedia)
     url: https://en.wikipedia.org/wiki/Treaty_of_The_Hague_(1720)
+steps:
+  - title: Sardinia, Sicily and Cape Passaro
+    date: August 1717 – December 1718
+    when: "1717-08-22"
+    borders: "1718-12-17"
+    countries: [es, it, gb, at]
+    body:
+      - Philip V’s queen, Elisabeth Farnese, and his minister, Cardinal Alberoni, wanted to win back the Italian lands Spain had lost at Utrecht. In August 1717 a Spanish expedition from Barcelona landed at Cagliari and by the end of October had taken all of Sardinia from the Emperor. On 1 July 1718 about 30,000 Spanish troops under the Marquis of Lede landed near Palermo, in the Kingdom of Sicily, which Victor Amadeus of Savoy had held since 1713. Palermo opened its gates, and the Spaniards overran most of the island and besieged the citadel of Messina. On 2 August Britain, France and Austria formed the Quadruple Alliance in London to force Spain to withdraw.
+      - Admiral Sir George Byng had already sailed with a British fleet. On 11 August, off Cape Passaro at the south-eastern tip of Sicily, he caught the Spanish fleet strung out along the coast and attacked, although Britain and Spain were not at war. In a running fight the Spanish lost seven ships of the line and six frigates, and more were scuttled by their crews. The Spanish army was now cut off on the island. It took the citadel of Messina at the end of September and beat an Austrian force from Naples at Milazzo on 15 October, but the Austrians held on to a bridgehead there. Britain declared war on Spain in December, and France in January 1719.
+    facts:
+      - [Sardinia taken by Spain, "22 August – 30 October 1717"]
+      - [Spanish landing in Sicily, "1 July 1718"]
+      - [Battle of Cape Passaro, "11 August 1718, British victory"]
+    markers:
+      - kind: taken
+        side: es
+        name: Cagliari
+        date: August – October 1717
+        text: The Spanish landing that began the conflict. The Emperor’s small garrisons were overwhelmed within weeks.
+        lonlat: [9.11, 39.223]
+      - kind: taken
+        side: es
+        name: Palermo
+        date: July 1718
+        text: The Spanish army landed at Solanto, east of the city, which welcomed them. The Savoyard viceroy withdrew.
+        lonlat: [13.36, 38.116]
+      - kind: naval
+        side: qa
+        name: Battle of Cape Passaro
+        date: 11 August 1718
+        text: Byng’s twenty ships of the line overwhelmed the scattered Spanish fleet; its admiral, Antonio de Gaztañeta, was taken prisoner.
+        lonlat: [15.15, 36.69]
+        lp: b
+      - kind: siege
+        side: es
+        name: Messina
+        date: July – September 1718
+        text: The Savoyard garrison of the citadel held out for more than two months before surrendering.
+        lonlat: [15.554, 38.193]
+      - kind: held
+        side: qa
+        name: Milazzo
+        date: October 1718 – 1719
+        text: Austrian troops landed from Naples were beaten outside the town on 15 October, but kept a foothold on the peninsula.
+        lonlat: [15.24, 38.22]
+        lp: l
+    arrows:
+      - side: es
+        via: [[2.2, 41.3], [5.5, 40.4], [9.0, 39.2]]
+      - side: es
+        label: Lede
+        via: [[2.2, 41.3], [8.5, 39.9], [12.5, 38.6], [13.52, 38.08]]
+      - side: qa
+        label: Byng
+        via: [[14.2, 40.75], [15.6, 38.25], [15.4, 37.2], [15.18, 36.75]]
+    areas:
+      - style: occupied
+        side: es
+        label: Held by Spain, end of 1718
+        atoms: [IT-PA, IT-TP, IT-AG, IT-CL, IT-EN, IT-CT, IT-RG, IT-SR, IT-ME]
+  - title: Francavilla, Messina and the exchange
+    date: 1719 – August 1720
+    when: "1719-01-09"
+    borders: "1720-08-08"
+    countries: [es, it, fr, gb, at]
+    body:
+      - In 1719 France attacked by land. The Duke of Berwick, who had won Almansa for Philip V twelve years before, led a French army into the Basque country and took Fuenterrabía in June and San Sebastián in August, and in October a British expedition seized Vigo. Spain backed a Jacobite landing in Scotland, which failed at Glen Shiel in June. In Sicily, an Austrian army of about 24,000 men under Count Mercy, ferried over by the British fleet, attacked the Spanish lines at Francavilla on 20 June and was beaten back with heavy losses. Mercy then besieged Messina, which fell in the autumn, but Lede’s army still held most of the island.
+      - Philip V dismissed Alberoni in December 1719 and accepted the allies’ terms in the Treaty of The Hague of 17 February 1720. The Spanish troops left Sicily and Sardinia, and the two islands changed rulers as the allies had agreed in 1718. Austria took Sicily, which was reunited with Naples under the Emperor, and Victor Amadeus received Sardinia instead, taking the title King of Sardinia; the island was handed over to him on 8 August 1720. The Emperor Charles VI recognised Philip V as king of Spain, and Elisabeth Farnese’s son Don Carlos was promised the succession to Parma and Tuscany.
+    facts:
+      - [Battle of Francavilla, "20 June 1719, Spanish victory"]
+      - [Treaty of The Hague, "17 February 1720"]
+      - [Exchange, "Sicily to Austria; Sardinia to Savoy, 8 August 1720"]
+    markers:
+      - kind: taken
+        side: qa
+        name: Fuenterrabía
+        date: 18 June 1719
+        text: Berwick’s first conquest in Spain, at the mouth of the Bidasoa.
+        lonlat: [-1.793, 43.362]
+      - kind: taken
+        side: qa
+        name: San Sebastián
+        date: August 1719
+        text: The town fell first and its castle on Monte Urgull soon after. France returned both at the peace.
+        lonlat: [-1.984, 43.318]
+        lp: l
+      - kind: taken
+        side: qa
+        name: Vigo
+        date: October 1719
+        text: A British force under Lord Cobham landed, took the town and carried off its guns and stores.
+        lonlat: [-8.72, 42.24]
+      - kind: battle
+        side: es
+        name: Battle of Francavilla
+        date: 20 June 1719
+        text: Lede’s Spaniards, entrenched behind a river and around a monastery, threw back three Austrian columns; Mercy was wounded.
+        lonlat: [15.137, 37.9]
+        lp: b
+      - kind: siege
+        side: qa
+        name: Messina
+        date: July – October 1719
+        text: The Austrians took the city and then the citadel, the only major Spanish loss in Sicily before the peace.
+        lonlat: [15.554, 38.193]
+    arrows:
+      - side: qa
+        label: Berwick
+        via: [[-1.47, 43.49], [-1.72, 43.39], [-1.98, 43.31]]
+      - side: qa
+        label: Mercy
+        via: [[15.65, 38.11], [15.4, 38.2], [15.1, 38.05], [15.14, 37.92]]
+    areas:
+      - style: gained
+        label: Sicily, to the Emperor in 1720
+        atoms: [IT-PA, IT-TP, IT-AG, IT-CL, IT-EN, IT-CT, IT-RG, IT-SR, IT-ME]
+      - style: gained
+        label: Sardinia, to Savoy in 1720
+        atoms: [IT-CA, IT-CI, IT-VS, IT-OR, IT-OG, IT-NU, IT-SS, IT-OT]

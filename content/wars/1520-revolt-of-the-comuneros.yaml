@@ -1,0 +1,131 @@
+id: revolt-of-the-comuneros
+name: Revolt of the Comuneros
+start: "1520-04-16"
+end: "1522-02-03"
+tier: B
+summary: A rising of the cities of Castile against the government of the young Charles I, the emperor Charles V, his Flemish advisers and the taxes he demanded before leaving for Germany. The rebel towns formed a Holy Junta and tried to rule in the name of his mother, Queen Joanna, but the great nobles rallied to the crown, and the comunero army was crushed at Villalar on 23 April 1521. Toledo held out under María Pacheco into 1522.
+countries: [es, fr, pt]
+sides:
+  - id: com
+    name: Comuneros
+    polities: []
+    ink: purple
+    moves: Comunero moves
+    success: Comunero success
+  - id: roy
+    name: Royalists
+    polities: [spain]
+    ink: gold
+    moves: Royalist moves
+    success: Royalist success
+notes:
+  - Dates are Julian, as usual for the period.
+  - The comunidades were the councils that took over the rebel cities. At its height the Holy Junta spoke for fourteen cities, among them Toledo, Segovia, Salamanca, Valladolid, Ávila, León, Zamora, Toro and Madrid; Burgos left it in the autumn of 1520. Andalusia stayed loyal to the crown.
+  - The revolt ran alongside the Revolt of the Brotherhoods in the Kingdom of Valencia, which had different causes. Since the 19th century the comuneros have been remembered as defenders of Castile’s liberties, and 23 April is now the regional day of Castile and León.
+sources:
+  - title: Revolt of the Comuneros (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Revolt_of_the_Comuneros
+  - title: Battle of Villalar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Villalar
+  - title: María Pacheco (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mar%C3%ADa_Pacheco
+steps:
+  - title: The cities rise
+    date: April–December 1520
+    when: "1520-04-16"
+    borders: "1520-12-05"
+    countries: [es]
+    body:
+      - Charles of Habsburg, who had grown up in Flanders, came to Castile in 1517 with Flemish advisers who took its richest offices, and in 1519 he was elected emperor. To pay for the election and his journey to Germany he asked the Cortes, meeting at Santiago and A Coruña in the spring of 1520, for a large subsidy, and got it only by pressure and bribes. He sailed on 20 May, leaving his old tutor, Cardinal Adrian of Utrecht, as regent. Toledo had already risen in April. At Segovia on 30 May a crowd of wool workers killed the city’s deputy who had voted for the tax, and other cities drove out royal officials.
+      - In August royal troops sent to seize the artillery at Medina del Campo set fire to the great market town, and the outrage swung opinion behind the rebels. Their Holy Junta, first meeting at Ávila, moved to Tordesillas, where Juan de Padilla’s comunero army had taken charge of Queen Joanna, Charles’s mother, long kept there as unfit to rule. The Junta claimed to govern in her name, but she would sign nothing. As peasants rose against their lords, the great nobles sided with the crown. Charles made the Constable and the Admiral of Castile co-regents, and on 5 December the royalists stormed Tordesillas.
+    facts:
+      - [Cortes of Santiago and A Coruña, "spring 1520, subsidy voted"]
+      - [Burning of Medina del Campo, 21 August 1520]
+      - [Royalists take Tordesillas, 5 December 1520]
+    markers:
+      - kind: event
+        side: com
+        name: Toledo
+        date: April 1520
+        text: The city council led the protests against Charles’s policies. When its leaders were summoned to court, the city rose and took control.
+        lonlat: [-4.02, 39.86]
+      - kind: event
+        name: Segovia
+        date: 30 May 1520
+        text: Wool workers lynched the city’s deputy, Rodrigo de Tordesillas, and two officials. The regent’s attempt to punish the city spread the revolt.
+        lonlat: [-4.12, 40.95]
+      - kind: event
+        name: Medina del Campo
+        date: 21 August 1520
+        text: Antonio de Fonseca’s troops met resistance and started a fire that destroyed much of the town and its warehouses, then withdrew without the guns.
+        lonlat: [-4.92, 41.31]
+      - kind: event
+        side: com
+        name: Ávila
+        date: summer 1520
+        text: The Holy Junta of the Communities first met here and named Juan de Padilla captain-general.
+        lonlat: [-4.7, 40.66]
+      - kind: taken
+        side: roy
+        name: Tordesillas
+        date: 5 December 1520
+        text: The rebels had held the town and the queen since late August. The royal army stormed it and took Joanna back.
+        lonlat: [-5.0, 41.5]
+    arrows:
+      - side: com
+        label: Padilla, 1520
+        via: [[-4.02, 39.86], [-4.12, 40.95], [-4.92, 41.31], [-4.99, 41.48]]
+      - side: roy
+        label: Royal army
+        via: [[-5.04, 41.88], [-5.02, 41.7], [-5.0, 41.53]]
+  - title: Villalar and Toledo
+    date: 1521–1522
+    when: "1521-02-21"
+    borders: "1521-04-23"
+    countries: [es, fr, pt]
+    body:
+      - The comuneros regrouped at Valladolid. In the north the warlike Bishop of Zamora, Antonio de Acuña, raised the peasants against their lords around Palencia and then went on to Toledo, where crowds hailed him as archbishop. In February 1521 Padilla stormed and plundered the small town of Torrelobatón, west of Valladolid, but the rebels then hesitated while the Constable brought his army from Burgos to join the Admiral’s. On 23 April, as Padilla tried to fall back on Toro through heavy rain, the royal cavalry caught his army near Villalar, and it broke almost at once.
+      - Padilla, Juan Bravo of Segovia and Francisco Maldonado of Salamanca were beheaded at Villalar the next day, and the revolt collapsed. A French army that invaded Navarre in May, hoping to profit from it, was beaten at Noáin on 30 June. Toledo held out under Padilla’s widow, María Pacheco, until it surrendered on terms in October, and after a last rising on 3 February 1522 she fled to Portugal. Charles returned in July 1522 and on 1 November pardoned all but 293 rebels; Bishop Acuña was executed in 1526. The Castilian cities never again challenged the crown.
+    facts:
+      - [Battle of Villalar, "23 April 1521, royalist victory"]
+      - [Padilla, Bravo and Maldonado beheaded, 24 April 1521]
+      - [General pardon, "1 November 1522, with 293 exceptions"]
+    markers:
+      - kind: event
+        name: Valladolid
+        date: December 1520 – April 1521
+        text: The Junta’s third and last seat, after Ávila and Tordesillas.
+        lonlat: [-4.72, 41.65]
+      - kind: taken
+        side: com
+        name: Torrelobatón
+        date: 25 February 1521
+        text: The town fell after four days and was plundered; its castle surrendered two days later.
+        lonlat: [-5.02, 41.65]
+        lp: l
+      - kind: battle
+        side: roy
+        name: Battle of Villalar
+        date: 23 April 1521
+        text: The royalist horsemen caught the comunero army strung out on muddy roads. Most of the rebel infantry fled or surrendered.
+        lonlat: [-5.13, 41.55]
+        lp: b
+      - kind: held
+        side: com
+        name: Toledo
+        date: April 1521 – February 1522
+        text: María Pacheco held the city and its Alcázar after Villalar. Toledo surrendered on terms in October, and she fled after a last rising in February 1522.
+        lonlat: [-4.02, 39.86]
+      - kind: battle
+        side: roy
+        name: Battle of Noáin
+        date: 30 June 1521
+        text: A French and Navarrese army that had overrun Navarre while Castile was divided was routed south of Pamplona.
+        lonlat: [-1.65, 42.76]
+    arrows:
+      - side: roy
+        label: The Constable
+        via: [[-3.7, 42.34], [-4.3, 42.0], [-4.9, 41.7], [-5.1, 41.58]]
+      - side: com
+        label: Padilla
+        via: [[-5.02, 41.65], [-5.08, 41.6], [-5.13, 41.56]]

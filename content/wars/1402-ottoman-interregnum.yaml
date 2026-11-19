@@ -1,0 +1,140 @@
+id: ottoman-interregnum
+name: Ottoman Interregnum
+start: "1402-07-28"
+end: "1413-07-05"
+tier: B
+summary: The civil war among the sons of Bayezid I after his defeat and capture by Timur at Ankara. Süleyman ruled the European provinces from Edirne, while İsa held Bursa and Mehmed Amasya; Mehmed defeated İsa, and their brother Musa, sent by Mehmed into the Balkans, overthrew and killed Süleyman in 1411. Allied with the Byzantine emperor and the Serbian despot, Mehmed finally defeated Musa at Çamurlu in 1413 and reunited the Ottoman state as Mehmed I.
+countries: [tr, bg, gr, rs, ro]
+sides:
+  - id: meh
+    name: Mehmed Çelebi
+    polities: [ottoman]
+    ink: teal
+    moves: Mehmed’s moves
+    success: Success for Mehmed
+  - id: sul
+    name: Süleyman Çelebi
+    polities: []
+    ink: navy
+    moves: Süleyman’s moves
+    success: Success for Süleyman
+  - id: musa
+    name: Musa Çelebi
+    polities: []
+    ink: orange
+    moves: Musa’s moves
+    success: Success for Musa
+  - id: isa
+    name: İsa Çelebi
+    polities: []
+    ink: brown
+    moves: İsa’s moves
+    success: Success for İsa
+  - id: byz
+    name: Byzantine Empire
+    polities: [byzantium]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+notes:
+  - Ottoman chronicles written later, under Mehmed’s descendants, present him as the rightful heir; only he called himself sultan on his coins during the civil war. Many dates are uncertain. A fifth brother, Mustafa, who had been captured at Ankara, reappeared in 1416 and again in 1421–1422 to challenge Mehmed and his son Murad II.
+  - The Christian neighbours changed sides as suited them. Byzantium, Venice and Genoa backed Süleyman, who gave back Thessalonica and other places in the Treaty of Gallipoli of 1403. Mircea of Wallachia and, by most accounts, the Serbian despot Stefan Lazarević backed Musa against him, but when Musa turned on his former allies, Stefan and Manuel II helped Mehmed defeat him.
+sources:
+  - title: Ottoman Interregnum (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ottoman_Interregnum
+  - title: Battle of Kosmidion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kosmidion
+  - title: Battle of Çamurlu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_%C3%87amurlu
+  - title: Treaty of Gallipoli (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Gallipoli
+  - title: Mehmed I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mehmed_I
+steps:
+  - title: The brothers’ war
+    date: 1402–1411
+    when: "1402-07-28"
+    borders: "1411-02-17"
+    countries: [tr, bg, gr, ro]
+    body:
+      - After Ankara, Bayezid’s eldest son Süleyman held the European provinces from Edirne. To win friends he signed the Treaty of Gallipoli early in 1403 with Byzantium, Venice, Genoa, the Knights of Rhodes and the Duke of Naxos, returning Thessalonica and part of the Black Sea and Marmara coasts to the emperor. In Anatolia, İsa took Bursa and Mehmed ruled from Amasya. In 1403 Mehmed beat İsa at Ulubad and took Bursa; İsa fled and was later killed by Mehmed’s agents. Süleyman then crossed into Anatolia, took Bursa and Ankara in 1404, and for some years held Mehmed in check.
+      - Mehmed sent their brother Musa, released from Timurid captivity, across the Black Sea to attack Süleyman’s European lands with the help of Mircea of Wallachia. Süleyman returned to Thrace and beat Musa on 15 June 1410 at Kosmidion, just outside the walls of Constantinople, but by the chroniclers’ account his idleness and drinking cost him support. In February 1411 his army went over to Musa at Edirne, and Süleyman was caught and strangled on 17 February. Musa now ruled the Ottoman Balkans and turned on Süleyman’s allies, besieging Constantinople and attacking Serbia and Thessalonica.
+    facts:
+      - [Treaty of Gallipoli, "1403; Thessalonica returned to Byzantium"]
+      - [Battle of Kosmidion, "15 June 1410, Süleyman defeats Musa"]
+      - [Death of Süleyman, 17 February 1411]
+    markers:
+      - kind: event
+        side: sul
+        name: Edirne
+        date: 1402–1411
+        text: Süleyman’s capital, where the Ottoman treasury had been moved. His troops abandoned him here in 1411.
+        lonlat: [26.556, 41.677]
+      - kind: event
+        side: byz
+        name: Thessalonica
+        date: "1403"
+        text: Returned to the Byzantines by the Treaty of Gallipoli, sixteen years after it had surrendered to the Ottomans.
+        lonlat: [22.936, 40.64]
+      - kind: battle
+        side: meh
+        name: Ulubad
+        date: "1403"
+        text: Mehmed defeated İsa near the lake of Ulubad and entered Bursa.
+        lonlat: [28.437, 40.203]
+      - kind: event
+        side: meh
+        name: Amasya
+        date: 1402–1413
+        text: Mehmed’s base in northern Anatolia, where Timur had confirmed him as ruler.
+        lonlat: [35.833, 40.65]
+      - kind: battle
+        side: sul
+        name: Battle of Kosmidion
+        date: 15 June 1410
+        text: Fought at modern Eyüp outside the land walls. Süleyman, Manuel II’s ally, won after many of Musa’s vassals changed sides.
+        lonlat: [28.935, 41.045]
+    arrows:
+      - side: musa
+        label: Musa
+        via: [[29.0, 44.5], [27.5, 43.6], [26.8, 42.5], [26.6, 41.75]]
+      - side: sul
+        label: Süleyman
+        via: [[29.06, 40.2], [28.4, 40.4], [27.0, 40.6], [26.55, 41.6]]
+  - title: Çamurlu
+    date: 1411–1413
+    when: "1411-02-17"
+    borders: "1413-07-05"
+    countries: [bg, tr, rs, gr]
+    body:
+      - Musa’s attacks drove his enemies together. Emperor Manuel II called on Mehmed, whose troops crossed to defend Constantinople; after failed sorties and a revolt at home Mehmed had to withdraw, but in 1413 he crossed again with Byzantine help and joined forces with the Serbian despot Stefan Lazarević, whose lands Musa had ravaged. Many of Musa’s commanders in the Balkans, alienated by his harsh rule, went over to Mehmed.
+      - On 5 July 1413 the armies met at Çamurlu, near Samokov in the mountains of western Bulgaria. Hasan, aga of Mehmed’s janissaries, rode out to urge Musa’s men to change sides; Musa cut him down but was wounded by one of Hasan’s companions. Musa’s men fought well, but Mehmed won, and Musa fled and was caught and strangled. Mehmed, now sole sultan, kept peace with Byzantium and Serbia and spent his eight-year reign restoring Ottoman rule in Anatolia and the Balkans.
+    facts:
+      - [Battle of Çamurlu, "5 July 1413, Mehmed’s victory"]
+      - [Mehmed’s allies, "Manuel II and Stefan Lazarević"]
+    markers:
+      - kind: battle
+        side: meh
+        name: Battle of Çamurlu
+        date: 5 July 1413
+        text: The last battle of the civil war, fought on the plain of Çamurlu near Samokov. Musa was killed soon after.
+        lonlat: [23.556, 42.337]
+      - kind: siege
+        side: musa
+        name: Constantinople
+        date: 1411–1412
+        text: Musa besieged the city to punish Manuel II for backing Süleyman; Mehmed’s troops helped defend it.
+        lonlat: [28.98, 41.01]
+      - kind: held
+        side: byz
+        name: Thessalonica
+        date: "1412"
+        text: Musa’s attack on the city failed.
+        lonlat: [22.936, 40.64]
+    arrows:
+      - side: meh
+        label: Mehmed
+        via: [[28.95, 41.05], [27.5, 41.7], [25.5, 42.15], [23.65, 42.33]]
+      - side: musa
+        label: Musa
+        via: [[26.55, 41.7], [25.0, 42.15], [23.65, 42.35]]

@@ -1,0 +1,215 @@
+id: second-balkan-war
+name: Second Balkan War
+start: "1913-06-29"
+end: "1913-08-10"
+tier: B
+summary: A six-week war over the division of Macedonia, in which Bulgaria attacked its former allies Serbia and Greece and was defeated, while Romania and the Ottoman Empire invaded from the north and east. By the Treaty of Bucharest of August 1913 Bulgaria lost most of Macedonia to Serbia and Greece and Southern Dobruja to Romania, and in September it returned Adrianople to the Ottomans.
+countries: [bg, rs, gr, me, ro, tr, mk]
+sides:
+  - id: bg
+    name: Bulgaria
+    polities: [bulgaria]
+    ink: green
+    moves: Bulgarian moves
+    success: Bulgarian success
+  - id: rs
+    name: Serbia and Montenegro
+    polities: [serbia, montenegro]
+    ink: red
+    moves: Serbian moves
+    success: Serbian success
+  - id: gr
+    name: Greece
+    polities: [greece]
+    ink: navy
+    moves: Greek moves
+    success: Greek success
+  - id: ro
+    name: Romania
+    polities: [romania]
+    ink: gold
+    moves: Romanian moves
+    success: Romanian success
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Bulgaria, Serbia, Greece, Montenegro and Romania still used the Julian (Old Style) calendar; Bulgarian and Greek accounts often date the start of the war to 16–17 June and the Battle of Kilkis–Lachanas to 19–21 June. All dates here are New Style.
+  - The Carnegie Commission of 1914 found that every army in the war, and the irregulars with them, had killed civilians and burned villages, Bulgarian, Greek, Muslim and others alike.
+sources:
+  - title: Second Balkan War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Balkan_War
+  - title: Balkan Wars (Britannica)
+    url: https://www.britannica.com/topic/Balkan-Wars
+  - title: Battle of Bregalnica (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Bregalnica
+  - title: Battle of Kilkis–Lachanas (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kilkis%E2%80%93Lachanas
+  - title: Battle of Kresna Gorge (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kresna_Gorge
+  - title: Treaty of Bucharest (1913) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Bucharest_(1913)
+  - title: Treaty of Constantinople (1913) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Constantinople_(1913)
+steps:
+  - title: Bregalnica and Kilkis–Lachanas
+    date: June – July 1913
+    when: "1913-06-29"
+    borders: "1913-07-10"
+    countries: [bg, rs, gr, mk, me]
+    body:
+      - The victors of the First Balkan War fell out over Macedonia. Serbia, denied a port in Albania, wanted to keep the central Macedonian lands its army held, which the 1912 treaty had promised to Bulgaria, and on 1 June 1913 it signed a secret alliance with Greece. Bulgaria, confident in its army, would not wait for Russian arbitration. On the night of 29–30 June, without a declaration of war, Bulgarian troops attacked Serbian positions on the Bregalnica river and Greek positions east of Thessaloniki. The Serbs held, and in a week of fighting along the Bregalnica drove the Bulgarians back.
+      - In Thessaloniki, Greek troops overwhelmed the small Bulgarian garrison on 30 June and 1 July. The Greek army under King Constantine, who had come to the throne after his father’s assassination in March, attacked at Kilkis and Lachanas on 2–4 July and won after heavy losses on both sides. It pushed north past Lake Doiran and up the Struma valley. As they retreated, Bulgarian troops burned much of Serres, while Kilkis was burned by the Greeks, and civilians of every community were killed or driven from their homes.
+    facts:
+      - [Bulgarian attack, "night of 29–30 June 1913"]
+      - [Battle of Bregalnica, "30 June – 8 July 1913, Serbian victory"]
+      - [Battle of Kilkis–Lachanas, "2–4 July 1913, Greek victory"]
+    markers:
+      - kind: battle
+        side: rs
+        name: Battle of Bregalnica
+        date: 30 June – 8 July 1913
+        text: The largest battle of the war; the Serbian Third and First Armies stopped the Bulgarian Fourth Army and pushed it back towards the old border.
+        lonlat: [22.2, 41.83]
+      - kind: taken
+        side: gr
+        name: Thessaloniki
+        date: 30 June – 1 July 1913
+        text: Greek troops attacked the Bulgarian battalion quartered in the city, which surrendered after a night of fighting.
+        lonlat: [22.944, 40.64]
+        lp: l
+      - kind: battle
+        side: gr
+        name: Battle of Kilkis–Lachanas
+        date: 2–4 July 1913
+        text: The Greek army broke the Bulgarian Second Army’s positions north of Thessaloniki after three days of costly attacks.
+        lonlat: [22.876, 40.993]
+        lp: l
+      - kind: battle
+        side: gr
+        name: Doiran
+        date: 5–7 July 1913
+        text: The Greeks drove the Bulgarians from the lake and the railway, opening the way north.
+        lonlat: [22.73, 41.18]
+        lp: l
+      - kind: event
+        name: Serres
+        date: 11 July 1913
+        text: Much of the town was burned as the Bulgarian army withdrew, shortly before Greek troops entered it.
+        lonlat: [23.548, 41.086]
+    arrows:
+      - side: bg
+        via: [[22.5, 41.98], [22.33, 41.9], [22.18, 41.84]]
+      - side: rs
+        via: [[21.95, 41.73], [22.15, 41.8], [22.4, 41.93]]
+      - side: gr
+        label: Constantine
+        via: [[22.93, 40.72], [22.88, 40.98], [22.76, 41.16], [22.95, 41.4]]
+      - side: gr
+        via: [[23.05, 40.75], [23.25, 40.95], [23.5, 41.08], [23.2, 41.45]]
+  - title: Romania and the Ottomans join in
+    date: July 1913
+    when: "1913-07-10"
+    borders: "1913-07-31"
+    countries: [ro, bg, tr]
+    body:
+      - Romania had stayed out of the first war but claimed Southern Dobruja in return for Bulgaria’s gains. On 10 July it declared war, and its army occupied Southern Dobruja without a fight. On the night of 14–15 July Romanian troops crossed the Danube into northern Bulgaria and marched on Sofia almost unopposed, since the Bulgarian army was fighting in the south and west. Their cavalry reached Vrazhdebna, on the edge of the capital. Cholera, rather than the Bulgarians, caused most of the Romanian army’s losses.
+      - The Ottoman Empire seized its chance. On 12 July its army crossed the Enos–Midia line and reoccupied Eastern Thrace, which had few Bulgarian troops left, and on 23 July Enver Bey rode into Adrianople unopposed, calling himself its second conqueror. Reprisals by Ottoman troops and irregulars drove most of the Bulgarians of Eastern Thrace from their homes. With enemies on every side, Bulgaria’s government resigned, and the new prime minister, Vasil Radoslavov, sought an armistice.
+    facts:
+      - [Romania declares war, "10 July 1913"]
+      - [Romanians cross the Danube, "14–15 July 1913"]
+      - [Adrianople retaken, "23 July 1913"]
+    markers:
+      - kind: taken
+        side: ro
+        name: Silistra
+        date: July 1913
+        text: The Danube fortress, already promised to Romania by the powers in May, was occupied with the rest of Southern Dobruja.
+        lonlat: [27.26, 44.117]
+      - kind: event
+        side: ro
+        name: Oryahovo
+        date: 14–15 July 1913
+        text: The Romanian Danube Army under Crown Prince Ferdinand crossed here and at Gigen and Nikopol.
+        lonlat: [23.96, 43.73]
+      - kind: taken
+        side: ro
+        name: Vrazhdebna
+        date: late July 1913
+        text: Romanian cavalry reached this village outside Sofia, a few kilometres from the capital.
+        lonlat: [23.43, 42.72]
+      - kind: taken
+        side: ot
+        name: Adrianople
+        date: 23 July 1913
+        text: The Ottomans recovered their former capital without a fight; Bulgaria recognised its loss in the Treaty of Constantinople.
+        lonlat: [26.556, 41.677]
+        lp: l
+    arrows:
+      - side: ro
+        via: [[27.65, 44.15], [27.55, 43.9], [27.85, 43.6]]
+      - side: ro
+        label: Danube Army
+        via: [[23.98, 43.78], [23.8, 43.4], [23.55, 43.02], [23.45, 42.76]]
+      - side: ot
+        label: Ahmed İzzet Pasha
+        via: [[28.3, 41.2], [27.6, 41.38], [26.9, 41.6], [26.6, 41.67]]
+    areas:
+      - style: occupied
+        side: ro
+        label: Occupied by Romania, July 1913 (approximate)
+        atoms: [BG-08, BG-19, BG-15, BG-06, BG-12]
+      - style: occupied
+        side: ot
+        label: Reoccupied by the Ottomans, July 1913 (approximate)
+        atoms: [TR-22, TR-39]
+  - title: Kresna and the Treaty of Bucharest
+    date: July – September 1913
+    when: "1913-07-21"
+    borders: "1913-08-10"
+    countries: [bg, gr, rs, ro, tr, mk]
+    body:
+      - The Greek army, advancing up the Struma valley into Bulgaria itself, was counter-attacked from both flanks in the Kresna Gorge from 21 July and came close to being surrounded, while the Serbs were held at Kalimanci on the Bregalnica. Both sides were exhausted, and King Constantine, who had planned to march on Sofia, accepted an armistice that came into force on 31 July. A peace conference met in Bucharest, where the Romanian prime minister, Titu Maiorescu, presided over the division of the spoils.
+      - By the Treaty of Bucharest of 10 August Romania took Southern Dobruja. Serbia kept northern and central Macedonia, Greece the south with Thessaloniki and Kavala, and Bulgaria only the Pirin region, the Strumica valley and Western Thrace with an outlet to the Aegean at Dedeagach. In the Treaty of Constantinople of 29 September Bulgaria gave Adrianople and most of Eastern Thrace back to the Ottomans. Bulgarians called the outcome their first national catastrophe, and the quarrel over Macedonia helped draw Bulgaria into the First World War on the side of the Central Powers.
+    facts:
+      - [Battle of Kresna Gorge, "21–31 July 1913, inconclusive"]
+      - [Armistice, "31 July 1913"]
+      - [Treaty of Bucharest, "10 August 1913"]
+    markers:
+      - kind: battle
+        name: Battle of Kresna Gorge
+        date: 21–31 July 1913
+        text: Bulgarian forces attacked the Greek army in the narrow Struma valley; the armistice ended the fighting before either side could claim a decisive result.
+        lonlat: [23.16, 41.77]
+      - kind: battle
+        side: bg
+        name: Kalimanci
+        date: 17–24 July 1913
+        text: Bulgarian troops held off repeated Serbian and Montenegrin attacks around the village on the upper Bregalnica, stopping the Serbian offensive.
+        lonlat: [22.99, 41.98]
+      - kind: treaty
+        name: Treaty of Bucharest
+        date: 10 August 1913
+        text: Signed by Bulgaria, Romania, Serbia, Greece and Montenegro; the Ottomans were not admitted and made peace separately.
+        lonlat: [26.1, 44.43]
+      - kind: treaty
+        name: Treaty of Constantinople
+        date: 29 September 1913
+        text: Bulgaria accepted the loss of Adrianople, Kirk Kilisse and most of the land it had won in Eastern Thrace.
+        lonlat: [28.976, 41.009]
+    arrows:
+      - side: gr
+        via: [[23.35, 41.25], [23.25, 41.5], [23.18, 41.75]]
+      - side: bg
+        via: [[23.5, 42.0], [23.3, 41.88], [23.18, 41.8]]
+    areas:
+      - style: gained
+        side: ro
+        label: Southern Dobruja, gained by Romania
+        atoms: [BG-08, BG-19]
+      - style: lost
+        label: Returned by Bulgaria to the Ottomans, 29 September 1913
+        atoms: [TR-22, TR-39]

@@ -1,0 +1,217 @@
+id: byzantine-seljuk-wars
+name: Byzantine–Seljuk wars
+start: "1048"
+end: "1081"
+tier: B
+summary: The wars in which the Seljuk Turks and the Turkmen tribes that followed them broke Byzantine power in Armenia and Asia Minor. After two decades of raids, during which Alp Arslan took Ani in 1064, the sultan defeated and captured the Emperor Romanos IV Diogenes at Manzikert in 1071. The Byzantine civil wars that followed let Turkish bands settle across Anatolia, and by 1081 a Seljuk prince ruled from Nicaea, close to Constantinople.
+countries: [tr, am, ge, sy]
+sides:
+  - id: byz
+    name: Byzantine Empire
+    polities: [byzantium]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+  - id: sel
+    name: Seljuks and Turkmen
+    polities: [seljuk, rum]
+    ink: olive
+    moves: Seljuk and Turkmen moves
+    success: Seljuk and Turkmen success
+notes:
+  - Many raiders were Turkmen bands, only loosely under the Seljuk sultans, who were often more concerned with Iran, Iraq and the Fatimids of Egypt. Byzantine writers called all of them Turks.
+  - The main sources are Byzantine (Michael Attaleiates, who was at Manzikert, Michael Psellos, John Skylitzes and Nikephoros Bryennios), Armenian (Aristakes Lastivertsi and Matthew of Edessa) and Arabic and Persian historians such as Ibn al-Athir. They differ on numbers, on the terms agreed after Manzikert and on what happened to the troops sent to Khliat.
+  - Place names. Manzikert is Malazgirt, Khliat is Ahlat, Theodosiopolis is Erzurum, Kapetron is Pasinler, Sebasteia is Sivas, Melitene is Malatya, Caesarea is Kayseri, Iconium is Konya, Chonae is Honaz, Dokeia is Tokat, Kotyaion is Kütahya and Nicaea is İznik. Ani, the old Armenian capital, lies in ruins on today’s Turkish–Armenian border.
+sources:
+  - title: Byzantine–Seljuk wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Byzantine%E2%80%93Seljuk_wars
+  - title: Battle of Kapetron (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kapetron
+  - title: Ani (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ani
+  - title: Battle of Manzikert (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Manzikert
+  - title: Romanos IV Diogenes (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Romanos_IV_Diogenes
+  - title: Alp Arslan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Alp_Arslan
+  - title: Suleiman ibn Qutalmish (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Suleiman_ibn_Qutalmish
+  - title: Battle of Manzikert (Britannica)
+    url: https://www.britannica.com/event/Battle-of-Manzikert
+  - title: Alp Arslan (Britannica)
+    url: https://www.britannica.com/biography/Alp-Arslan
+steps:
+  - title: Kapetron and the first raids
+    date: 1048–1059
+    when: "1048"
+    borders: "1059"
+    countries: [tr, am, ge]
+    body:
+      - "By the 1040s Byzantium had annexed the Armenian kingdoms of Vaspurakan and Ani, and Constantine IX let the local troops of the eastern provinces pay taxes instead of serving. In Iran the Seljuks, a ruling family of Oghuz Turks, had built an empire, and Turkmen bands began raiding Byzantine Armenia. In 1048 Ibrahim Inal, half-brother of the sultan Tughril, invaded in force. The Byzantine commanders, Aaron and Katakalon Kekaumenos, were ordered to wait for the Georgian prince Liparit IV, and meanwhile the Turks burned Artze, a rich, unwalled market town, killing many of its people."
+      - "On the night of 18 September the allies fought Ibrahim at Kapetron. The Byzantine wings drove the Turks off, but in the centre Liparit was captured, and Ibrahim went home with his plunder. Liparit was later freed and embassies passed between the two courts, but the raids resumed in 1054, when Tughril himself besieged Manzikert and was beaten off by its commander, Basil Apokapes. With many Byzantine troops away fighting the Pechenegs in the Balkans, the raiders went deeper: Melitene was sacked in 1057 and Sebasteia in 1059."
+    facts:
+      - [Battle of Kapetron, "18 September 1048, indecisive; Liparit IV captured"]
+      - [Seljuk commander, "Ibrahim Inal"]
+      - [Siege of Manzikert, "1054, held by Basil Apokapes"]
+    markers:
+      - kind: taken
+        side: sel
+        name: Artze
+        date: "1048"
+        text: The Turks set fire to the barricaded trading town and killed its people as they fled. Skylitzes’ figure of 150,000 dead is much exaggerated. The site is uncertain, near Erzurum.
+        lonlat: [41.05, 39.95]
+        lp: l
+      - kind: battle
+        name: Battle of Kapetron
+        date: 18 September 1048
+        text: A night battle on the plain of Basean. The Byzantines held the field, but the Turks captured Liparit and kept their plunder.
+        lonlat: [41.676, 39.98]
+      - kind: held
+        side: byz
+        name: Manzikert
+        date: "1054"
+        text: Tughril besieged the fortress north of Lake Van, but its commander, Basil Apokapes, held out and the sultan withdrew.
+        lonlat: [42.544, 39.148]
+      - kind: taken
+        side: sel
+        name: Melitene
+        date: "1057"
+        text: Turkmen raiders sacked the city, which had been Byzantine since 934.
+        lonlat: [38.317, 38.35]
+      - kind: taken
+        side: sel
+        name: Sebasteia
+        date: "1059"
+        text: The raiders sacked the city, deep inside Byzantine Asia Minor.
+        lonlat: [37.015, 39.751]
+    arrows:
+      - side: sel
+        label: Ibrahim Inal
+        via: [[46.3, 38.1], [44.5, 39.7], [42.6, 40.0], [41.3, 39.97]]
+      - side: sel
+        via: [[41.6, 39.3], [40.0, 38.8], [38.45, 38.4]]
+      - side: sel
+        via: [[40.5, 39.6], [38.8, 39.75], [37.15, 39.75]]
+  - title: Ani and the raids into Anatolia
+    date: 1064–1070
+    when: "1064"
+    borders: "1070"
+    countries: [tr, am, ge, sy]
+    body:
+      - "In 1064 Tughril’s nephew and successor, Alp Arslan, invaded Georgia and Armenia and besieged Ani, the former Armenian royal city, now held by a Byzantine garrison. It fell on 16 August, and Armenian and Arab writers describe the slaughter of many of its people. The next year the Armenian king of Kars handed his land to the empire in exchange for estates in Asia Minor. Turkmen bands now rode deep into Anatolia almost every year: they plundered Caesarea in 1067, Neocaesarea and Amorium in 1068, Iconium in 1069 and Chonae, near the Aegean, in 1070."
+      - "In 1068 the general Romanos Diogenes married the widowed empress Eudokia and became emperor. He set out to rebuild the eastern army, much of it now foreign mercenaries, and campaigned every year. In 1068 he marched into Syria and took Hierapolis (Manbij); in 1069 he campaigned in Cappadocia and towards Lake Van with little result. In 1070, while he stayed in Constantinople, his general Manuel Komnenos was defeated and captured near Sebasteia. Romanos resolved to secure the frontier by retaking the fortresses around Lake Van."
+    facts:
+      - [Ani taken, "16 August 1064"]
+      - [Sultan, "Alp Arslan (1063–1072)"]
+      - [Emperor, "Romanos IV Diogenes (1068–1071)"]
+    markers:
+      - kind: siege
+        side: sel
+        name: Ani
+        date: 16 August 1064
+        text: Alp Arslan took the walled city on its river gorge after a siege. Many of its people were killed or enslaved, and it never fully recovered.
+        lonlat: [43.572, 40.507]
+      - kind: event
+        side: byz
+        name: Kars
+        date: "1065"
+        text: The last Armenian king of Kars, Gagik-Abas, ceded his kingdom to Byzantium and moved to Asia Minor.
+        lonlat: [43.096, 40.608]
+        lp: l
+      - kind: taken
+        side: sel
+        name: Caesarea
+        date: "1067"
+        text: Turkmen raiders sacked the city and looted the shrine of its patron, Saint Basil.
+        lonlat: [35.487, 38.722]
+      - kind: taken
+        side: sel
+        name: Amorium
+        date: "1068"
+        text: The great city of the Anatolian plateau was sacked again, two centuries after al-Mu’tasim.
+        lonlat: [31.29, 39.02]
+      - kind: taken
+        side: sel
+        name: Iconium
+        date: "1069"
+        text: Turkmen raiders plundered the city, which became the Seljuk capital in Anatolia a generation later.
+        lonlat: [32.493, 37.874]
+      - kind: taken
+        side: sel
+        name: Chonae
+        date: "1070"
+        text: The furthest raid yet, into western Asia Minor; the famous church of the Archangel Michael was desecrated.
+        lonlat: [29.27, 37.76]
+      - kind: taken
+        side: byz
+        name: Hierapolis (Manbij)
+        date: November 1068
+        text: Romanos took the Syrian town from the Mirdasid emirs of Aleppo, allies of the Seljuks.
+        lonlat: [37.955, 36.528]
+    arrows:
+      - side: sel
+        label: Alp Arslan
+        via: [[45.0, 41.0], [44.2, 40.7], [43.65, 40.53]]
+      - side: sel
+        via: [[37.5, 39.3], [35.6, 38.8], [33.6, 38.3], [32.6, 37.95]]
+      - side: byz
+        label: Romanos IV, 1068
+        via: [[35.0, 38.0], [36.3, 37.2], [37.9, 36.6]]
+  - title: Manzikert and the Turkish settlement of Anatolia
+    date: 1071–1081
+    when: "1071-08-26"
+    borders: "1081-06"
+    countries: [tr, am]
+    body:
+      - "In the spring of 1071 Romanos marched east with a large but mixed army: Byzantine regiments, Armenian and Georgian levies, Norman and Frankish mercenaries under Roussel de Bailleul, Pecheneg and Uz horsemen and part of the Varangian Guard, perhaps 40,000 men in all. Alp Arslan, who had been campaigning in northern Syria on his way to fight the Fatimids, hurried north. Unaware how close he was, Romanos split his forces, sending Joseph Tarchaneiotes and Roussel with about half the army towards Khliat, and took Manzikert himself on 23 August. The Khliat force took no further part; Muslim writers say it was beaten, Byzantine writers that it withdrew."
+      - "On 26 August, having rejected a Seljuk offer of terms, Romanos advanced across the plain. The Turkish horse archers fell back before him, shooting into his flanks. By evening he had reached the sultan’s camp without forcing a battle and ordered a return to his own. In the confusion Andronikos Doukas, commanding the rearguard and the son of Romanos’s rival, the Caesar John Doukas, marched off the field instead of covering the withdrawal. The Turks attacked, the wings broke and Romanos, fighting on, was wounded and captured, the first Byzantine emperor to become the prisoner of a Muslim ruler. Most of the army escaped, and losses may have been lower than later writers claimed."
+      - "Alp Arslan treated Romanos generously and freed him after a week, on terms that included a ransom, a yearly tribute and, in some accounts, Manzikert, Antioch, Edessa and Hierapolis. But the Doukas family had already made Michael VII emperor; Romanos was defeated, surrendered at Adana and was blinded in June 1072, dying of his wounds. In the civil wars of the next decade, against Roussel de Bailleul, Nikephoros Botaneiates and Nikephoros Melissenos, emperors and rebels alike hired Turkish bands and let them garrison towns, while Turkmen settled across the plateau. When Alexios I Komnenos seized the throne in April 1081, Suleiman ibn Qutulmish ruled from Nicaea. Many historians see these civil wars, more than the battle itself, as the cause of the loss of Anatolia."
+    facts:
+      - [Battle of Manzikert, "26 August 1071, Seljuk victory; Romanos IV captured"]
+      - [Romanos IV blinded, "29 June 1072, at Kotyaion"]
+      - [Nicaea, "Seat of Suleiman ibn Qutulmish by 1081"]
+    markers:
+      - kind: taken
+        side: byz
+        name: Manzikert
+        date: 23 August 1071
+        text: The Turkish garrison surrendered the fortress to Romanos three days before the battle.
+        lonlat: [42.544, 39.148]
+        lp: t
+      - kind: event
+        name: Khliat
+        date: August 1071
+        text: Romanos sent about half his army under Joseph Tarchaneiotes and Roussel de Bailleul to this fortress on Lake Van. What happened to it is unclear.
+        lonlat: [42.494, 38.753]
+      - kind: battle
+        side: sel
+        name: Battle of Manzikert
+        date: 26 August 1071
+        text: Romanos’s withdrawal at nightfall turned into a rout when the rearguard under Andronikos Doukas left the field. The emperor was captured and brought before Alp Arslan.
+        lonlat: [42.59, 39.08]
+        lp: b
+      - kind: event
+        name: Adana
+        date: "1072"
+        text: Besieged here by Andronikos Doukas, Romanos surrendered on a promise of safety. He was blinded at Kotyaion on 29 June 1072 and died soon after.
+        lonlat: [35.321, 37.0]
+      - kind: taken
+        side: sel
+        name: Nicaea
+        date: c. 1080–1081
+        text: Turkish troops brought in by rival Byzantine claimants garrisoned the city, and Suleiman ibn Qutulmish made it his capital. In 1081 Alexios I agreed with him a frontier on the river Drakon, on the Gulf of Nicomedia.
+        lonlat: [29.72, 40.43]
+    arrows:
+      - side: byz
+        label: Romanos IV
+        via: [[37.0, 39.75], [39.5, 39.8], [41.3, 39.9], [42.5, 39.2]]
+      - side: byz
+        label: Tarchaneiotes
+        via: [[42.48, 39.12], [42.5, 38.95], [42.49, 38.79]]
+      - side: sel
+        label: Alp Arslan
+        via: [[38.8, 37.2], [41.0, 38.15], [42.45, 38.72], [42.6, 39.0]]
+      - side: sel
+        label: Suleiman
+        via: [[32.5, 39.0], [30.8, 39.8], [29.78, 40.38]]

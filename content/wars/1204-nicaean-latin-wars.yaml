@@ -1,0 +1,196 @@
+id: nicaean-latin-wars
+name: Nicaean–Latin wars
+start: "1204"
+end: "1261-07-25"
+tier: B
+summary: The long struggle between the Empire of Nicaea, the main Byzantine successor state, and the Latin Empire of Constantinople. After early Latin successes, John III Vatatzes beat the Latins at Poimanenon in 1224 and drove them from Asia Minor; with Bulgaria he besieged Constantinople in vain in 1235–1236. Michael VIII Palaiologos defeated the Latins of Greece and their allies at Pelagonia in 1259, and his general Alexios Strategopoulos took Constantinople almost without a fight on 25 July 1261, restoring the Byzantine Empire.
+countries: [tr, gr, bg, mk, al, it]
+sides:
+  - id: ni
+    name: Empire of Nicaea
+    polities: [byzantium]
+    ink: purple
+    moves: Nicaean moves
+    success: Nicaean success
+  - id: la
+    name: Latin Empire and its allies
+    polities: [latin-empire, achaea, duchy-of-athens, venice]
+    ink: orange
+    moves: Latin moves
+    success: Latin success
+  - id: bg
+    name: Bulgaria
+    polities: [bulgaria]
+    ink: green
+    moves: Bulgarian moves
+    success: Bulgarian success
+  - id: ep
+    name: Epirus and Thessalonica
+    polities: [epirus]
+    ink: magenta
+    moves: Epirote moves
+    success: Epirote success
+notes:
+  - On the map the Empire of Nicaea is shown as the continuation of the Byzantine Empire, which is how it saw itself. The main source is the Nicaean official George Akropolites, who was taken prisoner by the Epirotes and later served Michael VIII.
+  - Alliances shifted constantly. Bulgaria fought both Nicaea and the Latins at different times, and Epirus was a rival of Nicaea for the Byzantine inheritance; the battle of Klokotnitsa (1230) has its own entry.
+sources:
+  - title: Nicaean–Latin wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nicaean%E2%80%93Latin_wars
+  - title: Battle of Poimanenon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Poimanenon
+  - title: Siege of Constantinople (1235–1236) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Constantinople_(1235%E2%80%931236)
+  - title: Battle of Pelagonia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Pelagonia
+  - title: Reconquest of Constantinople (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Reconquest_of_Constantinople
+  - title: John III Doukas Vatatzes (Wikipedia)
+    url: https://en.wikipedia.org/wiki/John_III_Doukas_Vatatzes
+steps:
+  - title: Poimanenon and Nicaea’s advance
+    date: 1204–1225
+    when: "1224"
+    borders: "1225-12-31"
+    countries: [tr, gr]
+    body:
+      - After 1204 Theodore Laskaris built a Byzantine state in exile at Nicaea, and in 1208 he was crowned emperor. The Latins, who claimed north-western Asia Minor, beat him at Poimanenon in 1204 and on the Rhyndacus in 1211, just after he had defeated the Seljuks of Rum at Antioch on the Meander, where their sultan was killed. The Treaty of Nymphaeum of 1214 divided the region, leaving the Latins the coast from Nicomedia to Adramyttion. When Theodore died in 1221, his son-in-law John III Doukas Vatatzes succeeded him.
+      - Theodore’s brothers Alexios and Isaac Laskaris, who had opposed the succession, fled to the Latins, and in 1224 a Latin army marched with them against Vatatzes. At Poimanenon, south of Cyzicus, Vatatzes won a decisive victory, and the two brothers were captured and blinded. In the peace of 1225 the Latins gave up all their lands in Asia except the shore opposite Constantinople and the region of Nicomedia. The Nicaean fleet took Lesbos, Chios, Samos and other islands, and Nicaean troops entered Adrianople, but had to hand it over to Theodore Komnenos Doukas of Epirus, who had taken Thessalonica in 1224.
+    facts:
+      - [Treaty of Nymphaeum, 1214]
+      - [Battle of Poimanenon, "1224, Nicaean victory"]
+      - [Peace with the Latins, 1225]
+    markers:
+      - kind: battle
+        side: ni
+        name: Battle of Antioch on the Meander
+        date: June 1211
+        text: Theodore Laskaris beat the Seljuk army, which had come to restore the deposed emperor Alexios III. Sultan Kaykhusraw I was killed in the fighting.
+        lonlat: [28.574, 37.873]
+      - kind: battle
+        side: la
+        name: Battle of the Rhyndacus
+        date: 15 October 1211
+        text: The emperor Henry beat the Nicaean army, weakened by its losses against the Seljuks, near the river.
+        lonlat: [28.4, 40.15]
+      - kind: treaty
+        name: Treaty of Nymphaeum
+        date: "1214"
+        text: The first treaty between the two empires, which divided north-western Asia Minor between them.
+        lonlat: [27.42, 38.43]
+      - kind: battle
+        side: ni
+        name: Battle of Poimanenon
+        date: "1224"
+        text: Fought near a church of the Archangel Michael. The Nicaean army was close to defeat until Vatatzes led a charge himself, according to Akropolites.
+        lonlat: [27.892, 40.079]
+        lp: l
+      - kind: taken
+        side: ep
+        name: Thessalonica
+        date: December 1224
+        text: Theodore Komnenos Doukas of Epirus took the capital of the Latin kingdom of Thessalonica and soon had himself crowned emperor.
+        lonlat: [22.936, 40.64]
+      - kind: event
+        side: ep
+        name: Adrianople
+        date: "1225"
+        text: The city’s Greeks invited in Nicaean troops, but Theodore of Epirus arrived and forced them to leave.
+        lonlat: [26.556, 41.677]
+    arrows:
+      - side: ni
+        label: John III, 1224
+        via: [[29.72, 40.43], [28.6, 40.25], [27.95, 40.1]]
+      - side: ep
+        label: Theodore of Epirus
+        via: [[22.94, 40.64], [24.5, 41.15], [26.5, 41.65]]
+  - title: The siege of Constantinople
+    date: 1230–1237
+    when: "1235"
+    borders: "1236-12-31"
+    countries: [tr, bg, gr]
+    body:
+      - After Ivan Asen II of Bulgaria crushed Theodore of Epirus at Klokotnitsa in 1230, Bulgaria was the strongest power in the Balkans. The Latin barons, who had hinted that Asen might become regent for their boy emperor Baldwin II, chose instead the aged John of Brienne, a former king of Jerusalem, as co-emperor. In 1235 Asen allied with Vatatzes. Asen’s daughter married Vatatzes’s son, the Bulgarian Church was recognised as a patriarchate, and Vatatzes crossed into Europe and took Gallipoli and the Latin lands in Thrace.
+      - In 1235 and again in 1236 the allies besieged Constantinople by land and sea. John of Brienne, with a few hundred knights, held the walls, and fleets from Venice, Achaea, Genoa and Pisa broke the Nicaean blockade and destroyed many of its ships. Asen, who had come to fear that a Nicaean Constantinople would be a stronger neighbour than a Latin one, changed sides in 1237, then made peace with Vatatzes again. The Latin Empire survived, but it was now little more than the city itself, kept alive by Venetian ships and Western money; Baldwin II pawned the Crown of Thorns and even his own son to Venetian merchants.
+    facts:
+      - [Nicaean–Bulgarian alliance, 1235]
+      - [Siege of Constantinople, "1235–1236, failed"]
+    markers:
+      - kind: battle
+        side: bg
+        name: Battle of Klokotnitsa
+        date: 9 March 1230
+        text: Ivan Asen II beat and captured Theodore of Epirus, ending his bid to take Constantinople and making Bulgaria the leading Balkan power.
+        lonlat: [25.5, 41.983]
+      - kind: taken
+        side: ni
+        name: Gallipoli
+        date: "1235"
+        text: Vatatzes took the Venetian-held town, which gave Nicaea a foothold in Europe and control of the Dardanelles crossing.
+        lonlat: [26.67, 40.41]
+      - kind: event
+        name: Lampsakos
+        date: "1235"
+        text: The alliance was sealed here with the marriage of Asen’s daughter Helena to Vatatzes’s son Theodore, and a church council recognised the Bulgarian patriarchate.
+        lonlat: [26.684, 40.344]
+        lp: b
+      - kind: siege
+        side: la
+        name: Constantinople
+        date: 1235–1236
+        text: The small Latin garrison under the elderly John of Brienne held the land walls, while Italian and Achaean fleets saved the city by sea.
+        lonlat: [28.955, 41.014]
+    arrows:
+      - side: bg
+        label: Ivan Asen II
+        via: [[25.62, 43.05], [27.0, 42.0], [28.8, 41.1]]
+      - side: ni
+        label: John III
+        via: [[26.68, 40.34], [27.6, 40.85], [28.85, 41.0]]
+  - title: Pelagonia and the recovery of Constantinople
+    date: 1246–1261
+    when: "1259"
+    borders: "1261-07-25"
+    countries: [gr, mk, al, tr, it]
+    body:
+      - Vatatzes took Thessalonica in 1246 and much of Macedonia from Bulgaria and Epirus. In 1258 the general Michael Palaiologos became regent for the boy emperor John IV Laskaris, and soon co-emperor. Against him gathered Michael II of Epirus, William II of Villehardouin, prince of Achaea, and Manfred of Sicily, who sent German knights. In 1259 the Nicaean army under Michael’s brother John Palaiologos met them at Pelagonia in western Macedonia. The allies fell out, Michael II and his son left the field, and the Nicaeans destroyed the Achaean and German knights. William was captured and in 1262 gave up the fortresses of Mistras, Monemvasia and Maina as his ransom.
+      - Constantinople, held by a small Latin garrison and the Venetian fleet, was now isolated. In March 1261 Michael VIII allied with Genoa, Venice’s rival, by the Treaty of Nymphaeum. In July the general Alexios Strategopoulos, passing near the city with some 800 soldiers, learned that the Venetian fleet and much of the garrison had sailed to attack the Nicaean-held island of Daphnousia in the Black Sea. On the night of 24–25 July his men slipped in through a passage near the Gate of the Spring and opened the gates, and the city was taken almost without a fight. Baldwin II fled on a Venetian ship. Michael VIII entered Constantinople on 15 August 1261.
+    facts:
+      - [Battle of Pelagonia, "1259, Nicaean victory"]
+      - [Constantinople recovered, 25 July 1261]
+      - [Michael VIII enters the city, 15 August 1261]
+    markers:
+      - kind: taken
+        side: ni
+        name: Thessalonica
+        date: December 1246
+        text: The city’s leading citizens opened the gates to Vatatzes, ending Epirote rule there.
+        lonlat: [22.936, 40.64]
+      - kind: battle
+        side: ni
+        name: Battle of Pelagonia
+        date: "1259"
+        text: Deserted by the Epirotes, the Latin knights were surrounded and cut down or captured, among them Prince William of Achaea, found hiding under a haystack, Akropolites says.
+        lonlat: [21.567, 40.817]
+      - kind: treaty
+        name: Treaty of Nymphaeum
+        date: 13 March 1261
+        text: Michael VIII promised Genoa the trading privileges Venice had enjoyed in return for the help of its fleet against the Latins.
+        lonlat: [27.42, 38.43]
+      - kind: event
+        name: Daphnousia
+        date: July 1261
+        text: The Venetian fleet sailed to attack this island off the Black Sea coast of Bithynia, leaving Constantinople nearly undefended.
+        lonlat: [30.27, 41.2]
+      - kind: taken
+        side: ni
+        name: Constantinople
+        date: 25 July 1261
+        text: Strategopoulos’s men entered at night, helped by Greek townspeople. The Latin emperor fled, and the returning Venetian fleet could only evacuate the Latin inhabitants.
+        lonlat: [28.955, 41.014]
+    arrows:
+      - side: ni
+        label: John Palaiologos
+        via: [[22.94, 40.64], [22.1, 40.85], [21.62, 40.82]]
+      - side: ni
+        label: Alexios Strategopoulos
+        via: [[28.1, 41.1], [28.6, 41.05], [28.93, 41.02]]

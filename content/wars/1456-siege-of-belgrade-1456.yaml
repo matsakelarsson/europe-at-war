@@ -1,0 +1,114 @@
+id: siege-of-belgrade-1456
+name: Siege of Belgrade, 1456
+start: "1456-06"
+end: "1456-08-11"
+tier: B
+summary: Mehmed II’s attempt, three years after taking Constantinople, to capture Belgrade, Hungary’s great fortress where the Sava meets the Danube. Defended by Michael Szilágyi and relieved by John Hunyadi’s fleet and an army of crusaders raised by the friar John of Capistrano, the fortress beat off a general assault on 21–22 July, and a sortie the next day overran the Ottoman guns. The sultan, wounded, withdrew, and Ottoman expansion into Hungary was checked for some seventy years.
+countries: [rs, hu]
+sides:
+  - id: hun
+    name: Kingdom of Hungary and the crusaders
+    polities: [hungary]
+    ink: olive
+    moves: Hungarian moves
+    success: Hungarian success
+  - id: ott
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Numbers vary widely. The garrison had perhaps 5,000–7,000 men, and Hunyadi brought a larger relief force, many of them peasant crusaders. Modern estimates of the Ottoman army range from about 30,000 to 60,000 or more, with dozens of cannon and a river fleet.
+  - Pope Callixtus III’s order that church bells be rung at noon to pray for the defenders is often said to commemorate the victory; in fact it was issued before the battle. The story of Titusz Dugovics, who is said to have thrown himself from the walls with a Turkish standard-bearer, is a later legend.
+sources:
+  - title: Siege of Belgrade (1456) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Belgrade_(1456)
+  - title: John Hunyadi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/John_Hunyadi
+  - title: John of Capistrano (Wikipedia)
+    url: https://en.wikipedia.org/wiki/John_of_Capistrano
+  - title: Belgrade Fortress (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Belgrade_Fortress
+steps:
+  - title: The siege and the river battle
+    date: June – 14 July 1456
+    when: "1456-07-04"
+    borders: "1456-07-14"
+    countries: [rs, hu]
+    body:
+      - After campaigns against the Serbian despotate in 1454 and 1455, Mehmed II marched on Belgrade, the “key to Hungary”, which Hunyadi had strengthened at his own expense. The sultan brought a large army, many heavy cannon cast for the campaign and a fleet of river boats to close the Danube. The fortress, on a headland between the two rivers, was held by Hunyadi’s brother-in-law Michael Szilágyi with a few thousand men. Meanwhile the Franciscan friar John of Capistrano preached the crusade in Hungary, and thousands of peasants, townsmen and minor nobles, poorly armed but eager, gathered with Hunyadi at Zemun on the opposite bank.
+      - From 4 July the Ottoman guns battered the walls. Hunyadi gathered boats along the Danube, and on 14 July, attacked from upstream by his flotilla and from the fortress by about forty vessels manned by Serbian boatmen, the Ottoman fleet was broken after five hours of fighting; several large galleys were sunk and others captured. Hunyadi could now bring his troops and supplies into the fortress.
+    facts:
+      - [Bombardment begins, 4 July 1456]
+      - [River battle, "14 July 1456, Hungarian victory"]
+    markers:
+      - kind: siege
+        side: ott
+        name: Belgrade
+        date: from 4 July 1456
+        text: The fortress was bombarded for weeks by some of the largest guns of the time, opening several breaches.
+        lonlat: [20.45, 44.823]
+        lp: b
+      - kind: naval
+        side: hun
+        name: Danube flotilla battle
+        date: 14 July 1456
+        text: Hunyadi’s boats broke the Ottoman river blockade, opening the way for reinforcements.
+        lonlat: [20.43, 44.84]
+        lp: t
+      - kind: event
+        side: hun
+        name: Zemun
+        date: July 1456
+        text: Hunyadi’s camp, where Capistrano’s crusaders gathered across the Sava from the fortress.
+        lonlat: [20.4, 44.85]
+        lp: l
+    arrows:
+      - side: ott
+        label: Mehmed II
+        via: [[21.1, 43.9], [20.8, 44.35], [20.52, 44.78]]
+      - side: hun
+        label: Hunyadi’s flotilla
+        via: [[20.25, 45.25], [20.38, 45.05], [20.44, 44.86]]
+  - title: The assault and the sortie
+    date: 21 July – 11 August 1456
+    when: "1456-07-21"
+    borders: "1456-08"
+    countries: [rs, hu]
+    body:
+      - On the evening of 21 July Mehmed launched a general assault that went on all night. The janissaries broke into the lower town and climbed towards the citadel, but the defenders threw down burning wood and tar, and a wall of fire cut off those inside the walls from their comrades. The janissaries trapped inside were killed, and the attack outside the walls was beaten off with heavy losses.
+      - On 22 July crusaders slipped out against orders to skirmish with the Ottomans, and others followed until Capistrano, unable to call them back, led them across the Sava against the Ottoman flank, while Hunyadi charged out of the fortress and seized the Ottoman guns. Mehmed fought in person and was wounded, and the Ottomans recovered their camp, but that night they withdrew, leaving much of their artillery and baggage behind. Plague broke out in the Christian camp; Hunyadi died of it at Zemun on 11 August, and Capistrano in October.
+    facts:
+      - [General assault, "21–22 July 1456"]
+      - [Ottomans withdraw, "night of 22–23 July 1456"]
+      - [Death of Hunyadi, 11 August 1456]
+    markers:
+      - kind: held
+        side: hun
+        name: Belgrade
+        date: 21–22 July 1456
+        text: The night assault reached the upper town before it was thrown back with fire.
+        lonlat: [20.45, 44.823]
+        lp: b
+      - kind: battle
+        side: hun
+        name: Sortie
+        date: 22 July 1456
+        text: Crusaders and Hunyadi’s troops broke into the Ottoman lines south of the fortress and took the siege guns.
+        lonlat: [20.47, 44.8]
+        lp: r
+      - kind: event
+        side: hun
+        name: Zemun
+        date: 11 August 1456
+        text: Hunyadi died of plague in the camp three weeks after his victory.
+        lonlat: [20.4, 44.85]
+        lp: l
+    arrows:
+      - side: hun
+        label: Capistrano’s crusaders
+        via: [[20.41, 44.84], [20.42, 44.81], [20.46, 44.79]]
+      - side: ott
+        label: Ottoman retreat
+        via: [[20.5, 44.78], [20.8, 44.4], [21.2, 43.9]]

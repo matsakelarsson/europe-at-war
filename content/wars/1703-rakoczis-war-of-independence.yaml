@@ -1,0 +1,191 @@
+id: rakoczis-war-of-independence
+name: Rákóczi’s War of Independence
+start: "1703-06"
+end: "1711-05-01"
+tier: B
+summary: A rising of Hungarian nobles, soldiers and peasants, the Kurucs, led by Prince Francis II Rákóczi against Habsburg rule, fought while most imperial troops were away in the War of the Spanish Succession. At its height the rebels held most of Hungary and Transylvania and raided Austria and Moravia, but after their defeat at Trencsén in 1708 the rising collapsed, and the Peace of Szatmár in 1711 brought an amnesty and a promise to respect Hungary’s constitution.
+countries: [hu, sk, ro, ua, at]
+sides:
+  - id: kr
+    name: Kurucs (Confederated Estates of Hungary)
+    polities: [kuruc-confederation]
+    ink: orange
+    moves: Kuruc moves
+    success: Kuruc success
+  - id: hb
+    name: Habsburg Monarchy
+    polities: [habsburg]
+    ink: purple
+    moves: Imperial moves
+    success: Imperial success
+notes:
+  - Dates are New Style (Gregorian).
+  - The rebels were called kuruc, a name first used for crusading peasants in 1514; Hungarians loyal to the Habsburgs were called labanc. Serbs of the southern border, Croats, the Transylvanian Saxons and Danish auxiliaries fought on the imperial side, while Slovaks, Rusyns, many Romanians, Polish volunteers and French officers served with the Kurucs.
+  - Places are given their Hungarian names, as in most accounts; Trencsén is Trenčín and Nagyszombat Trnava in Slovakia, Munkács is Mukachevo in Ukraine, and Szatmár is Satu Mare, Zsibó Jibou and Gyulafehérvár Alba Iulia in Romania.
+sources:
+  - title: Rákóczi’s War of Independence (Wikipedia)
+    url: https://en.wikipedia.org/wiki/R%C3%A1k%C3%B3czi%27s_War_of_Independence
+  - title: Francis II Rákóczi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Francis_II_R%C3%A1k%C3%B3czi
+  - title: Battle of Zsibó (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Zsib%C3%B3
+  - title: Battle of Trencsén (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tren%C4%8D%C3%ADn
+  - title: Battle of Romhány (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Romh%C3%A1ny
+  - title: Treaty of Szatmár (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Szatm%C3%A1r
+  - title: Kuruc (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kuruc
+steps:
+  - title: The Kurucs rise
+    date: 1703–1704
+    when: "1703-06-15"
+    borders: "1704-12-26"
+    countries: [hu, sk, ro, ua, at]
+    body:
+      - After the Ottomans were driven out of Hungary, Habsburg rule weighed heavily on the country. Taxes were raised, soldiers were quartered on the villages, Protestants were pressed to convert, and reconquered estates were returned only to owners who could prove their title and pay a tenth of their value. Francis II Rákóczi, the richest landowner in Hungary and grandson of princes of Transylvania, was arrested in 1700 for contacts with France, escaped from prison at Wiener Neustadt and fled to Poland. When the War of the Spanish Succession drew most imperial troops west, peasants and former soldiers of the north-east, led by Tamás Esze, rose in the spring of 1703 and asked Rákóczi to lead them.
+      - On 15 June 1703 Rákóczi met Esze’s men at Lavochne, on the Polish side of the Carpathians, and led them into Hungary by the Verecke Pass; his friend Count Miklós Bercsényi brought French money and Polish mercenaries. Most nobles at first held back from what looked like a peasant revolt, but by late September the Kurucs held most of Hungary east and north of the Danube. In 1704 they crossed into Transdanubia and raided Lower Austria, Styria and Moravia, and Vienna threw up an earthwork, the Linienwall, against them. The Transylvanian diet elected Rákóczi prince on 8 July 1704. The allied victory at Blenheim in August ended hopes of joining the French and Bavarians, and on 26 December General Sigbert Heister beat the Kurucs at Nagyszombat.
+    facts:
+      - [Rákóczi crosses the Carpathians, "June 1703"]
+      - [Elected Prince of Transylvania, "8 July 1704"]
+      - [Battle of Nagyszombat, "26 December 1704, imperial victory"]
+    markers:
+      - kind: event
+        side: kr
+        name: Verecke Pass
+        date: 15 June 1703
+        text: Rákóczi crossed from Poland with Tamás Esze’s rebels, the start of the war under his leadership.
+        lonlat: [23.176, 48.827]
+      - kind: event
+        side: kr
+        name: Gyulafehérvár
+        date: 8 July 1704
+        text: The Transylvanian diet elected Rákóczi prince of Transylvania, though imperial garrisons still held the Saxon towns.
+        lonlat: [23.57, 46.067]
+      - kind: event
+        side: hb
+        name: Vienna
+        date: "1704"
+        text: Kuruc raids reached the outskirts of the capital, and the Linienwall, an earth rampart around the suburbs, was built against them.
+        lonlat: [16.37, 48.21]
+      - kind: battle
+        side: hb
+        name: Battle of Nagyszombat
+        date: 26 December 1704
+        text: Heister’s better-trained imperial army defeated Rákóczi and Bercsényi’s larger force.
+        lonlat: [17.588, 48.377]
+    arrows:
+      - side: kr
+        label: Rákóczi
+        via: [[23.18, 48.83], [22.69, 48.43], [21.9, 48.2], [21.42, 48.12]]
+      - side: kr
+        label: Kuruc raids
+        via: [[17.9, 47.9], [17.2, 47.95], [16.6, 48.1]]
+    areas:
+      - style: occupied
+        side: kr
+        label: Held by the Kurucs, 1704 (approximate)
+        atoms: [SK-KI, SK-PV, SK-BC, UA-21, HU-BZ, HU-MI, HU-HE, HU-EG, HU-NO, HU-ST, HU-SZ, HU-NY, HU-HB, HU-DE, HU-JN, HU-SK, HU-BE, HU-BC, HU-CS, HU-SD, HU-HV, RO-SM, RO-MM, RO-BH, RO-SJ, RO-CJ, RO-BN, RO-MS, RO-HR, RO-CV]
+  - title: Szécsény, Ónod and Trencsén
+    date: 1705–1708
+    when: "1705-09"
+    borders: "1708-08-03"
+    countries: [hu, sk, ro, at]
+    body:
+      - In September 1705 a diet near Szécsény formed the Confederated Estates of Hungary and elected Rákóczi their ruling prince, with a senate to share the conduct of the war and of peace talks. Emperor Joseph I, who had succeeded Leopold I in May, opened negotiations through English and Dutch mediators, but neither side would give up Transylvania. In November an imperial army under Ludwig Herbeville, with Danish auxiliaries and Serbian light cavalry, forced its way into Transylvania and beat Rákóczi at Zsibó, while in December János Bottyán’s Kurucs won at Szentgotthárd. Rákóczi paid his troops in copper coins that quickly lost their value.
+      - Believing that only a clean break would win him foreign allies, Rákóczi had the diet at Ónod declare the House of Habsburg deposed from the Hungarian throne on 13 June 1707; two county delegates who argued for peace were cut down in the hall. Louis XIV still refused a treaty, and talks with Peter the Great of Russia came to nothing. In August 1708, marching north to reach Silesia, Rákóczi attacked Heister at Trencsén. His horse stumbled at a ditch and threw him unconscious, and his army, thinking him dead, broke and fled, losing about 3,000 killed and wounded and all its guns.
+    facts:
+      - [Diet of Szécsény, "September 1705"]
+      - [Habsburgs deposed at Ónod, "13 June 1707"]
+      - [Battle of Trencsén, "3 August 1708, imperial victory"]
+    markers:
+      - kind: event
+        side: kr
+        name: Szécsény
+        date: September 1705
+        text: Bishops, magnates and about a thousand lesser nobles formed the Confederation and elected Rákóczi its ruling prince.
+        lonlat: [19.517, 48.083]
+      - kind: battle
+        side: hb
+        name: Battle of Zsibó
+        date: 15 November 1705
+        text: Herbeville’s Austrian, Danish and Serbian troops turned the Kuruc flank and won back Transylvania for the emperor.
+        lonlat: [23.25, 47.267]
+      - kind: battle
+        side: kr
+        name: Szentgotthárd
+        date: 13 December 1705
+        text: János Bottyán’s Kurucs defeated an imperial force on the Styrian border.
+        lonlat: [16.279, 46.949]
+      - kind: event
+        side: kr
+        name: Ónod
+        date: 13 June 1707
+        text: The diet dethroned the Habsburgs. The killing of two delegates from Turóc county in the hall shocked many of Rákóczi’s supporters.
+        lonlat: [20.917, 48.0]
+      - kind: battle
+        side: hb
+        name: Battle of Trencsén
+        date: 3 August 1708
+        text: About 8,000 imperial and Serbian troops under Heister and János Pálffy routed a Kuruc army nearly twice their size. Many Kuruc leaders soon changed sides.
+        lonlat: [18.011, 48.857]
+    arrows:
+      - side: hb
+        label: Herbeville
+        via: [[19.04, 47.5], [20.15, 46.6], [21.9, 47.05], [23.2, 47.25]]
+      - side: kr
+        label: Rákóczi
+        via: [[18.4, 48.3], [17.9, 48.5], [17.98, 48.8]]
+  - title: Romhány and the Peace of Szatmár
+    date: 1709–1711
+    when: "1710-01-22"
+    borders: "1711-05-01"
+    countries: [hu, sk, ro, ua]
+    body:
+      - After Trencsén the imperial armies won back the country fortress by fortress, while plague spread across Hungary from 1708 to 1711 and killed far more people than the fighting. Many nobles made their peace with the emperor. At Romhány on 22 January 1710 Rákóczi’s last field army, with Polish, Swedish and French soldiers among its ranks, came close to beating an imperial force before being driven back. Érsekújvár surrendered that autumn, and the Kurucs were pushed back to the north-east, around Munkács and Szatmár.
+      - Field Marshal János Pálffy, a loyalist Hungarian, opened talks with the Kuruc commander Sándor Károlyi in late 1710. Rákóczi rejected the terms and left for Poland on 21 February 1711 to seek help from Peter the Great, forbidding further talks, but Károlyi went on. Joseph I died in April, and his brother Charles VI wanted peace. Under the Peace of Szatmár, agreed on 29 April and signed on 1 May 1711, the Kurucs who swore loyalty received an amnesty and their estates, and the crown promised to respect the laws, diet and religious freedoms of Hungary and Transylvania. About 12,000 Kurucs laid down their flags at Majtény. Rákóczi refused the amnesty and died in exile at Rodosto on the Sea of Marmara in 1735.
+    facts:
+      - [Battle of Romhány, "22 January 1710, indecisive"]
+      - [Peace of Szatmár, "29 April – 1 May 1711"]
+      - [Surrender at Majtény, "1 May 1711, about 12,000 Kurucs"]
+    markers:
+      - kind: battle
+        name: Battle of Romhány
+        date: 22 January 1710
+        text: The last major battle of the war. The Kurucs nearly won but were broken by an imperial counter-attack.
+        lonlat: [19.25, 47.93]
+      - kind: taken
+        side: hb
+        name: Érsekújvár
+        date: September 1710
+        text: The great fortress on the Nyitra surrendered to the imperial army, one of the last Kuruc strongholds in the west.
+        lonlat: [18.158, 47.986]
+        lp: l
+      - kind: treaty
+        name: Peace of Szatmár
+        date: 29 April 1711
+        text: Agreed between Pálffy and Károlyi with the emperor’s envoys. It granted an amnesty and confirmed the rights of the Hungarian and Transylvanian estates.
+        lonlat: [22.89, 47.79]
+      - kind: event
+        side: hb
+        name: Majtény
+        date: 1 May 1711
+        text: The remaining Kuruc army surrendered its flags and swore allegiance to the House of Habsburg on the fields outside the village.
+        lonlat: [22.601, 47.688]
+        lp: b
+      - kind: taken
+        side: hb
+        name: Munkács
+        date: June 1711
+        text: The last Kuruc fortress surrendered several weeks after the peace.
+        lonlat: [22.688, 48.432]
+    arrows:
+      - side: kr
+        label: Rákóczi to Poland
+        via: [[22.69, 48.43], [23.18, 48.83], [23.5, 49.25]]
+    areas:
+      - style: occupied
+        side: kr
+        label: Held by the Kurucs, early 1711 (approximate)
+        atoms: [UA-21, HU-SZ, HU-NY, RO-SM]

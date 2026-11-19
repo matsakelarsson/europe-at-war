@@ -1,0 +1,86 @@
+id: ottoman-conquest-of-bosnia
+name: Ottoman conquest of Bosnia
+start: "1463-05"
+end: "1463-12-25"
+tier: B
+summary: Mehmed II’s rapid conquest of the Kingdom of Bosnia in 1463. King Stephen Tomašević had refused to pay tribute, trusting in help from Hungary and the pope, but when the sultan invaded in May the royal fortress of Bobovac fell within days, and the king was captured at Ključ and beheaded. Matthias Corvinus of Hungary retook Jajce and the north at the end of the year, and the duchy of Herzegovina to the south held out in part until its last fortress fell in 1481–1482.
+countries: [ba, hr, me]
+sides:
+  - id: bos
+    name: Kingdom of Bosnia and Herzegovina
+    polities: [bosnia, herzegovina]
+    ink: navy
+    moves: Bosnian moves
+    success: Bosnian success
+  - id: hun
+    name: Kingdom of Hungary
+    polities: [hungary]
+    ink: olive
+    moves: Hungarian moves
+    success: Hungarian success
+  - id: ott
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Accounts of the king’s death differ. One version says Mehmed’s scholar Ali al-Bistami ruled that the promise of safety was not binding on the sultan and beheaded the king himself; others say Mehmed did it. Later stories that he was flayed or used as a target are not supported by contemporary sources.
+  - The Hungarian conquest of Jajce is dated 16 or 25 December 1463 in different sources. Herzegovina’s last fortress, Novi (Herceg Novi), fell at the end of 1481, and the duchy is often said to have ended in 1482.
+sources:
+  - title: Stephen Tomašević of Bosnia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Stephen_Toma%C5%A1evi%C4%87_of_Bosnia
+  - title: Ottoman conquest of Bosnia and Herzegovina (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ottoman_conquest_of_Bosnia_and_Herzegovina
+  - title: Siege of Jajce (1463) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Jajce_(1463)
+  - title: Kingdom of Bosnia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kingdom_of_Bosnia
+steps:
+  - title: The fall of the kingdom
+    date: May – December 1463
+    when: "1463-05-19"
+    borders: "1463-12-25"
+    countries: [ba, hr, me]
+    body:
+      - Stephen Tomašević, crowned in 1461 with a crown sent by Pope Pius II, refused the customary tribute to the sultan, counting on Hungarian help that did not come in time. His kingdom was divided, his people largely indifferent and the powerful Duke Stjepan Vukčić Kosača of Herzegovina at war with his own son. In the spring of 1463 Mehmed II marched into Bosnia with a large army. His grand vizier Mahmud Pasha Angelović besieged the royal fortress of Bobovac on 19 May, and it surrendered within days. The king fled west, but Mahmud Pasha caught up with him at Ključ, where after a four-day siege he gave himself up in return for a written promise of safety.
+      - Taken before the sultan at Jajce, Stephen ordered his commanders to give up their castles, and some seventy towns surrendered in a week. On 25 May he was beheaded, and Bosnia became an Ottoman province. Mahmud Pasha then attacked Herzegovina, where the old duke had to give up his lands north of Blagaj. When the sultan’s army had gone home, Matthias Corvinus invaded in the autumn, besieged Jajce and took it in December, forming a Hungarian frontier province that held until 1527. Herzegovina was conquered piece by piece; its last fortress, Herceg Novi on the Bay of Kotor, fell at the end of 1481.
+    facts:
+      - [Bobovac besieged, 19 May 1463]
+      - [King Stephen beheaded, 25 May 1463]
+      - [Jajce taken by Hungary, "December 1463"]
+    markers:
+      - kind: taken
+        side: ott
+        name: Bobovac
+        date: May 1463
+        text: The royal fortress, expected to hold for two years, surrendered within days of the siege.
+        lonlat: [18.239, 44.138]
+      - kind: taken
+        side: ott
+        name: Ključ
+        date: May 1463
+        text: The king surrendered here after a four-day siege, trusting Mahmud Pasha’s written guarantee of his life.
+        lonlat: [16.78, 44.53]
+      - kind: taken
+        side: hun
+        name: Jajce
+        date: December 1463
+        text: Stephen was executed here in May. Matthias Corvinus retook the town after a siege of about three months.
+        lonlat: [17.269, 44.342]
+      - kind: held
+        side: bos
+        name: Herceg Novi
+        date: until 1481
+        text: The last stronghold of the dukes of Herzegovina, on the Bay of Kotor, held out for eighteen years.
+        lonlat: [18.531, 42.453]
+    arrows:
+      - side: ott
+        label: Mehmed II
+        via: [[19.3, 43.85], [18.7, 44.0], [18.27, 44.12]]
+      - side: ott
+        label: Mahmud Pasha
+        via: [[18.2, 44.15], [17.5, 44.3], [16.82, 44.52]]
+      - side: hun
+        label: Matthias Corvinus
+        via: [[17.5, 45.2], [17.35, 44.8], [17.28, 44.38]]

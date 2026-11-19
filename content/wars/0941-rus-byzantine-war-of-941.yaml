@@ -1,0 +1,81 @@
+id: rus-byzantine-war-of-941
+name: Rus’–Byzantine War of 941
+start: "941-06"
+end: "944"
+tier: B
+summary: A raid on Constantinople by the fleet of Prince Igor of Kiev, which was burned with Greek fire at the mouth of the Bosporus in June 941. The survivors plundered the Asian coast for months before their last boats were destroyed off Thrace. A second expedition in 944 was bought off, and a treaty restored trade between Kiev and the empire on stricter terms.
+countries: [tr, ua, ru]
+sides:
+  - id: rus
+    name: Kievan Rus’
+    polities: [kievan-rus]
+    ink: brown
+    moves: Rus’ moves
+    success: Rus’ success
+  - id: byz
+    name: Byzantine Empire
+    polities: [byzantium]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+notes:
+  - The main accounts are the Byzantine chronicle of Theophanes Continuatus, Liudprand of Cremona, whose stepfather saw the Rus’ prisoners executed in Constantinople, and the Rus’ Primary Chronicle, compiled about 1113, which preserves the text of the treaty. Their figures for the Rus’ fleet, from about 1,000 ships (Liudprand) to 10,000, are far too high to trust.
+  - The treaty is dated 944 or 945. Hieron was a customs post at the Black Sea entrance of the Bosporus, near today’s Anadolu Kavağı.
+sources:
+  - title: Rus’–Byzantine War (941–944) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rus%27%E2%80%93Byzantine_War_(941%E2%80%93944)
+  - title: Igor of Kiev (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Igor_of_Kiev
+  - title: Rus’–Byzantine Treaty (945) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rus%27%E2%80%93Byzantine_Treaty_(945)
+  - title: Greek fire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Greek_fire
+steps:
+  - title: Igor’s fleet and the Greek fire
+    date: 941–944
+    when: "941-06"
+    borders: "944"
+    countries: [tr, ua, ru]
+    body:
+      - "In 941 Igor, prince of Kiev, sent a great fleet of boats down the Dnieper and across the Black Sea. The Bulgarians sent warning, but the Byzantine navy was away fighting the Arabs and the army was on the eastern frontier. The Emperor Romanos I had fifteen old warships fitted with tubes for Greek fire and sent them out under the protovestiarios Theophanes. On 11 June, near Hieron at the mouth of the Bosporus, the Rus’ surrounded the ships to capture them and were met with fire. Liudprand of Cremona writes that men leapt into the sea to escape the flames and sank under their armour."
+      - "The survivors landed on the Asian shore and for months plundered Bithynia and Paphlagonia as far as Nicomedia; the chroniclers describe captives crucified and nailed to the ground. Bardas Phokas and then John Kourkouas, recalled with the army of the east, hemmed them in. In September, as the Rus’ tried to slip home, Theophanes’ fleet caught them off the Thracian coast and burned most of their boats; prisoners were beheaded in Constantinople. In 944 Igor came again with Rus’ and Pecheneg allies, but Romanos sent envoys with gifts to meet him on the Danube. In the treaty that followed, Rus’ merchants were let back into Constantinople, but on stricter terms than before."
+    facts:
+      - [Battle off Hieron, "11 June 941, Byzantine victory"]
+      - [Byzantine commanders, "Theophanes the protovestiarios, Bardas Phokas, John Kourkouas"]
+      - [Treaty, "944 or 945, preserved in the Primary Chronicle"]
+    markers:
+      - kind: naval
+        side: byz
+        name: Battle off Hieron
+        date: 11 June 941
+        text: Fifteen Byzantine ships armed with Greek fire broke up the Rus’ fleet at the entrance to the Bosporus.
+        lonlat: [29.09, 41.18]
+      - kind: event
+        side: rus
+        name: Nicomedia
+        date: Summer 941
+        text: The Rus’ raided the coasts and countryside of Bithynia as far as this city, looting churches and monasteries.
+        lonlat: [29.92, 40.77]
+      - kind: naval
+        side: byz
+        name: Off the Thracian coast
+        date: September 941
+        text: Theophanes’ fleet intercepted the Rus’ as they crossed back towards Thrace and destroyed most of their boats. The exact place is not recorded.
+        lonlat: [28.5, 41.35]
+        lp: l
+      - kind: treaty
+        name: Treaty of 944/945
+        date: 944 or 945
+        text: Igor swore to the treaty in Kiev by the god Perun, and his Christian followers in the church of Saint Elias. Rus’ merchants needed the prince’s letters, entered Constantinople unarmed in groups of fifty and could not winter there.
+        lonlat: [30.523, 50.45]
+    arrows:
+      - side: rus
+        label: Igor’s fleet
+        via: [[31.5, 46.5], [30.6, 44.6], [29.6, 42.5], [29.15, 41.25]]
+      - side: rus
+        via: [[29.3, 41.15], [29.6, 40.85], [29.88, 40.8]]
+      - side: rus
+        via: [[29.5, 41.2], [31.0, 41.25], [32.6, 41.6]]
+      - side: byz
+        label: John Kourkouas
+        via: [[35.5, 40.6], [33.5, 40.8], [31.2, 40.9]]

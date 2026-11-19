@@ -1,0 +1,90 @@
+id: sack-of-amorium
+name: Sack of Amorium
+start: "838-06"
+end: "838-08"
+tier: B
+summary: The Abbasid caliph al-Mu’tasim’s revenge for the Byzantine sack of Sozopetra in 837. His armies beat the Emperor Theophilos at Anzen, took Ancyra and in August 838 stormed and destroyed Amorium, the home city of the ruling dynasty and one of the largest cities of Byzantine Asia Minor.
+countries: [tr]
+sides:
+  - id: ab
+    name: Abbasid Caliphate
+    polities: [abbasid]
+    ink: green
+    moves: Abbasid moves
+    success: Abbasid success
+  - id: byz
+    name: Byzantine Empire
+    polities: [byzantium]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+notes:
+  - The campaign is described by Byzantine chroniclers and, in more detail, by the Arab historian al-Tabari; Michael the Syrian gives what is thought the most reliable figure for the caliph’s army, about 80,000 fighting men. Other writers give far larger numbers, as they do for the dead of Amorium (30,000 according to al-Mas’udi, 70,000 according to Theophanes Continuatus).
+  - The date of the fall of Amorium is given by modern historians as 12, 13 or 15 August 838. Ancyra is today’s Ankara; Amorium lay near Emirdağ in Afyonkarahisar province, and the site of Sozopetra (Zibatra) is uncertain.
+sources:
+  - title: Sack of Amorium (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sack_of_Amorium
+  - title: Battle of Anzen (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Anzen
+  - title: Theophilos (emperor) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Theophilos_(emperor)
+  - title: Al-Mu’tasim (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Al-Mu%27tasim
+  - title: 42 Martyrs of Amorium (Wikipedia)
+    url: https://en.wikipedia.org/wiki/42_Martyrs_of_Amorium
+steps:
+  - title: Anzen and Amorium
+    date: 837–838
+    when: "838-07"
+    borders: "838-08-15"
+    countries: [tr]
+    body:
+      - "In 837 the Emperor Theophilos raided the Abbasid frontier on the upper Euphrates, encouraged by the Khurramite rebels then fighting the caliph. He sacked Sozopetra, said by some sources to be the caliph’s birthplace, killed its men and enslaved its women and children. Once the revolt was crushed, al-Mu’tasim gathered a great army at Tarsus and chose as his target Amorium, the home of Theophilos’s family. One army under Afshin, with the emir of Melitene and Armenian princes, crossed the frontier in the north-east; the caliph led the other through the Cilician Gates. On 22 July Theophilos attacked Afshin at Anzen, near Dazimon. His army broke, and he escaped with difficulty."
+      - "The caliph’s army found Ancyra abandoned, plundered it and laid siege to Amorium on 1 August. A defector showed the besiegers a stretch of wall that had been badly repaired, and they made a breach. After about two weeks Boiditzes, the officer holding the breach, went to bargain with the caliph on his own, and the Arabs broke in. The city was sacked and burned and its people killed or enslaved. Al-Mu’tasim turned home on hearing of a plot against him; many captives died on the march across the dry plateau. Forty-two officers who refused to convert were executed at Samarra in 845 and are venerated as the 42 Martyrs of Amorium."
+    facts:
+      - [Battle of Anzen, "22 July 838, Abbasid victory"]
+      - [Siege of Amorium, "1 August to about 12–15 August 838"]
+      - [Commanders, "Caliph al-Mu’tasim and Afshin; Emperor Theophilos"]
+    markers:
+      - kind: taken
+        side: byz
+        name: Sozopetra
+        date: "837"
+        text: Theophilos’s army sacked the frontier town, whose fate the caliph set out to avenge. Its exact site is unknown.
+        lonlat: [37.88, 38.09]
+      - kind: event
+        side: ab
+        name: Tarsus
+        date: June 838
+        text: The caliph’s main army gathered at the frontier city and crossed the Taurus through the Cilician Gates in late June.
+        lonlat: [34.895, 36.916]
+      - kind: battle
+        side: ab
+        name: Battle of Anzen
+        date: 22 July 838
+        text: Afshin’s horse archers broke the Byzantine army after a promising start. Theophilos and his guard were surrounded and fought their way out.
+        lonlat: [36.09, 40.39]
+      - kind: taken
+        side: ab
+        name: Ancyra
+        date: 26 July 838
+        text: The inhabitants had fled to nearby mines, where an Arab detachment found them. The deserted city was plundered.
+        lonlat: [32.855, 39.929]
+      - kind: siege
+        side: ab
+        name: Siege of Amorium
+        date: August 838
+        text: The Arabs broke in through a weak stretch of wall, sacked the city and burned it. Its iron gates were carried off to Samarra and later ended up in Aleppo.
+        lonlat: [31.29, 39.02]
+    arrows:
+      - side: ab
+        label: Al-Mu’tasim
+        via: [[34.9, 36.95], [34.75, 37.35], [34.0, 38.6], [32.95, 39.85]]
+      - side: ab
+        via: [[32.8, 39.85], [32.0, 39.45], [31.38, 39.06]]
+      - side: ab
+        label: Afshin
+        via: [[38.3, 38.35], [37.6, 39.1], [36.6, 39.95], [36.15, 40.35]]
+      - side: byz
+        label: Theophilos
+        via: [[33.9, 40.1], [35.0, 40.3], [36.0, 40.38]]

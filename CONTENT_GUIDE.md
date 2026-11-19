@@ -191,17 +191,19 @@ date, from two sources merged by date:
   | 1801–today | Georgia, Armenia, Azerbaijan, the northern Caucasus, Kars–Ardahan–Artvin | `caucasus.yaml` |
   | 1809–today | Finland and Åland | `finland.yaml` |
   | 1812–today | Bessarabia and Transnistria (Moldova, Budjak, Khotyn) | `bessarabia.yaml` |
+  | 800–1812 | Moldavia east of the Prut, the Budjak, Transnistria, Khotyn and Northern Bukovina | `balkans.yaml` (with `bessarabia.yaml` and `rus-and-russia.yaml`) |
+  | 800–today | Hungary, Slovakia, Romania, the former Yugoslavia, Albania, Greece, Bulgaria, Cyprus, Turkey (without Kars, Ardahan, Artvin and Iğdır before 1801) and Carpathian Ruthenia | `balkans.yaml`, `anatolia.yaml` (Anatolia, and Turkey from 1922) |
+  | 800–1801 | Kars, Ardahan, Artvin and Iğdır | `anatolia.yaml` |
+  | 800–today | Syria, Lebanon, Israel, Palestine, Jordan, Egypt | `levant.yaml` |
 
-  Other event files (`turkey.yaml`, `balkans.yaml`,
-  `central-europe.yaml`, and `rus-and-russia.yaml` before 1236) correct
-  drafts outside any curated range; there, the next keyframe can still
-  override an event. `balkans.yaml`, `central-europe.yaml`
-  (now only Austria-Hungary and Alsace-Lorraine) and `turkey.yaml`
-  are first passes made for the Russia wave's maps (historical-basemaps has
-  no snapshot between 1815 and 1880); the later waves replace them with
-  curated ranges. For the German lands wave, `balkans.yaml` gained the
-  Illyrian Provinces (1809–1814). `italy.yaml` still lists Venetian Istria and
-  Dalmatia for 1797–1814 and Italian Libya from 1912 (`libya-it`, also fixed in
+  Other event files (`central-europe.yaml`, and `rus-and-russia.yaml` before
+  1236) correct drafts outside any curated range; there, the next keyframe can
+  still override an event. `central-europe.yaml` is a first pass made for the
+  Russia wave's maps (historical-basemaps has no snapshot between 1815 and
+  1880) and now only holds Austria-Hungary's Austrian half (Istria, Trieste,
+  Gorizia, Bohemia, Galicia) and Alsace-Lorraine. Wave 5 rewrote `balkans.yaml`
+  and replaced `turkey.yaml` with `anatolia.yaml`. `italy.yaml` still lists Venetian Istria and
+  Dalmatia in 1797 and 1805 and Italian Libya from 1912 (`libya-it`, also fixed in
   the 1914 and 1938 keyframes by `tools/migrate/libya-keyframes.mjs`), and `iberia.yaml` ends with three North African
   events (1031, 1069, 1147) that correct the drafts until the next keyframe. `german-lands.yaml` also
   opens with a few events before 1240 (907, 948, 962, 976, 983) that correct
@@ -251,6 +253,33 @@ date, from two sources merged by date:
   grouped as `italian-communes`. After 1282 island Sicily and peninsular Naples
   are separate (the Two Sicilies from 1816). Naples, Sicily, Sardinia and Milan
   keep their own polities under Aragonese, Spanish or Austrian rule.
+- **The Balkans and Hungary.** Bulgaria, Byzantium, the Franks and the Avars
+  in 800; Great Moravia (833) and the Magyars (895–907); Samuel's Bulgaria and
+  Basil II's conquest (1018). Croatia is its own kingdom in union with Hungary
+  (1102–1527); the Second Bulgarian Empire (1185), Nemanjić Serbia, Bosnia
+  (1180), Zeta and the Albanian principalities (1355) follow. The Latin states
+  of 1204 are separate (Latin Empire, Thessalonica, Achaea, Athens, the
+  Archipelago, Epirus). Ottoman vassals (Wallachia, Moldavia, Transylvania,
+  Ragusa, Serbia from 1817, Bulgaria 1878–1908, Eastern Rumelia, the Cretan
+  State) are shown as their own states. After Mohács (1526) the line between
+  Habsburg Royal Hungary, Zápolya's kingdom (later Transylvania) and Ottoman
+  Hungary moves with each fortress that fell; the Great Turkish War changes the
+  map at Karlowitz (1699), the Balkan Wars at the treaties of 1913, and
+  Kosovo is shown from its declaration of independence (2008-02-17). The
+  Second World War is in the war files, except the Vienna Awards and the
+  Treaty of Craiova. Fiume (Rijeka) is too small to be an atom; use a marker.
+- **Anatolia and the Levant.** The Abbasid frontier (thughur) and the
+  Byzantine reconquest (934–1045); Rum, the Danishmendids and the crusader
+  states after 1081; the Ilkhanate (1243) and the Turkish beyliks
+  (`anatolian-beyliks` groups the smaller emirates); the Eretnids, Karamanids,
+  Kara Koyunlu and Aq Qoyunlu; the Ottomans, who stay on the base map until
+  the sultanate is abolished (1922-11-01), after which all of Turkey is
+  `turkey` (Hatay from 1939). The Allied, Greek, Italian and French zones of
+  1918–1923 are war-step areas. In the Levant: the Tulunids, Ikhshidids,
+  Hamdanids, Fatimids, the crusader states, the Zengids, Ayyubids and Mamluks;
+  Ottoman from 1516–1517; Muhammad Ali's Egypt from 1805 (with Syria
+  1833–1840); the mandates of 1920; the territories Israel occupied in 1967
+  are war-step areas, and Palestine is shown from the 1988 declaration.
 - **The British Isles.** The Anglo-Saxon kingdoms and the Danelaw until England
   (927/954; Mercian client kingdoms are shown as Mercia); Wales until 1283, with
   the Marcher lordships under the English crown from 1070/1093; Pictland, Dál
@@ -295,7 +324,14 @@ date, from two sources merged by date:
   Navarre, `ES-PM~menorca`, `ES-BA~olivenza`, the Neapolitan parts of Lazio
   (`IT-LT~gaeta`, `IT-FR~sora`, `IT-RI~cittaducale`), `IT-AL~casale` Montferrat
   and `IT-PV~pavese` (Pavia; the rest of `IT-PV` is the Lomellina and the
-  Oltrepò, Sardinian from 1713).
+  Oltrepò, Sardinian from 1713). In the east (`90-east.geojson`):
+  `GR-H~euboea`, `GR-G~achaea` (Achaea and Elis), `GR-L~dodecanese`,
+  `GR-A~thrace` (Western Thrace), `TR-34~asia` (the Asian side of Istanbul),
+  `TR-17~gelibolu` (the Gallipoli peninsula), `RS-16~sandzak` and
+  `RS-18~sandzak` (the Serbian Sandžak), and `~hu1938` for the four parts of
+  southern Slovakia Hungary held in 1938–1945. `HU-BA~habHun`, `HU-SO~ottH` and
+  `HU-VE~ottH` (from Sweden at War's map) follow the Habsburg–Ottoman line in
+  Transdanubia.
 - **Splits.** `content/borders/splits/*.geojson`, applied in file-name order:
   polygons in lon/lat with `{id: "<atom>~<name>", from: "<atom>", name}`. The
   part of the atom inside the polygon becomes the new atom (it may cut an atom

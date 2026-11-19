@@ -1,0 +1,79 @@
+id: herzegovina-uprising
+name: Herzegovina Uprising of 1875–1877
+start: "1875-07-09"
+end: "1877"
+tier: B
+summary: A rising of Christian peasants, mostly Orthodox Serbs, against their Muslim landlords and Ottoman tax collectors, which began around Nevesinje in Herzegovina in July 1875 and spread to Bosnia. Aided by Montenegro and Serbia, it opened the Great Eastern Crisis that led to the Serbian and Montenegrin wars of 1876, the Russo-Turkish War of 1877–1878 and the Austro-Hungarian occupation of Bosnia and Herzegovina.
+countries: [ba, hr, me, rs, tr]
+sides:
+  - id: ins
+    name: Herzegovinian and Bosnian insurgents
+    polities: [herzegovinian-insurgents]
+    ink: orange
+    moves: Insurgent moves
+    success: Insurgent success
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Dates are New Style (Gregorian); local Orthodox Christians used the Julian calendar, then 12 days behind. Numbers of refugees and dead are contemporary estimates and vary widely.
+  - Historians of the region still differ over how far the rising was a social revolt of peasants against landlords, a national rising and a religious war, and over the part played by Catholics, most of whom stayed out of it after the first months. Its fighting from June 1876 is told under the Montenegrin–Ottoman and Serbian–Ottoman wars.
+sources:
+  - title: Herzegovina uprising (1875–1877) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Herzegovina_uprising_(1875%E2%80%931877)
+  - title: Great Eastern Crisis (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Great_Eastern_Crisis
+  - title: Gyula Andrássy (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Gyula_Andr%C3%A1ssy
+  - title: Berlin Memorandum (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Berlin_Memorandum
+steps:
+  - title: Nevesinje and the Great Eastern Crisis
+    date: 1875–1877
+    when: "1875-07-09"
+    borders: "1876-06-30"
+    countries: [ba, hr, me, rs, tr]
+    body:
+      - Bosnia’s Christian peasants owed up to half their harvest to Muslim landlords, as well as taxes collected by tax farmers, and the bad harvest of 1874 and higher taxes in 1875 made their burden unbearable. In early July 1875 villagers around Nevesinje in Herzegovina clashed with Ottoman troops, and within weeks the revolt spread to Bileća, Stolac, Gacko and the Montenegrin border; Catholics around Gabela also rose, hoping for Austrian intervention. Bands of rebels destroyed border posts and the towers of the beys, and besieged Trebinje in August. In mid-August Serbs in the Bosnian Krajina rose too, around Kozara and Grmeč.
+      - Montenegro and Serbia sent arms and volunteers, and Italians, Russians and others came to fight, while refugees fled to Austrian Dalmatia and Croatia and to Montenegro, between 100,000 and 250,000 by the end of 1876. The great powers tried to contain the crisis. The Andrássy Note of December 1875 and the Berlin Memorandum of May 1876 called for reforms, but the rebels would not lay down their arms without guarantees. Villages were burned and civilians driven out by both sides. In June 1876 Serbia and Montenegro went to war, and the rising merged into the wider wars that ended with the Austro-Hungarian occupation of 1878.
+    facts:
+      - [Rising at Nevesinje, "July 1875"]
+      - [Andrássy Note, "30 December 1875"]
+      - [Refugees by the end of 1876, "100,000–250,000 (estimates)"]
+    markers:
+      - kind: event
+        side: ins
+        name: Nevesinje
+        date: July 1875
+        text: A clash between armed villagers and Ottoman troops on 9 July, remembered in Serbian as the “Nevesinje rifle”, set off the rising across Herzegovina.
+        lonlat: [18.113, 43.258]
+      - kind: event
+        side: ins
+        name: Gabela
+        date: July 1875
+        text: Catholic villagers in the lower Neretva valley rose early in July, but most Catholics soon withdrew when no Austrian help came.
+        lonlat: [17.67, 43.06]
+        lp: l
+      - kind: siege
+        side: ot
+        name: Trebinje
+        date: August 1875
+        text: Rebels besieged the town until Ottoman battalions landed by sea at Klek relieved it at the end of August.
+        lonlat: [18.346, 42.712]
+      - kind: event
+        side: ins
+        name: Kozara
+        date: August 1875
+        text: Serbs of the Bosnian Krajina rose here and in the Grmeč hills, cutting Ottoman communications and driving Muslim villagers into the towns.
+        lonlat: [16.977, 44.971]
+    arrows:
+      - side: ot
+        via: [[17.62, 42.93], [17.95, 42.8], [18.3, 42.72]]
+    areas:
+      - style: contested
+        side: ins
+        label: Main areas of the rising, 1875–1876 (approximate)
+        atoms: [BIH-4808, BIH-2225, BIH-4802]

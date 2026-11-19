@@ -1,0 +1,103 @@
+id: montenegrin-ottoman-war
+name: Montenegrin–Ottoman War of 1876–1878
+start: "1876-06-30"
+end: "1878-01-31"
+tier: B
+summary: A war in which the Principality of Montenegro, allied with Serbia and the Herzegovinian rebels and later fighting alongside Russia, beat Ottoman armies at Vučji Do and Fundina in 1876, took Nikšić in 1877 and Bar and Ulcinj on the coast in 1878. Known in Montenegro as the Great War, it ended with Montenegro’s independence recognised at the Congress of Berlin and its territory roughly doubled, with an outlet to the Adriatic.
+countries: [me, ba, al, tr]
+sides:
+  - id: me
+    name: Montenegro and the Herzegovinian insurgents
+    polities: [montenegro, herzegovinian-insurgents]
+    ink: red
+    moves: Montenegrin moves
+    success: Montenegrin success
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Dates are New Style (Gregorian). Montenegro used the Julian calendar, then 12 days behind, so Montenegrin accounts date the fall of Nikšić 27 August 1877. Several battle dates appear in either style in the literature, and some are given here only by month.
+  - The Herzegovina Uprising, the Serbian–Ottoman Wars and the Russo-Turkish War of 1877–1878 have their own entries.
+sources:
+  - title: Montenegrin–Ottoman War (1876–1878) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Montenegrin%E2%80%93Ottoman_War_(1876%E2%80%931878)
+  - title: Battle of Vučji Do (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Vu%C4%8Dji_Do
+  - title: Battle of Fundina (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Fundina
+  - title: Nikšić (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nik%C5%A1i%C4%87
+  - title: Nicholas I of Montenegro (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nicholas_I_of_Montenegro
+  - title: Congress of Berlin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Congress_of_Berlin
+steps:
+  - title: Vučji Do, Nikšić and the coast
+    date: June 1876 – July 1878
+    when: "1876-06-30"
+    borders: "1878-07-13"
+    countries: [me, ba, al, tr]
+    body:
+      - Montenegro had armed the Herzegovinian rebels since 1875, and at the end of June 1876 it declared war together with Serbia. Prince Nicholas’s army of mountain clans, joined by Herzegovinian insurgents, won its greatest victory in late July at Vučji Do near Nikšić, where an Ottoman army under Ahmed Muhtar Pasha was routed; Selim Pasha was killed and Osman Pasha taken prisoner. On 2 August Marko Miljanov and Ilija Plamenac threw back a larger force from Scutari at Fundina in the Kuči lands. When Serbia was beaten, Montenegro too accepted the armistice of November 1876, but no peace followed.
+      - In June 1877, as Russia went to war, an Ottoman army under Suleiman Pasha fought its way through the Duga pass to relieve Nikšić and then across Montenegro down the Zeta valley, before being shipped to Bulgaria to face the Russians. Nicholas then besieged Nikšić, which surrendered on 8 September after 47 days, and in January 1878 his troops took Bar and Ulcinj on the coast and the forts on Lake Scutari. Many Albanian and Slav Muslim inhabitants left or were driven from Podgorica, Spuž and other places. At Berlin Montenegro won independence, Nikšić, Podgorica, Kolašin and Bar; Ulcinj followed in 1880.
+    facts:
+      - [Battle of Vučji Do, "July 1876, Montenegrin victory"]
+      - [Nikšić taken, "8 September 1877"]
+      - [Independence recognised, "Congress of Berlin, 13 July 1878"]
+    markers:
+      - kind: battle
+        side: me
+        name: Battle of Vučji Do
+        date: July 1876
+        text: Montenegrin and Herzegovinian battalions routed Ahmed Muhtar Pasha’s army and captured a large stock of arms.
+        lonlat: [18.408, 42.944]
+        lp: l
+      - kind: battle
+        side: me
+        name: Battle of Fundina
+        date: 2 August 1876
+        text: Warned of the Ottoman plan, about 4,000 Montenegrins under Marko Miljanov and Ilija Plamenac beat back Mahmud Pasha’s attack from Scutari.
+        lonlat: [19.365, 42.451]
+      - kind: battle
+        side: ot
+        name: Zeta valley
+        date: June 1877
+        text: Suleiman Pasha’s army forced its way down the valley past Ostrog in costly fighting to join the Ottoman forces at Podgorica.
+        lonlat: [19.05, 42.61]
+        lp: l
+      - kind: taken
+        side: me
+        name: Nikšić
+        date: 8 September 1877
+        text: The Ottoman garrison surrendered after a 47-day siege by Montenegrin troops under Mašo Vrbica.
+        lonlat: [18.95, 42.778]
+      - kind: taken
+        side: me
+        name: Bar
+        date: January 1878
+        text: The old town surrendered after a siege, giving Montenegro its first port.
+        lonlat: [19.135, 42.093]
+        lp: l
+      - kind: taken
+        side: me
+        name: Ulcinj
+        date: January 1878
+        text: Taken against stiff Albanian resistance, handed back at Berlin and finally ceded to Montenegro in 1880.
+        lonlat: [19.2, 41.92]
+    arrows:
+      - side: ot
+        label: Suleiman Pasha
+        via: [[18.6, 43.05], [18.92, 42.8], [19.05, 42.62], [19.25, 42.45]]
+      - side: me
+        label: Nicholas
+        via: [[18.92, 42.39], [19.05, 42.22], [19.13, 42.11]]
+      - side: me
+        via: [[19.14, 42.08], [19.2, 41.95]]
+    areas:
+      - style: gained
+        side: me
+        label: Gained at the Congress of Berlin (approximate)
+        atoms: [ME-02, ME-09, ME-11, ME-12, ME-15, ME-16]

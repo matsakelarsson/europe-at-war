@@ -1,0 +1,96 @@
+id: bocskai-uprising
+name: Bocskai Uprising
+start: "1604-10"
+end: "1606-06-23"
+tier: B
+summary: A revolt in Royal Hungary and Transylvania against Emperor Rudolf II, led by the Calvinist magnate István Bocskai during the Long Turkish War. Provoked by treason trials, confiscations and the seizure of Protestant churches, it was carried by the hajdús, free soldiers of the frontier, and backed by the Ottomans. Bocskai was elected prince of Transylvania and of Hungary, and the Peace of Vienna of 1606 guaranteed the estates’ rights and freedom of worship.
+countries: [hu, sk, ro, at, cz, tr]
+sides:
+  - id: bo
+    name: Bocskai and the hajdús
+    polities: [transylvania]
+    ink: orange
+    moves: Moves by Bocskai’s forces
+    success: Success for Bocskai
+  - id: hb
+    name: Rudolf II and the Habsburgs
+    polities: [habsburg, hre]
+    ink: purple
+    moves: Habsburg moves
+    success: Habsburg success
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman, crimean-khanate]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Dates are Gregorian. Hungarian historians call the revolt Bocskai’s War of Independence. The Long Turkish War, of which it was part, has its own entry.
+  - Bocskai died in Kassa on 29 December 1606, a few weeks after the Peace of Zsitvatorok ended the Long Turkish War. His followers suspected poison and killed his chancellor, Mihály Káthay. Shortly before his death he settled thousands of hajdús as a privileged free community in the Hajdúság region.
+sources:
+  - title: Bocskai uprising (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bocskai_uprising
+  - title: Stephen Bocskai (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Stephen_Bocskai
+  - title: Peace of Vienna (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peace_of_Vienna
+  - title: Hajduk (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hajduk
+steps:
+  - title: The hajdús rise
+    date: 1604–1606
+    when: "1604-10"
+    borders: "1606-06-23"
+    countries: [hu, sk, ro, at, cz, tr]
+    body:
+      - By 1604 the long war had ruined much of Hungary, and Rudolf II’s government was using treason trials to seize the estates of rich nobles, while in Upper Hungary churches were taken from the Protestants; in January 1604 the cathedral of Kassa was handed to the Catholics. In the autumn the imperial commander Giovanni Giacomo Barbiano di Belgioioso moved against István Bocskai, a magnate and former Transylvanian commander whose letters to exiles in Ottoman territory had been intercepted. Bocskai won over the hajdús, cattle drovers turned frontier soldiers, and on the night of 14–15 October they routed an imperial force near Álmosd and Diószeg. In November Kassa opened its gates to him.
+      - Giorgio Basta, brought back from the Ottoman front, beat the rebels at Osgyán but could not take Kassa, and in the spring of 1605 he withdrew to Pozsony. Bocskai’s forces overran Upper Hungary and the lands east of the Tisza, and hajdú raiders plundered Moravia, Lower Austria and Styria. The Transylvanian estates elected him prince in February 1605, and the Hungarian diet at Szerencs made him prince of Hungary in April. In November the grand vizier Lala Mehmed Pasha gave him a crown, which he accepted only as a gift. He chose to negotiate, and on 23 June 1606 the Peace of Vienna restored the Hungarian estates’ rights, allowed Protestants to worship freely and left Transylvania and several eastern counties to Bocskai.
+    facts:
+      - [Battle of Álmosd, "14–15 October 1604, hajdú victory"]
+      - [Bocskai elected prince of Hungary, "Szerencs, April 1605"]
+      - [Peace of Vienna, 23 June 1606]
+    markers:
+      - kind: battle
+        side: bo
+        name: Álmosd
+        date: 14–15 October 1604
+        text: The hajdús surprised and routed an imperial column at night in the woods between Álmosd and Diószeg.
+        lonlat: [21.98, 47.41]
+      - kind: taken
+        side: bo
+        name: Kassa
+        date: November 1604
+        text: The chief city of Upper Hungary opened its gates to Bocskai and became his capital.
+        lonlat: [21.26, 48.72]
+      - kind: battle
+        side: hb
+        name: Osgyán
+        date: November 1604
+        text: Basta defeated the rebel captain Balázs Németi, who was taken and executed.
+        lonlat: [19.97, 48.39]
+      - kind: event
+        side: bo
+        name: Szerencs
+        date: April 1605
+        text: The Hungarian estates elected Bocskai prince of Hungary.
+        lonlat: [21.2, 48.16]
+        lp: l
+      - kind: event
+        side: ot
+        name: Rákos field
+        date: 11 November 1605
+        text: Near Pest the grand vizier Lala Mehmed Pasha presented Bocskai with a crown in the sultan’s name.
+        lonlat: [19.15, 47.5]
+      - kind: treaty
+        side: bo
+        name: Vienna
+        date: 23 June 1606
+        text: The peace guaranteed the Hungarian estates’ rights and Protestant worship, and confirmed Bocskai as prince of Transylvania.
+        lonlat: [16.37, 48.21]
+    arrows:
+      - side: hb
+        label: Basta
+        via: [[18.75, 47.8], [19.7, 48.3], [20.75, 48.3], [21.1, 48.65]]
+      - side: bo
+        label: Hajdú raids
+        via: [[18.9, 48.3], [17.9, 48.5], [17.0, 48.85]]

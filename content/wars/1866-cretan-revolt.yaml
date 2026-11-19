@@ -1,0 +1,84 @@
+id: cretan-revolt
+name: Cretan Revolt of 1866–1869
+start: "1866-08-21"
+end: "1869"
+tier: B
+summary: The largest of the nineteenth-century Christian risings in Ottoman Crete, which sought union with Greece. Ottoman and Egyptian troops held the towns and slowly won back the countryside; the destruction of the Arkadi monastery in November 1866, where defenders blew up the powder magazine, turned European opinion towards the Cretans, and the revolt ended in 1869 with a new Organic Law that gave the Christians a share in governing the island.
+countries: [gr, tr, eg]
+sides:
+  - id: cr
+    name: Cretan insurgents and Greek volunteers
+    polities: [cretan-insurgents]
+    ink: navy
+    moves: Insurgent moves
+    success: Insurgent success
+  - id: tr
+    name: Ottoman Empire and Egypt
+    polities: [ottoman, egypt]
+    ink: teal
+    moves: Ottoman and Egyptian moves
+    success: Ottoman and Egyptian success
+notes:
+  - Also called the Great Cretan Revolution. Numbers at Arkadi come from the commonly cited count of those in the monastery; the Ottoman losses there are an estimate.
+sources:
+  - title: Cretan revolt (1866–1869) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cretan_revolt_(1866%E2%80%931869)
+  - title: Arkadi Monastery (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Arkadi_Monastery
+  - title: Crete (Britannica)
+    url: https://www.britannica.com/place/Crete
+steps:
+  - title: Arkadi and the Cretan revolt
+    date: 1866 – 1869
+    when: "1866-08-21"
+    borders: "1867-06-01"
+    countries: [gr, tr, eg]
+    body:
+      - Crete had stayed Ottoman when Greece became independent, and its Christian majority rose again in 1841 and 1858. The reforms promised after the Crimean War came slowly, and in 1866 a quarrel over the property of the monasteries brought matters to a head. Assemblies of Christian notables petitioned the Sultan, and on 21 August 1866 they proclaimed a revolt and union with Greece. The insurgents, joined by volunteers from Greece, took most of the countryside, while the Ottomans held the fortified towns of the north coast. Egypt’s Khedive Ismail sent a large force of infantry to help put the rising down.
+      - The monastery of Arkadi, near Rethymno, was a centre of the revolt. On 8 November 1866 an Ottoman army of perhaps 15,000 men with artillery attacked it; inside were 964 people, of whom 259 were armed men and most of the rest women and children. On the second day the attackers broke in, and the defenders set fire to the powder magazine, killing themselves and many of the soldiers. About 864 of those in the monastery died and 114 were taken prisoner; Ottoman losses are put at about 1,500. Reported abroad by telegraph, the “holocaust of Arkadi” caused outrage, and volunteers from Italy, France, Hungary and Serbia joined the Cretans.
+      - In May 1867 Omer Pasha’s troops overran the Lasithi plateau in the east, and from October 1867 the grand vizier, Âli Pasha, spent four months on the island, building blockhouses and offering reform. His Organic Law of 1868 gave the Christians a large share in local government. Greek ships kept running guns to the rebels until a conference of the powers in Paris in early 1869 made Greece stop, and by then most rebel leaders had submitted.
+    facts:
+      - [Revolt proclaimed, 21 August 1866]
+      - [Arkadi, "8–9 November 1866, about 864 dead among the defenders and refugees"]
+      - [Organic Law, "1868"]
+    markers:
+      - kind: siege
+        side: tr
+        name: Arkadi
+        date: 8–9 November 1866
+        text: When the Ottomans broke into the monastery, the defenders blew up the powder magazine with the women and children who had taken refuge there.
+        lonlat: [24.629, 35.31]
+      - kind: held
+        side: tr
+        name: Chania
+        date: 1866–1869
+        text: The governor’s seat and the base of the Ottoman and Egyptian troops; the four fortified towns of the north coast never fell to the rebels.
+        lonlat: [24.017, 35.517]
+      - kind: held
+        side: tr
+        name: Rethymno
+        date: November 1866
+        text: The survivors of Arkadi were brought here as prisoners; the men were held for a year.
+        lonlat: [24.474, 35.369]
+        lp: b
+      - kind: held
+        side: cr
+        name: Sfakia
+        date: 1866–1869
+        text: The mountain district on the south coast, a rebel stronghold in every Cretan rising.
+        lonlat: [24.133, 35.2]
+      - kind: taken
+        side: tr
+        name: Lasithi plateau
+        date: May 1867
+        text: Ottoman and Egyptian troops under Omer Pasha fought their way onto the upland plain, a rebel base in the east of the island, and laid it waste.
+        lonlat: [25.467, 35.183]
+    arrows:
+      - side: tr
+        label: Mustafa Pasha
+        via: [[24.47, 35.37], [24.55, 35.33], [24.61, 35.31]]
+    areas:
+      - style: contested
+        side: cr
+        label: Countryside largely held by the insurgents, 1866–1867 (approximate)
+        atoms: [GR-M]

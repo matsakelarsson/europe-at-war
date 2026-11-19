@@ -1,0 +1,151 @@
+id: bulgarian-latin-wars
+name: Bulgarian–Latin wars
+start: "1205-02"
+end: "1213"
+tier: B
+summary: The wars between the Second Bulgarian Empire and the Latin Empire founded by the Fourth Crusade. Tsar Kaloyan, joined by the Greek nobles of Thrace, destroyed the Latin army at Adrianople in 1205, captured the emperor Baldwin I and ravaged Thrace until his death at Thessalonica in 1207; his successor Boril was beaten by the emperor Henry at Philippopolis in 1208, and peace followed in 1213.
+countries: [bg, gr, tr]
+sides:
+  - id: bg
+    name: Bulgaria
+    polities: [bulgaria]
+    ink: green
+    moves: Bulgarian moves
+    success: Bulgarian success
+  - id: la
+    name: Latin Empire
+    polities: [latin-empire, kingdom-of-thessalonica]
+    ink: orange
+    moves: Latin moves
+    success: Latin success
+  - id: gr
+    name: Greeks of Thrace
+    polities: []
+    ink: purple
+    moves: Greek moves
+    success: Greek success
+notes:
+  - Dates are Julian. The main sources are the crusader chroniclers Geoffrey of Villehardouin and Henry of Valenciennes and the Byzantine historians Niketas Choniates and George Akropolites; numbers of soldiers vary widely between them.
+  - Fighting between Bulgaria and the Latin Empire flared up again later, notably in the siege of Constantinople of 1235–1236, told under the Nicaean–Latin wars.
+sources:
+  - title: Bulgarian–Latin wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bulgarian%E2%80%93Latin_wars
+  - title: Battle of Adrianople (1205) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Adrianople_(1205)
+  - title: Battle of Rusion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Rusion
+  - title: Kaloyan of Bulgaria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kaloyan_of_Bulgaria
+  - title: Battle of Philippopolis (1208) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Philippopolis_(1208)
+  - title: Henry of Flanders (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Henry_of_Flanders
+steps:
+  - title: Adrianople
+    date: February–summer 1205
+    when: "1205-02"
+    borders: "1205-04-14"
+    countries: [bg, tr, gr]
+    body:
+      - Kaloyan had offered the crusaders friendship after they took Constantinople in 1204, but the emperor Baldwin I treated him as a rebel against lands that had belonged to the Byzantine Empire. The Greek nobles of Thrace, ill-used by their new Latin lords, rose in February 1205, killed or drove out Latin garrisons in Adrianople and Didymoteicho, and called on Kaloyan for help. Baldwin marched to besiege Adrianople with Count Louis of Blois and the doge Enrico Dandolo before all his forces had gathered.
+      - Kaloyan came south with Bulgarians, Vlachs and a large force of Cuman horsemen. On 14 April 1205 the Cumans drew the Latin knights into a headlong pursuit, and Kaloyan’s army surrounded them. Louis of Blois was killed and Baldwin taken prisoner; he died in captivity at Tarnovo. Villehardouin and Dandolo led the survivors back to Rodosto. In the summer Kaloyan took Serres and much of Thrace, and he destroyed Philippopolis after its Greek leaders had submitted to him.
+    facts:
+      - [Thracian Greek rising, February 1205]
+      - [Battle of Adrianople, "14 April 1205, Bulgarian victory"]
+      - [Emperor Baldwin I, "captured, died in captivity"]
+    markers:
+      - kind: event
+        side: gr
+        name: Didymoteicho
+        date: February 1205
+        text: The Greeks rose here and at Adrianople and drove out the Latins, beginning the revolt that brought Kaloyan into Thrace.
+        lonlat: [26.5, 41.35]
+        lp: b
+      - kind: battle
+        side: bg
+        name: Battle of Adrianople
+        date: 14 April 1205
+        text: Cuman horse archers feigned flight and drew the Latin knights away from their camp. The Latin army was destroyed and its emperor captured.
+        lonlat: [26.567, 41.667]
+      - kind: event
+        side: la
+        name: Rodosto
+        date: April 1205
+        text: The survivors fell back to this port on the Sea of Marmara, which the Venetians held.
+        lonlat: [27.515, 40.978]
+      - kind: taken
+        side: bg
+        name: Serres
+        date: June 1205
+        text: Kaloyan took the town after a short siege; the Latin garrison surrendered on terms but was killed.
+        lonlat: [23.55, 41.083]
+      - kind: taken
+        side: bg
+        name: Philippopolis
+        date: summer 1205
+        text: Kaloyan razed the walls of the city and had many of its leading citizens executed.
+        lonlat: [24.75, 42.15]
+    arrows:
+      - side: bg
+        label: Kaloyan
+        via: [[25.62, 43.05], [26.2, 42.4], [26.55, 41.72]]
+      - side: la
+        label: Baldwin I
+        via: [[28.92, 41.02], [27.8, 41.15], [26.62, 41.66]]
+      - side: bg
+        label: Summer 1205
+        via: [[26.5, 41.6], [24.8, 41.3], [23.6, 41.1]]
+  - title: Kaloyan’s campaigns and Philippopolis
+    date: 1206–1213
+    when: "1206-01-31"
+    borders: "1208-06-30"
+    countries: [bg, tr, gr]
+    body:
+      - Kaloyan pressed on. On 31 January 1206 he destroyed a Latin force at Rusion, and his armies ravaged Thrace, taking and wrecking towns and carrying off their people. He called himself “the Roman-slayer”, answering the Byzantine emperor Basil II’s name of “Bulgar-slayer”, and the Thracian Greeks, alarmed, turned back to the Latins. Baldwin’s brother Henry, crowned emperor in August 1206, relieved Didymoteicho and won back much of Thrace. In September 1207 Boniface of Thessalonica was killed in a Bulgarian ambush, and Kaloyan besieged Thessalonica, but in October he died in his camp, perhaps murdered.
+      - His nephew Boril seized the throne and carried on the war. In June 1208 he beat the Latins near Beroe (Stara Zagora), but on 30 June 1208, near Philippopolis, Henry’s army routed him, and the Latins recovered the plain of Philippopolis. Boril’s cousin Alexius Slav, lord of the Rhodopes, went over to the Latins. In 1213 Henry married Boril’s daughter and the two states made peace, which held for the rest of Henry’s reign.
+    facts:
+      - [Battle of Rusion, "31 January 1206, Bulgarian victory"]
+      - [Death of Kaloyan, "October 1207, before Thessalonica"]
+      - [Battle of Philippopolis, "30 June 1208, Latin victory"]
+    markers:
+      - kind: battle
+        side: bg
+        name: Battle of Rusion
+        date: 31 January 1206
+        text: Kaloyan’s Cumans ambushed and destroyed a Latin force of more than a hundred knights and their men near the town.
+        lonlat: [26.633, 40.853]
+      - kind: event
+        side: bg
+        name: Mosynopolis
+        date: 4 September 1207
+        text: Boniface of Montferrat, king of Thessalonica, was killed in a Bulgarian ambush in the Rhodope foothills near the town. His head was sent to Kaloyan.
+        lonlat: [25.4, 41.12]
+      - kind: held
+        side: la
+        name: Thessalonica
+        date: October 1207
+        text: Kaloyan’s siege ended with his sudden death. Legend credited St Demetrius, the city’s patron, with killing him.
+        lonlat: [22.936, 40.64]
+      - kind: battle
+        side: bg
+        name: Beroe
+        date: June 1208
+        text: Boril surprised Henry’s army in camp at night and inflicted heavy losses, though the Latins withdrew in good order.
+        lonlat: [25.63, 42.42]
+      - kind: battle
+        side: la
+        name: Battle of Philippopolis
+        date: 30 June 1208
+        text: Henry’s knights broke the Bulgarian army in the hills near the city. Boril fled, and the Latins took back the plain of Philippopolis.
+        lonlat: [24.75, 42.15]
+        lp: l
+    arrows:
+      - side: bg
+        label: Kaloyan, 1206
+        via: [[26.0, 42.0], [26.4, 41.2], [26.62, 40.88]]
+      - side: bg
+        label: Kaloyan, 1207
+        via: [[24.75, 42.1], [23.6, 41.2], [22.98, 40.68]]
+      - side: la
+        label: Henry, 1208
+        via: [[26.56, 41.68], [25.65, 42.38], [24.8, 42.15]]

@@ -1,0 +1,155 @@
+id: cretan-war
+name: Cretan War
+start: "1645"
+end: "1669-09-27"
+tier: B
+summary: The fifth Ottoman–Venetian war, also called the War of Candia, in which the Ottoman Empire took Crete from Venice. The Ottomans landed in 1645 and overran most of the island within three years, but the capital, Candia, held out for over twenty years while the Venetian fleet fought to blockade the Dardanelles. With help from the papacy, Malta and France, Venice won most of the battles at sea, yet in 1669 Francesco Morosini surrendered Candia after one of the longest sieges in history.
+countries: [gr, tr, hr, mt, it, fr]
+sides:
+  - id: ve
+    name: Republic of Venice
+    polities: [venice]
+    ink: red
+    moves: Venetian moves
+    success: Venetian success
+  - id: al
+    name: Venice’s allies
+    polities: [malta, papal-states, tuscany, france, savoy]
+    ink: gold
+    moves: Allied moves
+    success: Allied success
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Dates are Gregorian. Morosini agreed the terms of surrender on 5–6 September 1669; the city was handed over on 27 September.
+  - Casualty figures for the siege of Candia come mostly from Venetian and other Christian accounts and are uncertain. The war was also fought in Dalmatia, where Venice lost Novigrad in 1646 but in 1647–1648 retook it, beat off an Ottoman siege of Šibenik and took the fortress of Klis.
+sources:
+  - title: Cretan War (1645–1669) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cretan_War_(1645%E2%80%931669)
+  - title: Siege of Chania (1645) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Chania_(1645)
+  - title: Battle of the Dardanelles (1656) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Dardanelles_(1656)
+  - title: Siege of Candia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Candia
+  - title: Francesco Morosini (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Francesco_Morosini
+steps:
+  - title: The landing and Chania
+    date: 1644–1648
+    when: "1644-09-28"
+    borders: "1646-11"
+    countries: [gr, tr, mt]
+    body:
+      - On 28 September 1644 galleys of the Knights of Malta captured an Ottoman convoy bound for Egypt with pilgrims for Mecca aboard, among them the former chief black eunuch of the sultan’s palace, who was killed. The knights stopped briefly on the south coast of Venetian Crete before sailing home with their captives. Sultan Ibrahim’s government accused Venice of complicity and prepared a great fleet, which it said was bound for Malta. Instead it appeared off Crete on 23 June 1645 and landed an army west of Chania.
+      - Chania surrendered on 22 August after a siege of about two months, and the Venetian relief efforts, joined by papal, Tuscan, Neapolitan and Maltese galleys, came too late. In 1646 the Ottomans took Rethymno, whose citadel surrendered in November, and by early 1648 they held the whole island except Candia and a few fortified islets. Plague and war killed a large part of Crete’s people; by one estimate almost two-fifths had died by 1648.
+    facts:
+      - [Ottoman fleet off Crete, 23 June 1645]
+      - [Chania surrenders, 22 August 1645]
+      - [Rethymno taken, November 1646]
+    markers:
+      - kind: taken
+        side: ot
+        name: Chania
+        date: 22 August 1645
+        text: The second city of Crete surrendered after a siege of about two months and became the Ottoman base on the island.
+        lonlat: [24.02, 35.52]
+      - kind: taken
+        side: ot
+        name: Rethymno
+        date: November 1646
+        text: The town fell in October and its citadel, the Fortezza, surrendered in November.
+        lonlat: [24.47, 35.37]
+    arrows:
+      - side: ot
+        label: Ottoman fleet
+        via: [[26.2, 40.1], [24.0, 38.3], [21.7, 36.9], [23.7, 35.6]]
+  - title: Battles at the Dardanelles
+    date: 1646–1657
+    when: "1646-05-26"
+    borders: "1657-11"
+    countries: [tr, gr, mt]
+    body:
+      - Unable to drive the Ottomans out of Crete, Venice tried to cut their supply line by blockading the Dardanelles, through which troops and stores sailed from Constantinople. The blockade was hard to keep up with oared galleys, and Ottoman convoys often got through. Still, Venetian fleets won most of the fights at sea, among them a three-day battle off Naxos in July 1651, and in 1655 Francesco Morosini raided Aegina and burned the port of Volos. The Ottomans began to add sailing warships, galleons, to their fleet of galleys.
+      - On 26 June 1656 a Venetian and Maltese fleet under Lorenzo Marcello caught Kenan Pasha’s larger fleet coming out of the straits and destroyed it, the worst Ottoman naval defeat since Lepanto. Marcello was killed, but some 5,000 Christian galley slaves were freed, and Venice took the islands of Tenedos and Lemnos. The new grand vizier, Köprülü Mehmed Pasha, restored Ottoman fortunes. In July 1657 a new three-day battle at the straits ended when the Venetian flagship blew up, killing its commander, Lazzaro Mocenigo, and the Ottomans retook both islands.
+    facts:
+      - [Battle of the Dardanelles, "26 June 1656, Venetian victory"]
+      - [Christian galley slaves freed, "about 5,000"]
+      - [Tenedos and Lemnos, "Venetian 1656–1657"]
+    markers:
+      - kind: naval
+        side: ve
+        name: Battle of the Dardanelles, 1656
+        date: 26 June 1656
+        text: The Venetian and Maltese fleet destroyed most of the Ottoman fleet at the mouth of the straits.
+        lonlat: [26.2, 40.05]
+      - kind: naval
+        side: ot
+        name: Battle of the Dardanelles, 1657
+        date: 17–19 July 1657
+        text: The Ottoman fleet broke the blockade after a running fight in which the Venetian flagship exploded.
+        lonlat: [26.0, 39.95]
+        lp: l
+      - kind: taken
+        side: ot
+        name: Lemnos
+        date: November 1657
+        text: Taken by Venice in August 1656, the island was retaken by the Ottomans after a long siege.
+        lonlat: [25.24, 39.88]
+      - kind: naval
+        side: ve
+        name: Battle of Naxos
+        date: 10 July 1651
+        text: Alvise Mocenigo’s fleet beat an Ottoman fleet about twice its size south of the island.
+        lonlat: [25.4, 36.9]
+    areas:
+      - style: occupied
+        side: ot
+        label: Crete, occupied by the Ottomans except Candia and island forts
+        atoms: [GR-M]
+  - title: The siege of Candia
+    date: 1648–1669
+    when: "1648-05"
+    borders: "1669-09-27"
+    countries: [gr, tr, fr, it, mt, hr]
+    body:
+      - The siege of Candia began in May 1648, but for years it was more a blockade than a siege, as the Ottomans lacked the strength to take the city’s great bastions and Venice could still bring in supplies by sea. A French corps came in 1660 and achieved little. Once peace with the emperor was made at Vasvár in 1664, the grand vizier Köprülü Fazıl Ahmed Pasha came to Crete himself with fresh troops, and from May 1667 the Ottomans pressed the siege with mines and assaults, met by countermines and sorties. By one Venetian count about 108,000 Ottomans and 29,000 defenders died in the last phase of the siege.
+      - In June 1669 a French force of some 6,000 men under the Duke of Beaufort landed, but its sortie on 25 June was thrown back and Beaufort was killed. A French warship blew up by accident in July, and in August the French sailed away. Francesco Morosini, with only a few thousand fit men left, agreed terms early in September, and on 27 September Candia was handed over. Its people were allowed to leave with their belongings. Venice kept three island forts off Crete and some gains in Dalmatia, including Klis.
+    facts:
+      - [Siege of Candia, "May 1648 – September 1669"]
+      - [French relief force, "about 6,000, 1669"]
+      - [Candia handed over, 27 September 1669]
+    markers:
+      - kind: taken
+        side: ot
+        name: Candia
+        date: 27 September 1669
+        text: After more than twenty years under siege, the capital of Crete was surrendered by Francesco Morosini.
+        lonlat: [25.14, 35.34]
+      - kind: held
+        side: ve
+        name: Souda
+        date: until 1715
+        text: Venice kept this fortified islet, and Gramvousa and Spinalonga, as harbours for its ships.
+        lonlat: [24.2, 35.49]
+        lp: t
+      - kind: held
+        side: ve
+        name: Spinalonga
+        date: until 1715
+        text: The island fortress stayed Venetian after the peace, until 1715.
+        lonlat: [25.74, 35.3]
+      - kind: taken
+        side: ve
+        name: Klis
+        date: 1648
+        text: The Venetians took this fortress above Split in 1648 and kept it in the peace.
+        lonlat: [16.52, 43.56]
+    arrows:
+      - side: al
+        label: French relief, 1669
+        via: [[5.9, 43.1], [12.5, 37.5], [20.5, 35.5], [25.1, 35.4]]

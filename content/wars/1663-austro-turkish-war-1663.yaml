@@ -1,0 +1,143 @@
+id: austro-turkish-war-1663
+name: Austro-Turkish War (1663–1664)
+start: "1663"
+end: "1664-08-10"
+tier: B
+summary: A war between Emperor Leopold I and the Ottoman Empire, revived under the Köprülü grand viziers. Fazıl Ahmed Pasha took Érsekújvár in 1663, and the Croatian–Hungarian ban Nikola Zrinski answered with a daring winter raid that burned the Ottoman bridge at Osijek. An imperial army with German and French contingents under Raimondo Montecuccoli won at Saint Gotthard in August 1664, but the Peace of Vasvár nine days later left the Ottomans their conquests and angered the Hungarian nobility.
+countries: [hu, sk, hr, at, cz, ro, tr]
+sides:
+  - id: hb
+    name: Leopold I and his allies
+    polities: [habsburg, hre]
+    ink: purple
+    moves: Imperial moves
+    success: Imperial success
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman, crimean-khanate]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Dates are Gregorian. Sources disagree on the date of Érsekújvár’s surrender, giving dates between 13 and 26 September 1663.
+  - Nikola Zrinski (in Hungarian Zrínyi Miklós), poet and general, was the great-grandson of the defender of Szigetvár in 1566. He died in a hunting accident in November 1664. The anger at the Peace of Vasvár fed the Magnate Conspiracy, whose leaders, among them his brother Petar Zrinski and Fran Krsto Frankopan, were executed in 1671.
+  - The war grew out of the Transylvanian–Ottoman war of 1658–1662, which has its own entry.
+sources:
+  - title: Austro-Turkish War (1663–1664) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Austro-Turkish_War_(1663%E2%80%931664)
+  - title: Siege of Érsekújvár (1663) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_%C3%89rsek%C3%BAjv%C3%A1r_(1663)
+  - title: Siege of Kanizsa (1664) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kanizsa_(1664)
+  - title: Battle of Saint Gotthard (1664) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Saint_Gotthard_(1664)
+  - title: Peace of Vasvár (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peace_of_Vasv%C3%A1r
+  - title: Novi Zrin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Novi_Zrin
+steps:
+  - title: Érsekújvár and the winter campaign
+    date: 1663 – February 1664
+    when: "1663-04"
+    borders: "1664-02-01"
+    countries: [sk, hu, hr, cz, tr]
+    body:
+      - After the Ottomans crushed Transylvania’s bid for independence and took Várad in 1660, Leopold I sent troops under Raimondo Montecuccoli into Transylvania, and the ban of Croatia, Nikola Zrinski, raided Ottoman land from his new fortress of Novi Zrin on the Mura. In 1663 the grand vizier Köprülü Fazıl Ahmed Pasha led a large army, perhaps 100,000 men, up the Danube. On 7 August it routed a force under Ádám Forgách, commander of Érsekújvár, at Párkány, and then besieged his fortress, the chief Habsburg stronghold north of the Danube, which surrendered on terms in September.
+      - Ottoman and Tatar raiders crossed the Váh and devastated western Upper Hungary and Moravia, carrying off thousands of captives, and Nógrád fell too. Zrinski struck back in midwinter. In January 1664, with about 25,000 Croatian, Hungarian and German troops, he marched some 240 kilometres down the Drava, taking Berzence and Babócsa and burning the town of Pécs, and on 1 February he set fire to the Ottoman army’s great wooden bridge across the Drava marshes at Osijek. The raid made him famous throughout Europe.
+    facts:
+      - [Battle of Párkány, "7 August 1663, Ottoman victory"]
+      - [Érsekújvár surrenders, September 1663]
+      - [Osijek bridge burned, 1 February 1664]
+    markers:
+      - kind: battle
+        side: ot
+        name: Párkány
+        date: 7 August 1663
+        text: Ádám Forgách’s attempt to surprise the Ottoman camp across from Esztergom ended in a rout.
+        lonlat: [18.72, 47.8]
+      - kind: taken
+        side: ot
+        name: Érsekújvár
+        date: September 1663
+        text: The modern fortress surrendered after a siege of about six weeks and became the centre of a new Ottoman province.
+        lonlat: [18.16, 47.99]
+      - kind: taken
+        side: ot
+        name: Nógrád
+        date: autumn 1663
+        text: The castle fell to the grand vizier after Érsekújvár.
+        lonlat: [19.04, 47.9]
+      - kind: event
+        side: hb
+        name: Pécs
+        date: January 1664
+        text: Zrinski’s army burned the town but did not take its castle.
+        lonlat: [18.23, 46.07]
+      - kind: event
+        side: hb
+        name: Osijek bridge
+        date: 1 February 1664
+        text: Zrinski burned this long wooden bridge and causeway, the Ottoman army’s route from Belgrade into Hungary.
+        lonlat: [18.69, 45.58]
+    arrows:
+      - side: ot
+        label: Köprülü Fazıl Ahmed Pasha
+        via: [[19.04, 47.5], [18.75, 47.78], [18.2, 47.95]]
+      - side: ot
+        label: Tatar raids
+        via: [[18.2, 48.05], [17.85, 48.4], [17.6, 48.95]]
+      - side: hb
+        label: Zrinski’s winter campaign
+        via: [[16.88, 46.3], [17.4, 46.05], [18.2, 46.03], [18.66, 45.62]]
+  - title: Saint Gotthard and Vasvár
+    date: April – August 1664
+    when: "1664-04-28"
+    borders: "1664-08-10"
+    countries: [hu, hr, at, sk, ro, tr]
+    body:
+      - In late April Zrinski and the imperial general Wolfgang Julius von Hohenlohe besieged Kanizsa, but they could not breach its walls, and on 2 June, as the grand vizier’s army approached, they withdrew. The Ottomans then besieged Novi Zrin, and Montecuccoli would not risk an attack to save it; the fortress was destroyed on 7 July. Fazıl Ahmed marched north towards Styria. On 1 August Montecuccoli’s imperial army, with troops of the Empire and a French corps of 6,000 sent by Louis XIV, met him at the Rába between Mogersdorf and the abbey of Szentgotthárd. Ottoman troops crossed the river and drove back the imperial centre, but a counter-attack threw them back into the swollen river with heavy losses.
+      - In the north Jean-Louis Raduit de Souches retook Nitra and won at Léva. Yet on 10 August, nine days after the battle, Leopold’s envoy signed the Peace of Vasvár. The emperor, worried about France and the Spanish succession, accepted a twenty-year truce in which the Ottomans kept Várad, Érsekújvár and Nógrád, both armies left Transylvania, whose Ottoman-backed prince Michael I Apafi was recognised, and Leopold sent the sultan a “gift” of 200,000 florins. Many Hungarian and Croatian nobles saw it as a betrayal.
+    facts:
+      - [Battle of Saint Gotthard, "1 August 1664, imperial victory"]
+      - [Peace of Vasvár, "10 August 1664, a twenty-year truce"]
+      - [Ottomans keep, "Várad, Érsekújvár and Nógrád"]
+    markers:
+      - kind: held
+        side: ot
+        name: Kanizsa
+        date: April – June 1664
+        text: Zrinski and Hohenlohe besieged the Ottoman fortress for a month but withdrew as the grand vizier approached.
+        lonlat: [16.99, 46.45]
+      - kind: taken
+        side: ot
+        name: Novi Zrin
+        date: 7 July 1664
+        text: Zrinski’s fortress at the mouth of the Mura was taken and destroyed by the grand vizier’s army.
+        lonlat: [16.88, 46.32]
+        lp: l
+      - kind: battle
+        side: hb
+        name: Battle of Saint Gotthard
+        date: 1 August 1664
+        text: Montecuccoli’s imperial, German and French troops threw the Ottoman army back across the Rába.
+        lonlat: [16.22, 46.94]
+      - kind: battle
+        side: hb
+        name: Léva
+        date: 19 July 1664
+        text: Jean-Louis Raduit de Souches defeated an Ottoman force in the north of Hungary.
+        lonlat: [18.6, 48.22]
+      - kind: treaty
+        name: Vasvár
+        date: 10 August 1664
+        text: The peace left the Ottomans their recent conquests, despite their defeat at Saint Gotthard.
+        lonlat: [16.8, 47.05]
+    arrows:
+      - side: ot
+        label: Köprülü Fazıl Ahmed Pasha
+        via: [[16.95, 46.4], [16.6, 46.7], [16.28, 46.92]]
+    areas:
+      - style: gained
+        side: ot
+        label: Érsekújvár, kept by the Ottomans
+        atoms: [SK-NI~hu1938]

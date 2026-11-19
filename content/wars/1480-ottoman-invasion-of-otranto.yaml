@@ -1,0 +1,63 @@
+id: ottoman-invasion-of-otranto
+name: Ottoman invasion of Otranto
+start: "1480-07-28"
+end: "1481-09-10"
+tier: B
+summary: The Ottoman landing in southern Italy in 1480, when Gedik Ahmed Pasha crossed from Albania and stormed the Neapolitan port of Otranto. The capture, and the killing of many of its people, caused panic in Italy and led the pope to call the Italian states and Hungary to its defence. After Mehmed II’s death in May 1481 the isolated garrison surrendered to Alfonso of Calabria in September.
+countries: [it, al]
+sides:
+  - id: nap
+    name: Naples and its allies
+    polities: [naples, hungary, papal-states]
+    ink: purple
+    moves: Neapolitan moves
+    success: Neapolitan success
+  - id: ott
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - The traditional account, followed by the Church, says that on 14 August 1480 about 800 men of Otranto were beheaded on a nearby hill for refusing to give up their faith; they were canonised in 2013. Some modern historians question the religious motive and the larger figures given for the population and the dead, such as 12,000 killed out of 22,000, which are much exaggerated.
+  - Some contemporaries suspected that Venice, then at peace with the Ottomans, had encouraged the attack on its rival Naples; this has never been proved.
+sources:
+  - title: Ottoman conquest of Otranto (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ottoman_conquest_of_Otranto
+  - title: Martyrs of Otranto (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Martyrs_of_Otranto
+  - title: Gedik Ahmed Pasha (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Gedik_Ahmed_Pasha
+steps:
+  - title: Otranto
+    date: July 1480 – September 1481
+    when: "1480-07-28"
+    borders: "1480-08-11"
+    countries: [it, al]
+    body:
+      - In the summer of 1480 Gedik Ahmed Pasha, who had just taken the Ionian islands, gathered a fleet at Vlorë and crossed the strait of Otranto. He had meant to land near Brindisi but turned south, and on 28 July his army came ashore near Otranto, the easternmost town of the Kingdom of Naples. The town was bombarded, and on 11 August it was stormed. Many of its people were killed or enslaved, and on 14 August, according to tradition, some 800 men who refused to convert were beheaded. Ottoman raiders rode towards Lecce, Brindisi and Taranto.
+      - King Ferdinand of Naples recalled his son Alfonso, Duke of Calabria, from Tuscany, and Pope Sixtus IV called for a league of the Italian states; Hungary sent troops, but Venice stayed out. Over the winter the Ottomans held the town while Gedik Ahmed went back to Albania for reinforcements. The news that Mehmed II had died on 3 May 1481 ended any hope of relief, and the Neapolitan and Hungarian besiegers tightened their grip. On 10 September 1481 the garrison surrendered, and the threat of an Ottoman invasion of Italy passed for a generation.
+    facts:
+      - [Ottomans land, 28 July 1480]
+      - [Otranto stormed, 11 August 1480]
+      - [Ottoman garrison surrenders, 10 September 1481]
+    markers:
+      - kind: taken
+        side: ott
+        name: Otranto
+        date: 11 August 1480
+        text: Stormed after a two-week siege; the Ottomans held it for thirteen months. It was retaken by Alfonso of Calabria on 10 September 1481.
+        lonlat: [18.483, 40.15]
+      - kind: event
+        side: ott
+        name: Vlorë
+        date: July 1480
+        text: The Ottoman fleet gathered at this Albanian port for the crossing.
+        lonlat: [19.483, 40.467]
+    arrows:
+      - side: ott
+        label: Gedik Ahmed Pasha
+        via: [[19.45, 40.47], [19.0, 40.35], [18.53, 40.17]]
+      - side: ott
+        label: Ottoman raiders
+        via: [[18.45, 40.18], [18.17, 40.35], [17.95, 40.63]]

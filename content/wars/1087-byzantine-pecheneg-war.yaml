@@ -1,0 +1,101 @@
+id: byzantine-pecheneg-war
+name: Byzantine–Pecheneg war
+start: "1087"
+end: "1091-04-29"
+tier: B
+summary: The war in which the Pechenegs, Turkic nomads settled along the lower Danube, defeated the Byzantine emperor Alexios I Komnenos at Dristra in 1087 and raided Thrace for four years, coming close to Constantinople. With the help of the Cumans, Alexios destroyed their host at Levounion near the mouth of the Hebros on 29 April 1091.
+countries: [bg, ro, tr, gr, ua]
+sides:
+  - id: by
+    name: Byzantine Empire
+    polities: [byzantium]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+  - id: pe
+    name: Pechenegs
+    polities: [pechenegs]
+    ink: magenta
+    moves: Pecheneg moves
+    success: Pecheneg success
+  - id: cu
+    name: Cumans
+    polities: [cuman-kipchak-confederation]
+    ink: orange
+    moves: Cuman moves
+    success: Cuman success
+notes:
+  - Almost everything known about this war comes from the Alexiad, the history of Alexios’s reign written decades later by his daughter Anna Komnene, who calls the Pechenegs “Scythians”. Her numbers are very large and her dates are not always clear.
+  - The Pechenegs had crossed the lower Danube into the Byzantine province of Paristrion (Paradounavon) in the 1040s and lived there beside local lords who were only loosely subject to the empire.
+sources:
+  - title: Battle of Dristra (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Dristra
+  - title: Battle of Levounion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Levounion
+  - title: Pechenegs (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pechenegs
+  - title: Alexios I Komnenos (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Alexios_I_Komnenos
+  - title: Tzachas (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tzachas
+steps:
+  - title: Dristra
+    date: 1087–1090
+    when: "1087-08"
+    borders: "1087-08-31"
+    countries: [bg, ro, tr]
+    body:
+      - In the 1080s, while Alexios I Komnenos fought the Normans in the west and the Turks held most of Anatolia, the Pechenegs on the lower Danube became a third threat. In 1087 a large Pecheneg host raided deep into Thrace before Byzantine troops drove it back. That summer Alexios, rejecting Pecheneg offers of peace, crossed the Haemus (Balkan Mountains) to strike at their homeland and reached Dristra (Silistra), the chief town of the Danube province.
+      - In August 1087 Alexios took the town but not its citadels and, fearing the arrival of the main Pecheneg army, began to withdraw. The Pechenegs caught up with him. The battle was hard fought until fresh Pecheneg horsemen arrived and the Byzantine army broke. Alexios barely escaped, and many of his men were killed or captured. A quarrel between the Pechenegs and the Cumans over the spoils gave the empire a pause, but for the next three years the Pechenegs raided Thrace almost at will, and Alexios could do little more than buy truces.
+    facts:
+      - [Battle of Dristra, "August 1087, Pecheneg victory"]
+      - [Pecheneg raids into Thrace, 1088–1090]
+    markers:
+      - kind: battle
+        side: pe
+        name: Battle of Dristra
+        date: August 1087
+        text: The Byzantine army was routed as it withdrew from the Danube. Alexios fought his way out with a few companions, carrying, Anna Komnene says, a cloak said to be the Virgin’s as a banner until he had to hide it in a bush.
+        lonlat: [27.261, 44.117]
+    arrows:
+      - side: by
+        label: Alexios I
+        via: [[28.9, 41.05], [26.9, 42.4], [26.9, 43.25], [27.2, 44.05]]
+      - side: pe
+        label: Pecheneg raids
+        via: [[27.6, 44.0], [26.7, 42.8], [26.55, 41.75]]
+  - title: Levounion
+    date: 1090–1091
+    when: "1090"
+    borders: "1091-04-29"
+    countries: [tr, gr, ua]
+    body:
+      - In 1090 the danger came close to the capital. The Pechenegs moved south and spent the winter in Thrace near Constantinople, and the Turkish emir Tzachas of Smyrna, who had built a fleet and seized several Aegean islands, sought to join them in an attack on the city by land and sea. Alexios gathered every soldier he could, raised new levies, took Western knights into his service and bought the help of the Cumans, nomads from the steppe north of the Black Sea, whose khans Tugorkhan and Boniak brought a large army south in the spring of 1091.
+      - On 29 April 1091 the Byzantines and Cumans attacked the Pecheneg camp at Levounion, a hill near the mouth of the Hebros (Maritsa), not far from Ainos. The Pechenegs, with their women and children in a ring of wagons, were surrounded and overwhelmed. Most of them were killed, families as well as warriors. Anna Komnene wrote that a whole people was wiped out in a single day, and a saying arose that the Pechenegs never saw May. Survivors were settled in the empire or taken into its army, and the Pechenegs did not threaten Byzantium again until 1122.
+    facts:
+      - [Battle of Levounion, "29 April 1091, Byzantine and Cuman victory"]
+      - [Allies, "Cumans under Tugorkhan and Boniak"]
+    markers:
+      - kind: battle
+        side: by
+        name: Battle of Levounion
+        date: 29 April 1091
+        text: The Byzantine and Cuman cavalry closed around the Pecheneg wagon camp from both wings, and the defence collapsed. The killing went on until the soldiers, as Anna Komnene put it, grew tired of striking.
+        lonlat: [26.15, 40.8]
+      - kind: event
+        name: Smyrna
+        date: 1088–1091
+        text: Seat of the emir Tzachas, a former captive at the Byzantine court, who used Greek shipbuilders to build a fleet and took Lesbos, Chios and other islands.
+        lonlat: [27.132, 38.424]
+      - kind: event
+        name: Constantinople
+        date: winter 1090–1091
+        text: With the Pechenegs camped in Thrace and Tzachas’s ships in the Aegean, the capital was more threatened than at any time since the Arab sieges.
+        lonlat: [28.955, 41.014]
+    arrows:
+      - side: cu
+        label: Cumans
+        via: [[28.0, 44.6], [27.3, 42.7], [26.5, 41.4], [26.2, 40.85]]
+      - side: by
+        label: Alexios I
+        via: [[28.85, 41.02], [27.5, 40.97], [26.6, 40.86], [26.2, 40.8]]

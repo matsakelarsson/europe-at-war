@@ -1,0 +1,79 @@
+id: arab-conquest-of-crete
+name: Arab conquest of Crete
+start: "824"
+end: "827"
+tier: B
+summary: The conquest of Byzantine Crete by a band of Muslim exiles from al-Andalus, who had held Alexandria until the Abbasids expelled them. Led by Abu Hafs, they beat off the expeditions of the Emperor Michael II, founded Chandax (Heraklion) and made the island an emirate that raided the Aegean until the Byzantines retook it in 961.
+countries: [gr, eg]
+sides:
+  - id: cr
+    name: Andalusi exiles (Emirate of Crete)
+    polities: [emirate-of-crete]
+    ink: olive
+    moves: Andalusi moves
+    success: Andalusi success
+  - id: byz
+    name: Byzantine Empire
+    polities: [byzantium]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+notes:
+  - The date of the landing is uncertain. Muslim sources put it in 827 or 828, after the expulsion from Alexandria; Byzantine sources place it soon after the revolt of Thomas the Slav (821–823), and several historians now prefer about 824. The landing place is unknown.
+  - The exiles are traditionally said to be survivors of the Revolt of the Suburb in Córdoba in 818, but Andalusi corsairs were active in Alexandria earlier, and their leader came from Fahs al-Ballut (Los Pedroches), north of Córdoba. Their numbers are estimated at about 12,000 people, of whom some 3,000 were fighting men.
+  - The Byzantine reconquest is told in the Byzantine reconquest of Crete.
+sources:
+  - title: Emirate of Crete (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Emirate_of_Crete
+  - title: Abu Hafs Umar al-Iqritishi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Abu_Hafs_Umar_al-Iqritishi
+  - title: Michael II (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Michael_II
+  - title: Al-Hakam I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Al-Hakam_I
+steps:
+  - title: The Andalusi exiles take Crete
+    date: c. 824–827
+    when: "824"
+    borders: "828"
+    countries: [gr, eg]
+    body:
+      - "In 818 the emir of Córdoba, al-Hakam I, crushed a revolt in the suburb south of his capital and exiled its people. Many of them, with other Andalusi sailors, made their way to Alexandria, where they seized power in the confusion of the Abbasid civil war. In 827 the Abbasid general Abdallah ibn Tahir besieged them and let them leave with their families in some forty ships. Led by Abu Hafs Umar al-Balluti, they landed on Crete, which they may already have raided. Byzantine writers say Abu Hafs burned the ships so his men could not turn back, but as they had brought their families, this is probably a later story."
+      - "The Emperor Michael II, weakened by the revolt of Thomas the Slav, sent a force under Photeinos and Damian, which was beaten; Damian was killed. A second expedition of 70 ships under Krateros won a first battle but was routed in a night attack, and Krateros, who fled to Kos, was captured there and crucified. The Andalusis founded a new capital on the north coast, Chandax, “the castle of the moat”, recognised the Abbasid caliph as their nominal overlord and ruled the island as an independent emirate. Byzantine fleets cleared them from the nearby islands, but Crete became the base for raids across the Aegean for more than a century."
+    facts:
+      - [Leader, "Abu Hafs Umar al-Balluti, first emir of Crete"]
+      - [Expelled from Alexandria, "827, in about 40 ships"]
+      - [New capital, "Chandax (rabḍ al-khandaq), today’s Heraklion"]
+    markers:
+      - kind: event
+        side: cr
+        name: Alexandria
+        date: "827"
+        text: The Andalusis had held the city for some years. Abdallah ibn Tahir, sent to restore Abbasid rule in Egypt, besieged them and allowed them to sail away.
+        lonlat: [29.92, 31.2]
+      - kind: taken
+        side: cr
+        name: Gortyn
+        date: c. 824–827
+        text: The old capital of Byzantine Crete, in the Messara plain. Some historians think the Andalusis ruled from here before Chandax was built.
+        lonlat: [24.947, 35.063]
+        lp: l
+      - kind: event
+        side: cr
+        name: Chandax
+        date: c. 827
+        text: The Andalusis built a fortified town on the north coast, protected by a great moat, which became the emirate’s capital.
+        lonlat: [25.134, 35.34]
+      - kind: event
+        side: cr
+        name: Kos
+        date: c. 827
+        text: Krateros, the Byzantine commander, escaped here after his army was routed, but was caught by the Andalusis and crucified.
+        lonlat: [27.29, 36.89]
+    arrows:
+      - side: cr
+        label: Abu Hafs
+        via: [[29.9, 31.35], [28.0, 33.2], [26.0, 34.6], [25.15, 35.25]]
+      - side: byz
+        label: Krateros
+        via: [[30.7, 36.85], [28.6, 36.1], [26.4, 35.5]]

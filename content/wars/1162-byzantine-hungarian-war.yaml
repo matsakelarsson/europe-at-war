@@ -1,0 +1,77 @@
+id: byzantine-hungarian-war
+name: Byzantine–Hungarian war of 1162–1167
+start: "1162"
+end: "1167-07-08"
+tier: B
+summary: A war between the Byzantine emperor Manuel I Komnenos and King Stephen III of Hungary over the succession to the Hungarian throne and over Sirmium, Dalmatia and Bosnia, which Manuel claimed as the inheritance of Stephen’s brother Béla, then living in Constantinople as Manuel’s heir. It ended with a Byzantine victory at Sirmium in 1167 and a peace that left these lands to the empire until Manuel’s death in 1180.
+countries: [hu, rs, hr, ba]
+sides:
+  - id: by
+    name: Byzantine Empire
+    polities: [byzantium]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+  - id: hu
+    name: Kingdom of Hungary
+    polities: [hungary, croatia]
+    ink: olive
+    moves: Hungarian moves
+    success: Hungarian success
+notes:
+  - The fullest accounts are by the Byzantine historians John Kinnamos and Niketas Choniates; Hungarian sources say little. The fighting of 1162–1167 is sometimes treated as several short wars.
+  - Croatia had been in union with the Hungarian crown since 1102 and is shown on the map as a separate kingdom. The Dalmatian towns were contested between Hungary, Venice and Byzantium throughout the 12th century.
+sources:
+  - title: Battle of Sirmium (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sirmium
+  - title: Manuel I Komnenos (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Manuel_I_Komnenos
+  - title: Béla III of Hungary (Wikipedia)
+    url: https://en.wikipedia.org/wiki/B%C3%A9la_III_of_Hungary
+  - title: Stephen III of Hungary (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Stephen_III_of_Hungary
+steps:
+  - title: Sirmium
+    date: 1162–1167
+    when: "1162"
+    borders: "1167-07-08"
+    countries: [hu, rs, hr, ba]
+    body:
+      - When Géza II of Hungary died in 1162, Manuel I backed the claims of Géza’s brothers against his young son Stephen III, whose supporters drove them out. In 1163 the two sides made a deal. Stephen’s younger brother Béla went to Constantinople, where he was betrothed to Manuel’s daughter, renamed Alexios and made heir to the empire, and his inheritance of Croatia, Dalmatia and Sirmium (Srem) was to pass with him. Stephen would not give it up, and for four years Byzantine and Hungarian armies fought over Sirmium, Zemun and the Dalmatian towns, which changed hands several times.
+      - In 1167 Manuel sent a large army under his nephew Andronikos Kontostephanos. On 8 July 1167, near Zemun in the region of Sirmium, it met the Hungarian army under Dénes, count of Bács, and routed it. Hungary made peace and accepted Byzantine rule over Sirmium, Bosnia and most of Dalmatia. The gains did not last. When Manuel’s own son was born, Béla lost his place as heir, and he became king of Hungary in 1172 with Byzantine support. After Manuel died in 1180, Béla III took Sirmium and Dalmatia back.
+    facts:
+      - [Battle of Sirmium, "8 July 1167, Byzantine victory"]
+      - [Ceded to Byzantium, "Sirmium, Bosnia and most of Dalmatia, until 1180"]
+    markers:
+      - kind: taken
+        side: by
+        name: Zemun
+        date: "1165"
+        text: Manuel besieged and took the Hungarian fortress across the Sava from Belgrade, and his troops took Sirmium and the land between the Sava and the Danube.
+        lonlat: [20.4, 44.85]
+        lp: t
+      - kind: battle
+        side: by
+        name: Battle of Sirmium
+        date: 8 July 1167
+        text: The Byzantine army, which included Turkish and Western mercenaries, broke the Hungarian charge and routed Dénes’s army. Kinnamos and Choniates tell of heavy Hungarian losses.
+        lonlat: [20.25, 44.9]
+        lp: l
+      - kind: taken
+        side: by
+        name: Split
+        date: "1165"
+        text: A Byzantine army took Split and other Dalmatian towns, which stayed under imperial rule until 1180.
+        lonlat: [16.44, 43.51]
+    arrows:
+      - side: by
+        label: Andronikos Kontostephanos
+        via: [[21.9, 43.32], [20.9, 44.35], [20.46, 44.82], [20.3, 44.88]]
+      - side: hu
+        label: Dénes
+        via: [[19.6, 45.6], [19.9, 45.15], [20.2, 44.93]]
+    areas:
+      - style: gained
+        side: by
+        label: Ceded to Byzantium, 1167
+        atoms: [RS-07, HR-16, HR-15, HR-17, HR-19]

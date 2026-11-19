@@ -1,0 +1,133 @@
+id: uprising-of-asen-and-peter
+name: Uprising of Asen and Peter
+start: "1185-10-26"
+end: "1202"
+tier: B
+summary: The revolt of the Bulgarians and Vlachs of the Balkan Mountains against Byzantine rule, led by the brothers Asen and Peter, which began at Tarnovo in 1185 and restored an independent Bulgarian state, the Second Bulgarian Empire. With Cuman help the rebels beat the emperor Isaac II at Tryavna in 1190 and went on to raid Thrace and Macedonia; their younger brother Kaloyan made peace with Byzantium in 1201 or 1202.
+countries: [bg, gr, tr, ro]
+sides:
+  - id: bg
+    name: Bulgarians and Vlachs
+    polities: [bulgaria]
+    ink: green
+    moves: Bulgarian moves
+    success: Bulgarian success
+  - id: by
+    name: Byzantine Empire
+    polities: [byzantium]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+  - id: cu
+    name: Cumans
+    polities: [cuman-kipchak-confederation]
+    ink: orange
+    moves: Cuman moves
+    success: Cuman success
+notes:
+  - The main source is the Byzantine historian Niketas Choniates, who served Isaac II and took part in some of the campaigns. Historians debate how far the rising was Bulgarian or Vlach (Romanian-speaking) in character; the sources speak of both peoples, and the new state was ruled from Tarnovo as a Bulgarian empire.
+  - Some accounts treat the uprising as ending with the truce of 1187, which left the rebels in control north of the Balkan Mountains; this entry follows the war to the peace Kaloyan made with Alexios III.
+sources:
+  - title: Uprising of Asen and Peter (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Uprising_of_Asen_and_Peter
+  - title: Battle of Tryavna (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tryavna
+  - title: Battle of Arcadiopolis (1194) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Arcadiopolis_(1194)
+  - title: Battle of Serres (1196) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Serres_(1196)
+  - title: Kaloyan of Bulgaria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kaloyan_of_Bulgaria
+  - title: Second Bulgarian Empire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Bulgarian_Empire
+steps:
+  - title: The rising and Tryavna
+    date: 1185–1190
+    when: "1185-10-26"
+    borders: "1190-12-31"
+    countries: [bg, tr, ro]
+    body:
+      - In 1185 the Byzantine emperor Isaac II Angelos raised a new tax to pay for his wedding to the daughter of Béla III of Hungary, and it fell heavily on the people of the Haemus (Balkan Mountains). Two brothers from the region, Theodore, later called Peter, and Asen, came to Isaac at Kypsella to ask for an estate and were refused and humiliated. On 26 October 1185, the feast of St Demetrius, they raised a revolt at Tarnovo, proclaiming that the saint had left Thessalonica to help them, and Peter took the title of tsar, reviving the Bulgarian Empire destroyed in 1018.
+      - Isaac’s campaign of 1186 drove many rebels north of the Danube, but they came back with Cuman horsemen from the steppe and held the land between the Haemus and the Danube. After a three-month siege of Lovech failed in 1187, Isaac agreed a truce that left them in control, taking the youngest brother, Kaloyan, as a hostage. In 1190 he tried again and besieged Tarnovo, but rumours of a Cuman army made him retreat, and in a mountain pass near Tryavna the Bulgarians ambushed his column. Isaac barely escaped, and the new state was secure.
+    facts:
+      - [Rising at Tarnovo, 26 October 1185]
+      - [Siege of Lovech, "1187, failed"]
+      - [Battle of Tryavna, "1190, Bulgarian victory"]
+    markers:
+      - kind: event
+        name: Kypsella
+        date: "1185"
+        text: The brothers met Isaac II here as he gathered his army against the Normans. Choniates says one of them was struck in the face for his insolence.
+        lonlat: [26.38, 40.92]
+      - kind: event
+        side: bg
+        name: Tarnovo
+        date: 26 October 1185
+        text: The brothers built a church to St Demetrius and declared the rising here. Tarnovo became the capital of the new state.
+        lonlat: [25.617, 43.078]
+      - kind: held
+        side: bg
+        name: Lovech
+        date: "1187"
+        text: Isaac besieged the fortress for three months without success and then made a truce, which in practice recognised the brothers’ rule.
+        lonlat: [24.717, 43.135]
+      - kind: battle
+        side: bg
+        name: Battle of Tryavna
+        date: "1190"
+        text: The Bulgarians attacked the retreating Byzantine army in a narrow pass. Isaac lost much of his army and baggage and barely escaped with his life.
+        lonlat: [25.5, 42.867]
+        lp: b
+    arrows:
+      - side: by
+        label: Isaac II, 1190
+        via: [[26.56, 41.68], [25.95, 42.5], [25.65, 43.03]]
+      - side: by
+        label: Retreat
+        via: [[25.58, 43.03], [25.5, 42.87], [25.3, 42.6]]
+      - side: cu
+        label: Cumans
+        via: [[26.6, 45.0], [26.0, 44.0], [25.7, 43.2]]
+  - title: The new Bulgarian state
+    date: 1190–1202
+    when: "1194"
+    borders: "1201-12-31"
+    countries: [bg, gr, tr]
+    body:
+      - Now on the offensive, the Bulgarians and their Cuman allies raided Thrace and Macedonia. In 1194 they routed a Byzantine army at Arcadiopolis, and in 1196 Asen beat another near Serres. But the brothers made enemies among their own nobles. Asen was murdered by the boyar Ivanko in 1196, and Peter was killed the next year. Their younger brother Kaloyan, who had spent years as a hostage in Constantinople, took power in 1197.
+      - Kaloyan pressed on. He took Constantia and, in March 1201, the Black Sea port of Varna, and the weak emperor Alexios III made peace with him in 1201 or 1202, accepting his rule over the lands he held. Kaloyan sought recognition from Pope Innocent III, and in November 1204 a papal legate crowned him king at Tarnovo. The Second Bulgarian Empire, which he called an empire of the Bulgarians and Vlachs, lasted until the Ottoman conquest of 1393–1396.
+    facts:
+      - [Battle of Arcadiopolis, "1194, Bulgarian victory"]
+      - [Kaloyan takes Varna, March 1201]
+      - [Coronation of Kaloyan, November 1204]
+    markers:
+      - kind: battle
+        side: bg
+        name: Battle of Arcadiopolis
+        date: "1194"
+        text: Bulgarians and Cumans routed the Byzantine armies of the east and west under Alexios Gidos and Basil Vatatzes, who was killed.
+        lonlat: [27.251, 41.44]
+      - kind: battle
+        side: bg
+        name: Battle of Serres
+        date: "1196"
+        text: Asen beat a Byzantine army and captured its commander, the sebastokrator Isaac Komnenos, the emperor’s son-in-law.
+        lonlat: [23.55, 41.083]
+      - kind: event
+        name: Tarnovo
+        date: "1196"
+        text: Asen was murdered here by the boyar Ivanko, who held the city briefly before fleeing to the Byzantines.
+        lonlat: [25.617, 43.078]
+      - kind: taken
+        side: bg
+        name: Varna
+        date: March 1201
+        text: Kaloyan stormed the Byzantine port with a siege tower and is said to have had its defenders buried alive in the moat.
+        lonlat: [27.91, 43.21]
+    arrows:
+      - side: bg
+        label: Asen, 1196
+        via: [[25.6, 43.05], [24.2, 42.2], [23.6, 41.15]]
+      - side: bg
+        label: Kaloyan, 1201
+        via: [[25.65, 43.07], [27.0, 43.2], [27.87, 43.21]]

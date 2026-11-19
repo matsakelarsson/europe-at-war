@@ -1,0 +1,101 @@
+id: byzantine-reconquest-of-crete
+name: Byzantine reconquest of Crete
+start: "960"
+end: "961-03-06"
+tier: B
+summary: The expedition in which the Byzantine general Nikephoros Phokas, the future emperor, landed on Crete in 960 and after a winter siege stormed Chandax (Heraklion), the capital of the emirate that had raided the Aegean for more than a century. Crete became a Byzantine province again.
+countries: [gr]
+sides:
+  - id: byz
+    name: Byzantine Empire
+    polities: [byzantium]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+  - id: cr
+    name: Emirate of Crete
+    polities: [emirate-of-crete]
+    ink: olive
+    moves: Cretan moves
+    success: Cretan success
+notes:
+  - The main accounts are by Byzantine writers, above all Leo the Deacon, with a verse poem on the conquest by Theodosios the Deacon. Their figures for the armies, such as Leo’s 40,000 men in the Cretan relief force, are not reliable.
+  - The city fell on 6 March 961 in most accounts; some give 7 March. Chandax is today’s Heraklion.
+  - The Arab conquest of the island is told in the Arab conquest of Crete.
+sources:
+  - title: Siege of Chandax (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Chandax
+  - title: Emirate of Crete (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Emirate_of_Crete
+  - title: Nikephoros II Phokas (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nikephoros_II_Phokas
+  - title: Nikon the Metanoeite (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nikon_the_Metanoeite
+  - title: Nicephorus II Phocas (Britannica)
+    url: https://www.britannica.com/biography/Nicephorus-II-Phocas
+steps:
+  - title: The armada and the siege
+    date: "960"
+    when: "960-07"
+    borders: "960-12"
+    countries: [gr, tr]
+    body:
+      - "Raiders from Crete had plundered the coasts and islands of the Aegean for over a century, and in 904 a Syrian fleet that used the island as a base had sacked Thessalonica. Byzantine expeditions to retake it failed in 911 and 949. Constantine VII prepared another, and his son Romanos II gave the command to the Domestic of the Schools, Nikephoros Phokas. The fleet, with dromons carrying Greek fire and transports fitted with ramps for horses, sailed in June or July 960 and landed near Chandax."
+      - "Nikephoros scattered the Cretan army on the beach, but Chandax had earthen walls wide enough for two wagons to pass on top and a double moat, and his first attempt to storm it failed. He built a fortified camp, and the fleet blockaded the harbour. A foraging party under Nikephoros Pastilas was ambushed and destroyed in the hills. Nikephoros then surprised a relief army at night, cut off the heads of the dead and threw some into the city with catapults. A second assault failed too, and he settled down to starve the city over the winter while his engineers built heavier siege engines."
+    facts:
+      - [Commander, "Nikephoros Phokas, Domestic of the Schools"]
+      - [Sailed, June or July 960]
+      - [Emir of Crete, "Abd al-Aziz ibn Shu’ayb"]
+    markers:
+      - kind: event
+        side: byz
+        name: Landing
+        date: Summer 960
+        text: The troops came ashore down ramps from their ships, already in battle order, and drove the Cretans back into Chandax.
+        lonlat: [25.0, 35.37]
+        lp: l
+      - kind: held
+        side: cr
+        name: Chandax
+        date: 960–961
+        text: The emirate’s capital held out through the winter behind its massive earthen walls and double moat.
+        lonlat: [25.134, 35.34]
+      - kind: battle
+        side: byz
+        name: Relief army destroyed
+        date: "960"
+        text: Guided by local Christians, Nikephoros attacked a Muslim army gathering in the hills at night and destroyed it. The site is not recorded.
+        lonlat: [25.2, 35.2]
+        lp: b
+    arrows:
+      - side: byz
+        label: Byzantine fleet
+        via: [[28.95, 40.95], [26.4, 40.0], [26.3, 38.4], [26.0, 36.6]]
+      - side: byz
+        label: Nikephoros Phokas
+        via: [[26.0, 36.5], [25.5, 35.9], [25.05, 35.42]]
+  - title: The fall of Chandax
+    date: "961"
+    when: "961-03-06"
+    borders: "961-03-06"
+    countries: [gr]
+    body:
+      - "The emir, Abd al-Aziz ibn Shu’ayb, appealed to the Ikhshidid ruler of Egypt and to the Fatimid caliph al-Mu’izz. The Fatimid promised a fleet, but nothing came in time. In March 961 Nikephoros attacked again. While the defenders were drawn to a battering ram, his miners dug beneath the walls, propped the tunnel with timber and set it on fire, and a great stretch of wall fell. On 6 March the Byzantines broke in, and the city was given over to plunder for three days."
+      - "Many inhabitants were killed or enslaved, and the mosques and walls were torn down. The emir and his son al-Nu’man were taken to Constantinople, where Nikephoros celebrated a triumph. Crete became a province again, and missionaries such as Nikon the Metanoeite worked to convert the remaining Muslims. Al-Nu’man, baptised as Anemas, later died fighting for the empire against the Rus’ at Dorostolon. Nikephoros went on to campaign in Cilicia and Syria and took the throne in 963."
+    facts:
+      - [Chandax stormed, 6 March 961]
+      - [Captives, "Emir Abd al-Aziz ibn Shu’ayb and his son al-Nu’man"]
+      - [Afterwards, "Crete Byzantine until the Fourth Crusade (1204)"]
+    markers:
+      - kind: taken
+        side: byz
+        name: Chandax
+        date: 6 March 961
+        text: Miners brought down part of the wall and the Byzantines stormed the city. It was sacked for three days.
+        lonlat: [25.134, 35.34]
+      - kind: event
+        side: byz
+        name: Triumph in Constantinople
+        date: "961"
+        text: Nikephoros paraded the emir, his family and the spoils of Chandax through the capital.
+        lonlat: [28.975, 41.01]

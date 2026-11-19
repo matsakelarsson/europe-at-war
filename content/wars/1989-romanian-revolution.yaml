@@ -1,0 +1,114 @@
+id: romanian-revolution
+name: Romanian Revolution
+start: "1989-12-16"
+end: "1989-12-27"
+tier: B
+summary: The violent overthrow of Nicolae Ceaușescu’s communist dictatorship in December 1989, after protests that began in Timișoara on 16 December spread to Bucharest, where the army turned against the regime on 22 December. Ceaușescu and his wife Elena fled, were captured, tried by a military tribunal and shot on 25 December; most of the 1,104 people killed died in confused fighting after the National Salvation Front had taken power.
+countries: [ro]
+sides:
+  - id: reg
+    name: Ceaușescu regime (Securitate, militia and, until 22 December, the army)
+    polities: [romania]
+    ink: slate
+    moves: Regime moves
+    success: Regime success
+  - id: rev
+    name: Protesters, then the army and the National Salvation Front
+    ink: orange
+    moves: Revolutionary moves
+    success: Revolutionary success
+notes:
+  - Who fired on the crowds and the army after 22 December, the so-called terrorists, has never been fully established. Many deaths were caused by soldiers, militiamen and armed civilians firing on each other in confusion, and whether the revolution was a popular uprising or was taken over by a group within the party and army is still debated in Romania. Ion Iliescu and others were indicted in 2019 for crimes against humanity over the events after 22 December.
+  - Official figures give 1,104 dead, 162 of them in the protests up to 22 December and 942 afterwards, and some 3,350 wounded.
+sources:
+  - title: Romanian revolution (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Romanian_revolution
+  - title: Timișoara (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Timi%C8%99oara
+  - title: Trial and execution of Nicolae and Elena Ceaușescu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Trial_and_execution_of_Nicolae_and_Elena_Ceau%C8%99escu
+  - title: Nicolae Ceaușescu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nicolae_Ceau%C8%99escu
+steps:
+  - title: Timișoara
+    date: 16–20 December 1989
+    when: "1989-12-16"
+    borders: "1989-12-20"
+    countries: [ro]
+    body:
+      - By 1989 Romanians lived with food and fuel rationing, imposed by Ceaușescu to pay off the foreign debt, and under close watch by the Securitate, the secret police, while communist rule was collapsing elsewhere in Eastern Europe. In Timișoara, members of the Hungarian Reformed congregation gathered to stop the authorities evicting their pastor, László Tőkés, a critic of the regime. On 16 December the crowd grew, Romanians joined the Hungarians, and the protest turned into a march against Ceaușescu.
+      - On 17 December the army, the Securitate and the militia opened fire on the crowds in the city centre, killing dozens of people. The bodies of more than 40 victims were secretly taken to Bucharest and cremated to hide what had happened. Ceaușescu left for a visit to Iran the next day. In Timișoara the workers went on strike, and on 20 December some 100,000 people filled Opera Square, the army withdrew to its barracks, and protesters declared the first city free of communist rule.
+    facts:
+      - [Protest for László Tőkés, "16 December 1989"]
+      - [Army opens fire, "17 December 1989"]
+      - [Timișoara declared free, "20 December 1989"]
+    markers:
+      - kind: event
+        side: rev
+        name: Tőkés’s church
+        date: 15–16 December 1989
+        text: Parishioners formed a human chain around the pastor’s home; the vigil grew into the first protest of the revolution.
+        lonlat: [21.22, 45.749]
+        lp: b
+      - kind: held
+        side: rev
+        name: Opera Square
+        date: 20 December 1989
+        text: Speakers on the opera house balcony proclaimed Timișoara free, as tens of thousands of strikers filled the square.
+        lonlat: [21.227, 45.756]
+        lp: r
+      - kind: event
+        side: reg
+        name: Bucharest
+        date: 18–19 December 1989
+        text: The bodies of Timișoara’s dead were taken in secret to a crematorium in the capital and the ashes scattered.
+        lonlat: [26.1, 44.43]
+  - title: Bucharest and the fall of Ceaușescu
+    date: 21–27 December 1989
+    when: "1989-12-21"
+    borders: "1989-12-27"
+    countries: [ro]
+    body:
+      - Back from Iran, Ceaușescu called a mass rally outside the party’s Central Committee building in Bucharest on 21 December. Minutes into his speech, broadcast live, the crowd began to boo and jeer, and he stopped, visibly stunned. That evening protesters in University Square were shot down by security forces and the army. On the morning of 22 December the defence minister, Vasile Milea, was found shot, officially a suicide, and the army went over to the crowds, which stormed the building. Nicolae and Elena Ceaușescu fled from its roof by helicopter.
+      - A group of former party officials led by Ion Iliescu appeared on television as the National Salvation Front and took power. For several days shooting went on in Bucharest, Sibiu and other cities, blamed on Securitate “terrorists”, and soldiers, militia and armed civilians often fired on each other; most of the 1,104 dead were killed in these days. The Ceaușescus were caught near Târgoviște, tried there by a military tribunal on 25 December and shot immediately. The shooting stopped on 27 December.
+    facts:
+      - [Ceaușescu’s last speech, "21 December 1989"]
+      - [Ceaușescus flee, "22 December 1989"]
+      - [Ceaușescus executed, "25 December 1989, Târgoviște"]
+    markers:
+      - kind: event
+        side: rev
+        name: Central Committee building
+        date: 21–22 December 1989
+        text: The crowd that booed Ceaușescu here on 21 December stormed the building the next day as he escaped from the roof.
+        lonlat: [26.097, 44.439]
+        lp: l
+      - kind: event
+        side: reg
+        name: University Square
+        date: 21–22 December 1989
+        text: Security forces fired on protesters and cleared the barricades during the night; dozens were killed in Bucharest.
+        lonlat: [26.102, 44.435]
+        lp: b
+      - kind: battle
+        name: Sibiu
+        date: 21–23 December 1989
+        text: Some of the heaviest fighting outside Bucharest, around the militia and Securitate buildings and the army barracks.
+        lonlat: [24.152, 45.793]
+      - kind: event
+        name: Otopeni airport
+        date: 23 December 1989
+        text: Army units guarding the airport fired on a convoy of troops sent to reinforce them, believing they were terrorists; dozens of soldiers were killed.
+        lonlat: [26.085, 44.571]
+      - kind: event
+        side: rev
+        name: Târgoviște
+        date: 22–25 December 1989
+        text: The Ceaușescus were held in an army barracks and shot after a trial lasting less than two hours.
+        lonlat: [25.457, 44.925]
+        lp: l
+    arrows:
+      - side: reg
+        via: [[26.097, 44.44], [25.85, 44.68], [25.47, 44.92]]
+    move_names:
+      reg: The Ceaușescus’ flight

@@ -1,0 +1,157 @@
+id: seventh-ottoman-venetian-war
+name: Seventh Ottoman–Venetian War
+start: "1714-12-09"
+end: "1718-07-21"
+tier: B
+summary: The last war between Venice and the Ottoman Empire, in which the Ottomans retook the Peloponnese (the Morea), won by Venice in the 1680s, in a single campaign in 1715, along with Tinos, Aegina and the last Venetian forts on Crete. Venice held Corfu against a siege in 1716 and was saved from worse by Austria’s entry into the war, but at the Peace of Passarowitz in 1718 it kept only the Ionian Islands, Preveza and small gains in Dalmatia.
+countries: [gr, it, hr, al, tr]
+sides:
+  - id: ven
+    name: Venice and its allies
+    polities: [venice, papal-states, malta, portugal]
+    ink: red
+    moves: Venetian moves
+    success: Venetian success
+  - id: tr
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Also called the Second Morean War or, in Croatia, the War of Sinj. The papacy, the Knights of Malta, Portugal, Spain and Tuscany sent ships to help Venice in 1716–1717.
+  - Austria’s war against the Ottomans in 1716–1718, with Petrovaradin and Belgrade, is told in the Austro-Turkish War of 1716–1718.
+  - The size of the Ottoman army in 1715 comes from the journal of the French interpreter Benjamin Brue and may be exaggerated.
+sources:
+  - title: Ottoman–Venetian War (1714–1718) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ottoman%E2%80%93Venetian_War_(1714%E2%80%931718)
+  - title: Siege of Corfu (1716) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Corfu_(1716)
+  - title: Johann Matthias von der Schulenburg (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Johann_Matthias_von_der_Schulenburg
+  - title: Battle of Matapan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Matapan
+  - title: Battle of Imbros (1717) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Imbros_(1717)
+  - title: Treaty of Passarowitz (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Passarowitz
+  - title: Treaty of Passarowitz (Britannica)
+    url: https://www.britannica.com/event/Treaty-of-Passarowitz
+steps:
+  - title: The Ottomans retake the Morea
+    date: December 1714 – September 1715
+    when: "1714-12-09"
+    borders: "1715-09-13"
+    countries: [gr, it, tr]
+    body:
+      - At Karlowitz in 1699 the Ottomans had ceded the Morea to Venice, and they were determined to win it back. Victory over Russia in 1711 and the distraction of the other European powers gave them their chance. The pretexts were the seizure of an Ottoman ship and the shelter Venice had given Danilo I, the prince-bishop of Montenegro, after a rising against the Ottomans, and on 9 December 1714 the Sultan declared war. In the spring the grand vizier, Silahdar Damat Ali Pasha, gathered an army of perhaps 70,000 men in Macedonia, while the fleet took Tinos and Aegina, the last Venetian islands in the Aegean.
+      - Venice had only about 8,000 mercenaries in the Morea, and its Greek subjects, who resented Venetian rule and taxes, supplied the Ottomans. The army crossed the Isthmus of Corinth on 25 June 1715. Acrocorinth surrendered on terms, but Janissaries broke in and killed or enslaved most of the garrison and townspeople. Nafplio, the Venetian capital, fell on 20 July after a mine breached the Palamidi fort. Navarino and Koroni were abandoned and Methoni capitulated, as did Souda and Spinalonga, the last Venetian outposts on Crete. Within a hundred days the whole peninsula was Ottoman again.
+    facts:
+      - [Ottoman declaration of war, 9 December 1714]
+      - [Fall of Nafplio, "20 July 1715, after a nine-day siege"]
+      - [Commanders, "Silahdar Damat Ali Pasha; Captain-General Daniel Delfin"]
+    markers:
+      - kind: taken
+        side: tr
+        name: Tinos
+        date: June 1715
+        text: The Venetian governor surrendered the island fortress to the Ottoman fleet without a fight.
+        lonlat: [25.133, 37.617]
+      - kind: taken
+        side: tr
+        name: Acrocorinth
+        date: July 1715
+        text: The citadel guarding the isthmus surrendered on terms of free departure, but Janissaries broke in and massacred many of its people. The event inspired Byron’s poem The Siege of Corinth.
+        lonlat: [22.872, 37.891]
+      - kind: taken
+        side: tr
+        name: Nafplio
+        date: 20 July 1715
+        text: The Ottomans exploded a mine under the Palamidi and stormed it, and the defence of the Venetian capital collapsed.
+        lonlat: [22.8, 37.566]
+      - kind: taken
+        side: tr
+        name: Methoni
+        date: August 1715
+        text: The fortress capitulated after the Venetian fleet failed to come to its relief.
+        lonlat: [21.704, 36.815]
+        lp: l
+      - kind: taken
+        side: tr
+        name: Souda and Spinalonga
+        date: 1715
+        text: The two island forts, held by Venice since the loss of Crete in 1669, surrendered in return for safe departure.
+        lonlat: [24.08, 35.49]
+    arrows:
+      - side: tr
+        label: Damat Ali Pasha
+        via: [[22.94, 40.64], [22.42, 39.64], [23.32, 38.32], [22.93, 37.94]]
+      - side: tr
+        via: [[22.9, 37.9], [22.73, 37.66], [22.78, 37.58]]
+      - side: tr
+        via: [[22.76, 37.56], [22.38, 37.48], [21.92, 37.0], [21.73, 36.84]]
+      - side: tr
+        label: Ottoman fleet
+        via: [[26.3, 40.1], [25.6, 38.6], [25.15, 37.65]]
+    areas:
+      - style: lost
+        side: ven
+        label: Lost by Venice, 1715
+        atoms: [GR-J, GR-G~achaea]
+  - title: Corfu, Matapan and Passarowitz
+    date: 1716 – July 1718
+    when: "1716-07-08"
+    borders: "1718-07-21"
+    countries: [gr, al, hr, it, tr, mt, pt, rs]
+    body:
+      - In 1716 the Ottomans turned on the Ionian Islands. They occupied Lefkada and Butrint on the mainland opposite Corfu, and on 8 July landed an army of about 33,000 men on Corfu itself. Count Johann Matthias von der Schulenburg, a German soldier in Venetian service, defended the town with about 8,000 men and beat off several assaults. After a violent storm on 9 August, which the Corfiots credited to their patron saint, Spyridon, and with Austria now in the war and victorious at Petrovaradin, the Ottomans gave up the siege and had left the island by 20 August.
+      - Austria had renewed its alliance with Venice in April 1716, drawing the main Ottoman effort to the Danube. At sea the Venetian fleet, joined by Portuguese, Maltese and papal ships, fought the Ottomans off Imbros in June 1717 and off Cape Matapan in July without decisive result. Venice took Preveza on the Epirote coast and Imotski in Dalmatia, where Sinj had held out against a siege in 1715. At Passarowitz on 21 July 1718 Venice kept the Ionian Islands, with Kythira, Preveza and its small Dalmatian gains, but gave up the Morea, Tinos, Aegina and the Cretan forts. It was the last war between the two powers.
+    facts:
+      - [Siege of Corfu, "8 July – 20 August 1716, Venetian success"]
+      - [Battle of Matapan, "19 July 1717, indecisive"]
+      - [Treaty of Passarowitz, 21 July 1718]
+    markers:
+      - kind: siege
+        side: ven
+        name: Siege of Corfu
+        date: 8 July – 20 August 1716
+        text: Schulenburg’s garrison held the fortress town; a statue of him was set up in Corfu in his lifetime.
+        lonlat: [19.921, 39.624]
+      - kind: taken
+        side: tr
+        name: Butrint
+        date: 1716
+        text: The Ottomans took the Venetian fort opposite Corfu before landing on the island.
+        lonlat: [20.021, 39.746]
+      - kind: naval
+        name: Battle of Matapan
+        date: 19 July 1717
+        text: Venetian, Portuguese and Maltese ships fought the Ottoman fleet in the Laconian Gulf; both sides withdrew.
+        lonlat: [22.483, 36.389]
+      - kind: taken
+        side: ven
+        name: Preveza
+        date: 1717
+        text: The Venetians took the town and kept it until the end of the Republic in 1797.
+        lonlat: [20.752, 38.958]
+      - kind: siege
+        side: ven
+        name: Sinj
+        date: 1715
+        text: The Venetian garrison and local people beat off the army of the pasha of Bosnia, a victory still celebrated each year in the Sinjska alka.
+        lonlat: [16.638, 43.703]
+      - kind: taken
+        side: ven
+        name: Imotski
+        date: 1717
+        text: Taken from the Ottomans and kept by Venice at the peace.
+        lonlat: [17.217, 43.45]
+        lp: l
+      - kind: treaty
+        name: Treaty of Passarowitz
+        date: 21 July 1718
+        text: Signed at Požarevac in Serbia, it ended both the Venetian and the Austrian wars with the Ottomans.
+        lonlat: [21.183, 44.617]
+    arrows:
+      - side: tr
+        via: [[20.05, 39.72], [19.98, 39.66], [19.94, 39.63]]

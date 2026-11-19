@@ -1,0 +1,98 @@
+id: austro-hungarian-occupation-of-bosnia
+name: Austro-Hungarian occupation of Bosnia and Herzegovina
+start: "1878-07-29"
+end: "1878-10-20"
+tier: B
+summary: The campaign of July to October 1878 in which Austria-Hungary, given the right by the Congress of Berlin to occupy and administer Bosnia and Herzegovina, overcame armed resistance by Bosnian Muslims and Orthodox Serbs, helped unofficially by Ottoman troops. Sarajevo fell after street fighting on 19 August, and the last strongholds in October; the provinces stayed under nominal Ottoman sovereignty until Austria-Hungary annexed them in 1908.
+countries: [ba, hr, at, hu, tr]
+sides:
+  - id: ah
+    name: Austria-Hungary
+    polities: [austria-hungary]
+    ink: purple
+    moves: Austro-Hungarian moves
+    success: Austro-Hungarian success
+  - id: bos
+    name: Bosnian resistance, with Ottoman troops
+    polities: [bosnian-resistance]
+    ink: brown
+    moves: Moves of the resistance
+    success: Success for the resistance
+notes:
+  - The Ottoman government did not fight the occupation officially, but many of its troops in the provinces joined or helped the resistance. Numbers of insurgents and of Bosnian dead are uncertain; the Austro-Hungarian General Staff estimated 79,000 armed insurgents and 13,800 Ottoman regulars.
+  - The occupation was sanctioned by Article 25 of the Treaty of Berlin. Austro-Hungarian garrisons entered the Sanjak of Novi Pazar, which stayed under Ottoman administration, in September 1879.
+sources:
+  - title: Austro-Hungarian campaign in Bosnia and Herzegovina in 1878 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Austro-Hungarian_campaign_in_Bosnia_and_Herzegovina_in_1878
+  - title: Austro-Hungarian rule in Bosnia and Herzegovina (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Austro-Hungarian_rule_in_Bosnia_and_Herzegovina
+  - title: Josip Filipović (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Josip_Filipovi%C4%87
+  - title: Congress of Berlin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Congress_of_Berlin
+steps:
+  - title: Sarajevo and the occupation
+    date: 29 July – 20 October 1878
+    when: "1878-07-29"
+    borders: "1878-10-20"
+    countries: [ba, hr, at, hu, tr]
+    body:
+      - The Congress of Berlin allowed Austria-Hungary to occupy and administer Bosnia and Herzegovina, which stayed under the sultan’s nominal sovereignty, and to garrison the Sanjak of Novi Pazar between Serbia and Montenegro. The foreign minister, Gyula Andrássy, expected “a walk with a brass band”, but many Bosnian Muslims, who stood to lose most under Christian rule, and many Orthodox Serbs resisted; most Catholic Croats did not. On 29 July General Josip Filipović’s XIII Corps crossed the Sava at Brod, Kostajnica and Gradiška, while General Stjepan Jovanović’s division marched up the Neretva from Dalmatia and took Mostar on 5 August.
+      - Muslim volunteers led by the preacher Hadži Lojo rallied armed bands, helped almost openly by withdrawing Ottoman troops. Hussars were ambushed at Maglaj on 3 August, and on 7 August the Austro-Hungarians lost some 600 men in a battle near Jajce. Vienna mobilised three more corps, and on 19 August Sarajevo was taken after a day of street fighting; summary courts then had many accused rebels executed. Resistance went on in the hills until Hadži Lojo surrendered on 3 October and the castle of Velika Kladuša fell on 20 October. The campaign needed 153,000 troops and cost almost 5,200 Austro-Hungarian casualties.
+    facts:
+      - [Invasion begins, "29 July 1878"]
+      - [Sarajevo taken, "19 August 1878"]
+      - [Austro-Hungarian losses, "946 dead, 3,980 wounded, 272 missing"]
+    markers:
+      - kind: event
+        side: ah
+        name: Brod
+        date: 29 July 1878
+        text: The main body of the XIII Corps crossed the Sava here and marched up the Bosna valley towards Sarajevo.
+        lonlat: [17.983, 45.133]
+      - kind: taken
+        side: ah
+        name: Banja Luka
+        date: August 1878
+        text: The columns that crossed at Gradiška and Kostajnica gathered here before advancing up the Vrbas.
+        lonlat: [17.192, 44.773]
+        lp: l
+      - kind: battle
+        side: bos
+        name: Maglaj
+        date: 3 August 1878
+        text: A troop of hussars was ambushed on the Bosna, and Filipović declared martial law.
+        lonlat: [18.1, 44.55]
+      - kind: battle
+        name: Jajce
+        date: 7 August 1878
+        text: A pitched battle cost the Austro-Hungarian infantry, most of them Carniolan troops, some 600 men.
+        lonlat: [17.269, 44.342]
+        lp: l
+      - kind: taken
+        side: ah
+        name: Mostar
+        date: 5 August 1878
+        text: The chief town of Herzegovina fell to the division advancing from Dalmatia.
+        lonlat: [17.808, 43.344]
+      - kind: taken
+        side: ah
+        name: Sarajevo
+        date: 19 August 1878
+        text: Filipović’s troops took the city of about 50,000 people after bombarding it with 52 guns and fighting from house to house; the former Ottoman governor had been arrested the day before.
+        lonlat: [18.413, 43.856]
+      - kind: taken
+        side: ah
+        name: Velika Kladuša
+        date: 20 October 1878
+        text: The surrender of the castle in the north-west ended organised resistance.
+        lonlat: [15.8, 45.183]
+    arrows:
+      - side: ah
+        label: Filipović
+        via: [[17.98, 45.13], [18.09, 44.65], [17.95, 44.22], [18.38, 43.87]]
+      - side: ah
+        via: [[17.25, 45.15], [17.19, 44.77], [17.27, 44.36]]
+      - side: ah
+        label: Jovanović
+        via: [[17.65, 43.05], [17.75, 43.2], [17.8, 43.33]]

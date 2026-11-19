@@ -1,0 +1,171 @@
+id: wars-of-krum
+name: Krum’s wars with Byzantium
+start: "807"
+end: "815"
+tier: B
+summary: The wars between Khan Krum of Bulgaria and the Byzantine Empire, in which Krum took Serdica (Sofia), destroyed the army of the Emperor Nikephoros I in the Balkan passes in 811 and killed him, routed Michael I at Versinikia in 813 and stood before the walls of Constantinople. After Krum’s death in 814 his son Omurtag made a thirty-year peace that fixed the frontier in northern Thrace.
+countries: [bg, tr]
+sides:
+  - id: bg
+    name: Bulgaria
+    polities: [bulgaria]
+    ink: green
+    moves: Bulgarian moves
+    success: Bulgarian success
+  - id: byz
+    name: Byzantine Empire
+    polities: [byzantium]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+notes:
+  - The main source is the chronicle of Theophanes the Confessor, a contemporary who was hostile to Nikephoros I, with a fragment by an anonymous writer (the Scriptor Incertus) for 811–815. Both were written on the Byzantine side; Bulgarian inscriptions add a little. Numbers are uncertain, and some events (the Struma defeat, the peace) are dated a year apart in different accounts.
+  - Krum’s title was khan (in the inscriptions kanasubigi). Serdica is today’s Sofia, Develtos stood near Debelt south of Burgas, Mesembria is Nesebar, Adrianople is Edirne and Arcadiopolis is Lüleburgaz in Turkey.
+sources:
+  - title: Krum (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Krum
+  - title: Battle of Pliska (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Pliska
+  - title: Battle of Versinikia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Versinikia
+  - title: Siege of Constantinople (813) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Constantinople_(813)
+  - title: Nikephoros I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nikephoros_I
+  - title: Byzantine–Bulgarian treaty of 815 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Byzantine%E2%80%93Bulgarian_treaty_of_815
+  - title: Omurtag of Bulgaria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Omurtag_of_Bulgaria
+  - title: Krum (Britannica)
+    url: https://www.britannica.com/biography/Krum
+steps:
+  - title: Serdica
+    date: 807–809
+    when: "807"
+    borders: "809-04"
+    countries: [bg, tr]
+    body:
+      - Krum, who became khan of the Bulgars around 800, first turned north-west, where the Avar khaganate had been broken by Charlemagne’s Franks; by about 805 he had taken over its eastern lands, bringing Bulgaria to the borders of the Frankish empire. In the south lay the Byzantine Empire, ruled since 802 by Nikephoros I, a former finance minister who meant to recover the Balkans. His first campaign, in 807, got no further than Adrianople, where he turned back after discovering a plot against him.
+      - In 808 or 809 the Bulgarians surprised a Byzantine army in the valley of the Struma and captured the money sent to pay it. Then, shortly before Easter 809, Krum took Serdica, the Byzantine stronghold on the main road across the Balkans. Theophanes writes that he killed the garrison of 6,000 men and many civilians, although they had surrendered on terms. Nikephoros marched north, claimed to have reached Krum’s capital, Pliska, and tried to rebuild Serdica. In 810 he moved settlers from Asia Minor into the Slav lands on the frontier to hold it.
+    facts:
+      - [Serdica taken, "Spring 809, shortly before Easter"]
+      - [Byzantine emperor, "Nikephoros I (802–811)"]
+    markers:
+      - kind: event
+        side: byz
+        name: Adrianople
+        date: "807"
+        text: Nikephoros’s first campaign against Bulgaria ended here, when he learned of a conspiracy among his officers and returned to Constantinople.
+        lonlat: [26.556, 41.677]
+      - kind: taken
+        side: bg
+        name: Serdica
+        date: Spring 809
+        text: Krum took the city on terms and then, according to Theophanes, put the garrison of 6,000 men to death. Some officers escaped to Constantinople; the emperor refused them a hearing.
+        lonlat: [23.33, 42.7]
+      - kind: event
+        name: Pliska
+        date: "809"
+        text: The khans’ capital, a great walled enclosure with a stone palace in its centre. Nikephoros claimed to have celebrated Easter 809 in Krum’s palace; some historians doubt he got so far.
+        lonlat: [27.132, 43.387]
+    arrows:
+      - side: bg
+        label: Krum
+        via: [[24.9, 43.25], [24.0, 43.0], [23.38, 42.74]]
+      - side: byz
+        label: Nikephoros, 807
+        via: [[28.9, 41.05], [27.7, 41.3], [26.62, 41.66]]
+  - title: Pliska and the death of Nikephoros
+    date: "811"
+    when: "811-07"
+    borders: "811-07-26"
+    countries: [bg, tr]
+    body:
+      - "In the summer of 811 Nikephoros invaded Bulgaria with a large army drawn from the themes of Thrace and Asia Minor and the guard regiments, and his son Staurakios at his side. He refused Krum’s offers of peace at the frontier fortress of Marcellae, crossed the Balkan Mountains and, after beating the forces Krum could gather in haste, took Pliska on 20 July. The palace was looted and burned. Later sources describe the Byzantine troops killing the people of the town, children among them."
+      - "Krum armed everyone he could and blocked the passes with ditches and wooden palisades. As the army marched south through a narrow valley, usually identified as the Varbitsa Pass, it found itself trapped, and at dawn on 26 July the Bulgarians fell on its camp. The army broke; many men died at the palisades or in a river. Nikephoros was killed, the first Byzantine emperor to die in battle since Valens in 378. Theophanes writes that Krum had his skull lined with silver and drank from it. Staurakios, badly wounded in the neck, reigned for a few weeks and died in 812."
+    facts:
+      - [Pliska taken, 20 July 811]
+      - [Battle of Pliska, "26 July 811, Bulgarian victory; Nikephoros I killed"]
+      - [Also called, the battle of the Varbitsa Pass]
+    markers:
+      - kind: event
+        name: Marcellae
+        date: July 811
+        text: At this frontier fortress, near today’s Karnobat, Nikephoros turned down Krum’s offer of peace.
+        lonlat: [27.05, 42.65]
+        lp: l
+      - kind: taken
+        side: byz
+        name: Pliska
+        date: 20 July 811
+        text: The Byzantines took the Bulgarian capital, looted Krum’s treasury and burned the palace.
+        lonlat: [27.132, 43.387]
+      - kind: battle
+        side: bg
+        name: Battle of Pliska
+        date: 26 July 811
+        text: The returning army was trapped behind wooden barriers in a mountain pass and destroyed in a dawn attack. Nikephoros and many of his senior officers were killed.
+        lonlat: [26.65, 42.95]
+    arrows:
+      - side: byz
+        label: Nikephoros I
+        via: [[28.9, 41.05], [26.7, 41.75], [27.05, 42.6], [27.1, 43.3]]
+      - side: byz
+        via: [[27.08, 43.33], [26.8, 43.12], [26.67, 42.98]]
+  - title: Versinikia, Constantinople and the peace
+    date: 812–815
+    when: "812"
+    borders: "815"
+    countries: [bg, tr]
+    body:
+      - "In 812 Krum took Develtos and, that autumn, the port of Mesembria, where he captured a supply of Greek fire and the bronze tubes used to throw it. Nikephoros’s son-in-law, Michael I, refused his offer of peace. In June 813 Michael led a large army north and met Krum near Versinikia, north of Adrianople. After two weeks of waiting the Byzantines attacked on 22 June and were routed. Byzantine writers later suspected Leo the Armenian, whose Anatolian troops were among the first to leave the field. Within weeks Michael had abdicated and Leo was emperor."
+      - "On 17 July Krum appeared before Constantinople and made sacrifices outside the Golden Gate. Leo invited him to a parley and set archers to kill him; Krum escaped wounded. In revenge he burned the suburbs, took Adrianople and carried thousands of its people off beyond the Danube, among them the family of the future emperor Basil I. He was preparing siege engines for an assault on the city when he died on 13 April 814. His son Omurtag made a thirty-year peace in 815 or 816. The frontier ran from Develtos inland along an earthwork, later called the Erkesia, and it held for most of the century."
+    facts:
+      - [Battle of Versinikia, "22 June 813, Bulgarian victory"]
+      - [Krum before Constantinople, 17 July 813]
+      - [Peace, "815 or 816, for thirty years, under Omurtag"]
+    markers:
+      - kind: taken
+        side: bg
+        name: Mesembria
+        date: Autumn 812
+        text: The Black Sea port fell after a short siege. Theophanes says the Bulgarians found 36 bronze siphons for Greek fire and a store of the fire itself.
+        lonlat: [27.733, 42.65]
+      - kind: taken
+        side: bg
+        name: Develtos
+        date: "812"
+        text: Krum took the town and moved its people, with their bishop, into Bulgaria. Its site is near today’s Debelt, south of Burgas.
+        lonlat: [27.27, 42.4]
+        lp: b
+      - kind: battle
+        side: bg
+        name: Battle of Versinikia
+        date: 22 June 813
+        text: The armies faced each other for two weeks. When the Byzantines attacked, their line broke almost at once and Krum’s cavalry pursued them. The exact site is unknown; some scholars place it near Elhovo.
+        lonlat: [26.6, 42.1]
+      - kind: held
+        side: byz
+        name: Constantinople
+        date: July 813
+        text: Krum’s army could not storm the land walls, and he had no fleet. An attempt to kill him at a parley outside the walls failed.
+        lonlat: [28.975, 41.01]
+      - kind: taken
+        side: bg
+        name: Adrianople
+        date: "813"
+        text: Krum’s brother besieged the city, which surrendered after Krum’s return. Thousands of its people were deported north of the Danube.
+        lonlat: [26.556, 41.677]
+        lp: l
+    arrows:
+      - side: byz
+        label: Michael I
+        via: [[28.9, 41.05], [27.5, 41.45], [26.65, 41.8], [26.6, 42.02]]
+      - side: bg
+        label: Krum
+        via: [[26.7, 42.05], [27.4, 41.5], [28.3, 41.15], [28.88, 41.03]]
+    areas:
+      - style: front
+        side: bg
+        label: The Erkesia, the frontier of 815/816 (approximate)
+        line: [[27.27, 42.4], [26.8, 42.25], [26.3, 42.1], [25.93, 41.95], [25.66, 41.96]]

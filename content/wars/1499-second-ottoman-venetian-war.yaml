@@ -1,0 +1,118 @@
+id: second-ottoman-venetian-war
+name: Second Ottoman–Venetian War
+start: "1499"
+end: "1503"
+tier: B
+summary: A war between the Republic of Venice and the Ottoman Empire of Bayezid II, fought at sea off western Greece and in the Venetian outposts of the Morea and Albania. The Ottoman fleet beat the Venetians at Zonchio in 1499 and took Lepanto, Modon, Coron and Durazzo, while Venice, with Spanish help, won Kefalonia; the peace of 1502–1503 confirmed the Ottoman conquests and showed that the sultan was now a naval power.
+countries: [gr, al, it, hr, es, tr]
+sides:
+  - id: ve
+    name: Republic of Venice
+    polities: [venice]
+    ink: red
+    moves: Venetian moves
+    success: Venetian success
+  - id: sp
+    name: Spain
+    polities: [castile, aragon]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Dates are Julian. The sources give different dates for the end of the war; the peace was agreed at the end of 1502 and confirmed in 1503.
+  - Venetian Dalmatia was raided from Ottoman Bosnia throughout the war, and in 1501 Venice agreed to pay the king of Hungary to defend Croatia, which shielded its Dalmatian towns.
+sources:
+  - title: Ottoman–Venetian War (1499–1503) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ottoman%E2%80%93Venetian_War_(1499%E2%80%931503)
+  - title: Battle of Zonchio (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Zonchio
+  - title: Battle of Modon (1500) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Modon_(1500)
+  - title: Kemal Reis (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kemal_Reis
+  - title: Gonzalo Fernández de Córdoba (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Gonzalo_Fern%C3%A1ndez_de_C%C3%B3rdoba
+steps:
+  - title: Zonchio and Lepanto
+    date: 1499
+    when: "1499-07"
+    borders: "1499-09-01"
+    countries: [gr, it, hr, tr]
+    body:
+      - In the summer of 1499 Bayezid II sent a great fleet, some 260 ships under the kapudan pasha Davud with the corsair captain Kemal Reis, to support the siege of Venetian Lepanto at the mouth of the Gulf of Corinth. The Venetian captain-general Antonio Grimani, with a smaller but heavier fleet, met it off Cape Zonchio near Navarino on 12 August. His captains failed to attack together, the great carrack of Andrea Loredan burned with an Ottoman ship locked to it, and in clashes over the following two weeks the Venetians could not stop the Ottoman fleet as it worked its way north along the coast.
+      - With the Ottoman fleet and its guns in the Gulf of Corinth, Lepanto surrendered to the sultan’s army at the end of August. Ottoman horsemen from Bosnia raided Venetian Friuli that autumn, burning villages as far as the Tagliamento. In Venice the defeat caused uproar; Grimani was arrested, tried and exiled, though he later returned and became doge. Venetian attacks on Lepanto in the winter failed.
+    facts:
+      - [Battle of Zonchio, "12–25 August 1499, Ottoman victory"]
+      - [Ottoman fleet, "about 260 ships, 60–70 of them galleys"]
+      - [Lepanto surrenders, late August 1499]
+    markers:
+      - kind: naval
+        side: ot
+        name: Battle of Zonchio
+        date: 12–25 August 1499
+        text: Fought over several days off Navarino and Sapienza. The Venetians failed to stop the Ottoman fleet, and two of their great ships were lost.
+        lonlat: [21.6, 36.88]
+      - kind: taken
+        side: ot
+        name: Lepanto
+        date: late August 1499
+        text: The Venetian fortress at the entrance to the Gulf of Corinth surrendered once the Ottoman fleet arrived with its siege guns.
+        lonlat: [21.83, 38.39]
+    arrows:
+      - side: ot
+        label: Davud Pasha and Kemal Reis
+        via: [[23.3, 36.3], [22.1, 36.65], [21.55, 37.4], [21.75, 38.3]]
+  - title: Modon and the peace
+    date: 1500–1503
+    when: "1500-07"
+    borders: "1503"
+    countries: [gr, al, it, es, tr]
+    body:
+      - In 1500 Bayezid II led his army against Modon, Venice’s chief port in the Morea, while Kemal Reis blockaded it from the sea and beat off a Venetian relief fleet. On 9 August the town was stormed and sacked, and many of its people were killed. Coron and Navarino surrendered soon after. Venice had lost the “two eyes of the Republic”, its stations on the route to the Levant. In December a Venetian and Spanish fleet under Benedetto Pesaro and Gonzalo Fernández de Córdoba took the castle of St George on Kefalonia.
+      - In 1501 Ottoman forces took Durazzo, Venice’s last important port in Albania. A French and Venetian attack on Mytilene failed, and in 1502 Pesaro took Lefkada. Venice, short of money and facing war in Italy, made peace at the end of 1502, confirmed in 1503. It kept Kefalonia but gave back Lefkada and recognised the loss of Lepanto, Modon, Coron and Durazzo. The Ottomans had shown that their fleet could defeat Venice’s.
+    facts:
+      - [Fall of Modon, 9 August 1500]
+      - [Kefalonia taken by Venice and Spain, December 1500]
+      - [Peace, "end of 1502, confirmed 1503"]
+    markers:
+      - kind: taken
+        side: ot
+        name: Modon
+        date: 9 August 1500
+        text: Bayezid II’s army stormed the town after a Venetian relief fleet was beaten off. It stayed Ottoman until 1686.
+        lonlat: [21.71, 36.82]
+        lp: l
+      - kind: taken
+        side: ot
+        name: Coron
+        date: August 1500
+        text: Surrendered after the fall of Modon, as did Navarino.
+        lonlat: [21.96, 36.8]
+      - kind: taken
+        side: sp
+        name: Kefalonia
+        date: December 1500
+        text: The Spanish and Venetian fleet stormed the Ottoman castle of St George after a siege of several weeks. The island stayed Venetian until 1797.
+        lonlat: [20.53, 38.14]
+      - kind: taken
+        side: ot
+        name: Durazzo
+        date: 1501
+        text: The Venetian port on the Albanian coast fell to Ottoman forces.
+        lonlat: [19.45, 41.31]
+      - kind: event
+        side: ve
+        name: Lefkada
+        date: 1502
+        text: Taken by Benedetto Pesaro but given back to the Ottomans at the peace.
+        lonlat: [20.71, 38.83]
+    arrows:
+      - side: sp
+        label: Gonzalo de Córdoba
+        via: [[15.55, 38.2], [17.8, 38.4], [20.3, 38.2]]

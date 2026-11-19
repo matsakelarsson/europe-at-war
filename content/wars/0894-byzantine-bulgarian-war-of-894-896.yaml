@@ -1,0 +1,142 @@
+id: byzantine-bulgarian-war-of-894-896
+name: Byzantine–Bulgarian war of 894–896
+start: "894"
+end: "896"
+tier: B
+summary: A war that began when the Byzantine government moved the Bulgarian merchants’ market from Constantinople to Thessalonica. Simeon I of Bulgaria invaded Thrace; the Byzantines brought in the Magyars, who ravaged Bulgaria, but Simeon and the Pechenegs drove the Magyars from their steppe homeland and in 896 he routed the Byzantine army at Bulgarophygon, winning a yearly tribute.
+countries: [bg, tr, ro, ua, md]
+sides:
+  - id: bg
+    name: Bulgaria
+    polities: [bulgaria]
+    ink: green
+    moves: Bulgarian moves
+    success: Bulgarian success
+  - id: byz
+    name: Byzantine Empire
+    polities: [byzantium]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+  - id: mag
+    name: Magyars
+    polities: [hungary]
+    ink: olive
+    moves: Magyar moves
+    success: Magyar success
+  - id: pe
+    name: Pechenegs
+    polities: [pechenegs]
+    ink: magenta
+    moves: Pecheneg moves
+    success: Pecheneg success
+notes:
+  - The main sources are the Byzantine chronicle of Theophanes Continuatus, Constantine VII’s De administrando imperio, written some fifty years later, and Simeon’s own letters to the Byzantine envoy Leo Choirosphaktes. They give few places and dates; the battle on the Southern Buh is dated to 895 or 896, and its site is unknown.
+  - Bulgarophygon is today’s Babaeski in Turkish Thrace, and Dristra is Silistra on the Danube. The war is sometimes called the first trade war in Europe; many historians think Simeon was defending his merchants rather than looking for a pretext.
+  - The Magyars’ move into the Carpathian Basin that followed is told in the Hungarian conquest of the Carpathian Basin.
+sources:
+  - title: Byzantine–Bulgarian war of 894–896 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Byzantine%E2%80%93Bulgarian_war_of_894%E2%80%93896
+  - title: Battle of Boulgarophygon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Boulgarophygon
+  - title: Battle of Southern Buh (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Southern_Buh
+  - title: Simeon I of Bulgaria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Simeon_I_of_Bulgaria
+  - title: Leo Choirosphaktes (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Leo_Choirosphaktes
+  - title: Simeon I (Britannica)
+    url: https://www.britannica.com/biography/Simeon-I
+steps:
+  - title: The trade war and the Magyar alliance
+    date: 894–896
+    when: "894"
+    borders: "896-03"
+    countries: [bg, tr, ro, ua, md]
+    body:
+      - "In 894 Stylianos Zaoutzes, the chief minister of the Emperor Leo VI, let two merchants with links to his household move the market for Bulgarian traders from Constantinople to Thessalonica, where they paid heavier duties. Simeon, who had become ruler of Bulgaria the year before after studying in Constantinople, protested and was ignored. That autumn he invaded Byzantine Thrace and defeated an army under Prokopios Krenites and Kourtikios, who were both killed. He had the noses of the captured Khazar guardsmen cut off and sent them back to Constantinople."
+      - "Leo paid the Magyars, then living on the steppes between the Dnieper and the Danube, to attack Bulgaria from the north. In 895 a Byzantine fleet ferried them across the Danube while Nikephoros Phokas the Elder threatened Bulgaria from the south. The Magyars beat Simeon, who shut himself up in Dristra, and plundered the country up to Preslav. Simeon bought time with talks about prisoners, then made an alliance with the Pechenegs. In 896, or perhaps late 895, his army beat the Magyars on the Southern Buh while the Pechenegs ravaged their homeland."
+    facts:
+      - [Cause, "The Bulgarian market moved from Constantinople to Thessalonica, 894"]
+      - [Magyar leaders, Árpád and Kurszán]
+      - [Southern Buh, "895 or 896, Bulgarian victory over the Magyars"]
+    markers:
+      - kind: battle
+        side: bg
+        name: Defeat of Krenites and Kourtikios
+        date: Autumn 894
+        text: Simeon beat a hastily raised Byzantine army, including the emperor’s Khazar guard, somewhere in Thrace, probably near Adrianople. Both Byzantine commanders were killed.
+        lonlat: [26.7, 41.8]
+      - kind: battle
+        side: mag
+        name: Simeon defeated in the Dobruja
+        date: "895"
+        text: The Magyars, carried over the Danube by Byzantine ships, routed Simeon’s army. The site is not recorded.
+        lonlat: [28.0, 44.35]
+      - kind: held
+        side: bg
+        name: Dristra
+        date: "895"
+        text: Simeon took refuge in the fortress on the Danube while the Magyars plundered the country. They sold many of their captives to the Byzantines.
+        lonlat: [27.261, 44.117]
+        lp: l
+      - kind: event
+        side: mag
+        name: Preslav
+        date: "895"
+        text: The Magyars plundered as far as the outskirts of Simeon’s capital.
+        lonlat: [26.817, 43.167]
+        lp: l
+      - kind: battle
+        side: bg
+        name: Battle of Southern Buh
+        date: 895 or 896
+        text: A hard-fought Bulgarian victory somewhere on the river in today’s Ukraine. One account says it cost the victors 20,000 horsemen.
+        lonlat: [30.8, 48.0]
+    arrows:
+      - side: bg
+        label: Simeon, 894
+        via: [[26.8, 43.1], [26.6, 42.4], [26.68, 41.85]]
+      - side: byz
+        label: Byzantine fleet
+        via: [[29.0, 41.2], [28.6, 42.6], [29.3, 44.5], [28.95, 45.15]]
+      - side: mag
+        label: Magyars
+        via: [[29.8, 46.4], [28.7, 45.25], [28.0, 44.45], [26.9, 43.25]]
+      - side: bg
+        via: [[27.4, 44.2], [28.9, 45.5], [30.1, 46.9], [30.75, 47.9]]
+      - side: pe
+        label: Pechenegs
+        via: [[35.0, 47.4], [33.0, 47.5], [31.0, 47.95]]
+  - title: Bulgarophygon and the peace
+    date: "896"
+    when: "896"
+    borders: "897"
+    countries: [bg, tr]
+    body:
+      - "With the Magyars gone, Simeon demanded that the Byzantines return all their Bulgarian prisoners. Leo, at war with the Arabs in the east and without Nikephoros Phokas, who had died or fallen from favour, gave way. Simeon then claimed that not all had been sent back and in the summer of 896 invaded Thrace again. The Byzantines made a truce in the east and brought over the armies of Asia Minor under the Domestic of the Schools, Leo Katakalon. At Bulgarophygon the Bulgarians routed them; the second-in-command, the protovestiarios Theodosios, was among the dead, and Katakalon escaped with a few men."
+      - "An Arab historian, al-Tabari, writes that the Bulgarians then marched on Constantinople and that Leo considered arming Arab prisoners against them. In the peace that followed the market returned to Constantinople and Byzantium agreed to pay Bulgaria a yearly tribute. Bulgaria gained land between the Strandzha mountains and the Black Sea and released its captives, said to number 120,000. The peace lasted until Leo’s death in 912, apart from 904, when Simeon used the Arab sack of Thessalonica to win more of Macedonia."
+    facts:
+      - [Battle of Bulgarophygon, "Summer 896, Bulgarian victory"]
+      - [Byzantine commander, "Leo Katakalon, Domestic of the Schools"]
+      - [Peace, "Yearly tribute to Bulgaria; lasted until 912"]
+    markers:
+      - kind: battle
+        side: bg
+        name: Battle of Bulgarophygon
+        date: Summer 896
+        text: The Byzantine army, including troops brought over from Asia Minor, was destroyed. One survivor became a hermit and is remembered as Saint Luke the Stylite.
+        lonlat: [27.1, 41.433]
+      - kind: held
+        side: byz
+        name: Constantinople
+        date: "896"
+        text: The Bulgarians are said to have advanced on the city after the battle. Leo VI agreed to their terms instead.
+        lonlat: [28.975, 41.01]
+    arrows:
+      - side: bg
+        label: Simeon
+        via: [[26.8, 43.1], [26.95, 42.4], [27.05, 41.5]]
+      - side: byz
+        label: Leo Katakalon
+        via: [[28.9, 41.05], [27.95, 41.25], [27.17, 41.42]]

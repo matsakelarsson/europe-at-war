@@ -1,0 +1,443 @@
+id: hungarian-revolution
+name: Hungarian Revolution of 1848–1849
+start: "1848-03-15"
+end: "1849-10-02"
+tier: A
+summary: A revolution in which Hungary won a constitutional government of its own in the spring of 1848 and then fought the Austrian Empire, Croatia and the Serb and Romanian insurgents of the kingdom, declaring independence in April 1849. Its armies drove the imperial forces almost out of the country, but a Russian army of some 200,000 men joined the Austrians that summer, and the Hungarians surrendered at Világos in August 1849, followed by harsh reprisals.
+countries: [hu, sk, ro, rs, hr, ua, at, ru]
+sides:
+  - id: hu
+    name: Hungarian revolutionary government
+    polities: [hungarian-revolutionaries]
+    ink: olive
+    moves: Hungarian moves
+    success: Hungarian success
+  - id: at
+    name: Austrian Empire and its allies
+    polities: [habsburg]
+    ink: purple
+    moves: Austrian and allied moves
+    success: Austrian and allied success
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+notes:
+  - Dates are New Style (Gregorian). Russian accounts use the Julian calendar, then 12 days behind.
+  - Places are given their Hungarian names of the time, as in most accounts. Pozsony is Bratislava; Kassa is Košice and Nagysalló Tekovské Lužany in Slovakia; Kolozsvár is Cluj, Nagyszeben Sibiu, Segesvár Sighișoara, Piski Simeria, Temesvár Timișoara and Világos Șiria in Romania; Karlóca is Sremski Karlovci and Szenttamás Srbobran in Serbia.
+  - The risings in Vienna are told in the German revolutions of 1848–1849, and the revolution in Wallachia in its own entry. The war in Hungary was also a civil war between the kingdom’s nationalities; numbers of civilians killed, especially in Transylvania and the south, are disputed.
+sources:
+  - title: Hungarian Revolution of 1848 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hungarian_Revolution_of_1848
+  - title: April Laws (Wikipedia)
+    url: https://en.wikipedia.org/wiki/April_Laws
+  - title: Battle of Pákozd (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_P%C3%A1kozd
+  - title: Battle of Kápolna (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_K%C3%A1polna
+  - title: Spring Campaign (1849) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Spring_Campaign_(1849)
+  - title: Hungarian Declaration of Independence (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hungarian_Declaration_of_Independence
+  - title: Siege of Buda (1849) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Buda_(1849)
+  - title: Battle of Segesvár (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Segesv%C3%A1r
+  - title: Battle of Temesvár (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Temesv%C3%A1r
+  - title: Surrender at Világos (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Surrender_at_Vil%C3%A1gos
+  - title: 13 Martyrs of Arad (Wikipedia)
+    url: https://en.wikipedia.org/wiki/13_Martyrs_of_Arad
+  - title: Lajos Kossuth (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Lajos_Kossuth
+steps:
+  - title: The April Laws
+    date: March – August 1848
+    when: "1848-03-15"
+    borders: "1848-04-11"
+    countries: [hu, sk, ro, rs, hr, at]
+    body:
+      - News of the February revolution in Paris reached the Hungarian diet at Pozsony, where Lajos Kossuth called for a constitution on 3 March 1848. After the rising in Vienna on 13 March, young radicals in Pest, the poet Sándor Petőfi among them, met at the Pilvax café on 15 March, read out twelve demands and Petőfi’s National Song to growing crowds, printed them without the censor’s leave and freed the imprisoned writer Mihály Táncsics. The court gave way without bloodshed. On 17 March Count Lajos Batthyány was appointed prime minister of Hungary, and on 11 April King Ferdinand V signed the laws the diet had passed.
+      - The April Laws made Hungary a constitutional monarchy with a government answerable to an elected parliament in Pest, ended serfdom and the nobles’ freedom from tax, freed the press and united Transylvania with Hungary. But Hungarian stayed the only language of government in a kingdom where Magyars were fewer than half the people. Josip Jelačić, the new ban of Croatia, broke off relations with Pest. Serbs meeting at Karlóca in May proclaimed a Serbian Vojvodina and took up arms in June, and Romanians meeting at Balázsfalva claimed recognition as a nation and opposed the union with Transylvania, which its diet voted on 29 May. The court, recovering from its shock, began to back the nationalities against Pest.
+    facts:
+      - [Revolution in Pest, "15 March 1848"]
+      - [April Laws signed, "11 April 1848"]
+      - [Serbian May Assembly, "13–15 May 1848, Karlóca"]
+    markers:
+      - kind: event
+        side: hu
+        name: Pest
+        date: 15 March 1848
+        text: Students and writers from the Pilvax café printed the twelve points and the National Song, and a mass meeting outside the National Museum backed them.
+        lonlat: [19.06, 47.5]
+      - kind: event
+        side: hu
+        name: Pozsony
+        date: 11 April 1848
+        text: Ferdinand V closed the last diet of the estates and signed the April Laws, which moved parliament and government to Pest.
+        lonlat: [17.11, 48.144]
+      - kind: event
+        name: Zagreb
+        date: March – June 1848
+        text: Jelačić, appointed ban on 23 March, refused to recognise the Hungarian government, and the Croatian Sabor backed him in June.
+        lonlat: [15.977, 45.813]
+      - kind: event
+        name: Karlóca
+        date: 13–15 May 1848
+        text: A Serb assembly proclaimed Serbian Vojvodina in southern Hungary. A Hungarian attack on the town on 12 June began the fighting.
+        lonlat: [19.934, 45.203]
+      - kind: held
+        side: at
+        name: Szenttamás
+        date: July – August 1848
+        text: The Serb fortified camp beat off two Hungarian sieges in the summer of 1848 and fell only in April 1849.
+        lonlat: [19.783, 45.533]
+        lp: l
+      - kind: event
+        name: Balázsfalva
+        date: 15 May 1848
+        text: Some 40,000 Romanians met on the Field of Liberty to demand recognition as a nation in Transylvania.
+        lonlat: [23.914, 46.175]
+    areas:
+      - style: contested
+        side: at
+        label: Serbian Vojvodina, proclaimed May 1848 (approximate)
+        atoms: [RS-02, RS-04, RS-06, RS-07]
+  - title: Jelačić and Pákozd
+    date: September – December 1848
+    when: "1848-09-11"
+    borders: "1848-12-02"
+    countries: [hu, hr, at, ro]
+    body:
+      - By late summer the court had turned against the Batthyány government, and on 11 September Jelačić crossed the Drava with an army of Croatian border regiments and volunteers. Batthyány resigned, and parliament gave power to a National Defence Committee led by Kossuth, which raised new honvéd battalions and printed its own money. On 28 September a crowd in Pest killed Count Franz Lamberg, sent by the king to take command of all troops in Hungary. The next day General János Móga’s army stopped Jelačić’s advance at Pákozd, near Lake Velence. The fight was small, but Jelačić asked for a three-day truce and slipped away towards Vienna, and on 7 October Artúr Görgei and Mór Perczel forced his rearguard of some 9,000 men to surrender at Ozora.
+      - The order sending troops from Vienna against Hungary set off a rising there on 6 October. The Hungarian army crossed the border late and was beaten at Schwechat on 30 October by Jelačić and Prince Alfred Windischgrätz, who took Vienna the next day. On 2 December Ferdinand abdicated in favour of his 18-year-old nephew Francis Joseph, whom the Hungarian parliament refused to recognise as king. In Transylvania, Romanian insurgents and imperial troops took most of the country by November. Both sides killed civilians. Hungarian townspeople were massacred at Zalatna in October and at Nagyenyed in January, and Hungarian troops and courts burned Romanian villages and hanged peasants.
+    facts:
+      - [Battle of Pákozd, "29 September 1848, Hungarian success"]
+      - [Surrender at Ozora, "7 October 1848"]
+      - [Battle of Schwechat, "30 October 1848, Austrian victory"]
+    markers:
+      - kind: event
+        side: at
+        name: Varaždin
+        date: 11 September 1848
+        text: Jelačić crossed the Drava into Hungary here at the head of the Croatian army.
+        lonlat: [16.338, 46.308]
+      - kind: event
+        name: Pest
+        date: 28 September 1848
+        text: The royal commissioner Count Lamberg was dragged from his carriage on the bridge of boats and killed by a crowd, ending hopes of a settlement.
+        lonlat: [19.05, 47.5]
+      - kind: battle
+        side: hu
+        name: Battle of Pákozd
+        date: 29 September 1848
+        text: The new Hungarian army and national guards held their ground against Jelačić, who then withdrew. It is remembered as the birthday of the Hungarian army.
+        lonlat: [18.545, 47.221]
+      - kind: battle
+        side: hu
+        name: Ozora
+        date: 7 October 1848
+        text: Hungarian troops and peasant militia surrounded the Croatian reserve corps of Generals Roth and Philippović and took it prisoner.
+        lonlat: [18.398, 46.753]
+      - kind: battle
+        side: at
+        name: Battle of Schwechat
+        date: 30 October 1848
+        text: The Hungarian army, marching to help the Vienna rising, was driven back by Windischgrätz and Jelačić just outside the city.
+        lonlat: [16.479, 48.141]
+      - kind: taken
+        side: at
+        name: Vienna
+        date: 31 October 1848
+        text: Windischgrätz’s troops stormed the city after a bombardment, ending the October rising.
+        lonlat: [16.37, 48.21]
+        lp: t
+    arrows:
+      - side: at
+        label: Jelačić
+        via: [[16.34, 46.31], [17.0, 46.6], [17.9, 46.95], [18.5, 47.2]]
+      - side: at
+        via: [[18.5, 47.27], [17.63, 47.68], [16.9, 47.95], [16.52, 48.12]]
+      - side: hu
+        label: Móga
+        via: [[17.2, 48.0], [16.8, 48.08], [16.52, 48.14]]
+  - title: Windischgrätz takes Buda; Kápolna
+    date: December 1848 – March 1849
+    when: "1848-12-14"
+    borders: "1849-03-04"
+    countries: [hu, sk, ro, ua, at, ru]
+    body:
+      - In mid-December Windischgrätz invaded Hungary with the main imperial army, while other corps closed in from Galicia, Styria, Croatia and the Serbian south. Görgei fell back from the border, and Perczel was beaten at Mór on 30 December. Parliament and the National Defence Committee moved to Debrecen, beyond the Tisza, taking the Holy Crown with them, and on 5 January 1849 Windischgrätz entered Buda and Pest. Görgei led his corps north into the mountains of Upper Hungary, drawing imperial troops after him, forced the Branyiszkó Pass on 5 February and joined György Klapka’s troops at Kassa.
+      - In Transylvania the Polish general Józef Bem took Kolozsvár at Christmas and, after beating the Austrian commander Anton Puchner at Piski on 9 February, held his own against imperial troops and a Russian detachment called in from Wallachia by the Saxon towns. Kossuth gave command of the main army to another Pole, Henryk Dembiński, whom Windischgrätz defeated at Kápolna on 26–27 February. Believing the war won, the court issued a new constitution, dated 4 March, which made Hungary one crown land among many in a centralised empire and separated Transylvania, Croatia and the Serbian Vojvodina from it. The war became one for independence.
+    facts:
+      - [Windischgrätz enters Buda and Pest, "5 January 1849"]
+      - [Battle of Kápolna, "26–27 February 1849, Austrian victory"]
+      - [Imposed March Constitution, "4 March 1849"]
+    markers:
+      - kind: battle
+        side: at
+        name: Mór
+        date: 30 December 1848
+        text: Jelačić’s corps defeated Perczel’s division as it tried to cover the road to Buda.
+        lonlat: [18.189, 47.388]
+      - kind: taken
+        side: at
+        name: Buda and Pest
+        date: 5 January 1849
+        text: Windischgrätz entered the capital without a fight after the Hungarian government had left for Debrecen.
+        lonlat: [19.04, 47.5]
+      - kind: event
+        side: hu
+        name: Debrecen
+        date: January – May 1849
+        text: The seat of parliament and of Kossuth’s National Defence Committee, safe for a time behind the Tisza.
+        lonlat: [21.624, 47.532]
+      - kind: battle
+        side: hu
+        name: Branyiszkó
+        date: 5 February 1849
+        text: Görgei’s troops stormed the snowbound pass held by an Austrian brigade and broke through to the east.
+        lonlat: [20.857, 49.018]
+      - kind: battle
+        side: hu
+        name: Piski
+        date: 9 February 1849
+        text: Bem held the bridge over the Sztrigy against Puchner, saving his army and turning the campaign in Transylvania.
+        lonlat: [23.025, 45.853]
+      - kind: battle
+        side: at
+        name: Battle of Kápolna
+        date: 26–27 February 1849
+        text: Windischgrätz defeated Dembiński’s army in two days of fighting, though the Hungarians withdrew in good order.
+        lonlat: [20.236, 47.758]
+    arrows:
+      - side: at
+        label: Windischgrätz
+        via: [[17.11, 48.14], [17.63, 47.68], [18.4, 47.62], [19.0, 47.52]]
+      - side: at
+        via: [[19.1, 47.56], [19.67, 47.66], [20.2, 47.75]]
+      - side: hu
+        label: Görgei
+        via: [[19.13, 47.78], [18.9, 48.45], [20.0, 48.95], [20.85, 49.0]]
+      - side: hu
+        label: Government to Debrecen
+        via: [[19.08, 47.48], [20.2, 47.18], [21.58, 47.52]]
+      - side: hu
+        label: Bem
+        via: [[23.6, 46.77], [23.3, 46.2], [23.05, 45.87]]
+    areas:
+      - style: occupied
+        side: hu
+        label: Held by the Hungarian government, February 1849 (approximate)
+        atoms: [HU-SZ, HU-NY, HU-HB, HU-DE, HU-BE, HU-BC, HU-JN, HU-SK, HU-CS, HU-SD, HU-HV, HU-BZ, HU-MI, SK-KI, SK-PV, UA-21, RO-BH, RO-SM, RO-SJ, RO-MM, RO-CJ, RO-BN, RO-HR, RO-CV, RO-MS, RO-HD]
+  - title: The Spring Campaign and the Declaration of Independence
+    date: March – May 1849
+    when: "1849-04-02"
+    borders: "1849-05-21"
+    countries: [hu, sk, ro, rs, at, ru]
+    body:
+      - In March Bem drove the Austrians and Russians out of Transylvania, taking Nagyszeben on 11 March, and Perczel cleared much of the south of Serb and imperial troops. At the start of April the main army, now led in practice by Görgei, attacked east of Pest and won at Hatvan on 2 April, Tápióbicske on 4 April and Isaszeg on 6 April, where Windischgrätz himself was beaten. It then turned north, took Vác on 10 April, defeated General Ludwig von Wohlgemuth at Nagysalló on 19 April and on 26 April relieved the besieged fortress of Komárom. Windischgrätz was dismissed, and his successor withdrew almost all imperial troops from Hungary, leaving garrisons in Buda castle and a few fortresses.
+      - On 14 April, in the Great Church of Debrecen, parliament declared the House of Habsburg-Lorraine deposed and Hungary independent, and elected Kossuth governor-president. Görgei, who thought the declaration ruled out a compromise, turned back to besiege Buda rather than follow the enemy towards Vienna, a choice still argued over. The castle’s commander, General Heinrich Hentzi, shelled Pest across the river; Buda was stormed on 21 May after a siege of 17 days, and Hentzi was mortally wounded. It was the height of Hungarian success, but Francis Joseph had already asked the tsar for help.
+    facts:
+      - [Battle of Isaszeg, "6 April 1849, Hungarian victory"]
+      - [Declaration of Independence, "14 April 1849, Debrecen"]
+      - [Buda retaken, "21 May 1849"]
+    markers:
+      - kind: taken
+        side: hu
+        name: Nagyszeben
+        date: 11 March 1849
+        text: Bem drove the Austrian and Russian garrison out of the Saxon capital of Transylvania.
+        lonlat: [24.152, 45.793]
+      - kind: battle
+        side: hu
+        name: Hatvan
+        date: 2 April 1849
+        text: The first battle of the Spring Campaign, won by András Gáspár’s corps.
+        lonlat: [19.67, 47.668]
+        lp: t
+      - kind: battle
+        side: hu
+        name: Battle of Isaszeg
+        date: 6 April 1849
+        text: Görgei defeated Windischgrätz east of Pest, forcing the imperial army back to the capital.
+        lonlat: [19.4, 47.533]
+        lp: b
+      - kind: battle
+        side: hu
+        name: Vác
+        date: 10 April 1849
+        text: Damjanich’s corps took the Danube town, opening the way north to Komárom.
+        lonlat: [19.131, 47.775]
+        lp: t
+      - kind: battle
+        side: hu
+        name: Nagysalló
+        date: 19 April 1849
+        text: The Hungarians routed Wohlgemuth’s corps on the Garam and outflanked the imperial army.
+        lonlat: [18.544, 48.09]
+      - kind: held
+        side: hu
+        name: Komárom
+        date: 26 April 1849
+        text: Görgei’s army lifted the siege of the Danube fortress, which stayed in Hungarian hands until October.
+        lonlat: [18.124, 47.74]
+        lp: l
+      - kind: event
+        side: hu
+        name: Debrecen
+        date: 14 April 1849
+        text: Parliament, meeting in the Calvinist Great Church, dethroned the Habsburgs and declared Hungary independent.
+        lonlat: [21.624, 47.532]
+      - kind: taken
+        side: hu
+        name: Buda
+        date: 21 May 1849
+        text: The honvéds stormed the castle after a siege. Hentzi’s bombardment had set much of Pest on fire.
+        lonlat: [19.036, 47.501]
+        lp: l
+    arrows:
+      - side: hu
+        label: Görgei
+        via: [[20.25, 47.65], [19.67, 47.65], [19.42, 47.53]]
+      - side: hu
+        via: [[19.4, 47.57], [19.13, 47.79], [18.56, 48.07], [18.15, 47.76]]
+      - side: hu
+        via: [[18.15, 47.72], [18.6, 47.62], [19.0, 47.51]]
+      - side: hu
+        label: Bem
+        via: [[23.6, 46.5], [24.15, 45.81], [25.55, 45.66]]
+    areas:
+      - style: occupied
+        side: hu
+        label: Held by the Hungarian government, late May 1849 (approximate)
+        atoms: [HU-BA, HU-BC, HU-BE, HU-BK, HU-BU, HU-BZ, HU-CS, HU-DE, HU-DU, HU-ED, HU-EG, HU-FE, HU-GY, HU-HB, HU-HE, HU-HV, HU-JN, HU-KE, HU-KM, HU-KV, HU-MI, HU-NK, HU-NO, HU-NY, HU-PE, HU-PS, HU-SD, HU-SF, HU-SH, HU-SK, HU-SO, HU-SS, HU-ST, HU-SZ, HU-TB, HU-TO, HU-VA, HU-VE, HU-VM, HU-ZA, HU-ZE, SK-KI, SK-PV, SK-BC, UA-21, RO-AB, RO-CJ, RO-MS, RO-HR, RO-CV, RO-BV, RO-SB, RO-HD, RO-BN, RO-SJ, RO-MM, RO-SM, RO-BH, RO-AR, RS-01, RS-05, RS-06, RS-03]
+  - title: The Russian intervention
+    date: June – August 1849
+    when: "1849-06-17"
+    borders: "1849-08-09"
+    countries: [hu, sk, ro, ua, rs, at, ru]
+    body:
+      - On 21 May, in Warsaw, Francis Joseph thanked Tsar Nicholas I in person for his promise of help. In mid-June about 200,000 Russian troops under Field Marshal Ivan Paskevich crossed the Carpathians from Galicia, through the Dukla Pass and others, while a second Russian army under General Alexander von Lüders entered Transylvania from Wallachia. In the west the new Austrian commander, Julius Jacob von Haynau, took Győr on 28 June. Together the two empires had well over twice as many men as the Hungarians. Görgei held Haynau before Komárom on 2 July but failed to break through on 11 July, then marched east around the Russians, fighting them at Vác on 15–17 July and drawing them north before turning south towards Arad.
+      - The government left Pest for Szeged, where on 28 July parliament passed laws allowing the nationalities to use their own languages in local government and schools and emancipating the Jews, too late to change the war. In Transylvania Lüders beat Bem at Segesvár on 31 July; the poet Petőfi was last seen alive on that battlefield. Haynau crossed the Tisza and beat Dembiński at Szőreg on 5 August, and on 9 August he routed the southern army, now under Bem, at Temesvár. Cholera swept through all the armies, and most of the Russian dead died of disease rather than in battle.
+    facts:
+      - [Russian army, "about 200,000 under Paskevich"]
+      - [Battle of Segesvár, "31 July 1849, Russian victory"]
+      - [Battle of Temesvár, "9 August 1849, Austrian victory"]
+    markers:
+      - kind: event
+        side: ru
+        name: Dukla Pass
+        date: June 1849
+        text: Paskevich’s main army crossed from Galicia into Hungary through this and neighbouring Carpathian passes.
+        lonlat: [21.696, 49.418]
+      - kind: taken
+        side: at
+        name: Győr
+        date: 28 June 1849
+        text: Haynau’s offensive began by driving Poeltenberg’s corps out of the town, with Francis Joseph present.
+        lonlat: [17.634, 47.684]
+      - kind: battle
+        name: Komárom
+        date: 2 and 11 July 1849
+        text: Görgei’s army fought Haynau to a standstill outside the fortress, but its attempt to break out south-east failed.
+        lonlat: [18.106, 47.736]
+        lp: b
+      - kind: battle
+        name: Vác
+        date: 15–17 July 1849
+        text: Görgei fought his way past Paskevich’s army and slipped away north-east, drawing the Russians after him.
+        lonlat: [19.131, 47.775]
+        lp: t
+      - kind: event
+        side: hu
+        name: Szeged
+        date: 28 July 1849
+        text: The last sitting of the Hungarian parliament passed a law on the rights of the nationalities and the emancipation of the Jews.
+        lonlat: [20.145, 46.255]
+        lp: l
+      - kind: battle
+        side: ru
+        name: Battle of Segesvár
+        date: 31 July 1849
+        text: Lüders’s Russians defeated Bem near Fehéregyháza. Sándor Petőfi went missing in the rout and was probably killed.
+        lonlat: [24.846, 46.236]
+      - kind: battle
+        side: at
+        name: Szőreg
+        date: 5 August 1849
+        text: Haynau forced the crossing of the Tisza and defeated Dembiński’s army south-east of Szeged.
+        lonlat: [20.211, 46.179]
+        lp: b
+      - kind: battle
+        side: at
+        name: Battle of Temesvár
+        date: 9 August 1849
+        text: Haynau routed the Hungarian southern army and relieved the imperial garrison, which had held the fortress against Hungarian sieges since the autumn of 1848.
+        lonlat: [21.158, 45.831]
+    arrows:
+      - side: ru
+        label: Paskevich
+        via: [[21.7, 49.42], [21.25, 48.72], [20.78, 48.1], [20.25, 47.75]]
+      - side: ru
+        label: Lüders
+        via: [[25.6, 45.45], [25.6, 45.66], [24.9, 46.2]]
+      - side: at
+        label: Haynau
+        via: [[17.2, 48.05], [17.63, 47.68], [19.0, 47.5], [20.12, 46.27]]
+      - side: at
+        via: [[20.25, 46.17], [20.8, 45.95], [21.12, 45.82]]
+      - side: hu
+        label: Görgei
+        via: [[18.12, 47.74], [19.13, 47.78], [20.0, 48.05], [20.78, 48.1]]
+      - side: hu
+        via: [[20.85, 48.05], [21.9, 47.06], [21.33, 46.2]]
+  - title: Világos and the Arad martyrs
+    date: August – October 1849
+    when: "1849-08-11"
+    borders: "1849-10-06"
+    countries: [hu, ro, bg, at, ru]
+    body:
+      - On 11 August Kossuth handed full power to Görgei and fled with other leaders across the Ottoman border; his minister Bertalan Szemere buried the Holy Crown near Orsova, where it was found in 1853. On 13 August, at Világos near Arad, Görgei surrendered his army of about 30,000 men to the Russian general Count Theodor von Rüdiger, choosing to lay down arms before the Russians rather than the Austrians. The Russians handed the prisoners over to the Austrians. The remaining corps and fortresses gave up in the following weeks; Klapka held Komárom until 2 October and won free passage for its garrison.
+      - Haynau, given full powers, took harsh revenge. On 6 October, the anniversary of the Vienna rising, twelve generals and a colonel of the Hungarian army were executed at Arad, four by firing squad and nine on the gallows, and the same day Batthyány was shot in Pest. Over a hundred people were executed and many more imprisoned or forced into the imperial army. Görgei was spared at the tsar’s request and interned at Klagenfurt, and many Hungarians called him a traitor. Hungary was ruled as a conquered land until the Compromise of 1867, Kossuth died in exile, and 6 October is a day of mourning in Hungary.
+    facts:
+      - [Surrender at Világos, "13 August 1849, to the Russians"]
+      - [Komárom surrenders, "2 October 1849"]
+      - [Executions at Arad, "6 October 1849"]
+    markers:
+      - kind: event
+        side: hu
+        name: Orsova
+        date: August 1849
+        text: Kossuth crossed into Ottoman territory nearby, and Szemere hid the Holy Crown and the regalia in the ground outside the town.
+        lonlat: [22.396, 44.725]
+      - kind: event
+        side: ru
+        name: Világos
+        date: 13 August 1849
+        text: Görgei’s army laid down its arms before Rüdiger’s Russian corps on the fields of Szőlős, ending the war in the field.
+        lonlat: [21.633, 46.267]
+      - kind: event
+        name: Arad
+        date: 6 October 1849
+        text: The thirteen martyrs of Arad, officers of the Hungarian army, were executed in the fortress on Haynau’s orders.
+        lonlat: [21.312, 46.175]
+        lp: l
+      - kind: taken
+        side: at
+        name: Komárom
+        date: 2 October 1849
+        text: Klapka surrendered the fortress on terms that let its defenders go free, the last Hungarian force to give up.
+        lonlat: [18.124, 47.74]
+      - kind: event
+        name: Pest
+        date: 6 October 1849
+        text: Lajos Batthyány, Hungary’s first prime minister, was shot by firing squad.
+        lonlat: [19.05, 47.5]
+    arrows:
+      - side: hu
+        label: Kossuth into exile
+        via: [[21.31, 46.17], [21.9, 45.69], [22.4, 44.75], [22.87, 44.0]]

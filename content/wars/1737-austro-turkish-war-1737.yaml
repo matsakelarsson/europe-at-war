@@ -1,0 +1,139 @@
+id: austro-turkish-war-1737
+name: Austro-Turkish War of 1737–1739
+start: "1737-07"
+end: "1739-09-18"
+tier: B
+summary: A war in which the Habsburg Monarchy, as Russia’s ally, attacked the Ottoman Empire in Serbia, Bosnia and Wallachia. After brief early gains it was beaten at Banja Luka and lost Niš, and after its defeat at Grocka in 1739 the Treaty of Belgrade gave Belgrade, northern Serbia and Oltenia back to the Ottomans and Wallachia, undoing most of the gains of Passarowitz.
+countries: [rs, ba, ro, at, hu, tr]
+sides:
+  - id: hb
+    name: Habsburg Monarchy and Serbian insurgents
+    polities: [habsburg]
+    ink: purple
+    moves: Habsburg moves
+    success: Habsburg success
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Dates are New Style (Gregorian).
+  - Russia’s war with the Ottomans in 1735–1739, on the Black Sea, in the Crimea and in Moldavia, is told in the Russo-Turkish War of 1735–1739, which also covers the Russian peace signed at Belgrade and Niš.
+sources:
+  - title: Russo-Turkish War (1735–1739) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russo-Turkish_War_(1735%E2%80%931739)
+  - title: Battle of Banja Luka (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Banja_Luka
+  - title: Battle of Grocka (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Grocka
+  - title: Siege of Belgrade (1739) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Belgrade_(1739)
+  - title: Treaty of Belgrade (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Belgrade
+  - title: Kingdom of Serbia (1718–1739) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kingdom_of_Serbia_(1718%E2%80%931739)
+  - title: Friedrich Heinrich von Seckendorff (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Friedrich_Heinrich_von_Seckendorff
+steps:
+  - title: Niš and Banja Luka
+    date: 1737–1738
+    when: "1737-07"
+    borders: "1738-08-15"
+    countries: [rs, ba, ro, at, hu, tr]
+    body:
+      - Bound by its alliance of 1726 to help Russia, and hoping for easy gains, the Habsburg Monarchy entered the Russo-Turkish war in July 1737. Field Marshal Friedrich Heinrich von Seckendorff led the main army up the Morava from Belgrade and took Niš in late July, and Serbs in the Ottoman lands rose in support. In the west, an army under Prince Joseph of Saxe-Hildburghausen invaded Bosnia and besieged Banja Luka, but on 4 August it ran into a relief army raised by the governor of Bosnia, Hekimoğlu Ali Pasha, from the local captains and their men, and was routed. A third force from Oltenia achieved little in Wallachia.
+      - The Ottomans struck back in the autumn and retook Niš in October; its commander, General Nikolaus Doxat, was later beheaded by the Austrians for giving it up. Seckendorff was recalled, tried and imprisoned at Graz. Peace talks with Russia and the Ottomans at Nemyriv in Poland failed. In 1738 a large Ottoman army under Grand Vizier Yeğen Mehmed Pasha advanced into the Banat, took Mehadia and the island fortress of Orsova on the Danube, while plague spread through both armies and the towns of the region.
+    facts:
+      - [Niš taken and lost, "July and October 1737"]
+      - [Battle of Banja Luka, "4 August 1737, Ottoman victory"]
+      - [Orsova taken by the Ottomans, "August 1738"]
+    markers:
+      - kind: taken
+        side: hb
+        name: Niš
+        date: July 1737
+        text: Taken by Seckendorff’s army without a long siege, and lost again to an Ottoman counter-offensive in October.
+        lonlat: [21.896, 43.321]
+      - kind: battle
+        side: ot
+        name: Battle of Banja Luka
+        date: 4 August 1737
+        text: Hekimoğlu Ali Pasha’s Bosnian army broke the Austrian siege in five assaults and drove Hildburghausen’s force back across the Sava.
+        lonlat: [17.192, 44.773]
+      - kind: taken
+        side: ot
+        name: Mehadia
+        date: "1738"
+        text: The Ottoman advance into the Banat took the fort guarding the road from the Danube to Temesvár.
+        lonlat: [22.367, 44.9]
+      - kind: taken
+        side: ot
+        name: Orsova
+        date: August 1738
+        text: The Ottomans retook the fortress on the island in the Danube below the Iron Gates, later known as Ada Kaleh.
+        lonlat: [22.456, 44.716]
+        lp: b
+    arrows:
+      - side: hb
+        label: Seckendorff
+        via: [[20.46, 44.8], [21.0, 44.4], [21.4, 43.85], [21.85, 43.37]]
+      - side: hb
+        label: Hildburghausen
+        via: [[17.6, 45.2], [17.35, 45.0], [17.22, 44.82]]
+      - side: ot
+        label: Yeğen Mehmed
+        via: [[22.87, 43.99], [22.62, 44.55], [22.45, 44.72], [22.37, 44.88]]
+    areas:
+      - style: occupied
+        side: hb
+        label: Held by the Habsburgs, July–October 1737 (approximate)
+        atoms: [RS-20]
+  - title: Grocka and the Peace of Belgrade
+    date: July – September 1739
+    when: "1739-07-21"
+    borders: "1739-09-18"
+    countries: [rs, ro, at, hu, tr]
+    body:
+      - In 1739 Count George Oliver Wallis took command with about 40,000 men. Hearing that the main Ottoman army under Grand Vizier Elhac Ivaz Mehmed Pasha was camped at Grocka, on the Danube below Belgrade, he hurried his cavalry forward. On the morning of 22 July they came out of a narrow defile into the Ottoman army drawn up on the hills, and were shot down as they arrived; the infantry that followed fought all day under fire from above. That night Wallis retreated to Belgrade, and the Ottomans followed and laid siege to the city.
+      - Vienna sent Count Wilhelm Reinhard von Neipperg to make peace. Isolated in the grand vizier’s camp and relying on the French ambassador, the Marquis de Villeneuve, he agreed on 1 September to give up Belgrade, not knowing that the emperor had meanwhile decided to hold it. The Treaty of Belgrade, signed on 18 September, returned Belgrade, northern Serbia and the strip of Bosnia south of the Sava to the Ottomans and Oltenia to Wallachia; the Austrians had to demolish the fortifications they had built at Belgrade. The border was again the Sava and the Danube. Wallis and Neipperg were imprisoned until Maria Theresa freed them in 1740, and many Serbs who had sided with the Habsburgs fled north across the rivers.
+    facts:
+      - [Battle of Grocka, "21–22 July 1739, Ottoman victory"]
+      - [Treaty of Belgrade, "18 September 1739"]
+      - [Returned by the Habsburgs, "Belgrade, northern Serbia, Oltenia"]
+    markers:
+      - kind: battle
+        side: ot
+        name: Battle of Grocka
+        date: 22 July 1739
+        text: Wallis’s army attacked piecemeal out of a defile and was cut down from the surrounding heights. The defeat decided the war.
+        lonlat: [20.72, 44.67]
+        lp: b
+      - kind: siege
+        side: ot
+        name: Belgrade
+        date: July – September 1739
+        text: The Ottoman army besieged the fortress after Grocka. It was handed over under the peace, after the Austrians had pulled down their new works.
+        lonlat: [20.457, 44.818]
+        lp: l
+      - kind: treaty
+        name: Treaty of Belgrade
+        date: 18 September 1739
+        text: Signed in the grand vizier’s camp through French mediation. It set the Habsburg–Ottoman border on the Sava and the Danube.
+        lonlat: [20.5, 44.76]
+        lp: b
+    arrows:
+      - side: hb
+        label: Wallis
+        via: [[20.46, 44.8], [20.6, 44.73], [20.7, 44.68]]
+      - side: ot
+        label: Ivaz Mehmed
+        via: [[21.18, 44.6], [20.93, 44.66], [20.75, 44.67]]
+      - side: ot
+        via: [[20.68, 44.7], [20.58, 44.77], [20.49, 44.8]]
+    areas:
+      - style: lost
+        side: hb
+        label: Returned to the Ottomans and Wallachia at Belgrade (approximate)
+        atoms: [RS-00, RS-08, RS-09, RS-10, RS-11, RS-12, RS-13, RS-17, RO-DJ, RO-GJ, RO-MH, RO-VL, RO-OT]

@@ -1,0 +1,160 @@
+id: hungarian-conquest-of-the-carpathian-basin
+name: Hungarian conquest of the Carpathian Basin
+start: "895"
+end: "902"
+tier: B
+summary: The migration of the Magyars (Hungarians) from the steppes north of the Black Sea into the Carpathian Basin. Driven out of their homeland by the Bulgarians and the Pechenegs after a war in Bulgaria in 895, they crossed the Carpathians, took Pannonia from the East Franks in 900 and destroyed Great Moravia in the early 900s, founding the Hungarian state. In Hungarian it is called the honfoglalás, the “taking of the homeland”.
+countries: [hu, ro, ua, md, bg, sk, cz, at, si, hr, rs]
+sides:
+  - id: mag
+    name: Magyars
+    polities: [hungary]
+    ink: olive
+    moves: Magyar moves
+    success: Magyar success
+  - id: bg
+    name: Bulgaria
+    polities: [bulgaria]
+    ink: green
+    moves: Bulgarian moves
+    success: Bulgarian success
+  - id: pe
+    name: Pechenegs
+    polities: [pechenegs]
+    ink: magenta
+    moves: Pecheneg moves
+    success: Pecheneg success
+  - id: mor
+    name: Great Moravia
+    polities: [great-moravia]
+    ink: teal
+    moves: Moravian moves
+    success: Moravian success
+  - id: ef
+    name: East Francia
+    polities: [east-francia]
+    ink: gold
+    moves: East Frankish moves
+    success: East Frankish success
+notes:
+  - The near-contemporary sources are foreign, chiefly the Annals of Fulda, Regino of Prüm and the Byzantine emperor Constantine VII; the Hungarian chronicles, the Gesta Hungarorum of about 1200 and the 14th-century Illuminated Chronicle, are much later and partly legendary. Hungary traditionally dates the conquest to 895–896 and celebrated its millennium in 1896.
+  - The Magyars were then led by two rulers, the kende and the gyula; Árpád and Kurszán held these offices around 895, but which was which is disputed. Their route over the mountains is also disputed. The Magyars’ western raids and the battle of Pressburg in 907 are told in the Hungarian invasions of Europe, and their part in the Byzantine–Bulgarian war of 894–896 in that war’s own entry.
+sources:
+  - title: Hungarian conquest of the Carpathian Basin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hungarian_conquest_of_the_Carpathian_Basin
+  - title: Árpád (Wikipedia)
+    url: https://en.wikipedia.org/wiki/%C3%81rp%C3%A1d
+  - title: Great Moravia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Great_Moravia
+  - title: Hungarian prehistory (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hungarian_prehistory
+  - title: Battle of Southern Buh (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Southern_Buh
+steps:
+  - title: The Bulgar war and the crossing of the Carpathians
+    date: c. 895–896
+    when: "895"
+    borders: "896"
+    countries: [hu, ro, ua, md, bg, sk]
+    body:
+      - "In the late 9th century the Magyars, a federation of seven tribes of horsemen joined by the Kabars, lived in Etelköz, the steppe between the Dnieper and the lower Danube. They already raided far to the west: in 892 they fought for the East Frankish king Arnulf against Great Moravia, and in 894 they plundered Pannonia as allies of the Moravians. That year the Byzantine emperor Leo VI hired them against Simeon of Bulgaria. In 895 Byzantine ships carried them across the Danube; they routed Simeon, who took refuge in Dristra, plundered Bulgaria and sold their captives to the Byzantines."
+      - "Simeon took his revenge. While the Magyar warriors were away, the Pechenegs, his allies, fell on their camps in Etelköz and killed or drove off their families, and the Bulgarians defeated the Magyars on the Southern Buh. The survivors crossed the Carpathians in search of new pastures, perhaps through the north-eastern passes such as Verecke, as the Gesta says, or into Transylvania, as the Illuminated Chronicle has it, where the chronicle says their leader Álmos was killed. They settled first along the upper Tisza, in a thinly peopled land on the edges of Bulgaria, Moravia and the Frankish march."
+    facts:
+      - [Leaders, "Árpád and Kurszán (and Álmos, Árpád’s father)"]
+      - [Homeland left, "Etelköz, between the Dnieper and the lower Danube"]
+      - [Crossing of the Carpathians, "c. 895–896"]
+    markers:
+      - kind: event
+        name: Etelköz
+        date: until c. 895
+        text: The Magyars’ homeland on the steppe north of the Black Sea, between the Dnieper and the lower Danube. Its name means “between the rivers”.
+        lonlat: [30.2, 47.2]
+      - kind: battle
+        side: mag
+        name: Simeon defeated
+        date: "895"
+        text: The Magyars, ferried over the Danube by the Byzantine fleet, beat the Bulgarian army in the Dobruja and plundered the country as far as Preslav.
+        lonlat: [28.0, 44.35]
+      - kind: battle
+        side: bg
+        name: Battle of Southern Buh
+        date: 895 or 896
+        text: Simeon’s Bulgarians defeated the Magyars on the river while the Pechenegs ravaged their homeland. The site is unknown.
+        lonlat: [30.8, 48.0]
+      - kind: event
+        side: mag
+        name: Verecke Pass
+        date: c. 895
+        text: The pass in the north-eastern Carpathians through which, according to the Gesta Hungarorum, the Magyars entered their new homeland.
+        lonlat: [23.176, 48.827]
+      - kind: event
+        name: Transylvania
+        date: c. 895
+        text: The Illuminated Chronicle has the Magyars arrive here and says Álmos “could not enter Pannonia, for he was killed in Erdély”.
+        lonlat: [24.2, 46.6]
+        lp: l
+    arrows:
+      - side: mag
+        label: Magyars, 895
+        via: [[29.8, 46.4], [28.7, 45.25], [28.0, 44.45], [26.9, 43.3]]
+      - side: pe
+        label: Pechenegs
+        via: [[35.0, 47.4], [33.0, 47.5], [31.0, 47.4]]
+      - side: mag
+        label: To the Carpathian Basin
+        via: [[29.5, 47.9], [26.5, 48.5], [23.4, 48.8], [22.0, 48.15]]
+      - side: mag
+        via: [[27.8, 46.9], [26.1, 46.45], [24.4, 46.6]]
+  - title: Pannonia and the end of Great Moravia
+    date: 896–902
+    when: "899"
+    borders: "902"
+    countries: [hu, sk, cz, at, si, hr, it, de]
+    body:
+      - "Arnulf, crowned emperor in 896, put the Slav prince Braslav in charge of Pannonia, west of the Danube, while Great Moravia was torn by a war between the sons of Svatopluk I. The Magyars served Arnulf again, and in 899 they invaded Italy, apparently at his urging, and routed King Berengar on the Brenta. Arnulf died in December 899. Coming back from Italy in 900, the Magyars took Pannonia, the old Frankish march around Braslav’s fortress at Mosaburg (Zalavár), and raided Bavaria. On 20 November Margrave Luitpold beat one of their bands on the Danube, and the Bavarians built a fortress on the Enns."
+      - "Moravia, already plundered, made peace with East Francia at Regensburg in 901, but it was too late. Under 902 a German chronicle records a war with the Hungarians in Moravia in which “the land succumbed”, and the last Moravian ruler, Mojmír II, is not heard of after about 906. Its strongholds were destroyed and many of its people fled to Bulgaria, Croatia and elsewhere. The Bavarians murdered Kurszán at a banquet in 902 or 904, and the Magyars, now masters of the Carpathian Basin, turned to raiding the West."
+    facts:
+      - [Pannonia taken, "900, after Arnulf’s death"]
+      - [Great Moravia, "Destroyed between 902 and 906"]
+      - [Kurszán murdered, "902 or 904, by the Bavarians"]
+    markers:
+      - kind: battle
+        side: mag
+        name: Battle of the Brenta
+        date: September 899
+        text: On their first great raid into Italy the Magyars routed King Berengar I’s army.
+        lonlat: [11.77, 45.55]
+      - kind: taken
+        side: mag
+        name: Mosaburg (Zalavár)
+        date: "900"
+        text: The fortress in the marshes of the Zala, seat of Pribina and Kocel, Slav princes under Frankish rule, and given to Braslav in 896. Its fate after 900 is not recorded.
+        lonlat: [17.16, 46.67]
+      - kind: battle
+        side: ef
+        name: Battle on the Danube
+        date: 20 November 900
+        text: Margrave Luitpold of Bavaria routed a Magyar band raiding the north bank of the Danube between Passau and Krems.
+        lonlat: [15.0, 48.3]
+      - kind: event
+        side: ef
+        name: Ennsburg
+        date: "900"
+        text: The Bavarians built a fortress on the Enns, which became the frontier with the Magyars.
+        lonlat: [14.47, 48.21]
+        lp: b
+      - kind: taken
+        side: mag
+        name: Mikulčice
+        date: c. 902–906
+        text: One of the great fortified centres of Great Moravia, with a palace and a dozen churches. It was abandoned in the early 10th century.
+        lonlat: [17.051, 48.816]
+    arrows:
+      - side: mag
+        label: From Italy, 900
+        via: [[13.4, 45.9], [15.0, 46.2], [16.4, 46.55], [17.1, 46.65]]
+      - side: mag
+        via: [[17.5, 47.6], [16.5, 48.1], [15.3, 48.3]]
+      - side: mag
+        label: Into Moravia
+        via: [[19.0, 47.6], [18.3, 48.2], [17.2, 48.75]]

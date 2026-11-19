@@ -1,0 +1,89 @@
+id: ottoman-habsburg-war-1565
+name: Ottoman–Habsburg War (1565–1568)
+start: "1565"
+end: "1568-02-17"
+tier: B
+summary: A short war between the Habsburg emperor Maximilian II and the Ottoman Empire, allied with John Sigismund of Transylvania. Suleiman the Magnificent led his last campaign in 1566 and died in his tent during the siege of Szigetvár, whose defender, Nikola Zrinski, fell in a final sortie; the Ottomans also took Gyula. The Treaty of Adrianople of 1568 began a quarter of a century of uneasy peace in Hungary.
+countries: [hu, hr, ro, at, tr]
+sides:
+  - id: hb
+    name: Maximilian II and the Habsburgs
+    polities: [habsburg, hre]
+    ink: purple
+    moves: Habsburg moves
+    success: Habsburg success
+  - id: tv
+    name: Transylvania under John Sigismund
+    polities: [transylvania]
+    ink: orange
+    moves: Transylvanian moves
+    success: Transylvanian success
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Dates are Julian. Sources differ by a day on the date of Suleiman’s death (5–7 September) and on the date of Zrinski’s last sortie (7 or 8 September 1566).
+  - Zrinski is a hero to both Croats and Hungarians, who know him as Nikola Šubić Zrinski and Zrínyi Miklós. His great-grandson, the poet and general Miklós Zrínyi, wrote the epic The Siege of Sziget about him, and Ivan Zajc’s opera Nikola Šubić Zrinski (1876) is one of the best known Croatian operas.
+sources:
+  - title: Siege of Szigetvár (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Szigetv%C3%A1r
+  - title: Nikola IV Zrinski (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nikola_IV_Zrinski
+  - title: Siege of Gyula (1566) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Gyula_(1566)
+  - title: Treaty of Adrianople (1568) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Adrianople_(1568)
+steps:
+  - title: Szigetvár
+    date: 1565–1568
+    when: "1565"
+    borders: "1568-02-17"
+    countries: [hu, hr, ro, at, tr]
+    body:
+      - After Ferdinand I died in 1564, fighting broke out over the borderlands between his son Maximilian II and John Sigismund of Transylvania, and in 1565 the imperial general Lazarus von Schwendi took Tokaj. Suleiman, over seventy and ill, set out on his last campaign in May 1566. He meant to attack Eger, but turned on Szigetvár after its captain, Nikola Zrinski, raided an Ottoman camp at Siklós. From 5 August the Ottoman army, led in practice by the grand vizier Sokollu Mehmed Pasha, besieged the fortress, held by Zrinski with about 2,300 Croatian and Hungarian soldiers. Further east Pertev Pasha took Gyula on 2 September.
+      - The defenders lost the new town and the old town and withdrew into the castle, which mines and fire slowly destroyed. On 6 September Suleiman died in his tent; Sokollu kept his death secret for weeks so that the army would not break up. On 8 September, with the castle in flames, Zrinski led his last few hundred men out and was killed, and almost all of the garrison died; more than 20,000 Ottomans are thought to have died in the siege. Maximilian’s army lay at Győr and did not move. In February 1568 the Treaty of Adrianople made an eight-year truce, renewed for many years after.
+    facts:
+      - [Siege of Szigetvár, "5 August – 8 September 1566, Ottoman victory"]
+      - [Garrison, "about 2,300, almost all killed"]
+      - [Treaty of Adrianople, "17 February 1568, an eight-year truce"]
+    markers:
+      - kind: taken
+        side: hb
+        name: Tokaj
+        date: 1565
+        text: Schwendi’s imperial army took this fortress on the Tisza from John Sigismund.
+        lonlat: [21.41, 48.12]
+      - kind: battle
+        side: hb
+        name: Siklós
+        date: June 1566
+        text: Zrinski’s successful raid on an Ottoman camp here is said to have turned the sultan towards Szigetvár.
+        lonlat: [18.3, 45.85]
+      - kind: taken
+        side: ot
+        name: Szigetvár
+        date: 8 September 1566
+        text: Zrinski and his last men died in a sortie from the burning castle. Suleiman had died two days earlier in his camp nearby.
+        lonlat: [17.8, 46.05]
+      - kind: taken
+        side: ot
+        name: Gyula
+        date: 2 September 1566
+        text: After a siege of 63 days, Pertev Pasha’s army of some 30,000 forced László Kerecsényi’s garrison of about 2,000 to surrender.
+        lonlat: [21.28, 46.65]
+      - kind: event
+        side: hb
+        name: Győr
+        date: August–September 1566
+        text: Maximilian II’s imperial army camped here but made no attempt to relieve Szigetvár.
+        lonlat: [17.63, 47.68]
+    arrows:
+      - side: ot
+        label: Suleiman I
+        via: [[20.4, 44.85], [19.3, 45.6], [18.6, 45.92], [17.86, 46.05]]
+      - side: ot
+        label: Pertev Pasha
+        via: [[21.23, 45.76], [21.32, 46.2], [21.28, 46.6]]

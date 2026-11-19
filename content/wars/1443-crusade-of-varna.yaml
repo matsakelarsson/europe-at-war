@@ -1,0 +1,158 @@
+id: crusade-of-varna
+name: Crusade of Varna
+start: "1443-10"
+end: "1444-11-10"
+tier: B
+summary: The last great crusade against the Ottomans in the Balkans, led by Władysław III, king of Poland and Hungary, and John Hunyadi. Their “long campaign” of 1443 reached the Balkan Mountains before winter drove them back, and in 1444 Sultan Murad II agreed to a ten-year truce that restored the Serbian despotate. Urged on by the papal legate, the king renounced the truce and marched to the Black Sea, where on 10 November 1444 the crusaders were crushed at Varna and Władysław was killed.
+countries: [hu, pl, rs, bg, ro, tr]
+sides:
+  - id: cru
+    name: Hungary, Poland and Wallachia
+    polities: [hungary, poland, wallachia]
+    ink: olive
+    moves: Crusader moves
+    success: Crusader success
+  - id: ser
+    name: Đurađ Branković of Serbia
+    polities: [serbia]
+    ink: red
+    moves: Serbian moves
+    success: Serbian success
+  - id: ott
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - The size of the armies is uncertain. The crusaders probably had about 20,000 men in 1444, including several thousand Wallachians; estimates for Murad’s army at Varna range from 40,000 to 60,000 or more.
+  - Whether the king broke his word is still argued over. Before the truce was sworn, Cardinal Cesarini had Władysław declare in advance that any treaty with the sultan was void, so that it could be ratified without stopping the crusade. Ottoman tradition says that Murad fought at Varna with the broken treaty fixed to his standard.
+  - Władysław’s death was not witnessed by his own men and his body was never found, which gave rise to legends that he survived.
+sources:
+  - title: Crusade of Varna (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Crusade_of_Varna
+  - title: Battle of Varna (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Varna
+  - title: Peace of Szeged (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peace_of_Szeged
+  - title: Battle of Niš (1443) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ni%C5%A1_(1443)
+  - title: Battle of Zlatitsa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Zlatitsa
+  - title: John Hunyadi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/John_Hunyadi
+steps:
+  - title: The long campaign
+    date: October 1443 – February 1444
+    when: "1443-10"
+    borders: "1443-12"
+    countries: [hu, rs, bg]
+    body:
+      - Since 1439 the Ottomans had annexed the Serbian despotate and besieged Belgrade, and Hunyadi, the voivode of Transylvania, had beaten their raiders in 1441 and 1442. Pope Eugene IV proclaimed a crusade on 1 January 1443, and in October Władysław, Hunyadi and the exiled despot Đurađ Branković crossed into Serbia with a Hungarian, Polish and Serbian army, counting on the Ottoman cavalry having gone home after the harvest. Hunyadi’s vanguard defeated the Ottoman forces near Niš on 2 or 3 November, and the crusaders marched on to Sofia. In the confusion, Skanderbeg and his Albanians left the Ottoman army and rode home to Krujë.
+      - Beyond Sofia the Ottomans burned the countryside and blocked the passes over the Balkan Mountains. On 12 December, in deep snow and bitter cold, the crusaders failed to break through at the Zlatitsa pass and turned back. On 2 or 5 January 1444 they ambushed their pursuers at Kunovica, between Niš and Pirot, and captured Mahmud Bey, the sultan’s brother-in-law and brother of the grand vizier. The army reached Buda in February to a heroes’ welcome; the setback at Zlatitsa was played down.
+    facts:
+      - [Battle of Niš, "2 or 3 November 1443, crusader victory"]
+      - [Zlatitsa pass, "12 December 1443, crusaders turned back"]
+      - [Battle of Kunovica, "2 or 5 January 1444, crusader victory"]
+    markers:
+      - kind: battle
+        side: cru
+        name: Niš
+        date: 2–3 November 1443
+        text: Hunyadi’s vanguard defeated the troops of the governor of Rumelia, Kasım Pasha, who fell back burning the villages on his way.
+        lonlat: [21.896, 43.321]
+      - kind: taken
+        side: cru
+        name: Sofia
+        date: late 1443
+        text: The crusaders entered the city, the farthest point of their advance before the mountains.
+        lonlat: [23.333, 42.7]
+      - kind: battle
+        side: ott
+        name: Zlatitsa pass
+        date: 12 December 1443
+        text: Ottoman troops dug in on the snowbound pass threw back the crusaders’ attacks and forced them to retreat.
+        lonlat: [24.1, 42.75]
+      - kind: battle
+        side: cru
+        name: Kunovica
+        date: 2 or 5 January 1444
+        text: The retreating crusaders ambushed the pursuing Ottomans in the hills and took many prisoners, among them Mahmud Bey.
+        lonlat: [22.176, 43.18]
+        lp: b
+    arrows:
+      - side: cru
+        label: Władysław and Hunyadi
+        via: [[20.5, 44.8], [21.6, 43.9], [21.9, 43.35], [23.3, 42.72]]
+      - side: cru
+        label: Władysław and Hunyadi
+        via: [[23.4, 42.7], [24.05, 42.73]]
+      - side: cru
+        label: Retreat
+        via: [[23.3, 42.75], [22.25, 43.17], [21.6, 43.9], [20.5, 44.85]]
+  - title: Szeged and the broken truce
+    date: June – September 1444
+    when: "1444-06-12"
+    borders: "1444-08-22"
+    countries: [hu, rs, tr]
+    body:
+      - Under pressure from his Serbian wife Mara and from Mahmud Bey’s family, and threatened by Karaman in Anatolia, Murad II offered peace. The terms agreed at Edirne on 12 June 1444 returned the Serbian despotate, with Smederevo, Golubac and some two dozen towns, to Branković as an Ottoman vassal, released his two blinded sons and set a ten-year truce with Hungary. At the same time, Cardinal Julian Cesarini, the papal legate, kept pressing for a new crusade, and the Venetians and the pope were preparing a fleet to close the straits.
+      - On 4 August, with Cesarini’s help, Władysław swore in advance that he renounced any treaty he had made or would make with the sultan, and on 15 August the truce was ratified by oath. Branković took back Serbia on 22 August and stayed out of the coming fight. Murad, believing the peace secure, gave up the throne to his twelve-year-old son Mehmed II and retired. On 20 September the crusading army set out from Szeged, crossed the Danube and marched east along its southern bank, joined near Nicopolis by Wallachian cavalry under Mircea, son of Vlad Dracul.
+    facts:
+      - [Treaty agreed at Edirne, 12 June 1444]
+      - [Truce ratified, 15 August 1444]
+      - [Serbia restored to Branković, 22 August 1444]
+    markers:
+      - kind: treaty
+        name: Edirne
+        date: 12 June 1444
+        text: The sultan swore to a ten-year truce and the restoration of Serbia; the text was sent to Hungary for ratification.
+        lonlat: [26.556, 41.677]
+      - kind: treaty
+        name: Szeged
+        date: August 1444
+        text: The Ottoman envoys met the king here. The treaty is known as the Peace of Szeged, although the oaths may have been taken at Várad.
+        lonlat: [20.145, 46.255]
+      - kind: held
+        side: ser
+        name: Smederevo
+        date: 22 August 1444
+        text: Returned to Branković under the truce, with the rest of the despotate.
+        lonlat: [20.928, 44.669]
+    arrows:
+      - side: cru
+        label: Crusaders
+        via: [[20.15, 46.2], [22.4, 44.7], [23.0, 43.95], [24.85, 43.72]]
+  - title: Varna
+    date: October – November 1444
+    when: "1444-10-18"
+    borders: "1444-11-10"
+    countries: [bg, hu, pl, ro, tr]
+    body:
+      - The Christian fleet failed to stop Murad, recalled from retirement, from bringing his Anatolian army across the Bosporus on 18 October, and he marched north to cut the crusaders off. On 9 November they found him behind them near Varna, trapped between the sea, Lake Varna and the hills. Hunyadi drew up the army in an arc between the lake and the heights, with the wagon fort behind.
+      - On 10 November the Ottoman light cavalry drove in the crusader right wing, many of whom died in the marshes; Cesarini disappeared in the rout. Hunyadi held the left, but the twenty-year-old king, ignoring his advice, charged the janissaries in the Ottoman centre with his Polish household knights. Władysław was killed and his head was shown to his army, which broke. Hunyadi escaped, only to be held for a time in Wallachia by Vlad Dracul. Thousands of crusaders were killed or captured, and no Western army would try again to drive the Ottomans out of the Balkans for many years.
+    facts:
+      - [Murad crosses the Bosporus, 18 October 1444]
+      - [Battle of Varna, "10 November 1444, Ottoman victory"]
+      - [Killed, "King Władysław III and Cardinal Cesarini"]
+    markers:
+      - kind: battle
+        side: ott
+        name: Battle of Varna
+        date: 10 November 1444
+        text: The king fell in a charge on the janissaries guarding Murad. His head was carried on a lance and the crusaders broke.
+        lonlat: [27.883, 43.217]
+      - kind: event
+        side: ott
+        name: Bosporus
+        date: 18 October 1444
+        text: Murad’s army crossed from Asia here; the Venetian, papal and Burgundian ships failed to stop it.
+        lonlat: [29.065, 41.083]
+        lp: r
+    arrows:
+      - side: cru
+        label: Crusaders
+        via: [[24.9, 43.7], [26.0, 43.55], [26.95, 43.3], [27.8, 43.22]]
+      - side: ott
+        label: Murad II
+        via: [[29.06, 41.08], [27.9, 41.7], [27.5, 42.5], [27.82, 43.15]]

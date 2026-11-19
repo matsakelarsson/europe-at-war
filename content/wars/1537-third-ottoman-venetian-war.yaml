@@ -1,0 +1,133 @@
+id: third-ottoman-venetian-war
+name: Third Ottoman–Venetian War
+start: "1537"
+end: "1540-10-02"
+tier: B
+summary: A war that began when Suleiman the Magnificent, gathering forces in Albania to invade Italy in concert with France, turned instead on Venetian Corfu. The siege of 1537 failed, but Hayreddin Barbarossa took Venice’s Aegean islands, beat the Holy League fleet of Venice, the pope and Charles V at Preveza in 1538 and retook Castelnuovo in 1539. In the peace of 1540 Venice gave up its last towns in the Morea and paid 300,000 ducats.
+countries: [gr, al, it, me, es, mt, tr]
+sides:
+  - id: ve
+    name: Republic of Venice
+    polities: [venice]
+    ink: red
+    moves: Venetian moves
+    success: Venetian success
+  - id: hl
+    name: Charles V and the pope
+    polities: [spain, habsburg, genoa, papal-states, malta, naples, sicily]
+    ink: gold
+    moves: Imperial and papal moves
+    success: Imperial and papal success
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Dates are Julian. The size of the fleets at Preveza differs widely between sources; most give the Holy League well over 100 galleys and many sailing ships, and Barbarossa about 120 galleys and galliots.
+  - Venetian and imperial writers blamed each other for the defeat at Preveza. Venetians accused Andrea Doria, the Genoese admiral of Charles V, of holding back his ships on purpose, while imperial writers said the Venetians would not follow his orders.
+sources:
+  - title: Ottoman–Venetian War (1537–1540) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ottoman%E2%80%93Venetian_War_(1537%E2%80%931540)
+  - title: Siege of Corfu (1537) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Corfu_(1537)
+  - title: Battle of Preveza (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Preveza
+  - title: Siege of Castelnuovo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Castelnuovo
+steps:
+  - title: Corfu
+    date: 1537
+    when: "1537-07"
+    borders: "1537-09-15"
+    countries: [gr, al, it, tr]
+    body:
+      - In 1537 Suleiman brought a great army to Valona in Albania, meaning to cross to Italy with Hayreddin Barbarossa’s fleet while his ally Francis I of France attacked Charles V in the north. At the end of July Ottoman troops landed near Otranto and ravaged the country, carrying thousands of people into slavery, but the French attack was slow to come and they were withdrawn. A series of clashes at sea with Venetian galleys gave the sultan a reason to turn on Venice, which had tried to stay neutral.
+      - In late August some 25,000 Ottoman troops landed on Corfu, Venice’s key to the Adriatic. They burned the countryside and carried off many islanders, but the guns of the citadel, rebuilt to withstand artillery, held them off. With rain, disease in the camp and the season ending, Suleiman lifted the siege in mid-September. Barbarossa then swept through the Aegean, sacking Aegina and taking or forcing tribute from the Venetian islands and the Duchy of Naxos.
+    facts:
+      - [Siege of Corfu, "late August – mid-September 1537"]
+      - [Ottoman troops on Corfu, "about 25,000"]
+      - [Islands lost by Venice, "Aegina, Paros, Ios, Karpathos and others"]
+    markers:
+      - kind: event
+        side: ot
+        name: Valona
+        date: summer 1537
+        text: Suleiman’s army camped here, across the Strait of Otranto from Italy, waiting to invade.
+        lonlat: [19.49, 40.47]
+      - kind: event
+        side: ot
+        name: Otranto
+        date: late July 1537
+        text: Ottoman troops landed at Castro nearby and raided the Salento for two weeks.
+        lonlat: [18.49, 40.15]
+      - kind: held
+        side: ve
+        name: Corfu
+        date: late August – mid-September 1537
+        text: The Venetian citadel withstood the Ottoman bombardment, and the sultan withdrew.
+        lonlat: [19.92, 39.62]
+      - kind: taken
+        side: ot
+        name: Aegina
+        date: autumn 1537
+        text: Barbarossa sacked the island and carried off much of its population.
+        lonlat: [23.43, 37.75]
+      - kind: event
+        side: ot
+        name: Naxos
+        date: autumn 1537
+        text: The Duke of Naxos, a Venetian vassal, had to pay the sultan tribute; the duchy was annexed in 1566.
+        lonlat: [25.37, 37.1]
+    arrows:
+      - side: ot
+        label: Suleiman I
+        via: [[19.49, 40.43], [19.85, 40.0], [19.9, 39.68]]
+      - side: ot
+        label: Barbarossa
+        via: [[18.55, 40.1], [19.2, 39.85], [19.85, 39.64]]
+      - side: ot
+        label: Barbarossa in the Aegean
+        via: [[22.6, 37.3], [23.43, 37.72], [24.6, 37.35], [25.35, 37.12]]
+  - title: Preveza and the peace
+    date: 1538–1540
+    when: "1538-02"
+    borders: "1540-10-02"
+    countries: [gr, it, es, me, mt, tr]
+    body:
+      - In February 1538 Pope Paul III, Venice and Charles V formed a Holy League. In September its fleet, under the Genoese admiral Andrea Doria with the Venetians under Vincenzo Capello and the papal galleys under Marco Grimani, found Barbarossa’s smaller fleet sheltering in the Gulf of Arta, near the old battlefield of Actium. Doria would not force the narrow entrance under the guns of Preveza. On 28 September, as the League ships moved off down the coast, Barbarossa came out and attacked. The League lost a number of ships, and Doria withdrew to Corfu with the rest.
+      - In October Spanish troops took Castelnuovo at the mouth of the Bay of Kotor, but in the summer of 1539 Barbarossa besieged it by land and sea and killed almost all of its garrison. Venice made a separate peace on 2 October 1540. It gave up Nauplia and Monemvasia, its last towns in the Morea, recognised the loss of the Aegean islands and paid 300,000 ducats. The Ottoman fleet was now the strongest in the eastern Mediterranean.
+    facts:
+      - [Holy League, February 1538]
+      - [Battle of Preveza, "28 September 1538, Ottoman victory"]
+      - [Peace, "2 October 1540; Venice cedes Nauplia and Monemvasia and pays 300,000 ducats"]
+    markers:
+      - kind: naval
+        side: ot
+        name: Battle of Preveza
+        date: 28 September 1538
+        text: Barbarossa sallied from the Gulf of Arta and attacked the larger League fleet as it moved off. Doria broke off the fight.
+        lonlat: [20.75, 38.96]
+      - kind: taken
+        side: ot
+        name: Castelnuovo
+        date: August 1539
+        text: Taken by Spanish troops in 1538 and retaken by Barbarossa after a hard siege, in which most of the garrison died.
+        lonlat: [18.53, 42.45]
+      - kind: treaty
+        side: ot
+        name: Nauplia
+        date: 2 October 1540
+        text: Venice gave up Nauplia and Monemvasia in the peace. It won them back only in 1686.
+        lonlat: [22.8, 37.57]
+      - kind: event
+        side: ot
+        name: Monemvasia
+        date: 1540
+        text: The rock fortress, Venetian since 1464, was handed over to the Ottomans under the peace.
+        lonlat: [23.06, 36.69]
+    arrows:
+      - side: hl
+        label: Andrea Doria
+        via: [[19.92, 39.6], [20.3, 39.25], [20.62, 38.98]]

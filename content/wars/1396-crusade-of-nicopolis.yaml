@@ -1,0 +1,122 @@
+id: crusade-of-nicopolis
+name: Crusade of Nicopolis
+start: "1396-04-30"
+end: "1396-09-25"
+tier: B
+summary: The great crusade of 1396, in which King Sigismund of Hungary and an army of French, Burgundian, German and other knights, with Wallachians, Hospitallers and a Venetian fleet, marched down the Danube to drive the Ottomans from the Balkans. After taking Vidin and Oryahovo they besieged Nicopolis, where on 25 September the army of Sultan Bayezid I and his Serbian vassals destroyed them. Bayezid had thousands of prisoners killed, and annexed Vidin, the last Bulgarian realm.
+countries: [bg, ro, hu, fr, tr, rs]
+sides:
+  - id: cru
+    name: Sigismund and the crusaders
+    polities: [hungary, france, burgundy, wallachia, malta, venice]
+    ink: olive
+    moves: Crusader moves
+    success: Crusader success
+  - id: ott
+    name: Ottoman Empire and Serbia
+    polities: [ottoman, serbia]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Dates are Julian. The chroniclers give armies of 100,000 or more on each side; modern historians think each numbered perhaps 15,000 to 20,000. The reported English contingent seems never to have existed.
+  - The main accounts are French (Froissart, the Monk of Saint-Denis and others) and blame the defeat on the French knights’ haste; the young Johann Schiltberger, a Bavarian squire who survived the massacre, left an eyewitness account of it.
+sources:
+  - title: Battle of Nicopolis (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Nicopolis
+  - title: Sigismund, Holy Roman Emperor (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sigismund,_Holy_Roman_Emperor
+  - title: John the Fearless (Wikipedia)
+    url: https://en.wikipedia.org/wiki/John_the_Fearless
+  - title: Johann Schiltberger (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Johann_Schiltberger
+steps:
+  - title: Down the Danube
+    date: April – September 1396
+    when: "1396-04-30"
+    borders: "1396-09-12"
+    countries: [hu, bg, ro, fr, rs]
+    body:
+      - The fall of Tarnovo and Ottoman raids across the Danube led Sigismund of Hungary to appeal to the West, and with England and France at truce, French nobles answered eagerly. Duke Philip of Burgundy paid for much of the expedition and gave its command to his son John, Count of Nevers, aged 24, advised by veterans such as Enguerrand de Coucy, Jean de Vienne and Marshal Boucicaut. The French and Burgundians left Dijon on 30 April 1396 and joined Sigismund at Buda in July, together with German knights, Wallachians under Mircea the Elder and others; Venetian ships brought the Hospitallers of Rhodes into the Black Sea and up the Danube.
+      - Rather than wait for Bayezid in Hungary, the crusaders marched down the Danube and crossed it at Orșova over eight days. Ivan Sratsimir opened Vidin to them, and the Turkish officers of its garrison were put to death. At Oryahovo (Rahova) the townspeople surrendered to Sigismund on promise of their lives, but the French sacked the town and massacred many of them, Turks and Bulgarians, keeping about a thousand for ransom. On 12 September the army reached Nicopolis, a strong fortress on a cliff above the river. Having brought no siege engines, it settled down to starve the garrison out.
+    facts:
+      - [Crusaders leave Dijon, 30 April 1396]
+      - [Vidin surrenders, September 1396]
+      - [Siege of Nicopolis begins, 12 September 1396]
+    markers:
+      - kind: event
+        side: cru
+        name: Buda
+        date: July 1396
+        text: The crusaders gathered here with Sigismund’s Hungarian army. A council of war decided to march into Ottoman lands.
+        lonlat: [19.05, 47.467]
+      - kind: event
+        side: cru
+        name: Orșova
+        date: August 1396
+        text: The army crossed the Danube below the Iron Gates gorge on boats and pontoons.
+        lonlat: [22.396, 44.725]
+      - kind: taken
+        side: cru
+        name: Vidin
+        date: September 1396
+        text: Ivan Sratsimir, the Bulgarian ruler of Vidin and an Ottoman vassal, surrendered his town to the crusaders.
+        lonlat: [22.872, 43.993]
+      - kind: taken
+        side: cru
+        name: Oryahovo
+        date: September 1396
+        text: Taken after a day of fighting. The French broke Sigismund’s promise of safety, plundered the town and set it on fire.
+        lonlat: [23.961, 43.734]
+      - kind: siege
+        side: cru
+        name: Nicopolis
+        date: from 12 September 1396
+        text: The Ottoman governor, Doğan Bey, held the fortress, sure that the sultan would come to his relief.
+        lonlat: [24.9, 43.7]
+    arrows:
+      - side: cru
+        label: Crusaders
+        via: [[19.05, 47.45], [20.4, 44.9], [22.4, 44.72], [22.85, 44.0]]
+      - side: cru
+        label: Crusaders
+        via: [[22.9, 43.95], [23.96, 43.74], [24.88, 43.71]]
+  - title: The battle of Nicopolis
+    date: 25 September 1396
+    when: "1396-09-25"
+    borders: "1396-10"
+    countries: [bg, hu, fr, ro, rs, tr]
+    body:
+      - Bayezid broke off his blockade of Constantinople and came north through the Shipka Pass, joined by Stefan Lazarević and his Serbian knights. On 25 September the French insisted on leading the attack, against Sigismund’s advice to let the Wallachian infantry open the battle. Their knights rode down the Ottoman light troops and irregular infantry and then, many of them on foot after crossing lines of sharpened stakes, climbed the slope beyond, only to meet fresh Ottoman cavalry held in reserve at the top. Surrounded, Nevers and the surviving French surrendered.
+      - The Wallachians and Transylvanians left the field, and Sigismund, the Hospitallers and the Germans were overwhelmed after the Serbian horsemen joined the battle. Sigismund escaped in a boat to the Venetian ships; many others drowned trying to reach them. Enraged by his losses and by the killing of prisoners at Oryahovo, Bayezid had several thousand captives put to death the next day, sparing the richest nobles, among them Nevers and Boucicaut, who were ransomed for 200,000 florins. Coucy died in captivity at Bursa. Bayezid then took Vidin and returned to his siege of Constantinople.
+    facts:
+      - [Battle of Nicopolis, "25 September 1396, Ottoman victory"]
+      - [Prisoners executed, "several thousand by the chroniclers’ accounts; modern estimates 300–3,000"]
+      - [Ransom of the nobles, "200,000 florins"]
+    markers:
+      - kind: battle
+        side: ott
+        name: Battle of Nicopolis
+        date: 25 September 1396
+        text: The French charge broke against the Ottoman reserve on the plateau south of the town; the rest of the army was then defeated in turn.
+        lonlat: [24.85, 43.66]
+        lp: l
+      - kind: held
+        side: ott
+        name: Nicopolis
+        date: 25 September 1396
+        text: The garrison held out until the sultan arrived; the crusader camp below the walls was abandoned.
+        lonlat: [24.9, 43.7]
+      - kind: taken
+        side: ott
+        name: Vidin
+        date: autumn 1396
+        text: Bayezid took Vidin and sent Ivan Sratsimir to prison in Bursa, ending the last Bulgarian state.
+        lonlat: [22.872, 43.993]
+    arrows:
+      - side: ott
+        label: Bayezid I
+        via: [[26.56, 41.68], [25.35, 42.75], [25.62, 43.08], [24.9, 43.6]]
+      - side: cru
+        label: Sigismund’s escape
+        via: [[24.9, 43.72], [26.5, 44.1], [28.8, 44.9]]

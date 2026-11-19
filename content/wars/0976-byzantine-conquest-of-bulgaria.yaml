@@ -1,0 +1,370 @@
+id: byzantine-conquest-of-bulgaria
+name: Byzantine conquest of Bulgaria
+start: "976"
+end: "1018"
+tier: A
+summary: The forty-year war in which the Byzantine emperor Basil II destroyed the western Bulgarian realm of Samuel, centred on Prespa and Ohrid. After a defeat at the Gates of Trajan in 986 and years of Bulgarian raids deep into Greece, the Byzantines won at the Spercheios in 997, took fortress after fortress from 1000 and broke Samuel’s army at Kleidion in 1014, blinding thousands of prisoners. The last Bulgarian leaders surrendered in 1018, and Bulgaria was ruled from Constantinople until 1185.
+countries: [bg, mk, gr, al, rs, me, xk, ro, tr]
+sides:
+  - id: byz
+    name: Byzantine Empire
+    polities: [byzantium]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+  - id: bg
+    name: Bulgaria
+    polities: [bulgaria]
+    ink: green
+    moves: Bulgarian moves
+    success: Bulgarian success
+notes:
+  - The main source is John Skylitzes, who wrote in the late 11th century; Leo the Deacon, who was at the Gates of Trajan, Yahya of Antioch and the Armenian Stepanos Taronetsi add details. Their chronologies often disagree, so several dates here are given as alternatives (the Spercheios 996 or 997, Vidin 1002 or 1003, Skopje 1003 or 1004). Yahya of Antioch has Tsar Roman captured in 991 and dying in 997, while Skylitzes has him surrender Skopje in 1004. No Bulgarian account survives.
+  - Samuel’s state is one of the subjects of competing national histories in Bulgaria and North Macedonia. Contemporary Byzantine, Armenian and Arab writers called it Bulgaria, and Basil’s nickname Boulgaroktonos, “Bulgar-slayer”, appears in writing only from the 12th century.
+  - Places are given their Byzantine names where these are usual in English, with modern names in the text. Serdica or Sredets is Sofia, Berroia is Veria, Vodena is Edessa, Dyrrhachium is Durrës and Kleidion is near today’s Klyuch in Bulgaria. Sviatoslav’s war of 965–971, after which Byzantium annexed eastern Bulgaria, is told in Sviatoslav’s campaigns.
+sources:
+  - title: Byzantine conquest of Bulgaria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Byzantine_conquest_of_Bulgaria
+  - title: Samuel of Bulgaria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Samuel_of_Bulgaria
+  - title: Basil II (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Basil_II
+  - title: Battle of the Gates of Trajan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Gates_of_Trajan
+  - title: Battle of Spercheios (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Spercheios
+  - title: Battle of Skopje (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Skopje
+  - title: Battle of Kleidion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kleidion
+  - title: Ivan Vladislav of Bulgaria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ivan_Vladislav_of_Bulgaria
+  - title: Archbishopric of Ohrid (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Archbishopric_of_Ohrid
+  - title: Basil II (Britannica)
+    url: https://www.britannica.com/biography/Basil-II
+steps:
+  - title: The Cometopuli and the Gates of Trajan
+    date: 976–986
+    when: "976"
+    borders: "986-08-17"
+    countries: [bg, mk, gr]
+    body:
+      - "When John I Tzimiskes died in January 976, Byzantium held eastern Bulgaria, but the west had never been conquered. There four brothers, the sons of a count and so called the Cometopuli, rose against the empire; two were soon killed, and the youngest, Samuel, came to rule. Boris II and his brother Roman escaped from Constantinople, but Boris was killed at the frontier by a guard who took him for a Byzantine. Roman, who had been castrated in captivity, was proclaimed tsar, but Samuel held real power. While Basil II fought the rebel Bardas Skleros in Asia Minor, Samuel raided Greece and starved Larissa into surrender after years of blockade."
+      - "In 986 Basil marched on Serdica through the pass known as the Gates of Trajan and besieged it for twenty days. The defenders sallied out, burned his siege engines and captured his draught animals, and he turned back. On 17 August, in the pass, the Bulgarians fell on his army and routed it. Basil barely escaped, and his baggage and treasury were lost. The historian Leo the Deacon, who was with the army, only just escaped himself."
+    facts:
+      - [Byzantine emperor, "Basil II (976–1025)"]
+      - [Siege of Serdica, "July–August 986, 20 days"]
+      - [Gates of Trajan, "17 August 986, Bulgarian victory"]
+    markers:
+      - kind: event
+        side: bg
+        name: Serres
+        date: "976"
+        text: Moses, one of the four Cometopuli brothers, was killed by a stone while besieging the town.
+        lonlat: [23.55, 41.09]
+      - kind: taken
+        side: bg
+        name: Larissa
+        date: c. 983–986
+        text: The key town of Thessaly fell to Samuel after a long blockade. He took the relics of its patron, Saint Achillius, to a new church on an island in Lake Prespa.
+        lonlat: [22.417, 39.642]
+      - kind: held
+        side: bg
+        name: Serdica (Sredets)
+        date: July–August 986
+        text: The Bulgarian garrison held out for twenty days and destroyed the Byzantine siege engines.
+        lonlat: [23.33, 42.7]
+      - kind: battle
+        side: bg
+        name: Battle of the Gates of Trajan
+        date: 17 August 986
+        text: The retreating army was ambushed in the pass near Ihtiman. Basil reached Philippopolis with a few of his guard.
+        lonlat: [23.918, 42.356]
+        lp: b
+      - kind: event
+        name: Prespa
+        date: from the 980s
+        text: Samuel’s seat, with his church of Saint Achillius on an island in the Small Prespa lake.
+        lonlat: [21.1, 40.82]
+        lp: l
+    arrows:
+      - side: byz
+        label: Basil II, 986
+        via: [[24.75, 42.15], [24.1, 42.3], [23.6, 42.55], [23.38, 42.68]]
+      - side: byz
+        via: [[23.42, 42.64], [23.7, 42.45], [23.9, 42.37]]
+      - side: bg
+        label: Samuel
+        via: [[21.15, 40.85], [21.6, 40.2], [22.35, 39.68]]
+  - title: Samuel’s high tide and the Spercheios
+    date: 987–998
+    when: "987"
+    borders: "998"
+    countries: [gr, mk, bg, al, me]
+    body:
+      - "For three years Basil was fighting the rebel Bardas Phokas, and Samuel took the chance. He took Berroia and Servia in Macedonia, gained Dyrrhachium on the Adriatic by marrying the daughter of its leading citizen and at some point won back north-eastern Bulgaria. Basil campaigned in Macedonia from 991 and captured Roman, but in 995 he had to go east to save Aleppo from the Fatimids. Samuel’s men then killed the governor of Thessalonica, Gregory Taronites, outside the city, captured his son Ashot and raided through Thessaly and central Greece into the Peloponnese."
+      - "Basil’s general Nikephoros Ouranos followed him. On the way home the Bulgarians camped behind the flooded Spercheios near Lamia, sure that no one could cross. Ouranos found a ford, crossed at night and attacked at dawn. Most of the Bulgarian army was killed or captured; Samuel and his son Gabriel Radomir, both wounded, escaped by lying among the dead and fled over the Pindus mountains. When Roman died in captivity in 997, Samuel had himself proclaimed tsar. In 998 he subdued Duklja, on today’s Montenegrin coast, and raided Dalmatia."
+    facts:
+      - [Battle of Thessalonica, "995 or 996, Bulgarian victory"]
+      - [Battle of the Spercheios, "997 (some date it 996), Byzantine victory"]
+      - [Samuel proclaimed tsar, "997, after Roman’s death"]
+    markers:
+      - kind: battle
+        side: bg
+        name: Battle of Thessalonica
+        date: 995 or 996
+        text: Samuel drew the city’s governor, Gregory Taronites, into an ambush and killed him; his son Ashot was captured and later married Samuel’s daughter.
+        lonlat: [22.94, 40.64]
+      - kind: event
+        side: bg
+        name: Raid into the Peloponnese
+        date: c. 996
+        text: The Bulgarians passed Thermopylae and plundered as far as the Peloponnese.
+        lonlat: [22.88, 37.94]
+      - kind: battle
+        side: byz
+        name: Battle of the Spercheios
+        date: "997"
+        text: A night crossing of the flooded river and a dawn attack destroyed Samuel’s army and ended his raids into Greece.
+        lonlat: [22.43, 38.88]
+      - kind: held
+        side: bg
+        name: Dyrrhachium
+        date: by the 990s
+        text: The great Adriatic port came under Samuel through his marriage to the daughter of John Chryselios, its leading citizen.
+        lonlat: [19.446, 41.313]
+      - kind: taken
+        side: bg
+        name: Duklja
+        date: "998"
+        text: Samuel besieged Ulcinj and made Prince Jovan Vladimir submit. Vladimir was taken to Prespa, married Samuel’s daughter and returned as his vassal.
+        lonlat: [19.2, 41.93]
+        lp: l
+    arrows:
+      - side: bg
+        label: Samuel
+        via: [[22.1, 40.6], [22.4, 39.7], [22.55, 38.85], [22.85, 37.98]]
+      - side: byz
+        label: Nikephoros Ouranos
+        via: [[22.94, 40.6], [22.45, 39.6], [22.45, 38.95]]
+      - side: bg
+        via: [[22.35, 38.9], [21.6, 39.55], [21.15, 40.5]]
+  - title: Vidin, Skopje and Dyrrhachium
+    date: 1000–1005
+    when: "1000"
+    borders: "1005"
+    countries: [bg, gr, mk, al, ro, tr]
+    body:
+      - "From 1000 Basil, at peace in the east, campaigned in the Balkans almost every year. His generals Theodorokanos and Nikephoros Xiphias retook Pliska and the two Preslavs, Great and Little, in the north-east. Basil himself then took Berroia, whose commander changed sides, stormed Servia, recovered the forts of Thessaly and took Vodena after a long siege, moving its people to Thrace. Then he besieged Vidin on the Danube for eight months and took it. While he was there, Samuel raided Adrianople on the feast of the Dormition, 15 August."
+      - "Marching south, Basil found Samuel’s army camped across the Vardar near Skopje. A soldier found a ford, the Byzantines crossed and routed the Bulgarians, and the governor of Skopje surrendered the town. Basil then besieged Pernik, but its commander, Krakra, held out and the Byzantines withdrew with heavy losses. In 1005 the Chryselios family handed Dyrrhachium to a Byzantine fleet, while Samuel’s son-in-law Ashot slipped away to Constantinople. For the next nine years the war went on in yearly raids and sieges, of which little is recorded."
+    facts:
+      - [Vidin, "Taken after eight months, 1002 or 1003"]
+      - [Battle of Skopje, "1004 (some date it 1003), Byzantine victory"]
+      - [Dyrrhachium, "Handed over to Byzantium, 1005"]
+    markers:
+      - kind: taken
+        side: byz
+        name: Preslav and Pliska
+        date: 1000 or 1001
+        text: Theodorokanos and Nikephoros Xiphias retook the old Bulgarian capitals in the north-east.
+        lonlat: [26.817, 43.167]
+      - kind: taken
+        side: byz
+        name: Berroia, Servia and Vodena
+        date: 1001 or 1002
+        text: Berroia surrendered, Servia was stormed and Vodena fell after a long siege; its people were moved to the plain between the Mesta and the Maritsa.
+        lonlat: [22.2, 40.52]
+        lp: l
+      - kind: siege
+        side: byz
+        name: Siege of Vidin
+        date: 1002 or 1003
+        text: The Danube fortress held out for eight months, beating off attacks with Greek fire, before it fell.
+        lonlat: [22.872, 43.993]
+      - kind: event
+        side: bg
+        name: Adrianople
+        date: 15 August 1002 or 1003
+        text: Samuel struck in the opposite direction while Basil was at Vidin, and plundered the city on the feast of the Dormition.
+        lonlat: [26.556, 41.677]
+      - kind: battle
+        side: byz
+        name: Battle of Skopje
+        date: "1004"
+        text: Basil found a ford over the Vardar and surprised Samuel’s camp, as Ouranos had done on the Spercheios. Skopje then surrendered.
+        lonlat: [21.433, 42.0]
+      - kind: held
+        side: bg
+        name: Pernik
+        date: "1004"
+        text: Krakra, the fortress’s commander, refused Basil’s offers of titles and wealth and beat off his assaults.
+        lonlat: [23.033, 42.6]
+      - kind: taken
+        side: byz
+        name: Dyrrhachium
+        date: "1005"
+        text: John Chryselios’s family surrendered the port to the Byzantine commander Eustathios Daphnomeles in return for court titles.
+        lonlat: [19.446, 41.313]
+    arrows:
+      - side: byz
+        label: Basil II
+        via: [[22.94, 40.64], [22.25, 40.5], [22.0, 40.2], [22.05, 40.78]]
+      - side: byz
+        label: To Vidin
+        via: [[24.75, 42.15], [23.6, 42.75], [23.0, 43.6], [22.88, 43.95]]
+      - side: byz
+        via: [[22.6, 43.85], [21.9, 43.3], [21.6, 42.6], [21.45, 42.05]]
+    areas:
+      - style: occupied
+        side: byz
+        label: Taken by Byzantium, 1000–1005 (approximate)
+        atoms: [BG-03, BG-08, BG-17, BG-18, BG-19, BG-25, BG-27, RO-CT, RO-TL, BG-05, GR-E, GR-C, AL-02]
+  - title: Kleidion
+    date: "1014"
+    when: "1014-07-29"
+    borders: "1014-10-06"
+    countries: [bg, mk, gr]
+    body:
+      - "In 1014 Samuel tried to stop Basil’s yearly invasion in the narrow valley of the Strumitsa at Kleidion, “the key”, where he built a thick wooden wall between the mountains of Belasitsa and Ograzhden. Basil’s attacks on the wall failed, and a Bulgarian force sent to distract him was beaten outside Thessalonica by its governor, Theophylact Botaneiates. Nikephoros Xiphias then led a detachment along mountain paths over Belasitsa, and on 29 July he fell on the Bulgarians from behind while Basil stormed the wall. Samuel escaped with the help of his son Gabriel Radomir."
+      - "Skylitzes says Basil took 15,000 prisoners (Kekaumenos says 14,000), blinded ninety-nine of every hundred and left the hundredth one eye to lead the others home; modern historians think the numbers exaggerated but do not doubt the blinding. It may have been revenge for Botaneiates, killed soon afterwards in an ambush in a pass near Strumitsa. When the blinded men reached Prespa, Samuel collapsed at the sight and died on 6 October 1014."
+    facts:
+      - [Battle of Kleidion, "29 July 1014, Byzantine victory"]
+      - [Prisoners blinded, "14,000 or 15,000 according to Byzantine writers; probably fewer"]
+      - [Samuel’s death, 6 October 1014]
+    markers:
+      - kind: battle
+        side: byz
+        name: Battle of Kleidion
+        date: 29 July 1014
+        text: Samuel’s palisade across the Strumitsa valley was taken from behind by Nikephoros Xiphias. Thousands of Bulgarians were killed or captured.
+        lonlat: [23.018, 41.363]
+      - kind: battle
+        side: byz
+        name: Thessalonica
+        date: July 1014
+        text: Theophylact Botaneiates beat the Bulgarian force under Nestoritsa that Samuel had sent to draw Basil away.
+        lonlat: [22.94, 40.64]
+      - kind: battle
+        side: bg
+        name: Ambush near Strumitsa
+        date: Summer 1014
+        text: Botaneiates, sent to clear the passes towards Thessalonica, was trapped in a narrow valley and killed, reportedly by Gabriel Radomir himself. Basil gave up the siege of Strumitsa.
+        lonlat: [22.64, 41.4]
+        lp: l
+      - kind: event
+        name: Death of Samuel
+        date: 6 October 1014
+        text: Samuel died at Prespa after seeing his blinded soldiers. A grave identified as his was found in the church on the island of Saint Achillius in 1965.
+        lonlat: [21.1, 40.82]
+        lp: l
+    arrows:
+      - side: byz
+        label: Basil II
+        via: [[23.55, 41.1], [23.35, 41.3], [23.08, 41.37]]
+      - side: byz
+        label: Xiphias
+        via: [[23.15, 41.33], [23.02, 41.27], [22.88, 41.31], [22.97, 41.37]]
+      - side: bg
+        label: Nestoritsa
+        via: [[22.7, 41.38], [22.85, 41.0], [22.93, 40.7]]
+  - title: The end of resistance
+    date: 1015–1018
+    when: "1015"
+    borders: "1018-02"
+    countries: [mk, bg, al, gr, me]
+    body:
+      - "Gabriel Radomir reigned for a year before his cousin Ivan Vladislav, whose life he had once saved, murdered him while hunting in 1015, reportedly with Basil’s encouragement. Ivan offered to submit, then fought on. Basil retook Vodena, which had rebelled, captured Moglena and reached Ohrid, Samuel’s capital, but withdrew when another Byzantine force was ambushed and destroyed. In 1016 Ivan lured Jovan Vladimir of Duklja to Prespa and had him killed, while Basil besieged Pernik for 88 days and again failed to take it."
+      - "Basil campaigned every year, wasting the country and taking forts one by one. Ivan Vladislav tried to win the Pechenegs as allies and, with Krakra of Pernik, to retake lost towns, without success. In February 1018 he was killed in a skirmish outside the walls of Dyrrhachium, which he was besieging. With him the last Bulgarian ruler with an army in the field was gone, and the nobles began to surrender."
+    facts:
+      - [Gabriel Radomir murdered, "1015, by Ivan Vladislav"]
+      - [Siege of Pernik, "1016, 88 days, Bulgarian success"]
+      - [Death of Ivan Vladislav, "February 1018, at Dyrrhachium"]
+    markers:
+      - kind: taken
+        side: byz
+        name: Vodena and Moglena
+        date: "1015"
+        text: Basil recaptured Vodena, which had risen against its Byzantine garrison, and took the fortress of Moglena by diverting the river beneath its walls.
+        lonlat: [22.05, 40.8]
+      - kind: event
+        side: byz
+        name: Ohrid
+        date: "1015"
+        text: Basil reached Samuel’s capital and seized its treasury, but withdrew after news that a detachment he had sent ahead had been destroyed.
+        lonlat: [20.802, 41.117]
+      - kind: event
+        side: bg
+        name: Prespa
+        date: 22 May 1016
+        text: Jovan Vladimir, prince of Duklja and Samuel’s son-in-law, was killed here on Ivan Vladislav’s orders. He is venerated as a saint.
+        lonlat: [21.1, 40.82]
+        lp: b
+      - kind: held
+        side: bg
+        name: Pernik
+        date: "1016"
+        text: Krakra held the fortress for a second time, against a siege of 88 days.
+        lonlat: [23.033, 42.6]
+      - kind: battle
+        side: byz
+        name: Death of Ivan Vladislav
+        date: February 1018
+        text: The Bulgarian ruler was killed in fighting outside Dyrrhachium. Later legend said he was struck down by a mysterious warrior.
+        lonlat: [19.446, 41.313]
+    arrows:
+      - side: byz
+        label: Basil II, 1015
+        via: [[22.9, 40.7], [22.05, 40.85], [21.3, 41.0], [20.85, 41.1]]
+      - side: bg
+        label: Ivan Vladislav
+        via: [[20.75, 41.15], [20.2, 41.2], [19.5, 41.3]]
+  - title: The settlement at Ohrid
+    date: "1018"
+    when: "1018-03"
+    borders: "1018-12"
+    countries: [mk, al, bg, gr, rs, hr, tr]
+    body:
+      - "In the spring of 1018 Basil marched west. Krakra surrendered Pernik and its neighbouring forts, and commanders and nobles came to his camp with the keys of their towns. At Ohrid Ivan Vladislav’s widow, Maria, gave herself up with her children and the treasury. His sons held out for a time on Mount Tomorr, and the last commanders surrendered or were captured within the year. Basil then went south through Thessaly to Athens, gave thanks in the Parthenon, then the church of the Mother of God, and celebrated a triumph in Constantinople in 1019."
+      - "Basil’s settlement was mild by the standards of the war. The Bulgarian lands became the provinces of Bulgaria, with its seat at Skopje, Sirmium and, on the lower Danube, Paristrion. Taxes were still taken in kind, as under Samuel, and the church kept its own archbishop at Ohrid, a Bulgarian, appointed by the emperor. Many nobles received Byzantine titles and posts. The Serbs and Croats acknowledged Basil’s overlordship, and for the first time since the 7th century the empire’s border ran along the Danube."
+    facts:
+      - [Surrender at Ohrid, "1018"]
+      - [New provinces, "Bulgaria (Skopje), Sirmium, Paristrion"]
+      - [Archbishopric of Ohrid, "Self-governing church for the Bulgarian lands"]
+    markers:
+      - kind: treaty
+        side: byz
+        name: Surrender at Ohrid
+        date: "1018"
+        text: Maria, widow of Ivan Vladislav, surrendered Samuel’s capital, the royal family and the treasury to Basil.
+        lonlat: [20.802, 41.117]
+      - kind: event
+        side: byz
+        name: Pernik
+        date: "1018"
+        text: Krakra, who had twice held Pernik against Basil, surrendered it with some 35 forts and was made a patrikios.
+        lonlat: [23.033, 42.6]
+      - kind: event
+        name: Mount Tomorr
+        date: "1018"
+        text: Ivan Vladislav’s eldest son, Presian, and two of his brothers took refuge on the mountain before surrendering.
+        lonlat: [20.15, 40.7]
+        lp: l
+      - kind: event
+        side: byz
+        name: Skopje
+        date: "1018"
+        text: Seat of the governor of the new province of Bulgaria.
+        lonlat: [21.433, 42.0]
+      - kind: event
+        side: byz
+        name: Athens
+        date: "1018"
+        text: Basil gave thanks for his victory in the Parthenon, then a church of the Virgin, and gave it rich gifts.
+        lonlat: [23.726, 37.971]
+    arrows:
+      - side: byz
+        label: Basil II, 1018
+        via: [[23.5, 41.6], [22.6, 41.4], [21.6, 41.2], [20.85, 41.12]]
+      - side: byz
+        via: [[20.9, 41.0], [21.6, 40.2], [22.4, 39.5], [23.6, 38.05]]

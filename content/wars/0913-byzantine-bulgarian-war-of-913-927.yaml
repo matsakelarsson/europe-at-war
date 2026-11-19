@@ -1,0 +1,160 @@
+id: byzantine-bulgarian-war-of-913-927
+name: Byzantine–Bulgarian war of 913–927
+start: "913"
+end: "927-10"
+tier: B
+summary: Simeon I of Bulgaria’s war to win the throne of Constantinople. He extracted an imperial coronation from the regents of the boy emperor Constantine VII in 913, destroyed the Byzantine army at Achelous in 917 and raided Thrace and Greece for years, but without a fleet he could not take the city. After his death in 927 his son Peter made a peace that recognised him as emperor (tsar) of the Bulgarians.
+countries: [bg, tr, gr, rs, hr, ba, me]
+sides:
+  - id: bg
+    name: Bulgaria
+    polities: [bulgaria]
+    ink: green
+    moves: Bulgarian moves
+    success: Bulgarian success
+  - id: byz
+    name: Byzantine Empire
+    polities: [byzantium]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+  - id: west
+    name: Serbia and Croatia
+    polities: [serbia, croatia]
+    ink: red
+    moves: Serbian and Croatian moves
+    success: Serbian and Croatian success
+notes:
+  - Almost all the narrative comes from Byzantine chroniclers hostile to Simeon, above all Theophanes Continuatus, with the letters that Patriarch Nicholas Mystikos and Romanos I wrote to him. What Simeon was crowned in 913, and what Romanos conceded in 924, are disputed; many historians think Simeon was crowned emperor of the Bulgarians, not of the Romans.
+  - The size of the armies at Achelous is not known; figures such as 60,000 for the Byzantines are modern guesses. Anchialos is today’s Pomorie, and Katasyrtai was a place near Constantinople whose site is unknown.
+  - The Croatian victory of 926 is told in its own entry, the Croatian–Bulgarian war.
+sources:
+  - title: Byzantine–Bulgarian war of 913–927 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Byzantine%E2%80%93Bulgarian_war_of_913%E2%80%93927
+  - title: Battle of Achelous (917) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Achelous_(917)
+  - title: Battle of Katasyrtai (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Katasyrtai
+  - title: Simeon I of Bulgaria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Simeon_I_of_Bulgaria
+  - title: Croatian–Bulgarian battle of 926 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Croatian%E2%80%93Bulgarian_battle_of_926
+  - title: Peter I of Bulgaria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peter_I_of_Bulgaria
+  - title: Simeon I (Britannica)
+    url: https://www.britannica.com/biography/Simeon-I
+steps:
+  - title: Simeon at Constantinople
+    date: 913–914
+    when: "913"
+    borders: "914-09"
+    countries: [bg, tr]
+    body:
+      - "In 912 the new emperor Alexander sent Simeon’s envoys away with threats, ending the peace of 896. Alexander died in June 913, leaving his seven-year-old nephew Constantine VII under a regency led by Patriarch Nicholas Mystikos. In August Simeon arrived before Constantinople with a large army. He knew he could not take the city without ships, and soon opened talks. Nicholas came out to his camp and crowned him, perhaps with his own patriarchal headdress, and the regents seem to have agreed that Constantine would marry one of Simeon’s daughters, which could have made Simeon the boy emperor’s guardian."
+      - "Byzantine writers later presented the coronation as a sham, but Simeon called himself emperor from then on. In February 914 Constantine’s mother, Zoe Karbonopsina, overthrew the regency and revoked the agreement. Simeon invaded Thrace that summer while his troops pressed on Thessalonica and Dyrrhachium. In September the Armenian commander of Adrianople surrendered the city to him, but the Byzantines soon bought it back."
+    facts:
+      - [Simeon before Constantinople, August 913]
+      - [Adrianople, "Surrendered to Simeon, September 914; soon ransomed back"]
+    markers:
+      - kind: event
+        side: bg
+        name: Constantinople
+        date: August 913
+        text: Simeon’s army camped outside the land walls. Patriarch Nicholas Mystikos crowned him in his camp, and his sons were feasted in the Blachernae palace.
+        lonlat: [28.975, 41.01]
+      - kind: taken
+        side: bg
+        name: Adrianople
+        date: September 914
+        text: The city’s commander handed it over, and the townspeople recognised Simeon as their ruler. The regency of Zoe recovered it for a large payment.
+        lonlat: [26.556, 41.677]
+    arrows:
+      - side: bg
+        label: Simeon, 913
+        via: [[26.8, 43.1], [26.9, 42.2], [27.6, 41.4], [28.9, 41.05]]
+  - title: Achelous and Katasyrtai
+    date: 917–922
+    when: "917"
+    borders: "917-08-20"
+    countries: [bg, tr, gr]
+    body:
+      - "In 917 Zoe’s government made peace with the Arabs and gathered the whole army of the empire under the Domestic of the Schools, Leo Phokas. The fleet under Romanos Lekapenos was to carry Pechenegs across the Danube to attack from the north, but Romanos and the envoy John Bogas quarrelled and the Pechenegs never crossed. Leo marched up the Black Sea coast alone. On 20 August, by the river Achelous near Anchialos, the Byzantines were at first winning, but when Leo lost his horse panic spread, and Simeon led his cavalry down from the hills. The army was destroyed; Leo the Deacon wrote of piles of bones still visible there decades later."
+      - "That autumn Leo Phokas raised another army, and the Bulgarians destroyed it in a night attack at Katasyrtai, close to Constantinople. In 919 Romanos Lekapenos took power, married his daughter to Constantine VII and in 920 was crowned senior emperor, the place Simeon wanted for himself. Simeon refused to deal with him. His armies reached the Isthmus of Corinth, camped on the Dardanelles in 920, routed the Byzantines at Pegae outside Constantinople in 921 and burned imperial palaces near the city in 922."
+    facts:
+      - [Battle of Achelous, "20 August 917, Bulgarian victory"]
+      - [Battle of Katasyrtai, "Autumn 917, Bulgarian victory"]
+      - [Byzantine commander, "Leo Phokas the Elder"]
+    markers:
+      - kind: battle
+        side: bg
+        name: Battle of Achelous
+        date: 20 August 917
+        text: One of the worst defeats in Byzantine history. Almost the whole army was killed or captured; Leo Phokas escaped to Mesembria.
+        lonlat: [27.637, 42.643]
+      - kind: event
+        name: Pecheneg alliance fails
+        date: "917"
+        text: The Byzantine fleet sailed to the Danube to ferry Pecheneg horsemen into Bulgaria, but its admiral, Romanos Lekapenos, refused to take them across.
+        lonlat: [28.9, 45.2]
+      - kind: battle
+        side: bg
+        name: Battle of Katasyrtai
+        date: Autumn 917
+        text: A Bulgarian night attack broke the last Byzantine field army near the capital. The exact site is unknown.
+        lonlat: [28.6, 41.1]
+        lp: b
+    arrows:
+      - side: byz
+        label: Leo Phokas
+        via: [[28.9, 41.1], [27.95, 41.75], [27.72, 42.3], [27.64, 42.6]]
+      - side: byz
+        label: Romanos Lekapenos
+        via: [[29.0, 41.25], [28.7, 42.8], [29.4, 44.6], [28.95, 45.15]]
+      - side: bg
+        label: Simeon
+        via: [[26.8, 43.1], [27.2, 42.9], [27.6, 42.7]]
+      - side: bg
+        via: [[27.6, 42.55], [28.0, 41.8], [28.55, 41.15]]
+  - title: Serbia, Croatia and the peace
+    date: 924–927
+    when: "924"
+    borders: "927-10-08"
+    countries: [bg, rs, me, ba, hr, tr]
+    body:
+      - "Simeon had spent years installing and deposing Serbian princes as the Byzantines bribed them to change sides. When Prince Zaharija killed two Bulgarian generals and sent their heads to Constantinople, a large army invaded Serbia in 924. Zaharija fled to Croatia; the Serbian župans who came to pay homage to Simeon’s candidate, Časlav, were arrested, and Serbia was annexed. In September Simeon camped once more before Constantinople and met Romanos I at Kosmidion, outside the walls. Neither side’s account of the talks survives in full, but the war in Thrace largely stopped, and Simeon soon styled himself emperor of the Bulgarians and the Romans."
+      - "Annexing Serbia brought Bulgaria up against Croatia, whose king, Tomislav, was a Byzantine ally. In 926 a Bulgarian army sent into Croatia was destroyed, and papal envoys arranged a peace. Simeon died on 27 May 927 while preparing another attack on Constantinople. His son Peter I, guided by his uncle George Sursuvul, made peace. On 8 October 927 Peter married Maria, the granddaughter of Romanos I. Byzantium recognised his title of emperor (tsar), recognised the head of the Bulgarian church as a patriarch and resumed a yearly payment, and the frontier went back roughly to that of 904."
+    facts:
+      - [Serbia annexed, "924"]
+      - [Meeting at Kosmidion, "September 924, Simeon and Romanos I"]
+      - [Peace, "October 927; Peter I married Maria Lekapene"]
+    markers:
+      - kind: taken
+        side: bg
+        name: Serbia annexed
+        date: "924"
+        text: After deposing a series of Serbian princes, Simeon made Serbia a Bulgarian province. It regained its independence under Časlav in the 930s.
+        lonlat: [20.5, 43.15]
+      - kind: event
+        name: Kosmidion
+        date: 9 September 924
+        text: Simeon and Romanos I met on a specially built platform outside the walls. Byzantine writers say the emperor shamed Simeon with a sermon; many historians think he recognised Simeon’s imperial title.
+        lonlat: [28.94, 41.05]
+      - kind: battle
+        side: west
+        name: Battle of the Bosnian Highlands
+        date: "926"
+        text: King Tomislav’s Croats destroyed a Bulgarian army under Alogobotur. The site, somewhere in the mountains of eastern Bosnia, is unknown, and the date of 27 May given in some modern works is not certain.
+        lonlat: [17.8, 44.2]
+      - kind: treaty
+        name: Peace of 927
+        date: 8 October 927
+        text: Peter I married Maria Lekapene in Constantinople, and the empire recognised the Bulgarian ruler as emperor.
+        lonlat: [28.975, 41.01]
+        lp: b
+    arrows:
+      - side: bg
+        label: "924"
+        via: [[22.5, 43.4], [21.5, 43.3], [20.6, 43.17]]
+      - side: bg
+        label: "926"
+        via: [[20.3, 43.5], [19.2, 43.9], [17.9, 44.2]]

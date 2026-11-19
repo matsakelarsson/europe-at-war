@@ -1,0 +1,84 @@
+id: conquest-of-tunis
+name: Conquest of Tunis
+start: "1535-05"
+end: "1535-08"
+tier: B
+summary: Emperor Charles V’s expedition against Tunis, which the Ottoman admiral and corsair Hayreddin Barbarossa had seized from its Hafsid sultan in 1534. A fleet from Spain, Genoa, Portugal, the papacy, the Hospitallers and Charles’s Italian kingdoms took the fortress of La Goulette and Tunis in July 1535, sacked the city and restored the Hafsid Muley Hasan as a Spanish vassal, but Barbarossa escaped.
+countries: [tn, es, it, pt, mt, dz, tr]
+sides:
+  - id: ch
+    name: Charles V and his allies
+    polities: [spain, naples, sicily, genoa, papal-states, malta, portugal, habsburg, hafsid-caliphate]
+    ink: gold
+    moves: Moves by Charles V and his allies
+    success: Success for Charles V and his allies
+  - id: ot
+    name: Hayreddin Barbarossa and the Ottomans
+    polities: [ottoman, algeria]
+    ink: teal
+    moves: Ottoman and corsair moves
+    success: Ottoman success
+notes:
+  - Dates are Julian. Figures for the size of the expedition and for the dead in the sack of Tunis vary widely between sources.
+  - Charles’s campaign was celebrated across Europe as a crusade; the Flemish painter Jan Cornelisz Vermeyen went with the army, and his drawings became the basis of a famous set of tapestries woven by Willem de Pannemaker. Charles’s attack on Algiers in 1541 has its own entry.
+sources:
+  - title: Conquest of Tunis (1535) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Conquest_of_Tunis_(1535)
+  - title: Hayreddin Barbarossa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hayreddin_Barbarossa
+  - title: Andrea Doria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Andrea_Doria
+  - title: Hafsid dynasty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hafsid_dynasty
+steps:
+  - title: La Goulette and Tunis
+    date: June–September 1535
+    when: "1535-05"
+    borders: "1535-07-21"
+    countries: [tn, es, it, pt, mt, dz, tr]
+    body:
+      - Hayreddin Barbarossa, the corsair ruler of Algiers whom Suleiman had made admiral of the Ottoman fleet, raided the coasts of Italy in 1534 and on 16 August took Tunis from its Hafsid sultan, Muley Hasan. From there his galleys could close the narrows between Sicily and Africa. Charles V decided to lead a crusade against him in person. A fleet of several hundred ships carrying about 30,000 soldiers gathered from Spain, Genoa under Andrea Doria, Naples, Sicily, Portugal, the Papal States and the Knights of St John; Francis I of France, then seeking an Ottoman alliance, refused to help. The fleet assembled at Cagliari and landed near the ruins of Carthage in mid-June.
+      - La Goulette, the fortress guarding the channel into the lagoon of Tunis, was stormed on 14 July after a month’s siege, and most of Barbarossa’s fleet was taken in the lagoon. As the army marched on Tunis on 21 July, thousands of Christian captives broke out of the kasbah and seized it, and Barbarossa fled to Bône. Charles’s troops then sacked the city, killing many thousands of its people, perhaps 10,000 or more, and enslaving others. Muley Hasan was restored as a vassal of Spain, which kept a garrison in La Goulette. In September Barbarossa struck back by sacking Mahón on Minorca.
+    facts:
+      - [La Goulette stormed, 14 July 1535]
+      - [Tunis taken, 21 July 1535]
+      - [Expedition, "about 30,000 soldiers in several hundred ships"]
+    markers:
+      - kind: event
+        side: ch
+        name: Cagliari
+        date: June 1535
+        text: The ships from Spain, Italy and Portugal met here in Sardinia before crossing to Africa.
+        lonlat: [9.11, 39.22]
+      - kind: taken
+        side: ch
+        name: La Goulette
+        date: 14 July 1535
+        text: The fortress fell after weeks of bombardment and assaults, with thousands of its defenders killed. Spain held it until 1574.
+        lonlat: [10.31, 36.82]
+      - kind: taken
+        side: ch
+        name: Tunis
+        date: 21 July 1535
+        text: Freed captives handed the kasbah to Charles, whose soldiers then plundered the city.
+        lonlat: [10.17, 36.8]
+        lp: l
+      - kind: event
+        side: ot
+        name: Bône
+        date: July 1535
+        text: Barbarossa escaped here with the galleys he had kept in reserve, and Doria’s pursuit turned back.
+        lonlat: [7.77, 36.9]
+      - kind: taken
+        side: ot
+        name: Mahón
+        date: September 1535
+        text: Barbarossa’s galleys surprised the port on Minorca and carried off hundreds of its people as slaves.
+        lonlat: [4.26, 39.89]
+    arrows:
+      - side: ch
+        label: Charles V
+        via: [[2.17, 41.38], [6.0, 40.2], [9.1, 39.1], [10.3, 36.95]]
+      - side: ot
+        label: Barbarossa
+        via: [[10.2, 36.86], [7.8, 37.05], [5.6, 38.6], [4.3, 39.84]]

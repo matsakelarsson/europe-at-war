@@ -1,0 +1,125 @@
+id: hungarian-czechoslovak-war
+name: Hungarian–Czechoslovak War
+start: "1918-11"
+end: "1919-08"
+tier: B
+summary: A war over Upper Hungary, today’s Slovakia, after the break-up of Austria-Hungary. Czechoslovak troops took over Slovakia in the winter of 1918–1919 and pushed into northern Hungary in May 1919, until the Hungarian Soviet Republic’s Northern Campaign drove them back deep into Slovakia; under Allied pressure the Hungarians withdrew in early July, and the Treaty of Trianon confirmed Czechoslovakia’s southern border.
+countries: [sk, hu, cz, ua]
+sides:
+  - id: hu
+    name: Hungary (the Hungarian Soviet Republic from March 1919)
+    polities: [hungary]
+    ink: olive
+    moves: Hungarian moves
+    success: Hungarian success
+  - id: cs
+    name: Czechoslovakia
+    polities: [czechoslovakia]
+    ink: navy
+    moves: Czechoslovak moves
+    success: Czechoslovak success
+notes:
+  - Known in Hungary as the war for Upper Hungary, and the 1919 offensive as the Northern Campaign (északi hadjárat). Places are named in their present-day forms; Bratislava was Pozsony (Pressburg), Košice was Kassa and Prešov was Eperjes.
+  - The base map shows Slovakia as part of Czechoslovakia from 28 October 1918; land the two armies held beyond the demarcation lines is shown as approximate areas.
+sources:
+  - title: Hungarian–Czechoslovak War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hungarian%E2%80%93Czechoslovak_War
+  - title: Slovak Soviet Republic (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Slovak_Soviet_Republic
+  - title: Hungarian Soviet Republic (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hungarian_Soviet_Republic
+  - title: Treaty of Trianon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Trianon
+steps:
+  - title: Upper Hungary changes hands
+    date: November 1918 – May 1919
+    when: "1918-11-02"
+    borders: "1919-05-02"
+    countries: [sk, hu, cz, ua]
+    body:
+      - Czechoslovakia declared independence on 28 October 1918 and claimed the Slovak-inhabited north of the Kingdom of Hungary. Small Czechoslovak units crossed into Upper Hungary in early November, and Hungarian troops drove some of them back, but the Allies backed the Czechoslovak claim and drew a demarcation line. In December Czechoslovak forces, among them legionaries returned from Italy, took Žilina, Nitra, Banská Bystrica and, at the end of the month, Košice. On 1 January 1919 they entered Bratislava, whose largely German and Hungarian population had hoped to make it a free city.
+      - After the Hungarian Soviet Republic was proclaimed in March, its enemies moved together. In late April, as the Romanian army advanced to the Tisza, Czechoslovak troops occupied Subcarpathian Ruthenia with the Romanians and pushed south over the demarcation line into northern Hungary, entering Miskolc on 2 May. The two armies threatened to meet and cut off the young Soviet Republic from the north-east. Instead, Budapest’s government signed a truce with Romania and turned its new Red Army against Czechoslovakia.
+    facts:
+      - [Czechoslovak independence, "28 October 1918"]
+      - [Bratislava occupied, "1 January 1919"]
+      - [Miskolc occupied, "2 May 1919"]
+    markers:
+      - kind: taken
+        side: cs
+        name: Bratislava
+        date: 1 January 1919
+        text: Czechoslovak legionaries took over the city, which became the capital of Slovakia; a protest there in February ended with troops firing on the crowd.
+        lonlat: [17.107, 48.149]
+      - kind: taken
+        side: cs
+        name: Košice
+        date: 29 December 1918
+        text: The largest city of eastern Upper Hungary was occupied by Czechoslovak troops.
+        lonlat: [21.258, 48.716]
+      - kind: taken
+        side: cs
+        name: Miskolc
+        date: 2 May 1919
+        text: Czechoslovak troops under the Italian general Luigi Piccione crossed the demarcation line and took the city.
+        lonlat: [20.78, 48.1]
+        lp: b
+    arrows:
+      - side: cs
+        via: [[18.2, 49.2], [18.6, 48.9], [19.15, 48.74]]
+      - side: cs
+        via: [[21.25, 49.0], [21.25, 48.72], [20.95, 48.35], [20.8, 48.13]]
+    areas:
+      - style: occupied
+        side: cs
+        label: Hungarian land occupied by Czechoslovakia, May 1919 (approximate)
+        atoms: [HU-BZ, HU-MI]
+  - title: The Northern Campaign
+    date: May – July 1919
+    when: "1919-05-20"
+    borders: "1919-07-04"
+    countries: [sk, hu]
+    body:
+      - The Hungarian Red Army, with Colonel Aurél Stromfeld as its chief of staff, attacked in force on 20 May. It retook Miskolc and the industrial towns of the north, then advanced deep into Slovakia, taking Košice on 6 June and pushing on to Prešov and Bardejov, and drove a wedge between the Czechoslovak and Romanian armies. Many former officers of the old army fought for the Soviet Republic in the hope of restoring Hungary’s borders. On 16 June a Slovak Soviet Republic was proclaimed in Prešov, dependent on Budapest.
+      - The Allies stepped in. In notes of 7 and 13 June, Georges Clemenceau ordered the Hungarians to leave Slovakia and promised that the Romanians would then pull back from the Tisza. Kun accepted, Stromfeld resigned in protest, and by the first days of July the Hungarian Red Army had withdrawn behind the demarcation line. The Slovak Soviet Republic collapsed on 7 July, and the Romanians stayed where they were. The Treaty of Trianon in June 1920 confirmed a border that left about a million Hungarians in Czechoslovakia.
+    facts:
+      - [Hungarian offensive, "from 20 May 1919"]
+      - [Košice retaken, "6 June 1919"]
+      - [Slovak Soviet Republic, "16 June – 7 July 1919"]
+    markers:
+      - kind: taken
+        side: hu
+        name: Miskolc
+        date: late May 1919
+        text: Retaken by the Hungarian Red Army at the start of the Northern Campaign.
+        lonlat: [20.78, 48.1]
+        lp: b
+      - kind: battle
+        side: hu
+        name: Salgótarján
+        date: May – June 1919
+        text: The Hungarians drove the Czechoslovaks from the coal-mining district and held it against counter-attacks.
+        lonlat: [19.8, 48.1]
+        lp: l
+      - kind: taken
+        side: hu
+        name: Košice
+        date: 6 June 1919
+        text: The Hungarian III Corps took the city, which it held for less than a month.
+        lonlat: [21.258, 48.716]
+      - kind: event
+        side: hu
+        name: Prešov
+        date: 16 June 1919
+        text: The Slovak Soviet Republic was proclaimed here under the Czech journalist Antonín Janoušek.
+        lonlat: [21.24, 49.0]
+    arrows:
+      - side: hu
+        label: Stromfeld
+        via: [[19.95, 47.75], [20.45, 48.0], [20.85, 48.25], [21.2, 48.65], [21.24, 48.97]]
+      - side: hu
+        via: [[19.75, 47.92], [19.8, 48.12], [19.65, 48.33]]
+    areas:
+      - style: occupied
+        side: hu
+        label: Held by the Hungarian Red Army, mid-June 1919 (approximate)
+        atoms: [SK-KI, SK-PV, SK-BC~hu1938, SK-NI~hu1938]

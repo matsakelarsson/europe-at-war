@@ -1,0 +1,134 @@
+id: ottoman-timurid-war
+name: Ottoman–Timurid War
+start: "1400-08"
+end: "1402-12"
+tier: B
+summary: The war between Sultan Bayezid I and the Central Asian conqueror Timur (Tamerlane), whose empire stretched from Samarkand to eastern Anatolia. After years of insulting letters and quarrels over the Turkish lords of eastern Anatolia, Timur sacked Sivas in 1400, and in 1402 he destroyed the Ottoman army near Ankara and took Bayezid prisoner. Timur restored the Turkish beyliks that Bayezid had annexed, and the Ottoman state nearly fell apart in the civil war that followed.
+countries: [tr, sy]
+sides:
+  - id: tim
+    name: Timur
+    polities: [timurid-empire]
+    ink: red
+    moves: Timurid moves
+    success: Timurid success
+  - id: ott
+    name: Ottoman Empire and its vassals
+    polities: [ottoman, serbia]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+  - id: mam
+    name: Mamluk Sultanate
+    polities: [mamluk]
+    ink: brown
+    moves: Mamluk moves
+    success: Mamluk success
+notes:
+  - The battle of Ankara is dated 28 July 1402 in many accounts and 20 July in others. The size of the armies is unknown; the chroniclers’ figures of hundreds of thousands are impossible, and modern guesses range widely.
+  - The story that Timur carried Bayezid around in an iron cage comes from later writers and is doubted; historians at Timur’s court said that the sultan was treated well.
+sources:
+  - title: Battle of Ankara (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ankara
+  - title: Timur (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Timur
+  - title: Bayezid I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bayezid_I
+  - title: Siege of Smyrna (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Smyrna
+steps:
+  - title: Sivas
+    date: 1400–1401
+    when: "1400-08"
+    borders: "1400-09"
+    countries: [tr, sy]
+    body:
+      - In the 1390s Bayezid annexed the Turkish beyliks of western and central Anatolia and in 1398 took Sivas and the lands of Kadi Burhan al-Din, and then Malatya, reaching the frontier of Timur’s empire. Rulers he had driven out, among them the lords of Aydın, Germiyan and Menteşe, fled to Timur, and the lord of Erzincan, Taharten, was Timur’s vassal. Insulting letters passed between the two rulers. In August 1400 Timur invaded Anatolia and besieged Sivas, which surrendered after about three weeks. According to the chroniclers, he had the Christian soldiers of the garrison, said to number some 4,000, mostly Armenians, buried alive, and the town was destroyed.
+      - Timur did not march west at once. He turned south against the Mamluks of Egypt and Syria, sacked Aleppo in late 1400 and took Damascus early in 1401, massacring much of its population and carrying off its craftsmen to Samarkand, and then stormed Baghdad. Bayezid used the respite to attack Taharten and take the castle of Kemah on the upper Euphrates, while keeping up his blockade of Constantinople. In 1402 Timur retook Kemah and set out for central Anatolia.
+    facts:
+      - [Sack of Sivas, "August 1400"]
+      - [Sack of Aleppo, "late 1400"]
+      - [Damascus taken, "early 1401"]
+    markers:
+      - kind: taken
+        side: tim
+        name: Sivas
+        date: August 1400
+        text: The city surrendered after a siege of about three weeks. Its garrison was killed and the walls were razed.
+        lonlat: [37.015, 39.751]
+      - kind: event
+        side: tim
+        name: Erzincan
+        date: 1400–1402
+        text: Its ruler, Taharten, was Timur’s vassal; Bayezid’s demands on him were one cause of the war.
+        lonlat: [39.491, 39.746]
+      - kind: taken
+        side: ott
+        name: Kemah
+        date: "1401"
+        text: Bayezid’s troops took this strong castle from Taharten while Timur was in Syria. Timur recaptured it in 1402.
+        lonlat: [39.036, 39.603]
+        lp: b
+      - kind: taken
+        side: tim
+        name: Aleppo
+        date: late 1400
+        text: Timur defeated the Mamluk governors of Syria outside the city and sacked it.
+        lonlat: [37.16, 36.2]
+      - kind: taken
+        side: tim
+        name: Damascus
+        date: early 1401
+        text: The city surrendered after negotiations, in which the historian Ibn Khaldun took part, but it was plundered and burnt.
+        lonlat: [36.309, 33.513]
+    arrows:
+      - side: tim
+        label: Timur
+        via: [[41.3, 39.9], [39.5, 39.75], [37.1, 39.75]]
+      - side: tim
+        label: Timur
+        via: [[37.6, 39.0], [38.3, 38.35], [37.2, 36.3], [36.35, 33.6]]
+  - title: Ankara
+    date: July 1402
+    when: "1402-07-28"
+    borders: "1402-12"
+    countries: [tr, rs]
+    body:
+      - In the summer of 1402 Timur marched by way of Sivas and Kayseri towards Ankara. Bayezid broke off his blockade of Constantinople and hurried east in the heat, but Timur slipped round behind him and camped in the plain of Çubuk, north-east of Ankara, where he controlled the water. When the armies met on 28 July, the Tatars in Bayezid’s army and the soldiers of the beyliks he had annexed went over to Timur, whose horse archers wore down the tired and thirsty Ottomans. The Serbian knights of Stefan Lazarević fought hard and broke out with Bayezid’s son Süleyman, but Bayezid was surrounded and captured with another son, Musa.
+      - Timur’s grandson Muhammad Sultan sacked Bursa and its treasury, and in December Timur took the Hospitallers’ sea castle at Smyrna after a two-week siege and had many of its people killed. He gave back their lands to the lords of Karaman, Germiyan, Aydın, Saruhan, Menteşe and the other beyliks. Bayezid died in captivity at Akşehir on 8 March 1403, and Timur went home to Samarkand. The Ottoman realm in Europe survived, but Bayezid’s sons were soon fighting each other for what was left.
+    facts:
+      - [Battle of Ankara, "28 July 1402, Timurid victory"]
+      - [Bayezid captured, "28 July 1402; died 8 March 1403"]
+      - [Siege of Smyrna, "December 1402"]
+    markers:
+      - kind: battle
+        side: tim
+        name: Battle of Ankara
+        date: 28 July 1402
+        text: Fought on the Çubuk plain. Bayezid escaped to the hills with a few hundred horsemen but was surrounded and taken.
+        lonlat: [32.95, 40.15]
+      - kind: taken
+        side: tim
+        name: Bursa
+        date: August 1402
+        text: Timur’s grandson Muhammad Sultan plundered the Ottoman capital, carrying off its treasure and Bayezid’s family.
+        lonlat: [29.062, 40.197]
+      - kind: taken
+        side: tim
+        name: Smyrna
+        date: December 1402
+        text: The Knights of Rhodes had held the harbour castle since 1344. Timur’s miners breached the walls; some of the garrison escaped by sea.
+        lonlat: [27.14, 38.42]
+      - kind: event
+        side: tim
+        name: Akşehir
+        date: 8 March 1403
+        text: Bayezid died here as Timur’s prisoner, aged about 43.
+        lonlat: [31.416, 38.358]
+    arrows:
+      - side: tim
+        label: Timur
+        via: [[37.0, 39.75], [35.5, 38.75], [34.2, 39.2], [33.0, 40.05]]
+      - side: ott
+        label: Bayezid I
+        via: [[28.9, 41.0], [30.4, 40.75], [32.0, 40.0], [32.85, 40.1]]

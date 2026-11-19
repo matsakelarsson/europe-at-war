@@ -1,0 +1,105 @@
+id: ottoman-safavid-war
+name: Ottoman–Safavid War (1514–1517)
+start: "1514"
+end: "1517"
+tier: B
+summary: The first war between the Ottoman sultan Selim I and the Safavid shah Ismail I of Persia, whose Shi‘i Qizilbash followers had a large following among the Turkmen of Anatolia. Selim’s guns and janissaries routed Ismail at Chaldiran in 1514 and briefly occupied Tabriz, and in the following years the Ottomans conquered the Dulkadir beylik and eastern Anatolia from Erzincan to Diyarbakır, a frontier fought over until the Peace of Amasya in 1555.
+countries: [tr, ir]
+sides:
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+  - id: sa
+    name: Safavid Persia
+    polities: [persia]
+    ink: green
+    moves: Safavid moves
+    success: Safavid success
+  - id: du
+    name: Dulkadir
+    polities: [dulkadir]
+    ink: orange
+    moves: Dulkadir moves
+    success: Dulkadir success
+notes:
+  - Dates are Julian. Sources differ on some dates, such as the Ottoman entry into Tabriz (5 or 7 September 1514).
+  - The size of both armies at Chaldiran is uncertain; modern estimates run from about 60,000 to 100,000 Ottomans and 40,000 to 80,000 Safavids. No peace was made, and the later Ottoman–Safavid wars, which began again in 1532, are not told here.
+sources:
+  - title: Battle of Chaldiran (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Chaldiran
+  - title: Battle of Chaldiran (Britannica)
+    url: https://www.britannica.com/event/Battle-of-Chaldiran
+  - title: Battle of Turnadağ (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Turnada%C4%9F
+  - title: Selim I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Selim_I
+  - title: Ismail I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ismail_I
+  - title: Idris Bitlisi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Idris_Bitlisi
+steps:
+  - title: Chaldiran and the conquest of eastern Anatolia
+    date: 1514–1517
+    when: "1514-04"
+    borders: "1517"
+    countries: [tr, ir]
+    body:
+      - Selim I, who had pushed his father from the throne in 1512, saw a deadly danger in Ismail I, the young shah who had made Shi‘i Islam the faith of Persia. Ismail’s Qizilbash followers were strong among the Turkmen tribes of Anatolia and had risen in a great revolt there in 1511. Armed with rulings that called them heretics, Selim had many of them killed or imprisoned; chroniclers speak of 40,000, a figure historians treat with caution. In the spring of 1514 he marched east. On 23 August, at Chaldiran north-east of Lake Van, the Safavid cavalry charged the Ottoman wings and was shot down by guns and janissary muskets behind a barrier of carts. Ismail was wounded and fled.
+      - Selim entered Tabriz in early September and carried off its treasury and many of its craftsmen, but his janissaries refused to winter there and he withdrew. In 1515 he took the fortress of Kemah, and his vizier Hadım Sinan Pasha destroyed the army of Dulkadir at Turnadağ; its ruler was killed and replaced by a vassal. Diyarbakır and many Kurdish lords went over to the Ottomans, won over by the scholar Idris Bitlisi, and in 1516 Bıyıklı Mehmed Pasha beat a Safavid army near Mardin, which fell soon after. Tabriz stayed Persian, but eastern Anatolia was now Ottoman.
+    facts:
+      - [Battle of Chaldiran, "23 August 1514, Ottoman victory"]
+      - [Battle of Turnadağ, "June 1515, Ottoman victory over Dulkadir"]
+      - [Conquered, "Erzincan, Kemah, Diyarbakır, Mardin and the Kurdish emirates"]
+    markers:
+      - kind: battle
+        side: ot
+        name: Battle of Chaldiran
+        date: 23 August 1514
+        text: The Ottoman artillery and musketeers broke the Safavid cavalry. Ismail’s defeat ended the belief among his followers that he could not be beaten.
+        lonlat: [44.33, 39.09]
+      - kind: taken
+        side: ot
+        name: Tabriz
+        date: early September 1514
+        text: Selim occupied the Safavid capital for about a week, then withdrew west with its treasury and artisans.
+        lonlat: [46.3, 38.07]
+      - kind: taken
+        side: ot
+        name: Kemah
+        date: 1515
+        text: This fortress on the upper Euphrates, held for the shah, was stormed by Selim’s army.
+        lonlat: [39.03, 39.6]
+      - kind: battle
+        side: ot
+        name: Battle of Turnadağ
+        date: June 1515
+        text: The Ottomans destroyed the army of the Dulkadir beylik, a Mamluk ally, in the mountains near Elbistan.
+        lonlat: [37.4, 38.0]
+        lp: l
+      - kind: taken
+        side: ot
+        name: Diyarbakır
+        date: 1515
+        text: The city rose against its Safavid garrison and went over to Selim, then held out against a Safavid counter-attack.
+        lonlat: [40.24, 37.91]
+      - kind: battle
+        side: ot
+        name: Koçhisar
+        date: 1516
+        text: Bıyıklı Mehmed Pasha defeated the Safavid army near Mardin, securing the south-east.
+        lonlat: [40.59, 37.19]
+    arrows:
+      - side: ot
+        label: Selim I, 1514
+        via: [[37.02, 39.75], [39.49, 39.75], [41.9, 39.6], [44.2, 39.1]]
+      - side: ot
+        label: To Tabriz
+        via: [[44.4, 39.0], [45.4, 38.5], [46.25, 38.1]]
+    areas:
+      - style: occupied
+        side: ot
+        label: Conquered by the Ottomans, 1514–1517 (approximate)
+        atoms: [TR-23, TR-12, TR-21, TR-72, TR-47, TR-56, TR-13, TR-49]

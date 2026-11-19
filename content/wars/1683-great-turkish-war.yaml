@@ -2,7 +2,7 @@ id: great-turkish-war
 name: Great Turkish War
 start: "1683"
 end: "1699"
-tier: B
+tier: A
 summary: After the failed Ottoman siege of Vienna in 1683, the Habsburg Monarchy, Poland–Lithuania, Venice and later Russia formed the Holy League against the Ottoman Empire. Sixteen years of war ended at Karlowitz in 1699 with the Ottomans giving up Hungary and Transylvania to the Habsburgs and Podolia to Poland–Lithuania.
 countries: [at, hu, sk, cz, hr, si, rs, de, pl, lt, ua, md, ro, tr, it, gr, ru]
 sides:
@@ -45,6 +45,7 @@ sides:
 notes:
   - Dates are New Style (Gregorian).
   - Russia still used the Julian calendar, so Russian sources give the dates of the Crimean and Azov campaigns ten days earlier (eleven days from March 1700).
+  - The Venetian campaigns in Greece and Dalmatia are often called the Morean War, or the Sixth Ottoman–Venetian War.
 sources:
   - title: Great Turkish War (Wikipedia)
     url: https://en.wikipedia.org/wiki/Great_Turkish_War
@@ -66,6 +67,28 @@ sources:
     url: https://en.wikipedia.org/wiki/Azov_campaigns_(1695%E2%80%931696)
   - title: Treaty of Constantinople (1700) (Wikipedia)
     url: https://en.wikipedia.org/wiki/Treaty_of_Constantinople_(1700)
+  - title: Morean War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Morean_War
+  - title: Siege of Buda (1686) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Buda_(1686)
+  - title: Battle of Mohács (1687) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Moh%C3%A1cs_(1687)
+  - title: Siege of Belgrade (1688) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Belgrade_(1688)
+  - title: Great Migrations of the Serbs (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Great_Migrations_of_the_Serbs
+  - title: Karposh’s rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Karposh%27s_rebellion
+  - title: Siege of Belgrade (1690) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Belgrade_(1690)
+  - title: Battle of Slankamen (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Slankamen
+  - title: Diploma Leopoldinum (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Diploma_Leopoldinum
+  - title: Battle of Lugos (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Lugos
+  - title: Battle of Zenta (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Zenta
 steps:
   - title: The relief of Vienna
     date: 1683
@@ -152,6 +175,131 @@ steps:
         side: pl
         label: Regained by Poland–Lithuania
         atoms: [UA-68]
+  - title: Venice in the Morea and Athens
+    date: 1684–1688
+    when: "1684-04-25"
+    borders: "1688-10-22"
+    countries: [gr, it, de, mt, tr]
+    body:
+      - For once Venice declared war on the Ottomans rather than the other way round, joining the Holy League in 1684 to win back what it had lost in Greece. Francesco Morosini, the defender of Candia in the Cretan War, sailed with papal, Tuscan and Maltese galleys and took Lefkada in August 1684. In 1685 his army, strengthened with Hanoverian and Saxon mercenaries, landed at Koroni; the fortress surrendered on 11 August, but its garrison was massacred during the talks. The Maniots rose again, and in 1686 the Swedish marshal Otto Wilhelm Königsmarck took Navarino, Modon and, on 29 August, Nauplia, the capital of the Morea.
+      - In July 1687 the Venetians routed the Ottoman army at Patras, and within weeks all of the Peloponnese except Monemvasia was theirs. In September Königsmarck landed near Athens and besieged the Acropolis. On the evening of 26 September a Venetian mortar shell hit the Parthenon, which the garrison used as a powder store; the explosion killed about 300 people and wrecked the temple. The garrison surrendered two days later, but Athens was abandoned in April 1688, and some 4,000–5,000 Athenians left with the Venetians. A siege of Negroponte that summer failed, with about 9,000 men lost to battle and plague, Königsmarck among them. In Dalmatia Venetian troops took Herceg Novi in 1687 and Knin in 1688.
+    facts:
+      - [Nauplia surrenders, 29 August 1686]
+      - [Parthenon explosion, "26 September 1687, about 300 dead"]
+      - [Siege of Negroponte, "July–October 1688, failed"]
+    markers:
+      - kind: taken
+        side: ve
+        name: Lefkada
+        date: 6 August 1684
+        text: The castle of Santa Maura surrendered after a siege of 16 days, the first Venetian conquest of the war.
+        lonlat: [20.71, 38.84]
+      - kind: taken
+        side: ve
+        name: Koroni
+        date: 11 August 1685
+        text: A former Venetian fortress in Messenia. The garrison was killed during the surrender talks, suspected of treachery.
+        lonlat: [21.96, 36.8]
+      - kind: taken
+        side: ve
+        name: Navarino
+        date: June 1686
+        text: Both castles of Navarino fell in June, the new one after a powder magazine blew up and killed its commander.
+        lonlat: [21.7, 36.91]
+        lp: l
+      - kind: taken
+        side: ve
+        name: Nauplia
+        date: 29 August 1686
+        text: The Ottoman capital of the Morea surrendered after its relief army was beaten. It became the Venetians’ main base.
+        lonlat: [22.8, 37.57]
+      - kind: battle
+        side: ve
+        name: Patras
+        date: July 1687
+        text: Morosini’s 14,000 men routed the Ottoman camp, and the garrisons of Patras and the castles of the Gulf of Corinth fled.
+        lonlat: [21.73, 38.25]
+      - kind: event
+        side: ve
+        name: Parthenon
+        date: 26 September 1687
+        text: A Venetian shell set off the gunpowder stored in the temple, blowing out its roof and most of its walls.
+        lonlat: [23.73, 37.97]
+      - kind: held
+        side: ot
+        name: Negroponte
+        date: July–October 1688
+        text: Supplied across the Euripus strait, the Ottoman garrison of about 6,000 beat off the Venetian siege.
+        lonlat: [23.6, 38.46]
+        lp: t
+    arrows:
+      - side: ve
+        label: Morosini
+        via: [[19.92, 39.62], [20.55, 38.75], [21.2, 37.6], [21.92, 36.83]]
+      - side: ve
+        label: Königsmarck, 1687
+        via: [[22.93, 37.94], [23.4, 38.03], [23.7, 37.98]]
+    areas:
+      - style: occupied
+        side: ve
+        label: Taken by Venice, 1685–1687
+        atoms: [GR-J, GR-G~achaea]
+  - title: Buda
+    date: 1684–1686
+    when: "1684-07"
+    borders: "1686-10-23"
+    countries: [hu, sk, at, de, tr]
+    body:
+      - After Vienna, the imperial army under Charles of Lorraine moved down the Danube. Esztergom was taken in October 1683, and in 1684 Lorraine besieged Buda for more than three months, but disease and the autumn rains forced him to give up. In August 1685 he beat an Ottoman army near Esztergom and stormed Érsekújvár, the great fortress north of the Danube, killing most of its garrison. That autumn the Ottomans, blaming him for their defeats, arrested Imre Thököly, and many of his Hungarian kuruc rebels made terms with the emperor.
+      - On 18 June 1686 the siege of Buda began again, with an army of perhaps 65,000–75,000 under Lorraine and Maximilian II Emanuel of Bavaria, joined by volunteers from across Europe. The garrison under the veteran governor Abdurrahman Abdi Pasha held out for eleven weeks, and a relief army under the grand vizier could not break through. The city was stormed on 2 September; Abdurrahman died fighting. The soldiers sacked it for days, killing over 3,000 Muslims and about half of its Jewish community. Szeged, Pécs and other towns fell that autumn.
+    facts:
+      - [Érsekújvár stormed, 19 August 1685]
+      - [Buda stormed, "2 September 1686, after 145 years of Ottoman rule"]
+      - [Besiegers, "perhaps 65,000–75,000"]
+    markers:
+      - kind: battle
+        side: hb
+        name: Esztergom
+        date: 16 August 1685
+        text: Lorraine’s army defeated an Ottoman army that had come to retake the town.
+        lonlat: [18.74, 47.79]
+        lp: b
+      - kind: taken
+        side: hb
+        name: Érsekújvár
+        date: 19 August 1685
+        text: The fortress the Ottomans had taken in 1663 was stormed, and most of its garrison killed.
+        lonlat: [18.16, 47.99]
+      - kind: taken
+        side: hb
+        name: Buda
+        date: 2 September 1686
+        text: Stormed after an eleven-week siege. The Ottoman capital of Hungary was plundered and much of it burned.
+        lonlat: [19.04, 47.5]
+      - kind: taken
+        side: hb
+        name: Szeged
+        date: October 1686
+        text: The fortress on the Tisza surrendered to the imperial army in the weeks after Buda.
+        lonlat: [20.15, 46.25]
+      - kind: taken
+        side: hb
+        name: Pécs
+        date: October 1686
+        text: Taken by imperial troops in a push into southern Transdanubia.
+        lonlat: [18.23, 46.07]
+    arrows:
+      - side: hb
+        label: Charles of Lorraine
+        via: [[17.75, 47.7], [18.45, 47.78], [19.0, 47.56]]
+      - side: ot
+        label: Grand vizier’s relief army
+        via: [[18.69, 45.6], [18.9, 46.55], [19.0, 47.35]]
+    areas:
+      - style: occupied
+        side: hb
+        label: Taken by the Holy League, 1683–1686 (approximate)
+        atoms: [SK-NI~hu1938, HU-KE, HU-TB, HU-BU, HU-ED, HU-PE, HU-NO, HU-ST, HU-SD, HU-CS, HU-HV, HU-PS, HU-BA!]
   - title: Golitsyn’s Crimean campaigns
     date: 1687 and 1689
     when: "1687-05"
@@ -205,6 +353,188 @@ steps:
       - side: ru
         label: Golitsyn, 1689
         via: [[35.1, 48.45], [34.95, 47.5], [34.3, 46.75], [33.75, 46.25]]
+  - title: Mohács and Transylvania
+    date: 1687
+    when: "1687-06"
+    borders: "1687-12-09"
+    countries: [hu, hr, ro, sk, de, tr]
+    body:
+      - In the summer of 1687 Charles of Lorraine, with about 40,000 men, and the Elector of Bavaria, with about 20,000, advanced on Osijek, where the grand vizier Sarı Süleyman Pasha had entrenched some 60,000 men to guard the long wooden bridge across the Drava marshes. Lorraine turned away north, and on 12 August, near Mount Harsány, not far from the battlefield of 1526, the Ottomans attacked his marching columns. The imperial wings held and counter-attacked, and the Ottoman army broke, losing perhaps 10,000 dead and most of its guns. It then mutinied; the grand vizier fled, and on 8 November Sultan Mehmed IV was deposed in favour of his brother Suleiman II.
+      - Imperial troops took Osijek and most of Slavonia that autumn, and Eger surrendered in December after a long blockade. Lorraine marched into Transylvania, and Prince Michael I Apafi had to accept imperial garrisons in his towns. At Eperjes the imperial general Antonio Caraffa set up a court that tortured and executed more than twenty Hungarian nobles and burghers suspected of backing Thököly. In the autumn the Hungarian diet at Pozsony accepted the Habsburgs as hereditary kings and gave up the nobles’ old right to resist an unlawful ruler, and Archduke Joseph was crowned on 9 December.
+    facts:
+      - [Battle of Mohács (Harsány), "12 August 1687, imperial victory"]
+      - [Mehmed IV deposed, 8 November 1687]
+      - [Hereditary Habsburg kingship, "accepted at Pozsony; Joseph I crowned 9 December 1687"]
+    markers:
+      - kind: battle
+        side: hb
+        name: Battle of Mohács
+        date: 12 August 1687
+        text: The Ottoman attack on Lorraine’s army at the foot of Mount Harsány ended in a rout. It is also called the battle of Harsány.
+        lonlat: [18.4, 45.85]
+      - kind: taken
+        side: hb
+        name: Osijek
+        date: September 1687
+        text: The Ottomans abandoned the Drava crossing, and Slavonia fell to imperial and Croatian troops.
+        lonlat: [18.69, 45.56]
+      - kind: taken
+        side: hb
+        name: Eger
+        date: December 1687
+        text: Starved out after a long blockade, the fortress surrendered after 91 years of Ottoman rule.
+        lonlat: [20.37, 47.9]
+      - kind: event
+        side: hb
+        name: Blaj
+        date: 27 October 1687
+        text: Under an agreement made here, Transylvania took in imperial garrisons and paid for their upkeep.
+        lonlat: [23.91, 46.18]
+      - kind: event
+        side: hb
+        name: Eperjes
+        date: March–September 1687
+        text: Caraffa’s tribunal, remembered in Hungary as the “slaughterhouse of Eperjes”, had suspected Thököly supporters tortured and beheaded.
+        lonlat: [21.24, 49.0]
+      - kind: event
+        side: hb
+        name: Pozsony
+        date: October–December 1687
+        text: The diet made the Hungarian crown hereditary in the House of Habsburg.
+        lonlat: [17.11, 48.14]
+    arrows:
+      - side: hb
+        label: Charles of Lorraine
+        via: [[18.9, 46.65], [18.75, 46.05], [18.6, 45.65], [18.45, 45.85]]
+      - side: hb
+        label: Elector of Bavaria
+        via: [[20.2, 47.17], [20.15, 46.3], [19.35, 45.8], [18.85, 45.68]]
+      - side: hb
+        label: Lorraine to Transylvania
+        via: [[19.2, 46.0], [20.6, 46.2], [22.0, 46.5], [23.55, 46.75]]
+    areas:
+      - style: occupied
+        side: hb
+        label: Taken by the Habsburgs in 1687
+        atoms: [HR-14, HR-10, HRV-1604, HR-12, HU-HE, HU-EG]
+      - style: occupied
+        side: hb
+        label: Imperial garrisons in Transylvania from 1687
+        atoms: [RO-AB, RO-BN, RO-BV, RO-CJ, RO-CV, RO-HD, RO-HR, RO-MS, RO-SB, RO-SJ]
+  - title: Belgrade, Kosovo and the Great Migration
+    date: 1688–1690
+    when: "1688-07"
+    borders: "1690-10-08"
+    countries: [rs, xk, mk, bg, hu, hr, de, tr]
+    body:
+      - In 1688 the Elector of Bavaria crossed the Sava and took Belgrade by storm on 6 September. Weeks later Louis XIV invaded the Rhineland, and many imperial troops were sent west. Even so, in 1689 Louis William of Baden beat the Ottomans at Batočina and at Niš on 24 September and took Vidin. General Enea Silvio Piccolomini pushed on into Kosovo and Macedonia with a small force, joined by Serbian and Albanian volunteers and by the rising of the outlaw Karposh around Kumanovo. In late October Piccolomini burned Skopje, reportedly for fear of plague, and in November he died of plague at Prizren.
+      - The new grand vizier, Fazıl Mustafa Pasha, struck back. On 2 January 1690 an Ottoman and Tatar army destroyed the imperial and Serbian force at Kačanik, and Christian villages suffered harsh reprisals. In 1690 the Ottomans retook Niš and, on 8 October, Belgrade, after its powder magazine exploded. Thousands of Serbs, with some Albanians, fled north with Patriarch Arsenije III of Peć and settled in Habsburg Hungary, where Leopold I granted them church autonomy. Arsenije wrote of more than 30,000 people; Serbian tradition speaks of 37,000 families. How far this Great Migration changed the population of Kosovo is still debated by Serbian and Albanian historians.
+    facts:
+      - [Belgrade taken, 6 September 1688]
+      - [Battle of Kačanik, "2 January 1690, Ottoman victory"]
+      - [Belgrade retaken by the Ottomans, 8 October 1690]
+    markers:
+      - kind: siege
+        name: Belgrade
+        date: 1688 and 1690
+        text: Stormed by the Elector of Bavaria on 6 September 1688 after a month’s siege, and retaken by the Ottomans on 8 October 1690 after a shell blew up its main powder magazine.
+        lonlat: [20.45, 44.82]
+      - kind: battle
+        side: hb
+        name: Battle of Niš
+        date: 24 September 1689
+        text: Louis William of Baden defeated the Ottoman army and took the city, a month after his victory at Batočina.
+        lonlat: [21.9, 43.32]
+      - kind: event
+        side: hb
+        name: Skopje
+        date: October 1689
+        text: Piccolomini’s troops set fire to the city, reportedly to stop the plague that had broken out there.
+        lonlat: [21.43, 42.0]
+      - kind: event
+        name: Prizren
+        date: November 1689
+        text: Piccolomini died of plague here, and the Habsburg advance lost its leader.
+        lonlat: [20.74, 42.21]
+      - kind: battle
+        side: ot
+        name: Battle of Kačanik
+        date: 2 January 1690
+        text: Ottoman troops and Crimean Tatars destroyed the imperial and Serbian force guarding the pass.
+        lonlat: [21.26, 42.25]
+      - kind: event
+        name: Peć
+        date: 1689–1690
+        text: Seat of the Serbian patriarch, Arsenije III, who sided with the Habsburgs and led the refugees north.
+        lonlat: [20.27, 42.66]
+        lp: l
+    arrows:
+      - side: hb
+        label: Louis of Baden, 1689
+        via: [[20.45, 44.78], [21.05, 44.15], [21.85, 43.38]]
+      - side: hb
+        label: Piccolomini
+        via: [[21.85, 43.28], [21.2, 42.7], [21.38, 42.06]]
+      - side: ot
+        label: Fazıl Mustafa Pasha, 1690
+        via: [[22.6, 42.9], [21.95, 43.36], [21.0, 44.3], [20.5, 44.76]]
+      - label: Great Migration, 1690
+        via: [[20.27, 42.7], [20.75, 43.7], [20.4, 44.9], [19.75, 45.9]]
+    areas:
+      - style: occupied
+        side: hb
+        label: Held by the Habsburgs, 1688–1690 (approximate)
+        atoms: [RS-00, RS-08, RS-09, RS-10, RS-11, RS-12, RS-13, RS-14, RS-15, RS-16, RS-17, RS-18, RS-19, RS-20, RS-21, RS-22, RS-23, RS-24, RS-07, RS-06, RS-05, RS-01]
+  - title: Slankamen and the stalemate
+    date: 1690–1696
+    when: "1690-08-21"
+    borders: "1695-09-21"
+    countries: [rs, ro, hu, tr]
+    body:
+      - The Ottoman recovery went on. On 21 August 1690 Thököly, with Ottoman and Tatar troops, defeated an imperial force at Zărnești and was proclaimed prince of Transylvania, though Louis William of Baden drove him out within weeks. In 1691 Fazıl Mustafa Pasha led about 50,000 men up the Danube to win back Hungary. On 19 August Louis of Baden, with about 33,000, attacked him at Slankamen, where the Tisza joins the Danube. It was one of the bloodiest battles of the century; late in the day the grand vizier was killed by a bullet, and his army broke, leaving its guns and treasury behind.
+      - Leopold I’s Diploma Leopoldinum, published in December 1691, made Transylvania a Habsburg land with its own estates and laws. Nagyvárad fell after a long blockade in 1692 and Gyula in 1695. But the main imperial armies were fighting France in the Nine Years’ War, and the war in the south stalled. From 1695 Sultan Mustafa II led his army in person, and on 21 September 1695 he defeated an imperial corps near Lugos in the Banat, where its general, Federico Veterani, was mortally wounded.
+    facts:
+      - [Battle of Slankamen, "19 August 1691, imperial victory"]
+      - [Armies at Slankamen, "about 33,000 imperial troops, about 50,000 Ottomans"]
+      - [Battle of Lugos, "21 September 1695, Ottoman victory"]
+    markers:
+      - kind: battle
+        side: ot
+        name: Battle of Zărnești
+        date: 21 August 1690
+        text: Thököly and his Ottoman and Tatar allies broke into Transylvania through the mountains and beat its imperial defenders.
+        lonlat: [25.33, 45.57]
+      - kind: battle
+        side: hb
+        name: Battle of Slankamen
+        date: 19 August 1691
+        text: The death of the grand vizier, Fazıl Mustafa Pasha, turned a hard-fought battle into an Ottoman rout.
+        lonlat: [20.25, 45.14]
+      - kind: taken
+        side: hb
+        name: Nagyvárad
+        date: June 1692
+        text: The fortress, Ottoman since 1660, surrendered after a long blockade.
+        lonlat: [21.92, 47.07]
+      - kind: taken
+        side: hb
+        name: Gyula
+        date: 1695
+        text: One of the last Ottoman strongholds north of the Maros, starved into surrender.
+        lonlat: [21.28, 46.65]
+      - kind: battle
+        side: ot
+        name: Battle of Lugos
+        date: 21 September 1695
+        text: Mustafa II’s army overwhelmed Veterani’s outnumbered corps, which was trying to join the main imperial army.
+        lonlat: [21.93, 45.71]
+    arrows:
+      - side: ot
+        label: Fazıl Mustafa Pasha, 1691
+        via: [[20.45, 44.85], [20.3, 45.0], [20.22, 45.12]]
+      - side: hb
+        label: Louis of Baden
+        via: [[19.86, 45.27], [20.05, 45.2], [20.2, 45.15]]
   - title: Peter the Great takes Azov
     date: 1695–1700
     when: "1695-06"
@@ -251,3 +581,99 @@ steps:
       - side: ru
         label: Sheremetev and Mazepa, 1695
         via: [[34.55, 49.6], [34.2, 48.1], [33.5, 46.95]]
+  - title: Zenta
+    date: 1697
+    when: "1697-09-11"
+    borders: "1697-10-23"
+    countries: [rs, hu, ba, at, tr]
+    body:
+      - In 1697 Mustafa II marched again from Belgrade, crossed the Danube, took Titel and turned up the Tisza towards Transylvania. Prince Eugene of Savoy, newly given command in Hungary at the age of 34, followed from Petrovaradin with about 50,000 men. On the afternoon of 11 September his cavalry found the Ottoman army crossing the Tisza at Zenta on a bridge of boats, with the sultan and part of the army already on the eastern bank and the rest behind earthworks on the western one.
+      - With only a few hours of daylight left, Eugene attacked at once. His wings worked round the earthworks to the river and cut the defenders off from the bridge, which broke under the fleeing crowd. Estimates of the Ottoman dead run from about 20,000 to 30,000, many of them drowned, among them the grand vizier Elmas Mehmed Pasha; the imperial army reported fewer than 500 casualties. Eugene took the army’s treasury and the sultan’s seal. In October he raided Bosnia with 6,000 horsemen, and after his envoys were killed he let his troops plunder and burn Sarajevo.
+    facts:
+      - [Battle of Zenta, "11 September 1697, imperial victory"]
+      - [Ottoman dead, "about 20,000–30,000, many drowned"]
+      - [Sarajevo burned, 22–23 October 1697]
+    markers:
+      - kind: event
+        side: hb
+        name: Petrovaradin
+        date: August 1697
+        text: Eugene gathered his army at this Danube fortress before following the sultan up the Tisza.
+        lonlat: [19.86, 45.25]
+        lp: l
+      - kind: taken
+        side: ot
+        name: Titel
+        date: 1697
+        text: The sultan’s army took this small fortress where the Tisza meets the Danube.
+        lonlat: [20.29, 45.21]
+      - kind: battle
+        side: hb
+        name: Battle of Zenta
+        date: 11 September 1697
+        text: Caught astride the Tisza, the Ottoman army was destroyed in a few hours while the sultan watched from the far bank.
+        lonlat: [20.09, 45.93]
+      - kind: event
+        side: hb
+        name: Sarajevo
+        date: 22–23 October 1697
+        text: Eugene’s raiders sacked and burned the city, then withdrew north with their booty.
+        lonlat: [18.41, 43.86]
+    arrows:
+      - side: ot
+        label: Mustafa II
+        via: [[20.45, 44.85], [20.35, 45.12], [20.2, 45.55], [20.12, 45.88]]
+      - side: hb
+        label: Eugene of Savoy
+        via: [[19.86, 45.27], [20.25, 45.45], [20.15, 45.85]]
+      - side: hb
+        label: Raid on Sarajevo
+        via: [[19.1, 45.1], [18.75, 44.55], [18.44, 43.9]]
+  - title: The Treaty of Karlowitz
+    date: 1698–1699
+    when: "1698-11"
+    borders: "1699-01-26"
+    countries: [rs, hu, hr, ro, sk, ba, me, gr, it, pl, at, tr]
+    body:
+      - After Zenta the Ottomans accepted the mediation of England and the Dutch Republic, whose ambassadors, Lord Paget and Jacob Colyer, wanted the emperor free to face France. In November 1698 envoys of all the warring powers met at Karlowitz, on the Danube below Petrovaradin; the Ottoman side was led by Rami Mehmed Efendi and the dragoman Alexander Mavrocordatos. The talks took more than two months. They were based on uti possidetis, the principle that each side kept what it held, and the treaties were signed on 26 January 1699, for twenty-five years.
+      - The emperor kept all of Hungary except the Banat of Temesvár, together with Transylvania, Slavonia and most of Croatia; the Ottomans kept Belgrade and the Banat. Venice kept the Morea and its new conquests in Dalmatia, and Poland–Lithuania regained Podolia. Ragusa had the Ottoman border brought down to the sea at Neum and Sutorina, so that Venetian land would not surround it. It was the first time the Ottoman Empire gave up so much by treaty, and the border was marked on the ground in the following years. Thököly and his followers went into exile in the Ottoman Empire.
+    facts:
+      - [Treaty of Karlowitz, "26 January 1699, for 25 years"]
+      - [Principle, "uti possidetis: each side keeps what it holds"]
+      - [Mediators, England and the Dutch Republic]
+    markers:
+      - kind: treaty
+        name: Treaty of Karlowitz
+        date: 26 January 1699
+        text: Signed after a congress of more than two months at Karlowitz (Sremski Karlovci) in Syrmia.
+        lonlat: [19.93, 45.2]
+      - kind: held
+        side: ot
+        name: Belgrade
+        date: 1699
+        text: Kept by the Ottomans, with the Banat of Temesvár, until the next war in 1716–1718.
+        lonlat: [20.45, 44.82]
+      - kind: held
+        side: ot
+        name: Temesvár
+        date: 1699
+        text: The Banat of Temesvár was the only part of the Hungarian kingdom left in Ottoman hands.
+        lonlat: [21.23, 45.76]
+      - kind: event
+        name: Neum
+        date: 1699
+        text: Ragusa had this strip of coast given to the Ottomans, so that it bordered the empire and not only Venice. It still divides Croatia’s coast.
+        lonlat: [17.61, 42.92]
+    areas:
+      - style: gained
+        side: hb
+        label: Ottoman lands recognised as Habsburg at Karlowitz
+        atoms: [SK-NI~hu1938, HU-KE, HU-TB, HU-BU, HU-ED, HU-PE, HU-KM, HU-BK, HU-CS, HU-SD, HU-HV, HU-JN, HU-SK, HU-HE, HU-EG, HU-NO, HU-ST, HU-FE, HU-SF, HU-DU, HU-TO, HU-SS, HU-BA!, HU-PS, HU-SO~ottH, HU-VE~ottH, HU-BE, HU-BC, HU-HB, HU-DE, HU-NK, HU-KV, RO-BH, HR-14, HR-10, HRV-1604, HR-12, HR-16, RS-01, RS-05, RS-06, RS-07]
+      - style: gained
+        side: hb
+        label: Transylvania, recognised as Habsburg at Karlowitz
+        atoms: [RO-AB, RO-BN, RO-BV, RO-CJ, RO-CV, RO-HD, RO-HR, RO-MS, RO-SB, RO-SJ, RO-MM, RO-SM]
+      - style: gained
+        side: ve
+        label: Recognised as Venetian at Karlowitz
+        atoms: [GR-J, GR-G~achaea]

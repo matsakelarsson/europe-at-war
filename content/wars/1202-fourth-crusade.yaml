@@ -1,0 +1,280 @@
+id: fourth-crusade
+name: Fourth Crusade
+start: "1202-10"
+end: "1205-04-14"
+tier: A
+summary: A crusade called by Pope Innocent III to recover Jerusalem by way of Egypt, which instead sacked the Christian city of Zara in 1202 and, after taking up the cause of the exiled Byzantine prince Alexios Angelos, captured and sacked Constantinople in April 1204. The crusaders and Venice divided the Byzantine Empire among themselves, founding the Latin Empire and Latin lordships in Greece, while Byzantine successor states arose at Nicaea, Trebizond and in Epirus. The Latin emperor Baldwin was captured by the Bulgarians at Adrianople in 1205.
+countries: [it, hr, fr, be, hu, tr, gr, bg]
+sides:
+  - id: cr
+    name: Crusaders
+    polities: [latin-empire, kingdom-of-thessalonica, achaea, duchy-of-athens]
+    ink: navy
+    moves: Crusader moves
+    success: Crusader success
+  - id: ven
+    name: Venice
+    polities: [venice]
+    ink: red
+    moves: Venetian moves
+    success: Venetian success
+  - id: by
+    name: Byzantine Empire and successor states
+    polities: [byzantium, epirus, trebizond]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+  - id: hu
+    name: Hungary and Zara
+    polities: [hungary, croatia]
+    ink: olive
+    moves: Hungarian moves
+    success: Hungarian success
+  - id: bg
+    name: Bulgaria
+    polities: [bulgaria]
+    ink: green
+    moves: Bulgarian moves
+    success: Bulgarian success
+notes:
+  - Dates are Julian. The main eyewitness accounts are by two crusaders, Geoffrey of Villehardouin, one of the leaders, and the knight Robert of Clari, and by the Byzantine official and historian Niketas Choniates, who lived through the sack.
+  - Historians have long argued whether the diversion to Constantinople was planned, by Venice or by the leaders, or was the result of debt, accident and opportunism. Most now favour the second view.
+  - The wars of the Latin Empire with Bulgaria and with Nicaea have their own entries.
+sources:
+  - title: Fourth Crusade (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fourth_Crusade
+  - title: Siege of Zara (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Zara
+  - title: Siege of Constantinople (1203) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Constantinople_(1203)
+  - title: Sack of Constantinople (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sack_of_Constantinople
+  - title: Partitio terrarum imperii Romaniae (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Partitio_terrarum_imperii_Romaniae
+  - title: Latin Empire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Latin_Empire
+  - title: Battle of Adrianople (1205) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Adrianople_(1205)
+  - title: Enrico Dandolo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Enrico_Dandolo
+  - title: Fourth Crusade (World History Encyclopedia)
+    url: https://www.worldhistory.org/Fourth_Crusade/
+steps:
+  - title: Venice and Zara
+    date: 1198–1203
+    when: "1202-10"
+    borders: "1202-11-24"
+    countries: [it, hr, fr, be, hu]
+    body:
+      - Pope Innocent III called a new crusade in 1198 to recover Jerusalem, this time by attacking Egypt, the centre of Ayyubid power. Its leaders, mostly French and Flemish nobles under Boniface of Montferrat, agreed in 1201 that Venice would build a fleet to carry 33,500 men and 4,500 horses for 85,000 marks of silver. Venice put much of its trade aside for a year to build and crew the ships. But in the summer of 1202 only about a third of the expected army came to Venice, and the crusaders could not pay.
+      - The aged and nearly blind doge, Enrico Dandolo, offered to put off the debt if the crusaders helped Venice recover Zara (Zadar), a Dalmatian port that had rebelled against Venice and put itself under the King of Hungary, who had himself taken the cross. Despite the pope’s ban, the fleet sailed in October 1202, reached Zara on 10 November and took it on 24 November; the city was sacked. Some crusaders, among them Simon de Montfort, refused to take part. Innocent excommunicated the army, then absolved the crusaders but not the Venetians.
+      - At Zara envoys came from Alexios Angelos, son of the Byzantine emperor Isaac II, whom his brother Alexios III had deposed and blinded in 1195. If he were put on the throne, the young Alexios promised 200,000 marks, 10,000 soldiers for the crusade, 500 knights to guard the Holy Land and the submission of the Greek Church to Rome. Most of the leaders accepted, though many crusaders objected and some left for Syria on their own, and in April 1203 the fleet sailed for Constantinople.
+    facts:
+      - [Treaty of Venice, "1201, 85,000 marks for the fleet"]
+      - [Siege of Zara, "10–24 November 1202"]
+    markers:
+      - kind: event
+        side: ven
+        name: Venice
+        date: summer 1202
+        text: The crusaders camped on the Lido while the Venetians waited for payment. In September Dandolo took the cross himself in St Mark’s.
+        lonlat: [12.336, 45.438]
+      - kind: taken
+        side: ven
+        name: Zara
+        date: 24 November 1202
+        text: The citizens hung crosses on the walls to remind the besiegers that they too were Christians. The city surrendered after two weeks and was sacked and divided between the Venetians and the crusaders.
+        lonlat: [15.228, 44.114]
+    arrows:
+      - side: ven
+        label: Crusader fleet
+        via: [[12.4, 45.4], [13.6, 44.85], [15.18, 44.13]]
+  - title: Constantinople, 1203
+    date: June–August 1203
+    when: "1203-06-24"
+    borders: "1203-08-01"
+    countries: [tr, gr, al]
+    body:
+      - The fleet called at Durazzo and Corfu, sailed up the Dardanelles and on 24 June 1203 anchored off Constantinople, the largest city in Christendom. The crusaders camped on the Asian shore, then on 5 July landed at Galata across the Golden Horn, took the tower that held the chain across the harbour and let the Venetian ships into the Horn. The city’s people showed no wish to welcome the young Alexios. On 17 July the crusaders attacked; the French assault near the Blachernae palace was beaten back by the Varangian Guard, but the Venetians, with the doge at their head, seized some 25 towers of the sea walls and set fire to the houses behind.
+      - Alexios III led his army out but would not fight, and that night he fled with his treasure. The courtiers restored the blind Isaac II, and on 1 August his son was crowned co-emperor as Alexios IV. He paid part of what he had promised but could not raise the rest, and his efforts to bring the Church under Rome angered his subjects. In August a group of crusaders attacked a mosque in the city; the fire they started burned for days and destroyed a large part of Constantinople, and relations between the Latins and the citizens went from bad to worse.
+    facts:
+      - [Arrival at Constantinople, 24 June 1203]
+      - [First assault, 17 July 1203]
+      - [Alexios IV crowned, 1 August 1203]
+    markers:
+      - kind: event
+        side: cr
+        name: Abydos
+        date: June 1203
+        text: The fleet stopped here on its way up the Dardanelles, and the crusaders gathered the ripe harvest from the fields.
+        lonlat: [26.41, 40.195]
+      - kind: event
+        side: cr
+        name: Chalcedon
+        date: 24–26 June 1203
+        text: The army landed on the Asian shore and camped in the imperial palaces at Chalcedon and Scutari.
+        lonlat: [29.03, 40.985]
+        lp: b
+      - kind: taken
+        side: cr
+        name: Galata
+        date: 6 July 1203
+        text: The crusaders took the tower holding the great chain across the Golden Horn, and the Venetian fleet broke into the harbour.
+        lonlat: [28.974, 41.025]
+        lp: t
+      - kind: battle
+        side: ven
+        name: Assault on the sea walls
+        date: 17 July 1203
+        text: Venetian ships ran up to the walls along the Golden Horn and their crews took a long stretch of them. The fires they set burned a large part of the city.
+        lonlat: [28.95, 41.032]
+        lp: l
+      - kind: event
+        name: Great fire
+        date: 19–21 August 1203
+        text: A fire started by crusaders who attacked a mosque burned across the city from the Golden Horn to the Sea of Marmara.
+        lonlat: [28.966, 41.012]
+        lp: b
+    arrows:
+      - side: cr
+        label: Fleet, June 1203
+        via: [[26.4, 40.2], [27.6, 40.72], [28.98, 40.98]]
+  - title: The sack of Constantinople
+    date: January–April 1204
+    when: "1204-02-08"
+    borders: "1204-04-13"
+    countries: [tr]
+    body:
+      - In January 1204 a revolt in the city ended the crusaders’ hopes of payment. The courtier Alexios Doukas, known as Mourtzouphlos, seized the throne as Alexios V, had Alexios IV strangled on 8 February (Isaac II had already died) and broke with the Latins. Short of food and camped outside the walls, the crusaders and Venetians decided to take the city for themselves, and their clergy told them the war against the schismatic Greeks was just. In March they agreed how to share the conquest. Six Venetians and six crusaders would elect a Latin emperor, who would have a quarter of the empire, and the rest would be divided equally between Venice and the crusaders.
+      - A first assault from the ships on the Golden Horn on 9 April was driven off. On 12 April the attack was renewed; ships lashed together in pairs reached the towers, and knights forced their way through a walled-up gate. Alexios V fled in the night, and on the morning of 13 April the city lay open. For three days it was sacked. Soldiers killed and raped, churches and monasteries were plundered, and the altar of Hagia Sophia was broken up for its silver, as the historian Niketas Choniates, who fled the city, recorded.
+      - Much of the loot was melted down, and relics and treasures went west, among them the four bronze horses now at St Mark’s in Venice. Innocent III, who had forbidden attacks on Christians, condemned the crusaders’ violence, though he accepted the new Latin Church in Constantinople. The sack deepened the hostility between Greek and Latin Christians for centuries; in 2001 and 2004 Pope John Paul II expressed sorrow for it.
+    facts:
+      - [Alexios IV murdered, 8 February 1204]
+      - [Constantinople taken, 12–13 April 1204]
+      - [Sack of the city, 13–15 April 1204]
+    markers:
+      - kind: battle
+        side: by
+        name: First assault
+        date: 9 April 1204
+        text: The defenders under Alexios V beat off an attack from the ships on the Golden Horn.
+        lonlat: [28.945, 41.033]
+        lp: l
+      - kind: taken
+        side: cr
+        name: Constantinople
+        date: 13 April 1204
+        text: The city fell to the second assault, launched from ships against the walls along the Golden Horn near the Petrion.
+        lonlat: [28.955, 41.025]
+        lp: t
+      - kind: event
+        name: Hagia Sophia
+        date: April 1204
+        text: Soldiers stripped the great church, smashed its altar and loaded its treasures onto mules led into the sanctuary.
+        lonlat: [28.98, 41.008]
+        lp: b
+  - title: The partition of the empire
+    date: May 1204 – 1205
+    when: "1204-05-09"
+    borders: "1205-04-01"
+    countries: [tr, gr, it, fr, be, ge]
+    body:
+      - On 9 May 1204 the electors chose Count Baldwin of Flanders rather than Boniface as emperor; he was crowned in Hagia Sophia on 16 May, and a Venetian, Thomas Morosini, became Latin patriarch. A treaty of partition gave the emperor Constantinople and the lands around it, and Venice three-eighths of the empire, from which it chose ports and islands for its trade. Boniface took Thessalonica as a kingdom under the emperor and sold Venice his claim to Crete. Much of this had still to be conquered.
+      - That autumn the Franks spread out. Boniface marched through Thessaly into Greece; Othon de la Roche became lord of Athens and Thebes, and William of Champlitte and Geoffrey of Villehardouin, nephew of the chronicler, conquered most of the Peloponnese, beating local forces at the olive grove of Kountouras in 1205 and founding the Principality of Achaea. In Asia Minor Latin knights beat Theodore Laskaris at Poimanenon in December 1204. But Greek states survived at Nicaea under Laskaris, at Trebizond, where the Komnenos brothers had taken power with Georgian help in April 1204, and in Epirus under Michael Komnenos Doukas.
+    facts:
+      - [Baldwin I crowned, 16 May 1204]
+      - [Venice’s share, three-eighths of the empire]
+      - [Byzantine successor states, "Nicaea, Trebizond, Epirus"]
+    markers:
+      - kind: event
+        side: cr
+        name: Constantinople
+        date: 16 May 1204
+        text: Baldwin of Flanders was crowned Latin emperor in Hagia Sophia.
+        lonlat: [28.955, 41.014]
+      - kind: taken
+        side: cr
+        name: Thessalonica
+        date: autumn 1204
+        text: Boniface of Montferrat made the empire’s second city the capital of his kingdom.
+        lonlat: [22.936, 40.64]
+      - kind: taken
+        side: cr
+        name: Athens
+        date: early 1205
+        text: The city surrendered to Boniface after its archbishop, Michael Choniates, the historian’s brother, gave up the Acropolis. Othon de la Roche became its lord.
+        lonlat: [23.73, 37.98]
+      - kind: battle
+        side: cr
+        name: Battle of Kountouras
+        date: "1205"
+        text: A small Frankish force beat the local Greek landowners and their followers somewhere in Messenia, opening the Peloponnese to conquest.
+        lonlat: [21.9, 37.1]
+      - kind: battle
+        side: cr
+        name: Battle of Poimanenon
+        date: 6 December 1204
+        text: Latin knights under Peter of Bracheux and Payen of Orléans beat Theodore Laskaris and occupied much of north-western Asia Minor.
+        lonlat: [27.892, 40.079]
+      - kind: event
+        side: by
+        name: Nicaea
+        date: 1204–1205
+        text: Theodore Laskaris, son-in-law of Alexios III, gathered the Byzantine refugees here. He was crowned emperor in 1208.
+        lonlat: [29.721, 40.429]
+      - kind: event
+        side: by
+        name: Trebizond
+        date: April 1204
+        text: Alexios and David Komnenos, grandsons of the emperor Andronikos I, took the city with troops lent by their relative, Queen Tamar of Georgia.
+        lonlat: [39.722, 41.005]
+      - kind: event
+        side: by
+        name: Arta
+        date: "1205"
+        text: Michael Komnenos Doukas, a cousin of the Angelos emperors, made himself master of Epirus.
+        lonlat: [20.988, 39.165]
+    arrows:
+      - side: cr
+        label: Boniface of Montferrat
+        via: [[22.94, 40.64], [22.42, 39.64], [23.32, 38.32], [23.73, 37.99]]
+      - side: cr
+        label: Champlitte and Villehardouin
+        via: [[21.73, 38.25], [21.35, 37.85], [21.85, 37.15]]
+  - title: Adrianople and the aftermath
+    date: 1205
+    when: "1205-02"
+    borders: "1205-04-14"
+    countries: [bg, tr, gr]
+    body:
+      - The Greek nobles of Thrace, ill treated by their new lords, rose early in 1205 and called on Kaloyan, ruler of the Bulgarians, whose offers of alliance the Latins had scorned. Baldwin besieged Adrianople, and on 14 April 1205 Kaloyan’s army, with many Cuman horsemen, drew the Latin knights into a reckless pursuit and destroyed them. Louis of Blois was killed and Baldwin taken prisoner; he died in Bulgarian captivity. Dandolo, who helped Villehardouin lead the survivors back, died at Constantinople that summer and was buried in Hagia Sophia.
+      - Baldwin’s brother Henry, crowned in 1206, steadied the Latin Empire, but it remained weak, squeezed between the Bulgarians and the Greeks of Nicaea, until the Byzantines recovered Constantinople in 1261. The crusade never reached the Holy Land. Venice gained an empire of ports and islands in the Aegean that lasted for centuries, and Latin lordships in Greece outlived the Latin Empire by many years. The restored Byzantine Empire never regained its former strength, which, many historians argue, eased the Ottoman conquest of the Balkans.
+    facts:
+      - [Battle of Adrianople, "14 April 1205, Bulgarian victory"]
+      - [Emperor Baldwin I, "captured, died in captivity"]
+      - [Recovery of Constantinople, 25 July 1261]
+    markers:
+      - kind: battle
+        side: bg
+        name: Battle of Adrianople
+        date: 14 April 1205
+        text: Cuman horse archers feigned flight and drew the Latin knights away from their camp, where Kaloyan’s main army surrounded them.
+        lonlat: [26.567, 41.667]
+      - kind: event
+        side: bg
+        name: Tarnovo
+        date: 1205–1206
+        text: Kaloyan’s capital, where Baldwin was held prisoner and died; how he died is uncertain.
+        lonlat: [25.617, 43.078]
+      - kind: event
+        name: Constantinople
+        date: "1205"
+        text: Enrico Dandolo died here, in his nineties, and was buried in Hagia Sophia.
+        lonlat: [28.955, 41.014]
+    arrows:
+      - side: bg
+        label: Kaloyan
+        via: [[25.62, 43.05], [26.2, 42.4], [26.55, 41.72]]
+      - side: cr
+        label: Baldwin I
+        via: [[28.92, 41.02], [27.8, 41.15], [26.62, 41.66]]

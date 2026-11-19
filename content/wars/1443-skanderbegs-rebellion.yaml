@@ -1,0 +1,190 @@
+id: skanderbegs-rebellion
+name: Skanderbeg’s rebellion
+start: "1443-11-28"
+end: "1479-04-25"
+tier: B
+summary: The Albanian revolt against the Ottomans led by Gjergj Kastrioti, called Skanderbeg, a former Ottoman commander who seized Krujë in 1443. With the League of Lezhë, and later with help from Naples, the papacy and Venice, he held the mountains of northern and central Albania for a quarter of a century, beating several Ottoman armies and twice seeing sultans fail before Krujë. After his death in 1468 the struggle went on under Venetian leadership until Krujë fell in 1478 and Venice gave up Shkodër in 1479.
+countries: [al, mk, me]
+sides:
+  - id: alb
+    name: Skanderbeg and the Albanian lords
+    polities: []
+    ink: red
+    moves: Albanian moves
+    success: Albanian success
+  - id: ven
+    name: Venice
+    polities: [venice]
+    ink: purple
+    moves: Venetian moves
+    success: Venetian success
+  - id: ott
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - The main narrative source, Marin Barleti’s life of Skanderbeg written about forty years after his death, is a heroic biography, and its figures for Ottoman armies and losses, often repeated, are much exaggerated. Modern estimates are given here where they exist; Ottoman, Venetian and Ragusan documents give a more sober picture.
+  - The League of Lezhë was a loose alliance of noble families. Several of its members, including Skanderbeg’s own nephew Hamza, changed sides at times, and Venice fought against Skanderbeg in 1447–1448 before becoming his ally in 1463.
+sources:
+  - title: Skanderbeg (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Skanderbeg
+  - title: League of Lezhë (Wikipedia)
+    url: https://en.wikipedia.org/wiki/League_of_Lezh%C3%AB
+  - title: Siege of Krujë (1450) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kruj%C3%AB_(1450)
+  - title: Battle of Albulena (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Albulena
+  - title: Siege of Krujë (1466–1467) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kruj%C3%AB_(1466%E2%80%931467)
+  - title: Siege of Krujë (1477–1478) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kruj%C3%AB_(1477%E2%80%931478)
+  - title: Siege of Shkodra (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Shkodra
+  - title: Treaty of Gaeta (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Gaeta
+steps:
+  - title: Krujë and the League of Lezhë
+    date: 1443–1450
+    when: "1443-11-28"
+    borders: "1450-10"
+    countries: [al, mk]
+    body:
+      - Skanderbeg, son of the Albanian lord Gjon Kastrioti, had been sent to the Ottoman court as a hostage and rose high in the sultan’s service. In November 1443, during the Hungarian crusade, he left the Ottoman army with a few hundred Albanians, and on 28 November he took Krujë, his family’s old stronghold, with a forged order from the sultan. He returned to Christianity and raised a red flag with a black double-headed eagle. On 2 March 1444, at Venetian-held Lezhë, the leading Albanian families formed an alliance under his command, known as the League of Lezhë.
+      - On 29 June 1444 Skanderbeg defeated an Ottoman army at Torvioll, using a force hidden in the woods to fall on its flank, and in 1446 he won again at Otonetë. A quarrel over the inheritance of the fortress of Dagnum led to war with Venice in 1447–1448, while the Ottomans took the border fortress of Svetigrad in 1448 and Berat in 1450. In May 1450 Murad II himself, with his son Mehmed, besieged Krujë. While Vrana Konti held the castle, Skanderbeg harried the besiegers from the mountains, and in the autumn, after costly assaults had failed, Murad withdrew.
+    facts:
+      - [Krujë seized, 28 November 1443]
+      - [League of Lezhë, 2 March 1444]
+      - [First siege of Krujë, "May – autumn 1450, Ottomans withdraw"]
+    markers:
+      - kind: taken
+        side: alb
+        name: Krujë
+        date: 28 November 1443
+        text: Skanderbeg took the town with a forged letter from the sultan to its governor and made it his capital.
+        lonlat: [19.793, 41.511]
+      - kind: treaty
+        side: alb
+        name: Lezhë
+        date: 2 March 1444
+        text: The Albanian lords met in this Venetian town and agreed to fight the Ottomans under Skanderbeg.
+        lonlat: [19.644, 41.782]
+      - kind: battle
+        side: alb
+        name: Torvioll
+        date: 29 June 1444
+        text: Skanderbeg’s first victory in the field, in the plain north of Peshkopi.
+        lonlat: [20.367, 41.767]
+      - kind: battle
+        side: alb
+        name: Otonetë
+        date: 27 September 1446
+        text: An Ottoman army invading through the Black Drin valley was beaten near Debar.
+        lonlat: [20.533, 41.517]
+        lp: b
+      - kind: taken
+        side: ott
+        name: Svetigrad
+        date: "1448"
+        text: The garrison of this frontier fortress gave up after the Ottomans spoiled its water supply.
+        lonlat: [20.6, 41.45]
+        lp: r
+      - kind: held
+        side: alb
+        name: Krujë
+        date: May – autumn 1450
+        text: Murad II’s siege failed. Vrana Konti commanded the garrison while Skanderbeg attacked the Ottoman supply lines.
+        lonlat: [19.793, 41.511]
+    arrows:
+      - side: ott
+        label: Murad II
+        via: [[21.0, 41.35], [20.6, 41.43], [20.15, 41.45], [19.85, 41.5]]
+  - title: Albulena and the later sieges
+    date: 1451–1467
+    when: "1451-03"
+    borders: "1467-04-23"
+    countries: [al, mk, it]
+    body:
+      - Short of money after the siege, Skanderbeg allied with King Alfonso V of Naples by the Treaty of Gaeta in March 1451, accepting him as overlord in return for troops and supplies. In 1455 he lost much of his cavalry in a surprise attack while besieging Berat, and in 1456 his nephew Hamza, who had lost hope of succeeding him, went over to the Ottomans. In 1457 a large Ottoman army under Isa Bey and Hamza ravaged the lowlands and camped at Albulena (Ujëbardha), between Lezhë and Krujë. Having hidden in the mountains for weeks, Skanderbeg fell on the camp on 2 September and routed the army. Pope Calixtus III named him captain-general of the Holy See.
+      - After an expedition to Italy in 1460–1462 to help Alfonso’s son Ferdinand against his rivals, and a short-lived truce with Mehmed in the spring of 1463, Skanderbeg returned to war later that year, now allied with Venice. In 1466 Mehmed II besieged Krujë in person and, when it held, built the fortress of Elbasan in the plain to keep it under pressure. Skanderbeg, back from seeking aid in Rome and Naples, attacked the besiegers with Lekë Dukagjini in April 1467; their commander Ballaban Pasha was killed on 23 April, and the siege was broken. Mehmed came back that summer and laid waste much of the country, but Krujë still held.
+    facts:
+      - [Treaty of Gaeta, "26 March 1451"]
+      - [Battle of Albulena, "2 September 1457, Albanian victory"]
+      - [Second siege of Krujë, "June 1466 – 23 April 1467"]
+    markers:
+      - kind: battle
+        side: alb
+        name: Albulena
+        date: 2 September 1457
+        text: Skanderbeg surprised the Ottoman camp in the plain of Ujëbardha and took its baggage and standards. Hamza Kastrioti was captured.
+        lonlat: [19.718, 41.602]
+        lp: l
+      - kind: battle
+        side: ott
+        name: Berat
+        date: "1455"
+        text: Skanderbeg’s siege of the castle ended when an Ottoman relief force caught his cavalry resting by the Osum river.
+        lonlat: [19.958, 40.702]
+      - kind: taken
+        side: ott
+        name: Elbasan
+        date: "1466"
+        text: Mehmed II built this fortress in a few weeks to cut Albania in two and support the blockade of Krujë.
+        lonlat: [20.081, 41.111]
+      - kind: held
+        side: alb
+        name: Krujë
+        date: 1466–1467
+        text: Twice besieged, in 1466 and 1467; Ballaban Pasha was killed when Skanderbeg attacked the besiegers.
+        lonlat: [19.793, 41.511]
+    arrows:
+      - side: alb
+        label: Skanderbeg
+        via: [[19.85, 41.75], [19.76, 41.65], [19.72, 41.61]]
+      - side: ott
+        label: Mehmed II
+        via: [[21.0, 41.12], [20.5, 41.12], [20.1, 41.12], [19.85, 41.45]]
+  - title: The fall of Krujë and Shkodër
+    date: 1468–1479
+    when: "1468-01-17"
+    borders: "1479-04-25"
+    countries: [al, me]
+    body:
+      - In January 1468 Skanderbeg called the remaining Albanian lords to Lezhë to plan the war, but he fell ill, perhaps with malaria, and died there on 17 January, aged about 62. His widow and young son fled to Italy, and Venice took over Krujë and carried on the war with the help of Albanian and Montenegrin lords such as Lekë Dukagjini and Ivan Crnojević. In 1474 the Ottomans besieged Venetian Shkodër for three months without success.
+      - In 1477 Ottoman troops blockaded Krujë, and in September they routed a Venetian and Albanian relief army. Starving, the town surrendered on 15 or 16 June 1478, and many of its defenders are said to have been killed despite promises of safety. Mehmed II then besieged Shkodër in person; its small garrison beat off five great assaults in July, so the sultan took the nearby forts of Žabljak, Drisht and Lezhë, left an army to blockade the town and went home. In the peace of 25 January 1479 Venice gave up Shkodër, and in April its surviving defenders sailed for Venice. Of Venetian Albania only Durrës and a few coastal places were left.
+    facts:
+      - [Death of Skanderbeg, 17 January 1468]
+      - [Fall of Krujë, "15 or 16 June 1478"]
+      - [Shkodër handed over, April 1479]
+    markers:
+      - kind: event
+        side: alb
+        name: Lezhë
+        date: 17 January 1468
+        text: Skanderbeg died here and was buried in the cathedral of St Nicholas. Lezhë fell to the Ottomans in 1478.
+        lonlat: [19.644, 41.782]
+        lp: l
+      - kind: taken
+        side: ott
+        name: Krujë
+        date: June 1478
+        text: After more than a year of blockade the starving Venetian garrison surrendered to Mehmed II.
+        lonlat: [19.793, 41.511]
+      - kind: siege
+        side: ven
+        name: Shkodër
+        date: May 1478 – April 1479
+        text: The defenders of Rozafa castle beat off every assault and were blockaded until Venice ceded the town by treaty.
+        lonlat: [19.512, 42.068]
+      - kind: taken
+        side: ott
+        name: Drisht
+        date: "1478"
+        text: Stormed during the siege of Shkodër; many of its people were killed.
+        lonlat: [19.591, 42.123]
+        lp: r
+    arrows:
+      - side: ott
+        label: Mehmed II
+        via: [[20.1, 41.15], [19.85, 41.45], [19.7, 41.8], [19.53, 42.05]]

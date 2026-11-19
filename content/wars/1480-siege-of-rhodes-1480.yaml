@@ -1,0 +1,67 @@
+id: siege-of-rhodes-1480
+name: Siege of Rhodes, 1480
+start: "1480-05-23"
+end: "1480-08-17"
+tier: B
+summary: The failed Ottoman attempt to take Rhodes from the Knights Hospitaller. A fleet and army under Mesih Pasha landed in May 1480 and bombarded the city for nearly three months, but the Knights and the townspeople under Grand Master Pierre d’Aubusson beat off the attacks on the harbour tower of St Nicholas and, on 27 July, a great assault that had already broken into the city. In August the Ottomans withdrew. Rhodes fell to Suleiman the Magnificent in 1522.
+countries: [gr, tr]
+sides:
+  - id: kni
+    name: Knights Hospitaller
+    polities: [malta]
+    ink: red
+    moves: Hospitaller moves
+    success: Hospitaller success
+  - id: ott
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - The Ottoman army is put at about 70,000 men by d’Aubusson, a figure that may be inflated; the defenders numbered a few hundred knights and perhaps 2,000–3,000 soldiers, besides the citizens. The best-known account is by the order’s vice-chancellor Guillaume Caoursin, an eyewitness.
+sources:
+  - title: Siege of Rhodes (1480) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Rhodes_(1480)
+  - title: Pierre d’Aubusson (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pierre_d%27Aubusson
+  - title: Mesih Pasha (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mesih_Pasha
+steps:
+  - title: The siege
+    date: 23 May – 17 August 1480
+    when: "1480-05-23"
+    borders: "1480-08-17"
+    countries: [gr, tr]
+    body:
+      - The Knights of St John had ruled Rhodes since 1310, raiding Muslim shipping from its harbours. After the peace with Venice, Mehmed II sent a fleet of about 160 ships and a large army under Mesih Pasha, a member of the Byzantine imperial family who had become an Ottoman commander. They landed on 23 May and set up their heavy guns. The first attacks, from 9 June, fell on the Tower of St Nicholas guarding the harbour mole; d’Aubusson himself led its defence, and the assaults were driven off.
+      - The Ottomans then battered the weak eastern walls by the Jewish quarter, in the sector of the knights of Italy, while the defenders dug a new ditch and wall behind them. At dawn on 27 July janissaries stormed the breach, raised their flags on the Tower of Italy and entered the city. In three hours of fighting, with the grand master wounded five times, they were thrown back, and the counter-attack reached the Ottoman camp. After losing thousands of men, Mesih Pasha re-embarked his army, and the fleet sailed away by 17 August. Mehmed planned a new expedition but died in May 1481.
+    facts:
+      - [Ottoman landing, 23 May 1480]
+      - [Final assault, "27 July 1480, repulsed"]
+      - [Siege abandoned, 17 August 1480]
+    markers:
+      - kind: held
+        side: kni
+        name: Rhodes
+        date: 27 July 1480
+        text: The janissaries broke into the city through the Italian sector but were driven out after three hours’ fighting.
+        lonlat: [28.227, 36.442]
+      - kind: held
+        side: kni
+        name: Tower of St Nicholas
+        date: June 1480
+        text: The fort at the end of the harbour mole was battered to ruins but held, keeping the harbour open.
+        lonlat: [28.229, 36.451]
+        lp: r
+      - kind: event
+        side: ott
+        name: Ottoman landing
+        date: 23 May 1480
+        text: The fleet anchored in the gulf of Trianda, west of the city, and the army landed there.
+        lonlat: [28.16, 36.43]
+        lp: l
+    arrows:
+      - side: ott
+        label: Mesih Pasha’s fleet
+        via: [[28.3, 36.85], [28.2, 36.6], [28.17, 36.45]]

@@ -1,0 +1,164 @@
+id: campaigns-of-the-catalan-company
+name: Campaigns of the Catalan Company
+start: "1303"
+end: "1311-03-15"
+tier: B
+summary: The wars of the Grand Catalan Company, mercenaries from the War of the Sicilian Vespers hired by the Byzantine emperor Andronikos II to fight the Turks in Anatolia. After victories over the Turks in 1303–1304 the Company fell out with its employers, and when its leader Roger de Flor was murdered in 1305 it turned on the Byzantines, ravaging Thrace and Macedonia for years. In 1311 it destroyed the army of the Duke of Athens at Halmyros and took over his duchy, which it ruled until 1388.
+countries: [tr, gr]
+sides:
+  - id: cat
+    name: Catalan Company
+    polities: []
+    ink: orange
+    moves: Moves by the Catalan Company
+    success: Catalan success
+  - id: byz
+    name: Byzantine Empire
+    polities: [byzantium]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+  - id: tur
+    name: Turkish beyliks
+    polities: [anatolian-beyliks]
+    ink: brown
+    moves: Turkish moves
+    success: Turkish success
+  - id: ath
+    name: Duchy of Athens
+    polities: [duchy-of-athens]
+    ink: green
+    moves: Moves by the Duke of Athens
+    success: Success for the Duke of Athens
+notes:
+  - The main account of the Company is the chronicle of Ramon Muntaner, who served in it and tells its story from the Catalan side; the Byzantine historians George Pachymeres and Nikephoros Gregoras saw the Catalans as plunderers. Their numbers for the Company differ widely, from about 1,000 men to Muntaner’s 6,500 fighting men with their families and servants.
+  - The battle of 15 March 1311 was long called the battle of the Cephissus and placed near Orchomenos in Boeotia; most historians now place it at Halmyros in southern Thessaly.
+  - The Company’s revenge after 1305 is remembered in Catalan as the venjança catalana. After 1311 the Duchy of Athens, and from 1319 Neopatras, were ruled by the Catalans under the Aragonese kings of Sicily, until Nerio Acciaioli of Corinth took Athens in 1388.
+sources:
+  - title: Catalan Company (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Catalan_Company
+  - title: Roger de Flor (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Roger_de_Flor
+  - title: Battle of Apros (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Apros
+  - title: Battle of Halmyros (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Halmyros
+  - title: Duchy of Athens (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Duchy_of_Athens
+steps:
+  - title: Anatolia and the murder of Roger de Flor
+    date: 1303–1305
+    when: "1303"
+    borders: "1305-04-30"
+    countries: [tr]
+    body:
+      - The peace of 1302 that ended the War of the Sicilian Vespers left thousands of Catalan and Aragonese soldiers in Sicily without pay, many of them almogavars, hardy light infantry from the frontier wars in Spain. Their leader, the former Templar Roger de Flor, offered them to Andronikos II, who badly needed soldiers against the Turks. The Company reached Constantinople in 1303, and Roger married the emperor’s niece and was made megas doux, commander of the fleet. After a bloody fight with the city’s Genoese, the Company was shipped to Cyzicus, where it surprised and routed the Turks of Karasi in October.
+      - In the spring of 1304 Roger marched south with his Catalans and Alan allies, beat the Turks of Germiyan and Aydın besieging Philadelphia at Aulax, and relieved the city. He went on as far as the Cilician Gates, where on 15 August he won another battle at Kibistra. But the Catalans plundered Greek towns as freely as Turkish ones and quarrelled over pay, and the emperor called them back to Europe; they wintered at Gallipoli. On 30 April 1305 Roger was murdered at a banquet in Adrianople by Alan mercenaries of the co-emperor Michael IX, with many of his escort, and Catalans in Constantinople were killed.
+    facts:
+      - [Company arrives, "1303; about 6,500 men by Muntaner’s account"]
+      - [Battle of Kibistra, 15 August 1304]
+      - [Murder of Roger de Flor, "30 April 1305, Adrianople"]
+    markers:
+      - kind: battle
+        side: cat
+        name: Cyzicus
+        date: October 1303
+        text: The Catalans landed on the peninsula of Artake and surprised a Turkish camp, then spent the winter there, plundering the district.
+        lonlat: [27.88, 40.39]
+      - kind: battle
+        side: cat
+        name: Philadelphia
+        date: spring 1304
+        text: The last Byzantine town in inner western Anatolia was relieved after the Catalans beat its besiegers at Aulax nearby.
+        lonlat: [28.517, 38.35]
+      - kind: battle
+        side: cat
+        name: Battle of Kibistra
+        date: 15 August 1304
+        text: The furthest point of the campaign, near the Cilician Gates in the Taurus mountains, where the Company beat a large Turkish army.
+        lonlat: [34.05, 37.53]
+      - kind: event
+        side: byz
+        name: Adrianople
+        date: 30 April 1305
+        text: Roger de Flor was murdered while visiting Michael IX. Some 100 horsemen and 1,000 foot of the Company are said to have died with him or soon after.
+        lonlat: [26.556, 41.677]
+      - kind: held
+        side: cat
+        name: Gallipoli
+        date: 1304–1305
+        text: The Company’s base on the Dardanelles, where its families and loot were kept.
+        lonlat: [26.67, 40.414]
+    arrows:
+      - side: cat
+        label: Roger de Flor
+        via: [[27.88, 40.39], [28.3, 39.5], [28.5, 38.4]]
+      - side: cat
+        label: Roger de Flor
+        via: [[28.55, 38.33], [31.0, 37.9], [34.0, 37.55]]
+  - title: Thrace, Macedonia and Halmyros
+    date: 1305–1311
+    when: "1305-06-21"
+    borders: "1311-03-15"
+    countries: [tr, gr]
+    body:
+      - Led now by Berenguer d’Entença and Bernat de Rocafort, the Company took its revenge. On 21 June 1305 the garrison of Gallipoli sallied out and routed the besieging Byzantines, and in July the Catalans crushed Michael IX’s army near Apros. For two years, joined by Turkish bands, they ravaged Thrace from Gallipoli. When the land was exhausted they moved west, wintered on the Kassandra peninsula, plundered the monasteries of Mount Athos and in 1308 failed to take Thessalonica. Their leaders fell out; Rocafort was seized in 1309 by an agent of Charles of Valois and died in prison in Naples.
+      - In 1309 the Company reached Thessaly, and in 1310 Walter of Brienne, the new Duke of Athens, hired it against his Greek neighbours. When he refused to pay and tried to drive it out, the Catalans met his army near Halmyros on 15 March 1311. They had flooded the marshy ground in front of their line, and the duke’s heavy cavalry charged into the mud and was cut down. Walter and most of the knights of Frankish Greece were killed. The Company took over the duchy and placed it under the Aragonese kings of Sicily; Catalans ruled Athens and Thebes until 1388.
+    facts:
+      - [Battle of Apros, "July 1305, Catalan victory"]
+      - [Battle of Halmyros, "15 March 1311, Catalan victory; Walter of Brienne killed"]
+      - [Catalan Duchy of Athens, 1311–1388]
+    markers:
+      - kind: held
+        side: cat
+        name: Gallipoli
+        date: 21 June 1305
+        text: A garrison of about 1,500 under Muntaner and Rocafort beat off the Byzantine army besieging the town.
+        lonlat: [26.67, 40.414]
+      - kind: battle
+        side: cat
+        name: Battle of Apros
+        date: July 1305
+        text: The Alans fled and the Turkish auxiliaries changed sides; Michael IX was unhorsed and carried from the field by his guards. Thrace lay open to the Catalans.
+        lonlat: [27.521, 40.967]
+      - kind: event
+        side: cat
+        name: Kassandreia
+        date: 1307–1308
+        text: The Company wintered behind the old wall across the neck of the Kassandra peninsula and raided Chalcidice from there.
+        lonlat: [23.413, 40.048]
+      - kind: event
+        side: cat
+        name: Mount Athos
+        date: 1307–1308
+        text: The Catalans and their Turkish allies plundered the monasteries of the Holy Mountain.
+        lonlat: [24.327, 40.158]
+      - kind: held
+        side: byz
+        name: Thessalonica
+        date: "1308"
+        text: The Company’s attempt on the empire’s second city failed.
+        lonlat: [22.936, 40.64]
+        lp: l
+      - kind: battle
+        side: cat
+        name: Battle of Halmyros
+        date: 15 March 1311
+        text: The Frankish knights of Athens and Achaea charged across flooded fields and were destroyed. Duke Walter of Brienne was killed.
+        lonlat: [22.76, 39.18]
+      - kind: taken
+        side: cat
+        name: Thebes
+        date: "1311"
+        text: The capital of the duchy fell to the Catalans after the battle, and Athens soon followed.
+        lonlat: [23.318, 38.321]
+    arrows:
+      - side: cat
+        label: Catalan Company
+        via: [[26.67, 40.42], [25.4, 40.95], [24.2, 40.85], [23.45, 40.15]]
+      - side: cat
+        label: Catalan Company
+        via: [[22.95, 40.35], [22.4, 39.8], [22.74, 39.22]]
+      - side: ath
+        label: Walter of Brienne
+        via: [[23.32, 38.32], [22.9, 38.8], [22.78, 39.15]]

@@ -1,0 +1,160 @@
+id: conquests-of-stefan-dusan
+name: Conquests of Stefan Dušan
+start: "1330-07-28"
+end: "1355-12-20"
+tier: B
+summary: The expansion of medieval Serbia to its greatest extent under King, later Emperor, Stefan Dušan. After the Serbian victory over Bulgaria at Velbazhd in 1330, Dušan took the throne from his father and, exploiting the Byzantine civil wars, conquered Macedonia, Albania, Epirus and Thessaly. In 1346 he was crowned Emperor of the Serbs and Greeks at Skopje, but his empire broke apart soon after his death in 1355.
+countries: [rs, mk, gr, al, bg, xk, me]
+sides:
+  - id: ser
+    name: Serbia
+    polities: [serbia]
+    ink: red
+    moves: Serbian moves
+    success: Serbian success
+  - id: byz
+    name: Byzantine Empire
+    polities: [byzantium, epirus]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+  - id: bul
+    name: Bulgaria
+    polities: [bulgaria]
+    ink: green
+    moves: Bulgarian moves
+    success: Bulgarian success
+  - id: ott
+    name: Turkish allies of Byzantium
+    polities: [ottoman]
+    ink: teal
+    moves: Turkish moves
+    success: Turkish success
+notes:
+  - Dates are Julian. Dušan’s titles grew with his conquests; Serbian documents use “Romans” or “Greeks” for the Byzantines, and he was crowned “Emperor of the Serbs and Romans”.
+  - The Byzantine civil wars of 1321–1328 and 1341–1347, which made many of these conquests possible, have their own entries.
+sources:
+  - title: Stefan Dušan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Stefan_Du%C5%A1an
+  - title: Battle of Velbazhd (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Velbazhd
+  - title: Serbian Empire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Serbian_Empire
+  - title: Dušan’s Code (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Du%C5%A1an%27s_Code
+steps:
+  - title: Velbazhd and the conquest of Macedonia
+    date: 1330–1345
+    when: "1330-07-28"
+    borders: "1345-09-25"
+    countries: [rs, bg, mk, al, gr, xk]
+    body:
+      - Alarmed by Serbia’s advance into northern Macedonia, the Bulgarian tsar Michael Shishman and the Byzantine emperor Andronikos III agreed to attack it together. Before the Byzantines arrived, King Stefan Dečanski and his son Dušan caught the Bulgarian army near Velbazhd (Kyustendil) on 28 July 1330. The Bulgarians were routed and Michael Shishman was mortally wounded; Dečanski’s nephew Ivan Stefan was put on the Bulgarian throne. The following year nobles eager for southern conquests turned against Dečanski, and Dušan seized power; he was crowned king on 8 September 1331, and his father died in prison at Zvečan soon after.
+      - Dušan made peace with Bulgaria, marrying Helena, the sister of its new tsar Ivan Alexander, and turned south. With the help of the Byzantine rebel Syrgiannes he took Ohrid, Prilep and Strumica, which the Byzantines recognised as Serbian in 1334. When the Byzantine civil war broke out in 1341 he backed first John Kantakouzenos and then the regency in Constantinople, while his armies took Albania except Durrës, the towns of western Macedonia and, on 25 September 1345 after a long siege, Serres.
+    facts:
+      - [Battle of Velbazhd, "28 July 1330, Serbian victory"]
+      - [Dušan crowned king, 8 September 1331]
+      - [Serres taken, 25 September 1345]
+    markers:
+      - kind: battle
+        side: ser
+        name: Battle of Velbazhd
+        date: 28 July 1330
+        text: The Serbs, with German, Catalan and other mercenaries, surprised the Bulgarian army. Tsar Michael Shishman died of his wounds.
+        lonlat: [22.683, 42.283]
+      - kind: event
+        side: ser
+        name: Zvečan
+        date: 1331
+        text: Dušan imprisoned his father in this castle in northern Kosovo, where he died in November 1331, perhaps murdered.
+        lonlat: [20.84, 42.91]
+      - kind: taken
+        side: ser
+        name: Ohrid
+        date: 1334
+        text: The seat of the old archbishopric, one of the towns the Byzantines recognised as Serbian in the peace of August 1334.
+        lonlat: [20.802, 41.117]
+      - kind: taken
+        side: ser
+        name: Krujë
+        date: about 1343
+        text: Dušan granted the Albanian town a charter as its ruler. By 1345 he held most of Albania, though not Angevin Durrës.
+        lonlat: [19.793, 41.511]
+      - kind: taken
+        side: ser
+        name: Kastoria
+        date: about 1343
+        text: The lakeside town in western Macedonia fell to the Serbs during the Byzantine civil war.
+        lonlat: [21.267, 40.517]
+      - kind: taken
+        side: ser
+        name: Serres
+        date: 25 September 1345
+        text: The great Byzantine town in eastern Macedonia surrendered after a long siege. Dušan proclaimed himself tsar there that Christmas.
+        lonlat: [23.55, 41.083]
+    arrows:
+      - side: bul
+        label: Michael Shishman
+        via: [[23.33, 42.7], [23.0, 42.45], [22.72, 42.3]]
+      - side: ser
+        label: Dušan
+        via: [[21.43, 42.0], [21.3, 41.45], [21.27, 40.6]]
+      - side: ser
+        label: Dušan
+        via: [[21.6, 41.35], [22.6, 41.25], [23.5, 41.1]]
+  - title: Emperor of the Serbs and Greeks
+    date: 1346–1355
+    when: "1346-04-16"
+    borders: "1348"
+    countries: [mk, gr, al, rs, xk, tr, ba]
+    body:
+      - On Easter Sunday, 16 April 1346, an assembly at Skopje raised the Serbian archbishopric to a patriarchate with its seat at Peć, and the new patriarch crowned Dušan Emperor of the Serbs and Romans, with the Bulgarian patriarch and monks of Mount Athos present; Constantinople’s patriarch excommunicated him. In 1347–1348, as the Black Death ravaged the Byzantine lands, his armies took Epirus, Aetolia and Thessaly. Dušan made his half-brother Simeon Uroš governor of Epirus and the general Preljub governor of Thessaly. His law code, proclaimed at Skopje in 1349, was meant to bind the many peoples of his realm together.
+      - Dušan’s empire now stretched from the Danube to the Gulf of Corinth, but Thessalonica and Constantinople were beyond him without a fleet, and Venice refused to lend him one. In 1350 Kantakouzenos, now emperor, briefly won back Veria and Edessa with Turkish help. In 1352 a Serbian force sent to help John V against Kantakouzenos was beaten near Didymoteicho by Ottoman troops under Orhan’s son Süleyman. Dušan beat off a Hungarian invasion in 1354 and died, aged about 47, on 20 December 1355. Under his son Uroš V the provinces fell away to their governors.
+    facts:
+      - [Coronation at Skopje, 16 April 1346]
+      - [Thessaly taken, "1348"]
+      - [Death of Dušan, 20 December 1355]
+    markers:
+      - kind: event
+        side: ser
+        name: Skopje
+        date: 16 April 1346
+        text: Dušan was crowned emperor here, and his law code was proclaimed here in 1349.
+        lonlat: [21.432, 41.996]
+      - kind: event
+        side: ser
+        name: Peć
+        date: "1346"
+        text: The monastery became the seat of the new Serbian patriarchate.
+        lonlat: [20.266, 42.661]
+      - kind: taken
+        side: ser
+        name: Arta
+        date: 1347–1348
+        text: The capital of Epirus, annexed by Byzantium only in 1340, passed to Serbian rule under Simeon Uroš.
+        lonlat: [20.988, 39.165]
+      - kind: taken
+        side: ser
+        name: Trikala
+        date: "1348"
+        text: Preljub took Thessaly after its Byzantine governor, John Angelos, died of the plague.
+        lonlat: [21.767, 39.55]
+      - kind: battle
+        side: ott
+        name: Battle of Demotika
+        date: "1352"
+        text: Ottoman troops fighting for Kantakouzenos routed the Serbian cavalry sent to help John V in Thrace.
+        lonlat: [26.5, 41.35]
+      - kind: event
+        name: Death of Dušan
+        date: 20 December 1355
+        text: Dušan died suddenly in his mid-forties and was buried in his monastery of the Holy Archangels near Prizren.
+        lonlat: [20.739, 42.213]
+        lp: l
+    arrows:
+      - side: ser
+        label: Preljub
+        via: [[21.27, 40.5], [21.6, 40.0], [21.75, 39.6]]
+      - side: ser
+        label: Simeon Uroš
+        via: [[20.8, 40.9], [20.75, 40.0], [20.98, 39.2]]

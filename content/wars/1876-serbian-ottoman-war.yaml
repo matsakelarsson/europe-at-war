@@ -1,0 +1,161 @@
+id: serbian-ottoman-war
+name: Serbian–Ottoman Wars of 1876–1878
+start: "1876-06-30"
+end: "1878-02-05"
+tier: B
+summary: Two wars between the Principality of Serbia and the Ottoman Empire during the Great Eastern Crisis. In 1876 Serbia, with Montenegro, went to war in support of the rising in Bosnia and Herzegovina and was beaten at Đunis, saved only by a Russian ultimatum; in December 1877, as Russia was winning its own war, Serbia attacked again and took Niš, Pirot and Vranje, which it kept, with full independence, at the Congress of Berlin.
+countries: [rs, tr, xk, ba, bg]
+sides:
+  - id: rs
+    name: Serbia and its volunteers
+    polities: [serbia]
+    ink: red
+    moves: Serbian moves
+    success: Serbian success
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - Dates are New Style (Gregorian). Serbia used the Julian calendar, then 12 days behind, so Serbian accounts date the declaration of war 18 June 1876 and the capture of Niš 29–30 December 1877. Some dates of the 1876 campaign appear in either style in the literature.
+  - The Russo-Turkish War of 1877–1878, the Montenegrin–Ottoman War of 1876–1878 and the Herzegovina Uprising have their own entries.
+sources:
+  - title: Serbian–Ottoman Wars (1876–1878) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Serbian%E2%80%93Ottoman_Wars_(1876%E2%80%931878)
+  - title: First Serbian–Ottoman War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Serbian%E2%80%93Ottoman_War
+  - title: Second Serbian–Ottoman War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Serbian%E2%80%93Ottoman_War
+  - title: Battle of Šumatovac (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_%C5%A0umatovac
+  - title: Mikhail Chernyayev (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mikhail_Chernyayev
+  - title: Expulsion of the Albanians (1877–1878) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Expulsion_of_the_Albanians_(1877%E2%80%931878)
+  - title: Congress of Berlin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Congress_of_Berlin
+steps:
+  - title: Aleksinac and Đunis
+    date: June 1876 – March 1877
+    when: "1876-06-30"
+    borders: "1876-11-01"
+    countries: [rs, tr, ba, ru]
+    body:
+      - Serbia and Montenegro, which had armed and aided the rebels in Herzegovina and Bosnia, declared war on the Ottoman Empire on 30 June 1876, a month after Sultan Abdülaziz was deposed. Prince Milan’s main army, about 45,000 men with its volunteers, gathered at Aleksinac under the Russian general Mikhail Chernyayev, conqueror of Tashkent. It advanced down the Nišava valley towards Sofia, while smaller forces crossed the Drina towards Bijeljina and the Timok towards Vidin. The Serbian militia, poorly trained and armed with a mixture of old rifles, was driven back on every front within weeks.
+      - From Vidin, Osman Pasha took Zaječar and Knjaževac in the Timok valley, where villages were burned and civilians killed. The main Ottoman army under Abdülkerim Pasha advanced from Niš up the Morava. A Serbian redoubt at Šumatovac near Aleksinac held on 23 August, but the Ottomans pushed along the river’s west bank; among the thousands of Russian volunteers, Colonel Nikolai Raevsky was killed at Adrovac. On 29 October they broke the line at Đunis, opening the road north. Russia gave the Porte a 48-hour ultimatum, an armistice followed on 1 November, and the peace of early 1877 restored the pre-war border.
+    facts:
+      - [Serbia declares war, "30 June 1876"]
+      - [Battle of Đunis, "29 October 1876, Ottoman victory"]
+      - [Peace of Constantinople, "February–March 1877, pre-war border"]
+    markers:
+      - kind: battle
+        side: ot
+        name: Bijeljina
+        date: July 1876
+        text: General Ranko Alimpić’s division crossed the Drina into Bosnia but failed to take the town and was pushed back.
+        lonlat: [19.216, 44.757]
+      - kind: taken
+        side: ot
+        name: Zaječar
+        date: August 1876
+        text: Osman Pasha’s army from Vidin beat General Milojko Lešjanin and occupied the Timok valley.
+        lonlat: [22.3, 43.917]
+      - kind: taken
+        side: ot
+        name: Knjaževac
+        date: August 1876
+        text: Burned by the advancing Ottoman troops.
+        lonlat: [22.258, 43.568]
+      - kind: battle
+        side: rs
+        name: Šumatovac
+        date: 23 August 1876
+        text: Two Serbian battalions in a redoubt by Aleksinac, backed by artillery on the hills, held off a day of Ottoman frontal attacks.
+        lonlat: [21.71, 43.545]
+      - kind: battle
+        side: ot
+        name: Battle of Đunis
+        date: 29 October 1876
+        text: The Ottomans broke the last Serbian line west of the Morava, and Chernyayev’s beaten army fell back towards Deligrad and Kruševac.
+        lonlat: [21.507, 43.584]
+        lp: l
+    arrows:
+      - side: rs
+        label: Chernyayev
+        via: [[21.7, 43.55], [22.0, 43.4], [22.3, 43.25]]
+      - side: rs
+        label: Alimpić
+        via: [[19.7, 44.75], [19.4, 44.78], [19.24, 44.76]]
+      - side: ot
+        label: Osman Pasha
+        via: [[22.87, 43.99], [22.6, 43.97], [22.32, 43.92]]
+      - side: ot
+        label: Abdülkerim Pasha
+        via: [[21.9, 43.32], [21.75, 43.45], [21.53, 43.58]]
+    areas:
+      - style: occupied
+        side: ot
+        label: Occupied by the Ottomans, autumn 1876 (approximate)
+        atoms: [RS-15]
+  - title: Niš, Pirot and Vranje
+    date: December 1877 – July 1878
+    when: "1877-12-13"
+    borders: "1878-07-13"
+    countries: [rs, xk, bg, tr]
+    body:
+      - Serbia stayed out of the Russo-Turkish War until the Russians had nearly taken Plevna. With Russian money it rebuilt its army in five corps, nearly 90,000 men, and on 13 December 1877, three days after Plevna fell, it declared war again. Under Prince Milan, with General Kosta Protić in effective command, the main force struck south and surrounded Niš within days, while a column took Kuršumlija to cut the road from Kosovo, and Pirot fell on 28 December. Niš surrendered on 11 January 1878. A planned advance into the Sanjak of Novi Pazar was called off under Austro-Hungarian pressure.
+      - Serbian troops took Vranje on 31 January and pushed on towards Preševo and Vitina in Kosovo and into the Bulgarian lands around Trn and Kyustendil before an armistice in early February. The Treaty of San Stefano gave Serbia Niš but assigned Pirot and Vranje to a large Bulgaria; at the Congress of Berlin Serbia won full independence and kept Niš, Pirot, Toplica and Vranje. Tens of thousands of Albanians and other Muslims fled or were driven out of these districts, between 49,000 and 130,000 by different estimates, many to Kosovo, where Serbs then suffered reprisals.
+    facts:
+      - [Serbia declares war, "13 December 1877"]
+      - [Niš taken, "11 January 1878"]
+      - [Independence recognised, "Congress of Berlin, 13 July 1878"]
+    markers:
+      - kind: taken
+        side: rs
+        name: Kuršumlija
+        date: December 1877
+        text: Serbian troops took the town after two days of fighting, cutting the route from Priština to Niš.
+        lonlat: [21.267, 43.15]
+      - kind: taken
+        side: rs
+        name: Pirot
+        date: 28 December 1877
+        text: Taken by the Timok Corps. San Stefano gave it to Bulgaria, but the Congress of Berlin returned it to Serbia.
+        lonlat: [22.6, 43.167]
+      - kind: taken
+        side: rs
+        name: Niš
+        date: 11 January 1878
+        text: The fortress surrendered after a short siege. Much of the town’s Muslim population, mostly Albanian, left or was expelled, and most of its mosques were pulled down.
+        lonlat: [21.896, 43.321]
+      - kind: taken
+        side: rs
+        name: Vranje
+        date: 31 January 1878
+        text: The southernmost town Serbia kept at the peace.
+        lonlat: [21.9, 42.55]
+      - kind: event
+        side: rs
+        name: Preševo
+        date: February 1878
+        text: Near the farthest point of the Serbian advance; Preševo and the Kosovo towns beyond it stayed Ottoman at the peace.
+        lonlat: [21.65, 42.31]
+        lp: l
+    arrows:
+      - side: rs
+        label: Morava Corps
+        via: [[21.7, 43.55], [21.8, 43.42], [21.87, 43.34]]
+      - side: rs
+        label: Timok Corps
+        via: [[22.26, 43.57], [22.42, 43.35], [22.58, 43.18]]
+      - side: rs
+        via: [[21.33, 43.58], [21.3, 43.36], [21.27, 43.17]]
+      - side: rs
+        via: [[21.95, 43.0], [21.9, 42.76], [21.9, 42.57]]
+    areas:
+      - style: occupied
+        side: rs
+        label: Taken by Serbia, December 1877 – January 1878 (approximate)
+        atoms: [RS-20, RS-21, RS-22, RS-23, RS-24]

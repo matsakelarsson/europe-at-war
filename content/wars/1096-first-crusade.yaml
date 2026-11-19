@@ -1,0 +1,408 @@
+id: first-crusade
+name: First Crusade
+start: "1096"
+end: "1099-08-12"
+tier: A
+summary: The first of the great expeditions from Latin Europe to the eastern Mediterranean, called by Pope Urban II at Clermont in 1095 after the Byzantine emperor Alexios I asked for help against the Seljuk Turks. After the People’s Crusade was destroyed in Anatolia, the armies of the princes took Nicaea for Byzantium, beat the Turks at Dorylaeum, took Antioch after an eight-month siege and stormed Jerusalem in July 1099, killing much of its population. They founded the County of Edessa, the Principality of Antioch and the Kingdom of Jerusalem, later joined by the County of Tripoli.
+countries: [fr, de, be, it, hu, rs, bg, gr, tr, sy, lb, il, ps, eg]
+sides:
+  - id: cr
+    name: Crusaders
+    polities: [edessa, antioch, kingdom-of-jerusalem, tripoli-county]
+    ink: red
+    moves: Crusader moves
+    success: Crusader success
+  - id: by
+    name: Byzantine Empire
+    polities: [byzantium]
+    ink: purple
+    moves: Byzantine moves
+    success: Byzantine success
+  - id: tu
+    name: Seljuk Turks and the Syrian emirs
+    polities: [rum, seljuk, danishmendids]
+    ink: olive
+    moves: Turkish moves
+    success: Turkish success
+  - id: fa
+    name: Fatimid Caliphate
+    polities: [fatimid]
+    ink: green
+    moves: Fatimid moves
+    success: Fatimid success
+notes:
+  - Dates are Julian. Most of what is known comes from Latin chronicles written by participants (the anonymous Gesta Francorum, Raymond of Aguilers, Fulcher of Chartres), from Anna Komnene’s Alexiad, written decades later, and from Arabic historians such as Ibn al-Athir, writing a century later. Numbers of soldiers and of the dead come from these chroniclers and are uncertain.
+  - Places have the names usual in histories of the crusades, with modern names where they help, such as Nicaea (İznik), Dorylaeum (near Eskişehir), Iconium (Konya), Edessa (Şanlıurfa), Antioch (Antakya), Ma‘arra (Maarat al-Numan) and Ascalon (Ashkelon).
+  - The Crusade of 1101, the Byzantine recovery of western Anatolia and the Second Crusade have their own entries. Robert Guiscard’s and Bohemond’s earlier war against Alexios, with the battle of Dyrrhachium in 1081, is told under the Norman conquest of southern Italy.
+sources:
+  - title: First Crusade (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Crusade
+  - title: People’s Crusade (Wikipedia)
+    url: https://en.wikipedia.org/wiki/People%27s_Crusade
+  - title: Rhineland massacres (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rhineland_massacres
+  - title: Siege of Nicaea (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Nicaea
+  - title: Battle of Dorylaeum (1097) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Dorylaeum_(1097)
+  - title: County of Edessa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/County_of_Edessa
+  - title: Siege of Antioch (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Antioch
+  - title: Siege of Ma‘arra (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Ma%27arra
+  - title: Siege of Jerusalem (1099) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(1099)
+  - title: Battle of Ascalon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ascalon
+  - title: Crusader states (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Crusader_states
+  - title: First Crusade (World History Encyclopedia)
+    url: https://www.worldhistory.org/First_Crusade/
+steps:
+  - title: Clermont and the People’s Crusade
+    date: 1095–1097
+    when: "1096-04"
+    borders: "1096-10-21"
+    countries: [fr, de, be, it, hu, rs, bg, tr, al, gr, hr]
+    body:
+      - In March 1095 envoys of the Byzantine emperor Alexios I Komnenos asked Pope Urban II for soldiers to fight the Seljuk Turks, who since the 1070s had overrun most of Anatolia and taken much of Syria and Palestine. On 27 November 1095, at Clermont in France, Urban called on the knights of the West to go east, help the Christians there and free Jerusalem, promising that the journey would count as full penance for their sins. Preachers carried the call across France and Germany, and the response went far beyond anything the pope had planned.
+      - The first to set out were crowds of poor people and minor knights, stirred by preachers such as Peter the Hermit. In May and June 1096 bands led by Count Emicho and others massacred the Jews of Speyer, Worms, Mainz and Cologne; King Coloman of Hungary later scattered several of these bands. Peter’s followers crossed Hungary, fought the Byzantine garrison at Niš and reached Constantinople on 1 August. Alexios ferried them over to Civetot in Asia Minor. A German group seized the fort of Xerigordos and was starved into surrender, and on 21 October the Turks of Kilij Arslan I destroyed the main body near Civetot.
+      - The armies of the great lords followed. Godfrey of Bouillon, Duke of Lower Lorraine, came through Hungary and reached Constantinople on 23 December 1096. Bohemond of Taranto, Raymond of Saint-Gilles, Count of Toulouse, Robert of Normandy, Robert of Flanders and Stephen of Blois came by way of Italy, Dalmatia and the old Roman road across the Balkans, the Via Egnatia, in the spring of 1097. How many took part is uncertain, but these were the largest armies the Latin West had ever sent east, with many non-combatants among them.
+    facts:
+      - [Council of Clermont, 27 November 1095]
+      - [Battle of Civetot, "21 October 1096, Turkish victory"]
+      - [Godfrey of Bouillon at Constantinople, 23 December 1096]
+    markers:
+      - kind: event
+        name: Clermont
+        date: 27 November 1095
+        text: Urban II preached the crusade in a field outside the town at the end of a church council. The crowd is said to have answered “Deus vult” (God wills it).
+        lonlat: [3.087, 45.777]
+      - kind: event
+        name: Mainz
+        date: 27 May 1096
+        text: Crusaders following Emicho broke into the archbishop’s palace, where the Jews had taken refuge, and killed hundreds; some took their own lives rather than be forcibly baptised.
+        lonlat: [8.27, 50.0]
+      - kind: battle
+        side: by
+        name: Niš
+        date: July 1096
+        text: A quarrel with the Byzantine garrison turned into a fight in which Peter the Hermit lost many followers and much of his baggage.
+        lonlat: [21.896, 43.321]
+      - kind: event
+        name: Constantinople
+        date: August 1096 – May 1097
+        text: The crusading armies gathered outside the walls of the imperial city, where Alexios supplied them and kept them out of the city itself.
+        lonlat: [28.955, 41.014]
+      - kind: siege
+        side: tu
+        name: Xerigordos
+        date: late September – October 1096
+        text: German crusaders seized this fort but were surrounded by the Turks and, without water, surrendered after eight days. Those who refused to convert to Islam were killed.
+        lonlat: [29.804, 40.392]
+      - kind: battle
+        side: tu
+        name: Battle of Civetot
+        date: 21 October 1096
+        text: The Turks ambushed the People’s Crusade as it marched out of its camp. Few survived. Peter the Hermit, who was in Constantinople, later joined the princes’ armies.
+        lonlat: [29.156, 40.432]
+        lp: l
+    arrows:
+      - side: cr
+        label: Peter the Hermit
+        via: [[6.96, 50.94], [17.5, 48.0], [21.9, 43.32], [28.9, 41.03]]
+      - side: cr
+        label: Bohemond
+        via: [[16.87, 41.13], [19.45, 41.31], [22.94, 40.64], [28.9, 41.0]]
+      - side: cr
+        label: Raymond of Toulouse
+        via: [[10.0, 45.3], [15.2, 44.1], [19.45, 41.33]]
+  - title: Constantinople and Nicaea
+    date: 1097
+    when: "1097-05-14"
+    borders: "1097-06-19"
+    countries: [tr]
+    body:
+      - Alexios had hoped for soldiers he could command, not independent armies led by great lords, one of whom, Bohemond, had invaded the empire with his father Robert Guiscard in 1081. He supplied the crusaders but asked each leader to swear to return to the empire any former imperial lands they took. Most did, some only after armed clashes outside the walls. Raymond of Toulouse swore only to respect the emperor’s life and honour, and Bohemond’s nephew Tancred slipped across the Bosporus to avoid swearing at all.
+      - In May 1097 the armies besieged Nicaea, the capital of Kilij Arslan’s Sultanate of Rum, beside Lake Askania. Kilij Arslan, who had been away fighting the Danishmendids, came back and attacked on 16 May, but was beaten off with heavy losses. Alexios had boats hauled overland to the lake to cut the city off. Seeing no hope, the garrison secretly negotiated with the Byzantine commander Manuel Boutoumites, and on 19 June the crusaders woke to find imperial banners on the walls. Many resented losing the plunder, though Alexios rewarded the leaders generously.
+    facts:
+      - [Siege of Nicaea, "14 May – 19 June 1097"]
+      - [Nicaea surrenders, "19 June 1097, to the Byzantines"]
+    markers:
+      - kind: event
+        name: Constantinople
+        date: winter 1096–1097
+        text: The leaders swore their oaths to Alexios here. Godfrey of Bouillon held out for months, and his men fought imperial troops outside the walls before he gave way.
+        lonlat: [28.955, 41.014]
+      - kind: battle
+        side: cr
+        name: Battle of Nicaea
+        date: 16 May 1097
+        text: Kilij Arslan’s relief army attacked the southern camp, held by Raymond of Toulouse, and was driven back into the hills.
+        lonlat: [29.76, 40.38]
+        lp: b
+      - kind: taken
+        side: by
+        name: Nicaea
+        date: 19 June 1097
+        text: The city surrendered to the Byzantines rather than face a crusader assault. Kilij Arslan’s wife and children, captured inside, were later returned to him without ransom.
+        lonlat: [29.721, 40.429]
+        lp: t
+      - kind: event
+        side: by
+        name: Lake Askania
+        date: June 1097
+        text: Byzantine boats, dragged overland from the Gulf of Nicomedia, were launched on the lake and closed the city’s western side.
+        lonlat: [29.55, 40.44]
+        lp: l
+    arrows:
+      - side: cr
+        label: Crusader armies
+        via: [[29.03, 40.98], [29.92, 40.76], [29.76, 40.47]]
+      - side: tu
+        label: Kilij Arslan I
+        via: [[30.6, 40.1], [30.1, 40.25], [29.8, 40.37]]
+  - title: Dorylaeum and the march across Anatolia
+    date: July–October 1097
+    when: "1097-07-01"
+    borders: "1097-10-20"
+    countries: [tr]
+    body:
+      - The army left Nicaea at the end of June in two groups, a day’s march apart. On 1 July 1097, near Dorylaeum, Kilij Arslan, now allied with the Danishmendid emir Gazi Gümüshtigin, surrounded the leading group under Bohemond, Robert of Normandy and Stephen of Blois. For hours Turkish horse archers shot into the knights and the crowded camp. The crusaders held on until Godfrey and Raymond came up with the second group and the papal legate, Bishop Adhemar of Le Puy, fell on the Turks from behind. The Turks fled, leaving their camp and treasure.
+      - Kilij Arslan stripped the country ahead of the crusaders. Their march across the dry Anatolian plateau in July and August cost many lives and most of the horses; knights went on foot, and oxen, goats and even dogs carried the baggage. They passed Philomelion and Iconium, beat another Turkish force at Heraclea in September and turned north-east by Caesarea and over the Anti-Taurus to Marash, reaching Antioch on 20 October. Meanwhile Tancred and Baldwin of Boulogne, Godfrey’s brother, crossed into Cilicia and quarrelled over Tarsus, which Baldwin took; Tancred went on to Adana and Mamistra.
+    facts:
+      - [Battle of Dorylaeum, "1 July 1097, crusader victory"]
+      - [Arrival at Antioch, 20 October 1097]
+    markers:
+      - kind: battle
+        side: cr
+        name: Battle of Dorylaeum
+        date: 1 July 1097
+        text: The first pitched battle of the crusade. The crusaders lost heavily but held their ground, and the Turks never again tried to stop them in open battle in Anatolia.
+        lonlat: [30.521, 39.777]
+      - kind: event
+        name: Iconium
+        date: August 1097
+        text: The crusaders found the Seljuk town deserted and rested in the gardens around it.
+        lonlat: [32.493, 37.874]
+      - kind: battle
+        side: cr
+        name: Battle of Heraclea
+        date: September 1097
+        text: Bohemond scattered a Turkish force waiting at the town, opening the roads into Cilicia and towards Caesarea.
+        lonlat: [34.05, 37.51]
+      - kind: taken
+        side: cr
+        name: Tarsus
+        date: September 1097
+        text: Tancred reached the town first, but Baldwin, with the larger force, made him leave. Baldwin then refused to let 300 of Bohemond’s men in, and the Turks killed them outside the walls.
+        lonlat: [34.895, 36.916]
+        lp: b
+      - kind: event
+        name: Marash
+        date: October 1097
+        text: The army rested in this Armenian town after a hard crossing of the Anti-Taurus mountains, where many men and animals fell from the narrow paths.
+        lonlat: [36.93, 37.58]
+    arrows:
+      - side: cr
+        label: Main army
+        via: [[29.72, 40.43], [30.52, 39.78], [31.42, 38.36], [34.0, 37.52]]
+      - side: cr
+        via: [[34.1, 37.55], [35.49, 38.72], [36.93, 37.58], [36.2, 36.24]]
+      - side: cr
+        label: Tancred and Baldwin
+        via: [[34.05, 37.48], [34.75, 37.2], [34.9, 36.95], [35.6, 36.96]]
+  - title: Edessa and the siege of Antioch
+    date: October 1097 – June 1098
+    when: "1097-10-20"
+    borders: "1098-06-03"
+    countries: [tr, sy]
+    body:
+      - At Marash Baldwin of Boulogne left the main army with a small force and rode east towards the Euphrates, where Armenian Christians welcomed him and helped him take Turbessel and Ravendel. Thoros, the Armenian lord of Edessa, hard pressed by his Turkish neighbours, invited him in and adopted him as his son. On 9 March 1098 Thoros was killed by a mob, which Baldwin may have encouraged, and the next day Baldwin took over the city. The County of Edessa, a mainly Armenian land astride the Euphrates, was the first crusader state.
+      - Antioch, the great city of northern Syria, had been Byzantine until 1084. Its Turkish governor, Yaghi-Siyan, held walls that climbed the steep mountain behind the city and could not be fully surrounded, and the crusaders blockaded it from 20 October 1097. That winter they starved. Foraging parties had to go far afield; Bohemond and Robert of Flanders beat a relief army from Damascus on 31 December, and on 9 February 1098 Bohemond routed one from Aleppo. Many deserted, and the Byzantine contingent under Tatikios left in February.
+      - In March an English fleet landed timber and supplies at the port of St Symeon, and the crusaders built forts to close the city’s gates. Bohemond secretly won over Firuz, who commanded towers on the walls. On the night of 2–3 June 1098 crusaders climbed into the city by a rope ladder and opened the gates, and in the darkness killed many of its people, Christians as well as Muslims. Yaghi-Siyan fled and was killed; his son held out in the citadel high above the town.
+    facts:
+      - [County of Edessa founded, 10 March 1098]
+      - [Siege of Antioch, "20 October 1097 – 3 June 1098"]
+      - [Battle of the Lake of Antioch, "9 February 1098, crusader victory"]
+    markers:
+      - kind: taken
+        side: cr
+        name: Edessa
+        date: 10 March 1098
+        text: Baldwin became count after the murder of Thoros. Edessa stayed in Frankish hands until Zengi took it in 1144.
+        lonlat: [38.79, 37.155]
+      - kind: taken
+        side: cr
+        name: Turbessel
+        date: late 1097
+        text: The Armenians of this fortress town helped Baldwin drive out its Turkish garrison. It later became the second seat of the counts of Edessa.
+        lonlat: [37.546, 36.879]
+      - kind: battle
+        side: cr
+        name: Battle of the Lake of Antioch
+        date: 9 February 1098
+        text: With the few hundred knights who still had horses, Bohemond ambushed and routed the relief army of Ridwan of Aleppo between the Orontes and the lake.
+        lonlat: [36.37, 36.27]
+        lp: t
+      - kind: event
+        name: St Symeon
+        date: March 1098
+        text: Antioch’s port on the Orontes estuary, where Genoese and English ships landed supplies for the besiegers.
+        lonlat: [35.95, 36.1]
+        lp: l
+      - kind: siege
+        side: cr
+        name: Antioch
+        date: 20 October 1097 – 3 June 1098
+        text: One of the longest sieges of the crusades. The city fell by treachery after more than seven months.
+        lonlat: [36.161, 36.203]
+        lp: b
+    arrows:
+      - side: cr
+        label: Baldwin of Boulogne
+        via: [[36.93, 37.58], [37.55, 36.9], [38.2, 37.05], [38.76, 37.15]]
+      - side: tu
+        label: Ridwan of Aleppo
+        via: [[37.16, 36.2], [36.75, 36.22], [36.42, 36.26]]
+  - title: The battle of Antioch
+    date: June–December 1098
+    when: "1098-06-07"
+    borders: "1098-06-28"
+    countries: [tr, sy, iq]
+    body:
+      - Within days of taking the city, the crusaders were themselves besieged. Kerbogha, the atabeg of Mosul, had gathered an army of Turkish and Arab emirs, among them Duqaq of Damascus, and on the way had spent three weeks trying in vain to take Edessa. Trapped between his army and the citadel, the crusaders starved, and many let themselves down the walls on ropes and fled. One of them, Stephen of Blois, met Alexios at Philomelion as the emperor marched to help and persuaded him that the crusade was lost. Alexios turned back, which the crusaders never forgave.
+      - On 14 June, after a poor Provençal pilgrim, Peter Bartholomew, reported visions of St Andrew, a spearhead said to be the Holy Lance that had pierced Christ was dug up in the cathedral of St Peter. Their spirits raised, the crusaders marched out on 28 June under Bohemond’s command. Kerbogha let them deploy, but his coalition, divided by rivalries and fears of his ambitions, fell apart; several emirs left the field and the rest of the army fled. The citadel surrendered the same day.
+      - The victory saved the crusade, but the leaders did not march on. An epidemic broke out, killing Adhemar of Le Puy on 1 August, and Bohemond and Raymond quarrelled over Antioch, which Bohemond claimed in spite of the oath to Alexios. In late November the army besieged Ma‘arrat al-Nu‘man. It fell on 12 December and its people were massacred, and crusader chroniclers wrote that starving soldiers ate the bodies of the dead.
+    facts:
+      - [Holy Lance found, 14 June 1098]
+      - [Battle of Antioch, "28 June 1098, crusader victory"]
+      - [Ma‘arra taken, 12 December 1098]
+    markers:
+      - kind: held
+        side: cr
+        name: Edessa
+        date: May 1098
+        text: Kerbogha besieged Baldwin’s new county for three weeks before giving up and marching on to Antioch, a delay that gave the crusaders time to take the city.
+        lonlat: [38.79, 37.155]
+      - kind: event
+        name: Philomelion
+        date: late June 1098
+        text: Alexios, marching to relieve Antioch, met deserters here and, believing the crusaders lost, withdrew and laid waste the country behind him to slow the Turks.
+        lonlat: [31.416, 38.358]
+      - kind: battle
+        side: cr
+        name: Battle of Antioch
+        date: 28 June 1098
+        text: The crusaders came out of the city in six divisions, with the Holy Lance carried before them. Kerbogha’s army broke up almost without a fight.
+        lonlat: [36.2, 36.23]
+      - kind: taken
+        side: cr
+        name: Ma‘arrat al-Nu‘man
+        date: 12 December 1098
+        text: The town was stormed after a two-week siege. Its inhabitants were killed or sold into slavery, and the episode of cannibalism was long remembered in the Muslim world.
+        lonlat: [36.67, 35.643]
+    arrows:
+      - side: tu
+        label: Kerbogha
+        via: [[43.13, 36.34], [38.85, 37.1], [37.4, 36.55], [36.3, 36.25]]
+      - side: by
+        label: Alexios I
+        via: [[29.0, 41.0], [30.2, 39.7], [31.35, 38.4]]
+  - title: The road to Jerusalem
+    date: January–July 1099
+    when: "1099-01-13"
+    borders: "1099-07-15"
+    countries: [sy, lb, il, ps]
+    body:
+      - Pressed by his own soldiers, Raymond of Toulouse led the march south from Ma‘arra on 13 January 1099, barefoot as a pilgrim; Bohemond stayed in Antioch. The emirs of Shaizar, Homs and Tripoli bought peace with food and money. From February to May the crusaders besieged Arqa in vain, and Peter Bartholomew, whose Holy Lance many now doubted, died after walking through fire to prove it genuine. Giving up Arqa, the army marched quickly down the coast past Beirut, Tyre and Acre, and turned inland at Arsuf to Ramla.
+      - The Fatimid caliphate of Egypt had taken Jerusalem from the Turks in August 1098 and offered the crusaders free access for unarmed pilgrims, but the leaders would accept nothing less than the city. They reached it on 7 June 1099 with perhaps 1,300 knights and 12,000 foot. The governor, Iftikhar al-Dawla, had poisoned the wells outside and expelled the city’s Christians. An early assault failed for lack of ladders. Genoese sailors who had landed at Jaffa brought timber, and the crusaders built siege towers; on 8 July they walked barefoot in procession around the walls.
+      - In the assault of 13–15 July, Godfrey’s tower reached the northern wall and his men broke into the city. The governor surrendered the Tower of David to Raymond and was allowed to leave, but the crusaders killed most of the Muslims they found, including many who had taken refuge in the al-Aqsa Mosque, and many of the Jews, though some were captured and later ransomed. The death toll is disputed. Ibn al-Athir gave 70,000; some modern historians estimate about 3,000. On 22 July the leaders chose Godfrey as ruler; he took the title Advocate of the Holy Sepulchre.
+    facts:
+      - [Siege of Arqa, "14 February – 13 May 1099, abandoned"]
+      - [Siege of Jerusalem, "7 June – 15 July 1099"]
+      - [Godfrey chosen as ruler, 22 July 1099]
+    markers:
+      - kind: siege
+        name: Arqa
+        date: 14 February – 13 May 1099
+        text: The town held out for three months against the crusaders, who wanted to force the emir of Tripoli to pay more. Its defenders were left in peace when the army moved on.
+        lonlat: [36.04, 34.53]
+      - kind: taken
+        side: cr
+        name: Ramla
+        date: 3 June 1099
+        text: The crusaders found the town abandoned and made the nearby church of St George at Lydda the seat of the first Latin bishop in the Holy Land.
+        lonlat: [34.862, 31.927]
+        lp: l
+      - kind: event
+        side: cr
+        name: Jaffa
+        date: 17 June 1099
+        text: Genoese ships put in at the abandoned port. Their crews brought the timber and skills to build siege engines.
+        lonlat: [34.753, 32.052]
+        lp: l
+      - kind: taken
+        side: cr
+        name: Jerusalem
+        date: 15 July 1099
+        text: Godfrey’s men crossed from their tower onto the northern wall near the Gate of Flowers. The city was taken after a siege of five weeks.
+        lonlat: [35.234, 31.777]
+    arrows:
+      - side: cr
+        label: Raymond of Toulouse
+        via: [[36.67, 35.64], [36.6, 35.2], [36.29, 34.76], [36.06, 34.55]]
+      - side: cr
+        via: [[35.84, 34.44], [35.2, 33.27], [34.85, 32.3], [35.2, 31.8]]
+  - title: Ascalon and the crusader states
+    date: 1099–1109
+    when: "1099-08-12"
+    borders: "1109-07-12"
+    countries: [il, ps, lb, sy, tr, eg, gr, al]
+    body:
+      - In August 1099 the Fatimid vizier al-Afdal Shahanshah brought an army from Egypt to Ascalon to recover Jerusalem. The crusaders marched out to meet him, and at dawn on 12 August they surprised his camp outside the town and routed his army. Ascalon itself wanted to surrender to Raymond, but Godfrey would not let him have it, and it stayed in Fatimid hands until 1153. Most of the crusaders now went home, leaving Godfrey with a few hundred knights.
+      - The crusade had created three Latin states, known together in the West as Outremer, “the land beyond the sea”. When Godfrey died in July 1100, his brother Baldwin of Edessa came south and was crowned King of Jerusalem in Bethlehem on Christmas Day 1100. With fleets from Genoa, Pisa and Venice the Franks took the coastal towns, among them Caesarea in 1101, Acre in 1104, Tripoli in 1109 after a long siege, Beirut and Sidon in 1110 and Tyre in 1124. Tripoli became a fourth state, a county ruled by Raymond of Toulouse’s heirs.
+      - Bohemond, who had kept Antioch against his oath to Alexios, was captured by the Danishmendids in 1100, and the armies of the Crusade of 1101 were destroyed in Anatolia. A Turkish victory at Harran in 1104 stopped the Franks’ advance towards Mesopotamia. Bohemond went to Europe to raise an army against Byzantium, but failed to take Dyrrhachium and in the Treaty of Devol (1108) had to accept Alexios as his overlord. The treaty was never carried out.
+    facts:
+      - [Battle of Ascalon, "12 August 1099, crusader victory"]
+      - [Baldwin I crowned King of Jerusalem, 25 December 1100]
+      - [Tripoli taken, 12 July 1109]
+    markers:
+      - kind: battle
+        side: cr
+        name: Battle of Ascalon
+        date: 12 August 1099
+        text: The last battle of the crusade. The Egyptian army, caught unprepared, was cut down or driven into the sea.
+        lonlat: [34.558, 31.671]
+      - kind: event
+        side: cr
+        name: Bethlehem
+        date: 25 December 1100
+        text: Baldwin I was crowned in the Church of the Nativity. Unlike Godfrey, he took the title of king.
+        lonlat: [35.206, 31.704]
+      - kind: taken
+        side: cr
+        name: Acre
+        date: 26 May 1104
+        text: Taken with the help of a Genoese fleet, Acre became the kingdom’s main port.
+        lonlat: [35.082, 32.928]
+      - kind: taken
+        side: cr
+        name: Tripoli
+        date: 12 July 1109
+        text: The city fell after a siege of several years, begun by Raymond of Toulouse, who died outside its walls in 1105.
+        lonlat: [35.834, 34.437]
+      - kind: battle
+        side: tu
+        name: Battle of Harran
+        date: 7 May 1104
+        text: The Turkish rulers of Mosul and Mardin beat the armies of Edessa and Antioch, capturing Count Baldwin II of Edessa.
+        lonlat: [39.033, 36.867]
+    arrows:
+      - side: fa
+        label: al-Afdal
+        via: [[32.6, 31.1], [34.2, 31.3], [34.53, 31.64]]
+      - side: cr
+        label: Godfrey
+        via: [[35.22, 31.78], [34.86, 31.85], [34.6, 31.68]]

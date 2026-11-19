@@ -1,0 +1,401 @@
+id: long-turkish-war
+name: Long Turkish War
+start: "1593"
+end: "1606-11-11"
+tier: A
+summary: A war of thirteen years between the Habsburg Monarchy and the Ottoman Empire, fought mainly in Hungary, Croatia and the Danubian principalities, and known in Hungary as the Fifteen Years’ War. Transylvania, Wallachia and Moldavia joined the Habsburg side in 1594–1595, and Michael the Brave of Wallachia briefly ruled all three principalities in 1600. Neither empire could break the other’s chain of fortresses, and after the Hungarian rising led by Stephen Bocskai the war ended in the Peace of Zsitvatorok of 1606, which left the border much as it had been.
+countries: [hu, hr, sk, at, ro, md, ba, si, bg, pl, it, tr]
+sides:
+  - id: hb
+    name: Habsburg Monarchy and its allies
+    polities: [habsburg, hre]
+    ink: purple
+    moves: Imperial moves
+    success: Imperial success
+  - id: tv
+    name: Principality of Transylvania
+    polities: [transylvania]
+    ink: orange
+    moves: Transylvanian moves
+    success: Transylvanian success
+  - id: wa
+    name: Wallachia and Moldavia
+    polities: [wallachia, moldavia]
+    ink: navy
+    moves: Wallachian and Moldavian moves
+    success: Wallachian success
+  - id: pl
+    name: Poland–Lithuania
+    polities: [poland-lithuania]
+    ink: magenta
+    moves: Polish–Lithuanian moves
+    success: Polish–Lithuanian success
+  - id: bo
+    name: Stephen Bocskai and the hajdús
+    polities: []
+    ink: gold
+    moves: Moves by Bocskai’s forces
+    success: Success for Bocskai’s forces
+  - id: ot
+    name: Ottoman Empire and the Crimean Tatars
+    polities: [ottoman, crimean-khanate]
+    ink: teal
+    moves: Ottoman and Tatar moves
+    success: Ottoman success
+notes:
+  - Dates are Gregorian, which the Habsburg lands, Hungary and Transylvania used by then. Wallachia and Moldavia kept the Julian calendar, ten days behind, so Romanian sources often give Michael the Brave’s battles ten days earlier (Călugăreni 13 August, Șelimbăr 18 October).
+  - The sides changed during the war. Transylvania fought with the Habsburgs in 1595–1598 but later turned against them; Moldavia was ruled in turn by princes allied to Transylvania, to Poland and to Michael the Brave. Numbers of soldiers and dead come mostly from accounts of the time and are uncertain.
+  - The rising led by Stephen Bocskai in 1604–1606 has its own entry. The Hundred Years’ Croatian–Ottoman War, which ended at Sisak, has its own entry too.
+sources:
+  - title: Long Turkish War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Long_Turkish_War
+  - title: Battle of Sisak (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sisak
+  - title: Battle of Călugăreni (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_C%C4%83lug%C4%83reni
+  - title: Siege of Esztergom (1595) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Esztergom_(1595)
+  - title: Siege of Eger (1596) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Eger_(1596)
+  - title: Battle of Mezőkeresztes (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Mez%C5%91keresztes
+  - title: Michael the Brave (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Michael_the_Brave
+  - title: Battle of Șelimbăr (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_%C8%98elimb%C4%83r
+  - title: Battle of Bucov (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Bucov
+  - title: Siege of Kanizsa (1601) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kanizsa_(1601)
+  - title: Siege of Esztergom (1605) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Esztergom_(1605)
+  - title: Bocskai uprising (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bocskai_uprising
+  - title: Peace of Zsitvatorok (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peace_of_Zsitvatorok
+steps:
+  - title: Sisak and the outbreak of war
+    date: 1593–1594
+    when: "1593-06-15"
+    borders: "1594-09-29"
+    countries: [hr, ba, hu, sk, at, si, tr]
+    body:
+      - Along the Croatian border the fighting had never really stopped. In 1592 Telli Hasan Pasha, the Ottoman governor of Bosnia, took Bihać, and on 15 June 1593 he crossed the Kupa to besiege Sisak, a fortress where the Kupa meets the Sava, with perhaps 12,000–16,000 men. A relief army of 5,000–6,000 Croats, Styrians and Carniolans under Ruprecht von Eggenberg, the ban Tamás Erdődy and Andreas von Auersperg attacked on 22 June while the garrison sallied out. The Ottomans were routed; Hasan Pasha and some 8,000 of his men were killed or drowned in the Kupa.
+      - Sultan Murad III answered with open war. In August the Ottomans took Sisak, and in October the grand vizier Koca Sinan Pasha took Veszprém and Várpalota in Transdanubia, while an imperial winter campaign won back Fülek and other castles in Upper Hungary. In 1594 the imperial army besieged Esztergom without success, and Sinan marched up the Danube and took Győr on 29 September. Győr, the strongest fortress on the road to Vienna, was a heavy loss, and Emperor Rudolf II and the Imperial Diet voted large sums for what Germans called the Turkish war.
+    facts:
+      - [Battle of Sisak, "22 June 1593, Habsburg victory"]
+      - [Ottoman losses at Sisak, "about 8,000, with Hasan Pasha"]
+      - [Győr surrenders, 29 September 1594]
+    markers:
+      - kind: battle
+        side: hb
+        name: Battle of Sisak
+        date: 22 June 1593
+        text: The relief army fell on the besiegers between the Kupa and the Odra. Most of the Ottoman army was cut down or drowned in the river.
+        lonlat: [16.39, 45.47]
+      - kind: taken
+        side: ot
+        name: Veszprém
+        date: October 1593
+        text: Sinan Pasha’s first conquest in Hungary, followed by nearby Várpalota.
+        lonlat: [17.91, 47.09]
+      - kind: taken
+        side: hb
+        name: Fülek
+        date: late 1593
+        text: Imperial and Hungarian troops took this castle in Upper Hungary, held by the Ottomans since 1554, in their winter campaign.
+        lonlat: [19.82, 48.27]
+      - kind: taken
+        side: ot
+        name: Győr
+        date: 29 September 1594
+        text: The great fortress of Győr (Raab) surrendered to Sinan Pasha after a month’s siege, opening the road towards Vienna.
+        lonlat: [17.63, 47.68]
+    arrows:
+      - side: ot
+        label: Sinan Pasha, 1594
+        via: [[19.04, 47.5], [18.5, 47.6], [17.72, 47.68]]
+  - title: Michael the Brave and Călugăreni
+    date: 1594–1595
+    when: "1594-11"
+    borders: "1595-10-30"
+    countries: [ro, bg, hu, md, tr]
+    body:
+      - Pope Clement VIII worked to bring the Ottoman vassals into the war, and in the winter of 1594–1595 Sigismund Báthory of Transylvania, Michael of Wallachia and Aron of Moldavia joined the emperor. In November 1594 Michael had the Ottoman creditors and soldiers in Bucharest killed and attacked the Ottoman fortresses on the Danube, among them Giurgiu, Brăila and Silistra. In the summer of 1595 Koca Sinan Pasha crossed the Danube with a large army to make Wallachia an Ottoman province, and on 23 August Michael, with about 16,000 men, met him in the marshy valley of the Neajlov at Călugăreni.
+      - The Wallachians held the field and drove back the Ottoman attacks, but Michael was too weak to follow up and withdrew to the mountains. Sinan occupied Bucharest and Târgoviște and fortified them. In October Sigismund Báthory came down from Transylvania with his army, joined by Michael and by imperial and Tuscan troops; they retook Târgoviște on 18 October and Bucharest soon after, and caught Sinan’s army as it crossed the Danube at Giurgiu, destroying its rearguard. In Hungary the imperial army had taken Esztergom on 2 September.
+    facts:
+      - [Battle of Călugăreni, "23 August 1595, Wallachian victory"]
+      - [Battle of Giurgiu, late October 1595]
+      - [Esztergom retaken, 2 September 1595]
+    markers:
+      - kind: event
+        side: wa
+        name: Bucharest
+        date: November 1594
+        text: Michael began his revolt here by having the sultan’s creditors and soldiers in the city killed.
+        lonlat: [26.1, 44.43]
+      - kind: battle
+        side: wa
+        name: Battle of Călugăreni
+        date: 23 August 1595
+        text: Michael’s small army stopped Sinan Pasha at a bridge over the Neajlov. Legend says Sinan fell from his horse into the marsh.
+        lonlat: [25.83, 44.16]
+        lp: l
+      - kind: taken
+        side: wa
+        name: Târgoviște
+        date: 18 October 1595
+        text: The Ottoman garrison left by Sinan was overwhelmed by the Transylvanian and Wallachian army.
+        lonlat: [25.46, 44.92]
+      - kind: battle
+        side: wa
+        name: Battle of Giurgiu
+        date: late October 1595
+        text: The allies caught Sinan’s retreating army at the Danube crossing and inflicted heavy losses before it reached the southern bank.
+        lonlat: [25.97, 43.9]
+    arrows:
+      - side: ot
+        label: Sinan Pasha
+        via: [[25.97, 43.85], [25.9, 44.0], [25.84, 44.15], [26.08, 44.4]]
+      - side: tv
+        label: Sigismund Báthory
+        via: [[25.6, 45.65], [25.32, 45.4], [25.45, 44.97]]
+      - side: wa
+        label: Michael and Báthory
+        via: [[25.5, 44.9], [26.05, 44.42], [26.0, 43.95]]
+  - title: Eger and Mezőkeresztes
+    date: 1596
+    when: "1596-09"
+    borders: "1596-10-26"
+    countries: [hu, ro, at, tr]
+    body:
+      - In 1596 Mehmed III became the first sultan in thirty years to lead his army in person. The imperial army under Archduke Maximilian had taken Hatvan in September and killed its garrison and inhabitants, women and children among them. The Ottomans besieged Eger, which had held out against them in 1552, from 21 September, and on 12 October the fortress capitulated. Its defenders, mostly foreign mercenaries, were then killed in revenge for Hatvan.
+      - Maximilian and Sigismund Báthory joined forces and met the Ottoman army on the marshy plain of Mezőkeresztes, south of the Bükk hills, on 24–26 October. On the last day the Christian army broke into the Ottoman camp, but its soldiers turned to plunder; the camp servants fought back with whatever came to hand, and cavalry under Cığalazade Sinan Pasha struck the scattered troops and routed them. Both sides lost tens of thousands of men. It was the only great field battle of the war, but Mehmed went home without following it up.
+    facts:
+      - [Eger capitulates, 12 October 1596]
+      - [Battle of Mezőkeresztes, "24–26 October 1596, Ottoman victory"]
+      - [Losses, "perhaps 20,000–30,000 on each side"]
+    markers:
+      - kind: taken
+        side: hb
+        name: Hatvan
+        date: September 1596
+        text: The imperial army stormed the town and massacred its Muslim garrison and people.
+        lonlat: [19.67, 47.67]
+      - kind: taken
+        side: ot
+        name: Eger
+        date: 12 October 1596
+        text: The fortress that had defied the Ottomans in 1552 fell to Mehmed III and became the seat of an Ottoman province until 1687.
+        lonlat: [20.37, 47.9]
+        lp: l
+      - kind: battle
+        side: ot
+        name: Battle of Mezőkeresztes
+        date: 24–26 October 1596
+        text: A near victory for the imperial and Transylvanian army turned into a rout when its men stopped to plunder the sultan’s camp.
+        lonlat: [20.69, 47.83]
+        lp: b
+    arrows:
+      - side: ot
+        label: Mehmed III
+        via: [[20.15, 46.3], [20.2, 47.17], [20.36, 47.84]]
+      - side: tv
+        label: Sigismund Báthory
+        via: [[22.6, 47.05], [21.5, 47.55], [20.75, 47.82]]
+      - side: hb
+        label: Archduke Maximilian
+        via: [[19.7, 47.67], [20.2, 47.75], [20.62, 47.83]]
+  - title: Michael the Brave’s union
+    date: 1599–1601
+    when: "1599-10"
+    borders: "1601-08-19"
+    countries: [ro, md, pl, hu]
+    body:
+      - Sigismund Báthory gave up Transylvania twice, and in 1599 handed it to his cousin, Cardinal Andrew Báthory, who looked to Poland and demanded that Michael step down. Michael, with the emperor’s approval, crossed the Carpathians and beat Andrew at Șelimbăr near Sibiu on 28 October 1599; Andrew was killed by Székelys as he fled. On 1 November Michael entered Alba Iulia and ruled Transylvania as the emperor’s governor. In May 1600 he drove Ieremia Movilă out of Moldavia, and for a few months he styled himself prince of Wallachia, Transylvania and Moldavia.
+      - Since the 19th century Romanian nationalists have seen this as the first union of the lands that now form Romania. In his own time Michael relied on the Hungarian, Székely and Saxon estates and did not give new rights to the Romanian peasants, and his rule was short. The Transylvanian nobles rose against him and, with the imperial general Giorgio Basta, beat him at Mirăslău on 18 September 1600, while the Polish chancellor Jan Zamoyski restored Movilă in Moldavia and defeated Michael at Bucov in October. Michael won back the emperor’s support and, with Basta, beat Sigismund Báthory at Guruslău on 3 August 1601, but days later Basta’s soldiers killed him near Câmpia Turzii.
+    facts:
+      - [Battle of Șelimbăr, "28 October 1599 (18 October Old Style)"]
+      - [Ruler of all three principalities, "May–September 1600"]
+      - [Michael killed, "19 August 1601 (9 August Old Style)"]
+    markers:
+      - kind: battle
+        side: wa
+        name: Battle of Șelimbăr
+        date: 28 October 1599
+        text: Michael’s Wallachian, Székely and mercenary army defeated Andrew Báthory and won Transylvania.
+        lonlat: [24.2, 45.77]
+      - kind: event
+        side: wa
+        name: Alba Iulia
+        date: 1 November 1599
+        text: Michael entered the Transylvanian capital and received the keys of the fortress.
+        lonlat: [23.57, 46.07]
+        lp: b
+      - kind: taken
+        side: wa
+        name: Iași
+        date: May 1600
+        text: Michael’s army overran Moldavia in a few weeks, and Ieremia Movilă fled to Poland.
+        lonlat: [27.59, 47.16]
+      - kind: battle
+        side: hb
+        name: Battle of Mirăslău
+        date: 18 September 1600
+        text: The Transylvanian nobles and Basta’s imperial troops defeated Michael, who lost Transylvania.
+        lonlat: [23.72, 46.37]
+        lp: l
+      - kind: battle
+        side: pl
+        name: Battle of Bucov
+        date: 20 October 1600
+        text: Zamoyski’s Polish army and Movilă’s Moldavians beat Michael on the Teleajen, and a Movilă was put on the Wallachian throne.
+        lonlat: [26.08, 44.97]
+      - kind: battle
+        side: hb
+        name: Battle of Guruslău
+        date: 3 August 1601
+        text: Michael and Basta together defeated Sigismund Báthory, who had returned to Transylvania.
+        lonlat: [23.02, 47.25]
+      - kind: event
+        name: Câmpia Turzii
+        date: 19 August 1601
+        text: Michael was killed in his camp here by Walloon soldiers sent by Basta.
+        lonlat: [23.88, 46.55]
+    arrows:
+      - side: wa
+        label: Michael, 1599
+        via: [[26.0, 45.3], [25.6, 45.65], [24.95, 45.75], [24.28, 45.77]]
+      - side: wa
+        label: Michael, 1600
+        via: [[25.7, 45.95], [26.4, 46.55], [27.1, 46.95], [27.55, 47.14]]
+      - side: pl
+        label: Zamoyski
+        via: [[26.3, 48.3], [26.5, 47.6], [26.85, 46.4], [26.15, 45.1]]
+    areas:
+      - style: outline
+        side: wa
+        label: Ruled by Michael the Brave, summer 1600
+        atoms: [RO-AG, RO-B, RO-BR, RO-BZ, RO-CL, RO-DB, RO-DJ, RO-GJ, RO-GR, RO-IF, RO-IL, RO-MH, RO-OT, RO-PH, RO-TR, RO-VL, RO-AB, RO-BN, RO-BV, RO-CJ, RO-CV, RO-HD, RO-HR, RO-MS, RO-SB, RO-SJ, RO-MM, RO-SM, RO-BC, RO-BT, RO-GL, RO-IS, RO-NT, RO-SV, RO-VN, RO-VS, UA-77, MD-AN, MD-BA, MD-BR, MD-BS, MD-CA, MD-CL, MD-CM, MD-CR, MD-CS, MD-CT, MD-CU, MD-DO, MD-DR, MD-ED, MD-FA, MD-FL, MD-GL, MD-HI, MD-IA, MD-LE, MD-NI, MD-OC, MD-OR, MD-RI, MD-SD, MD-SI, MD-SO, MD-ST, MD-SV, MD-TE, MD-UN]
+  - title: Kanizsa
+    date: 1598–1601
+    when: "1598-03-29"
+    borders: "1601-11-18"
+    countries: [hu, hr, at, it, tr]
+    body:
+      - The war in Hungary became a war of sieges. On 29 March 1598 imperial troops under Adolf von Schwarzenberg and Miklós Pálffy blew open a gate of Győr with a petard and took it back by surprise. In the autumn of 1600 the grand vizier Damat İbrahim Pasha besieged Kanizsa, the main fortress covering Styria and Croatia, and in October its commander Georg Paradeiser surrendered; he was later tried and executed for it. Kanizsa became the seat of a new Ottoman province only a few days’ march from Graz.
+      - In September 1601 Archduke Ferdinand of Inner Austria laid siege to Kanizsa with an army of perhaps 30,000–35,000, including papal troops under Gian Francesco Aldobrandini and soldiers from Mantua, Tuscany and Spain. The garrison under Tiryaki Hasan Pasha, a few thousand strong, held out against bombardment and assaults while rain, disease and desertion wore the besiegers down. Aldobrandini died, and in mid-November, with snow falling, the army retreated, leaving its guns and many sick behind. The same autumn an army under the Duke of Mercœur took Székesfehérvár, which the Ottomans won back in 1602.
+    facts:
+      - [Győr retaken, 29 March 1598]
+      - [Kanizsa falls, October 1600]
+      - [Siege of Kanizsa, "September–November 1601, failed"]
+    markers:
+      - kind: taken
+        side: hb
+        name: Győr
+        date: 29 March 1598
+        text: A surprise attack at dawn, with a petard against the gate, won back the fortress lost in 1594.
+        lonlat: [17.63, 47.68]
+      - kind: held
+        side: ot
+        name: Kanizsa
+        date: 1600–1601
+        text: Taken by the Ottomans in October 1600, the fortress held out under Tiryaki Hasan Pasha against a far larger Christian army in 1601.
+        lonlat: [16.99, 46.46]
+      - kind: taken
+        side: hb
+        name: Székesfehérvár
+        date: September 1601
+        text: The Duke of Mercœur, a French Catholic nobleman in imperial service, took the old coronation city; it was lost again the next year.
+        lonlat: [18.41, 47.19]
+    arrows:
+      - side: ot
+        label: İbrahim Pasha, 1600
+        via: [[18.69, 45.6], [17.8, 46.05], [17.05, 46.42]]
+      - side: hb
+        label: Archduke Ferdinand, 1601
+        via: [[15.44, 47.07], [16.2, 46.75], [16.93, 46.48]]
+  - title: Bocskai’s rising and the Ottoman recovery
+    date: 1602–1605
+    when: "1602"
+    borders: "1605-10"
+    countries: [hu, sk, ro, at, cz, tr]
+    body:
+      - By 1602 both empires were exhausted. Unpaid mercenaries plundered the country they were meant to defend; in Transylvania Basta’s soldiers and the Tatars left famine behind them, and in the Ottoman Empire the Celali revolts spread across Anatolia and war with Persia began in 1603. Imperial troops took Pest in 1602 but could not take Buda. Meanwhile Rudolf II’s officials tried Protestant nobles for treason and seized churches from the Lutheran towns of Upper Hungary.
+      - In October 1604 Stephen Bocskai, a Calvinist lord in Bihar, rose against the emperor with the hajdús, the free soldiers of the plain, and defeated an imperial column at Álmosd. He took Kassa in November, was elected prince of Transylvania in February 1605 and prince of Hungary at Szerencs in April, and his horsemen raided Moravia, Styria and Lower Austria. The Ottomans backed him, and their grand vizier, Lala Mehmed Pasha, took Esztergom back in October 1605 and in November handed Bocskai a crown on the field of Rákos near Pest.
+    facts:
+      - [Battle of Álmosd, "14–15 October 1604, Bocskai’s victory"]
+      - [Bocskai elected prince of Hungary, "17 April 1605, at Szerencs"]
+      - [Esztergom retaken by the Ottomans, October 1605]
+    markers:
+      - kind: battle
+        side: bo
+        name: Battle of Álmosd
+        date: 14–15 October 1604
+        text: In a night attack in the woods, Bocskai’s hajdús destroyed an imperial column sent to arrest him.
+        lonlat: [21.98, 47.42]
+      - kind: taken
+        side: bo
+        name: Kassa
+        date: 11 November 1604
+        text: The chief town of Upper Hungary opened its gates to Bocskai and became his headquarters.
+        lonlat: [21.25, 48.72]
+      - kind: event
+        side: bo
+        name: Szerencs
+        date: 17 April 1605
+        text: A diet of the Hungarian estates who had joined the rising elected Bocskai prince of Hungary.
+        lonlat: [21.21, 48.16]
+        lp: b
+      - kind: taken
+        side: ot
+        name: Esztergom
+        date: October 1605
+        text: Lala Mehmed Pasha took back the fortress lost in 1595, after a siege of more than a month.
+        lonlat: [18.74, 47.79]
+      - kind: event
+        side: ot
+        name: Rákos
+        date: November 1605
+        text: The grand vizier presented Bocskai with a jewelled crown from the sultan. Bocskai accepted it as a gift but never had himself crowned.
+        lonlat: [19.2, 47.5]
+    areas:
+      - style: occupied
+        side: bo
+        label: Held by Bocskai’s forces in 1605 (approximate)
+        atoms: [SK-KI, SK-PV, HU-BZ, HU-MI, HU-SZ, HU-NY, HU-HB, HU-DE]
+  - title: The peace of Zsitvatorok
+    date: 1606
+    when: "1606-06-23"
+    borders: "1606-11-11"
+    countries: [sk, hu, at, ro, tr]
+    body:
+      - With Rudolf II unable to govern, the Habsburg archdukes made his brother Matthias head of the family in 1606, and Matthias made peace first with the rebels. In the Peace of Vienna of 23 June 1606 Lutherans and Calvinists in Hungary were promised freedom of worship, Hungarians were to hold the kingdom’s offices, and Bocskai was recognised as prince of Transylvania with several counties of eastern Hungary. Bocskai settled his hajdús on the land as free men, and died that December.
+      - Talks with the Ottomans began on 24 October at the mouth of the Zsitva on the Danube, and the peace was signed there on 11 November 1606, for twenty years. The border stayed much as it was. The Ottomans kept Eger, Kanizsa and Esztergom, and the Habsburgs Győr and Komárom. The emperor no longer paid a yearly tribute but sent a single gift of 200,000 florins, and for the first time the sultan addressed him as an equal, as padishah rather than as a king of Vienna. The peace held, with border raids, for more than half a century.
+    facts:
+      - [Peace of Vienna, 23 June 1606]
+      - [Peace of Zsitvatorok, "11 November 1606, for 20 years"]
+      - [Payment, "a single gift of 200,000 florins instead of yearly tribute"]
+    markers:
+      - kind: treaty
+        name: Peace of Vienna
+        date: 23 June 1606
+        text: Archduke Matthias and Bocskai’s envoys agreed on religious freedom and the restoration of Hungarian offices.
+        lonlat: [16.37, 48.21]
+      - kind: treaty
+        name: Peace of Zsitvatorok
+        date: 11 November 1606
+        text: Signed in tents at the mouth of the Zsitva (Žitava) on the Danube, on the border between Royal and Ottoman Hungary.
+        lonlat: [18.32, 47.76]
+      - kind: held
+        side: ot
+        name: Eger
+        date: 1606
+        text: Kept by the Ottomans at the peace, with Kanizsa and Esztergom.
+        lonlat: [20.37, 47.9]
+      - kind: held
+        side: hb
+        name: Győr
+        date: 1606
+        text: Kept by the Habsburgs, with Komárom, as the main fortresses guarding Vienna.
+        lonlat: [17.63, 47.68]

@@ -1,62 +1,1085 @@
-# The Balkans: a first pass until the Ottoman and Balkan wave curates them.
-# The 1000 keyframe shows Tsar Samuel's Bulgaria; the 1100 keyframe was
-# corrected to Byzantine rule (1018–1185).
+# The Balkans, the Carpathian basin, Greece, Cyprus, eastern Thrace and Moldavia,
+# 800–today (curated ranges "Balkans, Hungary and Anatolia" and "Moldavia before
+# 1812" in curated.yaml). Generated for wave 5 (scratchpad gen-east.mjs); edit by
+# hand from here on. Anatolia and the 1922 change to Turkey are in anatolia.yaml,
+# the Levant and Egypt in levant.yaml, Bessarabia after 1812 in bessarabia.yaml.
+# Venetian Istria and Dalmatia in 1797–1805 are in italy.yaml.
+#
+# How the map is drawn:
+# - Atoms are counties, provinces or municipalities, with splits for Euboea,
+#   Achaea and Elis, western Thrace, the Dodecanese, the Gallipoli peninsula,
+#   the Sandžak, Royal and Ottoman Hungary and the Hungarian strip of 1938.
+#   A region changes hands with its main town, so lines are approximate.
+# - The base map shows borders recognised by treaty or in practice; wartime
+#   occupations and fronts are war-step areas. Ottoman vassals (Wallachia,
+#   Moldavia, Transylvania, Ragusa, Serbia from 1817, Bulgaria 1878–1908,
+#   Eastern Rumelia, the Cretan State) are shown as their own states.
+# - Croatia is shown as its own kingdom in union with Hungary, 1102–1527.
+# - The conquests of the Great Turkish War (1683–1699) change the map at
+#   Karlowitz; the Balkan Wars at the treaties of 1913.
+# - The Second World War (1939–1945) is drawn in the war files, except for the
+#   Vienna Awards and the Treaty of Craiova.
 
+# ---- The Balkans and the Carpathian basin in 800 (start of the curated range)
+- date: "800"
+  note: "About 800. Byzantium holds Greece, Thrace and the coasts, with loose claims over the Slavs of Macedonia and the interior. Bulgaria rules the lower Danube on both banks. Charlemagne’s Franks have broken the Avar Khaganate (791–796) and hold Pannonia, Carantania and Istria; the Croats of Dalmatia and the Serbs of Raška are ruled by their own princes."
+  owners:
+    carolingian: [HU-BA, HU-BA~habHun, HU-DU, HU-ED, HU-FE, HU-GS, HU-GY, HU-KE, HU-KV, HU-NK, HU-PS, HU-SF, HU-SH, HU-SN, HU-SO, HU-SO~ottH, HU-SS, HU-TB, HU-TO, HU-VA, HU-VE, HU-VE~ottH, HU-VM, HU-ZA, HU-ZE, SI-001, SI-002, SI-003, SI-004, SI-005, SI-006, SI-007, SI-008, SI-009, SI-011, SI-012, SI-013, SI-014, SI-015, SI-016, SI-017, SI-018, SI-019, SI-020, SI-021, SI-022, SI-023, SI-024, SI-025, SI-026, SI-027, SI-028, SI-029, SI-030, SI-031, SI-032, SI-033, SI-034, SI-035, SI-036, SI-037, SI-038, SI-039, SI-040, SI-041, SI-042, SI-043, SI-044, SI-045, SI-046, SI-047, SI-048, SI-049, SI-05, SI-050, SI-051, SI-052, SI-053, SI-054, SI-055, SI-056, SI-057, SI-058, SI-059, SI-060, SI-061, SI-062, SI-063, SI-064, SI-065, SI-066, SI-067, SI-068, SI-069, SI-070, SI-071, SI-072, SI-073, SI-074, SI-075, SI-076, SI-077, SI-078, SI-079, SI-080, SI-081, SI-082, SI-083, SI-084, SI-085, SI-087, SI-089, SI-090, SI-091, SI-092, SI-093, SI-094, SI-095, SI-096, SI-097, SI-098, SI-099, SI-100, SI-101, SI-102, SI-103, SI-104, SI-105, SI-106, SI-107, SI-108, SI-109, SI-110, SI-111, SI-112, SI-113, SI-114, SI-115, SI-116, SI-117, SI-118, SI-119, SI-120, SI-121, SI-122, SI-123, SI-124, SI-125, SI-126, SI-127, SI-128, SI-129, SI-130, SI-131, SI-132, SI-133, SI-134, SI-135, SI-136, SI-137, SI-138, SI-139, SI-140, SI-141, SI-144, SI-146, SI-147, SI-148, SI-149, SI-150, SI-151, SI-152, SI-153, SI-154, SI-155, SI-156, SI-157, SI-158, SI-159, SI-160, SI-162, SI-163, SI-164, SI-165, SI-166, SI-167, SI-168, SI-169, SI-170, SI-171, SI-172, SI-173, SI-174, SI-175, SI-177, SI-178, SI-179, SI-180, SI-181, SI-182, SI-183, SI-184, SI-185, SI-186, SI-187, SI-188, SI-189, SI-190, SI-191, SI-192, SI-193, SI-194, SI-195, HR-01, HR-21, HR-02, HR-03, HR-05, HR-06, HR-07, HR-10, HR-12, HRV-1604, HR-14, HR-16, HR-20, HR-18, RS-07]
+    croatia: [HR-13, HR-15, HR-17, HR-09, HR-04, HR-08, BIH-2225, BIH-2224, BIH-2227, BIH-4802]
+    byzantium: [HR-19, ME-10, ME-19, ME-05, ME-08, ME-02, ME-20, ME-16, ME-07, ME-06, ME-12, AL-01, AL-02, AL-03, AL-04, AL-05, AL-06, AL-07, AL-08, AL-09, AL-10, AL-11, AL-12, MK-01, MK-02, MK-03, MK-04, MK-05, MK-06, MK-07, MK-08, MK-09, MK-10, MK-11, MK-12, MK-13, MK-14, MK-15, MK-16, MK-17, MK-18, MK-19, MK-20, MK-21, MK-22, MK-23, MK-24, MK-25, MK-26, MK-27, MK-28, MK-29, MK-30, MK-31, MK-32, MK-33, MK-34, MK-35, MK-36, MK-37, MK-38, MK-39, MK-40, MK-41, MK-42, MK-43, MK-44, MK-45, MK-46, MK-47, MK-48, MK-49, MK-50, MK-51, MK-52, MK-53, MK-54, MK-55, MK-56, MK-57, MK-58, MK-60, MK-61, MK-62, MK-63, MK-64, MK-65, MK-66, MK-67, MK-68, MK-69, MK-70, MK-71, MK-72, MK-73, MK-74, MK-75, MK-76, MK-78, MK-80, MK-81, MK-82, MK-83, MK-85, KOS-5886, KOS-5887, KOS-5888, KOS-5889, KOS-5890, KOS-5891, KOS-5892, KOS-5893, KOS-5894, KOS-5895, KOS-5896, KOS-5897, KOS-5898, KOS-5899, KOS-5900, KOS-5901, KOS-5902, KOS-5903, KOS-5904, KOS-5905, KOS-5906, KOS-5907, KOS-5908, KOS-5909, KOS-5910, KOS-5911, KOS-5912, KOS-5913, KOS-5914, KOS-5915, GR-69, GR-A, GR-A~thrace, GR-A1, GR-B, GR-C, GR-D, GR-E, GR-F, GR-G, GR-G~achaea, GR-H, GR-H~euboea, GR-J, GR-K, GR-L, GR-L~dodecanese, GR-M, TR-34!, TR-22, TR-39, TR-59, TR-17~gelibolu, BG-02, BG-13, BG-16, BG-20, BG-24, BG-26, BG-28, BG-09, BG-21, BG-01, BG-22, BG-23, BG-14, BG-10, RS-13, RS-19, RS-20, RS-21, RS-22, RS-23, RS-24]
+    serbia: [RS-08, RS-09, RS-12, RS-16, RS-17, RS-18, ME-14, ME-04, ME-03, ME-17, ME-13, ME-01, ME-09, ME-11, ME-21, ME-18, ME-15, BIH-2226, BIH-2889, BIH-2890, BIH-4806, BIH-4801, BIH-2887, BA-BRC, BA-SRP, BIH-4804, BIH-4805, BA-BIH, BIH-4808, BIH-2891, BIH-4807]
+    bulgaria: [BG-03, BG-04, BG-05, BG-06, BG-07, BG-08, BG-11, BG-12, BG-15, BG-17, BG-18, BG-19, BG-25, BG-27, RO-DJ, RO-GJ, RO-MH, RO-OT, RO-VL, RO-AG, RO-B, RO-BR, RO-BZ, RO-CL, RO-DB, RO-GR, RO-IF, RO-IL, RO-PH, RO-TR, RO-CT, RO-TL, RO-GL, RO-VN, RS-10, RS-11, RS-14, RS-15, MD-BS, MD-CA, MD-CM, MD-CS, MD-CT, MD-GA, MD-LE, MD-TA, UA-51~ro1938, UA-51~ro1938~1856]
+    avars: [HU-BC, HU-BE, HU-BK, HU-BU, HU-BZ, HU-CS, HU-DE, HU-EG, HU-HB, HU-HE, HU-HV, HU-JN, HU-KM, HU-MI, HU-NO, HU-NY, HU-PE, HU-SD, HU-SK, HU-ST, HU-SZ, RO-AB, RO-BN, RO-BV, RO-CJ, RO-CV, RO-HD, RO-HR, RO-MS, RO-SB, RO-BH, RO-SJ, RO-SM, RO-MM, RO-AR, RO-TM, RO-CS, RS-02, RS-03, RS-04, RS-01, RS-05, RS-06, RS-00]
+    slavonic-tribes: [SK-BC, SK-BC~hu1938, SK-BL, SK-KI, SK-KI~hu1938, SK-NI, SK-NI~hu1938, SK-PV, SK-TA, SK-TA~hu1938, SK-TC, SK-ZI, UA-21, RO-BC, RO-BT, RO-IS, RO-NT, RO-SV, RO-VS, MD-AN, MD-BA, MD-BD, MD-BR, MD-CAM, MD-CL, MD-CR, MD-CU, MD-DO, MD-DR, MD-ED, MD-FA, MD-FL, MD-GL, MD-GRI, MD-HI, MD-IA, MD-NI, MD-OC, MD-OR, MD-RE, MD-RI, MD-SD, MD-SI, MD-SN, MD-SO, MD-ST, MD-SV, MD-TE, MD-UN, MDA-1638, MDA-1644, UA-77]
+    cyprus: [CY-01, CY-02, CY-03, CY-04, CY-05, CYN+00?]
+
+# ---- Bulgaria, Byzantium and the Franks, 800–1018
+- date: "805"
+  note: "About 805. Khan Krum of Bulgaria destroys what is left of the Avar Khaganate east of the Danube; the Great Hungarian Plain, the Banat and Transylvania come under loose Bulgarian rule."
+  owners:
+    bulgaria: [HU-BC, HU-BE, HU-BK, HU-BU, HU-BZ, HU-CS, HU-DE, HU-EG, HU-HB, HU-HE, HU-HV, HU-JN, HU-KM, HU-MI, HU-NO, HU-NY, HU-PE, HU-SD, HU-SK, HU-ST, HU-SZ, RO-AB, RO-BN, RO-BV, RO-CJ, RO-CV, RO-HD, RO-HR, RO-MS, RO-SB, RO-BH, RO-SJ, RO-SM, RO-MM, RO-AR, RO-TM, RO-CS, RS-02, RS-03, RS-04, RS-01, RS-05, RS-06, RS-00]
+- date: "809"
+  note: "Krum takes Serdica (Sofia) in the spring of 809 and opens the way into the upper Struma valley."
+  owners:
+    bulgaria: [BG-22, BG-23, BG-14, BG-10]
+- date: "816"
+  note: "Thirty years’ peace between Khan Omurtag and Emperor Leo V. The border follows the Erkesia earthwork from Develtos on the Gulf of Burgas to the Maritsa; northern Thrace with Stara Zagora, Sliven and Yambol is Bulgarian."
+  owners:
+    bulgaria: [BG-24, BG-20, BG-28, BG-02]
+- date: "827"
+  note: "Omurtag’s Bulgarians drive the Franks from Syrmia and the land along the lower Drava; the war lasts until 829."
+  owners:
+    bulgaria: [RS-07, HR-16]
+- date: "827-06"
+  note: "About 827–828. Andalusi exiles led by Abu Hafs land on Crete and found an emirate with its capital at Chandax (Heraklion). Some historians date the landing to 824."
+  owners:
+    emirate-of-crete: [GR-M]
+- date: "833"
+  note: "Mojmír I of Moravia drives Prince Pribina from Nitra and unites the two principalities into Great Moravia."
+  owners:
+    great-moravia: [SK-BC, SK-BC~hu1938, SK-BL, SK-KI, SK-KI~hu1938, SK-NI, SK-NI~hu1938, SK-PV, SK-TA, SK-TA~hu1938, SK-TC, SK-ZI]
+- date: "836"
+  note: "About 836. Philippopolis (Plovdiv) and the upper Maritsa valley pass to Bulgaria under Khan Malamir or his successor Presian."
+  owners:
+    bulgaria: [BG-16, BG-13]
+- date: "843-08-10"
+  note: "Treaty of Verdun. Louis the German receives the eastern Frankish lands, with Pannonia, Carantania and Carniola; Istria and Friuli stay with Lothair’s Italy."
+  owners:
+    east-francia: [HU-BA, HU-BA~habHun, HU-DU, HU-ED, HU-FE, HU-GS, HU-GY, HU-KE, HU-KV, HU-NK, HU-PS, HU-SF, HU-SH, HU-SN, HU-SO, HU-SO~ottH, HU-SS, HU-TB, HU-TO, HU-VA, HU-VE, HU-VE~ottH, HU-VM, HU-ZA, HU-ZE, SI-002, SI-003, SI-004, SI-005, SI-008, SI-009, SI-011, SI-012, SI-013, SI-014, SI-015, SI-016, SI-017, SI-018, SI-020, SI-021, SI-022, SI-023, SI-024, SI-025, SI-026, SI-027, SI-028, SI-029, SI-030, SI-031, SI-032, SI-033, SI-034, SI-036, SI-037, SI-038, SI-039, SI-041, SI-042, SI-043, SI-045, SI-047, SI-048, SI-05, SI-051, SI-052, SI-053, SI-054, SI-055, SI-056, SI-057, SI-058, SI-059, SI-060, SI-061, SI-062, SI-063, SI-064, SI-065, SI-066, SI-067, SI-068, SI-069, SI-070, SI-071, SI-072, SI-073, SI-074, SI-076, SI-077, SI-078, SI-079, SI-080, SI-081, SI-082, SI-083, SI-085, SI-087, SI-089, SI-091, SI-092, SI-093, SI-094, SI-095, SI-096, SI-097, SI-098, SI-099, SI-100, SI-101, SI-102, SI-103, SI-104, SI-105, SI-106, SI-107, SI-108, SI-109, SI-110, SI-112, SI-113, SI-114, SI-115, SI-116, SI-117, SI-118, SI-119, SI-120, SI-121, SI-122, SI-123, SI-124, SI-125, SI-126, SI-127, SI-129, SI-130, SI-131, SI-132, SI-133, SI-134, SI-135, SI-137, SI-138, SI-139, SI-140, SI-141, SI-144, SI-146, SI-147, SI-148, SI-149, SI-150, SI-151, SI-152, SI-153, SI-154, SI-155, SI-156, SI-157, SI-158, SI-159, SI-160, SI-162, SI-163, SI-164, SI-165, SI-166, SI-167, SI-168, SI-169, SI-170, SI-171, SI-172, SI-173, SI-174, SI-175, SI-177, SI-178, SI-179, SI-180, SI-181, SI-182, SI-184, SI-185, SI-186, SI-187, SI-188, SI-189, SI-190, SI-191, SI-192, SI-193, SI-194, SI-195, HR-01, HR-21, HR-02, HR-03, HR-05, HR-06, HR-07, HR-10, HR-12, HRV-1604, HR-14, HR-20]
+- date: "850"
+  note: "About 850. Under Presian and Boris I the Bulgarians extend their rule over the Morava valley, Kosovo, Macedonia and the Rhodopes; the dates of these conquests, between the 830s and the 860s, are uncertain."
+  owners:
+    bulgaria: [MK-01, MK-02, MK-03, MK-04, MK-05, MK-06, MK-07, MK-08, MK-09, MK-10, MK-11, MK-12, MK-13, MK-14, MK-15, MK-16, MK-17, MK-18, MK-19, MK-20, MK-21, MK-22, MK-23, MK-24, MK-25, MK-26, MK-27, MK-28, MK-29, MK-30, MK-31, MK-32, MK-33, MK-34, MK-35, MK-36, MK-37, MK-38, MK-39, MK-40, MK-41, MK-42, MK-43, MK-44, MK-45, MK-46, MK-47, MK-48, MK-49, MK-50, MK-51, MK-52, MK-53, MK-54, MK-55, MK-56, MK-57, MK-58, MK-60, MK-61, MK-62, MK-63, MK-64, MK-65, MK-66, MK-67, MK-68, MK-69, MK-70, MK-71, MK-72, MK-73, MK-74, MK-75, MK-76, MK-78, MK-80, MK-81, MK-82, MK-83, MK-85, KOS-5886, KOS-5887, KOS-5888, KOS-5889, KOS-5890, KOS-5891, KOS-5892, KOS-5893, KOS-5894, KOS-5895, KOS-5896, KOS-5897, KOS-5898, KOS-5899, KOS-5900, KOS-5901, KOS-5902, KOS-5903, KOS-5904, KOS-5905, KOS-5906, KOS-5907, KOS-5908, KOS-5909, KOS-5910, KOS-5911, KOS-5912, KOS-5913, KOS-5914, KOS-5915, RS-13, RS-19, RS-20, RS-21, RS-22, RS-23, RS-24, BG-01, BG-09, BG-21, BG-26, GR-C, AL-06, AL-09, AL-07]
+- date: "888-01-13"
+  note: "Emperor Charles the Fat dies and the Carolingian empire breaks up; Friuli and Istria belong to the Kingdom of Italy."
+  owners:
+    kingdom-of-italy: [SI-006, SI-046, SI-128, SI-044, SI-007, SI-084, SI-183, SI-075, SI-001, SI-136, SI-049, SI-111, SI-019, SI-035, SI-050, SI-040, SI-090, HR-18]
+- date: "895"
+  note: "The Magyars, driven from the steppe north of the Black Sea by the Pechenegs, cross the Carpathians and occupy the Great Hungarian Plain and the upper Tisza. The Pechenegs take the steppe north of the lower Danube."
+  owners:
+    hungary: [HU-BC, HU-BE, HU-BK, HU-BU, HU-BZ, HU-CS, HU-DE, HU-EG, HU-HB, HU-HE, HU-HV, HU-JN, HU-KM, HU-MI, HU-NO, HU-NY, HU-PE, HU-SD, HU-SK, HU-ST, HU-SZ, UA-21, RO-BH, RO-SJ, RO-SM, RO-MM, RO-AR, RO-TM, RO-CS, RS-02, RS-03, RS-04, RS-01, RS-05, RS-06]
+    pechenegs: [RO-DJ, RO-GJ, RO-MH, RO-OT, RO-VL, RO-AG, RO-B, RO-BR, RO-BZ, RO-CL, RO-DB, RO-GR, RO-IF, RO-IL, RO-PH, RO-TR, RO-BC, RO-BT, RO-GL, RO-IS, RO-NT, RO-SV, RO-VN, RO-VS, MD-AN, MD-BA, MD-BD, MD-BR, MD-BS, MD-CA, MD-CAM, MD-CL, MD-CM, MD-CR, MD-CS, MD-CT, MD-CU, MD-DO, MD-DR, MD-ED, MD-FA, MD-FL, MD-GA, MD-GL, MD-GRI, MD-HI, MD-IA, MD-LE, MD-NI, MD-OC, MD-OR, MD-RE, MD-RI, MD-SD, MD-SI, MD-SN, MD-SO, MD-ST, MD-SV, MD-TA, MD-TE, MD-UN, MDA-1638, MDA-1644, UA-51~ro1938, UA-51~ro1938~1856]
+- date: "900"
+  note: "After the death of Emperor Arnulf (899) the Magyars take Pannonia west of the Danube from East Francia. Transylvania is settled in the same years."
+  owners:
+    hungary: [HU-BA, HU-BA~habHun, HU-DU, HU-ED, HU-FE, HU-GS, HU-GY, HU-KE, HU-KV, HU-NK, HU-PS, HU-SF, HU-SH, HU-SN, HU-SO, HU-SO~ottH, HU-SS, HU-TB, HU-TO, HU-VA, HU-VE, HU-VE~ottH, HU-VM, HU-ZA, HU-ZE, SI-002, SI-015, SI-031, SI-033, SI-047, SI-056, SI-059, SI-078, SI-080, SI-097, SI-105, SI-132, SI-152, SI-156, SI-158, SI-187, HR-14, HR-20, RO-AB, RO-BN, RO-BV, RO-CJ, RO-CV, RO-HD, RO-HR, RO-MS, RO-SB]
+- date: "904"
+  note: "A peace after Simeon’s wars with Byzantium sets the border about 20 km north of Thessaloniki; Bulgaria holds most of Albania and northern Epirus, while Dyrrhachium stays Byzantine."
+  owners:
+    bulgaria: [AL-01, AL-03, AL-04, AL-05, AL-11, AL-12, GR-D]
+- date: "907-07-04"
+  note: "Battle of Pressburg. A Bavarian army is destroyed by the Magyars, who now control the former Moravian lands in the Danube basin. Their hold on the hills of today’s northern Slovakia stays loose for another century."
+  owners:
+    hungary: [SK-BC, SK-BC~hu1938, SK-BL, SK-KI, SK-KI~hu1938, SK-NI, SK-NI~hu1938, SK-PV, SK-TA, SK-TA~hu1938, SK-TC, SK-ZI]
+- date: "924"
+  note: "Tsar Simeon’s army annexes Serbia after deposing its prince Zaharija."
+  owners:
+    bulgaria: [RS-16, RS-17, RS-18, ME-14, ME-04, ME-03, ME-17, ME-13, ME-01, ME-09, ME-11, ME-21, ME-18, ME-15, BIH-2891, BIH-4807]
+- date: "925"
+  note: "About 925. Tomislav unites Pannonian and Dalmatian Croatia; a papal letter of 925 calls him king."
+  owners:
+    croatia: [HR-01, HR-21, HR-02, HR-03, HR-05, HR-06, HR-07, HR-10, HR-12, HRV-1604]
+- date: "933"
+  note: "About 933. Časlav Klonimirović escapes from Bulgaria and restores the Serbian principality."
+  owners:
+    serbia: [RS-16, RS-17, RS-18, ME-14, ME-04, ME-03, ME-17, ME-13, ME-01, ME-09, ME-11, ME-21, ME-18, ME-15, BIH-2891, BIH-4807]
+- date: "961-03-06"
+  note: "Nikephoros Phokas takes Chandax after a winter siege; Crete is Byzantine again."
+  owners:
+    byzantium: [GR-M]
+- date: "962-02-02"
+  note: "Otto I is crowned emperor in Rome. Carantania, Carniola and the March of Istria belong to the empire."
+  owners:
+    hre: [SI-001, SI-003, SI-004, SI-005, SI-006, SI-007, SI-008, SI-009, SI-011, SI-012, SI-013, SI-014, SI-016, SI-017, SI-018, SI-019, SI-020, SI-021, SI-022, SI-023, SI-024, SI-025, SI-026, SI-027, SI-028, SI-029, SI-030, SI-032, SI-034, SI-035, SI-036, SI-037, SI-038, SI-039, SI-040, SI-041, SI-042, SI-043, SI-044, SI-045, SI-046, SI-048, SI-049, SI-05, SI-050, SI-051, SI-052, SI-053, SI-054, SI-055, SI-057, SI-058, SI-060, SI-061, SI-062, SI-063, SI-064, SI-065, SI-066, SI-067, SI-068, SI-069, SI-070, SI-071, SI-072, SI-073, SI-074, SI-075, SI-076, SI-077, SI-079, SI-081, SI-082, SI-083, SI-084, SI-085, SI-087, SI-089, SI-090, SI-091, SI-092, SI-093, SI-094, SI-095, SI-096, SI-098, SI-099, SI-100, SI-101, SI-102, SI-103, SI-104, SI-106, SI-107, SI-108, SI-109, SI-110, SI-111, SI-112, SI-113, SI-114, SI-115, SI-116, SI-117, SI-118, SI-119, SI-120, SI-121, SI-122, SI-123, SI-124, SI-125, SI-126, SI-127, SI-128, SI-129, SI-130, SI-131, SI-133, SI-134, SI-135, SI-136, SI-137, SI-138, SI-139, SI-140, SI-141, SI-144, SI-146, SI-147, SI-148, SI-149, SI-150, SI-151, SI-153, SI-154, SI-155, SI-157, SI-159, SI-160, SI-162, SI-163, SI-164, SI-165, SI-166, SI-167, SI-168, SI-169, SI-170, SI-171, SI-172, SI-173, SI-174, SI-175, SI-177, SI-178, SI-179, SI-180, SI-181, SI-182, SI-183, SI-184, SI-185, SI-186, SI-188, SI-189, SI-190, SI-191, SI-192, SI-193, SI-194, SI-195, HR-18]
+- date: "965"
+  note: "Byzantium takes Cyprus, which had been shared with the Arab caliphate since the treaty of 688."
+  owners:
+    byzantium: [CY-01, CY-02, CY-03, CY-04, CY-05, CYN+00?]
 - date: "971-07"
-  note: After defeating Sviatoslav of Kiev at Dorostolon, John I Tzimiskes annexes eastern Bulgaria with Preslav. The western Bulgarian lands stay independent under the Cometopuli brothers, later Tsar Samuel.
+  note: "After defeating Sviatoslav of Kiev at Dorostolon, John I Tzimiskes annexes eastern Bulgaria with Preslav and the Thracian lands. The western Bulgarian lands stay independent under the Cometopuli brothers, later Tsar Samuel."
   owners:
-    byzantium: [RO-TL, RO-CT, BG-19, BG-08, BG-03, BG-27, BG-17, BG-18, BG-25]
+    byzantium: [RO-CT, RO-TL, BG-19, BG-08, BG-03, BG-27, BG-17, BG-18, BG-25, BG-04, BG-07, BG-02, BG-20, BG-28, BG-24, BG-16, BG-26, BG-09, BG-21, BG-13]
+- date: "986-08-17"
+  note: "Samuel takes Larissa (986) and defeats Basil II at the Gates of Trajan. By then Bulgaria also holds the north-east again; the date of that recovery is uncertain."
+  owners:
+    bulgaria: [BG-27, BG-25, BG-17, BG-18, BG-19, BG-03, BG-04, BG-07, BG-08, GR-E]
+- date: "997"
+  note: "In the 990s Samuel takes Dyrrhachium on the Adriatic."
+  owners:
+    bulgaria: [AL-02]
+- date: "1000"
+  note: "Basil II’s generals retake Pliska, Preslav and Dorostolon in north-eastern Bulgaria."
+  owners:
+    byzantium: [BG-27, BG-25, BG-17, BG-18, BG-19, BG-03, BG-04, BG-07, BG-08]
+- date: "1001"
+  note: "Byzantium recovers Thessaly and the fortresses of Berroia and Servia in western Macedonia."
+  owners:
+    byzantium: [GR-E, GR-C]
+- date: "1003"
+  note: "Vidin surrenders after an eight-month siege (1002 or 1003); Byzantium holds the Danube from Vidin to the sea."
+  owners:
+    byzantium: [BG-05, BG-12, BG-06, BG-11, BG-15]
+- date: "1004"
+  note: "Basil II defeats Samuel on the Vardar and takes Skopje (1003 or 1004)."
+  owners:
+    byzantium: [MK-01, MK-02, MK-06, MK-08, MK-09, MK-16, MK-17, MK-29, MK-30, MK-34, MK-35, MK-38, MK-39, MK-47, MK-48, MK-68, MK-70, MK-71, MK-75, MK-76, MK-82, MK-85]
+- date: "1005"
+  note: "Dyrrhachium is handed back to Byzantium."
+  owners:
+    byzantium: [AL-02]
 - date: "1018"
-  note: Basil II completes the conquest of Bulgaria after Samuel's death and the surrender of Tsar Ivan Vladislav's widow at Ohrid.
+  note: "Basil II completes the conquest of Bulgaria after Samuel’s death and the surrender of Tsar Ivan Vladislav’s widow at Ohrid. Sirmium follows in 1018–1019."
   owners:
-    byzantium: [AL-01, AL-02, AL-03, AL-04, AL-05, AL-06, AL-07, AL-08, AL-09, AL-11, AL-12, BA-BRC, BG-02, BG-04, BG-05, BG-06, BG-07, BG-10, BG-11, BG-12, BG-14, BG-15, BG-16, BG-20, BG-22, BG-23, BG-24, BIH-4802, BIH-4804, BIH-4805, GR-C, KOS-5886, KOS-5887, KOS-5888, KOS-5889, KOS-5890, KOS-5891, KOS-5892, KOS-5893, KOS-5894, KOS-5895, KOS-5896, KOS-5897, KOS-5898, KOS-5899, KOS-5900, KOS-5901, KOS-5902, KOS-5903, KOS-5904, KOS-5905, KOS-5906, KOS-5907, KOS-5908, KOS-5909, KOS-5910, KOS-5911, KOS-5912, KOS-5913, KOS-5914, KOS-5915, MD-AN, MD-BS, MD-CA, MD-CM, MD-CS, MD-CT, MD-CU, MD-GA, MD-HI, MD-IA, MD-LE, MD-SV, MD-TA, ME-01, ME-03, ME-04, ME-07, ME-09, ME-11, ME-13, ME-14, ME-16, ME-17, ME-18, ME-21, MK-01, MK-02, MK-03, MK-04, MK-05, MK-06, MK-07, MK-08, MK-09, MK-10, MK-11, MK-12, MK-13, MK-14, MK-15, MK-16, MK-17, MK-18, MK-19, MK-20, MK-21, MK-22, MK-23, MK-24, MK-25, MK-26, MK-27, MK-28, MK-29, MK-30, MK-31, MK-32, MK-33, MK-34, MK-35, MK-36, MK-37, MK-38, MK-39, MK-40, MK-41, MK-42, MK-43, MK-44, MK-45, MK-46, MK-47, MK-48, MK-49, MK-50, MK-51, MK-52, MK-53, MK-54, MK-55, MK-56, MK-57, MK-58, MK-60, MK-61, MK-62, MK-63, MK-64, MK-65, MK-66, MK-67, MK-68, MK-69, MK-70, MK-71, MK-72, MK-73, MK-74, MK-75, MK-76, MK-78, MK-80, MK-81, MK-82, MK-83, MK-85, RO-AG, RO-B, RO-BR, RO-BZ, RO-CL, RO-DB, RO-DJ, RO-GJ, RO-GL, RO-GR, RO-IF, RO-IL, RO-MH, RO-OT, RO-PH, RO-TR, RO-VL, RO-VN, RO-VS, RS-00, RS-08, RS-09, RS-10, RS-11, RS-12, RS-13, RS-14, RS-15, RS-16, RS-17, RS-18, RS-19, RS-20, RS-21, RS-22, RS-23, RS-24, UA-51~ro1938]
+    byzantium: [BG-22, BG-23, BG-14, BG-10, BG-01, BG-13, BG-16, BG-26, BG-09, BG-21, MK-03, MK-04, MK-05, MK-07, MK-10, MK-11, MK-12, MK-13, MK-14, MK-15, MK-18, MK-19, MK-20, MK-21, MK-22, MK-23, MK-24, MK-25, MK-26, MK-27, MK-28, MK-31, MK-32, MK-33, MK-36, MK-37, MK-40, MK-41, MK-42, MK-43, MK-44, MK-45, MK-46, MK-49, MK-50, MK-51, MK-52, MK-53, MK-54, MK-55, MK-56, MK-57, MK-58, MK-60, MK-61, MK-62, MK-63, MK-64, MK-65, MK-66, MK-67, MK-69, MK-72, MK-73, MK-74, MK-78, MK-80, MK-81, MK-83, KOS-5886, KOS-5887, KOS-5888, KOS-5889, KOS-5890, KOS-5891, KOS-5892, KOS-5893, KOS-5894, KOS-5895, KOS-5896, KOS-5897, KOS-5898, KOS-5899, KOS-5900, KOS-5901, KOS-5902, KOS-5903, KOS-5904, KOS-5905, KOS-5906, KOS-5907, KOS-5908, KOS-5909, KOS-5910, KOS-5911, KOS-5912, KOS-5913, KOS-5914, KOS-5915, AL-01, AL-03, AL-04, AL-05, AL-06, AL-07, AL-09, AL-11, AL-12, GR-D, RS-00, RS-07, RS-10, RS-11, RS-13, RS-14, RS-15, RS-19, RS-20, RS-21, RS-22, RS-23, RS-24, HR-16]
 
-# ---- Wallachia and Moldavia (autonomous principalities under Ottoman
-# suzerainty, shown as their own states; Ottoman rayas such as Brăila,
-# Bender, Khotyn and the Budjak are Ottoman)
+# ---- Hungary, Croatia, Serbia and Byzantium, 1018–1204
+- date: "1042"
+  note: "Stefan Vojislav of Duklja defeats a Byzantine army near Bar and makes Duklja independent."
+  owners:
+    zeta: [ME-10, ME-19, ME-05, ME-08, ME-02, ME-20, ME-16, ME-07, ME-06, ME-12, AL-10]
+- date: "1070"
+  note: "About 1070. The Cumans (Kipchaks) push the Pechenegs out of the steppe north of the Danube."
+  owners:
+    cuman-kipchak-confederation: [RO-DJ, RO-GJ, RO-MH, RO-OT, RO-VL, RO-AG, RO-B, RO-BR, RO-BZ, RO-CL, RO-DB, RO-GR, RO-IF, RO-IL, RO-PH, RO-TR, RO-BC, RO-BT, RO-GL, RO-IS, RO-NT, RO-SV, RO-VN, RO-VS, MD-AN, MD-BA, MD-BD, MD-BR, MD-BS, MD-CA, MD-CAM, MD-CL, MD-CM, MD-CR, MD-CS, MD-CT, MD-CU, MD-DO, MD-DR, MD-ED, MD-FA, MD-FL, MD-GA, MD-GL, MD-GRI, MD-HI, MD-IA, MD-LE, MD-NI, MD-OC, MD-OR, MD-RE, MD-RI, MD-SD, MD-SI, MD-SN, MD-SO, MD-ST, MD-SV, MD-TA, MD-TE, MD-UN, MDA-1638, MDA-1644, UA-51~ro1938, UA-51~ro1938~1856]
+- date: "1071"
+  note: "King Solomon of Hungary takes Belgrade and Sirmium from Byzantium."
+  owners:
+    hungary: [RS-00, RS-07, HR-16]
+- date: "1091"
+  note: "Ladislaus I of Hungary takes Slavonia; he founds the bishopric of Zagreb a few years later."
+  owners:
+    hungary: [HR-01, HR-21, HR-02, HR-03, HR-05, HR-06, HR-07, HR-10, HR-12, HRV-1604]
+- date: "1102"
+  note: "Coloman of Hungary is crowned king of Croatia at Biograd. Croatia stays a separate kingdom in union with Hungary, shown here on its own until 1527."
+  owners:
+    croatia: [HR-01, HR-21, HR-02, HR-03, HR-05, HR-06, HR-07, HR-10, HR-12, HRV-1604]
+- date: "1137"
+  note: "Béla II takes Bosnia (Rama), which is ruled by bans under Hungarian overlordship."
+  owners:
+    hungary: [BIH-2226, BIH-2889, BIH-2890, BIH-4806, BIH-4801, BIH-2887, BA-BRC, BA-SRP, BIH-4804, BIH-4805]
+- date: "1167-07-08"
+  note: "Manuel I’s victory at Sirmium confirms Byzantine rule over Syrmia, Bosnia and Dalmatia, taken in the war that began in 1162."
+  owners:
+    byzantium: [RS-07, HR-16, HR-15, HR-17, BIH-2226, BIH-2889, BIH-2890, BIH-4806, BIH-4801, BIH-2887, BA-BRC, BA-SRP, BIH-4804, BIH-4805]
+- date: "1180-09-24"
+  note: "Manuel I dies. Béla III of Hungary recovers Syrmia and Dalmatia; Ban Kulin rules Bosnia as an independent banate."
+  owners:
+    hungary: [RS-07, HR-16]
+    croatia: [HR-15, HR-17]
+    bosnia: [BIH-2226, BIH-2889, BIH-2890, BIH-4806, BIH-4801, BIH-2887, BA-BRC, BA-SRP, BIH-4804, BIH-4805]
+- date: "1185-10-26"
+  note: "The brothers Asen and Peter rise against Byzantium at Tarnovo. By 1187 the Second Bulgarian Empire holds the land between the Danube and the Balkan range."
+  owners:
+    bulgaria: [BG-04, BG-07, BG-11, BG-15, BG-17, BG-18, BG-25, BG-27, BG-08, BG-19, RO-CT, RO-TL]
+- date: "1186"
+  note: "Stefan Nemanja of Serbia conquers Duklja (Zeta) with its coastal towns."
+  owners:
+    serbia: [ME-10, ME-19, ME-05, ME-02, ME-20, ME-16, ME-07, ME-06, ME-12, AL-10]
+- date: "1190"
+  note: "After the battle on the Morava, Byzantium recognises Stefan Nemanja’s Serbia, which keeps Kosovo, Toplica and the upper Morava valley."
+  owners:
+    serbia: [KOS-5886, KOS-5887, KOS-5888, KOS-5889, KOS-5890, KOS-5891, KOS-5892, KOS-5893, KOS-5894, KOS-5895, KOS-5896, KOS-5897, KOS-5898, KOS-5899, KOS-5900, KOS-5901, KOS-5902, KOS-5903, KOS-5904, KOS-5905, KOS-5906, KOS-5907, KOS-5908, KOS-5909, KOS-5910, KOS-5911, KOS-5912, KOS-5913, KOS-5914, KOS-5915, RS-19, RS-21, RS-23, AL-07]
+- date: "1195"
+  note: "Asen takes Sofia and the upper Struma valley; Vidin and the north-west also pass to Bulgaria."
+  owners:
+    bulgaria: [BG-22, BG-23, BG-14, BG-10, BG-05, BG-12, BG-06]
+- date: "1201-03-24"
+  note: "Tsar Kaloyan takes Varna."
+  owners:
+    bulgaria: [BG-03]
+- date: "1202-11-24"
+  note: "The Fourth Crusade takes Zara (Zadar) for Venice."
+  owners:
+    venice: [HR-13]
+- date: "1203"
+  note: "Kaloyan takes Belgrade and Braničevo from Hungary, Niš and most of Macedonia from Byzantium (1202–1203)."
+  owners:
+    bulgaria: [MK-01, MK-02, MK-03, MK-04, MK-05, MK-06, MK-07, MK-08, MK-09, MK-10, MK-11, MK-12, MK-13, MK-14, MK-15, MK-16, MK-17, MK-18, MK-19, MK-20, MK-21, MK-22, MK-23, MK-24, MK-25, MK-26, MK-27, MK-28, MK-29, MK-30, MK-31, MK-32, MK-33, MK-34, MK-35, MK-36, MK-37, MK-38, MK-39, MK-40, MK-41, MK-42, MK-43, MK-44, MK-45, MK-46, MK-47, MK-48, MK-49, MK-50, MK-51, MK-52, MK-53, MK-54, MK-55, MK-56, MK-57, MK-58, MK-60, MK-61, MK-62, MK-63, MK-64, MK-65, MK-66, MK-67, MK-68, MK-69, MK-70, MK-71, MK-72, MK-73, MK-74, MK-75, MK-76, MK-78, MK-80, MK-81, MK-82, MK-83, MK-85, RS-00, RS-10, RS-11, RS-13, RS-14, RS-15, RS-20, RS-22, RS-24, BG-01]
+
+# ---- The Latin partition of Byzantium, 1204–1261
+- date: "1204-04-13"
+  note: "The Fourth Crusade sacks Constantinople. Baldwin of Flanders is crowned Latin emperor, with Thrace as his share; Boniface of Montferrat founds the Kingdom of Thessalonica."
+  owners:
+    latin-empire: [TR-34!, TR-22, TR-39, TR-59, TR-17~gelibolu, GR-A~thrace, GR-K, BG-16, BG-26, BG-09, BG-21, BG-13, BG-02, BG-28, BG-20, BG-24]
+    kingdom-of-thessalonica: [GR-B, GR-A!, GR-C, GR-E, GR-69]
+- date: "1205"
+  note: "The crusaders conquer southern Greece: William of Champlitte and Geoffrey of Villehardouin found the Principality of Achaea, Othon de la Roche the lordship of Athens and Thebes. Michael Komnenos Doukas holds Epirus; Venice takes Ragusa and Dyrrhachium."
+  owners:
+    achaea: [GR-J, GR-G~achaea]
+    duchy-of-athens: [GR-A1, GR-H!]
+    epirus: [GR-D, GR-G!, AL-01, AL-04, AL-05, AL-12]
+    venice: [HR-19, AL-02]
+- date: "1205-04-14"
+  note: "Kaloyan destroys the Latin army at Adrianople and captures Emperor Baldwin; Bulgaria takes the Thracian plain north of Adrianople."
+  owners:
+    bulgaria: [BG-24, BG-20, BG-28, BG-02, BG-16, BG-26, BG-13]
+- date: "1207"
+  note: "Marco Sanudo founds the Duchy of the Archipelago in the Cyclades; Venice occupies Corfu."
+  owners:
+    archipelago: [GR-L!]
+    venice: [GR-F]
+- date: "1208-06-30"
+  note: "Emperor Henry defeats Tsar Boril near Philippopolis; the plain of Plovdiv returns to the Latin Empire."
+  owners:
+    latin-empire: [BG-16, BG-26, BG-13]
+- date: "1209"
+  note: "The Lombard lords of Euboea (Negroponte) accept Venetian overlordship."
+  owners:
+    venice: [GR-H~euboea]
+- date: "1211"
+  note: "Venice, which bought Crete from Boniface in 1204, completes its conquest of the island."
+  owners:
+    venice: [GR-M]
+- date: "1213"
+  note: "Michael I of Epirus takes Dyrrhachium from Venice."
+  owners:
+    epirus: [AL-02]
+- date: "1214"
+  note: "Michael I of Epirus takes Corfu from Venice."
+  owners:
+    epirus: [GR-F]
+- date: "1224-12"
+  note: "Theodore Komnenos Doukas of Epirus takes Thessalonica and ends the Latin kingdom; he is crowned emperor."
+  owners:
+    epirus: [GR-B, GR-A!, GR-C, GR-E, GR-69]
+- date: "1225"
+  note: "Theodore takes Adrianople and western Thrace. In Asia Minor, the Empire of Nicaea takes the Aegean islands from the Latins."
+  owners:
+    epirus: [TR-22, GR-A~thrace]
+    byzantium: [GR-K]
+- date: "1230-03-09"
+  note: "Ivan Asen II defeats and captures Theodore at Klokotnitsa and takes Thrace, Macedonia and Albania. Theodore’s brother Manuel keeps Thessalonica as a Bulgarian vassal."
+  owners:
+    bulgaria: [TR-22, GR-A~thrace, GR-A!, GR-C, AL-02, AL-11, AL-03, AL-06, AL-09, BG-16, BG-26, BG-09, BG-21, BG-13]
+- date: "1235"
+  note: "Nicaea, allied with Bulgaria against the Latins, takes Gallipoli and the Thracian coast."
+  owners:
+    byzantium: [TR-17~gelibolu, TR-59]
+- date: "1246-12"
+  note: "John III Vatatzes takes Thessalonica and, after the death of the young tsar Koloman, the Bulgarian lands in Thrace and Macedonia."
+  owners:
+    byzantium: [GR-B, GR-A!, GR-A~thrace, GR-C, GR-69, TR-22, TR-39, MK-01, MK-02, MK-03, MK-04, MK-05, MK-06, MK-07, MK-08, MK-09, MK-10, MK-11, MK-12, MK-13, MK-14, MK-15, MK-16, MK-17, MK-18, MK-19, MK-20, MK-21, MK-22, MK-23, MK-24, MK-25, MK-26, MK-27, MK-28, MK-29, MK-30, MK-31, MK-32, MK-33, MK-34, MK-35, MK-36, MK-37, MK-38, MK-39, MK-40, MK-41, MK-42, MK-43, MK-44, MK-45, MK-46, MK-47, MK-48, MK-49, MK-50, MK-51, MK-52, MK-53, MK-54, MK-55, MK-56, MK-57, MK-58, MK-60, MK-61, MK-62, MK-63, MK-64, MK-65, MK-66, MK-67, MK-68, MK-69, MK-70, MK-71, MK-72, MK-73, MK-74, MK-75, MK-76, MK-78, MK-80, MK-81, MK-82, MK-83, MK-85, BG-16, BG-26, BG-09, BG-21, BG-13, BG-01, AL-06, AL-09, AL-03, AL-11]
+- date: "1247"
+  note: "Béla IV organises the Banate of Macsó south of the Sava; Belgrade is Hungarian too."
+  owners:
+    hungary: [RS-00, RS-08]
+- date: "1261-07-25"
+  note: "Alexios Strategopoulos retakes Constantinople for Michael VIII Palaiologos; the Latin Empire ends."
+  owners:
+    byzantium: [TR-34!]
+
+# ---- Byzantium, Serbia, Bulgaria and the Angevins, 1261–1371
+- date: "1267"
+  note: "By the Treaty of Viterbo, Charles of Anjou gains Corfu."
+  owners:
+    naples: [GR-F]
+- date: "1267-06"
+  note: "Poreč submits to Venice (1267), the first of the Istrian coastal towns; Pula follows in 1331. Inner Istria stays with the counts of Gorizia and later the Habsburgs."
+  owners:
+    venice: [HR-18]
+- date: "1272-02-21"
+  note: "Charles of Anjou proclaims himself king of Albania at Durrës."
+  owners:
+    naples: [AL-02, AL-11]
+- date: "1250-12-13"
+  note: "Emperor Frederick II dies; the counts of Gorizia rule the upper Soča valley and the Karst as their own county."
+  owners:
+    gorizia: [SI-006, SI-046, SI-128, SI-044, SI-007, SI-084, SI-183, SI-075, SI-001, SI-136, SI-049, SI-111, SI-019, SI-035]
+- date: "1261-03-31"
+  note: "Peace of Vienna. Béla IV of Hungary gives up Styria to Ottokar II of Bohemia."
+  owners:
+    bohemia: [SI-011, SI-018, SI-024, SI-025, SI-026, SI-028, SI-029, SI-034, SI-042, SI-045, SI-055, SI-057, SI-058, SI-063, SI-069, SI-070, SI-076, SI-081, SI-087, SI-089, SI-093, SI-096, SI-098, SI-100, SI-101, SI-103, SI-106, SI-107, SI-108, SI-112, SI-113, SI-114, SI-115, SI-116, SI-118, SI-120, SI-124, SI-125, SI-126, SI-127, SI-133, SI-135, SI-137, SI-139, SI-141, SI-144, SI-148, SI-149, SI-151, SI-153, SI-154, SI-155, SI-159, SI-160, SI-166, SI-167, SI-168, SI-169, SI-171, SI-172, SI-173, SI-174, SI-177, SI-178, SI-181, SI-182, SI-184, SI-185, SI-188, SI-190, SI-191, SI-195]
+- date: "1269-12-04"
+  note: "Ottokar II inherits Carniola and Carinthia from Duke Ulrich III."
+  owners:
+    bohemia: [SI-003, SI-004, SI-005, SI-008, SI-009, SI-012, SI-013, SI-014, SI-016, SI-017, SI-020, SI-021, SI-022, SI-023, SI-027, SI-030, SI-032, SI-036, SI-037, SI-038, SI-039, SI-041, SI-043, SI-048, SI-05, SI-051, SI-052, SI-053, SI-054, SI-060, SI-061, SI-062, SI-064, SI-065, SI-066, SI-067, SI-068, SI-071, SI-072, SI-073, SI-074, SI-077, SI-079, SI-082, SI-083, SI-085, SI-091, SI-092, SI-094, SI-095, SI-099, SI-102, SI-104, SI-109, SI-110, SI-117, SI-119, SI-121, SI-122, SI-123, SI-129, SI-130, SI-131, SI-134, SI-138, SI-140, SI-146, SI-147, SI-150, SI-157, SI-162, SI-163, SI-164, SI-165, SI-170, SI-175, SI-179, SI-180, SI-186, SI-189, SI-192, SI-193, SI-194]
+- date: "1276-11-21"
+  note: "Treaty of Vienna. Ottokar gives up Austria, Styria, Carinthia and Carniola to King Rudolf of Habsburg."
+  owners:
+    hre: [SI-011, SI-018, SI-024, SI-025, SI-026, SI-028, SI-029, SI-034, SI-042, SI-045, SI-055, SI-057, SI-058, SI-063, SI-069, SI-070, SI-076, SI-081, SI-087, SI-089, SI-093, SI-096, SI-098, SI-100, SI-101, SI-103, SI-106, SI-107, SI-108, SI-112, SI-113, SI-114, SI-115, SI-116, SI-118, SI-120, SI-124, SI-125, SI-126, SI-127, SI-133, SI-135, SI-137, SI-139, SI-141, SI-144, SI-148, SI-149, SI-151, SI-153, SI-154, SI-155, SI-159, SI-160, SI-166, SI-167, SI-168, SI-169, SI-171, SI-172, SI-173, SI-174, SI-177, SI-178, SI-181, SI-182, SI-184, SI-185, SI-188, SI-190, SI-191, SI-195, SI-003, SI-004, SI-005, SI-008, SI-009, SI-012, SI-013, SI-014, SI-016, SI-017, SI-020, SI-021, SI-022, SI-023, SI-027, SI-030, SI-032, SI-036, SI-037, SI-038, SI-039, SI-041, SI-043, SI-048, SI-05, SI-051, SI-052, SI-053, SI-054, SI-060, SI-061, SI-062, SI-064, SI-065, SI-066, SI-067, SI-068, SI-071, SI-072, SI-073, SI-074, SI-077, SI-079, SI-082, SI-083, SI-085, SI-091, SI-092, SI-094, SI-095, SI-099, SI-102, SI-104, SI-109, SI-110, SI-117, SI-119, SI-121, SI-122, SI-123, SI-129, SI-130, SI-131, SI-134, SI-138, SI-140, SI-146, SI-147, SI-150, SI-157, SI-162, SI-163, SI-164, SI-165, SI-170, SI-175, SI-179, SI-180, SI-186, SI-189, SI-192, SI-193, SI-194]
+- date: "1282-12-27"
+  note: "Rudolf enfeoffs his sons with Austria and Styria; Styria stays with the Habsburgs."
+  owners:
+    habsburg: [SI-011, SI-018, SI-024, SI-025, SI-026, SI-028, SI-029, SI-034, SI-042, SI-045, SI-055, SI-057, SI-058, SI-063, SI-069, SI-070, SI-076, SI-081, SI-087, SI-089, SI-093, SI-096, SI-098, SI-100, SI-101, SI-103, SI-106, SI-107, SI-108, SI-112, SI-113, SI-114, SI-115, SI-116, SI-118, SI-120, SI-124, SI-125, SI-126, SI-127, SI-133, SI-135, SI-137, SI-139, SI-141, SI-144, SI-148, SI-149, SI-151, SI-153, SI-154, SI-155, SI-159, SI-160, SI-166, SI-167, SI-168, SI-169, SI-171, SI-172, SI-173, SI-174, SI-177, SI-178, SI-181, SI-182, SI-184, SI-185, SI-188, SI-190, SI-191, SI-195]
+- date: "1279"
+  note: "Koper (Capodistria) submits to Venice; Izola and Piran follow by 1283."
+  owners:
+    venice: [SI-050, SI-040, SI-090]
+- date: "1281"
+  note: "Byzantium defeats the Angevins at Berat and holds central and southern Albania."
+  owners:
+    byzantium: [AL-01, AL-03, AL-04, AL-05, AL-12]
+- date: "1282"
+  note: "Stefan Uroš II Milutin of Serbia takes Skopje and northern Macedonia, and Niš."
+  owners:
+    serbia: [MK-01, MK-02, MK-06, MK-08, MK-09, MK-16, MK-17, MK-29, MK-30, MK-34, MK-35, MK-38, MK-39, MK-47, MK-48, MK-68, MK-70, MK-71, MK-75, MK-76, MK-82, MK-85, RS-20, RS-24, RS-13]
+- date: "1284"
+  note: "Stefan Dragutin, who abdicated the Serbian throne, receives Belgrade and Mačva from Hungary."
+  owners:
+    serbia: [RS-00, RS-08]
+- date: "1291"
+  note: "Dragutin and Milutin take Braničevo from the Bulgarian lords Darman and Kudelin."
+  owners:
+    serbia: [RS-10, RS-11]
+- date: "1310-08-15"
+  note: "The Knights Hospitaller complete their conquest of Rhodes and make it the seat of their order."
+  owners:
+    malta: [GR-L~dodecanese]
+- date: "1319"
+  note: "Charles I of Hungary retakes Belgrade and Mačva from Dragutin’s son."
+  owners:
+    hungary: [RS-00, RS-08]
+- date: "1320"
+  note: "About 1320. The Byzantine Despotate of the Morea, based at Mystras since 1262, takes most of Arcadia and holds the larger part of the Peloponnese outside Achaea’s north-west and the Venetian ports."
+  owners:
+    byzantium: [GR-J]
+- date: "1326"
+  note: "Ban Stephen II Kotromanić of Bosnia takes Hum (Zachlumia) from Serbia, and the Tropolje around Livno."
+  owners:
+    bosnia: [BA-BIH, BIH-2227, BIH-4808, BIH-2224]
+- date: "1333"
+  note: "Andronikos III takes Thessaly after the death of its ruler Stephen Gabrielopoulos."
+  owners:
+    byzantium: [GR-E]
+- date: "1335-05-02"
+  note: "Emperor Louis IV enfeoffs the Habsburgs with Carinthia and Carniola."
+  owners:
+    habsburg: [SI-003, SI-004, SI-005, SI-008, SI-009, SI-012, SI-013, SI-014, SI-016, SI-017, SI-020, SI-021, SI-022, SI-023, SI-027, SI-030, SI-032, SI-036, SI-037, SI-038, SI-039, SI-041, SI-043, SI-048, SI-05, SI-051, SI-052, SI-053, SI-054, SI-060, SI-061, SI-062, SI-064, SI-065, SI-066, SI-067, SI-068, SI-071, SI-072, SI-073, SI-074, SI-077, SI-079, SI-082, SI-083, SI-085, SI-091, SI-092, SI-094, SI-095, SI-099, SI-102, SI-104, SI-109, SI-110, SI-117, SI-119, SI-121, SI-122, SI-123, SI-129, SI-130, SI-131, SI-134, SI-138, SI-140, SI-146, SI-147, SI-150, SI-157, SI-162, SI-163, SI-164, SI-165, SI-170, SI-175, SI-179, SI-180, SI-186, SI-189, SI-192, SI-193, SI-194]
+- date: "1340"
+  note: "Andronikos III annexes Epirus (1338–1340)."
+  owners:
+    byzantium: [GR-D, GR-G!]
+- date: "1343"
+  note: "Stefan Dušan of Serbia takes the rest of Macedonia and most of Albania (1342–1345), taking advantage of the Byzantine civil war."
+  owners:
+    serbia: [MK-03, MK-04, MK-05, MK-07, MK-10, MK-11, MK-12, MK-13, MK-14, MK-15, MK-18, MK-19, MK-20, MK-21, MK-22, MK-23, MK-24, MK-25, MK-26, MK-27, MK-28, MK-31, MK-32, MK-33, MK-36, MK-37, MK-40, MK-41, MK-42, MK-43, MK-44, MK-45, MK-46, MK-49, MK-50, MK-51, MK-52, MK-53, MK-54, MK-55, MK-56, MK-57, MK-58, MK-60, MK-61, MK-62, MK-63, MK-64, MK-65, MK-66, MK-67, MK-69, MK-72, MK-73, MK-74, MK-78, MK-80, MK-81, MK-83, GR-C, AL-01, AL-03, AL-04, AL-05, AL-06, AL-07, AL-08, AL-09, AL-11, AL-12]
+- date: "1345-09-25"
+  note: "Dušan takes Serres; Mount Athos accepts his rule. In 1346 he is crowned emperor."
+  owners:
+    serbia: [GR-A!, GR-69]
+- date: "1348"
+  note: "Dušan’s commanders take Thessaly and Epirus (1347–1348)."
+  owners:
+    serbia: [GR-E, GR-D, GR-G!]
+- date: "1354-03-02"
+  note: "An earthquake ruins the walls of Gallipoli; Süleyman Pasha’s Ottoman troops occupy the town, their first foothold in Europe."
+  owners:
+    ottoman: [TR-17~gelibolu]
+- date: "1355-12-20"
+  note: "Stefan Dušan dies. His empire breaks up; in Albania local families rule their own principalities."
+  owners:
+    albanian-principalities: [AL-01, AL-03, AL-04, AL-05, AL-06, AL-07, AL-08, AL-09, AL-11, AL-12]
+- date: "1344"
+  note: "Anna of Savoy, regent in Constantinople, cedes Philippopolis and the upper Maritsa valley to Tsar Ivan Alexander of Bulgaria for his help in the civil war."
+  owners:
+    bulgaria: [BG-16, BG-13]
+- date: "1356"
+  note: "About 1356. Ivan Alexander’s son Ivan Sratsimir rules Vidin as a separate tsardom."
+  owners:
+    vidin: [BG-05, BG-12, BG-06, RS-14, RS-15, RS-22]
+- date: "1358-02-18"
+  note: "Treaty of Zadar. Venice gives up Dalmatia to Louis I of Hungary; Ragusa accepts Hungarian overlordship and governs itself."
+  owners:
+    croatia: [HR-13]
+    ragusa: [HR-19]
+- date: "1359"
+  note: "Epirus passes to Serbian and Albanian lords after the death of Nikephoros II; the ruler of Ioannina takes the title of despot."
+  owners:
+    epirus: [GR-D, GR-G!]
+- date: "1362"
+  note: "About 1362. The Balšić family rules Zeta independently of the Serbian emperor."
+  owners:
+    zeta: [ME-02, ME-20, ME-16, ME-07, ME-06, ME-12, AL-10]
+- date: "1366-08-23"
+  note: "Amadeus VI of Savoy takes Gallipoli from the Ottomans and hands it to Byzantium."
+  owners:
+    byzantium: [TR-17~gelibolu]
+- date: "1368"
+  note: "Karl Thopia takes Durrës from the Angevins."
+  owners:
+    albanian-principalities: [AL-02]
+- date: "1369"
+  note: "Murad I takes Adrianople (at some point between 1361 and 1369), which becomes the Ottoman capital, and Philippopolis (about 1363)."
+  owners:
+    ottoman: [TR-22, TR-39, TR-59, GR-A~thrace, BG-16, BG-26, BG-09, BG-21, BG-13]
+
+# ---- The Ottoman conquest of the Balkans, 1371–1500
+- date: "1371-09-26"
+  note: "Battle of the Maritsa. The Ottomans destroy the army of the Serbian lords of Macedonia and take northern Thrace; Tsar Ivan Shishman of Bulgaria and the surviving Serbian lords become Ottoman vassals."
+  owners:
+    ottoman: [BG-24, BG-20, BG-28, BG-02]
+- date: "1371-11"
+  note: "After the death of the Serbian lords at the Maritsa, Manuel Palaiologos retakes Serres and the lower Struma for Byzantium."
+  owners:
+    byzantium: [GR-A!, GR-69]
+- date: "1377"
+  note: "Andronikos IV hands Gallipoli back to Murad I."
+  owners:
+    ottoman: [TR-17~gelibolu]
+- date: "1377-10-26"
+  note: "Tvrtko I, who took the upper Drina and Lim valleys and Trebinje in 1373, is crowned king of Bosnia."
+  owners:
+    bosnia: [BIH-2891, BIH-4807, BIH-4808, ME-14, ME-12, ME-15, ME-08, RS-16~sandzak]
+- date: "1382"
+  note: "About 1382–1385. The Ottomans take Sofia."
+  owners:
+    ottoman: [BG-22, BG-23, BG-14]
+- date: "1383-09-19"
+  note: "The Ottomans take Serres; Mount Athos submits."
+  owners:
+    ottoman: [GR-A!, GR-69]
+- date: "1386"
+  note: "The Ottomans take Niš."
+  owners:
+    ottoman: [RS-20]
+- date: "1386-06-09"
+  note: "Corfu places itself under Venice, which rules it until 1797."
+  owners:
+    venice: [GR-F]
+- date: "1387-04"
+  note: "Thessalonica surrenders to the Ottomans after a four-year siege."
+  owners:
+    ottoman: [GR-B]
+- date: "1390"
+  note: "About 1388–1390. Mircea the Elder of Wallachia takes Dobruja and Silistra."
+  owners:
+    wallachia: [RO-CT, RO-TL, BG-08, BG-19]
+- date: "1392-01-06"
+  note: "The Ottomans take Skopje from Vuk Branković."
+  owners:
+    ottoman: [MK-01, MK-02, MK-06, MK-08, MK-09, MK-16, MK-17, MK-29, MK-30, MK-34, MK-35, MK-38, MK-39, MK-47, MK-48, MK-68, MK-70, MK-71, MK-75, MK-76, MK-82, MK-85]
+- date: "1392-08"
+  note: "Venice takes over Durrës from the Thopia."
+  owners:
+    venice: [AL-02]
+- date: "1393-07-17"
+  note: "Tarnovo falls after a three-month siege; Bayezid I annexes the Bulgarian tsardom and occupies Thessaly."
+  owners:
+    ottoman: [BG-04, BG-07, BG-11, BG-15, BG-18, BG-17, BG-25, BG-27, BG-03, GR-E]
+- date: "1395-05-17"
+  note: "Battle of Rovine. The Ottoman vassals Prince Marko and Konstantin Dejanović fall fighting for Bayezid against Wallachia; their lands in Macedonia are annexed."
+  owners:
+    ottoman: [MK-03, MK-04, MK-05, MK-07, MK-10, MK-11, MK-12, MK-13, MK-14, MK-15, MK-18, MK-19, MK-20, MK-21, MK-22, MK-23, MK-24, MK-25, MK-26, MK-27, MK-28, MK-31, MK-32, MK-33, MK-36, MK-37, MK-40, MK-41, MK-42, MK-43, MK-44, MK-45, MK-46, MK-49, MK-50, MK-51, MK-52, MK-53, MK-54, MK-55, MK-56, MK-57, MK-58, MK-60, MK-61, MK-62, MK-63, MK-64, MK-65, MK-66, MK-67, MK-69, MK-72, MK-73, MK-74, MK-78, MK-80, MK-81, MK-83, GR-C, BG-10, BG-01]
+- date: "1396-04"
+  note: "Venice buys Shkodër from the Balšići and holds Lezhë."
+  owners:
+    venice: [AL-10, AL-08]
+- date: "1396-09-25"
+  note: "After the crusaders’ defeat at Nicopolis, Bayezid I annexes the Tsardom of Vidin."
+  owners:
+    ottoman: [BG-05, BG-12, BG-06, RS-14, RS-15, RS-22]
+- date: "1403"
+  note: "Treaty of Gallipoli. After the Ottoman defeat at Ankara, Süleyman Çelebi returns Thessalonica and Mount Athos to Byzantium."
+  owners:
+    byzantium: [GR-B, GR-69]
+- date: "1404"
+  note: "Despot Stefan Lazarević of Serbia receives Belgrade and Mačva from King Sigismund."
+  owners:
+    serbia: [RS-00, RS-08]
+- date: "1409-07-09"
+  note: "Ladislaus of Naples sells Zadar and his rights in Dalmatia to Venice."
+  owners:
+    venice: [HR-13]
+- date: "1417"
+  note: "The Ottomans take Dobruja from Wallachia, and Vlorë, Berat and southern Albania (1417–1419)."
+  owners:
+    ottoman: [RO-CT, RO-TL, BG-08, BG-19, AL-12, AL-01, AL-04, AL-05]
+- date: "1420"
+  note: "Venice completes its conquest of Dalmatia (Šibenik 1412, Trogir and Split 1420); Kotor places itself under Venice."
+  owners:
+    venice: [HR-15, HR-17, ME-10, ME-19]
+- date: "1421"
+  note: "Balša III dies; Zeta passes to his uncle, Despot Stefan Lazarević of Serbia."
+  owners:
+    serbia: [ME-16, ME-07, ME-06, ME-12]
+- date: "1423-09-14"
+  note: "Byzantium hands besieged Thessalonica to Venice."
+  owners:
+    venice: [GR-B]
+- date: "1427"
+  note: "Stefan Lazarević dies; under their agreement Belgrade and Mačva return to Hungary."
+  owners:
+    hungary: [RS-00, RS-08]
+- date: "1430-03-29"
+  note: "Murad II takes Thessalonica by storm."
+  owners:
+    ottoman: [GR-B, GR-69]
+- date: "1430-10-09"
+  note: "Ioannina surrenders to the Ottomans; the Tocco keep Arta as vassals."
+  owners:
+    ottoman: [GR-D]
+- date: "1430"
+  note: "Constantine Palaiologos takes Patras; Thomas Palaiologos ends the Principality of Achaea in 1432."
+  owners:
+    byzantium: [GR-G~achaea]
+- date: "1439-08-27"
+  note: "Murad II takes Smederevo; Despot Đurađ Branković flees to Hungary and Serbia becomes an Ottoman province."
+  owners:
+    ottoman: [RS-09, RS-10, RS-11, RS-12, RS-13, RS-17, RS-19, RS-21, RS-23, RS-24, RS-16!, RS-18!, KOS-5886, KOS-5887, KOS-5888, KOS-5889, KOS-5890, KOS-5891, KOS-5892, KOS-5893, KOS-5894, KOS-5895, KOS-5896, KOS-5897, KOS-5898, KOS-5899, KOS-5900, KOS-5901, KOS-5902, KOS-5903, KOS-5904, KOS-5905, KOS-5906, KOS-5907, KOS-5908, KOS-5909, KOS-5910, KOS-5911, KOS-5912, KOS-5913, KOS-5914, KOS-5915]
+- date: "1443"
+  note: "Venice takes Bar, Ulcinj and Budva on the Zeta coast."
+  owners:
+    venice: [ME-02, ME-20, ME-05]
+- date: "1444-08-15"
+  note: "Peace of Szeged. After Hunyadi’s Long Campaign, Murad II restores the Serbian Despotate to Đurađ Branković."
+  owners:
+    serbia: [RS-09, RS-10, RS-11, RS-12, RS-13, RS-17, RS-19, RS-21, RS-23, RS-24, RS-16!, RS-18!, KOS-5886, KOS-5887, KOS-5888, KOS-5889, KOS-5890, KOS-5891, KOS-5892, KOS-5893, KOS-5894, KOS-5895, KOS-5896, KOS-5897, KOS-5898, KOS-5899, KOS-5900, KOS-5901, KOS-5902, KOS-5903, KOS-5904, KOS-5905, KOS-5906, KOS-5907, KOS-5908, KOS-5909, KOS-5910, KOS-5911, KOS-5912, KOS-5913, KOS-5914, KOS-5915]
+- date: "1448"
+  note: "Stjepan Vukčić Kosača takes the title “herceg of Saint Sava”; his lands become known as Herzegovina."
+  owners:
+    herzegovina: [BA-BIH, BIH-2227, BIH-4808, BIH-2891, BIH-4807, ME-14, ME-12, ME-15, ME-08, RS-16~sandzak]
+- date: "1449-03-24"
+  note: "The Ottomans take Arta."
+  owners:
+    ottoman: [GR-G!]
+- date: "1451"
+  note: "About 1451. Stefan Crnojević rules Upper Zeta between Venice and the Ottomans."
+  owners:
+    zeta: [ME-06, ME-07, ME-16]
+- date: "1453-05-29"
+  note: "Mehmed II takes Constantinople; the last emperor, Constantine XI, dies in the fighting."
+  owners:
+    ottoman: [TR-34!]
+- date: "1455-06"
+  note: "The Ottomans take Novo Brdo and Prizren, and with them Kosovo and the upper Ibar and Lim valleys."
+  owners:
+    ottoman: [KOS-5886, KOS-5887, KOS-5888, KOS-5889, KOS-5890, KOS-5891, KOS-5892, KOS-5893, KOS-5894, KOS-5895, KOS-5896, KOS-5897, KOS-5898, KOS-5899, KOS-5900, KOS-5901, KOS-5902, KOS-5903, KOS-5904, KOS-5905, KOS-5906, KOS-5907, KOS-5908, KOS-5909, KOS-5910, KOS-5911, KOS-5912, KOS-5913, KOS-5914, KOS-5915, RS-18, ME-13, ME-03, ME-17, ME-04, ME-01, ME-09, ME-11]
+- date: "1458-06-04"
+  note: "The Acropolis surrenders to the Ottomans, two years after the city of Athens; the Duchy of Athens ends."
+  owners:
+    ottoman: [GR-A1, GR-H!]
+- date: "1459-06-20"
+  note: "Smederevo surrenders; the Serbian Despotate ends."
+  owners:
+    ottoman: [RS-09, RS-10, RS-11, RS-12, RS-13, RS-17, RS-19, RS-21, RS-23, RS-24, RS-16!]
+- date: "1460-05-29"
+  note: "Mehmed II conquers the Despotate of the Morea (1460); only the Venetian ports and Monemvasia stay outside Ottoman rule."
+  owners:
+    ottoman: [GR-J, GR-G~achaea]
+- date: "1462-09"
+  note: "Mehmed II takes Lesbos from the Genoese Gattilusio family."
+  owners:
+    ottoman: [GR-K]
+- date: "1463-06-05"
+  note: "Mehmed II conquers Bosnia; King Stephen Tomašević is executed."
+  owners:
+    ottoman: [BIH-2226, BIH-2889, BIH-2890, BIH-4806, BIH-4801, BIH-2887, BA-BRC, BA-SRP, BIH-4804, BIH-4805, BIH-4802, BIH-2224]
+- date: "1463-12-16"
+  note: "Matthias Corvinus retakes Jajce and organises the banates of Jajce and Srebrenik along the Sava."
+  owners:
+    hungary: [BIH-2226, BIH-4802, BIH-2887, BIH-4801, BA-BRC, BA-SRP]
+- date: "1466"
+  note: "By 1466 the Ottomans hold most of Herzegovina; Herceg Novi and the western strongholds hold out."
+  owners:
+    ottoman: [BA-BIH, BIH-2227, BIH-4808, BIH-2891, BIH-4807, ME-14, ME-21, ME-18, RS-16~sandzak]
+- date: "1470-07-12"
+  note: "Mehmed II takes Negroponte (Chalkis) from Venice."
+  owners:
+    ottoman: [GR-H~euboea]
+- date: "1474"
+  note: "The Ottomans fortify Podgorica."
+  owners:
+    ottoman: [ME-16]
+- date: "1478-06-16"
+  note: "Krujë surrenders to the Ottomans, ten years after Skanderbeg’s death."
+  owners:
+    ottoman: [AL-11, AL-03, AL-09, AL-07, AL-06]
+- date: "1479-01-25"
+  note: "Treaty of Constantinople. Venice cedes Shkodër and Lezhë to the Ottomans."
+  owners:
+    ottoman: [AL-10, AL-08]
+- date: "1482"
+  note: "The Ottomans take Herceg Novi, the last stronghold of Herzegovina."
+  owners:
+    ottoman: [ME-08, ME-12, ME-15]
+- date: "1489-02-26"
+  note: "Queen Catherine Cornaro abdicates; Venice takes over Cyprus."
+  owners:
+    venice: [CY-01, CY-02, CY-03, CY-04, CY-05, CYN+00?]
+- date: "1496"
+  note: "The Ottomans annex Zeta after the last Crnojević ruler leaves for Venice."
+  owners:
+    ottoman: [ME-06, ME-07]
+- date: "1501-08"
+  note: "The Ottomans take Durrës from Venice."
+  owners:
+    ottoman: [AL-02]
+
+# ---- Hungary divided, 1500–1699
+- date: "1500-07-02"
+  note: "The last count of Gorizia dies; the county passes to Maximilian of Habsburg."
+  owners:
+    habsburg: [SI-006, SI-046, SI-128, SI-044, SI-007, SI-084, SI-183, SI-075, SI-001, SI-136, SI-049, SI-111, SI-019, SI-035]
+- date: "1512"
+  note: "The Ottomans take Srebrenik."
+  owners:
+    ottoman: [BIH-2887, BIH-4801, BA-BRC]
+- date: "1521-08-29"
+  note: "Suleiman I takes Belgrade and Šabac."
+  owners:
+    ottoman: [RS-00, RS-08]
+- date: "1522-05-29"
+  note: "The Ottomans take Knin."
+  owners:
+    ottoman: [HR-15]
+- date: "1522-12-22"
+  note: "The Knights Hospitaller surrender Rhodes after a six-month siege and leave on 1 January 1523."
+  owners:
+    ottoman: [GR-L~dodecanese]
+- date: "1526-09"
+  note: "After the battle of Mohács (29 August), the Ottomans keep Syrmia and Osijek."
+  owners:
+    ottoman: [RS-07, HR-16, HR-14]
+- date: "1526-12-17"
+  note: "Two kings for Hungary. John Zápolya, crowned in November, holds the centre and east; Ferdinand of Habsburg, elected on 17 December, holds the west and north. The line between them shifts for years; Zápolya’s kingdom becomes the Principality of Transylvania."
+  owners:
+    habsburg: [HU-GS, HU-GY, HU-SN, HU-VA, HU-SH, HU-ZA, HU-ZE, HU-NK, HU-VE, HU-VE~ottH, HU-VM, HU-KE, HU-TB, HU-SO, HU-SO~ottH, HU-KV, HU-BA~habHun, HU-BZ, HU-MI, HU-HE, HU-EG, HU-NO, HU-ST, SK-BC, SK-BC~hu1938, SK-BL, SK-KI, SK-KI~hu1938, SK-NI, SK-NI~hu1938, SK-PV, SK-TA, SK-TA~hu1938, SK-TC, SK-ZI, SI-002, SI-015, SI-031, SI-033, SI-047, SI-056, SI-059, SI-078, SI-080, SI-097, SI-105, SI-132, SI-152, SI-156, SI-158, SI-187]
+    transylvania: [HU-BA!, HU-PS, HU-TO, HU-SS, HU-FE, HU-SF, HU-DU, HU-ED, HU-BU, HU-PE, HU-BK, HU-KM, HU-SD, HU-CS, HU-HV, HU-BE, HU-BC, HU-JN, HU-SK, HU-HB, HU-DE, HU-SZ, HU-NY, RO-AB, RO-BN, RO-BV, RO-CJ, RO-CV, RO-HD, RO-HR, RO-MS, RO-SB, RO-BH, RO-SJ, RO-SM, RO-MM, RO-AR, RO-TM, RO-CS, RS-02, RS-03, RS-04, RS-01, RS-05, RS-06, UA-21]
+- date: "1527-01-01"
+  note: "The Croatian estates at Cetin elect Ferdinand of Habsburg king."
+  owners:
+    habsburg: [HR-01, HR-21, HR-02, HR-03, HR-05, HR-06, HR-07, HR-10, HR-12, HRV-1604, HR-04, HR-08, HR-09, HR-20]
+- date: "1527-12"
+  note: "The Ottomans take Jajce and Banja Luka."
+  owners:
+    ottoman: [BIH-2226, BIH-4802, BA-SRP]
+- date: "1528"
+  note: "The Ottomans take Lika (Udbina, 1527–1528)."
+  owners:
+    ottoman: [HR-09]
+- date: "1537"
+  note: "The Ottomans take Požega and western Slavonia (1536–1537)."
+  owners:
+    ottoman: [HR-12, HRV-1604]
+- date: "1541-08-29"
+  note: "Suleiman I occupies Buda. Central Hungary becomes an Ottoman province; Queen Isabella and the infant John Sigismund keep the east."
+  owners:
+    ottoman: [HU-BU, HU-PE, HU-ED, HU-BK, HU-KM, HU-SD, HU-CS, HU-HV, RS-01, RS-05, RS-06]
+- date: "1543"
+  note: "The Ottomans take Pécs, Siklós, Esztergom and Székesfehérvár."
+  owners:
+    ottoman: [HU-BA!, HU-PS, HU-TO, HU-SS, HU-FE, HU-SF, HU-DU]
+- date: "1551-07-19"
+  note: "Treaty of Weissenburg. Queen Isabella gives up Transylvania and the eastern counties to Ferdinand of Habsburg in exchange for Silesian duchies."
+  owners:
+    habsburg: [RO-AB, RO-BN, RO-BV, RO-CJ, RO-CV, RO-HD, RO-HR, RO-MS, RO-SB, RO-BH, RO-SJ, RO-SM, RO-MM, RO-AR, RO-TM, RO-CS, HU-HB, HU-DE, HU-SZ, HU-NY, HU-BE, HU-BC, UA-21]
+- date: "1552"
+  note: "The Ottomans take Temesvár and the Banat, Lippa, Szolnok, Nógrád and Veszprém, and Virovitica in Slavonia; Eger holds out."
+  owners:
+    ottoman: [RO-TM, RO-CS, RS-02, RS-03, RS-04, RO-AR, HU-SK, HU-JN, HU-NO, HU-ST, HU-VE~ottH, HR-10, HR-07]
+- date: "1555"
+  note: "The Ottomans take Kaposvár."
+  owners:
+    ottoman: [HU-KV, HU-SO~ottH]
+- date: "1556-10-22"
+  note: "With Ottoman backing, Isabella and her son John Sigismund return to Transylvania; the Habsburg troops leave."
+  owners:
+    transylvania: [RO-AB, RO-BN, RO-BV, RO-CJ, RO-CV, RO-HD, RO-HR, RO-MS, RO-SB, RO-BH, RO-SJ, RO-SM, RO-MM, HU-HB, HU-DE, HU-SZ, HU-NY, HU-BE, HU-BC, UA-21]
+- date: "1566"
+  note: "The Ottomans take Szigetvár (7 September, after Suleiman’s death in his camp) and Gyula."
+  owners:
+    ottoman: [HU-BA~habHun, HU-BE, HU-BC]
+- date: "1571-08-01"
+  note: "Famagusta surrenders after an eleven-month siege; Cyprus is Ottoman. Bar and Ulcinj fall the same year."
+  owners:
+    ottoman: [CY-01, CY-02, CY-03, CY-04, CY-05, CYN+00?, ME-02, ME-20]
+- date: "1579"
+  note: "After the death of Joseph Nasi, whom Selim II made duke in 1566, the Cyclades come under direct Ottoman rule."
+  owners:
+    ottoman: [GR-L!]
+- date: "1592-06-19"
+  note: "The Ottomans take Bihać."
+  owners:
+    ottoman: [BIH-2225]
+- date: "1594"
+  note: "Archduke Matthias retakes Nógrád during the Long Turkish War."
+  owners:
+    habsburg: [HU-NO]
+- date: "1596-10-12"
+  note: "The Ottomans take Eger."
+  owners:
+    ottoman: [HU-HE, HU-EG]
+- date: "1600-10-22"
+  note: "The Ottomans take Kanizsa."
+  owners:
+    ottoman: [HU-NK]
+- date: "1660-08-27"
+  note: "The Ottomans take Várad (Oradea) from Transylvania."
+  owners:
+    ottoman: [RO-BH, HU-HB, HU-DE]
+- date: "1663-09-25"
+  note: "The Ottomans take Érsekújvár (Nové Zámky) and Nógrád; the Treaty of Vasvár (1664) leaves them to the Ottomans."
+  owners:
+    ottoman: [SK-NI~hu1938, HU-NO]
+- date: "1669-09-27"
+  note: "Candia (Heraklion) surrenders after a siege of 21 years; Venice keeps only three island forts off Crete."
+  owners:
+    ottoman: [GR-M]
+- date: "1696"
+  note: "Danilo I becomes prince-bishop of Montenegro (1696 or 1697); Old Montenegro around Cetinje is in practice independent of Ottoman rule."
+  owners:
+    montenegro: [ME-06]
+- date: "1699-01-26"
+  note: "Treaty of Karlowitz. The Ottomans cede Hungary (except the Banat), Transylvania and Slavonia to the Habsburgs, the Morea and inland Dalmatia to Venice, and Podolia to Poland–Lithuania."
+  owners:
+    habsburg: [HU-BA, HU-BA~habHun, HU-BC, HU-BE, HU-BK, HU-BU, HU-BZ, HU-CS, HU-DE, HU-DU, HU-ED, HU-EG, HU-FE, HU-GS, HU-GY, HU-HB, HU-HE, HU-HV, HU-JN, HU-KE, HU-KM, HU-KV, HU-MI, HU-NK, HU-NO, HU-NY, HU-PE, HU-PS, HU-SD, HU-SF, HU-SH, HU-SK, HU-SN, HU-SO, HU-SO~ottH, HU-SS, HU-ST, HU-SZ, HU-TB, HU-TO, HU-VA, HU-VE, HU-VE~ottH, HU-VM, HU-ZA, HU-ZE, SK-BC, SK-BC~hu1938, SK-BL, SK-KI, SK-KI~hu1938, SK-NI, SK-NI~hu1938, SK-PV, SK-TA, SK-TA~hu1938, SK-TC, SK-ZI, RO-AB, RO-BN, RO-BV, RO-CJ, RO-CV, RO-HD, RO-HR, RO-MS, RO-SB, RO-BH, RO-SJ, RO-SM, RO-MM, RO-AR, RS-01, RS-05, RS-06, RS-07, HR-14, HR-16, HR-12, HRV-1604, HR-10, HR-07, HR-09, UA-21]
+    venice: [GR-J, GR-G~achaea, HR-15, ME-08]
+    poland: [MD-CAM, MD-RE]
+
+# ---- Habsburgs, Venice and the Ottomans, 1699–1830
+- date: "1715-09-13"
+  note: "The Ottomans complete the reconquest of the Morea from Venice in a single summer campaign; the Treaty of Passarowitz (1718) confirms it."
+  owners:
+    ottoman: [GR-J, GR-G~achaea]
 - date: "1718-07-21"
-  note: Treaty of Passarowitz. The Ottomans cede Oltenia, western Wallachia, to the Habsburgs.
+  note: "Treaty of Passarowitz. The Ottomans cede the Banat, northern Serbia and Oltenia to the Habsburgs."
   owners:
-    habsburg: [RO-DJ, RO-GJ, RO-MH, RO-VL, RO-OT]
+    habsburg: [RO-TM, RO-CS, RS-02, RS-03, RS-04, RS-00, RS-08, RS-09, RS-10, RS-11, RS-12, RS-13, RS-17, RO-DJ, RO-GJ, RO-MH, RO-OT, RO-VL]
 - date: "1739-09-18"
-  note: Treaty of Belgrade. The Habsburgs return Oltenia to Wallachia.
+  note: "Treaty of Belgrade. The Habsburgs return northern Serbia with Belgrade to the Ottomans and Oltenia to Wallachia."
   owners:
-    wallachia: [RO-DJ, RO-GJ, RO-MH, RO-VL, RO-OT]
+    ottoman: [RS-00, RS-08, RS-09, RS-10, RS-11, RS-12, RS-13, RS-17]
+    wallachia: [RO-DJ, RO-GJ, RO-MH, RO-OT, RO-VL]
 - date: "1775-05-07"
-  note: The Ottomans cede Bukovina, the north-western corner of Moldavia, to the Habsburgs, who had occupied it in 1774.
+  note: "The Ottomans cede Bukovina, the north-western corner of Moldavia, to the Habsburgs, who had occupied it in 1774."
   owners:
-    habsburg: [RO-SV]
+    habsburg: [RO-SV, UA-77!]
+- date: "1796-09-22"
+  note: "After the Montenegrin victory at Krusi, the Bjelopavlići and Piperi clans join Montenegro."
+  owners:
+    montenegro: [ME-07]
+- date: "1797-10-17"
+  note: "Treaty of Campo Formio. The Republic of Venice is abolished; Austria takes Venetian Albania with the Bay of Kotor, and France the Ionian Islands."
+  owners:
+    habsburg: [ME-10, ME-19, ME-05, ME-08]
+    france: [GR-F]
+- date: "1800-03-21"
+  note: "Russia and the Ottomans set up the Septinsular Republic in the Ionian Islands, under Ottoman suzerainty."
+  owners:
+    ionian-islands: [GR-F]
+- date: "1805-12-26"
+  note: "Treaty of Pressburg. Austria cedes the former Venetian lands, with the Bay of Kotor, to Napoleon’s Kingdom of Italy."
+  owners:
+    napoleonic-italy: [ME-10, ME-19, ME-05, ME-08]
+- date: "1807-07-07"
+  note: "Treaty of Tilsit. Russia gives the Ionian Islands to France."
+  owners:
+    france: [GR-F]
+- date: "1808-01-31"
+  note: "Marshal Marmont abolishes the Republic of Ragusa, which is joined to the Kingdom of Italy."
+  owners:
+    napoleonic-italy: [HR-19]
 - date: "1809-10-14"
-  note: Treaty of Schönbrunn. Austria cedes Carniola, Gorizia, Trieste, Istria, western Carinthia and Croatia south of the Sava; with Dalmatia and Ragusa from the Kingdom of Italy they form the Illyrian Provinces of the French Empire.
+  note: "Treaty of Schönbrunn. Austria cedes Carniola, Gorizia, Trieste, Istria, western Carinthia and Croatia south of the Sava; with Dalmatia, Ragusa and Kotor from the Kingdom of Italy they form the Illyrian Provinces of the French Empire."
   owners:
-    illyrian-provinces: [SI-001, SI-003, SI-004, SI-005, SI-006, SI-007, SI-008, SI-012, SI-013, SI-014, SI-017, SI-019, SI-020, SI-021, SI-022, SI-023, SI-027, SI-032, SI-035, SI-036, SI-037, SI-038, SI-039, SI-040, SI-041, SI-043, SI-044, SI-046, SI-048, SI-049, SI-05, SI-050, SI-052, SI-053, SI-054, SI-060, SI-061, SI-064, SI-065, SI-066, SI-068, SI-071, SI-072, SI-073, SI-075, SI-077, SI-082, SI-084, SI-085, SI-090, SI-091, SI-094, SI-095, SI-099, SI-102, SI-104, SI-109, SI-111, SI-117, SI-119, SI-121, SI-122, SI-123, SI-128, SI-130, SI-131, SI-134, SI-136, SI-138, SI-140, SI-146, SI-147, SI-150, SI-157, SI-162, SI-163, SI-164, SI-165, SI-170, SI-179, SI-183, SI-186, SI-192, SI-193, SI-194, IT-GO, IT-TS, HR-18, HR-08, HR-09, HR-04, HR-03, HR-13, HR-15, HR-17, HR-19]
+    illyrian-provinces: [SI-001, SI-003, SI-004, SI-005, SI-006, SI-007, SI-008, SI-012, SI-013, SI-014, SI-017, SI-019, SI-020, SI-021, SI-022, SI-023, SI-027, SI-032, SI-035, SI-036, SI-037, SI-038, SI-039, SI-040, SI-041, SI-043, SI-044, SI-046, SI-048, SI-049, SI-05, SI-050, SI-052, SI-053, SI-054, SI-060, SI-061, SI-064, SI-065, SI-066, SI-068, SI-071, SI-072, SI-073, SI-075, SI-077, SI-082, SI-084, SI-085, SI-090, SI-091, SI-094, SI-095, SI-099, SI-102, SI-104, SI-109, SI-111, SI-117, SI-119, SI-121, SI-122, SI-123, SI-128, SI-130, SI-131, SI-134, SI-136, SI-138, SI-140, SI-146, SI-147, SI-150, SI-157, SI-162, SI-163, SI-164, SI-165, SI-170, SI-179, SI-183, SI-186, SI-192, SI-193, SI-194, IT-GO, IT-TS, HR-18, HR-08, HR-09, HR-04, HR-03, HR-13, HR-15, HR-17, HR-19, ME-10, ME-19, ME-05, ME-08]
 - date: "1814-05-30"
-  note: After Austria reconquers the Illyrian Provinces in 1813, the First Peace of Paris returns them, with Dalmatia and Ragusa, to Austria.
+  note: "After Austria reconquers the Illyrian Provinces in 1813, the First Peace of Paris returns them, with Dalmatia, Ragusa and Kotor, to Austria."
   owners:
-    habsburg: [SI-001, SI-003, SI-004, SI-005, SI-006, SI-007, SI-008, SI-012, SI-013, SI-014, SI-017, SI-019, SI-020, SI-021, SI-022, SI-023, SI-027, SI-032, SI-035, SI-036, SI-037, SI-038, SI-039, SI-040, SI-041, SI-043, SI-044, SI-046, SI-048, SI-049, SI-05, SI-050, SI-052, SI-053, SI-054, SI-060, SI-061, SI-064, SI-065, SI-066, SI-068, SI-071, SI-072, SI-073, SI-075, SI-077, SI-082, SI-084, SI-085, SI-090, SI-091, SI-094, SI-095, SI-099, SI-102, SI-104, SI-109, SI-111, SI-117, SI-119, SI-121, SI-122, SI-123, SI-128, SI-130, SI-131, SI-134, SI-136, SI-138, SI-140, SI-146, SI-147, SI-150, SI-157, SI-162, SI-163, SI-164, SI-165, SI-170, SI-179, SI-183, SI-186, SI-192, SI-193, SI-194, IT-GO, IT-TS, HR-18, HR-08, HR-09, HR-04, HR-03, HR-13, HR-15, HR-17, HR-19]
+    habsburg: [SI-001, SI-003, SI-004, SI-005, SI-006, SI-007, SI-008, SI-012, SI-013, SI-014, SI-017, SI-019, SI-020, SI-021, SI-022, SI-023, SI-027, SI-032, SI-035, SI-036, SI-037, SI-038, SI-039, SI-040, SI-041, SI-043, SI-044, SI-046, SI-048, SI-049, SI-05, SI-050, SI-052, SI-053, SI-054, SI-060, SI-061, SI-064, SI-065, SI-066, SI-068, SI-071, SI-072, SI-073, SI-075, SI-077, SI-082, SI-084, SI-085, SI-090, SI-091, SI-094, SI-095, SI-099, SI-102, SI-104, SI-109, SI-111, SI-117, SI-119, SI-121, SI-122, SI-123, SI-128, SI-130, SI-131, SI-134, SI-136, SI-138, SI-140, SI-146, SI-147, SI-150, SI-157, SI-162, SI-163, SI-164, SI-165, SI-170, SI-179, SI-183, SI-186, SI-192, SI-193, SI-194, IT-GO, IT-TS, HR-18, HR-08, HR-09, HR-04, HR-03, HR-13, HR-15, HR-17, HR-19, ME-10, ME-19, ME-05, ME-08]
+- date: "1815-11-05"
+  note: "Treaty of Paris. The Ionian Islands become the United States of the Ionian Islands under British protection."
+  owners:
+    ionian-islands: [GR-F]
+- date: "1817-11-06"
+  note: "The assembly in Belgrade recognises Miloš Obrenović as hereditary prince. Serbia, autonomous in practice since the Second Serbian Uprising (1815), has its status confirmed by the sultan in 1830."
+  owners:
+    serbia: [RS-00, RS-08, RS-09, RS-10, RS-11, RS-12, RS-13, RS-17, RS-16!, RS-18!]
 - date: "1829-09-14"
-  note: Treaty of Adrianople. The Ottoman fortresses on the Danube's left bank, Brăila among them, go back to Wallachia, and the principalities come under Russian protection.
+  note: "Treaty of Adrianople. The Ottoman fortresses on the Danube’s left bank, Brăila among them, go back to Wallachia, and the principalities come under Russian protection."
   owners:
     wallachia: [RO-BR]
-- date: "1859-01-24"
-  note: Alexandru Ioan Cuza, already prince of Moldavia, is elected prince of Wallachia too. The United Principalities take the name Romania in 1862 and become independent in 1878.
-  owners:
-    romania: [RO-IS, RO-BC, RO-NT, RO-BT, RO-VS, RO-GL, RO-VN, RO-B, RO-IF, RO-AG, RO-DB, RO-PH, RO-BZ, RO-CL, RO-GR, RO-IL, RO-TR, RO-OT, RO-DJ, RO-GJ, RO-MH, RO-VL, RO-BR]
 
-# ---- 1878–1885 (Serbia autonomous from 1817–1830 and Montenegro de facto
-# independent are shown as their own states in the 1815 keyframe)
-- date: "1878-07-13"
-  note: Congress of Berlin. Romania, Serbia and Montenegro become independent and gain land; Romania takes northern Dobruja in exchange for southern Bessarabia. A smaller Bulgaria than the one agreed at San Stefano becomes an autonomous principality; Eastern Rumelia stays an Ottoman province with its own governor, and Macedonia goes back to the Ottomans. Austria-Hungary occupies Bosnia and Herzegovina.
+# ---- The new Balkan states, 1830–1912
+- date: "1830-02-03"
+  note: "London Protocol. Britain, France and Russia recognise Greece as an independent kingdom: the Peloponnese, Central Greece south of a line from the Aspropotamos to Zitouni, Euboea and the Cyclades."
   owners:
-    bulgaria: [BG-03, BG-04, BG-05, BG-06, BG-07, BG-08, BG-10, BG-11, BG-12, BG-14, BG-15, BG-17, BG-18, BG-19, BG-22, BG-23, BG-25, BG-27]
+    greece: [GR-J, GR-G~achaea, GR-A1, GR-H, GR-L!]
+- date: "1830-06"
+  note: "The sultan gives Crete to Muhammad Ali of Egypt in return for his help against the Greek revolution."
+  owners:
+    egypt: [GR-M]
+- date: "1832-07-21"
+  note: "Treaty of Constantinople. The Ottomans accept the Arta–Volos line, which adds Acarnania to Greece."
+  owners:
+    greece: [GR-G!]
+- date: "1833"
+  note: "A decree of the sultan adds six districts to Serbia, among them the Krajina, Crna Reka and Kruševac."
+  owners:
+    serbia: [RS-14, RS-15, RS-19]
+- date: "1840-11-27"
+  note: "Muhammad Ali accepts the London convention and returns Crete and Syria to the Ottomans."
+  owners:
+    ottoman: [GR-M]
+- date: "1859-01-24"
+  note: "Alexandru Ioan Cuza, already prince of Moldavia, is elected prince of Wallachia too. The United Principalities take the name Romania in 1862 and become independent in 1878."
+  owners:
+    romania: [RO-DJ, RO-GJ, RO-MH, RO-OT, RO-VL, RO-AG, RO-B, RO-BR, RO-BZ, RO-CL, RO-DB, RO-GR, RO-IF, RO-IL, RO-PH, RO-TR, RO-BC, RO-BT, RO-GL, RO-IS, RO-NT, RO-VN, RO-VS]
+- date: "1859-11-08"
+  note: "A boundary commission marks Montenegro’s border after its victory at Grahovac (1858), adding Grahovo, Drobnjak and the upper Vasojevići."
+  owners:
+    montenegro: [ME-18, ME-21, ME-01]
+- date: "1864-05-28"
+  note: "Britain hands the Ionian Islands to Greece, as agreed in the Treaty of London of March 1864."
+  owners:
+    greece: [GR-F]
+- date: "1867-02-08"
+  note: "The Austro-Hungarian Compromise. The Austrian Empire becomes the Dual Monarchy of Austria-Hungary: Hungary with Transylvania, Croatia–Slavonia and the Banat under a government in Budapest; Slovenia, Istria, Dalmatia and Bukovina under Vienna."
+  owners:
+    austria-hungary: [HU-BA, HU-BA~habHun, HU-BC, HU-BE, HU-BK, HU-BU, HU-BZ, HU-CS, HU-DE, HU-DU, HU-ED, HU-EG, HU-FE, HU-GS, HU-GY, HU-HB, HU-HE, HU-HV, HU-JN, HU-KE, HU-KM, HU-KV, HU-MI, HU-NK, HU-NO, HU-NY, HU-PE, HU-PS, HU-SD, HU-SF, HU-SH, HU-SK, HU-SN, HU-SO, HU-SO~ottH, HU-SS, HU-ST, HU-SZ, HU-TB, HU-TO, HU-VA, HU-VE, HU-VE~ottH, HU-VM, HU-ZA, HU-ZE, SK-BC, SK-BC~hu1938, SK-BL, SK-KI, SK-KI~hu1938, SK-NI, SK-NI~hu1938, SK-PV, SK-TA, SK-TA~hu1938, SK-TC, SK-ZI, RO-AB, RO-BN, RO-BV, RO-CJ, RO-CV, RO-HD, RO-HR, RO-MS, RO-SB, RO-BH, RO-SJ, RO-SM, RO-MM, RO-AR, RO-TM, RO-CS, RO-SV, RS-01, RS-02, RS-03, RS-04, RS-05, RS-06, RS-07, HR-01, HR-02, HR-03, HR-04, HR-05, HR-06, HR-07, HR-08, HR-09, HR-10, HR-12, HR-13, HR-14, HR-15, HR-16, HR-17, HR-18, HR-19, HR-20, HR-21, HRV-1604, SI-001, SI-002, SI-003, SI-004, SI-005, SI-006, SI-007, SI-008, SI-009, SI-011, SI-012, SI-013, SI-014, SI-015, SI-016, SI-017, SI-018, SI-019, SI-020, SI-021, SI-022, SI-023, SI-024, SI-025, SI-026, SI-027, SI-028, SI-029, SI-030, SI-031, SI-032, SI-033, SI-034, SI-035, SI-036, SI-037, SI-038, SI-039, SI-040, SI-041, SI-042, SI-043, SI-044, SI-045, SI-046, SI-047, SI-048, SI-049, SI-05, SI-050, SI-051, SI-052, SI-053, SI-054, SI-055, SI-056, SI-057, SI-058, SI-059, SI-060, SI-061, SI-062, SI-063, SI-064, SI-065, SI-066, SI-067, SI-068, SI-069, SI-070, SI-071, SI-072, SI-073, SI-074, SI-075, SI-076, SI-077, SI-078, SI-079, SI-080, SI-081, SI-082, SI-083, SI-084, SI-085, SI-087, SI-089, SI-090, SI-091, SI-092, SI-093, SI-094, SI-095, SI-096, SI-097, SI-098, SI-099, SI-100, SI-101, SI-102, SI-103, SI-104, SI-105, SI-106, SI-107, SI-108, SI-109, SI-110, SI-111, SI-112, SI-113, SI-114, SI-115, SI-116, SI-117, SI-118, SI-119, SI-120, SI-121, SI-122, SI-123, SI-124, SI-125, SI-126, SI-127, SI-128, SI-129, SI-130, SI-131, SI-132, SI-133, SI-134, SI-135, SI-136, SI-137, SI-138, SI-139, SI-140, SI-141, SI-144, SI-146, SI-147, SI-148, SI-149, SI-150, SI-151, SI-152, SI-153, SI-154, SI-155, SI-156, SI-157, SI-158, SI-159, SI-160, SI-162, SI-163, SI-164, SI-165, SI-166, SI-167, SI-168, SI-169, SI-170, SI-171, SI-172, SI-173, SI-174, SI-175, SI-177, SI-178, SI-179, SI-180, SI-181, SI-182, SI-183, SI-184, SI-185, SI-186, SI-187, SI-188, SI-189, SI-190, SI-191, SI-192, SI-193, SI-194, SI-195, ME-10, ME-19, ME-05, ME-08, UA-21]
+- date: "1878-06-04"
+  note: "Cyprus Convention. The Ottomans hand the administration of Cyprus to Britain in return for an alliance against Russia; Britain annexes it in 1914."
+  owners:
+    united-kingdom: [CY-01, CY-02, CY-03, CY-04, CY-05, CYN+00?]
+- date: "1878-07-13"
+  note: "Congress of Berlin. Romania, Serbia and Montenegro become independent and gain land; Romania takes northern Dobruja in exchange for southern Bessarabia. A smaller Bulgaria than the one agreed at San Stefano becomes an autonomous principality, Eastern Rumelia an autonomous Ottoman province. Austria-Hungary occupies Bosnia and Herzegovina."
+  owners:
+    bulgaria: [BG-03, BG-04, BG-05, BG-06, BG-07, BG-08, BG-10, BG-11, BG-12, BG-15, BG-17, BG-18, BG-19, BG-22, BG-23, BG-25, BG-27, BG-14]
+    eastern-rumelia: [BG-02, BG-13, BG-16, BG-20, BG-24, BG-26, BG-28]
     serbia: [RS-20, RS-21, RS-22, RS-23, RS-24]
     montenegro: [ME-02, ME-09, ME-12, ME-16, ME-15, ME-11]
     romania: [RO-CT, RO-TL]
+    austria-hungary: [BA-BIH, BA-BRC, BA-SRP, BIH-2224, BIH-2225, BIH-2226, BIH-2227, BIH-2887, BIH-2889, BIH-2890, BIH-2891, BIH-4801, BIH-4802, BIH-4804, BIH-4805, BIH-4806, BIH-4807, BIH-4808]
 - date: "1880-11-26"
-  note: Under pressure from the Great Powers, the Ottomans hand Ulcinj to Montenegro in place of Plav and Gusinje.
+  note: "Under pressure from the Great Powers, the Ottomans hand Ulcinj to Montenegro in place of Plav and Gusinje."
   owners:
     montenegro: [ME-20]
+- date: "1881-07-02"
+  note: "Convention of Constantinople. The Ottomans cede Thessaly and the district of Arta to Greece."
+  owners:
+    greece: [GR-E]
 - date: "1885-09-18"
-  note: A bloodless coup in Plovdiv unites Eastern Rumelia with Bulgaria; the union survives the Serbo-Bulgarian War that follows.
+  note: "A bloodless coup in Plovdiv unites Eastern Rumelia with Bulgaria; the union survives the Serbo-Bulgarian War that follows."
   owners:
     bulgaria: [BG-02, BG-13, BG-16, BG-20, BG-24, BG-26, BG-28]
+- date: "1898-12-21"
+  note: "Prince George of Greece arrives as high commissioner of the autonomous Cretan State; the last Ottoman troops left in November."
+  owners:
+    cretan-state: [GR-M]
+- date: "1912-10-18"
+  note: "Treaty of Ouchy ends the Italo-Turkish War. Italy keeps the Dodecanese, occupied in May 1912, pending an Ottoman withdrawal from Libya that never fully happens."
+  owners:
+    italy: [GR-L~dodecanese]
+
+# ---- The Balkan Wars and the First World War, 1912–1920
+- date: "1913-05-30"
+  note: "Treaty of London. The Ottomans give up everything west of a line from Enos to Midia. The allies keep the land they occupied: Serbia most of Macedonia, Kosovo and the Sandžak; Greece southern Macedonia and Epirus; Montenegro the upper Lim valley and western Kosovo; Bulgaria eastern Macedonia, Thrace and the Rhodopes."
+  owners:
+    serbia: [MK-01, MK-02, MK-03, MK-04, MK-05, MK-06, MK-08, MK-09, MK-10, MK-12, MK-13, MK-14, MK-15, MK-16, MK-17, MK-18, MK-19, MK-20, MK-21, MK-22, MK-23, MK-24, MK-25, MK-26, MK-27, MK-28, MK-29, MK-30, MK-31, MK-32, MK-33, MK-34, MK-35, MK-36, MK-37, MK-38, MK-39, MK-40, MK-41, MK-42, MK-43, MK-44, MK-45, MK-46, MK-47, MK-48, MK-49, MK-50, MK-51, MK-52, MK-53, MK-54, MK-55, MK-57, MK-58, MK-60, MK-61, MK-62, MK-63, MK-64, MK-65, MK-66, MK-67, MK-68, MK-69, MK-70, MK-71, MK-72, MK-74, MK-75, MK-76, MK-78, MK-80, MK-81, MK-82, MK-83, MK-85, KOS-5891, KOS-5892, KOS-5893, KOS-5894, KOS-5895, KOS-5896, KOS-5897, KOS-5898, KOS-5899, KOS-5900, KOS-5901, KOS-5902, KOS-5903, KOS-5904, KOS-5905, KOS-5906, KOS-5907, KOS-5908, KOS-5909, KOS-5910, KOS-5911, KOS-5912, KOS-5913, KOS-5914, KOS-5915, RS-16~sandzak, RS-18~sandzak]
+    montenegro: [KOS-5886, KOS-5887, KOS-5888, KOS-5889, KOS-5890, ME-13, ME-03, ME-17, ME-04, ME-14]
+    greece: [GR-B, GR-C, GR-D, GR-69]
+    bulgaria: [GR-A, TR-22, TR-39, BG-01, BG-09, BG-21, MK-73, MK-56, MK-07, MK-11]
+- date: "1913-07-29"
+  note: "The Conference of Ambassadors in London recognises Albania as an independent principality; its southern border follows in December."
+  owners:
+    albania: [AL-01, AL-02, AL-03, AL-04, AL-07, AL-08, AL-09, AL-10, AL-11, AL-12]
+- date: "1913-08-10"
+  note: "Treaty of Bucharest ends the Second Balkan War. Greece takes eastern Macedonia with Kavala, Romania southern Dobruja; Bulgaria keeps the Strumica valley and western Thrace."
+  owners:
+    greece: [GR-A!]
+    romania: [BG-08, BG-19]
+- date: "1913-09-29"
+  note: "Treaty of Constantinople. Bulgaria returns Adrianople and eastern Thrace, retaken by the Ottomans in July."
+  owners:
+    ottoman: [TR-22, TR-39]
+- date: "1913-11-14"
+  note: "Treaty of Athens between Greece and the Ottomans. The Great Powers award Greece the north-eastern Aegean islands occupied in 1912 (February 1914); the Ottomans accept it only at Lausanne in 1923."
+  owners:
+    greece: [GR-K]
+- date: "1913-12-01"
+  note: "Crete is formally united with Greece."
+  owners:
+    greece: [GR-M]
+- date: "1913-12-17"
+  note: "The Protocol of Florence gives Gjirokastër and Korçë to Albania; Greek troops leave in 1914."
+  owners:
+    albania: [AL-05, AL-06]
+- date: "1918-10-28"
+  note: "The Czechoslovak Republic is proclaimed in Prague; Slovak leaders join it two days later at Martin."
+  owners:
+    czechoslovakia: [SK-BC, SK-BC~hu1938, SK-BL, SK-KI, SK-KI~hu1938, SK-NI, SK-NI~hu1938, SK-PV, SK-TA, SK-TA~hu1938, SK-TC, SK-ZI]
+- date: "1918-11-03"
+  note: "Armistice of Villa Giusti. Italian troops occupy the Slovene Littoral and Istria up to the line promised in the 1915 Treaty of London; the Treaty of Rapallo (12 November 1920) confirms them as Italian."
+  owners:
+    italy: [SI-006, SI-046, SI-128, SI-044, SI-007, SI-084, SI-183, SI-075, SI-001, SI-136, SI-049, SI-111, SI-019, SI-035, SI-038, SI-091, SI-094, SI-036, SI-014, SI-050, SI-040, SI-090, HR-18]
+- date: "1918-11-16"
+  note: "The Hungarian People’s Republic is proclaimed; Austria-Hungary has dissolved."
+  owners:
+    hungary: [HU-BA, HU-BA~habHun, HU-BC, HU-BE, HU-BK, HU-BU, HU-BZ, HU-CS, HU-DE, HU-DU, HU-ED, HU-EG, HU-FE, HU-GS, HU-GY, HU-HB, HU-HE, HU-HV, HU-JN, HU-KE, HU-KM, HU-KV, HU-MI, HU-NK, HU-NO, HU-NY, HU-PE, HU-PS, HU-SD, HU-SF, HU-SH, HU-SK, HU-SN, HU-SO, HU-SO~ottH, HU-SS, HU-ST, HU-SZ, HU-TB, HU-TO, HU-VA, HU-VE, HU-VE~ottH, HU-VM, HU-ZA, HU-ZE, RO-AB, RO-BN, RO-BV, RO-CJ, RO-CV, RO-HD, RO-HR, RO-MS, RO-SB, RO-BH, RO-SJ, RO-SM, RO-MM, RO-AR, RO-TM, RO-CS, UA-21, HR-20, SI-002, SI-015, SI-031, SI-033, SI-047, SI-056, SI-059, SI-078, SI-080, SI-097, SI-105, SI-132, SI-152, SI-156, SI-158, SI-187]
+- date: "1918-11-26"
+  note: "The Podgorica Assembly deposes King Nicholas and votes for union with Serbia."
+  owners:
+    serbia: [ME-01, ME-02, ME-03, ME-04, ME-06, ME-07, ME-09, ME-11, ME-12, ME-13, ME-14, ME-15, ME-16, ME-17, ME-18, ME-20, ME-21]
+- date: "1918-11-28"
+  note: "The General Congress of Bukovina in Czernowitz votes for union with Romania."
+  owners:
+    romania: [RO-SV]
+- date: "1918-12-01"
+  note: "The Kingdom of Serbs, Croats and Slovenes is proclaimed in Belgrade, uniting Serbia and Montenegro with the South Slav lands of Austria-Hungary, Vojvodina among them. The same day an assembly at Alba Iulia votes for the union of Transylvania with Romania."
+  owners:
+    yugoslavia: [SI-003, SI-004, SI-005, SI-008, SI-009, SI-011, SI-012, SI-013, SI-016, SI-017, SI-018, SI-020, SI-021, SI-022, SI-023, SI-024, SI-025, SI-026, SI-027, SI-028, SI-029, SI-030, SI-032, SI-034, SI-037, SI-039, SI-041, SI-042, SI-043, SI-045, SI-048, SI-05, SI-051, SI-052, SI-053, SI-054, SI-055, SI-057, SI-058, SI-060, SI-061, SI-062, SI-063, SI-064, SI-065, SI-066, SI-067, SI-068, SI-069, SI-070, SI-071, SI-072, SI-073, SI-074, SI-076, SI-077, SI-079, SI-081, SI-082, SI-083, SI-085, SI-087, SI-089, SI-092, SI-093, SI-095, SI-096, SI-098, SI-099, SI-100, SI-101, SI-102, SI-103, SI-104, SI-106, SI-107, SI-108, SI-109, SI-110, SI-112, SI-113, SI-114, SI-115, SI-116, SI-117, SI-118, SI-119, SI-120, SI-121, SI-122, SI-123, SI-124, SI-125, SI-126, SI-127, SI-129, SI-130, SI-131, SI-133, SI-134, SI-135, SI-137, SI-138, SI-139, SI-140, SI-141, SI-144, SI-146, SI-147, SI-148, SI-149, SI-150, SI-151, SI-153, SI-154, SI-155, SI-157, SI-159, SI-160, SI-162, SI-163, SI-164, SI-165, SI-166, SI-167, SI-168, SI-169, SI-170, SI-171, SI-172, SI-173, SI-174, SI-175, SI-177, SI-178, SI-179, SI-180, SI-181, SI-182, SI-184, SI-185, SI-186, SI-188, SI-189, SI-190, SI-191, SI-192, SI-193, SI-194, SI-195, HR-01, HR-02, HR-03, HR-04, HR-05, HR-06, HR-07, HR-08, HR-09, HR-10, HR-12, HR-13, HR-14, HR-15, HR-16, HR-17, HR-19, HR-21, HRV-1604, BA-BIH, BA-BRC, BA-SRP, BIH-2224, BIH-2225, BIH-2226, BIH-2227, BIH-2887, BIH-2889, BIH-2890, BIH-2891, BIH-4801, BIH-4802, BIH-4804, BIH-4805, BIH-4806, BIH-4807, BIH-4808, ME-01, ME-02, ME-03, ME-04, ME-05, ME-06, ME-07, ME-08, ME-09, ME-10, ME-11, ME-12, ME-13, ME-14, ME-15, ME-16, ME-17, ME-18, ME-19, ME-20, ME-21, RS-00, RS-01, RS-02, RS-03, RS-04, RS-05, RS-06, RS-07, RS-08, RS-09, RS-10, RS-11, RS-12, RS-13, RS-14, RS-15, RS-16, RS-16~sandzak, RS-17, RS-18, RS-18~sandzak, RS-19, RS-20, RS-21, RS-22, RS-23, RS-24, KOS-5886, KOS-5887, KOS-5888, KOS-5889, KOS-5890, KOS-5891, KOS-5892, KOS-5893, KOS-5894, KOS-5895, KOS-5896, KOS-5897, KOS-5898, KOS-5899, KOS-5900, KOS-5901, KOS-5902, KOS-5903, KOS-5904, KOS-5905, KOS-5906, KOS-5907, KOS-5908, KOS-5909, KOS-5910, KOS-5911, KOS-5912, KOS-5913, KOS-5914, KOS-5915, MK-01, MK-02, MK-03, MK-04, MK-05, MK-06, MK-08, MK-09, MK-10, MK-12, MK-13, MK-14, MK-15, MK-16, MK-17, MK-18, MK-19, MK-20, MK-21, MK-22, MK-23, MK-24, MK-25, MK-26, MK-27, MK-28, MK-29, MK-30, MK-31, MK-32, MK-33, MK-34, MK-35, MK-36, MK-37, MK-38, MK-39, MK-40, MK-41, MK-42, MK-43, MK-44, MK-45, MK-46, MK-47, MK-48, MK-49, MK-50, MK-51, MK-52, MK-53, MK-54, MK-55, MK-57, MK-58, MK-60, MK-61, MK-62, MK-63, MK-64, MK-65, MK-66, MK-67, MK-68, MK-69, MK-70, MK-71, MK-72, MK-74, MK-75, MK-76, MK-78, MK-80, MK-81, MK-82, MK-83, MK-85]
+    romania: [RO-AB, RO-BN, RO-BV, RO-CJ, RO-CV, RO-HD, RO-HR, RO-MS, RO-SB]
+- date: "1919-09-10"
+  note: "Treaty of Saint-Germain. Carpathian Ruthenia is assigned to Czechoslovakia."
+  owners:
+    czechoslovakia: [UA-21]
+- date: "1919-11-27"
+  note: "Treaty of Neuilly. Bulgaria cedes the Strumica valley to Yugoslavia and western Thrace to the Allies."
+  owners:
+    yugoslavia: [MK-73, MK-56, MK-07, MK-11]
+- date: "1920-05-14"
+  note: "The Allies hand western Thrace to Greece, which confirms its rule in the Treaty of Sèvres."
+  owners:
+    greece: [GR-A~thrace]
+- date: "1920-06-04"
+  note: "Treaty of Trianon. Hungary loses two-thirds of its territory: the Banat, Crișana and Maramureș go to Romania, Međimurje and Prekmurje to Yugoslavia."
+  owners:
+    romania: [RO-BH, RO-SJ, RO-SM, RO-MM, RO-AR, RO-TM, RO-CS]
+    yugoslavia: [HR-20, SI-002, SI-015, SI-031, SI-033, SI-047, SI-056, SI-059, SI-078, SI-080, SI-097, SI-105, SI-132, SI-152, SI-156, SI-158, SI-187]
+
+# ---- 1938–today
+- date: "1938-11-02"
+  note: "First Vienna Award. Germany and Italy give southern Slovakia, with Košice, to Hungary."
+  owners:
+    hungary: [SK-TA~hu1938, SK-NI~hu1938, SK-BC~hu1938, SK-KI~hu1938]
+- date: "1939-03-14"
+  note: "Slovakia declares independence under German protection; Germany occupies Bohemia and Moravia the next day."
+  owners:
+    slovakia: [SK-BC, SK-BL, SK-KI, SK-NI, SK-PV, SK-TA, SK-TC, SK-ZI]
+- date: "1939-03-15"
+  note: "Carpatho-Ukraine declares independence; Hungary occupies it the same day."
+  owners:
+    hungary: [UA-21]
+- date: "1940-08-30"
+  note: "Second Vienna Award. Germany and Italy give northern Transylvania to Hungary."
+  owners:
+    hungary: [RO-BH, RO-SJ, RO-SM, RO-MM, RO-BN, RO-CJ, RO-MS, RO-HR, RO-CV]
+- date: "1940-09-07"
+  note: "Treaty of Craiova. Romania returns southern Dobruja to Bulgaria."
+  owners:
+    bulgaria: [BG-08, BG-19]
+- date: "1945-03-09"
+  note: "With the Groza government in office, Romanian administration returns to northern Transylvania; the Paris peace treaty (1947) confirms the 1920 border."
+  owners:
+    romania: [RO-BH, RO-SJ, RO-SM, RO-MM, RO-BN, RO-CJ, RO-MS, RO-HR, RO-CV]
+- date: "1945-04-04"
+  note: "Soviet and Romanian troops take Bratislava; Slovakia, with the land Hungary took in 1938, returns to Czechoslovakia."
+  owners:
+    czechoslovakia: [SK-BC, SK-BC~hu1938, SK-BL, SK-KI, SK-KI~hu1938, SK-NI, SK-NI~hu1938, SK-PV, SK-TA, SK-TA~hu1938, SK-TC, SK-ZI]
+- date: "1945-06-29"
+  note: "Czechoslovakia cedes Carpathian Ruthenia to the Soviet Union, which had occupied it in October 1944."
+  owners:
+    ussr: [UA-21]
+- date: "1947-03-31"
+  note: "Britain hands the Dodecanese, which Italy ceded under the Paris peace treaty, to Greece."
+  owners:
+    greece: [GR-L~dodecanese]
+- date: "1947-09-15"
+  note: "The Paris peace treaty comes into force. Italy cedes Istria and most of the Slovene Littoral to Yugoslavia; Koper, Izola and Piran become Zone B of the Free Territory of Trieste, under Yugoslav military administration."
+  owners:
+    yugoslavia: [SI-006, SI-046, SI-128, SI-044, SI-007, SI-084, SI-183, SI-075, SI-001, SI-136, SI-049, SI-111, SI-019, SI-035, SI-038, SI-091, SI-094, SI-036, SI-014, HR-18]
+    trieste: [SI-050, SI-040, SI-090]
+- date: "1954-10-26"
+  note: "London Memorandum. Zone B of the Free Territory passes to Yugoslavia, Zone A with Trieste to Italy."
+  owners:
+    yugoslavia: [SI-050, SI-040, SI-090]
+- date: "1960-08-16"
+  note: "Cyprus becomes independent of Britain, which keeps two sovereign base areas."
+  owners:
+    cyprus: [CY-01, CY-02, CY-03, CY-04, CY-05, CYN+00?]
+- date: "1991-06-25"
+  note: "Slovenia and Croatia declare independence from Yugoslavia."
+  owners:
+    slovenia: [SI-001, SI-002, SI-003, SI-004, SI-005, SI-006, SI-007, SI-008, SI-009, SI-011, SI-012, SI-013, SI-014, SI-015, SI-016, SI-017, SI-018, SI-019, SI-020, SI-021, SI-022, SI-023, SI-024, SI-025, SI-026, SI-027, SI-028, SI-029, SI-030, SI-031, SI-032, SI-033, SI-034, SI-035, SI-036, SI-037, SI-038, SI-039, SI-040, SI-041, SI-042, SI-043, SI-044, SI-045, SI-046, SI-047, SI-048, SI-049, SI-05, SI-050, SI-051, SI-052, SI-053, SI-054, SI-055, SI-056, SI-057, SI-058, SI-059, SI-060, SI-061, SI-062, SI-063, SI-064, SI-065, SI-066, SI-067, SI-068, SI-069, SI-070, SI-071, SI-072, SI-073, SI-074, SI-075, SI-076, SI-077, SI-078, SI-079, SI-080, SI-081, SI-082, SI-083, SI-084, SI-085, SI-087, SI-089, SI-090, SI-091, SI-092, SI-093, SI-094, SI-095, SI-096, SI-097, SI-098, SI-099, SI-100, SI-101, SI-102, SI-103, SI-104, SI-105, SI-106, SI-107, SI-108, SI-109, SI-110, SI-111, SI-112, SI-113, SI-114, SI-115, SI-116, SI-117, SI-118, SI-119, SI-120, SI-121, SI-122, SI-123, SI-124, SI-125, SI-126, SI-127, SI-128, SI-129, SI-130, SI-131, SI-132, SI-133, SI-134, SI-135, SI-136, SI-137, SI-138, SI-139, SI-140, SI-141, SI-144, SI-146, SI-147, SI-148, SI-149, SI-150, SI-151, SI-152, SI-153, SI-154, SI-155, SI-156, SI-157, SI-158, SI-159, SI-160, SI-162, SI-163, SI-164, SI-165, SI-166, SI-167, SI-168, SI-169, SI-170, SI-171, SI-172, SI-173, SI-174, SI-175, SI-177, SI-178, SI-179, SI-180, SI-181, SI-182, SI-183, SI-184, SI-185, SI-186, SI-187, SI-188, SI-189, SI-190, SI-191, SI-192, SI-193, SI-194, SI-195]
+    croatia: [HR-01, HR-02, HR-03, HR-04, HR-05, HR-06, HR-07, HR-08, HR-09, HR-10, HR-12, HR-13, HR-14, HR-15, HR-16, HR-17, HR-18, HR-19, HR-20, HR-21, HRV-1604]
+- date: "1991-09-08"
+  note: "Macedonia votes for independence from Yugoslavia in a referendum."
+  owners:
+    north-macedonia: [MK-01, MK-02, MK-03, MK-04, MK-05, MK-06, MK-07, MK-08, MK-09, MK-10, MK-11, MK-12, MK-13, MK-14, MK-15, MK-16, MK-17, MK-18, MK-19, MK-20, MK-21, MK-22, MK-23, MK-24, MK-25, MK-26, MK-27, MK-28, MK-29, MK-30, MK-31, MK-32, MK-33, MK-34, MK-35, MK-36, MK-37, MK-38, MK-39, MK-40, MK-41, MK-42, MK-43, MK-44, MK-45, MK-46, MK-47, MK-48, MK-49, MK-50, MK-51, MK-52, MK-53, MK-54, MK-55, MK-56, MK-57, MK-58, MK-60, MK-61, MK-62, MK-63, MK-64, MK-65, MK-66, MK-67, MK-68, MK-69, MK-70, MK-71, MK-72, MK-73, MK-74, MK-75, MK-76, MK-78, MK-80, MK-81, MK-82, MK-83, MK-85]
+- date: "1992-03-03"
+  note: "Bosnia and Herzegovina declares independence after a referendum boycotted by most Bosnian Serbs."
+  owners:
+    bosnia: [BA-BIH, BA-BRC, BA-SRP, BIH-2224, BIH-2225, BIH-2226, BIH-2227, BIH-2887, BIH-2889, BIH-2890, BIH-2891, BIH-4801, BIH-4802, BIH-4804, BIH-4805, BIH-4806, BIH-4807, BIH-4808]
+- date: "1993-01-01"
+  note: "Czechoslovakia splits peacefully into the Czech Republic and Slovakia."
+  owners:
+    slovakia: [SK-BC, SK-BC~hu1938, SK-BL, SK-KI, SK-KI~hu1938, SK-NI, SK-NI~hu1938, SK-PV, SK-TA, SK-TA~hu1938, SK-TC, SK-ZI]
+- date: "2006-06-03"
+  note: "Montenegro declares independence after its referendum of 21 May; Serbia becomes the successor of the state union."
+  owners:
+    montenegro: [ME-01, ME-02, ME-03, ME-04, ME-05, ME-06, ME-07, ME-08, ME-09, ME-10, ME-11, ME-12, ME-13, ME-14, ME-15, ME-16, ME-17, ME-18, ME-19, ME-20, ME-21]
+    serbia: [RS-00, RS-01, RS-02, RS-03, RS-04, RS-05, RS-06, RS-07, RS-08, RS-09, RS-10, RS-11, RS-12, RS-13, RS-14, RS-15, RS-16, RS-16~sandzak, RS-17, RS-18, RS-18~sandzak, RS-19, RS-20, RS-21, RS-22, RS-23, RS-24, KOS-5886, KOS-5887, KOS-5888, KOS-5889, KOS-5890, KOS-5891, KOS-5892, KOS-5893, KOS-5894, KOS-5895, KOS-5896, KOS-5897, KOS-5898, KOS-5899, KOS-5900, KOS-5901, KOS-5902, KOS-5903, KOS-5904, KOS-5905, KOS-5906, KOS-5907, KOS-5908, KOS-5909, KOS-5910, KOS-5911, KOS-5912, KOS-5913, KOS-5914, KOS-5915]
+- date: "2008-02-17"
+  note: "Kosovo, under UN administration since 1999, declares independence from Serbia. Serbia and a number of states do not recognise it."
+  owners:
+    kosovo: [KOS-5886, KOS-5887, KOS-5888, KOS-5889, KOS-5890, KOS-5891, KOS-5892, KOS-5893, KOS-5894, KOS-5895, KOS-5896, KOS-5897, KOS-5898, KOS-5899, KOS-5900, KOS-5901, KOS-5902, KOS-5903, KOS-5904, KOS-5905, KOS-5906, KOS-5907, KOS-5908, KOS-5909, KOS-5910, KOS-5911, KOS-5912, KOS-5913, KOS-5914, KOS-5915]
+
+# ---- Wallachia, Moldavia and the Dniester before 1812
+- date: "1233"
+  note: "About 1230–1233. Hungary organises the Banate of Severin in Oltenia."
+  owners:
+    hungary: [RO-DJ, RO-GJ, RO-MH, RO-OT, RO-VL]
+- date: "1242"
+  note: "After the Mongol invasion of 1241–1242, the steppe east of the Carpathians and the Wallachian plain come under the Golden Horde."
+  owners:
+    golden-horde: [RO-BC, RO-BT, RO-GL, RO-IS, RO-NT, RO-SV, RO-VN, RO-VS, RO-AG, RO-B, RO-BR, RO-BZ, RO-CL, RO-DB, RO-GR, RO-IF, RO-IL, RO-PH, RO-TR, MD-AN, MD-BA, MD-BD, MD-BR, MD-BS, MD-CA, MD-CAM, MD-CL, MD-CM, MD-CR, MD-CS, MD-CT, MD-CU, MD-DO, MD-DR, MD-ED, MD-FA, MD-FL, MD-GA, MD-GL, MD-GRI, MD-HI, MD-IA, MD-LE, MD-NI, MD-OC, MD-OR, MD-RE, MD-RI, MD-SD, MD-SI, MD-SN, MD-SO, MD-ST, MD-SV, MD-TA, MD-TE, MD-UN, MDA-1638, MDA-1644]
+- date: "1330-11-09"
+  note: "Battle of Posada. Basarab I of Wallachia defeats King Charles I of Hungary; Wallachia is independent."
+  owners:
+    wallachia: [RO-DJ, RO-GJ, RO-MH, RO-OT, RO-VL, RO-AG, RO-B, RO-BR, RO-BZ, RO-CL, RO-DB, RO-GR, RO-IF, RO-IL, RO-PH, RO-TR]
+- date: "1359"
+  note: "Bogdan I, who rebelled against Hungary, rules Moldavia as an independent principality around Baia, Siret and Suceava."
+  owners:
+    moldavia: [RO-SV, RO-NT, RO-BT, UA-77]
+- date: "1363"
+  note: "After the Battle of Blue Waters, Lithuania takes Podolia from the Golden Horde."
+  owners:
+    lithuania: [MD-CAM, MD-RE]
+- date: "1392"
+  note: "Roman I calls himself ruler of Moldavia “from the mountains to the sea”: Moldavia now reaches the Dniester and the Black Sea at Cetatea Albă."
+  owners:
+    moldavia: [RO-IS, RO-BC, RO-VS, RO-VN, RO-GL, MD-AN, MD-BA, MD-BR, MD-BS, MD-CA, MD-CL, MD-CM, MD-CR, MD-CS, MD-CT, MD-CU, MD-DO, MD-DR, MD-ED, MD-FA, MD-FL, MD-GA, MD-GL, MD-HI, MD-IA, MD-LE, MD-NI, MD-OC, MD-OR, MD-RI, MD-SD, MD-SI, MD-SO, MD-ST, MD-SV, MD-TA, MD-TE, MD-UN, MDA-1644, UA-51~ro1938]
+- date: "1400"
+  note: "About 1400. Grand Duke Vytautas extends Lithuanian rule over the steppe between the Dniester and the Dnieper."
+  owners:
+    lithuania: [MD-SN, MDA-1638, MD-GRI, MD-BD]
+- date: "1478"
+  note: "The Crimean Khanate becomes an Ottoman vassal; its Nogai subjects roam the steppe east of the Dniester."
+  owners:
+    crimean-khanate: [MD-SN, MDA-1638, MD-GRI, MD-BD]
+- date: "1538-09"
+  note: "Suleiman I’s campaign against Petru Rareș. Moldavia becomes a tributary state; the Ottomans annex the Budjak steppe and Bender, and Brăila in Wallachia."
+  owners:
+    ottoman: [MD-TA, MD-GA, MD-BS, MD-CS, MD-SV, MD-CA, RO-BR]
+- date: "1569-07-01"
+  note: "Union of Lublin. The Bracław region passes from Lithuania to the Polish Crown in the new Commonwealth."
+  owners:
+    poland: [MD-CAM, MD-RE]
+- date: "1672-10-18"
+  note: "Treaty of Buczacz. Poland–Lithuania cedes Podolia and the right-bank Ukraine to the Ottomans and their Cossack vassals."
+  owners:
+    ottoman: [MD-CAM, MD-RE]
+- date: "1713"
+  note: "The Ottomans take over Khotyn as a district under their direct rule."
+  owners:
+    ottoman: [UA-77~bess]

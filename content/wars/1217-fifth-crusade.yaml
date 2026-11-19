@@ -1,0 +1,110 @@
+id: fifth-crusade
+name: Fifth Crusade
+start: "1217"
+end: "1221-08-30"
+tier: B
+summary: A crusade called by Pope Innocent III to recover Jerusalem by conquering Egypt. After a Hungarian and Austrian expedition in Syria in 1217, the crusaders took Damietta in the Nile delta in 1219 after a siege of a year and a half, refusing the sultan al-Kamil’s offer to trade it for Jerusalem. Their march on Cairo in 1221 was trapped by the Nile flood near al-Mansurah, and they gave up Damietta in exchange for their freedom and an eight-year truce.
+countries: [eg, il, hu, at, de, fr, it, nl]
+sides:
+  - id: cr
+    name: Crusaders
+    polities: [kingdom-of-jerusalem]
+    ink: red
+    moves: Crusader moves
+    success: Crusader success
+  - id: ay
+    name: Ayyubids
+    polities: [ayyubid]
+    ink: purple
+    moves: Ayyubid moves
+    success: Ayyubid success
+notes:
+  - Dates are Julian. The crusade had no single leader. John of Brienne, king of Jerusalem, commanded in the field, but the papal legate Pelagius of Albano claimed authority over the army, and their disputes shaped its decisions.
+  - The Hungarian and Austrian campaign of 1217–1218 in Syria under Andrew II of Hungary and Leopold VI of Austria is often counted as the first part of the crusade.
+sources:
+  - title: Fifth Crusade (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fifth_Crusade
+  - title: Siege of Damietta (1218–1219) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Damietta_(1218%E2%80%931219)
+  - title: Battle of Fariskur (1219) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Fariskur_(1219)
+  - title: Battle of Mansurah (1221) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Mansurah_(1221)
+  - title: Al-Kamil (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Al-Kamil
+  - title: Pelagio Galvani (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pelagio_Galvani
+steps:
+  - title: Damietta
+    date: 1217–1219
+    when: "1218-05-27"
+    borders: "1219-11-05"
+    countries: [eg, il, hu, at, de, nl, it, fr]
+    body:
+      - The crusade called at the Fourth Lateran Council of 1215 began in 1217, when Andrew II of Hungary and Leopold VI of Austria led an army to Acre and raided Ayyubid lands in Galilee and beyond the Jordan without lasting result. In May 1218, joined by fleets from Frisia and the Rhineland, the crusaders sailed for Egypt, the centre of Ayyubid power, under John of Brienne, king of Jerusalem, and besieged Damietta at the mouth of the Nile. On 24 August they took the Chain Tower that barred the river, news that is said to have hastened the death of Sultan al-Adil a week later.
+      - The siege lasted more than a year, through floods and disease. The papal legate Pelagius, who arrived in September 1218, claimed the leadership and rejected the new sultan al-Kamil’s offer to give up Jerusalem and much of the old kingdom in exchange for Damietta. An attack on the Egyptian camp at Fariskur on 29 August 1219 was beaten back with heavy losses. Francis of Assisi crossed the lines that autumn to preach before al-Kamil, who received him courteously. On 5 November 1219 the crusaders entered Damietta to find most of its people dead of hunger and disease.
+    facts:
+      - [Chain Tower taken, 24 August 1218]
+      - [Battle of Fariskur, "29 August 1219, Ayyubid victory"]
+      - [Damietta taken, 5 November 1219]
+    markers:
+      - kind: taken
+        side: cr
+        name: Chain Tower
+        date: 24 August 1218
+        text: Frisian and German crusaders took the tower in the Nile, which held a chain across the river, from ships fitted with a siege ladder.
+        lonlat: [31.84, 31.44]
+        lp: t
+      - kind: battle
+        side: ay
+        name: Battle of Fariskur
+        date: 29 August 1219
+        text: The crusaders marched on al-Kamil’s camp in the heat of summer; when part of the army broke, the Egyptians counter-attacked and killed or captured thousands.
+        lonlat: [31.715, 31.33]
+        lp: l
+      - kind: taken
+        side: cr
+        name: Damietta
+        date: 5 November 1219
+        text: The starving city fell almost without resistance. Of tens of thousands of inhabitants only a few thousand were still alive.
+        lonlat: [31.81, 31.415]
+        lp: b
+    arrows:
+      - side: cr
+        label: Crusader fleet, May 1218
+        via: [[35.0, 32.9], [33.5, 31.85], [31.88, 31.5]]
+      - side: ay
+        label: al-Kamil
+        via: [[31.24, 30.05], [31.4, 30.7], [31.7, 31.3]]
+  - title: The march on Cairo
+    date: 1220–1221
+    when: "1221-07"
+    borders: "1221-08-30"
+    countries: [eg, de]
+    body:
+      - For a year and a half the crusaders waited at Damietta for the emperor Frederick II, who had promised to come. Instead he sent troops under Duke Louis of Bavaria, who arrived in May 1221. In July, against John of Brienne’s advice, Pelagius led the army south towards Cairo, just as the Nile began its annual flood. Al-Kamil’s army waited behind a branch of the Nile at al-Mansurah, the camp town he had founded, and his brothers brought reinforcements from Syria.
+      - By late August the crusaders were trapped. The Egyptians broke the dykes and flooded the land around them, and their ships cut the river behind. Starving and stuck in the mud, the army surrendered on about 30 August 1221. In return for being allowed to leave, the crusaders gave up Damietta and agreed to an eight-year truce, and al-Kamil promised to return the relic of the True Cross, which could not be found. The crusaders sailed away in September having gained nothing, and many blamed Frederick for staying away.
+    facts:
+      - [Louis of Bavaria arrives, May 1221]
+      - [Surrender near al-Mansurah, "about 30 August 1221"]
+      - [Truce, eight years]
+    markers:
+      - kind: event
+        side: cr
+        name: Damietta
+        date: 1219–1221
+        text: The crusaders held the city for almost two years and gave it back under the surrender terms in September 1221.
+        lonlat: [31.81, 31.415]
+      - kind: battle
+        side: ay
+        name: Battle of Mansurah
+        date: August 1221
+        text: Cut off by water on all sides, the crusader army could neither advance nor retreat and had to accept al-Kamil’s terms.
+        lonlat: [31.4, 31.06]
+    arrows:
+      - side: cr
+        label: Pelagius
+        via: [[31.8, 31.4], [31.7, 31.33], [31.52, 31.16], [31.43, 31.08]]
+      - side: ay
+        label: al-Kamil
+        via: [[31.24, 30.05], [31.35, 30.6], [31.38, 31.0]]

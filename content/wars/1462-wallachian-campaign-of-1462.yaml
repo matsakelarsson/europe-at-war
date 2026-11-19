@@ -1,0 +1,85 @@
+id: wallachian-campaign-of-1462
+name: Wallachian campaign of 1462
+start: "1462-02"
+end: "1462-11"
+tier: B
+summary: Mehmed II’s invasion of Wallachia to punish its prince, Vlad III, later known as Vlad the Impaler, who had stopped paying tribute, allied with Hungary and slaughtered thousands of people along the Ottoman bank of the Danube. Vlad fought a war of scorched earth and raids, and on the night of 17 June attacked the sultan’s camp near Târgoviște. Mehmed reached the capital but withdrew, and his candidate, Vlad’s brother Radu, won over the boyars; Vlad sought help from King Matthias of Hungary, who instead had him imprisoned.
+countries: [ro, bg]
+sides:
+  - id: wal
+    name: Vlad III of Wallachia
+    polities: [wallachia]
+    ink: orange
+    moves: Wallachian moves
+    success: Wallachian success
+  - id: ott
+    name: Ottoman Empire and Radu
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - The figures in the sources are unreliable. Contemporaries put the Ottoman army at 90,000 to 300,000 or more, and modern historians at perhaps 60,000–90,000; Vlad may have had about 30,000 men. Vlad’s own figure of 23,884 Turks killed in his winter raid comes from his letter to Matthias Corvinus.
+  - Accounts of the night attack differ widely, from great slaughter in the Ottoman camp to small losses of men and many of horses and camels, and its outcome is generally described as inconclusive.
+sources:
+  - title: Night attack at Târgoviște (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Night_attack_at_T%C3%A2rgovi%C8%99te
+  - title: Vlad the Impaler (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Vlad_the_Impaler
+  - title: Radu cel Frumos (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Radu_cel_Frumos
+steps:
+  - title: The night attack
+    date: February – November 1462
+    when: "1462-06-17"
+    borders: "1462-09"
+    countries: [ro, bg]
+    body:
+      - Vlad III had held the Wallachian throne since 1456 as an Ottoman vassal, but he stopped paying tribute and made an alliance with Matthias Corvinus of Hungary. When the bey of Nicopolis, Hamza, tried to seize him by a trick near Giurgiu in the winter of 1461–1462, Vlad ambushed and captured him, took Giurgiu and raided the Ottoman bank of the Danube from Serbia to the Black Sea in January and February 1462, killing, by his own count, 23,884 people. In the spring Mehmed II led a great army north, crossing the Danube in early June while his fleet attacked Brăila and Kiliia.
+      - Vlad emptied the country before the invaders, burning crops and poisoning wells, and harried them with raids. On the night of 17 June, with several thousand horsemen, he attacked the Ottoman camp south of Târgoviște, perhaps hoping to kill the sultan, and caused great confusion before the janissaries drove him off. When Mehmed reached Târgoviște he found it deserted, and outside it a forest of stakes with thousands of impaled prisoners, among them Hamza. The sultan withdrew, burning Brăila on 29 June, and left Vlad’s younger brother Radu, raised at the Ottoman court, to win over the boyars. By the autumn most of the boyars had gone over to Radu. Vlad turned to Matthias Corvinus, who came to Transylvania in November, but the king had no wish to fight the sultan; he had Vlad arrested and kept him a prisoner until 1475.
+    facts:
+      - [Winter raid across the Danube, January – February 1462]
+      - [Night attack, "17 June 1462, inconclusive"]
+      - [Vlad arrested by Matthias Corvinus, November 1462]
+    markers:
+      - kind: battle
+        side: wal
+        name: Night attack
+        date: 16–17 June 1462
+        text: Vlad’s horsemen raided the Ottoman camp from late evening until early morning; the sultan survived and the Wallachians were pursued.
+        lonlat: [25.45, 44.88]
+        lp: l
+      - kind: event
+        side: ott
+        name: Târgoviște
+        date: June 1462
+        text: Mehmed entered the deserted capital; nearby lay rows of impaled Ottoman prisoners.
+        lonlat: [25.457, 44.924]
+        lp: r
+      - kind: taken
+        side: wal
+        name: Giurgiu
+        date: early 1462
+        text: Vlad seized the Ottoman fortress after ambushing Hamza Bey, and then raided along the Danube.
+        lonlat: [25.974, 43.901]
+      - kind: taken
+        side: ott
+        name: Brăila
+        date: 29 June 1462
+        text: The Danube port was burnt as the Ottoman army withdrew.
+        lonlat: [27.957, 45.269]
+      - kind: held
+        name: Kiliia
+        date: June 1462
+        text: Vlad’s cousin Stephen of Moldavia attacked the Hungarian-held fortress at the mouth of the Danube but was wounded and failed.
+        lonlat: [29.233, 45.45]
+    arrows:
+      - side: wal
+        label: Vlad’s raid
+        via: [[25.9, 43.95], [27.0, 44.05], [28.0, 44.1], [28.7, 44.6]]
+      - side: ott
+        label: Mehmed II
+        via: [[24.88, 43.62], [25.0, 44.2], [25.35, 44.75]]
+      - side: ott
+        label: Ottoman withdrawal
+        via: [[25.5, 44.9], [26.8, 45.15], [27.9, 45.25]]

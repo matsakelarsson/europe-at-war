@@ -1,0 +1,131 @@
+id: hungarian-romanian-war
+name: Hungarian–Romanian War
+start: "1918-11-13"
+end: "1919-08-03"
+tier: B
+summary: A war fought as the Kingdom of Hungary broke up after the First World War. Romanian troops advanced through Transylvania to the Tisza in the spring of 1919, defeated the Hungarian Soviet Republic’s offensive in July and occupied Budapest in August, staying in Hungary until early 1920; the Treaty of Trianon then gave Romania Transylvania and the lands to its west.
+countries: [hu, ro]
+sides:
+  - id: hu
+    name: Hungary (the Hungarian Soviet Republic from March 1919)
+    polities: [hungary]
+    ink: olive
+    moves: Hungarian moves
+    success: Hungarian success
+  - id: ro
+    name: Romania
+    polities: [romania]
+    ink: gold
+    moves: Romanian moves
+    success: Romanian success
+notes:
+  - Places are named in their present-day forms; Oradea was Nagyvárad, Satu Mare was Szatmárnémeti and Cluj was Kolozsvár to Hungarians.
+  - The base map follows the borders recognised at the time; land the Romanian army held beyond them is shown as approximate areas. Losses were small compared with the World War, about 3,670 Romanian soldiers killed and, by most estimates, between 2,000 and 6,000 Hungarians.
+sources:
+  - title: Hungarian–Romanian War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hungarian%E2%80%93Romanian_War
+  - title: Hungarian Soviet Republic (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hungarian_Soviet_Republic
+  - title: Great Union (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Great_Union
+  - title: Treaty of Trianon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Trianon
+steps:
+  - title: Transylvania and the road to the Tisza
+    date: November 1918 – May 1919
+    when: "1918-11-13"
+    borders: "1919-05-01"
+    countries: [ro, hu]
+    body:
+      - As Austria-Hungary collapsed, Romania re-entered the war on 10 November 1918, and its troops crossed into Transylvania three days later. On 1 December an assembly of Transylvanian Romanians at Alba Iulia declared union with Romania, and the Romanian army moved west to lines set by the Allies. Hungary’s new government under Mihály Károlyi had demobilised most of its army. When the Allied Vix note of 20 March 1919 demanded a further Hungarian withdrawal, Károlyi resigned, and on 21 March communists and social democrats proclaimed the Hungarian Soviet Republic, led in practice by Béla Kun.
+      - Kun’s government promised to defend Hungary’s borders and hoped for help from Soviet Russia. On 16 April, before the new Hungarian Red Army was ready, the Romanian army attacked. It took Oradea on 20 April and Debrecen on 23 April, the Székely Division of Transylvanian Hungarians laid down its arms, and by 1 May the Romanians stood along the Tisza. With Czechoslovak troops advancing from the north at the same time, the Soviet Republic seemed close to collapse, but a mass mobilisation of Budapest’s workers saved it.
+    facts:
+      - [Union declared at Alba Iulia, "1 December 1918"]
+      - [Hungarian Soviet Republic proclaimed, "21 March 1919"]
+      - [Romanian spring offensive, "16 April – 1 May 1919"]
+    markers:
+      - kind: event
+        side: ro
+        name: Alba Iulia
+        date: 1 December 1918
+        text: The Great National Assembly of Transylvania’s Romanians voted for union with the Kingdom of Romania.
+        lonlat: [23.58, 46.07]
+      - kind: event
+        side: hu
+        name: Budapest
+        date: 21 March 1919
+        text: The Hungarian Soviet Republic was proclaimed after Károlyi resigned rather than accept the Allies’ new demarcation line.
+        lonlat: [19.04, 47.5]
+      - kind: taken
+        side: ro
+        name: Oradea
+        date: 20 April 1919
+        text: Taken in the first days of the Romanian offensive, as Hungarian units fell back.
+        lonlat: [21.92, 47.07]
+      - kind: taken
+        side: ro
+        name: Debrecen
+        date: 23 April 1919
+        text: The largest city of eastern Hungary was occupied as the Romanian army advanced on the Tisza.
+        lonlat: [21.63, 47.53]
+      - kind: held
+        side: ro
+        name: Szolnok
+        date: 1 May 1919
+        text: The Romanian army reached the Tisza here and halted on the river line.
+        lonlat: [20.18, 47.17]
+        lp: b
+    arrows:
+      - side: ro
+        via: [[23.6, 46.77], [22.6, 46.98], [21.92, 47.07], [20.9, 47.15], [20.28, 47.17]]
+      - side: ro
+        via: [[23.0, 47.72], [22.3, 47.88], [21.7, 47.95], [21.35, 48.1]]
+    areas:
+      - style: occupied
+        side: ro
+        label: Held by Romania, May 1919 (approximate)
+        atoms: [RO-BH, RO-SM, RO-SJ, RO-MM, RO-AR, HU-HB, HU-DE, HU-BE, HU-BC, HU-SZ, HU-NY]
+  - title: The Tisza and Budapest
+    date: July 1919 – March 1920
+    when: "1919-07-20"
+    borders: "1919-08-04"
+    countries: [hu, ro]
+    body:
+      - After withdrawing from Slovakia under Allied pressure, the Hungarian Red Army turned on the Romanians, whom the Allies had promised to pull back but who had not moved. On 20 July it crossed the Tisza at several points and pushed east for a few days, but the Romanians stopped it, counter-attacked and crossed the river on the night of 29–30 July. The Hungarian army fell apart. Kun’s government resigned on 1 August and its leaders fled to Austria, and on 3–4 August Romanian troops entered Budapest.
+      - The Romanian army occupied Budapest and most of Hungary as far as Győr. It took rolling stock, livestock, grain and factory equipment as reparations, in defiance of protests from the Allied Supreme Council in Paris. Short-lived governments followed in Budapest, while officers of the counter-revolutionary National Army carried out a White Terror against communists, Jews and others. The Romanians left Budapest on 14 November, Admiral Miklós Horthy rode in two days later, and the last Romanian troops left Hungary in March 1920, before the Treaty of Trianon fixed the new border.
+    facts:
+      - [Hungarian Tisza offensive, "from 20 July 1919"]
+      - [Romanian troops enter Budapest, "3–4 August 1919"]
+      - [Romanians leave Budapest, "14 November 1919"]
+    markers:
+      - kind: battle
+        side: ro
+        name: Tisza
+        date: 20–30 July 1919
+        text: The Hungarian offensive around Szolnok was stopped and thrown back, and the Romanians crossed the river.
+        lonlat: [20.18, 47.17]
+        lp: b
+      - kind: taken
+        side: ro
+        name: Budapest
+        date: 3–4 August 1919
+        text: Romanian troops occupied the capital three days after the Soviet Republic fell and held it until November.
+        lonlat: [19.04, 47.5]
+      - kind: taken
+        side: ro
+        name: Győr
+        date: August 1919
+        text: The furthest point west reached by the Romanian army.
+        lonlat: [17.635, 47.687]
+    arrows:
+      - side: hu
+        via: [[19.95, 47.18], [20.35, 47.2], [20.75, 47.25]]
+      - side: ro
+        via: [[20.7, 47.2], [20.2, 47.18], [19.6, 47.35], [19.12, 47.5]]
+      - side: ro
+        via: [[19.0, 47.56], [18.4, 47.66], [17.7, 47.69]]
+    areas:
+      - style: occupied
+        side: ro
+        label: Occupied by Romania, August 1919 (approximate)
+        atoms: [HU-HB, HU-DE, HU-BE, HU-BC, HU-SZ, HU-NY, HU-JN, HU-SK, HU-HV, HU-CS, HU-BK, HU-KM, HU-PE, HU-BU, HU-HE, HU-EG, HU-BZ, HU-MI, HU-KE, HU-TB, HU-GY]

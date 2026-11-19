@@ -3,7 +3,7 @@ name: Napoleonic Wars
 start: "1803"
 end: "1815"
 tier: A
-summary: The wars between Napoleon’s France and its allies and changing coalitions of Britain, Austria, Prussia, Russia, Sweden and others. Napoleon’s victories over Austria and Prussia ended the Holy Roman Empire and remade the map of Germany until the allies drove him back across the Rhine in 1813; Sweden lost Swedish Pomerania in 1807 and, after the campaign of 1813, gained Norway from Denmark at Kiel in 1814.
+summary: The wars between Napoleon’s France and its allies and changing coalitions of Britain, Austria, Prussia, Russia, Sweden and others. Napoleon’s victories over Austria and Prussia ended the Holy Roman Empire and remade the map of Germany until the allies drove him back across the Rhine in 1813; Sweden lost Swedish Pomerania in 1807 and, after the campaign of 1813, gained Norway from Denmark at Kiel in 1814. Britain’s victory at Trafalgar in 1805 left it master of the seas, and Napoleon’s blockade of its trade drew him into Spain and Russia; after the destruction of his army in Russia in 1812 and his defeat at Leipzig in 1813 he abdicated, and the Congress of Vienna and his final defeat at Waterloo in 1815 settled the map of Europe.
 sides:
   - id: se
     name: Sweden
@@ -62,6 +62,7 @@ notes:
   - Migrated from Sweden at War, so the story is told from Sweden’s side.
   - The steps on the war in Germany and Austria were added for Europe at War. Bavaria, Württemberg, Baden and, from December 1806, Saxony fought on France’s side until 1813.
   - The steps on the campaign of 1814 and the Hundred Days were also added for Europe at War. The war in Spain and Portugal, at sea and in Italy is only outlined.
+  - The steps on Trafalgar, Eylau, Friedland and Tilsit, the Continental System, the invasion of Russia, Leipzig and the Congress of Vienna were added later to tell the war as a European story. The Peninsular War and the invasion of Russia have their own pages.
 sources:
   - url: https://en.wikipedia.org/wiki/Franco-Swedish_War
     title: Franco-Swedish War (Wikipedia)
@@ -107,6 +108,34 @@ sources:
     title: Treaty of Fontainebleau, 1814 (Wikipedia)
   - url: https://en.wikipedia.org/wiki/Treaty_of_Paris_(1814)
     title: Treaty of Paris, 1814 (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Trafalgar
+    title: Battle of Trafalgar (Wikipedia)
+  - url: https://www.britannica.com/event/Battle-of-Trafalgar-European-history
+    title: Battle of Trafalgar (Britannica)
+  - url: https://en.wikipedia.org/wiki/Trafalgar_campaign
+    title: Trafalgar campaign (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Eylau
+    title: Battle of Eylau (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Friedland
+    title: Battle of Friedland (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Continental_System
+    title: Continental System (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/French_invasion_of_Russia
+    title: French invasion of Russia (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Dresden
+    title: Battle of Dresden (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Kulm
+    title: Battle of Kulm (Wikipedia)
+  - url: https://en.wikipedia.org/wiki/Battle_of_Leipzig
+    title: Battle of Leipzig (Wikipedia)
+  - url: https://www.britannica.com/event/Battle-of-Leipzig
+    title: Battle of Leipzig (Britannica)
+  - url: https://en.wikipedia.org/wiki/Congress_of_Vienna
+    title: Congress of Vienna (Wikipedia)
+  - url: https://www.britannica.com/event/Congress-of-Vienna
+    title: Congress of Vienna (Britannica)
+  - url: https://en.wikipedia.org/wiki/German_Confederation
+    title: German Confederation (Wikipedia)
   - url: https://en.wikipedia.org/wiki/Hundred_Days
     title: Hundred Days (Wikipedia)
   - url: https://en.wikipedia.org/wiki/Battle_of_Ligny
@@ -262,6 +291,73 @@ steps:
       - style: lost
         label: Lost by Austria to Bavaria and Baden (Tyrol, Vorarlberg, the Breisgau)
         atoms: [AT-7, AT-8, IT-BZ, IT-TN, DE-BW~baden~vorder]
+  - title: Trafalgar
+    date: March – November 1805
+    when: "1805-10-21"
+    borders: "1805-10-21"
+    countries: [gb, es, fr]
+    side_names:
+      fr: French and Spanish success
+      gb: British success
+    move_names:
+      fr: French and Spanish moves
+      gb: British moves
+    body:
+      - To invade Britain, Napoleon gathered his Army of England in camps around Boulogne, but he needed command of the Channel to get it across. Spain, at war with Britain again from December 1804, added its fleet to his. In March 1805 Admiral Pierre-Charles Villeneuve slipped out of Toulon and sailed for the West Indies to draw the British fleets away, with Horatio Nelson in pursuit. On his way back Villeneuve fought an indecisive action with Admiral Robert Calder off Cape Finisterre on 22 July, then put into Ferrol and, in August, into Cádiz. Soon afterwards Napoleon gave up the invasion and turned his army against Austria.
+      - Ordered to sail for Naples, Villeneuve led 33 French and Spanish ships of the line out of Cádiz in mid-October, and on 21 October Nelson, with 27, met him off Cape Trafalgar. Instead of fighting line against line, the British attacked in two columns that broke through the allied line. In about five hours of close fighting they captured 17 ships and destroyed one without losing any of their own, though a storm in the following days wrecked most of the prizes. Nelson was shot by a marksman on the French Redoutable and died as the battle ended. Britain kept command of the sea for the rest of the war, and Napoleon turned to economic warfare against it.
+    facts:
+      - [Battle of Trafalgar, "21 October 1805, British victory"]
+      - [Ships of the line, "27 British, 33 French and Spanish"]
+      - [Losses, "About 1,700 British and some 14,000 French and Spanish killed, wounded or captured"]
+    markers:
+      - kind: event
+        side: fr
+        name: Boulogne
+        date: 1803 – August 1805
+        text: Napoleon’s Army of England waited in camps along the Channel coast. In late August 1805 he marched it to the Rhine against Austria.
+        lonlat: [1.614, 50.726]
+      - kind: event
+        side: fr
+        name: Toulon
+        date: 30 March 1805
+        text: Villeneuve slipped past the British blockade with the Toulon fleet and sailed for the West Indies, picking up Spanish ships at Cádiz.
+        lonlat: [5.93, 43.12]
+      - kind: naval
+        name: Battle of Cape Finisterre
+        date: 22 July 1805
+        text: Calder’s squadron took two Spanish ships in fog but did not renew the fight, and Villeneuve reached Vigo and Ferrol.
+        lonlat: [-10.6, 43.1]
+      - kind: event
+        name: Cádiz
+        date: August – October 1805
+        text: The combined fleet lay in the harbour, blockaded by the British, until Napoleon ordered it to sea.
+        lonlat: [-6.292, 36.527]
+        lp: t
+      - kind: naval
+        side: gb
+        name: Battle of Trafalgar
+        date: 21 October 1805
+        text: Nelson’s and Collingwood’s columns broke the allied line in two places. Nelson was killed, and Collingwood took command.
+        lonlat: [-6.2, 36.25]
+        lp: b
+      - kind: naval
+        side: gb
+        name: Battle of Cape Ortegal
+        date: 4 November 1805
+        text: Four French ships of the line that had escaped from Trafalgar were caught and taken by Sir Richard Strachan’s squadron.
+        lonlat: [-8.2, 44.0]
+    arrows:
+      - side: fr
+        label: Villeneuve, March
+        via: [[5.93, 43.0], [1.5, 38.6], [-5.6, 35.95], [-9.8, 35.6]]
+      - side: fr
+        label: Villeneuve, August
+        via: [[-8.3, 43.55], [-9.7, 41.5], [-9.5, 38.0], [-6.5, 36.55]]
+      - side: fr
+        via: [[-6.32, 36.48], [-6.48, 36.36], [-6.27, 36.25]]
+      - side: gb
+        label: Nelson
+        via: [[-7.1, 36.3], [-6.7, 36.27], [-6.27, 36.25]]
   - title: Jena, Auerstedt and the end of the Empire
     date: July 1806 – July 1807
     when: "1806-07-12"
@@ -325,6 +421,65 @@ steps:
       - side: fr
         label: Pursuit
         via: [[11.9, 51.45], [12.65, 51.87], [13.35, 52.45]]
+  - title: Eylau, Friedland and Tilsit
+    date: November 1806 – July 1807
+    when: "1806-11-28"
+    borders: "1807-07-09"
+    countries: [pl, ru, de, fr]
+    body:
+      - After Jena the war moved east. Russia came to Prussia’s aid, and on 28 November 1806 French troops entered Warsaw, welcomed by Poles who hoped Napoleon would restore their state. A winter campaign followed in mud and snow. At Pułtusk on 26 December Marshal Lannes failed to break General Levin von Bennigsen’s Russians, and on 7–8 February 1807 Napoleon attacked Bennigsen at Eylau, today’s Bagrationovsk, in a snowstorm. Augereau’s corps was cut to pieces, and Murat saved the French centre with a mass charge of more than 10,000 cavalry. When the Russians and a Prussian corps withdrew in the night, each side had lost at least 15,000 men, and nothing had been decided.
+      - "In the spring the French took Danzig after a two-month siege. On 14 June Napoleon caught Bennigsen’s army with its back to the River Alle at Friedland and routed it; the Russians lost at least 20,000 men. Alexander I asked for an armistice, and on 25 June he and Napoleon met on a raft moored in the Niemen at Tilsit. By the treaties of 7 and 9 July Russia recognised Napoleon’s new states, secretly promised to join his blockade of Britain if Britain refused peace, and gained a free hand against Sweden. Prussia paid the price: its Polish lands became the Duchy of Warsaw under the King of Saxony, and Danzig a free city under French protection."
+    facts:
+      - [Battle of Eylau, "7–8 February 1807, inconclusive"]
+      - [Battle of Friedland, "14 June 1807, French victory"]
+      - [Treaties of Tilsit, "7 July (Russia) and 9 July 1807 (Prussia)"]
+    link: { href: "#/war/finnish-war", text: "The Finnish War, 1808–1809" }
+    markers:
+      - kind: taken
+        side: fr
+        name: Warsaw
+        date: 28 November 1806
+        text: Murat’s cavalry entered the city as the Prussians and Russians withdrew. Napoleon arrived in December and spent much of the winter there.
+        lonlat: [21.012, 52.23]
+      - kind: battle
+        name: Battle of Pułtusk
+        date: 26 December 1806
+        text: Lannes attacked Bennigsen’s army in deep mud. Both sides claimed victory, and the Russians withdrew north.
+        lonlat: [21.08, 52.70]
+      - kind: battle
+        name: Battle of Eylau
+        date: 7–8 February 1807
+        text: One of the bloodiest battles of the age, fought in snow. The French held the field, but the Russian army escaped intact.
+        lonlat: [20.633, 54.4]
+        lp: l
+      - kind: siege
+        side: fr
+        name: Danzig
+        date: 19 March – 24 May 1807
+        text: Marshal Lefebvre’s corps forced the Prussian and Russian garrison to surrender, and Napoleon made him Duke of Danzig.
+        lonlat: [18.646, 54.352]
+      - kind: battle
+        side: fr
+        name: Battle of Friedland
+        date: 14 June 1807
+        text: Lannes held the Russians until Napoleon arrived. Ney’s corps then stormed the town, and the Russians fled across the Alle, many drowning.
+        lonlat: [21.017, 54.45]
+      - kind: treaty
+        side: fr
+        name: Treaties of Tilsit
+        date: 7 and 9 July 1807
+        text: Napoleon and Alexander met on a raft in the river on 25 June. Frederick William III of Prussia was left waiting on the bank.
+        lonlat: [21.883, 55.083]
+    arrows:
+      - side: fr
+        label: Napoleon, February
+        via: [[21.0, 52.35], [20.4, 53.3], [20.55, 54.3]]
+      - side: fr
+        label: Napoleon, June
+        via: [[20.5, 54.12], [20.8, 54.36], [20.98, 54.44]]
+      - side: ru
+        label: Bennigsen
+        via: [[21.1, 54.5], [21.5, 54.85], [21.85, 55.05]]
   - title: Aspern-Essling and Wagram
     date: April – October 1809
     when: "1809-04-10"
@@ -384,6 +539,68 @@ steps:
       - style: lost
         label: Ceded by Austria to Bavaria, 1809
         atoms: [AT-5, AT-4~inn]
+  - title: The Continental System and Napoleon’s Europe
+    date: 1806–1811
+    when: "1810"
+    borders: "1811-12-31"
+    countries: [fr, nl, be, lu, de, it, ch, pl, si, hr, es, pt, gb, ru, at]
+    body:
+      - With no fleet left to challenge Britain after Trafalgar, Napoleon set out to ruin its trade. The Berlin Decree of 21 November 1806 closed the ports of France and its allies to British ships and goods, and the Milan Decree of December 1807 extended the ban to neutral ships that obeyed British rules; Britain answered with Orders in Council. Enforcing this Continental System drew Napoleon ever further. He sent an army into Portugal in 1807 and in 1808 made his brother Joseph King of Spain, starting a long war there. He annexed the Papal States in 1809, Holland in 1810 after his brother Louis, its king, refused to enforce the blockade, and in December 1810 the North Sea coast to Hamburg and Lübeck.
+      - At the end of 1811 Napoleon’s power was at its height. The French Empire, with about 130 departments, reached from Lübeck to Rome and across the Adriatic to the Illyrian Provinces. Around it lay dependent states, the Kingdom of Italy, Naples under Joachim Murat, Spain under Joseph, Westphalia under Jérôme, the rest of the Confederation of the Rhine, Switzerland and the Duchy of Warsaw. In 1810 he married Marie Louise, daughter of the Austrian emperor, who bore him a son in March 1811. But smuggling and hardship eroded the blockade, the war in Spain drained his armies, and when Russia opened its ports to neutral ships at the end of 1810, the quarrel led to war.
+    facts:
+      - [Berlin Decree, "21 November 1806"]
+      - [Milan Decree, "17 December 1807"]
+      - [French Empire at its largest, "about 130 departments, 1811–1812"]
+    link: { href: "#/war/peninsular-war", text: The Peninsular War }
+    markers:
+      - kind: event
+        side: fr
+        name: Berlin Decree
+        date: 21 November 1806
+        text: From the captured Prussian capital Napoleon declared the British Isles under blockade and banned all trade with them.
+        lonlat: [13.4, 52.52]
+      - kind: taken
+        side: fr
+        name: Lisbon
+        date: 30 November 1807
+        text: General Junot occupied the city to close Portugal to British trade. The royal family had sailed for Brazil the day before.
+        lonlat: [-9.139, 38.722]
+      - kind: event
+        side: fr
+        name: Madrid
+        date: May – July 1808
+        text: Madrid rose against the French on 2 May. Napoleon forced the Spanish Bourbons to abdicate at Bayonne and made Joseph king in their place.
+        lonlat: [-3.704, 40.417]
+      - kind: taken
+        side: fr
+        name: Rome
+        date: May – July 1809
+        text: The Papal States were annexed to France. Pope Pius VII excommunicated Napoleon and was arrested and held in Savona and Fontainebleau until 1814.
+        lonlat: [12.483, 41.893]
+      - kind: event
+        side: fr
+        name: Amsterdam
+        date: 9 July 1810
+        text: King Louis abdicated rather than enforce the blockade, and Napoleon annexed the Kingdom of Holland.
+        lonlat: [4.9, 52.37]
+      - kind: taken
+        side: fr
+        name: Hamburg
+        date: December 1810
+        text: Annexed with Bremen, Lübeck, Oldenburg and the North Sea coast to close the last gaps in the blockade.
+        lonlat: [10.0, 53.55]
+      - kind: event
+        side: gb
+        name: Heligoland
+        date: 1807–1814
+        text: Taken by Britain from Denmark in 1807, the island became a depot for smuggling British goods into Germany.
+        lonlat: [7.885, 54.182]
+        lp: l
+    areas:
+      - style: outline
+        side: fr
+        label: Napoleon’s empire and the states dependent on it, end of 1811 (approximate)
+        atoms: [DE-ST~anhalt, DE-BW~baden!, DE-BW~baden~vorder, DE-BW~baden~kpf, DE-BW~baden~us1945, DE-BY!, AT-8, AT-7, AT-5, DE-BY~oger!, DE-BY~bav!, DE-BY~oger~bav, DE-BY~bav~opf, AT-4~inn, DE-NW!, DE-NW~kleve, DE-NW~mark, PL-PM~danzig, LT-AL!, PL-MA!, LT-MR, PL-LU, PL-MZ, PL-LD, PL-KP!, PL-WP!, PL-SK, PL-MA~krakow, PL-KP~netze, PL-WP~congress, PL-KP~congress, PL-SL~congress, PL-SL~polLes~congress, PL-WP~de1930, PL-PD~congress, DE-RP!, LU-D, LU-G, DE-SL!, FR-59!, BE-VWV, BE-WHT, FR-08, BE-WNA, FR-02, BE-WLX, FR-55, FR-54, BE-WLG!, LU-L, FR-57!, IT-AO, NL-GR, NL-DR, NL-OV, NL-GE, NL-LI, IT-IM, FR-06, IT-CN, FR-04, FR-05, IT-TO, FR-73, FR-74, MCO+00?, FR-64!, FR-31, FR-65, FR-09, FR-66, NL-ZE!, BE-VOV, NL-NB, BE-VAN, BE-VLI, FR-67, FR-68, CH-JU, FR-90, FR-25, CH-GE, FR-01, FR-39, CH-NE, BE-BRU, BE-VBR, BE-WBR, IT-LT!, IT-RM, IT-VT, IT-GR, IT-LI, IT-PI, IT-SP, IT-GE, IT-SV, FR-83, FR-13, FR-30, FR-34, FR-11, FR-40, FR-33, FR-17, FR-85, FR-44, FR-56, FR-29, FR-22, FR-35, FR-50, FR-14, FR-27, FR-76, FR-80, FR-62!, NL-ZH, NL-NH, NL-FR, DE-HB, DE-HH, GR-F, FR-2B, FR-2A, NL-FL, NL-UT, IT-AT, IT-SI, IT-AR, IT-FI, IT-VC, IT-RI!, IT-AL!, IT-PC, IT-PR, IT-PT, IT-TR, IT-PG, IT-FR!, IT-BI, IT-PO, FR-32, FR-87, FR-19, FR-82, FR-81, FR-38, FR-26, FR-12, FR-46, FR-37, FR-36, FR-41, FR-23, FR-53, FR-72, FR-84, FR-52, FR-51, FR-24, FR-69, FR-88, FR-07, FR-42, FR-63, FR-03, FR-45, FR-49, FR-10, FR-75, FR-92, FR-93, FR-95, FR-78, FR-16, FR-18, FR-28, FR-43, FR-15, FR-47, FR-48, FR-58, FR-21, FR-60, FR-61, FR-70, FR-71, FR-79, FR-86, FR-89, FR-91, FR-77, FR-94, DE-NI~oger!, DE-NI~bv, DE-RP~pfalz, DE-SL~pfalz, DE-NI~oger~old, DE-RP~hd, DE-TH~pr1815!, DE-NW~lb!, DE-NW~lb~kleve, DE-NI~oger~ofr, FR-62~calais, FR-59~flandre, FR-57~metz, FR-64~bearn, NL-ZE~vlaanderen, BE-WLG~eupen, IT-AL~casale, DE-SH!, DE-HE!, DE-BW~hohenz, SI-090, HR-18, SI-053, SI-006, SI-046, SI-128, SI-044, SI-007, IT-GO, SI-084, SI-183, SI-075, SI-049, IT-TS, SI-111, SI-035, SI-050, HR-19!, ME-08, SI-131, SI-192, SI-041, SI-163, ME-10, HR-03, HR-04, HR-13!, HR-17!, SI-054, SI-119, SI-085, SI-073, SI-017, HR-08!, SI-048, SI-165, SI-066, SI-065, SI-038, ME-05, ME-19, HR-15!, HR-09, SI-040, SI-095, SI-117, SI-012, SI-043, SI-071, SI-052, SI-122, SI-146, SI-004, SI-082, SI-102, SI-068, SI-138, SI-164, SI-072, SI-140, SI-162, SI-186, SI-008, SI-021, SI-027, SI-064, SI-05, SI-060, SI-013, SI-134, SI-005, SI-094, SI-091, SI-023, SI-039, SI-061, SI-194, SI-037, SI-022, SI-077, SI-020, SI-099, SI-147, SI-014, SI-003, SI-001, SI-019, SI-036, SI-136, SI-150, SI-170, SI-130, SI-193, SI-032, SI-123, SI-109, SI-157, SI-179, SI-104, SI-121, HR-08~cres, HR-08~krk, HR-13~it1941, HR-15~it1941, HR-17~it1941, HR-19~korcula, HR-19~lastovo, DE-NW~lippe, IT-LU, IT-MS, DE-MV!, IT-TE, IT-PE, IT-CH, IT-CB, IT-FG, IT-BT, IT-BA, IT-BR, IT-LE, IT-TA, IT-MT, IT-CS, IT-KR, IT-CZ, IT-RC, IT-VV, IT-PZ, IT-SA, IT-NA, IT-CE, IT-BN, IT-AV, IT-AQ, IT-IS, IT-LT~gaeta, IT-FR~sora, IT-RI~cittaducale, IT-VB, IT-VA, IT-CO, IT-SO, IT-BZ, IT-RN, IT-PU, IT-BL, IT-UD, IT-VE, IT-PD, IT-RO, IT-FE, IT-RA, IT-FC, IT-AN, IT-MC, IT-FM, IT-AP, IT-BG, IT-BS, IT-CR, IT-MN, IT-MI, IT-LC, IT-MB, IT-LO, IT-PV!, IT-NO, IT-TN, IT-VI, IT-VR, IT-TV, IT-RE, IT-MO, IT-BO, IT-PN, IT-PV~pavese, DE-HE~nassau, DE-RP~nassau, DE-RP~rb, DE-SN!, DE-ST~sax, DE-BB~sax!, DE-TH~sax, DE-TH~pr1815~sax, PL-LB~sax, PL-DS~sax, DE-SN~olaus!, DE-BB~sax~nlaus, DE-SN~pr1815, DE-SN~olaus~pr1815, ES-CE, ES-ML, ES-NA!, ES-SS, ES-HU!, ES-L!, ES-GI, ES-BA!, ES-CA, ES-OR, ES-CC, ES-SA, ES-ZA, ES-PO, ES-H, ES-B, ES-T, ES-CS, ES-V, ES-A, ES-MU, ES-AL, ES-GR, ES-MA, ES-SE, ES-C, ES-LU, ES-O, ES-S, ES-BI, ES-TF, ES-GC, ES-PM!, ES-Z, ES-LO, ES-VI, ES-AB, ES-TE, ES-CU, ES-TO, ES-LE, ES-SO, ES-BU, ES-AV, ES-P, ES-CR, ES-CO, ES-GU, ES-J, ES-M, ES-SG, ES-VA, ES-PM~menorca, ES-BA~olivenza, ES-NA~tudela, ES-HU~jaca, ES-L~pallars, CH-TI, CH-GR, CH-SH, CH-TG, CH-ZH, CH-AG, CH-BS, CH-BL, CH-SG, CH-SO, CH-VD, CH-BE, CH-LU, CH-ZG, CH-UR, CH-SZ, CH-GL, CH-NW, CH-FR, CH-OW, CH-AR, CH-AI, DE-TH!, CH-VS, DE-HE~waldeck, DE-NI!, DE-ST!, DE-ST~bra, DE-HE~hk, DE-NW~mr, DE-NI~bs, DE-BW!, DE-BW~wue!, DE-BW~wue~us1945, DE-BW~us1945]
   - title: Bernadotte and the Army of the North
     date: 1810–1813
     when: "1810"
@@ -469,6 +686,55 @@ steps:
             - 51.5
           - - 12.4577
             - 51.4403
+  - title: The invasion of Russia
+    date: June – December 1812
+    when: "1812-06-24"
+    borders: "1812-06-24"
+    countries: [ru, by, lt, pl, fr, de, at]
+    body:
+      - Napoleon and Alexander had fallen out over the blockade, over Poland and over the annexation of Oldenburg, whose ruling family was related to the tsar’s. On 24 June 1812 Napoleon crossed the Niemen with the largest army Europe had yet seen, more than 600,000 men in all. It was drawn from all over his empire and his allies, with Germans, Poles, Italians and others beside the French, while Austrian and Prussian corps guarded its flanks. The Russian armies fell back, fought at Smolensk in August and at Borodino on 7 September, and gave up Moscow, which burned after the French entered it on 14 September.
+      - Alexander refused to make peace, and on 19 October Napoleon left Moscow. Hunger, cold, disease and constant attacks by Cossacks, peasant partisans and the pursuing Russian armies destroyed most of his army on the retreat, and after the crossing of the Berezina in late November only a small fraction of the men who had entered Russia came back across the Niemen in December. The disaster broke Napoleon’s hold on Germany. Within weeks the Prussian corps had stood aside, and in 1813 Prussia changed sides.
+    facts:
+      - [Crossing of the Niemen, "24 June 1812"]
+      - [Battle of Borodino, "7 September 1812"]
+      - [Grande Armée, "more than 600,000 men; only a small fraction came back"]
+    link: { href: "#/war/french-invasion-of-russia", text: The French invasion of Russia }
+    markers:
+      - kind: event
+        side: fr
+        name: Crossing of the Niemen
+        date: 24 June 1812
+        text: The Grande Armée crossed the river near Kovno, today’s Kaunas, on pontoon bridges.
+        lonlat: [23.933, 54.9]
+      - kind: taken
+        side: fr
+        name: Smolensk
+        date: 16–18 August 1812
+        text: The French stormed the burning city, but the Russian armies, now united, got away east.
+        lonlat: [32.045, 54.783]
+      - kind: battle
+        name: Battle of Borodino
+        date: 7 September 1812
+        text: The bloodiest day of the war. Kutuzov’s army withdrew after the battle, leaving the road to Moscow open.
+        lonlat: [35.817, 55.517]
+      - kind: taken
+        side: fr
+        name: Moscow
+        date: 14 September 1812
+        text: Napoleon entered a city its people had largely abandoned. Fires destroyed most of it in the following days.
+        lonlat: [37.618, 55.756]
+      - kind: battle
+        name: Berezina
+        date: 26–29 November 1812
+        text: The remains of the Grande Armée escaped over two improvised bridges, at a terrible cost in lives.
+        lonlat: [28.355, 54.325]
+    arrows:
+      - side: fr
+        label: Grande Armée
+        via: [[23.93, 54.95], [30.2, 55.2], [32.05, 54.85], [37.4, 55.8]]
+      - side: fr
+        label: Retreat
+        via: [[37.4, 55.6], [33.0, 54.65], [28.4, 54.2], [24.0, 54.8]]
   - title: Prussia rises, Lützen and Bautzen
     date: December 1812 – August 1813
     when: "1812-12-30"
@@ -536,6 +802,73 @@ steps:
       - side: ru
         label: Allied retreat
         via: [[14.5, 51.2], [15.5, 51.15], [16.35, 51.05]]
+  - title: Leipzig, the Battle of the Nations
+    date: August – October 1813
+    when: "1813"
+    borders: "1813-10-19"
+    countries: [de, cz, pl, fr, at, ru]
+    side_names:
+      at: Allied success (Schwarzenberg’s Army of Bohemia)
+      pr: Allied success (Blücher’s Army of Silesia)
+    move_names:
+      at: Army of Bohemia (Austrians, Russians and Prussians)
+      pr: Army of Silesia (Prussians and Russians)
+      se: Army of the North (Swedes, Prussians and Russians)
+      ru: Army of Poland (Russians)
+    body:
+      - When the armistice ended in August 1813, Austria joined Russia, Prussia and Sweden against Napoleon, with Britain paying subsidies. Three allied armies closed on him in Saxony, Schwarzenberg’s Army of Bohemia from the south, Blücher’s Army of Silesia from the east and Crown Prince Charles John’s Army of the North from Berlin. Under the Trachenberg plan they avoided battle with Napoleon himself and struck at his marshals. Napoleon beat Schwarzenberg at Dresden on 26–27 August, his last great victory in Germany, but in the same days Blücher routed Macdonald on the Katzbach, the allies trapped Vandamme’s pursuing corps at Kulm, and the French drives on Berlin failed. On 8 October Bavaria changed sides.
+      - In October the allies converged on Leipzig. On 16–19 October more than half a million men fought the largest battle of the Napoleonic Wars there, Napoleon’s army of fewer than 200,000, with Germans, Poles and Italians in its ranks, against more than 300,000 Austrians, Russians, Prussians and Swedes. Schwarzenberg attacked from the south and Blücher from the north, and on 18 October Bennigsen’s Army of Poland and the Army of the North closed the ring from the east as Saxon troops went over to the allies. As Napoleon retreated on the 19th, the bridge over the Elster was blown too early, trapping his rearguard, and Marshal Józef Poniatowski drowned. Napoleon fell back to the Rhine, and the Confederation of the Rhine fell apart.
+    facts:
+      - [Battle of Dresden, "26–27 August 1813, French victory"]
+      - [Battle of Leipzig, "16–19 October 1813, allied victory"]
+      - [Losses at Leipzig, "Some 60,000–80,000 on each side killed, wounded or captured"]
+    markers:
+      - kind: battle
+        side: fr
+        name: Battle of Dresden
+        date: 26–27 August 1813
+        text: Napoleon threw back Schwarzenberg’s attack on the Saxon capital in heavy rain but could not follow up his victory.
+        lonlat: [13.733, 51.033]
+      - kind: battle
+        side: pr
+        name: Battle of the Katzbach
+        date: 26 August 1813
+        text: Blücher’s army caught Macdonald’s corps crossing the swollen Katzbach in a downpour and routed it.
+        lonlat: [16.099, 51.105]
+      - kind: battle
+        side: at
+        name: Battle of Kulm
+        date: 29–30 August 1813
+        text: Vandamme’s corps, pursuing the allies into Bohemia, was surrounded by Russian, Prussian and Austrian troops. He was captured with several thousand of his men.
+        lonlat: [13.939, 50.697]
+      - kind: battle
+        side: at
+        name: Battle of Leipzig
+        date: 16–19 October 1813
+        text: The Battle of the Nations. The allies attacked Napoleon’s army from three sides and drove it out of the city with heavy losses.
+        lonlat: [12.413, 51.312]
+      - kind: battle
+        side: fr
+        name: Battle of Hanau
+        date: 30–31 October 1813
+        text: Napoleon broke through General Wrede’s Bavarian and Austrian army, which tried to block his retreat to the Rhine.
+        lonlat: [8.917, 50.133]
+    arrows:
+      - side: at
+        label: Schwarzenberg
+        via: [[13.82, 50.64], [13.0, 50.92], [12.45, 51.26]]
+      - side: pr
+        label: Blücher
+        via: [[15.6, 51.15], [12.8, 51.78], [12.1, 51.5], [12.33, 51.37]]
+      - side: se
+        label: Charles John
+        via: [[13.2, 52.05], [12.6, 51.7], [12.47, 51.37]]
+      - side: ru
+        label: Bennigsen
+        via: [[13.7, 51.08], [12.85, 51.22], [12.5, 51.31]]
+      - side: fr
+        label: Retreat to the Rhine
+        via: [[12.35, 51.32], [11.03, 50.98], [8.95, 50.14], [8.27, 50.0]]
   - title: "Kiel: Norway for Pomerania"
     date: 1813–1814
     when: "1813"
@@ -732,6 +1065,70 @@ steps:
       - side: gb
         label: Wellington
         via: [[-1.47, 43.49], [-0.78, 43.5], [0.5, 43.55], [1.42, 43.6]]
+  - title: The Congress of Vienna
+    date: September 1814 – June 1815
+    when: "1814-09"
+    borders: "1815-06-09"
+    countries: [at, de, pl, ru, nl, be, lu, it, fr, gb, dk, si, hr]
+    side_names:
+      at: Austrian gains
+      pr: Prussian gains
+      ru: Russian gains
+      gb: Gains for the Netherlands
+    body:
+      - After Napoleon’s first abdication the victors met in Vienna to remake the map of Europe. From September 1814 the four great powers, Austria, Britain, Prussia and Russia, represented by Metternich, Castlereagh, Hardenberg and Tsar Alexander himself, decided the main questions, and France’s foreign minister Talleyrand soon won a place beside them. Amid balls and receptions the Congress nearly broke up over Poland and Saxony, for Russia wanted the whole Duchy of Warsaw and Prussia the whole of Saxony. On 3 January 1815 Austria, Britain and France signed a secret alliance against them. In the compromise Russia took most of the duchy as a Kingdom of Poland under the tsar, Kraków became a free city, and Prussia received about two-fifths of Saxony.
+      - The Final Act was signed on 9 June 1815, nine days before Waterloo. Prussia also gained Westphalia and the Rhineland, which made it France’s neighbour on the Rhine, and Austria took Lombardy and Venetia and recovered its Alpine and Illyrian lands. The southern Netherlands, today’s Belgium, were joined to the Dutch provinces as a barrier against France, Sardinia received Genoa, and the Pope and the Bourbon king of Naples returned. In place of the Holy Roman Empire a German Confederation of 39 states was formed under Austrian presidency. The settlement paid little heed to national feeling, but no war between the great powers broke out again until the Crimean War of 1853.
+    facts:
+      - [Congress of Vienna, "September 1814 – June 1815"]
+      - [Final Act, "9 June 1815"]
+      - [German Confederation, "39 states under Austrian presidency"]
+    link: { href: "#/war/neapolitan-war", text: "Murat’s war for Naples, 1815" }
+    markers:
+      - kind: treaty
+        name: Final Act of the Congress of Vienna
+        date: 9 June 1815
+        text: The Final Act gathered the Congress’s treaties into one document, signed by Austria, Britain, France, Portugal, Prussia, Russia and Sweden. Spain signed only in 1817.
+        lonlat: [16.372, 48.208]
+      - kind: event
+        side: ru
+        name: Warsaw
+        date: 1815
+        text: The Kingdom of Poland, known as Congress Poland, was joined to Russia with the tsar as its king and its own constitution and army.
+        lonlat: [21.012, 52.23]
+      - kind: event
+        side: pr
+        name: Saxony
+        date: 1815
+        text: The King of Saxony, who had stood by Napoleon, kept his throne and Dresden but lost the north of his kingdom to Prussia.
+        lonlat: [13.738, 51.05]
+      - kind: event
+        side: pr
+        name: Cologne
+        date: 1815
+        text: Prussia’s new lands on the Rhine and in Westphalia made it the guardian of Germany’s western border.
+        lonlat: [6.958, 50.938]
+      - kind: event
+        side: gb
+        name: Brussels
+        date: 1815
+        text: The United Kingdom of the Netherlands under William I of Orange joined the former Austrian Netherlands to the Dutch provinces.
+        lonlat: [4.352, 50.847]
+      - kind: event
+        name: Frankfurt
+        date: 1815
+        text: The Federal Assembly of the German Confederation met in the free city from 1816, chaired by Austria.
+        lonlat: [8.682, 50.11]
+      - kind: event
+        side: at
+        name: Milan
+        date: 1815
+        text: Lombardy and Venetia became the Kingdom of Lombardy–Venetia under the Austrian emperor.
+        lonlat: [9.19, 45.464]
+      - kind: event
+        name: Genoa
+        date: 1815
+        text: The old republic was given to the Kingdom of Sardinia, against the wishes of many of its people.
+        lonlat: [8.934, 44.407]
   - title: The Hundred Days and Waterloo
     date: March – November 1815
     when: "1815-03-01"

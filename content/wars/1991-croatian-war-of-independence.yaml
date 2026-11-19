@@ -1,0 +1,585 @@
+id: croatian-war-of-independence
+name: Croatian War of Independence
+start: "1991-03-31"
+end: "1995-11-12"
+tier: A
+summary: The war that followed Croatia’s break with Yugoslavia. From August 1990 Serbs in the Knin region and other Serb-populated areas rose against the new Croatian government and set up the Serbian Autonomous Region of Krajina. After Croatia declared independence on 25 June 1991, the Yugoslav People’s Army (JNA) joined the rebels; by the end of the year Vukovar had been destroyed, Dubrovnik besieged and almost a third of Croatia taken, and most Croats and other non-Serbs had been driven out of the Serb-held areas. A UN-supervised ceasefire from January 1992 froze the front around the Republic of Serbian Krajina for three years. Croatia retook western Slavonia in May 1995 and the Krajina in Operation Storm that August, when most of its Serb population fled. Eastern Slavonia returned peacefully under the Erdut Agreement and a UN transitional administration, which ended in January 1998. More than 20,000 people were killed.
+countries: [hr, rs, ba, me]
+sides:
+  - id: hr
+    name: Croatia
+    polities: [croatia]
+    ink: blue
+    moves: Croatian moves
+    success: Croatian success
+  - id: rsk
+    name: Krajina Serbs (SAO Krajina, RSK)
+    polities: [serbian-krajina]
+    ink: red
+    moves: Krajina Serb moves
+    success: Krajina Serb success
+  - id: yu
+    name: Yugoslav People’s Army (JNA)
+    polities: [yugoslavia]
+    ink: olive
+    moves: JNA moves
+    success: JNA success
+  - id: ba
+    name: Army of the Republic of Bosnia and Herzegovina
+    polities: [bosnia]
+    ink: green
+    moves: Bosnian Army moves
+    success: Bosnian Army success
+notes:
+  - The Republic of Serbian Krajina was recognised by no state. The map shows it, and the JNA’s hold on the Dubrovnik coast, as areas inside Croatia, whose independence the base map shows from 25 June 1991. Front lines are approximate.
+  - Casualty figures for many events are disputed between Croatian, Serbian and international sources; the figures given are those of the sources listed, and ICTY findings where the tribunal settled them.
+  - The Croatian army was called the National Guard Corps (ZNG) until November 1991. Croatian Serb forces were the SAO Krajina police and Territorial Defence, from 1992 the Serbian Army of Krajina (SVK).
+sources:
+  - title: Croatian War of Independence (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Croatian_War_of_Independence
+  - title: Log Revolution (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Log_Revolution
+  - title: Battle of Vukovar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Vukovar
+  - title: Siege of Dubrovnik (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Dubrovnik
+  - title: Vance plan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Vance_plan
+  - title: Operation Maslenica (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Maslenica
+  - title: Operation Medak Pocket (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Medak_Pocket
+  - title: Operation Flash (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Flash
+  - title: Operation Storm (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Storm
+  - title: Erdut Agreement (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Erdut_Agreement
+  - title: Mrkšić et al. (“Vukovar Hospital”), case information (ICTY)
+    url: https://www.icty.org/en/case/mrksic
+  - title: Martić, case information (ICTY)
+    url: https://www.icty.org/en/case/martic
+  - title: Gotovina et al., case information (ICTY)
+    url: https://www.icty.org/en/case/gotovina
+steps:
+  - title: The Log Revolution
+    date: August 1990 – March 1991
+    when: "1990-08-17"
+    borders: "1991-03-31"
+    countries: [hr, rs]
+    body:
+      - Franjo Tuđman’s Croatian Democratic Union won Croatia’s first multi-party elections in spring 1990. Many of the republic’s Serbs, about an eighth of the population, feared the new government, and Belgrade’s media told them they faced persecution. On 17 August 1990 Serbs around Knin, led by Milan Babić and the local police chief Milan Martić, blocked the roads into Dalmatia with felled trees to protect a referendum on Serb autonomy. The “Log Revolution” cut the coast off from the rest of Croatia in the middle of the tourist season.
+      - On 21 December the Serb-run municipalities of Knin, Benkovac, Obrovac, Gračac, Vojnić, Dvor and Kostajnica adopted a statute for a Serbian Autonomous Region (SAO) of Krajina. More than two hundred armed incidents followed. In March 1991 Krajina forces clashed with Croatian police at Pakrac, and on 31 March at the Plitvice Lakes, where the policeman Josip Jović and the Krajina fighter Rajko Vukadinović were killed. The next day the SAO Krajina declared that it was leaving Croatia to join Serbia, and the JNA moved in between the two sides.
+    facts:
+      - [Log Revolution began, 17 August 1990]
+      - [SAO Krajina statute, 21 December 1990]
+      - [Plitvice Lakes clash, "31 March 1991, one killed on each side"]
+    markers:
+      - kind: capital
+        side: rsk
+        name: Knin
+        date: August 1990
+        text: Centre of the revolt and from 1991 capital of the SAO Krajina, later the Republic of Serbian Krajina.
+        lonlat: [16.197, 44.041]
+        lp: r
+      - kind: event
+        side: rsk
+        name: Log barricades
+        date: 17 August 1990
+        text: Roads between Knin, Benkovac and Obrovac and the coast were blocked with logs and rocks, severing land links between Dalmatia and northern Croatia.
+        lonlat: [15.613, 44.034]
+        lp: l
+      - kind: battle
+        name: Pakrac
+        date: 1–2 March 1991
+        text: Serb police and Territorial Defence took over the town’s police station; Croatian special police retook it, and the JNA deployed to separate the sides.
+        lonlat: [17.189, 45.436]
+      - kind: battle
+        side: hr
+        name: Plitvice Lakes
+        date: 31 March 1991
+        text: Croatian special police drove SAO Krajina forces out of the national park. Josip Jović was the first Croatian policeman killed in the war, Rajko Vukadinović the first Krajina fighter.
+        lonlat: [15.61, 44.88]
+      - kind: capital
+        side: hr
+        name: Zagreb
+        date: May 1990
+        text: Croatia’s new parliament and government, led by Franjo Tuđman, took office in May 1990.
+        lonlat: [15.977, 45.813]
+    areas:
+      - style: outline
+        side: rsk
+        label: Serb-run municipalities of the SAO Krajina, spring 1991 (approximate)
+        polygons:
+          - [[15.55, 44.06], [15.62, 44], [15.8, 43.97], [15.95, 43.93], [16.1, 43.93], [16.22, 43.98], [16.323, 44.087], [16.276, 44.157], [16.216, 44.208], [16.188, 44.282], [16.203, 44.36], [16.171, 44.377], [16.138, 44.378], [16.16, 44.416], [16.116, 44.521], [16.084, 44.535], [16.027, 44.525], [16.006, 44.541], [16.045, 44.589], [16.036, 44.615], [15.969, 44.639], [15.948, 44.678], [15.937, 44.689], [15.905, 44.69], [15.889, 44.724], [15.856, 44.704], [15.806, 44.697], [15.754, 44.739], [15.716, 44.803], [15.769, 44.827], [15.769, 44.853], [15.66, 44.78], [15.66, 44.62], [15.75, 44.42], [15.62, 44.12]]
+          - [[15.62, 45.3], [15.7, 45.2], [15.791, 45.188], [15.825, 45.211], [15.879, 45.217], [16.02, 45.214], [16.024, 45.184], [16.067, 45.17], [16.104, 45.113], [16.213, 45.031], [16.279, 45.007], [16.341, 45.006], [16.399, 45.121], [16.2, 45.32], [16.08, 45.4], [15.88, 45.45], [15.7, 45.4]]
+  - title: Independence and the JNA
+    date: May – September 1991
+    when: "1991-05-02"
+    borders: "1991-08-26"
+    countries: [hr, rs]
+    link: { href: "#/war/ten-day-war", text: The Ten-Day War in Slovenia }
+    body:
+      - On 2 May 1991 Croatian police drove into an ambush at Borovo Selo near Vukovar; twelve policemen and one Serb fighter were killed. On 19 May 93 per cent of voters backed independence in a referendum, and Croatia declared independence on 25 June, the same day as Slovenia. Under the Brioni Declaration of 7 July both agreed to suspend their decisions for three months, but the fighting in Croatia only grew.
+      - While the JNA left Slovenia, in Croatia it increasingly fought alongside the rebels. Serb forces from eastern Slavonia attacked Dalj on 1 August, killing police and National Guard defenders who had surrendered, and by early August Serb forces had overrun much of Banovina. On 26 August the JNA, under Colonel Ratko Mladić, and Martić’s police took the Croatian village of Kijevo near Knin and burned it. The ICTY later found that the attack was meant to drive its Croat inhabitants out.
+    facts:
+      - [Independence referendum, "19 May 1991, 93% in favour, 83% turnout"]
+      - [Independence declared, 25 June 1991]
+      - [Kijevo taken, 26 August 1991]
+    markers:
+      - kind: battle
+        side: rsk
+        name: Borovo Selo
+        date: 2 May 1991
+        text: Croatian police sent to free two captured colleagues were ambushed; twelve policemen and one Serb paramilitary were killed before the JNA intervened.
+        lonlat: [18.958, 45.381]
+      - kind: capital
+        side: hr
+        name: Zagreb
+        date: 25 June 1991
+        text: The Croatian parliament declared independence on 25 June 1991 and, after the Brioni moratorium ran out, cut all remaining ties with Yugoslavia on 8 October.
+        lonlat: [15.977, 45.813]
+      - kind: event
+        name: Dalj
+        date: 1 August 1991
+        text: Krajina Serb Territorial Defence, the JNA and Serbian paramilitaries took the village; Croatian police and guardsmen who surrendered were killed, and its non-Serb civilians were persecuted until mid-1992.
+        lonlat: [18.986, 45.484]
+      - kind: taken
+        side: rsk
+        name: Kijevo
+        date: 26 August 1991
+        text: Blockaded in April and again from mid-August by the JNA 9th Corps and SAO Krajina police, the village was taken, looted and burned. The ICTY’s Martić judgement of 2007 described the attack as aimed at expelling its Croat population.
+        lonlat: [16.351, 43.979]
+      - kind: event
+        name: Plitvice police station
+        date: Late August 1991
+        text: The Croatian police post left at the lakes after the March clash was blockaded by the JNA and taken.
+        lonlat: [15.61, 44.88]
+        lp: l
+    areas:
+      - style: outline
+        side: rsk
+        label: Serb-run municipalities of the SAO Krajina, spring 1991 (approximate)
+        polygons:
+          - [[15.55, 44.06], [15.62, 44], [15.8, 43.97], [15.95, 43.93], [16.1, 43.93], [16.22, 43.98], [16.323, 44.087], [16.276, 44.157], [16.216, 44.208], [16.188, 44.282], [16.203, 44.36], [16.171, 44.377], [16.138, 44.378], [16.16, 44.416], [16.116, 44.521], [16.084, 44.535], [16.027, 44.525], [16.006, 44.541], [16.045, 44.589], [16.036, 44.615], [15.969, 44.639], [15.948, 44.678], [15.937, 44.689], [15.905, 44.69], [15.889, 44.724], [15.856, 44.704], [15.806, 44.697], [15.754, 44.739], [15.716, 44.803], [15.769, 44.827], [15.769, 44.853], [15.66, 44.78], [15.66, 44.62], [15.75, 44.42], [15.62, 44.12]]
+          - [[15.62, 45.3], [15.7, 45.2], [15.791, 45.188], [15.825, 45.211], [15.879, 45.217], [16.02, 45.214], [16.024, 45.184], [16.067, 45.17], [16.104, 45.113], [16.213, 45.031], [16.279, 45.007], [16.341, 45.006], [16.399, 45.121], [16.2, 45.32], [16.08, 45.4], [15.88, 45.45], [15.7, 45.4]]
+  - title: Vukovar and Škabrnja
+    date: August – December 1991
+    when: "1991-08-25"
+    borders: "1991-11-18"
+    countries: [hr, rs, ba]
+    body:
+      - From 14 September Croatian forces blockaded JNA barracks across the country and captured many, including all those of the Varaždin corps, gaining the heavy weapons they had lacked. The JNA answered with a full offensive. Vukovar on the Danube, held by about 1,800 guardsmen and volunteers, was besieged for 87 days by up to 36,000 troops and Serbian paramilitaries and reduced to ruins. On 7 October Yugoslav aircraft bombed the presidential palace in Zagreb; the next day Croatia cut its last ties with Yugoslavia.
+      - Vukovar fell on 18 November. About 3,000 people had died in the battle, and at least 20,000 inhabitants were expelled. On 20 November some 200 prisoners taken from the town’s hospital were shot at the Ovčara farm; the ICTY convicted the JNA officers Mile Mrkšić and Veselin Šljivančanin. Seventy Croat civilians were killed at Lovas in October, and 62 civilians and five prisoners at Škabrnja near Zadar on 18–19 November, crimes for which the tribunal convicted the Krajina leaders Babić and Martić.
+      - Serb civilians were also killed on the Croatian side. In October 100–120 people, most of them Serbs, were murdered in Gospić on the orders of local commanders, and in December soldiers killed 18 Serbs and a Hungarian at Paulin Dvor near Osijek; Croatian courts later convicted those responsible. In late 1991 Croatian offensives in western Slavonia, Otkos 10 and Orkan 91, retook much of the area the JNA had seized there.
+    facts:
+      - [Siege of Vukovar, "25 August – 18 November 1991, about 3,000 dead"]
+      - [Ovčara massacre, "20 November 1991, at least 200 killed"]
+      - [Dead by the end of 1991, "about 10,000"]
+    markers:
+      - kind: siege
+        side: yu
+        name: Vukovar
+        date: 25 August – 18 November 1991
+        text: Up to 12,000 shells and rockets a day fell on the town. It was the first major European town to be entirely destroyed since the Second World War.
+        lonlat: [19.002, 45.352]
+        lp: r
+      - kind: event
+        name: Ovčara
+        date: 20 November 1991
+        text: About 200 Croatian prisoners of war and civilians removed from Vukovar hospital, among them Serbs, Hungarians and Bosniaks, were beaten and shot by Krajina Serb Territorial Defence and Serbian paramilitaries after the JNA handed them over.
+        lonlat: [19.059, 45.296]
+        lp: r
+      - kind: event
+        name: Lovas
+        date: 10–18 October 1991
+        text: Seventy Croat civilians were killed after the JNA and Serb paramilitaries occupied the village; on 18 October prisoners were forced to walk into a minefield and then fired upon.
+        lonlat: [19.169, 45.226]
+        lp: b
+      - kind: event
+        name: Škabrnja
+        date: 18–19 November 1991
+        text: After JNA armour broke into the village, SAO Krajina troops killed 62 civilians and five prisoners in Škabrnja and Nadin.
+        lonlat: [15.451, 44.091]
+        lp: l
+      - kind: event
+        name: Gospić
+        date: October 1991
+        text: 100–120 civilians, mostly Serbs arrested in Gospić and Karlobag, were shot. The local commanders Tihomir Orešković and Mirko Norac were convicted in Croatia in 2004.
+        lonlat: [15.375, 44.546]
+        lp: l
+      - kind: event
+        name: Paulin Dvor
+        date: 11 December 1991
+        text: Croatian soldiers killed nineteen civilians aged 41 to 85, eighteen Serbs and one Hungarian. Two were later convicted, and in 2010 President Ivo Josipović apologised at the victims’ graves.
+        lonlat: [18.624, 45.443]
+        lp: l
+      - kind: air
+        side: yu
+        name: Banski dvori
+        date: 7 October 1991
+        text: Yugoslav aircraft struck the presidential residence in Zagreb while Tuđman was meeting the federal president Stjepan Mesić and prime minister Ante Marković; none was hurt.
+        lonlat: [15.973, 45.816]
+      - kind: taken
+        side: hr
+        name: Varaždin barracks
+        date: September 1991
+        text: In the Battle of the Barracks Croatian forces took the whole JNA 32nd Corps, with about 250 tanks among the weapons seized across Croatia.
+        lonlat: [16.336, 46.305]
+    arrows:
+      - side: yu
+        label: JNA across the Danube
+        via: [[19.45, 45.25], [19.25, 45.29], [19.04, 45.34]]
+      - side: yu
+        label: JNA 5th Corps
+        via: [[17.19, 44.95], [17.22, 45.15], [17.19, 45.38]]
+      - side: yu
+        label: JNA and Krajina forces
+        via: [[16.10, 44.03], [15.75, 44.04], [15.48, 44.085]]
+      - side: hr
+        label: Otkos 10 and Orkan 91
+        via: [[16.85, 45.80], [17.02, 45.66], [17.17, 45.50]]
+    areas:
+      - style: occupied
+        side: rsk
+        label: Held by Krajina Serb forces and the JNA, January 1992 (approximate)
+        polygons:
+          - [[15.31, 45.08], [15.32, 45.02], [15.37, 44.96], [15.36, 44.84], [15.47, 44.64], [15.415, 44.54], [15.34, 44.505], [15.325, 44.475], [15.345, 44.45], [15.45, 44.405], [15.49, 44.35], [15.494, 44.281], [15.529, 44.272], [15.525, 44.261], [15.481, 44.262], [15.475, 44.252], [15.5, 44.215], [15.33, 44.115], [15.35, 44.075], [15.42, 44.048], [15.56, 43.962], [15.65, 43.935], [15.75, 43.93], [15.84, 43.875], [15.885, 43.812], [15.96, 43.79], [16.18, 43.812], [16.36, 43.855], [16.43, 43.85], [16.585, 43.78], [16.658, 43.854], [16.501, 43.993], [16.44, 44.014], [16.414, 44.056], [16.367, 44.058], [16.327, 44.082], [16.276, 44.157], [16.216, 44.208], [16.188, 44.282], [16.203, 44.36], [16.171, 44.377], [16.138, 44.378], [16.16, 44.416], [16.116, 44.521], [16.084, 44.535], [16.027, 44.525], [16.006, 44.541], [16.045, 44.589], [16.028, 44.625], [15.969, 44.639], [15.948, 44.678], [15.937, 44.689], [15.905, 44.69], [15.889, 44.724], [15.856, 44.704], [15.806, 44.697], [15.717, 44.786], [15.716, 44.803], [15.769, 44.827], [15.773, 44.845], [15.731, 44.927], [15.767, 44.993], [15.756, 45.042], [15.784, 45.101], [15.781, 45.168], [15.825, 45.211], [16.008, 45.218], [16.029, 45.205], [16.024, 45.184], [16.067, 45.17], [16.104, 45.113], [16.213, 45.031], [16.316, 45.001], [16.341, 45.006], [16.389, 45.117], [16.436, 45.133], [16.482, 45.2], [16.529, 45.222], [16.812, 45.181], [16.831, 45.217], [16.924, 45.285], [16.947, 45.236], [16.968, 45.237], [16.961, 45.251], [16.999, 45.231], [17.008, 45.244], [17.008, 45.216], [17.036, 45.23], [17.056, 45.2], [17.098, 45.178], [17.187, 45.149], [17.245, 45.155], [17.269, 45.19], [17.283, 45.183], [17.275, 45.225], [17.3, 45.265], [17.37, 45.33], [17.39, 45.38], [17.36, 45.42], [17.31, 45.44], [17.25, 45.43], [17.165, 45.39], [17.08, 45.33], [17.03, 45.31], [16.93, 45.3], [16.854, 45.27], [16.803, 45.279], [16.822, 45.317], [16.782, 45.32], [16.789, 45.341], [16.731, 45.377], [16.704, 45.364], [16.676, 45.373], [16.58, 45.355], [16.5, 45.392], [16.33, 45.438], [16.32, 45.458], [15.99, 45.481], [15.86, 45.512], [15.7, 45.488], [15.585, 45.462], [15.556, 45.37], [15.5, 45.348], [15.35, 45.19]]
+          - [[18.448, 45.697], [18.482, 45.692], [18.489, 45.669], [18.506, 45.669], [18.537, 45.642], [18.592, 45.628], [18.64, 45.581], [18.771, 45.556], [18.775, 45.52], [18.65, 45.445], [18.655, 45.41], [18.865, 45.322], [18.87, 45.31], [18.835, 45.285], [18.85, 45.25], [18.88, 45.215], [18.95, 45.172], [19.116, 45.143], [19.138, 45.146], [19.142, 45.162], [19.122, 45.196], [19.144, 45.2], [19.205, 45.163], [19.268, 45.166], [19.287, 45.18], [19.304, 45.167], [19.391, 45.169], [19.405, 45.18], [19.397, 45.223], [19.29, 45.236], [19.158, 45.276], [19.104, 45.299], [19.083, 45.339], [19.03, 45.345], [18.977, 45.371], [18.976, 45.391], [19.023, 45.402], [19.031, 45.416], [18.997, 45.456], [19.01, 45.499], [19.077, 45.492], [19.106, 45.512], [19.018, 45.567], [18.942, 45.539], [18.904, 45.573], [18.912, 45.619], [18.968, 45.669], [18.917, 45.707], [18.9, 45.765], [18.845, 45.816], [18.855, 45.857], [18.907, 45.868], [18.873, 45.895], [18.907, 45.916], [18.901, 45.931], [18.828, 45.906], [18.805, 45.914], [18.776, 45.883], [18.656, 45.908], [18.573, 45.817], [18.53, 45.791], [18.482, 45.791], [18.448, 45.769]]
+  - title: The siege of Dubrovnik
+    date: October 1991 – October 1992
+    when: "1991-10-01"
+    borders: "1991-12-06"
+    countries: [hr, me, ba, rs]
+    body:
+      - On 1 October 1991 the JNA attacked the Dubrovnik region from Montenegro and eastern Herzegovina, with many Montenegrin reservists in its ranks, while the Yugoslav Navy blockaded the coast. Cavtat fell on 16 October, and by the end of the month the army held almost all the land between the Pelješac peninsula and Prevlaka except Dubrovnik itself, defended at first by a few hundred poorly armed men. Villages in Konavle and the Dubrovnik hinterland were looted and burned.
+      - The city was shelled for months, most heavily on 6 December, when the walled Old Town, a World Heritage Site, was hit. The bombardment caused international outrage and helped bring about recognition of Croatia. About 16,000 refugees were evacuated by sea. In May 1992 the JNA pulled back into Herzegovina and handed its equipment to the Bosnian Serb army, and by the end of 1992 Croatian forces had retaken the whole region. The ICTY convicted the commanders Pavle Strugar and Miodrag Jokić for the attacks on the Old Town.
+    facts:
+      - [Croatian dead, "194 soldiers and 82–88 civilians"]
+      - [JNA dead, 165]
+      - [Heaviest shelling, 6 December 1991]
+    markers:
+      - kind: siege
+        side: hr
+        name: Dubrovnik
+        date: October 1991 – May 1992
+        text: The city held out under siege and naval blockade, without electricity or running water for three months; more than 11,000 buildings in the region were damaged.
+        lonlat: [18.109, 42.641]
+        lp: b
+      - kind: held
+        side: hr
+        name: Fort Imperial, Srđ
+        date: 6 December 1991
+        text: The fort above the city, held by a handful of defenders, was attacked on 6 December but not taken.
+        lonlat: [18.113, 42.648]
+        lp: t
+      - kind: taken
+        side: yu
+        name: Cavtat
+        date: 16 October 1991
+        text: Taken by the JNA’s Boka Kotorska naval sector, supported by a landing east of Dubrovnik.
+        lonlat: [18.219, 42.581]
+        lp: b
+      - kind: taken
+        side: yu
+        name: Slano
+        date: October 1991
+        text: The JNA’s advance from Herzegovina reached the coast at Slano, cutting the road to the north.
+        lonlat: [17.892, 42.786]
+        lp: l
+      - kind: taken
+        side: hr
+        name: Konavle
+        date: September – October 1992
+        text: Croatian forces retook the area south-east of Dubrovnik after the JNA’s withdrawal; Operation Tiger had pushed the front back from the city in July 1992.
+        lonlat: [18.374, 42.518]
+        lp: r
+      - kind: event
+        name: Prevlaka
+        date: 1992–2002
+        text: The peninsula at the mouth of the Bay of Kotor was demilitarised and watched by UN military observers until 2002.
+        lonlat: [18.515, 42.401]
+        lp: b
+    arrows:
+      - side: yu
+        label: From Herzegovina
+        via: [[18.344, 42.712], [18.24, 42.67], [18.14, 42.655]]
+      - side: yu
+        label: From the Bay of Kotor
+        via: [[18.53, 42.46], [18.40, 42.51], [18.24, 42.58]]
+      - side: yu
+        label: To Slano
+        via: [[17.966, 42.887], [17.93, 42.83], [17.90, 42.795]]
+    areas:
+      - style: occupied
+        side: yu
+        label: Held by the JNA, late October 1991 – May 1992 (approximate)
+        polygons:
+          - [[17.78, 42.86], [17.872, 42.79], [17.893, 42.791], [17.886, 42.779], [17.93, 42.745], [18.02, 42.694], [18.043, 42.702], [18.065, 42.677], [18.11, 42.665], [18.138, 42.639], [18.218, 42.62], [18.229, 42.57], [18.412, 42.476], [18.413, 42.462], [18.474, 42.441], [18.496, 42.416], [18.493, 42.442], [18.455, 42.465], [18.437, 42.493], [18.437, 42.559], [18.385, 42.567], [18.339, 42.603], [18.224, 42.628], [17.995, 42.74], [17.904, 42.805], [17.858, 42.817], [17.827, 42.853], [17.825, 42.894]]
+  - title: The Sarajevo ceasefire and the UN Protected Areas
+    date: January – June 1992
+    when: "1992-01-02"
+    borders: "1992-01-15"
+    countries: [hr, rs]
+    body:
+      - The UN envoy Cyrus Vance negotiated a ceasefire signed in Geneva on 23 November 1991, which did not hold, and an implementation agreement signed in Sarajevo on 2 January 1992 by the JNA general Andrija Rašeta and Croatia’s defence minister Gojko Šušak, which did. Under the Vance plan the Serb-held areas became UN Protected Areas in four sectors, East, West, North and South, patrolled by the UN Protection Force (UNPROFOR) from spring 1992. The JNA was to leave, local forces to disarm and refugees to return.
+      - Only the first part was carried out. The Krajina Serbs, who had proclaimed the Republic of Serbian Krajina on 19 December 1991, kept their weapons under police and army names, and few of the 170,000–250,000 Croats and other non-Serbs driven from the area could return. The European Community recognised Croatia on 15 January 1992, and it joined the UN on 22 May. The front now ran through a quarter of the country, and fighting flared at its edges, as on the Miljevci plateau in June.
+    facts:
+      - [Implementation agreement, "2 January 1992, Sarajevo"]
+      - [EC recognition of Croatia, 15 January 1992]
+      - [Area held by the RSK, "about 13,900 km², over a quarter of Croatia"]
+    markers:
+      - kind: treaty
+        name: Sarajevo
+        date: 2 January 1992
+        text: The implementation agreement of the Vance plan, signed in Sarajevo, brought a ceasefire that took effect on 3 January and largely held.
+        lonlat: [18.413, 43.856]
+      - kind: capital
+        side: rsk
+        name: Knin
+        date: 19 December 1991
+        text: Capital of the Republic of Serbian Krajina, proclaimed by the SAO Krajina and SAO Western Slavonia; SAO Eastern Slavonia joined it in February 1992.
+        lonlat: [16.197, 44.041]
+      - kind: event
+        name: UN Sector East
+        date: 1992–1995
+        text: Eastern Slavonia, Baranja and Western Syrmium, along the border with Serbia.
+        lonlat: [18.95, 45.45]
+      - kind: event
+        name: UN Sector West
+        date: 1992–1995
+        text: The Serb-held part of western Slavonia around Okučani, astride the Zagreb–Belgrade motorway.
+        lonlat: [17.199, 45.26]
+        lp: b
+      - kind: event
+        name: UN Sector North
+        date: 1992–1995
+        text: Banovina and Kordun, south of Sisak and Karlovac.
+        lonlat: [15.95, 45.25]
+      - kind: event
+        name: UN Sector South
+        date: 1992–1995
+        text: Lika and northern Dalmatia around Knin, the core of the Krajina.
+        lonlat: [15.85, 44.40]
+      - kind: battle
+        side: hr
+        name: Miljevci plateau
+        date: 21–22 June 1992
+        text: Croatian forces took the plateau between the Krka and Drniš, inside the UN-protected zone.
+        lonlat: [16.05, 43.84]
+        lp: b
+    areas:
+      - style: occupied
+        side: rsk
+        label: Republic of Serbian Krajina and the UN Protected Areas, 1992 (approximate)
+        polygons:
+          - [[15.31, 45.08], [15.32, 45.02], [15.37, 44.96], [15.36, 44.84], [15.47, 44.64], [15.415, 44.54], [15.34, 44.505], [15.325, 44.475], [15.345, 44.45], [15.45, 44.405], [15.49, 44.35], [15.494, 44.281], [15.529, 44.272], [15.525, 44.261], [15.481, 44.262], [15.475, 44.252], [15.5, 44.215], [15.33, 44.115], [15.35, 44.075], [15.42, 44.048], [15.56, 43.962], [15.65, 43.935], [15.75, 43.93], [15.84, 43.875], [15.885, 43.812], [15.96, 43.79], [16.18, 43.812], [16.36, 43.855], [16.43, 43.85], [16.585, 43.78], [16.658, 43.854], [16.501, 43.993], [16.44, 44.014], [16.414, 44.056], [16.367, 44.058], [16.327, 44.082], [16.276, 44.157], [16.216, 44.208], [16.188, 44.282], [16.203, 44.36], [16.171, 44.377], [16.138, 44.378], [16.16, 44.416], [16.116, 44.521], [16.084, 44.535], [16.027, 44.525], [16.006, 44.541], [16.045, 44.589], [16.028, 44.625], [15.969, 44.639], [15.948, 44.678], [15.937, 44.689], [15.905, 44.69], [15.889, 44.724], [15.856, 44.704], [15.806, 44.697], [15.717, 44.786], [15.716, 44.803], [15.769, 44.827], [15.773, 44.845], [15.731, 44.927], [15.767, 44.993], [15.756, 45.042], [15.784, 45.101], [15.781, 45.168], [15.825, 45.211], [16.008, 45.218], [16.029, 45.205], [16.024, 45.184], [16.067, 45.17], [16.104, 45.113], [16.213, 45.031], [16.316, 45.001], [16.341, 45.006], [16.389, 45.117], [16.436, 45.133], [16.482, 45.2], [16.529, 45.222], [16.812, 45.181], [16.831, 45.217], [16.924, 45.285], [16.947, 45.236], [16.968, 45.237], [16.961, 45.251], [16.999, 45.231], [17.008, 45.244], [17.008, 45.216], [17.036, 45.23], [17.056, 45.2], [17.098, 45.178], [17.187, 45.149], [17.245, 45.155], [17.269, 45.19], [17.283, 45.183], [17.275, 45.225], [17.3, 45.265], [17.37, 45.33], [17.39, 45.38], [17.36, 45.42], [17.31, 45.44], [17.25, 45.43], [17.165, 45.39], [17.08, 45.33], [17.03, 45.31], [16.93, 45.3], [16.854, 45.27], [16.803, 45.279], [16.822, 45.317], [16.782, 45.32], [16.789, 45.341], [16.731, 45.377], [16.704, 45.364], [16.676, 45.373], [16.58, 45.355], [16.5, 45.392], [16.33, 45.438], [16.32, 45.458], [15.99, 45.481], [15.86, 45.512], [15.7, 45.488], [15.585, 45.462], [15.556, 45.37], [15.5, 45.348], [15.35, 45.19]]
+          - [[18.448, 45.697], [18.482, 45.692], [18.489, 45.669], [18.506, 45.669], [18.537, 45.642], [18.592, 45.628], [18.64, 45.581], [18.771, 45.556], [18.775, 45.52], [18.65, 45.445], [18.655, 45.41], [18.865, 45.322], [18.87, 45.31], [18.835, 45.285], [18.85, 45.25], [18.88, 45.215], [18.95, 45.172], [19.116, 45.143], [19.138, 45.146], [19.142, 45.162], [19.122, 45.196], [19.144, 45.2], [19.205, 45.163], [19.268, 45.166], [19.287, 45.18], [19.304, 45.167], [19.391, 45.169], [19.405, 45.18], [19.397, 45.223], [19.29, 45.236], [19.158, 45.276], [19.104, 45.299], [19.083, 45.339], [19.03, 45.345], [18.977, 45.371], [18.976, 45.391], [19.023, 45.402], [19.031, 45.416], [18.997, 45.456], [19.01, 45.499], [19.077, 45.492], [19.106, 45.512], [19.018, 45.567], [18.942, 45.539], [18.904, 45.573], [18.912, 45.619], [18.968, 45.669], [18.917, 45.707], [18.9, 45.765], [18.845, 45.816], [18.855, 45.857], [18.907, 45.868], [18.873, 45.895], [18.907, 45.916], [18.901, 45.931], [18.828, 45.906], [18.805, 45.914], [18.776, 45.883], [18.656, 45.908], [18.573, 45.817], [18.53, 45.791], [18.482, 45.791], [18.448, 45.769]]
+  - title: Maslenica and the Medak Pocket
+    date: January – September 1993
+    when: "1993-01-22"
+    borders: "1993-09-17"
+    countries: [hr]
+    body:
+      - The Serb-held strip around Maslenica left Dalmatia joined to northern Croatia only by ferries and the Pag bridge. On 22 January 1993 the Croatian army attacked, retaking the Maslenica crossing, Zemunik airport and the hinterland of Zadar, and on 28 January the Peruća dam, which Serb forces had mined. Croatian sources put the dead at 114 Croatian and 490 Serb soldiers. The villages of Islam Grčki, Kašić and Smoković were burned. The UN Security Council condemned the offensive.
+      - On 9 September Croatian troops attacked the Medak Pocket, a Serb-held salient on the edge of Gospić from which the town was shelled. They took the villages of Divoselo, Čitluk and part of Počitelj, but under international pressure withdrew after a week; by UN and Canadian accounts they exchanged fire with Canadian peacekeepers moving in. The villages were destroyed. ICTY investigators found that at least 100 Serbs had been unlawfully killed; a Croatian court later convicted the commander Mirko Norac of failing to stop the killings of civilians and prisoners.
+    facts:
+      - [Operation Maslenica, 22 January 1993]
+      - [Operation Medak Pocket, 9–17 September 1993]
+      - [Serb civilians killed at Medak, "at least 29 identified (ICTY investigators: at least 100 Serbs unlawfully killed)"]
+    markers:
+      - kind: taken
+        side: hr
+        name: Maslenica
+        date: 22 January 1993
+        text: The crossing where the bridge had been destroyed in 1991; its capture reopened a land route to Dalmatia, first by a pontoon bridge.
+        lonlat: [15.523, 44.237]
+      - kind: taken
+        side: hr
+        name: Zemunik airport
+        date: January 1993
+        text: Zadar’s airport, held by Krajina forces since 1991, was retaken.
+        lonlat: [15.346, 44.108]
+        lp: l
+      - kind: taken
+        side: hr
+        name: Peruća dam
+        date: 28 January 1993
+        text: Krajina forces had chased off the UN guards and mined the dam above the Cetina valley. The charges they set off as they retreated damaged it, but it held.
+        lonlat: [16.589, 43.789]
+      - kind: event
+        name: Medak Pocket
+        date: 9–17 September 1993
+        text: About 400 Serb civilians lived in the pocket before the attack. Twenty-nine executed civilians and five killed prisoners were identified, and Serb property was systematically looted and destroyed.
+        lonlat: [15.43, 44.48]
+        lp: r
+      - kind: held
+        side: hr
+        name: Gospić
+        date: 1991–1995
+        text: The town remained in Croatian hands throughout the war but was regularly shelled from the Serb-held hills to its south and east.
+        lonlat: [15.375, 44.546]
+        lp: l
+      - kind: event
+        name: Islam Grčki
+        date: January 1993
+        text: This Serb village, with Kašić and Smoković, was burned by Croatian forces, and many civilians fled.
+        lonlat: [15.455, 44.174]
+        lp: b
+    arrows:
+      - side: hr
+        label: Operation Maslenica
+        via: [[15.30, 44.13], [15.42, 44.18], [15.52, 44.23]]
+      - side: hr
+        label: To the Peruća dam
+        via: [[16.64, 43.70], [16.62, 43.75], [16.59, 43.785]]
+    areas:
+      - style: occupied
+        side: rsk
+        label: Held by the RSK, late 1993 – April 1995 (approximate)
+        polygons:
+          - [[15.31, 45.08], [15.32, 45.02], [15.37, 44.96], [15.36, 44.84], [15.47, 44.64], [15.415, 44.54], [15.45, 44.53], [15.475, 44.49], [15.46, 44.405], [15.665, 44.235], [15.625, 44.19], [15.48, 44.105], [15.47, 44.055], [15.5, 44.005], [15.56, 43.962], [15.65, 43.935], [15.75, 43.93], [15.84, 43.875], [15.885, 43.812], [15.96, 43.8], [15.99, 43.835], [16.05, 43.87], [16.12, 43.835], [16.2, 43.82], [16.49, 43.882], [16.569, 43.927], [16.501, 43.993], [16.44, 44.014], [16.414, 44.056], [16.367, 44.058], [16.327, 44.082], [16.276, 44.157], [16.216, 44.208], [16.188, 44.282], [16.203, 44.36], [16.171, 44.377], [16.138, 44.378], [16.16, 44.416], [16.116, 44.521], [16.084, 44.535], [16.027, 44.525], [16.006, 44.541], [16.045, 44.589], [16.028, 44.625], [15.969, 44.639], [15.948, 44.678], [15.937, 44.689], [15.905, 44.69], [15.889, 44.724], [15.856, 44.704], [15.806, 44.697], [15.717, 44.786], [15.716, 44.803], [15.769, 44.827], [15.773, 44.845], [15.731, 44.927], [15.764, 44.976], [15.756, 45.042], [15.784, 45.101], [15.792, 45.19], [15.825, 45.211], [15.879, 45.217], [16.02, 45.214], [16.024, 45.184], [16.067, 45.17], [16.122, 45.096], [16.213, 45.031], [16.316, 45.001], [16.341, 45.006], [16.389, 45.117], [16.436, 45.133], [16.482, 45.2], [16.529, 45.222], [16.812, 45.181], [16.831, 45.217], [16.924, 45.285], [16.947, 45.236], [16.968, 45.237], [16.961, 45.251], [16.999, 45.231], [17.008, 45.244], [17.008, 45.216], [17.036, 45.23], [17.056, 45.2], [17.098, 45.178], [17.187, 45.149], [17.245, 45.155], [17.269, 45.19], [17.283, 45.183], [17.275, 45.225], [17.37, 45.33], [17.39, 45.38], [17.36, 45.42], [17.31, 45.44], [17.25, 45.43], [17.165, 45.39], [17.08, 45.33], [17.03, 45.31], [16.93, 45.3], [16.854, 45.27], [16.803, 45.279], [16.822, 45.317], [16.782, 45.32], [16.789, 45.341], [16.731, 45.377], [16.704, 45.364], [16.676, 45.373], [16.58, 45.355], [16.5, 45.392], [16.33, 45.438], [16.32, 45.458], [15.99, 45.481], [15.86, 45.512], [15.585, 45.462], [15.556, 45.37], [15.5, 45.348], [15.35, 45.19]]
+          - [[18.448, 45.697], [18.482, 45.692], [18.489, 45.669], [18.506, 45.669], [18.537, 45.642], [18.592, 45.628], [18.64, 45.581], [18.771, 45.556], [18.775, 45.52], [18.65, 45.445], [18.655, 45.41], [18.865, 45.322], [18.87, 45.31], [18.835, 45.285], [18.85, 45.25], [18.88, 45.215], [18.95, 45.172], [19.116, 45.143], [19.138, 45.146], [19.142, 45.162], [19.122, 45.196], [19.144, 45.2], [19.205, 45.163], [19.268, 45.166], [19.287, 45.18], [19.304, 45.167], [19.391, 45.169], [19.405, 45.18], [19.397, 45.223], [19.29, 45.236], [19.158, 45.276], [19.104, 45.299], [19.083, 45.339], [19.03, 45.345], [18.977, 45.371], [18.976, 45.391], [19.023, 45.402], [19.031, 45.416], [18.997, 45.456], [19.01, 45.499], [19.077, 45.492], [19.106, 45.512], [19.018, 45.567], [18.942, 45.539], [18.904, 45.573], [18.912, 45.619], [18.968, 45.669], [18.917, 45.707], [18.9, 45.765], [18.845, 45.816], [18.855, 45.857], [18.907, 45.868], [18.873, 45.895], [18.907, 45.916], [18.901, 45.931], [18.828, 45.906], [18.805, 45.914], [18.776, 45.883], [18.656, 45.908], [18.573, 45.817], [18.53, 45.791], [18.482, 45.791], [18.448, 45.769]]
+      - style: gained
+        side: hr
+        label: Retaken by Croatia, June 1992 – January 1993 (approximate)
+        polygons:
+          - [[15.33, 44.115], [15.35, 44.075], [15.42, 44.048], [15.56, 43.962], [15.5, 44.005], [15.47, 44.055], [15.48, 44.105], [15.625, 44.19], [15.665, 44.235], [15.56, 44.33], [15.45, 44.405], [15.49, 44.35], [15.494, 44.281], [15.529, 44.272], [15.525, 44.261], [15.481, 44.262], [15.5, 44.215]]
+          - [[15.885, 43.812], [15.96, 43.79], [16.02, 43.79], [16.18, 43.812], [16.36, 43.855], [16.43, 43.85], [16.585, 43.78], [16.658, 43.854], [16.569, 43.927], [16.49, 43.882], [16.2, 43.82], [16.12, 43.835], [16.05, 43.87], [15.99, 43.835], [15.96, 43.8]]
+      - style: contested
+        side: hr
+        label: Medak Pocket, taken 9–15 September 1993 and handed to UN troops
+        polygons:
+          - [[15.325, 44.475], [15.345, 44.45], [15.4, 44.432], [15.5, 44.37], [15.46, 44.405], [15.475, 44.49], [15.45, 44.53], [15.415, 44.54], [15.34, 44.505]]
+  - title: Flash and Storm
+    date: May – August 1995
+    when: "1995-05-01"
+    borders: "1995-08-07"
+    countries: [hr, ba, rs]
+    link: { href: "#/war/bosnian-war", text: The Bosnian War }
+    body:
+      - A ceasefire in March 1994 and an economic agreement in December reopened the Zagreb–Belgrade motorway through western Slavonia, but Krajina leaders refused even to receive the Z-4 peace plan in January 1995. On 1 May the Croatian army launched Operation Flash and in three days took the 558 km² Serb-held salient around Okučani. Of about 14,000 Serbs there, most fled. In reply Krajina forces fired cluster rockets at Zagreb on 2 and 3 May, killing seven people; the ICTY convicted Martić for the attacks.
+      - In late July Croatian and Bosnian Croat forces took Bosansko Grahovo and Glamoč in Bosnia, outflanking Knin. Operation Storm began on 4 August along a 630 km front. Knin fell the next day, and on 6 August Croatian troops linked up with the Bosnian army’s 5th Corps, ending the siege of Bihać. Within four days Croatia had retaken 10,400 km², the whole of the Krajina except eastern Slavonia.
+      - On 4 August the Krajina authorities ordered the evacuation of northern Dalmatia and Lika, and 150,000–200,000 Serbs fled to Bosnia and Serbia. Many of the elderly who stayed were killed in the following months, as at Grubori and Varivode, and villages were looted and burned; ICTY prosecutors put the civilian dead at 324, Serbian sources at 1,192. The tribunal convicted the generals Ante Gotovina and Mladen Markač in 2011, but acquitted them on appeal in 2012, rejecting the charge of a plan to expel the Serbs.
+    facts:
+      - [Operation Flash, "1–3 May 1995, 558 km² retaken"]
+      - [Operation Storm, "4–7 August 1995, 10,400 km² retaken"]
+      - [Serbs who fled, "150,000–200,000"]
+    markers:
+      - kind: taken
+        side: hr
+        name: Okučani
+        date: 2 May 1995
+        text: Croatian columns from Novska and Nova Gradiška met at the town; the last organised Krajina resistance in western Slavonia ended on 3 May.
+        lonlat: [17.199, 45.26]
+        lp: b
+      - kind: event
+        name: Rocket attacks on Zagreb
+        date: 2–3 May 1995
+        text: Orkan rockets with cluster munitions killed seven people and wounded more than 200 in the capital. The ICTY found Martić responsible.
+        lonlat: [15.977, 45.813]
+      - kind: taken
+        side: hr
+        name: Knin
+        date: 5 August 1995
+        text: The Krajina capital fell on the second day of Storm, after the Split Corps under Ante Gotovina came down from the Dinara.
+        lonlat: [16.197, 44.041]
+      - kind: event
+        side: hr
+        name: Tržačka Raštela
+        date: 6 August 1995
+        text: Croatian troops linked up with the Bosnian 5th Corps near Rakovica, ending the three-year siege of the Bihać pocket; the meeting was staged for the press here.
+        lonlat: [15.784, 44.976]
+        lp: l
+      - kind: taken
+        side: hr
+        name: Glina and Petrinja
+        date: August 1995
+        text: The Krajina Banija Corps put up a tough defence here before it was defeated, its reserve pinned down by the Bosnian army.
+        lonlat: [16.20, 45.40]
+      - kind: event
+        name: Varivode
+        date: 28 September 1995
+        text: Croatian soldiers and police killed nine Serb villagers aged 60 to 85. In 2012 the Croatian Supreme Court held the state responsible.
+        lonlat: [15.877, 43.960]
+        lp: l
+    arrows:
+      - side: hr
+        label: Flash
+        via: [[16.98, 45.335], [17.10, 45.30], [17.19, 45.27]]
+      - side: hr
+        label: Flash
+        via: [[17.38, 45.255], [17.29, 45.26], [17.21, 45.262]]
+      - side: hr
+        label: Split Corps
+        via: [[16.42, 44.10], [16.30, 44.07], [16.21, 44.045]]
+      - side: hr
+        label: Special police
+        via: [[15.55, 44.33], [15.70, 44.33], [15.84, 44.30]]
+      - side: hr
+        label: Karlovac Corps
+        via: [[15.55, 45.40], [15.57, 45.26], [15.58, 45.12]]
+      - side: hr
+        label: Zagreb Corps
+        via: [[16.38, 45.44], [16.24, 45.38], [16.09, 45.34]]
+      - side: ba
+        label: 5th Corps
+        via: [[15.87, 44.82], [15.80, 44.90], [15.78, 44.97]]
+    areas:
+      - style: gained
+        side: hr
+        label: Retaken in Operation Flash, 1–3 May 1995
+        polygons:
+          - [[16.885, 45.285], [16.889, 45.259], [16.924, 45.285], [16.947, 45.236], [16.968, 45.237], [16.961, 45.251], [16.999, 45.231], [17.008, 45.244], [17.008, 45.216], [17.036, 45.23], [17.056, 45.2], [17.098, 45.178], [17.187, 45.149], [17.245, 45.155], [17.269, 45.19], [17.283, 45.183], [17.275, 45.225], [17.37, 45.33], [17.39, 45.38], [17.36, 45.42], [17.31, 45.44], [17.25, 45.43], [17.03, 45.31]]
+      - style: gained
+        side: hr
+        label: Retaken in Operation Storm, 4–7 August 1995
+        polygons:
+          - [[15.31, 45.08], [15.32, 45.02], [15.37, 44.96], [15.36, 44.84], [15.47, 44.64], [15.415, 44.54], [15.34, 44.505], [15.325, 44.475], [15.345, 44.45], [15.45, 44.405], [15.56, 44.33], [15.665, 44.235], [15.625, 44.19], [15.48, 44.105], [15.47, 44.055], [15.5, 44.005], [15.56, 43.962], [15.65, 43.935], [15.75, 43.93], [15.84, 43.875], [15.885, 43.812], [15.96, 43.8], [15.99, 43.835], [16.05, 43.87], [16.12, 43.835], [16.2, 43.82], [16.49, 43.882], [16.569, 43.927], [16.501, 43.993], [16.44, 44.014], [16.414, 44.056], [16.367, 44.058], [16.327, 44.082], [16.276, 44.157], [16.216, 44.208], [16.188, 44.282], [16.203, 44.36], [16.171, 44.377], [16.138, 44.378], [16.16, 44.416], [16.116, 44.521], [16.084, 44.535], [16.027, 44.525], [16.006, 44.541], [16.045, 44.589], [16.028, 44.625], [15.969, 44.639], [15.948, 44.678], [15.937, 44.689], [15.905, 44.69], [15.889, 44.724], [15.856, 44.704], [15.806, 44.697], [15.717, 44.786], [15.716, 44.803], [15.769, 44.827], [15.773, 44.845], [15.731, 44.927], [15.767, 44.993], [15.756, 45.042], [15.784, 45.101], [15.781, 45.168], [15.825, 45.211], [16.008, 45.218], [16.029, 45.205], [16.024, 45.184], [16.067, 45.17], [16.104, 45.113], [16.213, 45.031], [16.316, 45.001], [16.341, 45.006], [16.389, 45.117], [16.436, 45.133], [16.482, 45.2], [16.529, 45.222], [16.812, 45.181], [16.831, 45.217], [16.896, 45.268], [16.88, 45.282], [16.854, 45.27], [16.803, 45.279], [16.822, 45.317], [16.782, 45.32], [16.789, 45.341], [16.731, 45.377], [16.704, 45.364], [16.676, 45.373], [16.58, 45.355], [16.5, 45.392], [16.33, 45.438], [16.32, 45.458], [15.99, 45.481], [15.86, 45.512], [15.585, 45.462], [15.556, 45.37], [15.5, 45.348], [15.35, 45.19]]
+      - style: occupied
+        side: rsk
+        label: Still held by Serb forces, August 1995
+        polygons:
+          - [[18.448, 45.697], [18.482, 45.692], [18.489, 45.669], [18.506, 45.669], [18.537, 45.642], [18.592, 45.628], [18.64, 45.581], [18.771, 45.556], [18.775, 45.52], [18.65, 45.445], [18.655, 45.41], [18.865, 45.322], [18.87, 45.31], [18.835, 45.285], [18.85, 45.25], [18.88, 45.215], [18.95, 45.172], [19.116, 45.143], [19.138, 45.146], [19.142, 45.162], [19.122, 45.196], [19.144, 45.2], [19.205, 45.163], [19.268, 45.166], [19.287, 45.18], [19.304, 45.167], [19.391, 45.169], [19.405, 45.18], [19.397, 45.223], [19.29, 45.236], [19.158, 45.276], [19.104, 45.299], [19.083, 45.339], [19.03, 45.345], [18.977, 45.371], [18.976, 45.391], [19.023, 45.402], [19.031, 45.416], [18.997, 45.456], [19.01, 45.499], [19.077, 45.492], [19.106, 45.512], [19.018, 45.567], [18.942, 45.539], [18.904, 45.573], [18.912, 45.619], [18.968, 45.669], [18.917, 45.707], [18.9, 45.765], [18.845, 45.816], [18.855, 45.857], [18.907, 45.868], [18.873, 45.895], [18.907, 45.916], [18.901, 45.931], [18.828, 45.906], [18.805, 45.914], [18.776, 45.883], [18.656, 45.908], [18.573, 45.817], [18.53, 45.791], [18.482, 45.791], [18.448, 45.769]]
+  - title: Erdut and the UN transition
+    date: November 1995 – January 1998
+    when: "1995-11-12"
+    borders: "1996-01-15"
+    countries: [hr, rs]
+    body:
+      - After Storm only eastern Slavonia remained in Serb hands. Croatia made its return a condition of taking part in the Dayton peace talks, and the mediators pressed for a peaceful solution. The Erdut Agreement was signed on 12 November 1995 by Hrvoje Šarinić for Croatia and Milan Milanović for the local Serbs, acting on instructions from Belgrade, with the US ambassador Peter Galbraith and the UN mediator Thorvald Stoltenberg as witnesses. It provided for a transitional period under international rule, guarantees of minority rights and the return of refugees.
+      - The UN Security Council set up the Transitional Administration for Eastern Slavonia, Baranja and Western Syrmium (UNTAES) on 15 January 1996, with about 5,000 troops. It demilitarised the region, reformed its police, issued Croatian papers and held local elections in April 1997. On 15 January 1998 the region returned to Croatian rule. Its Serb and Croat communities, Vukovar’s above all, remain divided.
+    facts:
+      - [Erdut Agreement, 12 November 1995]
+      - [UNTAES, "15 January 1996 – 15 January 1998"]
+      - [War dead, "over 20,000"]
+    markers:
+      - kind: treaty
+        name: Erdut Agreement
+        date: 12 November 1995
+        text: The Basic Agreement on the Region of Eastern Slavonia, Baranja and Western Syrmium, signed in the village of Erdut on the Danube.
+        lonlat: [19.060, 45.526]
+      - kind: event
+        name: Vukovar
+        date: 15 January 1998
+        text: Under Serb control since November 1991, the ruined town returned to Croatian rule with the rest of the region.
+        lonlat: [19.002, 45.352]
+        lp: b
+      - kind: event
+        name: Beli Manastir
+        date: 1991–1998
+        text: Chief town of Baranja, held by Serb forces from 1991 until the reintegration.
+        lonlat: [18.604, 45.770]
+      - kind: held
+        side: hr
+        name: Osijek
+        date: 1991–1998
+        text: The regional capital, shelled from August 1991 to June 1992 with about 800 deaths, stayed in Croatian hands on the edge of the Serb-held area.
+        lonlat: [18.694, 45.551]
+        lp: l
+    areas:
+      - style: outline
+        side: rsk
+        label: Region under UNTAES, January 1996 – January 1998
+        polygons:
+          - [[18.448, 45.697], [18.482, 45.692], [18.489, 45.669], [18.506, 45.669], [18.537, 45.642], [18.592, 45.628], [18.64, 45.581], [18.771, 45.556], [18.775, 45.52], [18.65, 45.445], [18.655, 45.41], [18.865, 45.322], [18.87, 45.31], [18.835, 45.285], [18.85, 45.25], [18.88, 45.215], [18.95, 45.172], [19.116, 45.143], [19.138, 45.146], [19.142, 45.162], [19.122, 45.196], [19.144, 45.2], [19.205, 45.163], [19.268, 45.166], [19.287, 45.18], [19.304, 45.167], [19.391, 45.169], [19.405, 45.18], [19.397, 45.223], [19.29, 45.236], [19.158, 45.276], [19.104, 45.299], [19.083, 45.339], [19.03, 45.345], [18.977, 45.371], [18.976, 45.391], [19.023, 45.402], [19.031, 45.416], [18.997, 45.456], [19.01, 45.499], [19.077, 45.492], [19.106, 45.512], [19.018, 45.567], [18.942, 45.539], [18.904, 45.573], [18.912, 45.619], [18.968, 45.669], [18.917, 45.707], [18.9, 45.765], [18.845, 45.816], [18.855, 45.857], [18.907, 45.868], [18.873, 45.895], [18.907, 45.916], [18.901, 45.931], [18.828, 45.906], [18.805, 45.914], [18.776, 45.883], [18.656, 45.908], [18.573, 45.817], [18.53, 45.791], [18.482, 45.791], [18.448, 45.769]]

@@ -34,7 +34,7 @@ script in `tools/migrate/` that updates every file, and a note here.
 
 | Tier | What it has |
 | --- | --- |
-| A | Full story, 5–20 steps |
+| A | Full story, 5–20 steps (the world wars and a few long wars have more) |
 | B | Short story, 1–3 steps |
 | C | Catalogue entry only: dates, sides, one-paragraph `summary`, sources. Steps may be omitted or have no body. |
 
@@ -116,6 +116,11 @@ file migrated from Sweden at War, set `countries` on the new steps and leave
 Per-step `side_names` and `move_names` (maps from side id to text) override the
 legend wording for one step.
 
+Text containing a colon followed by a space (`: `) must be quoted, or YAML reads
+it as a mapping and the page would show "[object Object]". Use double quotes and
+keep typographic quotes (“ ”) inside. The build rejects unquoted cases in names,
+summaries, notes, step titles, dates, body paragraphs, facts and marker text.
+
 ### Per-war checklist
 
 - [ ] `id`, `name`, `start`, `end`, `tier`, `summary`, at least one source
@@ -184,7 +189,7 @@ date, from two sources merged by date:
   | 1772–today | Poland, Lithuania, Latvia, Estonia, Belarus, Kaliningrad, right-bank Ukraine | `poland-lithuania.yaml` |
   | 800–today | Outer Hebrides, Orkney, Shetland, the Isle of Man | `british-isles.yaml` |
   | 800–today | Great Britain, Ireland, Jersey, Sark | `british-isles.yaml` |
-  | 1066–today | France, Belgium, the Netherlands, Luxembourg | `france-low-countries.yaml` (also `central-europe.yaml` for Alsace-Lorraine, `italy.yaml` for Savoy and Nice 1860) |
+  | 1066–today | France, Belgium, the Netherlands, Luxembourg | `france-low-countries.yaml` (also `central-europe.yaml` for Alsace-Lorraine, `italy.yaml` for Savoy and Nice 1860, `ww2.yaml` for 1940–1945) |
   | 800–today | Spain, Portugal, Andorra | `iberia.yaml` (Roussillon is in `france-low-countries.yaml`) |
   | 800–today | Italy (without Trentino and South Tyrol), San Marino, Malta, Monaco | `italy.yaml` |
   | 1236–today | European Russia and left-bank and southern Ukraine | `rus-and-russia.yaml`, `russia.yaml`, `ww2-east.yaml` |
@@ -192,7 +197,7 @@ date, from two sources merged by date:
   | 1809–today | Finland and Åland | `finland.yaml` |
   | 1812–today | Bessarabia and Transnistria (Moldova, Budjak, Khotyn) | `bessarabia.yaml` |
   | 800–1812 | Moldavia east of the Prut, the Budjak, Transnistria, Khotyn and Northern Bukovina | `balkans.yaml` (with `bessarabia.yaml` and `rus-and-russia.yaml`) |
-  | 800–today | Hungary, Slovakia, Romania, the former Yugoslavia, Albania, Greece, Bulgaria, Cyprus, Turkey (without Kars, Ardahan, Artvin and Iğdır before 1801) and Carpathian Ruthenia | `balkans.yaml`, `anatolia.yaml` (Anatolia, and Turkey from 1922) |
+  | 800–today | Hungary, Slovakia, Romania, the former Yugoslavia, Albania, Greece, Bulgaria, Cyprus, Turkey (without Kars, Ardahan, Artvin and Iğdır before 1801) and Carpathian Ruthenia | `balkans.yaml`, `anatolia.yaml` (Anatolia, and Turkey from 1922), `ww2.yaml` (1941–1945) |
   | 800–1801 | Kars, Ardahan, Artvin and Iğdır | `anatolia.yaml` |
   | 800–today | Syria, Lebanon, Israel, Palestine, Jordan, Egypt | `levant.yaml` |
 
@@ -216,7 +221,14 @@ date, from two sources merged by date:
   not on the base map. Exceptions, where an occupation lasted long enough to
   be the map of the time: the German and Romanian occupation of the Soviet
   Union in 1941–1944 (at six dates in `ww2-east.yaml`, as the Reichskommissariats
-  and the military zone), and the Finnish reconquest of 1941–1944. Abkhazia,
+  and the military zone), the Finnish reconquest of 1941–1944, and, in
+  `ww2.yaml`, the German annexations of Eupen-Malmedy, Alsace-Moselle and
+  Luxembourg, the partition of Yugoslavia in 1941–1945 (the Independent State
+  of Croatia, the annexations, German-occupied Serbia and Italian-occupied
+  Montenegro, each region returning to Yugoslavia when it was liberated) and the
+  Bulgarian annexation in Greece. Occupied France, the Low Countries, Denmark,
+  Norway, Greece, Albania after 1943, Italy after the armistice and Hungary
+  in 1944 are areas. Abkhazia,
   South Ossetia, Transnistria, Karabakh, Crimea after 2014 and the occupied
   parts of Ukraine stay with the state they are recognised as part of.
   Germany's 1938–1939 annexations, the Protectorate of Bohemia and Moravia,
@@ -324,7 +336,11 @@ date, from two sources merged by date:
   Navarre, `ES-PM~menorca`, `ES-BA~olivenza`, the Neapolitan parts of Lazio
   (`IT-LT~gaeta`, `IT-FR~sora`, `IT-RI~cittaducale`), `IT-AL~casale` Montferrat
   and `IT-PV~pavese` (Pavia; the rest of `IT-PV` is the Lomellina and the
-  Oltrepò, Sardinian from 1713). In the east (`90-east.geojson`):
+  Oltrepò, Sardinian from 1713). On the Adriatic (`95-adriatic.geojson`):
+  `HR-08~cres` (Cres and Lošinj) and `HR-19~lastovo`, Italian 1918–1947;
+  `HR-08~krk` (Krk and Rab), `HR-13~it1941`, `HR-15~it1941`, `HR-17~it1941`
+  and `HR-19~korcula`, the Italian annexations of 1941; `HR-14~baranja`, north
+  of the Drava. In the east (`90-east.geojson`):
   `GR-H~euboea`, `GR-G~achaea` (Achaea and Elis), `GR-L~dodecanese`,
   `GR-A~thrace` (Western Thrace), `TR-34~asia` (the Asian side of Istanbul),
   `TR-17~gelibolu` (the Gallipoli peninsula), `RS-16~sandzak` and

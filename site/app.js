@@ -156,7 +156,9 @@ function hatch(key, rot, cls, width, gap) {
     const p = el('pattern', { id, width: gap, height: gap, patternUnits: 'userSpaceOnUse', patternTransform: `rotate(${rot})` }, defs);
     p.innerHTML = cls === 'hatch-lost'
       ? `<rect width="${width}" height="${gap}" class="hatch-lost"/><rect width="${gap}" height="${width}" class="hatch-lost"/>`
-      : `<rect width="${width}" height="${gap}" class="${cls}"/>`;
+      // Patterns inherit CSS variables from <defs>, not from the shape that uses
+      // them, so a side hatch names its ink directly (--mc would be unset here).
+      : `<rect width="${width}" height="${gap}" class="${cls}"${cls === 'hatch' ? ` style="fill:var(--ink-${key.split('-')[0]})"` : ''}/>`;
     patterns.push([p, rot]);
     applyPatternScale(p, rot);
   }

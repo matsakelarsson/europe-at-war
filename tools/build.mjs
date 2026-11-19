@@ -14,6 +14,9 @@ import { join } from 'node:path';
 import { gzipSync } from 'node:zlib';
 import { ROOT, CONTENT, readJSON, readYAML, listFiles, exists, loadPolities, darkFill, hexToOklch, oklchToHex } from './lib.mjs';
 import { project, FRAME } from './projection.mjs';
+// A YAML string containing ": " without quotes parses as a mapping and would show as "[object Object]".
+const NOT_TEXT = 'is not plain text (it contains ": "; put it in quotes)';
+const isObj = (v) => v !== null && typeof v === 'object';
 
 const DIST = join(ROOT, 'dist');
 const errors = [], warnings = [];
@@ -229,10 +232,13 @@ function buildWar(w, file, ctx) {
   const countries = new Set(w.countries || []);
   for (const s of w.sides || []) for (const p of s.polities || []) for (const c of ctx.pol.list[ctx.pol.index.get(p)]?.countries || []) if (!w.countries) countries.add(c);
 
+  for (const [k, v] of [['name', w.name], ['summary', w.summary], ...(w.notes || []).map((n, i) => [`note ${i + 1}`, n])]) if (isObj(v)) err(`${where}: ${k} ${NOT_TEXT}`);
   const steps = (w.steps || []).map((s, si) => {
     const sw = `${where} step ${si + 1}`;
     if (!s.title) err(`${sw}: missing title`);
     if (!s.body?.length && w.tier !== 'C') err(`${sw}: missing body`);
+    (s.body || []).forEach((b, k) => { if (typeof b !== 'string') err(`${sw}: body paragraph ${k + 1} ${NOT_TEXT}`); });
+    for (const v of [s.title, s.date, ...(s.facts || []).flat(), ...(s.markers || []).flatMap((m) => [m.name, m.text, m.date])]) if (isObj(v)) err(`${sw}: "${Object.keys(v)[0]}…" ${NOT_TEXT}`);
     if (s.link) validLink(s.link.href, `${sw} link`, true);
     const bkey = dateKey(s.borders ?? s.date);
     if (!bkey) err(`${sw}: bad date/borders ${s.borders ?? s.date}`);

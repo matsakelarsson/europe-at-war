@@ -1,0 +1,173 @@
+id: ten-day-war
+name: Ten-Day War
+start: "1991-06-27"
+end: "1991-07-07"
+tier: B
+summary: Slovenia declared independence from Yugoslavia on 25 June 1991, after a referendum in which 88.5 per cent of voters had backed it. Two days later the Yugoslav People’s Army (JNA) moved to seize the republic’s border crossings and Ljubljana airport. The Slovenian Territorial Defence and police, prepared for months, blockaded barracks and ambushed tank columns, and many of the army’s conscripts surrendered. A European Community ceasefire held from 4 July and the Brioni Declaration of 7 July ended the fighting. About 80 people were killed, and the last JNA troops left Slovenia in October.
+countries: [si, hr, rs]
+sides:
+  - id: si
+    name: Slovenia
+    polities: [slovenia]
+    ink: orange
+    moves: Slovenian moves
+    success: Slovenian success
+  - id: yu
+    name: Yugoslav People’s Army (JNA)
+    polities: [yugoslavia]
+    ink: olive
+    moves: JNA moves
+    success: JNA success
+notes:
+  - Casualty figures are Slovenian estimates. The JNA was still the army of the whole federation, and its dead and prisoners included men from every republic, Slovenes among them.
+sources:
+  - title: Ten-Day War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ten-Day_War
+  - title: Brioni Agreement (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Brioni_Agreement
+  - title: 1990 Slovenian independence referendum (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1990_Slovenian_independence_referendum
+steps:
+  - title: Independence and the border crossings
+    date: 25–28 June 1991
+    when: "1991-06-25"
+    borders: "1991-06-28"
+    countries: [si, hr, rs]
+    body:
+      - On 23 December 1990 Slovenes voted for independence in a referendum, and the republic’s government spent the following months preparing its Territorial Defence (TO) for a fight with the Yugoslav People’s Army. Slovenia and Croatia both declared independence on 25 June 1991, a day earlier than planned. Slovenian officers took over the border posts with Italy, Austria and Hungary and set up new ones on the border with Croatia.
+      - Early on 27 June JNA columns left their barracks to retake the crossings and Brnik airport. The army expected little resistance, but the Slovenian leadership under Milan Kučan chose to fight. The TO shot down two army helicopters, blocked roads with lorries and besieged barracks across the country. By midnight the JNA held every crossing on the Italian border and most on the Austrian, but many of its units were stranded, and on 28 June the TO went over to a general offensive.
+    facts:
+      - [Independence declared, 25 June 1991]
+      - [JNA operation began, 27 June 1991]
+      - [Referendum, "23 December 1990, 88.5% of the electorate in favour"]
+    markers:
+      - kind: capital
+        side: si
+        name: Ljubljana
+        date: 25 June 1991
+        text: The Slovenian parliament proclaimed independence on 25 June. On 27 June the TO shot down a JNA Gazelle helicopter over Rožna Dolina; its pilot, Toni Mrlak, was himself a Slovene, and it turned out to be carrying bread for the troops.
+        lonlat: [14.506, 46.051]
+        lp: b
+      - kind: taken
+        side: yu
+        name: Brnik airport
+        date: 27–28 June 1991
+        text: A JNA armoured column from Vrhnika took the airport on 27 June. Yugoslav aircraft struck it the next day, killing the Austrian journalists Nikolas Vogel and Norbert Werner and wrecking four Adria Airways airliners.
+        lonlat: [14.458, 46.224]
+        lp: t
+      - kind: battle
+        side: si
+        name: Trzin
+        date: 27 June 1991
+        text: Four JNA soldiers and the TO fighter Edvard Peperko were killed in a firefight; the rest of the army unit surrendered.
+        lonlat: [14.562, 46.136]
+      - kind: battle
+        side: si
+        name: Holmec
+        date: 28 June 1991
+        text: The TO took the border post on the Austrian border, killing three JNA soldiers and capturing 45, for two of its own dead. Austrian television filmed soldiers apparently trying to surrender as shots rang out; whether any of them were killed has been disputed ever since.
+        lonlat: [14.841, 46.567]
+        lp: t
+      - kind: battle
+        side: si
+        name: Nova Gorica
+        date: 28 June 1991
+        text: Slovenian special forces destroyed two T-55 tanks on the Italian border and took dozens of JNA soldiers prisoner; some wounded crossed to hospital in Gorizia.
+        lonlat: [13.648, 45.956]
+        lp: l
+      - kind: air
+        side: yu
+        name: Medvedjek
+        date: 28 June 1991
+        text: Air strikes on a lorry barricade blocking a JNA column on the Ljubljana–Zagreb road killed six lorry drivers.
+        lonlat: [14.917, 45.930]
+        lp: b
+      - kind: air
+        side: yu
+        name: Štrihovec
+        date: 28 June 1991
+        text: Yugoslav aircraft supporting a blocked tank column near the Austrian border killed four lorry drivers.
+        lonlat: [15.667, 46.667]
+        lp: r
+    arrows:
+      - side: yu
+        label: 1st Armoured Brigade
+        via: [[14.295, 45.964], [14.40, 46.10], [14.458, 46.215]]
+        label_at: [14.05, 46.03]
+      - side: yu
+        label: From Maribor
+        via: [[15.65, 46.55], [15.66, 46.62], [15.648, 46.682]]
+      - side: yu
+        label: 306th Air Defence Regiment
+        via: [[15.55, 45.49], [15.313, 45.65], [14.917, 45.93]]
+      - side: yu
+        label: 32nd Mechanised Brigade
+        via: [[16.34, 46.30], [16.25, 46.37], [16.152, 46.412]]
+  - title: Surrender, ceasefire and Brioni
+    date: 29 June – 26 October 1991
+    when: "1991-06-29"
+    borders: "1991-07-07"
+    countries: [si, hr, rs]
+    link: { href: "#/war/croatian-war-of-independence", text: The Croatian War of Independence }
+    body:
+      - In the following days the TO overran crossings at Šentilj, Gornja Radgona and Vrtojba and took barracks and depots, re-arming itself with captured weapons. The garrison at Dravograd, some 400 men, surrendered on 30 June. On 2 July, the heaviest day of fighting, a relief column from Jastrebarsko in Croatia was turned back at Bregana, and a trapped air defence column in the Krakovo Forest held out near Krško.
+      - The army’s generals wanted a full-scale offensive, but the federal presidency would not authorise one. A ceasefire took hold from the evening of 3 July, and on 7 July Slovenia, Croatia and the federal government signed the Brioni Declaration under European Community mediation. Slovenia and Croatia suspended their independence for three months. On 18 July the federal presidency decided to withdraw the JNA from Slovenia, and the last troops left by 26 October. The war in Croatia was only beginning.
+    facts:
+      - [Killed, "44 JNA soldiers, 19 Slovenian fighters, 6 Slovenian civilians and 12 foreigners (Slovenian estimates)"]
+      - [Captured by Slovenia, "4,692 JNA soldiers and 252 federal police"]
+      - [Brioni Declaration, 7 July 1991]
+    markers:
+      - kind: treaty
+        name: Brioni Declaration
+        date: 7 July 1991
+        text: Signed on the Brijuni Islands under European Community mediation. It ended the fighting, left Slovenia’s police and TO in control of the republic and put a three-month moratorium on both declarations of independence.
+        lonlat: [13.744, 44.916]
+        lp: l
+      - kind: taken
+        side: si
+        name: Dravograd
+        date: 30 June 1991
+        text: The whole JNA garrison, 16 officers and about 400 men, surrendered with its equipment; the TO had also taken the barracks at nearby Bukovje.
+        lonlat: [15.019, 46.589]
+        lp: l
+      - kind: taken
+        side: si
+        name: Šentilj
+        date: 29 June – 2 July 1991
+        text: The TO took the crossing on the Austrian border and seized the tanks of the unit holding it.
+        lonlat: [15.648, 46.682]
+        lp: t
+      - kind: battle
+        side: si
+        name: Gornja Radgona
+        date: 2–3 July 1991
+        text: The TO overran the crossing on 2 July; a JNA relief force sent towards it was halted near Radenci the next day.
+        lonlat: [15.992, 46.673]
+      - kind: battle
+        side: si
+        name: Bregana
+        date: 2 July 1991
+        text: Units of the JNA 4th Armoured Brigade moving up from Jastrebarsko in Croatia were beaten back at the border.
+        lonlat: [15.688, 45.840]
+        lp: r
+      - kind: siege
+        name: Krakovo Forest
+        date: 30 June – 4 July 1991
+        text: The 306th Air Defence Regiment, having retreated from Medvedjek, was surrounded near Krško but refused to surrender before the ceasefire.
+        lonlat: [15.43, 45.88]
+        lp: t
+      - kind: air
+        side: yu
+        name: Domžale transmitter
+        date: 2 July 1991
+        text: Two MiG-21s attacked and heavily damaged the radio transmitter north of Ljubljana.
+        lonlat: [14.594, 46.138]
+    arrows:
+      - side: yu
+        label: Relief column
+        via: [[15.65, 45.67], [15.67, 45.76], [15.688, 45.835]]
+        label_at: [15.80, 45.70]
+      - side: yu
+        label: Withdrawal
+        via: [[14.506, 46.03], [15.10, 45.86], [15.60, 45.70]]
+        label_at: [14.85, 45.83]

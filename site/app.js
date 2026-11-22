@@ -205,7 +205,6 @@ function hatch(key, rot, cls, width, gap) {
   }
   return `url(#${id})`;
 }
-el('rect', { class: 'sea', x: FRAME[0] - 4000, y: FRAME[1] - 4000, width: FRAME[2] + 8000, height: FRAME[3] + 8000 }, svg);
 const gAtoms = el('g', { 'aria-hidden': 'true' }, svg);
 const atomEls = new Array(NA), atomFill = new Array(NA).fill('');
 for (let i = 0; i < NA; i++) {

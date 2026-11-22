@@ -5,11 +5,13 @@
   --muted: #5b6672;
   --line: #d4d9dc;
   --sea: #d2dfe7;
+  --sea-center: #dce7ed;
+  --sea-edge: #c7d7e1;
   --sea-ink: #5f7d91;
   --river: #a9c2d2;
   --land: #e5e5de;
   --bline: rgba(38, 44, 52, 0.42);
-  --coast: rgba(95, 125, 145, 0.55);
+  --coast: rgba(95, 125, 145, 0.65);
   --accent: #24579a;
   --gold: #a87b05;
   --gold-fill: #efcd5f;
@@ -24,7 +26,8 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #11161c; --surface: #1a2129; --ink: #e6eaee; --muted: #9ba7b3; --line: #2c3640;
-    --sea: #172633; --sea-ink: #7f9db3; --river: #2a4458; --land: #262c31; --bline: rgba(220, 228, 236, 0.38); --coast: rgba(127, 157, 179, 0.5);
+    --sea: #172633; --sea-ink: #7f9db3; --river: #2a4458; --land: #262c31; --bline: rgba(220, 228, 236, 0.38); --coast: rgba(127, 157, 179, 0.6);
+    --sea-center: #1c2e3d; --sea-edge: #14222e;
     --accent: #86b0e8; --gold: #f2c94c; --gold-fill: #8f7019;
     --ink-blue: #86b0e8; --ink-red: #f0857d; --ink-purple: #c2b4e0; --ink-orange: #f59a4a;
     --ink-green: #7fc98d; --ink-teal: #6cc7c1; --ink-brown: #d1a479; --ink-magenta: #e58ac0;
@@ -35,7 +38,8 @@
 }
 :root[data-theme="dark"] {
   --bg: #11161c; --surface: #1a2129; --ink: #e6eaee; --muted: #9ba7b3; --line: #2c3640;
-  --sea: #172633; --sea-ink: #7f9db3; --river: #2a4458; --land: #262c31; --bline: rgba(220, 228, 236, 0.38); --coast: rgba(127, 157, 179, 0.5);
+  --sea: #172633; --sea-ink: #7f9db3; --river: #2a4458; --land: #262c31; --bline: rgba(220, 228, 236, 0.38); --coast: rgba(127, 157, 179, 0.6);
+  --sea-center: #1c2e3d; --sea-edge: #14222e;
   --accent: #86b0e8; --gold: #f2c94c; --gold-fill: #8f7019;
   --ink-blue: #86b0e8; --ink-red: #f0857d; --ink-purple: #c2b4e0; --ink-orange: #f59a4a;
   --ink-green: #7fc98d; --ink-teal: #6cc7c1; --ink-brown: #d1a479; --ink-magenta: #e58ac0;
@@ -62,7 +66,7 @@ h1 a.home { color: inherit; text-decoration: none; }
 .sub { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.95rem; max-width: 70ch; }
 
 .stage { max-width: 1440px; margin: 0 auto; padding: 4px 16px 20px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
-.mapwrap { position: relative; aspect-ratio: 1 / 1; max-height: 76vh; width: 100%; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--sea); }
+.mapwrap { position: relative; aspect-ratio: 1 / 1; max-height: 76vh; width: 100%; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--sea); background-image: radial-gradient(ellipse, var(--sea-center), var(--sea-edge)); }
 #map { display: block; width: 100%; height: 100%; touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; }
 #map.panning { cursor: grabbing; }
 @media (min-width: 900px) {
@@ -76,12 +80,11 @@ h1 a.home { color: inherit; text-decoration: none; }
 .yearbadge { position: absolute; left: 12px; top: 10px; font: 600 1.5rem/1 var(--display); color: var(--ink); opacity: 0.55; pointer-events: none; font-variant-numeric: tabular-nums; z-index: 2; }
 
 /* Map */
-.sea { fill: var(--sea); }
 .atom { fill: var(--land); stroke: var(--land); stroke-width: 0.6; vector-effect: non-scaling-stroke; transition: fill 0.6s ease, stroke 0.6s ease; }
 .lakes { fill: var(--sea); stroke: var(--coast); stroke-width: 0.5; vector-effect: non-scaling-stroke; }
 .rivers { fill: none; stroke: var(--river); stroke-width: 0.9; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
 .bline { fill: none; stroke: var(--bline); stroke-width: 0.95; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
-.coast { fill: none; stroke: var(--coast); stroke-width: 0.7; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.coast { fill: none; stroke: var(--coast); stroke-width: 0.85; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
 
 .ov { pointer-events: none; stroke-width: 1.2; vector-effect: non-scaling-stroke; animation: ovin 0.5s ease; }
 @keyframes ovin { from { opacity: 0; } to { opacity: 1; } }
@@ -96,7 +99,7 @@ h1 a.home { color: inherit; text-decoration: none; }
 .hatch-lost { fill: var(--ink); opacity: 0.6; }
 
 .lbl text { font-family: var(--body); }
-.plbl { font-weight: 600; letter-spacing: 0.16em; fill: var(--ink); opacity: 0.55; text-transform: uppercase; paint-order: stroke; stroke: var(--halo); stroke-width: 2px; stroke-opacity: 0.5; }
+.plbl { font-weight: 600; letter-spacing: 0.16em; fill: var(--ink); opacity: 0.65; text-transform: uppercase; paint-order: stroke; stroke: var(--halo); stroke-width: 2px; stroke-opacity: 0.5; }
 .plbl.l1 { font-size: 14px; letter-spacing: 0.26em; }
 .plbl.l2 { font-size: 11px; letter-spacing: 0.2em; }
 .plbl.l3 { font-size: 9.5px; letter-spacing: 0.12em; }
@@ -131,7 +134,7 @@ h1 a.home { color: inherit; text-decoration: none; }
 .marker.sel .ring, .marker:focus-visible .ring { opacity: 1; }
 .marker:focus { outline: none; }
 .mlabel { font: 600 11.5px var(--body); fill: var(--ink); paint-order: stroke; stroke: var(--halo); stroke-width: 3.5px; stroke-linejoin: round; }
-.caplabel { font: 500 11px var(--body); fill: var(--ink); paint-order: stroke; stroke: var(--halo); stroke-width: 3px; stroke-linejoin: round; }
+.caplabel { font: 500 11px var(--body); fill: var(--ink); paint-order: stroke; stroke: var(--halo); stroke-width: 2.5px; stroke-linejoin: round; }
 
 .pop { max-height: calc(100% - 16px); overflow-y: auto; position: absolute; z-index: 5; width: min(280px, calc(100% - 16px)); background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 9px; box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2); padding: 10px 12px 12px; font-size: 0.875rem; line-height: 1.45; }
 .pop .pk { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 26px 2px 0; }

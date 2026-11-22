@@ -13,6 +13,8 @@ import { mkdir, writeFile, cp, rm, readFile, stat, rename } from 'node:fs/promis
 import { join } from 'node:path';
 import { gzipSync } from 'node:zlib';
 import { ROOT, CONTENT, readJSON, readYAML, listFiles, exists, loadPolities, darkFill, hexToOklch, oklchToHex } from './lib.mjs';
+import { compileCapitals } from './capitals.mjs';
+import { feature } from 'topojson-client';
 import { project, FRAME } from './projection.mjs';
 // A YAML string containing ": " without quotes parses as a mapping and would show as "[object Object]".
 const NOT_TEXT = 'is not plain text (it contains ": "; put it in quotes)';
@@ -158,14 +160,28 @@ async function buildBorders(pol, topo) {
 }
 
 // ---------------------------------------------------------------- labels
-async function buildLabels() {
-  const out = { labels: [], capitals: [] };
-  if (await exists(join(CONTENT, 'labels.yaml'))) {
-    const L = await readYAML(join(CONTENT, 'labels.yaml'));
-    for (const l of L.labels || []) out.labels.push({ t: l.text, xy: project(l.lonlat), cls: l.class || 'lbl-reg', minZoom: l.min_zoom || 0, from: dateKey(l.from), until: dateKey(l.until), anchor: l.anchor || 'middle' });
-    for (const c of L.capitals || []) out.capitals.push({ name: c.name, xy: project(c.lonlat), lp: c.lp || 'r', from: dateKey(c.from), until: dateKey(c.until), minZoom: c.min_zoom || 0 });
-  }
-  return out;
+async function buildLabels(pol, borders, topo) {
+  const L = await readYAML(join(CONTENT, 'labels.yaml'));
+  const rivers = topo.objects.rivers.geometries;
+  const labels = L.labels.map(l => {
+    let xy = project(l.lonlat);
+    if (l.river) {
+      const lines = rivers.filter(g => g.properties.name === l.river)
+        .flatMap(g => { const f = feature(topo, g).geometry; return f.type === 'LineString' ? [f.coordinates] : f.coordinates; });
+      const hint = xy;
+      let best = Infinity;
+      for (const line of lines) for (const point of line) {
+        const d = Math.hypot(point[0] - hint[0], point[1] - hint[1]);
+        if (d < best) { best = d; xy = point; }
+      }
+      if (best > 100) err('Missing river near label ' + l.text);
+    }
+    return { t: l.text, xy, cls: l.class || 'lbl-reg', minZoom: l.min_zoom || 0, from: dateKey(l.from), until: dateKey(l.until), anchor: l.anchor || 'middle' };
+  });
+  const rows = await readYAML(join(CONTENT, 'capitals.yaml'));
+  const {audit, ...seats} = compileCapitals(rows, pol, borders, dateKey, err);
+  await emit('data/capital-coverage.json', JSON.stringify(audit, null, 2));
+  return {labels, ...seats};
 }
 
 // ---------------------------------------------------------------- wars
@@ -351,7 +367,7 @@ async function main() {
   const topo = JSON.parse(topoText);
   const pol = await buildPolities();
   const borders = await buildBorders(pol, topo);
-  const labels = await buildLabels();
+  const labels = await buildLabels(pol, borders, topo);
 
   const wars = [];
   const seen = new Set();

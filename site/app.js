@@ -187,8 +187,8 @@ const blineEl = el('path', { class: 'bline', 'aria-hidden': 'true' }, svg);
 el('path', { d: pathD(topojson.mesh(topo, topo.objects.atoms, (a, b) => a === b)), class: 'coast', 'aria-hidden': 'true' }, svg);
 const gLbl = el('g', { class: 'lbl', 'aria-hidden': 'true' }, svg);
 const gPLbl = el('g', null, gLbl);
-const gArrows = el('g', { 'aria-hidden': 'true' }, svg);
-const gCaps = el('g', { 'aria-hidden': 'true' }, svg);
+const gCaps = el('g', { role: 'group', 'aria-label': 'Capitals' }, svg);
+const gArrows = el('g', { 'aria-hidden': 'true', 'pointer-events': 'none' }, svg);
 const gMarkers = el('g', null, svg);
 
 // Scalables keep a constant on-screen size whatever the zoom.
@@ -201,16 +201,82 @@ for (const l of LBL.labels) {
   fixedScalables.push({ g, x: l.xy[0], y: l.xy[1] });
   staticLabels.push({ g, minZoom: l.minZoom, from: l.from, until: l.until, dateOk: true });
 }
-for (const c of LBL.capitals) {
-  const g = el('g', null, gCaps);
-  g.innerHTML = '<circle r="3.2" class="mcap"/>';
-  const la = labelAttrs(c.lp);
-  const t = el('text', { class: 'caplabel', x: la.x * 0.8, y: la.y, 'text-anchor': la.a }, g);
-  t.textContent = c.name;
-  fixedScalables.push({ g, x: c.xy[0], y: c.xy[1] });
-  staticLabels.push({ g, minZoom: c.minZoom, from: c.from, until: c.until, dateOk: true });
+// Only active seats in the buffered viewport get SVG nodes.
+const activeSeats = new Set(), capitalNodes = new Map(), capitalWidths = new Map();
+const measureCapital = document.createElement('canvas').getContext('2d');
+let capitalPeriod = -1, capitalBuffer = null, capitalFocus = null;
+function updateCapitalDate(key) {
+  const timeline = LBL.capitalTimeline;
+  let lo = 0, hi = timeline.length;
+  while (lo < hi) {
+    const mid = (lo + hi) >>> 1;
+    if (timeline[mid].key <= key) lo = mid + 1; else hi = mid;
+  }
+  const next = lo - 1;
+  if (next === capitalPeriod) return false;
+  while (capitalPeriod < next) {
+    const t = timeline[++capitalPeriod];
+    for (const i of t.removed) activeSeats.delete(i);
+    for (const i of t.added) activeSeats.add(i);
+  }
+  while (capitalPeriod > next) {
+    const t = timeline[capitalPeriod--];
+    for (const i of t.added) activeSeats.delete(i);
+    for (const i of t.removed) activeSeats.add(i);
+  }
+  capitalBuffer = null;
+  return true;
 }
-
+function describeSeat(c) {
+  return c.name + ' · ' + (c.role || 'Capital') + ' of ' + polName(POL[c.owner]);
+}
+function syncCapitals(v, scale) {
+  const [x,y,w,h] = v;
+  if (capitalBuffer && x >= capitalBuffer[0] && y >= capitalBuffer[1] &&
+      x+w <= capitalBuffer[2] && y+h <= capitalBuffer[3] && w >= capitalBuffer[4]) return;
+  const pad = 64 * scale;
+  capitalBuffer = [x-pad, y-pad, x+w+pad, y+h+pad, w*0.8];
+  const sites = new Map();
+  for (const id of activeSeats) {
+    const c = LBL.capitals[id], [cx,cy] = c.xy;
+    if (cx < x-pad || cy < y-pad || cx > x+w+pad || cy > y+h+pad) continue;
+    const k = c.xy.join(',');
+    if (!sites.has(k)) sites.set(k, []);
+    sites.get(k).push(c);
+  }
+  for (const [k,it] of capitalNodes) if (!sites.has(k)) {
+    if (selected === it.g) closePop();
+    it.g.remove(); capitalNodes.delete(k);
+  }
+  for (const [k,seats] of sites) {
+    let it = capitalNodes.get(k);
+    if (!it) {
+      const [cx,cy] = seats[0].xy;
+      const g = el('g', {class:'capital', tabindex:0, role:'button'}, gCaps);
+      const title = el('title', null, g);
+      el('circle', {class:'hit', r:12}, g);
+      el('circle', {class:'capital-ring', r:2.8}, g);
+      it = {g, title, x:cx, y:cy, anchor:'r'};
+      capitalNodes.set(k,it);
+      g.addEventListener('click', e => {
+        e.stopPropagation();
+        if (!dragMoved) openCapital(it, e.detail ? clientToMap(e.clientX, e.clientY) : null);
+      });
+      g.addEventListener('focus', () => { if (g.matches(':focus-visible')) openCapital(it); });
+      g.addEventListener('keydown', e => {
+        if (['Enter',' '].includes(e.key)) { e.preventDefault(); openCapital(it); }
+      });
+      g.style.transform = `translate(${cx}px, ${cy}px) scale(var(--capital-scale))`;
+    }
+    it.seats = seats;
+    const description = seats.map(describeSeat).join(' / ');
+    if (it.description !== description) {
+      it.description = description;
+      it.title.textContent = description;
+      it.g.setAttribute('aria-label', description);
+    }
+  }
+}
 
 // ---------- View handling ----------
 let vb = FRAME.slice(), S = 1, anim = null, targetBox = FRAME.slice();
@@ -225,10 +291,14 @@ function apply(v, viewportOnly = false) {
   vb = v;
   svg.setAttribute('viewBox', v.map((n) => n.toFixed(2)).join(' '));
   const cw = svg.clientWidth || 1;
+  syncCapitals(v, v[2] / cw);
   if (viewportOnly && S === v[2] / cw) return;
+  const scaleChanged = S !== v[2] / cw || !gCaps.style.getPropertyValue('--capital-scale');
   S = v[2] / cw;
   const s = S.toFixed(4);
-  for (const list of [fixedScalables, stepScalables, polScalables]) for (const it of list) it.g.setAttribute('transform', `translate(${it.x},${it.y}) scale(${s})`);
+  if (scaleChanged) gCaps.style.setProperty('--capital-scale', s);
+  const lists = scaleChanged ? [fixedScalables, stepScalables, polScalables] : [stepScalables, polScalables];
+  for (const list of lists) for (const it of list) it.g.setAttribute('transform', `translate(${it.x},${it.y}) scale(${s})`);
   for (const h of heads) {
     const tx = h.x + Math.cos(h.ang) * 6 * S, ty = h.y + Math.sin(h.ang) * 6 * S;
     h.g.setAttribute('transform', `translate(${tx.toFixed(2)},${ty.toFixed(2)}) rotate(${(h.ang * 180 / Math.PI).toFixed(1)}) scale(${s})`);
@@ -236,28 +306,83 @@ function apply(v, viewportOnly = false) {
   svg.style.setProperty('--sw', (3.2 * S).toFixed(3));
   for (const [p, rot] of patterns) applyPatternScale(p, rot);
   const zoom = (REF_W / v[2]) * (cw / 700);
-  for (const l of staticLabels) l.g.style.display = zoom >= l.minZoom && l.dateOk ? '' : 'none';
+  for (const l of staticLabels) l.g.style.display = zoom >= l.minZoom && l.dateOk && !l.coll ? '' : 'none';
   for (const l of polScalables) l.g.style.display = !l.coll && l.w / S > l.tw && l.h / S > l.th ? '' : 'none';
 }
 function cullLabels() {
-  const taken = [];
-  const hit = (r) => taken.some((t) => r.left < t.right && r.right > t.left && r.top < t.bottom && r.bottom > t.top);
-  for (const l of staticLabels) if (l.g.style.display !== 'none') { const r = l.g.getBoundingClientRect(); if (r.width) taken.push(r); }
-  for (const g of gMarkers.children) { const r = g.getBoundingClientRect(); if (r.width) taken.push(r); }
-  const hidden = [];
-  for (const l of polScalables) {
-    if (l.g.style.display === 'none') continue;
-    const r = l.g.getBoundingClientRect();
-    if (hit(r)) hidden.push(l); else taken.push(r);
+  const cells = new Map();
+  // Probe the cells a rectangle intersects, or reserve them for later labels.
+  function visit(r, test) {
+    for (let x = Math.floor(r.left/64); x <= Math.floor(r.right/64); x++)
+      for (let y = Math.floor(r.top/64); y <= Math.floor(r.bottom/64); y++) {
+        const k = x + ',' + y;
+        if (test) {
+          if (cells.get(k)?.some(t => r.left < t.right && r.right > t.left && r.top < t.bottom && r.bottom > t.top)) return true;
+        } else {
+          if (!cells.has(k)) cells.set(k, []);
+          cells.get(k).push(r);
+        }
+      }
+    return false;
   }
-  for (const l of hidden) { l.coll = true; l.g.style.display = 'none'; }
+  const frame = svg.getBoundingClientRect();
+  const zoom = REF_W / S / 700;
+  for (const g of [...gMarkers.children, ...gArrows.querySelectorAll('.alabel')]) visit(g.getBoundingClientRect(), false);
+  const obstacles = [wrap.querySelector('.mapctl'), $('yearbadge'), wrap.querySelector('.capital-key')];
+  for (const control of obstacles) visit(control.getBoundingClientRect(), false);
+  const px = it => frame.left + (it.x-vb[0])/S;
+  const py = it => frame.top + (it.y-vb[1])/S;
+  for (const it of capitalNodes.values()) visit({left:px(it)-4, right:px(it)+4, top:py(it)-4, bottom:py(it)+4}, false);
+  // Batch geometry reads before hiding rejected text.
+  const candidates = [...polScalables, ...staticLabels].filter(l => l.g.style.display !== 'none')
+    .map(l => [l, l.g.getBoundingClientRect()]);
+  for (const [l,r] of candidates) {
+    l.coll = r.left < frame.left || r.top < frame.top || r.right > frame.right || r.bottom > frame.bottom || visit(r,true);
+    if (l.coll) l.g.style.display = 'none'; else visit(r,false);
+  }
+  const focused = it => it.seats.some(c => capitalFocus?.has(c.owner));
+  const rank = it => Math.min(...it.seats.map(c => polityLabelOrder.get(c.owner) ?? Infinity));
+  const seats = [...capitalNodes.values()].sort((a,b) => focused(b)-focused(a) || rank(a)-rank(b) || a.x-b.x);
+  const nameBudget = Math.max(2, Math.ceil(frame.width * frame.height * zoom * zoom / 19000));
+  let named = 0;
+  // Give overview names room to breathe even when their glyphs barely fit.
+  const gap = Math.max(3, 20 / Math.max(0.4,zoom));
+  measureCapital.font = '500 11px ' + getComputedStyle(svg).getPropertyValue('--body');
+
+  for (const it of seats) {
+    const name = it.seats[0].name;
+    if (!capitalWidths.has(name)) capitalWidths.set(name, measureCapital.measureText(name).width);
+    const width = capitalWidths.get(name);
+    let placement;
+    for (const dir of new Set([it.anchor,'r','l','t','b'])) {
+      if (named >= nameBudget) break;
+      const a = labelAttrs(dir), x = px(it) + a.x, y = py(it) + a.y;
+      const left = x - (a.a === 'middle' ? width/2 : a.a === 'end' ? width : 0);
+      const r = {left:left-2, right:left+width+2, top:y-11, bottom:y+3};
+      if (r.left < frame.left || r.top < frame.top || r.right > frame.right || r.bottom > frame.bottom || visit(r,true)) continue;
+      visit({left:r.left-gap,right:r.right+gap,top:r.top-gap/2,bottom:r.bottom+gap/2},false);
+      placement = a; it.anchor = dir; named++; break;
+    }
+    if (placement) {
+      if (!it.label) it.label = el('text', {class:'caplabel'}, it.g);
+      if (it.label.textContent !== name) it.label.textContent = name;
+      if (it.placed !== it.anchor) {
+        it.label.setAttribute('x', placement.x);
+        it.label.setAttribute('y', placement.y);
+        it.label.setAttribute('text-anchor', placement.a);
+        it.placed = it.anchor;
+      }
+    } else if (it.label) {
+      it.label.remove(); it.label = null; it.placed = null;
+    }
+  }
 }
 function animateTo(target, dur) {
   if (anim) cancelAnimationFrame(anim);
   anim = null;
   const distance = Math.max(...target.map((n, i) => Math.abs(n - vb[i]) / vb[i % 2 + 2]));
   dur = Math.min(dur, 400 * Math.sqrt(distance), 400);
-  if (reduceMotion || !dur) { apply(target); placeLabels(); return; }
+  if (reduceMotion || !dur) { vb = target; placeLabels(); return; }
   const from = vb.slice(); let t0 = null;
   const frame = (t) => {
     if (t0 === null) t0 = t;
@@ -408,21 +533,26 @@ function visiblePolities(box) {
   out.sort((p, q) => q.sum - p.sum);
   return out;
 }
+const polityLabelOrder = new Map();
 let labelT = 0;
 function scheduleLabels() { clearTimeout(labelT); labelT = setTimeout(placeLabels, 140); }
 function placeLabels() {
+  svg.classList.remove('scrubbing');
   gPLbl.textContent = '';
   polScalables = [];
   const box = [vb[0], vb[1], vb[0] + vb[2], vb[1] + vb[3]];
-  const px2 = S * S;
+  const viewScale = vb[2] / (svg.clientWidth || 1);
+  const px2 = viewScale * viewScale;
+  polityLabelOrder.clear();
   for (const V of visiblePolities(box)) {
+    polityLabelOrder.set(V.o, polityLabelOrder.size);
     const screenA = V.a / px2;
     if (screenA < 1400) continue;
     const p = POL[V.o];
     let x, y, r;
     const hint = (p.lxy || []).find(([hx, hy]) => hx > box[0] + vb[2] * 0.08 && hx < box[2] - vb[2] * 0.08 && hy > box[1] + vb[3] * 0.08 && hy < box[3] - vb[3] * 0.08 && inRings(V.poly.rings, hx, hy));
     if (hint) { [x, y] = hint; r = Math.max(0, signedDist(V.rings, x, y)); }
-    else [x, y, r] = polylabel(V.rings, Math.max(1.5 * S, Math.sqrt(V.a) / 60));
+    else [x, y, r] = polylabel(V.rings, Math.max(1.5 * viewScale, Math.sqrt(V.a) / 60));
     const tier = screenA > 70000 ? 1 : screenA > 16000 ? 2 : 3;
     const fs = tier === 1 ? 14 : tier === 2 ? 11 : 9.5, ls = tier === 1 ? 3.6 : tier === 2 ? 2.2 : 1.1;
     const name = polName(p);
@@ -441,24 +571,27 @@ function placeLabels() {
     // and its height within the inscribed circle.
     polScalables.push({ g, x, y, w: Math.min(bw, 4.4 * r), h: 2.6 * r, tw: chars * (fs * 0.62 + ls), th: lines.length * fs * 1.15 });
   }
+  for (const l of staticLabels) l.coll = false;
   apply(vb);
   cullLabels();
 }
 /** Show the border state at `key`; polity names follow `nameKey` (a step's own date). */
-function setBorders(key, focus, nameKey = key) {
+function setBorders(key, focus, nameKey = key, deferLabels = false) {
   const si = stateIndex(key);
   const own = ownersAt(si);
   const fk = focus ? [...focus].sort((a, b) => a - b).join(',') : '';
-  let labelDatesChanged = false;
+  capitalFocus = focus;
+  let labelDatesChanged = updateCapitalDate(nameKey);
   for (const l of staticLabels) {
     const visible = (!l.from || key >= l.from) && (!l.until || key < l.until);
     if (visible !== l.dateOk) labelDatesChanged = true;
     l.dateOk = visible;
   }
   const namesChanged = curKey !== nameKey && datedPolities.some(p => polName(p, curKey) !== polName(p, nameKey));
+  if (namesChanged) capitalBuffer = null;
   curKey = nameKey;
   if (si === curSi && fk === curFocusKey) {
-    if (namesChanged || labelDatesChanged) placeLabels();
+    if (!deferLabels && (namesChanged || labelDatesChanged)) placeLabels();
     return own;
   }
   for (let i = 0; i < NA; i++) {
@@ -474,8 +607,8 @@ function setBorders(key, focus, nameKey = key) {
       borderPaths.set(si, pathD(topojson.mesh(topo, topo.objects.atoms, (a, b) => a !== b && own[a.i] !== own[b.i])));
     }
     blineEl.setAttribute('d', borderPaths.get(si));
-    placeLabels();
-  } else apply(vb);
+  }
+  if (!deferLabels) placeLabels();
   return own;
 }
 function swatch(fill, stroke) {
@@ -501,10 +634,23 @@ function openPop(mi) {
   const it = popItems[mi];
   if (!it) return;
   const { m, g } = it;
+  const nearby = nearbyCapitals(m.xy[0], m.xy[1], Math.min(7 * S, 8));
+  showPopover(g, `<p class="pk">${esc(KIND_NAMES[m.kind] || '')}</p><h3>${esc(m.name)}</h3><p class="pd">${esc(m.date)}</p><p>${esc(m.text)}</p>` + seatDetails(nearby));
+}
+function nearbyCapitals(x,y,radius) {
+  return [...capitalNodes.values()].filter(it => Math.hypot(it.x-x,it.y-y) <= radius);
+}
+function seatDetails(sites) {
+  return sites.flatMap(it => it.seats.map(c => '<p>' + esc(describeSeat(c)) + '</p>')).join('');
+}
+function openCapital(it, point = null) {
+  const nearby = point ? nearbyCapitals(...point, 12 * S).filter(other => other !== it) : [];
+  showPopover(it.g, '<p class="pk">Capital</p>' + seatDetails([it, ...nearby]));
+}
+function showPopover(g, html) {
   if (selected) selected.classList.remove('sel');
   selected = g; g.classList.add('sel');
-  pop.innerHTML = '<button type="button" class="x" aria-label="Close">×</button>' +
-    `<p class="pk">${esc(KIND_NAMES[m.kind] || '')}</p><h3>${esc(m.name)}</h3><p class="pd">${esc(m.date)}</p><p>${esc(m.text)}</p>`;
+  pop.innerHTML = '<button type="button" class="x" aria-label="Close">×</button>' + html;
   pop.hidden = false;
   pop.querySelector('.x').addEventListener('click', (e) => { e.stopPropagation(); closePop(); });
   const r = g.querySelector('.hit').getBoundingClientRect(), wr = wrap.getBoundingClientRect();
@@ -654,7 +800,13 @@ function setYear(y, opts = {}) {
   year = Math.max(800, Math.min(2026, Math.round(y)));
   yearEl.value = year; yearOut.textContent = year; badge.textContent = year;
   const key = `${String(year).padStart(4, '0')}-12-31`;
-  setBorders(key, null);
+  closePop();
+  setBorders(key, null, key, opts.scrub);
+  if (opts.scrub) {
+    svg.classList.add('scrubbing');
+    syncCapitals(vb, S);
+    scheduleLabels();
+  }
   const si = stateIndex(key);
   $('bsrc').textContent = si >= 0 ? `Borders: ${T[si].s}` : '';
   renderWarList(); markTimeline();
@@ -673,7 +825,7 @@ function setYear(y, opts = {}) {
     }, 250);
   }
 }
-yearEl.addEventListener('input', () => { cancelAnimationFrame(yearRaf); yearRaf = requestAnimationFrame(() => setYear(+yearEl.value)); });
+yearEl.addEventListener('input', () => { cancelAnimationFrame(yearRaf); yearRaf = requestAnimationFrame(() => setYear(+yearEl.value, {scrub:true})); });
 const changeYears = [...new Set(T.map((t) => yearOf(t.k)))].sort((a, b) => a - b);
 $('yprev').addEventListener('click', () => { const y = [...changeYears].reverse().find((v) => v < year); if (y !== undefined) setYear(y); });
 $('ynext').addEventListener('click', () => { const y = changeYears.find((v) => v > year); if (y !== undefined) setYear(y); });
@@ -858,7 +1010,7 @@ async function go(i, instant = false, destination = story, push = false) {
   closePop();
   cur = i;
   const focus = new Set(war.sides.flatMap((s) => s.polities));
-  const own = setBorders(step.borders, focus, step.when || step.borders);
+  const own = setBorders(step.borders, focus, step.when || step.borders, true);
   buildStepLayers(war, step);
   renderStory(i, war, step);
   renderLegend(war, step, own);
@@ -871,7 +1023,7 @@ async function go(i, instant = false, destination = story, push = false) {
   document.title = `${step.title} · ${war.name} · Europe at War`;
   history[push ? 'pushState' : 'replaceState'](null, '', `#/${story.kind}/${encodeURIComponent(story.id)}/${i + 1}`);
   drawArrows(instant);
-  apply(vb);
+  if (!instant && !reduceMotion) apply(vb);
   animateTo(fit(targetBox), instant ? 0 : 400);
 }
 function openStory(kind, id, i, push = false) {
@@ -933,3 +1085,5 @@ document.addEventListener('click', e => {
 window.addEventListener('hashchange', route);
 apply(fit(FRAME));
 route();
+
+document.fonts?.ready.then(() => { capitalWidths.clear(); scheduleLabels(); });

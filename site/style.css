@@ -130,7 +130,7 @@ h1 a.home { color: inherit; text-decoration: none; }
 .mlabel { font: 600 11.5px var(--body); fill: var(--ink); paint-order: stroke; stroke: var(--halo); stroke-width: 3.5px; stroke-linejoin: round; }
 .caplabel { font: 500 11px var(--body); fill: var(--ink); paint-order: stroke; stroke: var(--halo); stroke-width: 3px; stroke-linejoin: round; }
 
-.pop { position: absolute; z-index: 5; width: min(280px, calc(100% - 16px)); background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 9px; box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2); padding: 10px 12px 12px; font-size: 0.875rem; line-height: 1.45; }
+.pop { max-height: calc(100% - 16px); overflow-y: auto; position: absolute; z-index: 5; width: min(280px, calc(100% - 16px)); background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 9px; box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2); padding: 10px 12px 12px; font-size: 0.875rem; line-height: 1.45; }
 .pop .pk { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 26px 2px 0; }
 .pop h3 { font: 600 1.02rem/1.25 var(--display); margin: 0 26px 2px 0; }
 .pop .pd { color: var(--muted); font-size: 0.8rem; margin: 0 0 6px; font-variant-numeric: tabular-nums; }
@@ -221,3 +221,14 @@ footer li { margin: 0 0 2px; }
 @media (prefers-reduced-motion: reduce) {
   .atom, .ov, .front, .progress button::before { transition: none; animation: none; }
 }
+
+.capital { cursor: pointer; }
+.capital .hit { fill: transparent; }
+.capital-ring { fill: var(--surface); stroke: var(--ink); stroke-width: 1.4; }
+.capital:focus { outline: none; }
+.capital:focus-visible .capital-ring, .capital.sel .capital-ring { stroke-width: 2.6; }
+.caplabel { pointer-events: none; }
+.capital-key { position: absolute; bottom: 8px; left: 10px; display: flex; align-items: center; gap: 5px; padding: 2px 6px; background: var(--surface); color: var(--muted); border-radius: 3px; font-size: 11px; pointer-events: none; }
+.capital-key i { width: 6px; height: 6px; border: 1.4px solid var(--ink); border-radius: 50%; }
+
+#map.scrubbing .lbl, #map.scrubbing .caplabel { visibility: hidden; }

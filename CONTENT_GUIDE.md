@@ -363,8 +363,7 @@ date, from two sources merged by date:
 
 ## Labels: `content/labels.yaml`
 
-Seas, regions and capitals that are not polity names. Polity names are placed
-automatically.
+Geographic labels give readers physical and regional landmarks. The renderer places polity names automatically.
 
 ```yaml
 labels:
@@ -374,9 +373,26 @@ labels:
     min_zoom: 1.6           # only when zoomed in this far (1 ≈ the Sweden at War map scale)
     from: "1658"            # optional date range
     until: "1720"
-capitals:
-  - name: Stockholm
-    lonlat: [18.07, 59.33]
-    lp: r                   # label position: r, l, t or b
-    from: "1250"
 ```
+
+## Capitals and geographic references
+
+`content/capitals.yaml` records the polity, period name, longitude and latitude,
+and source for each seat. Optional `from` and `until` use the map’s date
+precision. The start is inclusive and the end exclusive. A record applies only
+while the polity holds mapped territory on the story or explorer date. For a
+city-state too small to have a border atom, supply `point_only: true` and an
+explicit founding date. Use the same coordinates for a shared city or a rename.
+
+Give a temporary or concurrent seat a descriptive `role`. Use `Itinerant court`, `No permanent capital`, or `Territorial grouping`
+for a sourced period without a single seat. Omit the name and coordinates
+for those periods. For a documented city with a disputed location, keep its
+name and source, omit the coordinates, and use `Unlocated seat`.
+Each build emits `dist/data/capital-coverage.json`, with one entry per mapped
+owner and period. It identifies unresolved periods and seats outside the map.
+The browser loads only the compiled in-frame records and dated changes.
+
+Physical references live in `content/labels.yaml`. Set `min_zoom` to the first
+scale where the feature helps orientation. For a river, set `river` to its
+name in the topology and provide a nearby coordinate. The build places its
+label at the nearest vertex of the named river.

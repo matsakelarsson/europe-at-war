@@ -1,4 +1,4 @@
-# Geographic labels (seas, regions) and capitals. from/until are dates.
+# Geographic labels. from/until are dates.
 # min_zoom: shown only when zoomed in at least this far (1 ≈ the Sweden at War map scale).
 refWidth: 2603
 labels:
@@ -289,63 +289,21 @@ labels:
       - 55.5497
     class: lbl-sea lbl-small
     min_zoom: 3.5
-capitals:
-  - name: Stockholm
-    lonlat:
-      - 18.0729
-      - 59.3281
-    lp: r
-    from: "1250"
-  - name: Copenhagen          # the royal seat from 1443
-    lonlat:
-      - 12.5693
-      - 55.6804
-    lp: l
-    from: "1443"
-  - name: Oslo                # Haakon V's capital; Bergen before, Copenhagen in the union
-    lonlat: [10.75, 59.91]
-    from: "1299"
-    until: "1380"
-  - name: Christiania
-    lonlat: [10.75, 59.91]
-    from: "1814-05-17"
-    until: "1925-01-01"
-  - name: Oslo
-    lonlat: [10.75, 59.91]
-    from: "1925-01-01"
-  - name: Kraków
-    lonlat: [19.94, 50.06]
-    lp: l
-    from: "1038"
-    until: "1596"
-  - name: Warsaw              # gaps: the partitions, Russian rule from 1867, the German occupation
-    lonlat: [21.01, 52.23]
-    from: "1596"
-    until: "1795-10-24"
-  - name: Warsaw
-    lonlat: [21.01, 52.23]
-    from: "1807-07-09"
-    until: "1867"
-  - name: Warsaw
-    lonlat: [21.01, 52.23]
-    from: "1918-11-11"
-    until: "1939-09-28"
-  - name: Warsaw
-    lonlat: [21.01, 52.23]
-    from: "1945-01-17"
-  - name: Vilnius             # Kaunas was the temporary capital while Poland held Vilnius
-    lonlat: [25.28, 54.69]
-    from: "1323"
-    until: "1795-10-24"
-  - name: Kaunas
-    lonlat: [23.90, 54.90]
-    lp: l
-    from: "1920-10-12"
-    until: "1939-10-28"
-  - name: Vilnius
-    lonlat: [25.28, 54.69]
-    from: "1939-10-28"
-    until: "1940-08-03"
-  - name: Vilnius
-    lonlat: [25.28, 54.69]
-    from: "1991-09-06"
+  - {text: Atlantic Ocean, lonlat: [-16, 48], class: lbl-sea, min_zoom: 0}
+  - {text: Mediterranean Sea, lonlat: [18, 35], class: lbl-sea, min_zoom: 0}
+  - {text: Black Sea, lonlat: [34, 43], class: lbl-sea, min_zoom: 0}
+  - {text: Caspian Sea, lonlat: [51, 42], class: lbl-sea, min_zoom: 0.6}
+  - {text: Alps, lonlat: [10, 46.5], class: lbl-reg lbl-dim, min_zoom: 0.65}
+  - {text: Carpathians, lonlat: [24.5, 47.4], class: lbl-reg lbl-dim, min_zoom: 1.1}
+  - {text: Pyrenees, lonlat: [1, 42.7], class: lbl-reg lbl-dim, min_zoom: 1}
+  - {text: Caucasus, lonlat: [43.5, 42.9], class: lbl-reg lbl-dim, min_zoom: 1}
+  - {text: Adriatic Sea, lonlat: [15.3, 42.7], class: lbl-sea, min_zoom: 1}
+  - {text: Aegean Sea, lonlat: [25, 38.4], class: lbl-sea, min_zoom: 1}
+  - {text: Strait of Gibraltar, lonlat: [-5.55, 35.96], class: lbl-sea lbl-small, min_zoom: 2.3}
+  - {text: Bosporus, lonlat: [29.05, 41.13], class: lbl-sea lbl-small, min_zoom: 3}
+  - {text: English Channel, lonlat: [-1.5, 50.1], class: lbl-sea, min_zoom: 1.25}
+  - {text: Danube, lonlat: [19.3, 45.4], class: lbl-sea lbl-small, min_zoom: 1.7, river: Danube}
+  - {text: Rhine, lonlat: [7.6, 50.35], class: lbl-sea lbl-small, min_zoom: 1.7, river: Rhine}
+  - {text: Dnieper, lonlat: [32, 49.2], class: lbl-sea lbl-small, min_zoom: 1.7, river: Dnipro}
+  - {text: Volga, lonlat: [46, 52], class: lbl-sea lbl-small, min_zoom: 1.7, river: Volga}
+  - {text: Nile, lonlat: [31, 28], class: lbl-sea lbl-small, min_zoom: 1.7, river: Nile}

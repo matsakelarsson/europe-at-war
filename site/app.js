@@ -112,8 +112,17 @@ try {
 }
 const warById = new Map(WARS.map((w) => [w.id, w]));
 const warCache = new Map();
-const loadWar = (id) => { if (!warCache.has(id)) warCache.set(id, fetchJSON(`data/wars/${id}.json`)); return warCache.get(id); };
+function loadWar(id) {
+  if (!warCache.has(id)) {
+    warCache.set(id, fetchJSON(`data/wars/${id}.json`).catch(error => {
+      warCache.delete(id);
+      throw error;
+    }));
+  }
+  return warCache.get(id);
+}
 const POL = B.polities;
+const datedPolities = POL.filter(p => p.names?.length);
 let curKey = '1648-12-31';
 /** A polity's name at a date: `names` holds [until, name] pairs, oldest first. */
 function polName(p, key = curKey) {
@@ -128,23 +137,24 @@ const REF_W = LBL.refWidth || 2000;
 
 // ---------- Border timeline ----------
 const T = B.timeline;
-const snaps = new Array(T.length);
+const snaps = new Map();
 function stateIndex(key) {
   let lo = 0, hi = T.length - 1, ans = -1;
   while (lo <= hi) { const m = (lo + hi) >> 1; if (T[m].k <= key) { ans = m; lo = m + 1; } else hi = m - 1; }
   return ans;
 }
 function ownersAt(si) {
-  if (si < 0) return new Int16Array(NA).fill(-1);
-  if (snaps[si]) return snaps[si];
-  let k = si; while (k >= 0 && !snaps[k]) k--;
-  let cur = k >= 0 ? snaps[k] : new Int16Array(NA).fill(-1);
+  if (snaps.has(si)) return snaps.get(si);
+  let k = -1;
+  for (const index of snaps.keys()) if (index <= si && index > k) k = index;
+  const owners = k >= 0 ? snaps.get(k).slice() : new Int16Array(NA).fill(-1);
   for (let i = k + 1; i <= si; i++) {
-    const next = cur.slice(); const c = T[i].c;
-    for (let j = 0; j < c.length; j += 2) next[c[j]] = c[j + 1];
-    snaps[i] = next; cur = next;
+    const changes = T[i].c;
+    for (let j = 0; j < changes.length; j += 2) owners[changes[j]] = changes[j + 1];
   }
-  return snaps[si];
+  if (snaps.size >= 40) snaps.delete(snaps.keys().next().value);
+  snaps.set(si, owners);
+  return owners;
 }
 
 // ---------- Build the map ----------
@@ -200,7 +210,7 @@ for (const c of LBL.capitals) {
   fixedScalables.push({ g, x: c.xy[0], y: c.xy[1] });
   staticLabels.push({ g, minZoom: c.minZoom, from: c.from, until: c.until, dateOk: true });
 }
-$('loading').remove();
+
 
 // ---------- View handling ----------
 let vb = FRAME.slice(), S = 1, anim = null, targetBox = FRAME.slice();
@@ -211,10 +221,11 @@ function fit(b) {
   return [x, y, w, h];
 }
 function applyPatternScale(p, rot) { p.setAttribute('patternTransform', `rotate(${rot}) scale(${S.toFixed(4)})`); }
-function apply(v) {
+function apply(v, viewportOnly = false) {
   vb = v;
   svg.setAttribute('viewBox', v.map((n) => n.toFixed(2)).join(' '));
   const cw = svg.clientWidth || 1;
+  if (viewportOnly && S === v[2] / cw) return;
   S = v[2] / cw;
   const s = S.toFixed(4);
   for (const list of [fixedScalables, stepScalables, polScalables]) for (const it of list) it.g.setAttribute('transform', `translate(${it.x},${it.y}) scale(${s})`);
@@ -233,23 +244,27 @@ function cullLabels() {
   const hit = (r) => taken.some((t) => r.left < t.right && r.right > t.left && r.top < t.bottom && r.bottom > t.top);
   for (const l of staticLabels) if (l.g.style.display !== 'none') { const r = l.g.getBoundingClientRect(); if (r.width) taken.push(r); }
   for (const g of gMarkers.children) { const r = g.getBoundingClientRect(); if (r.width) taken.push(r); }
+  const hidden = [];
   for (const l of polScalables) {
     if (l.g.style.display === 'none') continue;
     const r = l.g.getBoundingClientRect();
-    if (hit(r)) { l.coll = true; l.g.style.display = 'none'; } else taken.push(r);
+    if (hit(r)) hidden.push(l); else taken.push(r);
   }
+  for (const l of hidden) { l.coll = true; l.g.style.display = 'none'; }
 }
-function animateTo(target, dur, done) {
+function animateTo(target, dur) {
   if (anim) cancelAnimationFrame(anim);
   anim = null;
-  if (reduceMotion || !dur) { apply(target); placeLabels(); if (done) done(); return; }
+  const distance = Math.max(...target.map((n, i) => Math.abs(n - vb[i]) / vb[i % 2 + 2]));
+  dur = Math.min(dur, 400 * Math.sqrt(distance), 400);
+  if (reduceMotion || !dur) { apply(target); placeLabels(); return; }
   const from = vb.slice(); let t0 = null;
   const frame = (t) => {
     if (t0 === null) t0 = t;
     const k = Math.min(1, (t - t0) / dur);
     const e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
-    apply(from.map((a, i) => a + (target[i] - a) * e));
-    if (k < 1) anim = requestAnimationFrame(frame); else { anim = null; placeLabels(); if (done) done(); }
+    apply(from.map((a, i) => a + (target[i] - a) * e), true);
+    if (k < 1) anim = requestAnimationFrame(frame); else { anim = null; placeLabels(); }
   };
   anim = requestAnimationFrame(frame);
 }
@@ -267,6 +282,7 @@ function clientToMap(cx, cy) {
   return [vb[0] + ((cx - r.left) / r.width) * vb[2], vb[1] + ((cy - r.top) / r.height) * vb[3]];
 }
 function zoomAt(p, k) {
+  cancelAnimationFrame(anim); anim = null;
   const v = [p[0] - (p[0] - vb[0]) * k, p[1] - (p[1] - vb[1]) * k, vb[2] * k, vb[3] * k];
   apply(clampView(v));
   scheduleLabels();
@@ -299,7 +315,7 @@ svg.addEventListener('pointermove', (e) => {
   if (!dragMoved) { dragMoved = true; svg.setPointerCapture(e.pointerId); svg.classList.add('panning'); if (anim) { cancelAnimationFrame(anim); anim = null; } closePop(); }
   if (pointers.size === 1) {
     const r = svg.getBoundingClientRect();
-    apply(clampView([vb[0] - (dx * vb[2]) / r.width, vb[1] - (dy * vb[3]) / r.height, vb[2], vb[3]]));
+    apply(clampView([vb[0] - (dx * vb[2]) / r.width, vb[1] - (dy * vb[3]) / r.height, vb[2], vb[3]]), true);
   } else if (pointers.size === 2 && pinch) {
     const [a, b] = [...pointers.values()];
     const d = Math.hypot(a.x - b.x, a.y - b.y) || 1;
@@ -322,6 +338,7 @@ $('zfit').addEventListener('click', () => animateTo(fit(targetBox), 600));
 
 // ---------- Borders, polity labels ----------
 let curSi = null, curFocusKey = null, curOwners = null;
+const borderPaths = new Map();
 const polyCache = new Map();
 /** Merged polygons per polity for a border state: [{o, polys: [{rings, bbox, area}], total}] */
 function polityPolys(si, own) {
@@ -432,10 +449,18 @@ function setBorders(key, focus, nameKey = key) {
   const si = stateIndex(key);
   const own = ownersAt(si);
   const fk = focus ? [...focus].sort((a, b) => a - b).join(',') : '';
-  for (const l of staticLabels) l.dateOk = (!l.from || key >= l.from) && (!l.until || key < l.until);
-  const keyChanged = nameKey !== curKey;
+  let labelDatesChanged = false;
+  for (const l of staticLabels) {
+    const visible = (!l.from || key >= l.from) && (!l.until || key < l.until);
+    if (visible !== l.dateOk) labelDatesChanged = true;
+    l.dateOk = visible;
+  }
+  const namesChanged = curKey !== nameKey && datedPolities.some(p => polName(p, curKey) !== polName(p, nameKey));
   curKey = nameKey;
-  if (si === curSi && fk === curFocusKey) { if (keyChanged) placeLabels(); else apply(vb); return own; }
+  if (si === curSi && fk === curFocusKey) {
+    if (namesChanged || labelDatesChanged) placeLabels();
+    return own;
+  }
   for (let i = 0; i < NA; i++) {
     const o = own[i];
     const v = o < 0 ? 'var(--land)' : focus && !focus.has(o) ? `var(--q${o})` : `var(--p${o})`;
@@ -444,7 +469,11 @@ function setBorders(key, focus, nameKey = key) {
   const changed = si !== curSi;
   curSi = si; curFocusKey = fk; curOwners = own;
   if (changed) {
-    blineEl.setAttribute('d', pathD(topojson.mesh(topo, topo.objects.atoms, (a, b) => a !== b && own[a.i] !== own[b.i])));
+    if (!borderPaths.has(si)) {
+      if (borderPaths.size >= 40) borderPaths.delete(borderPaths.keys().next().value);
+      borderPaths.set(si, pathD(topojson.mesh(topo, topo.objects.atoms, (a, b) => a !== b && own[a.i] !== own[b.i])));
+    }
+    blineEl.setAttribute('d', borderPaths.get(si));
     placeLabels();
   } else apply(vb);
   return own;
@@ -554,14 +583,6 @@ function drawArrows(instant) {
     a.head.style.opacity = 1;
   });
 }
-function hideArrows() {
-  for (const a of arrowItems) {
-    const p = a.path, L = p.getTotalLength();
-    p.style.transition = 'none'; p.style.strokeDasharray = `${L} ${L}`; p.style.strokeDashoffset = L;
-    a.head.style.transition = 'none'; a.head.style.opacity = 0;
-  }
-}
-
 // ---------- Explore mode ----------
 const exploreEl = $('explore'), storyViewEl = $('storyView');
 const yearEl = $('year'), yearOut = $('yearOut'), badge = $('yearbadge');
@@ -625,18 +646,32 @@ function renderWarList() {
     lens.innerHTML = `Follow <b>${esc(possessive(countryName(cc)))}</b> wars step by step (${n} steps) ›`;
   } else lens.hidden = true;
 }
+let exploreListKey;
 let yearRaf = 0, hashT = 0;
 function setYear(y, opts = {}) {
+  ++goToken;
+  $('storyError').hidden = true;
   year = Math.max(800, Math.min(2026, Math.round(y)));
   yearEl.value = year; yearOut.textContent = year; badge.textContent = year;
   const key = `${String(year).padStart(4, '0')}-12-31`;
-  const own = setBorders(key, null);
+  setBorders(key, null);
   const si = stateIndex(key);
   $('bsrc').textContent = si >= 0 ? `Borders: ${T[si].s}` : '';
   renderWarList(); markTimeline();
-  $('exOtherList').innerHTML = otherListHTML(boxOf(fit(FRAME)), null);
-  $('exOthers').hidden = !$('exOtherList').innerHTML;
-  if (!opts.noHash) { clearTimeout(hashT); hashT = setTimeout(() => history.replaceState(null, '', `#/year/${year}`), 250); }
+  const box = boxOf(fit(FRAME));
+  const listKey = JSON.stringify([si, box, datedPolities.map(p => polName(p))]);
+  if (listKey !== exploreListKey) {
+    exploreListKey = listKey;
+    $('exOtherList').innerHTML = otherListHTML(box, null);
+    $('exOthers').hidden = !$('exOtherList').innerHTML;
+  }
+  if (!opts.noHash) {
+    clearTimeout(hashT);
+    hashT = setTimeout(() => {
+      hashT = 0;
+      history.replaceState(null, '', `#/year/${year}`);
+    }, 250);
+  }
 }
 yearEl.addEventListener('input', () => { cancelAnimationFrame(yearRaf); yearRaf = requestAnimationFrame(() => setYear(+yearEl.value)); });
 const changeYears = [...new Set(T.map((t) => yearOf(t.k)))].sort((a, b) => a - b);
@@ -646,15 +681,31 @@ countryEl.addEventListener('change', () => { renderTimelineBars(); renderWarList
 qEl.addEventListener('input', renderWarList);
 
 function explore(y) {
+  const storyWasVisible = mode === 'story';
   const entering = mode !== 'explore';
+  ++goToken;
+  cancelAnimationFrame(yearRaf);
+  clearTimeout(hashT);
+  $('storyError').hidden = true;
+  $('loading')?.remove();
   mode = 'explore'; story = null;
   exploreEl.hidden = false; storyViewEl.hidden = true; badge.hidden = false;
   clearStepLayers(); closePop();
   $('footStory').innerHTML = '';
   document.title = 'Europe at War';
-  if (entering) renderTimelineBars();
+  if (entering) {
+    cancelAnimationFrame(anim);
+    anim = null;
+    renderTimelineBars();
+  }
   setYear(y ?? year, { noHash: true });
-  if (entering) { targetBox = START_BOX || FRAME.slice(); animateTo(fit(targetBox), vb[2] === FRAME[2] ? 0 : 800); START_BOX = null; }
+  if (entering) {
+    targetBox = START_BOX || FRAME.slice();
+    const target = fit(targetBox);
+    if (target.some((n, i) => n !== vb[i])) animateTo(target, 400);
+    else if (storyWasVisible) placeLabels();
+    START_BOX = null;
+  }
 }
 // `?box=x,y,w,h` (map km) opens explore mode on that box; used for review screenshots.
 let START_BOX = (() => { const b = new URLSearchParams(location.search).get('box'); const v = b ? b.split(',').map(Number) : []; return v.length === 4 && v.every(Number.isFinite) ? v : null; })();
@@ -662,7 +713,7 @@ let START_BOX = (() => { const b = new URLSearchParams(location.search).get('box
 // ---------- Story mode (one war, or one country's wars) ----------
 const storyEl = $('story'), legendEl = $('legend'), jumpEl = $('jump'), progEl = $('progress');
 const prevBtn = $('prev'), nextBtn = $('next');
-let story = null, cur = -1, goToken = 0;
+let story = null, cur = -1, requested = -1, goToken = 0;
 function stepBox(step) {
   const b = step.view;
   if (!b) return FRAME.slice();
@@ -687,8 +738,8 @@ function buildNav() {
   });
 }
 jumpEl.addEventListener('change', () => go(+jumpEl.value));
-prevBtn.addEventListener('click', () => go(cur - 1));
-nextBtn.addEventListener('click', () => go(cur + 1));
+prevBtn.addEventListener('click', () => go(requested - 1));
+nextBtn.addEventListener('click', () => go(requested + 1));
 function renderNav(i) {
   jumpEl.value = String(i);
   Array.prototype.forEach.call(progEl.children, (b, k) => {
@@ -726,6 +777,7 @@ function renderLegend(war, step, own) {
   legendEl.innerHTML = h.join('');
 }
 function renderStory(i, war, step) {
+  const displayed = story;
   const N = story.items.length;
   let h = `<p class="eyebrow"><b>${esc(war.name)}</b> · Step ${i + 1} of ${N} · ${esc(step.date)}</p>`;
   h += `<h2 class="st">${esc(step.title)}</h2><div class="story">`;
@@ -750,7 +802,7 @@ function renderStory(i, war, step) {
       const r = wrap.getBoundingClientRect();
       if (r.top < 0 || r.bottom > window.innerHeight) {
         wrap.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
-        setTimeout(() => openPop(mi), reduceMotion ? 0 : 450);
+        setTimeout(() => { if (displayed === story && cur === i) openPop(mi); }, reduceMotion ? 0 : 450);
       } else openPop(mi);
     });
   }
@@ -761,12 +813,47 @@ function renderFooter(war) {
   if (war.sources?.length) h += `<h3>Sources for ${esc(war.name)}</h3><ul>${war.sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}">${esc(s.title)}</a>` : esc(s.title)}</li>`).join('')}</ul>`;
   $('footStory').innerHTML = h;
 }
-async function go(i, instant) {
-  if (!story || i < 0 || i >= story.items.length || (i === cur && !instant)) return;
+let retryStory;
+$('retryStory').addEventListener('click', () => retryStory?.());
+async function go(i, instant = false, destination = story, push = false) {
+  if (!destination || i < 0 || i >= destination.items.length) return;
   const token = ++goToken;
-  const it = story.items[i];
-  const war = await loadWar(it.w);
+  clearTimeout(hashT);
+  cancelAnimationFrame(yearRaf);
+  $('storyError').hidden = true;
+  const same = destination === story;
+  if (same) {
+    requested = i;
+    prevBtn.disabled = i === 0;
+    nextBtn.disabled = i === story.items.length - 1;
+  }
+  const it = destination.items[i];
+  let war;
+  try { war = await loadWar(it.w); }
+  catch {
+    if (token !== goToken) return;
+    if (!mode) explore(year);
+    requested = cur;
+    if (story) renderNav(cur);
+    history.replaceState(null, '', story ? `#/${story.kind}/${encodeURIComponent(story.id)}/${cur + 1}` : `#/year/${year}`);
+    retryStory = () => go(i, instant, destination, push);
+    $('storyError').hidden = false;
+    return;
+  }
   if (token !== goToken) return;
+  clearTimeout(hashT);
+  if (!same) {
+    story = destination;
+    $('loading')?.remove();
+    mode = 'story';
+    exploreEl.hidden = true; storyViewEl.hidden = false; badge.hidden = false;
+    buildNav();
+    const back = $('back');
+    back.href = `#/year/${yearOf(warById.get(story.items[0].w).sk)}`;
+    back.textContent = story.kind === 'country' ? `‹ All wars · ${possessive(countryName(story.id))} wars` : '‹ All wars';
+    if (window.matchMedia('(min-width: 900px)').matches) $('others').open = true;
+  }
+  requested = i;
   const step = war.steps[it.s];
   closePop();
   cur = i;
@@ -782,12 +869,12 @@ async function go(i, instant) {
   $('others').hidden = !$('otherList').innerHTML;
   badge.textContent = step.date;
   document.title = `${step.title} · ${war.name} · Europe at War`;
-  history.replaceState(null, '', `#/${story.kind}/${encodeURIComponent(story.id)}/${i + 1}`);
-  if (!instant) hideArrows();
+  history[push ? 'pushState' : 'replaceState'](null, '', `#/${story.kind}/${encodeURIComponent(story.id)}/${i + 1}`);
+  drawArrows(instant);
   apply(vb);
-  animateTo(fit(targetBox), instant ? 0 : 950, () => drawArrows(instant));
+  animateTo(fit(targetBox), instant ? 0 : 400);
 }
-function openStory(kind, id, i) {
+function openStory(kind, id, i, push = false) {
   let items;
   if (kind === 'war') {
     const w = warById.get(id);
@@ -799,20 +886,8 @@ function openStory(kind, id, i) {
   else items = lensSteps(id);
   if (!items.length) return explore();
   const same = story && story.kind === kind && story.id === id;
-  mode = 'story';
-  exploreEl.hidden = true; storyViewEl.hidden = false; badge.hidden = false;
-  if (!same) {
-    story = { kind, id, items };
-    cur = -1;
-    buildNav();
-    const back = $('back');
-    const w0 = warById.get(items[0].w);
-    back.href = `#/year/${yearOf(w0.sk)}`;
-    back.textContent = kind === 'country' ? `‹ All wars · ${possessive(countryName(id))} wars` : '‹ All wars';
-  }
-  if (window.matchMedia('(min-width: 900px)').matches) $('others').open = true;
-  go(Math.max(0, Math.min(items.length - 1, i || 0)), !same && cur < 0 && !document.body.dataset.started);
-  document.body.dataset.started = '1';
+  go(Math.max(0, Math.min(items.length - 1, i || 0)), !mode,
+    same ? story : { kind, id, items }, push);
 }
 
 // ---------- Keyboard, resize, routing ----------
@@ -821,8 +896,8 @@ document.addEventListener('keydown', (e) => {
   const tag = (e.target && e.target.tagName) || '';
   if (/INPUT|TEXTAREA|SELECT/.test(tag)) return;
   if (mode === 'story') {
-    if (e.key === 'ArrowRight') { e.preventDefault(); go(cur + 1); }
-    if (e.key === 'ArrowLeft') { e.preventDefault(); go(cur - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(requested + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(requested - 1); }
   } else if (mode === 'explore') {
     if (e.key === 'ArrowRight') { e.preventDefault(); setYear(year + 1); }
     if (e.key === 'ArrowLeft') { e.preventDefault(); setYear(year - 1); }
@@ -831,13 +906,30 @@ document.addEventListener('keydown', (e) => {
 let resizeT = null;
 window.addEventListener('resize', () => {
   clearTimeout(resizeT);
-  resizeT = setTimeout(() => { if (anim) return; apply(fit(targetBox)); placeLabels(); closePop(); }, 80);
+  resizeT = setTimeout(() => {
+    animateTo(fit(targetBox), anim ? 400 : 0);
+    closePop();
+  }, 80);
 });
 function route() {
   const h = decodeURIComponent(location.hash.replace(/^#\/?/, '')).split('/');
   if ((h[0] === 'war' || h[0] === 'country') && h[1]) openStory(h[0], h[1], (parseInt(h[2], 10) || 1) - 1);
   else explore(h[0] === 'year' && h[1] ? parseInt(h[1], 10) : undefined);
 }
+// Commit an in-page story link to history when its content is ready.
+document.addEventListener('click', e => {
+  if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  const link = e.target.closest('a[href^="#/"]');
+  const match = link?.hash.match(/^#\/(war|country)\/([^/]+)(?:\/(\d+))?$/);
+  if (!match || link.target || link.hasAttribute('download')) return;
+  e.preventDefault();
+  if (mode === 'explore' && hashT) {
+    clearTimeout(hashT);
+    hashT = 0;
+    history.replaceState(null, '', `#/year/${year}`);
+  }
+  openStory(match[1], decodeURIComponent(match[2]), Number(match[3] || 1) - 1, location.hash !== link.hash);
+});
 window.addEventListener('hashchange', route);
 apply(fit(FRAME));
 route();

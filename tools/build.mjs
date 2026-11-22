@@ -335,6 +335,12 @@ const OUT = join(ROOT, '.dist-tmp');
 const emit = (f, data) => (CHECK ? null : writeFile(join(OUT, f), data));
 
 async function main() {
+  const preview = process.argv.includes('--dev') && !CHECK
+    ? await (await import('./dev-build.mjs')).previewCache() : null;
+  if (preview?.reuseData) {
+    console.log('Reusing validated map data for local preview.');
+    return;
+  }
   if (!CHECK) {
     await rm(OUT, { recursive: true, force: true });
     await mkdir(join(OUT, 'data/wars'), { recursive: true });
@@ -349,13 +355,19 @@ async function main() {
 
   const wars = [];
   const seen = new Set();
-  for (const f of await listFiles(join(CONTENT, 'wars'), '.yaml')) {
-    const w = await readYAML(join(CONTENT, 'wars', f));
-    if (seen.has(w.id)) err(`war ${f}: duplicate id ${w.id}`);
-    seen.add(w.id);
-    const { war, index } = buildWar(w, f, { pol, borders });
-    wars.push(index);
-    await emit(`data/wars/${w.id}.json`, JSON.stringify(war));
+  const files = await listFiles(join(CONTENT, 'wars'), '.yaml');
+  for (let start = 0; start < files.length; start += 16) {
+    const batch = files.slice(start, start + 16);
+    const entries = await Promise.all(batch.map(f => readYAML(join(CONTENT, 'wars', f))));
+    const outputs = entries.map((w, i) => {
+      const f = batch[i];
+      if (seen.has(w.id)) err(`war ${f}: duplicate id ${w.id}`);
+      seen.add(w.id);
+      const { war, index } = buildWar(w, f, { pol, borders });
+      wars.push(index);
+      return war;
+    });
+    if (!CHECK) await Promise.all(outputs.map(war => emit(`data/wars/${war.id}.json`, JSON.stringify(war))));
   }
   wars.sort((a, b) => (a.sk < b.sk ? -1 : a.sk > b.sk ? 1 : a.name.localeCompare(b.name)));
 
@@ -380,7 +392,7 @@ async function main() {
   // Size report: what a first visit downloads.
   const first = ['index.html', 'app.js', 'style.css', 'vendor/topojson-client.min.js', 'data/atoms.topo.json', 'data/borders.json', 'data/polities.css', 'data/wars.json', 'data/labels.json'];
   let raw = 0, gz = 0;
-  for (const f of first) { try { const b = await readFile(join(OUT, f)); raw += b.length; gz += gzipSync(b).length; } catch {} }
+  for (const f of CHECK ? [] : first) { try { const b = await readFile(join(OUT, f)); raw += b.length; gz += gzipSync(b).length; } catch {} }
   console.log(`polities ${pol.list.length}, atoms ${borders.order.length}, timeline entries ${borders.timeline.length}, wars ${wars.length}`);
   if (!CHECK) console.log(`first load: ${(raw / 1e6).toFixed(2)} MB raw, ${(gz / 1e6).toFixed(2)} MB gzip`);
   if (!CHECK && gz > 1.2e6) warn(`first load is over budget (${(gz / 1e6).toFixed(2)} MB gzip > 1.2 MB)`);
@@ -394,6 +406,7 @@ async function main() {
   if (!CHECK) {
     await rm(DIST, { recursive: true, force: true });
     await rename(OUT, DIST);
+    if (preview) await preview.save();
   }
 }
 

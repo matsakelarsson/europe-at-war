@@ -65,7 +65,7 @@ Needs Node 20 or newer.
 
 ```sh
 npm install
-npm run dev        # build into dist/ and serve it at http://127.0.0.1:8080/
+npm run dev        # reuse validated data and preview site/ at http://127.0.0.1:8080/
 npm run build      # validate content and build dist/ (what CI runs)
 ```
 

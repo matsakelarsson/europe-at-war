@@ -11,8 +11,9 @@ const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '
 createServer(async (req, res) => {
   let p = decodeURIComponent(new URL(req.url, 'http://x').pathname);
   if (p.endsWith('/')) p += 'index.html';
-  const file = normalize(join(DIST, p));
-  if (!file.startsWith(DIST)) { res.writeHead(403).end(); return; }
+  const root = process.argv.includes('--dev') && !p.startsWith('/data/') ? join(ROOT, 'site') : DIST;
+  const file = normalize(join(root, p));
+  if (!file.startsWith(root + '/')) { res.writeHead(403).end(); return; }
   try {
     const body = await readFile(file);
     res.writeHead(200, { 'Content-Type': TYPES[extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-store' }).end(body);

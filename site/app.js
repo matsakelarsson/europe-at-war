@@ -831,6 +831,9 @@ const exploreEl = $('explore'), storyViewEl = $('storyView');
 const yearEl = $('year'), yearOut = $('yearOut'), badge = $('yearbadge');
 const timelineEl = yearEl.parentElement;
 const timelineStart = +yearEl.min, timelineEnd = +yearEl.max, timelineSpan = timelineEnd - timelineStart;
+const yearPrev = $('yprev'), yearNext = $('ynext');
+// The timeline can extend beyond the first and last recorded border states.
+const borderYears = [...new Set(T.map((entry) => yearOf(entry.k)))];
 const timelinePosition = (year) => ((year - timelineStart) / timelineSpan) * 100 + '%';
 for (const tick of timelineEl.querySelectorAll('.tl-ticks span')) {
   tick.style.insetInlineStart = timelinePosition(+tick.dataset.year);
@@ -909,6 +912,8 @@ function setYear(y, opts = {}) {
   year = Math.max(timelineStart, Math.min(timelineEnd, Math.round(y)));
   yearEl.value = year; yearOut.textContent = number(year); badge.textContent = number(year);
   yearEl.setAttribute('aria-valuetext', number(year));
+  yearPrev.disabled = year === timelineStart;
+  yearNext.disabled = year === timelineEnd;
   timelineEl.style.setProperty('--year-position', timelinePosition(year));
   const key = `${String(year).padStart(4, '0')}-12-31`;
   closePop();
@@ -937,9 +942,8 @@ function setYear(y, opts = {}) {
   }
 }
 yearEl.addEventListener('input', () => { cancelAnimationFrame(yearRaf); yearRaf = requestAnimationFrame(() => setYear(+yearEl.value, {scrub:true})); });
-const changeYears = [...new Set(T.map((t) => yearOf(t.k)))].sort((a, b) => a - b);
-$('yprev').addEventListener('click', () => { const y = [...changeYears].reverse().find((v) => v < year); if (y !== undefined) setYear(y); });
-$('ynext').addEventListener('click', () => { const y = changeYears.find((v) => v > year); if (y !== undefined) setYear(y); });
+yearPrev.addEventListener('click', () => setYear(borderYears.findLast((v) => v < year) ?? timelineStart));
+yearNext.addEventListener('click', () => setYear(borderYears.find((v) => v > year) ?? timelineEnd));
 countryEl.addEventListener('change', () => { renderTimelineBars(); renderWarList(); markTimeline(); });
 qEl.addEventListener('input', renderWarList);
 

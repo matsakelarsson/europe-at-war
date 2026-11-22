@@ -268,9 +268,15 @@ function buildWar(w, file, ctx) {
       const xy = project(m.lonlat || [0, 0]); pts.push(xy);
       return { kind: m.kind, side: m.side || 'none', name: m.name, date: m.date || '', text: m.text || '', xy, lp: m.lp || 'r' };
     });
+    const arrowPhases = new Set();
+    const hasArrowPhases = s.arrows?.some((a) => a.phase !== undefined);
     const arrows = (s.arrows || []).map((a, ai) => {
       const aw = `${sw} arrow ${ai + 1}`;
       if (!sideIds.has(a.side || 'none')) err(`${aw}: unknown side ${a.side}`);
+      if (hasArrowPhases) {
+        if (!Number.isSafeInteger(a.phase) || a.phase < 1) err(`${aw}: phase must be a positive integer on every arrow in a phased step`);
+        else arrowPhases.add(a.phase);
+      }
       let d, end, ang, poly;
       if (a.bezier) {
         const P = a.bezier.map((ll) => (validLonLat(ll, aw), project(ll)));
@@ -292,8 +298,9 @@ function buildWar(w, file, ctx) {
         if (a.label_at) { validLonLat(a.label_at, aw); lxy = project(a.label_at); }
         else { const { p, dir } = pathPoint(poly, 0.5); const n = Math.hypot(dir[0], dir[1]) || 1; lxy = [p[0], p[1]]; lxy.auto = [-dir[1] / n, dir[0] / n]; }
       }
-      return { side: a.side || 'none', d, end, ang: Math.round(ang * 1000) / 1000, label: a.label || null, lxy, auto: lxy?.auto || null };
+      return { side: a.side || 'none', phase: a.phase, d, end, ang: Math.round(ang * 1000) / 1000, label: a.label || null, lxy, auto: lxy?.auto || null };
     }).filter(Boolean);
+    if ([...arrowPhases].some((phase) => phase > arrowPhases.size)) err(`${sw}: arrow phases must be consecutive starting at 1`);
     const areas = (s.areas || []).map((ar, ai) => {
       const aw = `${sw} area ${ai + 1}`;
       if (!AREA_STYLES.includes(ar.style)) err(`${aw}: unknown style ${ar.style}`);

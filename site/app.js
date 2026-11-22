@@ -773,17 +773,18 @@ function buildStepLayers(war, step) {
   }
   for (const a of step.arrows) {
     const ink = inkOf(a.side);
-    const p = el('path', { d: a.d, class: `arrow side-${ink}` }, gArrows);
-    const hg = el('g', { class: `side-${ink}` }, gArrows);
+    const g = el('g', { class: `side-${ink}` }, gArrows);
+    const p = el('path', { d: a.d, class: 'arrow' }, g);
+    const hg = el('g', null, g);
     el('path', { d: 'M0,0L-11,-5.5L-8.4,0L-11,5.5Z', class: 'ah' }, hg);
     heads.push({ g: hg, x: a.end[0], y: a.end[1], ang: a.ang });
     if (a.label && a.lxy) {
-      const lg = el('g', { class: `side-${ink}` }, gArrows);
+      const lg = el('g', null, g);
       const lt = el('text', { class: 'alabel', 'text-anchor': 'middle', y: 4 }, lg);
       lt.textContent = a.label;
       stepScalables.push({ g: lg, x: a.lxy[0], y: a.lxy[1] });
     }
-    arrowItems.push({ path: p, head: hg });
+    arrowItems.push({ group: g, path: p, head: hg, phase: a.phase });
   }
   step.markers.forEach((m, mi) => {
     const ink = inkOf(m.side);
@@ -798,17 +799,30 @@ function buildStepLayers(war, step) {
   });
 }
 function drawArrows(instant) {
+  if (instant || reduceMotion || !arrowItems.length) return;
+  const phaseDuration = 700;
+  for (const { group, path, head, phase } of arrowItems) {
+    const length = path.getTotalLength();
+    path.style.strokeDasharray = `${length} ${length}`;
+    path.style.strokeDashoffset = length;
+    head.style.opacity = 0;
+    if (phase !== undefined) group.style.opacity = 0;
+  }
+  // Commit the hidden state before starting the transitions together.
+  gArrows.getBoundingClientRect();
   arrowItems.forEach((a, k) => {
-    const p = a.path;
-    if (instant || reduceMotion) { p.style.transition = 'none'; p.style.strokeDasharray = ''; p.style.strokeDashoffset = ''; a.head.style.opacity = 1; return; }
-    const L = p.getTotalLength();
-    p.style.transition = 'none'; p.style.strokeDasharray = `${L} ${L}`; p.style.strokeDashoffset = L;
-    a.head.style.transition = 'none'; a.head.style.opacity = 0;
-    p.getBoundingClientRect();
-    const delay = k * 180;
-    p.style.transition = `stroke-dashoffset 1s cubic-bezier(.4,0,.2,1) ${delay}ms`;
-    p.style.strokeDashoffset = 0;
-    a.head.style.transition = `opacity .25s ease ${delay + 850}ms`;
+    const phased = a.phase !== undefined;
+    const delay = phased ? (a.phase - 1) * phaseDuration : k * 180;
+    const drawDuration = phased ? 600 : 1000;
+    const headDuration = phased ? 150 : 250;
+    const headDelay = phased ? phaseDuration - headDuration : 850;
+    if (phased) {
+      a.group.style.transition = `opacity 0s linear ${delay}ms`;
+      a.group.style.opacity = 1;
+    }
+    a.path.style.transition = `stroke-dashoffset ${drawDuration}ms cubic-bezier(.4,0,.2,1) ${delay}ms`;
+    a.path.style.strokeDashoffset = 0;
+    a.head.style.transition = `opacity ${headDuration}ms ease ${delay + headDelay}ms`;
     a.head.style.opacity = 1;
   });
 }

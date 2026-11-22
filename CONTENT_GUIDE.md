@@ -93,6 +93,7 @@ steps:
     arrows:
       - side: se
         label: Charles XI
+        phase: 1                                             # optional relative playback order
         via: [[13.8, 56.6], [13.5, 56.1], [13.2, 55.75]]   # smooth curve through points
         # or bezier: [p0, c1, c2, p1, c1, c2, p2, …]         # 1 + 3n points
         label_at: [13.9, 56.2]                              # optional label position
@@ -115,6 +116,12 @@ file migrated from Sweden at War, set `countries` on the new steps and leave
 `se` out unless the step is about Sweden, so the Sweden view keeps its 67 steps.
 Per-step `side_names` and `move_names` (maps from side id to text) override the
 legend wording for one step.
+
+Use arrow `phase` to show a sequence supported by historical sources. Give
+each leg of a continuing route a later phase, and give overlapping movements
+the same phase. A phase can cover a broad period when exact dates are unclear.
+If a step uses phases, assign every arrow a positive integer and use
+consecutive numbers starting at 1. Add the references to the war’s sources.
 
 Text containing a colon followed by a space (`: `) must be quoted, or YAML reads
 it as a mapping and the page would show "[object Object]". Use double quotes and

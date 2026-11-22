@@ -16,7 +16,7 @@ import { ROOT, CONTENT, readJSON, readYAML, listFiles, exists, loadPolities, dar
 import { loadLocales, prepareLocaleOutput, compileWarTranslations, emitLocales } from './locales.mjs';
 import { compileCapitals } from './capitals.mjs';
 import { feature } from 'topojson-client';
-import { project, FRAME } from './projection.mjs';
+import { project, DATA_CLIP, FRAME, overviewGrid } from './projection.mjs';
 // A YAML string containing ": " without quotes parses as a mapping and would show as "[object Object]".
 const NOT_TEXT = 'is not plain text (it contains ": "; put it in quotes)';
 const isObj = (v) => v !== null && typeof v === 'object';
@@ -51,7 +51,7 @@ async function buildPolities() {
   const muted = (hex, dark) => { const [L, C, H] = hexToOklch(hex); return dark ? oklchToHex(0.3, Math.min(0.04, C * 0.6), H) : oklchToHex(Math.min(0.95, L + 0.035), C * 0.45, H); };
   const light = list.map((p, i) => `--p${i}:${p.color};--q${i}:${muted(p.color, false)};`).join('');
   const dark = list.map((p, i) => { const d = darkFill(p.color); return `--p${i}:${d};--q${i}:${muted(p.color, true)};`; }).join('');
-  const css = `:root{${light}}\n@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){${dark}}}\n:root[data-theme="dark"]{${dark}}\n`;
+  const css = `:root{${light}}\n:root[data-theme="dark"]{${dark}}\n`;
   return { list, index, css };
 }
 
@@ -395,6 +395,8 @@ async function main() {
 
   const bordersOut = {
     frame: [FRAME.x0, FRAME.y0, FRAME.x1 - FRAME.x0, FRAME.y1 - FRAME.y0],
+    overviewGrid: overviewGrid(),
+    reliefBounds: [DATA_CLIP.x0, DATA_CLIP.y0, DATA_CLIP.x1 - DATA_CLIP.x0, DATA_CLIP.y1 - DATA_CLIP.y0],
     atoms: borders.order,
     names: borders.order.map((id) => borders.meta.get(id)?.name || id),
     polities: pol.list.map((p) => {
@@ -413,7 +415,7 @@ async function main() {
   await emit('data/labels.json', JSON.stringify(labels));
 
   // Size report: what a first visit downloads.
-  const first = ['index.html', 'app.js', 'i18n.js', 'localized-content.js', ...(await listFiles(join(ROOT, 'site/locales'), '.js')).map(file => `locales/${file}`), 'style.css', 'vendor/topojson-client.min.js', 'data/atoms.topo.json', 'data/borders.json', 'data/polities.css', 'data/wars.json', 'data/labels.json'];
+  const first = ['index.html', 'app.js', 'i18n.js', 'localized-content.js', ...(await listFiles(join(ROOT, 'site/locales'), '.js')).map(file => `locales/${file}`), 'style.css', 'relief.webp', 'vendor/topojson-client.min.js', 'data/atoms.topo.json', 'data/borders.json', 'data/polities.css', 'data/wars.json', 'data/labels.json'];
   let raw = 0, gz = 0;
   for (const f of CHECK ? [] : first) { try { const b = await readFile(join(OUT, f)); raw += b.length; gz += gzipSync(b).length; } catch {} }
   console.log(`polities ${pol.list.length}, atoms ${borders.order.length}, timeline entries ${borders.timeline.length}, wars ${wars.length}`);

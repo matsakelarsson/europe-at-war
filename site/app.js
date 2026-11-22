@@ -9,8 +9,27 @@ const topojson = window.topojson;
 const NS = 'http://www.w3.org/2000/svg';
 const $ = (id) => document.getElementById(id);
 const svg = $('map'), wrap = $('mapwrap'), pop = $('pop');
-{ const t = new URLSearchParams(location.search).get('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; }
 const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const themeRoot = document.documentElement, themeToggle = $('theme-toggle');
+function describeThemeToggle() {
+  const label = t(themeRoot.dataset.theme === 'dark' ? 'switchToLightTheme' : 'switchToDarkTheme');
+  themeToggle.setAttribute('aria-label', label);
+  themeToggle.title = label;
+}
+themeToggle.addEventListener('click', () => {
+  const theme = themeRoot.dataset.theme === 'dark' ? 'light' : 'dark';
+  themeRoot.dataset.theme = theme;
+  describeThemeToggle();
+  const url = new URL(location.href);
+  let updateUrl = url.searchParams.has('theme');
+  try { localStorage.setItem('europe-at-war.theme', theme); } catch { updateUrl = true; }
+  if (updateUrl) {
+    url.searchParams.set('theme', theme);
+    history.replaceState(history.state, '', url);
+  }
+});
+describeThemeToggle();
 
 const HATCH_ROT = [45, -45, 0, 90];
 
@@ -205,13 +224,39 @@ function hatch(key, rot, cls, width, gap) {
   }
   return `url(#${id})`;
 }
+if (B.overviewGrid) el('path', { d: B.overviewGrid, class: 'graticule', 'aria-hidden': 'true' }, svg);
 const gAtoms = el('g', { 'aria-hidden': 'true' }, svg);
 const atomEls = new Array(NA), atomFill = new Array(NA).fill('');
 for (let i = 0; i < NA; i++) {
   atomEls[i] = el('path', { d: pathD(topojson.feature(topo, geoms[i]).geometry), class: 'atom' }, gAtoms);
 }
+let reliefImage;
+if (B.reliefBounds) {
+  const [x, y, width, height] = B.reliefBounds;
+  reliefImage = el('image', { x, y, width, height, href: 'relief.webp', preserveAspectRatio: 'none', class: 'relief', 'aria-hidden': 'true' }, svg);
+}
+if (topo.objects.rivers) {
+  const rivers = topojson.feature(topo, topo.objects.rivers).features;
+  const lengths = new Map();
+  for (const { geometry, properties } of rivers) {
+    if (!geometry || !properties.name) continue;
+    const lines = geometry.type === 'LineString' ? [geometry.coordinates] : geometry.coordinates;
+    let length = lengths.get(properties.name) || 0;
+    for (const line of lines) for (let i = 1; i < line.length; i++) {
+      const [x, y] = line[i], [px, py] = line[i - 1];
+      length += Math.hypot(x - px, y - py);
+    }
+    lengths.set(properties.name, length);
+  }
+  let minor = '', major = '';
+  for (const { geometry, properties } of rivers) {
+    if (lengths.get(properties.name) >= 500) major += pathD(geometry);
+    else minor += pathD(geometry);
+  }
+  el('path', { d: minor, class: 'rivers', 'aria-hidden': 'true' }, svg);
+  el('path', { d: major, class: 'rivers major', 'aria-hidden': 'true' }, svg);
+}
 if (topo.objects.lakes) el('path', { d: pathD(topojson.merge(topo, topo.objects.lakes.geometries)), class: 'lakes', 'aria-hidden': 'true' }, svg);
-if (topo.objects.rivers) el('path', { d: topojson.feature(topo, topo.objects.rivers).features.map((f) => pathD(f.geometry)).join(''), class: 'rivers', 'aria-hidden': 'true' }, svg);
 const gOv = el('g', { 'aria-hidden': 'true' }, svg);
 const blineEl = el('path', { class: 'bline', 'aria-hidden': 'true' }, svg);
 el('path', { d: pathD(topojson.mesh(topo, topo.objects.atoms, (a, b) => a === b)), class: 'coast', 'aria-hidden': 'true' }, svg);
@@ -326,7 +371,15 @@ function apply(v, viewportOnly = false) {
   const scaleChanged = S !== v[2] / cw || !gCaps.style.getPropertyValue('--capital-scale');
   S = v[2] / cw;
   const s = S.toFixed(4);
-  if (scaleChanged) gCaps.style.setProperty('--capital-scale', s);
+  if (scaleChanged) {
+    gCaps.style.setProperty('--capital-scale', s);
+    // Fade the atlas-resolution raster where its pixels would stand out.
+    if (reliefImage) {
+      const opacity = Math.min(1, Math.max(0, (S - 0.58) * 0.76)).toFixed(2);
+      if (reliefImage.getAttribute('opacity') !== opacity) reliefImage.setAttribute('opacity', opacity);
+    }
+  }
+  svg.classList.toggle('overview', v[2] >= 4600);
   const lists = scaleChanged ? [fixedScalables, stepScalables, polScalables] : [stepScalables, polScalables];
   for (const list of lists) for (const it of list) it.g.setAttribute('transform', `translate(${it.x},${it.y}) scale(${s})`);
   for (const h of heads) {
@@ -688,7 +741,7 @@ function showPopover(g, html) {
   const pw = pop.offsetWidth, ph = pop.offsetHeight;
   const left = Math.min(Math.max(8, cx - pw / 2), wr.width - pw - 8);
   let top = cy - ph - 18;
-  if (top < 8) top = Math.min(cy + 18, wr.height - ph - 8);
+  if (top < 8) top = Math.min(cy + 18, svg.clientHeight - ph - 8);
   pop.style.left = left + 'px'; pop.style.top = Math.max(8, top) + 'px';
 }
 pop.addEventListener('click', (e) => e.stopPropagation());
@@ -713,7 +766,7 @@ function buildStepLayers(war, step) {
     else if (ar.style === 'pledged') { cls += ' ov-pledged'; fill = hatch('gold', 45, 'hatch-gold', 2.6, 7); }
     else if (ar.style === 'lost') { cls += ' ov-lost'; fill = hatch('lost', 45, 'hatch-lost', 1.6, 8); }
     else if (ar.style === 'outline') cls += ' ov-outline';
-    else { const ink = inkOf(ar.side); const rot = HATCH_ROT[sideIdx(ar.side) % 4]; cls += ` ov-hatch side-${ink}`; fill = hatch(`${ink}-${rot}`, rot, 'hatch', 2.4, 7); }
+    else { const ink = inkOf(ar.side); const rot = HATCH_ROT[sideIdx(ar.side) % 4]; cls += ` ov-hatch side-${ink}`; fill = hatch(`${ink}-${rot}`, rot, 'hatch', 1.8, 7); }
     const p = el('path', { d, class: cls }, gOv);
     if (fill) p.style.fill = fill;
     if (ar.style !== 'gained' && ar.style !== 'outline' && ar.style !== 'pledged' && ar.style !== 'lost') p.classList.add(`side-${inkOf(ar.side)}`);
@@ -762,6 +815,12 @@ function drawArrows(instant) {
 // ---------- Explore mode ----------
 const exploreEl = $('explore'), storyViewEl = $('storyView');
 const yearEl = $('year'), yearOut = $('yearOut'), badge = $('yearbadge');
+const timelineEl = yearEl.parentElement;
+const timelineStart = +yearEl.min, timelineEnd = +yearEl.max, timelineSpan = timelineEnd - timelineStart;
+const timelinePosition = (year) => ((year - timelineStart) / timelineSpan) * 100 + '%';
+for (const tick of timelineEl.querySelectorAll('.tl-ticks span')) {
+  tick.style.insetInlineStart = timelinePosition(+tick.dataset.year);
+}
 const countryEl = $('country'), qEl = $('q');
 const regionNames = (() => { try { return new Intl.DisplayNames([locale], { type: 'region' }); } catch { return null; } })();
 const countryName = (cc) => { if (cc === 'xk') return t('kosovo'); try { return regionNames?.of(cc.toUpperCase()) || cc.toUpperCase(); } catch { return cc.toUpperCase(); } };
@@ -787,12 +846,13 @@ const lensSteps = (cc) => {
 function renderTimelineBars() {
   const cc = countryEl.value;
   const list = WARS.filter((w) => !cc || w.countries.includes(cc));
-  const span = 2026 - 800, lanes = [];
+  const lanes = [];
   const html = list.map((w) => {
-    const a = Math.max(800, yearOf(w.sk)), b = Math.min(2026, w.end === 'ongoing' ? 2026 : yearOf(w.ek));
+    const a = Math.max(timelineStart, yearOf(w.sk));
+    const b = w.end === 'ongoing' ? timelineEnd : Math.min(timelineEnd, yearOf(w.ek));
     let lane = lanes.findIndex((end) => end < a - 3); if (lane < 0) { lane = lanes.length; lanes.push(b); } else lanes[lane] = b;
     if (lane > 3) return '';
-    return `<span data-a="${a}" data-b="${b}" style="inset-inline-start:${((a - 800) / span) * 100}%;width:${((b - a + 1) / span) * 100}%;top:${lane * 4.5}px" title="${esc(w.name)}"></span>`;
+    return `<span data-a="${a}" data-b="${b}" style="inset-inline-start:${timelinePosition(a)};width:${((b - a + 1) / timelineSpan) * 100}%;top:${lane * 4.5}px" title="${esc(w.name)}"></span>`;
   }).join('');
   $('tlBars').innerHTML = html;
 }
@@ -832,9 +892,10 @@ let yearRaf = 0, hashT = 0;
 function setYear(y, opts = {}) {
   ++goToken;
   $('storyError').hidden = true;
-  year = Math.max(800, Math.min(2026, Math.round(y)));
+  year = Math.max(timelineStart, Math.min(timelineEnd, Math.round(y)));
   yearEl.value = year; yearOut.textContent = number(year); badge.textContent = number(year);
   yearEl.setAttribute('aria-valuetext', number(year));
+  timelineEl.style.setProperty('--year-position', timelinePosition(year));
   const key = `${String(year).padStart(4, '0')}-12-31`;
   closePop();
   setBorders(key, null, key, opts.scrub);
@@ -954,7 +1015,7 @@ function renderLegend(war, step, own) {
     else if (ar.style === 'lost') sw = swatch(hatch('lost', 45, 'hatch-lost', 1.6, 8), 'var(--ink)');
     else if (ar.style === 'front') sw = `<svg class="side-${ink}" width="18" height="12" aria-hidden="true"><path d="M1,8 C6,2 11,10 17,4" style="fill:none;stroke:var(--mc);stroke-width:2.6;stroke-linecap:round"/></svg>`;
     else if (ar.style === 'outline') sw = '<svg width="18" height="12" aria-hidden="true"><rect x="1" y="1" width="16" height="10" rx="2" style="fill:none;stroke:var(--ink);stroke-width:1.6;stroke-dasharray:4 2"/></svg>';
-    else { const rot = HATCH_ROT[Math.max(0, war.sides.indexOf(s)) % 4]; sw = `<span class="side-${ink}" style="display:inline-flex">${swatch(hatch(`${ink}-${rot}`, rot, 'hatch', 2.4, 7), 'var(--mc)')}</span>`; }
+    else { const rot = HATCH_ROT[Math.max(0, war.sides.indexOf(s)) % 4]; sw = `<span class="side-${ink}" style="display:inline-flex">${swatch(hatch(`${ink}-${rot}`, rot, 'hatch', 1.8, 7), 'var(--mc)')}</span>`; }
     const html = `<span>${sw}${esc(lab)}</span>`;
     if (!h.includes(html)) h.push(html);
   }

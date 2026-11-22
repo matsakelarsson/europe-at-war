@@ -1,13 +1,13 @@
 // The one projection used everywhere: spherical Lambert azimuthal equal-area
 // centred on 10°E 52°N (the spherical twin of EPSG:3035). Output units are
 // kilometres, x to the east and y to the SOUTH, so they are SVG user units.
-import { geoAzimuthalEqualArea } from 'd3-geo';
+import { geoAzimuthalEqualArea, geoGraticule, geoPath } from 'd3-geo';
 
-export const projection = geoAzimuthalEqualArea()
+const atlasProjection = () => geoAzimuthalEqualArea()
   .rotate([-10, -52])
   .scale(6371.0088)
-  .translate([0, 0])
-  .precision(0);
+  .translate([0, 0]);
+export const projection = atlasProjection().precision(0);
 
 const r1 = (v) => Math.round(v * 10) / 10;
 
@@ -35,3 +35,9 @@ export const FRAME = { x0: -1950, y0: -2400, x1: 3650, y1: 2350 };
 // Geometry is kept a good way beyond FRAME so that no clip edge shows when
 // the view is wider than the frame or panned to its edge.
 export const DATA_CLIP = { x0: FRAME.x0 - 1100, y0: FRAME.y0 - 650, x1: FRAME.x1 + 1100, y1: FRAME.y1 + 900 };
+
+// A ten-degree grid for the atlas overview, simplified in projected kilometres.
+export function overviewGrid() {
+  const grid = geoGraticule().extent([[-70, 0], [111, 87]]).step([10, 10]).precision(5);
+  return geoPath(atlasProjection().precision(4)).digits(0)(grid());
+}

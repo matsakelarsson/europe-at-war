@@ -3,6 +3,8 @@ export default {
   description: 'Une carte interactive des guerres en Europe, de l’an 800 environ à nos jours. Suivez les frontières, les campagnes, les batailles, les sièges et les traités, étape par étape.',
   subtitle: 'Les guerres en Europe, de l’an 800 environ à nos jours. Parcourez les années pour voir les frontières évoluer, ou choisissez une guerre pour la suivre étape par étape.',
   language: 'Langue',
+  switchToDarkTheme: 'Passer au thème sombre',
+  switchToLightTheme: 'Passer au thème clair',
   contentFallback: 'Certains textes historiques ont été traduits automatiquement.',
   map: 'Carte de l’Europe',
   mapControls: 'Commandes de la carte',

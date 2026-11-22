@@ -1,5 +1,10 @@
 // Europe at War — browser runtime. Plain ES module, no framework, no build step.
 // Data comes from dist/data/*, produced by tools/build.mjs.
+import { applyLocale, count, esc, formatDate, locale, number, rich, t } from './i18n.js';
+import { defaultLocale } from './locales/index.js';
+import { localizeCatalogue, localizeMap, localizeWar, translateText } from './localized-content.js';
+
+applyLocale();
 const topojson = window.topojson;
 const NS = 'http://www.w3.org/2000/svg';
 const $ = (id) => document.getElementById(id);
@@ -7,8 +12,6 @@ const svg = $('map'), wrap = $('mapwrap'), pop = $('pop');
 { const t = new URLSearchParams(location.search).get('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; }
 const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const KIND_NAMES = { battle: 'Battle', naval: 'Naval battle', siege: 'Siege or capture', held: 'Held out', taken: 'Taken', event: 'Event', treaty: 'Treaty', toll: 'Toll station', air: 'Air attack', capital: 'Capital' };
-const AREA_DEFAULTS = { occupied: 'Occupied by {side}', gained: 'Gained in this peace', pledged: 'Held on a pledge', lost: 'Lost in this peace', outline: 'Union', contested: 'Contested', front: 'Front line' };
 const HATCH_ROT = [45, -45, 0, 90];
 
 function el(tag, attrs, parent) {
@@ -17,14 +20,17 @@ function el(tag, attrs, parent) {
   if (parent) parent.appendChild(e);
   return e;
 }
-function esc(s) { return String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 function dateKey(d) {
   if (d === null || d === undefined) return null;
   const m = String(d).trim().match(/^(-?\d{1,4})(?:-(\d{2}))?(?:-(\d{2}))?$/);
   return m ? `${m[1].padStart(4, '0')}-${m[2] || '00'}-${m[3] || '00'}` : null;
 }
 const yearOf = (k) => (k ? parseInt(k.slice(0, 4), 10) : null);
-const fmtYears = (w) => { const a = yearOf(w.sk), b = w.end === 'ongoing' ? 'today' : yearOf(w.ek); return a === b ? String(a) : `${a}–${b}`; };
+function fmtYears(w) {
+  const start = number(yearOf(w.sk));
+  const end = w.end === 'ongoing' ? t('today') : number(yearOf(w.ek));
+  return start === end ? start : t('yearRange', { start, end });
+}
 
 function shape(kind) {
   switch (kind) {
@@ -103,18 +109,43 @@ function polylabel(poly, precision) {
 
 // ---------- Load data ----------
 const fetchJSON = (u) => fetch(u).then((r) => { if (!r.ok) throw new Error(`${r.status} ${u}`); return r.json(); });
-let topo, B, WARS, LBL;
+const localeData = `data/locales/${locale}`;
+const optionalTranslation = (file) => fetchJSON(`${localeData}/${file}`).catch(() => null);
+let topo, B, WARS, LBL, translations;
 try {
-  [topo, B, WARS, LBL] = await Promise.all(['data/atoms.topo.json', 'data/borders.json', 'data/wars.json', 'data/labels.json'].map(fetchJSON));
+  const files = ['data/atoms.topo.json', 'data/borders.json', 'data/wars.json', 'data/labels.json'];
+  [topo, B, WARS, LBL, translations] = await Promise.all([
+    ...files.map(fetchJSON),
+    locale === defaultLocale ? null : optionalTranslation('index.json'),
+  ]);
 } catch (e) {
-  $('loading').textContent = 'The map could not be loaded. ' + e.message;
+  $('loading').textContent = t('mapError');
   throw e;
 }
+const searchIndex = new Map();
+const searchText = (value) => value.toLocaleLowerCase(locale).normalize('NFC');
+const warSearchText = (war) => [war.name, war.summary, ...war.steps.map(step => step.t)].map(searchText);
+if (translations) localizeMap(B, LBL, (category, value) => translateText(translations.map[category], value));
+for (const war of WARS) {
+  const search = warSearchText(war);
+  const dictionary = translations?.index[war.id];
+  if (dictionary) {
+    localizeCatalogue(war, (value) => translateText(dictionary, value));
+    search.push(...warSearchText(war));
+  }
+  searchIndex.set(war.id, search);
+}
+const storyTranslations = new Set(translations?.stories);
+
 const warById = new Map(WARS.map((w) => [w.id, w]));
 const warCache = new Map();
 function loadWar(id) {
   if (!warCache.has(id)) {
-    warCache.set(id, fetchJSON(`data/wars/${id}.json`).catch(error => {
+    const base = fetchJSON(`data/wars/${id}.json`);
+    const translated = storyTranslations.has(id) ? optionalTranslation(`wars/${id}.json`) : null;
+    warCache.set(id, Promise.all([base, translated]).then(([war, dictionary]) =>
+      dictionary ? localizeWar(war, (value) => translateText(dictionary, value)) : war
+    ).catch(error => {
       warCache.delete(id);
       throw error;
     }));
@@ -187,7 +218,7 @@ const blineEl = el('path', { class: 'bline', 'aria-hidden': 'true' }, svg);
 el('path', { d: pathD(topojson.mesh(topo, topo.objects.atoms, (a, b) => a === b)), class: 'coast', 'aria-hidden': 'true' }, svg);
 const gLbl = el('g', { class: 'lbl', 'aria-hidden': 'true' }, svg);
 const gPLbl = el('g', null, gLbl);
-const gCaps = el('g', { role: 'group', 'aria-label': 'Capitals' }, svg);
+const gCaps = el('g', { role: 'group', 'aria-label': t('capitals') }, svg);
 const gArrows = el('g', { 'aria-hidden': 'true', 'pointer-events': 'none' }, svg);
 const gMarkers = el('g', null, svg);
 
@@ -228,7 +259,7 @@ function updateCapitalDate(key) {
   return true;
 }
 function describeSeat(c) {
-  return c.name + ' · ' + (c.role || 'Capital') + ' of ' + polName(POL[c.owner]);
+  return t('capitalDescription', { place: c.name, role: c.role || t('capital'), state: polName(POL[c.owner]) });
 }
 function syncCapitals(v, scale) {
   const [x,y,w,h] = v;
@@ -635,7 +666,7 @@ function openPop(mi) {
   if (!it) return;
   const { m, g } = it;
   const nearby = nearbyCapitals(m.xy[0], m.xy[1], Math.min(7 * S, 8));
-  showPopover(g, `<p class="pk">${esc(KIND_NAMES[m.kind] || '')}</p><h3>${esc(m.name)}</h3><p class="pd">${esc(m.date)}</p><p>${esc(m.text)}</p>` + seatDetails(nearby));
+  showPopover(g, `<p class="pk">${esc(t(`kind.${m.kind}`))}</p><h3>${esc(m.name)}</h3><p class="pd">${esc(formatDate(m.date))}</p><p>${esc(m.text)}</p>` + seatDetails(nearby));
 }
 function nearbyCapitals(x,y,radius) {
   return [...capitalNodes.values()].filter(it => Math.hypot(it.x-x,it.y-y) <= radius);
@@ -645,12 +676,12 @@ function seatDetails(sites) {
 }
 function openCapital(it, point = null) {
   const nearby = point ? nearbyCapitals(...point, 12 * S).filter(other => other !== it) : [];
-  showPopover(it.g, '<p class="pk">Capital</p>' + seatDetails([it, ...nearby]));
+  showPopover(it.g, `<p class="pk">${esc(t('capital'))}</p>` + seatDetails([it, ...nearby]));
 }
 function showPopover(g, html) {
   if (selected) selected.classList.remove('sel');
   selected = g; g.classList.add('sel');
-  pop.innerHTML = '<button type="button" class="x" aria-label="Close">×</button>' + html;
+  pop.innerHTML = `<button type="button" class="x" aria-label="${esc(t('close'))}">×</button>` + html;
   pop.hidden = false;
   pop.querySelector('.x').addEventListener('click', (e) => { e.stopPropagation(); closePop(); });
   const r = g.querySelector('.hit').getBoundingClientRect(), wr = wrap.getBoundingClientRect();
@@ -704,7 +735,7 @@ function buildStepLayers(war, step) {
   }
   step.markers.forEach((m, mi) => {
     const ink = inkOf(m.side);
-    const g = el('g', { class: `marker side-${ink}`, tabindex: '0', role: 'button', 'aria-label': `${m.name}, ${m.date}` }, gMarkers);
+    const g = el('g', { class: `marker side-${ink}`, tabindex: '0', role: 'button', 'aria-label': t('markerDescription', { name: m.name, date: formatDate(m.date) }) }, gMarkers);
     const la = labelAttrs(m.lp);
     g.innerHTML = '<circle r="16" class="hit"/><circle r="11.5" class="ring"/>' + shape(m.kind) +
       `<text class="mlabel" x="${la.x}" y="${la.y}" text-anchor="${la.a}">${esc(m.name)}</text>`;
@@ -733,16 +764,19 @@ function drawArrows(instant) {
 const exploreEl = $('explore'), storyViewEl = $('storyView');
 const yearEl = $('year'), yearOut = $('yearOut'), badge = $('yearbadge');
 const countryEl = $('country'), qEl = $('q');
-const regionNames = (() => { try { return new Intl.DisplayNames(['en'], { type: 'region' }); } catch { return null; } })();
-const countryName = (cc) => { if (cc === 'xk') return 'Kosovo'; try { return regionNames?.of(cc.toUpperCase()) || cc.toUpperCase(); } catch { return cc.toUpperCase(); } };
-const possessive = (n) => (n.endsWith('s') ? n + '’' : n + '’s');
+const regionNames = (() => { try { return new Intl.DisplayNames([locale], { type: 'region' }); } catch { return null; } })();
+const countryName = (cc) => { if (cc === 'xk') return t('kosovo'); try { return regionNames?.of(cc.toUpperCase()) || cc.toUpperCase(); } catch { return cc.toUpperCase(); } };
+const collator = new Intl.Collator(locale);
 (function fillCountries() {
   const all = new Set();
   for (const w of WARS) for (const c of w.countries) all.add(c);
-  [...all].map((c) => [c, countryName(c)]).sort((a, b) => a[1].localeCompare(b[1]))
+  [...all].map((c) => [c, countryName(c)]).sort((a, b) => collator.compare(a[1], b[1]))
     .forEach(([c, n]) => { const o = document.createElement('option'); o.value = c; o.textContent = n; countryEl.appendChild(o); });
 })();
 let mode = null, year = 1648;
+$('language').addEventListener('change', () => {
+  if (mode === 'explore' && hashT) history.replaceState(null, '', `#/year/${year}`);
+}, { capture: true });
 // A country view: every step of every war that involves the country, in
 // reading order (step "when" date, then war start, then step order).
 const lensSteps = (cc) => {
@@ -759,7 +793,7 @@ function renderTimelineBars() {
     const a = Math.max(800, yearOf(w.sk)), b = Math.min(2026, w.end === 'ongoing' ? 2026 : yearOf(w.ek));
     let lane = lanes.findIndex((end) => end < a - 3); if (lane < 0) { lane = lanes.length; lanes.push(b); } else lanes[lane] = b;
     if (lane > 3) return '';
-    return `<span data-a="${a}" data-b="${b}" style="left:${((a - 800) / span) * 100}%;width:${((b - a + 1) / span) * 100}%;top:${lane * 4.5}px" title="${esc(w.name)}"></span>`;
+    return `<span data-a="${a}" data-b="${b}" style="inset-inline-start:${((a - 800) / span) * 100}%;width:${((b - a + 1) / span) * 100}%;top:${lane * 4.5}px" title="${esc(w.name)}"></span>`;
   }).join('');
   $('tlBars').innerHTML = html;
 }
@@ -767,29 +801,31 @@ function markTimeline() {
   for (const s of $('tlBars').children) s.classList.toggle('a', +s.dataset.a <= year && +s.dataset.b >= year);
 }
 function renderWarList() {
-  const cc = countryEl.value, q = qEl.value.trim().toLowerCase();
+  const cc = countryEl.value, q = searchText(qEl.value.trim());
   let list, head;
   if (q) {
-    list = WARS.filter((w) => (!cc || w.countries.includes(cc)) && (w.name.toLowerCase().includes(q) || w.summary.toLowerCase().includes(q) || w.steps.some((s) => s.t.toLowerCase().includes(q))));
-    head = `Search results (${list.length})`;
+    list = WARS.filter((w) => (!cc || w.countries.includes(cc)) && searchIndex.get(w.id).some(text => text.includes(q)));
+    head = t('searchResults', { count: list.length });
   } else {
     const k0 = `${String(year).padStart(4, '0')}-00-00`, k1 = `${String(year).padStart(4, '0')}-99-99`;
     list = WARS.filter((w) => (!cc || w.countries.includes(cc)) && w.sk <= k1 && w.ek >= k0);
-    head = `Wars in ${year}${cc ? ` · ${countryName(cc)}` : ''}`;
+    head = t(cc ? 'warsInCountryYear' : 'warsInYear', { year: number(year), country: countryName(cc) });
   }
   $('listHead').textContent = head;
   $('warList').innerHTML = list.length ? list.map((w) => {
     const n = w.steps.length;
-    const inner = `<span class="wn">${esc(w.name)}</span>${w.tier === 'C' ? '<span class="tier">brief</span>' : ''}<span class="wd">${fmtYears(w)}${n ? ` · ${n} step${n > 1 ? 's' : ''}` : ''}</span>${w.summary ? `<span class="ws">${esc(w.summary)}</span>` : ''}`;
+    const inner = `<span class="wn">${esc(w.name)}</span>${w.tier === 'C' ? `<span class="tier">${esc(t('brief'))}</span>` : ''}<span class="wd">${esc(fmtYears(w))}${n ? ` · ${esc(t('stepCount', { count: n }))}` : ''}</span>${w.summary ? `<span class="ws">${esc(w.summary)}</span>` : ''}`;
     // A catalogue entry without steps has nothing to open: show it as a card.
     return n ? `<li><a href="#/war/${encodeURIComponent(w.id)}">${inner}</a></li>` : `<li><div class="wcard">${inner}${w.sources?.length ? `<span class="wsrc">${w.sources.map((s) => `<a href="${esc(s.url)}">${esc(s.title)}</a>`).join(' · ')}</span>` : ''}</div></li>`;
-  }).join('') : `<li class="empty">${q ? 'No wars match your search.' : 'No wars in the catalogue for this year yet.'}</li>`;
+  }).join('') : `<li class="empty">${esc(t(q ? 'noSearchResults' : 'noWars'))}</li>`;
   const lens = $('lensLink');
   if (cc) {
     const n = lensSteps(cc).length;
     lens.hidden = !n;
     lens.href = `#/country/${cc}`;
-    lens.innerHTML = `Follow <b>${esc(possessive(countryName(cc)))}</b> wars step by step (${n} steps) ›`;
+    lens.innerHTML = rich('followCountry', {
+      country: `<b>${esc(countryName(cc))}</b>`, steps: esc(t('stepCount', { count: n })),
+    });
   } else lens.hidden = true;
 }
 let exploreListKey;
@@ -798,7 +834,8 @@ function setYear(y, opts = {}) {
   ++goToken;
   $('storyError').hidden = true;
   year = Math.max(800, Math.min(2026, Math.round(y)));
-  yearEl.value = year; yearOut.textContent = year; badge.textContent = year;
+  yearEl.value = year; yearOut.textContent = number(year); badge.textContent = number(year);
+  yearEl.setAttribute('aria-valuetext', number(year));
   const key = `${String(year).padStart(4, '0')}-12-31`;
   closePop();
   setBorders(key, null, key, opts.scrub);
@@ -808,7 +845,7 @@ function setYear(y, opts = {}) {
     scheduleLabels();
   }
   const si = stateIndex(key);
-  $('bsrc').textContent = si >= 0 ? `Borders: ${T[si].s}` : '';
+  $('bsrc').textContent = si >= 0 ? t('borderSource', { source: T[si].s }) : '';
   renderWarList(); markTimeline();
   const box = boxOf(fit(FRAME));
   const listKey = JSON.stringify([si, box, datedPolities.map(p => polName(p))]);
@@ -844,7 +881,7 @@ function explore(y) {
   exploreEl.hidden = false; storyViewEl.hidden = true; badge.hidden = false;
   clearStepLayers(); closePop();
   $('footStory').innerHTML = '';
-  document.title = 'Europe at War';
+  document.title = t('siteTitle');
   if (entering) {
     cancelAnimationFrame(anim);
     anim = null;
@@ -879,10 +916,10 @@ function buildNav() {
     const w = warById.get(it.w), s = w.steps[it.s];
     if (it.w !== lastW) { group = document.createElement('optgroup'); group.label = w.name; jumpEl.appendChild(group); }
     const o = document.createElement('option');
-    o.value = k; o.textContent = `${k + 1}. ${s.d} · ${s.t}`;
+    o.value = k; o.textContent = t('stepOption', { number: count(k + 1), date: formatDate(s.d), title: s.t });
     group.appendChild(o);
     const b = document.createElement('button');
-    b.type = 'button'; b.tabIndex = -1; b.title = `${k + 1}. ${s.t}`;
+    b.type = 'button'; b.tabIndex = -1; b.title = t('stepTooltip', { number: count(k + 1), title: s.t });
     if (lastW !== null && it.w !== lastW) b.className = 'newch';
     b.addEventListener('click', () => go(k));
     progEl.appendChild(b);
@@ -911,7 +948,7 @@ function renderLegend(war, step, own) {
   const sideOf = (sid) => war.sides.find((s) => s.id === sid);
   for (const ar of step.areas) {
     const s = sideOf(ar.side); const ink = s?.ink || 'none';
-    const lab = ar.label || AREA_DEFAULTS[ar.style].replace('{side}', s?.name || '');
+    const lab = ar.label || t(`area.${ar.style}`, { side: s?.name });
     let sw;
     if (ar.style === 'gained') sw = swatch('var(--gold-fill)');
     else if (ar.style === 'pledged') sw = swatch(hatch('gold', 45, 'hatch-gold', 2.6, 7), 'var(--gold)');
@@ -923,29 +960,29 @@ function renderLegend(war, step, own) {
     if (!h.includes(html)) h.push(html);
   }
   const arrowSides = [...new Set(step.arrows.map((a) => a.side))];
-  for (const sid of arrowSides) { const s = sideOf(sid); h.push(`<span>${lineSw(s?.ink || 'none')}${esc(step.moveNames?.[sid] || s?.moves || (s ? `${s.name}: moves` : 'Moves'))}</span>`); }
+  for (const sid of arrowSides) { const s = sideOf(sid); h.push(`<span>${lineSw(s?.ink || 'none')}${esc(step.moveNames?.[sid] || s?.moves || (s ? t('sideMoves', { side: s.name }) : t('moves')))}</span>`); }
   const mSides = [...new Set(step.markers.filter((m) => m.kind !== 'toll' && m.kind !== 'treaty').map((m) => m.side))];
-  for (const sid of mSides) { const s = sideOf(sid); h.push(`<span>${markSw('taken', s?.ink || 'none')}${esc(step.sideNames?.[sid] || s?.success || (s ? `${s.name}: success` : 'Indecisive or neutral'))}</span>`); }
+  for (const sid of mSides) { const s = sideOf(sid); h.push(`<span>${markSw('taken', s?.ink || 'none')}${esc(step.sideNames?.[sid] || s?.success || (s ? t('sideSuccess', { side: s.name }) : t('neutral')))}</span>`); }
   legendEl.innerHTML = h.join('');
 }
 function renderStory(i, war, step) {
   const displayed = story;
   const N = story.items.length;
-  let h = `<p class="eyebrow"><b>${esc(war.name)}</b> · Step ${i + 1} of ${N} · ${esc(step.date)}</p>`;
+  let h = `<p class="eyebrow"><b>${esc(war.name)}</b> · ${esc(t('stepPosition', { number: count(i + 1), total: count(N) }))} · ${esc(formatDate(step.date))}</p>`;
   h += `<h2 class="st">${esc(step.title)}</h2><div class="story">`;
   for (const p of step.body) h += `<p>${esc(p)}</p>`;
   if (step.link) h += `<p class="more"><a href="${esc(step.link.href)}">${esc(step.link.text)}</a></p>`;
   h += '</div>';
   if (step.facts?.length) { h += '<dl class="facts">'; for (const f of step.facts) h += `<dt>${esc(f[0])}</dt><dd>${esc(f[1])}</dd>`; h += '</dl>'; }
   if (step.markers.length) {
-    h += '<div class="onmap"><h3>On the map</h3><div class="chips">';
+    h += `<div class="onmap"><h3>${esc(t('onTheMap'))}</h3><div class="chips">`;
     step.markers.forEach((m, mi) => {
       const ink = (war.sides.find((s) => s.id === m.side) || { ink: 'none' }).ink;
       h += `<button type="button" class="chip side-${ink}" data-mi="${mi}">${markSw(m.kind, ink)}${esc(m.name)}</button>`;
     });
     h += '</div></div>';
   }
-  if (i === 0) h += '<p class="hint">Tip: you can also use the left and right arrow keys, and drag or scroll to move the map.</p>';
+  if (i === 0) h += `<p class="hint">${esc(t('keyboardTip'))}</p>`;
   storyEl.innerHTML = h;
   for (const b of storyEl.querySelectorAll('.chip')) {
     b.addEventListener('click', (e) => {
@@ -962,7 +999,7 @@ function renderStory(i, war, step) {
 function renderFooter(war) {
   let h = '';
   if (war.notes?.length) h += war.notes.map((n) => `<p>${esc(n)}</p>`).join('');
-  if (war.sources?.length) h += `<h3>Sources for ${esc(war.name)}</h3><ul>${war.sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}">${esc(s.title)}</a>` : esc(s.title)}</li>`).join('')}</ul>`;
+  if (war.sources?.length) h += `<h3>${esc(t('sourcesFor', { war: war.name }))}</h3><ul>${war.sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}">${esc(s.title)}</a>` : esc(s.title)}</li>`).join('')}</ul>`;
   $('footStory').innerHTML = h;
 }
 let retryStory;
@@ -1002,7 +1039,7 @@ async function go(i, instant = false, destination = story, push = false) {
     buildNav();
     const back = $('back');
     back.href = `#/year/${yearOf(warById.get(story.items[0].w).sk)}`;
-    back.textContent = story.kind === 'country' ? `‹ All wars · ${possessive(countryName(story.id))} wars` : '‹ All wars';
+    back.textContent = story.kind === 'country' ? t('backFromCountry', { country: countryName(story.id) }) : t('allWars');
     if (window.matchMedia('(min-width: 900px)').matches) $('others').open = true;
   }
   requested = i;
@@ -1019,8 +1056,8 @@ async function go(i, instant = false, destination = story, push = false) {
   targetBox = stepBox(step);
   $('otherList').innerHTML = otherListHTML(boxOf(fit(targetBox)), focus);
   $('others').hidden = !$('otherList').innerHTML;
-  badge.textContent = step.date;
-  document.title = `${step.title} · ${war.name} · Europe at War`;
+  badge.textContent = formatDate(step.date);
+  document.title = t('storyTitle', { step: step.title, war: war.name, site: t('siteTitle') });
   history[push ? 'pushState' : 'replaceState'](null, '', `#/${story.kind}/${encodeURIComponent(story.id)}/${i + 1}`);
   drawArrows(instant);
   if (!instant && !reduceMotion) apply(vb);
@@ -1047,13 +1084,11 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') { closePop(); return; }
   const tag = (e.target && e.target.tagName) || '';
   if (/INPUT|TEXTAREA|SELECT/.test(tag)) return;
-  if (mode === 'story') {
-    if (e.key === 'ArrowRight') { e.preventDefault(); go(requested + 1); }
-    if (e.key === 'ArrowLeft') { e.preventDefault(); go(requested - 1); }
-  } else if (mode === 'explore') {
-    if (e.key === 'ArrowRight') { e.preventDefault(); setYear(year + 1); }
-    if (e.key === 'ArrowLeft') { e.preventDefault(); setYear(year - 1); }
-  }
+  if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+  const rtl = document.documentElement.dir === 'rtl';
+  const delta = (e.key === 'ArrowRight') !== rtl ? 1 : -1;
+  if (mode === 'story') { e.preventDefault(); go(requested + delta); }
+  if (mode === 'explore') { e.preventDefault(); setYear(year + delta); }
 });
 let resizeT = null;
 window.addEventListener('resize', () => {

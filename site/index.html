@@ -18,67 +18,71 @@
 </head>
 <body>
 <header>
-  <h1><a href="#/" class="home">Europe at War</a></h1>
-  <p class="sub" id="sub">Europe’s wars from about 800 to today. Move through the years to watch borders change, or open a war to follow it step by step.</p>
+  <div class="heading">
+    <h1><a href="#/" class="home" data-i18n="siteTitle">Europe at War</a></h1>
+    <label class="language"><span data-i18n="language">Language</span><select id="language"></select></label>
+  </div>
+  <p class="sub" id="sub" data-i18n="subtitle">Europe’s wars from about 800 to today. Move through the years to watch borders change, or open a war to follow it step by step.</p>
 </header>
 
 <main class="stage">
   <div class="mapwrap" id="mapwrap">
-    <svg id="map" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Map of Europe"></svg>
-    <div class="mapctl" aria-label="Map controls">
-      <button type="button" id="zin" aria-label="Zoom in">+</button>
-      <button type="button" id="zout" aria-label="Zoom out">−</button>
-      <button type="button" id="zfit" aria-label="Reset view"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1,5V1H5M9,1H13V5M13,9V13H9M5,13H1V9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+    <svg id="map" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Map of Europe" data-i18n-label="map"></svg>
+    <div class="mapctl" aria-label="Map controls" data-i18n-label="mapControls">
+      <button type="button" id="zin" aria-label="Zoom in" data-i18n-label="zoomIn">+</button>
+      <button type="button" id="zout" aria-label="Zoom out" data-i18n-label="zoomOut">−</button>
+      <button type="button" id="zfit" aria-label="Reset view" data-i18n-label="resetView"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1,5V1H5M9,1H13V5M13,9V13H9M5,13H1V9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
     </div>
-    <span class="capital-key"><i aria-hidden="true"></i>Capital</span>
+    <span class="capital-key"><i aria-hidden="true"></i><span data-i18n="capital">Capital</span></span>
     <div class="yearbadge" id="yearbadge" aria-hidden="true"></div>
     <div class="pop" id="pop" role="dialog" aria-live="polite" hidden></div>
-    <div class="loading" id="loading">Loading map…</div>
+    <div class="loading" id="loading" data-i18n="loading">Loading map…</div>
   </div>
 
-  <section class="panel" aria-label="Wars and story">
-    <p id="storyError" role="alert" hidden>Story could not be loaded. <button id="retryStory" type="button">Retry</button></p>
+  <section class="panel" aria-label="Wars and story" data-i18n-label="warsAndStory">
+    <p id="storyError" role="alert" hidden><span data-i18n="storyError">Story could not be loaded.</span> <button id="retryStory" type="button" data-i18n="retry">Retry</button></p>
     <div id="explore" hidden>
       <div class="yearctl">
-        <button class="navbtn" id="yprev" type="button" aria-label="Previous border change"><span aria-hidden="true">‹</span></button>
-        <label class="yearlabel" for="year"><span class="vh">Year</span><output id="yearOut">1648</output></label>
-        <button class="navbtn" id="ynext" type="button" aria-label="Next border change"><span aria-hidden="true">›</span></button>
+        <button class="navbtn" id="yprev" type="button" aria-label="Previous border change" data-i18n-label="previousBorder"><span aria-hidden="true">‹</span></button>
+        <label class="yearlabel" for="year"><span class="vh" data-i18n="year">Year</span><output id="yearOut">1648</output></label>
+        <button class="navbtn" id="ynext" type="button" aria-label="Next border change" data-i18n-label="nextBorder"><span aria-hidden="true">›</span></button>
       </div>
       <div class="timeline">
         <input type="range" id="year" min="800" max="2026" step="1" value="1648" aria-describedby="yearOut">
         <div class="tl-bars" id="tlBars" aria-hidden="true"></div>
-        <div class="tl-ticks" aria-hidden="true"><span>800</span><span>1000</span><span>1200</span><span>1400</span><span>1600</span><span>1800</span><span>2000</span></div>
+        <div class="tl-ticks" aria-hidden="true"><span data-year="800">800</span><span data-year="1000">1000</span><span data-year="1200">1200</span><span data-year="1400">1400</span><span data-year="1600">1600</span><span data-year="1800">1800</span><span data-year="2000">2000</span></div>
       </div>
       <p class="bsrc" id="bsrc"></p>
       <div class="filters">
-        <label class="search"><span class="vh">Search wars, battles and treaties</span><input type="search" id="q" placeholder="Search wars, battles, treaties" autocomplete="off"></label>
-        <label class="jump"><span class="vh">Country</span><select id="country"><option value="">All countries</option></select></label>
+        <label class="search"><span class="vh" data-i18n="searchLabel">Search wars, battles and treaties</span><input type="search" id="q" placeholder="Search wars, battles, treaties" data-i18n-placeholder="searchPlaceholder" autocomplete="off"></label>
+        <label class="jump"><span class="vh" data-i18n="country">Country</span><select id="country"><option value="" data-i18n="allCountries">All countries</option></select></label>
       </div>
       <a class="lens" id="lensLink" hidden></a>
       <h2 class="listhead" id="listHead">Wars in 1648</h2>
       <ul class="warlist" id="warList"></ul>
-      <details class="others" id="exOthers"><summary>States on the map</summary><div class="list" id="exOtherList"></div></details>
+      <details class="others" id="exOthers"><summary data-i18n="statesOnMap">States on the map</summary><div class="list" id="exOtherList"></div></details>
     </div>
 
     <div id="storyView" hidden>
-      <a class="back" id="back" href="#/">‹ All wars</a>
-      <nav class="stepper" aria-label="Steps">
-        <button class="navbtn" id="prev" type="button" aria-label="Previous step"><span aria-hidden="true">‹</span><span class="t">Back</span></button>
-        <label class="jump"><span class="vh">Jump to a step</span><select id="jump"></select></label>
-        <button class="navbtn primary" id="next" type="button" aria-label="Next step"><span class="t">Next</span><span aria-hidden="true">›</span></button>
+      <a class="back" id="back" href="#/" data-i18n="allWars">‹ All wars</a>
+      <nav class="stepper" aria-label="Steps" data-i18n-label="steps">
+        <button class="navbtn" id="prev" type="button" aria-label="Previous step" data-i18n-label="previousStep"><span aria-hidden="true">‹</span><span class="t" data-i18n="back">Back</span></button>
+        <label class="jump"><span class="vh" data-i18n="jumpToStep">Jump to a step</span><select id="jump"></select></label>
+        <button class="navbtn primary" id="next" type="button" aria-label="Next step" data-i18n-label="nextStep"><span class="t" data-i18n="next">Next</span><span aria-hidden="true">›</span></button>
       </nav>
       <div class="progress" id="progress" aria-hidden="true"></div>
-      <div class="legend" id="legend" aria-label="Map key"></div>
-      <details class="others" id="others"><summary>Other states on the map</summary><div class="list" id="otherList"></div></details>
+      <div class="legend" id="legend" aria-label="Map key" data-i18n-label="mapKey"></div>
+      <details class="others" id="others"><summary data-i18n="otherStates">Other states on the map</summary><div class="list" id="otherList"></div></details>
       <div id="story" aria-live="polite"></div>
     </div>
   </section>
 </main>
 
 <footer id="footer">
+  <p id="contentFallback" data-i18n="contentFallback" hidden></p>
   <div id="footStory"></div>
-  <p>Borders are approximate. They are drafted from the open <a href="https://github.com/aourednik/historical-basemaps">historical-basemaps</a> dataset (GPL-3.0) and corrected by hand where the stories need it, using modern regions as building blocks, so lines that cut across today’s regions are simplified. Map data: <a href="https://www.naturalearthdata.com/">Natural Earth</a>.</p>
-  <p>Part of the same project as <a href="https://matsakelarsson.github.io/sweden-at-war/">Sweden at War, c. 1150–1814</a>. <a href="https://github.com/matsakelarsson/europe-at-war">Source code and data</a> (GPL-3.0).</p>
+  <p id="footerBorders">Borders are approximate. They are drafted from the open <a href="https://github.com/aourednik/historical-basemaps">historical-basemaps</a> dataset (GPL-3.0) and corrected by hand where the stories need it, using modern regions as building blocks, so lines that cut across today’s regions are simplified. Map data: <a href="https://www.naturalearthdata.com/">Natural Earth</a>.</p>
+  <p id="footerProject">Part of the same project as <a href="https://matsakelarsson.github.io/sweden-at-war/">Sweden at War, c. 1150–1814</a>. <a href="https://github.com/matsakelarsson/europe-at-war">Source code and data</a> (GPL-3.0).</p>
 </footer>
 
 <script src="vendor/topojson-client.min.js"></script>

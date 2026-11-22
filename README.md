@@ -76,6 +76,17 @@ reports the first-load size.
 Links into the site use the hash: `#/year/1658`, `#/war/scanian-war/3`,
 `#/country/se/35`.
 
+### Languages
+
+Use the language selector or add `?lang=en`, `?lang=fr` or `?lang=sv` before the
+hash in a link, for example `?lang=fr#/war/first-bremen-war/1`. Without an
+explicit URL language, the site uses the saved selection, then the browser
+preference, then English. The interface is available in English, French and
+Swedish. French covers the historical catalogue, including the stories and map text.
+Some French historical text was generated using offline machine translation.
+Swedish covers selected historical content, with English as the fallback.
+See the [translation guide](CONTENT_GUIDE.md#translations).
+
 ### Rebuilding the geometry (rarely needed)
 
 The projected geometry (`site-data/atoms.topo.json`, `content/borders/atoms.json`)

@@ -396,3 +396,42 @@ Physical references live in `content/labels.yaml`. Set `min_zoom` to the first
 scale where the feature helps orientation. For a river, set `river` to its
 name in the topology and provide a nearby coordinate. The build places its
 label at the nearest vertex of the named river.
+
+## Translations
+
+English is the source language for historical data. The interface catalogs live
+in `site/locales/`. To add a language, register its BCP 47 tag, native display
+name, text direction and catalog in `site/locales/index.js`. Copy the English
+message keys and keep placeholders such as `{year}` intact. For plural messages,
+provide every category returned by `Intl.PluralRules` for that locale and use
+`{count}` for the formatted number. Templates with named links accept those
+placeholders in any order. Catalog messages are plain text.
+
+Historical translations live in `content/locales/<tag>/`. The optional
+`map.yaml` maps English source text to translated text under `polities`
+(including dated names), `labels`, `capitals`, `capitalRoles` and
+`borderSources`. Each optional `wars/<war-id>.yaml` maps source text to its
+translation within one war. This covers the name, summary, notes, source titles,
+side names and legend text, step titles, display dates, prose, facts, link
+labels, markers, arrows and areas. The build uses the same translations in both
+the catalogue and the story. Keep YAML keys identical to the parsed source text
+and quote strings that YAML would otherwise interpret. An edited English key
+must be updated or removed in its translations.
+
+For example, in `content/locales/sv/wars/first-bremen-war.yaml`:
+
+```yaml
+First Bremen War: Första bremiska kriget
+'Bremen, and a new king': Bremen och en ny kung
+```
+
+Omitted historical translations fall back to the English source. ISO display
+dates and country names are formatted by the browser. Translate prose dates
+and date ranges as ordinary strings. URLs, route IDs, chronological keys and
+map geometry come from the source data. Run `npm run build` to validate the
+catalogs and compile the translation files.
+
+Some French historical entries were generated locally with
+[Argos Translate](https://github.com/argosopentech/argos-translate) and its
+English-to-French model. Review the French entries against the English sources
+when correcting names, dates or wording.

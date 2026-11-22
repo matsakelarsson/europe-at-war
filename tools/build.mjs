@@ -13,6 +13,7 @@ import { mkdir, writeFile, cp, rm, readFile, stat, rename } from 'node:fs/promis
 import { join } from 'node:path';
 import { gzipSync } from 'node:zlib';
 import { ROOT, CONTENT, readJSON, readYAML, listFiles, exists, loadPolities, darkFill, hexToOklch, oklchToHex } from './lib.mjs';
+import { loadLocales, prepareLocaleOutput, compileWarTranslations, emitLocales } from './locales.mjs';
 import { compileCapitals } from './capitals.mjs';
 import { feature } from 'topojson-client';
 import { project, FRAME } from './projection.mjs';
@@ -369,6 +370,8 @@ async function main() {
   const borders = await buildBorders(pol, topo);
   const labels = await buildLabels(pol, borders, topo);
 
+  const locales = await loadLocales(err);
+  if (!CHECK) await prepareLocaleOutput(locales, OUT);
   const wars = [];
   const seen = new Set();
   const files = await listFiles(join(CONTENT, 'wars'), '.yaml');
@@ -381,9 +384,12 @@ async function main() {
       seen.add(w.id);
       const { war, index } = buildWar(w, f, { pol, borders });
       wars.push(index);
-      return war;
+      return { war, index };
     });
-    if (!CHECK) await Promise.all(outputs.map(war => emit(`data/wars/${war.id}.json`, JSON.stringify(war))));
+    await Promise.all(outputs.map(async ({ war, index }) => {
+      await compileWarTranslations(locales, war, index, emit, err);
+      await emit(`data/wars/${war.id}.json`, JSON.stringify(war));
+    }));
   }
   wars.sort((a, b) => (a.sk < b.sk ? -1 : a.sk > b.sk ? 1 : a.name.localeCompare(b.name)));
 
@@ -399,6 +405,7 @@ async function main() {
     }),
     timeline: borders.timeline.map((t) => ({ d: t.d, k: t.k, s: t.s, c: t.c })),
   };
+  await emitLocales(locales, bordersOut, labels, emit, err);
   await emit('data/atoms.topo.json', topoText);
   await emit('data/borders.json', JSON.stringify(bordersOut));
   await emit('data/polities.css', pol.css);
@@ -406,7 +413,7 @@ async function main() {
   await emit('data/labels.json', JSON.stringify(labels));
 
   // Size report: what a first visit downloads.
-  const first = ['index.html', 'app.js', 'style.css', 'vendor/topojson-client.min.js', 'data/atoms.topo.json', 'data/borders.json', 'data/polities.css', 'data/wars.json', 'data/labels.json'];
+  const first = ['index.html', 'app.js', 'i18n.js', 'localized-content.js', ...(await listFiles(join(ROOT, 'site/locales'), '.js')).map(file => `locales/${file}`), 'style.css', 'vendor/topojson-client.min.js', 'data/atoms.topo.json', 'data/borders.json', 'data/polities.css', 'data/wars.json', 'data/labels.json'];
   let raw = 0, gz = 0;
   for (const f of CHECK ? [] : first) { try { const b = await readFile(join(OUT, f)); raw += b.length; gz += gzipSync(b).length; } catch {} }
   console.log(`polities ${pol.list.length}, atoms ${borders.order.length}, timeline entries ${borders.timeline.length}, wars ${wars.length}`);

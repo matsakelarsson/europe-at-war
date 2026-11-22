@@ -28,7 +28,7 @@ async function fingerprint(paths) {
 const cache = join(ROOT, '.cache/dev-build.json');
 export async function previewCache() {
   const inputs = await fingerprint(['content/', 'site-data/', 'tools/build.mjs', 'tools/lib.mjs',
-    'tools/projection.mjs', 'tools/capitals.mjs', 'package.json', 'package-lock.json']);
+    'tools/locales.mjs', 'site/localized-content.js', 'site/locales/', 'tools/projection.mjs', 'tools/capitals.mjs', 'package.json', 'package-lock.json']);
   let previous;
   try { previous = JSON.parse(await readFile(cache, 'utf8')); } catch { /* First preview. */ }
   let reuseData = false;

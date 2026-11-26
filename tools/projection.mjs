@@ -1,11 +1,16 @@
-// The one projection used everywhere: spherical Lambert azimuthal equal-area
-// centred on 10°E 52°N (the spherical twin of EPSG:3035). Output units are
-// kilometres, x to the east and y to the SOUTH, so they are SVG user units.
-import { geoAzimuthalEqualArea, geoGraticule, geoPath } from 'd3-geo';
+// The authoring projection: spherical Lambert azimuthal equal-area centred on
+// 10°E 52°N (the spherical twin of EPSG:3035). Output units are kilometres,
+// x to the east and y to the SOUTH. The site itself draws an orthographic
+// globe from longitude and latitude (site/globe.js); these kilometres are used
+// at build time (step views, arrow curves, the relief raster, atom interior
+// points) and by `?box=` links. site/globe.js repeats the centre and radius.
+import { geoAzimuthalEqualArea } from 'd3-geo';
 
+export const CENTER = [10, 52];
+export const RADIUS = 6371.0088;
 const atlasProjection = () => geoAzimuthalEqualArea()
-  .rotate([-10, -52])
-  .scale(6371.0088)
+  .rotate([-CENTER[0], -CENTER[1]])
+  .scale(RADIUS)
   .translate([0, 0]);
 export const projection = atlasProjection().precision(0);
 
@@ -29,15 +34,16 @@ export function mapCoords(geom, fn) {
   return { ...geom, coordinates: walk(geom.coordinates) };
 }
 
-// Map frame in projected km: Iceland and Portugal to the Urals and Caspian,
-// North Africa and the Levant to the North Cape.
+// The home view in projected km: Iceland and Portugal to the Urals and
+// Caspian, North Africa and the Levant to the North Cape.
 export const FRAME = { x0: -1950, y0: -2400, x1: 3650, y1: 2350 };
-// Geometry is kept a good way beyond FRAME so that no clip edge shows when
-// the view is wider than the frame or panned to its edge.
+// The region whose admin-1 regions are atoms (and which the relief raster
+// covers). Atoms that reach beyond it are kept whole; the rest of the world is
+// plain land.
 export const DATA_CLIP = { x0: FRAME.x0 - 1100, y0: FRAME.y0 - 650, x1: FRAME.x1 + 1100, y1: FRAME.y1 + 900 };
 
-// A ten-degree grid for the atlas overview, simplified in projected kilometres.
-export function overviewGrid() {
-  const grid = geoGraticule().extent([[-70, 0], [111, 87]]).step([10, 10]).precision(5);
-  return geoPath(atlasProjection().precision(4)).digits(0)(grid());
+/** A km box [x, y, w, h] as a globe view: [lon, lat, w, h], centre and size. */
+export function boxView([x, y, w, h]) {
+  const [lon, lat] = unproject([x + w / 2, y + h / 2]);
+  return [Math.round(lon * 1e4) / 1e4, Math.round(lat * 1e4) / 1e4, Math.round(w), Math.round(h)];
 }

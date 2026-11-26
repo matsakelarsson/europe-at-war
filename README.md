@@ -11,8 +11,12 @@ whose 67 steps are included here as the Sweden view (`#/country/se`).
 
 ## How it works
 
-- **Static site.** Vanilla JavaScript and SVG, no framework. The only runtime
-  dependency is `topojson-client`, vendored in `site/vendor/`.
+- **Static site.** Vanilla JavaScript, canvas and SVG, no framework. The only
+  runtime dependency is `topojson-client`, vendored in `site/vendor/`.
+- **A globe.** The map is a globe you can turn and zoom (`site/globe.js`). It
+  shows the whole world, but the history on it is Europe's: borders, wars and
+  capitals cover Europe and the lands its wars reached, and the rest of the
+  world is plain land.
 - **Atoms.** The map is built from Natural Earth admin-1 regions, cut further
   where history needs finer lines (`content/borders/splits/`). Each atom is
   filled with the colour of its owner on the chosen date, and borders are drawn

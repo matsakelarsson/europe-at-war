@@ -5,8 +5,13 @@
 //   dist/data/borders.json                         polities + border timeline
 //   dist/data/polities.css                         polity colours, light and dark
 //   dist/data/wars.json                            catalogue
-//   dist/data/wars/<id>.json                       one per war, projected
+//   dist/data/wars/<id>.json                       one per war
 //   dist/data/labels.json                          seas, regions, capitals
+//
+// The site draws a globe, so everything it places is in [lon, lat]. Curves and
+// views are worked out here in the authoring projection's km (projection.mjs)
+// and then turned back into [lon, lat]: arrows as dense polylines, step views
+// as [lon, lat, width km, height km].
 //
 // Exit code 1 on validation errors; warnings are printed but do not fail.
 import { mkdir, writeFile, cp, rm, readFile, stat, rename } from 'node:fs/promises';
@@ -16,7 +21,7 @@ import { ROOT, CONTENT, readJSON, readYAML, listFiles, exists, loadPolities, dar
 import { loadLocales, prepareLocaleOutput, compileWarTranslations, emitLocales } from './locales.mjs';
 import { compileCapitals } from './capitals.mjs';
 import { feature } from 'topojson-client';
-import { project, DATA_CLIP, FRAME, overviewGrid } from './projection.mjs';
+import { project, unproject, DATA_CLIP, FRAME, CENTER, boxView } from './projection.mjs';
 // A YAML string containing ": " without quotes parses as a mapping and would show as "[object Object]".
 const NOT_TEXT = 'is not plain text (it contains ": "; put it in quotes)';
 const isObj = (v) => v !== null && typeof v === 'object';
@@ -165,19 +170,21 @@ async function buildLabels(pol, borders, topo) {
   const L = await readYAML(join(CONTENT, 'labels.yaml'));
   const rivers = topo.objects.rivers.geometries;
   const labels = L.labels.map(l => {
-    let xy = project(l.lonlat);
+    let ll = l.lonlat.map(r4);
     if (l.river) {
+      // Put a river's name on the river: its nearest vertex to the given point.
       const lines = rivers.filter(g => g.properties.name === l.river)
         .flatMap(g => { const f = feature(topo, g).geometry; return f.type === 'LineString' ? [f.coordinates] : f.coordinates; });
-      const hint = xy;
+      const hint = project(l.lonlat);
       let best = Infinity;
       for (const line of lines) for (const point of line) {
-        const d = Math.hypot(point[0] - hint[0], point[1] - hint[1]);
-        if (d < best) { best = d; xy = point; }
+        const [x, y] = project(point);
+        const d = Math.hypot(x - hint[0], y - hint[1]);
+        if (d < best) { best = d; ll = point.map(r4); }
       }
       if (best > 100) err('Missing river near label ' + l.text);
     }
-    return { t: l.text, xy, cls: l.class || 'lbl-reg', minZoom: l.min_zoom || 0, from: dateKey(l.from), until: dateKey(l.until), anchor: l.anchor || 'middle' };
+    return { t: l.text, ll, cls: l.class || 'lbl-reg', minZoom: l.min_zoom || 0, from: dateKey(l.from), until: dateKey(l.until), anchor: l.anchor || 'middle' };
   });
   const rows = await readYAML(join(CONTENT, 'capitals.yaml'));
   const {audit, ...seats} = compileCapitals(rows, pol, borders, dateKey, err);
@@ -187,16 +194,38 @@ async function buildLabels(pol, borders, topo) {
 
 // ---------------------------------------------------------------- wars
 const r1 = (v) => Math.round(v * 10) / 10;
+const r4 = (v) => Math.round(v * 1e4) / 1e4;
+/** km -> [lon, lat], to about 10 m. */
+const toLL = (xy) => unproject(xy).map(r4);
+/** Points along a cubic Bézier in km, about one per 10 km (p0 itself excluded). */
+function sampleCubic(p0, c1, c2, p1, out) {
+  const len = Math.hypot(c1[0] - p0[0], c1[1] - p0[1]) + Math.hypot(c2[0] - c1[0], c2[1] - c1[1]) + Math.hypot(p1[0] - c2[0], p1[1] - c2[1]);
+  const n = Math.max(4, Math.min(64, Math.ceil(len / 10)));
+  for (let i = 1; i <= n; i++) {
+    const t = i / n, u = 1 - t, a = u * u * u, b = 3 * u * u * t, c = 3 * u * t * t, d = t * t * t;
+    out.push([a * p0[0] + b * c1[0] + c * c2[0] + d * p1[0], a * p0[1] + b * c1[1] + c * c2[1] + d * p1[1]]);
+  }
+}
+/** Straight segments in km, split about every `step` km. */
+function densify(pts, step = 20) {
+  const out = [pts[0]];
+  for (let i = 1; i < pts.length; i++) {
+    const a = pts[i - 1], b = pts[i], n = Math.max(1, Math.ceil(Math.hypot(b[0] - a[0], b[1] - a[1]) / step));
+    for (let k = 1; k <= n; k++) out.push([a[0] + ((b[0] - a[0]) * k) / n, a[1] + ((b[1] - a[1]) * k) / n]);
+  }
+  return out;
+}
+/** A Catmull–Rom spline through points in km, as a dense polyline. */
 function catmullRom(pts) {
-  if (pts.length === 2) return `M${pts[0]}L${pts[1]}`;
-  let d = `M${pts[0][0]},${pts[0][1]}`;
+  if (pts.length === 2) return densify(pts, 10);
+  const out = [pts[0]];
   for (let i = 0; i < pts.length - 1; i++) {
     const p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
     const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
     const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
-    d += `C${r1(c1[0])},${r1(c1[1])} ${r1(c2[0])},${r1(c2[1])} ${p2[0]},${p2[1]}`;
+    sampleCubic(p1, c1, c2, p2, out);
   }
-  return d;
+  return out;
 }
 function pathPoint(pts, t) {
   let L = 0; const seg = [];
@@ -210,9 +239,7 @@ function pathPoint(pts, t) {
 }
 
 function validLonLat(ll, where) {
-  if (!Array.isArray(ll) || ll.length !== 2 || !ll.every(Number.isFinite)) { err(`${where}: bad lonlat ${JSON.stringify(ll)}`); return false; }
-  const [x, y] = project(ll);
-  if (x < FRAME.x0 || x > FRAME.x1 || y < FRAME.y0 || y > FRAME.y1) warn(`${where}: ${JSON.stringify(ll)} is outside the map frame`);
+  if (!Array.isArray(ll) || ll.length !== 2 || !ll.every(Number.isFinite) || Math.abs(ll[0]) > 180 || Math.abs(ll[1]) > 90) { err(`${where}: bad lonlat ${JSON.stringify(ll)}`); return false; }
   return true;
 }
 
@@ -265,8 +292,8 @@ function buildWar(w, file, ctx) {
       if (!KINDS.includes(m.kind)) err(`${mw}: unknown kind ${m.kind}`);
       if (!sideIds.has(m.side || 'none')) err(`${mw}: unknown side ${m.side}`);
       validLonLat(m.lonlat, mw);
-      const xy = project(m.lonlat || [0, 0]); pts.push(xy);
-      return { kind: m.kind, side: m.side || 'none', name: m.name, date: m.date || '', text: m.text || '', xy, lp: m.lp || 'r' };
+      pts.push(project(m.lonlat || [0, 0]));
+      return { kind: m.kind, side: m.side || 'none', name: m.name, date: m.date || '', text: m.text || '', ll: (m.lonlat || [0, 0]).map(r4), lp: m.lp || 'r' };
     });
     const arrowPhases = new Set();
     const hasArrowPhases = s.arrows?.some((a) => a.phase !== undefined);
@@ -277,19 +304,19 @@ function buildWar(w, file, ctx) {
         if (!Number.isSafeInteger(a.phase) || a.phase < 1) err(`${aw}: phase must be a positive integer on every arrow in a phased step`);
         else arrowPhases.add(a.phase);
       }
-      let d, end, ang, poly;
+      // The curve is drawn in km, as before the globe, and kept as a polyline:
+      // the head points along its last segment, which is the curve's tangent.
+      let line, poly;
       if (a.bezier) {
         const P = a.bezier.map((ll) => (validLonLat(ll, aw), project(ll)));
         if ((P.length - 1) % 3) err(`${aw}: bezier needs 1 + 3n points`);
-        d = `M${P[0]}` + Array.from({ length: (P.length - 1) / 3 | 0 }, (_, k) => `C${P[1 + 3 * k]} ${P[2 + 3 * k]} ${P[3 + 3 * k]}`).join('');
-        end = P[P.length - 1]; const c = P[P.length - 2]; ang = Math.atan2(end[1] - c[1], end[0] - c[0]); poly = P.filter((_, k) => k % 3 === 0);
+        line = [P[0]];
+        for (let k = 0; k < ((P.length - 1) / 3 | 0); k++) sampleCubic(P[3 * k], P[1 + 3 * k], P[2 + 3 * k], P[3 + 3 * k], line);
+        poly = P.filter((_, k) => k % 3 === 0);
       } else {
         const P = (a.via || []).map((ll) => (validLonLat(ll, aw), project(ll)));
         if (P.length < 2) { err(`${aw}: needs at least two points in via`); return null; }
-        d = catmullRom(P); end = P[P.length - 1];
-        // The spline's end tangent points from the second-to-last point to the end.
-        const c = P[P.length - 2];
-        ang = Math.atan2(end[1] - c[1], end[0] - c[0]);
+        line = catmullRom(P);
         poly = P;
       }
       pts.push(...poly);
@@ -298,7 +325,7 @@ function buildWar(w, file, ctx) {
         if (a.label_at) { validLonLat(a.label_at, aw); lxy = project(a.label_at); }
         else { const { p, dir } = pathPoint(poly, 0.5); const n = Math.hypot(dir[0], dir[1]) || 1; lxy = [p[0], p[1]]; lxy.auto = [-dir[1] / n, dir[0] / n]; }
       }
-      return { side: a.side || 'none', phase: a.phase, d, end, ang: Math.round(ang * 1000) / 1000, label: a.label || null, lxy, auto: lxy?.auto || null };
+      return { side: a.side || 'none', phase: a.phase, line: line.map(toLL), label: a.label || null, lxy, auto: lxy?.auto || null };
     }).filter(Boolean);
     if ([...arrowPhases].some((phase) => phase > arrowPhases.size)) err(`${sw}: arrow phases must be consecutive starting at 1`);
     const areas = (s.areas || []).map((ar, ai) => {
@@ -313,13 +340,15 @@ function buildWar(w, file, ctx) {
         if (!Array.isArray(r) || r.length < 2) { err(`${aw}: ${what} needs at least two [lon, lat] points`); return []; }
         return r.map((ll) => { validLonLat(ll, aw); const xy = project(ll); pts.push(xy); return xy; });
       };
-      const rings = [...(ar.polygon ? [ar.polygon] : []), ...(ar.polygons || [])].map((r) => ring(r, 'polygon')).filter((r) => r.length >= 3);
-      const shape = rings.length ? rings.map((r) => `M${r.join('L')}Z`).join('') : null;
-      const lines = [...(ar.line ? [ar.line] : []), ...(ar.lines || [])].map((r) => ring(r, 'line')).filter((r) => r.length >= 2);
-      const line = lines.length ? lines.map((r) => `M${r.join('L')}`).join('') : null;
-      if (!atoms.length && !shape && !line) err(`${aw}: needs atoms, polygon(s) or line(s)`);
-      if (ar.style === 'front' && !line) err(`${aw}: a front needs line or lines`);
-      return { style: ar.style, side: ar.side || null, label: ar.label || null, atoms, ...(shape ? { shape } : {}), ...(line ? { line } : {}) };
+      // Edges are straight in km, as they were drawn, so long ones are split
+      // into short pieces before going back to [lon, lat].
+      const rings = [...(ar.polygon ? [ar.polygon] : []), ...(ar.polygons || [])].map((r) => ring(r, 'polygon')).filter((r) => r.length >= 3)
+        .map((r) => densify([...r, r[0]]).map(toLL));
+      const lines = [...(ar.line ? [ar.line] : []), ...(ar.lines || [])].map((r) => ring(r, 'line')).filter((r) => r.length >= 2)
+        .map((r) => densify(r).map(toLL));
+      if (!atoms.length && !rings.length && !lines.length) err(`${aw}: needs atoms, polygon(s) or line(s)`);
+      if (ar.style === 'front' && !lines.length) err(`${aw}: a front needs line or lines`);
+      return { style: ar.style, side: ar.side || null, label: ar.label || null, atoms, ...(rings.length ? { rings } : {}), ...(lines.length ? { lines } : {}) };
     });
     // View box
     let view;
@@ -333,7 +362,8 @@ function buildWar(w, file, ctx) {
     } else view = null;
     if (view) view = view.map(r1);
     for (const a of arrows) if (a.auto && view) { const off = Math.max(view[2], view[3]) * 0.025; a.lxy = [r1(a.lxy[0] + a.auto[0] * off), r1(a.lxy[1] + a.auto[1] * off)]; }
-    for (const a of arrows) delete a.auto;
+    for (const a of arrows) { if (a.lxy) a.lab = toLL(a.lxy); delete a.lxy; delete a.auto; }
+    if (view) view = boxView(view);
     const when = dateKey(s.when ?? (String(s.date ?? '').match(/\d{4}/) || [])[0] ?? w.start);
     if (!when) err(`${sw}: cannot work out a sort date (add when:)`);
     return {
@@ -401,16 +431,16 @@ async function main() {
   wars.sort((a, b) => (a.sk < b.sk ? -1 : a.sk > b.sk ? 1 : a.name.localeCompare(b.name)));
 
   const bordersOut = {
-    frame: [FRAME.x0, FRAME.y0, FRAME.x1 - FRAME.x0, FRAME.y1 - FRAME.y0],
-    overviewGrid: overviewGrid(),
-    reliefBounds: [DATA_CLIP.x0, DATA_CLIP.y0, DATA_CLIP.x1 - DATA_CLIP.x0, DATA_CLIP.y1 - DATA_CLIP.y0],
+    home: boxView([FRAME.x0, FRAME.y0, FRAME.x1 - FRAME.x0, FRAME.y1 - FRAME.y0]),
+    // site/relief.webp: a raster over DATA_CLIP in the authoring projection.
+    relief: { bounds: [DATA_CLIP.x0, DATA_CLIP.y0, DATA_CLIP.x1 - DATA_CLIP.x0, DATA_CLIP.y1 - DATA_CLIP.y0], center: CENTER },
     atoms: borders.order,
     names: borders.order.map((id) => borders.meta.get(id)?.name || id),
     polities: pol.list.map((p) => {
       const hints = p.label ? (Array.isArray(p.label[0]) ? p.label : [p.label]) : [];
       const names = (p.names || []).map(([until, n]) => [dateKey(until), n]);
       for (const [k] of names) if (!k) err(`polity ${p.id}: bad date in names`);
-      return { id: p.id, name: p.name, ink: p.ink || null, countries: p.countries || [], auto: !!p.auto, ...(hints.length ? { lxy: hints.map((h) => project(h)) } : {}), ...(names.length ? { names } : {}) };
+      return { id: p.id, name: p.name, ink: p.ink || null, countries: p.countries || [], auto: !!p.auto, ...(hints.length ? { hints: hints.map((h) => h.map(r4)) } : {}), ...(names.length ? { names } : {}) };
     }),
     timeline: borders.timeline.map((t) => ({ d: t.d, k: t.k, s: t.s, c: t.c })),
   };
@@ -422,7 +452,7 @@ async function main() {
   await emit('data/labels.json', JSON.stringify(labels));
 
   // Size report: what a first visit downloads.
-  const first = ['index.html', 'app.js', 'i18n.js', 'localized-content.js', ...(await listFiles(join(ROOT, 'site/locales'), '.js')).map(file => `locales/${file}`), 'style.css', 'relief.webp', 'vendor/topojson-client.min.js', 'data/atoms.topo.json', 'data/borders.json', 'data/polities.css', 'data/wars.json', 'data/labels.json'];
+  const first = ['index.html', 'app.js', 'globe.js', 'i18n.js', 'localized-content.js', ...(await listFiles(join(ROOT, 'site/locales'), '.js')).map(file => `locales/${file}`), 'style.css', 'relief.webp', 'vendor/topojson-client.min.js', 'data/atoms.topo.json', 'data/borders.json', 'data/polities.css', 'data/wars.json', 'data/labels.json'];
   let raw = 0, gz = 0;
   for (const f of CHECK ? [] : first) { try { const b = await readFile(join(OUT, f)); raw += b.length; gz += gzipSync(b).length; } catch {} }
   console.log(`polities ${pol.list.length}, atoms ${borders.order.length}, timeline entries ${borders.timeline.length}, wars ${wars.length}`);

@@ -1,14 +1,21 @@
 // Europe at War — browser runtime. Plain ES module, no framework, no build step.
 // Data comes from dist/data/*, produced by tools/build.mjs.
+//
+// The map is a globe (site/globe.js): two canvases for the base map, with the
+// step areas in an SVG between them (#mapareas), and an SVG on top (#map) for
+// labels, capitals, arrows and markers. Everything on the SVGs is placed in
+// screen pixels from longitude and latitude, again on every view change.
 import { applyLocale, count, esc, formatDate, locale, number, rich, t } from './i18n.js';
 import { defaultLocale } from './locales/index.js';
 import { localizeCatalogue, localizeMap, localizeWar, translateText } from './localized-content.js';
+import { Globe, R, capOf, capVisible, fitBox, laeaInvert, linesPath, lonLat, projector, ringsPath, screenLines, screenRings, unit, vecRings } from './globe.js';
 
 applyLocale();
 const topojson = window.topojson;
 const NS = 'http://www.w3.org/2000/svg';
+const RAD = Math.PI / 180;
 const $ = (id) => document.getElementById(id);
-const svg = $('map'), wrap = $('mapwrap'), pop = $('pop');
+const svg = $('map'), wrap = $('mapwrap'), pop = $('pop'), areasSvg = $('mapareas');
 const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const themeRoot = document.documentElement, themeToggle = $('theme-toggle');
@@ -73,19 +80,7 @@ function labelAttrs(lp) {
   return { x: 11, y: 4, a: 'start' };
 }
 
-// ---------- Geometry helpers ----------
-function pathD(g) {
-  if (!g) return '';
-  const ring = (r, close) => 'M' + r.map((p) => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join('L') + (close ? 'Z' : '');
-  switch (g.type) {
-    case 'Polygon': return g.coordinates.map((r) => ring(r, true)).join('');
-    case 'MultiPolygon': return g.coordinates.map((p) => p.map((r) => ring(r, true)).join('')).join('');
-    case 'LineString': return ring(g.coordinates, false);
-    case 'MultiLineString': return g.coordinates.map((r) => ring(r, false)).join('');
-    case 'GeometryCollection': return g.geometries.map(pathD).join('');
-    default: return '';
-  }
-}
+// ---------- Geometry helpers (screen pixels) ----------
 function ringArea(r) { let a = 0; for (let i = 0, j = r.length - 1; i < r.length; j = i++) a += (r[j][0] + r[i][0]) * (r[j][1] - r[i][1]); return Math.abs(a / 2); }
 
 /** Signed distance from (x, y) to the polygon's edges: positive inside. */
@@ -182,7 +177,8 @@ function polName(p, key = curKey) {
 const geoms = topo.objects.atoms.geometries;
 geoms.forEach((g, i) => { g.i = i; });
 const NA = geoms.length;
-const FRAME = B.frame || [-1950, -2400, 5600, 4750];
+// Boxes are [lon, lat, width km, height km]: a centre and a size.
+const HOME = B.home;
 const REF_W = LBL.refWidth || 2000;
 
 // ---------- Border timeline ----------
@@ -208,8 +204,15 @@ function ownersAt(si) {
 }
 
 // ---------- Build the map ----------
-const defs = el('defs', null, svg);
-const patterns = [];
+const globe = new Globe(topo, $('mapbase'), $('maplines'), POL.length);
+if (B.relief) {
+  const img = new Image();
+  img.addEventListener('load', () => globe.setRelief(img, B.relief.bounds));
+  img.src = 'relief.webp';
+}
+new MutationObserver(() => { globe.readColors(); globe.draw(true); }).observe(themeRoot, { attributes: true, attributeFilter: ['data-theme'] });
+
+const defs = el('defs', null, areasSvg);
 function hatch(key, rot, cls, width, gap) {
   const id = 'h-' + key;
   if (!defs.querySelector('#' + id)) {
@@ -219,67 +222,37 @@ function hatch(key, rot, cls, width, gap) {
       // Patterns inherit CSS variables from <defs>, not from the shape that uses
       // them, so a side hatch names its ink directly (--mc would be unset here).
       : `<rect width="${width}" height="${gap}" class="${cls}"${cls === 'hatch' ? ` style="fill:var(--ink-${key.split('-')[0]})"` : ''}/>`;
-    patterns.push([p, rot]);
-    applyPatternScale(p, rot);
   }
   return `url(#${id})`;
 }
-if (B.overviewGrid) el('path', { d: B.overviewGrid, class: 'graticule', 'aria-hidden': 'true' }, svg);
-const gAtoms = el('g', { 'aria-hidden': 'true' }, svg);
-const atomEls = new Array(NA), atomFill = new Array(NA).fill('');
-for (let i = 0; i < NA; i++) {
-  atomEls[i] = el('path', { d: pathD(topojson.feature(topo, geoms[i]).geometry), class: 'atom' }, gAtoms);
-}
-let reliefImage;
-if (B.reliefBounds) {
-  const [x, y, width, height] = B.reliefBounds;
-  reliefImage = el('image', { x, y, width, height, href: 'relief.webp', preserveAspectRatio: 'none', class: 'relief', 'aria-hidden': 'true' }, svg);
-}
-if (topo.objects.rivers) {
-  const rivers = topojson.feature(topo, topo.objects.rivers).features;
-  const lengths = new Map();
-  for (const { geometry, properties } of rivers) {
-    if (!geometry || !properties.name) continue;
-    const lines = geometry.type === 'LineString' ? [geometry.coordinates] : geometry.coordinates;
-    let length = lengths.get(properties.name) || 0;
-    for (const line of lines) for (let i = 1; i < line.length; i++) {
-      const [x, y] = line[i], [px, py] = line[i - 1];
-      length += Math.hypot(x - px, y - py);
-    }
-    lengths.set(properties.name, length);
-  }
-  let minor = '', major = '';
-  for (const { geometry, properties } of rivers) {
-    if (lengths.get(properties.name) >= 500) major += pathD(geometry);
-    else minor += pathD(geometry);
-  }
-  el('path', { d: minor, class: 'rivers', 'aria-hidden': 'true' }, svg);
-  el('path', { d: major, class: 'rivers major', 'aria-hidden': 'true' }, svg);
-}
-if (topo.objects.lakes) el('path', { d: pathD(topojson.merge(topo, topo.objects.lakes.geometries)), class: 'lakes', 'aria-hidden': 'true' }, svg);
-const gOv = el('g', { 'aria-hidden': 'true' }, svg);
-const blineEl = el('path', { class: 'bline', 'aria-hidden': 'true' }, svg);
-el('path', { d: pathD(topojson.mesh(topo, topo.objects.atoms, (a, b) => a === b)), class: 'coast', 'aria-hidden': 'true' }, svg);
+const gOv = el('g', { 'aria-hidden': 'true' }, areasSvg);
 const gLbl = el('g', { class: 'lbl', 'aria-hidden': 'true' }, svg);
 const gPLbl = el('g', null, gLbl);
 const gCaps = el('g', { role: 'group', 'aria-label': t('capitals') }, svg);
 const gArrows = el('g', { 'aria-hidden': 'true', 'pointer-events': 'none' }, svg);
 const gMarkers = el('g', null, svg);
 
-// Scalables keep a constant on-screen size whatever the zoom.
-let fixedScalables = [], stepScalables = [], polScalables = [], heads = [];
+// Placed items: {g, v (unit vector)}; each view change sets sx, sy and vis.
+// Names and capitals close to the horizon would crowd together there, so they
+// are hidden a little before it (z is the cosine of the distance from the centre).
+const NEAR_HORIZON = 0.12;
+let stepScalables = [], polScalables = [];
 const staticLabels = [];
 for (const l of LBL.labels) {
   const g = el('g', null, gLbl);
   const t = el('text', { class: l.cls, 'text-anchor': l.anchor, y: 4 }, g);
   t.textContent = l.t;
-  fixedScalables.push({ g, x: l.xy[0], y: l.xy[1] });
-  staticLabels.push({ g, minZoom: l.minZoom, from: l.from, until: l.until, dateOk: true });
+  staticLabels.push({ g, v: unit(l.ll[0], l.ll[1]), minZoom: l.minZoom, from: l.from, until: l.until, dateOk: true });
 }
-// Only active seats in the buffered viewport get SVG nodes.
+function show(g, on) {
+  if (g.on === on) return;
+  g.on = on;
+  g.style.display = on ? '' : 'none';
+}
+// Only active seats on the visible part of the globe get SVG nodes.
 const activeSeats = new Set(), capitalNodes = new Map(), capitalWidths = new Map();
 const measureCapital = document.createElement('canvas').getContext('2d');
-let capitalPeriod = -1, capitalBuffer = null, capitalFocus = null;
+let capitalPeriod = -1, capitalFocus = null;
 function updateCapitalDate(key) {
   const timeline = LBL.capitalTimeline;
   let lo = 0, hi = timeline.length;
@@ -299,52 +272,50 @@ function updateCapitalDate(key) {
     for (const i of t.added) activeSeats.delete(i);
     for (const i of t.removed) activeSeats.add(i);
   }
-  capitalBuffer = null;
   return true;
 }
 function describeSeat(c) {
   return t('capitalDescription', { place: c.name, role: c.role || t('capital'), state: polName(POL[c.owner]) });
 }
-function syncCapitals(v, scale) {
-  const [x,y,w,h] = v;
-  if (capitalBuffer && x >= capitalBuffer[0] && y >= capitalBuffer[1] &&
-      x+w <= capitalBuffer[2] && y+h <= capitalBuffer[3] && w >= capitalBuffer[4]) return;
-  const pad = 64 * scale;
-  capitalBuffer = [x-pad, y-pad, x+w+pad, y+h+pad, w*0.8];
+function syncCapitals() {
+  if (!pj) return;
+  const pad = 64;
   const sites = new Map();
   for (const id of activeSeats) {
-    const c = LBL.capitals[id], [cx,cy] = c.xy;
-    if (cx < x-pad || cy < y-pad || cx > x+w+pad || cy > y+h+pad) continue;
-    const k = c.xy.join(',');
-    if (!sites.has(k)) sites.set(k, []);
-    sites.get(k).push(c);
+    const c = LBL.capitals[id];
+    c.v ||= unit(c.ll[0], c.ll[1]);
+    const [x, y, z] = pj.vec(c.v[0], c.v[1], c.v[2]);
+    if (z < NEAR_HORIZON || x < -pad || y < -pad || x > cw + pad || y > ch + pad) continue;
+    const k = c.ll.join(',');
+    if (!sites.has(k)) sites.set(k, { x, y, seats: [] });
+    sites.get(k).seats.push(c);
   }
   for (const [k,it] of capitalNodes) if (!sites.has(k)) {
     if (selected === it.g) closePop();
     it.g.remove(); capitalNodes.delete(k);
   }
-  for (const [k,seats] of sites) {
+  for (const [k,site] of sites) {
     let it = capitalNodes.get(k);
     if (!it) {
-      const [cx,cy] = seats[0].xy;
       const g = el('g', {class:'capital', tabindex:0, role:'button'}, gCaps);
       const title = el('title', null, g);
       el('circle', {class:'hit', r:12}, g);
       el('circle', {class:'capital-ring', r:2.8}, g);
-      it = {g, title, x:cx, y:cy, anchor:'r'};
+      it = {g, title, anchor:'r'};
       capitalNodes.set(k,it);
       g.addEventListener('click', e => {
         e.stopPropagation();
-        if (!dragMoved) openCapital(it, e.detail ? clientToMap(e.clientX, e.clientY) : null);
+        if (!dragMoved) openCapital(it, e.detail ? clientPoint(e.clientX, e.clientY) : null);
       });
       g.addEventListener('focus', () => { if (g.matches(':focus-visible')) openCapital(it); });
       g.addEventListener('keydown', e => {
         if (['Enter',' '].includes(e.key)) { e.preventDefault(); openCapital(it); }
       });
-      g.style.transform = `translate(${cx}px, ${cy}px) scale(var(--capital-scale))`;
     }
-    it.seats = seats;
-    const description = seats.map(describeSeat).join(' / ');
+    it.x = site.x; it.y = site.y;
+    it.g.setAttribute('transform', `translate(${site.x.toFixed(1)},${site.y.toFixed(1)})`);
+    it.seats = site.seats;
+    const description = site.seats.map(describeSeat).join(' / ');
     if (it.description !== description) {
       it.description = description;
       it.title.textContent = description;
@@ -354,43 +325,35 @@ function syncCapitals(v, scale) {
 }
 
 // ---------- View handling ----------
-let vb = FRAME.slice(), S = 1, anim = null, targetBox = FRAME.slice();
-function fit(b) {
-  const cw = svg.clientWidth || 1, ch = svg.clientHeight || 1, A = cw / ch;
-  let [x, y, w, h] = b;
-  if (w / h > A) { const nh = w / A; y -= (nh - h) / 2; h = nh; } else { const nw = h * A; x -= (nw - w) / 2; w = nw; }
-  return [x, y, w, h];
+// A view is {lon, lat, k}: the centre and the globe's radius in pixels.
+let cw = 1, ch = 1, view = { lon: HOME[0], lat: HOME[1], k: 1 }, pj = null, S = 1, anim = null, targetBox = HOME.slice();
+const kMin = () => 0.42 * Math.min(cw, ch);
+const kMax = () => cw / (40 / R);
+function clampView(v) {
+  return { lon: ((v.lon + 540) % 360) - 180, lat: Math.max(-89, Math.min(89, v.lat)), k: Math.min(kMax(), Math.max(kMin(), v.k)) };
 }
-function applyPatternScale(p, rot) { p.setAttribute('patternTransform', `rotate(${rot}) scale(${S.toFixed(4)})`); }
-function apply(v, viewportOnly = false) {
-  vb = v;
-  svg.setAttribute('viewBox', v.map((n) => n.toFixed(2)).join(' '));
-  const cw = svg.clientWidth || 1;
-  syncCapitals(v, v[2] / cw);
-  if (viewportOnly && S === v[2] / cw) return;
-  const scaleChanged = S !== v[2] / cw || !gCaps.style.getPropertyValue('--capital-scale');
-  S = v[2] / cw;
-  const s = S.toFixed(4);
-  if (scaleChanged) {
-    gCaps.style.setProperty('--capital-scale', s);
-    // Fade the atlas-resolution raster where its pixels would stand out.
-    if (reliefImage) {
-      const opacity = Math.min(1, Math.max(0, (S - 0.58) * 0.76)).toFixed(2);
-      if (reliefImage.getAttribute('opacity') !== opacity) reliefImage.setAttribute('opacity', opacity);
-    }
-  }
-  svg.classList.toggle('overview', v[2] >= 4600);
-  const lists = scaleChanged ? [fixedScalables, stepScalables, polScalables] : [stepScalables, polScalables];
-  for (const list of lists) for (const it of list) it.g.setAttribute('transform', `translate(${it.x},${it.y}) scale(${s})`);
-  for (const h of heads) {
-    const tx = h.x + Math.cos(h.ang) * 6 * S, ty = h.y + Math.sin(h.ang) * 6 * S;
-    h.g.setAttribute('transform', `translate(${tx.toFixed(2)},${ty.toFixed(2)}) rotate(${(h.ang * 180 / Math.PI).toFixed(1)}) scale(${s})`);
-  }
-  svg.style.setProperty('--sw', (3.2 * S).toFixed(3));
-  for (const [p, rot] of patterns) applyPatternScale(p, rot);
-  const zoom = (REF_W / v[2]) * (cw / 700);
-  for (const l of staticLabels) l.g.style.display = zoom >= l.minZoom && l.dateOk && !l.coll ? '' : 'none';
-  for (const l of polScalables) l.g.style.display = !l.coll && l.w / S > l.tw && l.h / S > l.th ? '' : 'none';
+function fit(box) { return clampView(fitBox(box, cw, ch)); }
+const sameView = (a, b) => a.lon === b.lon && a.lat === b.lat && a.k === b.k;
+function apply(v) {
+  view = v;
+  pj = projector(v, cw, ch);
+  S = R / v.k;
+  globe.setProjector(pj);
+  globe.showGraticule = cw * S >= 4600;
+  // Fade the atlas-resolution relief where its pixels would stand out.
+  globe.reliefAlpha = Math.min(1, Math.max(0, (S - 0.58) * 0.76));
+  globe.drawIfChanged();
+  syncCapitals();
+  const place = (it, horizon) => {
+    const [x, y, z] = pj.vec(it.v[0], it.v[1], it.v[2]);
+    it.sx = x; it.sy = y; it.vis = z > horizon;
+    if (it.vis) it.g.setAttribute('transform', `translate(${x.toFixed(1)},${y.toFixed(1)})`);
+  };
+  const zoom = REF_W * v.k / (R * 700);
+  for (const l of staticLabels) { place(l, NEAR_HORIZON); show(l.g, l.vis && zoom >= l.minZoom && l.dateOk && !l.coll); }
+  for (const l of polScalables) { place(l, NEAR_HORIZON); show(l.g, l.vis && !l.coll && l.wr * v.k > l.tw && l.hr * v.k > l.th); }
+  for (const it of stepScalables) { place(it, 0.02); show(it.g, it.vis); }
+  drawStepGeometry();
 }
 function cullLabels() {
   const cells = new Map();
@@ -410,18 +373,18 @@ function cullLabels() {
   }
   const frame = svg.getBoundingClientRect();
   const zoom = REF_W / S / 700;
-  for (const g of [...gMarkers.children, ...gArrows.querySelectorAll('.alabel')]) visit(g.getBoundingClientRect(), false);
+  for (const g of [...gMarkers.children, ...gArrows.querySelectorAll('.alabel')]) if (g.style.display !== 'none') visit(g.getBoundingClientRect(), false);
   const obstacles = [wrap.querySelector('.mapctl'), $('yearbadge'), wrap.querySelector('.capital-key')];
   for (const control of obstacles) visit(control.getBoundingClientRect(), false);
-  const px = it => frame.left + (it.x-vb[0])/S;
-  const py = it => frame.top + (it.y-vb[1])/S;
+  const px = it => frame.left + it.x;
+  const py = it => frame.top + it.y;
   for (const it of capitalNodes.values()) visit({left:px(it)-4, right:px(it)+4, top:py(it)-4, bottom:py(it)+4}, false);
   // Batch geometry reads before hiding rejected text.
   const candidates = [...polScalables, ...staticLabels].filter(l => l.g.style.display !== 'none')
     .map(l => [l, l.g.getBoundingClientRect()]);
   for (const [l,r] of candidates) {
     l.coll = r.left < frame.left || r.top < frame.top || r.right > frame.right || r.bottom > frame.bottom || visit(r,true);
-    if (l.coll) l.g.style.display = 'none'; else visit(r,false);
+    if (l.coll) show(l.g, false); else visit(r,false);
   }
   const focused = it => it.seats.some(c => capitalFocus?.has(c.owner));
   const rank = it => Math.min(...it.seats.map(c => polityLabelOrder.get(c.owner) ?? Infinity));
@@ -460,58 +423,91 @@ function cullLabels() {
     }
   }
 }
+const ease = (k) => (k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2);
+/** Fly to a view: along the great circle, zooming out on the way when far. */
 function animateTo(target, dur) {
   if (anim) cancelAnimationFrame(anim);
   anim = null;
-  const distance = Math.max(...target.map((n, i) => Math.abs(n - vb[i]) / vb[i % 2 + 2]));
-  dur = Math.min(dur, 400 * Math.sqrt(distance), 400);
-  if (reduceMotion || !dur) { vb = target; placeLabels(); return; }
-  const from = vb.slice(); let t0 = null;
-  const frame = (t) => {
-    if (t0 === null) t0 = t;
-    const k = Math.min(1, (t - t0) / dur);
-    const e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
-    apply(from.map((a, i) => a + (target[i] - a) * e), true);
-    if (k < 1) anim = requestAnimationFrame(frame); else { anim = null; placeLabels(); }
+  const from = view;
+  const a = unit(from.lon, from.lat), b = unit(target.lon, target.lat);
+  const ang = Math.acos(Math.max(-1, Math.min(1, a[0] * b[0] + a[1] * b[1] + a[2] * b[2])));
+  const distance = Math.max(ang * Math.min(from.k, target.k) / cw, Math.abs(Math.log(target.k / from.k)));
+  if (reduceMotion || !dur || distance < 1e-4) { view = target; placeLabels(); return; }
+  // How much to zoom out mid-flight so that the way there stays in view.
+  const dip = Math.max(0, Math.log(Math.min(from.k, target.k) * ang / (cw * 1.5)));
+  dur = dip > 0.3 ? Math.max(Math.min(dur, 400), 700) : Math.min(dur, 400 * Math.sqrt(distance), 400);
+  const lk0 = Math.log(from.k), lk1 = Math.log(target.k), s = Math.sin(ang);
+  let t0 = null;
+  const frame = (time) => {
+    if (t0 === null) t0 = time;
+    const u = Math.min(1, (time - t0) / dur), e = ease(u);
+    let c = b;
+    if (s > 1e-9) { const wa = Math.sin((1 - e) * ang) / s, wb = Math.sin(e * ang) / s; c = [a[0] * wa + b[0] * wb, a[1] * wa + b[1] * wb, a[2] * wa + b[2] * wb]; }
+    const [lon, lat] = lonLat(c[0], c[1], c[2]);
+    if (u < 1) {
+      apply({ lon, lat, k: Math.exp(lk0 + (lk1 - lk0) * e - dip * Math.sin(Math.PI * e)) });
+      anim = requestAnimationFrame(frame);
+    } else { anim = null; view = target; placeLabels(); }
   };
   anim = requestAnimationFrame(frame);
 }
-function clampView(v) {
-  let [x, y, w, h] = v;
-  const maxW = FRAME[2] * 1.25, minW = 40;
-  if (w > maxW) { const k = maxW / w; const cx = x + w / 2, cy = y + h / 2; w *= k; h *= k; x = cx - w / 2; y = cy - h / 2; }
-  if (w < minW) { const k = minW / w; const cx = x + w / 2, cy = y + h / 2; w *= k; h *= k; x = cx - w / 2; y = cy - h / 2; }
-  const cx = Math.min(Math.max(x + w / 2, FRAME[0]), FRAME[0] + FRAME[2]);
-  const cy = Math.min(Math.max(y + h / 2, FRAME[1]), FRAME[1] + FRAME[3]);
-  return [cx - w / 2, cy - h / 2, w, h];
-}
-function clientToMap(cx, cy) {
+function clientPoint(x, y) {
   const r = svg.getBoundingClientRect();
-  return [vb[0] + ((cx - r.left) / r.width) * vb[2], vb[1] + ((cy - r.top) / r.height) * vb[3]];
+  return [x - r.left, y - r.top];
 }
-function zoomAt(p, k) {
+/**
+ * The view, at zoom v.k, that puts [lon, lat] at screen point [sx, sy] with
+ * north up, chosen nearest to v. Where no view can (a point dragged past
+ * what the globe can turn to), the closest reachable one.
+ */
+function solveView([lon, lat], [sx, sy], v) {
+  const X = (sx - cw / 2) / v.k, Y = -(sy - ch / 2) / v.k;
+  const phi = lat * RAD, cphi = Math.cos(phi), sphi = Math.sin(phi);
+  if (cphi < 1e-9) return v;
+  const wrap = (a) => Math.atan2(Math.sin(a), Math.cos(a));
+  const s = Math.max(-1, Math.min(1, X / cphi));
+  const d0 = wrap((lon - v.lon) * RAD);
+  const d1 = Math.asin(s), d2 = wrap(Math.PI - d1);
+  const delta = Math.abs(wrap(d1 - d0)) <= Math.abs(wrap(d2 - d0)) ? d1 : d2;
+  // Y = A cos(lat0) - B sin(lat0) = M cos(lat0 + beta)
+  const A = sphi, B = cphi * Math.cos(delta), M = Math.hypot(A, B), beta = Math.atan2(B, A);
+  const c = Math.acos(Math.max(-1, Math.min(1, Y / M)));
+  let best = null;
+  for (const p0 of [wrap(-beta + c), wrap(-beta - c)]) {
+    if (Math.abs(p0) > Math.PI / 2 || Math.sin(p0) * A + Math.cos(p0) * B < 0) continue;
+    if (best === null || Math.abs(p0 - v.lat * RAD) < Math.abs(best - v.lat * RAD)) best = p0;
+  }
+  return { lon: lon - delta / RAD, lat: best === null ? v.lat : best / RAD, k: v.k };
+}
+function zoomAt(p, f) {
   cancelAnimationFrame(anim); anim = null;
-  const v = [p[0] - (p[0] - vb[0]) * k, p[1] - (p[1] - vb[1]) * k, vb[2] * k, vb[3] * k];
-  apply(clampView(v));
+  const k = Math.min(kMax(), Math.max(kMin(), view.k / f));
+  const ll = pj.invert(p[0], p[1]);
+  apply(clampView(ll ? solveView(ll, p, { ...view, k }) : { ...view, k }));
   scheduleLabels();
 }
 
-// Pan and zoom: wheel, drag, pinch, buttons.
+// Turn and zoom: wheel, drag, pinch, buttons. A drag keeps the place under
+// the pointer under the pointer.
 let dragMoved = false;
 const pointers = new Map();
 let pinch = null;
+function anchor(p) { const q = clientPoint(p.x, p.y); p.ll = pj.invert(q[0], q[1]); }
 svg.addEventListener('wheel', (e) => {
   e.preventDefault();
   if (anim) { cancelAnimationFrame(anim); anim = null; }
   const dy = e.deltaMode === 1 ? e.deltaY * 30 : e.deltaY;
-  zoomAt(clientToMap(e.clientX, e.clientY), Math.exp(Math.max(-1, Math.min(1, dy * 0.002))));
+  zoomAt(clientPoint(e.clientX, e.clientY), Math.exp(Math.max(-1, Math.min(1, dy * 0.002))));
 }, { passive: false });
 svg.addEventListener('pointerdown', (e) => {
-  pointers.set(e.pointerId, { x: e.clientX, y: e.clientY, x0: e.clientX, y0: e.clientY });
+  const p = { x: e.clientX, y: e.clientY, x0: e.clientX, y0: e.clientY };
+  anchor(p);
+  pointers.set(e.pointerId, p);
   dragMoved = false;
   if (pointers.size === 2) {
     const [a, b] = [...pointers.values()];
-    pinch = { d: Math.hypot(a.x - b.x, a.y - b.y), vb: vb.slice(), m: clientToMap((a.x + b.x) / 2, (a.y + b.y) / 2) };
+    const m = clientPoint((a.x + b.x) / 2, (a.y + b.y) / 2);
+    pinch = { d: Math.hypot(a.x - b.x, a.y - b.y) || 1, k: view.k, ll: pj.invert(m[0], m[1]) };
   }
 });
 svg.addEventListener('pointermove', (e) => {
@@ -522,47 +518,46 @@ svg.addEventListener('pointermove', (e) => {
   if (!dragMoved && Math.hypot(p.x - p.x0, p.y - p.y0) < 4) return;
   if (!dragMoved) { dragMoved = true; svg.setPointerCapture(e.pointerId); svg.classList.add('panning'); if (anim) { cancelAnimationFrame(anim); anim = null; } closePop(); }
   if (pointers.size === 1) {
-    const r = svg.getBoundingClientRect();
-    apply(clampView([vb[0] - (dx * vb[2]) / r.width, vb[1] - (dy * vb[3]) / r.height, vb[2], vb[3]]), true);
+    const v = p.ll ? solveView(p.ll, clientPoint(p.x, p.y), view)
+      // Grabbed off the globe: turn it by the distance dragged.
+      : { lon: view.lon - dx / (view.k * Math.max(0.3, Math.cos(view.lat * RAD))) / RAD, lat: view.lat + dy / view.k / RAD, k: view.k };
+    apply(clampView(v));
   } else if (pointers.size === 2 && pinch) {
     const [a, b] = [...pointers.values()];
     const d = Math.hypot(a.x - b.x, a.y - b.y) || 1;
-    const k = pinch.d / d;
-    const v = pinch.vb, m = pinch.m;
-    apply(clampView([m[0] - (m[0] - v[0]) * k, m[1] - (m[1] - v[1]) * k, v[2] * k, v[3] * k]));
+    const k = Math.min(kMax(), Math.max(kMin(), pinch.k * d / pinch.d));
+    const m = clientPoint((a.x + b.x) / 2, (a.y + b.y) / 2);
+    apply(clampView(pinch.ll ? solveView(pinch.ll, m, { ...view, k }) : { ...view, k }));
   }
 });
 const endPointer = (e) => {
   pointers.delete(e.pointerId);
   if (pointers.size < 2) pinch = null;
+  // The finger left after a pinch takes hold of the place now under it.
+  for (const p of pointers.values()) anchor(p);
   if (!pointers.size) { svg.classList.remove('panning'); if (dragMoved) scheduleLabels(); }
 };
 svg.addEventListener('pointerup', endPointer);
 svg.addEventListener('pointercancel', endPointer);
-svg.addEventListener('dblclick', (e) => { e.preventDefault(); zoomAt(clientToMap(e.clientX, e.clientY), e.shiftKey ? 2 : 0.5); });
-$('zin').addEventListener('click', () => zoomAt([vb[0] + vb[2] / 2, vb[1] + vb[3] / 2], 0.6));
-$('zout').addEventListener('click', () => zoomAt([vb[0] + vb[2] / 2, vb[1] + vb[3] / 2], 1 / 0.6));
+svg.addEventListener('dblclick', (e) => { e.preventDefault(); zoomAt(clientPoint(e.clientX, e.clientY), e.shiftKey ? 2 : 0.5); });
+$('zin').addEventListener('click', () => zoomAt([cw / 2, ch / 2], 0.6));
+$('zout').addEventListener('click', () => zoomAt([cw / 2, ch / 2], 1 / 0.6));
 $('zfit').addEventListener('click', () => animateTo(fit(targetBox), 600));
 
 // ---------- Borders, polity labels ----------
 let curSi = null, curFocusKey = null, curOwners = null;
-const borderPaths = new Map();
+const borderArcs = new Map();
 const polyCache = new Map();
-/** Merged polygons per polity for a border state: [{o, polys: [{rings, bbox, area}], total}] */
+/** Merged polygons per polity for a border state: [{o, polys: [{rings (unit vectors), cap}]}] */
 function polityPolys(si, own) {
   if (polyCache.has(si)) return polyCache.get(si);
   const groups = new Map();
   for (let i = 0; i < NA; i++) { const o = own[i]; if (o < 0) continue; (groups.get(o) || groups.set(o, []).get(o)).push(geoms[i]); }
   const out = [];
   for (const [o, gs] of groups) {
-    const polys = topojson.merge(topo, gs).coordinates.map((rings) => {
-      let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
-      for (const [x, y] of rings[0]) { if (x < x0) x0 = x; if (y < y0) y0 = y; if (x > x1) x1 = x; if (y > y1) y1 = y; }
-      return { rings, bbox: [x0, y0, x1, y1], area: ringArea(rings[0]) };
-    });
-    out.push({ o, polys, total: polys.reduce((t, p) => t + p.area, 0) });
+    const polys = topojson.merge(topo, gs).coordinates.map((rings) => { const v = vecRings(rings); return { rings: v, cap: capOf(v) }; });
+    out.push({ o, polys });
   }
-  out.sort((a, b) => b.total - a.total);
   if (polyCache.size > 40) polyCache.delete(polyCache.keys().next().value);
   polyCache.set(si, out);
   return out;
@@ -595,21 +590,23 @@ function inRings(rings, x, y) {
   }
   return inside;
 }
-/** Polities with visible area in the current view, largest first: [{o, a (km²), rings}] */
-function visiblePolities(box) {
+/** Polities with visible area in view v, largest first: [{o, a (px²), rings, poly}], in screen pixels. */
+function visiblePolities(v) {
   if (curSi === null) return [];
+  const p = projector(v, cw, ch), box = [0, 0, cw, ch];
   const out = [];
   for (const P of polityPolys(curSi, curOwners)) {
     let best = null, sum = 0;
     for (const pg of P.polys) {
-      const b = pg.bbox;
-      if (b[2] < box[0] || b[0] > box[2] || b[3] < box[1] || b[1] > box[3]) continue;
-      const inside = b[0] >= box[0] && b[2] <= box[2] && b[1] >= box[1] && b[3] <= box[3];
-      const rings = inside ? pg.rings : pg.rings.map((r) => clipRing(r, box)).filter((r) => r.length >= 3);
+      const vis = capVisible(p, pg.cap);
+      if (!vis) continue;
+      const full = screenRings(p, pg.rings, 1);
+      if (!full.length) continue;
+      const rings = vis === 2 ? full : full.map((r) => clipRing(r, box)).filter((r) => r.length >= 3);
       if (!rings.length) continue;
       const a = ringArea(rings[0]);
       sum += a;
-      if (!best || a > best.a) best = { a, rings, poly: pg };
+      if (!best || a > best.a) best = { a, rings, poly: full };
     }
     if (best) out.push({ o: P.o, a: best.a, sum, rings: best.rings, poly: best.poly });
   }
@@ -621,21 +618,22 @@ let labelT = 0;
 function scheduleLabels() { clearTimeout(labelT); labelT = setTimeout(placeLabels, 140); }
 function placeLabels() {
   svg.classList.remove('scrubbing');
+  apply(view);
   gPLbl.textContent = '';
   polScalables = [];
-  const box = [vb[0], vb[1], vb[0] + vb[2], vb[1] + vb[3]];
-  const viewScale = vb[2] / (svg.clientWidth || 1);
-  const px2 = viewScale * viewScale;
   polityLabelOrder.clear();
-  for (const V of visiblePolities(box)) {
+  for (const V of visiblePolities(view)) {
     polityLabelOrder.set(V.o, polityLabelOrder.size);
-    const screenA = V.a / px2;
+    const screenA = V.a;
     if (screenA < 1400) continue;
     const p = POL[V.o];
     let x, y, r;
-    const hint = (p.lxy || []).find(([hx, hy]) => hx > box[0] + vb[2] * 0.08 && hx < box[2] - vb[2] * 0.08 && hy > box[1] + vb[3] * 0.08 && hy < box[3] - vb[3] * 0.08 && inRings(V.poly.rings, hx, hy));
+    const hint = (p.hints || []).map(([lon, lat]) => pj.point(lon, lat))
+      .find(([hx, hy, hz]) => hz > 0 && hx > cw * 0.08 && hx < cw * 0.92 && hy > ch * 0.08 && hy < ch * 0.92 && inRings(V.poly, hx, hy));
     if (hint) { [x, y] = hint; r = Math.max(0, signedDist(V.rings, x, y)); }
-    else [x, y, r] = polylabel(V.rings, Math.max(1.5 * viewScale, Math.sqrt(V.a) / 60));
+    else [x, y, r] = polylabel(V.rings, Math.max(1.5, Math.sqrt(V.a) / 60));
+    const ll = pj.invert(x, y);
+    if (!ll) continue;
     const tier = screenA > 70000 ? 1 : screenA > 16000 ? 2 : 3;
     const fs = tier === 1 ? 14 : tier === 2 ? 11 : 9.5, ls = tier === 1 ? 3.6 : tier === 2 ? 2.2 : 1.1;
     const name = polName(p);
@@ -651,11 +649,12 @@ function placeLabels() {
     const chars = Math.max(...lines.map((s) => s.length));
     let bw = 0; { let x0 = Infinity, x1 = -Infinity; for (const [px] of V.rings[0]) { if (px < x0) x0 = px; if (px > x1) x1 = px; } bw = x1 - x0; }
     // Shown when the text roughly fits: its width within the shape's extent
-    // and its height within the inscribed circle.
-    polScalables.push({ g, x, y, w: Math.min(bw, 4.4 * r), h: 2.6 * r, tw: chars * (fs * 0.62 + ls), th: lines.length * fs * 1.15 });
+    // and its height within the inscribed circle. Sizes are kept per unit of
+    // globe radius, so the test still holds while zooming.
+    polScalables.push({ g, v: unit(ll[0], ll[1]), wr: Math.min(bw, 4.4 * r) / view.k, hr: 2.6 * r / view.k, tw: chars * (fs * 0.62 + ls), th: lines.length * fs * 1.15 });
   }
   for (const l of staticLabels) l.coll = false;
-  apply(vb);
+  apply(view);
   cullLabels();
 }
 /** Show the border state at `key`; polity names follow `nameKey` (a step's own date). */
@@ -671,25 +670,23 @@ function setBorders(key, focus, nameKey = key, deferLabels = false) {
     l.dateOk = visible;
   }
   const namesChanged = curKey !== nameKey && datedPolities.some(p => polName(p, curKey) !== polName(p, nameKey));
-  if (namesChanged) capitalBuffer = null;
   curKey = nameKey;
+  if (namesChanged || labelDatesChanged) syncCapitals();
   if (si === curSi && fk === curFocusKey) {
     if (!deferLabels && (namesChanged || labelDatesChanged)) placeLabels();
     return own;
   }
-  for (let i = 0; i < NA; i++) {
-    const o = own[i];
-    const v = o < 0 ? 'var(--land)' : focus && !focus.has(o) ? `var(--q${o})` : `var(--p${o})`;
-    if (atomFill[i] !== v) { atomEls[i].style.fill = v; atomEls[i].style.stroke = v; atomFill[i] = v; }
-  }
+  const codes = new Int32Array(NA);
+  for (let i = 0; i < NA; i++) { const o = own[i]; codes[i] = o < 0 ? -1 : focus && !focus.has(o) ? 2 * o + 1 : 2 * o; }
+  globe.setFills(codes, curSi !== null && !reduceMotion);
   const changed = si !== curSi;
   curSi = si; curFocusKey = fk; curOwners = own;
   if (changed) {
-    if (!borderPaths.has(si)) {
-      if (borderPaths.size >= 40) borderPaths.delete(borderPaths.keys().next().value);
-      borderPaths.set(si, pathD(topojson.mesh(topo, topo.objects.atoms, (a, b) => a !== b && own[a.i] !== own[b.i])));
+    if (!borderArcs.has(si)) {
+      if (borderArcs.size >= 40) borderArcs.delete(borderArcs.keys().next().value);
+      borderArcs.set(si, globe.bordersFor(own));
     }
-    blineEl.setAttribute('d', borderPaths.get(si));
+    globe.setBorderArcs(borderArcs.get(si));
   }
   if (!deferLabels) placeLabels();
   return own;
@@ -703,21 +700,26 @@ function lineSw(ink) {
 function markSw(kind, ink) {
   return `<svg width="18" height="18" viewBox="-9 -9 18 18" aria-hidden="true" class="side-${ink}">${shape(kind)}</svg>`;
 }
-function boxOf(b) { return [b[0], b[1], b[0] + b[2], b[1] + b[3]]; }
-function otherListHTML(box, exclude) {
-  const minA = ((box[2] - box[0]) * (box[3] - box[1])) / 2500;
-  return visiblePolities(box).filter((V) => V.sum > minA && (!exclude || !exclude.has(V.o))).slice(0, 48)
+function otherListHTML(v, exclude) {
+  const minA = (cw * ch) / 2500;
+  return visiblePolities(v).filter((V) => V.sum > minA && (!exclude || !exclude.has(V.o))).slice(0, 48)
     .map((V) => `<span>${swatch(`var(--${exclude ? 'q' : 'p'}${V.o})`)}${esc(polName(POL[V.o]))}</span>`).join('');
 }
 
 // ---------- Popover ----------
 let selected = null, popItems = [];
 function closePop() { pop.hidden = true; if (selected) { selected.classList.remove('sel'); selected = null; } }
-function openPop(mi) {
+function openPop(mi, turned = false) {
   const it = popItems[mi];
   if (!it) return;
-  const { m, g } = it;
-  const nearby = nearbyCapitals(m.xy[0], m.xy[1], Math.min(7 * S, 8));
+  const { m, g, s } = it;
+  if (!s.vis && !turned) {
+    // On the far side of the globe: turn it round first.
+    animateTo(clampView({ lon: m.ll[0], lat: m.ll[1], k: view.k }), 400);
+    setTimeout(() => openPop(mi, true), reduceMotion ? 0 : 450);
+    return;
+  }
+  const nearby = nearbyCapitals(s.sx, s.sy, Math.min(7, 8 / S));
   showPopover(g, `<p class="pk">${esc(t(`kind.${m.kind}`))}</p><h3>${esc(m.name)}</h3><p class="pd">${esc(formatDate(m.date))}</p><p>${esc(m.text)}</p>` + seatDetails(nearby));
 }
 function nearbyCapitals(x,y,radius) {
@@ -727,7 +729,7 @@ function seatDetails(sites) {
   return sites.flatMap(it => it.seats.map(c => '<p>' + esc(describeSeat(c)) + '</p>')).join('');
 }
 function openCapital(it, point = null) {
-  const nearby = point ? nearbyCapitals(...point, 12 * S).filter(other => other !== it) : [];
+  const nearby = point ? nearbyCapitals(...point, 12).filter(other => other !== it) : [];
   showPopover(it.g, `<p class="pk">${esc(t('capital'))}</p>` + seatDetails([it, ...nearby]));
 }
 function showPopover(g, html) {
@@ -748,43 +750,68 @@ pop.addEventListener('click', (e) => e.stopPropagation());
 svg.addEventListener('click', () => { if (!dragMoved) closePop(); });
 
 // ---------- Step layers (arrows, markers, areas) ----------
-let arrowItems = [];
+let arrowItems = [], stepAreas = [], stepFronts = [];
 function clearStepLayers() {
   gArrows.textContent = ''; gMarkers.textContent = ''; gOv.textContent = '';
-  stepScalables = []; heads = []; arrowItems = []; popItems = [];
+  stepScalables = []; arrowItems = []; stepAreas = []; stepFronts = []; popItems = [];
+}
+/** Re-project the step's areas, fronts and arrows for the current view. */
+function drawStepGeometry() {
+  if (!pj) return;
+  for (const a of stepAreas) a.el.setAttribute('d', ringsPath(pj, a.rings));
+  for (const f of stepFronts) f.el.setAttribute('d', linesPath(pj, f.lines));
+  for (const a of arrowItems) {
+    const pieces = screenLines(pj, [a.line]);
+    a.path.setAttribute('d', pieces.map((p) => 'M' + p.map((q) => q[0].toFixed(1) + ',' + q[1].toFixed(1)).join('L')).join(''));
+    const n = a.line.length;
+    const end = pj.vec(a.line[n - 3], a.line[n - 2], a.line[n - 1]);
+    const last = pieces.at(-1);
+    if (end[2] > 0 && last?.length > 1) {
+      // The head points along the last few pixels of the line.
+      const [x, y] = last.at(-1);
+      let k = last.length - 2;
+      while (k > 0 && Math.hypot(last[k][0] - x, last[k][1] - y) < 4) k--;
+      const ang = Math.atan2(y - last[k][1], x - last[k][0]);
+      a.head.setAttribute('transform', `translate(${(x + Math.cos(ang) * 6).toFixed(1)},${(y + Math.sin(ang) * 6).toFixed(1)}) rotate(${(ang / RAD).toFixed(1)})`);
+      show(a.head, true);
+    } else show(a.head, false);
+  }
 }
 function buildStepLayers(war, step) {
   clearStepLayers();
   const inkOf = (sid) => (war.sides.find((s) => s.id === sid) || { ink: 'none' }).ink;
   const sideIdx = (sid) => Math.max(0, war.sides.findIndex((s) => s.id === sid));
   for (const ar of step.areas) {
-    if (ar.line) el('path', { d: ar.line, class: `front side-${inkOf(ar.side)}` }, gOv);
-    if (ar.style === 'front' || (!ar.atoms.length && !ar.shape)) continue;
-    const d = (ar.atoms.length ? pathD(topojson.merge(topo, ar.atoms.map((i) => geoms[i]))) : '') + (ar.shape || '');
+    if (ar.lines) stepFronts.push({ el: el('path', { class: `front side-${inkOf(ar.side)}` }, gOv), lines: vecRings(ar.lines) });
+    if (ar.style === 'front' || (!ar.atoms.length && !ar.rings)) continue;
+    const rings = ar.atoms.length ? topojson.merge(topo, ar.atoms.map((i) => geoms[i])).coordinates.flat() : [];
+    if (ar.rings) rings.push(...ar.rings);
     let cls = 'ov', fill = null;
     if (ar.style === 'gained') cls += ' ov-gained';
     else if (ar.style === 'pledged') { cls += ' ov-pledged'; fill = hatch('gold', 45, 'hatch-gold', 2.6, 7); }
     else if (ar.style === 'lost') { cls += ' ov-lost'; fill = hatch('lost', 45, 'hatch-lost', 1.6, 8); }
     else if (ar.style === 'outline') cls += ' ov-outline';
     else { const ink = inkOf(ar.side); const rot = HATCH_ROT[sideIdx(ar.side) % 4]; cls += ` ov-hatch side-${ink}`; fill = hatch(`${ink}-${rot}`, rot, 'hatch', 1.8, 7); }
-    const p = el('path', { d, class: cls }, gOv);
+    const p = el('path', { class: cls }, gOv);
     if (fill) p.style.fill = fill;
     if (ar.style !== 'gained' && ar.style !== 'outline' && ar.style !== 'pledged' && ar.style !== 'lost') p.classList.add(`side-${inkOf(ar.side)}`);
+    stepAreas.push({ el: p, rings: vecRings(rings) });
   }
   for (const a of step.arrows) {
     const ink = inkOf(a.side);
     const g = el('g', { class: `side-${ink}` }, gArrows);
-    const p = el('path', { d: a.d, class: 'arrow' }, g);
+    // pathLength 1: the draw-in animation works in fractions of the line,
+    // whatever its length on screen while the globe turns.
+    const p = el('path', { class: 'arrow', pathLength: 1 }, g);
     const hg = el('g', null, g);
     el('path', { d: 'M0,0L-11,-5.5L-8.4,0L-11,5.5Z', class: 'ah' }, hg);
-    heads.push({ g: hg, x: a.end[0], y: a.end[1], ang: a.ang });
-    if (a.label && a.lxy) {
+    if (a.label && a.lab) {
       const lg = el('g', null, g);
       const lt = el('text', { class: 'alabel', 'text-anchor': 'middle', y: 4 }, lg);
       lt.textContent = a.label;
-      stepScalables.push({ g: lg, x: a.lxy[0], y: a.lxy[1] });
+      stepScalables.push({ g: lg, v: unit(a.lab[0], a.lab[1]) });
     }
-    arrowItems.push({ group: g, path: p, head: hg, phase: a.phase });
+    arrowItems.push({ group: g, path: p, head: hg, phase: a.phase, line: vecRings([a.line])[0] });
   }
   step.markers.forEach((m, mi) => {
     const ink = inkOf(m.side);
@@ -792,19 +819,19 @@ function buildStepLayers(war, step) {
     const la = labelAttrs(m.lp);
     g.innerHTML = '<circle r="16" class="hit"/><circle r="11.5" class="ring"/>' + shape(m.kind) +
       `<text class="mlabel" x="${la.x}" y="${la.y}" text-anchor="${la.a}">${esc(m.name)}</text>`;
-    stepScalables.push({ g, x: m.xy[0], y: m.xy[1] });
+    const s = { g, v: unit(m.ll[0], m.ll[1]) };
+    stepScalables.push(s);
     g.addEventListener('click', (e) => { e.stopPropagation(); if (!dragMoved) openPop(mi); });
     g.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPop(mi); } });
-    popItems.push({ m, g });
+    popItems.push({ m, g, s });
   });
 }
 function drawArrows(instant) {
   if (instant || reduceMotion || !arrowItems.length) return;
   const phaseDuration = 700;
   for (const { group, path, head, phase } of arrowItems) {
-    const length = path.getTotalLength();
-    path.style.strokeDasharray = `${length} ${length}`;
-    path.style.strokeDashoffset = length;
+    path.style.strokeDasharray = '1 1';
+    path.style.strokeDashoffset = 1;
     head.style.opacity = 0;
     if (phase !== undefined) group.style.opacity = 0;
   }
@@ -920,17 +947,15 @@ function setYear(y, opts = {}) {
   setBorders(key, null, key, opts.scrub);
   if (opts.scrub) {
     svg.classList.add('scrubbing');
-    syncCapitals(vb, S);
     scheduleLabels();
   }
   const si = stateIndex(key);
   $('bsrc').textContent = si >= 0 ? t('borderSource', { source: T[si].s }) : '';
   renderWarList(); markTimeline();
-  const box = boxOf(fit(FRAME));
-  const listKey = JSON.stringify([si, box, datedPolities.map(p => polName(p))]);
+  const listKey = JSON.stringify([si, cw, ch, datedPolities.map(p => polName(p))]);
   if (listKey !== exploreListKey) {
     exploreListKey = listKey;
-    $('exOtherList').innerHTML = otherListHTML(box, null);
+    $('exOtherList').innerHTML = otherListHTML(fit(HOME), null);
     $('exOthers').hidden = !$('exOtherList').innerHTML;
   }
   if (!opts.noHash) {
@@ -967,15 +992,21 @@ function explore(y) {
   }
   setYear(y ?? year, { noHash: true });
   if (entering) {
-    targetBox = START_BOX || FRAME.slice();
+    targetBox = START_BOX || HOME.slice();
     const target = fit(targetBox);
-    if (target.some((n, i) => n !== vb[i])) animateTo(target, 400);
+    if (!sameView(target, view)) animateTo(target, 400);
     else if (storyWasVisible) placeLabels();
     START_BOX = null;
   }
 }
-// `?box=x,y,w,h` (map km) opens explore mode on that box; used for review screenshots.
-let START_BOX = (() => { const b = new URLSearchParams(location.search).get('box'); const v = b ? b.split(',').map(Number) : []; return v.length === 4 && v.every(Number.isFinite) ? v : null; })();
+// `?box=x,y,w,h` (km in the authoring projection, see tools/box.mjs) opens
+// explore mode on that box; used for review screenshots.
+let START_BOX = (() => {
+  const b = new URLSearchParams(location.search).get('box');
+  const v = b ? b.split(',').map(Number) : [];
+  if (v.length !== 4 || !v.every(Number.isFinite)) return null;
+  return [...laeaInvert(v[0] + v[2] / 2, v[1] + v[3] / 2), v[2], v[3]];
+})();
 
 // ---------- Story mode (one war, or one country's wars) ----------
 const storyEl = $('story'), legendEl = $('legend'), jumpEl = $('jump'), progEl = $('progress');
@@ -983,9 +1014,8 @@ const prevBtn = $('prev'), nextBtn = $('next');
 let story = null, cur = -1, requested = -1, goToken = 0;
 function stepBox(step) {
   const b = step.view;
-  if (!b) return FRAME.slice();
-  const px = b[2] * 0.04, py = b[3] * 0.04;
-  return [b[0] - px, b[1] - py, b[2] + 2 * px, b[3] + 2 * py];
+  if (!b) return HOME.slice();
+  return [b[0], b[1], b[2] * 1.08, b[3] * 1.08];
 }
 function buildNav() {
   jumpEl.innerHTML = ''; progEl.innerHTML = '';
@@ -1016,11 +1046,10 @@ function renderNav(i) {
   prevBtn.disabled = i === 0;
   nextBtn.disabled = i === story.items.length - 1;
 }
-function renderLegend(war, step, own) {
+function renderLegend(war, step) {
   const h = [];
-  const vbox = boxOf(fit(stepBox(step)));
-  const minA = ((vbox[2] - vbox[0]) * (vbox[3] - vbox[1])) / 2500;
-  const present = new Set(visiblePolities(vbox).filter((V) => V.sum > minA).map((V) => V.o));
+  const minA = (cw * ch) / 2500;
+  const present = new Set(visiblePolities(fit(stepBox(step))).filter((V) => V.sum > minA).map((V) => V.o));
   const shown = new Set();
   for (const s of war.sides) for (const p of s.polities) if (present.has(p) && !shown.has(p)) { shown.add(p); h.push(`<span>${swatch(`var(--p${p})`)}${esc(polName(POL[p]))}</span>`); }
   const sideOf = (sid) => war.sides.find((s) => s.id === sid);
@@ -1125,20 +1154,20 @@ async function go(i, instant = false, destination = story, push = false) {
   closePop();
   cur = i;
   const focus = new Set(war.sides.flatMap((s) => s.polities));
-  const own = setBorders(step.borders, focus, step.when || step.borders, true);
+  setBorders(step.borders, focus, step.when || step.borders, true);
   buildStepLayers(war, step);
   renderStory(i, war, step);
-  renderLegend(war, step, own);
+  renderLegend(war, step);
   renderNav(i);
   renderFooter(war);
   targetBox = stepBox(step);
-  $('otherList').innerHTML = otherListHTML(boxOf(fit(targetBox)), focus);
+  $('otherList').innerHTML = otherListHTML(fit(targetBox), focus);
   $('others').hidden = !$('otherList').innerHTML;
   badge.textContent = formatDate(step.date);
   document.title = t('storyTitle', { step: step.title, war: war.name, site: t('siteTitle') });
   history[push ? 'pushState' : 'replaceState'](null, '', `#/${story.kind}/${encodeURIComponent(story.id)}/${i + 1}`);
   drawArrows(instant);
-  if (!instant && !reduceMotion) apply(vb);
+  if (!instant && !reduceMotion) apply(view);
   animateTo(fit(targetBox), instant ? 0 : 400);
 }
 function openStory(kind, id, i, push = false) {
@@ -1168,6 +1197,14 @@ document.addEventListener('keydown', (e) => {
   if (mode === 'story') { e.preventDefault(); go(requested + delta); }
   if (mode === 'explore') { e.preventDefault(); setYear(year + delta); }
 });
+/** Size the canvases and the area layer to the map. */
+function resize() {
+  cw = svg.clientWidth || 1; ch = svg.clientHeight || 1;
+  globe.resize(cw, ch, Math.min(2, window.devicePixelRatio || 1));
+  areasSvg.style.width = cw + 'px'; areasSvg.style.height = ch + 'px';
+  apply(clampView(view));
+}
+new ResizeObserver(() => { if (svg.clientWidth !== cw || svg.clientHeight !== ch) resize(); }).observe(svg);
 let resizeT = null;
 window.addEventListener('resize', () => {
   clearTimeout(resizeT);
@@ -1196,7 +1233,9 @@ document.addEventListener('click', e => {
   openStory(match[1], decodeURIComponent(match[2]), Number(match[3] || 1) - 1, location.hash !== link.hash);
 });
 window.addEventListener('hashchange', route);
-apply(fit(FRAME));
+cw = svg.clientWidth || 1; ch = svg.clientHeight || 1;
+view = fit(HOME);
+resize();
 route();
 
 document.fonts?.ready.then(() => { capitalWidths.clear(); scheduleLabels(); });

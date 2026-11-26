@@ -1,5 +1,6 @@
-# Keep the GitHub Actions in .github/workflows/ up to date.
-# Updates are grouped into one pull request a month so they are easy to review.
+# Keep the GitHub Actions and the npm build tools up to date.
+# Each ecosystem gets one grouped pull request a month so they are easy to
+# review; the Check workflow builds and tests each one.
 version: 2
 updates:
   - package-ecosystem: github-actions
@@ -8,4 +9,12 @@ updates:
       interval: monthly
     groups:
       actions:
+        patterns: ["*"]
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      npm:
         patterns: ["*"]

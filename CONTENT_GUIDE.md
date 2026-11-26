@@ -199,7 +199,9 @@ date, from two sources merged by date:
   | 1066–today | France, Belgium, the Netherlands, Luxembourg | `france-low-countries.yaml` (also `central-europe.yaml` for Alsace-Lorraine, `italy.yaml` for Savoy and Nice 1860, `ww2.yaml` for 1940–1945) |
   | 800–today | Spain, Portugal, Andorra | `iberia.yaml` (Roussillon is in `france-low-countries.yaml`) |
   | 800–today | Italy (without Trentino and South Tyrol), San Marino, Malta, Monaco | `italy.yaml` |
+  | 800–1236 | European Russia, left-bank and southern Ukraine and western Kazakhstan (to 1240 also Belarus, right-bank Ukraine and the Karelian and Ingrian atoms) | `rus-and-russia.yaml` |
   | 1236–today | European Russia and left-bank and southern Ukraine | `rus-and-russia.yaml`, `russia.yaml`, `ww2-east.yaml` |
+  | 800–1801 | Georgia, Armenia, Azerbaijan, the northern Caucasus and Iranian Azerbaijan (East and West Azerbaijan, Ardabil) | `caucasus.yaml` |
   | 1801–today | Georgia, Armenia, Azerbaijan, the northern Caucasus, Kars–Ardahan–Artvin | `caucasus.yaml` |
   | 1809–today | Finland and Åland | `finland.yaml` |
   | 1812–today | Bessarabia and Transnistria (Moldova, Budjak, Khotyn) | `bessarabia.yaml` |
@@ -208,8 +210,7 @@ date, from two sources merged by date:
   | 800–1801 | Kars, Ardahan, Artvin and Iğdır | `anatolia.yaml` |
   | 800–today | Syria, Lebanon, Israel, Palestine, Jordan, Egypt | `levant.yaml` |
 
-  Other event files (`central-europe.yaml`, and `rus-and-russia.yaml` before
-  1236) correct drafts outside any curated range; there, the next keyframe can
+  Other event files (`central-europe.yaml`) correct drafts outside any curated range; there, the next keyframe can
   still override an event. `central-europe.yaml` is a first pass made for the
   Russia wave's maps (historical-basemaps has no snapshot between 1815 and
   1880) and now only holds Austria-Hungary's Austrian half (Istria, Trieste,
@@ -300,6 +301,28 @@ date, from two sources merged by date:
   Ottoman from 1516–1517; Muhammad Ali's Egypt from 1805 (with Syria
   1833–1840); the mandates of 1920; the territories Israel occupied in 1967
   are war-step areas, and Palestine is shown from the 1988 declaration.
+- **Rus' and the steppe.** Before the Rus' the forest peoples are shown as
+  tribal groupings (`slavic-tribes`, `chuds`, `karelians`, `veps`, `volga-finns`,
+  `mordvinians`, `permians`, `bashkirs`, `sami`), and the steppe passes from the
+  Khazars to the Magyars (Etelköz, 830–895), the Pechenegs (895/969), the Oghuz
+  east of the Volga and the Cumans (1061). Kievan Rus' grows from Novgorod (862)
+  and Kiev (882) to the Vyatichi (965), Rostov and Murom (988) and Volhynia
+  (993); Polotsk has its own princes from 1001, and the principalities of the
+  break-up start in 1132.
+- **The Caucasus.** Abbasid Arminiya in 800, then the emirates of Tbilisi
+  (833), Shirvan (861) and Derbent (869), Bagratid Armenia (885) with Tashir
+  (979), Syunik (987) and Khachen, the Sajids, Sallarids, Shaddadids
+  (`arran`) and Rawwadids; Georgia united in 1008; the Seljuks, the
+  Eldiguzids (1136), the Mongols and the Ilkhanate, the Chobanids, Jalayirids,
+  Timurids, Kara Koyunlu and Aq Qoyunlu, then Safavid Persia (1501) and the
+  Ottoman conquests of 1578–1607 and 1723–1735. Georgia splits in 1463–1465
+  into Kartli (`georgia`), Kakheti, Imereti, Samtskhe, Mingrelia, Guria and
+  Abkhazia. Vassal kingdoms stay on the map as their own states. The
+  khanates (Karabakh, Ganja, Sheki, Shirvan, Baku, Quba, Derbent, Talysh,
+  Javad, Erivan, Nakhchivan) are shown from Nader Shah's death (1747);
+  Erivan and Nakhchivan are Persian again from 1795. North of the mountains:
+  Alania, Circassia, Sarir and the Dagestani principalities (`dagestan`),
+  Kabarda and the Chechen and Ingush communities (`vainakh`) after 1395.
 - **The British Isles.** The Anglo-Saxon kingdoms and the Danelaw until England
   (927/954; Mercian client kingdoms are shown as Mercia); Wales until 1283, with
   the Marcher lordships under the English crown from 1070/1093; Pictland, Dál
@@ -352,7 +375,8 @@ date, from two sources merged by date:
   and `HR-19~korcula`, the Italian annexations of 1941; `HR-14~baranja`, north
   of the Drava. In the east (`90-east.geojson`):
   `GR-H~euboea`, `GR-G~achaea` (Achaea and Elis), `GR-L~dodecanese`,
-  `GR-A~thrace` (Western Thrace), `TR-34~asia` (the Asian side of Istanbul),
+  `GR-A~thrace` (Western Thrace), `TR-34~asia` (the Asian side of Istanbul), `RU-DA~derbent` (Derbent and the
+  southern coast of Dagestan),
   `TR-17~gelibolu` (the Gallipoli peninsula), `RS-16~sandzak` and
   `RS-18~sandzak` (the Serbian Sandžak), and `~hu1938` for the four parts of
   southern Slovakia Hungary held in 1938–1945. `HU-BA~habHun`, `HU-SO~ottH` and

@@ -1,10 +1,314 @@
-# The Caucasus from 1801: the Russian conquest, the republics of 1918–1921,
-# the Soviet republics and independence in 1991. Curated from 1801 ("Caucasus"
-# in curated.yaml); the 1800 keyframe gives the starting state (Kartli-Kakheti,
-# Imereti, the khanates under Persian suzerainty, Ottoman Akhaltsikhe and Kars).
+# The Caucasus, 800–today: Georgia, Armenia, Azerbaijan, the northern Caucasus
+# (Dagestan, Chechnya, Ingushetia, Ossetia, Kabarda, Karachay-Cherkessia,
+# Adygea) and Iranian Azerbaijan (East and West Azerbaijan, Ardabil).
+# Curated from 800 ("Caucasus before 1801" and "Caucasus" in curated.yaml), so
+# every change must be an event. Kars, Ardahan, Artvin and Iğdır before 1801 are
+# in anatolia.yaml; Krasnodar and Stavropol are in rus-and-russia.yaml.
+# Vassal kingdoms (Georgia and Shirvan under the Seljuks and Mongols, the
+# Georgian kingdoms under Persia or the Ottomans) stay on the map as their own
+# states; the khanates are shown from Nader Shah's death (1747).
 # The base map follows recognised borders: Abkhazia, South Ossetia and Karabakh
 # after 1991 are shown as areas in the war steps.
 
+- date: "800"
+  note: About 800. The Abbasid Caliphate rules Armenia, Arran, Shirvan and Azerbaijan through its governors (the province of Arminiya), with Tbilisi and Derbent as frontier fortresses. In the west, Leon II has made the Kingdom of Abkhazia independent of Byzantium; the Georgian princes of Iberia, Kakheti and Hereti and the Alans of the northern Caucasus are autonomous, and the Khazars hold the plains north of the mountains.
+  owners:
+    abkhazian-kingdom: [GE-AB, GE-SZ, GE-GU, GE-IM, GE-RL, GE-AJ]
+    georgia: [GE-SJ, GE-SK, GE-MM]
+    kakheti: [GE-KA]
+    hereti: [AZ-BAL, AZ-ZAQ, AZ-QAX, AZ-SA, AZE-5564, AZ-OGU, AZ-QAB]
+    abbasid: [GE-TB, GE-KK, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AM-LO, AM-TV, AZ-QAZ, AZ-AGA, AZ-TOV, AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, AM-VD, AM-SU, AZ-LAN, AZ-QBI, AZ-ZAN, AZ-KAL, AZ-SUS, AZ-XA, AZ-XCI, AZ-XVD, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-SMI, AZ-ISM, AZ-AGU, AZ-QOB, AZ-GOY, AZ-KUR, AZ-UCA, AZ-ZAR, AZ-HAC, AZ-ABS, AZ-BA, AZ-SM, AZ-XIZ, AZ-QBA, AZ-QUS, AZ-XAC, AZ-SBN, AZ-SIY, AZ-SAL, AZ-NEF, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, RU-DA~derbent, IR-01, IR-02, IR-03]
+    alans: [RU-KC, RU-KB, RU-SE, RU-IN]
+    khazars: [RU-AD, RU-CE, RU-DA!]
+- date: "833"
+  note: About 833. Ishaq ibn Ismail, the emir of Tbilisi, stops obeying the caliph. Bugha al-Kabir sacks the city in 853 and kills him, but the emirate goes on under its own emirs.
+  owners:
+    emirate-of-tiflis: [GE-TB, GE-KK]
+- date: "861"
+  note: Haytham ibn Khalid, the Arab governor of Shirvan, takes the title of Shirvanshah and founds a dynasty independent of the caliphs.
+  owners:
+    shirvan: [AZ-SMI, AZ-ISM, AZ-AGU, AZ-QOB, AZ-GOY, AZ-KUR, AZ-UCA, AZ-ZAR, AZ-HAC, AZ-ABS, AZ-BA, AZ-SM, AZ-XIZ, AZ-QBA, AZ-QUS, AZ-XAC, AZ-SBN, AZ-SIY, AZ-SAL, AZ-NEF]
+- date: "869"
+  note: Hashim ibn Suraqa becomes emir of Derbent (Bab al-Abwab) and founds the Hashimid emirate.
+  owners:
+    derbent: [RU-DA~derbent]
+- date: "885"
+  note: The caliph and the Byzantine emperor recognise Ashot I Bagratuni as king of Armenia. The Armenian princes of Syunik, Khachen (Artsakh) and the north acknowledge him.
+  owners:
+    armenia: [AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, AM-VD, AM-LO, AM-TV, AM-SU, AZ-LAN, AZ-QBI, AZ-ZAN]
+    artsakh: [AZ-KAL, AZ-SUS, AZ-XA, AZ-XCI, AZ-XVD]
+- date: "889"
+  note: The caliph appoints Muhammad ibn Abi’l-Saj governor of Azerbaijan. His family, the Sajids, rule Azerbaijan, Arran and Nakhchivan from Ardabil and Maragha as all but independent emirs until 929.
+  owners:
+    sajids: [IR-01, IR-02, IR-03, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL, AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, AZ-QAZ, AZ-AGA, AZ-TOV]
+- date: "893"
+  note: Grigol Hamam of Hereti, whose seat is at Sheki, takes the title of king.
+  owners:
+    hereti: [AZ-BAL, AZ-ZAQ, AZ-QAX, AZ-SA, AZE-5564, AZ-OGU, AZ-QAB]
+- date: "941"
+  note: Marzuban ibn Muhammad of the Sallarid (Musafirid) dynasty takes Azerbaijan and Arran, filling the gap left by the end of the Sajids (929).
+  owners:
+    sallarids: [IR-01, IR-02, IR-03, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL, AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, AZ-QAZ, AZ-AGA, AZ-TOV]
+- date: "971"
+  note: Lashkari ibn Muhammad of the Shaddadid dynasty takes Ganja, and the Shaddadids rule Arran from there; in Azerbaijan the Rawwadids of Tabriz take over from the Sallarids (about 980).
+  owners:
+    arran: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, AZ-QAZ, AZ-AGA, AZ-TOV]
+    rawwadids: [IR-01, IR-02, IR-03, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL]
+- date: "969"
+  note: Sviatoslav of Kiev destroys the Khazar Khaganate (965–969). North of the mountains the Kasogs (Circassians) and Alania are left independent, and the Avar kingdom of Sarir is the strongest power in Dagestan.
+  owners:
+    circassia: [RU-AD]
+    alans: [RU-CE]
+    dagestan: [RU-DA!]
+- date: "979"
+  note: Gurgen (Kiurike I) founds the Armenian kingdom of Tashir-Dzoraget (Lori) as a vassal of the Bagratid kings of Ani.
+  owners:
+    tashir: [AM-LO, AM-TV, AZ-QAZ, AZ-AGA, AZ-TOV]
+- date: "987"
+  note: Smbat of Syunik is crowned king; the Kingdom of Syunik holds the mountains between Lake Sevan and the Aras.
+  owners:
+    syunik: [AM-SU, AM-VD, AZ-LAN, AZ-QBI, AZ-ZAN]
+- date: "1008"
+  note: Bagrat III, heir to both Abkhazia and Tao-Klarjeti, unites the western and eastern Georgian lands into the Kingdom of Georgia.
+  owners:
+    georgia: [GE-AB, GE-SZ, GE-GU, GE-IM, GE-RL, GE-AJ, GE-SJ, GE-SK, GE-MM]
+- date: "1020"
+  note: About 1020. Kvirike III of Kakheti absorbs Hereti and rules the Kingdom of Kakheti-Hereti.
+  owners:
+    kakheti: [AZ-BAL, AZ-ZAQ, AZ-QAX, AZ-SA, AZE-5564, AZ-OGU, AZ-QAB]
+- date: "1045"
+  note: Byzantium annexes the Bagratid kingdom of Ani. The Armenian kingdoms of Lori and Syunik and the principality of Khachen survive as vassals.
+  owners:
+    byzantium: [AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR]
+- date: "1054"
+  note: The Seljuk sultan Tughril marches into Azerbaijan; the Rawwadids of Tabriz submit to him.
+  owners:
+    seljuk: [IR-01, IR-02, IR-03, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL]
+- date: "1064-08-16"
+  note: Sultan Alp Arslan takes Ani from Byzantium.
+  owners:
+    seljuk: [AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR]
+- date: "1075"
+  note: The Seljuks end the Shaddadid emirate of Ganja and occupy Derbent, where local emirs go on ruling under Seljuk and Shirvani overlordship. The Shirvanshahs keep their throne as Seljuk vassals.
+  owners:
+    seljuk: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN]
+- date: "1104"
+  note: David IV the Builder annexes the Kingdom of Kakheti-Hereti.
+  owners:
+    georgia: [GE-KA, AZ-BAL, AZ-ZAQ, AZ-QAX, AZ-SA, AZE-5564, AZ-OGU, AZ-QAB]
+- date: "1118"
+  note: David IV takes Lori from the Kiurikid kings; their heirs keep only a small domain in Tavush.
+  owners:
+    georgia: [AM-LO, AM-TV, AZ-QAZ, AZ-AGA, AZ-TOV]
+- date: "1122"
+  note: After the Battle of Didgori (1121) David IV takes Tbilisi, ending four centuries of Muslim rule there, and makes it his capital.
+  owners:
+    georgia: [GE-TB, GE-KK]
+- date: "1136"
+  note: The Seljuk sultan grants Arran to Eldiguz; within thirty years he and his sons, the Atabegs of Azerbaijan, rule Arran, Azerbaijan and Nakhchivan as the real power behind the sultans.
+  owners:
+    eldiguzids: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, IR-01, IR-02, IR-03, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL]
+- date: "1170"
+  note: The Eldiguzids take Baghaberd, the last fortress of the kings of Syunik.
+  owners:
+    eldiguzids: [AM-SU, AM-VD, AZ-LAN, AZ-QBI, AZ-ZAN]
+- date: "1201"
+  note: Queen Tamar’s generals Zakare and Ivane Mkhargrdzeli take Ani (1199) and Dvin (1203). Northern Armenia is ruled by the Zakarids under the Georgian crown, with the Orbelians in Syunik.
+  owners:
+    georgia: [AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, AM-VD, AM-SU, AZ-LAN, AZ-QBI, AZ-ZAN]
+- date: "1225"
+  note: Jalal al-Din, the last Khwarazmshah, takes Tabriz and ends the Eldiguzid atabegate.
+  owners:
+    khwarazmian-dynasty: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, IR-01, IR-02, IR-03, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL]
+- date: "1231"
+  note: Jalal al-Din is killed, and the Mongol general Chormaqan takes Azerbaijan and Arran.
+  owners:
+    mongol-empire: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, IR-01, IR-02, IR-03, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL]
+- date: "1236"
+  note: The Mongols take Ganja (1235), Lori, Ani and Kars (1236) and the Zakarid lands of Armenia. Queen Rusudan of Georgia submits in 1243, and the kingdom becomes a Mongol vassal.
+  owners:
+    mongol-empire: [AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, AM-VD, AM-SU, AZ-LAN, AZ-QBI, AZ-ZAN]
+- date: "1239"
+  note: The Mongols take Derbent and the northern Caucasus plains; the Alan capital, Magas, falls in the winter of 1239–1240.
+  owners:
+    mongol-empire: [RU-DA~derbent]
+- date: "1256"
+  note: Hülegü founds the Ilkhanate, which rules Azerbaijan, Arran, Armenia and Derbent. Georgia and Shirvan stay on the map as its vassals.
+  owners:
+    ilkhanate: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, IR-01, IR-02, IR-03, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL, AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, AM-VD, AM-SU, AZ-LAN, AZ-QBI, AZ-ZAN, RU-DA~derbent]
+- date: "1259"
+  note: David VI Narin breaks away from Mongol rule and is king in western Georgia, which becomes the Kingdom of Imereti.
+  owners:
+    imereti: [GE-IM, GE-RL, GE-SZ, GE-GU, GE-AB, GE-AJ]
+- date: "1261"
+  note: The Mongols execute Hasan-Jalal, prince of Khachen; his heirs rule as Mongol vassals.
+  owners:
+    ilkhanate: [AZ-KAL, AZ-SUS, AZ-XA, AZ-XCI, AZ-XVD]
+- date: "1266"
+  note: Sargis Jaqeli, lord of Samtskhe, breaks with the Georgian crown and submits directly to the Ilkhan.
+  owners:
+    samtskhe: [GE-SJ]
+- date: "1330"
+  note: "George V the Brilliant reunites the Kingdom of Georgia: he takes Imereti (1329–1330) and brings Samtskhe back under the crown (1334)."
+  owners:
+    georgia: [GE-IM, GE-RL, GE-SZ, GE-GU, GE-AB, GE-AJ, GE-SJ]
+- date: "1338"
+  note: The Ilkhanate breaks up after the death of Abu Said (1335). Hasan Kuchak of the Chobanid family takes Azerbaijan, Arran and Armenia.
+  owners:
+    chobanids: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, IR-01, IR-02, IR-03, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL, AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, AM-VD, AM-SU, AZ-LAN, AZ-QBI, AZ-ZAN, AZ-KAL, AZ-SUS, AZ-XA, AZ-XCI, AZ-XVD, RU-DA~derbent]
+- date: "1360"
+  note: The Golden Horde khan Jani Beg ends the Chobanid state (1357); after his death Shaikh Uvais of the Jalayirids takes Tabriz.
+  owners:
+    jalayirids: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, IR-01, IR-02, IR-03, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL, AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, AM-VD, AM-SU, AZ-LAN, AZ-QBI, AZ-ZAN, AZ-KAL, AZ-SUS, AZ-XA, AZ-XCI, AZ-XVD, RU-DA~derbent]
+- date: "1382"
+  note: Ibrahim I of Derbent becomes Shirvanshah and founds the Derbendi dynasty, which holds Derbent with Shirvan.
+  owners:
+    shirvan: [RU-DA~derbent]
+- date: "1386"
+  note: Timur takes Tabriz and invades Georgia, where he captures Tbilisi. Azerbaijan, Arran and Armenia become part of his empire; Georgia and Shirvan survive as tributaries.
+  owners:
+    timurid-empire: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, IR-01, IR-02, IR-03, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL, AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, AM-VD, AM-SU, AZ-LAN, AZ-QBI, AZ-ZAN, AZ-KAL, AZ-SUS, AZ-XA, AZ-XCI, AZ-XVD]
+- date: "1395"
+  note: Timur defeats Tokhtamysh of the Golden Horde on the Terek and ravages the northern Caucasus; Alania never recovers. Kabarda becomes the leading power of the Circassian princes, and the Chechen and Ingush communities of the mountains are left to themselves.
+  owners:
+    kabarda: [RU-KB, RU-SE]
+    circassia: [RU-KC]
+    vainakh: [RU-CE, RU-IN]
+- date: "1400"
+  note: About 1400. After Timur’s campaigns Sheki is ruled by its own princes.
+  owners:
+    sheki: [AZ-SA, AZE-5564, AZ-OGU, AZ-QAB]
+- date: "1408-04-21"
+  note: Qara Yusuf of the Kara Koyunlu defeats and kills Timur’s son Miran Shah at Sardrud and takes Azerbaijan.
+  owners:
+    kara-koyunlu: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, IR-01, IR-02, IR-03, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL, AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, AM-VD, AM-SU, AZ-LAN, AZ-QBI, AZ-ZAN, AZ-KAL, AZ-SUS, AZ-XA, AZ-XCI, AZ-XVD]
+- date: "1463"
+  note: At Chikhori the rebel Bagrat of Imereti defeats King George VIII. Bagrat becomes king in Imereti, and the princes of Mingrelia, Guria and Abkhazia rule their lands as vassals in name only.
+  owners:
+    imereti: [GE-IM, GE-RL]
+    mingrelia: [GE-SZ]
+    guria: [GE-GU]
+    abkhazia-principality: [GE-AB]
+- date: "1465"
+  note: Qvarqvare II Jaqeli of Samtskhe defeats and captures George VIII at Paravani; Samtskhe breaks away again, and George rules on in Kakheti as its first king.
+  owners:
+    samtskhe: [GE-SJ, GE-AJ, TR-75, TR-08]
+    kakheti: [GE-KA, AZ-BAL, AZ-ZAQ, AZ-QAX]
+- date: "1467-11-11"
+  note: Uzun Hasan of the Aq Qoyunlu defeats and kills Jahan Shah of the Kara Koyunlu.
+  owners:
+    aq-qoyunlu: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, IR-01, IR-02, IR-03, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL, AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, AM-VD, AM-SU, AZ-LAN, AZ-QBI, AZ-ZAN, AZ-KAL, AZ-SUS, AZ-XA, AZ-XCI, AZ-XVD]
+- date: "1501"
+  note: Ismail Safavi defeats the Aq Qoyunlu at Sharur, takes Tabriz and is crowned shah of Persia.
+  owners:
+    persia: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, IR-01, IR-02, IR-03, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL, AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, AM-VD, AM-SU, AZ-LAN, AZ-QBI, AZ-ZAN, AZ-KAL, AZ-SUS, AZ-XA, AZ-XCI, AZ-XVD, AZ-QAZ, AZ-AGA, AZ-TOV]
+- date: "1535"
+  note: Rostom Gurieli receives Adjara, taken from Samtskhe.
+  owners:
+    guria: [GE-AJ]
+- date: "1538"
+  note: Shah Tahmasp I ends the rule of the Shirvanshahs and annexes Shirvan and Derbent.
+  owners:
+    persia: [AZ-SMI, AZ-ISM, AZ-AGU, AZ-QOB, AZ-GOY, AZ-KUR, AZ-UCA, AZ-ZAR, AZ-HAC, AZ-ABS, AZ-BA, AZ-SM, AZ-XIZ, AZ-QBA, AZ-QUS, AZ-XAC, AZ-SBN, AZ-SIY, AZ-SAL, AZ-NEF, RU-DA~derbent]
+- date: "1551"
+  note: Shah Tahmasp I annexes Sheki.
+  owners:
+    persia: [AZ-SA, AZE-5564, AZ-OGU, AZ-QAB]
+- date: "1578"
+  note: Lala Mustafa Pasha defeats the Persians at Çıldır and takes Samtskhe, which becomes the Ottoman province of Childir (Akhaltsikhe).
+  owners:
+    ottoman: [GE-SJ]
+- date: "1590-03-21"
+  note: "Treaty of Constantinople. Persia cedes to the Ottomans the Caucasus lands they had taken since 1578: Erivan, Nakhchivan, Karabakh, Ganja, Shirvan with Derbent, Sheki and Tabriz."
+  owners:
+    ottoman: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, AZ-QAZ, AZ-AGA, AZ-TOV, IR-01, IR-02, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, AM-VD, AM-SU, AZ-LAN, AZ-QBI, AZ-ZAN, AZ-KAL, AZ-SUS, AZ-XA, AZ-XCI, AZ-XVD, AZ-SMI, AZ-ISM, AZ-AGU, AZ-QOB, AZ-GOY, AZ-KUR, AZ-UCA, AZ-ZAR, AZ-HAC, AZ-ABS, AZ-BA, AZ-SM, AZ-XIZ, AZ-QBA, AZ-QUS, AZ-XAC, AZ-SBN, AZ-SIY, AZ-SAL, AZ-NEF, RU-DA~derbent, AZ-SA, AZE-5564, AZ-OGU, AZ-QAB]
+- date: "1604"
+  note: Shah Abbas I retakes Tabriz (1603), Nakhchivan and Erivan.
+  owners:
+    persia: [IR-01, IR-02, IR-03, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, AM-VD, AM-SU, AZ-LAN, AZ-QBI, AZ-ZAN, AZ-KAL, AZ-SUS, AZ-XA, AZ-XCI, AZ-XVD, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR]
+- date: "1607"
+  note: Shah Abbas I completes the reconquest with Ganja (1606), Shirvan, Baku and Derbent.
+  owners:
+    persia: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-QAZ, AZ-AGA, AZ-TOV, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-SMI, AZ-ISM, AZ-AGU, AZ-QOB, AZ-GOY, AZ-KUR, AZ-UCA, AZ-ZAR, AZ-HAC, AZ-ABS, AZ-BA, AZ-SM, AZ-XIZ, AZ-QBA, AZ-QUS, AZ-XAC, AZ-SBN, AZ-SIY, AZ-SAL, AZ-NEF, RU-DA~derbent, AZ-SA, AZE-5564, AZ-OGU, AZ-QAB]
+- date: "1614"
+  note: The Ottomans conquer Adjara.
+  owners:
+    ottoman: [GE-AJ]
+- date: "1695"
+  note: The Lezgin (Avar and Tsakhur) communities of Jar and Belokani defeat the king of Kakheti and keep the lands of old Hereti north of the Alazani as free communities.
+  owners:
+    jar-belokani: [AZ-BAL, AZ-ZAQ, AZ-QAX]
+- date: "1722-08-23"
+  note: "Peter the Great’s Persian campaign: Derbent opens its gates to the Russian army."
+  owners:
+    russia: [RU-DA~derbent]
+- date: "1723-09-12"
+  note: Treaty of Saint Petersburg. The Safavid prince Tahmasp cedes the Caspian coast to Russia; Russian troops hold Baku (taken in July), Quba, Salyan and the Talysh coast.
+  owners:
+    russia: [AZ-ABS, AZ-BA, AZ-SM, AZ-XIZ, AZ-QBA, AZ-QUS, AZ-XAC, AZ-SBN, AZ-SIY, AZ-SAL, AZ-NEF, AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL]
+- date: "1724"
+  note: Treaty of Constantinople between Russia and the Ottomans. Ottoman armies take Tbilisi and Kartli (1723), Erivan, Ganja, Nakhchivan and Karabakh; Shirvan and Sheki submit under Ottoman protection.
+  owners:
+    ottoman: [GE-TB, GE-KK, GE-SK, GE-MM, AZ-QAZ, AZ-AGA, AZ-TOV, AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, AM-VD, AM-SU, AZ-LAN, AZ-QBI, AZ-ZAN, AZ-KAL, AZ-SUS, AZ-XA, AZ-XCI, AZ-XVD, AZ-SMI, AZ-ISM, AZ-AGU, AZ-QOB, AZ-GOY, AZ-KUR, AZ-UCA, AZ-ZAR, AZ-HAC, AZ-SA, AZE-5564, AZ-OGU, AZ-QAB, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR]
+- date: "1725"
+  note: The Ottomans take Tabriz.
+  owners:
+    ottoman: [IR-01, IR-02, IR-03]
+- date: "1730"
+  note: Nader, Tahmasp II’s general, drives the Ottomans out of Tabriz and Azerbaijan.
+  owners:
+    persia: [IR-01, IR-02, IR-03]
+- date: "1732-02-01"
+  note: Treaty of Resht. Russia returns the Persian lands south of the Kura.
+  owners:
+    persia: [AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL, AZ-SAL, AZ-NEF]
+- date: "1735-03-21"
+  note: Treaty of Ganja. Russia returns Baku and Derbent to Persia.
+  owners:
+    persia: [AZ-ABS, AZ-BA, AZ-SM, AZ-XIZ, AZ-QBA, AZ-QUS, AZ-XAC, AZ-SBN, AZ-SIY, RU-DA~derbent]
+- date: "1735-06-19"
+  note: Nader defeats the Ottomans at Yeghevard and retakes Ganja, Tbilisi, Shirvan and Karabakh. Kartli is ruled by Persian governors.
+  owners:
+    persia: [GE-TB, GE-KK, GE-SK, GE-MM, AZ-QAZ, AZ-AGA, AZ-TOV, AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, AM-SU, AZ-LAN, AZ-QBI, AZ-ZAN, AZ-KAL, AZ-SUS, AZ-XA, AZ-XCI, AZ-XVD, AZ-SMI, AZ-ISM, AZ-AGU, AZ-QOB, AZ-GOY, AZ-KUR, AZ-UCA, AZ-ZAR, AZ-HAC, AZ-SA, AZE-5564, AZ-OGU, AZ-QAB, AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR]
+- date: "1736"
+  note: Erivan surrenders to Nader (October 1735), who is crowned shah in 1736 and makes Erivan one of four khanates in the Caucasus.
+  owners:
+    persia: [AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, AM-VD]
+- date: "1743"
+  note: Haji Chalabi leads a rising against Nader’s officials in Sheki and founds the Khanate of Sheki.
+  owners:
+    sheki: [AZ-SA, AZE-5564, AZ-OGU, AZ-QAB, AZ-AGS, AZ-YEV, AZE-5566, AZ-MI]
+- date: "1744"
+  note: Nader gives Kartli to Teimuraz II and Kakheti to his son Erekle II as vassal kings.
+  owners:
+    georgia: [GE-TB, GE-KK, GE-SK, GE-MM]
+- date: "1747-06-20"
+  note: Nader Shah is murdered, and Persian rule north of the Aras falls apart. The khans of Karabakh, Ganja, Shirvan, Baku, Quba, Derbent, Talysh, Javad, Erivan and Nakhchivan rule as independent princes.
+  owners:
+    karabakh-khanate: [AZ-KAL, AZ-SUS, AZ-XA, AZ-XCI, AZ-XVD, AZ-AGM, AZ-FUZ, AZ-CAB, AZ-BAR, AZ-TAR, AZ-AGC, AZ-BEY, AZ-LAN, AZ-QBI, AZ-ZAN, AM-SU]
+    ganja-khanate: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD, AZ-QAZ, AZ-AGA, AZ-TOV]
+    shirvan: [AZ-SMI, AZ-ISM, AZ-AGU, AZ-QOB, AZ-GOY, AZ-KUR, AZ-UCA, AZ-ZAR, AZ-HAC]
+    baku-khanate: [AZ-ABS, AZ-BA, AZ-SM, AZ-XIZ]
+    quba-khanate: [AZ-QBA, AZ-QUS, AZ-XAC, AZ-SBN, AZ-SIY, AZ-SAL, AZ-NEF]
+    derbent: [RU-DA~derbent]
+    talysh-khanate: [AZ-AST, AZ-LA, AZE-5562, AZ-LER, AZ-MAS, AZ-YAR, AZ-CAL, AZ-BIL]
+    javad-khanate: [AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR]
+    erivan-khanate: [AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, TR-76]
+    nakhchivan-khanate: [AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, AM-VD]
+- date: "1762"
+  note: Teimuraz II dies, and Erekle II unites Kartli and Kakheti; the kingdom also holds the Kazakh and Shamshadil lands north of Ganja.
+  owners:
+    georgia: [GE-KA, AZ-QAZ, AZ-AGA, AZ-TOV]
+- date: "1765"
+  note: Fatali Khan of Quba takes Derbent; by the 1780s he also controls Baku and Shirvan, but his realm breaks up after his death (1789).
+  owners:
+    quba-khanate: [RU-DA~derbent]
+- date: "1795"
+  note: Agha Mohammad Khan Qajar receives the submission of Erivan and Nakhchivan on his way to sack Tbilisi; both stay under Persian rule until 1828.
+  owners:
+    persia: [AM-SH, AM-AG, AM-AV, AM-AR, AM-ER, AM-KT, AM-GR, TR-76, AZ-NX, AZ-BAB, AZ-CUL, AZ-ORD, AZ-SAD, AZ-SAH, AZ-SAR, AZ-KAN, AM-VD]
+
+# ---- The Russian conquest, the republics of 1918–1921, the Soviet republics and independence
 - date: "1801-09-12"
   note: Alexander I annexes the kingdom of Kartli-Kakheti (eastern Georgia).
   owners:
@@ -18,13 +322,13 @@
   owners:
     russia: [AZ-GA, AZ-GYG, AZ-SKR, AZ-SMX, AZ-GOR, AZ-DAS, AZ-GAD]
 - date: "1805-05-14"
-  note: The khans of Karabakh, with Zangezur, and Sheki (and in December Shirvan) accept Russian suzerainty, and Russia annexes the Shuragel sultanate around Gyumri.
+  note: The khans of Karabakh, with Zangezur, and Sheki (and in December Shirvan) accept Russian suzerainty, Russia annexes the Shuragel sultanate around Gyumri, and the Khanate of Javad is annexed.
   owners:
-    russia: [AM-SU, AM-SH, AZ-LAN, AZ-SUS, AZ-XA, AZ-XCI, AZ-AGM, AZ-XVD, AZ-FUZ, AZ-CAB, AZ-QBI, AZ-ZAN, AZ-KAL, AZ-TAR, AZ-BAR, AZ-AGC, AZ-BEY, AZ-SA, AZE-5564, AZ-OGU, AZ-QAB, AZ-SMI, AZ-ISM, AZ-AGU, AZ-QOB, AZ-GOY, AZ-KUR, AZ-UCA, AZ-ZAR, AZ-HAC, AZ-YEV, AZE-5566, AZ-MI, AZ-AGS]
+    russia: [AZ-SAB, AZ-SAT, AZ-IMI, AZ-SR, AM-SU, AM-SH, AZ-LAN, AZ-SUS, AZ-XA, AZ-XCI, AZ-AGM, AZ-XVD, AZ-FUZ, AZ-CAB, AZ-QBI, AZ-ZAN, AZ-KAL, AZ-TAR, AZ-BAR, AZ-AGC, AZ-BEY, AZ-SA, AZE-5564, AZ-OGU, AZ-QAB, AZ-SMI, AZ-ISM, AZ-AGU, AZ-QOB, AZ-GOY, AZ-KUR, AZ-UCA, AZ-ZAR, AZ-HAC, AZ-YEV, AZE-5566, AZ-MI, AZ-AGS]
 - date: "1806"
   note: Russian forces take Baku, Derbent and Quba.
   owners:
-    russia: [AZ-QBA, AZ-QUS, AZ-XAC, AZ-SBN, AZ-SIY, AZ-XIZ, AZ-ABS, AZ-BA, AZ-SM]
+    russia: [AZ-QBA, AZ-QUS, AZ-XAC, AZ-SBN, AZ-SIY, AZ-XIZ, AZ-ABS, AZ-BA, AZ-SM, AZ-SAL, AZ-NEF, RU-DA~derbent]
 - date: "1810"
   note: Russia deposes King Solomon II and annexes Imereti. Abkhazia and Guria become Russian protectorates (both are annexed outright later, Guria in 1829).
   owners:
@@ -32,7 +336,7 @@
 - date: "1813-10-24"
   note: Treaty of Gulistan. Persia recognises Russian rule over Georgia, Dagestan and the khanates north of the Aras, including Talysh.
   owners:
-    russia: [AZ-AST, AZ-BIL, AZ-CAL, AZ-IMI, AZ-LA, AZ-LER, AZ-MAS, AZ-NEF, AZ-SAB, AZ-SAL, AZ-SAT, AZ-SR, AZ-YAR, AZE-5562, RU-DA]
+    russia: [AZ-AST, AZ-BIL, AZ-CAL, AZ-LA, AZ-LER, AZ-MAS, AZ-YAR, AZE-5562, RU-DA]
 - date: "1828-02-21"
   note: Treaty of Turkmenchay. Persia cedes the khanates of Erivan and Nakhchivan.
   owners:

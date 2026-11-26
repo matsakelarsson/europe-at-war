@@ -7,7 +7,9 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CACHE = join(ROOT, '.cache');
 
-const NE = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/';
+// Natural Earth is pinned to a commit so the committed geometry can be rebuilt
+// exactly (the Check workflow does this on every pull request).
+const NE = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/';
 const HB = 'https://raw.githubusercontent.com/aourednik/historical-basemaps/master/geojson/';
 
 export const HB_YEARS = [800, 900, 1000, 1100, 1200, 1279, 1300, 1400, 1492, 1500, 1530, 1600, 1650,
@@ -24,7 +26,12 @@ const files = [
 
 async function exists(p) { try { return (await stat(p)).size > 0; } catch { return false; } }
 
+// Optional arguments limit the download to some folders, e.g. `ne` for build-geo.
+// Only when run directly: draft-keyframes imports this file and has its own args.
+const direct = process.argv[1] === fileURLToPath(import.meta.url);
+const only = direct ? process.argv.slice(2) : [];
 for (const [rel, url] of files) {
+  if (only.length && !only.includes(rel.split('/')[0])) continue;
   const out = join(CACHE, rel);
   if (await exists(out)) { console.log('cached  ', rel); continue; }
   await mkdir(dirname(out), { recursive: true });

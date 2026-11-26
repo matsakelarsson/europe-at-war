@@ -25,3 +25,15 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm test
+
+      # Rebuild the base map geometry from Natural Earth and fail if it differs
+      # from the committed site-data/ and content/borders/atoms.json. This covers
+      # the tools only build-geo uses (mapshaper, polygon-clipping).
+      - uses: actions/cache@v6
+        with:
+          path: .cache/ne
+          key: natural-earth-${{ hashFiles('tools/fetch-data.mjs') }}
+      - run: node tools/fetch-data.mjs ne
+      - run: npm run geo
+      - name: Geometry matches the committed files
+        run: git diff --exit-code --stat

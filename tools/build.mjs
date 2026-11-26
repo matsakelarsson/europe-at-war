@@ -22,7 +22,8 @@ import { ROOT, CONTENT, readJSON, readYAML, listFiles, exists, loadPolities } fr
 import { loadLocales, prepareLocaleOutput, compileWarTranslations, emitLocales } from './locales.mjs';
 import { compileCapitals } from './capitals.mjs';
 import { feature } from 'topojson-client';
-import { project, unproject, DATA_CLIP, FRAME, CENTER, boxView } from './projection.mjs';
+import { geoArea } from 'd3-geo';
+import { project, DATA_CLIP, FRAME, CENTER, boxView, localProjection, sphericalCenter } from './projection.mjs';
 // A YAML string containing ": " without quotes parses as a mapping and would show as "[object Object]".
 const NOT_TEXT = 'is not plain text (it contains ": "; put it in quotes)';
 const isObj = (v) => v !== null && typeof v === 'object';
@@ -188,11 +189,86 @@ async function buildLabels(pol, borders, topo) {
   return {labels, ...seats};
 }
 
+// ---------------------------------------------------------------- countries
+/**
+ * For each country code in the catalogue: its world region and a view
+ * [lon, lat, w, h] of its main territory, for the country filter. Far-off
+ * islands and territories stay out of the view: starting from the largest
+ * atom, atoms are gathered while they lie near what has been gathered.
+ */
+async function buildCountries(topo, codes) {
+  const table = await readJSON(join(CONTENT, 'borders/countries.json'));
+  const atomList = await readJSON(join(CONTENT, 'borders/atoms.json'));
+  const isoOf = new Map(atomList.map((a) => [a.id, table[a.country]?.[0] || null]));
+  // A code's region is that of its territory with the most atoms (France's
+  // is Europe's, not Clipperton's).
+  const atomCount = {};
+  for (const a of atomList) atomCount[a.country] = (atomCount[a.country] || 0) + 1;
+  const region = {}, best = {};
+  for (const [a3, [iso, r]] of Object.entries(table)) {
+    if (!iso || !r || (best[iso] ?? -1) >= (atomCount[a3] || 0)) continue;
+    region[iso] = r; best[iso] = atomCount[a3] || 0;
+  }
+  const byIso = new Map();
+  for (const g of topo.objects.atoms.geometries) {
+    const iso = isoOf.get(g.properties.id);
+    if (iso && codes.has(iso)) (byIso.get(iso) || byIso.set(iso, []).get(iso)).push(g);
+  }
+  const out = {};
+  for (const iso of [...codes].sort()) {
+    if (!region[iso]) { warn(`country ${iso}: not in content/borders/countries.json, so not in a region`); continue; }
+    const geoms = byIso.get(iso) || [];
+    if (!geoms.length) { out[iso] = [region[iso]]; continue; }
+    const atoms = geoms.map((g) => {
+      const f = feature(topo, g);
+      const pts = (f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates).flat(2);
+      let area = geoArea(f);
+      if (area > 2 * Math.PI) area = 4 * Math.PI - area; // ring order
+      return { pts, area };
+    });
+    atoms.sort((a, b) => b.area - a.area);
+    const bboxIn = (pr, list) => {
+      let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+      for (const ll of list) { const [x, y] = pr.project(ll); if (!Number.isFinite(x) || !Number.isFinite(y)) continue; x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y); }
+      return [x0, y0, x1, y1];
+    };
+    const pr0 = localProjection(sphericalCenter(atoms[0].pts));
+    for (const a of atoms) a.box = bboxIn(pr0, a.pts);
+    // Group the atoms into clusters of nearby land, largest atoms first, and
+    // keep the cluster with the most land (metropolitan France, not Guiana).
+    const taken = new Set();
+    let main = null;
+    for (const seed of atoms) {
+      if (taken.has(seed) || !Number.isFinite(seed.box[0])) continue;
+      let box = seed.box.slice(), area = seed.area;
+      const members = [seed];
+      taken.add(seed);
+      for (let grew = true; grew;) {
+        grew = false;
+        const reach = Math.max(400, 0.35 * Math.hypot(box[2] - box[0], box[3] - box[1]));
+        for (const a of atoms) {
+          if (taken.has(a) || !Number.isFinite(a.box[0])) continue;
+          const gap = Math.hypot(Math.max(0, a.box[0] - box[2], box[0] - a.box[2]), Math.max(0, a.box[1] - box[3], box[1] - a.box[3]));
+          if (gap > reach) continue;
+          taken.add(a); members.push(a); area += a.area; grew = true;
+          box = [Math.min(box[0], a.box[0]), Math.min(box[1], a.box[1]), Math.max(box[2], a.box[2]), Math.max(box[3], a.box[3])];
+        }
+      }
+      if (!main || area > main.area) main = { box, area, members };
+    }
+    const { box, members: chosen } = main;
+    // Measure again around the middle of what was gathered.
+    const pr = localProjection(pr0.unproject([(box[0] + box[2]) / 2, (box[1] + box[3]) / 2]));
+    const [x0, y0, x1, y1] = bboxIn(pr, chosen.flatMap((a) => a.pts));
+    const w = Math.max(x1 - x0, 300) * 1.15, h = Math.max(y1 - y0, 300) * 1.15;
+    out[iso] = [region[iso], ...pr.boxView([(x0 + x1) / 2 - w / 2, (y0 + y1) / 2 - h / 2, w, h])];
+  }
+  return out;
+}
+
 // ---------------------------------------------------------------- wars
 const r1 = (v) => Math.round(v * 10) / 10;
 const r4 = (v) => Math.round(v * 1e4) / 1e4;
-/** km -> [lon, lat], to about 10 m. */
-const toLL = (xy) => unproject(xy).map(r4);
 /** Points along a cubic Bézier in km, about one per 10 km (p0 itself excluded). */
 function sampleCubic(p0, c1, c2, p1, out) {
   const len = Math.hypot(c1[0] - p0[0], c1[1] - p0[1]) + Math.hypot(c2[0] - c1[0], c2[1] - c1[1]) + Math.hypot(p1[0] - c2[0], p1[1] - c2[1]);
@@ -275,6 +351,20 @@ function buildWar(w, file, ctx) {
   for (const [k, v] of [['name', w.name], ['summary', w.summary], ...(w.notes || []).map((n, i) => [`note ${i + 1}`, n])]) if (isObj(v)) err(`${where}: ${k} ${NOT_TEXT}`);
   const steps = (w.steps || []).map((s, si) => {
     const sw = `${where} step ${si + 1}`;
+    // Curves and the view are worked out in kilometres around the step's own
+    // centre (its view centre, or the middle of everything it shows), where
+    // the projection is true, then turned back into [lon, lat].
+    const isLL = (ll) => Array.isArray(ll) && ll.length === 2 && ll.every(Number.isFinite);
+    const stepPoints = [
+      ...(s.markers || []).map((m) => m.lonlat),
+      ...(s.arrows || []).flatMap((a) => [...(a.via || []), ...(a.bezier || []), a.label_at]),
+      ...(s.areas || []).flatMap((ar) => [...(ar.polygon || []), ...(ar.polygons || []).flat(), ...(ar.line || []), ...(ar.lines || []).flat(),
+        ...(ar.atoms || []).map((id) => ctx.borders.meta.get(String(id).replace(/!$/, ''))?.ll)]),
+      ...(Array.isArray(s.view) ? s.view : []),
+    ].filter(isLL);
+    const { project, unproject, boxView } = localProjection(isLL(s.view?.center) ? s.view.center : sphericalCenter(stepPoints) || CENTER);
+    /** km -> [lon, lat], to about 10 m. */
+    const toLL = (xy) => unproject(xy).map(r4);
     if (!s.title) err(`${sw}: missing title`);
     if (!s.body?.length && w.tier !== 'C') err(`${sw}: missing body`);
     (s.body || []).forEach((b, k) => { if (typeof b !== 'string') err(`${sw}: body paragraph ${k + 1} ${NOT_TEXT}`); });
@@ -329,7 +419,7 @@ function buildWar(w, file, ctx) {
       if (!AREA_STYLES.includes(ar.style)) err(`${aw}: unknown style ${ar.style}`);
       if (ar.side && !sideIds.has(ar.side)) err(`${aw}: unknown side ${ar.side}`);
       const atoms = [...new Set((ar.atoms || []).flatMap((id) => ctx.borders.expand(id, aw)))];
-      for (const i of atoms) { const m = ctx.borders.meta.get(ctx.borders.order[i]); if (m) pts.push(m.xy); }
+      for (const i of atoms) { const m = ctx.borders.meta.get(ctx.borders.order[i]); if (m) pts.push(project(m.ll)); }
       // Free-form shapes, for lines and zones that do not follow atoms (fronts,
       // occupation zones): polygon (one ring), polygons (several), line(s) (open).
       const ring = (r, what) => {
@@ -355,6 +445,19 @@ function buildWar(w, file, ctx) {
       for (const [x, y] of pts) { x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y); }
       const w0 = Math.max(x1 - x0, 260), h0 = Math.max(y1 - y0, 260), cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
       view = [cx - w0 * 0.62, cy - h0 * 0.62, w0 * 1.24, h0 * 1.24];
+      // Make room for marker names, which reach out from their markers:
+      // measured at the scale the box gets on a typical map (645 × 540 px).
+      for (let pass = 0; pass < 2; pass++) {
+        const kmPx = Math.max(view[2] / 645, view[3] / 540);
+        let [bx0, by0] = view, bx1 = view[0] + view[2], by1 = view[1] + view[3];
+        for (const m of markers) {
+          const [mx, my] = project(m.ll), w = (m.name || '').length * 6.6 + 8; // 11.5px semibold, plus margin
+          const [l, r0, t, b] = m.lp === 'l' ? [-11 - w, 14, -14, 14] : m.lp === 't' ? [-w / 2, w / 2, -26, 14] : m.lp === 'b' ? [-w / 2, w / 2, -14, 28] : [-14, 11 + w, -14, 14];
+          const r = r0 + ((my - view[1]) / view[3] < 0.3 ? 48 : 0); // the zoom buttons, top right
+          bx0 = Math.min(bx0, mx + l * kmPx); bx1 = Math.max(bx1, mx + r * kmPx); by0 = Math.min(by0, my + t * kmPx); by1 = Math.max(by1, my + b * kmPx);
+        }
+        view = [bx0, by0, bx1 - bx0, by1 - by0];
+      }
     } else view = null;
     if (view) view = view.map(r1);
     for (const a of arrows) if (a.auto && view) { const off = Math.max(view[2], view[3]) * 0.025; a.lxy = [r1(a.lxy[0] + a.auto[0] * off), r1(a.lxy[1] + a.auto[1] * off)]; }
@@ -455,6 +558,9 @@ async function main() {
       return { id: p.id, name: p.name, color: p.color.toLowerCase(), ink: p.ink || null, countries: p.countries || [], auto: !!p.auto, ...(hints.length ? { hints: hints.map((h) => h.map(r4)) } : {}), ...(names.length ? { names } : {}) };
     }),
     keys: timeline.map((t) => t.k),
+    // Country code -> [region, lon, lat, w, h] (only the region when the
+    // country has no atoms of its own), for the country filter.
+    countries: await buildCountries(topo, new Set(wars.flatMap((w) => w.countries))),
   };
   const borderChunks = new Map();
   {

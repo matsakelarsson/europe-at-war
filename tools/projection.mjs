@@ -47,3 +47,35 @@ export function boxView([x, y, w, h]) {
   const [lon, lat] = unproject([x + w / 2, y + h / 2]);
   return [Math.round(lon * 1e4) / 1e4, Math.round(lat * 1e4) / 1e4, Math.round(w), Math.round(h)];
 }
+
+/**
+ * The same kind of projection centred on another point, for work far from
+ * Europe: step views and arrow curves are worked out around the step's own
+ * centre, where kilometres are true. Same conventions (km, x east, y south).
+ */
+export function localProjection(center) {
+  const pr = atlasProjection().rotate([-center[0], -center[1]]).precision(0);
+  const unproj = (xy) => pr.invert(xy);
+  return {
+    center,
+    project: (lonlat) => { const p = pr(lonlat); return [r1(p[0]), r1(p[1])]; },
+    unproject: unproj,
+    boxView: ([x, y, w, h]) => {
+      const [lon, lat] = unproj([x + w / 2, y + h / 2]);
+      return [Math.round(lon * 1e4) / 1e4, Math.round(lat * 1e4) / 1e4, Math.round(w), Math.round(h)];
+    },
+  };
+}
+
+/** The centre of points on the sphere ([lon, lat] in degrees), or null for none. */
+export function sphericalCenter(points) {
+  let x = 0, y = 0, z = 0;
+  const RAD = Math.PI / 180;
+  for (const [lon, lat] of points) {
+    const c = Math.cos(lat * RAD);
+    x += c * Math.cos(lon * RAD); y += c * Math.sin(lon * RAD); z += Math.sin(lat * RAD);
+  }
+  const n = Math.hypot(x, y, z);
+  if (!points.length || n < 1e-9) return null;
+  return [Math.atan2(y, x) / RAD, Math.asin(z / n) / RAD];
+}

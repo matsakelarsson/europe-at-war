@@ -935,12 +935,39 @@ const countryEl = $('country'), qEl = $('q');
 const regionNames = (() => { try { return new Intl.DisplayNames([locale], { type: 'region' }); } catch { return null; } })();
 const countryName = (cc) => { if (cc === 'xk') return t('kosovo'); try { return regionNames?.of(cc.toUpperCase()) || cc.toUpperCase(); } catch { return cc.toUpperCase(); } };
 const collator = new Intl.Collator(locale);
+// Country code -> [region, lon, lat, w, h]; see buildCountries in tools/build.mjs.
+const COUNTRIES = B.countries || {};
+const regionKey = (r) => 'region' + r[0].toUpperCase() + r.slice(1);
 (function fillCountries() {
   const all = new Set();
   for (const w of WARS) for (const c of w.countries) all.add(c);
-  [...all].map((c) => [c, countryName(c)]).sort((a, b) => collator.compare(a[1], b[1]))
-    .forEach(([c, n]) => { const o = document.createElement('option'); o.value = c; o.textContent = n; countryEl.appendChild(o); });
+  // Grouped by world region, regions and countries in alphabetical order.
+  const groups = new Map();
+  for (const c of all) {
+    const r = COUNTRIES[c]?.[0] || 'other';
+    (groups.get(r) || groups.set(r, []).get(r)).push([c, countryName(c)]);
+  }
+  const regions = [...groups.keys()].map((r) => [r, t(regionKey(r))])
+    .sort((a, b) => (a[0] === 'other') - (b[0] === 'other') || collator.compare(a[1], b[1]));
+  for (const [r, label] of regions) {
+    let parent = countryEl;
+    if (regions.length > 1) { parent = document.createElement('optgroup'); parent.label = label; countryEl.appendChild(parent); }
+    groups.get(r).sort((a, b) => collator.compare(a[1], b[1]))
+      .forEach(([c, n]) => { const o = document.createElement('option'); o.value = c; o.textContent = n; parent.appendChild(o); });
+  }
 })();
+/** Is [lon, lat] on screen (on the near side of the globe, inside the map)? */
+function onScreen(lon, lat) {
+  const [x, y, z] = projector(view, cw, ch).point(lon, lat);
+  return z > 0 && x >= 0 && x <= cw && y >= 0 && y <= ch;
+}
+/** Picking a country whose land is out of sight turns the globe to it. */
+function showCountry(cc) {
+  const c = COUNTRIES[cc];
+  if (mode !== 'explore' || !c || c.length < 5 || onScreen(c[1], c[2])) return;
+  targetBox = c.slice(1);
+  animateTo(fit(targetBox), 900);
+}
 let mode = null, year = 1648;
 $('language').addEventListener('change', () => {
   if (mode === 'explore' && hashT) history.replaceState(null, '', `#/year/${year}`);
@@ -1053,7 +1080,7 @@ function setYear(y, opts = {}) {
 yearEl.addEventListener('input', () => { cancelAnimationFrame(yearRaf); yearRaf = requestAnimationFrame(() => setYear(+yearEl.value, {scrub:true})); });
 yearPrev.addEventListener('click', () => setYear(borderYears.findLast((v) => v < year) ?? timelineStart));
 yearNext.addEventListener('click', () => setYear(borderYears.find((v) => v > year) ?? timelineEnd));
-countryEl.addEventListener('change', () => { renderTimelineBars(); renderWarList(); markTimeline(); });
+countryEl.addEventListener('change', () => { renderTimelineBars(); renderWarList(); markTimeline(); showCountry(countryEl.value); });
 qEl.addEventListener('input', renderWarList);
 
 function explore(y) {
@@ -1075,7 +1102,11 @@ function explore(y) {
   }
   setYear(y ?? year, { noHash: true });
   if (entering) {
-    targetBox = START_BOX || HOME.slice();
+    // Back from a war far from the home view, the map stays in that part of
+    // the world, zoomed out; otherwise it returns to the home view.
+    const was = storyWasVisible ? targetBox : null;
+    const far = was && Math.acos(Math.min(1, unit(was[0], was[1]).reduce((sum, v, i) => sum + v * unit(HOME[0], HOME[1])[i], 0))) * R > Math.max(HOME[2], HOME[3]) / 2;
+    targetBox = START_BOX || (far ? [was[0], was[1], Math.max(was[2] * 2.5, 2500), Math.max(was[3] * 2.5, 2500)] : HOME.slice());
     const target = fit(targetBox);
     if (!sameView(target, view)) animateTo(target, 400);
     else if (storyWasVisible) placeLabels();

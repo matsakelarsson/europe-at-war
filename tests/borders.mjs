@@ -42,3 +42,18 @@ test('translated notes are filed with their century', () => {
     }
   }
 });
+
+test('every country in the catalogue has a region and, with land of its own, a view', () => {
+  const { countries } = load('borders.json');
+  const en = readFileSync(new URL('../site/locales/en.js', import.meta.url), 'utf8');
+  for (const w of load('wars.json')) for (const cc of w.countries) {
+    const c = countries[cc];
+    assert.ok(c, `${w.id}: country ${cc} has no entry`);
+    assert.match(en, new RegExp(`region${c[0][0].toUpperCase()}${c[0].slice(1)}:`), `${cc}: region ${c[0]} has no name`);
+    if (c.length > 1) {
+      assert.equal(c.length, 5, cc);
+      const [lon, lat, width, height] = c.slice(1);
+      assert.ok(Math.abs(lon) <= 180 && Math.abs(lat) <= 90 && width >= 300 && height >= 300 && width < 20000 && height < 20000, `${cc}: view ${c.slice(1)}`);
+    }
+  }
+});

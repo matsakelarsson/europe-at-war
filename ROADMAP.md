@@ -56,10 +56,19 @@ first load 1.05 MB gzip (1.41 MB for French and Swedish), build 2 s.
   the browser instead of `polities.css`); first load 1.03 MB gzip, French and
   Swedish 1.12. If later waves push past the budget, the next lever is loading
   the provinces outside the core after the first render (about 270 KB).*
-- [ ] **Batch 4: a world-ready interface.** The country filter grouped by world
+- [x] **Batch 4: a world-ready interface.** The country filter grouped by world
   region; the home view and the start view decided by the war or year in view;
   texts that say "Europe" made neutral where they describe the map; README and
-  CONTENT_GUIDE updated (regions, border ranges, how to add a region).
+  CONTENT_GUIDE updated (regions, border ranges, how to add a region). *Done:
+  the filter is grouped by UN M49 region (`content/borders/countries.json`);
+  picking a country out of sight turns the globe to its main territory; leaving
+  a war far from Europe keeps the map in that part of the world. Step views and
+  arrow curves are worked out around each step's own centre instead of central
+  Europe, so they are true anywhere on the globe; this also reframed the
+  existing steps in Russia and the Near East (and automatic views now leave
+  room for marker names). The map's accessible name is "Historical map"; the
+  title and subtitle keep "Europe" until the name is decided (see below), as
+  they describe what is on the site.*
 
 ## Phase 3: content, one world region at a time
 

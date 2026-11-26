@@ -29,7 +29,8 @@ whose 67 steps are included here as the Sweden view (`#/country/se`).
   corrected by hand, plus dated events (treaties, annexations) in
   `content/borders/events/`.
 - **Wars.** One YAML file per war in `content/wars/`, with steps, markers,
-  arrows and shaded areas, all in longitude and latitude.
+  arrows and shaded areas, all in longitude and latitude. The country filter
+  groups countries by world region (UN M49).
 - **Loaded when needed.** A first visit loads the map, the polities, the dates
   of all border changes and a short catalogue of wars (names, dates,
   countries). Everything else comes in pieces as the reader needs it: a war's

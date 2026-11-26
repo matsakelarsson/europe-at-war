@@ -111,6 +111,11 @@ steps:
         line: [[20.1, 53.2], [21.0, 52.4], [21.6, 51.8]]      # or lines: [line, …]
 ```
 
+Without a `view`, the build frames everything the step shows (markers,
+arrows, areas) and leaves room for marker names and the zoom buttons. Views
+and arrow curves are worked out in kilometres around the step's own centre, so
+they are as true in Japan or Peru as in Europe.
+
 Shared wars: a war told from several sides is one file. When adding steps to a
 file migrated from Sweden at War, set `countries` on the new steps and leave
 `se` out unless the step is about Sweden, so the Sweden view keeps its 67 steps.
@@ -403,6 +408,29 @@ they ever border, keeping curated colours.
   Run `npm run geo` and `npm run draft` after adding splits (needs
   `npm run fetch-data` once); the draft gives a split atom its own owner only
   where it differs from its parent's.
+
+## Adding a world region
+
+Every province of the world is already on the map, with owners drafted from
+historical-basemaps. A region gets its own history in this order:
+
+1. **Polities.** Put the region's states in `content/polities/<region>.yaml`
+   with `aliases` for the historical-basemaps names they replace (the build
+   then redirects the automatic polities to them; check with
+   `node tools/owner-history.mjs '^<ISO>-'`). Then
+   `node tools/palette.mjs <region>.yaml` (after a build) gives them colours
+   that stand apart from their neighbours.
+2. **Borders.** Correct the drafts with `tools/set-owner.mjs`, put dated
+   changes in `content/borders/events/<region>.yaml`, and, once the region's
+   borders are all events, add a range to `content/borders/curated.yaml` and
+   the table above. Add splits where history needs lines that modern provinces
+   do not have.
+3. **Capitals and labels** in `content/capitals.yaml` and `content/labels.yaml`.
+4. **Wars**, one file each, as above. `countries` uses ISO 3166 codes; the
+   country filter groups them by world region (the UN M49 regions, from
+   `content/borders/countries.json`, which `npm run geo` writes).
+5. **Translations** of names, summaries and step titles into French and
+   Swedish (step bodies may follow later), then `npm run build` and `npm test`.
 
 ## Labels: `content/labels.yaml`
 

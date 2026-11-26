@@ -206,10 +206,35 @@ async function main() {
   await mkdir(join(ROOT, 'site-data'), { recursive: true });
   await writeFile(join(ROOT, 'site-data/atoms.topo.json'), JSON.stringify(topo));
   await writeFile(join(ROOT, 'content/borders/atoms.json'), '[\n' + index.map((a) => JSON.stringify(a)).join(',\n') + '\n]\n');
+  await writeFile(join(ROOT, 'content/borders/countries.json'), countryTable(admin0));
   const size = Buffer.byteLength(JSON.stringify(topo));
   const count = (k) => topo.objects[k].geometries.length;
   console.log(`atoms: ${index.length} (${splits.length} splits), world: ${count('world')}, lakes: ${count('lakes')}, rivers: ${count('rivers')}`);
   console.log(`atoms.topo.json: ${(size / 1e6).toFixed(2)} MB`);
+}
+
+// The country filter groups countries by world region: the UN M49
+// subregions as Natural Earth gives them, merged into eleven groups.
+const REGION_OF = {
+  'Northern Europe': 'europe', 'Western Europe': 'europe', 'Southern Europe': 'europe', 'Eastern Europe': 'europe',
+  'Western Asia': 'westernAsia', 'Central Asia': 'centralAsia', 'Southern Asia': 'southernAsia',
+  'Eastern Asia': 'easternAsia', 'South-Eastern Asia': 'southeastAsia', 'Northern Africa': 'northernAfrica',
+  'Eastern Africa': 'subSaharanAfrica', 'Middle Africa': 'subSaharanAfrica', 'Southern Africa': 'subSaharanAfrica', 'Western Africa': 'subSaharanAfrica',
+  'Northern America': 'northernAmerica', 'Central America': 'latinAmerica', 'Caribbean': 'latinAmerica', 'South America': 'latinAmerica',
+  'Australia and New Zealand': 'oceania', 'Melanesia': 'oceania', 'Micronesia': 'oceania', 'Polynesia': 'oceania',
+};
+// Territories without an ISO code of their own count as the state they are
+// recognised as part of, as on the base map.
+const ISO_OF = { SOL: 'SO', CYN: 'CY' };
+/** content/borders/countries.json: Natural Earth country (ADM0_A3) -> [ISO code, region], for every country, with atoms or not. */
+function countryTable(admin0) {
+  const rows = [];
+  for (const { properties: q } of admin0.features) {
+    const iso = ISO_OF[q.ADM0_A3] || (q.ISO_A2_EH !== '-99' ? q.ISO_A2_EH : null);
+    rows.push([q.ADM0_A3, [iso ? iso.toLowerCase() : null, REGION_OF[q.SUBREGION] || null]]);
+  }
+  rows.sort(([a], [b]) => a.localeCompare(b));
+  return '{\n' + rows.map(([k, v]) => `${JSON.stringify(k)}: ${JSON.stringify(v)}`).join(',\n') + '\n}\n';
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

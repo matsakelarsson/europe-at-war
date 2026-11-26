@@ -240,7 +240,8 @@ date, from two sources merged by date:
   parts of Ukraine stay with the state they are recognised as part of.
   Germany's 1938–1939 annexations, the Protectorate of Bohemia and Moravia,
   the Napoleonic satellites and annexations, and the Allied occupation zones
-  of 1945–1949 are on the base map.
+  of Germany (1945–1949) and Austria (1945–1955, with Vienna under four-power
+  rule like Berlin) are on the base map.
 - **The Holy Roman Empire.** Until 1500 the Empire is one polity (`hre`), with
   Bohemia, Habsburg Austria (from 1282) and the Swiss Confederacy (from 1291)
   separate. From the Diet of Augsburg (1500-07-02) the larger territorial
@@ -331,7 +332,9 @@ date, from two sources merged by date:
   with `~ro1938~1856` for the part Moldavia held 1856–1878), `~pl1930`,
   `~de1930`, `~sax1783`-style `~sax`, `~pr1815` (Saxon until 1815, Prussian
   from 1815), `~sud` (the Sudetenland), `~us1945` (the American zone in
-  Baden-Württemberg) and so on. The German splits are historical regions:
+  Baden-Württemberg), `AT-4~muhl` (the Mühlviertel, Upper Austria north of the
+  Danube, Soviet 1945–1955) and `AT-7~osttirol` (East Tyrol, British 1945–1955;
+  `97-austria.geojson`) and so on. The German splits are historical regions:
   `DE-BY~bav` Old Bavaria, `DE-BY~bav~opf` Upper Palatinate, `DE-SN~olaus` Upper
   Lusatia, `DE-NW~lb` the left bank of the Rhine, `DE-NW~mark`, `DE-HE~hk`
   Hesse-Kassel, `DE-BW~baden~vorder` the Breisgau, and so on (see atoms.json).

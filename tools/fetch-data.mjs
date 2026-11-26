@@ -7,10 +7,11 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CACHE = join(ROOT, '.cache');
 
-// Natural Earth is pinned to a commit so the committed geometry can be rebuilt
-// exactly (the Check workflow does this on every pull request).
+// Both sources are pinned to a commit so the committed geometry and keyframe
+// drafts can be rebuilt exactly (the Check workflow rebuilds the geometry on
+// every pull request). To move to a newer upstream, change the commit here.
 const NE = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/';
-const HB = 'https://raw.githubusercontent.com/aourednik/historical-basemaps/master/geojson/';
+const HB = 'https://raw.githubusercontent.com/aourednik/historical-basemaps/4b5039e50d8d2464b065bd76ad6086cd4597108d/geojson/';
 
 export const HB_YEARS = [800, 900, 1000, 1100, 1200, 1279, 1300, 1400, 1492, 1500, 1530, 1600, 1650,
   1700, 1715, 1783, 1800, 1815, 1880, 1900, 1914, 1920, 1930, 1938, 1945, 1960, 1994, 2000, 2010];

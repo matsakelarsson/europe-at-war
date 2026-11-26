@@ -19,6 +19,7 @@
 <link rel="preload" as="fetch" crossorigin href="data/borders.json">
 <link rel="preload" as="fetch" crossorigin href="data/wars.json">
 <link rel="preload" as="fetch" crossorigin href="data/labels.json">
+<link rel="modulepreload" href="globe.js">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Spectral:ital,wght@0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -42,6 +43,9 @@
 
 <main class="stage">
   <div class="mapwrap" id="mapwrap">
+    <canvas id="mapbase" class="maplayer" aria-hidden="true"></canvas>
+    <svg id="mapareas" class="maplayer" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"></svg>
+    <canvas id="maplines" class="maplayer" aria-hidden="true"></canvas>
     <svg id="map" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Map of Europe" data-i18n-label="map"></svg>
     <div class="mapctl" aria-label="Map controls" data-i18n-label="mapControls">
       <button type="button" id="zin" aria-label="Zoom in" data-i18n-label="zoomIn">+</button>

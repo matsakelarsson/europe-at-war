@@ -335,7 +335,7 @@ date, from two sources merged by date:
   [polities…] [--atoms <regex>]` lists who owns what on a date, and
   `node tools/owner-history.mjs <regex> [from] [to]` lists every change to the
   matching atoms with its source. To look at an area, open
-  `/?box=<x,y,w,h>#/year/<year>` (map km; `node tools/box.mjs <lon> <lat> <width-km>`
+  `/?box=<x,y,w,h>#/year/<year>` (km in the authoring projection, `tools/projection.mjs`; `node tools/box.mjs <lon> <lat> <width-km>`
   prints the box).
 - **Polities in the drafts.** historical-basemaps lumps some unions together
   (the Polish–Lithuanian union, Denmark–Norway around 1000). The site keeps the
@@ -423,8 +423,8 @@ for a sourced period without a single seat. Omit the name and coordinates
 for those periods. For a documented city with a disputed location, keep its
 name and source, omit the coordinates, and use `Unlocated seat`.
 Each build emits `dist/data/capital-coverage.json`, with one entry per mapped
-owner and period. It identifies unresolved periods and seats outside the map.
-The browser loads only the compiled in-frame records and dated changes.
+owner and period. It identifies unresolved periods.
+The browser loads only the compiled located records and dated changes.
 
 Physical references live in `content/labels.yaml`. Set `min_zoom` to the first
 scale where the feature helps orientation. For a river, set `river` to its

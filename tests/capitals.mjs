@@ -33,7 +33,7 @@ test('point-only city-state and concurrent seats', () => {
   assert.deepEqual(seats('1900-12-31','austria-hungary').map(c => c.name).sort(), ['Budapest','Vienna']);
   assert.equal(seats('1000-12-31','hre').length, 0);
   const prague = seats('1600-12-31','hre').find(c => c.name === 'Prague');
-  assert.deepEqual(prague.xy, seats('1600-12-31','habsburg').find(c => c.name === 'Prague').xy);
+  assert.deepEqual(prague.ll, seats('1600-12-31','habsburg').find(c => c.name === 'Prague').ll);
 });
 
 test('coverage audit accounts for every territorial owner and reports gaps', () => {

@@ -1,5 +1,4 @@
 // Resolve capital tenures once at build time and audit each mapped owner-period.
-import { project, FRAME } from './projection.mjs';
 
 export function compileCapitals(rows, pol, borders, dateKey, err) {
   const pointOwners = new Set();
@@ -30,11 +29,12 @@ export function compileCapitals(rows, pol, borders, dateKey, err) {
       err('Invalid capital tenure: ' + JSON.stringify(row));
       continue;
     }
-    const xy = location ? project(lonlat) : null;
-    const inFrame = xy && xy[0] >= FRAME.x0 && xy[0] <= FRAME.x1 && xy[1] >= FRAME.y0 && xy[1] <= FRAME.y1;
+    // The globe shows the whole world, so every located seat is on the map.
+    const ll = location ? lonlat.map(v => Math.round(v * 1e4) / 1e4) : null;
+    const inFrame = !!ll;
     const owner = pol.index.get(polity), id = records.length;
-    const auditName = unlocated ? name + ' (location unresolved)' : name ? name + (inFrame ? '' : ' (outside map)') : role;
-    records.push({name, xy, owner, role, inFrame, auditName, pointOnly: row.point_only});
+    const auditName = unlocated ? name + ' (location unresolved)' : name || role;
+    records.push({name, ll, owner, role, inFrame, auditName, pointOnly: row.point_only});
     if (row.point_only) pointOwners.add(owner);
     add(byOwner, owner, id);
     add(starts, dateKey(from) || '0000-00-00', id);
@@ -69,9 +69,9 @@ export function compileCapitals(rows, pol, borders, dateKey, err) {
     }
     for (const i of active) if (!rendered.has(i)) {
       if (!publishedIndex.has(i)) {
-        const {name, xy, owner, role} = records[i];
+        const {name, ll, owner, role} = records[i];
         publishedIndex.set(i, published.length);
-        published.push({name, xy, owner, ...(role && {role})});
+        published.push({name, ll, owner, ...(role && {role})});
       }
       added.push(publishedIndex.get(i)); rendered.add(i);
     }

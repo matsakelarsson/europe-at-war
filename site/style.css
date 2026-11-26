@@ -11,6 +11,7 @@
   --river: #a9c2d2;
   --river-major: #83a4b9;
   --land: #e5e5de;
+  --space: #e3e6e6;
   --bline: rgba(38, 44, 52, 0.42);
   --coast: rgba(95, 125, 145, 0.65);
   --accent: #24579a;
@@ -28,7 +29,7 @@
 }
 :root[data-theme="dark"] {
   --bg: #11161c; --surface: #1a2129; --ink: #e6eaee; --muted: #9ba7b3; --line: #2c3640;
-  --sea: #172633; --sea-ink: #7f9db3; --river: #2a4458; --land: #262c31; --bline: rgba(220, 228, 236, 0.38); --coast: rgba(127, 157, 179, 0.6);
+  --sea: #172633; --sea-ink: #7f9db3; --river: #2a4458; --land: #262c31; --space: #0b0f13; --bline: rgba(220, 228, 236, 0.38); --coast: rgba(127, 157, 179, 0.6);
   --river-major: #567d98;
   --sea-center: #1c2e3d; --sea-edge: #14222e;
   --accent: #86b0e8; --gold: #f2c94c; --gold-fill: #8f7019;
@@ -65,8 +66,10 @@ h1 a.home { color: inherit; text-decoration: none; }
 .sub { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.95rem; max-width: 70ch; }
 
 .stage { max-width: 1440px; margin: 0 auto; padding: 4px 16px 20px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
-.mapwrap { --sea-gradient: radial-gradient(ellipse, var(--sea-center), var(--sea-edge)); position: relative; aspect-ratio: 1 / 1; max-height: 76vh; width: 100%; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--sea) var(--sea-gradient); box-shadow: 0 2px 8px rgb(0 0 0 / 5%); }
-#map { display: block; width: 100%; height: 100%; touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; }
+.mapwrap { position: relative; aspect-ratio: 1 / 1; max-height: 76vh; width: 100%; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--space); box-shadow: 0 2px 8px rgb(0 0 0 / 5%); }
+#map { position: relative; display: block; width: 100%; height: 100%; touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; }
+/* The globe's canvases and the step areas, under #map and sized to it by app.js. */
+.maplayer { position: absolute; inset-block-start: 0; left: 0; display: block; pointer-events: none; }
 #map.panning { cursor: grabbing; }
 @media (min-width: 900px) {
   .stage { grid-template-columns: minmax(0, 1fr) 400px; gap: 22px; align-items: start; }
@@ -85,25 +88,17 @@ h1 a.home { color: inherit; text-decoration: none; }
 .yearbadge { position: absolute; inset-inline-start: 10px; inset-block-start: 10px; max-inline-size: calc(100% - 76px); padding: 6px 10px 5px; font: 600 clamp(1.05rem, 2vw, 1.35rem)/1.2 var(--display); color: var(--ink); overflow-wrap: anywhere; pointer-events: none; font-variant-numeric: tabular-nums; z-index: 2; }
 .yearbadge:empty { display: none; }
 
-/* Map */
-.graticule { display: none; fill: none; stroke: var(--sea-ink); stroke-width: 0.7; stroke-opacity: 0.23; vector-effect: non-scaling-stroke; }
-#map.overview .graticule { display: inline; }
-.graticule, .atom, .relief, .lakes, .rivers, .bline, .coast, .lbl { pointer-events: none; }
-.atom { fill: var(--land); stroke: var(--land); stroke-width: 0.6; vector-effect: non-scaling-stroke; transition: fill 0.6s ease, stroke 0.6s ease; }
-.relief { will-change: transform; }
-.lakes { fill: var(--sea); stroke: var(--coast); stroke-width: 0.78; vector-effect: non-scaling-stroke; }
-.rivers { fill: none; stroke: var(--river); stroke-width: 0.8; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
-.rivers.major { stroke: var(--river-major); stroke-width: 1.1; }
-.bline { fill: none; stroke: var(--bline); stroke-width: 0.95; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
-.coast { fill: none; stroke: var(--coast); stroke-width: 0.95; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+/* Map. The base map is drawn on canvas by globe.js from these colours:
+   --space, --sea*, --land, --river*, --bline, --coast and the polity colours. */
+.lbl { pointer-events: none; }
 
-.ov { pointer-events: none; stroke-width: 1.2; vector-effect: non-scaling-stroke; animation: ovin 0.5s ease; }
+.ov { pointer-events: none; stroke-width: 1.2; animation: ovin 0.5s ease; }
 @keyframes ovin { from { opacity: 0; } to { opacity: 1; } }
 .ov-hatch { stroke: var(--mc); fill-opacity: 0.52; stroke-opacity: 0.78; }
 .ov-gained { fill: var(--gold-fill); fill-opacity: 0.82; stroke: var(--gold); }
 .ov-pledged { fill-opacity: 0.72; stroke: var(--gold); }
 .ov-lost { stroke: var(--ink); stroke-dasharray: 4 3; }
-.front { fill: none; stroke: var(--mc); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; pointer-events: none; animation: ovin 0.5s ease; }
+.front { fill: none; stroke: var(--mc); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; animation: ovin 0.5s ease; }
 .ov-outline { fill: none !important; stroke: var(--ink); stroke-width: 2.2; stroke-dasharray: 7 4; }
 .hatch { fill: var(--mc); }
 .hatch-gold { fill: var(--gold); }
@@ -120,7 +115,7 @@ h1 a.home { color: inherit; text-decoration: none; }
 .lbl-small { font-size: 11.5px; }
 .lbl-other { fill: var(--muted); opacity: 0.85; }
 
-.arrow { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: var(--sw, 3); }
+.arrow { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3.2px; }
 .ah { stroke: none; }
 .side-blue { --mc: var(--ink-blue); } .side-red { --mc: var(--ink-red); } .side-purple { --mc: var(--ink-purple); }
 .side-orange { --mc: var(--ink-orange); } .side-green { --mc: var(--ink-green); } .side-teal { --mc: var(--ink-teal); }
@@ -261,7 +256,7 @@ footer ul { margin: 4px 0 8px; padding-inline-start: 18px; columns: 2 260px; }
 footer li { margin: 0 0 2px; }
 
 @media (prefers-reduced-motion: reduce) {
-  .atom, .ov, .front, .progress button::before { transition: none; animation: none; }
+  .ov, .front, .progress button::before { transition: none; animation: none; }
 }
 
 .capital { cursor: pointer; }
@@ -275,7 +270,7 @@ footer li { margin: 0 0 2px; }
 
 @media (max-width: 899px) and (pointer: coarse) {
   .mapwrap { --map-footer-height: 54px; aspect-ratio: auto; padding-block-end: var(--map-footer-height); background: var(--surface); }
-  #map { aspect-ratio: 1; height: auto; max-height: calc(76vh - var(--map-footer-height) - 2px); background: var(--sea) var(--sea-gradient); }
+  #map { aspect-ratio: 1; height: auto; max-height: calc(76vh - var(--map-footer-height) - 2px); }
   .mapwrap::after { content: ''; position: absolute; inset-inline: 0; inset-block-end: calc(var(--map-footer-height) - 1px); border-top: 1px solid var(--line); pointer-events: none; }
   .yearbadge { max-inline-size: calc(100% - 20px); }
   .mapctl { inset-block: auto 4px; flex-direction: row; box-shadow: none; }

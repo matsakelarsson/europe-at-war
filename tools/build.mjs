@@ -2,7 +2,8 @@
 //
 //   dist/index.html, app.js, style.css, vendor/…    (copied from site/)
 //   dist/data/atoms.topo.json                      (from site-data/, see build-geo.mjs)
-//   dist/data/borders.json                         polities + border timeline
+//   dist/data/borders.json                         polities + the dates of border changes
+//   dist/data/borders/<century>.json               those changes and their notes, by century
 //   dist/data/polities.css                         polity colours, light and dark
 //   dist/data/wars.json                            catalogue: names, dates, countries
 //   dist/data/catalogue/<century>.json             summaries and step titles, by start century
@@ -384,7 +385,7 @@ function buildWar(w, file, ctx) {
   };
 }
 
-/** The catalogue file a war's details are in: its start century ("1648-…" -> "1600"). site/app.js has the same rule. */
+/** The century file a date key belongs to ("1648-…" -> "1600"), for the catalogue and the borders. site/app.js has the same rule. */
 const catalogueKey = (sk) => (sk || '0000').slice(0, 2) + '00';
 
 // ---------------------------------------------------------------- main
@@ -407,6 +408,7 @@ async function main() {
     await rm(OUT, { recursive: true, force: true });
     await mkdir(join(OUT, 'data/wars'), { recursive: true });
     await mkdir(join(OUT, 'data/catalogue'), { recursive: true });
+    await mkdir(join(OUT, 'data/borders'), { recursive: true });
     await cp(join(ROOT, 'site'), OUT, { recursive: true });
   }
 
@@ -442,23 +444,37 @@ async function main() {
   }
   wars.sort((a, b) => (a.sk < b.sk ? -1 : a.sk > b.sk ? 1 : a.name.localeCompare(b.name)));
 
+  // The border timeline is split by century: borders.json has every change's
+  // date, and data/borders/<century>.json the changes themselves (atom index,
+  // polity index pairs) and their notes, after a full snapshot of the owners
+  // before the century's first change. The site loads the century it shows.
+  const timeline = borders.timeline.map((t) => ({ d: t.d, k: t.k, s: t.s, c: t.c }));
   const bordersOut = {
     home: boxView([FRAME.x0, FRAME.y0, FRAME.x1 - FRAME.x0, FRAME.y1 - FRAME.y0]),
     // site/relief.webp: a raster over DATA_CLIP in the authoring projection.
     relief: { bounds: [DATA_CLIP.x0, DATA_CLIP.y0, DATA_CLIP.x1 - DATA_CLIP.x0, DATA_CLIP.y1 - DATA_CLIP.y0], center: CENTER },
-    atoms: borders.order,
-    names: borders.order.map((id) => borders.meta.get(id)?.name || id),
     polities: pol.list.map((p) => {
       const hints = p.label ? (Array.isArray(p.label[0]) ? p.label : [p.label]) : [];
       const names = (p.names || []).map(([until, n]) => [dateKey(until), n]);
       for (const [k] of names) if (!k) err(`polity ${p.id}: bad date in names`);
       return { id: p.id, name: p.name, ink: p.ink || null, countries: p.countries || [], auto: !!p.auto, ...(hints.length ? { hints: hints.map((h) => h.map(r4)) } : {}), ...(names.length ? { names } : {}) };
     }),
-    timeline: borders.timeline.map((t) => ({ d: t.d, k: t.k, s: t.s, c: t.c })),
+    keys: timeline.map((t) => t.k),
   };
-  await emitLocales(locales, bordersOut, labels, emit, err);
+  const borderChunks = new Map();
+  {
+    const owners = new Array(borders.order.length).fill(-1);
+    timeline.forEach((t, i) => {
+      const century = catalogueKey(t.k);
+      if (!borderChunks.has(century)) borderChunks.set(century, { start: i, base: owners.slice(), entries: [] });
+      borderChunks.get(century).entries.push({ d: t.d, s: t.s, c: t.c });
+      for (let j = 0; j < t.c.length; j += 2) owners[t.c[j]] = t.c[j + 1];
+    });
+  }
+  await emitLocales(locales, { polities: bordersOut.polities, timeline }, borderChunks, labels, emit, err);
   await emit('data/atoms.topo.json', topoText);
   await emit('data/borders.json', JSON.stringify(bordersOut));
+  for (const [century, chunk] of borderChunks) await emit(`data/borders/${century}.json`, JSON.stringify(chunk));
   await emit('data/polities.css', pol.css);
   await emit('data/wars.json', JSON.stringify(wars));
   for (const [century, entries] of catalogue) {
@@ -476,8 +492,16 @@ async function main() {
   };
   console.log(`polities ${pol.list.length}, atoms ${borders.order.length}, timeline entries ${borders.timeline.length}, wars ${wars.length}`);
   if (!CHECK) {
-    const base = await size(first);
-    const perLocale = await Promise.all(locales.map(async ({ code }) => [code, await size([...first, `data/locales/${code}/index.json`])]));
+    // Showing a year also takes one century of borders and one of the
+    // catalogue: count the largest of each.
+    const largest = async (dir) => {
+      let best = null, bytes = -1;
+      for (const f of await listFiles(join(OUT, dir), '.json')) { const n = (await stat(join(OUT, dir, f))).size; if (n > bytes) { bytes = n; best = `${dir}/${f}`; } }
+      return best ? [best] : [];
+    };
+    const centuries = async (prefix) => [...await largest(`${prefix}borders`), ...await largest(`${prefix}catalogue`)];
+    const base = await size([...first, ...await centuries('data/')]);
+    const perLocale = await Promise.all(locales.map(async ({ code }) => [code, await size([...first, ...await centuries('data/'), `data/locales/${code}/index.json`, ...await centuries(`data/locales/${code}/`)])]));
     const mb = (b) => (b / 1e6).toFixed(2);
     console.log(`first load: ${mb(base.raw)} MB raw, ${mb(base.gz)} MB gzip` + perLocale.map(([code, s]) => `; ${code} ${mb(s.gz)}`).join(''));
     // The budget that keeps the site fast and inside GitHub Pages' free bandwidth (ROADMAP.md).

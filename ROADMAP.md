@@ -34,12 +34,13 @@ first load 1.05 MB gzip (1.41 MB for French and Swedish), build 2 s.
   way: the per-language index keeps war names only. A size test fails the build
   above the first-load budget. *Done: first load 1.05 → 0.91 MB gzip (French and
   Swedish 1.41 → 1.03); `wars.json` 162 → 16 KB gzip.*
-- [ ] **Batch 2: the border timeline on demand.** `borders.json` keeps the
+- [x] **Batch 2: the border timeline on demand.** `borders.json` keeps the
   polities and the dates of border changes. The changes themselves and their
   notes move to one file per century in `data/borders/`, each starting from a full
   snapshot, so the map needs only the century it shows. Translated border notes
   split the same way. The tools that read the built timeline read the century
-  files.
+  files. *Done: first load 0.77 MB gzip (French and Swedish 0.79), or 0.82
+  (0.91) counting the largest century files, which a visit also needs.*
 
 ## Phase 2: a world base map
 

@@ -93,7 +93,12 @@ export async function compileWarTranslations(locales, war, entry, emit, err) {
   }
 }
 
-export async function emitLocales(locales, borders, labels, emit, err) {
+/**
+ * Each language's index (map strings, war names) and, per century, its
+ * catalogue strings and border notes. `borders` has the full timeline (with
+ * notes); `borderChunks` says which century file each note goes in.
+ */
+export async function emitLocales(locales, borders, borderChunks, labels, emit, err) {
   const strings = {};
   localizeMap(borders, labels, (category, value) => {
     (strings[category] ??= new Set()).add(value);
@@ -108,11 +113,18 @@ export async function emitLocales(locales, borders, labels, emit, err) {
       if (!Object.hasOwn(strings, category)) err(`Locale ${code}: unknown map category ${category}`);
       else translatedMap[category] = dictionary(value, strings[category], `Locale ${code}, map ${category}`, err);
     }
+    // Border notes go with their century, like the notes themselves.
+    const notes = translatedMap.borderSources || {};
+    delete translatedMap.borderSources;
+    for (const [century, chunk] of borderChunks) {
+      const own = Object.fromEntries(chunk.entries.filter((e) => Object.hasOwn(notes, e.s)).map((e) => [e.s, notes[e.s]]));
+      if (Object.keys(own).length) await emit(`data/locales/${code}/borders/${century}.json`, JSON.stringify(own));
+    }
     await emit(`data/locales/${code}/index.json`, JSON.stringify({ map: translatedMap, names: sorted(names), stories: stories.sort() }));
     for (const [century, entries] of catalogue) await emit(`data/locales/${code}/catalogue/${century}.json`, JSON.stringify(sorted(entries)));
   }
 }
 
 export async function prepareLocaleOutput(locales, out) {
-  await Promise.all(locales.flatMap(({ code }) => ['wars', 'catalogue'].map(dir => mkdir(join(out, 'data', 'locales', code, dir), { recursive: true }))));
+  await Promise.all(locales.flatMap(({ code }) => ['wars', 'catalogue', 'borders'].map(dir => mkdir(join(out, 'data', 'locales', code, dir), { recursive: true }))));
 }

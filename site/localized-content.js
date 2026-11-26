@@ -42,7 +42,8 @@ export function localizeMap(borders, labels, translate) {
     polity.name = translate('polities', polity.name);
     for (const name of polity.names || []) name[1] = translate('polities', name[1]);
   }
-  for (const row of borders.timeline) row.s = translate('borderSources', row.s);
+  // On the site, border notes are translated as their century loads.
+  for (const row of borders.timeline || []) row.s = translate('borderSources', row.s);
   for (const label of labels.labels) label.t = translate('labels', label.t);
   for (const seat of labels.capitals || []) {
     seat.name = translate('capitals', seat.name);

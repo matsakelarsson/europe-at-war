@@ -1,10 +1,8 @@
-// Owner history of atoms, from the last build (dist/data/borders.json).
+// Owner history of atoms, from the last build (dist/data/).
 //   node tools/owner-history.mjs 'IS-|FRO' [from-year] [to-year]
 // Prints each change: date, atom, new owner, and the entry's source.
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
-import { ROOT } from './lib.mjs';
-const B = JSON.parse(readFileSync(join(ROOT, 'dist/data/borders.json'), 'utf8'));
+import { loadBuiltBorders } from './built-borders.mjs';
+const B = loadBuiltBorders();
 const [pat, from = '0', to = '9999'] = process.argv.slice(2);
 const re = new RegExp(pat);
 for (const t of B.timeline) {

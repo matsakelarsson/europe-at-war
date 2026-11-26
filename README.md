@@ -27,6 +27,13 @@ whose 67 steps are included here as the Sweden view (`#/country/se`).
   `content/borders/events/`.
 - **Wars.** One YAML file per war in `content/wars/`, with steps, markers,
   arrows and shaded areas, all in longitude and latitude.
+- **Loaded when needed.** A first visit loads the map, the polities, the dates
+  of all border changes and a short catalogue of wars (names, dates,
+  countries). Everything else comes in pieces as the reader needs it: a war's
+  steps when it is opened (`data/wars/`), war summaries and step titles per
+  century (`data/catalogue/`), and border changes and their notes per century
+  (`data/borders/`). The build fails if a first visit would load more than
+  1.2 MB gzip; see [ROADMAP.md](ROADMAP.md).
 
 See [CONTENT_GUIDE.md](CONTENT_GUIDE.md) for the data formats and how to write
 a war.

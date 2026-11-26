@@ -2,9 +2,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { loadBuiltBorders } from '../tools/built-borders.mjs';
 const load = name => JSON.parse(readFileSync(new URL('../dist/data/' + name, import.meta.url)));
 const {capitals, capitalTimeline} = load('labels.json');
-const {polities, timeline} = load('borders.json');
+const {polities, timeline} = loadBuiltBorders();
 
 function seats(date, owner) {
   const ids = new Set();

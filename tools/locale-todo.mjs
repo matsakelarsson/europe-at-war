@@ -10,6 +10,7 @@ import { join } from 'node:path';
 import YAML from 'yaml';
 import { ROOT, CONTENT } from './lib.mjs';
 import { localizeWar, localizeMap } from '../site/localized-content.js';
+import { loadBuiltBorders } from './built-borders.mjs';
 
 const args = process.argv.slice(2);
 const code = args.find((a) => !a.startsWith('--'));
@@ -23,7 +24,7 @@ const folder = join(CONTENT, 'locales', code);
 const out = { map: {}, wars: {} };
 
 if (wantMap) {
-  const borders = JSON.parse(readFileSync(join(ROOT, 'dist/data/borders.json'), 'utf8'));
+  const borders = loadBuiltBorders();
   const labels = JSON.parse(readFileSync(join(ROOT, 'dist/data/labels.json'), 'utf8'));
   const have = readYAML(join(folder, 'map.yaml'));
   const seen = {};

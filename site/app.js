@@ -216,18 +216,45 @@ const HOME = B.home;
 const REF_W = LBL.refWidth || 2000;
 
 // ---------- Border timeline ----------
-const T = B.timeline;
+// borders.json has the date of every border change (B.keys). The changes
+// (atom, owner pairs) and their notes come per century, from
+// data/borders/<century>.json, with a full snapshot of the owners before the
+// century's first change. bordersReady(key) loads what a date needs.
+const T = B.keys.map((k) => ({ k }));
+const borderCenturies = new Map();
+const centuryBase = new Map(); // a loaded century's first entry -> owners before it
+function loadBorders(century) {
+  if (!borderCenturies.has(century)) {
+    const translated = translations ? optionalTranslation(`borders/${century}.json`) : null;
+    borderCenturies.set(century, Promise.all([fetchJSON(`data/borders/${century}.json`), translated]).then(([chunk, notes]) => {
+      chunk.entries.forEach((entry, j) => Object.assign(T[chunk.start + j], { c: entry.c, s: translateText(notes, entry.s) }));
+      centuryBase.set(chunk.start, Int16Array.from(chunk.base));
+    }).catch((error) => {
+      borderCenturies.delete(century);
+      throw error;
+    }));
+  }
+  return borderCenturies.get(century);
+}
+const bordersLoaded = (key) => { const si = stateIndex(key); return si < 0 || !!T[si].c; };
+function bordersReady(key) {
+  return bordersLoaded(key) ? Promise.resolve() : loadBorders(catalogueKey(T[stateIndex(key)].k));
+}
 const snaps = new Map();
 function stateIndex(key) {
   let lo = 0, hi = T.length - 1, ans = -1;
   while (lo <= hi) { const m = (lo + hi) >> 1; if (T[m].k <= key) { ans = m; lo = m + 1; } else hi = m - 1; }
   return ans;
 }
+/** The owner of every atom after entry si (whose century must be loaded). */
 function ownersAt(si) {
   if (snaps.has(si)) return snaps.get(si);
-  let k = -1;
-  for (const index of snaps.keys()) if (index <= si && index > k) k = index;
-  const owners = k >= 0 ? snaps.get(k).slice() : new Int16Array(NA).fill(-1);
+  // Start from the latest known state that is not before si's century:
+  // the century's snapshot, or a state worked out since.
+  let k = -1, base = null;
+  for (const [start, owners] of centuryBase) if (start <= si && start - 1 > k) { k = start - 1; base = owners; }
+  for (const [index, owners] of snaps) if (index <= si && index > k) { k = index; base = owners; }
+  const owners = base ? base.slice() : new Int16Array(NA).fill(-1);
   for (let i = k + 1; i <= si; i++) {
     const changes = T[i].c;
     for (let j = 0; j < changes.length; j += 2) owners[changes[j]] = changes[j + 1];
@@ -976,7 +1003,7 @@ function renderWarList() {
 let exploreListKey;
 let yearRaf = 0, hashT = 0;
 function setYear(y, opts = {}) {
-  ++goToken;
+  const token = ++goToken;
   $('storyError').hidden = true;
   year = Math.max(timelineStart, Math.min(timelineEnd, Math.round(y)));
   yearEl.value = year; yearOut.textContent = number(year); badge.textContent = number(year);
@@ -986,20 +1013,30 @@ function setYear(y, opts = {}) {
   timelineEl.style.setProperty('--year-position', timelinePosition(year));
   const key = `${String(year).padStart(4, '0')}-12-31`;
   closePop();
-  setBorders(key, null, key, opts.scrub);
-  if (opts.scrub) {
-    svg.classList.add('scrubbing');
-    scheduleLabels();
-  }
-  const si = stateIndex(key);
-  $('bsrc').textContent = si >= 0 ? t('borderSource', { source: T[si].s }) : '';
   renderWarList(); markTimeline();
-  const listKey = JSON.stringify([si, cw, ch, datedPolities.map(p => polName(p))]);
-  if (listKey !== exploreListKey) {
-    exploreListKey = listKey;
-    $('exOtherList').innerHTML = otherListHTML(fit(HOME), null);
-    $('exOthers').hidden = !$('exOtherList').innerHTML;
-  }
+  // The borders follow when their century is loaded (at once if it is).
+  const showBorders = () => {
+    $('loading')?.remove();
+    setBorders(key, null, key, opts.scrub);
+    if (opts.scrub) {
+      svg.classList.add('scrubbing');
+      scheduleLabels();
+    }
+    const si = stateIndex(key);
+    $('bsrc').textContent = si >= 0 ? t('borderSource', { source: T[si].s }) : '';
+    const listKey = JSON.stringify([si, cw, ch, datedPolities.map(p => polName(p))]);
+    if (listKey !== exploreListKey) {
+      exploreListKey = listKey;
+      $('exOtherList').innerHTML = otherListHTML(fit(HOME), null);
+      $('exOthers').hidden = !$('exOtherList').innerHTML;
+    }
+  };
+  if (bordersLoaded(key)) showBorders();
+  else bordersReady(key).then(() => { if (token === goToken) showBorders(); }, () => {
+    if (token !== goToken) return;
+    $('loading')?.remove();
+    showLoadError('mapError', () => setYear(year, opts));
+  });
   if (!opts.noHash) {
     clearTimeout(hashT);
     hashT = setTimeout(() => {
@@ -1021,7 +1058,6 @@ function explore(y) {
   cancelAnimationFrame(yearRaf);
   clearTimeout(hashT);
   $('storyError').hidden = true;
-  $('loading')?.remove();
   mode = 'explore'; story = null;
   exploreEl.hidden = false; storyViewEl.hidden = true; badge.hidden = false;
   clearStepLayers(); closePop();
@@ -1153,6 +1189,12 @@ function renderFooter(war) {
 }
 let retryStory;
 $('retryStory').addEventListener('click', () => retryStory?.());
+/** Say that something could not be loaded (message key), with a retry button. */
+function showLoadError(message, retry) {
+  $('storyError').firstElementChild.textContent = t(message);
+  retryStory = retry;
+  $('storyError').hidden = false;
+}
 async function go(i, instant = false, destination = story, push = false) {
   if (!destination || i < 0 || i >= destination.items.length) return;
   const token = ++goToken;
@@ -1167,15 +1209,16 @@ async function go(i, instant = false, destination = story, push = false) {
   }
   const it = destination.items[i];
   let war;
-  try { war = await loadWar(it.w); }
-  catch {
+  try {
+    war = await loadWar(it.w);
+    await bordersReady(war.steps[it.s].borders);
+  } catch {
     if (token !== goToken) return;
     if (!mode) explore(year);
     requested = cur;
     if (story) renderNav(cur);
     history.replaceState(null, '', story ? `#/${story.kind}/${encodeURIComponent(story.id)}/${cur + 1}` : `#/year/${year}`);
-    retryStory = () => go(i, instant, destination, push);
-    $('storyError').hidden = false;
+    showLoadError('storyError', () => go(i, instant, destination, push));
     return;
   }
   if (token !== goToken) return;
@@ -1227,8 +1270,7 @@ async function openStory(kind, id, i, push = false) {
   catch {
     if (token !== goToken) return;
     if (!mode) explore(year);
-    retryStory = () => openStory(kind, id, i, push);
-    $('storyError').hidden = false;
+    showLoadError('storyError', () => openStory(kind, id, i, push));
     return;
   }
   if (token !== goToken) return;

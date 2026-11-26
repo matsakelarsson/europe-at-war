@@ -1,11 +1,9 @@
-// List atom owners on a date, from the last build (dist/data/borders.json).
+// List atom owners on a date, from the last build (dist/data/).
 //   node tools/owners-at.mjs 1772-01-01                 all polities
 //   node tools/owners-at.mjs 1772-01-01 poland prussia  only these
 //   node tools/owners-at.mjs 1772-01-01 --atoms 'PL-|LT-'   atoms matching a regex
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
-import { ROOT } from './lib.mjs';
-const B = JSON.parse(readFileSync(join(ROOT, 'dist/data/borders.json'), 'utf8'));
+import { loadBuiltBorders } from './built-borders.mjs';
+const B = loadBuiltBorders();
 const args = process.argv.slice(2);
 const key = (s) => { const [y, m = '00', d = '00'] = String(s).split('-'); return `${y.padStart(4, '0')}-${m.padStart(2, '0')}-${d.padStart(2, '0')}`; };
 const k = key(args.shift());

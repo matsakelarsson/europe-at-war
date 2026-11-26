@@ -64,22 +64,30 @@ export async function loadLocales(err) {
     if (await isDirectory(warsFolder)) for (const name of await listFiles(warsFolder, '.yaml')) {
       wars.set(name.slice(0, -5), await readYAML(join(warsFolder, name)));
     }
-    return { code, map, wars, index: {}, stories: [] };
+    return { code, map, wars, names: {}, catalogue: new Map(), stories: [] };
   }));
 }
 
-export async function compileWarTranslations(locales, war, index, emit, err) {
+/**
+ * A war's translation file, plus its catalogue strings: the name goes into the
+ * language's index (loaded at once), the rest into the century file the war's
+ * details are in (`entry.century`, see catalogueKey in build.mjs).
+ */
+export async function compileWarTranslations(locales, war, entry, emit, err) {
   const targets = locales.filter(({ wars }) => wars.has(war.id));
   if (!targets.length) return;
   const strings = new Set();
   const collect = value => { if (value !== '') strings.add(String(value)); return value; };
   localizeWar(war, collect);
   const catalogue = new Set();
-  localizeCatalogue(index, value => { catalogue.add(String(value)); return value; });
-  for (const { code, wars, index, stories } of targets) {
+  localizeCatalogue({ name: entry.name, ...structuredClone(entry.detail) }, value => { catalogue.add(String(value)); return value; });
+  for (const locale of targets) {
+    const { code, wars, stories } = locale;
     const text = dictionary(wars.get(war.id), strings, `Locale ${code}, war ${war.id}`, err);
     wars.delete(war.id);
-    index[war.id] = Object.fromEntries(Object.entries(text).filter(([key]) => catalogue.has(key)));
+    if (Object.hasOwn(text, entry.name)) locale.names[war.id] = text[entry.name];
+    const own = Object.fromEntries(Object.entries(text).filter(([key]) => catalogue.has(key)));
+    if (Object.keys(own).length) (locale.catalogue.get(entry.century) || locale.catalogue.set(entry.century, {}).get(entry.century))[war.id] = own;
     stories.push(war.id);
     await emit(`data/locales/${code}/wars/${war.id}.json`, JSON.stringify(text));
   }
@@ -91,7 +99,8 @@ export async function emitLocales(locales, borders, labels, emit, err) {
     (strings[category] ??= new Set()).add(value);
     return value;
   });
-  for (const { code, map, wars, index, stories } of locales) {
+  const sorted = (object) => Object.fromEntries(Object.entries(object).sort(([a], [b]) => a.localeCompare(b)));
+  for (const { code, map, wars, names, catalogue, stories } of locales) {
     for (const id of wars.keys()) err(`Locale ${code}: unknown war ${id}`);
     if (!isMapping(map)) { err(`Locale ${code}: expected a mapping in map.yaml`); continue; }
     const translatedMap = {};
@@ -99,10 +108,11 @@ export async function emitLocales(locales, borders, labels, emit, err) {
       if (!Object.hasOwn(strings, category)) err(`Locale ${code}: unknown map category ${category}`);
       else translatedMap[category] = dictionary(value, strings[category], `Locale ${code}, map ${category}`, err);
     }
-    await emit(`data/locales/${code}/index.json`, JSON.stringify({ map: translatedMap, index, stories }));
+    await emit(`data/locales/${code}/index.json`, JSON.stringify({ map: translatedMap, names: sorted(names), stories: stories.sort() }));
+    for (const [century, entries] of catalogue) await emit(`data/locales/${code}/catalogue/${century}.json`, JSON.stringify(sorted(entries)));
   }
 }
 
 export async function prepareLocaleOutput(locales, out) {
-  await Promise.all(locales.map(({ code }) => mkdir(join(out, 'data', 'locales', code, 'wars'), { recursive: true })));
+  await Promise.all(locales.flatMap(({ code }) => ['wars', 'catalogue'].map(dir => mkdir(join(out, 'data', 'locales', code, dir), { recursive: true }))));
 }

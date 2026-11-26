@@ -4,7 +4,8 @@
 //   dist/data/atoms.topo.json                      (from site-data/, see build-geo.mjs)
 //   dist/data/borders.json                         polities + border timeline
 //   dist/data/polities.css                         polity colours, light and dark
-//   dist/data/wars.json                            catalogue
+//   dist/data/wars.json                            catalogue: names, dates, countries
+//   dist/data/catalogue/<century>.json             summaries and step titles, by start century
 //   dist/data/wars/<id>.json                       one per war
 //   dist/data/labels.json                          seas, regions, capitals
 //
@@ -376,15 +377,22 @@ function buildWar(w, file, ctx) {
   for (const st of steps) for (const c of st.countries || []) countries.add(c);
   return {
     war: { id: w.id, name: w.name, start: String(w.start), end: w.end !== undefined ? String(w.end) : null, tier: w.tier, summary: w.summary || '', sides, notes: w.notes || [], sources: w.sources || [], steps },
-    index: { id: w.id, name: w.name, start: String(w.start), end: w.end !== undefined ? String(w.end) : null, sk: dateKey(w.start), ek: dateKey(w.end === 'ongoing' ? '9999' : w.end ?? w.start), tier: w.tier, summary: w.summary || '', countries: [...countries].sort(), steps: steps.map((s) => ({ t: s.title, d: s.date, c: s.countries, w: s.when })), polities: [...new Set(sides.flatMap((s) => s.polities))], ...(steps.length ? {} : { sources: w.sources || [] }) },
+    // What the site needs at once (the timeline, the lists, routing) …
+    core: { id: w.id, name: w.name, sk: dateKey(w.start), ek: dateKey(w.end === 'ongoing' ? '9999' : w.end ?? w.start), tier: w.tier, countries: [...countries].sort(), n: steps.length, ...(w.end === 'ongoing' ? { end: 'ongoing' } : {}) },
+    // … and what it loads per century when a list, search or country view needs it.
+    detail: { summary: w.summary || '', steps: steps.map((s) => ({ t: s.title, d: s.date, c: s.countries, w: s.when })), ...(steps.length ? {} : { sources: w.sources || [] }) },
   };
 }
+
+/** The catalogue file a war's details are in: its start century ("1648-…" -> "1600"). site/app.js has the same rule. */
+const catalogueKey = (sk) => (sk || '0000').slice(0, 2) + '00';
 
 // ---------------------------------------------------------------- main
 // `--check`: validate only, write nothing (safe to run alongside a dev build).
 // A full build writes to a temporary folder and replaces dist/ only when it
 // succeeds, so a failed build leaves the served site as it was.
 const CHECK = process.argv.includes('--check');
+const FIRST_LOAD_BUDGET = 1.2e6;
 const OUT = join(ROOT, '.dist-tmp');
 const emit = (f, data) => (CHECK ? null : writeFile(join(OUT, f), data));
 
@@ -398,6 +406,7 @@ async function main() {
   if (!CHECK) {
     await rm(OUT, { recursive: true, force: true });
     await mkdir(join(OUT, 'data/wars'), { recursive: true });
+    await mkdir(join(OUT, 'data/catalogue'), { recursive: true });
     await cp(join(ROOT, 'site'), OUT, { recursive: true });
   }
 
@@ -410,6 +419,7 @@ async function main() {
   const locales = await loadLocales(err);
   if (!CHECK) await prepareLocaleOutput(locales, OUT);
   const wars = [];
+  const catalogue = new Map();
   const seen = new Set();
   const files = await listFiles(join(CONTENT, 'wars'), '.yaml');
   for (let start = 0; start < files.length; start += 16) {
@@ -419,12 +429,14 @@ async function main() {
       const f = batch[i];
       if (seen.has(w.id)) err(`war ${f}: duplicate id ${w.id}`);
       seen.add(w.id);
-      const { war, index } = buildWar(w, f, { pol, borders });
-      wars.push(index);
-      return { war, index };
+      const { war, core, detail } = buildWar(w, f, { pol, borders });
+      wars.push(core);
+      const century = catalogueKey(core.sk);
+      (catalogue.get(century) || catalogue.set(century, new Map()).get(century)).set(core.id, detail);
+      return { war, entry: { name: core.name, century, detail } };
     });
-    await Promise.all(outputs.map(async ({ war, index }) => {
-      await compileWarTranslations(locales, war, index, emit, err);
+    await Promise.all(outputs.map(async ({ war, entry }) => {
+      await compileWarTranslations(locales, war, entry, emit, err);
       await emit(`data/wars/${war.id}.json`, JSON.stringify(war));
     }));
   }
@@ -449,15 +461,28 @@ async function main() {
   await emit('data/borders.json', JSON.stringify(bordersOut));
   await emit('data/polities.css', pol.css);
   await emit('data/wars.json', JSON.stringify(wars));
+  for (const [century, entries] of catalogue) {
+    await emit(`data/catalogue/${century}.json`, JSON.stringify(Object.fromEntries([...entries].sort(([a], [b]) => a.localeCompare(b)))));
+  }
   await emit('data/labels.json', JSON.stringify(labels));
 
   // Size report: what a first visit downloads.
   const first = ['index.html', 'app.js', 'globe.js', 'i18n.js', 'localized-content.js', ...(await listFiles(join(ROOT, 'site/locales'), '.js')).map(file => `locales/${file}`), 'style.css', 'relief.webp', 'vendor/topojson-client.min.js', 'data/atoms.topo.json', 'data/borders.json', 'data/polities.css', 'data/wars.json', 'data/labels.json'];
-  let raw = 0, gz = 0;
-  for (const f of CHECK ? [] : first) { try { const b = await readFile(join(OUT, f)); raw += b.length; gz += gzipSync(b).length; } catch {} }
+  // A French or Swedish visitor also loads that language's index.
+  const size = async (files) => {
+    let raw = 0, gz = 0;
+    for (const f of files) { try { const b = await readFile(join(OUT, f)); raw += b.length; gz += gzipSync(b).length; } catch {} }
+    return { raw, gz };
+  };
   console.log(`polities ${pol.list.length}, atoms ${borders.order.length}, timeline entries ${borders.timeline.length}, wars ${wars.length}`);
-  if (!CHECK) console.log(`first load: ${(raw / 1e6).toFixed(2)} MB raw, ${(gz / 1e6).toFixed(2)} MB gzip`);
-  if (!CHECK && gz > 1.2e6) warn(`first load is over budget (${(gz / 1e6).toFixed(2)} MB gzip > 1.2 MB)`);
+  if (!CHECK) {
+    const base = await size(first);
+    const perLocale = await Promise.all(locales.map(async ({ code }) => [code, await size([...first, `data/locales/${code}/index.json`])]));
+    const mb = (b) => (b / 1e6).toFixed(2);
+    console.log(`first load: ${mb(base.raw)} MB raw, ${mb(base.gz)} MB gzip` + perLocale.map(([code, s]) => `; ${code} ${mb(s.gz)}`).join(''));
+    // The budget that keeps the site fast and inside GitHub Pages' free bandwidth (ROADMAP.md).
+    for (const [code, s] of [['en', base], ...perLocale]) if (s.gz > FIRST_LOAD_BUDGET) err(`first load (${code}) is over budget: ${mb(s.gz)} MB gzip > ${mb(FIRST_LOAD_BUDGET)} MB`);
+  }
   for (const w of warnings) console.warn('warning:', w);
   for (const e of errors) console.error('ERROR:', e);
   if (errors.length) {

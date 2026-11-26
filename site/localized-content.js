@@ -24,10 +24,12 @@ export function localizeWar(war, translate) {
   return war;
 }
 
+// A catalogue entry: a war's name, plus (once its century is loaded) its
+// summary, step titles and dates, and sources.
 export function localizeCatalogue(war, translate) {
   war.name = translate(war.name);
-  war.summary = translate(war.summary);
-  for (const step of war.steps) {
+  if (war.summary != null) war.summary = translate(war.summary);
+  for (const step of war.steps || []) {
     step.t = translate(step.t);
     step.d = translate(step.d);
   }

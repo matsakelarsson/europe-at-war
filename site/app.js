@@ -136,22 +136,56 @@ try {
   $('loading').textContent = t('mapError');
   throw e;
 }
+// The catalogue (wars.json) holds what the timeline and lists need at once.
+// A war's summary, step titles and sources come with its start century's
+// file (data/catalogue/), loaded when a list, a search or a story needs them;
+// `w.steps` is set once they are there, and `w.n` is the number of steps.
 const searchIndex = new Map();
 const searchText = (value) => value.toLocaleLowerCase(locale).normalize('NFC');
-const warSearchText = (war) => [war.name, war.summary, ...war.steps.map(step => step.t)].map(searchText);
 if (translations) localizeMap(B, LBL, (category, value) => translateText(translations.map[category], value));
 for (const war of WARS) {
-  const search = warSearchText(war);
-  const dictionary = translations?.index[war.id];
-  if (dictionary) {
-    localizeCatalogue(war, (value) => translateText(dictionary, value));
-    search.push(...warSearchText(war));
-  }
+  // English and translated text are both searchable.
+  const search = [searchText(war.name)];
+  const name = translations?.names[war.id];
+  if (name) { war.name = name; search.push(searchText(name)); }
   searchIndex.set(war.id, search);
 }
 const storyTranslations = new Set(translations?.stories);
 
 const warById = new Map(WARS.map((w) => [w.id, w]));
+/** Same rule as catalogueKey in tools/build.mjs: "1648-…" -> "1600". */
+const catalogueKey = (sk) => sk.slice(0, 2) + '00';
+const catalogueCache = new Map();
+function loadCatalogue(century) {
+  if (!catalogueCache.has(century)) {
+    const translated = translations ? optionalTranslation(`catalogue/${century}.json`) : null;
+    catalogueCache.set(century, Promise.all([fetchJSON(`data/catalogue/${century}.json`), translated]).then(([chunk, dictionaries]) => {
+      for (const [id, detail] of Object.entries(chunk)) {
+        const war = warById.get(id);
+        if (!war || war.steps) continue;
+        const detailText = () => [war.summary, ...war.steps.map((step) => step.t)].map(searchText);
+        Object.assign(war, detail);
+        const search = searchIndex.get(id);
+        search.push(...detailText());
+        const dictionary = dictionaries?.[id];
+        if (dictionary) {
+          localizeCatalogue(war, (value) => translateText(dictionary, value));
+          search.push(...detailText());
+        }
+      }
+    }).catch((error) => {
+      catalogueCache.delete(century);
+      throw error;
+    }));
+  }
+  return catalogueCache.get(century);
+}
+/** Load the details of these wars (resolves at once when they are there). */
+function withDetails(wars) {
+  const centuries = new Set();
+  for (const w of wars) if (!w.steps) centuries.add(catalogueKey(w.sk));
+  return Promise.all([...centuries].map(loadCatalogue));
+}
 const warCache = new Map();
 function loadWar(id) {
   if (!warCache.has(id)) {
@@ -903,8 +937,10 @@ function renderTimelineBars() {
 function markTimeline() {
   for (const s of $('tlBars').children) s.classList.toggle('a', +s.dataset.a <= year && +s.dataset.b >= year);
 }
+let listToken = 0;
 function renderWarList() {
   const cc = countryEl.value, q = searchText(qEl.value.trim());
+  const countryWars = cc ? WARS.filter((w) => w.countries.includes(cc)) : [];
   let list, head;
   if (q) {
     list = WARS.filter((w) => (!cc || w.countries.includes(cc)) && searchIndex.get(w.id).some(text => text.includes(q)));
@@ -914,15 +950,21 @@ function renderWarList() {
     list = WARS.filter((w) => (!cc || w.countries.includes(cc)) && w.sk <= k1 && w.ek >= k0);
     head = t(cc ? 'warsInCountryYear' : 'warsInYear', { year: number(year), country: countryName(cc) });
   }
+  // The list shows summaries, search reads every summary, and the country view
+  // needs every step of the country's wars. Until those are loaded, show what
+  // is known, then draw the list again.
+  const token = ++listToken;
+  const needed = (q ? WARS : cc ? countryWars : list).filter((w) => !w.steps);
+  if (needed.length) withDetails(needed).then(() => { if (token === listToken) renderWarList(); }, () => {});
   $('listHead').textContent = head;
   $('warList').innerHTML = list.length ? list.map((w) => {
-    const n = w.steps.length;
+    const n = w.n;
     const inner = `<span class="wn">${esc(w.name)}</span>${w.tier === 'C' ? `<span class="tier">${esc(t('brief'))}</span>` : ''}<span class="wd">${esc(fmtYears(w))}${n ? ` · ${esc(t('stepCount', { count: n }))}` : ''}</span>${w.summary ? `<span class="ws">${esc(w.summary)}</span>` : ''}`;
     // A catalogue entry without steps has nothing to open: show it as a card.
     return n ? `<li><a href="#/war/${encodeURIComponent(w.id)}">${inner}</a></li>` : `<li><div class="wcard">${inner}${w.sources?.length ? `<span class="wsrc">${w.sources.map((s) => `<a href="${esc(s.url)}">${esc(s.title)}</a>`).join(' · ')}</span>` : ''}</div></li>`;
   }).join('') : `<li class="empty">${esc(t(q ? 'noSearchResults' : 'noWars'))}</li>`;
   const lens = $('lensLink');
-  if (cc) {
+  if (cc && countryWars.every((w) => w.steps)) {
     const n = lensSteps(cc).length;
     lens.hidden = !n;
     lens.href = `#/country/${cc}`;
@@ -1170,15 +1212,27 @@ async function go(i, instant = false, destination = story, push = false) {
   if (!instant && !reduceMotion) apply(view);
   animateTo(fit(targetBox), instant ? 0 : 400);
 }
-function openStory(kind, id, i, push = false) {
+async function openStory(kind, id, i, push = false) {
   let items;
+  const w = kind === 'war' ? warById.get(id) : null;
   if (kind === 'war') {
-    const w = warById.get(id);
     if (!w) return explore();
     // A catalogue entry with no steps: show its years and list it there.
-    if (!w.steps.length) { location.replace(`#/year/${yearOf(w.sk)}`); return; }
-    items = w.steps.map((_, k) => ({ w: id, s: k }));
+    if (!w.n) { location.replace(`#/year/${yearOf(w.sk)}`); return; }
   }
+  // The step list needs the step titles (and a country view, every step of
+  // the country's wars). Anything else the reader does meanwhile wins.
+  const token = ++goToken;
+  try { await withDetails(w ? [w] : WARS.filter((war) => war.countries.includes(id))); }
+  catch {
+    if (token !== goToken) return;
+    if (!mode) explore(year);
+    retryStory = () => openStory(kind, id, i, push);
+    $('storyError').hidden = false;
+    return;
+  }
+  if (token !== goToken) return;
+  if (w) items = w.steps.map((_, k) => ({ w: id, s: k }));
   else items = lensSteps(id);
   if (!items.length) return explore();
   const same = story && story.kind === kind && story.id === id;

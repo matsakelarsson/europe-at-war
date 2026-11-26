@@ -8,6 +8,7 @@
 import { applyLocale, count, esc, formatDate, locale, number, rich, t } from './i18n.js';
 import { defaultLocale } from './locales/index.js';
 import { localizeCatalogue, localizeMap, localizeWar, translateText } from './localized-content.js';
+import { polityCSS } from './colors.js';
 import { Globe, R, capOf, capVisible, fitBox, laeaInvert, linesPath, lonLat, projector, ringsPath, screenLines, screenRings, unit, vecRings } from './globe.js';
 
 applyLocale();
@@ -201,6 +202,10 @@ function loadWar(id) {
   return warCache.get(id);
 }
 const POL = B.polities;
+// Polity fills as CSS variables (--p<i>, --q<i>), read by the globe and the legends.
+const polityStyle = document.createElement('style');
+polityStyle.textContent = polityCSS(POL.map((p) => p.color));
+document.head.appendChild(polityStyle);
 const datedPolities = POL.filter(p => p.names?.length);
 let curKey = '1648-12-31';
 /** A polity's name at a date: `names` holds [until, name] pairs, oldest first. */

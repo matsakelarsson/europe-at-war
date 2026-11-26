@@ -8,11 +8,12 @@
 // part of atom `from` inside the polygon becomes atom `id` (by convention
 // `<from>~<suffix>`); the rest keeps the id `from`.
 //
-// Which regions are atoms is decided in the authoring projection: every
-// admin-1 region with land inside DATA_CLIP (see projection.mjs). An atom that
-// reaches beyond it is kept whole. `world` is all other land, simplified more,
-// with no owner; it is cut into 30° tiles so that no polygon is larger than a
-// hemisphere, which the globe's horizon handling relies on (site/globe.js).
+// Every admin-1 region in the world is an atom, except Antarctica. Those with
+// land inside DATA_CLIP (the curated core, see projection.mjs) keep the most
+// detail; the rest of the world is simplified more, to keep the download small.
+// `world` is the land left over (Antarctica, slivers), with no owner; it is cut
+// into 30° tiles so that no polygon is larger than a hemisphere, which the
+// globe's horizon handling relies on (site/globe.js).
 import { readFile, writeFile, readdir, mkdir } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -25,8 +26,13 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const NAME_FIX = { 'MD-RE': 'Rîbnița', 'AZ-LAN': 'Lachin' };
 const CACHE = join(ROOT, '.cache');
 const PREFILTER = [-75, 0, 130, 90]; // lon/lat box that covers DATA_CLIP
-// Simplification in metres: atoms and the water near them, the rest of the world.
-const DETAIL = 1400, COARSE = 8000;
+// Simplification in metres: atoms in the curated core and the water near them,
+// atoms elsewhere, and the land and water that belong to no atom.
+const DETAIL = 1400, MID = +(process.env.GEO_MID || 5000), COARSE = 8000;
+// Rivers near the core: thin lines need less detail than coasts (lakes keep
+// DETAIL, their shores are also the atoms' coasts).
+const RIVER = +(process.env.GEO_RIVER || 3000);
+const NO_ATOMS = new Set(['ATA']); // Antarctica stays plain land
 const TILE = 30;
 
 const readJSON = async (p) => JSON.parse(await readFile(p, 'utf8'));
@@ -81,7 +87,7 @@ async function main() {
   const seen = new Map();
   let atoms = [];
   for (const ft of ne.features) {
-    if (!ft.geometry || !overlaps(bboxOf(ft.geometry), PREFILTER)) continue;
+    if (!ft.geometry || NO_ATOMS.has(ft.properties.adm0_a3)) continue;
     const p = ft.properties;
     let id = /^[A-Z]{2}-[A-Z0-9]{1,4}$/.test(p.iso_3166_2 || '') ? p.iso_3166_2 : p.adm1_code;
     if (seen.has(id)) id = p.adm1_code;
@@ -104,17 +110,27 @@ async function main() {
     atoms.push({ id: s.id, name: s.name || s.id, country: parent.country, admin: parent.admin, parent: s.from, geometry: fromMulti(inside) });
   }
 
-  // Which atoms have land inside DATA_CLIP, and their interior points, in km.
-  const projected = collection(atoms.map((a) => ({ properties: { id: a.id }, geometry: mapCoords(a.geometry, (c) => projectRaw(c)) })));
+  // Which atoms have land inside DATA_CLIP (the core, in full detail), and
+  // their interior points: in the authoring projection's km for the core, in
+  // longitude and latitude elsewhere (the projection is badly stretched far
+  // from Europe).
+  const inPrefilter = atoms.filter((a) => overlaps(bboxOf(a.geometry), PREFILTER));
+  const projected = collection(inPrefilter.map((a) => ({ properties: { id: a.id }, geometry: mapCoords(a.geometry, (c) => projectRaw(c)) })));
   const bbox = `${DATA_CLIP.x0},${DATA_CLIP.y0},${DATA_CLIP.x1},${DATA_CLIP.y1}`;
-  const clipped = await mapshaper.applyCommands([
+  const insideClip = async (extra) => new Set(JSON.parse((await mapshaper.applyCommands([
     '-i atoms.json snap', `-clip bbox=${bbox}`, '-simplify interval=1.4 keep-shapes planar',
-    '-filter-slivers min-area=4', '-clean', '-o format=geojson atoms.json',
-  ].join(' '), { 'atoms.json': projected });
-  const kept = new Set(JSON.parse(clipped['atoms.json']).features.filter((f) => f.geometry).map((f) => f.properties.id));
-  const ptsOut = await mapshaper.applyCommands('-i atoms.json -points inner -o format=geojson pts.json', { 'atoms.json': projected });
-  const pts = new Map(JSON.parse(ptsOut['pts.json']).features.map((f) => [f.properties.id, f.geometry.coordinates]));
-  atoms = atoms.filter((a) => kept.has(a.id));
+    extra, '-clean', '-o format=geojson atoms.json',
+  ].join(' '), { 'atoms.json': projected }))['atoms.json']).features.filter((f) => f.geometry).map((f) => f.properties.id));
+  const core = await insideClip('-filter-slivers min-area=4');
+  // Regions inside the core too small to see (Naftalan, Kökar) are left out, as they always were.
+  const tiny = new Set([...await insideClip('')].filter((id) => !core.has(id)));
+  atoms = atoms.filter((a) => !tiny.has(a.id));
+  const ptsOut = await mapshaper.applyCommands('-i atoms.json -points inner -o format=geojson pts.json', { 'atoms.json': collection(projected.features.filter((f) => core.has(f.properties.id))) });
+  const pts = new Map(JSON.parse(ptsOut['pts.json']).features.map((f) => [f.properties.id, unproject(f.geometry.coordinates)]));
+  const farOut = await mapshaper.applyCommands('-i atoms.json -points inner -o format=geojson pts.json',
+    { 'atoms.json': collection(atoms.filter((a) => !core.has(a.id)).map((a) => ({ properties: { id: a.id }, geometry: a.geometry }))) });
+  for (const f of JSON.parse(farOut['pts.json']).features) pts.set(f.properties.id, f.geometry.coordinates);
+  const kept = new Set(atoms.map((a) => a.id));
 
   // Land: the atoms, whole, and the rest of the world (Natural Earth countries,
   // dissolved, minus the atoms), simplified together so that they share edges.
@@ -129,15 +145,20 @@ async function main() {
     '-filter "this.area > 20e6" target=world',
     '-each "kind=\'w\'" target=world',
     '-merge-layers target=atoms,world force name=land',
-    `-simplify variable interval="kind == 'w' ? ${COARSE} : ${DETAIL}" keep-shapes`,
-    '-filter-slivers min-area=4km2 keep-shapes',
+    `-simplify variable interval="kind == 'w' ? ${COARSE} : core ? ${DETAIL} : ${MID}" keep-shapes`,
+    // Small rings go, except in atoms outside the core: there they may be all
+    // there is of an island state (the Maldives, Bermuda).
+    `-each "grp = kind == 'a' && !core ? 'far' : 'near'"`,
+    '-split grp',
+    '-filter-slivers min-area=4km2 keep-shapes target=near',
+    '-merge-layers target=near,far force name=land',
     // Overlaps left by simplifying go to the first feature, so an atom always
     // beats the world land around it, however small the atom.
     '-clean overlap-rule=min-id',
     '-split kind',
     '-o format=geojson precision=0.000001 land.json',
   ].join(' '), {
-    'atoms.json': collection(atoms.map((a) => ({ properties: { id: a.id, kind: 'a' }, geometry: a.geometry }))),
+    'atoms.json': collection(atoms.map((a) => ({ properties: { id: a.id, kind: 'a', core: core.has(a.id) ? 1 : 0 }, geometry: a.geometry }))),
     'world.json': collection(admin0.features.filter((f) => f.geometry).map((f) => ({ properties: {}, geometry: f.geometry }))),
   });
   const layers = Object.values(land).map((text) => JSON.parse(text).features);
@@ -147,17 +168,17 @@ async function main() {
 
   // Lakes and rivers: those near the atoms in detail, the rest of the world coarser.
   const near = (g) => overlaps(bboxOf(g), PREFILTER);
-  const water = async (file, maxRank, farRank, extra) => {
+  const water = async (file, maxRank, farRank, extra, detail) => {
     const raw = await readJSON(join(CACHE, `ne/${file}.geojson`));
     const fs = raw.features.filter((f) => f.geometry && f.properties.featurecla !== 'Lake Centerline' &&
       f.properties.scalerank <= (near(f.geometry) ? maxRank : farRank))
       .map((f) => ({ properties: { name: f.properties.name || '', far: near(f.geometry) ? 0 : 1 }, geometry: f.geometry }));
-    const out = await mapshaper.applyCommands(`-i ${file}.json -simplify variable interval="far ? ${COARSE} : ${DETAIL}" keep-shapes ${extra} -o format=geojson precision=0.000001 ${file}.json`,
+    const out = await mapshaper.applyCommands(`-i ${file}.json -simplify variable interval="far ? ${COARSE} : ${detail}" keep-shapes ${extra} -o format=geojson precision=0.000001 ${file}.json`,
       { [`${file}.json`]: collection(fs) });
     return JSON.parse(out[`${file}.json`]).features.filter((f) => f.geometry);
   };
-  const lakes = await water('lakes', 5, 3, '-filter "this.area > 30e6"');
-  const rivers = await water('rivers', 5, 4, '');
+  const lakes = await water('lakes', 5, 3, '-filter "this.area > 30e6"', DETAIL);
+  const rivers = await water('rivers', 5, 4, '', RIVER);
 
   const strip = (fs, keep) => collection(fs.map((f) => ({ properties: Object.fromEntries(keep.map((k) => [k, f.properties[k]])), geometry: f.geometry })));
   const out = await mapshaper.applyCommands([
@@ -176,8 +197,8 @@ async function main() {
   for (const g of topo.objects.world.geometries) delete g.properties;
 
   const index = atoms.map((a) => {
-    const xy = pts.get(a.id);
-    const ll = unproject(xy);
+    const ll = pts.get(a.id);
+    const xy = projectRaw(ll);
     return { id: a.id, name: a.name, country: a.country, admin: a.admin, ...(a.parent ? { parent: a.parent } : {}),
       xy: xy.map((v) => Math.round(v * 10) / 10), ll: ll.map((v) => Math.round(v * 1e4) / 1e4) };
   }).sort((a, b) => a.id.localeCompare(b.id));

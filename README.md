@@ -13,12 +13,15 @@ whose 67 steps are included here as the Sweden view (`#/country/se`).
 
 - **Static site.** Vanilla JavaScript, canvas and SVG, no framework. The only
   runtime dependency is `topojson-client`, vendored in `site/vendor/`.
-- **A globe.** The map is a globe you can turn and zoom (`site/globe.js`). It
-  shows the whole world, but the history on it is Europe's: borders, wars and
-  capitals cover Europe and the lands its wars reached, and the rest of the
-  world is plain land.
-- **Atoms.** The map is built from Natural Earth admin-1 regions, cut further
-  where history needs finer lines (`content/borders/splits/`). Each atom is
+- **A globe.** The map is a globe you can turn and zoom (`site/globe.js`).
+  Borders cover the whole world: hand-curated for Europe and the lands its wars
+  reached, drafted from historical-basemaps elsewhere. Wars and capitals cover
+  Europe so far; [ROADMAP.md](ROADMAP.md) has the plan for the rest of the
+  world.
+- **Atoms.** The map is built from all of Natural Earth's admin-1 regions
+  (provinces, states, counties), cut further where history needs finer lines
+  (`content/borders/splits/`). Atoms in Europe and around it keep the most
+  detail; the rest of the world is simplified more. Each atom is
   filled with the colour of its owner on the chosen date, and borders are drawn
   only where neighbouring atoms have different owners.
 - **Borders over time.** Drafted keyframes from
@@ -115,6 +118,7 @@ npm run draft        # fill keyframe gaps for new atoms (never overwrites existi
 | Command | What it does |
 | --- | --- |
 | `node tools/set-owner.mjs 1530,1600 russia RU-PSK` | Hand-correct atoms in drafted keyframes |
+| `node tools/palette.mjs world.yaml --auto` | Recolour polities so that neighbours stand apart (after a build) |
 | `node tools/rename-polity.mjs muscovy russia` | Rename or merge a polity id across all content |
 | `node tools/split-from-hb.mjs 30-poland 1880 Germany memel "Memel land" LT-KL` | Cut atoms along a historical-basemaps border |
 | `node tools/owners-at.mjs 1772-08-06 poland prussia` | Who owns which atoms on a date (after a build) |

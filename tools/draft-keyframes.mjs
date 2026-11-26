@@ -118,8 +118,13 @@ async function main() {
     // Parents before their split-off children (children of children last).
     const depth = (a) => a.id.split('~').length;
     const ownerOf = (id) => { for (let x = id; x; x = byAtom.get(x)?.parent) if (assign[x] !== undefined) return assign[x]; return undefined; };
+    /** The atom an owner is inherited from: id itself or its nearest assigned ancestor. */
+    const ownerAtom = (id) => { for (let x = id; x; x = byAtom.get(x)?.parent) if (assign[x] !== undefined) return x; return undefined; };
     for (const a of [...atoms].sort((p, q) => depth(p) - depth(q))) {
       if (have.has(a.id)) continue;
+      // In an existing keyframe, a split-off atom whose parent is assigned
+      // inherits that (perhaps hand-set) owner: leave it alone.
+      if (existing && a.parent && ownerOf(a.parent) !== undefined && have.has(ownerAtom(a.parent))) continue;
       const pol = (job.today ? resolve(a.country, job.year) : resolve(lookup(polys, a.ll), job.year)) || '-';
       // A split atom inherits from its parent; list it only where its own draft differs.
       if (a.parent && ownerOf(a.parent) === pol) continue;

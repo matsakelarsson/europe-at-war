@@ -173,6 +173,15 @@ date, from two sources merged by date:
    correct them with `node tools/set-owner.mjs <years> <polity> <atoms…>`.
 2. **Events**, `content/borders/events/*.yaml`: dated changes, usually treaties.
 
+Every admin-1 region in the world is an atom. Outside the curated ranges below,
+owners are historical-basemaps drafts, with automatic polities
+(`content/polities.auto.yaml`) for names that have no curated polity yet, and
+modern countries in `content/polities/world.yaml`. Events outside the curated
+regions go in `events/world.yaml` until a region gets its own file. After
+adding or renaming polities, `node tools/palette.mjs <polities file> --auto`
+(after a build) gives the new ones colours that stand apart from everything
+they ever border, keeping curated colours.
+
 ```yaml
 - date: "1658-02-26"
   note: Treaty of Roskilde.

@@ -44,12 +44,18 @@ first load 1.05 MB gzip (1.41 MB for French and Swedish), build 2 s.
 
 ## Phase 2: a world base map
 
-- [ ] **Batch 3: every province of the world is an atom.** `build-geo.mjs` makes
+- [x] **Batch 3: every province of the world is an atom.** `build-geo.mjs` makes
   atoms of all Natural Earth admin-1 regions, in detail where the map is curated
   and coarser elsewhere, within the geometry budget (about 0.8 MB gzip). Owners
   for the new atoms are drafted from historical-basemaps for every keyframe year
   (`npm run draft`, which keeps hand corrections), with automatic polities for
-  names that have no curated polity yet.
+  names that have no curated polity yet. *Done: 4,674 atoms (2,348 new), 137
+  modern countries in `content/polities/world.yaml`, about 650 automatic
+  polities, recoloured by the new `tools/palette.mjs` so that neighbours stand
+  apart. Geometry 0.80 MB gzip (rivers simplified more, polity colours built in
+  the browser instead of `polities.css`); first load 1.03 MB gzip, French and
+  Swedish 1.12. If later waves push past the budget, the next lever is loading
+  the provinces outside the core after the first render (about 270 KB).*
 - [ ] **Batch 4: a world-ready interface.** The country filter grouped by world
   region; the home view and the start view decided by the war or year in view;
   texts that say "Europe" made neutral where they describe the map; README and

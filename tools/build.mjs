@@ -4,7 +4,6 @@
 //   dist/data/atoms.topo.json                      (from site-data/, see build-geo.mjs)
 //   dist/data/borders.json                         polities + the dates of border changes
 //   dist/data/borders/<century>.json               those changes and their notes, by century
-//   dist/data/polities.css                         polity colours, light and dark
 //   dist/data/wars.json                            catalogue: names, dates, countries
 //   dist/data/catalogue/<century>.json             summaries and step titles, by start century
 //   dist/data/wars/<id>.json                       one per war
@@ -19,7 +18,7 @@
 import { mkdir, writeFile, cp, rm, readFile, stat, rename } from 'node:fs/promises';
 import { join } from 'node:path';
 import { gzipSync } from 'node:zlib';
-import { ROOT, CONTENT, readJSON, readYAML, listFiles, exists, loadPolities, darkFill, hexToOklch, oklchToHex } from './lib.mjs';
+import { ROOT, CONTENT, readJSON, readYAML, listFiles, exists, loadPolities } from './lib.mjs';
 import { loadLocales, prepareLocaleOutput, compileWarTranslations, emitLocales } from './locales.mjs';
 import { compileCapitals } from './capitals.mjs';
 import { feature } from 'topojson-client';
@@ -54,12 +53,7 @@ async function buildPolities() {
     if (!/^#[0-9a-f]{6}$/i.test(p.color || '')) err(`polity ${p.id}: bad color ${p.color}`);
     if (p.ink && !INKS.includes(p.ink)) err(`polity ${p.id}: unknown ink ${p.ink}`);
   }
-  // CSS custom properties: --p<i> (fill), --q<i> (muted fill, for non-participants).
-  const muted = (hex, dark) => { const [L, C, H] = hexToOklch(hex); return dark ? oklchToHex(0.3, Math.min(0.04, C * 0.6), H) : oklchToHex(Math.min(0.95, L + 0.035), C * 0.45, H); };
-  const light = list.map((p, i) => `--p${i}:${p.color};--q${i}:${muted(p.color, false)};`).join('');
-  const dark = list.map((p, i) => { const d = darkFill(p.color); return `--p${i}:${d};--q${i}:${muted(p.color, true)};`; }).join('');
-  const css = `:root{${light}}\n:root[data-theme="dark"]{${dark}}\n`;
-  return { list, index, css };
+  return { list, index };
 }
 
 // ---------------------------------------------------------------- borders
@@ -457,7 +451,8 @@ async function main() {
       const hints = p.label ? (Array.isArray(p.label[0]) ? p.label : [p.label]) : [];
       const names = (p.names || []).map(([until, n]) => [dateKey(until), n]);
       for (const [k] of names) if (!k) err(`polity ${p.id}: bad date in names`);
-      return { id: p.id, name: p.name, ink: p.ink || null, countries: p.countries || [], auto: !!p.auto, ...(hints.length ? { hints: hints.map((h) => h.map(r4)) } : {}), ...(names.length ? { names } : {}) };
+      // The site builds its colour variables from `color` (site/colors.js).
+      return { id: p.id, name: p.name, color: p.color.toLowerCase(), ink: p.ink || null, countries: p.countries || [], auto: !!p.auto, ...(hints.length ? { hints: hints.map((h) => h.map(r4)) } : {}), ...(names.length ? { names } : {}) };
     }),
     keys: timeline.map((t) => t.k),
   };
@@ -475,7 +470,6 @@ async function main() {
   await emit('data/atoms.topo.json', topoText);
   await emit('data/borders.json', JSON.stringify(bordersOut));
   for (const [century, chunk] of borderChunks) await emit(`data/borders/${century}.json`, JSON.stringify(chunk));
-  await emit('data/polities.css', pol.css);
   await emit('data/wars.json', JSON.stringify(wars));
   for (const [century, entries] of catalogue) {
     await emit(`data/catalogue/${century}.json`, JSON.stringify(Object.fromEntries([...entries].sort(([a], [b]) => a.localeCompare(b)))));
@@ -483,7 +477,7 @@ async function main() {
   await emit('data/labels.json', JSON.stringify(labels));
 
   // Size report: what a first visit downloads.
-  const first = ['index.html', 'app.js', 'globe.js', 'i18n.js', 'localized-content.js', ...(await listFiles(join(ROOT, 'site/locales'), '.js')).map(file => `locales/${file}`), 'style.css', 'relief.webp', 'vendor/topojson-client.min.js', 'data/atoms.topo.json', 'data/borders.json', 'data/polities.css', 'data/wars.json', 'data/labels.json'];
+  const first = ['index.html', 'app.js', 'globe.js', 'colors.js', 'i18n.js', 'localized-content.js', ...(await listFiles(join(ROOT, 'site/locales'), '.js')).map(file => `locales/${file}`), 'style.css', 'relief.webp', 'vendor/topojson-client.min.js', 'data/atoms.topo.json', 'data/borders.json', 'data/wars.json', 'data/labels.json'];
   // A French or Swedish visitor also loads that language's index.
   const size = async (files) => {
     let raw = 0, gz = 0;

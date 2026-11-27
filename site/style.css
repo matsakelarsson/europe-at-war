@@ -285,3 +285,51 @@ footer li { margin: 0 0 2px; }
 #map.scrubbing .lbl, #map.scrubbing .caplabel { visibility: hidden; }
 
 [dir="rtl"] .navbtn span[aria-hidden="true"] { transform: scaleX(-1); }
+
+/* Full-window map: the map fills the window, the timeline or step bar sits on
+   top, and the panel becomes a drawer over the right side of the map. */
+.topbar { display: none; }
+.full-off, :root.fullmap .full-on { display: none; }
+:root.fullmap .full-off { display: block; }
+:root.fullmap body { overflow: hidden; }
+:root.fullmap body > header, :root.fullmap body > footer { display: none; }
+:root.fullmap .stage {
+  --drawer-w: min(400px, calc(100% - 24px));
+  position: fixed; inset: 0; max-width: none; padding: 10px 12px 12px;
+  grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); gap: 10px; align-items: stretch;
+}
+:root.fullmap .topbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 8px 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 2px 8px rgb(0 0 0 / 5%); }
+:root.fullmap .topbar > .yearbar, :root.fullmap .topbar > .stepbar { flex: 1 1 320px; min-width: 0; }
+:root.fullmap:has(#explore[hidden]) #yearBar, :root.fullmap:has(#storyView[hidden]) #stepBar { display: none; }
+.info-toggle { margin-inline-start: auto; }
+.info-toggle[aria-expanded="true"] { border-color: var(--accent); color: var(--accent); }
+.yearbar { display: block; }
+:root.fullmap .yearbar { display: flex; flex-wrap: wrap; align-items: center; gap: 0 18px; }
+:root.fullmap .yearbar .yearctl { flex: none; }
+:root.fullmap .yearbar .yearlabel { min-width: 4.2ch; }
+:root.fullmap #yearOut { font-size: 1.6rem; }
+:root.fullmap .yearbar .timeline { flex: 1 1 260px; margin: 0; }
+:root.fullmap .yearbar .tl-bars { height: 12px; margin-block: 0 2px; }
+:root.fullmap .stepbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; }
+:root.fullmap .stepbar .stepper { flex: 1 1 340px; max-width: 620px; }
+:root.fullmap .stepbar .progress { flex: 1 1 200px; margin: 0; }
+:root.fullmap .mapwrap { grid-area: 2 / 1; position: relative; top: auto; height: auto; max-height: none; aspect-ratio: auto; }
+:root.fullmap #map { aspect-ratio: auto; height: 100%; max-height: none; }
+:root.fullmap .panel {
+  grid-area: 2 / 1; justify-self: end; align-self: start; z-index: 6; position: relative;
+  width: var(--drawer-w); max-height: calc(100% - 20px); margin: 10px; overflow-y: auto; overscroll-behavior: contain;
+  padding: 14px 16px 16px; background: var(--bg); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 8px 28px rgb(0 0 0 / 18%);
+}
+:root.fullmap.info-closed .panel { display: none; }
+:root.fullmap:not(.info-closed) .mapctl { inset-inline-end: calc(var(--drawer-w) + 30px); }
+:root.fullmap .panel .eyebrow:first-child, :root.fullmap .panel #explore > .bsrc:first-child { margin-top: 0; }
+@media (max-width: 699px) {
+  /* A bottom sheet on narrow windows. */
+  :root.fullmap .stage { padding: 6px; gap: 6px; }
+  :root.fullmap .panel { align-self: end; justify-self: stretch; width: auto; max-height: 55%; margin: 6px; }
+  :root.fullmap:not(.info-closed) .mapctl { inset-inline-end: 10px; }
+  :root.fullmap .topbar { gap: 8px; padding: 6px 8px; }
+  :root.fullmap .topbar > .yearbar, :root.fullmap .topbar > .stepbar { flex-basis: 200px; }
+  :root.fullmap .topbar > .navbtn { padding: 0; width: 42px; }
+  :root.fullmap .topbar > .navbtn .t { display: none; }
+}

@@ -10,6 +10,7 @@
     try { theme = localStorage.getItem('europe-at-war.theme'); } catch { /* Storage is optional. */ }
   }
   document.documentElement.dataset.theme = theme === 'dark' ? 'dark' : 'light';
+  try { if (localStorage.getItem('europe-at-war.fullmap') === '1') document.documentElement.classList.add('fullmap'); } catch { /* Storage is optional. */ }
 })();
 </script>
 <title>World at War</title>
@@ -41,6 +42,10 @@
 </header>
 
 <main class="stage">
+  <div class="topbar" id="topbar">
+    <button type="button" class="navbtn info-toggle" id="infoToggle" aria-controls="panel" aria-expanded="true" aria-label="Information" data-i18n-label="information"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10 2.5v11" stroke="currentColor" stroke-width="1.4"/></svg><span class="t" data-i18n="information">Information</span></button>
+    <button type="button" class="navbtn" id="fullExit" aria-label="Exit full-window map" data-i18n-label="exitFullMap"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M12.5,5.5H8.5V1.5M8.5,5.5L13,1M1.5,8.5H5.5V12.5M5.5,8.5L1,13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="t" data-i18n="exitFullMapShort">Exit</span></button>
+  </div>
   <div class="mapwrap" id="mapwrap">
     <canvas id="mapbase" class="maplayer" aria-hidden="true"></canvas>
     <svg id="mapareas" class="maplayer" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"></svg>
@@ -50,6 +55,7 @@
       <button type="button" id="zin" aria-label="Zoom in" data-i18n-label="zoomIn">+</button>
       <button type="button" id="zout" aria-label="Zoom out" data-i18n-label="zoomOut">−</button>
       <button type="button" id="zfit" aria-label="Reset view" data-i18n-label="resetView"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1,5V1H5M9,1H13V5M13,9V13H9M5,13H1V9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <button type="button" id="zfull" aria-label="Full-window map" aria-pressed="false"><svg class="full-on" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M8.5,1.5H12.5V5.5M12.5,1.5L8,6M5.5,12.5H1.5V8.5M1.5,12.5L6,8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="full-off" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M12.5,5.5H8.5V1.5M8.5,5.5L13,1M1.5,8.5H5.5V12.5M5.5,8.5L1,13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     </div>
     <span class="capital-key"><i aria-hidden="true"></i><span data-i18n="capital">Capital</span></span>
     <div class="yearbadge" id="yearbadge" aria-hidden="true"></div>
@@ -57,9 +63,10 @@
     <div class="loading" id="loading" data-i18n="loading">Loading map…</div>
   </div>
 
-  <section class="panel" aria-label="Wars and story" data-i18n-label="warsAndStory">
+  <section class="panel" id="panel" aria-label="Wars and story" data-i18n-label="warsAndStory">
     <p id="storyError" role="alert" hidden><span data-i18n="storyError">Story could not be loaded.</span> <button id="retryStory" type="button" data-i18n="retry">Retry</button></p>
     <div id="explore" hidden>
+      <div class="yearbar" id="yearBar">
       <div class="yearctl">
         <button class="navbtn" id="yprev" type="button" aria-label="Previous timeline stop" data-i18n-label="previousTimelineStop"><span aria-hidden="true">‹</span></button>
         <label class="yearlabel" for="year"><span class="vh" data-i18n="year">Year</span><output id="yearOut">1648</output></label>
@@ -69,6 +76,7 @@
         <input type="range" id="year" min="800" max="2026" step="1" value="1648" aria-describedby="yearOut">
         <div class="tl-bars" id="tlBars" aria-hidden="true"></div>
         <div class="tl-ticks" aria-hidden="true"><span data-year="800">800</span><span data-year="1000">1000</span><span data-year="1200">1200</span><span data-year="1400">1400</span><span data-year="1600">1600</span><span data-year="1800">1800</span><span data-year="2000">2000</span></div>
+      </div>
       </div>
       <p class="bsrc" id="bsrc"></p>
       <div class="filters">
@@ -83,12 +91,14 @@
 
     <div id="storyView" hidden>
       <a class="back" id="back" href="#/" data-i18n="allWars">‹ All wars</a>
+      <div class="stepbar" id="stepBar">
       <nav class="stepper" aria-label="Steps" data-i18n-label="steps">
         <button class="navbtn" id="prev" type="button" aria-label="Previous step" data-i18n-label="previousStep"><span aria-hidden="true">‹</span><span class="t" data-i18n="back">Back</span></button>
         <label class="jump"><span class="vh" data-i18n="jumpToStep">Jump to a step</span><select id="jump"></select></label>
         <button class="navbtn primary" id="next" type="button" aria-label="Next step" data-i18n-label="nextStep"><span class="t" data-i18n="next">Next</span><span aria-hidden="true">›</span></button>
       </nav>
       <div class="progress" id="progress" aria-hidden="true"></div>
+      </div>
       <div class="legend" id="legend" aria-label="Map key" data-i18n-label="mapKey"></div>
       <details class="others" id="others"><summary data-i18n="otherStates">Other states on the map</summary><div class="list" id="otherList"></div></details>
       <div id="story" aria-live="polite"></div>

@@ -393,7 +393,15 @@ const kMax = () => cw / (40 / R);
 function clampView(v) {
   return { lon: ((v.lon + 540) % 360) - 180, lat: Math.max(-89, Math.min(89, v.lat)), k: Math.min(kMax(), Math.max(kMin(), v.k)) };
 }
-function fit(box) { return clampView(fitBox(box, cw, ch)); }
+/** Fit a box into the map, or in full-window mode into the part the drawer leaves free. */
+function fit(box) {
+  const dw = drawerCover();
+  const v = clampView(fitBox(box, cw - dw, ch));
+  if (!dw) return v;
+  const shift = document.documentElement.dir === 'rtl' ? -dw / 2 : dw / 2;
+  const c = projector(v, cw, ch).invert(cw / 2 + shift, ch / 2);
+  return c ? clampView({ lon: c[0], lat: c[1], k: v.k }) : v;
+}
 const sameView = (a, b) => a.lon === b.lon && a.lat === b.lat && a.k === b.k;
 function apply(v) {
   view = v;
@@ -1273,6 +1281,7 @@ async function go(i, instant = false, destination = story, push = false) {
   setBorders(step.borders, focus, step.when || step.borders, true);
   buildStepLayers(war, step);
   renderStory(i, war, step);
+  if (themeRoot.classList.contains('fullmap')) $('panel').scrollTop = 0;
   renderLegend(war, step);
   renderNav(i);
   renderFooter(war);
@@ -1315,7 +1324,11 @@ async function openStory(kind, id, i, push = false) {
 
 // ---------- Keyboard, resize, routing ----------
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') { closePop(); return; }
+  if (e.key === 'Escape') {
+    if (!pop.hidden || !themeRoot.classList.contains('fullmap') || /INPUT|SELECT/.test(e.target?.tagName || '')) closePop();
+    else setFullMap(false);
+    return;
+  }
   const tag = (e.target && e.target.tagName) || '';
   if (/INPUT|TEXTAREA|SELECT/.test(tag)) return;
   if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
@@ -1332,6 +1345,57 @@ function resize() {
   apply(clampView(view));
 }
 new ResizeObserver(() => { if (svg.clientWidth !== cw || svg.clientHeight !== ch) resize(); }).observe(svg);
+
+// ---------- Full-window map ----------
+const topbar = $('topbar'), infoToggle = $('infoToggle'), fullBtn = $('zfull');
+/** Pixels of the map's width the open drawer covers (0 outside full-window mode or as a bottom sheet). */
+function drawerCover() {
+  if (!themeRoot.classList.contains('fullmap') || themeRoot.classList.contains('info-closed')) return 0;
+  const p = $('panel').getBoundingClientRect();
+  return p.width && p.width < cw * 0.7 ? p.width + 20 : 0;
+}
+function describeFullMap() {
+  const on = themeRoot.classList.contains('fullmap');
+  const label = t(on ? 'exitFullMap' : 'fullMap');
+  fullBtn.setAttribute('aria-label', label);
+  fullBtn.title = label;
+  fullBtn.setAttribute('aria-pressed', String(on));
+  $('fullExit').title = t('exitFullMap');
+  infoToggle.setAttribute('aria-expanded', String(!themeRoot.classList.contains('info-closed')));
+}
+/** Move the year and step bars into the top bar, or back into the panel. */
+function placeBars(on) {
+  const yearBar = $('yearBar'), stepBar = $('stepBar');
+  if (on) topbar.prepend(yearBar, stepBar);
+  else { $('explore').prepend(yearBar); $('back').after(stepBar); }
+}
+function refitAfterLayout() {
+  requestAnimationFrame(() => { resize(); closePop(); animateTo(fit(targetBox), anim || reduceMotion ? 0 : 300); });
+}
+function setFullMap(on) {
+  if (on === themeRoot.classList.contains('fullmap')) return;
+  themeRoot.classList.toggle('fullmap', on);
+  // Start with the drawer open where there is room for it beside the map.
+  themeRoot.classList.toggle('info-closed', on && !window.matchMedia('(min-width: 700px)').matches);
+  placeBars(on);
+  describeFullMap();
+  try { localStorage.setItem('europe-at-war.fullmap', on ? '1' : '0'); } catch { /* Storage is optional. */ }
+  refitAfterLayout();
+  if (!on) wrap.scrollIntoView({ block: 'nearest' });
+}
+fullBtn.addEventListener('click', () => setFullMap(!themeRoot.classList.contains('fullmap')));
+$('fullExit').addEventListener('click', () => setFullMap(false));
+infoToggle.addEventListener('click', () => {
+  themeRoot.classList.toggle('info-closed');
+  describeFullMap();
+  refitAfterLayout();
+});
+if (themeRoot.classList.contains('fullmap')) {
+  themeRoot.classList.toggle('info-closed', !window.matchMedia('(min-width: 700px)').matches);
+  placeBars(true);
+}
+describeFullMap();
+
 let resizeT = null;
 window.addEventListener('resize', () => {
   clearTimeout(resizeT);

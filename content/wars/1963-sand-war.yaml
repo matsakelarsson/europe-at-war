@@ -1,0 +1,121 @@
+id: sand-war
+name: Sand War
+start: "1963-09-25"
+end: "1963-11-04"
+tier: B
+summary: "A short border war between Morocco and Algeria in the autumn of 1963, a year after Algeria’s independence. France had never fixed the border south of Figuig and had attached the Sahara around Tindouf and Colomb-Béchar, with its iron ore and possible oil, to Algeria. Morocco, where the Istiqlal party’s idea of a Greater Morocco was widely held, claimed these lands and said that Algeria’s wartime leaders had promised to settle the question after independence; Ahmed Ben Bella’s government held to the colonial borders. On 25 September 1963 Moroccan troops seized the Algerian border posts of Hassi Beida and Tinjoub on the road from Colomb-Béchar to Tindouf. Algeria retook them on 8 October and Morocco took them back the following week, while a Moroccan push towards Tindouf stalled; Algeria opened a second front in the north, taking Ich near Figuig on 18 October. Egypt sent some 1,000 troops to help Algeria, and Cuba sent about 700 soldiers with tanks, who arrived at Oran on 22 October but saw little fighting. Mediation by the Organisation of African Unity, Haile Selassie of Ethiopia and Modibo Keïta of Mali brought Hassan II and Ben Bella to Bamako, where on 30 October they agreed a ceasefire from 2 November and a demilitarised zone watched by Ethiopian and Malian officers, the OAU’s first peacekeeping mission; fighting near Figuig went on for two more days. The losses were small: Algeria gave about 60 dead and Morocco 39, though later works give some 300 and 200. The border stayed in place: the two countries signed a border convention in 1972, which Morocco ratified only in 1989, and the war left a lasting distrust between them that shaped the Western Sahara conflict."
+countries: [ma, dz]
+sides:
+  - id: ma
+    name: Morocco
+    polities: [morocco]
+    ink: red
+    moves: Moroccan moves
+    success: Moroccan success
+  - id: dz
+    name: Algeria
+    polities: [algeria]
+    ink: green
+    moves: Algerian moves
+    success: Algerian success
+notes:
+  - Losses are uncertain. The figures at the time were about 60 Algerians killed and 250 wounded (from French sources) and 39 Moroccans killed (the official figure); later works give about 300 Algerian and 200 Moroccan dead. About 379 Algerians and 57 Moroccans were taken prisoner.
+  - Morocco’s claim rested on the authority its sultans had held over the people of the border oases before the French conquest; Algeria’s on the principle, adopted by the OAU in 1964, that independent African states keep the borders they inherited.
+sources:
+  - title: Sand War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sand_War
+  - title: Algeria–Morocco border (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Algeria%E2%80%93Morocco_border
+  - title: Algeria–Morocco relations (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Algeria%E2%80%93Morocco_relations
+  - title: Organisation of African Unity (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Organisation_of_African_Unity
+steps:
+  - title: Hassi Beida, Tinjoub and Tindouf
+    date: 25 September – 30 October 1963
+    when: "1963-09-25"
+    borders: "1963-10-15"
+    countries: [ma, dz]
+    body:
+      - "The border between Morocco and French Algeria had been drawn by treaty only for its first 165 km inland from the sea, in 1845. Further south the French moved their administrative lines several times, and in 1952 they placed Tindouf and Colomb-Béchar inside Algeria’s departments. When Morocco became independent in 1956 it claimed them, and in 1961 King Hassan II reached an agreement with the Algerian provisional government to settle the border once Algeria was free. Independent Algeria, whose people had just fought eight years for the whole territory, refused to give up land. Talks in 1963 failed, and both sides moved troops to the frontier."
+      - "On 25 September 1963 Moroccan units, about a thousand men, took the small Algerian posts of Hassi Beida and Tinjoub, in the desert on the track between Colomb-Béchar and Tindouf. Algeria retook them on 8 October, and the Moroccans returned in force in the week of 14 October with tanks and artillery and took them again. A Moroccan advance on Tindouf from 13 October was held by the Algerian garrison, reinforced by Egyptian troops, and a second offensive planned for 28 October was called off. In the north Algerian forces attacked across the border on 18 October and drove the Moroccans from Ich, a village north of Figuig. The Moroccan army, trained and equipped by France, had the better of the fighting in the desert, but neither side could force a decision, and both came under heavy pressure from African and Arab governments to stop."
+    facts:
+      - [Hassi Beida and Tinjoub taken by Morocco, "25 September 1963"]
+      - [Retaken by Algeria, "8 October 1963"]
+      - [Retaken by Morocco, "week of 14 October 1963"]
+      - [Algerian attack on Ich, "18 October 1963"]
+    markers:
+      - kind: battle
+        side: ma
+        name: Hassi Beida and Tinjoub
+        date: 25 September – mid-October 1963
+        text: Two Algerian desert posts about 10 km apart, taken by Morocco, retaken by Algeria on 8 October and taken again by Morocco in mid-October.
+        lonlat: [-5.670, 29.505]
+      - kind: held
+        side: dz
+        name: Tindouf
+        date: October 1963
+        text: The oasis town at the heart of the Moroccan claim. Its Algerian garrison, with Egyptian reinforcements, held off the Moroccan advance.
+        lonlat: [-8.129, 27.675]
+      - kind: event
+        side: dz
+        name: Colomb-Béchar
+        date: October 1963
+        text: The main Algerian base in the south-west, also claimed by Morocco.
+        lonlat: [-2.220, 31.620]
+      - kind: battle
+        side: dz
+        name: Figuig and Ich
+        date: 18 October – 4 November 1963
+        text: Algeria opened a northern front here, taking the village of Ich north of the oasis on 18 October; fighting around Figuig went on until 4 November, after the ceasefire was due.
+        lonlat: [-1.227, 32.117]
+    arrows:
+      - side: ma
+        label: Moroccan forces
+        via: [[-5.720, 29.830], [-5.700, 29.650], [-5.670, 29.530]]
+      - side: ma
+        via: [[-7.900, 28.800], [-8.000, 28.250], [-8.100, 27.800]]
+      - side: dz
+        label: Algerian counter-attack
+        via: [[-1.100, 32.900], [-1.400, 32.700], [-1.700, 32.550]]
+    areas:
+      - style: contested
+        side: ma
+        label: Algerian lands claimed by Morocco around Tindouf and Colomb-Béchar
+        atoms: [DZ-37, DZ-08]
+  - title: Bamako and the border
+    date: 30 October 1963 – 1972
+    when: "1963-10-30"
+    borders: "1963-11-04"
+    countries: [ma, dz]
+    body:
+      - "The Arab League, Tunisia’s Habib Bourguiba and King Idris of Libya all tried to mediate. In the end the new Organisation of African Unity, founded that May, brought Hassan II and Ben Bella to Bamako, where they met Emperor Haile Selassie and President Modibo Keïta of Mali on 29–30 October 1963. They agreed on a ceasefire from 2 November, a demilitarised zone to be marked out by Moroccan, Algerian, Ethiopian and Malian officers and watched by Ethiopian and Malian observers, and an OAU commission to study the border. Fighting near Figuig went on until 4 November, when a Malian officer arrived to enforce the ceasefire. A formal agreement followed in Bamako on 20 February 1964, and prisoners were exchanged."
+      - "Neither side gained ground. In 1969 the Algerian president Houari Boumediène and Hassan II signed a treaty of friendship at Ifrane, and on 15 June 1972 the two countries signed a convention that fixed the border along the colonial line, leaving Tindouf to Algeria, with an agreement to work the Gara Djebilet iron ore together. Algeria ratified it in 1973; Morocco only in 1989. The war left a deep distrust, and within three years Algeria was sheltering and arming the Polisario Front against Morocco in Western Sahara."
+    facts:
+      - [Bamako meeting, "29–30 October 1963"]
+      - [Ceasefire, "2 November 1963 (fighting at Figuig until 4 November)"]
+      - [Bamako agreement, "20 February 1964"]
+      - [Border convention, "15 June 1972"]
+    markers:
+      - kind: battle
+        name: Figuig
+        date: 1–4 November 1963
+        text: The last fighting of the war, around the Moroccan oasis on the border.
+        lonlat: [-1.227, 32.117]
+      - kind: treaty
+        name: Ifrane
+        date: January 1969
+        text: Boumediène and Hassan II signed a treaty of friendship in this mountain town.
+        lonlat: [-5.110, 33.530]
+      - kind: treaty
+        name: Rabat
+        date: 15 June 1972
+        text: The border convention was signed here. Algeria ratified it in 1973 and Morocco in 1989.
+        lonlat: [-6.840, 34.020]
+        lp: l
+      - kind: held
+        side: dz
+        name: Tindouf
+        date: "1963"
+        text: Remained Algerian under the 1972 convention.
+        lonlat: [-8.129, 27.675]

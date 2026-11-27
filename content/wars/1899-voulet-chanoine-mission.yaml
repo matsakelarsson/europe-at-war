@@ -1,0 +1,134 @@
+id: voulet-chanoine-mission
+name: Voulet–Chanoine Mission
+start: "1899-01"
+end: "1899-09-15"
+tier: B
+summary: "The march of the French Central Africa mission (mission Afrique centrale) from the Niger towards Lake Chad in 1899, under Captains Paul Voulet and Julien Chanoine, the officers who had taken Ouagadougou in 1896. Sent with vague orders and little money to put the lands between the Niger and Lake Chad “under French protection” and to meet the columns of Foureau and Lamy from Algeria and Gentil from the Congo, the column of some 600 soldiers and about 2,000 porters and followers lived off the country, and from January 1899 burned villages and killed those who resisted or failed to supply it, across what is now western and southern Niger. Sarraounia Mangou, the ruler of the Azna of Lougou, fought it in April. At Birni-N’Konni in May the column destroyed a town of more than 10,000 people. When reports reached Paris, the government sent Lieutenant-Colonel Jean-François Klobb to take command; on 14 July Voulet had his men fire on Klobb and kill him at Dankori. Two and three days later the African soldiers of the column killed Chanoine and then Voulet. Under new officers the mission took Zinder, capital of the sultanate of Damagaram, on 30 July, and went on as the Joalland–Meynier mission to join the battle of Kousséri in April 1900. The killings were one of the great scandals of the European conquest of Africa; in 2025 descendants of the victims in Niger asked France for reparations."
+countries: [ne, ml]
+sides:
+  - id: fr
+    name: The Central Africa mission (France)
+    polities: [france]
+    ink: navy
+    moves: Mission’s moves
+    success: Mission’s success
+  - id: az
+    name: Azna of Lougou (Sarraounia Mangou)
+    polities: [azna-lougou]
+    ink: green
+    moves: Azna moves
+    success: Azna success
+  - id: dm
+    name: Damagaram (Zinder)
+    polities: [damagaram]
+    ink: brown
+    moves: Damagaram moves
+    success: Damagaram success
+notes:
+  - "The main accounts are the letters of Lieutenant Louis Péteau, whom Voulet dismissed in January 1899, the reports of Klobb and his second Octave Meynier, and the agreed version of the surviving officers, which put much of the blame on African interpreters and soldiers who had been quickly executed. Oral traditions in Niger, and Abdoulaye Mamani’s novel Sarraounia (1980) and Med Hondo’s film (1986), keep the memory of the column and of Sarraounia’s resistance. The number killed at Birni-N’Konni is not known; estimates range from hundreds to thousands."
+  - "An official French inquiry closed in 1902 by blaming “soudanite aiguë”, a madness supposedly brought on by heat. When Robert Delavignette, a colonial administrator, had the graves of Voulet and Chanoine opened in 1923, they were empty."
+sources:
+  - title: Voulet–Chanoine Mission (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Voulet%E2%80%93Chanoine_Mission
+  - title: Mission Voulet-Chanoine (French Wikipedia)
+    url: https://fr.wikipedia.org/wiki/Mission_Voulet-Chanoine
+  - title: Sarraounia Mangou (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sarraounia_Mangou
+  - title: Jean-François Klobb (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jean-Fran%C3%A7ois_Klobb
+  - title: Sultanate of Damagaram (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sultanate_of_Damagaram
+  - title: Finn Fuglestad, À propos de travaux récents sur la mission Voulet-Chanoine (Revue française d’histoire d’outre-mer, 1980)
+    url: https://www.persee.fr/doc/outre_0300-9513_1980_num_67_246_2237
+  - title: La colonne infernale de Voulet-Chanoine (Le Monde, 1999)
+    url: https://www.lemonde.fr/archives/article/1999/09/26/la-colonne-infernale-de-voulet-chanoine_3567624_1819218.html
+steps:
+  - title: From the Niger to Lougou
+    date: November 1898 – April 1899
+    when: "1899-04-16"
+    borders: "1899-04-16"
+    countries: [ml, ne]
+    body:
+      - The mission left Dakar in November 1898 and divided at Koulikoro on the Niger. Chanoine led the larger part overland across the bend of the river, taking food from the villages and ordering that anyone who fled be shot; Voulet went down the river to Timbuktu, where Klobb, its commander, gave him 70 more tirailleurs and 20 spahis. The two halves met again in January 1899 at Say, the easternmost French post on the Niger, about 2,000 strong, far more than the country could feed. On 8 January, at Sansanné-Haoussa on the Niger, the column killed 101 people, among them 30 women and children, in revenge for the wounding of two of its soldiers. Lieutenant Péteau protested and was dismissed on 29 January; on 15 February he wrote to his fiancée describing what he had seen.
+      - East of the Niger the column marched into the Hausa lands, burning villages that refused it food or porters. Near Dogondoutchi the Azna, the Hausa who had kept their old religion, were led by Sarraounia Mangou, their queen and priestess. On 16 April 1899 the column attacked her fortified town of Lougou, losing 4 killed and 6 wounded in its hardest fight so far. The Azna withdrew from the town into the bush and fought on, and the French never captured Sarraounia; she is honoured in Niger as a symbol of resistance.
+    facts:
+      - [Sansanné-Haoussa, "8 January 1899, 101 people killed"]
+      - [Battle of Lougou, "16 April 1899"]
+    markers:
+      - kind: toll
+        side: fr
+        name: Sansanné-Haoussa
+        date: 8 January 1899
+        text: The column killed 101 people here, 30 of them women and children, in revenge for the wounding of two soldiers.
+        lonlat: [1.608, 13.847]
+      - kind: held
+        side: fr
+        name: Say
+        date: January 1899
+        text: The easternmost French post on the Niger, where the two halves of the column met.
+        lonlat: [2.367, 13.100]
+      - kind: battle
+        side: az
+        name: Lougou
+        date: 16 April 1899
+        text: Sarraounia Mangou’s town, taken by the column after hard fighting; she and her fighters withdrew and fought on.
+        lonlat: [4.243, 13.858]
+    arrows:
+      - side: fr
+        label: Voulet and Chanoine
+        via: [[2.367, 13.100], [3.000, 13.300], [3.700, 13.600], [4.200, 13.840]]
+  - title: Birni-N’Konni and Dankori
+    date: May – July 1899
+    when: "1899-07-14"
+    borders: "1899-07-14"
+    countries: [ne]
+    body:
+      - In early May the column took Birni-N’Konni, a Hausa town of more than 10,000 people, killed a great many of its inhabitants as they fled, and destroyed it. By then Péteau’s letter had reached Paris, and on 20 April the government had decided to arrest Voulet and Chanoine and to put Klobb in command. Klobb left Timbuktu with fifty tirailleurs and Lieutenant Octave Meynier and followed the column for over 2,000 km along a trail of burned villages and hanged bodies. On 10 July, near Zinder, he sent Voulet a letter relieving him; Voulet kept it secret from his officers and answered that he had 600 rifles to Klobb’s fifty. On 13 July, after a villager killed two of his men, Voulet had about 150 women and children killed.
+      - On 14 July Klobb came up to Voulet’s camp at Dankori in uniform and walked forward alone, ordering his own men not to fire; Voulet ordered his soldiers to shoot, and Klobb was killed and Meynier wounded. That evening Voulet told his officers, “I am no longer French, I am a black chief,” and that he would found an empire. The officers and the soldiers would not follow him. On 16 July, when Voulet and Chanoine fired on the assembled tirailleurs, the soldiers fired back and killed Chanoine; the next morning Voulet tried to re-enter the camp and was shot dead by a sentry.
+    facts:
+      - [Birni-N’Konni destroyed, "early May 1899"]
+      - [Klobb killed at Dankori, "14 July 1899"]
+      - [Chanoine and Voulet killed, "16 and 17 July 1899"]
+    markers:
+      - kind: toll
+        side: fr
+        name: Birni-N’Konni
+        date: early May 1899
+        text: A Hausa town of more than 10,000 people, destroyed by the column; a great many of its people were killed as they fled.
+        lonlat: [5.251, 13.791]
+      - kind: event
+        side: fr
+        name: Dankori
+        date: 14–17 July 1899
+        text: Klobb was shot dead here on Voulet’s orders; two and three days later the column’s soldiers killed Chanoine and Voulet.
+        lonlat: [7.972, 13.911]
+    arrows:
+      - side: fr
+        label: Voulet and Chanoine
+        phase: 1
+        via: [[4.243, 13.858], [4.800, 13.800], [5.240, 13.790]]
+      - side: fr
+        phase: 2
+        via: [[5.251, 13.791], [6.300, 13.750], [7.200, 13.800], [7.940, 13.900]]
+  - title: Zinder
+    date: July – September 1899
+    when: "1899-07-30"
+    borders: "1899-09-15"
+    countries: [ne]
+    body:
+      - Lieutenant Pallier, now in command, marched on Zinder, capital of Damagaram, the largest town in what is now Niger, whose sultan Amadou Kouran Daga had had the French officer Marius-Gabriel Cazemajou killed in May 1898. On 30 July the column defeated the sultan’s army at Tirmini, about 10 km from Zinder, and took the town. When Pallier set out for Lake Chad, his soldiers refused to go on and forced him back to Zinder; about 300 of them returned to the Sudan with him.
+      - The 270 who agreed to stay served under Lieutenant Paul Joalland, with Meynier as his second. Amadou was killed in a skirmish on 15 September, and his brother, who had sided with the French, was placed on the throne. In October Joalland and Meynier marched east with 170 men to Lake Chad, where they joined the Foureau–Lamy mission and fought at Kousséri in April 1900. Joalland and the other surviving officers escaped court-martial, and Zinder became the capital of the French Niger Military Territory in 1911.
+    facts:
+      - [Zinder taken, "30 July 1899"]
+      - [Sultan Amadou killed, "15 September 1899"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Zinder
+        date: 30 July 1899
+        text: Capital of Damagaram, taken after the column defeated the sultan’s army at Tirmini nearby.
+        lonlat: [8.988, 13.805]
+    arrows:
+      - side: fr
+        label: Pallier
+        via: [[7.972, 13.911], [8.400, 13.880], [8.700, 13.830], [8.950, 13.810]]

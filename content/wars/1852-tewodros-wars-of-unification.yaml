@@ -1,0 +1,208 @@
+id: tewodros-wars-of-unification
+name: Wars of Tewodros II
+start: "1852"
+end: "1868-04-13"
+tier: B
+summary: "The wars by which Kassa Hailu, a chief from the western borderland of Qwara, ended the Zemene Mesafint, the “Era of the Princes” in which regional lords had ruled Ethiopia in the name of powerless emperors at Gondar, and made himself emperor as Tewodros II. Between November 1852 and February 1855 he defeated the lords of Gojjam at Gur Amba, the regent Ras Ali II at Ayshal and Dejazmach Wube of Semien and Tigray at Derasge, and was crowned on 11 February 1855. He then took Wollo and, in 1855–1856, the kingdom of Shewa, whose young heir Menelik he brought to his court. His attempts to rule through appointed officials and a standing army, and to tax the church, met revolt in almost every province, which he answered with ever harsher reprisals. By 1867 he held little beyond his fortress of Magdala, where he died during the British assault of April 1868."
+countries: [et]
+sides:
+  - id: ka
+    name: Kassa Hailu, Emperor Tewodros II from 1855
+    polities: [ethiopia]
+    ink: gold
+    moves: Moves of Kassa (Tewodros)
+    success: Success of Kassa (Tewodros)
+  - id: ra
+    name: Ras Ali II and the Yejju regency
+    polities: [yejju-regency]
+    ink: brown
+    moves: Moves of Ras Ali and his allies
+    success: Success of Ras Ali and his allies
+  - id: wu
+    name: Dejazmach Wube of Semien and Tigray
+    polities: [wube-semien]
+    ink: purple
+    moves: Wube’s moves
+    success: Wube’s success
+  - id: sh
+    name: Kingdom of Shewa
+    polities: [shewa]
+    ink: green
+    moves: Shewan moves
+    success: Shewan success
+  - id: rb
+    name: Regional lords in revolt
+    polities: [ethiopian-rebel-lords]
+    ink: olive
+    moves: Rebel moves
+    success: Rebel success
+notes:
+  - The base map shows the Ethiopian empire as one state during the Era of the Princes, with Shewa separate until 1856. The lands of the regent and the regional lords, and the provinces that rose against Tewodros, are drawn as areas.
+  - Tewodros chose his throne name after a prophecy of a just king named Tewodros who would restore Ethiopia. Some of the battles of 1852–1854 (Takusa, Amba Jebelli) are not precisely dated or located in the sources.
+sources:
+  - title: Tewodros II (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tewodros_II
+  - title: Zemene Mesafint (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Zemene_Mesafint
+  - title: Battle of Gur Amba (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Gur_Amba
+  - title: Battle of Ayshal (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ayshal
+  - title: Battle of Derasge (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Derasge
+  - title: Haile Melekot (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Haile_Melekot
+  - title: Tewodros II (Britannica)
+    url: https://www.britannica.com/biography/Tewodros-II
+steps:
+  - title: Gur Amba and Ayshal
+    date: November 1852 – June 1853
+    when: "1852-11-27"
+    borders: "1853-06-29"
+    countries: [et]
+    body:
+      - Since 1769 the emperors at Gondar had been figureheads, set up and deposed by the great lords. From the 1780s the most powerful of them were the regents of the Yejju dynasty, lords of Oromo origin and Muslim descent from the eastern highlands who ruled from Debre Tabor; in 1852 the regent was Ras Ali II. Dejazmach Wube ruled Semien and Tigray, Goshu Zewde and his son Birru Goshu Gojjam, while Shewa had its own kings. Kassa Hailu, born about 1818 in Qwara near the Sudanese border, rose as the leader of a band of fighters, married Ras Ali’s daughter Tewabech and was made governor of Qwara. In 1848 he attacked the Egyptian post at Dabarki on the Sudanese frontier and was beaten back by artillery and disciplined musket fire, a lesson he did not forget.
+      - In 1852 he broke with Ras Ali. On 27 November 1852 he defeated the regent’s army at Gur Amba, where its commander, Goshu Zewde of Gojjam, was killed. In 1853 he beat Ras Ali’s generals Birru Aligaz and Belew at Takusa, and on 29 June 1853 he defeated Ras Ali himself at Ayshal in eastern Gojjam. Ras Ali fled to Yejju and never returned to power. Ethiopian tradition dates the end of the Era of the Princes to this battle.
+    facts:
+      - [Battle of Gur Amba, "27 November 1852, victory of Kassa"]
+      - [Battle of Ayshal, "29 June 1853, victory of Kassa"]
+    markers:
+      - kind: battle
+        side: ka
+        name: Gur Amba
+        date: 27 November 1852
+        text: Kassa defeated the regent’s army; its commander Goshu Zewde was killed.
+        lonlat: [37.367, 12.367]
+        lp: l
+      - kind: capital
+        side: ra
+        name: Debre Tabor
+        date: "1853"
+        text: Seat of the Yejju regents. After Ayshal Ras Ali fled east to Yejju.
+        lonlat: [38.02, 11.85]
+      - kind: event
+        side: ka
+        name: Gondar
+        date: 1852–1853
+        text: The old imperial capital, where the emperors of the Era of the Princes held court without power.
+        lonlat: [37.459, 12.608]
+    arrows:
+      - side: ka
+        label: Kassa
+        phase: 1
+        via: [[36.80, 12.40], [37.10, 12.40], [37.34, 12.37]]
+      - side: ka
+        phase: 2
+        via: [[37.40, 12.30], [37.60, 11.70], [37.90, 11.20]]
+      - side: ra
+        label: Ras Ali in flight
+        phase: 3
+        via: [[38.00, 11.30], [38.50, 11.60], [39.20, 11.80], [39.60, 11.90]]
+    areas:
+      - style: outline
+        side: ra
+        label: Lands of Ras Ali and his allies (approximate)
+        polygon: [[37.2, 12.2], [38.3, 12.3], [39.7, 12.2], [39.9, 11.3], [38.6, 10.6], [37.3, 10.2], [36.8, 11.0]]
+  - title: Derasge, the coronation and Shewa
+    date: February 1855 – 1856
+    when: "1855-02-09"
+    borders: "1856-06-01"
+    countries: [et]
+    body:
+      - Wube, the last great rival, ruled Semien and Tigray and had built the church of Derasge Maryam in Semien for his own coronation. Kassa defeated him at Derasge on 9 February 1855 and two days later, on 11 February, had himself crowned in Wube’s church by the Abuna Salama III as Tewodros II, King of Kings of Ethiopia. He then marched into Wollo, took the mountain fortress of Magdala, and turned on Shewa.
+      - King Haile Melekot of Shewa, with Oromo allies from Wollo, could not stop an army said to number about 50,000. Ill and deserted by part of his army, he destroyed his food stores and the town of Debre Berhan to deny them to Tewodros, and died in late 1855. A few Shewan nobles fought on until they were beaten at Bulga, then gave up his eleven-year-old son and heir, Menelik. Tewodros made Haile Melekot’s brother Haile Mikael governor and took Menelik back with him, raising him at court and later marrying him to his daughter Alitash. Shewa’s independence was over for a decade.
+    facts:
+      - [Battle of Derasge, "9 February 1855, victory of Kassa"]
+      - [Coronation of Tewodros II, "11 February 1855, Derasge Maryam"]
+      - [Death of Haile Melekot, "October or November 1855"]
+    markers:
+      - kind: battle
+        side: ka
+        name: Derasge
+        date: 9 February 1855
+        text: Kassa defeated Wube and was crowned Tewodros II two days later in Wube’s church of Derasge Maryam, near today’s Mekane Berhan.
+        lonlat: [38.117, 12.983]
+      - kind: taken
+        side: ka
+        name: Magdala
+        date: "1855"
+        text: The flat-topped mountain fortress in Wollo, which became Tewodros’s stronghold and treasury.
+        lonlat: [39.181, 11.346]
+        lp: l
+      - kind: event
+        side: sh
+        name: Debre Berhan
+        date: "1855"
+        text: Haile Melekot destroyed the town and his stores here to deny them to Tewodros’s army.
+        lonlat: [39.53, 9.68]
+        lp: l
+      - kind: capital
+        side: sh
+        name: Ankober
+        date: "1855"
+        text: The capital of the kings of Shewa.
+        lonlat: [39.73, 9.58]
+    arrows:
+      - side: ka
+        label: Tewodros
+        phase: 1
+        via: [[38.10, 12.90], [38.40, 12.30], [38.90, 11.70], [39.15, 11.38]]
+      - side: ka
+        phase: 2
+        via: [[39.20, 11.30], [39.40, 10.70], [39.50, 10.10], [39.52, 9.72]]
+    areas:
+      - style: gained
+        side: ka
+        label: Shewa, taken by Tewodros in 1855–1856
+        atoms: [ET-OR~shewa, ET-AM~shewa]
+  - title: Revolt in the provinces
+    date: 1856–1868
+    when: "1863"
+    borders: "1867-06-01"
+    countries: [et]
+    body:
+      - Tewodros wanted to end the power of the regional lords for good. He tried to replace hereditary governors with salaried appointees, built a standing army paid from taxes, banned the slave trade, and tried to tax church lands, which turned much of the clergy against him. His soldiers lived off the country. Revolts broke out in Gojjam under Tedla Gwalu, in Tigray under Negusse, who sought French help, in Lasta under Wagshum Gobeze, in Wollo and in Shewa.
+      - Tewodros answered with growing violence. After defeating Tedla Gwalu’s forces in February 1863 he had thousands of prisoners killed, and in 1864 he let his army plunder Gondar. In 1865 Menelik escaped from Magdala to Shewa and was proclaimed king there. By the end of 1867 Tewodros held little more than the country between Debre Tabor and Magdala; Kassa Mercha ruled Tigray, Gobeze Lasta and much of the north-west. His imprisonment of the British consul and other Europeans, after London had left his letter to Queen Victoria unanswered, brought a British army to Magdala, where he shot himself on 13 April 1868.
+    facts:
+      - [Menelik’s escape to Shewa, "1865"]
+      - [Death of Tewodros, "13 April 1868, Magdala"]
+    markers:
+      - kind: held
+        side: ka
+        name: Magdala
+        date: 1867–1868
+        text: Tewodros’s last stronghold, where he held his European captives and his treasury.
+        lonlat: [39.181, 11.346]
+        lp: l
+      - kind: event
+        side: ka
+        name: Gondar
+        date: "1864"
+        text: Plundered by Tewodros’s army after its clergy and people turned against him.
+        lonlat: [37.459, 12.608]
+      - kind: capital
+        side: sh
+        name: Ankober
+        date: "1865"
+        text: Menelik, escaped from Magdala, was proclaimed king of Shewa in 1865.
+        lonlat: [39.73, 9.58]
+    arrows:
+      - side: sh
+        label: Menelik’s escape
+        phase: 1
+        via: [[39.18, 11.30], [39.40, 10.70], [39.60, 10.10], [39.72, 9.62]]
+    areas:
+      - style: occupied
+        side: rb
+        label: Tigray, Lasta and Gojjam in revolt, about 1867 (approximate)
+        atoms: [ET-TI]
+      - style: occupied
+        side: rb
+        label: Tigray, Lasta and Gojjam in revolt, about 1867 (approximate)
+        polygons:
+          - [[38.6, 12.9], [39.6, 12.8], [39.5, 12.0], [38.6, 11.9]]
+          - [[36.9, 11.4], [38.0, 11.0], [38.2, 10.2], [37.2, 10.0], [36.6, 10.6]]
+      - style: outline
+        side: ka
+        label: Held by Tewodros, 1867 (approximate)
+        polygon: [[37.9, 12.0], [38.4, 12.0], [39.4, 11.5], [39.3, 11.2], [38.4, 11.5], [37.8, 11.7]]

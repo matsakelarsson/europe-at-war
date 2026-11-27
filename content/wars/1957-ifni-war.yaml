@@ -2,25 +2,193 @@ id: ifni-war
 name: Ifni War
 start: "1957-11-23"
 end: "1958-06-30"
-tier: C
-summary: A war between Spain and the Moroccan Army of Liberation, irregular forces backed by newly independent Morocco, over the Spanish enclave of Ifni and the Spanish Sahara. In November 1957 the irregulars attacked Sidi Ifni and the Spanish posts inland, and Spain withdrew to a small perimeter around the town, which was besieged; in the Sahara, a joint Spanish–French offensive in February 1958 broke the insurgents. By the Treaty of Angra de Cintra of April 1958 Spain ceded Cape Juby (the Tarfaya Strip) to Morocco, but it kept Sidi Ifni until 1969 and Western Sahara until 1975.
-countries: [ma, es, eh, fr]
+tier: B
+summary: "A war between Spain and the Moroccan Army of Liberation, irregular forces that newly independent Morocco tolerated and in part armed, over the Spanish enclave of Ifni and the Spanish Sahara. After Morocco became independent in 1956, the southern units of the Army of Liberation, which had fought the French protectorate, turned on the Spanish territories that the Istiqlal party and the king claimed as part of a Greater Morocco, and many Sahrawi tribesmen joined them. On 23 November 1957 the irregulars attacked Sidi Ifni and the Spanish posts inland; Spain relieved the besieged posts of Tiliouine and Telata with paratroopers and the Legion, then pulled back to a perimeter around the town, which stayed under siege until June 1958. In the Sahara the irregulars drove the Spanish back to the coast, and Spanish legionnaires were ambushed at Edchera in January 1958. In February 1958 some 9,000 Spanish and 5,000 French troops with about 150 aircraft, the Spanish Operation Teide and the French Operation Écouvillon, swept the desert from El Aaiún, Villa Cisneros, Tindouf and Fort Gouraud and broke the irregulars. By the Treaty of Angra de Cintra of 1 April 1958 Spain handed Cape Juby, the Tarfaya Strip, to Morocco, but it kept Sidi Ifni until 1969 and Western Sahara until 1976. Spain lost about 200 dead and 80 missing; the irregulars lost an estimated 800–1,000 dead."
+countries: [ma, eh, es, fr, mr]
 sides:
   - id: es
     name: Spain
-    polities: [spain]
+    polities: [spain, spanish-sahara]
     ink: gold
-  - id: ma
+    moves: Spanish moves
+    success: Spanish success
+  - id: alm
     name: Moroccan Army of Liberation
+    polities: [moroccan-army-of-liberation]
     ink: olive
+    moves: Army of Liberation moves
+    success: Army of Liberation success
   - id: fr
     name: France
     polities: [france]
     ink: blue
+    moves: French moves
+    success: French success
 notes:
-  - The fighting took place in south-western Morocco and Western Sahara, outside the map. Spain lost about 200 dead and 80 missing; the irregulars lost an estimated 800–1,000 dead.
+  - Spain called the irregulars “bands” and treated the war as a rebellion; in Morocco they are remembered as the Army of Liberation in the South (Jaysh al-Tahrir fi al-Janub). The Moroccan government denied directing them, though the king and the Istiqlal party openly backed the claim to the Spanish territories, and in 1958 the units in the south were taken into the Royal Armed Forces or disbanded.
+  - Spanish losses are given as about 190–200 killed, about 500 wounded and 80 missing; Moroccan losses are estimates. In Spain the war was little reported at the time and is sometimes called the forgotten war.
 sources:
   - title: Ifni War (Wikipedia)
     url: https://en.wikipedia.org/wiki/Ifni_War
   - title: Treaty of Angra de Cintra (Wikipedia)
     url: https://en.wikipedia.org/wiki/Treaty_of_Angra_de_Cintra
+  - title: Moroccan Army of Liberation (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Moroccan_Army_of_Liberation
+  - title: Sidi Ifni (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sidi_Ifni
+  - title: Ifni (Britannica)
+    url: https://www.britannica.com/place/Ifni
+  - title: Cape Juby (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cape_Juby
+steps:
+  - title: The attack on Ifni
+    date: November – December 1957
+    when: "1957-11-23"
+    borders: "1957-11-23"
+    countries: [ma, es]
+    body:
+      - "Ifni, a strip of coast and mountains some 60 km long around the port of Sidi Ifni, had been Spanish since 1934, under a claim going back to the treaty that ended the war of 1859–1860. When France and Spain ended their protectorates in 1956, Spain kept Ifni, its southern protectorate zone of Cape Juby (Tarfaya) and the Spanish Sahara to the south. Moroccan nationalists, led by the Istiqlal party and Allal al-Fassi’s idea of a Greater Morocco that reached to the Senegal River, claimed them all. Demonstrations against Spanish rule broke out in Ifni in April 1957, and units of the Army of Liberation gathered at Goulimine and Bouizakarne, just outside the enclave."
+      - "On 23 November 1957 some 2,000 irregulars, many of them local Aït Ba Amrane tribesmen, attacked Sidi Ifni and the small posts inland, cutting telephone lines and seizing ammunition. The attack on the town failed, but several posts were cut off. At Tiliouine some 60 Ifni riflemen held out until paratroopers were dropped to them and a Legion column broke through on 3 December; at Telata a paratroop platoon sent to relieve the post fought its way back through repeated ambushes. Spain then gave up the interior and held only a perimeter of about 8 km around Sidi Ifni, with 7,500 men by 9 December. The siege lasted until June 1958 but saw little fighting after December."
+    facts:
+      - [Attack on Sidi Ifni and the posts, "23 November 1957"]
+      - [Tiliouine relieved, "3 December 1957"]
+      - [Spanish garrison of Sidi Ifni, "about 7,500 by 9 December 1957"]
+    markers:
+      - kind: siege
+        side: es
+        name: Sidi Ifni
+        date: 23 November 1957 – June 1958
+        text: The Spanish garrison held the town and a small perimeter round it. The besieged posts of Tiliouine and Telata, in the hills a few kilometres inland, were relieved in early December and then abandoned.
+        lonlat: [-10.167, 29.383]
+        lp: l
+      - kind: event
+        side: alm
+        name: Goulimine
+        date: November 1957
+        text: The Army of Liberation gathered here and at Bouizakarne before the attack on Ifni.
+        lonlat: [-10.067, 28.983]
+        lp: r
+    arrows:
+      - side: alm
+        label: Army of Liberation
+        via: [[-10.067, 28.983], [-10.050, 29.180], [-10.120, 29.340]]
+    areas:
+      - style: contested
+        side: alm
+        label: Interior of Ifni, held by the Army of Liberation
+        atoms: [MA-13~ifni]
+      - style: occupied
+        side: es
+        label: Spanish perimeter around Sidi Ifni
+        polygon: [[-10.24, 29.45], [-10.11, 29.46], [-10.08, 29.36], [-10.14, 29.31], [-10.22, 29.33]]
+  - title: The Sahara and Operation Écouvillon
+    date: January – February 1958
+    when: "1958-01-12"
+    borders: "1958-02-10"
+    countries: [eh, ma, es, fr, mr]
+    body:
+      - "In the Spanish Sahara, a land of a few tens of thousands of nomads, the irregulars and the Sahrawi tribesmen who joined them attacked the scattered Spanish posts in late 1957. Spain abandoned Smara and the interior and held only the coastal towns of El Aaiún, Villa Cisneros (Dakhla) and Cape Juby. On 12 January 1958 the irregulars attacked El Aaiún and were driven off; on 13 January they ambushed two companies of the Legion’s 13th Battalion at Edchera, on the Saguia el-Hamra east of the town, in a fight that lasted until nightfall."
+      - "France feared the war would spread to Mauritania and Algeria, where the Army of Liberation also raided, and agreed to a joint campaign. On 10 February 1958 some 9,000 Spanish troops (Operation Teide) and 5,000 French (Operation Écouvillon), with about 150 aircraft, attacked from El Aaiún and Villa Cisneros and from Tindouf and Fort Gouraud. The Spanish drove the irregulars from the Tarfaya Strip and from Edchera and retook Smara, and on 21 February Spanish and French columns met near Bir Anzarane and Aousserd. By the end of February the irregulars had been scattered and driven north of the Draa, and many Sahrawi families fled to Morocco with them."
+    facts:
+      - [Attack on El Aaiún, "12 January 1958"]
+      - [Ambush at Edchera, "13 January 1958"]
+      - [Operations Teide and Écouvillon, "10–24 February 1958"]
+      - [Forces, "about 9,000 Spanish and 5,000 French troops, 150 aircraft"]
+    markers:
+      - kind: held
+        side: es
+        name: El Aaiún
+        date: 12 January 1958
+        text: The capital of the Spanish Sahara, attacked and held. The Spanish offensive set out from here.
+        lonlat: [-13.199, 27.150]
+        lp: l
+      - kind: battle
+        name: Edchera
+        date: 13 January 1958
+        text: Two companies of the Legion’s 13th Battalion were ambushed in the dunes along the Saguia el-Hamra and lost dozens of men before the irregulars withdrew at nightfall.
+        lonlat: [-13.052, 27.031]
+        lp: b
+      - kind: taken
+        side: es
+        name: Smara
+        date: February 1958
+        text: Abandoned by the Spanish in late 1957 and retaken during the offensive.
+        lonlat: [-11.670, 26.739]
+      - kind: taken
+        side: es
+        name: Tan-Tan
+        date: February 1958
+        text: The irregulars’ strongholds in the Tarfaya Strip fell first, with about 150 of their men killed.
+        lonlat: [-11.100, 28.433]
+      - kind: battle
+        side: fr
+        name: Bir Anzarane and Aousserd
+        date: 21 February 1958
+        text: Spanish columns from the coast and French columns from Fort Gouraud closed in on the irregulars in Río de Oro.
+        lonlat: [-14.531, 23.888]
+        lp: l
+      - kind: event
+        side: fr
+        name: Fort Gouraud
+        date: February 1958
+        text: French troops of Mauritania set out from here (today F’Dérik) to sweep the south.
+        lonlat: [-12.710, 22.680]
+      - kind: event
+        side: fr
+        name: Tindouf
+        date: February 1958
+        text: The French column from Algeria advanced from Tindouf towards the Saguia el-Hamra.
+        lonlat: [-8.129, 27.675]
+    arrows:
+      - side: es
+        label: Spanish columns
+        phase: 1
+        via: [[-13.199, 27.150], [-12.500, 26.950], [-11.670, 26.740]]
+      - side: es
+        phase: 1
+        via: [[-13.199, 27.150], [-12.400, 27.700], [-11.300, 28.250]]
+      - side: es
+        phase: 2
+        via: [[-15.946, 23.708], [-15.200, 23.800], [-14.531, 23.888]]
+      - side: fr
+        label: French columns
+        phase: 1
+        via: [[-8.129, 27.675], [-9.400, 27.300], [-10.800, 26.900]]
+      - side: fr
+        phase: 2
+        via: [[-12.710, 22.680], [-13.500, 23.100], [-14.300, 23.700]]
+  - title: Angra de Cintra and the cession of Tarfaya
+    date: April 1958 – June 1969
+    when: "1958-04-10"
+    borders: "1958-04-10"
+    countries: [ma, es, eh]
+    body:
+      - "With the irregulars beaten in the desert, Spain was ready to give up what mattered least to it. By the Treaty of Angra de Cintra, signed on 1 April 1958 after talks between the foreign ministers Fernando María Castiella and Ahmed Balafrej on the Bay of Cintra in Río de Oro, Spain handed over its southern protectorate zone of Cape Juby, the Tarfaya Strip between the Draa and the parallel 27°40′ N, which it had not given up with the rest of its protectorate in 1956. The handover took place at Villa Bens, the town of Tarfaya, on 10 April, in the presence of the crown prince, the future Hassan II. In the same months the Moroccan government took the Army of Liberation’s units in the south into the Royal Armed Forces or disbanded them."
+      - "Spain kept Sidi Ifni and its perimeter, and made both Ifni and the Sahara Spanish provinces in January 1958. Under pressure from the United Nations, which called for the decolonisation of Ifni and the Spanish Sahara from 1965, Spain ceded Ifni to Morocco by the Treaty of Fez of January 1969 and left on 30 June 1969. The Spanish Sahara remained Spanish until 1975–1976, when the Green March and the Madrid Accords opened the Western Sahara War."
+    facts:
+      - [Treaty of Angra de Cintra, "1 April 1958"]
+      - [Tarfaya handed to Morocco, "10 April 1958"]
+      - [Ifni handed to Morocco, "30 June 1969"]
+    markers:
+      - kind: treaty
+        name: Angra de Cintra
+        date: 31 March – 2 April 1958
+        text: The Spanish and Moroccan foreign ministers met on this bay on the coast of Río de Oro and signed the treaty on 1 April. Many sources wrongly place the talks at Sintra in Portugal.
+        lonlat: [-16.230, 23.060]
+      - kind: taken
+        side: alm
+        name: Tarfaya (Villa Bens)
+        date: 10 April 1958
+        text: Moroccan troops took over the town and the strip of Cape Juby from Spain.
+        lonlat: [-12.926, 27.939]
+      - kind: held
+        side: es
+        name: Sidi Ifni
+        date: 1958–1969
+        text: Kept by Spain as a province until it was handed to Morocco on 30 June 1969.
+        lonlat: [-10.167, 29.383]
+    areas:
+      - style: gained
+        side: alm
+        label: Tarfaya Strip, ceded to Morocco in April 1958
+        atoms: [MA-14~tarfaya, MA-15~tarfaya]

@@ -1,0 +1,155 @@
+id: sonni-ali-conquests
+name: Sonni Ali’s conquests
+start: "1464"
+end: "1492-11-06"
+tier: B
+summary: "The campaigns by which Sonni Ali, king of Gao from about 1464, turned the small Songhai kingdom into the leading power of the Niger bend. With a cavalry army and a fleet of river boats he took Timbuktu from the Maghsharen Tuareg in January 1468, besieged and took Djenné (in 1473 by the usual reckoning), fought a long war with the Mossi, who reached Walata in 1480 before Sonni Ali defeated them in 1483, and campaigned against the Tuareg, the Fulani, the Dogon of the cliffs and the peoples of the Gourma. He drowned on his way back from the Gourma in November 1492. The Timbuktu chroniclers, who wrote for the scholars he had persecuted and for the Askia dynasty that overthrew his son, remember him as a tyrant; Songhai tradition remembers Si Ali Ber as a great king and magician, and modern historians see in him the real founder of the Songhai Empire."
+countries: [ml, ne, bf]
+sides:
+  - id: son
+    name: Songhai (Sonni Ali)
+    polities: [songhai]
+    ink: orange
+    moves: Songhai moves
+    success: Songhai success
+  - id: tua
+    name: Maghsharen Tuareg (Akil ag Malwal)
+    polities: [maghsharen]
+    ink: purple
+    moves: Tuareg moves
+    success: Tuareg success
+  - id: mos
+    name: Mossi of the Niger bend
+    polities: [mossi-states]
+    ink: red
+    moves: Mossi moves
+    success: Mossi success
+notes:
+  - "Nearly everything comes from the two Timbuktu chronicles of the seventeenth century, the Tarikh al-Sudan and the Tarikh al-Fattash, both hostile to Sonni Ali. Dates are their Hijri years as converted by their translators; the chronicles disagree on some of them, notably the siege of Djenné, which is dated anywhere from 1468 to 1473, and the Tarikh al-Sudan repeats the legend that it lasted seven years, seven months and seven days. Which Mossi kingdom fought Songhai in the Niger bend is debated."
+sources:
+  - title: Sonni Ali (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sonni_Ali
+  - title: Songhai Empire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Songhai_Empire
+  - title: Djenné (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Djenn%C3%A9
+  - title: Sonni ʿAlī (Britannica)
+    url: https://www.britannica.com/biography/Sonni-Ali
+  - title: "S. M. Cissoko, “The Songhay from the 12th to the 16th century”, and M. Izard, “The peoples and kingdoms of the Niger Bend and the Volta basin”, in UNESCO General History of Africa, vol. IV (South African History Online)"
+    url: https://www.sahistory.org.za/archive/general-history-africa-volume-iv-africa-twelfth-sixteenth-century
+  - title: "al-Sa’di, Tarikh es-Soudan, French translation by O. Houdas, 1900, chapters 5, 7 and 12 (Internet Archive)"
+    url: https://archive.org/details/tarikhessoudanpa00sadauoft
+steps:
+  - title: The taking of Timbuktu
+    date: 1464–1470
+    when: "1468"
+    borders: "1468-01-30"
+    countries: [ml]
+    body:
+      - "Sonni Ali came to the throne of Gao about 1464 and, in the words of the Tarikh al-Sudan, spent his whole reign on campaigns and conquests. His first war was against the Mossi, who were driven back from the river. Timbuktu was then held by the Maghsharen Tuareg under Akil ag Malwal, who left its government to the Timbuktu-koi. When Akil kept back the governor’s share of the taxes, the new Timbuktu-koi Ammar secretly invited Sonni Ali to take the town. Songhai horsemen appeared on the Gourma bank of the Niger, Ammar sent boats to ferry them across, and Akil fled to Walata, taking with him many of the scholars of Sankore."
+      - "Sonni Ali entered Timbuktu on 29 or 30 January 1468 and sacked it. The scholar Ahmad Baba later counted it among the three sacks the town suffered, and the Tarikh al-Sudan says more blood was shed in it than when the Mossi had sacked Timbuktu. Accusing the scholars who had stayed of being friends of the Tuareg, the king had several of them killed or humiliated, and until 1470 or 1471 he pursued those who fled; at Tadjit his men overtook a party on its way to Walata and killed many of them. He also showed favour to other scholars and appointed a new qadi. The chroniclers, scholars of Timbuktu themselves, call him a tyrant who made light of Islam; historians point out that he was breaking a town elite that had sided with the Tuareg."
+    facts:
+      - [Accession of Sonni Ali, "about 1464"]
+      - [Timbuktu taken, "29 or 30 January 1468"]
+    markers:
+      - kind: capital
+        side: son
+        name: Gao
+        date: "1464"
+        text: Capital of the Songhai kings on the left bank of the Niger.
+        lonlat: [-0.044, 16.272]
+      - kind: taken
+        side: son
+        name: Timbuktu
+        date: 29 or 30 January 1468
+        text: Taken from the Tuareg at the invitation of the Timbuktu-koi Ammar, then sacked.
+        lonlat: [-3.008, 16.773]
+      - kind: event
+        side: tua
+        name: Walata
+        date: "1468"
+        text: Akil and many of the scholars of Sankore fled here with a thousand camels, according to the Tarikh al-Sudan.
+        lonlat: [-7.025, 17.288]
+    arrows:
+      - side: son
+        label: Sonni Ali
+        phase: 1
+        via: [[-0.100, 16.230], [-0.700, 16.550], [-1.700, 16.800], [-2.700, 16.640], [-2.980, 16.700]]
+      - side: tua
+        label: Akil and the scholars
+        phase: 2
+        via: [[-3.050, 16.800], [-4.600, 17.000], [-6.950, 17.280]]
+  - title: Djenné and the Mossi war
+    date: 1470–1483
+    when: "1473"
+    borders: "1480-08-01"
+    countries: [ml, bf, mr]
+    body:
+      - "Djenné, the trading city of the inland Niger delta, was the next prize. Sonni Ali blockaded it with his river fleet, withdrawing each year when the flood surrounded the town and returning when the waters fell. Famine finally forced the city to surrender, by the usual reckoning in 1473. Its young king, whose father had died during the siege, came out on foot to submit; Sonni Ali received him as an equal and married his mother, and the rulers of Songhai and Djenné thereafter sat on the same carpet."
+      - "Meanwhile the Mossi, the other military power of the Niger bend, struck back. Their raids reached the river in 1477, when their king took Sama, between the Niger and Walata. In July and August 1480 they besieged Walata for a month, took it and carried off families as captives, though the townspeople caught up with them and won them back. Sonni Ali began digging a canal from Ras el-Ma, at the western end of the lakes north of the Niger, towards Walata so that his boats could reach it, but abandoned the work when he heard that the Mossi were advancing against him. In 1483 he caught the Mossi king at Djiniki-To’oi near Kobi as the Mossi were returning home, routed him and pursued him into his own country."
+    facts:
+      - [Djenné surrenders, "1473 (sources vary)"]
+      - [Mossi siege of Walata, "July–August 1480"]
+      - [Battle of Kobi (Djiniki-To’oi), "1483, Songhai victory"]
+    markers:
+      - kind: taken
+        side: son
+        name: Djenné
+        date: "1473"
+        text: Taken after a long blockade by the Songhai river fleet; its young king submitted on terms.
+        lonlat: [-4.555, 13.906]
+      - kind: taken
+        side: mos
+        name: Walata
+        date: July – August 1480
+        text: Besieged for a month and taken by the Mossi, who withdrew with captives; the townspeople recovered them in pursuit.
+        lonlat: [-7.025, 17.288]
+      - kind: event
+        side: son
+        name: Ras el-Ma
+        date: about 1480–1483
+        text: Starting point of Sonni Ali’s canal towards Walata, abandoned when the Mossi advanced.
+        lonlat: [-4.480, 16.600]
+        lp: b
+    arrows:
+      - side: son
+        label: Songhai fleet
+        phase: 1
+        via: [[-3.020, 16.680], [-3.900, 15.600], [-4.190, 14.520], [-4.520, 13.950]]
+      - side: mos
+        label: Mossi raid
+        phase: 2
+        via: [[-2.400, 13.650], [-3.700, 14.900], [-5.500, 16.400], [-6.950, 17.230]]
+      - side: son
+        label: Pursuit of the Mossi, 1483
+        phase: 3
+        via: [[-4.100, 14.700], [-3.300, 14.100], [-2.500, 13.700]]
+  - title: The last campaigns
+    date: 1483–1492
+    when: "1485"
+    borders: "1492-11-06"
+    countries: [ml, ne, bf]
+    body:
+      - "In his last years Sonni Ali turned against the peoples of the escarpments and hills south of the Niger bend, whom the chronicle calls “the mountains”; all submitted except Dom. He also conquered Bara and the country of the Nunu Sanhaja, then ruled by a queen, and the lands of the Kunta, raided the Fulani and sent women captured from them to the notables of Timbuktu, and tried in vain to conquer Borgu. In 1485 he had the wall of Kabara, the port of Timbuktu, rebuilt. By the end of his reign Songhai held the Niger from the delta below Djenné to Dendi in the south-east."
+      - "His last campaign took him into the Gourma, the country in the bend south of the river, against the Zaghrani and the Fulani. On the way back, on 6 November 1492 by the Tarikh al-Sudan’s date, he was swept away by a torrent and drowned. His son Abu Bakr Dao (Sonni Baru) was proclaimed king, but within months one of Sonni Ali’s generals, Muhammad Ture, seized the throne as Askia Muhammad (see “Askia Muhammad’s wars”). Songhai oral tradition, in which Si Ali Ber is a magician king, tells of his end differently, and some versions say he did not die but disappeared."
+    facts:
+      - [Kabara’s wall rebuilt, "1485"]
+      - [Death of Sonni Ali, "6 November 1492"]
+    markers:
+      - kind: taken
+        side: son
+        name: Hombori mountains
+        date: after 1483
+        text: The hill and cliff country of the Niger bend, which the chronicle says Sonni Ali conquered, except Dom.
+        lonlat: [-1.700, 15.280]
+      - kind: capital
+        side: son
+        name: Gao
+        date: "1492"
+        text: Capital of Songhai, the base of Sonni Ali’s campaigns.
+        lonlat: [-0.044, 16.272]
+    areas:
+      - style: gained
+        side: son
+        label: Songhai under Sonni Ali, about 1492 (approximate)
+        polygon: [[-5.400, 13.600], [-4.900, 15.400], [-4.500, 16.900], [-2.500, 17.200], [0.200, 17.300], [1.200, 16.000], [3.200, 13.000], [3.700, 11.900], [2.600, 12.400], [0.900, 13.800], [-1.500, 14.600], [-3.600, 13.600], [-4.600, 13.200]]

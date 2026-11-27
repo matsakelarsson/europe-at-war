@@ -1,0 +1,173 @@
+id: moulay-ismail-wars-with-spain-and-england
+name: Moulay Ismail’s wars with Spain and England
+start: "1680-03-25"
+end: "1727-04"
+tier: B
+summary: "The campaigns in which Sultan Moulay Ismail (r. 1672–1727) won back most of the Atlantic and Mediterranean ports that Portugal, Spain and England held in Morocco. His commanders, leading the Rifian volunteers of the Jaysh al-Rifi and the sultan’s troops, besieged English Tangier in 1680, took Spanish La Mamora (Mehdya) in 1681 and saw the English give up Tangier, after blowing up its mole and walls, in February 1684. Larache fell to them in November 1689, with some 1,600 Spanish prisoners, and Asilah in 1691. In October 1694 they laid siege to Ceuta, a siege that went on, with a Spanish relief in 1720, until after Ismail’s death in 1727; Melilla also held out. The captives of these wars were put to work on Ismail’s buildings at Meknes or ransomed through envoys and the redemptionist religious orders."
+countries: [ma, es, gb]
+sides:
+  - id: ma
+    name: Morocco under Moulay Ismail
+    polities: [morocco]
+    ink: red
+    moves: Moroccan moves
+    success: Moroccan success
+  - id: en
+    name: England
+    polities: [england]
+    ink: blue
+    moves: English moves
+    success: English success
+  - id: es
+    name: Spain
+    polities: [spain]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+notes:
+  - English dates for Tangier are Old Style (Julian), Spanish dates New Style. The numbers of the besiegers and of the dead come mostly from European reports and vary widely.
+  - The presidios were small fortified towns, too small to show on the base map; Ceuta and Melilla, which Spain still holds, have their own atoms. England had received Tangier in 1661 as part of the dowry of Catherine of Braganza.
+  - European writers made much of the Christian slaves of Meknes; historians judge that they numbered a few thousand at most at any one time, fewer than some accounts claimed.
+sources:
+  - title: Great Siege of Tangier (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Great_Siege_of_Tangier
+  - title: English Tangier (Wikipedia)
+    url: https://en.wikipedia.org/wiki/English_Tangier
+  - title: Siege of La Mamora (1681) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_La_Mamora_(1681)
+  - title: Siege of Larache (1689) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Larache_(1689)
+  - title: Siege of Asilah (1690–1691) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Asilah_(1690%E2%80%931691)
+  - title: Sieges of Ceuta (1694–1727) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sieges_of_Ceuta_(1694%E2%80%931727)
+  - title: Ismail Ibn Sharif (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ismail_Ibn_Sharif
+steps:
+  - title: Tangier and La Mamora
+    date: 1680–1684
+    when: "1680-03"
+    borders: "1684-02-06"
+    countries: [ma, gb, es]
+    body:
+      - Moulay Ismail spent his first years as sultan putting down rivals and building a standing army, including the Abid al-Bukhari, a corps of enslaved and free Black soldiers, and he made Meknes his capital. He then turned on the European footholds on the coast. The English garrison of Tangier had built some fifteen forts outside the walls by the late 1670s, and had fought al-Khadir Ghailan in the 1660s. On 25 March 1680, after a first attempt in 1679, the qaid Omar ben Haddu laid siege to the town with 7,000–15,000 men; by the time a truce stopped the fighting from 19 May to 15 September most of the outer forts had fallen. When fighting resumed, reinforcements from England, Ireland and Scotland and Spanish cavalry had brought the garrison to over 3,000 men, and on 27 October 1680 the garrison drove the besiegers back and filled in their trenches. A truce and then a four-year peace followed.
+      - Omar ben Haddu also moved against La Mamora, the Spanish fort at the mouth of the Sebou held since 1614. It fell on 3 May 1681; its commander and about 300 men were captured, and the town was renamed al-Mahdiya. In England, Parliament, in the middle of the Exclusion Crisis, would not pay for Tangier, and Charles II decided to give it up. Lord Dartmouth’s fleet arrived in 1683; over the winter the English blew up the great mole and the fortifications, and they left in early February 1684. Ali ben Abdallah er-Riffi, whose Rifian forces had blockaded the town, took possession; he and later his son governed Tangier and the north for decades.
+    facts:
+      - [Great Siege of Tangier, "25 March – 27 October 1680"]
+      - [La Mamora taken, "3 May 1681"]
+      - [English evacuation of Tangier, "February 1684"]
+    markers:
+      - kind: taken
+        side: ma
+        name: Tangier
+        date: February 1684
+        text: Besieged in 1680, when the English lost most of their outer forts but held the town. Evacuated and demolished by the English in 1683–1684.
+        lonlat: [-5.80, 35.78]
+      - kind: taken
+        side: ma
+        name: La Mamora (al-Mahdiya)
+        date: 3 May 1681
+        text: The Spanish fort at the mouth of the Sebou, taken by Omar ben Haddu with about 300 prisoners. It was renamed al-Mahdiya (Mehdya).
+        lonlat: [-6.65, 34.26]
+      - kind: event
+        side: ma
+        name: Ksar el-Kebir
+        date: "1680"
+        text: Seat of Omar ben Haddu, qaid of Alcazar, who led the attacks on Tangier and La Mamora.
+        lonlat: [-5.90, 35.01]
+      - kind: capital
+        side: ma
+        name: Meknes
+        date: 1672–1727
+        text: Moulay Ismail’s capital, where he built a vast palace city with the labour of captives and slaves.
+        lonlat: [-5.56, 33.89]
+    arrows:
+      - side: ma
+        label: Omar ben Haddu
+        phase: 1
+        via: [[-5.88, 35.05], [-5.84, 35.40], [-5.81, 35.72]]
+      - side: ma
+        phase: 2
+        via: [[-5.95, 35.00], [-6.30, 34.70], [-6.62, 34.30]]
+  - title: Larache and Asilah
+    date: 1689–1691
+    when: "1689-07"
+    borders: "1691-12-31"
+    countries: [ma, es]
+    body:
+      - Spain had held Larache since al-Ma’mun handed it over in 1610. In July 1689 a Moroccan army under the qaid Ali ben Abdallah, by one account 30,000 horsemen, closed in on the town, defended by about 2,000 Spaniards. After a siege of four months the Spanish surrendered on 11 November 1689. About 400 of them had been killed, and some 1,600 were taken prisoner. Ismail broke the promise that the governor and a hundred officers could go free; the rest of the garrison was held at Meknes, and those who did not convert were put to forced labour until an exchange of Spanish officers for about 1,000 Moroccan prisoners was carried out at Ceuta in 1691.
+      - Ahmed ben Haddu then besieged the Spanish garrison of Asilah, a town the Portuguese had first taken in 1471. After a year’s siege the garrison slipped away by sea at night in 1691, and the Rifian troops occupied the town; some sources date its fall to 1692. Larache remained Moroccan until Spain occupied it again in 1911.
+    facts:
+      - [Larache surrendered, "11 November 1689"]
+      - [Spanish prisoners from Larache, "about 1,600–1,700"]
+      - [Asilah evacuated, "1691"]
+    markers:
+      - kind: taken
+        side: ma
+        name: Larache
+        date: 11 November 1689
+        text: Spanish since 1610. It surrendered after a siege of four months; about 1,600 Spanish soldiers were taken prisoner.
+        lonlat: [-6.15, 35.18]
+        lp: l
+      - kind: taken
+        side: ma
+        name: Asilah
+        date: "1691"
+        text: The Spanish garrison left by sea at night after a siege of about a year.
+        lonlat: [-6.03, 35.47]
+        lp: l
+      - kind: capital
+        side: ma
+        name: Meknes
+        date: "1689"
+        text: Most of the prisoners from Larache were held here and put to work on Ismail’s buildings.
+        lonlat: [-5.56, 33.89]
+    arrows:
+      - side: ma
+        label: Ali ben Abdallah
+        phase: 1
+        via: [[-5.92, 35.03], [-6.05, 35.12], [-6.13, 35.17]]
+      - side: ma
+        label: Ahmed ben Haddu
+        phase: 2
+        via: [[-6.12, 35.22], [-6.08, 35.35], [-6.04, 35.45]]
+  - title: The siege of Ceuta
+    date: 1694–1727
+    when: "1694-10-23"
+    borders: "1720-11-30"
+    countries: [ma, es, gb]
+    body:
+      - On 23 October 1694 Ali ben Abdallah opened the siege of Ceuta, Spain’s stronghold on the African side of the Strait, which had passed from Portugal to Spain in 1640–1668. In July 1695 the besiegers briefly seized the Plaza de Armas of its fortifications in a surprise attack in fog, before a Spanish counter-attack drove them out. Melilla was besieged at the same time, from 1694 to 1696, and held. When an Anglo-Dutch fleet took Gibraltar in 1704, in the War of the Spanish Succession, Ceuta lost its main supply route, while Gibraltar supplied the besiegers; an envoy of the Habsburg claimant Charles demanded Ceuta’s surrender, and the governor refused.
+      - The siege dragged on for a quarter of a century, with long periods of blockade and occasional assaults. In 1720 the Marquis of Lede brought about 16,000 Spanish soldiers, drove the Moroccans back to Tetouan and broke the siege; but plague broke out, the army was withdrawn in 1721 and the Moroccans returned. A storm destroyed the fleet Ismail was preparing in 1722. Moulay Ismail died in March 1727, and in the succession war among his sons the besiegers left; on 22 April 1727 a Spanish patrol found their camp empty. Ceuta and Melilla have stayed Spanish to this day.
+    facts:
+      - [Siege of Ceuta, "23 October 1694 – April 1727"]
+      - [Relief by the Marquis of Lede, "1720, about 16,000 men"]
+      - [Siege of Melilla, "1694–1696"]
+    markers:
+      - kind: siege
+        side: es
+        name: Ceuta
+        date: 1694–1727
+        text: Besieged for more than thirty years. The Spanish garrison held, and the relief of 1720 broke the siege for a time.
+        lonlat: [-5.32, 35.89]
+      - kind: siege
+        side: es
+        name: Melilla
+        date: 1694–1696
+        text: Besieged by part of the Moroccan army; its fortifications held.
+        lonlat: [-2.94, 35.29]
+      - kind: event
+        side: ma
+        name: Tetouan
+        date: "1720"
+        text: The besiegers of Ceuta fell back here after the Spanish relief of 1720, and returned in 1721.
+        lonlat: [-5.37, 35.57]
+      - kind: event
+        name: Gibraltar
+        date: "1704"
+        text: Taken by an Anglo-Dutch fleet in 1704 and kept by Britain. Ceuta lost its main supply route, and Gibraltar supplied the besiegers.
+        lonlat: [-5.35, 36.14]
+    arrows:
+      - side: es
+        label: Marquis of Lede, 1720
+        via: [[-5.45, 36.12], [-5.38, 36.00], [-5.33, 35.91]]

@@ -1,0 +1,213 @@
+id: egyptian-conquest-of-sudan
+name: Egyptian conquest of Sudan
+start: "1820-07"
+end: "1824"
+tier: B
+summary: "The conquest of the Nile valley south of Egypt and of Kordofan by the armies of Muhammad Ali, the Ottoman governor of Egypt, which began sixty years of Turco-Egyptian rule, the Turkiyya. Muhammad Ali wanted slaves to build a new army and hoped to find gold. In 1820 his son Ismail Kamil Pasha led about 4,000 men up the Nile, defeated the Shayqiyya at Korti and received the submission of Berber and Shendi; on 14 June 1821 the last Funj sultan, Badi VII, surrendered Sennar. A second army under the defterdar Muhammad Bey Khusraw took Kordofan from the Sultanate of Darfur after a battle at Bara. Heavy taxes and demands for slaves provoked a rising: in late 1822 Mek Nimr of the Ja’aliyyin had Ismail and his staff burned to death at Shendi, and the defterdar’s reprisals killed some 30,000 people. Tens of thousands of Sudanese were marched north as slaves for the army, most of whom died. Khartoum, at the meeting of the Blue and White Niles, became the seat of the new government."
+countries: [sd, eg]
+sides:
+  - id: eg
+    name: Egypt (Muhammad Ali’s army)
+    polities: [egypt]
+    ink: purple
+    moves: Egyptian moves
+    success: Egyptian success
+  - id: sud
+    name: Funj Sultanate, the Shayqiyya and the Ja’aliyyin
+    polities: [funj, shayqiyya, jaaliyyin]
+    ink: brown
+    moves: Sudanese moves
+    success: Sudanese success
+  - id: dar
+    name: Sultanate of Darfur
+    polities: [darfur]
+    ink: orange
+    moves: Darfur moves
+    success: Darfur success
+notes:
+  - "Sudanese call the period of Egyptian rule (1821–1885) the Turkiyya, “Turkish rule”, because the governors and officers were Turkish-speaking Ottoman subjects. Muhammad Ali governed Egypt in the Ottoman sultan’s name, and his army was made up of Turkish, Albanian and other Ottoman troops with Bedouin auxiliaries."
+  - Some dates, among them the battle of Bara and the month of Ismail’s death, differ between the sources.
+sources:
+  - title: Turco-Egyptian conquest of Sudan (1820–1824) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Turco-Egyptian_conquest_of_Sudan_(1820%E2%80%931824)
+  - title: Turco-Egyptian Sudan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Turco-Egyptian_Sudan
+  - title: Muhammad Ali (Britannica)
+    url: https://www.britannica.com/biography/Muhammad-Ali-pasha-and-viceroy-of-Egypt
+  - title: Mek Nimr (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mek_Nimr
+  - title: Shaigiya (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Shaigiya
+  - title: Muhammad Bey (defterdar) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Muhammad_Bey_(defterdar)
+  - title: Sultanate of Darfur (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sultanate_of_Darfur
+steps:
+  - title: Up the Nile to Korti and Berber
+    date: July 1820 – March 1821
+    when: "1820-11-04"
+    borders: "1820-11-04"
+    countries: [sd, eg]
+    body:
+      - Muhammad Ali had destroyed the Mamluk beys in Egypt in 1811, and a remnant had fled south to Dongola. He wanted to finish them, to find the gold that Sudan was said to hold, and above all to capture men for a new army of slave soldiers that would free him from his unruly Albanian and Turkish troops. In July 1820 an army of about 4,000 men, with artillery, left Cairo; Ismail Kamil Pasha, Muhammad Ali’s 25-year-old third son, took command at Aswan on 20 July. Ababda camel-men carried its supplies, and the boats were hauled through the Second Cataract on the Nile flood.
+      - The petty rulers of Lower Nubia submitted, and the Mamluks at Dongola gave up or fled south to Shendi. The first real resistance came from the Shayqiyya, a warlike confederation on the great bend of the Nile. On 4 November 1820 at Korti their cavalry, rallied by Mihera bint Abboud, a chief’s daughter who rode at their head, charged the Egyptian lines and was cut down by musket and cannon fire; a second attack in December failed in the same way. Ismail paid a bounty for the ears of the dead, which led his troops to mutilate and kill civilians.
+      - After the defeat many Shayqiyya horsemen took service with the invaders. In February 1821 Ismail crossed the Bayuda desert to the Nile, Berber submitted without fighting on 5 March, and Mek Nimr of the Ja’aliyyin at Shendi made terms. In May the army set up its headquarters at Khartoum, then a village at the meeting of the Blue and White Niles.
+    facts:
+      - [Ismail takes command at Aswan, "20 July 1820"]
+      - [Battle of Korti, "4 November 1820"]
+      - [Berber submits, "5 March 1821"]
+    markers:
+      - kind: event
+        side: eg
+        name: Aswan
+        date: 20 July 1820
+        text: Ismail Kamil Pasha took command of the expedition here. Captives from Sudan were later brought to barracks at Aswan.
+        lonlat: [32.90, 24.09]
+      - kind: event
+        side: eg
+        name: Dongola
+        date: Autumn 1820
+        text: The Mamluk refugees from Egypt held this stretch of the Nile. Some submitted to Ismail; the others fled to Shendi.
+        lonlat: [30.48, 19.17]
+        lp: l
+      - kind: battle
+        side: eg
+        name: Korti
+        date: 4 November 1820
+        text: The Shayqiyya cavalry charged the Egyptian squares and was shattered by musket and artillery fire. A second attack at Jebel Daiqa on 2 December also failed.
+        lonlat: [31.55, 18.11]
+        lp: b
+      - kind: taken
+        side: eg
+        name: Berber
+        date: 5 March 1821
+        text: Submitted without a fight after Ismail crossed the Bayuda desert.
+        lonlat: [33.98, 18.02]
+      - kind: event
+        side: sud
+        name: Shendi
+        date: March 1821
+        text: Mek Nimr, ruler of the Ja’aliyyin, came to terms with Ismail.
+        lonlat: [33.43, 16.69]
+    arrows:
+      - side: eg
+        label: Ismail Kamil Pasha
+        phase: 1
+        via: [[32.90, 24.09], [31.90, 22.60], [31.35, 21.80], [30.45, 19.60], [31.20, 18.40], [31.55, 18.15]]
+      - side: eg
+        phase: 2
+        via: [[31.70, 18.30], [32.60, 18.10], [33.40, 18.00], [33.90, 18.02]]
+      - side: eg
+        phase: 3
+        via: [[33.98, 17.95], [33.70, 17.20], [33.43, 16.75], [32.80, 16.00], [32.55, 15.65]]
+  - title: Sennar, Fazughli and Kordofan
+    date: 1821
+    when: "1821-06-14"
+    borders: "1821-08-19"
+    countries: [sd]
+    body:
+      - From Khartoum Ismail’s army crossed into the Gezira, the land between the two Niles. The Funj Sultanate of Sennar, which had ruled the middle Nile since about 1504, had long been divided by its regents, and on 14 June 1821 the last sultan, Badi VII, surrendered; the Egyptians entered Sennar the next day without a fight. Ismail went on up the Blue Nile to Fazughli in the hills near the Ethiopian border, the farthest point of the conquest. He found no gold worth mining, and the army turned to raiding the hill peoples of the south for slaves. Ibrahim Pasha, Muhammad Ali’s eldest son, joined him late in 1821 and organised boats to carry the captives north.
+      - Meanwhile the defterdar Muhammad Bey Khusraw, Muhammad Ali’s son-in-law, crossed from the Nile at Al Dabbah to Kordofan, then a province of the Sultanate of Darfur, with 3,000–4,000 men and artillery. At Bara, north of El Obeid, his guns and muskets broke a Darfur army of more than 9,000 under the Fur governor, the maqdum Musallim, who was killed with about 1,500 of his men (on 19 August 1821 by one account, in April by another). The Egyptians sacked El Obeid. Kordofan stayed Egyptian, but Darfur kept its independence for another half-century.
+      - The captives were marched or shipped north to camps at Aswan, where a French officer, Joseph Sève (Sulayman Pasha), trained the new army. Disease and hardship killed most of them; of an estimated 30,000 Sudanese brought to Aswan in 1822–1823, only about 3,000 are said to have survived.
+    facts:
+      - [Surrender of Sennar, "14 June 1821"]
+      - [Battle of Bara, "1821"]
+      - [Darfur army at Bara, "more than 9,000; about 1,500 killed"]
+    markers:
+      - kind: event
+        side: eg
+        name: Khartoum
+        date: May 1821
+        text: The army’s headquarters at the meeting of the Niles, soon the capital of Egyptian Sudan.
+        lonlat: [32.53, 15.60]
+      - kind: taken
+        side: eg
+        name: Sennar
+        date: 14 June 1821
+        text: Capital of the Funj Sultanate. Badi VII surrendered, and the Egyptians entered the next day.
+        lonlat: [33.62, 13.55]
+      - kind: event
+        side: eg
+        name: Fazughli
+        date: 1821
+        text: The farthest point of Ismail’s advance up the Blue Nile, and a base for slave raids into the southern hills.
+        lonlat: [34.77, 11.29]
+      - kind: battle
+        side: eg
+        name: Bara
+        date: "1821"
+        text: The defterdar’s artillery and muskets defeated the Darfur army of the maqdum Musallim, who was killed.
+        lonlat: [30.37, 13.70]
+      - kind: taken
+        side: eg
+        name: El Obeid
+        date: "1821"
+        text: The chief town of Kordofan, sacked after the battle of Bara.
+        lonlat: [30.22, 13.18]
+        lp: b
+    arrows:
+      - side: eg
+        label: Ismail
+        phase: 1
+        via: [[32.55, 15.55], [33.20, 14.90], [33.52, 14.40], [33.62, 13.60]]
+      - side: eg
+        phase: 2
+        via: [[33.65, 13.50], [34.10, 12.60], [34.40, 11.90], [34.75, 11.35]]
+      - side: eg
+        label: The defterdar
+        phase: 1
+        via: [[30.95, 18.05], [30.60, 16.60], [30.40, 15.00], [30.37, 13.78]]
+    areas:
+      - style: gained
+        side: eg
+        label: Kordofan, taken from Darfur
+        atoms: [SD-KN]
+  - title: Shendi burns
+    date: 1822–1824
+    when: "1822-11"
+    borders: "1823-06-01"
+    countries: [sd]
+    body:
+      - By early 1822 the riverain Sudan and Kordofan were under four Egyptian governors, and the new taxes, levied in cash at so much a slave, a cow or a sheep, drove many people to flee. Ismail fell back from Sennar to Wad Madani. In October or November 1822 he came to Shendi and demanded from Mek Nimr 15,000 dollars and 6,000 slaves. When Nimr protested, Ismail struck him with his pipe. That night the Ja’aliyyin set fire to the house where Ismail and his staff were lodged; none of them escaped. The rising spread along the Nile, and the garrisons at Khartoum and elsewhere withdrew to Wad Madani.
+      - The defterdar marched east from Kordofan, relieved the besieged garrison of Berber and spent months laying waste to the Ja’aliyyin country and the Gezira, killing rebels and civilians alike; an estimated 30,000 people died in the reprisals. Mek Nimr escaped east towards the Ethiopian borderlands and was never caught. In 1824 the defterdar was recalled, and Uthman Bey brought the first regiments of trained Sudanese slave soldiers, the jihadiyya, to garrison the country. Khartoum became the seat of the Egyptian governors, and Egyptian rule lasted until the Mahdist rising of 1881–1885.
+    facts:
+      - [Death of Ismail Kamil Pasha, "October or November 1822"]
+      - [Killed in the defterdar’s reprisals, "about 30,000"]
+    markers:
+      - kind: event
+        side: sud
+        name: Shendi
+        date: October or November 1822
+        text: Ismail and his officers were burned to death in a house set alight by Mek Nimr’s men.
+        lonlat: [33.43, 16.69]
+      - kind: siege
+        side: eg
+        name: Berber
+        date: "1823"
+        text: The Egyptian garrison was besieged by the Ja’aliyyin until the defterdar relieved it.
+        lonlat: [33.98, 18.02]
+      - kind: held
+        side: eg
+        name: Wad Madani
+        date: 1822–1823
+        text: The Egyptian garrisons of the Gezira and Khartoum gathered here during the rising.
+        lonlat: [33.52, 14.40]
+      - kind: capital
+        side: eg
+        name: Khartoum
+        date: "1824"
+        text: The new seat of government of Egyptian Sudan.
+        lonlat: [32.53, 15.60]
+        lp: l
+    arrows:
+      - side: eg
+        label: The defterdar
+        phase: 1
+        via: [[30.22, 13.25], [31.20, 15.20], [32.50, 16.80], [33.60, 17.60], [33.95, 17.95]]
+      - side: eg
+        phase: 2
+        via: [[33.90, 17.90], [33.50, 16.80], [33.00, 15.90], [33.40, 14.60]]
+      - side: sud
+        label: Mek Nimr
+        phase: 2
+        via: [[33.43, 16.69], [34.40, 16.00], [35.30, 15.00], [36.00, 14.30]]

@@ -1,26 +1,175 @@
 id: battle-of-alcacer-quibir
 name: Battle of Alcácer Quibir
-start: "1578-06"
+start: "1576"
 end: "1578-08-04"
-tier: C
-summary: The defeat of King Sebastian of Portugal in northern Morocco on 4 August 1578, also called the Battle of the Three Kings or of Wadi al-Makhazin. The young king had taken up the cause of the deposed Saadi sultan Abu Abdallah Mohammed II against his uncle Abd al-Malik, who had taken the throne with Ottoman help in 1576. Sebastian landed at Asilah with an army of perhaps 17,000–23,000 men, including German, Flemish, Spanish and Italian soldiers, and marched inland. Near Ksar el-Kebir it was surrounded by a much larger Moroccan army, strong in cavalry and firearms, and destroyed; thousands were killed and most of the rest captured. Sebastian and Mohammed II died in the battle, and Abd al-Malik died of illness during it. His brother Ahmad al-Mansur succeeded him and grew rich on the ransoms of Portuguese nobles. Sebastian was childless, and the succession crisis that followed brought Portugal under Philip II of Spain in 1580.
-countries: [pt, ma]
+tier: B
+summary: "The defeat of King Sebastian of Portugal in northern Morocco on 4 August 1578, also called the Battle of the Three Kings or, in Morocco, of Wadi al-Makhazin. It grew out of a Saadian succession war: in 1576 Abd al-Malik, with troops from Ottoman Algiers, drove his nephew, the sultan Abu Abdallah Mohammed al-Mutawakkil, from Fez and Marrakesh, and al-Mutawakkil turned to Portugal. Sebastian, young, unmarried and set on a crusade, landed at Asilah with an army of perhaps 17,000–23,000 men, including German, Flemish, Castilian and Italian soldiers, and marched inland. Near Ksar el-Kebir it was surrounded by a much larger Moroccan army, strong in cavalry and firearms, and destroyed; thousands were killed and most of the rest captured. Sebastian and al-Mutawakkil died in the battle, and Abd al-Malik died of illness during it. His brother Ahmad al-Mansur succeeded him and grew rich on the ransoms of Portuguese nobles. Sebastian was childless, and the succession crisis that followed brought Portugal under Philip II of Spain in 1580."
+countries: [pt, ma, dz]
 sides:
   - id: pt
-    name: Portugal and Mohammed II
+    name: Portugal
     polities: [portugal]
     ink: green
+    moves: Portuguese moves
+    success: Portuguese success
+  - id: mu
+    name: Abu Abdallah Mohammed al-Mutawakkil
+    polities: [mutawakkil]
+    ink: orange
+    moves: Moves of al-Mutawakkil
+    success: Success for al-Mutawakkil
   - id: ma
-    name: Morocco under Abd al-Malik
-    polities: [morocco]
+    name: Abd al-Malik’s Morocco and Ottoman Algiers
+    polities: [morocco, algiers-regency]
     ink: red
+    moves: Moroccan moves
+    success: Moroccan success
 notes:
-  - Dates are Julian, as usual for the period. The size of the Moroccan army is very uncertain; some accounts give 50,000 or more.
+  - Dates are Julian, as usual for the period. The size of the Moroccan army is very uncertain; accounts give from about 50,000 to 100,000 men. Figures for the dead and captured also vary between Moroccan, Portuguese and Spanish sources.
   - Many Portuguese refused to believe that Sebastian was dead, and several pretenders later claimed to be him. The hope of his return, Sebastianism, lived on in Portuguese popular culture for centuries.
+  - Philip II’s conquest of Portugal in 1580 has its own entry (War of the Portuguese Succession).
 sources:
   - title: Battle of Alcácer Quibir (Wikipedia)
     url: https://en.wikipedia.org/wiki/Battle_of_Alc%C3%A1cer_Quibir
   - title: Sebastian of Portugal (Wikipedia)
-    url: https://en.wikipedia.org/wiki/Sebastian_of_Portugal
+    url: https://en.wikipedia.org/wiki/Sebastian,_King_of_Portugal
   - title: Battle of the Three Kings (Britannica)
     url: https://www.britannica.com/event/Battle-of-the-Three-Kings
+  - title: Capture of Fez (1576) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Capture_of_Fez_(1576)
+  - title: Abd al-Malik I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Abd_al-Malik_I
+  - title: Ahmad al-Mansur (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ahmad_al-Mansur
+  - title: Battle of Ksar el-Kebir (EBSCO Research Starters)
+    url: https://www.ebsco.com/research-starters/military-history-and-science/battle-ksar-el-kebir
+steps:
+  - title: A Saadian succession war
+    date: 1574–1576
+    when: "1574"
+    borders: "1576-03-11"
+    countries: [ma, dz, tn]
+    body:
+      - The Saadian dynasty had ruled Morocco from Marrakesh and Fez since the 1550s. When Sultan Abdallah al-Ghalib died in 1574, his son Abu Abdallah Mohammed, later called al-Mutawakkil, took the throne, setting aside the claims of his uncles, the brothers Abd al-Malik and Ahmad, who had lived for years in exile in the Ottoman Empire. Abd al-Malik had served the Ottomans and fought on their side at the conquest of Tunis in 1574; he went to Istanbul and won the backing of the Ottoman sultan.
+      - In 1576 the governor of Algiers, Ramazan Pasha, invaded Morocco with Abd al-Malik and an army of janissaries and Algerian troops. Near Fez, at al-Rukn, al-Mutawakkil was beaten after the commander of his Andalusian contingent went over to the other side, and on 11 March Abd al-Malik entered Fez. He took Marrakesh soon after, and al-Mutawakkil fled to the Sous and then to the Spanish and Portuguese. Abd al-Malik had the khutba read in the Ottoman sultan’s name, paid the Algerian troops a large sum to go home, kept a guard of janissaries and Zwawa (Kabyle) soldiers and rebuilt his army on Ottoman lines.
+    facts:
+      - [Death of Abdallah al-Ghalib, "1574"]
+      - [Abd al-Malik enters Fez, "11 March 1576"]
+    markers:
+      - kind: taken
+        side: ma
+        name: Fez
+        date: 11 March 1576
+        text: Abd al-Malik entered the city after the battle of al-Rukn nearby, where al-Mutawakkil was defeated.
+        lonlat: [-5.00, 34.04]
+      - kind: taken
+        side: ma
+        name: Marrakesh
+        date: "1576"
+        text: The Saadian capital. Abd al-Malik took it after a further defeat of al-Mutawakkil, who fled south to the Sous.
+        lonlat: [-7.99, 31.63]
+      - kind: event
+        side: ma
+        name: Algiers
+        date: "1576"
+        text: The governor Ramazan Pasha led the Ottoman Algerian army that put Abd al-Malik on the throne.
+        lonlat: [3.06, 36.78]
+    arrows:
+      - side: ma
+        label: Ramazan Pasha and Abd al-Malik
+        phase: 1
+        via: [[3.00, 36.70], [0.50, 35.60], [-1.30, 34.90], [-3.20, 34.30], [-4.95, 34.05]]
+      - side: ma
+        phase: 2
+        via: [[-5.05, 33.98], [-6.40, 32.80], [-7.95, 31.68]]
+      - side: mu
+        label: al-Mutawakkil
+        phase: 3
+        via: [[-8.05, 31.55], [-8.60, 30.90], [-9.20, 30.45]]
+  - title: Sebastian’s crusade
+    date: June – August 1578
+    when: "1578-06"
+    borders: "1578-08-01"
+    countries: [pt, ma, es]
+    body:
+      - King Sebastian of Portugal, who had come of age in 1568, had grown up dreaming of a crusade in Africa, where Portugal still held Tangier, Mazagan and Ceuta. He had visited the Portuguese towns in Morocco in 1574, and when al-Mutawakkil asked for help, he saw a chance to win a Moroccan client and to keep the Ottomans away from the Atlantic. His uncle Philip II of Spain and his own advisers warned against it. Sebastian raised an army of perhaps 17,000–23,000 men, including German and Flemish mercenaries, Castilian volunteers and Italian soldiers under the English Catholic adventurer Thomas Stukley, and spent much of the crown’s wealth on it.
+      - The fleet left Lisbon on 24 or 25 June 1578, called at Lagos, Cádiz and Tangier, and landed the army at Asilah, where al-Mutawakkil joined it with his followers (6,000 men by one account, far fewer by others). Sebastian then waited nineteen days, giving Abd al-Malik time to gather his forces. On 29 July the army set out overland towards Larache, which it meant to take, but turned inland towards Ksar el-Kebir, marching through the summer heat with its baggage and camp followers. Abd al-Malik, already gravely ill, and his brother Ahmad brought their army north to Ksar el-Kebir, and the two armies camped facing each other near the Loukkos.
+    facts:
+      - [Fleet leaves Lisbon, "24 or 25 June 1578"]
+      - [March from Asilah, "29 July 1578"]
+      - [Portuguese army, "about 17,000–23,000 men"]
+    markers:
+      - kind: event
+        side: pt
+        name: Lisbon
+        date: June 1578
+        text: The fleet sailed from here and called at Lagos and Cádiz on the way to Morocco.
+        lonlat: [-9.14, 38.71]
+      - kind: held
+        side: pt
+        name: Tangier
+        date: July 1578
+        text: Portuguese since 1471. The fleet called here before landing the army at Asilah.
+        lonlat: [-5.80, 35.78]
+      - kind: event
+        side: pt
+        name: Asilah
+        date: July 1578
+        text: The army landed here and stayed nineteen days, joined by al-Mutawakkil.
+        lonlat: [-6.03, 35.47]
+        lp: l
+      - kind: event
+        side: ma
+        name: Ksar el-Kebir
+        date: early August 1578
+        text: Abd al-Malik gathered the Moroccan army here, across the road to Larache.
+        lonlat: [-5.90, 35.01]
+    arrows:
+      - side: pt
+        label: Sebastian
+        phase: 1
+        via: [[-9.20, 38.60], [-8.70, 36.95], [-6.40, 36.45], [-5.80, 35.85], [-6.08, 35.48]]
+      - side: pt
+        phase: 2
+        via: [[-6.02, 35.45], [-5.98, 35.30], [-5.94, 35.15], [-5.93, 35.09]]
+      - side: ma
+        label: Abd al-Malik and Ahmad
+        phase: 2
+        via: [[-5.55, 33.92], [-5.70, 34.50], [-5.88, 34.97]]
+  - title: The battle of the three kings
+    date: 4 August 1578
+    when: "1578-08-04"
+    borders: "1578-08-04"
+    countries: [pt, ma]
+    view:
+      center: [-6.00, 35.18]
+      size: [80, 70]
+    body:
+      - On the morning of 4 August the Portuguese army, drawn up in a great square with its baggage inside, faced the Moroccans on the plain between the Wadi al-Makhazin and the Loukkos. The Moroccan army, by most accounts 50,000 men or more, with about 12,000 cavalry, Andalusian exiles, renegades, Turkish troops and Zwawa musketeers, advanced on a broad front and enveloped it. Abd al-Malik directed the battle from a litter. Stukley was killed early by a cannon shot; the Portuguese flanks gave way under the Moroccan cavalry and the musket fire, and after about four hours the square broke.
+      - Sebastian charged into the enemy and was cut down; remains said to be his were later handed over to Philip II and buried in the Jerónimos monastery at Belém, though they could never be identified. Al-Mutawakkil drowned in the river as he fled. Abd al-Malik died during the battle, of his illness or, some said, of poison; his death was kept from the troops until the battle was won. By Moroccan figures about 8,000 of the Portuguese army were killed and some 15,000 captured, and only about a hundred escaped to the coast; Portuguese sources give about 7,000 dead.
+      - Ahmad was proclaimed sultan on the battlefield as al-Mansur, “the Victorious”. The ransoms of the captured nobles, and the prestige of the victory, made him one of the richest and most powerful rulers of his time; some of the captives later served in the army he sent across the Sahara against Songhai in 1590–1591. In Portugal, where much of the nobility had been killed or captured, Sebastian’s great-uncle, the aged Cardinal Henry, became king and spent his short reign raising the ransoms. When he died in January 1580, Philip II invaded and was crowned king of Portugal in 1581.
+    facts:
+      - [Battle of Alcácer Quibir (Wadi al-Makhazin), "4 August 1578, Moroccan victory"]
+      - [Moroccan army, "about 50,000–100,000 men by different accounts"]
+      - [Portuguese losses, "about 7,000–8,000 killed, most of the rest captured"]
+    markers:
+      - kind: battle
+        side: ma
+        name: Battle of Wadi al-Makhazin (Alcácer Quibir)
+        date: 4 August 1578
+        text: The Portuguese army was surrounded and destroyed on the plain north of Ksar el-Kebir. All three kings died.
+        lonlat: [-5.93, 35.08]
+      - kind: held
+        side: ma
+        name: Larache
+        date: August 1578
+        text: The port the Portuguese army set out to take. It stayed Moroccan until it was handed to Spain in 1610.
+        lonlat: [-6.15, 35.18]
+        lp: l
+      - kind: event
+        side: pt
+        name: Asilah
+        date: August 1578
+        text: The few who escaped the battle reached the fleet here.
+        lonlat: [-6.03, 35.47]
+        lp: l

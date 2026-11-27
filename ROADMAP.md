@@ -181,7 +181,32 @@ below are the number of new war entries (tiers A, B and C).
   map, so the Banda war is told with markers and a drawn outline; steps whose
   places lie a few kilometres apart (Singapore 1942, Banda, Badung) use close
   views. Site 45 MB, first load 1.07 MB gzip (fr and sv 1.13).*
-- [ ] Wave 12: North Africa, the Sahel and the Horn of Africa (~70)
+- [x] Wave 12: North Africa, the Sahel and the Horn of Africa (~70)
+  *Done: 129 wars (43 tier A, 54 B, 32 C; 454 steps), 124 new and 5
+  rewritten, from the Fatimid conquest of Ifriqiya (902–909) to the war in
+  Amhara and the Sudanese civil war (both ongoing), with the Almoravid and
+  Almohad wars, the Hilalian invasion, the Ethiopian–Adal war, the Moroccan
+  invasion of Songhai, the Barbary wars, the French conquests of Algeria, the
+  western Sudan and Morocco, the Mahdist war, the Italian wars in Libya and
+  Ethiopia, the North African campaign, the Algerian War, the Western Sahara,
+  Eritrean and Ogaden wars, the civil wars of Chad, Sudan, Somalia and Libya
+  and the wars in Mali and Burkina Faso. Borders are curated from 800 for
+  Morocco, Western Sahara, Algeria, Tunisia, Libya, Mauritania, Mali, Niger,
+  Chad, Sudan, South Sudan, Eritrea, Djibouti, Ethiopia, Somalia and
+  Somaliland in `events/north-africa-horn.yaml` (296 events, checked by two
+  fact-checkers), on 14 new splits (`splits/99d-north-africa-horn.geojson`),
+  with 74 new polities, 103 war actors, 119 capital tenures and 33 labels.
+  The Ottoman regencies of Algiers and Tunis are their own polities, Tripoli
+  under the Karamanli (1711–1835); Italian East Africa is shown in Ethiopia
+  1936–1941 and in Eritrea and Somalia until the 1947 peace treaty, and
+  Italian Libya likewise until 1947; Western Sahara is one territory from
+  February 1976 and Somaliland is shown on its own from May 1991. Mahdist
+  conquests before the fall of Khartoum, rebel zones and the jihadist areas
+  of the Sahel are war areas. Catalogue text, polity names, border notes,
+  capitals and labels are in French and Swedish. Known limits: Samori’s
+  Wassoulou, Rabih’s Bornu and the Boko Haram war reach into wave 13 lands
+  and wait for it; Congo and Tanzania still show inherited names there.
+  First load 1.09 MB gzip (fr 1.16, sv 1.15), close to the 1.2 MB budget.*
 - [ ] Wave 13: Africa south of the Sahara (~100)
 - [ ] Wave 14: North America and the Caribbean (~100)
 - [ ] Wave 15: Central and South America (~100)

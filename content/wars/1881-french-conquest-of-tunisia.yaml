@@ -1,0 +1,153 @@
+id: french-conquest-of-tunisia
+name: French conquest of Tunisia
+start: "1881-04-24"
+end: "1881-12"
+tier: B
+summary: "The French invasion that made Tunisia a protectorate. Using raids by the Kroumir tribes across the Algerian border as a pretext, France sent about 24,000 men from Algeria into north-western Tunisia on 24 April 1881 and landed another force at Bizerte on 1 May. On 12 May Muhammad III as-Sadiq, the bey of Tunis, signed the Treaty of Bardo, which gave France control of the regency’s foreign relations and the right to station troops. In June the south and centre rose against the occupation and the bey who had accepted it. French ships bombarded and stormed Sfax in July, a second, larger expedition took Kairouan without a fight in October, and the last resistance ended in December, while many of the tribes that had risen fled to Ottoman Tripolitania. The conventions of La Marsa in 1883 completed the protectorate, under which the beys reigned until 1957."
+countries: [tn, dz, fr]
+sides:
+  - id: fr
+    name: France
+    polities: [france, french-algeria]
+    ink: blue
+    moves: French moves
+    success: French success
+  - id: tun
+    name: Kroumir and southern tribes (Ali ben Khalifa, Ali ben Ammar)
+    polities: [tunisian-tribes-1881]
+    ink: green
+    moves: Moves of the Tunisian insurgents
+    success: Success of the Tunisian insurgents
+  - id: bey
+    name: Beylik of Tunis (Muhammad III as-Sadiq)
+    polities: [tunisia]
+    ink: red
+    moves: Moves of the bey’s forces
+    success: Success of the bey’s forces
+notes:
+  - "Tunisia had been an Ottoman province governed by its own beys since the 1700s and was deep in debt to European creditors, who had controlled its finances through an international commission since 1869. At the Congress of Berlin in 1878 Britain and Germany let France understand that it could take Tunisia, and France moved partly to forestall Italy, which had many settlers there. The Ottoman Empire protested but could do nothing."
+  - Losses in 1881 are not well recorded. French losses in battle were light, but many soldiers fell sick; Tunisian losses and the number of refugees who fled to Tripolitania are not known with any precision.
+sources:
+  - title: French conquest of Tunisia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/French_conquest_of_Tunisia
+  - title: Treaty of Bardo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Bardo
+  - title: Protectorat français de Tunisie (Wikipedia, in French)
+    url: https://fr.wikipedia.org/wiki/Protectorat_fran%C3%A7ais_de_Tunisie
+  - title: La Marsa Convention (Wikipedia)
+    url: https://en.wikipedia.org/wiki/La_Marsa_Convention
+  - title: "Tunisia: the protectorate, 1881–1956 (Britannica)"
+    url: https://www.britannica.com/place/Tunisia/The-protectorate-1881-1956
+steps:
+  - title: The Kroumir pretext and the Treaty of Bardo
+    date: March – May 1881
+    when: "1881-04-24"
+    borders: "1881-05-12"
+    countries: [tn, dz, fr]
+    body:
+      - On 30–31 March 1881 men of the Kroumir tribes of the wooded mountains of north-western Tunisia clashed with the Ouled Nahd across the Algerian border. The government of Jules Ferry, which had long wanted Tunisia, presented the raids as a threat to Algeria and obtained credits from the Chamber for a punitive expedition. On 24 April about 24,000 men under General Forgemol de Bostquénard crossed into Tunisia through Kroumirie and from Sidi Youssef; Tabarka and Le Kef were taken on 26 April, and fighting in the Kroumir mountains lasted until late May.
+      - The bey’s small army did not resist. On 1 May a second force of about 6,000 men under General Bréart landed at Bizerte and marched on Tunis. On the evening of 12 May, with French troops camped at La Manouba, Muhammad III as-Sadiq signed the Treaty of Bardo at his palace of Ksar Saïd, reportedly fearing that the French would otherwise replace him with his brother. The treaty let France occupy any points it chose, made its resident minister the bey’s channel to foreign powers and bound France to support the dynasty. Italy protested; Britain and Germany accepted it.
+    facts:
+      - [Border clashes, "30–31 March 1881"]
+      - [Invasion from Algeria, "24 April 1881, about 24,000 men"]
+      - [Landing at Bizerte, "1 May 1881"]
+      - [Treaty of Bardo, "12 May 1881"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Tabarka
+        date: 26 April 1881
+        text: Taken by the navy and Forgemol’s northern column at the start of the campaign in Kroumirie.
+        lonlat: [8.758, 36.954]
+      - kind: taken
+        side: fr
+        name: Le Kef
+        date: 26 April 1881
+        text: The fortress town of the north-west opened its gates to the column from Sidi Youssef.
+        lonlat: [8.714, 36.182]
+      - kind: event
+        side: fr
+        name: Bizerte
+        date: 1 May 1881
+        text: Bréart’s force landed here and marched on Tunis.
+        lonlat: [9.864, 37.274]
+      - kind: treaty
+        side: fr
+        name: Bardo (Ksar Saïd)
+        date: 12 May 1881
+        text: The bey signed the treaty at his palace outside Tunis with French troops at La Manouba.
+        lonlat: [10.12, 36.82]
+    arrows:
+      - side: fr
+        label: Forgemol
+        via: [[8.35, 36.75], [8.55, 36.82], [8.74, 36.93]]
+      - side: fr
+        via: [[8.0, 36.25], [8.36, 36.22], [8.69, 36.18]]
+      - side: fr
+        label: Bréart
+        via: [[9.864, 37.25], [9.95, 37.05], [10.09, 36.83]]
+    areas:
+      - style: contested
+        side: tun
+        label: Kroumir country, April – May 1881
+        polygon: [[8.35, 36.95], [8.75, 36.97], [9.1, 36.9], [9.0, 36.6], [8.6, 36.45], [8.3, 36.6], [8.35, 36.95]]
+  - title: The southern rising
+    date: June – December 1881
+    when: "1881-06-27"
+    borders: "1881-10-26"
+    countries: [tn, fr]
+    body:
+      - Once the protectorate was signed, the south and centre of the regency rose against the French and against the bey who had accepted them. Sfax rose on 27 June. The tribes of the south and the steppe, the Neffat under their qaid Ali ben Khalifa among them, and in the west the Ouled Ayar under Ali ben Ammar, joined the rising, which spread to the country around Kairouan, the holy city of the interior. French warships bombarded Sfax, and on 16 July marines stormed it after four hours of street fighting. Fighting spread to Gabès and the coast, Le Kef was besieged, and a French column near Hammamet was harassed for days in late August.
+      - In the autumn France sent a second, much larger expedition. Tunis itself was occupied on 7 October to reassure the Europeans. Three columns, from Tunis, from Sousse on the coast and from Tébessa in Algeria, converged on Kairouan, which surrendered without a fight on 26 October. Ali ben Ammar’s forces were routed, and the last fighting ended in December. Ali ben Khalifa and many of the tribes that had risen, with their families and herds, crossed into Ottoman Tripolitania.
+      - After the death of Muhammad III as-Sadiq in 1882 his brother Ali III signed the conventions of La Marsa on 8 June 1883, by which the bey undertook to carry out the reforms France chose. A French resident-general governed in the bey’s name until independence in 1956.
+    facts:
+      - [Sfax rises, "27 June 1881"]
+      - [Sfax stormed, "16 July 1881"]
+      - [Kairouan surrenders, "26 October 1881"]
+      - [Conventions of La Marsa, "8 June 1883"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Sfax
+        date: 16 July 1881
+        text: Bombarded from the sea and stormed by marines after a rising on 27 June.
+        lonlat: [10.76, 34.74]
+      - kind: event
+        side: tun
+        name: Gabès
+        date: July 1881
+        text: The port of the south, where the tribes of the south and the oases joined the rising.
+        lonlat: [10.1, 33.88]
+      - kind: siege
+        side: fr
+        name: Le Kef
+        date: September – October 1881
+        text: Besieged by about 5,000 fighters of the Ouled Ayar and their allies under Ali ben Ammar.
+        lonlat: [8.714, 36.182]
+      - kind: taken
+        side: fr
+        name: Kairouan
+        date: 26 October 1881
+        text: The holy city surrendered without resistance as three French columns converged on it.
+        lonlat: [10.1, 35.68]
+      - kind: event
+        side: fr
+        name: Tunis
+        date: 7 October 1881
+        text: French troops occupied the capital, which they had kept out of in May.
+        lonlat: [10.18, 36.8]
+    arrows:
+      - side: fr
+        via: [[10.18, 36.74], [10.2, 36.2], [10.12, 35.72]]
+      - side: fr
+        via: [[10.64, 35.83], [10.35, 35.75], [10.14, 35.69]]
+      - side: fr
+        via: [[8.12, 35.4], [8.9, 35.5], [9.6, 35.62], [10.06, 35.67]]
+      - side: tun
+        label: Flight to Tripolitania
+        via: [[10.1, 33.6], [10.9, 33.1], [11.6, 32.8]]
+    areas:
+      - style: contested
+        side: tun
+        label: Main areas of the rising, July – October 1881
+        atoms: [TN-61, TN-81, TN-41, TN-43, TN-71, TN-82, TN-73, TN-42, TN-53]

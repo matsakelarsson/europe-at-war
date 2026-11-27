@@ -1,0 +1,161 @@
+id: first-barbary-war
+name: First Barbary War
+start: "1801-05-10"
+end: "1805-06-10"
+tier: B
+summary: "The war between the United States and the Regency of Tripoli under Yusuf Karamanli. Like the European powers, the United States had paid the North African regencies for safe passage for its ships; when President Jefferson refused Yusuf’s demand for more money, Yusuf declared war in May 1801 by having the flagstaff of the American consulate cut down. American squadrons, at first alongside a Swedish one, blockaded Tripoli with mixed success. In October 1803 the frigate Philadelphia ran aground off Tripoli and her crew of about 300 were taken captive; in February 1804 Stephen Decatur burned her in the harbour, and Edward Preble’s squadron bombarded the town through the summer of 1804. In 1805 the former consul William Eaton led a small force of Greek, Arab and Berber soldiers and a handful of US Marines from Egypt across the desert to take Derna for Yusuf’s exiled brother Hamet. Yusuf made peace on 4 June 1805; the United States paid $60,000 to ransom the prisoners and abandoned Hamet. Tribute to Algiers went on until the Second Barbary War of 1815."
+countries: [ly, us, se, mt, it, eg, ma]
+sides:
+  - id: us
+    name: United States
+    polities: [united-states, naples]
+    ink: navy
+    moves: American moves
+    success: American success
+  - id: se
+    name: Sweden (1800–1802)
+    polities: [sweden]
+    ink: blue
+    moves: Swedish moves
+    success: Swedish success
+  - id: hk
+    name: Hamet Karamanli and William Eaton’s force
+    polities: [hamet-karamanli]
+    ink: orange
+    moves: Moves of Eaton and Hamet
+    success: Success for Eaton and Hamet
+  - id: tr
+    name: Tripoli under Yusuf Karamanli
+    polities: [libya]
+    ink: olive
+    moves: Tripolitan moves
+    success: Tripolitan success
+notes:
+  - Americans and Europeans of the time called the ships of the North African regencies pirates. The regencies saw them as privateers (corsairs), licensed by the state to take the ships of nations that had not bought a treaty of peace; captured crews were held for ransom or put to work.
+  - Tripoli was an Ottoman regency ruled by the hereditary Karamanli pashas from 1711 to 1835. Sources give 10 or 14 May 1801 for the declaration of war. The Kingdom of Naples lent the Americans gunboats and the use of its ports in 1804.
+  - The march to Derna and the “shores of Tripoli” in the Marines’ Hymn made the war part of American naval and Marine Corps tradition.
+sources:
+  - title: First Barbary War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Barbary_War
+  - title: Battle of Derna (1805) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Derna_(1805)
+  - title: USS Philadelphia (1799) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/USS_Philadelphia_(1799)
+  - title: Yusuf Karamanli (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yusuf_Karamanli
+  - title: "Barbary Wars, 1801–1805 and 1815–1816 (Office of the Historian, US Department of State)"
+    url: https://history.state.gov/milestones/1801-1829/barbary-wars
+steps:
+  - title: War with Tripoli and the blockade
+    date: 1801–1803
+    when: "1801-05"
+    borders: "1802-12-31"
+    countries: [ly, us, se, mt, ma]
+    body:
+      - Since the 1780s the North African regencies had taken American merchant ships and held their crews for ransom, and the United States, like many European states, had made treaties that paid them money and gifts. Yusuf Karamanli, who had made himself pasha of Tripoli in 1795 and sent his elder brother Hamet into exile in Egypt, complained that the gifts promised in the treaty of 1796 had not come and demanded $225,000. Jefferson, who had long argued that paying tribute only invited new demands, refused, and on 10 May 1801 Yusuf declared war in the customary way, by having the flagstaff of the American consulate cut down.
+      - Commodore Richard Dale’s squadron of three frigates and a schooner, already sailing for the Mediterranean, joined a Swedish squadron under Rudolf Cederström off Tripoli, for Sweden had been at war with Yusuf since 1800. On 1 August 1801 the schooner Enterprise defeated the Tripolitan corsair Tripoli after a long fight west of Malta. But the blockade of a coast with many small harbours was hard to keep, Sweden made peace in 1802, and Dale’s successor Richard Morris achieved little; a brief quarrel with Morocco, begun when the governor of Tangier sent out corsairs without the sultan’s leave, was settled in October 1803 while the new commodore, Edward Preble, lay off Tangier with his squadron. Preble then tightened the blockade of Tripoli.
+    facts:
+      - [Tripoli declares war, "10 May 1801"]
+      - [Enterprise takes the Tripoli, "1 August 1801"]
+      - [Sweden makes peace with Tripoli, "1802"]
+    markers:
+      - kind: capital
+        side: tr
+        name: Tripoli
+        date: 1801–1805
+        text: Seat of Yusuf Karamanli, pasha of Tripoli since 1795, and the main corsair port of the regency.
+        lonlat: [13.18, 32.90]
+      - kind: naval
+        side: us
+        name: Enterprise and Tripoli
+        date: 1 August 1801
+        text: The schooner Enterprise defeated the corsair Tripoli in a three-hour fight; having no orders to take prizes, the Americans dismasted her and let her go.
+        lonlat: [13.90, 35.80]
+      - kind: event
+        side: us
+        name: Gibraltar
+        date: 1801–1805
+        text: The American squadrons’ base at the entrance of the Mediterranean, with Malta and Syracuse further east.
+        lonlat: [-5.35, 36.14]
+      - kind: event
+        side: us
+        name: Tangier
+        date: October 1803
+        text: A quarrel with Morocco over ships seized by the governor of Tangier’s corsairs was settled here in October 1803, while Preble’s squadron lay offshore.
+        lonlat: [-5.80, 35.78]
+    arrows:
+      - side: us
+        label: American squadrons
+        via: [[-5.30, 36.05], [2.00, 37.40], [9.50, 37.60], [12.50, 35.00], [13.15, 33.10]]
+  - title: The Philadelphia
+    date: October 1803 – September 1804
+    when: "1803-10-31"
+    borders: "1804-09-04"
+    countries: [ly, us, it, mt]
+    body:
+      - On 31 October 1803 the frigate Philadelphia, chasing a Tripolitan ship close inshore, ran onto an uncharted reef about 3 km off Tripoli harbour. Her captain, William Bainbridge, threw guns overboard but could not get her off, and surrendered; he and about 300 officers and men spent the rest of the war as captives in Tripoli, and the Tripolitans refloated the ship and brought her into the harbour. To keep her from serving Yusuf, Lieutenant Stephen Decatur sailed from Syracuse with some seventy to eighty-five volunteers in a captured Tripolitan ketch, the Mastico, renamed Intrepid and rigged to look like a local trading vessel. On the night of 16 February 1804 they slipped into the harbour, boarded the Philadelphia, set her on fire and escaped under the guns of the batteries.
+      - In the summer of 1804 Preble, with gunboats and bomb vessels lent by the Kingdom of Naples, attacked Tripoli repeatedly from 14 July onwards. In the gunboat fight of 3 August American boarding parties took several Tripolitan gunboats, but the bombardments did little damage to the town. On the night of 4 September the Intrepid, packed with explosives as a fire ship, blew up at the harbour entrance before reaching the Tripolitan ships, killing Lieutenant Richard Somers and all twelve of her crew. A few days later Commodore Samuel Barron arrived to take over from Preble.
+    facts:
+      - [Philadelphia captured, "31 October 1803"]
+      - [Philadelphia burned, "16 February 1804"]
+      - [Attacks on Tripoli, "July–September 1804"]
+    markers:
+      - kind: naval
+        side: us
+        name: Tripoli harbour
+        date: 1803–1804
+        text: The Philadelphia ran aground on a reef off the harbour on 31 October 1803 and was burned in the harbour by Decatur’s party on 16 February 1804. Preble’s squadron attacked the town from July to September 1804.
+        lonlat: [13.20, 32.91]
+      - kind: event
+        side: us
+        name: Syracuse
+        date: "1804"
+        text: Preble’s base in Sicily, whose king, Ferdinand, also ruled Naples. The Intrepid sailed from here.
+        lonlat: [15.29, 37.07]
+    arrows:
+      - side: us
+        label: Decatur in the Intrepid
+        via: [[15.25, 37.00], [14.60, 35.60], [13.60, 33.60], [13.22, 32.95]]
+  - title: The march to Derna and the peace
+    date: March – June 1805
+    when: "1805-03"
+    borders: "1805-06-04"
+    countries: [ly, us, eg]
+    body:
+      - William Eaton, the former American consul in Tunis, proposed to restore Hamet Karamanli, Yusuf’s elder brother, who was living in exile in Egypt. In early March 1805 Eaton and Hamet set out from near Alexandria with about 400–500 men, Greek, Arab and Berber soldiers and Hamet’s followers, with eight or nine US Marines under Lieutenant Presley O’Bannon. They marched about 800 km along the coast, through desert where water was scarce and amid quarrels over pay and supplies, and met American ships with provisions at the Gulf of Bomba.
+      - On 27 April, with the brig Argus, the sloop Hornet and the schooner Nautilus firing from the sea, they stormed Derna, defended by about 800 men under its governor Mustafa Bey, in a few hours; it was the first time the American flag was raised in victory on foreign soil. A relief army of some 1,200 men sent by Yusuf under Hassan Bey attacked on 13 May and 10 June and was beaten off both times.
+      - Meanwhile the American envoy Tobias Lear negotiated with Yusuf, who was alarmed by the loss of Derna. By the treaty signed on 4 June 1805 the prisoners were exchanged, the United States paid $60,000 for the release of the Philadelphia’s crew, about 300 men, and the treaty provided for no tribute. It made no provision for Hamet. On the night of 12 June Eaton’s force, with Hamet, left Derna on the frigate Constellation; Eaton accused the government of betraying its ally. Algiers went on receiving American tribute until 1815.
+    facts:
+      - [Derna taken, "27 April 1805"]
+      - [Treaty of peace, "4 June 1805"]
+      - [Ransom for the prisoners, "$60,000"]
+    markers:
+      - kind: event
+        side: hk
+        name: Alexandria
+        date: March 1805
+        text: Eaton’s force set out from near here on its march across the Western Desert.
+        lonlat: [29.89, 31.20]
+      - kind: event
+        side: us
+        name: Gulf of Bomba
+        date: April 1805
+        text: American ships met the marchers here with food, water and money.
+        lonlat: [23.07, 32.45]
+        lp: b
+      - kind: taken
+        side: hk
+        name: Derna
+        date: 27 April 1805
+        text: Stormed by Eaton’s force with the support of three American warships, and held against two counter-attacks until the peace.
+        lonlat: [22.64, 32.76]
+        lp: t
+      - kind: treaty
+        name: Tripoli
+        date: 4 June 1805
+        text: Tobias Lear and Yusuf Karamanli signed the treaty of peace here.
+        lonlat: [13.18, 32.90]
+    arrows:
+      - side: hk
+        label: Eaton and Hamet
+        via: [[29.80, 31.05], [27.20, 31.30], [25.15, 31.60], [23.30, 32.25], [22.68, 32.72]]

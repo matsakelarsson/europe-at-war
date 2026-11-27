@@ -1,0 +1,241 @@
+id: norman-kingdom-of-africa
+name: Norman conquests in Ifriqiya
+start: "1135"
+end: "1160-01"
+tier: B
+summary: "The conquest of the coast of Ifriqiya and Tripolitania by the Norman kings of Sicily, and its loss to the Almohads. Weakened by the Hilalian migration, famine and civil strife, the Zirid emirs of Mahdia came to depend on Sicilian grain and trade. After a failed landing near Mahdia in 1123, Roger II took the island of Djerba in 1135 and Tripoli in 1146, and in June 1148 his admiral George of Antioch occupied Mahdia, the Zirid capital, without a fight, followed by Sousse, Sfax and Gabès. Roger styled himself king of Africa and ruled the towns through Muslim governors and judges, in return for tribute. From 1156 the towns rose against William I, Roger’s successor, and asked the Almohad caliph Abd al-Mu’min for help. His army and fleet took Tunis in 1159 and besieged Mahdia, whose Norman garrison surrendered in January 1160 and was allowed to sail home, ending the Norman kingdom in Africa."
+countries: [tn, ly, it]
+sides:
+  - id: sic
+    name: Kingdom of Sicily
+    polities: [sicily]
+    ink: gold
+    moves: Sicilian moves
+    success: Sicilian success
+  - id: zir
+    name: Zirids of Mahdia
+    polities: [zirids]
+    ink: purple
+    moves: Zirid moves
+    success: Zirid success
+  - id: kha
+    name: Banu Khazrun of Tripoli
+    polities: []
+    ink: orange
+    moves: Tripolitan moves
+    success: Tripolitan success
+  - id: almo
+    name: Almohads
+    polities: [almohad-caliphate]
+    ink: purple
+    moves: Almohad moves
+    success: Almohad success
+notes:
+  - The fullest accounts are Arabic, above all Ibn al-Athir, al-Tijani and Ibn Khaldun, with Latin chronicles from Sicily such as Romuald of Salerno’s and the history of “Hugo Falcandus”. Modern historians call the Norman possessions on the African coast the Kingdom of Africa.
+  - The coastal towns were never fully governed from Palermo. They kept their Muslim governors, judges and law, paid tribute, and in some cases chose their own rulers; the Norman garrisons were small.
+sources:
+  - title: Kingdom of Africa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kingdom_of_Africa
+  - title: George of Antioch (Wikipedia)
+    url: https://en.wikipedia.org/wiki/George_of_Antioch
+  - title: Mahdia campaign of 1123 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mahdia_campaign_of_1123
+  - title: Norman expedition to Tripoli (1143) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Norman_expedition_to_Tripoli_(1143)
+  - title: Abu’l-Hasan al-Hasan ibn Ali (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Abu%27l-Hasan_al-Hasan_ibn_Ali
+  - title: Almohad conquest of Norman Africa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Almohad_conquest_of_Norman_Africa
+  - title: Siege of Mahdia (1159–1160) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Mahdia_(1159%E2%80%931160)
+  - title: Zirid dynasty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Zirid_dynasty
+  - title: Roger II (Britannica)
+    url: https://www.britannica.com/biography/Roger-II
+steps:
+  - title: Djerba and Tripoli
+    date: 1123–1146
+    when: "1135"
+    borders: "1146-07-01"
+    countries: [tn, ly, it]
+    body:
+      - After the Hilalian migration the Zirid emirs held little more than Mahdia and the coast around it, and they lived largely from the sea, from trade and from raiding. Sicily, conquered from its Muslim emirs by the Normans between 1061 and 1091, sold them grain and had long kept agents in Mahdia. Relations broke down in the 1120s. In July 1123 a Sicilian fleet, said to have been 300 ships, landed near Mahdia and seized the fort of al-Dimas, but the emir al-Hasan ibn Ali attacked by night and the invaders fled to their ships, losing most of the fleet and the men left behind.
+      - Roger II, king of Sicily from 1130, tried again with better preparation. In the autumn of 1135 his fleet occupied the island of Djerba, and as drought and famine struck Ifriqiya in the following years, Mahdia came to depend on Sicilian grain and by 1142 was a Sicilian protectorate in all but name. An attack on Tripoli in 1143 was beaten off by its rulers, the Banu Khazrun. Three years later, when famine and civil strife had driven the Banu Khazrun out of the city, George of Antioch, Roger’s Greek admiral, took Tripoli from the sea in June 1146. He stayed about six months to organise its defence and left it under a local Muslim governor who paid tribute to Sicily.
+    facts:
+      - [Landing at al-Dimas, "July–August 1123, Zirid victory"]
+      - [Djerba taken, "autumn 1135"]
+      - [Attack on Tripoli, "1143, repulsed"]
+      - [Tripoli taken, "June 1146"]
+    markers:
+      - kind: capital
+        side: sic
+        name: Palermo
+        date: "1146"
+        text: Capital of Roger II, king of Sicily, and base of his fleets.
+        lonlat: [13.361, 38.116]
+      - kind: battle
+        side: zir
+        name: Mahdia (al-Dimas)
+        date: July–August 1123
+        text: The Sicilian landing at the fort of al-Dimas, north of Mahdia, was defeated by a night attack led by the emir al-Hasan ibn Ali and his vizier Sandal.
+        lonlat: [11.062, 35.505]
+      - kind: taken
+        side: sic
+        name: Djerba
+        date: autumn 1135
+        text: The island was occupied by Roger II’s fleet, the first Norman conquest on the African coast after Pantelleria.
+        lonlat: [10.857, 33.876]
+        lp: b
+      - kind: taken
+        side: sic
+        name: Tripoli
+        date: June 1146
+        text: Beat off a Sicilian attack in 1143; taken by George of Antioch in 1146 after famine and revolt had driven out the Banu Khazrun.
+        lonlat: [13.180, 32.890]
+    arrows:
+      - side: sic
+        phase: 1
+        via: [[12.600, 37.800], [12.000, 36.500], [11.200, 34.800], [10.950, 33.950]]
+      - side: sic
+        label: George of Antioch
+        phase: 2
+        via: [[13.361, 38.116], [13.600, 36.500], [13.500, 34.300], [13.200, 32.950]]
+  - title: Mahdia, Sousse and Sfax
+    date: June – July 1148
+    when: "1148-06"
+    borders: "1148-07-12"
+    countries: [tn, ly, it]
+    body:
+      - In 1148, with Ifriqiya again struck by famine, Roger II sent George of Antioch against Mahdia with a fleet of about 300 ships. It arrived on 22 June. The emir, unable to resist, fled with his family and what treasure he could carry, first to the Arab tribes and then to his Hammadid relatives in Algiers, who held him in what amounted to house arrest. The Sicilians plundered the city for two hours before Roger’s safe-conduct was proclaimed to its people.
+      - Sousse surrendered without a fight on 1 July, and Sfax fell after brief resistance on 12 July; Gabès and other towns of the coast accepted Sicilian overlordship, and the Kerkennah islands were taken too. The coast from Tripoli to beyond Sousse was now Sicilian. Roger had gold coins struck at Mahdia and governed the towns through Muslim governors and judges, who collected tribute for the king. In 1152 or 1153 Roger’s admiral Philip of Mahdia also took Bône (Annaba).
+    facts:
+      - [Mahdia taken, "22 June 1148"]
+      - [Sousse surrenders, "1 July 1148"]
+      - [Sfax taken, "12 July 1148"]
+    markers:
+      - kind: taken
+        side: sic
+        name: Mahdia
+        date: 22 June 1148
+        text: The Zirid capital was occupied without a fight after al-Hasan ibn Ali fled. It was plundered for two hours before the king’s safe-conduct was proclaimed.
+        lonlat: [11.062, 35.505]
+      - kind: taken
+        side: sic
+        name: Sousse
+        date: 1 July 1148
+        text: Surrendered without resistance.
+        lonlat: [10.637, 35.826]
+        lp: l
+      - kind: taken
+        side: sic
+        name: Sfax
+        date: 12 July 1148
+        text: Taken after brief resistance.
+        lonlat: [10.760, 34.740]
+        lp: l
+      - kind: event
+        side: sic
+        name: Gabès
+        date: "1148"
+        text: Accepted Sicilian overlordship.
+        lonlat: [10.098, 33.881]
+        lp: l
+      - kind: held
+        side: sic
+        name: Tripoli
+        date: 1146–1158
+        text: Under a Muslim governor paying tribute to Sicily.
+        lonlat: [13.180, 32.890]
+      - kind: event
+        side: zir
+        name: Algiers
+        date: from 1148
+        text: Al-Hasan ibn Ali found refuge with his Hammadid relatives here, in virtual house arrest until the Almohads took the city in 1152.
+        lonlat: [3.059, 36.776]
+      - kind: taken
+        side: sic
+        name: Bône (Annaba)
+        date: 1152 or 1153
+        text: Taken by Philip of Mahdia after the Almohads had overthrown the Hammadids at Bougie.
+        lonlat: [7.766, 36.900]
+    arrows:
+      - side: sic
+        label: George of Antioch
+        phase: 1
+        via: [[13.361, 38.116], [12.800, 37.300], [11.800, 36.300], [11.120, 35.520]]
+      - side: sic
+        phase: 2
+        via: [[11.062, 35.530], [10.900, 35.750], [10.680, 35.840]]
+      - side: sic
+        phase: 2
+        via: [[11.062, 35.480], [11.100, 35.100], [10.850, 34.780]]
+      - side: zir
+        label: Flight of al-Hasan
+        phase: 2
+        via: [[11.000, 35.480], [9.500, 35.300], [7.000, 35.900], [4.800, 36.400], [3.100, 36.740]]
+    areas:
+      - style: occupied
+        side: sic
+        label: Under Sicilian rule or overlordship, 1148
+        polygons:
+          - [[10.45, 35.95], [10.80, 35.95], [11.20, 35.50], [11.00, 35.05], [10.85, 34.55], [10.30, 33.75], [10.05, 33.70], [10.10, 34.10], [10.60, 34.80], [10.75, 35.30], [10.45, 35.75]]
+          - [[10.70, 33.95], [11.10, 33.85], [11.05, 33.55], [10.70, 33.65]]
+          - [[12.60, 32.95], [13.60, 32.95], [13.60, 32.70], [12.60, 32.70]]
+  - title: Revolt and the Almohad reconquest
+    date: 1156 – January 1160
+    when: "1159"
+    borders: "1160-01-22"
+    countries: [tn, ly, it, ma]
+    body:
+      - Roger II died in 1154, and his son William I faced rebellion in Sicily and southern Italy. In 1156 Tripoli, Sfax, Djerba and Gabès rose and expelled their Sicilian garrisons, and delegations from Ifriqiya asked the Almohad caliph Abd al-Mu’min, who had taken Bougie in 1152, for help. In 1159 he led an army that Ibn al-Athir puts at 100,000 men east from Salé, with the exiled emir al-Hasan ibn Ali in his train, while a fleet of seventy galleys sailed along the coast. Tunis, ruled by the Banu Khurasan, was taken after a three-day siege.
+      - The army then laid siege to Mahdia by land and sea in the summer of 1159. The Almohad fleet defeated a Sicilian fleet sent to relieve it, and in January 1160, after a siege of about seven months, the garrison negotiated its surrender and was allowed to sail back to Sicily; according to some accounts, the Christians and Jews who stayed were given the choice of Islam or death. Sfax, Gabès and the rest of the coast as far as Tripoli recognised the Almohads. Al-Hasan ibn Ali was allowed to live in Zawila, outside the walls of his former capital. Sicily made a lasting peace with the Almohads in 1180.
+    facts:
+      - [Towns rise against Sicily, "1156"]
+      - [Tunis taken by the Almohads, "1159"]
+      - [Mahdia surrenders, "January 1160"]
+    markers:
+      - kind: siege
+        side: almo
+        name: Mahdia
+        date: summer 1159 – January 1160
+        text: Besieged by land and sea for about seven months. The Almohad fleet beat a Sicilian relief fleet, and the garrison surrendered and sailed for Sicily.
+        lonlat: [11.062, 35.505]
+      - kind: taken
+        side: almo
+        name: Tunis
+        date: "1159"
+        text: Taken from the Banu Khurasan after a three-day siege.
+        lonlat: [10.181, 36.806]
+      - kind: event
+        name: Sfax
+        date: "1156"
+        text: One of the towns that expelled their Sicilian garrisons, with Tripoli, Djerba and Gabès. It later recognised the Almohads.
+        lonlat: [10.760, 34.740]
+        lp: l
+      - kind: event
+        name: Tripoli
+        date: "1156"
+        text: Rose against the Sicilians in 1156 and recognised the Almohads after the fall of Mahdia.
+        lonlat: [13.180, 32.890]
+      - kind: event
+        name: Djerba
+        date: "1156"
+        text: Expelled its Sicilian garrison in the rising of 1156.
+        lonlat: [10.857, 33.876]
+        lp: b
+    arrows:
+      - side: almo
+        label: Abd al-Mu’min
+        phase: 1
+        via: [[5.084, 36.751], [7.000, 36.400], [8.700, 36.500], [10.100, 36.780]]
+      - side: almo
+        phase: 2
+        via: [[10.181, 36.780], [10.400, 36.200], [10.600, 35.800], [11.000, 35.530]]
+      - side: almo
+        label: Almohad fleet
+        phase: 1
+        via: [[5.200, 36.900], [8.000, 37.150], [10.500, 37.250], [11.200, 36.500], [11.150, 35.600]]
+      - side: sic
+        label: Sicilian relief fleet
+        phase: 2
+        via: [[13.361, 38.116], [12.800, 37.000], [11.700, 35.900], [11.200, 35.580]]

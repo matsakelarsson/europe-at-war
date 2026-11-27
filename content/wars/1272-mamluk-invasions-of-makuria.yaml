@@ -1,0 +1,139 @@
+id: mamluk-invasions-of-makuria
+name: Mamluk invasions of Makuria
+start: "1272"
+end: "1317"
+tier: B
+summary: "A series of wars in which the Mamluk sultans of Egypt broke the Christian Nubian kingdom of Makuria and made it a vassal. For six centuries a treaty, the baqt, had kept the peace between Egypt and Makuria. In 1272 King David of Makuria raided the Red Sea port of Aidhab and later Aswan; in 1276 Sultan Baybars answered with an army that defeated the Nubians at Dongola, sacked the capital and put David’s rival Shakanda on the throne as a tributary. Under Qalawun the Mamluks sent at least two more expeditions (1287 and 1289 in the usual dating) against King Semamun, and the land between the Second Cataract and Dongola was laid waste. In 1316 Sultan al-Nasir Muhammad installed a Muslim Nubian prince, Abdallah Barshambu, and on 29 May 1317 the throne hall of Dongola was consecrated as a mosque. Christian kings reappeared after him, but Makuria never recovered; Arab Bedouin moved south along the Nile, and by the 15th century only a small kingdom remained in Lower Nubia."
+countries: [sd, eg]
+sides:
+  - id: mam
+    name: Mamluk Sultanate and its Nubian clients
+    polities: [mamluk]
+    ink: brown
+    moves: Mamluk moves
+    success: Mamluk success
+  - id: mak
+    name: Kingdom of Makuria
+    polities: [makuria]
+    ink: purple
+    moves: Makurian moves
+    success: Makurian success
+notes:
+  - "Almost everything known about these wars comes from Mamluk chroniclers writing in Cairo (Ibn Abd al-Zahir, al-Nuwayri, Baybars al-Mansuri, later al-Maqrizi), who wrote from the sultans’ side and often contradict each other on the order of the later expeditions and on who replaced whom on the Nubian throne. Nubian sources are a few inscriptions and documents; archaeology at Old Dongola confirms heavy destruction in the late 13th century."
+  - Names of Nubian kings are given in the forms of the English literature, which takes them from Arabic (Shakanda is also written Mashkouda or Shekenda, Semamun as Simamon or Shamamun, Barshambu as Barshanbu, Kudanbes as Kerenbes).
+sources:
+  - title: Makuria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Makuria
+  - title: Battle of Dongola (1276) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Dongola_(1276)
+  - title: Fourth battle of Dongola (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fourth_battle_of_Dongola
+  - title: Old Dongola (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Old_Dongola
+  - title: Baqt (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Baqt
+  - title: Baybars I (Britannica)
+    url: https://www.britannica.com/biography/Baybars-I
+  - title: Nubia (Britannica)
+    url: https://www.britannica.com/place/Nubia
+steps:
+  - title: Aidhab, Aswan and the fall of Dongola
+    date: 1272–1276
+    when: "1276"
+    borders: "1276-06-04"
+    countries: [sd, eg]
+    body:
+      - Since the Arab conquest of Egypt, Egypt and the Christian kingdom of Makuria, with its capital at Dongola on the middle Nile, had lived under the baqt, a treaty under which Nubia sent slaves each year and received grain, cloth and wine in return. Makuria had united with the northern kingdom of Nobadia and was at its height in the 10th and 11th centuries. The Mamluks, the slave soldiers who took power in Cairo in 1250, were a more aggressive neighbour than the Fatimids or the Ayyubids. King David of Makuria, who had seized the throne in about 1268, stopped meeting the baqt and in 1272 raided Aidhab, the Red Sea port through which pilgrims and spices passed between Egypt and Arabia. Sultan Baybars, busy against the crusaders and the Mongols, sent only a punitive raid into Lower Nubia.
+      - After a Nubian raid on Aswan in 1275, Baybars prepared a real campaign. A large army under the emirs Aqsunqur al-Farikani and Aybak al-Afram left Cairo in January 1276, with a pretender from the royal family, Shakanda, at its side. It took the fortresses of Lower Nubia, defeated the Nubian army before Dongola and sacked the capital; Arab writers say about 10,000 prisoners were taken. David fled south to the kingdom of al-Abwab, whose king handed him over to the Mamluks, and he was imprisoned in Cairo. On 4 June 1276 Shakanda was crowned as Baybars’s vassal. He swore to pay tribute, gave up the northern province of al-Maris to direct Mamluk rule, and agreed that his Christian subjects would pay the poll tax due from non-Muslims under Muslim rule.
+    facts:
+      - [Raid on Aidhab, "1272"]
+      - [Raid on Aswan, "1275"]
+      - [Mamluk army leaves Cairo, "January 1276"]
+      - [Shakanda crowned as a vassal, "4 June 1276"]
+    markers:
+      - kind: event
+        side: mak
+        name: Aidhab
+        date: "1272"
+        text: King David’s army raided this Red Sea port on the pilgrim and spice route, opening the war.
+        lonlat: [36.49, 22.33]
+      - kind: event
+        side: mak
+        name: Aswan
+        date: "1275"
+        text: Egypt’s southern frontier town, raided by the Nubians in 1275 and the starting point of the Mamluk invasions.
+        lonlat: [32.90, 24.09]
+      - kind: taken
+        side: mam
+        name: Dongola
+        date: "1276"
+        text: The Nubian army was defeated before the capital, which was sacked. Shakanda was crowned here as the sultan’s vassal.
+        lonlat: [30.743, 18.223]
+        lp: l
+    arrows:
+      - side: mam
+        label: Aqsunqur and Aybak
+        via: [[32.90, 24.09], [31.90, 22.60], [31.35, 21.80], [30.50, 19.80], [30.74, 18.30]]
+    areas:
+      - style: gained
+        side: mam
+        label: Al-Maris (Lower Nubia), under Mamluk rule from 1276
+        polygon: [[32.70, 24.05], [33.10, 23.90], [32.40, 22.60], [31.60, 21.70], [31.10, 21.80], [31.70, 22.70]]
+  - title: Qalawun and King Semamun
+    date: 1286–1290
+    when: "1287"
+    borders: "1289-06-01"
+    countries: [sd, eg]
+    body:
+      - Shakanda was soon murdered, and the Mamluk grip slackened while Baybars’s successors fought among themselves. By 1286 a new king, Semamun, ruled at Dongola and had stopped the tribute. Sultan Qalawun sent an army under Izz al-Din al-Kurani in 1287, which fought its way up the Nile to Dongola; Semamun withdrew to the far south, a nephew was made king in his place, and a Mamluk garrison stayed at Dongola. When the army left, Semamun returned, drove out the garrison and took back his throne.
+      - A second expedition, usually dated 1289, again reached Dongola and again failed to hold Semamun, who in the end sent tribute and was left in peace. The chroniclers disagree on the sequence of these campaigns. Al-Nuwayri describes the land between the island of Meinarti at the Second Cataract and Dongola as laid waste, and excavations at Old Dongola show burned and abandoned quarters from these decades. The raids also carried off large numbers of Nubians as slaves.
+    facts:
+      - [Mamluk expeditions, "1287 and 1289 (usual dating)"]
+      - [Mamluk commander in 1287, "Izz al-Din al-Kurani"]
+    markers:
+      - kind: taken
+        side: mam
+        name: Dongola
+        date: 1287 and 1289
+        text: Taken twice by Mamluk armies. Each time Semamun withdrew south and came back after the army had gone.
+        lonlat: [30.743, 18.223]
+        lp: l
+      - kind: event
+        side: mam
+        name: Second Cataract
+        date: 1280s
+        text: "Al-Nuwayri describes the land from Meinarti, at the cataract, to Dongola as devastated by the campaigns."
+        lonlat: [31.30, 21.85]
+    arrows:
+      - side: mam
+        label: Izz al-Din al-Kurani, 1287
+        via: [[32.90, 24.09], [31.90, 22.60], [31.35, 21.80], [30.50, 19.80], [30.74, 18.30]]
+      - side: mak
+        label: Semamun withdraws
+        via: [[30.74, 18.22], [31.80, 18.30], [32.40, 17.70]]
+  - title: A Muslim king at Dongola
+    date: 1311–1317
+    when: "1317-05-29"
+    borders: "1317-05-29"
+    countries: [sd, eg]
+    body:
+      - In 1311 Kudanbes killed his brother King Ayay and took the throne. Sultan al-Nasir Muhammad backed another member of the royal house, Abdallah Barshambu, who had lived at the Mamluk court and had become a Muslim. A Mamluk army put him on the throne in 1316, the first Muslim king of Makuria. On 29 May 1317, by the date of its foundation inscription, the upper hall of the royal palace at Dongola was consecrated as a mosque. The building still stands at Old Dongola.
+      - Barshambu was unpopular and was killed within the year by Kanz al-Dawla, the chief of the Banu Kanz, an Arabised family of Aswan related to the Nubian royal house through the female line. The sultan sent Kudanbes back with an army in 1323, but Kanz al-Dawla retook the throne when the Mamluks left and was recognised as a tributary. A Christian king, Siti, ruled again in about 1330, and the record of the following decades is fragmentary. With the central power gone, Arab Bedouin groups such as the Juhayna moved south past the cataracts, Islam spread along the Nile, and the kings withdrew to Lower Nubia, where a small Christian kingdom, Dotawo, is last attested in 1463.
+    facts:
+      - [Barshambu installed, "1316"]
+      - [Throne hall becomes a mosque, "29 May 1317"]
+      - [Last known Nubian Christian king, "Joel of Dotawo, 1463"]
+    markers:
+      - kind: event
+        side: mam
+        name: Throne hall of Dongola
+        date: 29 May 1317
+        text: The two-storey palace of the Makurian kings, consecrated as a mosque under Abdallah Barshambu. It served as a mosque until 1969.
+        lonlat: [30.743, 18.223]
+        lp: l
+      - kind: event
+        side: none
+        name: Aswan
+        date: "1317"
+        text: Home of the Banu Kanz, whose chief Kanz al-Dawla killed Barshambu and claimed the Nubian throne.
+        lonlat: [32.90, 24.09]

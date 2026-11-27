@@ -1,29 +1,486 @@
 id: algerian-war
 name: Algerian War
 start: "1954-11-01"
-end: "1962-03-19"
-tier: C
-summary: The war of independence fought by Algeria’s National Liberation Front (FLN) against French rule. It began with coordinated attacks on 1 November 1954 and became a guerrilla war in the countryside and a campaign of bombings in the cities, as in the Battle of Algiers in 1957. The French counter-insurgency made wide use of torture, summary executions and the forced resettlement of some two million villagers, and the FLN also killed many civilians, Algerian and European. The war brought down the Fourth Republic in 1958 and returned Charles de Gaulle to power, and it reached France itself, where the Paris police killed dozens of Algerian demonstrators on 17 October 1961, by some estimates as many as two hundred. After a failed army putsch in Algiers in April 1961 and a campaign of bombings and murders by the OAS, a secret army opposed to independence, the Évian Accords brought a ceasefire on 19 March 1962, and Algeria became independent on 5 July. Some 900,000 Europeans, the pieds-noirs, left for France within months, and many thousands of harkis, Algerians who had served with the French army, were killed. Estimates of the Algerian dead range from a few hundred thousand to the 1.5 million of official Algerian figures; about 25,000 French soldiers died.
-countries: [fr, dz]
+end: "1962-07-05"
+tier: A
+summary: "The war of independence fought by Algeria’s National Liberation Front (FLN) and its army, the ALN, against French rule. Algeria, conquered from 1830, was governed as part of France, with a million settlers of European descent and some nine million Muslim Algerians who had few political rights. After the bloody repression of the Sétif and Guelma rising in May 1945 and years of blocked reform, the FLN began the war with coordinated attacks on 1 November 1954. It became a guerrilla war in the mountains and a campaign of bombings and assassinations in the cities, as in the Battle of Algiers in 1957. France sent some 400,000 soldiers, most of them conscripts, sealed the borders with Tunisia and Morocco with electrified barriers, moved more than two million villagers into camps and made wide use of torture and summary executions; the FLN killed many civilians, European and Algerian, and fought a bitter war with its rival, the MNA. The crisis brought down the Fourth Republic in May 1958 and returned Charles de Gaulle to power. His army all but defeated the ALN inside Algeria, but he turned towards self-determination, survived an army putsch in April 1961 and the bombings of the OAS, a secret army of settlers and officers, and signed the Évian Accords, which brought a ceasefire on 19 March 1962. Algeria voted for independence on 1 July and celebrated it on 5 July 1962. Some 900,000 Europeans, the pieds-noirs, left for France within months, and tens of thousands of harkis, Algerians who had served with the French army, were killed. Estimates of the Algerian dead range from about 300,000 to the 1.5 million of official Algerian figures; about 25,000 French soldiers died."
+countries: [dz, fr, tn, ma]
 sides:
   - id: fr
     name: France
-    polities: [france]
+    polities: [france, french-algeria]
     ink: blue
+    moves: French moves
+    success: French success
   - id: fln
-    name: National Liberation Front (FLN)
+    name: National Liberation Front (FLN) and National Liberation Army (ALN)
+    polities: [fln]
     ink: green
+    moves: FLN and ALN moves
+    success: FLN success
+  - id: mna
+    name: Algerian National Movement (MNA)
+    polities: [mna]
+    ink: orange
+    moves: MNA moves
+    success: MNA success
   - id: oas
     name: Secret Army Organisation (OAS)
+    polities: [oas]
     ink: brown
+    moves: OAS moves
+    success: OAS success
 notes:
-  - Algeria, conquered from 1830, was governed as part of France, divided into French départements; it lies outside the map. France officially called the conflict a war only in 1999.
+  - "Algeria was divided into French departments and counted in law as part of France. French governments called the fighting “the events” or “operations to maintain order”; France officially called it a war only in 1999. Algerians call it the Revolution or the War of National Liberation, and the FLN called its fighters mujahideen; the French called them rebels, outlaws or fellaghas."
+  - "The death toll is disputed. French historians have mostly estimated the Algerian dead at about 300,000–400,000, including civilians and the Algerians killed by the FLN; the Algerian state has long spoken of 1.5 million martyrs, and Alistair Horne gave about a million. French military deaths were about 25,000, including deaths from accidents and disease. Several thousand European civilians were killed or went missing. The FLN’s war with the MNA killed thousands of Algerians in Algeria and in France, and estimates of the harkis and their families killed after the ceasefire range from about 30,000 to 150,000."
+  - "Places are given by their names of the time, with today’s names in brackets where they differ: Philippeville (Skikda), Bône (Annaba), Colomb-Béchar (Béchar), Rocher Noir (Boumerdès)."
 sources:
   - title: Algerian War (Wikipedia)
     url: https://en.wikipedia.org/wiki/Algerian_War
+  - title: Algerian War (Britannica)
+    url: https://www.britannica.com/topic/Algerian-War
+  - title: Sétif and Guelma massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/S%C3%A9tif_and_Guelma_massacre
+  - title: Toussaint Rouge (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Toussaint_Rouge
+  - title: Philippeville massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Philippeville_massacre
+  - title: Congress of Soummam (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Congress_of_Soummam
   - title: Battle of Algiers (1956–1957) (Wikipedia)
     url: https://en.wikipedia.org/wiki/Battle_of_Algiers_(1956%E2%80%931957)
+  - title: Morice Line (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Morice_Line
+  - title: Bombing of Sakiet Sidi Youssef (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bombing_of_Sakiet_Sidi_Youssef
+  - title: Algerian National Movement (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Algerian_National_Movement
+  - title: May 1958 crisis in France (Wikipedia)
+    url: https://en.wikipedia.org/wiki/May_1958_crisis_in_France
+  - title: Provisional Government of the Algerian Republic (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Provisional_Government_of_the_Algerian_Republic
+  - title: Challe Plan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Challe_Plan
+  - title: Algiers putsch of 1961 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Algiers_putsch_of_1961
+  - title: Organisation armée secrète (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Organisation_arm%C3%A9e_secr%C3%A8te
   - title: 1961 Paris massacre (Wikipedia)
     url: https://en.wikipedia.org/wiki/1961_Paris_massacre
+  - title: 1962 Isly massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1962_Isly_massacre
   - title: Évian Accords (Wikipedia)
     url: https://en.wikipedia.org/wiki/%C3%89vian_Accords
+  - title: Oran massacre of 1962 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Oran_massacre_of_1962
+  - title: Harki (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Harki
+  - title: Pieds-noirs (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pieds-noirs
+  - title: The military aspects of the Algerian War (Chemins de mémoire, French Ministry of the Armed Forces)
+    url: https://web.archive.org/web/20250217114311/https://www.cheminsdememoire.gouv.fr/en/military-aspects-algerian-war
+steps:
+  - title: Sétif and Guelma
+    date: 8 May – June 1945
+    when: "1945-05-08"
+    borders: "1945-05-08"
+    countries: [dz, fr]
+    body:
+      - "A century after the French conquest, Algeria was a settler colony. About a million people of European descent, the pieds-noirs, French, Spanish, Italian and Maltese in origin, lived alongside some eight million Muslim Algerians, Arabs and Berbers. The north was divided into French departments, the settlers held most of the best land and controlled local government, and most Muslims were French subjects without the rights of citizens. Between the wars a nationalist movement grew: Messali Hadj’s Algerian People’s Party (PPA), which demanded independence, Ferhat Abbas’s liberal reformers and the Islamic reformists of the Association of Ulema."
+      - "On 8 May 1945, the day the war ended in Europe, nationalists marched in Sétif with Algerian flags and banners calling for freedom. When a policeman shot a young man carrying a flag, the march turned into a riot, and the rising spread through the countryside around Sétif and Kherrata and to Guelma. About 102 Europeans were killed. The repression lasted for weeks: the army, including the Foreign Legion and Senegalese and Moroccan troops, carried out sweeps and summary executions, aircraft bombed villages, a cruiser shelled the coast near Kherrata, and settler militias around Guelma shot and lynched Muslims. The official French inquiry counted 1,020 Algerian dead; historians’ estimates mostly range from 3,000 to 8,000, some go much higher, and the Algerian state gives 45,000."
+      - "For many Algerians, Sétif ended hope of change by peaceful means. A new statute in 1947 created an Algerian Assembly elected in two separate colleges with sixty members each, one for the Europeans and a small Muslim elite and one for the Muslim majority, and the 1948 elections to it were openly rigged. Messali’s movement, now the MTLD, built a secret armed wing, the Special Organisation (OS), which the police broke up in 1950. In 1954, with the MTLD split between Messali and its central committee and France defeated at Dien Bien Phu in Indochina, young former members of the OS formed a committee for action and prepared an insurrection."
+    facts:
+      - [Rising at Sétif, "8 May 1945"]
+      - [European dead, "about 102"]
+      - [Algerian dead, "1,020 (official French figure) to 45,000 (Algerian state); historians mostly 3,000–8,000"]
+    markers:
+      - kind: event
+        name: Sétif
+        date: 8 May 1945
+        text: A nationalist march on VE Day turned into a riot after a policeman shot a young man carrying an Algerian flag. Europeans were killed in the town and the countryside, and the army’s repression followed.
+        lonlat: [5.410, 36.190]
+        lp: l
+      - kind: event
+        name: Kherrata
+        date: 9–11 May 1945
+        text: The rising spread to this mountain town. Aircraft bombed the villages around it, and the cruiser Duguay-Trouin shelled the nearby coast.
+        lonlat: [5.277, 36.494]
+      - kind: event
+        name: Guelma
+        date: May – June 1945
+        text: Settler militias formed with the backing of the sub-prefect shot and lynched hundreds of Muslims in the weeks after the rising.
+        lonlat: [7.430, 36.460]
+  - title: Toussaint Rouge
+    date: 1 November 1954
+    when: "1954-11-01"
+    borders: "1954-11-01"
+    countries: [dz, fr]
+    body:
+      - "In the early hours of 1 November 1954, All Saints’ Day, the new National Liberation Front (FLN) carried out some seventy attacks in about thirty places across Algeria: on police stations and barracks, farms, bridges, a gasworks and telephone lines. The French called the night the Toussaint Rouge, the Red All Saints’ Day. About ten people were killed. In the Tighanimine gorge in the Aurès, fighters stopped a bus and killed a local caïd, Hadj Sadok, and a young French schoolteacher, Guy Monnerot, whose wife was wounded. A proclamation broadcast from Cairo called for the restoration of a sovereign, democratic and social Algerian state within the framework of Islamic principles, and offered talks on that basis."
+      - "The FLN was the work of nine leaders, among them Mostefa Ben Boulaïd, Larbi Ben M’hidi, Mourad Didouche, Krim Belkacem and Mohamed Boudiaf inside Algeria and Ahmed Ben Bella, Hocine Aït Ahmed and Mohamed Khider in Cairo. They divided the country into zones, later called wilayas. Their armed men numbered perhaps a few hundred to a thousand, with old hunting rifles and wartime weapons. The rising was strongest in the Aurès, the mountain country of the Chaoui Berbers under Ben Boulaïd, where the French army had to fight for months; elsewhere it was quickly contained."
+      - "The French government of Pierre Mendès France answered that Algeria was France and that there could be no negotiation. Its interior minister, François Mitterrand, sent troops and paratroopers, and the police arrested hundreds of members of Messali’s movement, most of whom had had nothing to do with the attacks. Messali, who had not been told of the rising, founded his own movement, the MNA, which became the FLN’s rival."
+    facts:
+      - [Attacks, "about 70, in some 30 places"]
+      - [Dead, "about 10"]
+      - [ALN fighters, "a few hundred to about 1,000"]
+    markers:
+      - kind: event
+        side: fln
+        name: Tighanimine gorge
+        date: 1 November 1954
+        text: Fighters stopped the bus from Biskra to Arris here and killed the caïd Hadj Sadok and the teacher Guy Monnerot.
+        lonlat: [6.303, 35.211]
+        lp: b
+      - kind: battle
+        side: fln
+        name: Batna
+        date: 1 November 1954
+        text: The barracks and gendarmerie were attacked. Batna became the French headquarters for the campaign in the Aurès.
+        lonlat: [6.174, 35.556]
+      - kind: battle
+        side: fln
+        name: Khenchela
+        date: 1 November 1954
+        text: The barracks were attacked and an officer killed.
+        lonlat: [7.143, 35.435]
+      - kind: battle
+        side: fln
+        name: Biskra
+        date: 1 November 1954
+        text: Attacks on public buildings in the town.
+        lonlat: [5.728, 34.851]
+      - kind: event
+        side: fln
+        name: Algiers
+        date: 1 November 1954
+        text: Small bombs at the radio station, a gasworks and oil depots did little damage.
+        lonlat: [3.059, 36.754]
+      - kind: event
+        side: fln
+        name: Kabylia
+        date: 1 November 1954
+        text: Krim Belkacem’s men attacked posts and burned stores of cork and tobacco around Tizi Ouzou.
+        lonlat: [4.050, 36.710]
+    areas:
+      - style: contested
+        side: fln
+        label: The Aurès, the first stronghold of the rising
+        polygon: [[5.90, 35.62], [6.60, 35.62], [7.25, 35.45], [7.15, 35.00], [6.40, 34.90], [5.80, 35.10]]
+  - title: Philippeville and the widening war
+    date: August 1955 – October 1956
+    when: "1955-08-20"
+    borders: "1955-08-20"
+    countries: [dz, fr, ma, tn]
+    body:
+      - "France declared a state of emergency in April 1955, and the new governor-general, Jacques Soustelle, combined reforms with repression. By the summer the FLN feared it was losing ground. On 20 August 1955 Youcef Zighoud, its commander in North Constantine, sent his fighters and armed peasants against the towns and villages around Philippeville (Skikda). They killed 123 people, among them 71 Europeans; at the mine of El Halia 37 Europeans, women and children among them, were killed. The army, the police and settler militias took revenge. The French authorities counted 1,273 Muslims killed and the FLN said 12,000; the historian Charles-Robert Ageron estimated 3,000 to 5,000. The massacres on both sides opened a gulf between the communities, and moderate nationalists such as Ferhat Abbas joined the FLN."
+      - "In February 1956 the new Socialist prime minister, Guy Mollet, was pelted with tomatoes by settlers in Algiers and gave up his plan for reform. In March the National Assembly, the Communists included, voted the government special powers, and conscripts were sent to Algeria; by the end of 1956 there were more than 400,000 French troops there. Morocco and Tunisia became independent in March 1956, and the FLN set up bases, training camps and supply routes on their soil."
+      - "On 20 August 1956 FLN leaders met secretly at Ifri in the Soummam valley in Kabylia. The Soummam Congress, led by Abane Ramdane and Larbi Ben M’hidi, gave the movement a structure: six wilayas, a parliament (the CNRA) and an executive committee, with the primacy of the political over the military and of the leaders inside the country over those abroad. On 22 October the French air force forced down a Moroccan airliner carrying Ben Bella, Aït Ahmed, Boudiaf and Khider from Rabat to Tunis, and they spent the rest of the war in French prisons. Days later France joined Britain and Israel in attacking Egypt at Suez, in part to end Nasser’s support for the FLN."
+    facts:
+      - [Philippeville attacks, "20 August 1955; 123 killed, 71 of them Europeans"]
+      - [Reprisals, "1,273 Muslims killed by French count, 12,000 by the FLN’s, 3,000–5,000 by Ageron’s estimate"]
+      - [Soummam Congress, "20 August 1956"]
+      - [French troops in Algeria, "more than 400,000 by the end of 1956"]
+    markers:
+      - kind: event
+        side: fln
+        name: Philippeville (Skikda)
+        date: 20–25 August 1955
+        text: Youcef Zighoud’s offensive killed 123 people here and at El Halia, east of the town. The reprisals that followed killed well over a thousand Muslims.
+        lonlat: [6.909, 36.876]
+      - kind: event
+        side: fln
+        name: Ifri (Soummam Congress)
+        date: 20 August 1956
+        text: The FLN leaders of the interior met in this village in the Soummam valley and gave the movement its political and military structure.
+        lonlat: [4.552, 36.551]
+        lp: b
+      - kind: event
+        side: fr
+        name: Algiers airport
+        date: 22 October 1956
+        text: The plane carrying Ben Bella, Aït Ahmed, Boudiaf and Khider was forced to land here, and the four were arrested.
+        lonlat: [3.215, 36.691]
+        lp: l
+      - kind: event
+        side: fln
+        name: Tunis
+        date: from 1956
+        text: Independent Tunisia let the FLN set up bases and camps on its territory; the FLN’s leaders later made Tunis their capital in exile.
+        lonlat: [10.181, 36.806]
+    areas:
+      - style: contested
+        side: fln
+        label: Main ALN zones, 1956
+        atoms: [DZ-15, DZ-06, DZ-18, DZ-21]
+        polygon: [[5.90, 35.62], [6.60, 35.62], [7.25, 35.45], [7.15, 35.00], [6.40, 34.90], [5.80, 35.10]]
+  - title: The Battle of Algiers
+    date: September 1956 – October 1957
+    when: "1957-01-07"
+    borders: "1957-01-07"
+    countries: [dz, fr]
+    body:
+      - "In Algiers the FLN’s Autonomous Zone, led by Yacef Saadi under Larbi Ben M’hidi, built a network of fighters, bomb-makers and couriers in the Casbah, the old town of some 80,000 people. After the guillotining of FLN prisoners from June 1956 and a bomb planted by European extremists in the rue de Thèbes in the Casbah in August, which killed dozens, the FLN turned to bombings in the European city. On 30 September 1956 young women of the network, among them Zohra Drif, left bombs in the Milk Bar and the Cafétéria, cafés popular with young pieds-noirs, killing three and wounding dozens. Bombings and shootings of Europeans and police followed through the winter."
+      - "On 7 January 1957 the governor-general, Robert Lacoste, gave police powers in Algiers to General Jacques Massu and the 10th Parachute Division. The paratroopers broke the eight-day general strike the FLN called at the end of January for a debate at the United Nations, sealed off the Casbah, searched house by house and arrested thousands. Torture, with electric shocks and water, was systematic. Ben M’hidi, captured in February, was killed in custody in March, as one of Massu’s officers, Paul Aussaresses, admitted decades later; the lawyer Ali Boumendjel was thrown from a building; the mathematician Maurice Audin disappeared in June. The secretary-general of the Algiers police, Paul Teitgen, resigned, counting 3,024 people missing among those arrested."
+      - "The FLN’s leaders fled Algiers for Tunisia, and after a second wave of bombings in the summer the paratroopers captured Yacef Saadi on 24 September and killed Ali la Pointe and his companions on 8 October 1957 by blowing up their hiding place. The battle was a military victory for the French army. But accounts of torture, such as Henri Alleg’s book La Question in 1958, turned much opinion in France and abroad against the war. In 2018 France acknowledged that Audin had died under a system of torture that the state had allowed."
+    facts:
+      - [Milk Bar and Cafétéria bombings, "30 September 1956"]
+      - [Police powers to Massu, "7 January 1957"]
+      - [General strike, "28 January – 4 February 1957"]
+      - [Ben M’hidi killed, "4 March 1957"]
+      - [Ali la Pointe killed, "8 October 1957"]
+    markers:
+      - kind: siege
+        side: fr
+        name: Casbah of Algiers
+        date: January – October 1957
+        text: The old town, home to the FLN’s Autonomous Zone, was sealed off and searched by the 10th Parachute Division. The Milk Bar, bombed on 30 September 1956, stood a few hundred metres away in the European city, and detainees were tortured in villas at El Biar in the heights above. Ali la Pointe was killed in a house in the rue des Abderames on 8 October 1957.
+        lonlat: [3.060, 36.785]
+    view:
+      center: [3.050, 36.740]
+      size: [80, 60]
+  - title: The Morice Line and the camps
+    date: 1957–1958
+    when: "1957-09"
+    borders: "1958-02-08"
+    countries: [dz, fr, tn, ma]
+    body:
+      - "By 1957 the ALN had tens of thousands of fighters inside Algeria, and its main supply of arms and recruits came over the borders from Tunisia and Morocco, where its frontier armies trained. To cut them off, France built barriers named after the defence minister André Morice: an electrified fence carrying 5,000 volts, with barbed wire, minefields, radar and a patrol road, about 460 km long on the Tunisian border and some 700 km on the Moroccan. From January to May 1958 the ALN tried to force the eastern line in the battle of the frontiers, above all around Souk Ahras, and lost heavily; few large units got through after that."
+      - "On 11 January 1958 an ALN unit operating from Tunisia ambushed a French patrol and killed 14 soldiers. On 8 February French aircraft bombed the Tunisian border village of Sakiet Sidi Youssef on market day; more than 70 people were killed, among them 12 schoolchildren, and 148 were wounded. The raid caused an international outcry, Tunisia took the matter to the UN, and an Anglo-American mediation helped bring down the French government in April."
+      - "Inside Algeria the army cleared the mountains, declaring forbidden zones where anyone could be shot, and moved their people into regroupment camps under military control. By 1960 more than two million Algerians, about a quarter of the rural population, had been moved, and thousands of villages had been destroyed. A report by a young civil servant, Michel Rocard, in 1959 described hunger and child deaths in the camps. The FLN fought its rival as well: on 28–29 May 1957 ALN fighters killed some 300 men of the village of Melouza, which supported the MNA, and in France the FLN and the MNA fought a long war of assassinations among Algerian workers, which killed thousands."
+    facts:
+      - [Morice Line, "from summer 1957; about 460 km (Tunisia) and 700 km (Morocco)"]
+      - [Battle of the frontiers, "January – May 1958"]
+      - [Sakiet Sidi Youssef bombed, "8 February 1958; over 70 dead"]
+      - [Regrouped villagers, "over 2 million by 1960"]
+      - [Melouza, "28–29 May 1957"]
+    markers:
+      - kind: air
+        side: fr
+        name: Sakiet Sidi Youssef
+        date: 8 February 1958
+        text: French bombers struck this Tunisian village, said to shelter the ALN, on market day. Over 70 people were killed, among them 12 children in the school.
+        lonlat: [8.356, 36.224]
+      - kind: battle
+        side: fr
+        name: Souk Ahras
+        date: April – May 1958
+        text: The largest ALN attempt to break through the Morice Line ended in heavy losses.
+        lonlat: [7.951, 36.286]
+        lp: l
+      - kind: event
+        side: fln
+        name: Ghardimaou
+        date: 1960–1962
+        text: Headquarters in Tunisia of the ALN’s general staff under Houari Boumediene and of its eastern frontier army.
+        lonlat: [8.440, 36.450]
+      - kind: event
+        side: fln
+        name: Oujda
+        date: 1957–1962
+        text: The base of the ALN’s western frontier army in Morocco, where Houari Boumediene built his following.
+        lonlat: [-1.908, 34.682]
+      - kind: event
+        side: fln
+        name: Melouza
+        date: 28–29 May 1957
+        text: ALN fighters killed some 300 men of Mechta-Kasba, a village that supported the MNA. Each side blamed the other at first.
+        lonlat: [4.187, 35.980]
+    areas:
+      - style: front
+        side: fr
+        label: Morice Line, 1957–1958
+        lines:
+          - [[8.250, 36.870], [8.050, 36.500], [7.980, 36.250], [8.050, 35.750], [8.100, 35.400], [7.750, 34.850], [7.550, 34.450]]
+          - [[-2.150, 35.050], [-1.800, 34.750], [-1.700, 34.200], [-1.200, 33.200], [-1.050, 32.550], [-1.300, 32.050], [-2.100, 31.650]]
+  - title: 13 May 1958 and de Gaulle
+    date: May – October 1958
+    when: "1958-05-13"
+    borders: "1958-05-13"
+    countries: [dz, fr]
+    body:
+      - "The war wore down the governments of the Fourth Republic. On 13 May 1958, as Pierre Pflimlin, who was thought ready to negotiate, sought the National Assembly’s approval as prime minister, crowds of Europeans in Algiers stormed the building of the Government-General. Generals Jacques Massu and Raoul Salan put themselves at the head of a Committee of Public Safety and called for Charles de Gaulle to take power. On 24 May paratroopers from Algeria took over Corsica, and the army prepared an operation against Paris. On 1 June the Assembly voted de Gaulle in as prime minister with full powers."
+      - "On 4 June de Gaulle told a huge crowd in Algiers: “Je vous ai compris” (I have understood you). The settlers heard a promise to keep Algeria French; he chose his words to promise nothing. In the referendum of 28 September on the constitution of the Fifth Republic, all Algerians, Muslim women for the first time, voted in a single college. In October he announced the Constantine Plan to build housing, schools and industry, and offered the ALN a “peace of the brave” that it rejected."
+      - "The FLN answered by proclaiming the Provisional Government of the Algerian Republic (GPRA) in Cairo on 19 September 1958, with Ferhat Abbas as its president. It moved to Tunis and was soon recognised by Arab and Asian states, among them Morocco, Tunisia and China. In August the FLN had opened a front in France itself with attacks on police and oil depots."
+    facts:
+      - [Rising in Algiers, "13 May 1958"]
+      - [De Gaulle prime minister, "1 June 1958"]
+      - [GPRA proclaimed, "19 September 1958"]
+      - [Fifth Republic constitution approved, "28 September 1958"]
+    markers:
+      - kind: event
+        name: Algiers
+        date: 13 May 1958
+        text: Settlers stormed the Government-General building, and the army set up a Committee of Public Safety that called for de Gaulle. On 4 June he spoke to the crowd from its balcony.
+        lonlat: [3.059, 36.754]
+      - kind: event
+        name: Ajaccio
+        date: 24 May 1958
+        text: Paratroopers flown in from Algeria took over Corsica without bloodshed, a warning to Paris.
+        lonlat: [8.738, 41.919]
+      - kind: event
+        side: fr
+        name: Constantine
+        date: 3 October 1958
+        text: De Gaulle announced here a five-year plan to develop Algeria.
+        lonlat: [6.614, 36.365]
+      - kind: event
+        side: fln
+        name: Tunis
+        date: from September 1958
+        text: Seat of the GPRA, the FLN’s provisional government, proclaimed in Cairo on 19 September 1958.
+        lonlat: [10.181, 36.806]
+  - title: The Challe Plan
+    date: February 1959 – December 1960
+    when: "1959-07-22"
+    borders: "1959-07-22"
+    countries: [dz, fr]
+    body:
+      - "De Gaulle’s new commander-in-chief, General Maurice Challe, used the mobile reserves, paratroopers and legionnaires carried by helicopter, to sweep the ALN’s strongholds one after another from west to east, while units of harkis and commandos stayed on the trail of the scattered bands: in Oranie in February 1959, the Ouarsenis and the Algérois in the spring, the Hodna in July, Kabylia from 22 July in Operation Jumelles, and North Constantine in the autumn. The ALN inside Algeria lost thousands of men and most of its larger units. On 28 March 1959 Colonel Amirouche, the feared commander of Kabylia, and Si El Haouès, commander of the Sahara wilaya, were killed in a battle near Bou Saâda. In Kabylia French intelligence had fed Amirouche false lists of traitors, and his purges had killed hundreds of his own fighters."
+      - "Yet de Gaulle moved the other way in politics. On 16 September 1959 he offered Algerians self-determination, a choice between secession, full integration with France and association. In January 1960 settler activists in Algiers rose against him in the week of the barricades; about twenty people were killed, most of them gendarmes, before the rising collapsed on 1 February. In June 1960 three leaders of the Algérois wilaya were secretly received at the Élysée to discuss a ceasefire, without result, and talks with the GPRA at Melun failed."
+      - "In December 1960, during a visit by de Gaulle, tens of thousands of Algerians demonstrated in Algiers and other cities with FLN flags; more than a hundred people were killed. Days later the UN General Assembly recognised Algeria’s right to independence. The army had won on the ground, but the FLN had won the political war at home and abroad."
+    facts:
+      - [Operation Jumelles, "from 22 July 1959, Kabylia"]
+      - [Amirouche killed, "28 March 1959"]
+      - [Self-determination speech, "16 September 1959"]
+      - [Week of the barricades, "24 January – 1 February 1960"]
+      - [Demonstrations in Algiers, "December 1960"]
+    markers:
+      - kind: battle
+        side: fr
+        name: Akfadou forest
+        date: July 1959 – spring 1960
+        text: The heart of Wilaya III, the ALN’s Kabylia command, and the main target of Operation Jumelles.
+        lonlat: [4.624, 36.629]
+      - kind: battle
+        side: fr
+        name: Ouarsenis
+        date: spring 1959
+        text: The mountains of the Algérois and Oranie wilayas, swept in the second phase of the plan.
+        lonlat: [1.617, 35.867]
+      - kind: battle
+        side: fr
+        name: Bou Saâda
+        date: 28 March 1959
+        text: Amirouche and Si El Haouès were killed in a battle in the hills of Djebel Thameur south of the town, on their way to Tunisia.
+        lonlat: [4.180, 35.210]
+      - kind: event
+        name: Algiers
+        date: January and December 1960
+        text: The settlers’ week of the barricades in January and the great FLN demonstrations of December.
+        lonlat: [3.059, 36.754]
+    arrows:
+      - side: fr
+        label: Challe offensives, west to east
+        via: [[0.300, 35.200], [1.700, 35.850], [3.400, 36.200], [4.600, 36.550], [6.300, 36.750]]
+  - title: The generals’ putsch and the OAS
+    date: January 1961 – February 1962
+    when: "1961-04-22"
+    borders: "1961-04-22"
+    countries: [dz, fr]
+    body:
+      - "In a referendum on 8 January 1961 three quarters of the voters in France and Algeria approved self-determination for Algeria. Settler leaders and officers who would not accept it founded the Secret Army Organisation (OAS) early in the year. On the night of 21–22 April four retired generals, Maurice Challe, Edmond Jouhaud, André Zeller and Raoul Salan, seized Algiers with the 1st Foreign Parachute Regiment and other elite units. De Gaulle went on television on 23 April to condemn “a handful of retired generals” and ordered soldiers to disobey them; most of the conscripts, listening on transistor radios, did, and the putsch collapsed on 25–26 April. Challe and Zeller gave themselves up; Salan and Jouhaud went into hiding to lead the OAS."
+      - "Talks with the GPRA began at Évian in May 1961 and broke down over the Sahara, which de Gaulle conceded in September. Meanwhile the OAS waged a campaign of bombings and murders in Algeria and France, killing Algerians, liberal Europeans and officials, and tried to kill de Gaulle in September 1961."
+      - "The FLN also fought in France, where some 350,000 Algerians lived. On 17 October 1961 tens of thousands of Algerian men, women and children marched peacefully in Paris against a curfew imposed on them; the police under prefect Maurice Papon attacked them, beat and shot people and threw some into the Seine. Estimates of the dead range from the 40 that the French government acknowledged in 1998 to 200–300 by some historians’ counts. On 8 February 1962 police killed nine people at the Charonne metro station during a demonstration against the OAS."
+    facts:
+      - [Referendum on self-determination, "8 January 1961"]
+      - [Generals’ putsch, "21–26 April 1961"]
+      - [First Évian talks, "May – June 1961"]
+      - [Paris massacre, "17 October 1961"]
+    markers:
+      - kind: event
+        side: fr
+        name: Algiers
+        date: 21–26 April 1961
+        text: The putschist generals held the city for four days before the army and the conscripts turned against them.
+        lonlat: [3.059, 36.754]
+      - kind: event
+        name: Évian-les-Bains
+        date: May – June 1961
+        text: The first round of talks between France and the GPRA was held in this spa town on Lake Geneva.
+        lonlat: [6.590, 46.400]
+      - kind: event
+        side: fr
+        name: Paris
+        date: 17 October 1961
+        text: The police attacked a peaceful march of Algerians against a curfew; estimates of the dead range from about 40 to 300.
+        lonlat: [2.352, 48.857]
+  - title: Évian and the ceasefire
+    date: March – July 1962
+    when: "1962-03-19"
+    borders: "1962-03-19"
+    countries: [dz, fr]
+    body:
+      - "The Évian Accords were signed on 18 March 1962 by Louis Joxe for France and Krim Belkacem for the GPRA, and the ceasefire took effect at noon on 19 March. They provided for a referendum on independence, guarantees for the Europeans, who could keep French nationality, a French naval base at Mers el-Kébir for fifteen years, French use of nuclear test sites in the Sahara and French oil interests. A Provisional Executive under Abderrahmane Farès governed from Rocher Noir until independence. Voters in France approved the accords on 8 April with about 91 per cent."
+      - "The OAS fought on to wreck the settlement. In Algiers its gunmen killed French conscripts, and the army sealed off the European district of Bab El Oued. On 26 March soldiers of a tirailleur regiment fired on a crowd of Europeans marching to Bab El Oued in the rue d’Isly, killing some 50 to 80 people. OAS bombings killed hundreds of Algerians, among them some 60 dockers at the port of Algiers on 2 May, and its men burned the library of the University of Algiers in June. Jouhaud and Salan were caught, and on 17 June the OAS in Algiers reached a truce with the FLN."
+      - "In the referendum of 1 July 1962 Algerians voted for independence by 5,975,581 votes to 16,534. France recognised it on 3 July, and Algeria celebrated on 5 July, the anniversary of the French capture of Algiers in 1830. That day in Oran, after shots were fired, crowds and armed men attacked Europeans while the French troops in the city stayed in their barracks; estimates of the dead range from under a hundred to several hundred, most of them Europeans."
+    facts:
+      - [Évian Accords signed, "18 March 1962"]
+      - [Ceasefire, "19 March 1962, noon"]
+      - [Rue d’Isly shooting, "26 March 1962"]
+      - [Independence referendum, "1 July 1962; 99.7 per cent yes"]
+      - [Independence Day, "5 July 1962"]
+    markers:
+      - kind: treaty
+        name: Rocher Noir (Boumerdès)
+        date: March – July 1962
+        text: Seat of the Provisional Executive set up by the Évian Accords to govern Algeria until independence.
+        lonlat: [3.477, 36.760]
+      - kind: event
+        name: Algiers
+        date: March – June 1962
+        text: The OAS’s last stand. The army besieged Bab El Oued, soldiers fired on a European crowd in the rue d’Isly on 26 March, and OAS bombs killed hundreds of Algerians.
+        lonlat: [3.059, 36.754]
+        lp: l
+      - kind: event
+        name: Oran
+        date: 5 July 1962
+        text: On Independence Day crowds and armed men killed Europeans in the city while French troops stayed in barracks.
+        lonlat: [-0.641, 35.697]
+      - kind: held
+        side: fr
+        name: Mers el-Kébir
+        date: 1962–1968
+        text: The naval base France kept under the Évian Accords; it left in 1968, earlier than agreed.
+        lonlat: [-0.705, 35.730]
+        lp: l
+  - title: Independence, the exodus and the harkis
+    date: 1962
+    when: "1962-07-05"
+    borders: "1962-07-05"
+    countries: [dz, fr]
+    body:
+      - "Between May and August 1962 most of the pieds-noirs left for France, many with only a suitcase each, under the slogan of the time, “the suitcase or the coffin”. By the end of the year some 900,000 had gone, among them most of Algeria’s Jews, who had been French citizens since 1870. France had not planned for so many, and they arrived in Marseille and other ports with little help. Most of the farms, homes and businesses they left became state property in independent Algeria."
+      - "Tens of thousands of Algerian Muslims had served with the French as harkis and in other auxiliary units, besides those in the regular army. The French government ordered that they should not be brought to France in large numbers, and only some 90,000 harkis and their families got there, where many were housed for years in camps. Those left behind were killed in large numbers in the months after the ceasefire, by the ALN, by local committees and in personal revenge; estimates range from about 30,000 to 150,000. In 2021 President Emmanuel Macron asked the harkis for forgiveness, and a French law of 2022 recognised the state’s responsibility."
+      - "Independence brought a struggle for power. The GPRA under Benyoucef Benkhedda was opposed by Ben Bella, freed in March, who set up a Political Bureau at Tlemcen with the backing of the frontier army of Houari Boumediene. The frontier army marched on Algiers and fought the wilayas that sided with the GPRA in August and September, and Ben Bella became prime minister at the end of September 1962. The FLN became the only party. Algeria had lost a large share of its people to death, camps and exile, and the war left memories on both sides of the Mediterranean that are still contested."
+    facts:
+      - [Pieds-noirs who left, "about 900,000 in 1962"]
+      - [Harkis and families reaching France, "about 90,000"]
+      - [Harkis killed, "estimates from about 30,000 to 150,000"]
+      - [Ben Bella prime minister, "September 1962"]
+    markers:
+      - kind: event
+        name: Marseille
+        date: May – August 1962
+        text: Most of the pieds-noirs landed here and in the other ports of southern France.
+        lonlat: [5.370, 43.296]
+      - kind: event
+        side: fln
+        name: Tlemcen
+        date: July 1962
+        text: Ben Bella set up his Political Bureau here, backed by Boumediene’s frontier army, against the GPRA.
+        lonlat: [-1.315, 34.878]
+      - kind: capital
+        side: fln
+        name: Algiers
+        date: September 1962
+        text: The frontier army entered the capital after fighting the wilayas loyal to the GPRA, and Ben Bella formed the first government of independent Algeria.
+        lonlat: [3.059, 36.754]
+    arrows:
+      - side: fr
+        label: Exodus of the pieds-noirs
+        via: [[3.100, 36.850], [4.200, 39.500], [5.300, 43.150]]
+      - side: fr
+        via: [[-0.600, 35.800], [1.500, 39.000], [5.250, 43.150]]
+      - side: fln
+        label: Boumediene’s frontier army
+        via: [[-1.315, 34.878], [0.600, 35.500], [2.200, 36.200], [3.000, 36.650]]

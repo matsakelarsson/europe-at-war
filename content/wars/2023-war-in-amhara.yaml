@@ -1,0 +1,235 @@
+id: war-in-amhara
+name: War in Amhara
+start: "2023-04-09"
+end: ongoing
+tier: B
+summary: "Last updated 27 November 2026. The insurgency of the Fano, Amhara nationalist militias, against the Ethiopian federal government of Abiy Ahmed in the Amhara region, which since September 2026 has merged into a wider war. The Fano had fought beside the federal army against the TPLF in the Tigray War, but the Pretoria agreement of 2022, the government’s order in April 2023 to disband the regional special forces and the unresolved fate of Western Tigray turned them against it. In August 2023 Fano fighters briefly took Lalibela, Gondar and other towns, and the government declared a state of emergency. Since then the Fano, divided into regional commands in Gojjam, Gondar, Wollo and Shewa until they united as the Amhara Fano National Movement in January 2026, have controlled much of the countryside while the army holds the towns and main roads and strikes from the air; drone strikes, killings of civilians by all sides and mass arrests have been reported throughout. On 20 September 2026 the Fano joined the TPLF, the Oromo Liberation Army and other groups in an armed coalition against the government, and from 23 September fighting resumed in Tigray and spread along the fronts of Wollo, Wag Hemra and Afar, with Eritrea accused of backing the rebels."
+countries: [et, er]
+sides:
+  - id: fano
+    name: Fano (from January 2026 the Amhara Fano National Movement)
+    polities: [fano]
+    ink: magenta
+    moves: Fano moves
+    success: Fano success
+  - id: et
+    name: Ethiopia (federal forces and the Amhara regional government)
+    polities: [ethiopia]
+    ink: red
+    moves: Federal moves
+    success: Federal success
+  - id: tplf
+    name: TPLF and Tigrayan forces (in the coalition from September 2026)
+    polities: [tplf]
+    ink: orange
+    moves: Tigrayan moves
+    success: Tigrayan success
+  - id: er
+    name: Eritrea
+    polities: [eritrea]
+    ink: blue
+    moves: Eritrean moves
+    success: Eritrean success
+notes:
+  - "Reporting from Amhara is very hard to verify: journalists have little access, the internet is often cut, and both the government and the Fano make claims of towns taken and enemies killed that cannot be checked. Figures here come from the UN, the Ethiopian Human Rights Commission, ACLED and news agencies, and many are marked as unconfirmed."
+  - "The coalition formed on 20 September 2026 is called the Ethiopian Peoples’ Forces Coalition (or Alliance) for Survival (EPFAS). Its core members are the Amhara Fano National Movement, the TPLF and the Oromo Liberation Army, with smaller Afar and Benishangul groups; the Gumuz People’s Democratic Movement, named at the launch, denied being a member, and the membership of the Ogaden National Liberation Front is disputed. The government accuses Eritrea, Egypt and Sudan of backing it; Eritrea denies any part in forming it."
+sources:
+  - title: Fano insurgency (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fano_insurgency
+  - title: Fano (militia) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fano_(militia)
+  - title: 2026 Ethiopian offensive (Wikipedia)
+    url: https://en.wikipedia.org/wiki/2026_Ethiopian_offensive
+  - title: Ethiopian Peoples’ Forces Coalition for Survival (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ethiopian_Peoples%27_Forces_Coalition_for_Survival
+  - title: Can Ethiopia’s seven-group rebel alliance challenge Abiy Ahmed? (Al Jazeera, 23 September 2026)
+    url: https://www.aljazeera.com/news/2026/9/23/can-ethiopias-seven-group-rebel-alliance-challenge-abiy-ahmed
+  - title: "Ethiopia: Seven armed groups form anti-government alliance (Africanews, 21 September 2026)"
+    url: https://www.africanews.com/2026/09/21/ethiopia-seven-armed-groups-form-anti-government-alliance/
+  - title: Conflict in Ethiopia (Council on Foreign Relations, Global Conflict Tracker)
+    url: https://www.cfr.org/global-conflict-tracker/conflict/conflict-ethiopia
+  - title: "Ethiopia’s ruling party retains parliamentary majority in election marred by insecurity (AP, 21 June 2026)"
+    url: https://wtop.com/world/2026/06/ethiopias-ruling-party-retains-parliamentary-majority-in-election-marred-by-insecurity/
+steps:
+  - title: From allies to enemies
+    date: April – August 2023
+    when: "2023-08-04"
+    borders: "2023-08-10"
+    countries: [et]
+    body:
+      - "Fano is an old Amharic word for irregular fighters. Its modern militias, loosely organised and drawing on Amhara nationalism, grew during the protests of 2016–2018 and fought beside the federal army and the Amhara special forces against the TPLF in 2020–2022, taking Western Tigray and parts of Raya. Many Amhara felt betrayed by the Pretoria agreement, from which they were excluded and which left Western Tigray’s future to be settled later, and by the killings of Amhara civilians in Oromia. When the federal government ordered all regional special forces to be disbanded and absorbed into the army and police on 6 April 2023, protests and clashes broke out across Amhara, and many special-force members joined the Fano with their weapons."
+      - "At the end of July 2023 the Fano rose across the region. On 2 August they took the airport at Lalibela, and in the following days they entered Gondar, fought in Bahir Dar and Debre Tabor and took several smaller towns. On 4 August the government declared a six-month state of emergency, later extended. The army retook the main towns within days, but the fighting moved into the countryside. On 13 August a drone strike on the main square of Finote Selam in West Gojjam killed some 26 people, the first of many such strikes on towns and markets in Amhara."
+    facts:
+      - [Order to disband regional special forces, "6 April 2023"]
+      - [Lalibela airport taken by the Fano, "2 August 2023"]
+      - [State of emergency, "4 August 2023"]
+      - [Drone strike on Finote Selam, "13 August 2023"]
+    markers:
+      - kind: taken
+        side: fano
+        name: Lalibela
+        date: 2 August 2023
+        text: The Fano took the airport and the town; the army returned within a week.
+        lonlat: [39.046, 12.036]
+      - kind: battle
+        side: et
+        name: Gondar
+        date: August 2023
+        text: Fano fighters entered the city and were driven out after several days; they entered it again in September 2023 and January 2024.
+        lonlat: [37.467, 12.610]
+        lp: l
+      - kind: battle
+        side: et
+        name: Bahir Dar
+        date: August 2023
+        text: Fighting in and around the regional capital, which the army held.
+        lonlat: [37.390, 11.591]
+        lp: l
+      - kind: battle
+        name: Debre Tabor
+        date: August 2023
+        text: One of the towns where the Fano fought the army in the first days of the rising.
+        lonlat: [38.008, 11.857]
+      - kind: toll
+        side: et
+        name: Finote Selam
+        date: 13 August 2023
+        text: A drone strike on the town square killed some 26 people, according to hospital sources.
+        lonlat: [37.260, 10.680]
+        lp: l
+    areas:
+      - style: contested
+        label: Amhara region under the state of emergency
+        atoms: [ET-AM]
+  - title: War in the countryside
+    date: 2024–2025
+    when: "2024-09-01"
+    borders: "2024-10-01"
+    countries: [et]
+    body:
+      - "Through 2024 and 2025 the Fano controlled much of rural Gojjam, Gondar, Wollo and North Shewa, ambushing convoys, blocking roads and briefly entering towns, while the army held the cities and main roads and answered with offensives and drone strikes. The Ethiopian Human Rights Commission said soldiers killed at least 45 civilians in Merawi in January 2024, and other accounts gave higher figures; on 19 February 2024 a drone strike on a truck near Sela Dingay in North Shewa killed at least 15 civilians, most of them returning from a baptism, and residents put the toll at about 30; the UN and rights groups reported hundreds of civilians killed by drone strikes, among them a strike in East Gojjam in April 2025 in which more than 100 people, many at a school, were reported killed. The Fano too were accused of killing civilians, officials and captives, and of kidnappings for ransom. Fano offensives in 2024 took the border town of Metemma in September and reached into Gondar and Bahir Dar, and in October the army began what its commanders called a “final operation”."
+      - "The Fano remained divided into rival regional commands, which made both war and talks harder. In May 2025 four of them formed the Amhara Fano National Force, and in the autumn of 2025 Wollo Fano fighters claimed to have surrounded Woldia and taken Mekane Selam, claims the government disputed. In December 2025 the government signed a peace agreement with a Fano leader whom his own organisation said had already been suspended. By 2025 the war had displaced hundreds of thousands, closed thousands of schools and cut off much of the region’s health care."
+    facts:
+      - [Merawi killings, "January 2024"]
+      - [Metemma taken by the Fano, "1 September 2024"]
+      - [Amhara Fano National Force formed, "9 May 2025"]
+    markers:
+      - kind: toll
+        side: et
+        name: Merawi
+        date: 29–30 January 2024
+        text: Soldiers killed dozens of civilians in house searches after a Fano attack, according to the Ethiopian Human Rights Commission and witnesses.
+        lonlat: [37.160, 11.418]
+        lp: l
+      - kind: taken
+        side: fano
+        name: Metemma
+        date: 1 September 2024
+        text: The town on the Sudanese border, on the main trade route from Gondar to Sudan, taken by the Fano.
+        lonlat: [36.159, 12.958]
+        lp: l
+      - kind: battle
+        name: Woldia
+        date: March and September – October 2025
+        text: Wollo Fano fighters claimed to have surrounded the town; the army held it.
+        lonlat: [39.596, 11.829]
+      - kind: battle
+        side: et
+        name: Debre Markos
+        date: 2024–2025
+        text: The capital of East Gojjam, held by the army in a countryside largely under Fano control.
+        lonlat: [37.729, 10.336]
+        lp: l
+    areas:
+      - style: occupied
+        side: fano
+        label: Countryside largely under Fano control, 2024–2025 (approximate)
+        polygon: [[36.40, 12.80], [37.10, 13.20], [38.00, 13.00], [38.90, 12.70], [39.50, 12.30], [39.85, 11.50], [40.00, 10.40], [39.70, 9.50], [39.00, 9.60], [38.30, 10.10], [37.50, 10.05], [36.80, 10.60], [36.60, 11.50], [36.30, 12.20]]
+  - title: The Fano National Movement and the coalition war
+    date: January – November 2026
+    when: "2026-09-23"
+    borders: "2026-11-27"
+    countries: [et, er]
+    body:
+      - "Last updated 27 November 2026. In January 2026 the main Fano factions merged into the Amhara Fano National Movement (AFNM), chaired by Zemene Kassie. Its February offensive claimed more than a dozen towns, and its fighters entered Debre Tabor on 4 February before drone strikes drove them out. When Ethiopia voted in its general election on 1 June 2026, which the Prosperity Party won by a large majority, voting did not take place in Tigray, and insecurity kept 143 polling stations in Amhara and Oromia from opening."
+      - "On 20 September 2026 the AFNM, the TPLF, the OLA and four smaller groups announced an alliance to overthrow Abiy Ahmed’s government and set up a transitional government. After federal drone strikes on 22 September, coalition forces attacked on 23 September on the Kobo front in North Wollo and along the border of Afar and Amhara, seized the airports of Mekelle, Axum and Shire, and opened a front in Wag Hemra. The army counterattacked: it retook Sekota on 27 September and Alamata on 28 September, where at least 52 civilians were reported killed, Mekelle’s airport and the city itself, which the TPLF left, on 3–4 October, and Adigrat, Adwa and Zalambessa on 10–12 October. Ethiopia accused Eritrea of backing the coalition; the two countries broke off relations on 1 October, Eritrean troops entered north-eastern Tigray on 7 October and withdrew under Ethiopian drone attacks, and in mid-November the two armies exchanged fire near Badme and Sheraro."
+      - "In Amhara the Fano kept up attacks across the region, claiming towns such as Meragna in North Shewa in October; in November they fought the army for Wuchale and Girana on the main road south of Woldia, which the army retook, and near Debre Werq in East Gojjam. As of late November 2026 the government holds the cities and main roads of Amhara and the main towns of Tigray, while the Fano are active across rural Amhara and Tigrayan forces in rural Tigray; the African Union has been asked to mediate. Many reports from both sides could not be verified."
+    facts:
+      - [Amhara Fano National Movement formed, "22 January 2026"]
+      - [Coalition announced, "20 September 2026"]
+      - [Renewed war begins, "23 September 2026"]
+      - [Ethiopia and Eritrea break off relations, "1 October 2026"]
+    link: { href: "#/war/tigray-war", text: Tigray War }
+    markers:
+      - kind: battle
+        side: et
+        name: Debre Tabor
+        date: 4 February 2026
+        text: AFNM fighters entered the town and withdrew after government drone strikes.
+        lonlat: [38.008, 11.857]
+        lp: l
+      - kind: battle
+        side: tplf
+        name: Kobo
+        date: 23 September 2026
+        text: Coalition forces attacked on this front at the start of the renewed war.
+        lonlat: [39.629, 12.151]
+      - kind: taken
+        side: et
+        name: Sekota
+        date: 27 September 2026
+        text: Capital of Wag Hemra, where the coalition opened a front on 24 September; retaken by the army.
+        lonlat: [39.035, 12.629]
+        lp: l
+      - kind: taken
+        side: et
+        name: Alamata
+        date: 28 September 2026
+        text: Retaken by the army; at least 52 civilians were reported killed in the town.
+        lonlat: [39.560, 12.418]
+      - kind: taken
+        side: et
+        name: Mekelle
+        date: 3–4 October 2026
+        text: The army and pro-government Tigrayan fighters retook the airport and entered the city after the TPLF withdrew from it.
+        lonlat: [39.533, 13.467]
+      - kind: taken
+        side: et
+        name: Adigrat
+        date: 10 October 2026
+        text: Retaken by the army after the coalition forces withdrew on 5 October.
+        lonlat: [39.461, 14.277]
+        lp: l
+      - kind: event
+        side: er
+        name: Idaga Hamus
+        date: 7–9 October 2026
+        text: Eritrean troops crossed by way of Zalambessa and reached this town before withdrawing under drone attack.
+        lonlat: [39.563, 14.186]
+      - kind: battle
+        name: Badme
+        date: 13–14 November 2026
+        text: Ethiopian and Eritrean forces exchanged drone strikes and artillery fire near Badme and Sheraro.
+        lonlat: [37.805, 14.726]
+        lp: l
+    arrows:
+      - side: tplf
+        phase: 1
+        via: [[39.560, 12.450], [39.600, 12.300], [39.630, 12.180]]
+      - side: et
+        phase: 2
+        via: [[39.600, 11.850], [39.620, 12.150], [39.570, 12.400]]
+      - side: et
+        phase: 3
+        via: [[39.560, 12.450], [39.520, 13.000], [39.530, 13.440]]
+      - side: et
+        phase: 4
+        via: [[39.560, 13.550], [39.580, 13.900], [39.470, 14.250]]
+      - side: er
+        phase: 4
+        via: [[39.390, 14.560], [39.480, 14.380], [39.550, 14.200]]
+    areas:
+      - style: occupied
+        side: fano
+        label: Countryside largely under Fano control, late 2026 (approximate)
+        polygon: [[36.40, 12.80], [37.10, 13.20], [38.00, 13.00], [38.90, 12.70], [39.50, 12.30], [39.85, 11.50], [40.00, 10.40], [39.70, 9.50], [39.00, 9.60], [38.30, 10.10], [37.50, 10.05], [36.80, 10.60], [36.60, 11.50], [36.30, 12.20]]

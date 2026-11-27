@@ -1,0 +1,163 @@
+id: chadian-civil-war-2005
+name: Chadian Civil War (2005–2010)
+start: "2005-12-18"
+end: "2010-01-15"
+tier: B
+summary: "A war between the government of President Idriss Déby and rebel movements based in Darfur, fought alongside the war in Darfur as a proxy war between Chad and Sudan. Déby, who had taken power in 1990, faced defections from his own Zaghawa clan and army over his support for the Darfur rebels and over a constitutional change of 2005 that let him stand for a third term. Sudan armed and sheltered the Chadian rebels, while Chad backed the Darfur rebels of the Justice and Equality Movement (JEM). Rebel columns of pickup trucks crossed Chad from the Sudanese border and reached N’Djamena twice: in April 2006, when the United Front for Democratic Change was beaten back at the National Assembly, and in February 2008, when a coalition of the UFDD, UFDD-F and RFC broke into the capital and besieged Déby in his palace before withdrawing. France helped the government with intelligence, logistics and the evacuation of foreigners. In eastern Chad, where about 250,000 refugees from Darfur lived in camps, militias and rebels raided villages and some 170,000 Chadians were displaced; a European Union force and then a UN mission protected the camps in 2008–2010. After a last rebel offensive was crushed at Am Dam in May 2009, Chad and Sudan signed an agreement on 15 January 2010 to stop backing each other’s rebels."
+countries: [td, sd, fr, cf]
+sides:
+  - id: td
+    name: Chad (Idriss Déby’s government)
+    polities: [chad]
+    ink: blue
+    moves: Government moves
+    success: Government success
+  - id: reb
+    name: Chadian rebel movements (RDL, FUC, UFDD, UFDD-F, RFC, UFR)
+    polities: [chadian-rebels-2005]
+    ink: orange
+    moves: Rebel moves
+    success: Rebel success
+  - id: sd
+    name: Sudan (backing the rebels)
+    polities: [sudan]
+    ink: green
+  - id: fr
+    name: France (Opération Épervier)
+    polities: [france]
+    ink: navy
+notes:
+  - "The rebel movements: the Rally for Democracy and Liberty (RDL) and the United Front for Democratic Change (FUC) of Mahamat Nour Abdelkerim; the Union of Forces for Democracy and Development (UFDD) of Mahamat Nouri and its breakaway, the UFDD-Fondamentale of Abdelwahid Aboud Mackaye; the Rally of Forces for Change (RFC) of Timan Erdimi, a nephew of Déby; and from 2009 the Union of Resistance Forces (UFR) that brought most of them together. Several were led by former ministers and officers of Déby’s own government."
+  - Casualty figures are uncertain. The Uppsala Conflict Data Program counts about 540 deaths in the battle of N’Djamena in 2008; some estimates put the dead of the whole war at about 7,000.
+sources:
+  - title: Chadian Civil War (2005–2010) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Chadian_Civil_War_(2005%E2%80%932010)
+  - title: Battle of N’Djamena (2006) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_N%27Djamena_(2006)
+  - title: Battle of N’Djamena (2008) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_N%27Djamena_(2008)
+  - title: Battle of Am Dam (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Am_Dam
+  - title: EUFOR Tchad/RCA (Wikipedia)
+    url: https://en.wikipedia.org/wiki/EUFOR_Tchad/RCA
+  - title: Chad – Sudan relations (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Chad%E2%80%93Sudan_relations
+steps:
+  - title: Adré and the first battle of N’Djamena
+    date: December 2005 – 2007
+    when: "2005-12-18"
+    borders: "2006-04-13"
+    countries: [td, sd, cf]
+    body:
+      - "When the war in Darfur broke out in 2003, the Zaghawa, Déby’s own people, who live on both sides of the border, were among the main Darfur rebels, and many of Déby’s officers and kinsmen wanted Chad to back them openly. Others resented his growing reliance on family members and his plan, approved in a referendum in June 2005, to remove the limit on presidential terms. Through 2005 soldiers and officers deserted to the east, and Sudan, which accused Chad of arming the JEM, gave them bases in Darfur. On 18 December 2005 the Rally for Democracy and Liberty attacked Adré on the border; it was driven off, and Chad declared a “state of belligerence” with Sudan."
+      - "Mahamat Nour Abdelkerim united several groups in the United Front for Democratic Change (FUC). In April 2006 its columns of pickup trucks drove some 1,000 km from Darfur, partly through the north of the Central African Republic, and in the early hours of 13 April entered N’Djamena, hoping to stop the presidential election set for 3 May. Government troops beat them back at the National Assembly; by official figures some 370 rebels and 30 soldiers were killed and 271 rebels captured, and the prisoners were shown to the public in the Place de l’Indépendance. Chad broke off relations with Sudan, and Déby won a third term on 3 May. Nour made peace in December 2006 and became defence minister, until he was dismissed a year later."
+      - "In the east, Janjaweed militias from Darfur and Chadian Arab militias raided villages of the Dajo and other peoples in 2006–2007, killing hundreds and driving tens of thousands from their homes, while some 250,000 Darfur refugees lived in camps near the border."
+    facts:
+      - [Attack on Adré, "18 December 2005"]
+      - [Battle of N’Djamena, "13 April 2006"]
+      - [Presidential election, "3 May 2006"]
+    markers:
+      - kind: battle
+        side: td
+        name: Adré
+        date: 18 December 2005
+        text: The RDL’s attack on this border town, beaten off by the army, opened the war.
+        lonlat: [22.200, 13.470]
+      - kind: battle
+        side: td
+        name: N’Djamena
+        date: 13 April 2006
+        text: The FUC’s columns reached the capital at dawn and were beaten back at the National Assembly.
+        lonlat: [15.044, 12.107]
+      - kind: event
+        name: Goz Beïda
+        date: 2006–2007
+        text: Town of Dar Sila, where camps sheltered Darfur refugees and Chadians driven from their villages by militia raids.
+        lonlat: [21.415, 12.220]
+        lp: l
+    arrows:
+      - side: reb
+        label: FUC, April 2006
+        via: [[22.60, 11.30], [19.80, 10.20], [17.20, 10.90], [15.20, 12.00]]
+    areas:
+      - style: contested
+        side: reb
+        label: Eastern Chad, raided by rebels and militias (approximate)
+        atoms: [TD-OD, TD-SI, TD-WF]
+  - title: The battle of N’Djamena, 2008
+    date: 28 January – 4 February 2008
+    when: "2008-02-02"
+    borders: "2008-02-02"
+    countries: [td, sd, fr, cm]
+    body:
+      - "At the end of January 2008 a coalition of some 2,000 fighters of the UFDD of Mahamat Nouri, the UFDD-Fondamentale and Timan Erdimi’s RFC set out from the Sudanese border in about 250–300 vehicles, days before a European force was due to deploy in eastern Chad. They took Oum Hadjer on 30 January, and on 1 February at Massaguet, some 50 km north-east of the capital, they defeated the army in a battle in which its chief of staff, General Daoud Soumain, was killed."
+      - "On the morning of 2 February the rebels entered N’Djamena in two columns. They took much of the city and surrounded the presidential palace, where Déby refused French offers to fly him out, but tanks and helicopters held them off, and fighters of the JEM reportedly fought on the government side. On 3 February the rebels withdrew to the outskirts, and after a last clash they pulled back east. France’s forces in Chad guarded the airport, evacuated some 1,300 foreigners and gave the army intelligence; reports that they did more were denied. On 4 February the UN Security Council called on member states to support the government."
+      - "The Red Cross counted at least 160 civilians killed and more than 1,000 wounded, and some 30,000 people fled across the river to Cameroon; overall estimates of the dead range from several hundred to about 700. After the battle the opposition leader Ibni Oumar Mahamat Saleh was arrested by soldiers and never seen again, and in August 2008 a court sentenced rebel leaders, along with the former president Hissène Habré, to death in their absence."
+    facts:
+      - [Battle of Massaguet, "1 February 2008"]
+      - [Rebels in N’Djamena, "2–3 February 2008"]
+      - [Refugees to Cameroon, "about 30,000"]
+    markers:
+      - kind: taken
+        side: reb
+        name: Oum Hadjer
+        date: 30 January 2008
+        text: Taken by the rebel column on its way west.
+        lonlat: [19.690, 13.300]
+      - kind: battle
+        side: reb
+        name: Massaguet
+        date: 1 February 2008
+        text: The rebels defeated the army here; its chief of staff, General Daoud Soumain, was killed.
+        lonlat: [15.430, 12.470]
+        lp: t
+      - kind: battle
+        side: td
+        name: N’Djamena
+        date: 2–3 February 2008
+        text: The rebels took much of the city and surrounded the presidential palace but were driven off by tanks and helicopters.
+        lonlat: [15.044, 12.107]
+        lp: b
+    arrows:
+      - side: reb
+        label: UFDD, UFDD-F and RFC
+        via: [[22.30, 13.90], [19.69, 13.30], [17.00, 12.90], [15.43, 12.47], [15.08, 12.14]]
+  - title: EUFOR, Am Dam and peace with Sudan
+    date: 2008 – January 2010
+    when: "2008-03"
+    borders: "2009-05-07"
+    countries: [td, sd, cf]
+    body:
+      - "From March 2008 the European Union’s EUFOR Tchad/RCA, some 3,700 troops, more than half of them French, with Irish, Polish, Swedish, Austrian and other contingents, protected the refugee camps and aid routes in eastern Chad and the north-east of the Central African Republic. It handed over to the UN mission MINURCAT in March 2009. The proxy war went on: in May 2008 the JEM drove from Chad to Omdurman, across the Nile from Khartoum, and Sudan blamed Déby."
+      - "In January 2009 the rebel groups joined in the Union of Resistance Forces (UFR) under Timan Erdimi. Its offensive from Darfur was met by the army on 7 May 2009 at Am Dam, south of Abéché, and broken; the government said 225 rebels and 22 soldiers had been killed. Mediation by Libya and Qatar, and the cost of the war to both governments, led to an agreement signed on 15 January 2010 by which Chad and Sudan stopped supporting each other’s rebels and formed a joint border force. The border reopened, Déby visited Khartoum in February 2010, many rebels came home under an amnesty, and MINURCAT left at the end of 2010."
+    facts:
+      - [EUFOR Tchad/RCA, "March 2008 – March 2009"]
+      - [Battle of Am Dam, "7 May 2009"]
+      - [Chad–Sudan agreement, "15 January 2010"]
+    markers:
+      - kind: battle
+        side: td
+        name: Am Dam
+        date: 7 May 2009
+        text: The army defeated the offensive of the rebel coalition UFR.
+        lonlat: [20.470, 12.770]
+      - kind: event
+        name: Abéché
+        date: 2008–2010
+        text: Headquarters of EUFOR and then MINURCAT in eastern Chad.
+        lonlat: [20.830, 13.830]
+      - kind: event
+        name: Goz Beïda
+        date: 2008–2009
+        text: EUFOR base protecting the refugee and displaced camps of Dar Sila.
+        lonlat: [21.415, 12.220]
+        lp: l
+      - kind: treaty
+        name: N’Djamena
+        date: 15 January 2010
+        text: Chad and Sudan agreed to stop backing each other’s rebels and to patrol the border together.
+        lonlat: [15.044, 12.107]
+    arrows:
+      - side: reb
+        label: UFR, May 2009
+        via: [[22.40, 12.60], [21.40, 12.75], [20.55, 12.78]]

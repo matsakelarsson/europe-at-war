@@ -1,0 +1,178 @@
+id: ottoman-ethiopian-war
+name: Ottoman–Ethiopian border wars
+start: "1557"
+end: "1589"
+tier: B
+summary: "Wars between the Ottoman Empire and the Ethiopian emperors for the Red Sea coast and the highlands behind it in the second half of the 16th century. To shut the Portuguese out of the Red Sea, the Ottomans proclaimed a province of Habesh and in 1557 sent Özdemir Pasha, who took Massawa, Arqiqo and Debarwa, the capital of the Bahr Negash, ruler of the coastal highlands of Medri Bahri. The Bahr Negash Yeshaq first fought the Ottomans with Emperor Gelawdewos, then rebelled against Emperor Minas and joined them, and with Ottoman musketeers defeated Minas in Enderta in 1562. Emperor Sarsa Dengel defeated Yeshaq and the Ottomans at Addi Qarro in 1578, killing both Yeshaq and the pasha, and destroyed the Ottoman fort at Debarwa; after a last Ottoman push inland he raided Arqiqo in 1589, and the two sides made peace. The Ottomans kept Massawa and the coast, soon governed for them by the local na’ibs, and gave up their ambitions in the highlands."
+countries: [er, et]
+sides:
+  - id: ot
+    name: Ottoman Empire (Habesh eyalet)
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+  - id: et
+    name: Ethiopian Empire
+    polities: [ethiopia]
+    ink: gold
+    moves: Ethiopian moves
+    success: Ethiopian success
+  - id: mb
+    name: Bahr Negash Yeshaq of Medri Bahri
+    polities: [medri-bahri]
+    ink: navy
+    moves: Moves of the Bahr Negash
+    success: Success of the Bahr Negash
+notes:
+  - "The Bahr Negash (“king of the sea”) governed Medri Bahri, the highlands of today’s Eritrea, for the Ethiopian emperors, from Debarwa. Yeshaq fought on both sides: with the emperor against the Ottomans in 1557–1560, and with the Ottomans against the emperor in 1561–1562 and 1576–1578."
+  - The Ethiopian chronicles and the Ottoman records give different years for several events. Addi Qarro is dated 1577 or 1578, and the fight at Arqiqo 1587, 1588 or 1589. Arqiqo is also written Hirgigo or Arkiko.
+sources:
+  - title: Ottoman–Ethiopian War (1557–1589) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ottoman%E2%80%93Ethiopian_War_(1557%E2%80%931589)
+  - title: Özdemir Pasha (Wikipedia)
+    url: https://en.wikipedia.org/wiki/%C3%96zdemir_Pasha
+  - title: Habesh Eyalet (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Habesh_Eyalet
+  - title: Sarsa Dengel (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sarsa_Dengel
+  - title: Menas of Ethiopia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Menas_of_Ethiopia
+  - title: Medri Bahri (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Medri_Bahri
+steps:
+  - title: Özdemir Pasha and the province of Habesh
+    date: 1557–1560
+    when: "1557"
+    borders: "1557-12-01"
+    countries: [er, et]
+    body:
+      - After the Ottoman conquest of Egypt in 1517 and of Yemen in the 1530s, the Red Sea became a front in the Ottoman struggle with the Portuguese, who had helped Ethiopia defeat Adal in 1543. In 1555 Istanbul proclaimed a province (eyalet) of Habesh, “Abyssinia”, and gave its conquest to Özdemir Pasha, an officer who had served in Egypt and Yemen. In 1557 he landed on the coast with about 3,000 janissaries, 1,000 horsemen from Egypt and men from Suakin, took the port of Massawa, nearby Arqiqo and Beylul farther south, and marched inland to Debarwa, the capital of the Bahr Negash Yeshaq, where he built a fort and a mosque and imposed a poll tax.
+      - Yeshaq, reinforced by Emperor Gelawdewos’s army, retook Debarwa and the treasure the Ottomans had stored there. Özdemir took Zeila from the weakened sultanate of Adal in 1559 and died in 1560, by most accounts at Debarwa. His successors held Massawa and Arqiqo, with Suakin the other main port of the province.
+    facts:
+      - [Ottoman landing, "1557"]
+      - [Ottoman force, "about 3,000 janissaries and 1,000 horsemen"]
+      - [Death of Özdemir Pasha, "1560"]
+    markers:
+      - kind: event
+        side: ot
+        name: Suakin
+        date: 1550s
+        text: The Ottoman port on the Sudanese coast, with Massawa the main base of the province of Habesh.
+        lonlat: [37.33, 19.11]
+      - kind: taken
+        side: ot
+        name: Massawa and Arqiqo
+        date: "1557"
+        text: The island port and the town on the mainland opposite, taken by Özdemir Pasha. They stayed in Ottoman hands.
+        lonlat: [39.45, 15.61]
+      - kind: taken
+        side: ot
+        name: Debarwa
+        date: "1557"
+        text: The Bahr Negash’s capital, where Özdemir built a fort and a mosque. Yeshaq and Gelawdewos’s army retook it.
+        lonlat: [38.83, 15.10]
+        lp: l
+      - kind: taken
+        side: ot
+        name: Zeila
+        date: "1559"
+        text: Taken by Özdemir from the sultanate of Adal.
+        lonlat: [43.47, 11.35]
+    arrows:
+      - side: ot
+        label: Özdemir Pasha
+        phase: 1
+        via: [[37.33, 19.05], [38.20, 17.80], [39.00, 16.40], [39.42, 15.65]]
+      - side: ot
+        phase: 2
+        via: [[39.42, 15.58], [39.15, 15.35], [38.85, 15.12]]
+      - side: mb
+        label: Yeshaq
+        phase: 3
+        via: [[38.70, 14.70], [38.78, 14.90], [38.82, 15.07]]
+    areas:
+      - style: occupied
+        side: ot
+        label: Held by the Ottomans (approximate)
+        polygon: [[39.25, 15.75], [39.55, 15.75], [39.60, 15.45], [39.35, 15.40]]
+  - title: Yeshaq changes sides
+    date: 1560–1572
+    when: "1562-04-20"
+    borders: "1562-04-20"
+    countries: [er, et]
+    body:
+      - Gelawdewos was killed fighting Adal in 1559, and his brother Minas, who had spent years as a prisoner of Adal, succeeded him. In 1560 or 1561 Yeshaq rebelled against the new emperor, was defeated, and fled to the Ottomans, promising them Debarwa, Massawa and Arqiqo in return for their help.
+      - On 20 April 1562 the Ottoman governor and Yeshaq, with Ottoman musketeers and local allies, defeated Minas in Enderta in southern Tigray. The emperor fled and died the next year, a fugitive. Yeshaq ruled Medri Bahri as an ally of the Ottomans, who garrisoned Debarwa until 1572; when they withdrew he occupied it briefly and then handed it back to them as agreed.
+    facts:
+      - [Yeshaq’s revolt, "1560 or 1561"]
+      - [Battle in Enderta, "20 April 1562, Ottoman victory"]
+      - [Ottoman withdrawal from Debarwa, "1572"]
+    markers:
+      - kind: battle
+        side: ot
+        name: Enderta
+        date: 20 April 1562
+        text: The Ottomans and Yeshaq defeated Emperor Minas in this province of southern Tigray, around today’s Mekele. The exact site is not recorded.
+        lonlat: [39.47, 13.50]
+      - kind: held
+        side: ot
+        name: Debarwa
+        date: 1562–1572
+        text: Garrisoned by the Ottomans as allies of the Bahr Negash.
+        lonlat: [38.83, 15.10]
+        lp: l
+    arrows:
+      - side: ot
+        label: Ottomans and Yeshaq
+        phase: 1
+        via: [[38.83, 15.05], [39.10, 14.60], [39.40, 14.10], [39.47, 13.55]]
+      - side: et
+        label: Minas
+        phase: 1
+        via: [[39.30, 12.70], [39.45, 13.10], [39.47, 13.45]]
+    areas:
+      - style: occupied
+        side: ot
+        label: Medri Bahri, held by Yeshaq and the Ottomans (approximate)
+        atoms: [ER-MA, ER-AN]
+  - title: Sarsa Dengel, Addi Qarro and Arqiqo
+    date: 1576–1589
+    when: "1578"
+    borders: "1589-12-01"
+    countries: [er, et]
+    body:
+      - Minas’s son Sarsa Dengel, emperor from 1563, defeated an army of Adal at the Webi river and executed its sultan, and then turned north. When Yeshaq rebelled again with Ottoman support and took Debarwa, Sarsa Dengel defeated the Ottomans and their Medri Bahri allies at Addi Qarro in 1577 or 1578; both the Ottoman commander, Ahmad Pasha, and Yeshaq were killed. The Ottoman garrison of Debarwa surrendered with its firearms, and the emperor had the fort and the mosque destroyed. His forces also attacked the coast, but could not take Massawa.
+      - Egypt sent reinforcements, and in 1579 the new governor, Hızır Pasha, retook Arqiqo, beat the Ethiopian forces near Massawa and Debarwa and pushed inland again. In 1588 the Ottomans named their own Bahr Negash and advanced inland again. Sarsa Dengel crossed the Mareb, raided the Ottoman fort at Arqiqo and killed its commander, Kedwart Pasha. The Ottomans sent gifts and asked for peace, which he accepted, sparing the fort.
+      - The border settled where it would stay for nearly three centuries. The Ottomans kept Massawa, Arqiqo and the coast; from 1591 a local Beja chief, the na’ib of Arqiqo, governed them for the Ottomans, with a small garrison at Massawa, while the highlands, Debarwa included, remained Ethiopian.
+    facts:
+      - [Battle of Addi Qarro, "1577 or 1578, Ethiopian victory"]
+      - [Killed, "Bahr Negash Yeshaq and Ahmad Pasha"]
+      - [Raid on Arqiqo, "1589 (some sources 1587), Ethiopian success"]
+    markers:
+      - kind: taken
+        side: et
+        name: Debarwa
+        date: 1577 or 1578
+        text: After Addi Qarro the Ottoman garrison surrendered. Sarsa Dengel had the fort and the mosque destroyed.
+        lonlat: [38.83, 15.10]
+        lp: l
+      - kind: battle
+        side: et
+        name: Arqiqo (Hirgigo)
+        date: "1589"
+        text: Sarsa Dengel raided the Ottoman fort and killed its commander, Kedwart Pasha. Peace followed.
+        lonlat: [39.45, 15.53]
+    arrows:
+      - side: et
+        label: Sarsa Dengel
+        phase: 1
+        via: [[38.90, 14.20], [38.85, 14.60], [38.83, 15.05]]
+      - side: et
+        phase: 2
+        via: [[38.90, 15.12], [39.15, 15.30], [39.42, 15.50]]
+    areas:
+      - style: outline
+        side: ot
+        label: Ottoman coast after 1589 (approximate)
+        polygon: [[39.25, 15.75], [39.55, 15.75], [39.60, 15.45], [39.35, 15.40]]

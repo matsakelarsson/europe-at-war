@@ -151,7 +151,13 @@ for (let pass = 0; pass < 3; pass++) {
   }
 }
 let low = 0, lowRegion = 0;
-for (const i of order) for (const [j, , border] of nb[i]) { const d = de2000(labs[i], labs[j]); if (border ? d < 6 : d < 3) border ? low++ : lowRegion++; }
+for (const i of order) for (const [j, , border] of nb[i]) {
+  const d = de2000(labs[i], labs[j]);
+  if (!(border ? d < 6 : d < 3)) continue;
+  border ? low++ : lowRegion++;
+  // PAIRS=1 lists them.
+  if (process.env.PAIRS) console.log(`  ${border ? 'border' : 'region'} ${P[i].id} – ${P[j].id}: ΔE ${d.toFixed(1)}`);
+}
 console.log(`recoloured ${order.length} polities; ${low} neighbour pairs still under ΔE 6` + (region ? `, ${lowRegion} pairs in the region under ΔE 3` : ''));
 
 // ---- Write back

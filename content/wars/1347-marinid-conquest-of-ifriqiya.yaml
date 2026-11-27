@@ -1,0 +1,161 @@
+id: marinid-conquest-of-ifriqiya
+name: Marinid conquests of Ifriqiya
+start: "1347"
+end: "1358"
+tier: B
+summary: "Two attempts by the Marinid sultans of Fez to add Hafsid Ifriqiya to their empire and rebuild the unity of the Maghreb that the Almohads had lost. After taking Tlemcen in 1337, Abu al-Hasan used a succession dispute among the Hafsids to march east, and in September 1347 he entered Tunis. His attempt to bring the Arab tribes of the steppe under control led to a revolt, and in April 1348 they routed his army near Kairouan; his son Abu Inan seized the throne in Fez, the Zayyanids took back Tlemcen, and Abu al-Hasan, shipwrecked off Bougie on his way home, died a fugitive in 1351. Abu Inan, having retaken Tlemcen, took Bougie in 1353 and Tunis in August 1357, but his troops forced him to turn back, and he was murdered in Fez in January 1358. The Hafsids recovered, and no Moroccan ruler tried again."
+countries: [tn, dz, ma]
+sides:
+  - id: mar
+    name: Marinids
+    polities: [marinids]
+    ink: red
+    moves: Marinid moves
+    success: Marinid success
+  - id: haf
+    name: Hafsids
+    polities: [hafsids]
+    ink: green
+    moves: Hafsid moves
+    success: Hafsid success
+  - id: ar
+    name: Arab tribes of Ifriqiya
+    polities: [banu-hilal]
+    ink: brown
+    moves: Moves by the Arab tribes
+    success: Success for the Arab tribes
+notes:
+  - The fullest account is by Ibn Khaldun, who was a young man in Tunis when Abu al-Hasan’s court arrived there in 1347 and who soon afterwards lost both his parents in the Black Death. His dates, and those of other chroniclers, are converted here to the Julian calendar.
+  - The tribes who defeated Abu al-Hasan were mostly of the Banu Sulaym, Arab nomads who had come to Ifriqiya with the Banu Hilal in the 11th century and whose chiefs held rights to tax the lands they grazed.
+  - The wars between the Marinids and the Zayyanids of Tlemcen, through whose kingdom both campaigns passed, have their own entry.
+sources:
+  - title: Abu al-Hasan Ali ibn Othman (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Abu_al-Hasan_Ali_ibn_Othman
+  - title: Abu Inan Faris (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Abu_Inan_Faris
+  - title: Hafsid dynasty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hafsid_dynasty
+  - title: History of medieval Tunisia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/History_of_medieval_Tunisia
+  - title: Kingdom of Tlemcen (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kingdom_of_Tlemcen
+  - title: Marinid Sultanate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Marinid_Sultanate
+  - title: Ibn Khaldun (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ibn_Khaldun
+steps:
+  - title: Abu al-Hasan in Tunis
+    date: 1347–1350
+    when: "1347"
+    borders: "1347-12-01"
+    countries: [tn, dz, ma]
+    body:
+      - Abu al-Hasan, the Marinid sultan, had taken Tlemcen in 1337 and was married to Fatima, a daughter of the Hafsid sultan Abu Bakr II. When Abu Bakr died in 1346, his heir Abu al-Abbas was killed in Tunis by his brother Umar, and the Hafsid princes and governors fell out. Abu al-Hasan took the chance to intervene. Early in 1347 his army marched east through the central Maghreb, Bougie and Constantine submitted, Umar was overthrown, and in September 1347 the sultan entered Tunis. For a few months one ruler held the Maghreb from the Atlantic to Tripolitania, as the Almohad caliphs had done a century before.
+      - The Arab tribes of the Ifriqiyan steppe, above all the Banu Sulaym, had grown used to collecting taxes from the farmers and towns and to being courted by rival Hafsid princes. Abu al-Hasan tried to curb these rights and bring the tribes under his own governors. They rose against him, and in April 1348 they routed his army near Kairouan. The sultan escaped, but his authority was broken. That year the Black Death reached Tunis and killed many of his court and army, and in the west his son Abu Inan, governor of Tlemcen, went to Fez and proclaimed himself sultan, while the Zayyanid princes took back Tlemcen.
+      - Abu al-Hasan held on in Tunis for more than a year. In 1349 the Hafsid chamberlain Ibn Tafragin came back with the support of the tribes and installed a new Hafsid sultan, Abu Ishaq II, and Abu al-Hasan sailed west. A storm wrecked his fleet off Bougie. He reached Algiers, was beaten by the Zayyanids near the Chelif while trying to retake Tlemcen, and fled to Sijilmasa and then Marrakesh. Abu Inan defeated him on the Oum er-Rbia in May 1350, and he died in the High Atlas in May 1351.
+    facts:
+      - [Death of Abu Bakr II, "1346"]
+      - [Abu al-Hasan enters Tunis, "September 1347"]
+      - [Defeat near Kairouan, "April 1348"]
+      - [Abu al-Hasan leaves Tunis, "1349"]
+    markers:
+      - kind: event
+        side: mar
+        name: Tlemcen
+        date: early 1347
+        text: Marinid since 1337; Abu al-Hasan’s march east began here.
+        lonlat: [-1.315, 34.878]
+      - kind: taken
+        side: mar
+        name: Bougie
+        date: "1347"
+        text: Submitted to Abu al-Hasan on his march east. On his way home by sea his fleet was wrecked off this coast.
+        lonlat: [5.084, 36.756]
+      - kind: taken
+        side: mar
+        name: Constantine
+        date: "1347"
+        text: Submitted to Abu al-Hasan.
+        lonlat: [6.614, 36.365]
+      - kind: taken
+        side: mar
+        name: Tunis
+        date: September 1347
+        text: The Hafsid capital, entered by Abu al-Hasan. He held it until 1349.
+        lonlat: [10.171, 36.800]
+      - kind: battle
+        side: ar
+        name: Kairouan
+        date: April 1348
+        text: The Arab tribes routed Abu al-Hasan’s army near the city, ending his hold on the countryside.
+        lonlat: [10.096, 35.678]
+    arrows:
+      - side: mar
+        label: Abu al-Hasan
+        phase: 1
+        via: [[-1.25, 34.90], [1.00, 35.60], [3.10, 36.40], [5.00, 36.60], [6.60, 36.30], [8.50, 36.40], [10.10, 36.78]]
+      - side: mar
+        phase: 2
+        via: [[10.15, 36.72], [10.20, 36.20], [10.12, 35.73]]
+      - side: mar
+        phase: 3
+        via: [[10.25, 36.90], [9.00, 37.40], [7.00, 37.20], [5.20, 36.85]]
+    areas:
+      - style: occupied
+        side: mar
+        label: Hafsid lands held by Abu al-Hasan, 1347–1348 (approximate)
+        polygon: [[4.6, 36.9], [7.0, 37.1], [10.3, 37.3], [11.1, 36.9], [11.2, 35.3], [10.4, 34.2], [8.3, 34.3], [6.0, 35.2], [4.6, 35.9]]
+  - title: Abu Inan’s campaign
+    date: 1352–1358
+    when: "1352"
+    borders: "1357-09-01"
+    countries: [tn, dz, ma]
+    body:
+      - Abu Inan, who had overthrown his father, took up his plans. In 1352 he retook Tlemcen from the Zayyanids, and in 1353 he took Bougie from its Hafsid emir. In 1357 he marched east again, took Constantine, and in August 1357 his forces took Tunis; for the second time in ten years a Marinid sultan was master of Ifriqiya.
+      - It lasted only weeks. His troops, far from home and unwilling to winter in Ifriqiya, forced him to turn back, and the chroniclers also blame the intrigues of his vizier. Abu Inan returned to Fez, fell ill in November 1357, and on 10 January 1358 was strangled by another vizier, Hasan ibn Umar al-Fududi, who feared for his life over the succession. The Hafsids returned to Tunis. In 1370 Abu al-Abbas Ahmad II, emir of Bougie and Constantine, took Tunis and reunited the Hafsid kingdom, which outlasted the Marinids by sixty years.
+    facts:
+      - [Bougie taken, "1353"]
+      - [Tunis taken, "August 1357"]
+      - [Abu Inan murdered, "10 January 1358"]
+    markers:
+      - kind: taken
+        side: mar
+        name: Tlemcen
+        date: "1352"
+        text: Retaken by Abu Inan from the Zayyanids.
+        lonlat: [-1.315, 34.878]
+      - kind: taken
+        side: mar
+        name: Bougie
+        date: "1353"
+        text: Taken from its Hafsid emir by Abu Inan.
+        lonlat: [5.084, 36.756]
+      - kind: taken
+        side: mar
+        name: Constantine
+        date: "1357"
+        text: Taken on the march to Tunis.
+        lonlat: [6.614, 36.365]
+      - kind: taken
+        side: mar
+        name: Tunis
+        date: August 1357
+        text: Taken by Abu Inan’s forces and abandoned within weeks, when his army forced him to return west.
+        lonlat: [10.171, 36.800]
+      - kind: event
+        side: mar
+        name: Fez
+        date: 10 January 1358
+        text: Abu Inan was strangled here by his vizier.
+        lonlat: [-4.973, 34.065]
+    arrows:
+      - side: mar
+        label: Abu Inan
+        phase: 1
+        via: [[-1.25, 34.90], [1.00, 35.60], [3.10, 36.40], [5.00, 36.70]]
+      - side: mar
+        phase: 2
+        via: [[5.15, 36.70], [6.60, 36.30], [8.50, 36.40], [10.10, 36.78]]
+      - side: mar
+        phase: 3
+        via: [[10.05, 36.70], [6.60, 36.20], [3.00, 36.30], [-1.30, 34.80], [-4.90, 34.05]]

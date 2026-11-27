@@ -1,0 +1,149 @@
+id: ethiopian-egyptian-war
+name: Ethiopian–Egyptian War
+start: "1874"
+end: "1876-03-10"
+tier: B
+summary: "Khedive Isma’il of Egypt’s attempt to extend his African empire into the Ethiopian highlands. Egypt had taken over Massawa from the Ottomans in 1865 and occupied the Bogos country around Keren in 1872, and in 1875 its forces took Zeila, Berbera and the emirate of Harar. In the autumn of 1875 two columns marched inland against Ethiopia: Werner Munzinger’s from Tadjoura was destroyed by the forces of the sultan of Aussa, and Colonel Arendrup’s from Massawa was annihilated by Emperor Yohannes IV’s army at Gundet near the Mareb on 16 November 1875. A larger army under Ratib Pasha, with the American general William Loring as chief of staff, entrenched on the plain of Gura and was defeated on 7–9 March 1876. No peace was signed; Egypt kept Massawa, Bogos and Harar for some years, and the war’s cost added to the debts that led to Isma’il’s fall in 1879. Shalaqa Alula, the hero of both battles, became Ras Alula and governor of the northern frontier."
+countries: [er, et, eg]
+sides:
+  - id: eg
+    name: Khedivate of Egypt
+    polities: [egypt]
+    ink: purple
+    moves: Egyptian moves
+    success: Egyptian success
+  - id: et
+    name: Ethiopian Empire (Yohannes IV)
+    polities: [ethiopia]
+    ink: gold
+    moves: Ethiopian moves
+    success: Ethiopian success
+  - id: au
+    name: Sultanate of Aussa
+    polities: [aussa]
+    ink: olive
+    moves: Moves of Aussa
+    success: Success of Aussa
+notes:
+  - Egypt was formally an Ottoman province governed by its khedive. Its armies were officered partly by Europeans and by Americans who had served in the Civil War, among them Loring and Charles Pomeroy Stone in Cairo.
+  - The sources give different strengths and losses for both battles, and different days for Gura (7–9 or 7–10 March 1876). The site of Gundet is described only as a narrow valley near the Mareb, south of today’s Adi Quala; its marker is approximate.
+sources:
+  - title: Egyptian–Ethiopian War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Egyptian%E2%80%93Ethiopian_War
+  - title: Battle of Gundet (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Gundet
+  - title: Battle of Gura (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Gura
+  - title: Werner Munzinger (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Werner_Munzinger
+  - title: Ras Alula (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ras_Alula
+  - title: Yohannes IV (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yohannes_IV
+  - title: "Papers relating to the foreign relations of the United States, 1876, Egypt (Office of the Historian)"
+    url: https://history.state.gov/historicaldocuments/frus1876/d332
+steps:
+  - title: Isma’il’s advance and Gundet
+    date: 1872 – November 1875
+    when: "1875-11-16"
+    borders: "1875-11-16"
+    countries: [er, et, eg, dj, so]
+    body:
+      - Isma’il, khedive of Egypt from 1863, wanted to control the Nile basin and the coasts of the Red Sea and the Gulf of Aden. In 1865 the Ottomans handed Massawa and Suakin over to Egypt, and in 1872 the Swiss Werner Munzinger, Egypt’s governor at Massawa, occupied the Bogos country around Keren, which Ethiopia claimed. In 1875 Egyptian forces took Zeila and Berbera, and in October Ra’uf Pasha marched from Zeila to Harar, killed its emir and occupied the city. Emperor Yohannes IV, crowned in 1872, protested to the European powers, but Isma’il prepared to take the northern highlands as well.
+      - In the autumn of 1875 two columns marched inland. Munzinger set out from Tadjoura towards Shewa, whose king Menelik was Yohannes’s rival, but in November his column was attacked in the country of the Afar sultanate of Aussa and Munzinger was killed. The other column, about 2,500 Egyptian soldiers under the Danish colonel Adolph Arendrup, marched from Massawa into the highlands of Hamasien and on to the Mareb. Yohannes gathered an army of perhaps 10,000 or more, and on 16 November 1875 at Gundet, in a narrow valley near the Mareb, his troops, led by Shalaqa Alula, attacked the strung-out column from the hills and destroyed it. Arendrup and his senior officers, among them Arakil Bey and Count Zichy, were killed, and the Ethiopians took the column’s guns and rifles.
+    facts:
+      - [Egypt takes Harar, "October 1875"]
+      - [Battle of Gundet, "16 November 1875, Ethiopian victory"]
+      - [Egyptian losses, "about 2,000 killed or captured"]
+    markers:
+      - kind: event
+        side: eg
+        name: Massawa
+        date: from 1865
+        text: Egyptian since 1865, the base for the march into the highlands.
+        lonlat: [39.45, 15.61]
+      - kind: taken
+        side: eg
+        name: Keren
+        date: "1872"
+        text: Centre of the Bogos country, occupied by Munzinger for Egypt.
+        lonlat: [38.45, 15.78]
+        lp: l
+      - kind: battle
+        side: et
+        name: Gundet
+        date: 16 November 1875
+        text: Arendrup’s column was destroyed in a valley near the Mareb. The position is approximate.
+        lonlat: [38.83, 14.57]
+        lp: l
+      - kind: event
+        side: eg
+        name: Tadjoura
+        date: October 1875
+        text: Munzinger’s column set out from here; it was destroyed in Aussa in November.
+        lonlat: [42.88, 11.79]
+      - kind: taken
+        side: eg
+        name: Harar
+        date: October 1875
+        text: Occupied by Ra’uf Pasha, who killed the emir. Egypt held the city until 1885.
+        lonlat: [42.12, 9.31]
+    arrows:
+      - side: eg
+        label: Arendrup
+        phase: 1
+        via: [[39.45, 15.60], [39.10, 15.35], [38.90, 15.05], [38.84, 14.62]]
+      - side: et
+        label: Yohannes and Alula
+        phase: 2
+        via: [[38.90, 14.16], [38.88, 14.35], [38.84, 14.53]]
+      - side: eg
+        label: Munzinger
+        phase: 1
+        via: [[42.88, 11.79], [42.30, 11.70], [41.70, 11.60]]
+      - side: eg
+        label: Ra’uf Pasha
+        phase: 1
+        via: [[43.47, 11.35], [43.00, 10.50], [42.50, 9.80], [42.15, 9.35]]
+  - title: Gura
+    date: December 1875 – March 1876
+    when: "1876-03-07"
+    borders: "1876-03-10"
+    countries: [er, et, eg]
+    body:
+      - Isma’il sent a second, larger army, about 13,000 men under Muhammad Ratib Pasha, with Loring as chief of staff and the khedive’s son Prince Hassan attached. It landed at Massawa in December 1875, climbed to the highlands and built two forts, one on the plain of Gura and one at Khaya Khor in the pass behind it, with about 7,500 and 5,500 men. Yohannes brought up an army of over 50,000, of whom perhaps 15,000–20,000 were engaged at a time.
+      - On 7 March 1876 about 5,000 Egyptian infantry marched out of Fort Gura against the Ethiopians, were surrounded in the open and broke; most were killed or taken. An Ethiopian assault on the fort was beaten back by its artillery, and after a few days the Ethiopian army, short of food, dispersed, while the Egyptians fell back to the coast. Egyptian losses are given as about 3,200 dead and 2,000 captured, Ethiopian losses as about 1,800 dead.
+      - No treaty followed. Egypt kept Massawa and Bogos and held Harar until 1885; Charles Gordon, the khedive’s governor-general of the Sudan, failed to reach a settlement with Yohannes in 1879. Alula was made Ras and governor of the frontier province of Mereb Melash, which from 1884 he ruled from Asmara. The defeat added to Egypt’s debts and its discontents, and Isma’il was deposed under European pressure in 1879. In 1884, by the Hewett Treaty, Britain and Egypt returned Bogos to Ethiopia in return for help in evacuating the Egyptian garrisons cut off by the Mahdists in the Sudan.
+    facts:
+      - [Egyptian army, "about 13,000 men"]
+      - [Battle of Gura, "7–9 March 1876, Ethiopian victory"]
+      - [Losses, "Egypt about 3,200 dead and 2,000 captured; Ethiopia about 1,800 dead"]
+    markers:
+      - kind: battle
+        side: et
+        name: Gura
+        date: 7–9 March 1876
+        text: The Egyptian sortie from Fort Gura was surrounded and destroyed; Fort Gura and the fort at Khaya Khor held out until the Egyptian withdrawal.
+        lonlat: [39.061, 15.013]
+      - kind: event
+        side: eg
+        name: Massawa
+        date: December 1875
+        text: Ratib Pasha’s army landed here.
+        lonlat: [39.45, 15.61]
+      - kind: event
+        side: et
+        name: Asmara
+        date: from 1884
+        text: Seat of Ras Alula, governor of Mereb Melash from October 1876.
+        lonlat: [38.93, 15.33]
+        lp: l
+    arrows:
+      - side: eg
+        label: Ratib Pasha
+        phase: 1
+        via: [[39.45, 15.60], [39.30, 15.35], [39.10, 15.10], [39.07, 15.03]]
+      - side: et
+        label: Yohannes IV
+        phase: 2
+        via: [[38.90, 14.20], [38.95, 14.55], [39.03, 14.95]]

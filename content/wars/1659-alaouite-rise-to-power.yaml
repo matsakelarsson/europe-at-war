@@ -1,0 +1,171 @@
+id: alaouite-rise-to-power
+name: Alaouite rise to power
+start: "1659"
+end: "1672-04-09"
+tier: B
+summary: "The wars in which Moulay al-Rashid, a prince of the Alaouite sharifs of Tafilalt, reunited Morocco after the fall of the Saadians and founded the dynasty that still reigns. By 1659, when the last Saadian sultan was murdered, the country was divided between the Dila’iyya, a Sufi lodge of the Middle Atlas whose leader had been proclaimed sultan in Fez; the war leader al-Khadir Ghailan in the north-west; the Shabana Arabs in Marrakesh; the Semlali lords of Iligh in the Sous; the corsair town of Salé; and the Alaouites of Tafilalt under Muhammad ibn Sharif. Al-Rashid, who had refused to accept his half-brother Muhammad and fled, built a following around Taza and the east, and in August 1664 Muhammad was killed fighting him at Angad. Al-Rashid then took Sijilmasa (1665) and Fez (June 1666), defeated Ghailan, destroyed the zawiya of Dila (June 1668), took Marrakesh (July 1668) and subdued the Sous (1670). He died in Marrakesh in April 1672 after a fall from his horse, and his half-brother Moulay Ismail succeeded him."
+countries: [ma, dz]
+sides:
+  - id: ra
+    name: Al-Rashid and the Alaouites
+    polities: [morocco]
+    ink: red
+    moves: Moves of al-Rashid
+    success: Success for al-Rashid
+  - id: mi
+    name: Muhammad ibn Sharif (Tafilalt)
+    polities: [muhammad-ibn-sharif]
+    ink: brown
+    moves: Moves of Muhammad ibn Sharif
+    success: Success for Muhammad ibn Sharif
+  - id: dl
+    name: Dila’iyya
+    polities: [dilaiyya]
+    ink: olive
+    moves: Dila’iyya moves
+    success: Dila’iyya success
+  - id: gh
+    name: Al-Khadir Ghailan
+    polities: [ghailan]
+    ink: green
+    moves: Moves of Ghailan
+    success: Success for Ghailan
+notes:
+  - The main sources are Moroccan chronicles written under the Alaouites, notably al-Ifrani and al-Nasiri, and European reports. They disagree on several dates, such as the year the Dila’iyya lost Fez (1661 or 1662) and the order of al-Rashid’s campaigns after 1666; the areas drawn are approximate.
+  - Dates are Gregorian. The dynasty’s name is also written Alawite or ʿAlawi; its founders claimed descent from the Prophet through al-Hasan and had come to Tafilalt from Arabia in the 13th century.
+sources:
+  - title: Al-Rashid of Morocco (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Al-Rashid_of_Morocco
+  - title: Zawiya Dila’iya (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Zawiya_Dila%27iya
+  - title: Saadi Sultanate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Saadi_Sultanate
+  - title: Alawi dynasty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Alawi_dynasty
+  - title: Ismail Ibn Sharif (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ismail_Ibn_Sharif
+steps:
+  - title: From Taza to Fez
+    date: 1659–1666
+    when: "1659"
+    borders: "1664-08-02"
+    countries: [ma, dz]
+    body:
+      - The Saadian sultanate had shrunk to Marrakesh and its plains when its last sultan, Ahmad al-Abbas, was murdered by his mother’s kin, the Shabana Arabs, in 1658 or 1659. The strongest power was the Dila’iyya, whose leader Muhammad al-Hajj had governed Fez since 1641 and was proclaimed sultan there in 1659; but Salé rose against his governor in 1660–1661 and Fez threw off his rule in 1662. In the north-west al-Khadir Ghailan, who had fought the Portuguese and English at Tangier, ruled the Habt and the Gharb. In Tafilalt the Alaouite sharifs, who had taken power in 1631, ruled under Muhammad ibn Sharif.
+      - When their father died in 1659, al-Rashid refused to swear allegiance to his half-brother Muhammad, was imprisoned, escaped and fled. He entered the service of a chief near Taza, rose to command troops of his own, and in 1664 seized and plundered the citadel of Dar Ibn Mash’al in the Beni Snassen hills, whose riches paid for his army; he had himself proclaimed sultan at Oujda. Muhammad ibn Sharif marched north against him, and on 2 August 1664 he was killed early in the battle on the plain of Angad, near Oujda, and his army broke up. In 1665 al-Rashid took Sijilmasa after a nine-month siege and was recognised in Tafilalt, then routed the forces of Fez near Taza. After besieging Fez for eleven months he entered the city on 6 June 1666, and Meknes surrendered in October.
+    facts:
+      - [Death of Muhammad ibn Sharif at Angad, "2 August 1664"]
+      - [Sijilmasa taken, "1665"]
+      - [Al-Rashid enters Fez, "6 June 1666"]
+    markers:
+      - kind: battle
+        side: ra
+        name: Angad (Oujda)
+        date: 2 August 1664
+        text: Muhammad ibn Sharif was killed in battle with al-Rashid on the plain of Angad, and his army dispersed. Al-Rashid had been proclaimed at Oujda.
+        lonlat: [-1.91, 34.69]
+      - kind: taken
+        side: ra
+        name: Sijilmasa (Tafilalt)
+        date: "1665"
+        text: The Alaouite home country, taken after a nine-month siege.
+        lonlat: [-4.27, 31.29]
+      - kind: battle
+        side: ra
+        name: Taza
+        date: April 1665
+        text: Al-Rashid had built his following here. In 1665 he routed the forces of Fez and their allies nearby.
+        lonlat: [-4.02, 34.22]
+      - kind: taken
+        side: ra
+        name: Fez
+        date: 6 June 1666
+        text: Taken after an eleven-month siege. Fez became al-Rashid’s capital.
+        lonlat: [-5.00, 34.04]
+      - kind: capital
+        side: dl
+        name: Dila
+        date: "1664"
+        text: The zawiya near Aït Ishaq in the Middle Atlas, seat of the Dila’iyya and their leader Muhammad al-Hajj.
+        lonlat: [-5.70, 32.73]
+    arrows:
+      - side: ra
+        label: Al-Rashid
+        phase: 1
+        via: [[-1.95, 34.55], [-1.95, 33.20], [-2.30, 32.40], [-3.60, 31.90], [-4.20, 31.35]]
+      - side: ra
+        phase: 2
+        via: [[-4.25, 31.40], [-4.10, 32.50], [-4.05, 33.60], [-4.02, 34.15]]
+      - side: ra
+        phase: 3
+        via: [[-4.10, 34.20], [-4.60, 34.12], [-4.95, 34.05]]
+    areas:
+      - style: occupied
+        side: dl
+        label: Dila’iyya lands, about 1664
+        polygon: [[-6.40, 33.10], [-5.60, 33.60], [-4.80, 33.40], [-4.50, 32.90], [-4.80, 32.30], [-5.60, 32.10], [-6.30, 32.50]]
+      - style: occupied
+        side: gh
+        label: Held by Ghailan, about 1664
+        polygon: [[-6.25, 35.50], [-5.75, 35.75], [-5.30, 35.60], [-5.25, 35.10], [-5.70, 34.70], [-6.35, 34.60], [-6.45, 34.95]]
+      - style: occupied
+        side: mi
+        label: Tafilalt under Muhammad ibn Sharif, about 1664
+        polygon: [[-4.80, 31.80], [-3.80, 32.30], [-2.60, 32.70], [-1.70, 33.40], [-1.70, 32.00], [-3.20, 31.00], [-4.60, 30.90]]
+  - title: Dila, Marrakesh and the Sous
+    date: 1666–1672
+    when: "1666-10"
+    borders: "1670-06-01"
+    countries: [ma]
+    body:
+      - From Fez al-Rashid turned on the north-west. He defeated Ghailan near Ksar el-Kebir; Ghailan escaped through Asilah to Algiers, and Tetouan, Ksar el-Kebir and Salé submitted. In 1667 he struck at the Dila’iyya, and on 18 June 1668, at Fezzaz in the Middle Atlas, defections in their ranks delivered their army and its leader, a son of Muhammad al-Hajj, into his hands. The zawiya of Dila was razed, and Muhammad al-Hajj and his family were sent into exile in Tlemcen.
+      - On 31 July 1668 al-Rashid took Marrakesh after a brief resistance and had its Shabana ruler executed. In the next two years he campaigned in the south, and in 1670 he took the Sous, with Taroudant and Iligh, the seat of the Semlali lords, bringing all of Morocco under one ruler for the first time since 1603. He minted a new coinage and built bridges over the Sebou and in Fez. On 9 April 1672 he died in Marrakesh after a fall from his horse. His half-brother Moulay Ismail, his governor of Meknes, succeeded him and spent his first years putting down rivals in his own family, among them their nephew Ahmad ibn Muhriz.
+    facts:
+      - [Dila’iyya defeated at Fezzaz, "18 June 1668"]
+      - [Marrakesh taken, "31 July 1668"]
+      - [Death of al-Rashid, "9 April 1672"]
+    markers:
+      - kind: battle
+        side: ra
+        name: Ksar el-Kebir
+        date: 1666–1667
+        text: Al-Rashid defeated Ghailan near here. Ghailan fled by sea from Asilah to Algiers, and Ksar el-Kebir, Tetouan and Salé submitted.
+        lonlat: [-5.90, 35.01]
+      - kind: taken
+        side: ra
+        name: Dila
+        date: June 1668
+        text: The Dila’iyya army was defeated at Fezzaz on 18 June 1668, and the zawiya was razed.
+        lonlat: [-5.70, 32.73]
+      - kind: taken
+        side: ra
+        name: Marrakesh
+        date: 31 July 1668
+        text: Taken from the Shabana, who had ruled it since the end of the Saadians. Al-Rashid died here in 1672.
+        lonlat: [-7.99, 31.63]
+      - kind: taken
+        side: ra
+        name: Taroudant
+        date: "1670"
+        text: The capital of the Sous, taken with Iligh, the seat of the Semlali lords, in al-Rashid’s southern campaign.
+        lonlat: [-8.88, 30.47]
+      - kind: capital
+        side: ra
+        name: Fez
+        date: 1666–1672
+        text: Al-Rashid’s capital. Moulay Ismail later moved the court to Meknes.
+        lonlat: [-5.00, 34.04]
+        lp: l
+    arrows:
+      - side: ra
+        phase: 1
+        via: [[-5.05, 34.10], [-5.50, 34.55], [-5.88, 34.97]]
+      - side: ra
+        phase: 2
+        via: [[-5.00, 33.98], [-5.30, 33.40], [-5.65, 32.80]]
+      - side: ra
+        phase: 3
+        via: [[-5.75, 32.70], [-6.80, 32.20], [-7.95, 31.66]]
+      - side: ra
+        phase: 4
+        via: [[-8.05, 31.58], [-8.60, 31.00], [-8.85, 30.52]]

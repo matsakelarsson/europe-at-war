@@ -1,0 +1,144 @@
+id: ethiopian-adal-wars-1415
+name: Ethiopian wars with Ifat and Adal (1415–1445)
+start: "1415"
+end: "1445-12-25"
+tier: B
+summary: "Wars between the Solomonic emperors of Ethiopia and the Walashma sultans, first of Ifat and then of Adal, in the first half of the 15th century. Sa’ad ad-Din II, the last great sultan of Ifat, was besieged and killed at Zeila by an Ethiopian army, in 1403 under Dawit I according to al-Maqrizi, or in 1415 under Yeshaq according to a Walashma chronicle, and Ifat was overrun. His sons fled to the Rasulid court in Yemen, returned, and rebuilt their state farther east as the sultanate of Adal, from which they raided the Christian provinces for decades. Emperor Yeshaq (r. 1414–1429/1430) fought them for most of his reign and may have died in battle against Jamal ad-Din II. The wars ended for a generation when Zara Yaqob defeated and killed Sultan Badlay at Gomit in Dawaro on 25 December 1445."
+countries: [et, so, dj]
+sides:
+  - id: et
+    name: Ethiopian Empire
+    polities: [ethiopia]
+    ink: gold
+    moves: Ethiopian moves
+    success: Ethiopian success
+  - id: ad
+    name: Ifat, then Adal (the Walashma sultans)
+    polities: [ifat, adal]
+    ink: green
+    moves: Moves of Ifat and Adal
+    success: Success of Ifat and Adal
+notes:
+  - "The sources are few: the Ethiopian royal chronicles of Zara Yaqob, a hymn of Yeshaq’s reign, Arab historians in Egypt (al-Maqrizi, Ibn Taghribirdi) and a later History of the Walashma. They disagree on many dates, above all on when and under which emperor Sa’ad ad-Din II died at Zeila (1403 or 1415), and on the numbering of the sultans."
+  - Most places named in the accounts, among them the Adal capital of Dakkar and the battlefield of Gomit, cannot be located precisely; the regions are drawn as approximate areas.
+sources:
+  - title: Sa’ad ad-Din II (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sa%27ad_ad-Din_II
+  - title: Sabr ad-Din III (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sabr_ad-Din_III
+  - title: Yeshaq I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yeshaq_I
+  - title: Sultanate of Ifat (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sultanate_of_Ifat
+  - title: Adal Sultanate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Adal_Sultanate
+  - title: Battle of Gomit (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Gomit
+  - title: Zara Yaqob (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Zara_Yaqob
+steps:
+  - title: Zeila and the end of Ifat
+    date: 1403 or 1415
+    when: "1415"
+    borders: "1415-06-01"
+    countries: [et, so, dj]
+    body:
+      - Sa’ad ad-Din II, sultan of Ifat from about 1386, had moved the centre of his state east towards the Harar plateau and the coast and kept up raids into the Christian provinces. An Ethiopian army defeated his forces on the Harar plateau and pursued him to Zeila, where he took refuge on a peninsula or island by the town. The Ethiopians besieged it and cut him off from water, and he was killed. Al-Maqrizi, writing in Cairo, places this in 1403, under Emperor Dawit I; a later History of the Walashma dates it to 1415, the second year of Yeshaq, and many historians have followed one date or the other.
+      - With the sultan dead, Ifat ceased to exist as a state. Its heartland on the eastern escarpment of Shewa came under Christian governors and garrisons, and its Muslim population became subjects of the emperor. Sa’ad ad-Din’s ten sons escaped across the sea to Yemen and the court of the Rasulid sultan at Ta’izz.
+    facts:
+      - [Death of Sa’ad ad-Din II, "Zeila, 1403 (al-Maqrizi) or 1415 (History of the Walashma)"]
+      - [His sons, "in exile at the Rasulid court in Yemen"]
+    markers:
+      - kind: siege
+        side: et
+        name: Zeila
+        date: 1403 or 1415
+        text: Sa’ad ad-Din II, besieged on a peninsula by the town and cut off from water, was killed by the Ethiopian army.
+        lonlat: [43.47, 11.35]
+      - kind: event
+        side: ad
+        name: Ta’izz
+        date: early 15th century
+        text: Seat of the Rasulid sultans of Yemen, who sheltered Sa’ad ad-Din’s sons and later helped them return with horses and arms.
+        lonlat: [44.02, 13.58]
+        lp: l
+    arrows:
+      - side: et
+        phase: 1
+        via: [[40.3, 9.8], [41.3, 9.5], [42.2, 9.6]]
+      - side: et
+        phase: 2
+        via: [[42.2, 9.7], [42.8, 10.5], [43.4, 11.3]]
+      - side: ad
+        label: Sa’ad ad-Din’s sons
+        phase: 3
+        via: [[43.5, 11.4], [43.6, 12.3], [44.0, 13.5]]
+    areas:
+      - style: occupied
+        side: et
+        label: Ifat, overrun by the Ethiopian army (approximate)
+        polygon: [[39.7, 10.6], [40.3, 10.5], [40.7, 9.8], [40.3, 9.1], [39.8, 9.3], [39.6, 9.9]]
+  - title: Sabr ad-Din, Yeshaq and the new Adal
+    date: about 1415 – 1430
+    when: "1420"
+    borders: "1425-01-01"
+    countries: [et, so, dj]
+    body:
+      - The eldest son, Sabr ad-Din, returned from Arabia with ten horsemen and arms from the Rasulid sultan and gathered his father’s followers in the lowlands east of the old Ifat. The Arab sources tell of a string of victories over Christian forces, of churches burned and an imperial camp taken, but also of raids that failed. From this base the brothers built a new state, called Adal by its neighbours, with a capital at Dakkar near the later city of Harar. Sabr ad-Din died in 1422 or 1423 and was followed by his brothers Mansur ad-Din and Jamal ad-Din II.
+      - Emperor Yeshaq, who reigned from 1414, fought the Walashma brothers for most of his reign, and also crushed a rising of the Beta Israel in Wegera and pushed west beyond Agawmeder. Al-Maqrizi says he hired Mamluk soldiers from Egypt to train his army in gunnery and swordsmanship. A hymn celebrating his victory over the sultan of Ifat contains the first known mention of the Somali. In 1428 a letter from him proposing an alliance against the Muslims reached Alfonso V of Aragon. The manner of his death in 1429 or 1430 is uncertain. Al-Maqrizi says he was killed at Harjah, where Jamal ad-Din’s army surprised his exhausted troops, while the Ethiopian sources are silent or speak of a murder.
+    facts:
+      - [Sabr ad-Din’s return, "about 1415 (some sources give 1412)"]
+      - [Death of Sabr ad-Din, "1422 or 1423"]
+      - [Death of Yeshaq, "1429 or 1430"]
+    markers:
+      - kind: event
+        side: ad
+        name: Harar plateau
+        date: from about 1415
+        text: The heart of the new sultanate of Adal, whose first capital, Dakkar, lay near the later city of Harar. Its exact site is not known.
+        lonlat: [42.12, 9.31]
+    arrows:
+      - side: ad
+        label: Sabr ad-Din
+        phase: 1
+        via: [[44.0, 13.5], [43.6, 12.0], [43.0, 10.8]]
+      - side: ad
+        label: Adal raids
+        phase: 2
+        via: [[42.0, 9.5], [41.0, 9.4], [40.2, 9.6]]
+      - side: et
+        label: Yeshaq
+        phase: 3
+        via: [[39.6, 9.8], [40.6, 9.5], [41.5, 9.4]]
+    areas:
+      - style: outline
+        side: ad
+        label: Adal, the Walashma heartland after about 1415 (approximate)
+        polygon: [[41.6, 9.6], [42.4, 9.0], [43.3, 9.6], [43.6, 11.3], [42.6, 11.7], [41.8, 10.6]]
+  - title: Badlay and the battle of Gomit
+    date: 1443 – 25 December 1445
+    when: "1445-12-25"
+    borders: "1445-12-25"
+    countries: [et]
+    body:
+      - Zara Yaqob, who became emperor in 1434, was the most forceful of the medieval emperors, a reformer of the church who ruled the provinces through his own appointees. Badlay ibn Sa’ad ad-Din, another of the brothers and now sultan of Adal, invaded the frontier province of Dawaro in 1443 and again in 1445. The Muslim governor (garad) of Hadiya, Mohammed, the emperor’s father-in-law, was suspected of dealing with both sides, and Zara Yaqob kept his men under watch.
+      - Zara Yaqob marched south to meet Badlay with a smaller army and attacked him at Gomit, also called Egubba or Ayfars, in Dawaro, on 25 December 1445. According to the royal chronicle, Badlay was wounded by an arrow, charged at the emperor and was killed by his spear; his army broke, and his brother Khair ad-Din was caught while crossing the Awash and killed. Badlay’s body was cut up and the pieces sent to the provinces, and his possessions were given to monasteries; the chronicle’s claim that his whole army was destroyed may be exaggerated.
+      - The emperor garrisoned Dawaro and the frontier with regiments from Shewa but made no attempt to conquer Adal itself. According to some accounts Badlay’s son Muhammad agreed to pay tribute. The border between the two states stayed quiet for much of the next generation, until raids resumed later in the century; in the early 16th century Adal grew strong enough to invade the highlands.
+    facts:
+      - [Badlay’s invasions of Dawaro, "1443 and 1445"]
+      - [Battle of Gomit, "25 December 1445, Ethiopian victory"]
+      - [Killed, "Sultan Badlay and his brother Khair ad-Din"]
+    arrows:
+      - side: ad
+        label: Badlay
+        phase: 1
+        via: [[41.8, 9.3], [41.0, 8.7], [40.3, 8.3]]
+      - side: et
+        label: Zara Yaqob
+        phase: 2
+        via: [[39.2, 9.6], [39.5, 8.9], [40.0, 8.4]]
+    areas:
+      - style: contested
+        side: ad
+        label: Dawaro, invaded by Badlay; Gomit was fought here (approximate)
+        polygon: [[39.4, 8.6], [40.6, 8.8], [41.0, 8.0], [40.0, 7.6], [39.3, 8.0]]

@@ -1,0 +1,145 @@
+id: spanish-algerian-wars
+name: Spain against Algiers
+start: "1708"
+end: "1792-03"
+tier: B
+summary: "Spain’s long struggle with the Regency of Algiers over Oran and Mers el-Kébir, its last fortresses on the Algerian coast, and over the corsair war at sea. During the War of the Spanish Succession the bey of the west, Mustapha Bouchelaghem, took Oran in January 1708 and Mers el-Kébir in April. In 1732 a Spanish armada of some 25,000 men under the Count (later Duke) of Montemar landed near Mers el-Kébir and recovered both, and for the next sixty years the Spanish garrison lived under constant blockade. Charles III tried to strike at Algiers itself: Alejandro O’Reilly’s landing of about 20,000 men in July 1775 was routed on the beaches, and Antonio Barceló’s fleets bombarded the city in 1783 and 1784 without forcing it to terms. Spain made peace with Algiers in 1786. After an earthquake ruined Oran in October 1790 and Bey Mohammed el-Kebir besieged it, Spain agreed to give up Oran and Mers el-Kébir, and handed them over in early 1792."
+countries: [dz, es]
+sides:
+  - id: es
+    name: Spain and its allies
+    polities: [spain, tuscany, naples, portugal, malta]
+    ink: gold
+    moves: Spanish and allied moves
+    success: Spanish success
+  - id: dz
+    name: Regency of Algiers
+    polities: [algiers-regency]
+    ink: red
+    moves: Algerian moves
+    success: Algerian success
+notes:
+  - Oran and Mers el-Kébir, about 7 km apart, were fortified towns with a few outlying forts, much smaller than today’s province of Oran; they had been Spanish since 1505–1509. Figures for the armies, and for the dead of 1775 in particular, vary widely between Spanish and Algerian sources.
+  - Spain’s war with Algiers was part of the wider corsair war in the western Mediterranean, in which Algerian corsairs, licensed by the dey, took Spanish ships and coastal captives for ransom or sale, and Spanish and Maltese ships did the same to Muslim shipping. Europeans called the Algerian corsairs pirates; the regency treated them as privateers in a lawful war.
+sources:
+  - title: Siege of Oran (1707–1708) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Oran_(1707%E2%80%931708)
+  - title: Spanish conquest of Oran (1732) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Spanish_conquest_of_Oran_(1732)
+  - title: Invasion of Algiers (1775) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Invasion_of_Algiers_(1775)
+  - title: Bombardment of Algiers (1783) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bombardment_of_Algiers_(1783)
+  - title: Bombardment of Algiers (1784) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bombardment_of_Algiers_(1784)
+  - title: 1790 Oran earthquake (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1790_Oran_earthquake
+  - title: Siege of Oran (1790–1792) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Oran_(1790%E2%80%931792)
+steps:
+  - title: Oran lost and retaken
+    date: 1707–1732
+    when: "1708"
+    borders: "1732-07-02"
+    countries: [dz, es]
+    body:
+      - While Spain was torn by the War of the Spanish Succession, the dey of Algiers, Mohamed Bektash, sent about 8,500 soldiers and volunteers to join Mustapha Bouchelaghem, bey of the western province (the Beylik of the West) at Mascara, against Spanish Oran. The siege began on 1 November 1707 with the capture of the fort of San Felipe; Oran surrendered on 20 January 1708, and Mers el-Kébir, the fortified harbour to the west, fell on 4 April after heavy fighting. About 2,000 prisoners were taken. The victory was celebrated across the Muslim world, and Bouchelaghem moved his seat to Oran.
+      - Philip V, secure on his throne, prepared to recover the fortresses, paying for the expedition partly with two million pesos that Blas de Lezo had forced Genoa to pay. A fleet of about 12 ships of the line and some 300 other vessels left Alicante on 16 June 1732 with about 23,000 infantry and 3,400 cavalry under the Count of Montemar, made a duke a few years later. It reached the coast on 27 June, landed the next day on the beach of Las Aguadas, west of Mers el-Kébir, and drove back an Algerian army of some 20,000. The garrison of Mers el-Kébir capitulated on terms, Bouchelaghem’s forces left Oran by night, and the Spanish entered it on 1 July. Montemar sailed home in August, leaving 6,000 men; Bouchelaghem’s counter-attacks in 1732 and 1733 failed, and the garrison held out under a blockade that lasted, with intervals, for sixty years.
+    facts:
+      - [Oran surrendered to Algiers, "20 January 1708"]
+      - [Mers el-Kébir fell, "4 April 1708"]
+      - [Spanish landing at Las Aguadas, "28 June 1732"]
+      - [Spanish army of 1732, "about 26,000 men"]
+    markers:
+      - kind: taken
+        side: es
+        name: Oran
+        date: 1708 and 1 July 1732
+        text: Taken by Bey Bouchelaghem on 20 January 1708 after a siege of almost three months, and retaken by Montemar on 1 July 1732. Mers el-Kébir, just to the west, changed hands with it.
+        lonlat: [-0.64, 35.70]
+      - kind: event
+        side: es
+        name: Las Aguadas
+        date: 28 June 1732
+        text: The beach west of Mers el-Kébir, near today’s Aïn el-Turk, where Montemar’s army landed.
+        lonlat: [-0.76, 35.74]
+        lp: l
+      - kind: capital
+        side: dz
+        name: Mascara
+        date: 1707–1708
+        text: Seat of Mustapha Bouchelaghem, bey of the west, who led the siege of 1707–1708 and then ruled from Oran until 1732.
+        lonlat: [0.14, 35.40]
+    arrows:
+      - side: dz
+        label: Bouchelaghem, 1707
+        phase: 1
+        via: [[0.10, 35.42], [-0.20, 35.55], [-0.58, 35.68]]
+      - side: es
+        label: Montemar, 1732
+        phase: 2
+        via: [[-0.45, 38.30], [-0.70, 37.20], [-0.85, 36.20], [-0.78, 35.77]]
+  - title: O’Reilly and Barceló at Algiers
+    date: 1775–1786
+    when: "1775-07"
+    borders: "1786-06-14"
+    countries: [dz, es, it, pt, mt]
+    body:
+      - Charles III wanted to restore Spain’s military reputation after the Seven Years’ War and to end the corsair raids. In June 1775 an armada of about 74 warships and 230 transports, with some 20,000 troops under the Irish-born general Alejandro O’Reilly and Tuscan ships under John Acton, sailed from Cartagena for Algiers. On 8 July the troops landed on the beach east of the city, but the boats put them ashore in the wrong place and most of their artillery sank in the wet sand. The defenders, led by Dey Mohammed ben Osman with the dey’s guard and the levies of the beys of Constantine, the West and Titteri, among them Kabyle and tribal fighters, fell back, drew the Spanish inland and ambushed them from cover. The Spanish were routed and fled to their boats, covered by the guns of Acton’s ships. Estimates of their dead run from 500 to 2,000, with about 2,000 wounded and many taken prisoner, against some 300 Algerian dead and wounded by Algerian figures.
+      - In 1783 Admiral Antonio Barceló brought a fleet of gunboats and bomb vessels and bombarded Algiers from 4 to 8 August, damaging or destroying some 560 buildings but sinking only one Algerian gunboat. In July 1784 he returned with a larger allied fleet, with ships from Naples, Malta and Portugal, and bombarded the city from 12 to 21 July, again without bringing the dey to terms. Spain’s chief minister, the Count of Floridablanca, then turned to diplomacy, and on 14 June 1786 Spain and Algiers made peace. Spain paid a large sum and opened a consulate in Algiers, and the corsairs stopped attacking Spanish ships.
+    facts:
+      - [O’Reilly’s landing, "8 July 1775, Algerian victory"]
+      - [Bombardments of Algiers, "4–8 August 1783 and 12–21 July 1784"]
+      - [Peace between Spain and Algiers, "14 June 1786"]
+    markers:
+      - kind: battle
+        side: dz
+        name: Algiers
+        date: 8 July 1775
+        text: O’Reilly’s army landed on the beach east of the city and was routed. The city was bombarded by Barceló’s fleets in 1783 and 1784, and peace was made here in 1786.
+        lonlat: [3.06, 36.78]
+      - kind: event
+        side: es
+        name: Cartagena
+        date: 1775–1784
+        text: Spain’s main Mediterranean naval base, from which the expeditions against Algiers sailed.
+        lonlat: [-0.98, 37.60]
+      - kind: held
+        side: es
+        name: Oran
+        date: 1732–1790
+        text: Held by a Spanish garrison under almost constant blockade.
+        lonlat: [-0.64, 35.70]
+    arrows:
+      - side: es
+        label: O’Reilly (1775), Barceló (1783, 1784)
+        via: [[-0.90, 37.50], [0.80, 37.20], [2.20, 36.95], [3.05, 36.82]]
+  - title: The earthquake and the cession of Oran
+    date: 1790–1792
+    when: "1790-10"
+    borders: "1792-03-31"
+    countries: [dz, es]
+    body:
+      - On the night of 9–10 October 1790 an earthquake, followed by a tsunami, destroyed most of Oran and killed an estimated 2,000–3,000 people, among them hundreds of soldiers of the garrison. The bey of the west, Mohammed el-Kebir, immediately besieged the ruined town with about 5,000 men; his first assaults were beaten off, but the Spanish could neither rebuild the defences nor see much value in keeping them.
+      - In August or September 1791 Spain opened negotiations with Algiers and agreed to give up Oran and Mers el-Kébir. The Spanish garrison and the town’s Spanish inhabitants left at the end of February and in March 1792, many of them for Ceuta, and the bey took possession, ending almost three hundred years of Spanish rule. Mohammed el-Kebir made Oran the capital of the Beylik of the West, which it remained until the French took the city in 1831.
+    facts:
+      - [Oran earthquake, "night of 9–10 October 1790"]
+      - [Spanish evacuation, "early 1792"]
+      - [Handover to Algiers, "27 February – March 1792"]
+    markers:
+      - kind: treaty
+        side: dz
+        name: Oran
+        date: February – March 1792
+        text: Ruined by the earthquake of 1790 and besieged by Bey Mohammed el-Kebir, it was handed over to Algiers with Mers el-Kébir by agreement with Spain.
+        lonlat: [-0.64, 35.70]
+      - kind: capital
+        side: dz
+        name: Mascara
+        date: 1790–1792
+        text: Seat of Bey Mohammed el-Kebir, who led the siege and moved his capital to Oran in 1792.
+        lonlat: [0.14, 35.40]
+    arrows:
+      - side: dz
+        label: Mohammed el-Kebir
+        via: [[0.10, 35.42], [-0.20, 35.55], [-0.58, 35.68]]

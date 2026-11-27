@@ -1,0 +1,152 @@
+id: amda-seyon-campaigns
+name: Amda Seyon’s campaigns against Ifat and its allies
+start: "1329"
+end: "1332"
+tier: B
+summary: "Wars of the Ethiopian emperor Amda Seyon I (r. 1314–1344) against the Muslim sultanate of Ifat and the states of the south and east that made the Solomonic kingdom the leading power of the Horn of Africa. After campaigns against Damot and Hadiya in 1316–1317, Amda Seyon invaded Ifat when its sultan Haqq ad-Din I had his envoy, returning from Mamluk Cairo, put to death. In 1332 Haqq ad-Din’s brother Sabr ad-Din rose against him, joined by Hadiya and Dawaro, and the Muslims of Adal and Mora under the religious leader Salih joined in. In a long campaign told in the chronicle known as the Glorious Victories of Amda Seyon, the emperor defeated them one after another, installed a succession of Walashma princes in Ifat as his vassals, and extended his overlordship over Dawaro, Hadiya, Bale and the lands across the Awash. Arab writers of the time, among them al-Umari, list seven Muslim states in the region, all paying tribute to the Christian king."
+countries: [et, dj, so]
+sides:
+  - id: et
+    name: Ethiopian Empire (Amda Seyon)
+    polities: [ethiopia]
+    ink: gold
+    moves: Ethiopian moves
+    success: Ethiopian success
+  - id: if
+    name: Ifat and its allies (Hadiya, Dawaro, Adal and Mora)
+    polities: [ifat, adal]
+    ink: teal
+    moves: Moves of Ifat and its allies
+    success: Success of Ifat and its allies
+notes:
+  - "The main source is the Glorious Victories of Amda Seyon, an Ethiopian chronicle that tells the war from the emperor’s side, with long speeches and religious framing. Most editors treat it as nearly contemporary; Bertrand Hirsch has argued that it is a later epic that condenses a longer conflict. The Muslim side is known mainly from Arab writers in Egypt and Syria (al-Umari, later al-Maqrizi)."
+  - "The great campaign is dated to 1332 by most scholars (Dillmann, Conti Rossini, Cerulli, Taddesse Tamrat); Huntingford, following James Bruce, dated it to 1329. The dates of the first invasion of Ifat are uncertain."
+  - Many of the places named in the chronicle (Talag, Das, Bequlzar, Dilhoya) cannot be located today, so the regions are drawn as approximate areas.
+sources:
+  - title: Amda Seyon I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Amda_Seyon_I
+  - title: Sultanate of Ifat (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sultanate_of_Ifat
+  - title: Hadiya (historical region) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hadiya_(historical_region)
+  - title: Dawaro (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dawaro
+  - title: Adal Sultanate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Adal_Sultanate
+  - title: Walashma dynasty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Walashma_dynasty
+steps:
+  - title: Hadiya, Damot and the envoy killed in Ifat
+    date: 1316 – about 1329
+    when: "1328"
+    borders: "1328-01-01"
+    countries: [et]
+    body:
+      - Amda Seyon came to the throne in 1314, the fifth ruler of the Solomonic line that had taken power from the Zagwe in 1270. His kingdom was a mobile court and army moving between the highlands of Amhara and Shewa, surrounded by states it did not rule. To the south-west lay the non-Christian kingdom of Damot and the Muslim kingdom of Hadiya; to the east, along the escarpment and the Awash valley, the Muslim sultanate of Ifat of the Walashma dynasty, which controlled the caravan trade with the port of Zeila, and beyond it Dawaro, Bale and the Muslim communities of Adal.
+      - A note in a manuscript of the island monastery of Lake Hayq dates his campaigns against Damot and Hadiya to 1316–1317. Amano, the king of Hadiya, had refused tribute; the chronicle blames a Muslim preacher it calls Bel’am. Amda Seyon invaded, carried Amano and many of his people away and settled them elsewhere, and Hadiya became a tributary.
+      - In about 1320 the Mamluk sultan al-Nasir Muhammad was persecuting the Copts in Egypt and closing churches. Amda Seyon sent envoys to Cairo threatening reprisals against Muslims in his kingdom, and, according to the chronicle, to divert the Nile. On the way home his envoy Ti’yintay was seized by Haqq ad-Din I, sultan of Ifat, and put to death when he refused to convert. Amda Seyon invaded Ifat, sacked its capital and towns, and pillaged its provinces, taking many prisoners. Muslim forces struck back at Christian districts, and in Menz the emperor’s men defeated one of them and killed its leader, Dedadir, a son of Haqq ad-Din. Haqq ad-Din was succeeded by his brother Sabr ad-Din.
+    facts:
+      - [Campaign against Damot and Hadiya, "1316–1317"]
+      - [First invasion of Ifat, "1320s, by 1329"]
+    markers:
+      - kind: event
+        side: et
+        name: Lake Hayq
+        date: 1316–1317
+        text: A note in a manuscript of the island monastery of Hayq Estifanos records Amda Seyon’s campaigns against Damot and Hadiya.
+        lonlat: [39.71, 11.32]
+      - kind: event
+        side: if
+        name: Zeila
+        date: 14th century
+        text: The port on the Gulf of Aden through which the trade of Ifat and the Ethiopian highlands passed.
+        lonlat: [43.47, 11.35]
+        lp: l
+    arrows:
+      - side: et
+        label: Amda Seyon
+        phase: 1
+        via: [[38.9, 9.7], [38.4, 8.9], [38.0, 8.0]]
+      - side: et
+        phase: 2
+        via: [[39.3, 10.3], [39.8, 10.2], [40.2, 9.8]]
+    areas:
+      - style: occupied
+        side: et
+        label: Hadiya, tributary from 1316–1317 (approximate)
+        polygon: [[37.5, 8.4], [38.4, 8.4], [38.6, 7.6], [38.0, 7.2], [37.4, 7.6]]
+      - style: outline
+        side: if
+        label: Ifat (approximate)
+        polygon: [[39.7, 10.6], [40.3, 10.5], [40.7, 9.8], [40.3, 9.1], [39.8, 9.3], [39.6, 9.9]]
+  - title: Sabr ad-Din’s war
+    date: February – spring 1332
+    when: "1332-02"
+    borders: "1332-02-18"
+    countries: [et]
+    body:
+      - Sabr ad-Din seized goods being carried for the emperor from Zeila and, according to the chronicle, set out not merely to free Ifat but to rule all Ethiopia, appointing governors for the Christian provinces and calling the war a jihad. Dawaro and Hadiya joined him, and he sent three columns against Amhara, Angot and Shewa.
+      - The emperor marched east on 24 Yakatit (about 18 February 1332) with the troops he could gather; many soldiers at first refused to follow him into the hot, roadless lowlands. An advance force drove Sabr ad-Din from his camp, and the main army burned his capital, although he escaped. He then tried to make peace through Queen Jan Mengesha, who refused, and finally surrendered. Amda Seyon spared his life, kept him prisoner and appointed his brother Jamal ad-Din governor of Ifat.
+    facts:
+      - [Campaign begins, "24 Yakatit (about 18 February) 1332"]
+      - [Sabr ad-Din, "surrendered and imprisoned"]
+      - [Jamal ad-Din I, "appointed governor of Ifat"]
+    arrows:
+      - side: if
+        label: Sabr ad-Din
+        phase: 1
+        via: [[40.1, 10.0], [39.6, 10.6], [39.4, 11.3]]
+      - side: if
+        phase: 1
+        via: [[40.1, 9.8], [39.9, 11.2], [39.6, 12.2]]
+      - side: if
+        phase: 1
+        via: [[40.0, 9.6], [39.5, 9.6], [39.0, 9.5]]
+      - side: et
+        label: Amda Seyon
+        phase: 2
+        via: [[39.0, 10.6], [39.6, 10.3], [40.2, 9.9]]
+    areas:
+      - style: occupied
+        side: et
+        label: Ifat, overrun by Amda Seyon’s army (approximate)
+        polygon: [[39.7, 10.6], [40.3, 10.5], [40.7, 9.8], [40.3, 9.1], [39.8, 9.3], [39.6, 9.9]]
+      - style: outline
+        side: if
+        label: Hadiya and Dawaro, allies of Sabr ad-Din (approximate)
+        polygons:
+          - [[37.5, 8.4], [38.4, 8.4], [38.6, 7.6], [38.0, 7.2], [37.4, 7.6]]
+          - [[39.4, 8.6], [40.6, 8.8], [41.0, 8.0], [40.0, 7.6], [39.3, 8.0]]
+  - title: Adal and the lands beyond the Awash
+    date: spring – autumn 1332
+    when: "1332-06"
+    borders: "1332-10-01"
+    countries: [et, dj, so]
+    body:
+      - Instead of going home before the rains, as his troops wished, Amda Seyon stayed in the lowlands. The Muslims of Adal and Mora, led by the religious leader Salih, raised an army from the clans of the region and attacked his camp at night; the chronicle says the emperor was struck from behind, killed his attacker, and that the attackers were pursued to a river and cut down. Jamal ad-Din now joined Salih, and at a place the chronicle calls Das they tried to surround the emperor, who, though ill, defeated them.
+      - Amda Seyon then took Talag, which the chronicle calls the capital of Adal, where the governor’s brother and sons surrendered. Back in Ifat he deposed Jamal ad-Din for refusing to hand over Christians who had converted to Islam and appointed another brother, Nasir ad-Din. Further raids reached Dilhoya, the pastoralists of the Warjih and Sharkha, whose governor he imprisoned. The Muslim states from Ifat to Dawaro, Bale and Hadiya now paid him tribute, and Christian military colonies were settled in the borderlands.
+      - The war set the pattern of the next two centuries. Ifat’s Walashma sultans kept their dynasty as vassals but rose again and again, until their heirs moved east and founded the sultanate of Adal, which in the 16th century came close to destroying the Christian kingdom.
+    facts:
+      - [Night attack and the battle of Das, "1332"]
+      - [Nasir ad-Din, "made governor of Ifat"]
+      - [Tributaries, "Ifat, Dawaro, Hadiya, Bale and Sharkha"]
+    arrows:
+      - side: et
+        label: Amda Seyon
+        phase: 1
+        via: [[40.3, 9.7], [41.0, 9.6], [41.7, 9.6], [42.3, 9.6]]
+      - side: et
+        phase: 2
+        via: [[41.7, 9.3], [40.9, 8.6], [40.2, 8.1]]
+    areas:
+      - style: occupied
+        side: et
+        label: Raided by Amda Seyon’s armies (approximate)
+        polygon: [[41.6, 9.7], [42.4, 9.1], [43.0, 9.6], [43.0, 10.4], [42.0, 10.4]]
+      - style: gained
+        side: et
+        label: Tributary to Amda Seyon after 1332 (approximate)
+        polygons:
+          - [[39.4, 8.6], [40.6, 8.8], [41.0, 8.0], [40.0, 7.6], [39.3, 8.0]]
+          - [[39.3, 7.5], [40.8, 7.6], [40.8, 6.6], [39.5, 6.5]]
+          - [[37.5, 8.4], [38.4, 8.4], [38.6, 7.6], [38.0, 7.2], [37.4, 7.6]]

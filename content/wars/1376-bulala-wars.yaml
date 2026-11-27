@@ -1,0 +1,107 @@
+id: bulala-wars
+name: Bulala wars
+start: "1376"
+end: "1507"
+tier: B
+summary: "The wars in which the Bulala, a pastoral people of the Lake Fitri region, drove the Sayfawa kings out of Kanem, north-east of Lake Chad, and forced them to rebuild their kingdom in Bornu, west of the lake. Taking advantage of a succession war among the Sayfawa, the Bulala king Abd al-Jalil killed Mai Dawud about 1376; between then and about 1389 seven kings fell fighting the Bulala or their Arab allies, and Mai Umar b. Idris abandoned the capital Njimi and Kanem altogether. In Bornu the dynasty survived a century of civil war between two branches of the royal family, while the Bulala built a strong kingdom in Kanem. Mai Ali Gaji ended the civil wars, beat a Bulala raid about 1471 and founded a fortified capital at Ngazargamu; his son Idris Katakarmabe defeated the Bulala and entered Njimi in triumph early in his reign, 122 years after his ancestors had been driven out. He did not move the capital back, and the wars went on at intervals until Idris Alooma’s campaigns of the 1570s."
+countries: [td, ne, ng]
+sides:
+  - id: kb
+    name: Sayfawa kings of Kanem and Bornu
+    polities: [kanem-bornu]
+    ink: teal
+    moves: Sayfawa moves
+    success: Sayfawa success
+  - id: bul
+    name: Bulala
+    polities: [bulala]
+    ink: olive
+    moves: Bulala moves
+    success: Bulala success
+notes:
+  - "The sources are few: the Diwan, a short chronicle of the Sayfawa kings that gives little more than names, reign lengths and deaths; a letter of Mai Bir b. Idris to the sultan of Egypt of about 1391; a notice by al-Maqrizi; and the imam Ahmad ibn Furtu’s account of Idris Alooma, written in the 1570s, which looks back on the earlier wars. Reign dates follow the reconstruction of Dierk Lange and are approximate. The site of Njimi has never been found with certainty; a site at Tié, in Chad, was proposed in 2019. Leo Africanus knew the Bulala kingdom as “Gaoga” and described it, probably from merchants’ reports, as stronger than Bornu."
+sources:
+  - title: Bulala (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bulala
+  - title: Kanem Empire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kanem_Empire
+  - title: Bornu Empire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bornu_Empire
+  - title: Njimi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Njimi
+  - title: Idris Katakarmabe (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Idris_Katakarmabe
+  - title: Kanem-Bornu (Britannica)
+    url: https://www.britannica.com/place/Kanem-Bornu
+  - title: "D. Lange, “Kingdoms and peoples of Chad”, in UNESCO General History of Africa, vol. IV (South African History Online)"
+    url: https://www.sahistory.org.za/archive/general-history-africa-volume-iv-africa-twelfth-sixteenth-century
+  - title: "B. M. Barkindo, “Kanem-Borno: its relations with the Mediterranean Sea, Bagirmi and other states in the Chad basin”, in UNESCO General History of Africa, vol. V (South African History Online)"
+    url: https://www.sahistory.org.za/archive/general-history-africa-volume-v-africa-sixteenth-eighteenth-century
+steps:
+  - title: Driven out of Kanem
+    date: about 1376–1390
+    when: "1376"
+    borders: "1390"
+    countries: [td, ne, ng]
+    body:
+      - "In the fourteenth century the Sayfawa mais ruled from Njimi in Kanem, north-east of Lake Chad, over lands that reached the Fezzan, and had vassals in Bornu, west of the lake. A succession war between Mai Dawud b. Ibrahim Nikale and the sons of his brother and predecessor Idris weakened the kingdom, and the Bulala, herders of the Lake Fitri region to the south-east who may have been pushed by Arab migrations from the Nile, broke in. Their king Abd al-Jalil killed Dawud about 1376, and each of his next three successors died fighting them. The fourth, Umar b. Idris, gave up Njimi and Kanem and led his followers west into Bornu, where he was killed by Arabs."
+      - "Two more kings, Sa’id and Kaday Afnu, fell in battle against the Bulala before Mai Bir (Uthman) b. Idris, who reigned about 1389–1421, held them off and apparently carried the war into their country. In a letter to the sultan of Egypt he complained of Arab tribes raiding his people and selling them as slaves. The Sayfawa built a new kingdom in Bornu with its capital at Kaka, while the Bulala ruled Kanem, with Tubu and Arab allies; al-Maqrizi, in Cairo, heard that the people of Kanem had rebelled and abandoned Islam, though the Bornu chronicles do not say so."
+    facts:
+      - [Mai Dawud killed, "about 1376"]
+      - [Kings fallen in the war, "seven, about 1376–1389"]
+      - [Njimi abandoned, "under Umar b. Idris, about 1382–1387"]
+    markers:
+      - kind: capital
+        side: bul
+        name: Lake Fitri
+        date: 14th century
+        text: Homeland of the Bulala, who ruled the Kuba farmers of the lake shores.
+        lonlat: [17.500, 12.830]
+    arrows:
+      - side: bul
+        label: Bulala
+        phase: 1
+        via: [[17.400, 12.950], [17.000, 13.800], [16.300, 14.500], [15.600, 14.900]]
+      - side: kb
+        label: Umar b. Idris leaves Kanem
+        phase: 2
+        via: [[15.300, 14.700], [14.300, 14.500], [13.300, 13.900], [12.600, 13.300]]
+    areas:
+      - style: occupied
+        side: bul
+        label: Kanem, taken by the Bulala (approximate)
+        polygon: [[14.300, 13.700], [14.600, 15.400], [16.000, 16.200], [17.600, 15.600], [17.800, 14.200], [16.600, 13.300], [15.200, 13.100]]
+  - title: Ngazargamu and the return to Njimi
+    date: about 1465–1507
+    when: "1471"
+    borders: "1500"
+    countries: [td, ng, ne]
+    body:
+      - "For most of the fifteenth century the descendants of Dawud and of Idris fought each other for the throne of Bornu, and several kings were deposed or killed. Mai Ali b. Dunama, known as Ali Gaji (about 1465–1497), ended the strife by defeating the rival branch. When the Bulala raided Bornu again about 1471 he beat them, without following up his victory, and about 1472 he built a walled capital, Birni Ngazargamu, by the Komadugu Yobe. It remained the Sayfawa capital until 1808."
+      - "The Bulala attacked again after Ali Gaji’s death, and his son Idris Katakarmabe (about 1497–1519) defeated them early in his reign and entered Njimi in triumph, 122 years after the Sayfawa had been driven out, according to Ahmad ibn Furtu. He made an agreement with the Bulala and went back to Bornu; Njimi was never again the capital. The truce did not last, and fighting went on at intervals for another sixty years."
+    facts:
+      - [Bulala raid beaten, "about 1471"]
+      - [Birni Ngazargamu founded, "about 1472"]
+      - [Idris Katakarmabe enters Njimi, "early 16th century"]
+    markers:
+      - kind: capital
+        side: kb
+        name: Birni Ngazargamu
+        date: about 1472
+        text: Walled capital founded by Ali Gaji, seat of the Sayfawa until the Fulani took it in 1808.
+        lonlat: [12.367, 13.083]
+      - kind: capital
+        side: bul
+        name: Lake Fitri
+        date: 15th century
+        text: Homeland of the Bulala kings.
+        lonlat: [17.500, 12.830]
+    arrows:
+      - side: kb
+        label: Idris Katakarmabe
+        via: [[12.500, 13.200], [13.400, 14.000], [14.400, 14.600], [15.500, 14.700]]
+    areas:
+      - style: contested
+        side: kb
+        label: Kanem, raided by Idris Katakarmabe (approximate)
+        polygon: [[14.300, 13.700], [14.600, 15.400], [16.000, 16.200], [17.600, 15.600], [17.800, 14.200], [16.600, 13.300], [15.200, 13.100]]

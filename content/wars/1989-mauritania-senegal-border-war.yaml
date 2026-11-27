@@ -1,0 +1,164 @@
+id: mauritania-senegal-border-war
+name: Mauritania–Senegal Border War
+start: "1989-04-09"
+end: "1991-07-18"
+tier: B
+summary: "A conflict between Mauritania and Senegal that began with a quarrel over grazing land on the Senegal River in April 1989 and grew into riots, killings and mass expulsions in both countries and two years of clashes along the river. After Mauritanian border guards killed two Senegalese farmers at Diawara on 9 April 1989, crowds in Senegal attacked the shops of Mauritanian traders, and in Nouakchott and Nouadhibou mobs and security forces killed Senegalese residents; hundreds died in the last weeks of April, by most estimates some 200 Senegalese in Mauritania and dozens of Mauritanians in Senegal. With help from France, Spain, Algeria and Morocco about 250,000 people were taken home by air and sea. Mauritania also expelled tens of thousands of its own Black citizens, most of them Halpulaar (Fulani) of the river valley, into Senegal and Mali. The two countries broke off relations in August 1989, and from October their armies exchanged fire across the river, Mauritania with Iraqi arms and Senegal backing the African Liberation Forces of Mauritania (FLAM). In 1990–1991 the Mauritanian government arrested some 3,000 Black soldiers and officials, of whom more than 500 were killed in detention. A peace treaty was signed on 18 July 1991 and the border reopened in May 1992. Between 2008 and 2012 some 24,000 refugees returned to Mauritania with UNHCR’s help; about 14,000 chose to stay in Senegal."
+countries: [mr, sn, ml]
+sides:
+  - id: mr
+    name: Mauritania (Maaouya Ould Sid’Ahmed Taya)
+    polities: [mauritania]
+    ink: green
+    moves: Mauritanian moves
+    success: Mauritanian success
+  - id: sn
+    name: Senegal (Abdou Diouf)
+    polities: [senegal]
+    ink: red
+    moves: Senegalese moves
+    success: Senegalese success
+notes:
+  - Sources give 8 or 9 April 1989 for the incident at Diawara, and they differ on the order of the riots and on the number of dead in each country. Mauritanians call the killings and expulsions of 1989–1991 the “humanitarian liability” (passif humanitaire).
+  - In Mauritania the Arabic-speaking Moors (Beydane and Haratin) formed the majority and held power; the Halpulaar, Soninke and Wolof, called Black Mauritanians or Afro-Mauritanians in the sources, lived mainly along the Senegal River.
+sources:
+  - title: Mauritania–Senegal Border War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mauritania%E2%80%93Senegal_Border_War
+  - title: Inal, Mauritania (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Inal,_Mauritania
+  - title: The untold tragedy of 28 Mauritanian soldiers executed on Independence Day (Global Voices, 2018)
+    url: https://globalvoices.org/2018/12/23/the-untold-tragedy-of-28-mauritanians-soldiers-hanged-on-independence-day/
+  - title: UNHCR completes repatriation of more than 24,000 Mauritanians (UNHCR, March 2012)
+    url: https://webarchive.archive.unhcr.org/20151217114747mp_/http://www.unhcr.org/4f71f54c6.html
+  - title: Mauritania – History (Britannica)
+    url: https://www.britannica.com/place/Mauritania/History
+steps:
+  - title: Diawara and the riots of April 1989
+    date: April – May 1989
+    when: "1989-04-09"
+    borders: "1989-04-09"
+    countries: [mr, sn]
+    body:
+      - "The Senegal River had long been less a frontier than a shared valley: Halpulaar, Soninke and Wolof farmers on both banks were kin, herders crossed it with their cattle, and tens of thousands of Mauritanian Moors kept shops in Senegalese towns while Senegalese worked in Mauritania. In the 1980s the Diama and Manantali dams promised year-round irrigation and made the land of the valley valuable. A Mauritanian land reform of 1983 let the state and well-connected Moorish businessmen take over land that Black Mauritanian villages farmed by custom, while the government’s policy of Arabisation and the arrest and execution of Halpulaar officers accused of a coup plot in 1987 sharpened ethnic fear."
+      - "On 9 April 1989, at Diawara near Bakel, Fulani herders from the Mauritanian bank and Soninke farmers on the Senegalese side quarrelled over cattle in the fields; Mauritanian border guards opened fire, killed two Senegalese and took others away. In Senegal, where the economy was in crisis and the government had been shaken by riots after the 1988 election, crowds attacked and looted the shops of Mauritanian traders. In Nouakchott and Nouadhibou mobs, joined by security forces, killed Senegalese residents and Black Mauritanians taken for Senegalese, and in Dakar crowds killed Mauritanians in reprisal. Estimates of the dead differ widely; most put them at about 200 Senegalese and dozens of Mauritanians."
+      - "From late April an air and sea bridge with planes and ships from France, Spain, Algeria and Morocco took some 250,000 people home in both directions: Mauritanian traders and their families from Senegal, and Senegalese from Mauritania. Many had lived for decades in the country they now left, and lost their property."
+    facts:
+      - [Incident at Diawara, "9 April 1989"]
+      - [People repatriated, "about 250,000"]
+    markers:
+      - kind: event
+        name: Diawara
+        date: 9 April 1989
+        text: Mauritanian border guards fired on Senegalese farmers in a quarrel over cattle and grazing land, killing two.
+        lonlat: [-12.550, 15.033]
+      - kind: event
+        name: Dakar
+        date: April 1989
+        text: Crowds looted the shops of Mauritanian traders and, after news of killings in Mauritania, killed Mauritanians in the streets.
+        lonlat: [-17.447, 14.693]
+        lp: l
+      - kind: event
+        name: Nouakchott
+        date: April 1989
+        text: Mobs, joined by security forces, killed Senegalese residents and Black Mauritanians taken for Senegalese.
+        lonlat: [-15.978, 18.086]
+        lp: l
+      - kind: event
+        name: Nouadhibou
+        date: April 1989
+        text: Senegalese were attacked and killed here too before the evacuations began.
+        lonlat: [-17.034, 20.942]
+        lp: l
+    arrows:
+      - side: mr
+        label: Mauritanians from Senegal
+        via: [[-17.60, 14.80], [-17.30, 16.50], [-16.10, 18.05]]
+      - side: sn
+        label: Senegalese from Mauritania
+        via: [[-15.90, 18.00], [-16.70, 16.40], [-17.35, 14.75]]
+  - title: Expulsions and the border war
+    date: May 1989 – July 1991
+    when: "1989-05"
+    borders: "1990-01-01"
+    countries: [mr, sn, ml]
+    body:
+      - "Under cover of the repatriations, the Mauritanian authorities expelled tens of thousands of their own Black citizens, most of them Halpulaar herders and farmers of the river valley, together with Soninke and Wolof. Soldiers and officials took their identity papers, herds and land and drove them across the river into Senegal or into Mali; estimates run to 60,000–70,000 people. Haratin and Moorish settlers were moved onto some of the abandoned land. The refugees settled in camps and villages along the Senegalese bank, where many stayed for twenty years."
+      - "Senegal and Mauritania broke off diplomatic relations on 21 August 1989 and closed the border. Mediation by the Organisation of African Unity and by Egypt’s Hosni Mubarak failed over compensation and over where the border ran in the river. From October 1989 the two armies traded fire across the river, and in January 1990 there was a heavy artillery duel near Doundou. Iraq supplied Mauritania with arms and advisers, and Senegal let the African Liberation Forces of Mauritania (FLAM), a movement of exiled Black Mauritanians, raid across the river. Neither side launched a full invasion. A peace treaty was signed on 18 July 1991; relations were restored in April 1992 and the border reopened to civilians on 2 May 1992."
+    facts:
+      - [Relations broken, "21 August 1989"]
+      - [Peace treaty, "18 July 1991"]
+      - [Border reopened, "2 May 1992"]
+    markers:
+      - kind: event
+        side: mr
+        name: Kaédi
+        date: 1989–1990
+        text: Main town of the Gorgol, a centre of the Halpulaar villages of the valley from which many people were expelled across the river.
+        lonlat: [-13.505, 16.150]
+      - kind: event
+        name: Rosso
+        date: August 1989
+        text: The main crossing on the river, between the Mauritanian and Senegalese towns of Rosso, closed when relations were broken off.
+        lonlat: [-15.806, 16.513]
+        lp: l
+      - kind: capital
+        side: mr
+        name: Nouakchott
+        date: 1989–1991
+        text: Seat of Colonel Maaouya Ould Sid’Ahmed Taya’s military government.
+        lonlat: [-15.978, 18.086]
+        lp: l
+      - kind: capital
+        side: sn
+        name: Dakar
+        date: 1989–1991
+        text: Seat of President Abdou Diouf’s government.
+        lonlat: [-17.447, 14.693]
+        lp: l
+    arrows:
+      - side: mr
+        label: Expulsions
+        via: [[-13.70, 16.45], [-13.45, 16.10], [-13.20, 15.80]]
+      - side: mr
+        via: [[-15.20, 16.85], [-15.00, 16.62], [-14.85, 16.45]]
+      - side: mr
+        via: [[-12.30, 15.40], [-11.90, 15.05], [-11.60, 14.75]]
+    areas:
+      - style: contested
+        side: mr
+        label: Senegal River valley, the frontier of the clashes (approximate)
+        polygon: [[-16.50, 16.55], [-15.80, 16.75], [-14.60, 16.80], [-13.50, 16.45], [-12.80, 15.85], [-12.20, 15.25], [-11.90, 14.80], [-12.30, 14.70], [-12.90, 15.40], [-13.60, 16.00], [-14.60, 16.40], [-15.80, 16.35], [-16.50, 16.20]]
+  - title: The “humanitarian liability” and the return
+    date: 1990–2012
+    when: "1990-10"
+    borders: "1990-11-28"
+    countries: [mr, sn]
+    body:
+      - "In late 1990 the Mauritanian government announced that it had uncovered a coup plot by Black officers. Between October 1990 and January 1991 some 3,000 Black soldiers and civil servants were arrested; by Human Rights Watch’s count more than 500 of them were executed or died under torture in detention. At the military post of Inal, on the night of 27–28 November 1990, as the country marked thirty years of independence, 28 Black soldiers were hanged; Amnesty International gave a higher figure. An amnesty law of 1993 shielded those responsible, and the families of the dead still campaign for an inquiry."
+      - "After Taya’s fall in 2005, President Sidi Ould Cheikh Abdallahi acknowledged the abuses and invited the refugees home. Under an agreement between Mauritania, Senegal and UNHCR, convoys took 24,272 people back across the river between January 2008 and March 2012; many returned to find their land taken and struggled to recover their identity papers. About 14,000 chose to stay in Senegal, which offered them local integration."
+    facts:
+      - [Hangings at Inal, "night of 27–28 November 1990"]
+      - [Refugees returned with UNHCR, "24,272 (2008–2012)"]
+    markers:
+      - kind: event
+        side: mr
+        name: Inal
+        date: 27–28 November 1990
+        text: Twenty-eight Black soldiers, arrested in the weeks before, were hanged here on the night of Mauritania’s independence day.
+        lonlat: [-14.950, 21.250]
+      - kind: capital
+        side: mr
+        name: Nouakchott
+        date: 1990–2012
+        text: Capital of Mauritania, where the families of the victims of 1989–1991 still call for truth and justice.
+        lonlat: [-15.978, 18.086]
+        lp: l
+      - kind: event
+        name: Kaédi
+        date: 2008–2012
+        text: Many of the refugees who returned with UNHCR went back to villages in the Gorgol and Brakna along the river.
+        lonlat: [-13.505, 16.150]
+    arrows:
+      - side: mr
+        label: Return with UNHCR, 2008–2012
+        via: [[-13.20, 15.75], [-13.45, 16.05], [-13.65, 16.35]]

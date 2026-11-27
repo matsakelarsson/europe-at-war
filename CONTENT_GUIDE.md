@@ -231,6 +231,7 @@ they ever border, keeping curated colours.
   | 800–today | China, Mongolia, Taiwan, Hong Kong, Macau, eastern and southern Kazakhstan, Siberia without Sakhalin and the Kurils | `east-asia.yaml` (`russia.yaml` for 1917 and 1991) |
   | 800–today | Korea, Japan, the Ryukyu Islands, Sakhalin and the Kurils | `korea-japan.yaml` |
   | 800–today | Myanmar, Thailand, Laos, Cambodia, Vietnam, Malaysia, Singapore, Brunei, Indonesia, the Philippines and Timor-Leste | `southeast-asia.yaml` |
+  | 800–today | Morocco, Western Sahara, Algeria, Tunisia, Libya, Mauritania, Mali, Niger, Burkina Faso, Chad, Sudan, South Sudan, Eritrea, Ethiopia, Djibouti, Somalia and Somaliland | `north-africa-horn.yaml` |
   | 1236–today | Western Kazakhstan (West Kazakhstan, Atyrau, Aktobe, Mangystau, Kostanay) | `east-asia.yaml`, `rus-and-russia.yaml` (1242, 1440), `russia.yaml` |
 
   Other event files (`central-europe.yaml`) correct drafts outside any curated range; there, the next keyframe can
@@ -265,7 +266,14 @@ they ever border, keeping curated colours.
   Japanese occupation of Southeast Asia (1941–1945), the Thai annexations of
   1943 in Malaya and the Shan states, the Indonesian Republic of 1945–1949,
   the Viet Minh, Pathet Lao and Khmer Rouge zones before 1975 and the
-  First Philippine Republic are areas. Occupied France, the Low Countries, Denmark,
+  First Philippine Republic are areas. In `north-africa-horn.yaml`
+  Italian East Africa holds Ethiopia from 1936 to 1941 (the Ethiopian
+  resistance is an area), and Western Sahara is one territory from 1976
+  (Moroccan, Mauritanian and Polisario control are areas); Abd al-Qadir's
+  state in Algeria, the Rif Republic, the Dervish state, Azawad and the
+  zones held by rebels and jihadist groups in the Sahel are areas.
+  Somaliland, which no United Nations member recognised until Israel did in
+  2025, is shown on its own from 1991 because it has governed itself since. Occupied France, the Low Countries, Denmark,
   Norway, Greece, Albania after 1943, Italy after the armistice and Hungary
   in 1944 are areas. Abkhazia,
   South Ossetia, Transnistria, Karabakh, Crimea after 2014 and the occupied
@@ -278,7 +286,11 @@ they ever border, keeping curated colours.
   or ruled directly: Bukhara and Khiva, Hyderabad and the princely states,
   Joseon until 1910, Tunisia, and in Southeast Asia Annam, Cambodia, Luang
   Prabang, the Malay states, Brunei, Sulu (until 1904), Yogyakarta and
-  Surakarta, and the Lao and Malay vassals of Siam. Colonies ruled directly
+  Surakarta, and the Lao and Malay vassals of Siam; in Africa Tunisia and
+  Morocco under French protection (1881, 1912), Baguirmi, Darfur under the
+  Condominium (1898–1916), Aussa as a tributary of Ethiopia (1896–1936),
+  the Bulala under Bornu, the Somali sultanates of Hobyo and Majeerteen
+  until Italy's conquest, and the Midrarids under the Fatimids. Colonies ruled directly
   take the colonial power's polity.
 - **The Holy Roman Empire.** Until 1500 the Empire is one polity (`hre`), with
   Bohemia, Habsburg Austria (from 1282) and the Swiss Confederacy (from 1291)
@@ -511,6 +523,59 @@ they ever border, keeping curated colours.
   islands of East Nusa Tenggara without West Timor, `ID-SN!` Gowa and the
   west coast, `ID-MU!` Ternate and western Halmahera. Philippine cities and
   Vientiane Province have their own atoms (`PHL-…`, `LAO-3284`).
+- **North Africa, the Sahel and the Horn** (`north-africa-horn.yaml`).
+  Maghreb: `idrisids` (to 974), `nekor`, `barghawata`, `midrarids`,
+  `rustamids` (to 909), `aghlabids` (to 909), the `fatimid` west (909–972),
+  `zirids` (972–1148), `hammadids` (1015–1152), `zenata` emirs, then
+  `almoravid-dynasty` (1054–1147) and `almohad-caliphate` (1140–1269);
+  `hafsids` (1229–1574), `zayyanids` (1236–1554) and `marinids`
+  (1244–1472), `wattasids` (1472–1554), with `hintata` in Marrakesh (1472–1525), and `morocco` (the Saadian
+  Sultanate from 1510, the Alaouites from 1659). The Ottoman west is
+  `algiers-regency` (1516–1830; Constantine until 1837), `tunisia` (1574)
+  and Tripoli as `ottoman`, except under the Karamanli (`libya`,
+  1711–1835); the Fezzan is `banu-khattab` (about 918–1176) and `fezzan`
+  (1550–1812). Castile takes Oran (1509) and Bougie (1510), which pass to
+  `spain` in 1516 (Oran until 1708 and again 1732–1792, Bougie until 1555);
+  Tripoli is `sicily` (1510–1530), as are the Norman coast (1135–1160) and
+  Djerba (1284–1335); Portugal Tangier (1471–1661) and the Doukkala coast; England Tangier
+  (1661–1684); the Knights Tripoli (1530–1551). `french-algeria` comes in
+  steps from 1830 to 1934. Morocco keeps its polity under the French
+  protectorate, with `spanish-morocco` (1912–1956), `tangier` (1925–1956),
+  Ifni (Spain 1934–1969), `spanish-sahara` (the Río de Oro 1884, Tarfaya and
+  the Saguia el-Hamra 1912; Tarfaya to Morocco in 1958) and `western-sahara`
+  (1976). `libya-it` (1912), then `british-military-administration` and
+  `french-fezzan` (1947) and `libya` (Cyrenaica 1949, the kingdom 1951).
+  Sahel: `ghana-empire`, `sosso` (about 1203), `mali-empire` (about
+  1235–1670), `songhai` (Gao, the empire from 1464, Dendi after 1591),
+  `pashalik-timbuktu` (1591), `kanem-bornu` (Bornu after 1380), `bulala`,
+  `baguirmi` (1522), `wadai` (1635), `rabih` (1893–1900), `agadez`,
+  `damagaram`, `mossi-states`, `liptako`, `bamana-empire` (1712), `kaarta`
+  (1753), `massina` (1818), `toucouleur-empire` (1855), `kenedougou`,
+  `trarza`, `brakna` and `adrar-emirate`; then `french-west-africa` (from
+  1883) and `french-equatorial-africa` (from 1900), and independence in
+  1960. Sudan: `makuria` (to about 1365), `alwa` (to about 1504), `funj`,
+  `darfur` (about 1650–1874 and 1898–1916), `taqali`, `shilluk`, `egypt`
+  (1820–1885, and Dongola and Berber again in 1896–1898), `mahdist-state`
+  (1885–1898), `belgian-congo` in the Lado Enclave (1897–1910), `masalit`
+  (1916–1922), `anglo-egyptian-sudan`,
+  `sudan` (1956) and `south-sudan` (2011). The Horn: `aksum`, `zagwe`
+  (about 1137), `ethiopia` (1270), `ifat`, `adal` (about 1415–1577),
+  `aussa` (1577), `harar` (1647), `kaffa`, `shewa` (about 1682; Menelik's
+  kingdom 1865–1889), the Oromo lands as `none` from the 1570s, `ajuran`,
+  `geledi`, `isaaq`, `majeerteen` and `hobyo`; the Ottomans and Egypt on the
+  coast; `italian-eritrea` (1882), `italian-somaliland` (1892; the trust
+  territory 1950–1960), `british-somaliland` (1884), `french-somaliland`
+  (1884), `italian-east-africa` (1936), British administration (1941–1952),
+  `eritrea` (federated 1952, annexed 1962, independent from 1991),
+  `somalia` (1960), `djibouti` (1977) and `somaliland` (1960 and 1991).
+  Splits (`99d-north-africa-horn.geojson`): `MA-01~tangier`, `MA-03~rif`,
+  `MA-04~nador` (Melilla's hinterland), `MA-06~tafilalet`, `MA-13~ifni`,
+  `MA-14~tarfaya` and `MA-15~tarfaya` (the Tarfaya Strip, Draa to 27°40′ N),
+  `MA-14~semara`, `ET-AM~shewa` (North Shewa), `ET-OR~shewa`,
+  `ET-OR~hararghe`, `ET-OR~borena`, `ET-SN~kaffa` and `ET-AF~south` (Aussa).
+  Natural Earth's Eritrean codes are mixed up: `ER-DU` is Northern Red Sea
+  (Massawa), `ER-AN` Maekel (Asmara), `ER-MA` Debub, `ER-SK` Anseba (Keren);
+  the names in atoms.json are right.
 - **Checking borders.** After a build, `node tools/owners-at.mjs <date>
   [polities…] [--atoms <regex>]` lists who owns what on a date, and
   `node tools/owner-history.mjs <regex> [from] [to]` lists every change to the

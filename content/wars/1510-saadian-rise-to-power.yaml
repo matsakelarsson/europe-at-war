@@ -1,0 +1,214 @@
+id: saadian-rise-to-power
+name: Saadian rise to power
+start: "1510"
+end: "1554-09"
+tier: B
+summary: "The rise of the Saadians, a family of sharifs (descendants of the Prophet) from the Draa valley, from leaders of the holy war against the Portuguese in the Sous to rulers of all Morocco. Recognised as war leader by the tribes and Sufi brotherhoods of the Sous in 1510, Muhammad al-Qa’im left the movement to his sons Ahmad al-Araj and Muhammad al-Shaykh, who took Marrakesh in 1524 or 1525. After the treaty of Tadla (1527) Morocco was divided between them and the Wattasid sultans of Fez, until the Saadians routed the Wattasids in 1536. In 1541 Muhammad al-Shaykh took the Portuguese fortress at Agadir, which made his name and led Portugal to abandon Safi and Azemmour; he then pushed his brother aside and in January 1549 took Fez. His attempt to take Tlemcen in 1550 brought him into conflict with the Ottomans of Algiers, who drove his army out in 1551 and in January 1554 took Fez and restored the Wattasid Abu Hassun. Muhammad al-Shaykh defeated and killed Abu Hassun and retook Fez in September 1554, ending the Wattasid dynasty."
+countries: [ma, dz]
+sides:
+  - id: sa
+    name: Saadians
+    polities: [morocco]
+    ink: red
+    moves: Saadian moves
+    success: Saadian success
+  - id: wat
+    name: Wattasids of Fez
+    polities: [wattasids]
+    ink: orange
+    moves: Wattasid moves
+    success: Wattasid success
+  - id: por
+    name: Portugal
+    polities: [portugal]
+    ink: green
+    moves: Portuguese moves
+    success: Portuguese success
+  - id: ot
+    name: Ottoman Algiers
+    polities: [algiers-regency, ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - The main sources are Moroccan chronicles, such as al-Ifrani’s Nuzhat al-hadi (early 18th century), and Portuguese and Spanish reports from the coastal forts. They disagree on several dates; the quarrel between the two Saadian brothers, for example, is dated to 1542–1543 in some accounts and to 1539–1540 by the historian Jamil Abun-Nasr.
+  - The Saadian state is called Morocco on the map once it holds Marrakesh. Its full story, from Alcácer Quibir (1578) and the conquest of Songhai (1591) to the civil war after 1603, has its own entries.
+sources:
+  - title: Saadi Sultanate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Saadi_Sultanate
+  - title: Mohammed al-Shaykh (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mohammed_al-Shaykh
+  - title: Fall of Agadir (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fall_of_Agadir
+  - title: Moroccan–Portuguese conflicts (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Moroccan%E2%80%93Portuguese_conflicts
+  - title: Regency of Algiers (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Regency_of_Algiers
+  - title: Kingdom of Tlemcen (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kingdom_of_Tlemcen
+  - title: Wattasid dynasty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Wattasid_dynasty
+steps:
+  - title: Holy war in the Sous
+    date: 1510–1525
+    when: "1510"
+    borders: "1525-06-01"
+    countries: [ma]
+    body:
+      - In the early 16th century the Wattasid sultans of Fez had little power south of the Oum er-Rbia. The south was divided between tribal confederations, local lords such as the Hintata emirs of Marrakesh, and the Portuguese, who had built forts at Santa Cruz do Cabo de Gué (Agadir) in 1505 and at Safi and raided the plains around them. Sufi brotherhoods, above all the followers of the 15th-century mystic al-Jazuli, preached holy war against the Christians. In 1510, at Tidsi in the Sous valley near Taroudant, the tribes and Sufi groups of the Sous recognised Muhammad al-Qa’im, the head of a family of sharifs that had come from the Draa valley, as their war leader.
+      - In 1513 al-Qa’im moved north of the Atlas to Afughal in the Haha, where al-Jazuli was buried, and left his elder son Ahmad al-Araj in charge of the Sous. In 1515 the Saadians helped the Hintata defend Marrakesh against the Portuguese. When al-Qa’im died in 1517 and was buried beside al-Jazuli, Ahmad al-Araj took the lands north of the Atlas and his younger brother Muhammad al-Shaykh the Sous. Ahmad married the daughter of the Hintata lord of Marrakesh, Bu Shantuf; later he had him killed, and in 1524 or 1525 he took the city’s kasbah and made Marrakesh the Saadian capital, moving the remains of his father and of al-Jazuli there.
+    facts:
+      - [Muhammad al-Qa’im recognised as war leader, "1510"]
+      - [Death of al-Qa’im, "1517"]
+      - [Marrakesh taken, "1524 or 1525"]
+    markers:
+      - kind: event
+        side: sa
+        name: Taroudant
+        date: "1510"
+        text: In the Sous valley near here, at Tidsi, the tribes recognised Muhammad al-Qa’im as their war leader. Muhammad al-Shaykh later made Taroudant his base.
+        lonlat: [-8.877, 30.471]
+      - kind: held
+        side: por
+        name: Santa Cruz do Cabo de Gué
+        date: 1505–1541
+        text: The Portuguese fort beside today’s Agadir, the target of the Saadian holy war.
+        lonlat: [-9.623, 30.433]
+        lp: l
+      - kind: held
+        side: por
+        name: Safi
+        date: 1508–1541
+        text: Portuguese fortress, base for raids into the plains.
+        lonlat: [-9.237, 32.299]
+      - kind: taken
+        side: sa
+        name: Marrakesh
+        date: 1524–1525
+        text: Taken from the Hintata by Ahmad al-Araj and made the Saadian capital.
+        lonlat: [-7.989, 31.629]
+      - kind: capital
+        side: wat
+        name: Fez
+        date: 1510–1525
+        text: Capital of the Wattasid sultans.
+        lonlat: [-4.973, 34.065]
+    arrows:
+      - side: sa
+        label: Ahmad al-Araj
+        phase: 1
+        via: [[-8.88, 30.52], [-8.40, 30.85], [-8.10, 31.20], [-8.00, 31.58]]
+  - title: Two sultans in Morocco
+    date: 1526–1543
+    when: "1527"
+    borders: "1541-12-01"
+    countries: [ma]
+    body:
+      - The Wattasid sultan Ahmad tried to win back Marrakesh, but his siege of the city in 1527 failed, and the two sides agreed at Tadla to divide Morocco roughly along the Oum er-Rbia, with the Saadians ruling the south. The peace did not last. A Wattasid attack at Animay near Demnate failed in 1529, and in 1536 the Saadians routed the Wattasid army at the Wadi al-Abid, which won them recognition of their rule in the south; in 1537 they took the Tafilalt.
+      - Muhammad al-Shaykh, who held the Sous, turned against the Portuguese. After a failed attempt in 1533 he besieged Santa Cruz do Cabo de Gué again and took it in 1541, after a siege of about six months. The victory gave him great prestige as a fighter of the holy war, and Portugal evacuated Safi and Azemmour the same year. The brothers then fell out. Muhammad imprisoned Ahmad, made an agreement with him in 1542 and defeated him in open war in 1543, sending him into exile in the Tafilalt.
+    facts:
+      - [Treaty of Tadla, "1527"]
+      - [Wattasids routed at the Wadi al-Abid, "1536"]
+      - [Agadir taken from Portugal, "1541"]
+      - [Ahmad al-Araj defeated by his brother, "1543"]
+    markers:
+      - kind: treaty
+        name: Tadla
+        date: "1527"
+        text: The Wattasids and the Saadians agreed here to divide Morocco roughly along the Oum er-Rbia.
+        lonlat: [-6.268, 32.597]
+      - kind: battle
+        side: sa
+        name: Animay (Demnate)
+        date: "1529"
+        text: A Wattasid attack near Demnate was beaten off.
+        lonlat: [-6.997, 31.732]
+        lp: l
+      - kind: taken
+        side: sa
+        name: Tafilalt
+        date: "1537"
+        text: The oases around old Sijilmasa, taken by the Saadians. Ahmad al-Araj was exiled here in 1543.
+        lonlat: [-4.274, 31.282]
+      - kind: taken
+        side: sa
+        name: Santa Cruz do Cabo de Gué
+        date: "1541"
+        text: Taken from the Portuguese by Muhammad al-Shaykh after a siege of about six months.
+        lonlat: [-9.623, 30.433]
+        lp: l
+      - kind: capital
+        side: sa
+        name: Marrakesh
+        date: 1526–1543
+        text: Capital of the Saadians, besieged in vain by the Wattasid sultan Ahmad in 1527.
+        lonlat: [-7.989, 31.629]
+    arrows:
+      - side: wat
+        label: Sultan Ahmad
+        phase: 1
+        via: [[-4.97, 34.00], [-5.90, 33.30], [-6.90, 32.40], [-7.90, 31.70]]
+      - side: sa
+        phase: 2
+        via: [[-7.90, 31.60], [-6.80, 31.40], [-5.50, 31.30], [-4.32, 31.28]]
+      - side: sa
+        label: Muhammad al-Shaykh
+        phase: 3
+        via: [[-8.88, 30.47], [-9.20, 30.45], [-9.58, 30.43]]
+  - title: Fez, Tlemcen and the Ottomans
+    date: 1547–1554
+    when: "1549-01"
+    borders: "1554-09-30"
+    countries: [ma, dz]
+    body:
+      - In 1547 Muhammad al-Shaykh laid siege to Fez, and on 28 January 1549 the city surrendered, leaving him sole ruler of Morocco; Portugal gave up Ksar es-Seghir and Asilah in 1549–1550. In June 1550 his son Muhammad al-Harran marched east and took Tlemcen from its Zayyanid sultan. Al-Harran died of illness there, and in February 1551 an Ottoman army sent from Algiers by its beylerbey Hasan Pasha, Hayreddin Barbarossa’s son, defeated the Saadians in the Chelif valley and drove them out of Tlemcen.
+      - In 1552 Suleiman the Magnificent sent an embassy demanding that the Saadian sultan accept Ottoman overlordship, which he refused. In January 1554 Salah Rais, the beylerbey of Algiers, invaded Morocco, defeated the Saadians, took Fez and installed Ali Abu Hassun, the last of the Wattasids, as a vassal of the sultan. Once the Ottoman army had gone home, Muhammad al-Shaykh struck back. He defeated Abu Hassun, who was killed, in a battle usually placed near Tadla, and in September 1554 he entered Fez again. The Wattasid dynasty was at an end, and the Saadians, seeking Spanish help against the Ottomans, ruled Morocco for the rest of the century; in October 1557 Muhammad al-Shaykh was murdered by Turkish soldiers of his guard, reportedly on the orders of Hasan Pasha.
+    facts:
+      - [Fez taken by the Saadians, "28 January 1549"]
+      - [Tlemcen taken and lost, "June 1550 – February 1551"]
+      - [Fez taken by Salah Rais, "January 1554"]
+      - [Fez retaken by Muhammad al-Shaykh, "September 1554"]
+    markers:
+      - kind: taken
+        side: sa
+        name: Fez
+        date: 1549 and 1554
+        text: Taken by Muhammad al-Shaykh on 28 January 1549, by Salah Rais for Abu Hassun in January 1554, and by the Saadians again in September 1554.
+        lonlat: [-4.973, 34.065]
+      - kind: taken
+        side: ot
+        name: Tlemcen
+        date: February 1551
+        text: Taken by the Saadians in June 1550 and by the Ottomans of Algiers in February 1551.
+        lonlat: [-1.315, 34.878]
+      - kind: battle
+        side: sa
+        name: Tadla
+        date: "1554"
+        text: Muhammad al-Shaykh defeated the Wattasid Abu Hassun, who was killed, in a battle usually placed near here.
+        lonlat: [-6.268, 32.597]
+      - kind: capital
+        side: ot
+        name: Algiers
+        date: 1551–1554
+        text: Seat of the Ottoman beylerbeys Hasan Pasha and Salah Rais.
+        lonlat: [3.060, 36.785]
+    arrows:
+      - side: sa
+        phase: 1
+        via: [[-7.95, 31.70], [-7.00, 32.60], [-5.90, 33.50], [-5.00, 34.02]]
+      - side: sa
+        label: Muhammad al-Harran
+        phase: 2
+        via: [[-4.90, 34.10], [-3.80, 34.30], [-2.80, 34.45], [-1.38, 34.86]]
+      - side: ot
+        label: Hasan Pasha
+        phase: 3
+        via: [[3.00, 36.75], [2.20, 36.30], [1.00, 35.90], [-0.30, 35.30], [-1.25, 34.90]]
+      - side: ot
+        label: Salah Rais
+        phase: 4
+        via: [[-1.38, 34.86], [-2.80, 34.45], [-3.80, 34.30], [-4.90, 34.08]]
+      - side: sa
+        phase: 5
+        via: [[-6.27, 32.65], [-5.90, 33.20], [-5.40, 33.70], [-5.02, 34.02]]

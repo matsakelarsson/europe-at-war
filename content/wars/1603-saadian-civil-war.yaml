@@ -1,0 +1,197 @@
+id: saadian-civil-war
+name: Saadian succession war
+start: "1603-08-25"
+end: "1627"
+tier: B
+summary: "The war among the sons of Ahmad al-Mansur that split Saadian Morocco for a quarter of a century. When al-Mansur died of plague in August 1603, his sons Zidan, Abu Faris and Mohammed al-Shaykh al-Ma’mun fought over the throne, and the realm divided between a sultanate ruled from Marrakesh and one ruled from Fez. Marrakesh changed hands again and again; al-Ma’mun fled to Spain in 1608 and in 1610 handed over the port of Larache in return for Spanish help, a cession that cost him and the dynasty much of their standing. A scholar who proclaimed himself the Mahdi, Ahmad ibn Abi Mahalli, drove Zidan out of Marrakesh in 1612–1613; Spain took al-Ma’mura (Mehdya) in 1614; Moriscos expelled from Spain built a corsair state at Salé; and religious war leaders such as Muhammad al-Ayyashi fought the Spanish and Portuguese garrisons and defied the sultans. Plague added to the toll. The two Saadian states were reunited in 1627 under Zidan’s son Abd al-Malik II, but the dynasty never recovered its authority, and the zawiya of Dila and the Alaouites of Tafilalt divided the country after it."
+countries: [ma, es]
+sides:
+  - id: zd
+    name: Zidan (Marrakesh)
+    polities: [morocco]
+    ink: red
+    moves: Moves of Zidan
+    success: Success for Zidan
+  - id: fz
+    name: Al-Ma’mun, Abu Faris and the sultans of Fez
+    polities: [saadi-fez]
+    ink: purple
+    moves: Moves of the Fez branch
+    success: Success for the Fez branch
+  - id: es
+    name: Spain
+    polities: [spain]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+  - id: am
+    name: Ahmad ibn Abi Mahalli
+    polities: [abu-mahalli]
+    ink: brown
+    moves: Moves of Ibn Abi Mahalli
+    success: Success for Ibn Abi Mahalli
+  - id: ay
+    name: Muhammad al-Ayyashi
+    polities: [al-ayyashi]
+    ink: teal
+    moves: Moves of al-Ayyashi
+    success: Success for al-Ayyashi
+notes:
+  - The sources, mainly Moroccan chronicles such as al-Ifrani’s and the reports of European envoys and captives, disagree on many dates and on how often Marrakesh and Fez changed hands; the dates here are approximate, and the areas drawn for the two Saadian states are rough.
+  - Zidan, whom the mufti of Fez recognised as heir, counts as sultan of Morocco for 1603–1627 in most lists; his brothers and nephews ruled from Fez in rivalry with him.
+sources:
+  - title: Saadi Sultanate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Saadi_Sultanate
+  - title: Zidan Abu Maali (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Zidan_Abu_Maali
+  - title: Muhammad al-Shaykh al-Ma’mun (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Muhammad_al-Shaykh_al-Ma%27mun
+  - title: Abu Faris Abdallah (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Abu_Faris_Abdallah
+  - title: Sidi al-Ayachi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sidi_al-Ayachi
+  - title: Republic of Salé (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Republic_of_Sal%C3%A9
+  - title: Ahmed ibn Abi Mahalli (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ahmed_ibn_Abi_Mahalli
+  - title: Zawiya Dila’iya (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Zawiya_Dila%27iya
+steps:
+  - title: Fez against Marrakesh
+    date: 1603–1609
+    when: "1603-08"
+    borders: "1607-01-01"
+    countries: [ma]
+    body:
+      - Ahmad al-Mansur, the victor of Alcácer Quibir and conqueror of Songhai, died of plague on 25 August 1603, during an epidemic that struck much of Morocco. He had named his son Mohammed al-Shaykh al-Ma’mun as heir, but had later imprisoned him for rebellion. Another son, Zidan, was proclaimed in Fez, with the backing of the mufti, while a third, Abu Faris, took Marrakesh. Al-Ma’mun, Abu Faris’s full brother, joined the fight against Zidan, and in 1604 he defeated Zidan and drove him from Fez.
+      - For the next five years the two capitals fought each other. Abu Faris held Marrakesh until 1606, when it changed hands several times in a few months; al-Ma’mun’s son Abdallah held it until 1609. After defeats by Zidan, al-Ma’mun asked Tuscany for help and in March 1608 fled to Spain. In 1609 Zidan, with arms bought from the Ottomans, the English and the Dutch, retook Marrakesh, and Abdallah, who had Abu Faris killed, made himself master of Fez as Abdallah al-Ghalib II. From then on two Saadian sultans ruled Morocco, one from Marrakesh and the south, the other from Fez and the north, while governors and tribes in between obeyed whoever was strongest.
+    facts:
+      - [Death of Ahmad al-Mansur, "25 August 1603"]
+      - [Al-Ma’mun defeats Zidan, "1604"]
+      - [Zidan retakes Marrakesh, "1609"]
+    markers:
+      - kind: taken
+        side: fz
+        name: Fez
+        date: "1604"
+        text: Zidan was proclaimed here in 1603 and driven out by al-Ma’mun in 1604. It remained the capital of the northern Saadian state until 1627.
+        lonlat: [-5.00, 34.04]
+      - kind: taken
+        side: zd
+        name: Marrakesh
+        date: "1609"
+        text: Held by Abu Faris until 1606, then fought over and held by al-Ma’mun’s son Abdallah until Zidan took it in 1609.
+        lonlat: [-7.99, 31.63]
+    arrows:
+      - side: fz
+        label: Al-Ma’mun
+        phase: 1
+        via: [[-7.90, 31.70], [-7.00, 32.60], [-5.90, 33.60], [-5.08, 34.00]]
+      - side: zd
+        label: Zidan
+        phase: 2
+        via: [[-4.95, 33.95], [-5.60, 33.20], [-6.80, 32.30], [-7.90, 31.70]]
+    areas:
+      - style: occupied
+        side: fz
+        label: Ruled from Fez, about 1609
+        polygon: [[-6.83, 34.03], [-6.25, 35.00], [-5.95, 35.75], [-5.40, 35.90], [-4.30, 35.20], [-2.90, 35.20], [-2.20, 35.00], [-1.80, 34.60], [-2.40, 33.40], [-4.00, 32.60], [-4.80, 32.90], [-5.80, 33.40]]
+      - style: occupied
+        side: zd
+        label: Ruled from Marrakesh, about 1609
+        polygon: [[-6.83, 34.03], [-5.80, 33.40], [-4.80, 32.90], [-4.00, 32.60], [-4.50, 31.00], [-6.00, 30.00], [-8.00, 29.50], [-9.70, 29.90], [-9.65, 30.60], [-9.80, 31.40], [-9.30, 32.40], [-8.50, 33.25], [-7.60, 33.60]]
+  - title: Larache, the Mahdi and Mamora
+    date: 1610–1614
+    when: "1610"
+    borders: "1614-08-31"
+    countries: [ma, es]
+    body:
+      - In 1610 al-Ma’mun bought Spanish support with the port of Larache, at the mouth of the Loukkos, which Spain had long coveted. Spanish troops took possession in November 1610 and al-Ma’mun came back with them, but the surrender of a Muslim town to Christians outraged many Moroccans and fed the uprisings that followed. Al-Ma’mun was assassinated in 1613, and his son Abdallah went on ruling Fez.
+      - In the south, Ahmad ibn Abi Mahalli, a Sufi scholar of Sijilmasa who argued that the Saadians had lost their right to rule by failing to protect Muslims from the Christians, proclaimed himself the Mahdi, took Tafilalt and the Draa and in 1612 entered Marrakesh. Zidan fled to Safi; the ship he had hired to carry his household to Agadir sailed off with it and was seized by Spanish ships, and his library of about 4,000 manuscripts ended up in the Escorial, where part of it survives. Zidan called on Yahya ibn Abdallah al-Hahi, a marabout of the Haha country, whose army reached Marrakesh in October 1613; Ibn Abi Mahalli rode out against it and was shot dead, and Zidan returned to his capital. In 1614 a Spanish fleet took al-Ma’mura, the corsair harbour at the mouth of the Sebou, which Spain held as La Mamora.
+    facts:
+      - [Larache handed to Spain, "November 1610"]
+      - [Ibn Abi Mahalli in Marrakesh, "1612–1613"]
+      - [Spain takes al-Ma’mura (Mehdya), "1614"]
+    markers:
+      - kind: taken
+        side: es
+        name: Larache
+        date: November 1610
+        text: Handed to Spain by al-Ma’mun in return for military help. Spain held it until 1689.
+        lonlat: [-6.15, 35.18]
+      - kind: taken
+        side: es
+        name: Al-Ma’mura (Mehdya)
+        date: "1614"
+        text: The harbour at the mouth of the Sebou, a base for corsairs, taken by a Spanish fleet and held as La Mamora until 1681.
+        lonlat: [-6.65, 34.26]
+      - kind: taken
+        side: am
+        name: Marrakesh
+        date: 1612–1613
+        text: Ibn Abi Mahalli entered the city in 1612 and ruled it as the Mahdi until Zidan and Yahya al-Hahi retook it in 1613.
+        lonlat: [-7.99, 31.63]
+      - kind: event
+        side: zd
+        name: Safi
+        date: "1612"
+        text: Zidan fled here from Marrakesh. His household goods and library, sent on by sea, were seized by Spanish ships.
+        lonlat: [-9.23, 32.29]
+    arrows:
+      - side: am
+        label: Ibn Abi Mahalli
+        phase: 1
+        via: [[-4.27, 31.29], [-5.84, 30.40], [-6.90, 30.92], [-7.38, 31.28], [-7.95, 31.60]]
+      - side: zd
+        label: Zidan and Yahya al-Hahi
+        phase: 2
+        via: [[-9.50, 31.10], [-8.80, 31.30], [-8.05, 31.60]]
+  - title: Al-Ayyashi, Salé and reunification
+    date: 1614–1627
+    when: "1614"
+    borders: "1627-09-30"
+    countries: [ma, es, pt]
+    body:
+      - Zidan made Muhammad al-Ayyashi, a marabout, governor of Azemmour, close to Portuguese Mazagan. Angered by the sultans’ failure to defend the country, al-Ayyashi waged his own war on the Spanish garrisons of La Mamora and Larache and on the Portuguese, with support from the Moriscos and the English, and his power came to reach as far as Taza. The Moriscos expelled from Spain in 1609–1614 had settled at Salé and Rabat, at the mouth of the Bou Regreg, where they built a corsair republic that answered to no sultan. In April 1627 al-Ayyashi broke openly with Zidan and took Salé, and the English and the Dutch treated with him as an independent ruler.
+      - In the far south Abu Hassun al-Simlali made himself master of the Sous from Iligh in 1614, and in the Middle Atlas the Sufi lodge of Dila was growing into a power of its own. Zidan died in September 1627, and his nephew Abd al-Malik al-Mu’tasim, who had ruled Fez since 1623, died the same year; Zidan’s son Abu Marwan Abd al-Malik II reunited the two states, but regional powers soon challenged him. The Dila’iyya defeated al-Ayyashi, who was killed in 1641, took Fez and Salé the same year, and the last Saadian sultan was murdered in 1659.
+    facts:
+      - [Al-Ayyashi takes Salé, "April 1627"]
+      - [Death of Zidan, "September 1627"]
+      - [Reunification under Abd al-Malik II, "1627"]
+    markers:
+      - kind: taken
+        side: ay
+        name: Salé
+        date: April 1627
+        text: The Morisco corsair town on the Bou Regreg. Al-Ayyashi made it his base after breaking with Zidan.
+        lonlat: [-6.82, 34.04]
+        lp: l
+      - kind: held
+        side: es
+        name: La Mamora
+        date: 1614–1627
+        text: The Spanish garrison was attacked by al-Ayyashi, who for a time retook the town.
+        lonlat: [-6.65, 34.26]
+      - kind: held
+        side: es
+        name: Larache
+        date: 1614–1627
+        text: The Spanish garrison was one of al-Ayyashi’s targets.
+        lonlat: [-6.15, 35.18]
+      - kind: event
+        side: ay
+        name: Azemmour
+        date: about 1614
+        text: Al-Ayyashi was Zidan’s governor here, facing the Portuguese in Mazagan, before he began his own war.
+        lonlat: [-8.34, 33.29]
+      - kind: event
+        name: Dila
+        date: 1620s
+        text: The Sufi lodge in the Middle Atlas whose leaders later took Fez and Salé (1641).
+        lonlat: [-5.70, 32.73]
+      - kind: capital
+        side: zd
+        name: Marrakesh
+        date: "1627"
+        text: Zidan died here in September 1627. His son Abd al-Malik II reunited the Saadian realm.
+        lonlat: [-7.99, 31.63]

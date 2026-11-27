@@ -1,0 +1,91 @@
+id: volta-bani-war
+name: Volta-Bani War
+start: "1915-11-17"
+end: "1917"
+tier: B
+summary: "A war against French colonial rule in the lands between the Bani and the Black Volta rivers, in what are now western Burkina Faso and south-eastern Mali, in 1915–1917, during the First World War. It began when representatives of about a dozen villages met at Bona in November 1915 and resolved to take up arms; the heavy forced recruitment of soldiers for the war in Europe was the main grievance, and many believed the colonial government could be beaten while France was weak. The movement spread to around a thousand villages with up to 900,000 people, among them Marka, Bwa, Samo, Minianka, Bobo, Nuna and others, without any single leader or state. Armed mostly with bows and flintlocks, the coalition threw back the first two French columns. In 1916 France brought in about 5,000 troops, mostly West African tirailleurs and auxiliaries, with artillery and machine guns, and waged a campaign of systematic destruction until the last strongholds fell in September 1916; scattered resistance went on into 1917. At least 30,000 Africans were killed, many of them civilians, against about 300 on the French side, and more than a hundred villages were razed; there was also fighting between the coalition and villages that sided with the French or tried to stay out. It was one of the largest armed challenges to colonial rule anywhere in Africa, and led France to create the colony of Upper Volta, today Burkina Faso, in 1919."
+countries: [bf, ml]
+sides:
+  - id: fr
+    name: France (Haut-Sénégal-Niger)
+    polities: [french-west-africa, france]
+    ink: navy
+    moves: French moves
+    success: French success
+  - id: vb
+    name: Volta-Bani coalition
+    polities: [volta-bani-rising]
+    ink: red
+    moves: Coalition moves
+    success: Coalition success
+notes:
+  - "The name Volta-Bani War was coined by the anthropologists Mahir Saul and Patrick Royer in their study West African Challenge to Empire (2001); French officials at the time spoke of a revolt, and it is also known as Bona Kele. Figures for the coalition’s strength (20,000–30,000 fighters at its peak, perhaps 130,000 in all) and for the dead are estimates. The writer and politician Nazi Boni made the war the subject of the first Burkinabè novel, Crépuscule des temps anciens (1962)."
+sources:
+  - title: Volta-Bani War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Volta-Bani_War
+  - title: Guerre du Bani-Volta (French Wikipedia)
+    url: https://fr.wikipedia.org/wiki/Guerre_du_Bani-Volta
+  - title: "Myron Echenberg, A major study of a neglected resistance war (Journal of African History, 2005)"
+    url: https://doi.org/10.1017/S0021853705390815
+  - title: French Upper Volta (Wikipedia)
+    url: https://en.wikipedia.org/wiki/French_Upper_Volta
+  - title: Burkina Faso, history (Britannica)
+    url: https://www.britannica.com/place/Burkina-Faso/History
+steps:
+  - title: Bona
+    date: November – December 1915
+    when: "1915-11-17"
+    borders: "1915-12-31"
+    countries: [bf, ml]
+    body:
+      - On 17 November 1915, after the rainy season, people from about a dozen villages gathered at Bona, a village in the bend of the Black Volta some 50 km south of the French post of Dédougou, and resolved to fight the colonial government. The colony of Haut-Sénégal-Niger was then recruiting soldiers by force for the war in Europe, and resentment of conscription was the main reason for the rising; many also believed that France, weakened by the war, could be beaten.
+      - In December the fighters of Bona and their allies, armed with bows, flintlocks and a few outdated repeating rifles, drove back a French column of 24 tirailleurs and 200 auxiliaries, and then a second column of about 800 men. News of the victories spread, and village after village joined, from the Marka and Bwa to the Samo, Minianka, Bobo, Nuna, Toussian, Sambla, Winiama and others. Villages that refused to join or sided with the French were attacked by the coalition.
+    facts:
+      - [Meeting at Bona, "17 November 1915"]
+      - [French columns repulsed, "December 1915"]
+    markers:
+      - kind: event
+        side: vb
+        name: Bona
+        date: 17 November 1915
+        text: The meeting of a dozen villages that started the war was held here; the first French columns were driven back in the surrounding country.
+        lonlat: [-3.251, 12.018]
+      - kind: held
+        side: fr
+        name: Dédougou
+        date: 1915–1916
+        text: French district post north of Bona, at the centre of the area of the rising.
+        lonlat: [-3.467, 12.467]
+    arrows:
+      - side: fr
+        via: [[-3.467, 12.467], [-3.400, 12.300], [-3.280, 12.060]]
+  - title: Molard’s campaign
+    date: February 1916 – 1917
+    when: "1916-04"
+    borders: "1916-09-30"
+    countries: [bf, ml]
+    body:
+      - At its height in the spring of 1916 the rising covered an area as large as several French departments, and the coalition could gather 20,000 to 30,000 fighters. General Pineau, commander of the troops of French West Africa, gave Colonel Molard the task of crushing it. In February 1916 a column of 750 men with two machine-gun sections began a campaign of systematic destruction, and in April, when the rising was at its peak, two more columns were sent in. In all France used about 5,000 troops, mostly Senegalese tirailleurs and local auxiliaries, with six guns and four machine-gun units.
+      - The French troops did not distinguish between fighters and civilians, and razed about 110 villages. The last armed resistance was crushed in September 1916, though small pockets held out until 1917, and the leaders who were caught were imprisoned or executed. At least 30,000 Africans died, against about 300 soldiers on the French side. After the war France split seven districts from Haut-Sénégal-Niger to form the colony of Upper Volta in 1919; the rising was the main reason for the change.
+    facts:
+      - [Molard’s first column, "February 1916"]
+      - [Last strongholds taken, "September 1916"]
+      - [Deaths, "at least 30,000 Africans; about 300 on the French side"]
+    areas:
+      - style: contested
+        side: vb
+        label: Area of the rising, spring 1916 (approximate)
+        polygon: [[-5.20, 13.30], [-4.30, 13.60], [-3.30, 13.40], [-2.80, 12.80], [-2.80, 11.90], [-3.30, 11.40], [-4.20, 11.40], [-4.80, 12.10]]
+    markers:
+      - kind: held
+        side: fr
+        name: Dédougou
+        date: "1916"
+        text: French post from which the columns operated against the villages of the rising.
+        lonlat: [-3.467, 12.467]
+      - kind: toll
+        side: fr
+        name: Bona
+        date: "1916"
+        text: Centre of the rising; across the region about 110 villages were razed and at least 30,000 people killed.
+        lonlat: [-3.251, 12.018]

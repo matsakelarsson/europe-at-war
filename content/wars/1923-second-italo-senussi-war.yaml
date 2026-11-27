@@ -1,0 +1,340 @@
+id: second-italo-senussi-war
+name: Italian reconquest of Libya
+start: "1923-01-26"
+end: "1932-01-24"
+tier: A
+summary: "The war in which Fascist Italy reconquered Libya, which it had invaded in 1911 but held only along the coast after 1915. Also called the Second Italo-Senussi War and, in Italy, the “pacification” of Libya. From 1922 Italian columns with aircraft and motor transport retook Tripolitania, the Sirtica and in 1929–1930 the Fezzan, while in Cyrenaica the guerrilla bands of the Senussi order, led by the elderly sheikh Omar al-Mukhtar, held out in the Jebel Akhdar with the support of the population. In 1930 General Rodolfo Graziani had the people of the Jebel and the plateau, some 100,000 men, women and children, marched into concentration camps on the coast, where about 40,000 of them died; their herds were destroyed, a barbed-wire fence was built along the Egyptian border to cut off supplies, and in January 1931 the Senussi oasis of Kufra was taken. Omar al-Mukhtar was captured in September 1931 and hanged before thousands of internees, and Italy declared the war over in January 1932. Estimates of the Libyan dead range from about 20,000 to 100,000; perhaps a quarter of the people of Cyrenaica died."
+countries: [ly, it, eg]
+sides:
+  - id: it
+    name: Italy
+    polities: [italy, libya-it]
+    ink: green
+    moves: Italian moves
+    success: Italian success
+  - id: sen
+    name: Senussi fighters in Cyrenaica (Omar al-Mukhtar)
+    polities: [senussi]
+    ink: olive
+    moves: Senussi moves
+    success: Senussi success
+  - id: lib
+    name: Resistance in Tripolitania and the Fezzan
+    polities: [libyan-resistance]
+    ink: teal
+    moves: Moves of the Tripolitanian and Fezzani resistance
+    success: Success of the Tripolitanian and Fezzani resistance
+notes:
+  - "The war’s dates vary: the infobox date of 26 January 1923 marks the start of the war in Cyrenaica, but the reconquest of Tripolitania began in January 1922, and the last camps closed only in September 1933. Italian sources long called it the “pacification” or “reconquest” of Libya; Libyans remember the deportation as al-Rihlan, the “path of tears”, and some historians describe what happened in Cyrenaica as genocide."
+  - "Losses: Italian forces lost about 2,600 dead, wounded and missing, many of them Eritrean and Libyan troops. Estimates of Libyan deaths from fighting, executions, deportation, hunger and disease range from about 20,000 to 100,000; the historian Angelo Del Boca puts them at 40,000 to 70,000, and about a quarter of Cyrenaica’s 225,000 people died. In 2008 Italy apologised and agreed to pay Libya compensation."
+sources:
+  - title: Second Italo-Senussi War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Italo-Senussi_War
+  - title: Omar Mukhtar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Omar_Mukhtar
+  - title: Battle of Kufra (1931) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kufra_(1931)
+  - title: Frontier Wire (Libya) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Frontier_Wire_(Libya)
+  - title: Italian colonization of Libya (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Italian_colonization_of_Libya
+  - title: "Umar al-Mukhtar (Britannica)"
+    url: https://www.britannica.com/biography/Umar-al-Mukhtar
+steps:
+  - title: The end of the truces
+    date: 1917 – 1923
+    when: "1922-01"
+    borders: "1923-04-01"
+    countries: [ly, it]
+    body:
+      - The accords of Akrama in 1917 left Italy only the coast of Libya. In Tripolitania local leaders proclaimed a Tripolitanian Republic in 1918, and Italy, weakened by the First World War, granted Libyans a statute with local parliaments in 1919. In Cyrenaica the accord of al-Rajma of 1920 recognised Muhammad Idris, head of the Senussi order, as emir of the interior, with his seat at Ajdabiya. In 1922 leaders from Tripolitania offered Idris the emirate of their province as well.
+      - Italy’s governors and then the Fascist government that came to power in October 1922 set out to end these arrangements. In January 1922 the governor of Tripolitania, Giuseppe Volpi, landed troops at Misrata and began the reconquest of the province, and Italian columns pushed into the Jebel south of Tripoli. Idris, fearing Italian reprisals, left for exile in Egypt in December 1922. In April 1923 Italy renounced its accords with the Senussi and occupied Ajdabiya, and in Cyrenaica the war began again.
+    facts:
+      - [Accord of al-Rajma, "1920"]
+      - [Reconquest of Tripolitania begins, "January 1922"]
+      - [Idris leaves for Egypt, "December 1922"]
+      - [War resumes in Cyrenaica, "1923"]
+    markers:
+      - kind: event
+        side: it
+        name: Misrata
+        date: January 1922
+        text: Volpi’s landing here began the Italian reconquest of Tripolitania.
+        lonlat: [15.09, 32.38]
+      - kind: taken
+        side: it
+        name: Garian
+        date: 1922–1923
+        text: The town on the edge of the Jebel was retaken in the first campaigns of the reconquest.
+        lonlat: [13.02, 32.17]
+        lp: b
+      - kind: taken
+        side: it
+        name: Ajdabiya
+        date: April 1923
+        text: The seat of Idris’s emirate was occupied when Italy renounced its accords with the Senussi.
+        lonlat: [20.22, 30.76]
+      - kind: capital
+        side: it
+        name: Tripoli
+        date: 1922
+        text: Seat of the governor of Tripolitania.
+        lonlat: [13.19, 32.89]
+        lp: t
+    arrows:
+      - side: it
+        via: [[13.19, 32.85], [13.1, 32.5], [13.02, 32.2]]
+      - side: it
+        via: [[20.07, 32.1], [20.15, 31.4], [20.22, 30.8]]
+  - title: Tripolitania and the Sirtica
+    date: 1923 – 1928
+    when: "1924"
+    borders: "1928-12-31"
+    countries: [ly, it]
+    body:
+      - In 1923–1924 Italian forces, led in the field by Colonel Rodolfo Graziani, retook Tripolitania north of a line from Ghadames through Mizda to Bani Walid, which held about four-fifths of the people of Tripolitania and the Fezzan. The Italians relied on aircraft, armoured cars and trucks, on Eritrean and Libyan troops, and on rivalries among the Tripolitanian leaders, many of whom had fallen out with one another after 1918.
+      - In 1924 a campaign in the Sirtica, the desert between Tripolitania and Cyrenaica, brought some 150,000 km² under Italian control in five months and cut the links between the resistance in the two provinces. In 1928 Italian columns took the Jufra oases and the Ghibla, the steppe south of Tripoli, and disarmed its tribes. Many resistance leaders and their followers retreated to the Fezzan or crossed into Egypt, Tunisia, Algeria and Chad.
+    facts:
+      - [Line reached by 1924, "Ghadames – Mizda – Bani Walid"]
+      - [Sirtica campaign, "1924, about 150,000 km² in five months"]
+      - [Jufra and the Ghibla taken, "1928"]
+    markers:
+      - kind: taken
+        side: it
+        name: Mizda
+        date: 1923–1924
+        text: Part of the line Italy held by 1924, from Ghadames through Mizda to Bani Walid.
+        lonlat: [12.98, 31.45]
+      - kind: taken
+        side: it
+        name: Bani Walid
+        date: 1923–1924
+        text: The centre of the Warfalla tribes, taken in the reconquest of the Jebel.
+        lonlat: [13.98, 31.76]
+      - kind: taken
+        side: it
+        name: Ghadames
+        date: 1924
+        text: The caravan town at the meeting of the Tunisian and Algerian borders.
+        lonlat: [9.5, 30.13]
+      - kind: taken
+        side: it
+        name: Sirte
+        date: 1924
+        text: The Sirtica campaign joined the Italian-held coasts of Tripolitania and Cyrenaica.
+        lonlat: [16.59, 31.21]
+      - kind: taken
+        side: it
+        name: Jufra (Hun and Waddan)
+        date: 1928
+        text: The oases on the road from the coast to the Fezzan.
+        lonlat: [16.0, 29.13]
+    arrows:
+      - side: it
+        via: [[15.09, 32.3], [15.9, 31.6], [16.55, 31.22]]
+      - side: it
+        via: [[16.55, 31.15], [16.3, 30.2], [16.03, 29.2]]
+    areas:
+      - style: occupied
+        side: it
+        label: Retaken by Italy in Tripolitania by 1924 (approximate)
+        polygon: [[11.55, 33.15], [12.5, 32.85], [13.6, 32.85], [14.5, 32.5], [15.3, 32.4], [15.4, 31.8], [14.0, 31.6], [13.0, 31.3], [11.5, 31.0], [10.0, 30.2], [9.6, 30.5], [10.3, 31.4], [11.55, 33.15]]
+  - title: Omar al-Mukhtar’s war in the Jebel Akhdar
+    date: 1923 – 1929
+    when: "1926"
+    borders: "1929-06-01"
+    countries: [ly, it, eg]
+    body:
+      - In Cyrenaica the war was fought in the Jebel Akhdar, the wooded upland behind the coast, and on the plateau and desert to the south. Its leader was Omar al-Mukhtar, a teacher of the Koran and sheikh of a Senussi lodge, already in his sixties, whom Idris had made commander of the order’s fighters. His forces were small bands (adwar) of a few hundred men each, drawn from the tribes and fed, sheltered and informed by them; even people living under Italian control paid them tithes. Arms and supplies came across the frontier from Egypt, and the Senussi lodges and the oases of Jaghbub and Kufra were their rear.
+      - Italian columns, with aircraft and Eritrean and Libyan troops, could not catch the bands, and the war became one of ambushes and reprisals. Jaghbub, the old seat of the Senussi, which Egypt had ceded to Italy by a treaty of December 1925, was occupied in February 1926. In January 1929 Marshal Pietro Badoglio became governor of both Tripolitania and Cyrenaica and opened talks; a truce held for some months in 1929, but the two sides could not agree, and al-Mukhtar took up arms again in the autumn.
+    facts:
+      - [Omar al-Mukhtar, "born 1858, led the Senussi fighters from 1923"]
+      - [Jaghbub occupied, "February 1926"]
+      - [Badoglio governor of both colonies, "January 1929"]
+      - [Truce, "1929, broken in the autumn"]
+    markers:
+      - kind: event
+        side: sen
+        name: Jebel Akhdar
+        date: 1923–1931
+        text: The wooded upland of Cyrenaica, where al-Mukhtar’s bands fought and the tribes supported them.
+        lonlat: [21.8, 32.55]
+      - kind: taken
+        side: it
+        name: Jaghbub
+        date: February 1926
+        text: The oasis of the Senussi founder’s tomb and lodge, near the Egyptian border.
+        lonlat: [24.52, 29.75]
+      - kind: held
+        side: it
+        name: Benghazi
+        date: 1923–1931
+        text: Seat of the Italian government of Cyrenaica.
+        lonlat: [20.07, 32.12]
+        lp: l
+    arrows:
+      - side: sen
+        label: Supplies from Egypt
+        via: [[25.2, 31.2], [24.0, 31.6], [22.8, 32.2], [22.0, 32.45]]
+    areas:
+      - style: contested
+        side: sen
+        label: Main area of the Senussi guerrilla (approximate)
+        polygon: [[20.4, 32.4], [20.9, 32.6], [21.8, 32.85], [22.7, 32.8], [23.1, 32.4], [22.6, 31.9], [21.6, 31.8], [20.7, 31.9], [20.4, 32.4]]
+  - title: The Fezzan
+    date: 1929 – February 1930
+    when: "1930-01"
+    borders: "1930-02-20"
+    countries: [ly, it]
+    body:
+      - With Tripolitania held, Badoglio sent Graziani to take the Fezzan, the oasis country of the south-west, where the last Tripolitanian and Fezzani leaders had gathered. In the winter of 1929–1930 motorised columns supported by aircraft crossed the desert and occupied Brak, Sabha and Murzuk, the old capital of the Fezzan, and on 20 February 1930 Italian troops reached the southern frontier with French Africa, raising the flag at Tummo, on today’s border with Niger.
+      - Many of the defeated fighters and their families fled south into French territory or west into Algeria. Graziani’s success in the Fezzan won him the command in Cyrenaica.
+    facts:
+      - [Fezzan campaign, "winter 1929–1930"]
+      - [Italian troops reach the southern frontier, "20 February 1930"]
+    markers:
+      - kind: taken
+        side: it
+        name: Murzuk
+        date: early 1930
+        text: The old capital of the Fezzan was occupied by Graziani’s columns.
+        lonlat: [13.91, 25.92]
+      - kind: taken
+        side: it
+        name: Sabha
+        date: 1930
+        text: Taken in the same campaign; it became the Italian centre of the Fezzan.
+        lonlat: [14.43, 27.04]
+      - kind: event
+        side: it
+        name: Tummo
+        date: 20 February 1930
+        text: Italian troops reached the southern frontier with French Africa and raised the flag here, near today’s border with Niger.
+        lonlat: [14.1, 22.7]
+    arrows:
+      - side: it
+        label: Graziani
+        via: [[16.0, 29.1], [14.6, 28.0], [14.43, 27.1], [13.95, 26.0]]
+      - side: it
+        via: [[13.91, 25.85], [14.0, 24.4], [14.1, 22.8]]
+  - title: The deportations and the camps
+    date: March 1930 – September 1933
+    when: "1930-06-25"
+    borders: "1930-06-25"
+    countries: [ly, it]
+    body:
+      - Graziani took over as vice-governor of Cyrenaica in Benghazi on 27 March 1930. He closed the Senussi lodges, confiscated their lands, deported their sheikhs and disarmed the tribes. On 20 June Badoglio wrote to him that the course chosen “must be carried out to the end, even if the entire population of Cyrenaica must perish”, and on 25 June he ordered the evacuation of the Jebel Akhdar and the plateau.
+      - From late June 1930 some 100,000 to 110,000 people, about half the population of Cyrenaica, men, women and children of the herding tribes, were marched or driven, some hundreds of kilometres, to concentration camps on the coastal plain and the edge of the desert. Of about 600,000 sheep, goats, camels and horses taken with them, only about 100,000 survived. By 1931 the internees were held in some fifteen camps behind barbed wire; the largest, at Suluq and Sidi Ahmed al-Magrun near Benghazi, held about 33,000 people each, and at al-Agaila on the Gulf of Sirte the families of fighters were held under the harshest rules.
+      - Hunger, typhus and other diseases, forced labour and executions killed about 40,000 of the internees before the camps closed in September 1933. With the people gone, the Jebel was turned over to Italian settlers, who came in large numbers in the late 1930s.
+    facts:
+      - [Evacuation of the Jebel ordered, "25 June 1930"]
+      - [People deported, "about 100,000–110,000"]
+      - [Died in the camps, "about 40,000 by September 1933"]
+      - [Livestock, "about 600,000 taken, about 100,000 survived"]
+    markers:
+      - kind: event
+        side: it
+        name: Suluq
+        date: 1930–1933
+        text: One of the two largest camps, with about 33,000 internees; Omar al-Mukhtar was hanged here.
+        lonlat: [20.25, 31.67]
+      - kind: event
+        side: it
+        name: Al-Agaila
+        date: 1930–1933
+        text: The camp for the families of fighters and those held as suspects, on the desert coast of the Gulf of Sirte.
+        lonlat: [19.21, 30.27]
+      - kind: event
+        side: it
+        name: Benghazi
+        date: 27 March 1930
+        text: Graziani took over the government of Cyrenaica here.
+        lonlat: [20.07, 32.12]
+        lp: t
+    arrows:
+      - side: it
+        label: Deportations, 1930
+        via: [[21.6, 32.5], [20.9, 32.1], [20.4, 31.75]]
+      - side: it
+        via: [[21.3, 31.6], [20.4, 30.9], [19.35, 30.35]]
+    areas:
+      - style: lost
+        side: sen
+        label: Jebel Akhdar and the plateau, emptied of their people, 1930 (approximate)
+        polygon: [[20.4, 32.4], [20.9, 32.6], [21.8, 32.85], [22.7, 32.8], [23.2, 32.35], [23.0, 31.5], [22.0, 31.2], [21.0, 31.4], [20.4, 32.4]]
+  - title: The wire and Kufra
+    date: December 1930 – September 1931
+    when: "1931-01-19"
+    borders: "1931-01-31"
+    countries: [ly, it, eg]
+    body:
+      - In the winter of 1930–1931 Graziani sent a force of about 4,000 men with trucks, aircraft and 5,000 camels from Ajdabiya across the desert to Kufra, the last Senussi stronghold, some 800 km from the coast. On 19 January 1931 it defeated the oasis’s few hundred defenders at al-Hawari, and the next day Kufra was occupied. Aircraft strafed fighters and families who fled into the desert, and many who tried to cross the Great Sand Sea to Egypt or reach Chad died on the way; survivors told of executions, looting and the destruction of the lodges and their books. The fall of Kufra broke the power of the Senussi.
+      - To cut the remaining bands off from Egypt, the Italians then built a barrier of barbed wire, some 270 km long, from the Gulf of Sollum near Bardia south to Jaghbub, between April and September 1931. It was patrolled by armoured cars and aircraft and watched from forts along its length.
+    facts:
+      - [Battle of al-Hawari, "19 January 1931"]
+      - [Kufra occupied, "20 January 1931"]
+      - [Frontier wire, "about 270 km, Gulf of Sollum to Jaghbub, April – September 1931"]
+    markers:
+      - kind: taken
+        side: it
+        name: Kufra
+        date: 19–20 January 1931
+        text: Graziani’s force defeated the defenders at al-Hawari and occupied the oases. Many refugees died in the desert.
+        lonlat: [23.29, 24.2]
+      - kind: event
+        side: it
+        name: Bardia
+        date: 1931
+        text: The wire began on the coast near here and ran south along the Egyptian border.
+        lonlat: [25.09, 31.76]
+      - kind: held
+        side: it
+        name: Jaghbub
+        date: 1931
+        text: The southern end of the wire.
+        lonlat: [24.52, 29.75]
+        lp: l
+    arrows:
+      - side: it
+        label: Graziani’s column
+        via: [[20.22, 30.7], [21.3, 28.8], [22.6, 26.2], [23.25, 24.3]]
+      - side: sen
+        label: Flight to Egypt and Chad
+        via: [[23.4, 24.3], [24.5, 25.0], [25.5, 25.6]]
+    areas:
+      - style: front
+        side: it
+        label: Frontier wire (approximate line)
+        line: [[25.1, 31.68], [25.0, 31.0], [24.95, 30.4], [24.6, 29.8]]
+  - title: The death of Omar al-Mukhtar
+    date: September 1931 – January 1932
+    when: "1931-09-11"
+    borders: "1931-09-16"
+    countries: [ly, it]
+    body:
+      - Cut off from its people, its herds and Egypt, the resistance dwindled to a few hundred men. On 11 September 1931 Omar al-Mukhtar, then about 73, was wounded and captured by Libyan troops of the Italian army in a clash near Slonta in the Jebel Akhdar. He was tried by a special court in Benghazi on 15 September and sentenced to death, and on 16 September he was hanged at the camp of Suluq, before thousands of internees who were made to watch.
+      - Badoglio proclaimed the war over on 24 January 1932, and the last of al-Mukhtar’s companions were executed later that year. Italy went on to settle tens of thousands of colonists in Libya. Omar al-Mukhtar became a symbol of resistance in Libya and across the Arab world; Idris, who returned with the British in the Second World War, became king of independent Libya in 1951.
+    facts:
+      - [Omar al-Mukhtar captured, "11 September 1931"]
+      - [Hanged at Suluq, "16 September 1931"]
+      - [War declared over, "24 January 1932"]
+    markers:
+      - kind: event
+        side: it
+        name: Slonta
+        date: 11 September 1931
+        text: Omar al-Mukhtar was wounded and captured in a clash with Libyan cavalry of the Italian army.
+        lonlat: [21.7, 32.59]
+      - kind: event
+        side: it
+        name: Suluq
+        date: 16 September 1931
+        text: Omar al-Mukhtar was hanged in the camp before the internees.
+        lonlat: [20.25, 31.67]
+      - kind: event
+        side: it
+        name: Benghazi
+        date: 15 September 1931
+        text: A special court sentenced al-Mukhtar to death after a one-day trial.
+        lonlat: [20.07, 32.12]
+        lp: t

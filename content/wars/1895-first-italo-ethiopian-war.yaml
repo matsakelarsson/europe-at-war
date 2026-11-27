@@ -1,0 +1,282 @@
+id: first-italo-ethiopian-war
+name: First Italo-Ethiopian War
+start: "1894-12"
+end: "1896-10-26"
+tier: A
+summary: "Italy’s attempt to impose a protectorate on Ethiopia, which ended in its defeat at Adwa. From Massawa, occupied in 1885, Italy had built the colony of Eritrea, and it read the Treaty of Wuchale, signed with Menelik II in 1889, as making Ethiopia its protectorate, a reading Menelik rejected. In December 1894 a revolt against Italian rule in Eritrea led to war with Ras Mengesha of Tigray; the Italians under General Oreste Baratieri defeated him at Coatit and Senafe in January 1895 and occupied Tigray. Menelik called out the whole empire, and an army of more than 100,000 destroyed an Italian force at Amba Alagi on 7 December 1895, forced the surrender of the fort at Mekele in January 1896 and, on 1 March 1896, routed Baratieri’s army of about 17,700 at Adwa, killing or capturing more than half of it. By the Treaty of Addis Ababa of 26 October 1896 Italy annulled the Treaty of Wuchale and recognised Ethiopia’s full independence, keeping Eritrea. Adwa made Ethiopia the one African state to defeat a European colonial army decisively and keep its independence through the Scramble for Africa, and it became a symbol across Africa and its diaspora."
+countries: [et, er, it]
+sides:
+  - id: it
+    name: Italy
+    polities: [italy, italian-eritrea]
+    ink: green
+    moves: Italian moves
+    success: Italian success
+  - id: et
+    name: Ethiopian Empire (Menelik II)
+    polities: [ethiopia]
+    ink: gold
+    moves: Ethiopian moves
+    success: Ethiopian success
+notes:
+  - Most of Italy’s soldiers in Africa were Eritrean askari, recruited in the colony and led by Italian officers. Many Tigrayan lords changed sides during the war, and some fought for Italy.
+  - Figures for the armies and the dead at Adwa differ widely between sources. The numbers here are the ranges given by Harold Marcus, David Levering Lewis, George Berkeley and Richard Caulk as cited in the sources.
+  - The Italian occupation of Tigray in 1895 is drawn as an area; the base map follows the treaty borders of Wuchale and Addis Ababa.
+sources:
+  - title: First Italo-Ethiopian War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Italo-Ethiopian_War
+  - title: Battle of Dogali (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Dogali
+  - title: Treaty of Wuchale (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Wuchale
+  - title: Battle of Coatit (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Coatit
+  - title: Battle of Amba Alagi (1895) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Amba_Alagi_(1895)
+  - title: Siege of Mekelle (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Mekelle
+  - title: Battle of Adwa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Adwa
+  - title: Treaty of Addis Ababa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Addis_Ababa
+  - title: Battle of Adwa (Britannica)
+    url: https://www.britannica.com/event/Battle-of-Adwa
+steps:
+  - title: Massawa, Dogali and the Treaty of Wuchale
+    date: 1885–1890
+    when: "1887-01-26"
+    borders: "1890-01-01"
+    countries: [er, et, it]
+    body:
+      - Italy had held the bay of Assab on the Red Sea since 1869, first through a shipping company and from 1882 as a colony. In February 1885, with British consent and as Egypt gave up its Red Sea ports, Italian troops occupied Massawa, and they soon pushed inland to Saati and other posts claimed by Ras Alula, governor of the frontier for Emperor Yohannes IV. On 25 January 1887 Alula attacked Saati and was beaten off; the next day his army caught a relief column of about 500 Italians under Lieutenant-Colonel Tommaso De Cristoforis at Dogali and destroyed it, killing about 430. In 1888 Italy sent a much larger army; Yohannes faced it at Saati but withdrew without a battle to meet the Mahdists in the west.
+      - Italy had meanwhile courted Menelik of Shewa, Yohannes’s rival. When Yohannes was killed at Gallabat in March 1889, Menelik claimed the throne, and on 2 May 1889 at Wuchale he signed a treaty of friendship with the Italian envoy Pietro Antonelli. It drew a border that left Italy the Bogos country and much of the Eritrean highlands, including Asmara, which Italian troops occupied in August. In Article 17 the Amharic text said that the emperor could use the Italian government for his dealings with other powers; the Italian text said that he must. In October 1889 Italy told the powers that Ethiopia was its protectorate, and on 1 January 1890 it proclaimed the colony of Eritrea.
+    facts:
+      - [Italian occupation of Massawa, "February 1885"]
+      - [Battle of Dogali, "26 January 1887, Ethiopian victory"]
+      - [Treaty of Wuchale, "2 May 1889"]
+      - [Colony of Eritrea proclaimed, "1 January 1890"]
+    markers:
+      - kind: taken
+        side: it
+        name: Massawa
+        date: February 1885
+        text: Occupied by Italy as Egypt withdrew; the base of the future colony of Eritrea.
+        lonlat: [39.45, 15.61]
+      - kind: battle
+        side: et
+        name: Dogali
+        date: 26 January 1887
+        text: Ras Alula’s army destroyed an Italian relief column on its way to Saati, about 20 km west of Massawa.
+        lonlat: [39.27, 15.60]
+        lp: l
+      - kind: taken
+        side: it
+        name: Asmara
+        date: August 1889
+        text: Occupied by Italy after the death of Yohannes IV, under the border agreed at Wuchale.
+        lonlat: [38.93, 15.33]
+        lp: l
+      - kind: treaty
+        name: Wuchale
+        date: 2 May 1889
+        text: Menelik and the Italian envoy Pietro Antonelli signed the treaty whose Article 17 led to the war.
+        lonlat: [39.60, 11.52]
+    arrows:
+      - side: it
+        phase: 1
+        via: [[39.45, 15.61], [39.30, 15.55], [39.10, 15.45], [38.95, 15.34]]
+  - title: Coatit, Senafe and the occupation of Tigray
+    date: December 1894 – October 1895
+    when: "1895-01-13"
+    borders: "1895-10-01"
+    countries: [er, et, it]
+    body:
+      - Menelik refused to accept the protectorate. He repaid an Italian loan, bought rifles and artillery from France and Russia through the French port of Djibouti, and in 1893 denounced the treaty. Ras Mengesha Yohannes of Tigray, Yohannes’s son, who had dealt with the Italians, submitted to Menelik in 1894. In December 1894 Bahta Hagos, an Eritrean chief who had served Italy, rose against Italian rule in Akele Guzai and was killed. In January 1895 Mengesha crossed into Eritrea with about 19,000 men.
+      - At Coatit on 13–14 January 1895 General Oreste Baratieri, governor of Eritrea, with about 3,900 men, most of them askari, beat off Mengesha’s attacks, and on 15–16 January he shelled the Tigrayan camp at Senafe, from which Mengesha escaped in the night. Baratieri then occupied Adigrat in March and Adwa in April and declared Tigray annexed to Eritrea. Italian columns advanced to Mekele, where they built a fort around the church of Enda Iyesus, and in October beat Mengesha again at Debra Aila and pushed their outposts south to Amba Alagi.
+    facts:
+      - [Battle of Coatit, "13–14 January 1895, Italian victory"]
+      - [Losses at Coatit, "Italy 95 killed; Tigray about 1,500 killed"]
+      - [Tigray annexed by Italy, "1895"]
+    markers:
+      - kind: battle
+        side: it
+        name: Coatit and Senafe
+        date: 13–16 January 1895
+        text: Baratieri beat off Mengesha’s attacks at Coatit and shelled his camp at Senafe, near which both fights took place.
+        lonlat: [39.42, 14.70]
+        lp: l
+      - kind: taken
+        side: it
+        name: Adigrat
+        date: March 1895
+        text: Occupied by Baratieri and fortified as the main Italian base in Tigray.
+        lonlat: [39.46, 14.28]
+      - kind: taken
+        side: it
+        name: Adwa
+        date: April 1895
+        text: Occupied by Italy, which declared Tigray annexed to Eritrea.
+        lonlat: [38.896, 14.164]
+        lp: l
+      - kind: held
+        side: it
+        name: Mekele
+        date: 1895
+        text: The Italians fortified the hill of Enda Iyesus.
+        lonlat: [39.47, 13.50]
+    arrows:
+      - side: et
+        label: Mengesha
+        phase: 1
+        via: [[39.00, 14.20], [39.20, 14.50], [39.40, 14.75]]
+      - side: it
+        label: Baratieri
+        phase: 2
+        via: [[39.42, 14.70], [39.45, 14.45], [39.46, 14.30]]
+      - side: it
+        phase: 3
+        via: [[39.46, 14.28], [39.47, 13.90], [39.47, 13.52], [39.55, 13.00]]
+    areas:
+      - style: occupied
+        side: it
+        label: Occupied by Italy, 1895
+        atoms: [ET-TI]
+  - title: The call to arms and Amba Alagi
+    date: September – December 1895
+    when: "1895-12-07"
+    borders: "1895-12-07"
+    countries: [et, it]
+    body:
+      - In September 1895 Menelik proclaimed a general mobilisation and called the lords of the empire to gather at Were Ilu in Wollo. Armies came from Shewa, Gojjam, Wollo, Begemder, Harar and the newly conquered south, led by Ras Makonnen, Ras Mikael of Wollo, Negus Tekle Haymanot of Gojjam, Ras Wolde Giyorgis and others, with Empress Taytu commanding her own troops. The army, well over 100,000 strong and much of it armed with modern rifles, marched north in the autumn.
+      - Its vanguard, under Ras Makonnen, Ras Welle Betul and Ras Mengesha, reached the Italian outpost at Amba Alagi, a mountain commanding the road north, held by Major Pietro Toselli with about 2,350 men, most of them askari. On 7 December 1895 about 30,000 Ethiopians overran the position. Toselli and almost all his Italian officers were killed, with some 1,500 or more askari and irregulars; the survivors fell back to Mekele with General Giuseppe Arimondi, who had come up too late to help.
+    facts:
+      - [Mobilisation proclaimed, "September 1895"]
+      - [Battle of Amba Alagi, "7 December 1895, Ethiopian victory"]
+      - [Italian losses, "about 1,500–2,000 killed"]
+    markers:
+      - kind: event
+        side: et
+        name: Were Ilu
+        date: October 1895
+        text: The assembly point of Menelik’s armies from all parts of the empire.
+        lonlat: [39.43, 10.60]
+      - kind: battle
+        side: et
+        name: Amba Alagi
+        date: 7 December 1895
+        text: Makonnen’s vanguard overran Toselli’s force on the mountain; Toselli was killed.
+        lonlat: [39.55, 12.98]
+    arrows:
+      - side: et
+        label: Menelik’s army
+        phase: 1
+        via: [[38.75, 9.03], [39.10, 9.80], [39.43, 10.55], [39.55, 11.60], [39.55, 12.90]]
+    areas:
+      - style: occupied
+        side: it
+        label: Occupied by Italy, 1895
+        atoms: [ET-TI]
+  - title: The siege of Mekele
+    date: December 1895 – 21 January 1896
+    when: "1896-01-07"
+    borders: "1896-01-21"
+    countries: [et, it]
+    body:
+      - About 1,300 soldiers, nearly 1,100 of them Eritrean askari, under Major Giuseppe Galliano held the unfinished fort the Italians had built around the church of Enda Iyesus at Mekele. Makonnen’s vanguard arrived in mid-December, and Menelik came up with the main army on 7 January 1896. Assaults on the walls were beaten back with heavy losses, but the Ethiopians took the springs below the fort, and Empress Taytu’s men guarded them.
+      - With his water gone, Galliano surrendered on 21 January 1896. Menelik, who hoped to negotiate, let the garrison march out with its arms and escorted it towards the Italian lines. The Ethiopian army then marched around the Italian positions at Adigrat and Edaga Hamus and in February camped near Adwa, threatening Eritrea and the Italian line of supply.
+    facts:
+      - [Siege of the Mekele fort, "January 1896"]
+      - [Garrison surrenders, "21 January 1896"]
+    markers:
+      - kind: siege
+        side: et
+        name: Mekele (Enda Iyesus)
+        date: January 1896
+        text: The Italian fort surrendered after Ethiopian troops cut it off from its water; the garrison was allowed to leave.
+        lonlat: [39.47, 13.50]
+      - kind: held
+        side: it
+        name: Adigrat
+        date: early 1896
+        text: The main Italian base in Tigray, where Baratieri gathered his army.
+        lonlat: [39.46, 14.28]
+    arrows:
+      - side: et
+        label: Menelik
+        phase: 1
+        via: [[39.55, 12.95], [39.50, 13.25], [39.47, 13.45]]
+      - side: et
+        phase: 2
+        via: [[39.45, 13.55], [39.35, 13.80], [39.20, 14.00], [39.00, 14.05]]
+  - title: Adwa
+    date: 1 March 1896
+    when: "1896-03-01"
+    borders: "1896-03-01"
+    countries: [et, it]
+    view:
+      center: [38.97, 14.06]
+      size: [70, 60]
+    body:
+      - The two armies faced each other for weeks in the mountains east of Adwa. Both were short of food, and Menelik’s army was beginning to disperse in search of it. Under pressure from the Italian prime minister Francesco Crispi, who wanted a victory, and after his brigade commanders voted against a retreat on 28 February, Baratieri ordered an advance by night. His army of about 17,700 men, some 10,600 Italians and 7,100 askari, with 56 guns, marched in four brigades under Generals Matteo Albertone, Giuseppe Arimondi, Vittorio Dabormida and Giuseppe Ellena, to take positions overlooking the Ethiopian camp.
+      - In the dark and on poor maps the brigades lost touch. At dawn on 1 March Albertone’s askari brigade, far ahead of the others near Enda Kidane Mehret, was attacked by masses of Ethiopian troops and destroyed. Arimondi’s brigade was overwhelmed on the slopes of Mount Belah and Mount Rajo, and Dabormida’s, which had turned off into the Mariam Shewito valley, was cut off and wiped out. By noon the Italian army was in flight towards Eritrea, leaving its artillery behind. Arimondi and Dabormida were killed and Albertone was captured. Menelik’s army, from 73,000 to over 100,000 strong, under Ras Makonnen, Ras Mikael, Ras Alula, Ras Mengesha, Negus Tekle Haymanot, Ras Welle Betul and others, with Taytu’s troops and the emperor’s artillery, had fought as one force.
+      - Italian losses are given as about 5,900 to over 6,100 killed, among them some 2,000 askari, with about 3,900 taken prisoner; Ethiopian losses as about 3,900 to 7,000 killed and 6,000 to 10,000 wounded. About 800 captured Eritrean askari, regarded by the Ethiopians as traitors, had their right hand and left foot cut off. The Italian prisoners were taken to Addis Ababa.
+    facts:
+      - [Battle of Adwa, "1 March 1896, Ethiopian victory"]
+      - [Italian army, "about 17,700 men and 56 guns"]
+      - [Ethiopian army, "73,000 to over 100,000"]
+      - [Italian dead, "about 5,900–6,100, with about 3,900 prisoners"]
+    markers:
+      - kind: battle
+        side: et
+        name: Adwa
+        date: 1 March 1896
+        text: Baratieri’s four brigades were defeated one after another in the mountains south-east of the town.
+        lonlat: [38.973, 14.019]
+      - kind: event
+        name: Adwa (town)
+        date: "1896"
+        text: The town, near which Menelik’s army camped before the battle.
+        lonlat: [38.896, 14.164]
+        lp: l
+    arrows:
+      - side: it
+        label: Baratieri
+        phase: 1
+        via: [[39.15, 14.05], [39.08, 14.03], [39.00, 14.02]]
+      - side: et
+        label: Menelik’s army
+        phase: 2
+        via: [[38.92, 14.12], [38.94, 14.06], [38.98, 14.02]]
+      - side: it
+        label: Italian retreat
+        phase: 3
+        via: [[39.02, 14.03], [39.12, 14.10], [39.25, 14.20]]
+  - title: The Treaty of Addis Ababa
+    date: March – October 1896
+    when: "1896-10-26"
+    borders: "1896-10-26"
+    countries: [et, er, it]
+    body:
+      - The news of Adwa brought down Crispi’s government within days. Menelik did not invade Eritrea; his army was exhausted and short of food, and he withdrew south. Italy, under a new government, negotiated, and by the Treaty of Addis Ababa, signed on 26 October 1896, it annulled the Treaty of Wuchale and recognised the absolute independence of Ethiopia. The border was to follow the Mareb, Belesa and Muna rivers, leaving Eritrea to Italy, and the Italian prisoners were released in the following year against a payment Italy called compensation for their upkeep.
+      - In the north-west, where Italy had taken Kassala from the Mahdists in 1894, the Mahdists besieged the town in the spring of 1896 until an Italian force relieved it; Italy handed it to the Anglo-Egyptian Sudan in 1897. Britain, France and other powers sent missions to Addis Ababa to make treaties with Menelik. Adwa assured Ethiopia’s independence for the next four decades, until Fascist Italy invaded again in 1935, and it became a symbol of African resistance to colonial rule.
+    facts:
+      - [Treaty of Addis Ababa, "26 October 1896"]
+      - [Border, "the Mareb, Belesa and Muna rivers"]
+    markers:
+      - kind: treaty
+        name: Addis Ababa
+        date: 26 October 1896
+        text: The treaty by which Italy annulled the Treaty of Wuchale and recognised Ethiopia’s independence.
+        lonlat: [38.75, 9.03]
+      - kind: held
+        side: it
+        name: Kassala
+        date: 1894–1897
+        text: Taken by Italy from the Mahdists in 1894 and besieged by them in 1896; handed to the Anglo-Egyptian Sudan in 1897.
+        lonlat: [36.40, 15.45]
+      - kind: capital
+        side: it
+        name: Asmara
+        date: "1896"
+        text: Capital of the colony of Eritrea, which Italy kept.
+        lonlat: [38.93, 15.33]

@@ -1,21 +1,367 @@
 id: second-italo-ethiopian-war
 name: Second Italo-Ethiopian War
 start: "1935-10-03"
-end: "1936-05-05"
-tier: C
-summary: Fascist Italy’s invasion of Ethiopia, a member of the League of Nations, from its colonies of Eritrea and Italian Somaliland in October 1935. With overwhelming superiority in aircraft, armour and artillery, and the use of mustard gas against soldiers and civilians in breach of the Geneva Protocol, the Italian armies under Pietro Badoglio and Rodolfo Graziani defeated the Ethiopian forces, and Addis Ababa fell on 5 May 1936. Emperor Haile Selassie went into exile and appealed in vain to the League, whose sanctions against Italy had been limited and soon lifted; Ethiopia was joined to Eritrea and Somalia as Italian East Africa, and resistance continued until British and Ethiopian forces liberated the country in 1941.
+end: "1937-02"
+tier: A
+summary: "Fascist Italy’s conquest of Ethiopia, a member of the League of Nations. After a clash at the wells of Walwal in the Ogaden in December 1934, Italy invaded from Eritrea and Italian Somaliland on 3 October 1935 without a declaration of war. The League named Italy the aggressor but its sanctions left out oil and the Suez Canal. With far more aircraft, artillery and motor transport, and with mustard gas dropped from the air on soldiers and civilians in breach of the Geneva Protocol, the armies of Pietro Badoglio in the north and Rodolfo Graziani in the south destroyed the Ethiopian armies at Amba Aradam, Tembien, Shire and Maychew and in the Ogaden in the first months of 1936. Emperor Haile Selassie left for exile on 2 May, Badoglio entered Addis Ababa on 5 May, and on 9 May Mussolini proclaimed Ethiopia part of the Italian empire, joined with Eritrea and Somalia as Italian East Africa. Ethiopian armies and nobles fought on in the west and south until their last forces were destroyed in February 1937. On 19 February 1937, after an attempt on Graziani’s life, Italians killed thousands of people in Addis Ababa in three days of reprisals, remembered as Yekatit 12. Estimates of Ethiopian deaths in the war run from about 70,000 soldiers killed (an Italian estimate) to 275,000 killed in battle by the Ethiopian government’s count; Italian and colonial troops lost some 8,000–9,000 killed. Resistance continued until 1941 (see Ethiopian resistance to Italian rule and the East African campaign)."
 countries: [et, er, so, it]
 sides:
   - id: it
     name: Italy
-    polities: [italy]
+    polities: [italy, italian-eritrea, italian-somaliland, italian-east-africa]
     ink: green
+    moves: Italian moves
+    success: Italian success
   - id: et
     name: Ethiopia
     polities: [ethiopia]
     ink: gold
+    moves: Ethiopian moves
+    success: Ethiopian success
 notes:
-  - The fighting took place in East Africa, outside the map. Estimates of Ethiopian deaths run from about 70,000 soldiers killed to 250,000–270,000 deaths in all, civilians included; Italian figures give about 8,200 killed.
+  - "Many accounts end the war with the fall of Addis Ababa on 5 May 1936 and the annexation of 9 May. This story follows it to February 1937, when the last Ethiopian armies in the field were destroyed and the Yekatit 12 massacre took place; the resistance of 1936–1941 has its own story."
+  - "Casualty figures vary widely. Official Italian figures of June 1936 gave 1,148 Italian soldiers killed, with some 1,600 Eritrean troops and 450 workmen; the historian Angelo Del Boca put Italian deaths to the end of 1936 at about 4,350 (soldiers and civilians) with some 4,500 colonial soldiers. For Ethiopia, the Italian estimate was 70,000 killed in battle; an Ethiopian government memorandum of 1946 gave 760,300 deaths for the whole occupation; other estimates for the war are about 250,000–270,000 deaths, civilians included."
+  - "Ethiopian dates are given in the Gregorian calendar; Yekatit 12 in the Ethiopian calendar is 19 February 1937."
+  - "Only a few states never recognised the annexation, among them the United States, the Soviet Union, China, Mexico and New Zealand; Britain and France recognised it in 1938. The map shows Italian East Africa in Ethiopia from 9 May 1936, as the map of its time."
 sources:
   - title: Second Italo-Ethiopian War (Wikipedia)
     url: https://en.wikipedia.org/wiki/Second_Italo-Ethiopian_War
+  - title: "Italo-Ethiopian War (Britannica)"
+    url: https://www.britannica.com/event/Italo-Ethiopian-War-1935-1936
+  - title: Walwal incident (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ual-Ual_Incident
+  - title: Walwal Incident (Italy, Ethiopia), decision of 3 September 1935 (UN Reports of International Arbitral Awards)
+    url: https://legal.un.org/riaa/cases/vol_III/1657-1667.pdf
+  - title: Battle of Amba Aradam (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Amba_Aradam
+  - title: Battle of Maychew (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Maychew
+  - title: Battle of the Ogaden (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Ogaden
+  - title: Hoare–Laval Pact (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hoare%E2%80%93Laval_Pact
+  - title: Christmas Offensive (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Christmas_Offensive
+  - title: Battle of Genale Doria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Genale_Doria
+  - title: Second Battle of Tembien (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Battle_of_Tembien
+  - title: Battle of Shire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Shire
+  - title: March of the Iron Will (Wikipedia)
+    url: https://en.wikipedia.org/wiki/March_of_the_Iron_Will
+  - title: Yekatit 12 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yekatit_12
+  - title: Arbegnoch (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Arbegnoch
+steps:
+  - title: Walwal and the road to war
+    date: December 1934 – September 1935
+    when: "1934-12-05"
+    borders: "1934-12-05"
+    countries: [et, so, er, it]
+    body:
+      - "Ethiopia was the one African state that had kept its independence through the scramble for Africa, after Menelik II’s victory over Italy at Adwa in 1896. Haile Selassie, regent from 1916 and emperor from 1930, had brought it into the League of Nations in 1923 and was modernising its government, but its army was still mostly the levies of the provincial lords (rases), armed with old rifles, with a small Imperial Guard trained by Belgian officers and almost no aircraft. Mussolini wanted an empire, revenge for Adwa and land for Italian settlers, and from 1932 his ministers planned an invasion from the colonies of Eritrea and Italian Somaliland."
+      - "The pretext came at Walwal, wells in the Ogaden used by Somali herders, where Italy had kept a fort since 1930 although the place lay well inside Ethiopia by the treaties. In November 1934 an Anglo-Ethiopian boundary commission and its Ethiopian escort met the Italian garrison there, and on 5 December fighting broke out: about 107 Ethiopians and some 30 Somali soldiers of the Italian side were killed. Italy demanded an apology and compensation; Ethiopia appealed to the League. In January 1935 the French foreign minister Pierre Laval privately gave Mussolini a free hand, and through 1935 Italy shipped hundreds of thousands of men through the Suez Canal. On 3 September an arbitration commission held neither side responsible for Walwal."
+    facts:
+      - [Walwal incident, "5 December 1934"]
+      - [Franco-Italian agreements, "7 January 1935"]
+      - [Walwal arbitration, "3 September 1935"]
+    markers:
+      - kind: battle
+        name: Walwal
+        date: 5 December 1934
+        text: Ethiopian troops escorting a boundary commission clashed with the Italian fort’s Somali garrison, supported by armoured cars and aircraft. About 107 Ethiopians and 30 men of the Italian side were killed.
+        lonlat: [45.400, 7.050]
+      - kind: capital
+        side: et
+        name: Addis Ababa
+        date: "1935"
+        text: Capital of the Ethiopian Empire under Haile Selassie.
+        lonlat: [38.760, 9.030]
+      - kind: event
+        side: it
+        name: Asmara
+        date: "1935"
+        text: Capital of Italian Eritrea and the base of the northern invasion army under Emilio De Bono.
+        lonlat: [38.930, 15.330]
+      - kind: event
+        side: it
+        name: Mogadishu
+        date: "1935"
+        text: Capital of Italian Somaliland and the base of Graziani’s southern army.
+        lonlat: [45.340, 2.040]
+  - title: The invasion
+    date: October – December 1935
+    when: "1935-10-03"
+    borders: "1935-11-08"
+    countries: [et, er, so, it]
+    body:
+      - "On 3 October 1935 General Emilio De Bono’s army crossed the Mareb river from Eritrea without a declaration of war, while aircraft bombed Adwa and Adigrat. Haile Selassie proclaimed general mobilisation. The Italians took Adwa, the battlefield of 1896, on 6 October; De Bono proclaimed the end of slavery in the occupied lands, and Aksum fell on 15 October. On 11 October Dejazmach Haile Selassie Gugsa, the emperor’s son-in-law and lord of eastern Tigray, went over to the Italians with his men, and Mekele fell on 8 November. In the south Graziani’s forces advanced from Italian Somaliland up the Shebelle and took the Ethiopian post of Gorrahei in November."
+      - "On 7 October the League of Nations declared Italy the aggressor, and from 18 November its members applied economic sanctions; they did not include oil, and Britain did not close the Suez Canal. In December the British and French foreign ministers, Samuel Hoare and Pierre Laval, drew up a plan that would have given Italy much of Ethiopia; when it leaked to the press a few days later the outcry in Britain forced Hoare to resign. Mussolini, impatient with De Bono’s slow advance, replaced him with Marshal Pietro Badoglio in November."
+    facts:
+      - [Invasion, "3 October 1935"]
+      - [Adwa taken, "6 October 1935"]
+      - [League sanctions, "from 18 November 1935"]
+      - [Mekele taken, "8 November 1935"]
+    markers:
+      - kind: taken
+        side: it
+        name: Adwa
+        date: 6 October 1935
+        text: Taken three days after the invasion began; the site of Italy’s defeat in 1896.
+        lonlat: [38.896, 14.164]
+        lp: t
+      - kind: taken
+        side: it
+        name: Aksum
+        date: 15 October 1935
+        text: The holy city of Ethiopian Christianity. Italian troops later carried one of its great stelae to Rome, where it stood until 2005.
+        lonlat: [38.726, 14.121]
+        lp: l
+      - kind: taken
+        side: it
+        name: Mekele
+        date: 8 November 1935
+        text: Taken after Haile Selassie Gugsa, the lord of eastern Tigray, had gone over to the Italians.
+        lonlat: [39.475, 13.497]
+    arrows:
+      - side: it
+        label: II Corps
+        via: [[38.680, 14.880], [38.800, 14.500], [38.880, 14.200]]
+      - side: it
+        label: I Corps
+        via: [[39.400, 14.870], [39.450, 14.280], [39.470, 13.560]]
+      - side: it
+        label: Graziani
+        via: [[45.200, 4.700], [44.900, 5.600], [44.400, 6.600]]
+    areas:
+      - style: occupied
+        side: it
+        label: Occupied by Italy, November 1935 (approximate)
+        polygon: [[38.500, 14.800], [39.900, 14.800], [39.900, 13.400], [39.200, 13.400], [38.600, 13.900], [38.300, 14.300]]
+  - title: The Christmas offensive and the gas
+    date: December 1935 – January 1936
+    when: "1935-12-15"
+    borders: "1936-01-20"
+    countries: [et, so, it]
+    body:
+      - "In December the Ethiopian armies came north. Ras Imru crossed the Takazze and on 15 December routed an Italian force at the Dembeguina Pass, threatening Adwa and the road to Eritrea, while the armies of Ras Kassa and Ras Seyum pushed into the Tembien. In the First Battle of Tembien (20–24 January 1936) they nearly cut the Italian line before Badoglio held them. Badoglio answered with gas. Italian aircraft dropped mustard gas on the Ethiopian armies in Tigray from 22 December, first on Ras Imru’s men at the Takazze, and on 28 December Mussolini gave formal approval for its use; the Italian air force dropped more than 300 tonnes in the following months, on soldiers, villages, herds and water, and also bombed Red Cross units."
+      - "In the south Ras Desta Damtew led an army down from Sidamo towards Italian Somaliland. Graziani met it on the Genale Doria river in mid-January 1936, bombed it with gas and high explosive, and destroyed it; his motorised columns took Negele Borana on 20 January. A Swedish Red Cross ambulance near Dolo had been bombed on 30 December, and Haile Selassie protested to the League about the bombing of hospitals and the gas."
+    facts:
+      - [Dembeguina Pass, "15 December 1935, Ethiopian success"]
+      - [First Battle of Tembien, "20–24 January 1936"]
+      - [Genale Doria, "12–16 January 1936, Italian success"]
+      - [Mussolini authorises gas, "28 December 1935"]
+    markers:
+      - kind: battle
+        name: Tembien
+        date: 20–24 January 1936
+        text: Ras Kassa and Ras Seyum’s armies nearly broke the Italian line before Badoglio held them. Inconclusive.
+        lonlat: [38.980, 13.620]
+        lp: l
+      - kind: taken
+        side: it
+        name: Negele Borana
+        date: 20 January 1936
+        text: Taken by Graziani’s columns after the destruction of Ras Desta’s army on the Genale Doria.
+        lonlat: [39.580, 5.330]
+    arrows:
+      - side: et
+        label: Ras Imru
+        via: [[37.700, 13.100], [38.200, 13.700], [38.600, 14.050]]
+      - side: et
+        label: Ras Kassa and Ras Seyum
+        via: [[39.200, 12.900], [39.050, 13.300], [39.000, 13.580]]
+      - side: et
+        label: Ras Desta
+        via: [[38.400, 6.900], [39.300, 5.700], [40.600, 4.800]]
+      - side: it
+        label: Graziani
+        via: [[42.050, 4.200], [41.000, 4.800], [39.700, 5.300]]
+  - title: Amba Aradam, Tembien and Shire
+    date: February – March 1936
+    when: "1936-02-10"
+    borders: "1936-03-01"
+    countries: [et, it]
+    body:
+      - "With his supply roads built and some 70,000 men in the line, Badoglio struck the army of the war minister Ras Mulugeta Yeggazu on the mountain of Amba Aradam south of Mekele (10–19 February 1936). Encircled by two corps and pounded by artillery, aircraft and arsine shells, the Ethiopian army broke; Italian figures put its losses at some 6,000 killed and 12,000 wounded. Aircraft dropped about forty tonnes of mustard gas on the retreating columns, and Ras Mulugeta was killed by an aircraft as he turned back to find his son’s body."
+      - "Badoglio then turned on Ras Kassa and Ras Seyum, whose armies were destroyed in the Second Battle of Tembien (27–29 February), and on Ras Imru in the west, who was driven back across the Takazze in the Battle of Shire (29 February – 2 March). In three weeks the northern Ethiopian armies had ceased to exist, and the road south lay open."
+    facts:
+      - [Amba Aradam, "10–19 February 1936, Italian success"]
+      - [Second Tembien, "27–29 February 1936"]
+      - [Shire, "29 February – 2 March 1936"]
+    markers:
+      - kind: battle
+        side: it
+        name: Amba Aradam
+        date: 10–19 February 1936
+        text: Ras Mulugeta’s army, some 80,000 men, was encircled and destroyed. Italian losses were about 800.
+        lonlat: [39.511, 13.331]
+      - kind: battle
+        side: it
+        name: Tembien
+        date: 27–29 February 1936
+        text: The armies of Ras Kassa and Ras Seyum were destroyed in the second battle here.
+        lonlat: [38.980, 13.620]
+        lp: l
+      - kind: battle
+        side: it
+        name: Shire
+        date: 29 February – 2 March 1936
+        text: Ras Imru’s army was driven back across the Takazze.
+        lonlat: [38.280, 14.100]
+        lp: l
+    arrows:
+      - side: it
+        label: I and III Corps
+        via: [[39.470, 13.497], [39.400, 13.420], [39.480, 13.350]]
+      - side: it
+        label: II and IV Corps
+        via: [[38.896, 14.164], [38.600, 14.150], [38.320, 14.100]]
+      - side: et
+        label: Retreat
+        via: [[39.511, 13.300], [39.550, 12.950], [39.540, 12.600]]
+  - title: Maychew and the retreat
+    date: March – April 1936
+    when: "1936-03-31"
+    borders: "1936-04-15"
+    countries: [et, it]
+    body:
+      - "Haile Selassie now led his last army, some 31,000 men with six battalions of the Imperial Guard, against the Italian positions at Maychew. On 31 March 1936 they attacked for thirteen hours and were thrown back by about 40,000 Italian and Eritrean troops; the emperor ordered the retreat on the night of 2 April. Italian aircraft and Raya and Azebo Oromo fighters, who had turned against the government, harried the columns; on 4 April aircraft bombed and gassed the thousands crowded on the shores of Lake Ashenge. Ethiopian casualties at Maychew are put at about 11,000, and the Imperial Guard lost more men in the retreat than in the battle."
+      - "An Italian motorised column under the Fascist party secretary Achille Starace reached Gondar on 1 April, and Dessie fell on 15 April. In the south, Graziani attacked the defences that Ras Nasibu Zeamanuel and his Turkish adviser Wehib Pasha had built around Degehabur and Sasabaneh, the “Hindenburg Wall”. In the Battle of the Ogaden (14–25 April) the line was broken, at a cost of about 2,000 Italian and colonial casualties and some 5,000 Ethiopian, and the way to Jijiga and Harar was open."
+    facts:
+      - [Battle of Maychew, "31 March 1936, Italian success"]
+      - [Lake Ashenge bombing, "4 April 1936"]
+      - [Battle of the Ogaden, "14–25 April 1936"]
+    markers:
+      - kind: battle
+        side: it
+        name: Maychew
+        date: 31 March 1936
+        text: The emperor’s attack with the Imperial Guard failed after thirteen hours. The last Ethiopian army of the north.
+        lonlat: [39.540, 12.780]
+      - kind: event
+        side: it
+        name: Lake Ashenge
+        date: 4 April 1936
+        text: Italian aircraft bombed and gassed the retreating Ethiopians on the lake shore.
+        lonlat: [39.510, 12.580]
+        lp: l
+      - kind: taken
+        side: it
+        name: Gondar
+        date: 1 April 1936
+        text: Reached by Starace’s motorised column from Eritrea.
+        lonlat: [37.467, 12.600]
+      - kind: taken
+        side: it
+        name: Dessie
+        date: 15 April 1936
+        text: Taken by Badoglio’s advance; the base for the march on Addis Ababa.
+        lonlat: [39.630, 11.130]
+      - kind: battle
+        side: it
+        name: Degehabur
+        date: 14–25 April 1936
+        text: Centre of the Ethiopian defences in the Ogaden, broken by Graziani’s three columns.
+        lonlat: [43.560, 8.220]
+    arrows:
+      - side: et
+        label: Ethiopian retreat
+        via: [[39.540, 12.780], [39.500, 12.300], [39.400, 11.900]]
+      - side: it
+        label: Starace’s column
+        via: [[37.950, 14.400], [37.700, 13.400], [37.500, 12.650]]
+      - side: it
+        via: [[39.540, 12.780], [39.600, 12.000], [39.620, 11.200]]
+      - side: it
+        label: Graziani
+        via: [[44.300, 6.700], [43.900, 7.500], [43.580, 8.150]]
+  - title: Addis Ababa and the annexation
+    date: May – July 1936
+    when: "1936-05-05"
+    borders: "1936-05-09"
+    countries: [et, dj, it, fr]
+    body:
+      - "On 26 April Badoglio set out from Dessie for Addis Ababa with a column of motor lorries, the “March of the Iron Will”. Haile Selassie, persuaded by his council, left the capital by train for French Djibouti on 2 May and sailed into exile. Addis Ababa was looted and burned for three days, and hundreds of people were killed, until Badoglio entered the city on 5 May 1936. On 9 May Mussolini proclaimed the annexation of Ethiopia and King Victor Emmanuel III its emperor; on 1 June Ethiopia, Eritrea and Somalia were joined as Italian East Africa. Graziani’s columns reached Harar on 8 May, and the northern and southern armies met at Dire Dawa on 10 May."
+      - "On 30 June 1936 Haile Selassie addressed the League of Nations in Geneva, asking what answer he should take back to his people and ending, “God and history will remember your judgment.” Days later the League voted to end the sanctions, which lapsed by 15 July. Most states recognised the conquest within a few years, Britain and France in 1938, but the United States, the Soviet Union, China, Mexico and New Zealand did not. Italy controlled the main roads and towns; much of the west and south had not yet seen an Italian soldier."
+    facts:
+      - [Haile Selassie leaves, "2 May 1936"]
+      - [Badoglio enters Addis Ababa, "5 May 1936"]
+      - [Annexation, "9 May 1936"]
+      - [Speech to the League, "30 June 1936"]
+    markers:
+      - kind: taken
+        side: it
+        name: Addis Ababa
+        date: 5 May 1936
+        text: Badoglio entered the capital after three days of looting and fires.
+        lonlat: [38.760, 9.030]
+      - kind: event
+        side: et
+        name: Djibouti
+        date: 2–4 May 1936
+        text: Haile Selassie left Addis Ababa by train for the French port and sailed for Palestine and Britain.
+        lonlat: [43.145, 11.589]
+      - kind: taken
+        side: it
+        name: Harar
+        date: 8 May 1936
+        text: Reached by Graziani’s columns from the Ogaden.
+        lonlat: [42.120, 9.310]
+        lp: b
+      - kind: event
+        side: it
+        name: Dire Dawa
+        date: 10 May 1936
+        text: The northern and southern Italian armies met here, on the railway from Djibouti.
+        lonlat: [41.860, 9.600]
+        lp: t
+    arrows:
+      - side: it
+        label: March of the Iron Will
+        via: [[39.630, 11.130], [39.500, 10.200], [38.800, 9.080]]
+      - side: et
+        label: The emperor’s train
+        via: [[38.760, 9.030], [40.200, 9.000], [41.860, 9.600], [43.140, 11.560]]
+      - side: it
+        label: Graziani
+        via: [[43.560, 8.220], [42.800, 9.300], [42.150, 9.320]]
+  - title: The last armies and Yekatit 12
+    date: May 1936 – February 1937
+    when: "1936-07-28"
+    borders: "1936-08-01"
+    countries: [et, it]
+    body:
+      - "Ethiopian forces fought on. At the end of July 1936 the sons of Ras Kassa, Abebe Aregai and other leaders attacked Addis Ababa and were driven back; Abune Petros, a bishop who had joined them, was executed by the Italians. In the west, Ras Imru held out around Gore with cadets of the Black Lions, until Italian columns pressed him south and he surrendered on 19 December 1936; Ras Kassa’s sons Aberra and Asfawossen were shot after surrendering, and Wondosson was killed. In the south Ras Desta Damtew’s last force was destroyed at Gogetti on 19 February 1937, and he was executed on 24 February."
+      - "On the same 19 February, Yekatit 12 in the Ethiopian calendar, two young Eritreans, Abraham Deboch and Mogus Asgedom, threw grenades at Graziani, now viceroy, during an alms-giving at the Genete Leul palace in Addis Ababa. He was wounded and survived. The Fascist federal secretary Guido Cortese told the Italians to kill for three days, and Italian civilians, Blackshirts and soldiers burned houses and killed people across the city. Estimates of the dead range from a few hundred (Italian accounts) and 1,400–6,000 (contemporary foreign reports) to about 3,000 (Del Boca), 19,200 (Ian Campbell, 2017) and 30,000 (Ethiopian sources). Educated Ethiopians, many of them trained abroad, were hunted down and shot, and thousands were sent to camps at Danane in Somalia and Nocra in the Dahlak islands. The massacre at Debre Libanos followed in May (see Ethiopian resistance to Italian rule)."
+    facts:
+      - [Attack on Addis Ababa, "end of July 1936"]
+      - [Ras Imru surrenders, "19 December 1936"]
+      - [Gogetti, "19 February 1937"]
+      - [Yekatit 12, "19–21 February 1937"]
+    markers:
+      - kind: event
+        side: it
+        name: Addis Ababa
+        date: 19–21 February 1937
+        text: After the attempt on Graziani at the Genete Leul palace, Italians killed thousands of the city’s people in three days. Estimates range from a few hundred to 30,000; Campbell’s study gives about 19,200.
+        lonlat: [38.760, 9.030]
+      - kind: event
+        side: et
+        name: Gore
+        date: Summer – autumn 1936
+        text: Centre of the unoccupied west, where Ras Imru and the Black Lions held out until the end of 1936.
+        lonlat: [35.533, 8.150]
+    arrows:
+      - side: et
+        label: Attack on Addis Ababa
+        via: [[38.700, 9.700], [38.740, 9.350], [38.760, 9.080]]
+      - side: it
+        via: [[38.700, 8.980], [37.200, 8.700], [35.600, 8.170]]
+    areas:
+      - style: outline
+        side: et
+        label: Not yet held by Italy, summer 1936 (approximate)
+        polygon: [[34.500, 10.500], [36.800, 10.300], [37.600, 9.300], [38.200, 7.500], [39.000, 5.500], [37.500, 4.500], [35.200, 5.200], [34.000, 7.300]]

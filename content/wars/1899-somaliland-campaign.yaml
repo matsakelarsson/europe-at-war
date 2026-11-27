@@ -1,0 +1,389 @@
+id: somaliland-campaign
+name: Somaliland campaign (the Dervish War)
+start: "1899-09"
+end: "1920-12"
+tier: A
+summary: "Twenty years of war between the Dervish movement of Mohammed Abdullah Hassan and the British, Italian and Ethiopian empires in the Somali lands. Hassan, a Somali religious teacher of the Salihiyya order, began preaching against foreign rule at Berbera in 1895 and in 1899 gathered several thousand armed men at Burao and called for a holy war; his followers called themselves daraawiish (dervishes), and the British called him the “Mad Mullah”. Four British expeditions, two of them with Ethiopian armies, failed to destroy him between 1901 and 1904, although his forces were beaten at Jidballi in January 1904. After a truce under Italian protection (1905) the Dervishes returned to the Nugal valley, built stone forts at Taleh and elsewhere, and in 1910 drove the British back to the coast, which left the interior to raiding and famine. In January and February 1920 a British campaign led by twelve aircraft of the Royal Air Force took the Dervish forts and Taleh, and Hassan died in the Ethiopian Ogaden at the end of the year. Estimates of the deaths in the war years, most of them from raiding, hunger and disease, run to about a third of the population of British Somaliland."
+countries: [so, et, gb, it]
+sides:
+  - id: der
+    name: Dervish movement (Mohammed Abdullah Hassan)
+    polities: [dervish-state]
+    ink: brown
+    moves: Dervish moves
+    success: Dervish success
+  - id: gb
+    name: Britain (Somaliland Protectorate) and allied Somali clans
+    polities: [united-kingdom, british-somaliland]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: it
+    name: Italy and its protectorates (Majeerteen, Hobyo)
+    polities: [italy, italian-somaliland, majeerteen, hobyo]
+    ink: green
+    moves: Italian moves
+    success: Italian success
+  - id: et
+    name: Ethiopia
+    polities: [ethiopia]
+    ink: gold
+    moves: Ethiopian moves
+    success: Ethiopian success
+notes:
+  - "“Dervish” (Somali daraawiish) was the movement’s own name for its fighters. “Mad Mullah” was the British name for Mohammed Abdullah Hassan; Somalis call him Sayyid Mohammed. Somali place names are given in the forms of the English sources, with the Somali forms in brackets where they differ much (Bohotle for Buuhoodle, Illig for Eyl)."
+  - "Most of what is written about the war comes from British and Italian officers and officials; Somali poetry and oral history, including Hassan’s own poems, give the Dervish side. Numbers of Dervish fighters and of their losses are British estimates. The estimate that about a third of the population of British Somaliland died in the war years (100,000–150,000 people by some counts) covers the deaths from inter-clan raiding, hunger and disease as well as the fighting."
+  - Several battle sites (Erigo, Gumburu, Daratoleh) are known only from the officers’ reports; the markers give their approximate positions.
+sources:
+  - title: Somaliland campaign (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Somaliland_campaign
+  - title: Dervish State (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dervish_State
+  - title: Mohammed Abdullah Hassan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mohammed_Abdullah_Hassan
+  - title: Mohammed Abdullah Hassan (Britannica)
+    url: https://www.britannica.com/biography/Mohammed-Abdullah-Hassan
+  - title: Battle of Erego (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Erego
+  - title: "The disaster in Somaliland, House of Commons, 23 April 1903 (Hansard)"
+    url: https://api.parliament.uk/historic-hansard/commons/1903/apr/23/the-disaster-in-somaliland
+  - title: Charles Egerton (Indian Army officer) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Charles_Egerton_(Indian_Army_officer)
+  - title: Battle of Dul Madoba (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Dul_Madoba
+  - title: Somaliland campaign (1920) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Somaliland_campaign_(1920)
+  - title: Jidali (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jidali
+  - title: Taleh (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Taleh
+steps:
+  - title: The Sayyid and the call of 1899
+    date: 1895–1900
+    when: "1899-09"
+    borders: "1899-09-01"
+    countries: [so, et, gb]
+    body:
+      - "By the 1890s the Somali lands were divided on paper between Britain, which had held a protectorate on the northern coast since 1884–1887 and governed it from Berbera, Italy, which claimed the east and south through treaties with the Majeerteen and Hobyo sultanates and the Benadir ports, France at Djibouti, and Ethiopia, whose armies had taken Harar in 1887 and were raiding and taxing the pastoral clans of the Ogaden. Mohammed Abdullah Hassan, born in 1856 to an Ogaden father and a Dhulbahante mother, had studied in Harar, Mogadishu and the Arabian peninsula and joined the Salihiyya, a reformist Sufi order. Back in Berbera in 1895, he preached a stricter Islam, against the rival Qadiriyya, against the use of khat and tobacco and against Christian missions and foreign rule."
+      - "In 1897 he moved inland to Kirrit among the Dhulbahante, where his message found a following. In August 1899 he gathered some 5,000 armed men at Burao, about 200 of them with modern rifles, and on 1 September sent an ultimatum to the British at Berbera. His fighters called themselves daraawiish, dervishes; the British called him the Mad Mullah. Hassan attacked clans that refused to join him as well as the foreigners, and his movement was a war among Somalis as much as against the empires. In March 1900 about 6,000 Dervishes attacked an Ethiopian force of some 1,500 men under Gerazmach Bante at Jijiga; both sides claimed the victory."
+    facts:
+      - [Hassan returns to Berbera, "1895"]
+      - [Gathering at Burao, "August 1899"]
+      - [Ultimatum to Berbera, "1 September 1899"]
+      - [Attack on Jijiga, "March 1900"]
+    markers:
+      - kind: event
+        side: gb
+        name: Berbera
+        date: "1895–1899"
+        text: Seat of the British protectorate, where Hassan landed from Arabia in 1895 and began to preach. His ultimatum reached the British here in September 1899.
+        lonlat: [45.014, 10.439]
+        lp: t
+      - kind: event
+        side: der
+        name: Burao
+        date: August 1899
+        text: Hassan gathered some 5,000 armed men here in August 1899, the start of the Dervish rising.
+        lonlat: [45.533, 9.522]
+      - kind: battle
+        name: Jijiga
+        date: March 1900
+        text: About 6,000 Dervishes attacked an Ethiopian garrison of some 1,500 men. Both sides claimed the victory.
+        lonlat: [42.800, 9.350]
+    arrows:
+      - side: der
+        label: Dervish raid on Jijiga
+        via: [[45.400, 9.300], [44.200, 9.000], [42.950, 9.330]]
+  - title: Swayne’s expeditions and Erigo
+    date: 1901–1902
+    when: "1901-05"
+    borders: "1901-06-01"
+    countries: [so, et, gb]
+    body:
+      - "Britain answered with a levy of about 1,500 Somali soldiers under Lieutenant Colonel Eric Swayne, while Menelik II sent some 15,000 Ethiopian troops east from Harar to close the Ogaden. In the spring and summer of 1901 Swayne’s levies fought the Dervishes in the Haud, took thousands of their camels and drove them east, but after about three months Hassan crossed into the Majeerteen country claimed by Italy and escaped. By October 1901 the British put his following at about 12,000 men with 1,000 rifles."
+      - "In the summer of 1902 the Dervishes took Galkayo in the Mudug. Swayne advanced again from his base at Bohotle with some 2,300 men. On 6 October 1902, in thick bush at Erigo, about 110 km north of Galkayo, the Dervishes ambushed his column at close range. Two British officers and some 140 soldiers and levies were killed, and the column fell back in disorder, leaving a Maxim gun behind; Swayne withdrew to Bohotle. London decided that a regular army was needed."
+    facts:
+      - [First expedition, "May–July 1901"]
+      - [Ethiopian army from Harar, "about 15,000 men"]
+      - [Battle of Erigo, "6 October 1902, Dervish success"]
+    markers:
+      - kind: event
+        side: gb
+        name: Bohotle (Buuhoodle)
+        date: 1901–1903
+        text: The British fortified post on the edge of the Haud, base of Swayne’s columns and later of the 1903 and 1904 expeditions.
+        lonlat: [46.330, 8.240]
+        lp: l
+      - kind: taken
+        side: der
+        name: Galkayo
+        date: Summer 1902
+        text: Taken by the Dervishes in 1902; the wells of the Mudug gave them a base deep in the Italian sphere.
+        lonlat: [47.430, 6.770]
+      - kind: battle
+        side: der
+        name: Erigo
+        date: 6 October 1902
+        text: Swayne’s column of about 2,300 men was ambushed in thick bush. Two British officers and some 140 soldiers and levies were killed; the British counted 62 Dervish dead. The site is given as about 110 km north of Galkayo.
+        lonlat: [47.350, 7.780]
+    arrows:
+      - side: et
+        label: Ethiopian army from Harar
+        phase: 1
+        via: [[42.120, 9.310], [43.300, 8.600], [44.600, 8.000]]
+      - side: gb
+        label: Swayne’s levies
+        phase: 1
+        via: [[45.533, 9.522], [46.000, 8.900], [46.600, 8.300]]
+      - side: gb
+        label: Swayne, 1902
+        phase: 2
+        via: [[46.330, 8.240], [46.900, 7.900], [47.300, 7.800]]
+  - title: Gumburu and Daratoleh
+    date: January – June 1903
+    when: "1903-01"
+    borders: "1903-04-17"
+    countries: [so, et, gb, it]
+    body:
+      - "The third expedition, under Brigadier General William Manning, brought in British, Indian and King’s African Rifles battalions from Nyasaland and elsewhere. With Italy’s consent it landed at Obbia (Hobyo) on the Indian Ocean coast and marched inland to Galkayo and Galadi, while a column from Bohotle came down from the north and an Ethiopian army of about 5,000 men moved into the Ogaden, to trap the Dervishes between them."
+      - "Instead the Dervishes struck the British advance guard. On 17 April 1903 at Gumburu, some 65 km west of Galadi, a detachment under Lieutenant Colonel Arthur Plunkett, about 200 men of the King’s African Rifles and the Sikhs, was surrounded by Dervish horsemen and riflemen, among them a cavalry force led by Sultan Nur, and killed almost to a man after its ammunition ran out: nine British officers and 187 African soldiers died. Five days later at Daratoleh a column under Major John Gough lost about a quarter of its men before it broke off the fight. Manning’s force withdrew to the coast by the end of June."
+    facts:
+      - [Landing at Obbia (Hobyo), "early 1903"]
+      - [Gumburu, "17 April 1903, Dervish success"]
+      - [Daratoleh, "22 April 1903"]
+    markers:
+      - kind: event
+        side: gb
+        name: Obbia (Hobyo)
+        date: Early 1903
+        text: The British force landed at the seat of the Hobyo sultanate, with Italian consent, to strike the Dervishes from the south.
+        lonlat: [48.525, 5.352]
+        lp: l
+      - kind: event
+        side: gb
+        name: Galadi
+        date: April 1903
+        text: The British forward base in the Haud, from which Plunkett’s detachment marched out.
+        lonlat: [46.417, 6.950]
+      - kind: battle
+        side: der
+        name: Gumburu
+        date: 17 April 1903
+        text: Plunkett’s detachment of about 200 men was destroyed; nine British officers and 187 King’s African Rifles soldiers were killed. The site lay about 65 km west of Galadi, according to the official despatch.
+        lonlat: [45.840, 6.950]
+        lp: l
+    arrows:
+      - side: gb
+        label: Manning’s force
+        phase: 1
+        via: [[48.525, 5.352], [47.900, 6.100], [47.430, 6.770]]
+      - side: gb
+        phase: 2
+        via: [[47.430, 6.770], [46.900, 6.900], [46.417, 6.950]]
+      - side: gb
+        label: Plunkett
+        phase: 3
+        via: [[46.417, 6.950], [46.100, 6.960], [45.860, 6.950]]
+      - side: et
+        label: Ethiopian army
+        phase: 1
+        via: [[42.800, 9.350], [43.600, 8.400], [44.300, 7.500]]
+  - title: Jidballi and Illig
+    date: January – April 1904
+    when: "1904-01-10"
+    borders: "1904-01-10"
+    countries: [so, gb, it]
+    body:
+      - "For the fourth expedition Major General Sir Charles Egerton gathered a much larger army of British, Indian, South African and Somali troops, with camel transport, and built a chain of posts into the interior. He united his field force at Badwein on 9 January 1904 and the next day attacked the Dervish army at Jidballi, some 65 km east of Eil Dab. The Dervishes charged the British square across open ground and were cut down by rifle and machine-gun fire in about forty minutes; 668 Dervish dead were counted, and British estimates of the total ran to about 1,000. It was the heaviest defeat of Hassan’s war, but he was not caught."
+      - "Hassan withdrew east through the Nugal valley to the coast of the Majeerteen sultanate. On 21 April 1904 a Royal Navy landing party with three companies of the Hampshire Regiment stormed the Dervish forts at Illig (Eyl), losing three men killed; 58 Dervishes were killed. Italian warships arrived the next day. Hassan again slipped away, and the British and Italians looked for a settlement."
+    facts:
+      - [Battle of Jidballi, "10 January 1904, British success"]
+      - [Dervish dead counted, "668 (estimates to about 1,000)"]
+      - [Storming of Illig, "21 April 1904"]
+    markers:
+      - kind: battle
+        side: gb
+        name: Jidballi
+        date: 10 January 1904
+        text: Egerton’s square broke the Dervish charge in about forty minutes. The heaviest Dervish defeat of the war.
+        lonlat: [47.148, 8.984]
+      - kind: taken
+        side: gb
+        name: Illig (Eyl)
+        date: 21 April 1904
+        text: A naval landing party and the Hampshire Regiment stormed the Dervish forts on the coast. Hassan escaped.
+        lonlat: [49.816, 7.980]
+        lp: l
+      - kind: event
+        side: gb
+        name: Bohotle (Buuhoodle)
+        date: 1903–1904
+        text: Egerton’s main base in the interior.
+        lonlat: [46.330, 8.240]
+        lp: l
+    arrows:
+      - side: gb
+        label: Egerton
+        phase: 1
+        via: [[46.330, 8.240], [46.700, 8.700], [47.120, 8.970]]
+      - side: der
+        label: Hassan’s withdrawal
+        phase: 2
+        via: [[47.300, 8.700], [48.300, 8.300], [49.200, 8.100], [49.750, 7.990]]
+      - side: gb
+        label: Royal Navy
+        phase: 3
+        via: [[51.000, 8.600], [50.400, 8.200], [49.880, 7.990]]
+  - title: The Illig agreement and the stone forts
+    date: 1905–1912
+    when: "1905-03-05"
+    borders: "1910-03-01"
+    countries: [so, gb, it]
+    body:
+      - "On 5 March 1905, through the Italian consul Giulio Pestalozza, Hassan signed the Illig agreement, which let the Dervishes settle in the Nugal valley and on the coast at Illig under Italian protection and bound them to keep the peace with Italy, Britain and Ethiopia. Illig (Eyl) was the movement’s headquarters until 1909. By 1908 the Dervishes were raiding British-protected clans again, and a mediation by General Reginald Wingate failed in 1909, while in London Parliament debated a war whose cost was put at over £5 million."
+      - "The British then gave up the interior. In 1909–1910 they withdrew their posts to the coastal towns of Berbera, Bulhar and Zeila and armed the clans opposed to Hassan, chiefly Isaaq, to defend themselves. The interior fell into years of raiding between the Dervishes and the clans and among the clans themselves, and with drought it brought famine; much of the war’s death toll fell in these years. The Dervishes built a state of stone forts, some raised by masons brought from Yemen: Taleh, from 1909–1910 their capital in the Dhulbahante country of the upper Nugal, with a great fortress and some fourteen forts, and outposts at Jidali, Shimbiris and other places, from which their raiders reached far to the west."
+    facts:
+      - [Illig (Pestalozza) agreement, "5 March 1905"]
+      - [British withdrawal to the coast, "1909–1910"]
+      - [Taleh, "Dervish capital from about 1910"]
+    markers:
+      - kind: treaty
+        side: it
+        name: Illig (Eyl)
+        date: 5 March 1905
+        text: Hassan, Sultan Nur and Deria Arale signed the agreement with Italy’s envoy Giulio Pestalozza. Illig was the Dervish headquarters in 1905–1909.
+        lonlat: [49.816, 7.980]
+        lp: l
+      - kind: capital
+        side: der
+        name: Taleh (Taleex)
+        date: From about 1910
+        text: The Dervish capital, a walled town with a great stone fortress and some fourteen forts, in the Dhulbahante heartland of the Nugal valley.
+        lonlat: [48.418, 9.147]
+      - kind: event
+        side: der
+        name: Jidali
+        date: 1910s
+        text: A cross-shaped Dervish fort in the Sanaag highlands, from which the Dervishes threatened the Warsangeli coast.
+        lonlat: [47.665, 10.701]
+        lp: l
+      - kind: event
+        side: gb
+        name: Berbera
+        date: 1910
+        text: The British held only Berbera, Bulhar and Zeila after the withdrawal from the interior.
+        lonlat: [45.014, 10.439]
+        lp: b
+    areas:
+      - style: occupied
+        side: der
+        label: Dervish country, about 1910 (approximate)
+        polygon: [[46.400, 8.400], [47.000, 9.700], [47.500, 10.600], [48.200, 10.500], [48.900, 9.700], [49.900, 8.300], [49.600, 7.700], [48.300, 7.800], [47.000, 7.900]]
+  - title: Dul Madoba and the Dervish raids
+    date: 1913–1919
+    when: "1913-08-09"
+    borders: "1913-08-09"
+    countries: [so, et, gb, it]
+    body:
+      - "In 1912 the British raised a small Camel Constabulary under Richard Corfield to protect the clans near the coast. On 9 August 1913 Corfield, against his orders, attacked a Dervish force of about 2,000 men at Dul Madoba, some 40 km south-east of Burao. He was killed with 35 of his 110 men, and the Dervishes kept thousands of captured camels and sheep. They sacked the British station at Burao in September 1913 and in March 1914 raided the outskirts of Berbera itself."
+      - "Britain rebuilt the force as the Somaliland Camel Corps, which in February 1915 took the Dervish forts on Mount Shimbiris. During the First World War the Ottoman and German governments wrote to Hassan as an ally, and Lij Iyasu, the uncrowned ruler of Ethiopia, sought ties with him; Iyasu’s overthrow in September 1916 ended that. In the south the Dervishes took the Italian fort at Bulo Burti on the Shebelle in March 1916 before Italian colonial troops drove them out, and in 1919 forces of the Hobyo sultanate beat them in the south. Hassan still ruled from Taleh, but his raids had made enemies of most of the clans around him."
+    facts:
+      - [Dul Madoba, "9 August 1913, Dervish success"]
+      - [Burao sacked, "September 1913"]
+      - [Shimbiris forts taken, "February 1915"]
+      - [Iyasu deposed in Ethiopia, "September 1916"]
+    markers:
+      - kind: battle
+        side: der
+        name: Dul Madoba
+        date: 9 August 1913
+        text: Corfield and 35 of his Camel Constabulary were killed. Dervish losses are estimated at 200–400.
+        lonlat: [45.867, 9.100]
+      - kind: taken
+        side: der
+        name: Burao
+        date: September 1913
+        text: The Dervishes sacked and razed the British station after Dul Madoba.
+        lonlat: [45.533, 9.522]
+        lp: l
+      - kind: taken
+        side: gb
+        name: Shimbiris
+        date: February 1915
+        text: The Somaliland Camel Corps took the Dervish forts on the highest mountain of the Somali lands.
+        lonlat: [47.233, 10.733]
+        lp: l
+      - kind: battle
+        side: it
+        name: Bulo Burti
+        date: March 1916
+        text: The Dervishes took the Italian fort and were driven out by Italian colonial troops.
+        lonlat: [45.567, 3.853]
+      - kind: capital
+        side: der
+        name: Taleh (Taleex)
+        date: 1913–1919
+        text: Hassan’s capital.
+        lonlat: [48.418, 9.147]
+    arrows:
+      - side: der
+        label: Dervish raiders
+        via: [[48.300, 9.150], [47.200, 9.200], [46.000, 9.120]]
+      - side: der
+        via: [[48.300, 9.000], [47.000, 6.500], [45.700, 4.000]]
+    areas:
+      - style: occupied
+        side: der
+        label: Dervish country (approximate)
+        polygon: [[46.400, 8.400], [47.000, 9.700], [47.500, 10.600], [48.200, 10.500], [48.900, 9.700], [49.900, 8.300], [49.600, 7.700], [48.300, 7.800], [47.000, 7.900]]
+  - title: Z Force and the fall of Taleh
+    date: January – December 1920
+    when: "1920-01-21"
+    borders: "1920-02-09"
+    countries: [so, et, gb]
+    body:
+      - "After the First World War the colonial secretary, Lord Milner, wanted a quick end without the cost of a new army, and the new Royal Air Force offered to do it. Z Force, twelve DH.9A bombers with some 36 officers and 183 men under Group Captain Robert Gordon, arrived at Berbera from Egypt in January 1920. On 21 January its aircraft bombed the Dervish fort at Jidali and Hassan’s camp nearby; Hassan narrowly escaped. The Somaliland Camel Corps, a battalion of the King’s African Rifles and local levies then moved in, and the Camel Corps occupied Jidali on 28 January."
+      - "Taleh was bombed on 2–3 February and taken on 9 February 1920; its garrison surrendered almost without a fight. Hassan escaped with a handful of followers into the Ogaden, where in the summer a force of some 3,000 men of the clans he had raided, under Haji Warabe, fell on his camp at Shineleh, killing about 700 and taking 60,000 camels. Hassan reached Imi on the upper Shebelle in Ethiopia and died there, most sources say on 21 December 1920, of influenza or malaria. The war had cost the protectorate perhaps a third of its people. Hassan is remembered in Somalia as a forerunner of Somali nationalism and as one of the great Somali poets, and in the north, among clans his raiders fought, more ambivalently."
+    facts:
+      - [First air raid, "21 January 1920"]
+      - [Taleh taken, "9 February 1920"]
+      - [Death of Hassan, "21 December 1920 (some sources 1921), at Imi"]
+    markers:
+      - kind: event
+        side: gb
+        name: Berbera
+        date: January 1920
+        text: Z Force flew its twelve DH.9A bombers from a temporary airfield here.
+        lonlat: [45.014, 10.439]
+        lp: b
+      - kind: air
+        side: gb
+        name: Jidali
+        date: 21–28 January 1920
+        text: Bombed on 21 January and occupied by the Camel Corps on 28 January.
+        lonlat: [47.665, 10.701]
+        lp: t
+      - kind: taken
+        side: gb
+        name: Taleh (Taleex)
+        date: 9 February 1920
+        text: Bombed on 2–3 February and taken on 9 February. Hassan escaped with a few followers; his commanders Haji Sudi and Ibrahim Boghol were killed.
+        lonlat: [48.418, 9.147]
+      - kind: event
+        name: Imi
+        date: 21 December 1920
+        text: Hassan died here after fleeing into Ethiopia. His tomb is in the town.
+        lonlat: [42.167, 6.467]
+    arrows:
+      - side: gb
+        label: Z Force
+        phase: 1
+        via: [[45.014, 10.439], [46.300, 10.800], [47.600, 10.720]]
+      - side: gb
+        label: Camel Corps
+        phase: 2
+        via: [[45.533, 9.522], [46.800, 9.300], [48.380, 9.160]]
+      - side: der
+        label: Hassan’s flight
+        phase: 3
+        via: [[48.418, 9.147], [46.800, 8.200], [44.500, 7.000], [42.200, 6.500]]

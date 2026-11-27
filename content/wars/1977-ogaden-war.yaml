@@ -1,0 +1,338 @@
+id: ogaden-war
+name: Ogaden War
+start: "1977-07-13"
+end: "1978-03-23"
+tier: A
+summary: "War between Somalia and Ethiopia over the Ogaden, the Somali-inhabited east of Ethiopia, which Somalia claimed as Western Somalia. In 1976–1977 the Western Somali Liberation Front (WSLF), armed and trained by Somalia, drove Ethiopian forces into their garrisons while the Derg, Ethiopia’s new military government, was fighting rebellions across the country. In July 1977 the Somali National Army invaded. Within two months Somali and WSLF forces held most of the Ogaden, took Jijiga and the Marda Pass, and laid siege to Harar and Dire Dawa. The Soviet Union, which had armed Somalia, then switched to Ethiopia; Somalia expelled its Soviet advisers in November 1977, and a Soviet airlift brought arms, about 1,500 Soviet advisers and some 12,000–18,000 Cuban troops to Ethiopia, with a South Yemeni contingent. The Ethiopian and Cuban counteroffensive of February–March 1978 retook Jijiga, and on 9 March Siad Barre ordered his army home. Some 5,000–6,500 soldiers were killed on each side and hundreds of thousands of Ogadeni Somalis fled to Somalia. The defeat discredited Siad Barre’s government and opened the way to the rebellions that destroyed the Somali state in 1991."
+countries: [et, so, cu, ru, ye]
+sides:
+  - id: so
+    name: Somalia
+    polities: [somalia]
+    ink: blue
+    moves: Somali moves
+    success: Somali success
+  - id: wslf
+    name: Western Somali Liberation Front (WSLF)
+    polities: [wslf]
+    ink: teal
+    moves: WSLF moves
+    success: WSLF success
+  - id: et
+    name: Ethiopia (the Derg)
+    polities: [ethiopia]
+    ink: red
+    moves: Ethiopian moves
+    success: Ethiopian success
+  - id: cu
+    name: Cuba, the Soviet Union and South Yemen
+    polities: [cuba, ussr, south-yemen]
+    ink: purple
+    moves: Cuban and Soviet moves
+    success: Cuban success
+notes:
+  - "Sources give 12, 13 or 23 July 1977 for the start of the Somali invasion, and 9, 15 or 23 March 1978 for its end: Siad Barre announced the withdrawal on 9 March, and Ethiopia declared on 23 March that it had regained its last border post."
+  - "Figures for the war vary. Ethiopian losses are given as about 5,000–6,100 killed and 8,200–10,500 wounded, Somali losses as about 5,700–6,500 killed; Cuba lost about 160–400 killed, the Soviet Union 33 advisers and South Yemen about 100. One estimate puts civilian deaths at about 25,000. Refugee numbers in Somalia were disputed: the Somali government gave much higher figures than relief agencies."
+  - The Somali name for the Ogaden in the claims of the time was Western Somalia (Soomaali Galbeed). Ogaden is also the name of the Somali clan family that lives in much of it.
+sources:
+  - title: Ogaden War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ogaden_War
+  - title: Western Somali Liberation Front (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Western_Somali_Liberation_Front
+  - title: Battle of Jijiga (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Jijiga
+  - title: Battle of Harar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Harar
+  - title: Battle of Dire Dawa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Dire_Dawa
+  - title: Somali Salvation Democratic Front (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Somali_Salvation_Democratic_Front
+  - title: Greater Somalia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Greater_Somalia
+steps:
+  - title: Western Somalia and the WSLF
+    date: 1960 – June 1977
+    when: "1976"
+    borders: "1977-06-01"
+    countries: [et, so]
+    body:
+      - "When British Somaliland and Italian Somalia joined as the Somali Republic in 1960, its flag carried a five-pointed star for the five lands where Somalis lived: the two former colonies, French Somaliland (Djibouti), Kenya’s Northern Frontier District and the Ogaden. Ethiopia’s title to the Ogaden rested on the Anglo-Ethiopian treaty of 1897 and on Britain’s handover of the Ogaden in 1948 and of the Haud grazing lands in 1954; Somalia did not accept them. A rising in the Ogaden in 1963 led to a short border war in 1964, and its fighters later formed the core of the Western Somali Liberation Front."
+      - "Mohamed Siad Barre, who took power in Mogadishu in a coup in 1969, built with Soviet help one of the largest armies in sub-Saharan Africa, and in 1974 signed a treaty of friendship with the Soviet Union, which used the port of Berbera. In Ethiopia, the revolution of 1974 brought the Derg to power amid famine, purges, the Eritrean war and risings in many provinces. From 1975 Somalia armed and trained the WSLF, and in 1976 its guerrillas, many of them Somali soldiers on leave, began attacking Ethiopian posts; the Somali Abo Liberation Front fought further west in Bale and Sidamo. On 1 June 1977 the WSLF cut the railway from Addis Ababa to Djibouti, which became independent at the end of that month. By then the Ethiopian army held little more than its garrison towns."
+      - "The Soviet Union and Cuba tried to keep both their clients. In March 1977 Fidel Castro brought Siad Barre and Mengistu Haile Mariam together in Aden and proposed a federation of socialist states in the Horn; Siad Barre refused anything short of self-determination for the Ogaden. Ethiopia closed the American military mission in April and began receiving Soviet arms, and Siad Barre decided to strike before they arrived."
+    facts:
+      - [Anglo-Ethiopian treaty, "1897"]
+      - [Ogaden handed over by Britain, "1948 (the Haud in 1954)"]
+      - [Somali–Soviet treaty, "1974"]
+      - [Railway to Djibouti cut, "1 June 1977"]
+    markers:
+      - kind: capital
+        side: so
+        name: Mogadishu
+        date: "1977"
+        text: Capital of the Somali Democratic Republic under Mohamed Siad Barre, who had ruled since the coup of October 1969.
+        lonlat: [45.342, 2.035]
+        lp: l
+      - kind: capital
+        side: et
+        name: Addis Ababa
+        date: "1977"
+        text: Seat of the Derg, the Provisional Military Administrative Council. Mengistu Haile Mariam made himself its chairman in February 1977.
+        lonlat: [38.752, 9.036]
+        lp: l
+      - kind: event
+        side: wslf
+        name: Railway cut
+        date: 1 June 1977
+        text: The WSLF blew up bridges on the railway between Dire Dawa and Djibouti, which carried much of Ethiopia’s foreign trade.
+        lonlat: [42.230, 10.420]
+      - kind: event
+        name: Berbera
+        date: 1974–1977
+        text: The Soviet navy used the port and built a missile-handling facility and a long runway here under the treaty of 1974.
+        lonlat: [45.013, 10.439]
+    areas:
+      - style: contested
+        side: so
+        label: Claimed by Somalia as Western Somalia
+        atoms: [ET-SO]
+  - title: The invasion
+    date: July – August 1977
+    when: "1977-07-13"
+    borders: "1977-08-01"
+    countries: [et, so]
+    body:
+      - "On 13 July 1977 the Somali National Army crossed the border in force, with some 35,000 men, about 250 tanks and its air force, beside the WSLF. Ethiopia had perhaps 35,000–47,000 regulars and militia in the region, many of them newly raised peasant militia. Somali columns advanced on Gode in the south, on Degehabur, Kebri Dahar and Warder in the centre, and on Jijiga and Dire Dawa in the north. Gode, with its airfield, fell on 25 July after heavy fighting; of 2,350 militiamen sent there, only 489 made it back to Harar."
+      - "In the north a Somali force surprised Dire Dawa, the railway town and air base, on 16 July but was driven back by reinforcements from Harar. A second assault on 17 August broke into the outskirts and reached the airfield before the Ethiopian Third Division and the air force threw it back; Ethiopian F-5 fighters destroyed Somali tanks on the plain. Dire Dawa was never taken, but within a month Somali and WSLF forces held most of the Ogaden lowlands. Somalia publicly denied that its army was in Ethiopia and said the fighting was the WSLF’s."
+    facts:
+      - [Somali invasion, "13 July 1977"]
+      - [Gode taken, "25 July 1977"]
+      - [Attacks on Dire Dawa, "16 July and 17 August 1977"]
+    markers:
+      - kind: taken
+        side: so
+        name: Gode
+        date: 25 July 1977
+        text: The main Ethiopian base in the southern Ogaden, on the Shebelle, with an airfield. It fell after a week of fighting.
+        lonlat: [43.552, 5.953]
+      - kind: battle
+        side: et
+        name: Dire Dawa
+        date: 16 July and 17 August 1977
+        text: Two Somali attacks on the railway town and its air base were beaten off; the second reached the airfield.
+        lonlat: [41.857, 9.600]
+        lp: l
+      - kind: taken
+        side: so
+        name: Degehabur
+        date: July 1977
+        text: Taken in the first weeks, on the road from Jijiga into the central Ogaden.
+        lonlat: [43.558, 8.220]
+      - kind: taken
+        side: so
+        name: Kebri Dahar
+        date: July 1977
+        text: Ethiopian garrison town in the central Ogaden, taken by the Somali advance.
+        lonlat: [44.280, 6.739]
+      - kind: taken
+        side: so
+        name: Warder
+        date: July 1977
+        text: Border town near Walwal, where the incident of 1934 had led to the Italian invasion of Ethiopia.
+        lonlat: [45.330, 6.970]
+    arrows:
+      - side: so
+        label: Southern front
+        via: [[45.204, 4.737], [44.600, 5.300], [43.700, 5.900]]
+      - side: so
+        via: [[46.400, 6.300], [45.400, 6.700], [44.400, 6.750]]
+      - side: so
+        via: [[44.062, 9.300], [43.900, 8.700], [43.600, 8.300]]
+      - side: so
+        label: Northern front
+        via: [[43.331, 9.598], [42.700, 9.700], [42.000, 9.620]]
+    areas:
+      - style: occupied
+        side: so
+        label: Held by Somalia and the WSLF, August 1977
+        polygon: [[43.30, 9.62], [42.80, 9.20], [42.30, 8.80], [41.80, 8.00], [41.40, 7.00], [41.80, 5.80], [42.10, 4.30], [43.00, 4.90], [44.50, 4.95], [45.10, 5.10], [46.30, 6.40], [47.70, 7.80], [46.00, 8.30], [44.30, 8.90], [43.60, 9.35]]
+  - title: Jijiga and the Marda Pass
+    date: September 1977
+    when: "1977-09-12"
+    borders: "1977-09-15"
+    countries: [et, so, ru]
+    body:
+      - "The Somali army’s main blow fell on Jijiga, the headquarters of the Ethiopian forces in the north of the Ogaden, held by a division with tanks and artillery. After weeks of attacks the garrison, short of supplies and shaken by the loss of its armour, turned on its officers and fled, and Somali forces entered the town on 12 September 1977. The next day they took the Marda Pass on Mount Karamara, the gateway through the hills from the Ogaden plain towards Harar and Dire Dawa. By the end of September Ethiopia admitted that it controlled only about a tenth of the Ogaden."
+      - "The Soviet Union now chose between its clients. In early September it began shipping arms to Ethiopia, and about two weeks later it stopped deliveries to Somalia. Siad Barre went to Moscow and was turned away. In Addis Ababa the Derg mobilised the country under the slogan “Revolutionary Motherland or Death”, raising and training a people’s militia of tens of thousands, while its campaign of Red Terror against the civilian left went on in the capital."
+    facts:
+      - [Jijiga taken, "12 September 1977"]
+      - [Marda Pass taken, "13 September 1977"]
+      - [Ogaden held by Ethiopia, "about 10% (late September 1977)"]
+    markers:
+      - kind: taken
+        side: so
+        name: Jijiga
+        date: 12 September 1977
+        text: The Ethiopian garrison abandoned the town and its tank base after weeks of fighting.
+        lonlat: [42.800, 9.351]
+      - kind: taken
+        side: so
+        name: Marda Pass
+        date: 13 September 1977
+        text: The pass over the Karamara ridge west of Jijiga, the key to the road to Harar. The Somalis held it until March 1978.
+        lonlat: [42.680, 9.320]
+        lp: l
+      - kind: held
+        side: et
+        name: Harar
+        date: September 1977
+        text: The old walled city, headquarters of the Ethiopian forces in the east after the fall of Jijiga.
+        lonlat: [42.128, 9.312]
+        lp: l
+    arrows:
+      - side: so
+        via: [[43.331, 9.598], [43.050, 9.450], [42.820, 9.370]]
+      - side: so
+        via: [[42.800, 9.351], [42.700, 9.330], [42.560, 9.310]]
+    areas:
+      - style: occupied
+        side: so
+        label: Held by Somalia and the WSLF, late September 1977
+        polygon: [[43.30, 9.62], [42.60, 9.45], [42.30, 9.25], [42.10, 8.90], [41.60, 8.00], [41.20, 7.00], [41.60, 5.80], [42.10, 4.30], [43.00, 4.90], [44.50, 4.95], [45.10, 5.10], [46.30, 6.40], [47.70, 7.80], [46.00, 8.30], [44.30, 8.90], [43.60, 9.35]]
+  - title: The siege of Harar and the airlift
+    date: October 1977 – January 1978
+    when: "1977-11-13"
+    borders: "1977-11-13"
+    countries: [et, so, cu, ru, ye]
+    body:
+      - "From late September to mid-December Somali forces pressed on towards Harar through the hills, reaching its outskirts, while others cut the roads to Dire Dawa. Harar held. Ethiopian militia and regulars dug in around the city, the Ethiopian air force, flying American-built F-5s and soon Soviet MiG-21s, won command of the air and bombed Somali supply lines as far as Berbera and Hargeisa, and the Somali offensive, far from its bases and short of fuel and spare parts, lost its momentum. By December the Somali forces had fallen back to positions at Fedis, Jaldessa and Harewa in the hills around the city."
+      - "On 13 November 1977 Somalia ordered all Soviet advisers to leave within a week, ended Soviet use of Berbera and broke off relations with Cuba. Within days the Soviet Union began a huge sea and air lift to Ethiopia, flying tanks, artillery and aircraft through Aden and over the Red Sea. With it came about 1,500 Soviet advisers under General Vasily Petrov, who planned the counteroffensive, about 12,000–18,000 Cuban troops under General Arnaldo Ochoa, among them armoured brigades and pilots, and some 2,000 South Yemeni soldiers. Western governments refused Somalia’s requests for arms while its army was inside Ethiopia; China gave diplomatic support."
+      - "On 22–23 January 1978 the Somalis made a last attempt on Harar. Cuban armoured brigades and Ethiopian units met them in the hills east of the city and inflicted their worst losses of the war."
+    facts:
+      - [Soviet advisers expelled from Somalia, "13 November 1977"]
+      - [Cuban troops, "about 12,000–18,000"]
+      - [Soviet advisers, "about 1,500, under General Vasily Petrov"]
+      - [Last Somali attack on Harar, "22–23 January 1978"]
+    markers:
+      - kind: siege
+        side: et
+        name: Harar
+        date: October 1977 – January 1978
+        text: The Somali advance stopped in the hills around the city. The final Somali attack in January 1978 was broken by Ethiopian and Cuban armour.
+        lonlat: [42.128, 9.312]
+        lp: l
+      - kind: event
+        side: cu
+        name: Aden
+        date: November 1977 – January 1978
+        text: Soviet transport aircraft and ships carried arms and Cuban troops to Ethiopia by way of South Yemen, which also sent a brigade of its own.
+        lonlat: [45.030, 12.800]
+      - kind: event
+        side: so
+        name: Berbera
+        date: 13 November 1977
+        text: Somalia ended Soviet use of the port and expelled the advisers. Ethiopian aircraft bombed the area during the war.
+        lonlat: [45.013, 10.439]
+      - kind: air
+        side: et
+        name: Hargeisa
+        date: 1977–1978
+        text: Ethiopian aircraft struck Somali bases and supply lines in the north of Somalia.
+        lonlat: [44.062, 9.562]
+    arrows:
+      - side: cu
+        label: Soviet airlift and Cuban troops
+        via: [[45.030, 12.800], [42.500, 11.200], [40.500, 9.800], [38.900, 9.050]]
+      - side: so
+        via: [[42.560, 9.310], [42.350, 9.280], [42.200, 9.300]]
+  - title: The counteroffensive and Jijiga
+    date: February – March 1978
+    when: "1978-02-01"
+    borders: "1978-03-05"
+    countries: [et, so, cu]
+    body:
+      - "The Ethiopian and Cuban counteroffensive began on 1 February 1978 at Harewa, east of Harar, and Jaldessa fell on 4 February. Its planners, Soviet and Cuban, did not attack the Somali positions in the Marda Pass head on. Instead a mechanised force with Cuban tanks and artillery worked its way through the mountains north of the pass, by tracks the Somalis thought impassable for armour, to come down on the Jijiga plain from the north. Ethiopia and Cuba together had about 300 tanks and 46 combat aircraft against a Somali army that had lost much of its armour and air force."
+      - "In late February and early March, Soviet-built Mi-6 and Mi-8 helicopters lifted Ethiopian and Cuban troops and light armour behind the Somali lines, and paratroops dropped near Jijiga. On 5 March a frontal assault through the pass and the airmobile force in the rear converged on Jijiga, and the Somali defenders, threatened with encirclement, broke. Jijiga was retaken the same day, and the road into the Ogaden lay open."
+    facts:
+      - [Counteroffensive begins, "1 February 1978"]
+      - [Jijiga retaken, "5 March 1978"]
+    markers:
+      - kind: taken
+        side: cu
+        name: Jijiga
+        date: 5 March 1978
+        text: Retaken by Ethiopian and Cuban forces in a frontal assault combined with a heliborne landing behind the Somali lines.
+        lonlat: [42.800, 9.351]
+      - kind: battle
+        side: et
+        name: Marda Pass
+        date: March 1978
+        text: The Somali positions on the Karamara ridge were outflanked from the north and abandoned.
+        lonlat: [42.680, 9.320]
+        lp: b
+      - kind: battle
+        side: et
+        name: Harewa and Jaldessa
+        date: 1–4 February 1978
+        text: The first Somali positions in the hills around Harar to fall to the counteroffensive.
+        lonlat: [42.300, 9.420]
+        lp: t
+    arrows:
+      - side: cu
+        label: Outflanking force
+        phase: 1
+        via: [[42.300, 9.420], [42.450, 9.650], [42.700, 9.600], [42.790, 9.420]]
+      - side: et
+        phase: 2
+        via: [[42.300, 9.330], [42.550, 9.310], [42.760, 9.345]]
+      - side: cu
+        label: Heliborne landings
+        phase: 2
+        via: [[42.200, 9.150], [42.600, 9.150], [42.810, 9.300]]
+  - title: Withdrawal and aftermath
+    date: March 1978 and after
+    when: "1978-03-09"
+    borders: "1978-03-23"
+    countries: [et, so, cu]
+    body:
+      - "On 9 March 1978 Siad Barre announced that the Somali army would withdraw from the Ogaden. Ethiopian and Cuban columns followed it, taking Degehabur and Fik on 8 March and then Kebri Dahar, Warder and Gode, and on 23 March Ethiopia declared that its last border post had been regained. The Cubans stopped at the border; the Soviet Union and Cuba did not want Ethiopia to invade Somalia. Some 5,000–6,500 soldiers had died on each side. Somalia had lost about a third of its regular army, much of its armour and half its air force."
+      - "The war did not end the fighting in the Ogaden. The WSLF kept up a guerrilla war, and Ethiopian sweeps in 1978–1980 drove hundreds of thousands of Ogadeni Somalis and Oromo into camps in Somalia; the government there spoke of more than a million refugees by 1980, relief agencies of fewer. Ethiopia resettled highlanders in the region. Somalia turned to the West and in 1980 gave the United States access to Berbera. In April 1988 Siad Barre and Mengistu, each facing rebels the other supported, agreed to stop backing them."
+      - "In Somalia the defeat started the unravelling of Siad Barre’s rule. On 9 April 1978 officers, most of them from the Majeerteen clan, attempted a coup; its survivors founded the Somali Salvation Democratic Front with Ethiopian backing. Isaaq exiles founded the Somali National Movement in 1981, and the wars that followed in the north and the south brought down the Somali state in 1991."
+    facts:
+      - [Somali withdrawal announced, "9 March 1978"]
+      - [Last border post regained, "23 March 1978"]
+      - [Coup attempt in Mogadishu, "9 April 1978"]
+    link: { href: "#/war/somaliland-war-of-independence", text: Somaliland War of Independence }
+    markers:
+      - kind: taken
+        side: et
+        name: Degehabur
+        date: 8 March 1978
+        text: Retaken as the Somali army began to withdraw.
+        lonlat: [43.558, 8.220]
+      - kind: taken
+        side: et
+        name: Gode
+        date: March 1978
+        text: Retaken in the last days of the war.
+        lonlat: [43.552, 5.953]
+      - kind: event
+        side: so
+        name: Mogadishu
+        date: 9 March and 9 April 1978
+        text: Siad Barre announced the withdrawal here on 9 March. A month later officers tried and failed to overthrow him.
+        lonlat: [45.342, 2.035]
+        lp: l
+      - kind: event
+        name: Refugee camps
+        date: 1978–1980
+        text: Hundreds of thousands of refugees from the Ogaden lived in camps in Somalia, in the north-west, around Beledweyne and in the Gedo region.
+        lonlat: [45.204, 4.737]
+    arrows:
+      - side: so
+        via: [[42.800, 9.351], [43.200, 9.550], [43.500, 9.650]]
+      - side: so
+        via: [[43.552, 5.953], [44.400, 5.400], [45.150, 4.850]]
+      - side: et
+        via: [[42.800, 9.300], [43.300, 8.700], [43.558, 8.250]]
+      - side: et
+        via: [[43.558, 8.150], [43.900, 7.200], [44.250, 6.760]]

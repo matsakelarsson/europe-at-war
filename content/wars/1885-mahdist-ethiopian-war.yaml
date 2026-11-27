@@ -1,0 +1,154 @@
+id: mahdist-ethiopian-war
+name: Mahdist–Ethiopian War
+start: "1885-09"
+end: "1889-03-12"
+tier: B
+summary: "War between Emperor Yohannes IV of Ethiopia and the Mahdist state of the Sudan. By the Hewett Treaty of June 1884 Ethiopia agreed to help evacuate the Egyptian garrisons cut off by the Mahdist rising on its border, in return for the Bogos country and free transit through Massawa; the Mahdists treated this as an act of war. Ras Alula defeated Osman Digna at Kufit in September 1885. In January 1887 King Tekle Haymanot of Gojjam sacked the Mahdist border town of Gallabat, and in reply the Mahdist general Abu Anja defeated him at Sar Weha in January 1888 and sacked Gondar, burning its churches and carrying off captives. Yohannes, who had also to face the Italians on the coast and a restless Menelik of Shewa, led a great army against the Mahdist fortifications at Gallabat in March 1889. His army was close to victory when he was mortally wounded; it broke up in retreat, and the Mahdists sent his head to Omdurman. The war exhausted both sides and opened the way for Menelik’s accession and Italy’s advance into Eritrea."
+countries: [et, sd, er]
+sides:
+  - id: et
+    name: Ethiopian Empire (Yohannes IV)
+    polities: [ethiopia]
+    ink: gold
+    moves: Ethiopian moves
+    success: Ethiopian success
+  - id: md
+    name: Mahdist State
+    polities: [mahdist-state]
+    ink: green
+    moves: Mahdist moves
+    success: Mahdist success
+notes:
+  - The Mahdists called themselves the Ansar (helpers); the British called them Dervishes. Their state was led after the Mahdi’s death in June 1885 by the Khalifa Abdallahi ibn Muhammad, who saw Ethiopia as an enemy once it had helped the Egyptian garrisons.
+  - Gallabat, on the Sudanese side, and Metemma, on the Ethiopian side, are twin towns on the trade route from the Nile valley to Gondar; the battle of 1889 is known by both names. Army sizes on both sides, given in the sources as tens of thousands, are rough estimates, and no reliable count of the dead exists.
+  - The site of Kufit, between Keren and Kassala, and the battlefield of Sar Weha cannot be located precisely and have no markers.
+sources:
+  - title: Battle of Gallabat (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Gallabat
+  - title: Battle of Kufit (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kufit
+  - title: Ras Alula (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ras_Alula
+  - title: Yohannes IV (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yohannes_IV
+  - title: Tekle Haymanot of Gojjam (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tekle_Haymanot_of_Gojjam
+  - title: Gondar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Gondar
+  - title: Hewett Treaty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hewett_Treaty
+steps:
+  - title: The Hewett Treaty and Kufit
+    date: June 1884 – September 1885
+    when: "1885-09-23"
+    borders: "1885-09-23"
+    countries: [et, er, sd]
+    body:
+      - The Mahdist rising that began in the Sudan in 1881 cut off the Egyptian garrisons along the Ethiopian border, at Kassala, Amideb, Algeden, Gira, Gallabat and Keren. In June 1884 the British admiral Sir William Hewett, acting for Britain and Egypt, signed a treaty with Yohannes IV at Adwa. Ethiopia would help the garrisons withdraw through its territory to the coast; in return it received the Bogos country around Keren and the right to import goods, arms included, freely through Massawa. In February 1885, with British consent, Italy occupied Massawa instead of Egypt, which Yohannes and his commanders had not foreseen.
+      - Ras Alula, governor of the northern frontier, brought out some of the garrisons, but Kassala, after a long siege, fell to the Mahdists on 30 July 1885. The Mahdist commander in the east, Osman Digna, then moved towards the Bogos country. Alula entered Keren in September and marched west to meet him, and on 22–23 September 1885 at Kufit, between Keren and Kassala, his army routed the Mahdists after a hard fight. Estimates of the Mahdist dead range from 3,000 to 10,000, and Alula lost about 1,500 men, among them his lieutenant Blatta Gebru; he was wounded himself.
+    facts:
+      - [Hewett Treaty, "June 1884, Adwa"]
+      - [Kassala falls to the Mahdists, "30 July 1885"]
+      - [Battle of Kufit, "22–23 September 1885, Ethiopian victory"]
+    markers:
+      - kind: taken
+        side: md
+        name: Kassala
+        date: 30 July 1885
+        text: The Egyptian garrison surrendered to the Mahdists after a long siege.
+        lonlat: [36.40, 15.45]
+      - kind: taken
+        side: et
+        name: Keren
+        date: September 1885
+        text: The Egyptian garrison of the Bogos country withdrew, and Ras Alula entered the town before marching west to Kufit.
+        lonlat: [38.45, 15.78]
+      - kind: capital
+        side: et
+        name: Asmara
+        date: "1885"
+        text: Ras Alula’s headquarters from 1884.
+        lonlat: [38.93, 15.33]
+        lp: l
+    arrows:
+      - side: et
+        label: Ras Alula
+        phase: 1
+        via: [[38.93, 15.33], [38.70, 15.60], [38.45, 15.76]]
+      - side: et
+        phase: 2
+        via: [[38.40, 15.70], [38.00, 15.55], [37.60, 15.40]]
+      - side: md
+        label: Osman Digna
+        phase: 2
+        via: [[36.45, 15.45], [36.90, 15.40], [37.40, 15.40]]
+  - title: Gallabat, Sar Weha and the sack of Gondar
+    date: January 1887 – October 1888
+    when: "1888-01"
+    borders: "1888-01-31"
+    countries: [et, sd]
+    body:
+      - Raids crossed the western border in both directions. In January 1887 King Tekle Haymanot of Gojjam, one of Yohannes’s vassals, attacked the Mahdist border town of Gallabat with a large army, routed its garrison and plundered the country towards Gedaref, killing the wounded and carrying off women. The Khalifa sent his general Hamdan Abu Anja with a large army in reply. On 18 January 1888 Abu Anja defeated Tekle Haymanot at Sar Weha, and the Mahdists entered Gondar, the old capital, looted and burned its churches and carried many people off into slavery.
+      - Yohannes, whose main army was facing the Italians near Massawa in the spring of 1888, and who suspected Menelik of Shewa of dealing with Italy, did not march west at once. In the south-west Ras Gobana Dacche, Menelik’s general, defeated a Mahdist force at Guté Dili in Wollega on 14 October 1888.
+    facts:
+      - [Tekle Haymanot sacks Gallabat, "January 1887"]
+      - [Battle of Sar Weha, "18 January 1888, Mahdist victory"]
+      - [Gondar sacked, "January 1888"]
+    markers:
+      - kind: taken
+        side: et
+        name: Gallabat (Metemma)
+        date: January 1887
+        text: The Mahdist border town, sacked by Tekle Haymanot of Gojjam.
+        lonlat: [36.14, 12.96]
+        lp: l
+      - kind: taken
+        side: md
+        name: Gondar
+        date: January 1888
+        text: The old imperial capital, looted by Abu Anja’s army; its churches were burned and many inhabitants enslaved.
+        lonlat: [37.459, 12.608]
+    arrows:
+      - side: et
+        label: Tekle Haymanot
+        phase: 1
+        via: [[37.40, 11.60], [36.90, 12.20], [36.50, 12.70], [36.18, 12.94]]
+      - side: md
+        label: Abu Anja
+        phase: 2
+        via: [[36.14, 12.96], [36.60, 12.80], [37.10, 12.65], [37.42, 12.61]]
+    areas:
+      - style: occupied
+        side: md
+        label: Raided by the Mahdists, 1888 (approximate)
+        polygon: [[36.2, 13.1], [37.0, 13.1], [37.8, 12.8], [37.8, 12.3], [37.0, 12.2], [36.2, 12.6]]
+  - title: The death of Yohannes at Gallabat
+    date: 9–12 March 1889
+    when: "1889-03-09"
+    borders: "1889-03-12"
+    countries: [et, sd]
+    body:
+      - In early 1889 Yohannes gathered his army in Dembiya, north of Lake Tana; the sources speak of 130,000 foot and 20,000 horse, certainly an exaggeration. The Mahdists, under Zeki Tummal since Abu Anja had died of illness, waited behind a thorn-bush zariba around Gallabat. The Ethiopians attacked on 9 March 1889, broke through at one point and nearly destroyed one Mahdist division, while their left wing lost its commander, Ras Haile Maryam Gugsa. Yohannes took command himself, was wounded in the hand and then shot in the chest. He died that night, after naming his son Ras Mengesha as heir.
+      - The army, on the point of victory, turned back towards the Atbara with the emperor’s body. On 12 March Zeki Tummal caught Ras Alula’s rearguard, captured the body and sent the head to the Khalifa in Omdurman, where it was displayed. Each side probably lost several thousand men; no reliable figures exist.
+      - The war had exhausted both sides. The Mahdists never again put so large an army into the field. In Ethiopia Tigray’s claim to the throne collapsed, and within weeks Menelik of Shewa was recognised as emperor; the Italians used the confusion to occupy Keren and Asmara in the summer of 1889. Menelik later sought good relations with the Khalifa, and the two never fought again.
+    facts:
+      - [Battle of Gallabat (Metemma), "9–10 March 1889, Mahdist victory"]
+      - [Yohannes IV, "mortally wounded, died 9–10 March 1889"]
+      - [Ethiopian rearguard overtaken, "12 March 1889"]
+    markers:
+      - kind: battle
+        side: md
+        name: Gallabat (Metemma)
+        date: 9 March 1889
+        text: The Ethiopian assault on the Mahdist zariba came close to success until Yohannes was mortally wounded.
+        lonlat: [36.14, 12.96]
+        lp: l
+    arrows:
+      - side: et
+        label: Yohannes IV
+        phase: 1
+        via: [[37.40, 12.40], [37.00, 12.60], [36.60, 12.85], [36.20, 12.95]]
+      - side: et
+        label: Retreat with the emperor’s body
+        phase: 2
+        via: [[36.20, 12.90], [36.50, 13.30], [36.90, 13.70]]

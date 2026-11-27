@@ -1,0 +1,164 @@
+id: algerian-tunisian-wars
+name: Wars between Algiers and Tunis
+start: "1694-06"
+end: "1807-07"
+tier: B
+summary: "A series of wars between the two Ottoman regencies of Algiers and Tunis, nominal vassals of the same sultan, fought over their border, over tribute and over Tunis’s ruling families. An earlier war, in 1628, had ended with a treaty fixing the border along the Mellègue. In 1694 an Algerian army took Tunis for a rival claimant, until a revolt brought the Muradid bey back in 1695; in 1705 another Algerian invasion captured the bey Ibrahim Sharif at El Kef, but the officer Husayn ibn Ali held Tunis and founded the Husainid dynasty. Algiers backed Husayn’s nephew Ali Pasha against him in 1735, and in 1756 helped Husayn’s sons overthrow Ali Pasha, storming and sacking Tunis; for half a century afterwards Tunis paid tribute to Algiers. In 1807 Hammouda Pasha refused to pay, failed to take Constantine but beat the Algerian counter-invasion near El Kef, ending Tunis’s dependence. Fighting flared again in 1811 and 1813 before a peace at the end of 1813."
+countries: [tn, dz]
+sides:
+  - id: al
+    name: Regency of Algiers and its Tunisian allies
+    polities: [algiers-regency]
+    ink: red
+    moves: Algerian moves
+    success: Algerian success
+  - id: tn
+    name: Beylik of Tunis (the reigning bey)
+    polities: [tunisia]
+    ink: green
+    moves: Tunisian moves
+    success: Tunisian success
+notes:
+  - The main sources are Tunisian and Algerian chronicles and the reports of European consuls, and many details, dates and numbers are uncertain or disputed; recent popular accounts on both sides tend to inflate their own side’s victories. Some wars between the two regencies (1628, 1686, the war of 1699–1702 in which Tunis and Tripoli joined Morocco against Algiers, 1746, 1811, 1813) are mentioned here only in passing. Sources give 10, 12 or 15 July 1705 for Husayn ibn Ali’s proclamation, and 13 May or 13 September 1740 for his death.
+  - Both regencies acknowledged the Ottoman sultan, who sometimes tried to mediate, but by the late 17th century each was ruled by its own deys or beys and made war and peace on its own account. The Beylik of Constantine, the eastern province of the Regency of Algiers, usually led the Algerian armies against Tunis.
+sources:
+  - title: Tunisian–Algerian War (1694) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tunisian%E2%80%93Algerian_War_(1694)
+  - title: Tunisian–Algerian War (1705) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tunisian%E2%80%93Algerian_War_(1705)
+  - title: Capture of Tunis (1735) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Capture_of_Tunis_(1735)
+  - title: Capture of Tunis (1756) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Capture_of_Tunis_(1756)
+  - title: Tunisian–Algerian War (1807) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tunisian%E2%80%93Algerian_War_(1807)
+  - title: Ottoman Tunisia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ottoman_Tunisia
+  - title: Al-Husayn I ibn Ali (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Al-Husayn_I_ibn_Ali
+  - title: Abu l-Hasan Ali I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Abu_l-Hasan_Ali_I
+  - title: Hussein Ier Bey (Wikipédia, in French)
+    url: https://fr.wikipedia.org/wiki/Hussein_Ier_Bey
+steps:
+  - title: Algiers in Tunis, and the rise of the Husainids
+    date: 1694–1705
+    when: "1694-06"
+    borders: "1705-07-12"
+    countries: [tn, dz]
+    body:
+      - After the death of Murad II Bey in 1675, the Muradid family fought over Tunis for two decades, and Algiers repeatedly took sides; in 1686 an Algerian army sacked Tunis. In 1694 Mohamed Ben Cheker, a tribal chief of the north-west who had fallen out with Mohamed Bey, persuaded the dey of Algiers, Hadj Chabane, to make him bey as an Algerian vassal. An Algerian army crossed the border in June 1694, crushed the Tunisian army at El Kef and besieged Tunis, which fell in the autumn and was plundered. Mohamed Bey fled. Algerian taxes and occupation soon set Tunis, Sousse and Kairouan in revolt; Ben Cheker was driven out in April 1695, and Mohamed Bey, restored, beat him at Kairouan on 1 May 1695. Tunis then allied with the Moroccan sultan Moulay Ismail and with Tripoli, and in the war of 1699–1702 its army, after a victory near Constantine, was routed by the Algerians near Sétif on 3 October 1700.
+      - In 1702 the janissary officer Ibrahim Sharif killed the last Muradid and took power. In July 1705 Dey Hadj Mustapha invaded with an army joined by some Arab tribes of the border; Ibrahim Sharif, deserted by part of his troops, shut himself in El Kef, surrendered and was taken to Algiers. In Tunis, his officer Husayn ibn Ali had himself proclaimed bey on 12 July 1705 and held the city through a siege by an Algerian army of tens of thousands, paying, by one account, 150,000 piastres towards its withdrawal. Short of food and ammunition and facing the winter, the dey withdrew in early October, beating a Tunisian force that pursued him near Medjez el-Bab. Husayn ibn Ali’s family, the Husainids, ruled Tunisia until 1957.
+    facts:
+      - [Algerian invasion, "June 1694"]
+      - [Mohamed Bey restored, "1695"]
+      - [Husayn ibn Ali proclaimed bey, "12 July 1705"]
+    markers:
+      - kind: battle
+        side: al
+        name: El Kef
+        date: 1694 and 1705
+        text: The frontier fortress of north-western Tunisia. The Algerians routed the Tunisian army here in 1694, and in 1705 Ibrahim Sharif surrendered to them here.
+        lonlat: [8.71, 36.18]
+      - kind: siege
+        side: tn
+        name: Tunis
+        date: 1694 and 1705
+        text: Taken and plundered by the Algerians in 1694. In 1705 Husayn ibn Ali held it through a siege of almost three months.
+        lonlat: [10.17, 36.80]
+      - kind: battle
+        side: tn
+        name: Kairouan
+        date: 1 May 1695
+        text: The restored Mohamed Bey defeated Ben Cheker here and drove him out of the country.
+        lonlat: [10.10, 35.68]
+      - kind: battle
+        side: al
+        name: Medjez el-Bab
+        date: October 1705
+        text: The retreating Algerian army turned on a Tunisian cavalry force that pursued it and inflicted heavy losses.
+        lonlat: [9.60, 36.64]
+        lp: t
+      - kind: capital
+        side: al
+        name: Constantine
+        date: 1694–1705
+        text: Seat of the bey of Constantine, the eastern province of the Regency of Algiers, from which the armies against Tunis set out.
+        lonlat: [6.61, 36.36]
+    arrows:
+      - side: al
+        label: Algerian army, 1694 and 1705
+        via: [[6.70, 36.35], [7.80, 36.30], [8.65, 36.20], [9.55, 36.60], [10.10, 36.78]]
+  - title: Algiers chooses the bey
+    date: 1735–1756
+    when: "1735"
+    borders: "1756-09-22"
+    countries: [tn, dz]
+    body:
+      - Husayn ibn Ali had named his nephew Ali Pasha, governor of Sousse, as his heir, then passed him over for his own son. Ali rose against him with tribal support, and when that failed he fled to Algiers, whose dey sent an army of about 7,000 men to put him in power. On 4 September 1735 Husayn was beaten at Smindja; the Algerians reached Tunis, the gates were opened at night and many of the defenders were massacred, and Ali Pasha was installed as bey on 7 September, paying the Algerian troops a large indemnity and promising the dey a yearly tribute. Husayn held out at Kairouan for five years until Ali’s son Younes took the town in 1740 and had him killed. Husayn’s sons Muhammad and Ali escaped to Constantine and Algiers.
+      - Algiers kept the brothers as a lever against Ali Pasha, whose relations with the deys soured. In 1756 the bey of Constantine, Hassan Bey, invaded with them, by one report 5,000 infantry, 1,000 spahis and Arab cavalry. He took El Kef on 23 July, and on 31 August 1756 the Algerians broke the defences of Tunis and stormed the city. Thousands were killed, the city, the Bardo palace and the houses of Christians, Turks and Jews were plundered, and many people were carried off to the Algerian camp. Ali Pasha was deposed, taken to Algiers and strangled there; Muhammad ar-Rashid became bey on 22 September. For the next half-century Tunis paid Algiers a yearly tribute and acknowledged its overlordship.
+    facts:
+      - [Battle of Smindja, "4 September 1735"]
+      - [Death of Husayn ibn Ali, "1740"]
+      - [Tunis stormed, "31 August 1756"]
+    markers:
+      - kind: taken
+        side: al
+        name: Tunis
+        date: 1735 and 31 August 1756
+        text: Opened to the Algerians and Ali Pasha in September 1735. In 1756 the Algerians stormed and sacked it and put Husayn’s sons in power.
+        lonlat: [10.17, 36.80]
+      - kind: siege
+        side: al
+        name: Kairouan
+        date: 1735–1740
+        text: Husayn ibn Ali held out here against his nephew until Younes took the town in 1740 and had him killed.
+        lonlat: [10.10, 35.68]
+      - kind: taken
+        side: al
+        name: El Kef
+        date: 23 July 1756
+        text: Taken by the army of Hassan Bey of Constantine on its march to Tunis.
+        lonlat: [8.71, 36.18]
+    arrows:
+      - side: al
+        label: Hassan Bey of Constantine, 1756
+        via: [[6.70, 36.35], [7.80, 36.30], [8.65, 36.20], [9.55, 36.60], [10.10, 36.78]]
+  - title: Hammouda Pasha breaks free
+    date: 1807
+    when: "1807"
+    borders: "1807-07-31"
+    countries: [tn, dz]
+    body:
+      - Hammouda Pasha, bey of Tunis from 1782, had strengthened his army and resented the tribute. When the dey of Algiers, Ahmed, demanded more tribute and control of Tabarka, he refused and in 1807 sent an army, by one account more than 50,000 men, under Slimane Kahia against Constantine. After failing to carry the Mansoura plateau that guards the city, the Tunisians laid siege to it; about a month later reinforcements from Algiers under Hussein Bey reached the defenders, and the Tunisian army fell back in disorder.
+      - The Algerians followed it into Tunisia, but near the Wadi Serrat, close to El Kef, Hammouda’s minister Youssef Saheb Ettabaa attacked them with artillery and cavalry and drove them back. Tunis paid no more tribute to Algiers. The two regencies fought again at sea in 1811, and in 1813, when an Algerian fleet attacked La Goulette and a Tunisian invasion of the Beylik of Constantine was repulsed, before making peace at the end of that year. Both soon faced a greater danger, France, which conquered Algiers in 1830 and made Tunisia a protectorate in 1881.
+    facts:
+      - [Siege of Constantine, "1807"]
+      - [Battle of the Wadi Serrat, "1807, Tunisian victory"]
+    markers:
+      - kind: siege
+        side: al
+        name: Constantine
+        date: "1807"
+        text: Besieged by the Tunisian army of Slimane Kahia. Reinforcements from Algiers relieved the city after about a month.
+        lonlat: [6.61, 36.36]
+      - kind: battle
+        side: tn
+        name: Wadi Serrat
+        date: "1807"
+        text: Youssef Saheb Ettabaa defeated the invading Algerian army on this border river near El Kef. The exact site is uncertain.
+        lonlat: [8.40, 35.95]
+      - kind: capital
+        side: tn
+        name: Tunis
+        date: "1807"
+        text: Capital of Hammouda Pasha, bey of Tunis 1782–1814.
+        lonlat: [10.17, 36.80]
+    arrows:
+      - side: tn
+        label: Slimane Kahia
+        phase: 1
+        via: [[10.05, 36.75], [9.20, 36.45], [8.60, 36.25], [7.60, 36.35], [6.70, 36.38]]
+      - side: al
+        phase: 2
+        via: [[6.75, 36.30], [7.50, 36.10], [8.32, 35.96]]

@@ -1,0 +1,156 @@
+id: kaocen-revolt
+name: Kaocen revolt
+start: "1916"
+end: "1917-03"
+tier: B
+summary: "A Tuareg rising against French rule in the Aïr mountains of northern Niger in 1916–1917, during the First World War, led by Kaocen ag Mohammed (Kawsen), a noble of the Ikazkazan of the Kel Owey confederation and a follower of the Senussi order, which had declared a holy war against the French in October 1914. Many Tuareg had fought the French since the 1890s; others were driven to revolt by the drought of 1911–1914, by French taxes and the seizure of camels, and by the end of the slave trade and the revolt of the settled peoples who had paid them tribute. In the west, the Iwellemmeden Kel Ataram of the Ménaka region under their amenokal Fihirun (Firhoun) rose in 1914–1916 and were crushed with the help of the Kel Adagh. In December 1916 Kaocen, with more than 1,000 fighters, repeating rifles and a cannon taken from the Italians in Libya, laid siege to the French garrison of Agadez with the help of the sultan of Aïr, Tegama, defeated French relief columns and took the towns of the Aïr. A large French force from Zinder relieved Agadez on 3 March 1917 and retook the towns, with heavy reprisals; Kaocen withdrew north and was hanged by local forces at Murzuq in Libya in 1919. Tuareg remember the rising as part of a longer struggle against colonial rule and for self-government."
+countries: [ne, ml, ly]
+sides:
+  - id: fr
+    name: France and its allies
+    polities: [french-west-africa, france]
+    ink: navy
+    moves: French moves
+    success: French success
+  - id: kc
+    name: Kaocen’s fighters
+    polities: [kaocen]
+    ink: orange
+    moves: Kaocen’s moves
+    success: Kaocen’s success
+  - id: ag
+    name: Sultanate of Aïr (Tegama)
+    polities: [agadez]
+    ink: blue
+    moves: Aïr moves
+    success: Aïr success
+  - id: iw
+    name: Iwellemmeden Kel Ataram (Fihirun)
+    polities: [iwellemmeden]
+    ink: purple
+    moves: Iwellemmeden moves
+    success: Iwellemmeden success
+  - id: sn
+    name: Senussi order
+    polities: [senussi]
+    ink: green
+    moves: Senussi moves
+    success: Senussi success
+notes:
+  - "Kaocen’s name is also written Kaosen and Kawsen, and the war is known in Niger as the Kawousan war. The main studies are by Finn Fuglestad (1973), Salifou (1973) and Kimba Idrissa (2003). Sources give few exact dates for the fighting in the Aïr between December 1916 and March 1917, and they differ on Fihirun’s rising, which some date to 1911 and others to 1914–1916."
+sources:
+  - title: Kaocen revolt (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kaocen_revolt
+  - title: Révolte de Kaocen (French Wikipedia)
+    url: https://fr.wikipedia.org/wiki/R%C3%A9bellion_touar%C3%A8gue_de_1916-1917
+  - title: Ag Mohammed Wau Teguidda Kaocen (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ag_Mohammed_Wau_Teguidda_Kaocen
+  - title: Iwellemmedan people (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Iwellemmedan_people
+  - title: Sultanate of Agadez (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sultanate_of_Agadez
+  - title: "Finn Fuglestad, Les révoltes des Touareg du Niger, 1916–17 (Cahiers d’études africaines, 1973)"
+    url: https://www.persee.fr/doc/cea_0008-0055_1973_num_13_49_2727
+steps:
+  - title: The Senussi call and Fihirun’s rising
+    date: 1909–1916
+    when: "1916"
+    borders: "1916-06-30"
+    countries: [ne, ml, td, ly]
+    body:
+      - Kaocen, born about 1880 in the Aïr, had joined the Senussi order and fought the French from at least 1909, raiding their columns in what is now eastern Niger and western Chad and taking part in the fighting in Borkou and Ennedi; defeated there in 1910, he withdrew to Ounianga and then to the Fezzan, the centre of Senussi power, where he gathered Tuareg and other nomads loyal to the order. In October 1914, soon after the outbreak of the First World War, the Senussi leadership declared a holy war against the French.
+      - Further west, the Iwellemmeden Kel Ataram, the dominant Tuareg confederation of western Niger and eastern Mali, who had made peace with the French in 1903, rose in 1914 under their amenokal Fihirun around Ménaka. The French put the rising down by 1916 with the help of the Kel Adagh (Ifoghas) of the Adrar des Ifoghas, and afterwards divided the Kel Ataram among several chiefs of their own choosing.
+    facts:
+      - [Senussi declare holy war on France, "October 1914"]
+      - [Fihirun’s rising, "1914–1916"]
+    markers:
+      - kind: event
+        side: iw
+        name: Ménaka
+        date: 1914–1916
+        text: Centre of Fihirun’s rising among the Iwellemmeden Kel Ataram.
+        lonlat: [2.400, 15.917]
+    areas:
+      - style: outline
+        side: fr
+        label: Adrar des Ifoghas, whose Kel Adagh fought with the French
+        atoms: [ML-8]
+  - title: The siege of Agadez
+    date: December 1916 – March 1917
+    when: "1916-12-17"
+    borders: "1916-12-31"
+    countries: [ne]
+    body:
+      - Sultan Tegama of Aïr assured the French that the Tuareg confederations remained loyal, while he awaited Kaocen’s arrival. Kaocen and his brother Mokhtar Kodogo came south from the Fezzan with more than 1,000 fighters, armed with repeating rifles and a cannon taken from the Italians in Libya, and with Tegama’s help laid siege to the French garrison in Agadez on 17 December 1916.
+      - The besiegers defeated several French relief columns and took all the main towns of the Aïr, among them In-Gall, Assodé and Aouderas. For more than three months the mountains and much of what is now northern Niger were under their control, while the French held out in the fort at Agadez.
+    facts:
+      - [Siege of Agadez begins, "17 December 1916"]
+      - [Kaocen’s force, "more than 1,000 fighters"]
+    markers:
+      - kind: siege
+        side: kc
+        name: Agadez
+        date: from 17 December 1916
+        text: The French garrison was besieged in its fort by Kaocen’s fighters, with the help of Sultan Tegama.
+        lonlat: [7.991, 16.972]
+      - kind: taken
+        side: kc
+        name: In-Gall
+        date: 1916–1917
+        text: Taken by Kaocen’s fighters during the siege of Agadez.
+        lonlat: [6.934, 16.786]
+      - kind: taken
+        side: kc
+        name: Aouderas
+        date: 1916–1917
+        text: Taken by Kaocen’s fighters.
+        lonlat: [8.417, 17.617]
+      - kind: taken
+        side: kc
+        name: Assodé
+        date: 1916–1917
+        text: Town in the Aïr mountains, taken by Kaocen’s fighters.
+        lonlat: [8.600, 18.456]
+    arrows:
+      - side: kc
+        label: Kaocen
+        via: [[11.000, 22.500], [9.800, 20.500], [8.700, 18.800], [8.100, 17.100]]
+    areas:
+      - style: contested
+        side: kc
+        label: The Aïr under Kaocen’s control, early 1917 (approximate)
+        polygon: [[6.70, 16.60], [7.60, 16.50], [8.80, 16.90], [9.50, 18.00], [9.40, 19.30], [8.60, 19.60], [7.80, 18.80], [7.20, 17.60]]
+  - title: Relief and reprisals
+    date: March 1917 – 1920
+    when: "1917-03-03"
+    borders: "1917-03-03"
+    countries: [ne, ly]
+    body:
+      - On 3 March 1917 a large French force sent from Zinder relieved the garrison of Agadez and went on to retake the towns of the Aïr. The French took heavy reprisals, above all against local marabouts, many of whom were not Tuareg and had not supported the rising; summary public executions in Agadez and In-Gall alone numbered 130. Kaocen’s fighters had also killed civilians. Tegama and many others who had joined the rising fled; the French brought back the sultan who had reigned before him to mediate with the people.
+      - Kaocen withdrew north to the Tibesti and went on raiding French and local towns until he was driven into the Fezzan, where local forces hostile to the Senussi captured him and hanged him at Murzuq in 1919. Mokhtar Kodogo was killed by the French in 1920 while leading a rising among the Toubou and Fulbe in Damagaram. Tuareg nationalists remember Kaocen as a hero, and his name is a popular given name.
+    facts:
+      - [Agadez relieved, "3 March 1917"]
+      - [Executions in Agadez and In-Gall, "130"]
+      - [Kaocen hanged at Murzuq, "1919"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Agadez
+        date: 3 March 1917
+        text: Relieved by a French force from Zinder; there and at In-Gall the French publicly executed 130 people.
+        lonlat: [7.991, 16.972]
+      - kind: event
+        side: kc
+        name: Murzuq
+        date: "1919"
+        text: Kaocen was captured and hanged here by local forces hostile to the Senussi.
+        lonlat: [13.900, 25.900]
+    arrows:
+      - side: fr
+        label: Relief force from Zinder
+        phase: 1
+        via: [[8.988, 13.805], [8.600, 14.800], [8.200, 15.900], [8.000, 16.900]]
+      - side: kc
+        label: Kaocen
+        phase: 2
+        via: [[8.600, 18.456], [10.500, 20.500], [12.500, 23.000], [13.850, 25.800]]

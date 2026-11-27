@@ -1,0 +1,154 @@
+id: french-conquest-of-mauritania
+name: French conquest of Mauritania
+start: "1902"
+end: "1934"
+tier: B
+summary: "The French occupation of the emirates of the western Sahara north of the Senegal river, which became the colony of Mauritania. Moorish (Bidan) society was divided between the warrior (hassane) lineages who ruled the emirates of Trarza, Brakna, Tagant and Adrar and the scholarly (zawaya) lineages whose marabouts led the Sufi brotherhoods, and both lived partly from the labour of slaves and dependants. Xavier Coppolani, a Corsican official from Algeria who knew Arabic and the brotherhoods, won over two great marabouts, Shaykh Sidiyya Baba and Shaykh Saad Bouh, by promising to protect the zawaya from the warriors’ raids, and with their help and some force brought Trarza, Brakna and Tagant under French rule in 1902–1905; France made Mauritania a territory of its own in 1904. A third marabout, Shaykh Ma al-Aynayn, Saad Bouh’s brother, who had built a base at Smara in the north with the help of the sultan of Morocco, proclaimed a holy war in 1904. Coppolani was killed at Tidjikja in May 1905. In 1908–1909 Colonel Henri Gouraud marched into the Adrar and took Atar, the emirs submitted, and Ma al-Aynayn withdrew to Morocco, where he died in 1910. Resistance in the Adrar ended by 1912, but raids by the northern nomads went on until 1934. The French ruled through the emirs and marabouts and left slavery largely in place; Morocco later based part of its claim to Mauritania on Ma al-Aynayn’s allegiance to the sultan."
+countries: [mr, eh, ma, sn]
+sides:
+  - id: fr
+    name: France and its allies among the marabouts
+    polities: [french-west-africa, france]
+    ink: navy
+    moves: French moves
+    success: French success
+  - id: tg
+    name: Emirate of Tagant
+    polities: [tagant]
+    ink: brown
+    moves: Tagant moves
+    success: Tagant success
+  - id: ad
+    name: Emirate of Adrar
+    polities: [adrar-emirate]
+    ink: orange
+    moves: Adrar moves
+    success: Adrar success
+  - id: mn
+    name: Ma al-Aynayn and his followers
+    polities: [ma-al-aynayn]
+    ink: green
+    moves: Ma al-Aynayn’s moves
+    success: Ma al-Aynayn’s success
+notes:
+  - "Coppolani called his policy “peaceful penetration” and his plan a “plan of pacification”; these were French terms, and the occupation of the emirates also relied on military columns and posts. Dates for the submission of the emirates differ between sources: Trarza in 1902–1903, Brakna in 1903–1904 and Tagant in 1904–1905."
+  - "Accounts of Coppolani’s death differ. English sources name a member of Ma al-Aynayn’s brotherhood as his killer; French ones name a band led by Sidi Seghir Ould Moulay Zein and suggest that Saint-Louis merchants who traded in arms and slaves wanted him gone."
+sources:
+  - title: Colonial Mauritania (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Colonial_Mauritania
+  - title: Xavier Coppolani (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Xavier_Coppolani
+  - title: Xavier Coppolani (French Wikipedia)
+    url: https://fr.wikipedia.org/wiki/Xavier_Coppolani
+  - title: Ma al-Aynayn (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ma_al-Aynayn
+  - title: Émirat de l’Adrar (French Wikipedia)
+    url: https://fr.wikipedia.org/wiki/%C3%89mirat_de_l%27Adrar
+  - title: Henri Gouraud (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Henri_Gouraud
+  - title: Mauritania, history (Britannica)
+    url: https://www.britannica.com/place/Mauritania/History
+steps:
+  - title: Coppolani and the southern emirates
+    date: 1901 – May 1905
+    when: "1904"
+    borders: "1904-12-31"
+    countries: [mr, sn]
+    body:
+      - In 1901 the French government adopted Coppolani’s plan for the lands of the Moors north of the Senegal. He made alliances with Shaykh Sidiyya Baba of Boutilimit, whose authority was strongest in Trarza, Brakna and Tagant, and with Shaykh Saad Bouh, leaders of branches of the Qadiriyya brotherhood. They were promised a leading role under French rule and protection for their zawaya lineages against the raids of the hassane warriors, and in return used their religious influence to persuade the emirs to accept the French. The colonial government in Senegal saw little worth having in the desert, and the Saint-Louis trading houses feared for their trade in arms.
+      - With the marabouts’ support and military pressure, French posts were set up in Trarza from 1902–1903 and in Brakna in 1903–1904, and Coppolani moved into the Tagant in 1904–1905, setting up a post at Tidjikja. In 1904 France made Mauritania a territory separate from Senegal, with Coppolani as its first commissioner.
+    facts:
+      - [Coppolani’s plan adopted, "1901"]
+      - [Mauritania a separate territory, "1904"]
+    markers:
+      - kind: event
+        side: fr
+        name: Boutilimit
+        date: 1902–1905
+        text: Seat of Shaykh Sidiyya Baba, the marabout who backed the French; they later placed a school of Islamic studies here under his control.
+        lonlat: [-14.767, 17.517]
+      - kind: capital
+        side: fr
+        name: Saint-Louis
+        date: 1901–1905
+        text: Capital of Senegal, from which Coppolani’s missions set out and where Mauritania was governed from.
+        lonlat: [-16.500, 16.033]
+    arrows:
+      - side: fr
+        label: Coppolani
+        via: [[-16.500, 16.033], [-15.400, 16.900], [-14.200, 17.500], [-12.800, 18.100], [-11.500, 18.500]]
+    areas:
+      - style: gained
+        side: fr
+        label: Trarza and Brakna under French protection
+        atoms: [MR-06, MR-05]
+  - title: Tidjikja and Ma al-Aynayn’s holy war
+    date: 1904–1908
+    when: "1905-05-12"
+    borders: "1905-05-12"
+    countries: [mr, eh, ma]
+    body:
+      - Ma al-Aynayn, a scholar of the Fadiliyya brotherhood and a rival of the southern marabouts, had since 1898 built a fortified settlement at Smara, in what is now Western Sahara, with craftsmen, money and arms sent by Sultan Abdelaziz of Morocco; he moved there in 1902. In 1904 he proclaimed a holy war against the colonisers, and in return for Moroccan support recognised the sultan’s sovereignty over the Moorish lands. The emirate of Adrar, the last to hold out against the French, had his backing.
+      - On 12 May 1905, as he prepared to march on the Adrar, Coppolani was killed at Tidjikja. His death turned the tide for Ma al-Aynayn, who rallied many of the Moors with promises of Moroccan help and called for the French to be driven back across the Senegal, while the French government hesitated for three years.
+    facts:
+      - [Ma al-Aynayn proclaims holy war, "1904"]
+      - [Coppolani killed at Tidjikja, "12 May 1905"]
+    markers:
+      - kind: event
+        side: fr
+        name: Tidjikja
+        date: 12 May 1905
+        text: French post in the Tagant, where Coppolani was killed; his tomb is here.
+        lonlat: [-11.433, 18.550]
+      - kind: held
+        side: mn
+        name: Smara
+        date: 1898–1909
+        text: Ma al-Aynayn’s fortified settlement and library, built with Moroccan help, and the base of his holy war.
+        lonlat: [-11.670, 26.739]
+    areas:
+      - style: contested
+        side: tg
+        label: The Tagant
+        atoms: [MR-09]
+  - title: Gouraud and the Adrar
+    date: 1908–1934
+    when: "1909"
+    borders: "1912-12-31"
+    countries: [mr, ma]
+    body:
+      - In 1907–1908 Colonel Henri Gouraud, who had captured Samori in 1898, became government commissioner of Mauritania and turned Coppolani’s policy into open conquest. In 1909 his column marched into the Adrar, took Atar, the oasis capital of the emirate, and received the submission of its peoples. Emir Sidi Ahmed Ould Ahmed Ayda fought on and was captured in 1912; the French restored him the next year as an emir under their control.
+      - Ma al-Aynayn, angered by the concessions Sultan Abdelaziz made to the European powers at Algeciras in 1906, had backed his brother Abdelhafid, who took the throne in 1908. As the French advanced he withdrew to Tiznit in southern Morocco in 1908–1909. In 1910 he marched north at the head of some 6,000 men against Abdelhafid, now in turn weakened by European pressure, and was defeated by General Moinier on 23 June. He died at Tiznit on 23 October 1910. His son Ahmed al-Hiba carried on the fight in southern Morocco from 1912.
+      - By 1912 armed resistance in the Adrar and the south had been put down, but the fighting had cost the nomads much of their herds, and the northern camel herders, above all the Reguibat, rebuilt them by raiding. French camel corps chased the raiders for two decades; Port-Étienne (Nouadhibou) was attacked in 1924 and 1927, and the last great Reguibat raid, in 1934, covered some 6,000 km. Emir Sidi Ahmed of the Adrar broke with the French again in 1931 and died in 1932, which ended the emirate as a working state.
+    facts:
+      - [Atar taken, "1909"]
+      - [Ma al-Aynayn defeated by Moinier, "23 June 1910"]
+      - [Death of Ma al-Aynayn, "23 October 1910"]
+      - [Emir of Adrar captured, "1912"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Atar
+        date: "1909"
+        text: Oasis capital of the emirate of Adrar, taken by Gouraud’s column.
+        lonlat: [-13.050, 20.517]
+      - kind: event
+        side: mn
+        name: Tiznit
+        date: 1908–1910
+        text: Ma al-Aynayn withdrew here from the Sahara and died here on 23 October 1910; his tomb is a place of pilgrimage.
+        lonlat: [-9.717, 29.717]
+    arrows:
+      - side: fr
+        label: Gouraud
+        phase: 1
+        via: [[-14.300, 18.300], [-14.100, 19.100], [-13.700, 19.900], [-13.100, 20.450]]
+      - side: mn
+        label: Ma al-Aynayn
+        phase: 2
+        via: [[-11.670, 26.739], [-11.000, 27.700], [-10.300, 28.700], [-9.760, 29.650]]
+    areas:
+      - style: gained
+        side: fr
+        label: The Adrar
+        atoms: [MR-07]

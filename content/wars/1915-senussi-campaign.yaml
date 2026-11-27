@@ -1,0 +1,202 @@
+id: senussi-campaign
+name: Senussi campaign
+start: "1915-04-29"
+end: "1917-04-14"
+tier: B
+summary: "The war of the Senussi, the Sufi order that led the resistance to Italy in Cyrenaica, against Italy and Britain during the First World War. Libyan fighters drove the Italians out of the Fezzan in 1914 and defeated a large Italian column at Gasr Bu Hadi near Sirte in April 1915, after which Italy held little more than a few coastal towns. Urged on by Ottoman officers and supplied by German submarines, the head of the order, Sayyid Ahmed al-Sharif, declared jihad and in November 1915 attacked Egypt, then a British protectorate. A British Empire force drove the Senussi back from the coast in battles from December 1915 to February 1916 and retook Sollum in March. Sayyid Ahmed’s occupation of the oases of the Western Desert was undone in 1916, and after a British raid on Siwa in February 1917 he handed the leadership to his cousin Muhammad Idris, who made peace with Britain and Italy at Akrama in April 1917. Idris became king of independent Libya in 1951."
+countries: [ly, eg, it, gb, tr]
+sides:
+  - id: sen
+    name: Senussi order and the Libyan resistance
+    polities: [senussi]
+    ink: olive
+    moves: Senussi and Libyan moves
+    success: Senussi and Libyan success
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+  - id: gb
+    name: British Empire and Egypt
+    polities: [united-kingdom, egypt]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: it
+    name: Italy
+    polities: [italy, libya-it]
+    ink: green
+    moves: Italian moves
+    success: Italian success
+notes:
+  - "The Senussiya, founded in the 1830s by Muhammad ibn Ali al-Senussi, had a network of lodges (zawiyas) across Cyrenaica and the Sahara as far as Kufra and Chad, and led the resistance in Cyrenaica after Italy’s invasion of 1911. Not all its leaders wanted war with Britain; Idris opposed it."
+  - "Losses: the British counted 117 killed and 544 wounded in the battles on the Egyptian frontier and about 1,100 Senussi killed. Italian losses in Libya in the first half of 1915 alone are put at 5,600 killed and about 2,000 captured. The Senussi also inspired risings further south, in Darfur and in the Aïr, where Kaocen besieged Agadez in 1916–1917; those are told separately."
+sources:
+  - title: Senussi campaign (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Senussi_campaign
+  - title: Action of Agagia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Action_of_Agagia
+  - title: Ahmed Sharif as-Senussi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ahmed_Sharif_as-Senussi
+  - title: Idris of Libya (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Idris_of_Libya
+  - title: Second Italo-Senussi War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Italo-Senussi_War
+  - title: "Sanusiyah (Britannica)"
+    url: https://www.britannica.com/topic/Sanusiyah
+steps:
+  - title: Italy loses the interior
+    date: 1914 – 1915
+    when: "1915-04-29"
+    borders: "1915-08-21"
+    countries: [ly, it]
+    body:
+      - By the Treaty of Ouchy of 1912 the Ottoman Empire gave up Libya, but the war went on. In Cyrenaica the Senussi order, led by Sayyid Ahmed al-Sharif, kept up the fight from the Jebel Akhdar and the desert, and in Tripolitania local leaders resisted the Italian advance inland. In 1913–1914 a column under Colonel Antonio Miani pushed into the Fezzan and reached Murzuk, but in late 1914 risings cut it off and the Italians had to abandon the Fezzan.
+      - On 29 April 1915, at Gasr Bu Hadi near Sirte, Miani’s column was routed when many of its Libyan auxiliaries, among them the Misratan leader Ramadan al-Suwayhili, turned on the Italians. The Libyans captured thousands of rifles, dozens of guns and millions of rounds of ammunition. Italy, which entered the First World War in May, pulled its garrisons back to the coast; by the end of the year it held little more than Tripoli, Homs and a few towns on the coast of Cyrenaica. Italian losses in the first half of 1915 are estimated at 5,600 killed and some 2,000 captured. Italy declared war on the Senussi on 21 August 1915.
+    facts:
+      - [Battle of Gasr Bu Hadi, "29 April 1915"]
+      - [Italian losses, January – July 1915, "about 5,600 killed, 2,000 captured"]
+      - [Italy declares war on the Senussi, "21 August 1915"]
+    markers:
+      - kind: battle
+        side: sen
+        name: Gasr Bu Hadi
+        date: 29 April 1915
+        text: Miani’s column was destroyed when its Libyan auxiliaries changed sides; the Italians lost 3,000–4,000 men and huge stocks of arms.
+        lonlat: [16.65, 31.05]
+      - kind: event
+        side: sen
+        name: Murzuk
+        date: late 1914
+        text: The Italian garrisons of the Fezzan withdrew after the risings of 1914.
+        lonlat: [13.91, 25.92]
+      - kind: held
+        side: it
+        name: Tripoli
+        date: 1915
+        text: The capital and the coast near it were among the few places Italy still held.
+        lonlat: [13.19, 32.89]
+      - kind: held
+        side: it
+        name: Benghazi
+        date: 1915
+        text: Italy held the main towns of the Cyrenaican coast; the Senussi held the interior.
+        lonlat: [20.07, 32.12]
+    arrows:
+      - side: it
+        label: Retreat to the coast
+        via: [[16.5, 31.0], [15.6, 31.6], [14.4, 32.4]]
+    areas:
+      - style: occupied
+        side: sen
+        label: Lost by Italy to the Libyan resistance and the Senussi, 1914–1915 (approximate)
+        atoms: [LY-SB, LY-MQ, LY-WD, LY-WS, LY-GT, LY-JU, LY-SR, LY-MZ, LY-GD, LY-MI, LY-KF, LY-AJ]
+  - title: War on the Egyptian frontier
+    date: November 1915 – March 1916
+    when: "1915-11"
+    borders: "1916-03-17"
+    countries: [eg, ly, gb, tr]
+    body:
+      - The Ottoman Empire, now at war with Britain, sent officers to the Senussi, among them Nuri Bey, a half-brother of Enver Pasha, and the Baghdadi officer Jafar al-Askari, and German submarines landed arms on the Cyrenaican coast. In the summer of 1915 Sayyid Ahmed was persuaded to declare jihad against Britain, though not all the leaders of the order agreed. In November U-boats torpedoed the British armed boarding steamer Tara and the transport Moorina and handed their crews to the Senussi. Senussi forces attacked the Egyptian posts on the frontier, and the British evacuated Sollum and fell back to Mersa Matruh.
+      - A Western Frontier Force of British, Australian, New Zealand, Indian and South African troops was formed at Matruh. It defeated the Senussi at Wadi Senab on 11 December and at Wadi Majid on 25 December 1915, and fought a hard battle at Halazin on 23 January 1916. On 26 February at Agagia, south-east of Sidi Barrani, the Dorset Yeomanry charged the Senussi lines and Jafar al-Askari was taken prisoner. The British reoccupied Sollum on 14 March, and three days later the Duke of Westminster’s armoured cars drove more than 100 km into the desert to Bir Hakeim and freed 91 of the Tara’s crew; four had died in captivity.
+    facts:
+      - [Sollum evacuated, "November 1915"]
+      - [Wadi Majid, "25 December 1915"]
+      - [Agagia, "26 February 1916"]
+      - [Rescue at Bir Hakeim, "17 March 1916, 91 prisoners freed"]
+    markers:
+      - kind: battle
+        side: gb
+        name: Wadi Majid
+        date: 25 December 1915
+        text: The Western Frontier Force attacked the Senussi camp west of Matruh; about 300 Senussi were killed.
+        lonlat: [27.12, 31.3]
+        lp: b
+      - kind: held
+        side: gb
+        name: Mersa Matruh
+        date: November 1915 – February 1916
+        text: The base of the Western Frontier Force after Sollum was given up.
+        lonlat: [27.24, 31.35]
+        lp: t
+      - kind: battle
+        side: gb
+        name: Agagia
+        date: 26 February 1916
+        text: The Dorset Yeomanry charged and broke the Senussi; Jafar al-Askari was captured. About 500 Senussi were killed or wounded.
+        lonlat: [26.1, 31.46]
+      - kind: taken
+        side: gb
+        name: Sollum
+        date: 14 March 1916
+        text: Reoccupied without a fight; the armoured cars then pursued the Senussi along the frontier.
+        lonlat: [25.155, 31.565]
+        lp: t
+      - kind: event
+        side: gb
+        name: Bir Hakeim
+        date: 17 March 1916
+        text: The Duke of Westminster’s armoured cars freed the crews of the Tara and the Moorina held at the wells.
+        lonlat: [23.48, 31.59]
+    arrows:
+      - side: sen
+        phase: 1
+        via: [[24.6, 31.7], [25.2, 31.58], [26.5, 31.5], [27.0, 31.35]]
+      - side: gb
+        phase: 2
+        via: [[27.2, 31.33], [26.5, 31.45], [25.95, 31.6], [25.2, 31.57]]
+      - side: gb
+        label: Armoured cars
+        phase: 3
+        via: [[25.155, 31.565], [24.4, 31.6], [23.5, 31.59]]
+  - title: The oases and the peace of Akrama
+    date: February 1916 – April 1917
+    when: "1916-02-11"
+    borders: "1917-04-14"
+    countries: [eg, ly, gb, it]
+    body:
+      - Pushed off the coast, Sayyid Ahmed turned south. In February 1916 he and some 500 followers occupied the oasis of Bahariya, and Senussi forces held Farafra and Dakhla, threatening the Nile valley. The British answered with aircraft, motor patrols and a light railway to Kharga, and by the end of 1916 the Senussi had withdrawn from the Egyptian oases except Siwa. On 3–5 February 1917 a column of armoured cars attacked the Senussi at Girba and entered Siwa, and Sayyid Ahmed fell back to Jaghbub.
+      - Sayyid Ahmed’s cousin Muhammad Idris, who had opposed the war with Britain, took over the leadership of the order. At Akrama near Tobruk he accepted British terms on 12 April 1917, and on 14 April he reached a modus vivendi with Italy that left the Senussi the interior of Cyrenaica. Sayyid Ahmed left Libya by submarine for Istanbul in August 1918 and spent the rest of his life in exile. The Akrama accords and the later agreements of 1919–1920 gave Cyrenaica a few years of peace, until Fascist Italy renewed the war in 1923.
+    facts:
+      - [Bahariya occupied by the Senussi, "11 February 1916"]
+      - [Raid on Siwa, "3–5 February 1917"]
+      - [Accords of Akrama, "12–14 April 1917"]
+    markers:
+      - kind: taken
+        side: sen
+        name: Bahariya
+        date: 11 February 1916
+        text: Occupied by Sayyid Ahmed with about 500 men; he withdrew later in the year.
+        lonlat: [28.86, 28.35]
+      - kind: event
+        side: sen
+        name: Dakhla
+        date: February – October 1916
+        text: Held by the Senussi until British patrols cleared the oasis.
+        lonlat: [28.98, 25.49]
+      - kind: taken
+        side: gb
+        name: Siwa
+        date: 3–5 February 1917
+        text: Armoured cars defeated the Senussi at Girba and entered Siwa unopposed.
+        lonlat: [25.52, 29.2]
+      - kind: treaty
+        name: Akrama
+        date: 12–14 April 1917
+        text: Idris made peace with Britain and reached a modus vivendi with Italy here.
+        lonlat: [23.7, 31.99]
+      - kind: event
+        side: sen
+        name: Jaghbub
+        date: February 1917
+        text: Sayyid Ahmed withdrew to the Senussi centre at Jaghbub after the fall of Siwa.
+        lonlat: [24.52, 29.75]
+        lp: l
+    arrows:
+      - side: gb
+        label: Armoured cars
+        via: [[27.24, 31.3], [26.4, 30.3], [25.52, 29.25]]
+      - side: sen
+        via: [[25.4, 29.25], [25.0, 29.5], [24.6, 29.72]]

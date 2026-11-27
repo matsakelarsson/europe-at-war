@@ -1,0 +1,154 @@
+id: british-expedition-to-abyssinia
+name: British Expedition to Abyssinia
+start: "1867-10"
+end: "1868-06"
+tier: B
+summary: "A British and Indian army’s march to Magdala to free British and other European captives held by Emperor Tewodros II. Tewodros had imprisoned the British consul Charles Cameron in January 1864, after his letter to Queen Victoria went unanswered, and later the envoy Hormuzd Rassam and missionaries. In 1867 the British government sent an army from Bombay under Sir Robert Napier: about 13,000 soldiers, 26,000 followers and more than 40,000 animals, among them elephants, landed at Zula on the Red Sea and marched some 600 km through the highlands, helped by the ruler of Tigray, Kassa Mercha. On 10 April 1868 Tewodros’s army was cut down at Arogee below Magdala; he released the captives, and on 13 April, as the British stormed the fortress, he shot himself. The British looted and burned Magdala and left the country by June. Kassa Mercha, rewarded with arms, became Emperor Yohannes IV in 1872. Many of the manuscripts and treasures taken from Magdala are still in British collections, and Ethiopia has long asked for their return."
+countries: [et, er, gb]
+sides:
+  - id: gb
+    name: British and Indian army (Napier)
+    polities: [united-kingdom, british-india]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: et
+    name: Emperor Tewodros II
+    polities: [ethiopia]
+    ink: gold
+    moves: Tewodros’s moves
+    success: Tewodros’s success
+notes:
+  - The army was raised and supplied by the Bombay Presidency of British India; most of its soldiers and nearly all its followers came from India. Tewodros by then controlled only a small part of the country, and the rulers of Tigray, Lasta and Shewa stayed out of the fighting or helped the British.
+  - Contemporary accounts call Magdala also Maqdala; Arogee is also written Arogye.
+sources:
+  - title: British expedition to Abyssinia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/British_expedition_to_Abyssinia
+  - title: Battle of Magdala (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Magdala
+  - title: Tewodros II (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tewodros_II
+  - title: Robert Napier, 1st Baron Napier of Magdala (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Robert_Napier,_1st_Baron_Napier_of_Magdala
+  - title: Prince Alemayehu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Prince_Alemayehu
+steps:
+  - title: The captives
+    date: January 1864 – 1867
+    when: "1864-01-02"
+    borders: "1867-06-01"
+    countries: [et, gb]
+    body:
+      - Tewodros had written to Queen Victoria in 1862 asking for friendship and help against his Muslim neighbours, and sent the letter through the British consul, Charles Cameron. The Foreign Office left it unanswered for two years, while Cameron travelled to the Egyptian-held Sudan, which Tewodros took as an insult. On 2 January 1864 the emperor had Cameron and his staff chained, together with other Europeans in his camp, among them the missionary Henry Stern, who had written disrespectfully of Tewodros’s descent.
+      - In January 1866 Hormuzd Rassam arrived with a reply from the queen. He was received with honour at first, but in mid-1866 he too was made a prisoner, and the captives, Europeans with their families and servants, were later taken to the mountain fortress of Magdala. Tewodros, facing revolt everywhere, had moved his army between Debre Tabor and Magdala, where European craftsmen at Gafat had cast his great mortar, which his troops called Sebastopol. In 1867, after demands for their release had failed, the British government decided to send an army.
+    facts:
+      - [Cameron imprisoned, "2 January 1864"]
+      - [Rassam’s mission, "arrived January 1866, imprisoned 1866"]
+    markers:
+      - kind: held
+        side: et
+        name: Magdala
+        date: 1866–1868
+        text: The mountain fortress where Tewodros kept his treasury, his family and the European captives.
+        lonlat: [39.181, 11.346]
+      - kind: event
+        side: et
+        name: Debre Tabor
+        date: 1860s
+        text: Tewodros’s main camp; the workshops of the European craftsmen at nearby Gafat cast his cannon and his great mortar.
+        lonlat: [38.02, 11.85]
+        lp: l
+    arrows:
+      - side: et
+        label: Captives moved to Magdala
+        phase: 1
+        via: [[38.05, 11.80], [38.50, 11.60], [38.90, 11.45], [39.15, 11.36]]
+  - title: From Zula to the Bashilo
+    date: October 1867 – 9 April 1868
+    when: "1868-01-02"
+    borders: "1868-03-17"
+    countries: [er, et, gb]
+    body:
+      - Royal Engineers landed at Zula on Annesley Bay in October 1867 and built piers, a short railway and a road up the Kumayli pass to Senafe on the edge of the highlands. Napier arrived on 2 January 1868 and set off for Senafe on 25 January. More than 280 ships brought the army from Bombay, with some 13,000 British and Indian soldiers, about 26,000 followers and over 40,000 mules, camels, horses and bullocks, and 44 elephants for the heavy guns.
+      - The column climbed south through Tigray, buying food and transport from the local people. At Antalo Napier won the cooperation of the ruler of Tigray, Dejazmach Kassa Mercha, who let the army pass and helped supply it. It reached Lake Ashenge on 17 March, about 160 km from Magdala, with the troops on half rations. Tewodros, meanwhile, dragged his guns and mortar from Debre Tabor across the gorges to Magdala, which he reached in late March. The British reached the Bashilo river below the fortress on 9 April.
+    facts:
+      - [Napier lands at Zula, "2 January 1868"]
+      - [Army, "about 13,000 soldiers, 26,000 followers, 40,000 animals"]
+      - [Bashilo river reached, "9 April 1868"]
+    markers:
+      - kind: event
+        side: gb
+        name: Zula
+        date: October 1867 – June 1868
+        text: The expedition’s base on Annesley Bay, with piers, a railway and depots.
+        lonlat: [39.67, 15.24]
+      - kind: event
+        side: gb
+        name: Senafe
+        date: January 1868
+        text: The first camp on the highland plateau, reached by a road built up the Kumayli pass.
+        lonlat: [39.42, 14.70]
+        lp: l
+      - kind: treaty
+        side: gb
+        name: Antalo
+        date: "1868"
+        text: Here Napier secured the cooperation of Kassa Mercha of Tigray, the later Emperor Yohannes IV.
+        lonlat: [39.47, 13.30]
+        lp: l
+      - kind: event
+        side: gb
+        name: Lake Ashenge
+        date: 17 March 1868
+        text: The army reached the lake about 160 km from Magdala, on half rations.
+        lonlat: [39.51, 12.58]
+        lp: l
+    arrows:
+      - side: gb
+        label: Napier
+        phase: 1
+        via: [[39.67, 15.24], [39.48, 15.00], [39.42, 14.70], [39.46, 14.28], [39.47, 13.30]]
+      - side: gb
+        phase: 2
+        via: [[39.47, 13.30], [39.51, 12.58], [39.40, 12.00], [39.20, 11.45]]
+      - side: et
+        label: Tewodros
+        phase: 2
+        via: [[38.02, 11.85], [38.50, 11.70], [38.90, 11.50], [39.15, 11.36]]
+  - title: Arogee and Magdala
+    date: 10–13 April 1868
+    when: "1868-04-10"
+    borders: "1868-04-13"
+    countries: [et, gb]
+    view:
+      center: [39.17, 11.37]
+      size: [70, 60]
+    body:
+      - On Good Friday, 10 April 1868, as the British vanguard climbed towards the heights of Fala and Selassie in front of Magdala, Tewodros’s army charged down on it on the Arogee plain. The attackers, with muzzle-loaders and spears, met breech-loading Snider rifles, rockets and artillery; about 700 Ethiopians were killed and 1,200 wounded, against two British dead and about twenty wounded. That night Tewodros tried to make peace, released the captives on 11 and 12 April and offered cattle, but would not surrender himself. On 13 April the British shelled Magdala and stormed the gates. Tewodros shot himself with a pistol that Queen Victoria had once sent him.
+      - The British looted the fortress and its churches, and their prize agents auctioned the plunder on the spot. It included crowns, crosses, hundreds of manuscripts and church tabots, many of which are now in the British Library, the British Museum, the Victoria and Albert Museum and other collections. Magdala was then burned. Tewodros’s seven-year-old son Alemayehu was taken to Britain, where he died in 1879. The army marched back to the coast and had left by June. Napier gave Kassa Mercha guns and ammunition, which helped him defeat his rivals and be crowned Yohannes IV in 1872.
+    facts:
+      - [Battle of Arogee, "10 April 1868, British victory"]
+      - [Ethiopian losses at Arogee, "about 700 killed, 1,200 wounded"]
+      - [Storming of Magdala, "13 April 1868"]
+    markers:
+      - kind: battle
+        side: gb
+        name: Arogee
+        date: 10 April 1868
+        text: Tewodros’s army was cut down by British breech-loaders and rockets on the plain below Fala, a few kilometres from Magdala.
+        lonlat: [39.15, 11.38]
+        lp: l
+      - kind: taken
+        side: gb
+        name: Magdala
+        date: 13 April 1868
+        text: Stormed by the British. Tewodros shot himself; the fortress was looted and burned.
+        lonlat: [39.181, 11.346]
+    arrows:
+      - side: gb
+        label: Napier
+        phase: 1
+        via: [[39.20, 11.50], [39.17, 11.43], [39.15, 11.39]]
+      - side: gb
+        phase: 2
+        via: [[39.15, 11.38], [39.17, 11.36], [39.18, 11.35]]

@@ -23,7 +23,8 @@ import { projectRaw, unproject, mapCoords, DATA_CLIP } from './projection.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 // Natural Earth names that are wrong for the polygon they label.
-const NAME_FIX = { 'MD-RE': 'Rîbnița', 'AZ-LAN': 'Lachin' };
+// Natural Earth's Eritrean regions carry each other's names (ER-DU holds Massawa, ER-SK Keren).
+const NAME_FIX = { 'MD-RE': 'Rîbnița', 'AZ-LAN': 'Lachin', 'ER-DU': 'Northern Red Sea', 'ER-AN': 'Maekel', 'ER-MA': 'Debub', 'ER-SK': 'Anseba' };
 const CACHE = join(ROOT, '.cache');
 const PREFILTER = [-75, 0, 130, 90]; // lon/lat box that covers DATA_CLIP
 // Simplification in metres: atoms in the curated core and the water near them,
@@ -123,7 +124,10 @@ async function main() {
   ].join(' '), { 'atoms.json': projected }))['atoms.json']).features.filter((f) => f.geometry).map((f) => f.properties.id));
   const core = await insideClip('-filter-slivers min-area=4');
   // Regions inside the core too small to see (Naftalan, Kökar) are left out, as they always were.
-  const tiny = new Set([...await insideClip('')].filter((id) => !core.has(id)));
+  // A region that only grazes the core's edge (Kidal, Tagant) is kept, as a region outside it.
+  const within = new Set(projected.features.filter((f) => { const [x0, y0, x1, y1] = bboxOf(f.geometry);
+    return x0 >= DATA_CLIP.x0 && y0 >= DATA_CLIP.y0 && x1 <= DATA_CLIP.x1 && y1 <= DATA_CLIP.y1; }).map((f) => f.properties.id));
+  const tiny = new Set([...await insideClip('')].filter((id) => !core.has(id) && within.has(id)));
   atoms = atoms.filter((a) => !tiny.has(a.id));
   const ptsOut = await mapshaper.applyCommands('-i atoms.json -points inner -o format=geojson pts.json', { 'atoms.json': collection(projected.features.filter((f) => core.has(f.properties.id))) });
   const pts = new Map(JSON.parse(ptsOut['pts.json']).features.map((f) => [f.properties.id, unproject(f.geometry.coordinates)]));

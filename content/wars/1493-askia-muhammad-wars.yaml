@@ -1,0 +1,171 @@
+id: askia-muhammad-wars
+name: Askia Muhammad’s wars
+start: "1493-02"
+end: "1528-08-26"
+tier: B
+summary: "The wars of Askia Muhammad (Muhammad Ture), who seized the Songhai throne from Sonni Ali’s son in 1493 and ruled until his own son deposed him in 1528. After defeating Sonni Baru at Anfao, near Gao, he made the pilgrimage to Mecca, returned with the title of caliph for the lands of Takrur, and led a campaign against the Mossi in 1497–1498 that the Timbuktu chronicle calls the only true holy war of the region. In the following years his armies marched against Aïr (1500), the Malian town of Zalen (1501), Borgu (1505, with heavy losses), Mali (1506–1507), the Fulani leader Tengella in Diara (1512), Katsina in Hausaland (1513) and the sultan of Agadez (1514–1515). On the way back from Agadez, Kanta Kotal of Kebbi rebelled over his share of the plunder and held off a Songhai expedition in 1516–1517, founding an independent Kebbi. Under Askia Muhammad the Songhai Empire reached its greatest extent, from the upper Senegal to Aïr; in 1528, old and nearly blind, he was deposed by his son Musa."
+countries: [ml, ne, bf, ng]
+sides:
+  - id: son
+    name: Songhai Empire (Askia Muhammad)
+    polities: [songhai]
+    ink: orange
+    moves: Songhai moves
+    success: Songhai success
+  - id: baru
+    name: Sonni Baru’s followers
+    polities: [sonni-baru]
+    ink: brown
+  - id: mos
+    name: Mossi
+    polities: [mossi-states]
+    ink: red
+  - id: mali
+    name: Mali Empire
+    polities: [mali-empire]
+    ink: green
+  - id: air
+    name: Sultanate of Aïr (Agadez)
+    polities: [agadez]
+    ink: blue
+  - id: hau
+    name: Hausa kingdoms (Katsina)
+    polities: [hausa-states]
+    ink: purple
+  - id: keb
+    name: Kebbi (Kanta Kotal)
+    polities: [kebbi]
+    ink: teal
+    moves: Kebbi moves
+    success: Kebbi success
+notes:
+  - "The main sources are the Tarikh al-Sudan and the Tarikh al-Fattash, written in Timbuktu more than a century later by scholars who admired Askia Muhammad; dates are their Hijri years as converted by their translators, and many are given only to the year. Leo Africanus, who travelled in the region about 1510–1513, says the askiya conquered Katsina, Kano, Zamfara, Zaria and Gobir; the chronicles mention only the Katsina expedition, and historians doubt that Songhai rule over the Hausa states was more than brief."
+sources:
+  - title: Askia Muhammad I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Askia_Muhammad_I
+  - title: Battle of Anfao (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Anfao
+  - title: Songhai Empire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Songhai_Empire
+  - title: Kanta Kotal (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kanta_Kotal
+  - title: Muhammad I Askia (Britannica)
+    url: https://www.britannica.com/biography/Muhammad-I-Askia
+  - title: "S. M. Cissoko, “The Songhay from the 12th to the 16th century”, in UNESCO General History of Africa, vol. IV (South African History Online)"
+    url: https://www.sahistory.org.za/archive/general-history-africa-volume-iv-africa-twelfth-sixteenth-century
+  - title: "al-Sa’di, Tarikh es-Soudan, French translation by O. Houdas, 1900, chapter 13 (Internet Archive)"
+    url: https://archive.org/details/tarikhessoudanpa00sadauoft
+steps:
+  - title: Anfao and the Mossi war
+    date: 1493–1498
+    when: "1493"
+    borders: "1498"
+    countries: [ml, bf]
+    body:
+      - "When Sonni Ali drowned in November 1492, his son Abu Bakr Dao, known as Sonni Baru, was proclaimed king. One of Sonni Ali’s leading commanders, Muhammad Ture, attacked him on the night of 18 February 1493 and was driven off, but he gathered his men at Anfao, near Gao, and there won a hard-fought battle in early 1493; the Tarikh al-Sudan dates it to 3 March in one place, while it counts the new reign from 2 April. Sonni Baru fled and spent the rest of his life in exile. The victor took the title askiya and was welcomed by the scholars of Timbuktu, whom Sonni Ali had persecuted. He made his brother Umar Komdiagho kurmina-fari, governor of the western provinces, with his seat at Tendirma."
+      - "In late 1495 Askia Muhammad left for Mecca with a large escort and a great sum in gold, and in Cairo the Abbasid caliph made him his deputy for the lands of Takrur. Back in Gao in August 1497, he turned against the Mossi, Songhai’s old enemies in the Niger bend. He sent the scholar Mur Salih Jawara to summon their king, Na’asira, to accept Islam; when the king refused after consulting his ancestors, the Songhai army invaded, killed many men, laid waste the fields and took the women and children captive. The chronicle calls it the only true holy war ever fought in the region. The northern Mossi lost the initiative to Songhai, but their kingdom survived."
+    facts:
+      - [Battle of Anfao, "early 1493, victory of Muhammad Ture"]
+      - [Pilgrimage, "1495–1497"]
+      - [Expedition against the Mossi, "1497–1498"]
+    markers:
+      - kind: battle
+        side: son
+        name: Anfao, near Gao
+        date: early 1493
+        text: Muhammad Ture defeated Sonni Baru here and took the throne as Askia Muhammad.
+        lonlat: [-0.044, 16.272]
+      - kind: capital
+        side: son
+        name: Tendirma
+        date: about 1497
+        text: Seat of the kurmina-fari, the governor of the western provinces, first held by the askiya’s brother Umar Komdiagho.
+        lonlat: [-3.633, 16.133]
+        lp: l
+    arrows:
+      - side: son
+        label: Against the Mossi, 1497–1498
+        via: [[-0.100, 16.150], [-0.900, 15.300], [-1.800, 14.300], [-2.400, 13.700]]
+  - title: From Aïr to Diara and Katsina
+    date: 1498–1513
+    when: "1500"
+    borders: "1513"
+    countries: [ml, ne, ng, mr, bj]
+    body:
+      - "Year after year the askiya’s armies went out from Gao. In 1498–1499 he arrested the governor of Baghana and killed the Fulani chief Dinba-Donbi; in 1499–1500 he marched against Aïr. In 1500–1501 Umar Komdiagho failed to take Zalen, held for Mali by its governor Qama-Fiti-Qalli, until the askiya came in person, sacked the town, plundered the palace of the Malian king and carried off members of his family. Djenné had submitted of its own accord when he came to the throne. In 1504–1505 an expedition against Borgu cost the lives of many of the best Songhai commanders; Umar wept, and the askiya is said to have answered that those who had died would have made trouble for him at home."
+      - "In 1506–1507 he campaigned again against Mali. In 1511–1512 his army killed Tengella, a Fulani leader who had built up a following in Diara, at Zara; Tengella’s son Koli Tengella fled west with his men to Futa Toro, where he founded a dynasty. At the end of 1512 the askiya led an expedition to Katsina, in Hausaland, returning in May or June 1513."
+    facts:
+      - [Aïr, "1499–1500"]
+      - [Zalen sacked, "1500–1501"]
+      - [Borgu, "1504–1505, heavy Songhai losses"]
+      - [Tengella killed at Zara, "1511–1512"]
+      - [Katsina, "1512–1513"]
+    markers:
+      - kind: taken
+        side: son
+        name: Katsina
+        date: 1512–1513
+        text: Target of the askiya’s expedition into Hausaland. Leo Africanus claims wider conquests among the Hausa states, which historians doubt.
+        lonlat: [7.600, 12.990]
+      - kind: event
+        side: son
+        name: Agadez
+        date: 1499–1500
+        text: Capital of the sultanate of Aïr, against which the askiya marched in 1499–1500.
+        lonlat: [7.990, 16.970]
+    arrows:
+      - side: son
+        label: Aïr, 1500
+        phase: 1
+        via: [[0.050, 16.300], [2.500, 16.600], [5.500, 16.900], [7.850, 16.950]]
+      - side: son
+        label: Borgu, 1505
+        phase: 2
+        via: [[0.000, 16.100], [1.500, 13.800], [3.000, 12.000], [3.600, 10.400]]
+      - side: son
+        label: Diara, 1512
+        phase: 3
+        via: [[-3.700, 16.100], [-5.600, 15.600], [-7.600, 15.200], [-9.300, 15.100]]
+      - side: son
+        label: Katsina, 1513
+        phase: 4
+        via: [[0.500, 15.500], [3.500, 13.800], [6.000, 13.200], [7.500, 13.000]]
+  - title: Agadez and Kebbi
+    date: 1514–1528
+    when: "1515"
+    borders: "1528-08-26"
+    countries: [ne, ng, ml]
+    body:
+      - "At the end of 1514 the askiya marched against al-Adala, sultan of Agadez, and finished the campaign in 1515; Aïr became tributary to Songhai, though not for long. Among his allies on the expedition was Kanta Kotal, chief of Leka in Kebbi, who expected his share of the plunder when he got home. The Dendi-fari warned him that to claim it would be treated as rebellion. Kanta’s men insisted, so he rebelled, beat the troops sent against him and stopped recognising the askiya. An expedition against him in 1516–1517 achieved nothing, and Kebbi remained independent; under Kanta it became a power that contested Agadez with both Songhai and Bornu."
+      - "In his last years Askia Muhammad went blind, and his sons fought over the succession. His son Musa, the fari-mondzo, rebelled at Kukiya, where the askiya’s brother Yahya was killed trying to bring him to obedience, and on the feast of the sacrifice, 26 August 1528, Musa deposed his father at Gao. The old askiya was confined on an island in the Niger and died in 1538, after another of his sons, Askia Ismail, had brought him back to Gao."
+    facts:
+      - [Agadez campaign, "1514–1515"]
+      - [Kebbi’s revolt, "1515; Songhai expedition 1516–1517 fails"]
+      - [Askia Muhammad deposed, "26 August 1528"]
+    markers:
+      - kind: taken
+        side: son
+        name: Agadez
+        date: 1514–1515
+        text: The askiya’s campaign against al-Adala, sultan of Agadez, made Aïr tributary for a time.
+        lonlat: [7.990, 16.970]
+      - kind: event
+        side: none
+        name: Gao
+        date: 26 August 1528
+        text: Askia Muhammad was deposed here by his son Musa.
+        lonlat: [-0.044, 16.272]
+    arrows:
+      - side: son
+        label: Agadez, 1514–1515
+        phase: 1
+        via: [[0.050, 16.300], [2.500, 16.600], [5.500, 16.900], [7.850, 16.950]]
+      - side: son
+        label: Against Kebbi, 1516–1517
+        phase: 2
+        via: [[1.200, 14.000], [2.700, 13.200], [4.200, 12.700]]
+    areas:
+      - style: gained
+        side: keb
+        label: Kebbi, independent from 1515 (approximate)
+        polygon: [[3.300, 13.400], [4.700, 13.700], [5.700, 13.000], [5.200, 11.900], [3.900, 11.700], [3.400, 12.400]]

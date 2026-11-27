@@ -1,0 +1,119 @@
+id: hispano-moroccan-war
+name: Hispano-Moroccan War
+start: "1859-10-22"
+end: "1860-04-26"
+tier: B
+summary: "A war between Spain and Morocco, called the African War (Guerra de África) in Spain and the War of Tetuán in Morocco. After tribesmen of the Anjera destroyed new fortifications outside Ceuta in August 1859, the government of Leopoldo O’Donnell declared war in October and landed an army of about 45,000 men at Ceuta. Through the winter it fought its way south along the coast, winning at Castillejos on 1 January 1860, and on 4–6 February it defeated the army of Mawlay al-Abbas, the sultan’s brother, and entered Tetuán. After a last Spanish victory at Wad-Ras on 23 March, Morocco made peace by the Treaty of Wad-Ras of 26 April 1860: it enlarged the territories of Ceuta and Melilla, promised Spain a fishing post at Santa Cruz de la Mar Pequeña on the Atlantic coast, and agreed to pay an indemnity of 20 million duros, with Tetuán held by Spain until it was paid. Spain lost about 4,000 dead, most of them to cholera and other disease, and Morocco about 6,000. The war was hugely popular in Spain, while in Morocco the indemnity emptied the treasury and opened the way to European loans and control of the customs."
+countries: [ma, es]
+sides:
+  - id: es
+    name: Spain
+    polities: [spain]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+  - id: ma
+    name: Morocco
+    polities: [morocco]
+    ink: red
+    moves: Moroccan moves
+    success: Moroccan success
+notes:
+  - "Losses by the usual Spanish count: 4,040 dead, 1,152 of them killed in battle and 2,888 by disease, mostly cholera, and 4,994 wounded. Moroccan losses are estimated at about 6,000 dead; Moroccan sources on the war are few."
+  - "The indemnity of 20 million duros was 400 million reales or 100 million pesetas. Britain, which had warned Spain not to take Tangier, lent Morocco part of the money in 1861. The site of Santa Cruz de la Mar Pequeña was later identified with Ifni, which Spain occupied only in 1934."
+sources:
+  - title: Hispano-Moroccan War (1859–1860) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hispano-Moroccan_War_(1859%E2%80%931860)
+  - title: Guerra de África (Wikipedia, in Spanish)
+    url: https://es.wikipedia.org/wiki/Guerra_de_%C3%81frica
+  - title: Battle of Castillejos (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Castillejos
+  - title: Battle of Tetuán (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tetu%C3%A1n
+  - title: Battle of Wad-Ras (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Wad-Ras
+  - title: Treaty of Wad-Ras (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Wad_Ras
+steps:
+  - title: Ceuta, Castillejos and Tetuán
+    date: August 1859 – February 1860
+    when: "1859-12"
+    borders: "1860-02-06"
+    countries: [es, ma]
+    view:
+      center: [-5.45, 35.72]
+      size: [100, 80]
+    body:
+      - In August 1859 men of the Anjera, the tribe of the hills around Ceuta, tore down new Spanish fortification works outside the town. Leopoldo O’Donnell, prime minister and minister of war, demanded that the sultan punish them and cede more land around Ceuta. The old sultan, Abd al-Rahman, died in August, and his son Muhammad IV could not meet the Spanish demands; many in Spain also wanted a war that would unite the country behind O’Donnell’s government. The Cortes voted for war on 22 October 1859.
+      - An army of about 45,000 men in three corps, under O’Donnell himself, crossed to Ceuta in November and December. For weeks it fought off Moroccan attacks in the hills around the town while cholera spread through its camps. On 1 January 1860 it set out south along the coast, and at Castillejos General Juan Prim led the charge that won the first battle. The army struggled on through rain and mud past Cabo Negro, supplied by the fleet, to the plain of the Martín river below Tetuán.
+      - On 4 February the Spanish stormed the Moroccan camps outside Tetuán, defended by the army of the sultan’s brother Mawlay al-Abbas; about 450 Catalan volunteers who had arrived with Prim fought in the attack. Two days later the city surrendered, and O’Donnell was made Duke of Tetuán. In Spain the victory was celebrated in newspapers, songs and paintings, and the writer Pedro Antonio de Alarcón’s war diary became a best-seller.
+    facts:
+      - [War declared, "22 October 1859"]
+      - [Spanish army, "about 45,000 men"]
+      - [Battle of Castillejos, "1 January 1860"]
+      - [Tetuán taken, "6 February 1860"]
+    markers:
+      - kind: held
+        side: es
+        name: Ceuta
+        date: November – December 1859
+        text: The Spanish army landed here and fought off attacks in the hills on the landward side through December.
+        lonlat: [-5.316, 35.888]
+        lp: r
+      - kind: battle
+        side: es
+        name: Castillejos
+        date: 1 January 1860
+        text: Prim’s attack in the valley south of Ceuta opened the road to Tetuán; he was made Marquis of Castillejos.
+        lonlat: [-5.355, 35.835]
+        lp: l
+      - kind: taken
+        side: es
+        name: Tetuán
+        date: 4–6 February 1860
+        text: The Moroccan camps were stormed on 4 February, and the city opened its gates two days later.
+        lonlat: [-5.367, 35.572]
+        lp: l
+    arrows:
+      - side: es
+        label: O’Donnell
+        via: [[-5.32, 35.875], [-5.355, 35.835], [-5.33, 35.75], [-5.3, 35.68], [-5.35, 35.585]]
+  - title: Wad-Ras and the peace
+    date: March – April 1860
+    when: "1860-03-23"
+    borders: "1860-04-26"
+    countries: [es, ma]
+    view:
+      center: [-5.5, 35.7]
+      size: [110, 80]
+    body:
+      - Muhammad IV rejected the peace terms O’Donnell offered after Tetuán, and his brother gathered a new army in the hills on the road to Tangier. On 23 March 1860 the Spanish advanced up the valley of Wad-Ras and defeated it after a hard day’s fighting, in which Basque volunteers took part. Britain had made clear that it would not accept a Spanish Tangier, and O’Donnell, whose army was weakened by disease, preferred peace to a march on Tangier or Fez.
+      - By the Treaty of Wad-Ras, signed in Tetuán on 26 April 1860, Morocco enlarged the boundaries of Ceuta and Melilla, recognised Spain’s hold on the Chafarinas Islands, promised Spain land for a fishing post at Santa Cruz de la Mar Pequeña, allowed a Catholic mission at Tetuán and agreed to pay 20 million duros. Spain kept Tetuán as a pledge until 1862, when Morocco had paid much of the sum, partly with a British loan secured on its customs.
+      - In Spain many felt the treaty was “a small peace for a great war”. For Morocco the defeat showed how far its army lagged behind European ones; Muhammad IV began to reform it, but the indemnity drained the treasury, the currency lost value, and the customs posts that paid the debt came under foreign supervision.
+    facts:
+      - [Battle of Wad-Ras, "23 March 1860"]
+      - [Treaty of Wad-Ras, "26 April 1860"]
+      - [Indemnity, "20 million duros (400 million reales)"]
+      - [Tetuán evacuated, "1862"]
+    markers:
+      - kind: battle
+        side: es
+        name: Wad-Ras
+        date: 23 March 1860
+        text: The last battle of the war, fought in the valley on the road from Tetuán to Tangier.
+        lonlat: [-5.53, 35.64]
+      - kind: treaty
+        name: Tetuán
+        date: 26 April 1860
+        text: The treaty was signed here. Spanish troops held the city until 1862.
+        lonlat: [-5.367, 35.572]
+        lp: b
+      - kind: held
+        side: ma
+        name: Tangier
+        date: 1860
+        text: Morocco’s diplomatic capital; Britain warned Spain against taking it.
+        lonlat: [-5.81, 35.77]
+    arrows:
+      - side: es
+        via: [[-5.38, 35.58], [-5.45, 35.61], [-5.52, 35.635]]

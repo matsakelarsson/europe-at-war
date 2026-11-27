@@ -1,0 +1,394 @@
+id: almoravid-conquest-of-the-maghreb
+name: Almoravid conquest of the Maghreb
+start: "1053"
+end: "1083"
+tier: A
+summary: "The rise of the Almoravids (al-Murabitun), a movement of religious reform among the veiled Sanhaja Berbers of the western Sahara, and their conquest of what is now Morocco and western Algeria. Brought to the Gudala and Lamtuna tribes by the Maliki scholar Abdallah ibn Yasin in the 1040s, the movement took the caravan cities at both ends of the western Saharan trade in 1054–1055, Sijilmasa in the north and Awdaghust in the south. Under the Lamtuna chiefs Yahya ibn Umar and Abu Bakr ibn Umar it conquered the Sous, Aghmat (1058) and the Barghawata of the Atlantic plains, whose own faith it stamped out; Ibn Yasin was killed fighting them in 1059. Abu Bakr founded Marrakesh and went back to the desert, leaving the north to his cousin Yusuf ibn Tashfin, who took Fez from its Zenata emirs (1069–1075), then Tangier, Tlemcen and Algiers, and in 1083 Ceuta on the Strait. The Almoravids ruled from the Senegal to the Mediterranean, and in 1086 they crossed into al-Andalus at the call of its Muslim kings."
+countries: [ma, dz, mr, eh]
+sides:
+  - id: alm
+    name: Almoravids
+    polities: [almoravid-dynasty]
+    ink: purple
+    moves: Almoravid moves
+    success: Almoravid success
+  - id: zen
+    name: Zenata emirates (Maghrawa and Banu Ifran)
+    polities: [zenata]
+    ink: brown
+    moves: Zenata moves
+    success: Zenata success
+  - id: bar
+    name: Barghawata
+    polities: [barghawata]
+    ink: olive
+    moves: Barghawata moves
+    success: Barghawata success
+  - id: gha
+    name: Ghana
+    polities: [ghana-empire]
+    ink: gold
+    moves: Ghanaian moves
+    success: Ghanaian success
+notes:
+  - The main sources are al-Bakri’s geography (1068), the only one written while the conquests were going on, and later chronicles, above all Ibn Idhari, Ibn Abi Zar’s Rawd al-Qirtas (14th century) and Ibn Khaldun. They often disagree on dates by several years, especially for the founding of Marrakesh (1062 or 1070) and the taking of Fez (1069–1070 or 1074–1075); the text gives the ranges.
+  - "The name al-Murabitun, from which “Almoravid” comes, is explained in several ways: as the men of a ribat, a fortified retreat for religious warriors, perhaps on an island; as an honorific given after an early battle; or from the school of Waggag ibn Zallu, Dar al-Murabitin, where Ibn Yasin studied. The Sanhaja men of the desert covered their faces with a veil, the litham, and their enemies called them al-mulaththamun, the veiled ones."
+  - The Almoravid wars in al-Andalus from 1086 are told in the Reconquista; the question whether the Almoravids conquered Ghana is in a separate entry, The Almoravids and Ghana.
+sources:
+  - title: Almoravid dynasty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Almoravid_dynasty
+  - title: Almoravids (Britannica)
+    url: https://www.britannica.com/topic/Almoravids
+  - title: Abdallah ibn Yasin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Abdallah_ibn_Yasin
+  - title: Abu Bakr ibn Umar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Abu_Bakr_ibn_Umar
+  - title: Yusuf ibn Tashfin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yusuf_ibn_Tashfin
+  - title: Barghawata (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Barghawata
+  - title: Aoudaghost (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Aoudaghost
+  - title: Sijilmasa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sijilmasa
+  - title: History of Fez (Wikipedia)
+    url: https://en.wikipedia.org/wiki/History_of_Fez
+  - title: Taifa of Ceuta (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Taifa_of_Ceuta
+  - title: Nekor (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nekor
+steps:
+  - title: Ibn Yasin and the veiled Sanhaja
+    date: about 1040–1053
+    when: "1050"
+    borders: "1050-01-01"
+    countries: [mr, eh, ma]
+    body:
+      - In the western Sahara, between the Senegal river and the Draa, lived Sanhaja Berber tribes, the Gudala near the Atlantic, the Lamtuna in the Adrar and the Massufa to the east, camel herders who controlled the caravan routes between the Maghreb and the gold-producing lands of the Sahel. Their Islam was recent and, in the eyes of North African scholars, shallow. About 1040 the Gudala chief Yahya ibn Ibrahim, returning from the pilgrimage, asked the Maliki jurist Abu Imran al-Fasi in Kairouan for a teacher for his people. He was sent on to Waggag ibn Zallu, whose school at Aglu in the Sous gave him one of its pupils, Abdallah ibn Yasin.
+      - Ibn Yasin preached a strict Maliki Islam, with harsh punishments, the payment of only the taxes the law allowed and war on those who would not follow. After Yahya ibn Ibrahim’s death the Gudala drove him out. The Lamtuna chief Yahya ibn Umar took him in, and his followers, the Almoravids, became a disciplined army of the desert, led in religious matters by Ibn Yasin and in war by Yahya ibn Umar. By the early 1050s they were strong enough to move north.
+    facts:
+      - [Yahya ibn Ibrahim’s pilgrimage, "about 1040"]
+      - [Ibn Yasin’s teacher, "Waggag ibn Zallu of Aglu"]
+      - [First allies, "the Lamtuna under Yahya ibn Umar"]
+    markers:
+      - kind: event
+        side: alm
+        name: Aglu
+        date: about 1040
+        text: Waggag ibn Zallu’s school near Tiznit, where Ibn Yasin studied and from which he was sent to the Sahara.
+        lonlat: [-9.820, 29.800]
+        lp: l
+      - kind: event
+        name: Kairouan
+        date: about 1040
+        text: Yahya ibn Ibrahim met the jurist Abu Imran al-Fasi here on his way back from Mecca.
+        lonlat: [10.096, 35.678]
+    arrows:
+      - side: alm
+        label: Ibn Yasin
+        phase: 1
+        via: [[-9.820, 29.800], [-11.500, 27.000], [-13.500, 23.500], [-13.000, 20.800]]
+    areas:
+      - style: outline
+        side: alm
+        label: Lands of the Sanhaja tribes of the western Sahara
+        polygon: [[-17.0, 21.0], [-16.2, 23.5], [-13.0, 26.5], [-9.5, 27.6], [-6.0, 26.0], [-5.5, 22.0], [-7.0, 18.0], [-10.0, 16.6], [-15.0, 16.4], [-16.5, 18.0]]
+  - title: Sijilmasa and Awdaghust
+    date: 1054–1056
+    when: "1054"
+    borders: "1055-06-01"
+    countries: [ma, mr]
+    body:
+      - Sijilmasa, the caravan city on the northern edge of the Sahara, was ruled by Zenata emirs of the Maghrawa. In 1054 or 1055 the Almoravids took the city and killed its emir, Mas’ud ibn Wanudin. It was their first great conquest, and from 1058 its mint struck their gold dinars. The same year they turned south against Awdaghust, the trading town at the southern end of the route, which recognised the authority of the king of Ghana. Al-Bakri, writing a few years later, says they violated its women and declared everything they seized booty of the community, because the town had accepted the rule of Ghana. Awdaghust may never have recovered.
+      - The conquests strained the movement. The Gudala refused to follow, and in 1056 Yahya ibn Umar was killed fighting them at Tabfarilla. His brother Abu Bakr ibn Umar took command. In Sijilmasa the Maghrawa rose and killed the Lamtuna garrison, and Abu Bakr had to take the city again in 1056; he left his cousin Yusuf ibn Tashfin in command there.
+    facts:
+      - [Sijilmasa taken, "1054 or 1055"]
+      - [Awdaghust sacked, "1054 or 1055"]
+      - [Yahya ibn Umar killed at Tabfarilla, "1056"]
+      - [Sijilmasa retaken, "1056"]
+    markers:
+      - kind: taken
+        side: alm
+        name: Sijilmasa
+        date: 1054–1055, again 1056
+        text: The Maghrawa emir Mas’ud ibn Wanudin was killed. After a rising killed the garrison, Abu Bakr retook the city in 1056 and left Yusuf ibn Tashfin in command.
+        lonlat: [-4.270, 31.290]
+      - kind: taken
+        side: alm
+        name: Awdaghust
+        date: 1054–1055
+        text: The trading town of the southern Sahara, then under Ghana’s authority, was sacked; al-Bakri says the Almoravids abused its women and took all its goods as booty. Its ruins are at Tegdaoust in Mauritania.
+        lonlat: [-10.417, 17.417]
+    arrows:
+      - side: alm
+        label: Yahya ibn Umar and Ibn Yasin
+        phase: 1
+        via: [[-13.000, 20.800], [-10.000, 24.000], [-7.000, 28.000], [-5.000, 30.300], [-4.300, 31.250]]
+      - side: alm
+        phase: 2
+        via: [[-13.000, 20.500], [-12.000, 19.200], [-10.900, 18.000], [-10.450, 17.450]]
+    areas:
+      - style: gained
+        side: alm
+        label: Under Almoravid rule, 1055
+        polygon: [[-16.5, 19.5], [-16.0, 22.5], [-13.5, 25.5], [-10.5, 27.5], [-6.0, 30.5], [-4.0, 31.8], [-3.8, 30.8], [-6.5, 27.5], [-9.0, 22.0], [-10.2, 17.2], [-11.0, 17.0], [-14.0, 18.0]]
+  - title: The Sous, Aghmat and the Barghawata
+    date: 1056–1060
+    when: "1058"
+    borders: "1059-07-07"
+    countries: [ma]
+    body:
+      - Abu Bakr and Ibn Yasin now turned north-west across the Atlas. In 1057 they took Taroudant and the Sous valley, and in 1058 Aghmat, the capital of the Maghrawa emir Laqut at the foot of the High Atlas, which became their capital. Laqut’s widow, Zaynab al-Nafzawiyya, married Abu Bakr and later Yusuf ibn Tashfin.
+      - Beyond the Oum Er-Rbia lay the Barghawata, a confederation of the Atlantic plains of Tamesna between Salé and Safi, who had followed their own religion for three centuries, a faith that mixed Islam with Berber beliefs, with a scripture of eighty chapters attributed to their prophet Salih ibn Tarif. They had beaten off the Umayyads, the Fatimids and the Banu Ifran, and they fought the Almoravids hard. Ibn Yasin was killed in battle against them at Krifla, south-east of today’s Rabat, on 7 July 1059 (some sources give 1058); his tomb is still there. Abu Bakr avenged him with a campaign that broke the Barghawata state and forced them to accept orthodox Islam, though they were finally eliminated as a group only by the Almohads in 1149. Abu Bakr then advanced as far as Meknes.
+    facts:
+      - [Taroudant taken, "1057"]
+      - [Aghmat taken, "1058"]
+      - [Death of Ibn Yasin at Krifla, "7 July 1059 (or 1058)"]
+    markers:
+      - kind: taken
+        side: alm
+        name: Taroudant
+        date: "1057"
+        text: The chief town of the Sous, taken by Abu Bakr.
+        lonlat: [-8.877, 30.471]
+      - kind: taken
+        side: alm
+        name: Aghmat
+        date: "1058"
+        text: The capital of the Maghrawa emir Laqut at the foot of the High Atlas. It was the Almoravids’ capital until Marrakesh was built.
+        lonlat: [-7.800, 31.425]
+      - kind: battle
+        name: Krifla
+        date: 7 July 1059
+        text: Abdallah ibn Yasin was killed here fighting the Barghawata. His tomb, near Aïn El Aouda, is still a place of visits.
+        lonlat: [-6.800, 33.720]
+      - kind: taken
+        side: alm
+        name: Meknes
+        date: about 1060
+        text: The farthest point of Abu Bakr’s advance after the defeat of the Barghawata.
+        lonlat: [-5.547, 33.895]
+    arrows:
+      - side: alm
+        label: Abu Bakr ibn Umar
+        phase: 1
+        via: [[-4.270, 31.290], [-5.800, 30.600], [-7.500, 30.300], [-8.850, 30.450]]
+      - side: alm
+        phase: 2
+        via: [[-8.877, 30.471], [-8.400, 31.000], [-7.820, 31.400]]
+      - side: alm
+        phase: 3
+        via: [[-7.800, 31.450], [-7.400, 32.400], [-7.000, 33.200], [-6.820, 33.700]]
+      - side: alm
+        phase: 4
+        via: [[-6.800, 33.720], [-6.200, 33.850], [-5.580, 33.890]]
+    areas:
+      - style: contested
+        side: bar
+        label: Barghawata lands (Tamesna)
+        polygon: [[-6.85, 34.05], [-7.70, 33.60], [-8.60, 33.10], [-9.25, 32.40], [-8.30, 32.20], [-7.20, 32.60], [-6.40, 33.40]]
+  - title: Marrakesh and the parting of the cousins
+    date: 1060–1072
+    when: "1070"
+    borders: "1070-01-01"
+    countries: [ma, mr]
+    body:
+      - On the plain of the Tensift, a few hours’ ride from Aghmat, Abu Bakr set up a camp that grew into a new capital, Marrakesh. The chronicles date its founding to 1062 or to 1070; most modern historians prefer 1070. Its first buildings were a fortress of stone, the Qasr al-Hajar, and a mosque, and Yusuf ibn Tashfin completed the city and is counted as its co-founder.
+      - News of a revolt among the Gudala, which threatened the caravan routes, called Abu Bakr back to the Sahara, in about 1060 according to some chronicles and in 1071 according to others. He left the north in the hands of Yusuf, and before going he divorced Zaynab, who married Yusuf. When Abu Bakr came back, he found Yusuf too strong to be displaced and accepted the division. Abu Bakr remained nominal head of the Almoravids and kept the Sahara, while Yusuf ruled the north, striking coins in Abu Bakr’s name until his death. Abu Bakr spent the rest of his life fighting in the desert and the Sahel, and was killed by a poisoned arrow in the Tagant in 1087.
+    facts:
+      - [Marrakesh founded, "1070 (some chronicles 1062)"]
+      - [Abu Bakr returns to the Sahara, "about 1060 or 1071"]
+      - [Death of Abu Bakr, "1087, in the Tagant"]
+    markers:
+      - kind: capital
+        side: alm
+        name: Marrakesh
+        date: 1062 or 1070
+        text: Founded as a camp by Abu Bakr and completed by Yusuf ibn Tashfin, the capital of the Almoravids and later of the Almohads.
+        lonlat: [-7.989, 31.629]
+      - kind: event
+        side: alm
+        name: Aghmat
+        date: 1058–1070
+        text: The first Almoravid capital in Morocco.
+        lonlat: [-7.800, 31.425]
+        lp: b
+    arrows:
+      - side: alm
+        label: Abu Bakr returns to the desert
+        phase: 1
+        via: [[-7.989, 31.629], [-7.000, 30.000], [-8.000, 27.000], [-11.000, 22.500], [-12.000, 19.500]]
+    areas:
+      - style: gained
+        side: alm
+        label: Almoravid Morocco, about 1070
+        polygon: [[-9.85, 29.6], [-9.80, 31.6], [-9.25, 32.4], [-8.60, 33.1], [-7.70, 33.6], [-6.85, 34.05], [-5.9, 33.95], [-5.2, 33.6], [-4.6, 32.6], [-3.8, 31.8], [-3.8, 30.8], [-5.6, 29.8], [-7.5, 29.4]]
+  - title: Fez and the Zenata emirs
+    date: 1063–1075
+    when: "1070-03"
+    borders: "1075-06-01"
+    countries: [ma]
+    body:
+      - The north of Morocco was divided among Zenata emirs of the Maghrawa and the Banu Ifran, who had ruled it for Córdoba and then on their own since the fall of the caliphate. Fez itself had been split between two rival emirs ruling its two walled halves, and in 1062 the Hammadids of the central Maghreb briefly took it. From 1063 Yusuf ibn Tashfin campaigned against the Zenata strongholds of the Middle Atlas and the Saïs plain, and their chiefs submitted or fled.
+      - Fez was taken in 1069 or 1070, on 18 March 1070 according to one modern reckoning, though some historians date the conquest to 1074 or 1075. The Almoravids sacked the city and killed many of its Zenata defenders. Yusuf then tore down the walls between the two banks of the river, joining the old Idrisid towns into one city inside a new wall, built bridges and a citadel and extended its water system, and is sometimes called its second founder.
+    facts:
+      - [Campaign against the Zenata, "from 1063"]
+      - [Fez taken, "1069–1070 (some historians 1074–1075)"]
+    markers:
+      - kind: taken
+        side: alm
+        name: Fez
+        date: 1069–1075
+        text: Taken from the Zenata emirs, perhaps on 18 March 1070, and sacked; its defenders were massacred. Yusuf joined its two walled towns into one city.
+        lonlat: [-4.978, 34.062]
+      - kind: capital
+        side: alm
+        name: Marrakesh
+        date: "1070"
+        text: Yusuf’s capital.
+        lonlat: [-7.989, 31.629]
+    arrows:
+      - side: alm
+        label: Yusuf ibn Tashfin
+        phase: 1
+        via: [[-7.989, 31.629], [-6.900, 32.300], [-6.000, 33.100], [-5.400, 33.800], [-5.010, 34.040]]
+    areas:
+      - style: gained
+        side: alm
+        label: Almoravid Morocco, about 1075
+        polygon: [[-9.85, 29.6], [-9.80, 31.6], [-9.25, 32.4], [-8.60, 33.1], [-7.70, 33.6], [-6.85, 34.05], [-6.40, 34.70], [-5.6, 34.85], [-4.5, 34.70], [-3.9, 34.30], [-4.0, 33.30], [-4.3, 32.6], [-3.8, 31.8], [-3.8, 30.8], [-5.6, 29.8], [-7.5, 29.4]]
+  - title: Tangier, Tlemcen and Algiers
+    date: 1077–1082
+    when: "1080"
+    borders: "1082-06-01"
+    countries: [ma, dz]
+    body:
+      - Tangier and Ceuta on the Strait were ruled by Suqut, a commander of Barghawata origin who had governed them for the Hammudid caliphs of Málaga and made himself independent shortly before 1061; he could field about 12,000 horsemen. In 1078–1079 Yusuf’s armies defeated his forces and took Tangier, while his family held out in Ceuta. In 1080 the Almoravids destroyed Nekor, the old capital of the Rif.
+      - In the east the Zenata Banu Ya’la of Tlemcen and the Maghrawa still held the land from the Moulouya to the central Maghreb. In 1079 Yusuf’s general Mazdali ibn Tilankan defeated the Banu Ya’la with an army said to number 20,000 near the Moulouya, and in 1079–1081 Yusuf took Oujda and Tlemcen, where he founded a new town, Tagrart, next to the old one. In 1082 his armies took Oran, Ténès and Algiers, which became the eastern frontier of the Almoravid realm, facing the Hammadids.
+    facts:
+      - [Tangier taken, "1078–1079"]
+      - [Nekor destroyed, "1080"]
+      - [Oujda and Tlemcen, "1079–1081"]
+      - [Algiers taken, "1082"]
+    markers:
+      - kind: taken
+        side: alm
+        name: Tangier
+        date: 1078–1079
+        text: Taken from Suqut, the ruler of Tangier and Ceuta.
+        lonlat: [-5.813, 35.767]
+        lp: l
+      - kind: taken
+        side: alm
+        name: Nekor
+        date: "1080"
+        text: The old capital of the emirate of Nekor in the Rif, destroyed by the Almoravids.
+        lonlat: [-3.808, 35.090]
+      - kind: taken
+        side: alm
+        name: Oujda
+        date: 1079–1081
+        text: Taken by Yusuf in 1079 or 1081; the accounts differ.
+        lonlat: [-1.908, 34.681]
+        lp: b
+      - kind: taken
+        side: alm
+        name: Tlemcen
+        date: 1080–1081
+        text: The town of the Banu Ya’la. Yusuf founded the new town of Tagrart beside it.
+        lonlat: [-1.315, 34.878]
+      - kind: taken
+        side: alm
+        name: Oran
+        date: "1082"
+        text: Taken on the advance east along the coast.
+        lonlat: [-0.642, 35.697]
+        lp: t
+      - kind: taken
+        side: alm
+        name: Ténès
+        date: "1082"
+        text: Taken on the advance east.
+        lonlat: [1.310, 36.510]
+        lp: t
+      - kind: taken
+        side: alm
+        name: Algiers
+        date: "1082"
+        text: The eastern limit of the Almoravid conquests, on the frontier with the Hammadids.
+        lonlat: [3.059, 36.776]
+        lp: t
+      - kind: held
+        name: Ceuta
+        date: 1079–1083
+        text: Held by Suqut’s family after the fall of Tangier.
+        lonlat: [-5.316, 35.889]
+    arrows:
+      - side: alm
+        phase: 1
+        via: [[-4.978, 34.062], [-5.400, 34.700], [-5.700, 35.300], [-5.790, 35.720]]
+      - side: alm
+        label: Mazdali
+        phase: 1
+        via: [[-4.978, 34.062], [-3.800, 34.250], [-2.700, 34.500], [-1.950, 34.660]]
+      - side: alm
+        label: Yusuf ibn Tashfin
+        phase: 2
+        via: [[-1.908, 34.681], [-1.600, 34.800], [-1.340, 34.870]]
+      - side: alm
+        phase: 3
+        via: [[-1.315, 34.878], [-0.700, 35.600], [0.700, 36.200], [1.900, 36.550], [3.000, 36.740]]
+    areas:
+      - style: gained
+        side: alm
+        label: Almoravid realm, 1082
+        polygon: [[-9.85, 29.6], [-9.80, 31.6], [-9.25, 32.4], [-8.60, 33.1], [-7.70, 33.6], [-6.85, 34.05], [-6.30, 35.0], [-5.95, 35.75], [-5.55, 35.85], [-5.2, 35.50], [-4.0, 35.25], [-2.9, 35.40], [-2.2, 35.15], [-0.7, 35.85], [0.5, 36.30], [1.5, 36.60], [3.2, 36.85], [3.3, 36.3], [1.5, 35.4], [0.0, 34.5], [-1.5, 33.6], [-3.8, 31.8], [-3.8, 30.8], [-5.6, 29.8], [-7.5, 29.4]]
+  - title: Ceuta and the call from al-Andalus
+    date: 1083–1087
+    when: "1083"
+    borders: "1083-08-01"
+    countries: [ma, es]
+    body:
+      - Ceuta, the last port of the Strait still outside Almoravid hands, surrendered in 1083 (some accounts say 1084). Yusuf ibn Tashfin now ruled the whole of the western Maghreb from the Sous to Algiers, a realm held together by the Lamtuna and Massufa commanders of the desert, by Maliki jurists, who were given great influence, and by the gold that came north through Sijilmasa.
+      - Across the Strait the taifa kings of al-Andalus were paying tribute to Alfonso VI of Castile, who took Toledo in 1085. They called on Yusuf for help. In 1086 his army crossed to Algeciras and on 23 October routed Alfonso at Sagrajas (al-Zallaqa); within a few years the Almoravids had taken over al-Andalus itself, a story told in the Reconquista. Abu Bakr ibn Umar was killed in the Tagant in November 1087, and Yusuf, who took the title Commander of the Muslims and recognised the Abbasid caliph, ruled al-Andalus as well as the Maghreb and the Sahara until his death in 1106.
+    facts:
+      - [Ceuta surrenders, "1083 (or 1084)"]
+      - [Almoravids cross to al-Andalus, "1086"]
+      - [Battle of Sagrajas, "23 October 1086, Almoravid victory"]
+    markers:
+      - kind: taken
+        side: alm
+        name: Ceuta
+        date: 1083 or 1084
+        text: The last stronghold of Suqut’s family, the key to the Strait, surrendered to the Almoravids.
+        lonlat: [-5.316, 35.889]
+      - kind: event
+        side: alm
+        name: Algeciras
+        date: July 1086
+        text: The Almoravid army crossed the Strait here at the call of the taifa kings.
+        lonlat: [-5.454, 36.130]
+        lp: t
+      - kind: battle
+        side: alm
+        name: Sagrajas (al-Zallaqa)
+        date: 23 October 1086
+        text: Yusuf’s army and the taifa troops routed Alfonso VI of Castile near Badajoz.
+        lonlat: [-6.890, 38.920]
+      - kind: capital
+        side: alm
+        name: Marrakesh
+        date: "1083"
+        text: Capital of Yusuf ibn Tashfin.
+        lonlat: [-7.989, 31.629]
+    arrows:
+      - side: alm
+        phase: 1
+        via: [[-5.813, 35.767], [-5.600, 35.850], [-5.350, 35.880]]
+      - side: alm
+        label: Yusuf ibn Tashfin
+        phase: 2
+        via: [[-5.316, 35.900], [-5.400, 36.050], [-5.454, 36.120]]
+      - side: alm
+        phase: 3
+        via: [[-5.454, 36.130], [-5.900, 36.900], [-6.400, 38.100], [-6.880, 38.900]]

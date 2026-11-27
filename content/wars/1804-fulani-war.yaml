@@ -1,0 +1,400 @@
+id: fulani-war
+name: Fulani War
+start: "1804-02-21"
+end: "1812"
+tier: A
+summary: "The jihad of Usman dan Fodio, which overthrew the Hausa kingdoms of what is now northern Nigeria and created the Sokoto Caliphate, the largest state in West Africa in the 19th century. Usman, a Fulani scholar who had preached reform in Gobir and its neighbours for thirty years, was driven from his community at Degel by King Yunfa of Gobir, his former pupil, and on 21 February 1804 led his followers into exile at Gudu, where they swore allegiance to him as Commander of the Faithful. His army, Fulani, Hausa and Tuareg, beat Gobir’s cavalry at Tabkin Kwatto in June 1804, survived a heavy defeat at Tsuntua in December, took Kebbi in 1805 and made Gwandu its base. Leaders who received flags from Usman rose across Hausaland and took Katsina, Kano and Zazzau between 1805 and 1808, and the Gobir capital Alkalawa fell in October 1808. In Bornu the jihadists sacked the capital, Ngazargamu, in 1808, but the scholar Muhammad al-Amin al-Kanemi rallied the old empire, which survived under his family. By 1812 the new state was divided between Usman’s brother Abdullahi at Gwandu and his son Muhammad Bello at Sokoto, and new emirates were growing in the south and east, in Adamawa, Nupe and, from the 1820s, Ilorin. The wars enslaved many thousands of captives, and the caliphate became one of the largest slave societies of the century."
+countries: [ng, ne, cm]
+sides:
+  - id: sok
+    name: Usman dan Fodio’s jihad (the Sokoto Caliphate)
+    polities: [sokoto-caliphate]
+    ink: green
+    moves: Jihadist moves
+    success: Jihadist success
+  - id: hau
+    name: Gobir and the Hausa kingdoms
+    polities: [gobir, kebbi, zamfara, katsina, kano, zazzau]
+    ink: red
+    moves: Hausa moves
+    success: Hausa success
+  - id: bor
+    name: Bornu (the mai and al-Kanemi)
+    polities: [kanem-bornu]
+    ink: purple
+    moves: Bornu moves
+    success: Bornu success
+notes:
+  - "The jihad is usually dated 1804–1808, from the hijra to the fall of Alkalawa; the wars in Bornu and the founding of the southern emirates went on for years after, and this story follows them to the division of the caliphate in 1812."
+  - "Most of what is known comes from the leaders of the jihad themselves, above all Abdullahi dan Fodio’s Tazyin al-waraqat and Muhammad Bello’s Infaq al-maysur, written in Arabic soon after the events, and from al-Kanemi’s letters on the Bornu side. The Hausa kings left no written account. Dates are given in the Islamic calendar in these sources and often differ by a year between modern histories, especially for Katsina, Kano and Zazzau."
+  - "“Fulani War” is the British name. Historians now speak of the jihad of Usman dan Fodio or the Sokoto jihad, and of the Sokoto Caliphate, a term Murray Last brought into use in the 1960s; older books call the state the Fulani Empire. Its army was led mostly by Fulani scholars and clan heads, but Hausa peasants, Tuareg and others fought on both sides."
+sources:
+  - title: Jihad of Usman dan Fodio (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fulani_War
+  - title: Usman dan Fodio (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Usman_dan_Fodio
+  - title: Usman dan Fodio (Britannica)
+    url: https://www.britannica.com/biography/Usman-dan-Fodio
+  - title: Fulani empire (Britannica)
+    url: https://www.britannica.com/place/Fulani-empire
+  - title: Sokoto Caliphate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sokoto_Caliphate
+  - title: Battle of Tabkin Kwatto (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tabkin_Kwatto
+  - title: Battle of Tsuntua (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tsuntua
+  - title: Yunfa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yunfa
+  - title: Gobir (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Gobir
+  - title: Katsina Emirate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Katsina_Emirate
+  - title: Kano Emirate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kano_Emirate
+  - title: Kingdom of Zazzau (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Zaria_Emirate
+  - title: Muhammad al-Amin al-Kanemi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Muhammad_al-Amin_al-Kanemi
+  - title: Kanem–Bornu Empire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kanem%E2%80%93Bornu_Empire
+  - title: Ngazargamu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ngazargamu
+  - title: Modibo Adama (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Modibo_Adama
+  - title: Bida Emirate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bida_Emirate
+  - title: Ilorin Emirate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ilorin_Emirate
+  - title: Muhammadu Namoda (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Muhammadu_Namoda
+  - title: Muhammed Bello (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Muhammed_Bello
+  - title: Abdullahi dan Fodio (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Abdullahi_dan_Fodio
+steps:
+  - title: Degel and the hijra
+    date: 1774 – February 1804
+    when: "1804-02-21"
+    borders: "1804-02-21"
+    countries: [ng, ne]
+    body:
+      - At the end of the 18th century the land between the Niger and Lake Chad was divided among the Hausa kingdoms, Gobir, Kebbi, Zamfara, Katsina, Kano, Zazzau and Daura among them, walled cities ruled by kings who were Muslims but kept older court rituals and the spirit cult of bori. They fought one another constantly, raided for slaves and taxed their subjects heavily; Gobir had destroyed the capital of Zamfara in the 1750s or 1760s and built its own new capital, Alkalawa, on Zamfara land. Fulani cattle herders lived among the Hausa farmers, and Fulani clerics, the Torodbe, ran Quranic schools in the countryside.
+      - Usman dan Fodio, born on 15 December 1754 at Maratta in Gobir into a family of Torodbe scholars, began preaching in 1774 and toured Gobir, Kebbi and Zamfara for twenty years. He called on rulers to govern by Islamic law and denounced unjust taxes, the enslavement of Muslims and the mixing of Islam with older beliefs, and he insisted that women be taught as well as men. From his base at Degel he drew a large following of scholars, Fulani pastoralists and Hausa peasants. In about 1788 King Bawa of Gobir granted him the freedom to preach, but Bawa’s successor Nafata forbade conversions and the wearing of the turban that marked Usman’s community, and Yunfa, a former pupil of Usman who came to the throne in about 1801–1803, turned against his teacher; according to the jihad leaders’ accounts, he tried to kill him.
+      - "Late in 1803 Gobir troops attacked the Muslim community of Gimbana and carried off captives, and Usman’s followers freed them as the column passed Degel. Yunfa ordered Usman to leave Degel with his family alone. Usman refused to abandon his people, and on 21 February 1804 he led them on a hijra, an emigration modelled on the Prophet’s, to Gudu on the western edge of Gobir, some 100 km away. Thousands followed, and Yunfa ordered their property seized. At Gudu the community swore allegiance to Usman as Amir al-Mu’minin, Commander of the Faithful; his brother Abdullahi gave the first pledge and his son Muhammad Bello the second. Usman, now nearly fifty, took no part in the fighting, which was led by Abdullahi, Bello and the army commander Ali Jedo."
+    facts:
+      - [Usman dan Fodio, "born 15 December 1754, died 20 April 1817"]
+      - [Hijra to Gudu, "21 February 1804"]
+      - [Usman’s title, "Amir al-Mu’minin (Hausa Sarkin Musulmi)"]
+    markers:
+      - kind: event
+        side: sok
+        name: Degel
+        date: 1774–1804
+        text: Usman dan Fodio’s home and the centre of his community for thirty years.
+        lonlat: [5.33, 13.33]
+        lp: b
+      - kind: event
+        side: sok
+        name: Gudu
+        date: February 1804
+        text: The refuge of the hijra, on the western edge of Gobir, where Usman was proclaimed Commander of the Faithful.
+        lonlat: [4.43, 13.47]
+        lp: l
+      - kind: capital
+        side: hau
+        name: Alkalawa
+        date: "1804"
+        text: Capital of Gobir and seat of King Yunfa, built on the Rima river after Gobir’s conquest of Zamfara.
+        lonlat: [6.26, 13.61]
+    arrows:
+      - side: sok
+        label: The hijra
+        via: [[5.33, 13.33], [5.0, 13.42], [4.7, 13.46], [4.47, 13.47]]
+  - title: Tabkin Kwatto
+    date: March – June 1804
+    when: "1804-06"
+    borders: "1804-06-21"
+    countries: [ng, ne]
+    body:
+      - The emigrants at Gudu were short of food and arms, with few horses and many bows. After beating off a small Gobir force, they seized Matankari and Konni, towns on their northern flank, and sought allies among the Tuareg of Adar and the Fulani clans who had suffered under Gobir. Yunfa gathered his army, heavy cavalry with Tuareg allies and men of the Sullubawa Fulani, and marched west to crush them before the movement spread.
+      - In June 1804 the two armies met by the lake of Kwatto (Tabkin Kwatto), not far from Gudu. Abdullahi, who commanded the Muslim force, drew it up with a stream on one flank and thick bush in front; his archers held off the charges of the Gobir horsemen, and when the commander of Gobir’s armoured cavalry fell the Gobir army broke and Yunfa fled. To the jihadists the victory over a much larger army seemed a sign of God’s favour, and recruits poured into their camp.
+      - The rains had started and the harvest was months away, and the camp moved from place to place in search of grain and pasture. Several Zamfara chiefs, old enemies of Gobir, sent traders with food; Muhammad Bello later wrote that they did so out of hostility to Gobir more than zeal for reform.
+    facts:
+      - [Battle of Tabkin Kwatto, "June 1804 (Rabi’ al-Awwal 1219), jihadist victory"]
+      - [Jihadist commander, Abdullahi dan Fodio]
+    markers:
+      - kind: battle
+        side: sok
+        name: Tabkin Kwatto
+        date: June 1804
+        text: Abdullahi’s archers beat off the Gobir cavalry by the lake of Kwatto, and Yunfa fled. The first great victory of the jihad.
+        lonlat: [4.755, 13.486]
+      - kind: taken
+        side: sok
+        name: Matankari
+        date: "1804"
+        text: Taken by the jihadists soon after the hijra.
+        lonlat: [4.01, 13.77]
+        lp: l
+      - kind: taken
+        side: sok
+        name: Konni
+        date: "1804"
+        text: Birnin Konni, a Gobir town where Usman’s ancestors had once lived, taken early in the war.
+        lonlat: [5.25, 13.79]
+      - kind: capital
+        side: hau
+        name: Alkalawa
+        date: "1804"
+        text: Yunfa’s capital, from which the Gobir army marched west.
+        lonlat: [6.26, 13.61]
+    arrows:
+      - side: hau
+        label: Yunfa
+        via: [[6.2, 13.6], [5.7, 13.6], [5.2, 13.55], [4.8, 13.5]]
+      - side: sok
+        via: [[4.45, 13.5], [4.2, 13.65], [4.03, 13.75]]
+  - title: Tsuntua, Kebbi and Alwassa
+    date: October 1804 – late 1805
+    when: "1804-12"
+    borders: "1805-06-01"
+    countries: [ng]
+    body:
+      - After the harvest of October 1804 the jihadists marched east into the hinterland of Alkalawa, taking villages as they went. A mediator from Gummi in Zamfara failed; the Muslims demanded that Yunfa come to Usman in person. In December 1804, during Ramadan, with their camp a few kilometres from the capital and its men dispersed in search of food, the Gobir army and its Tuareg allies (the Kel Gress and others, who grazed their herds in the Rima valleys) attacked at Tsuntua. Bello was ill and Abdullahi wounded; by Bello’s own count about 2,000 Muslims were killed, 200 of them men who knew the Quran by heart.
+      - The survivors spent the rest of Ramadan in the valley and in early 1805 moved up the Rima into Zamfara, where they found friends. From there Abdullahi and Ali Jedo marched against Kebbi, whose capital, Birnin Kebbi, fell in 1805, and the Kebbi king fled north. The community settled at Gwandu, which gave it at last a permanent base.
+      - Late in 1805 a combined army of Gobir, the Tuareg and Kebbi attacked the jihadists at Alwassa, near Gwandu, and killed about a thousand of them, again by Bello’s count. But the attackers could not press home their advantage in the broken ground around Gwandu, where the Tuareg camels were of little use, and they withdrew. Gwandu remained the headquarters of the jihad until 1809.
+    facts:
+      - [Battle of Tsuntua, "December 1804 (Ramadan 1219), Gobir victory"]
+      - [Jihadist losses at Tsuntua, "about 2,000 (Bello’s figure)"]
+      - [Fall of Birnin Kebbi, "1805"]
+      - [Battle of Alwassa, "late 1805, attack beaten off"]
+    markers:
+      - kind: battle
+        side: hau
+        name: Tsuntua
+        date: December 1804
+        text: The Gobir army and its Tuareg allies surprised the jihadist camp a few kilometres from Alkalawa. The heaviest defeat of the jihad.
+        lonlat: [6.29, 13.64]
+      - kind: taken
+        side: sok
+        name: Birnin Kebbi
+        date: "1805"
+        text: Capital of Kebbi, taken by Abdullahi and Ali Jedo.
+        lonlat: [4.20, 12.45]
+        lp: l
+      - kind: battle
+        side: sok
+        name: Gwandu (Alwassa)
+        date: late 1805
+        text: The jihadists’ base from 1805 to 1809. At Alwassa nearby they beat off the combined army of Gobir, the Tuareg and Kebbi after heavy losses.
+        lonlat: [4.64, 12.50]
+    arrows:
+      - side: sok
+        phase: 1
+        via: [[4.5, 13.45], [5.2, 13.5], [5.8, 13.6], [6.25, 13.65]]
+      - side: sok
+        phase: 2
+        via: [[6.1, 13.3], [5.7, 12.8], [5.0, 12.5], [4.25, 12.45]]
+      - side: hau
+        phase: 3
+        label: Gobir, Tuareg and Kebbi
+        via: [[5.9, 13.4], [5.3, 13.0], [4.9, 12.7], [4.68, 12.53]]
+  - title: The flag-bearers
+    date: 1805–1808
+    when: "1807"
+    borders: "1808-06-01"
+    countries: [ng, ne]
+    body:
+      - The war against Gobir set off risings across Hausaland. Hausa kings, alarmed by the movement, turned on the Muslim communities in their own lands, and those communities sent their leaders to Usman, who gave each a flag and authority to wage the jihad in his own country. Most of the flag-bearers were Fulani clerics or clan heads; Yakubu of Bauchi was a Gerawa, the only one who was not. In the dry season of 1805–1806 Bello met leaders from Kano, Daura and Zamfara and took their oath of allegiance to Usman.
+      - "Katsina fell between 1805 and 1807 (the sources differ); its king, Magajin Halidu, is said to have killed himself, and Umaru Dallaji became its first emir. The Fulani leaders of Kano, under Suleiman dan Abahama, defeated King Muhammad Alwali II, who fled and was later killed at Burum-Burum; Suleiman ruled Kano as emir from about 1805–1807. In Zazzau, Mallam Musa took Zaria in 1808, and its Hausa king, Muhammad Makau, fled south and founded Abuja (today’s Suleja), which kept its independence until the British conquest. Daura, Hadejia, Katagum, Gombe and Bauchi also became emirates."
+      - The old dynasties did not disappear. Exiled kings of Katsina, Gobir, Kebbi and Zazzau carried on the fight from refuges at Maradi, Tibiri, Argungu and Abuja, and raided the new emirates for decades. Captives taken in the wars were enslaved, as captives had been under the Hausa kings; the jihad opened what historians call a new slaving frontier on the edges of the caliphate.
+    facts:
+      - [Katsina, "taken 1805–1807; Umaru Dallaji emir"]
+      - [Kano, "taken about 1805–1807; Suleiman dan Abahama emir"]
+      - [Zazzau, "Zaria taken 1808; Mallam Musa emir"]
+    markers:
+      - kind: taken
+        side: sok
+        name: Katsina
+        date: 1805–1807
+        text: Taken by the jihadists of Katsina under Umaru Dallaji and other Sullubawa Fulani leaders.
+        lonlat: [7.60, 12.99]
+      - kind: taken
+        side: sok
+        name: Kano
+        date: about 1805–1807
+        text: The Fulani leaders of Kano drove out King Muhammad Alwali II. Kano became the richest emirate of the caliphate.
+        lonlat: [8.52, 12.00]
+      - kind: taken
+        side: sok
+        name: Zaria
+        date: "1808"
+        text: Capital of Zazzau, taken by Mallam Musa.
+        lonlat: [7.71, 11.07]
+      - kind: held
+        side: hau
+        name: Abuja (Suleja)
+        date: from 1808
+        text: Founded by Muhammad Makau, the exiled Hausa king of Zazzau, and held against the emirates until the British conquest.
+        lonlat: [7.18, 9.18]
+      - kind: event
+        side: sok
+        name: Bauchi
+        date: about 1809
+        text: Founded as the capital of a new emirate by Yakubu, the only flag-bearer who was not a Fulani.
+        lonlat: [9.84, 10.31]
+    arrows:
+      - side: hau
+        label: Muhammad Makau
+        via: [[7.70, 11.0], [7.55, 10.4], [7.35, 9.7], [7.20, 9.25]]
+  - title: The fall of Alkalawa
+    date: October 1808
+    when: "1808-10"
+    borders: "1808-11-01"
+    countries: [ng, ne]
+    body:
+      - By 1808 Gobir stood almost alone. Three earlier attacks on Alkalawa had failed, and the jihad leaders now planned a converging assault. Muhammad Bello and the army commander Ali Jedo marched from the west with the main army, Muhammadu Namoda led the Fulani of Zamfara and Umaru Dallaji the jihadists of Katsina. The city was surrounded, and on 3 October 1808, at the fourth assault, it was stormed. Yunfa was killed with many of his officials, and large parts of the town were destroyed.
+      - With the fall of Alkalawa the main aims of the jihad had been achieved. In 1809 Bello turned his camp at Sokoto, on a ridge above the Rima, into a walled town that became the capital of the caliphate; Usman settled at nearby Sifawa and moved to Sokoto in 1815.
+      - Gobir’s royal family fled north. Its kings went on fighting from the edge of the desert, and in 1836, with the exiled rulers of Katsina, they rose again; Bello crushed them at Gawakuke, and the Gobir kingdom survived only as a rump state at Tibiri, in what is now Niger.
+    facts:
+      - [Fall of Alkalawa, "3 October 1808, at the fourth assault"]
+      - [Death of Yunfa, "October 1808"]
+      - [Sokoto founded, "1809"]
+    markers:
+      - kind: taken
+        side: sok
+        name: Alkalawa
+        date: 3 October 1808
+        text: The Gobir capital, surrounded by three jihadist armies and stormed at the fourth attempt. Yunfa was killed in the fighting.
+        lonlat: [6.26, 13.61]
+      - kind: event
+        side: sok
+        name: Sokoto
+        date: "1809"
+        text: Bello’s camp, made a walled town in 1809 and the capital of the caliphate.
+        lonlat: [5.24, 13.06]
+        lp: b
+    arrows:
+      - side: sok
+        label: Bello
+        via: [[4.64, 12.55], [5.2, 13.0], [5.8, 13.4], [6.22, 13.59]]
+      - side: sok
+        label: Namoda
+        via: [[6.59, 12.62], [6.5, 13.0], [6.35, 13.35], [6.27, 13.57]]
+      - side: sok
+        label: Dallaji
+        via: [[7.55, 12.99], [7.1, 13.2], [6.7, 13.45], [6.32, 13.6]]
+    areas:
+      - style: gained
+        side: sok
+        label: Held by the jihadists, end of 1808 (approximate)
+        polygon: [[4.0, 13.8], [5.5, 13.95], [7.0, 13.4], [8.6, 13.2], [10.3, 12.9], [10.6, 12.1], [10.2, 10.0], [8.6, 10.2], [7.8, 10.6], [6.2, 11.4], [5.0, 11.6], [4.0, 12.2]]
+  - title: Bornu and al-Kanemi
+    date: 1807–1812
+    when: "1808"
+    borders: "1809-01-01"
+    countries: [ng]
+    body:
+      - The jihad spread east into the western provinces of Bornu, the ancient empire whose kings, the mais, had been Muslims for eight hundred years. Fulani leaders there, Ibrahim Zaki in the Katagum country, Goni Mukhtar near Deya and others, took up Usman’s cause, and in about 1807 a rising in Daura led Mai Ahmad Alimi to send troops against them. After early successes the Bornu army was routed and its western governor, the galadima, was killed. In 1808 Goni Mukhtar’s forces captured and sacked the capital, Ngazargamu, on the Yobe; the old and blind Ahmad fled and gave up the throne to his son Dunama IX Lefiami.
+      - Muhammad al-Amin al-Kanemi, a Kanembu scholar born in Murzuk in 1776, had settled at Ngala south of Lake Chad. With a small band of students, Kanembu spearmen and Shuwa Arab horsemen he beat off a Fulani attack on Ngala, and Dunama called on his help. Later in 1808 the mai’s army retook Ngazargamu and Goni Mukhtar was killed. In 1809 Ibrahim Zaki raided the capital again; the mai abandoned it for good, and Bornu’s court moved east.
+      - Al-Kanemi also fought with the pen. In letters to Usman and Bello he asked by what right they made war on a people who had been Muslims for centuries; Bello answered that Bornu’s rulers had helped the Hausa kings and tolerated pagan practices. The debate is still read in Nigeria today. Al-Kanemi, given a fief at Ngurno, built an army and became the real power in Bornu; in 1814 he founded Kukawa and took the title shehu. The western provinces became the emirates of Hadejia, Katagum, Jama’are and Misau, but Bornu survived, and the frontier between it and the caliphate remained a war zone for decades.
+    facts:
+      - [Ngazargamu sacked, "1808"]
+      - [Ngazargamu abandoned, "1809"]
+      - [Kukawa founded, "1814"]
+    markers:
+      - kind: taken
+        side: sok
+        name: Ngazargamu
+        date: "1808"
+        text: Capital of Bornu for more than three centuries, sacked by Goni Mukhtar’s forces in 1808, retaken by the mai the same year and abandoned after a second raid in 1809.
+        lonlat: [12.37, 13.08]
+        lp: t
+      - kind: battle
+        side: bor
+        name: Ngala
+        date: "1808"
+        text: Al-Kanemi’s home, where his followers beat off a Fulani attack. The victory brought him to the mai’s attention.
+        lonlat: [14.18, 12.34]
+      - kind: event
+        side: sok
+        name: Katagum
+        date: 1807–1809
+        text: Base of Ibrahim Zaki, who led the jihad in western Bornu and raided Ngazargamu in 1809.
+        lonlat: [10.35, 12.29]
+        lp: b
+      - kind: capital
+        side: bor
+        name: Kukawa
+        date: "1814"
+        text: Founded by al-Kanemi in 1814 as his seat, and the capital of Bornu under his family.
+        lonlat: [13.57, 12.92]
+    arrows:
+      - side: sok
+        label: Goni Mukhtar
+        phase: 1
+        via: [[11.3, 12.2], [11.7, 12.6], [12.1, 12.95], [12.33, 13.06]]
+      - side: bor
+        label: Al-Kanemi
+        phase: 2
+        via: [[14.18, 12.34], [13.6, 12.7], [12.9, 13.0], [12.42, 13.08]]
+      - side: sok
+        label: Ibrahim Zaki
+        phase: 3
+        via: [[10.35, 12.29], [11.0, 12.6], [11.7, 12.95], [12.32, 13.1]]
+    areas:
+      - style: lost
+        side: bor
+        label: Western provinces of Bornu, lost to the new emirates
+        polygon: [[9.7, 12.9], [10.9, 13.1], [11.4, 12.6], [11.2, 11.6], [10.3, 11.4], [9.8, 11.9]]
+  - title: Gwandu, Sokoto and the new emirates
+    date: 1809–1817
+    when: "1812"
+    borders: "1812-06-01"
+    countries: [ng, ne, cm]
+    body:
+      - The jihad went on in the south and east. In about 1809 (some sources say 1806) Modibo Adama, a scholar sent to Usman by the Fulani clan heads of Fombina, the “southlands” on the upper Benue, came back with a flag and began the conquest of the lands that became Adamawa, named after him; his lieutenants pushed into what is now northern Cameroon, and Yola became his capital in 1841. Buba Yero founded Gombe and Yakubu Bauchi. In Nupe a Fulani preacher, Mallam Dendo, took sides in the civil wars that followed the death of Etsu Ma’azu in 1818, and his sons came to rule the kingdom as an emirate. In Oyo, the great Yoruba empire to the south, the rebel general Afonja called in Fulani and Hausa Muslims in 1817, and by the 1820s Ilorin had become an emirate of the caliphate (see the Fall of the Oyo Empire).
+      - In 1812 Usman divided the government. His brother Abdullahi took the western emirates from Gwandu, and his son Muhammad Bello the east from Sokoto; Usman went back to teaching and writing. When he died at Sokoto on 20 April 1817, Bello succeeded him as Commander of the Faithful, and Abdullahi, after a brief quarrel, accepted him.
+      - The caliphate the jihad created was a confederation of more than thirty emirates whose emirs pledged allegiance to the caliph at Sokoto, with a population of perhaps ten million by the mid-century. It brought Islamic law and a flowering of Arabic, Hausa and Fulfulde scholarship, by Usman, Abdullahi, Bello and Usman’s daughter Nana Asma’u among others. It also rested on slavery. By 1900 the caliphate held at least one million and perhaps 2.5 million slaves, captured in raids on its frontiers, according to Paul Lovejoy and Jan Hogendorn. Its example inspired the jihads of Seku Amadu in Massina and Umar Tall in the western Sudan, and it lasted until the British conquest of 1903.
+    facts:
+      - [Division of the caliphate, "1812 (Gwandu west, Sokoto east)"]
+      - [Death of Usman dan Fodio, "20 April 1817, at Sokoto"]
+      - [Emirates, "more than 30 by the mid-19th century"]
+    link: { href: "#/war/massina-jihad", text: The Massina jihad }
+    markers:
+      - kind: capital
+        side: sok
+        name: Sokoto
+        date: from 1812
+        text: Seat of Muhammad Bello, who ruled the eastern emirates, and from 1817 of the caliphs.
+        lonlat: [5.24, 13.06]
+      - kind: capital
+        side: sok
+        name: Gwandu
+        date: from 1812
+        text: Seat of Abdullahi dan Fodio, who ruled the western emirates, among them Nupe and Ilorin.
+        lonlat: [4.64, 12.50]
+        lp: l
+      - kind: event
+        side: sok
+        name: Yola
+        date: from about 1809
+        text: Capital of Adamawa from 1841. Modibo Adama’s conquests reached far into what is now Cameroon.
+        lonlat: [12.48, 9.21]
+      - kind: event
+        side: sok
+        name: Ilorin
+        date: 1817–1820s
+        text: Oyo’s northern stronghold, which became an emirate of the caliphate after Afonja’s revolt.
+        lonlat: [4.55, 8.50]
+      - kind: event
+        side: sok
+        name: Bauchi
+        date: from about 1809
+        text: Yakubu’s emirate, a base for wars on the Jos Plateau and the upper Benue.
+        lonlat: [9.84, 10.31]
+    areas:
+      - style: outline
+        side: sok
+        label: The Sokoto Caliphate and its emirates, about 1830 (approximate)
+        polygon: [[2.5, 14.2], [5.5, 14.0], [8.5, 13.4], [10.5, 13.1], [11.6, 12.4], [13.6, 10.9], [14.4, 9.6], [14.6, 7.6], [13.0, 6.8], [11.2, 8.0], [9.0, 8.4], [7.0, 8.0], [5.5, 8.6], [4.2, 8.2], [3.4, 9.6], [3.0, 11.5], [1.8, 12.6]]

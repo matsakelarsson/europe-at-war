@@ -1,0 +1,132 @@
+id: shaba-invasions
+name: Shaba invasions (Shaba I and Shaba II)
+start: "1977-03-08"
+end: "1978-06"
+tier: B
+summary: "Two invasions of Zaire’s mining province of Shaba (Katanga) by the Congolese National Liberation Front (FNLC), an army of former Katangese gendarmes and their sons who had gone into exile in Angola after Katanga’s secession ended in 1963 and had fought for the Portuguese and then for the MPLA. In Shaba I (March–May 1977) some 1,600–3,000 FNLC fighters took the towns along the Benguela Railway up to Mutshatsha, near Kolwezi; Mobutu’s army barely resisted, and the invaders were driven out by about 1,500 Moroccan troops flown in by France, with Egyptian pilots and Saudi money. In Shaba II (May 1978) the FNLC crossed through Zambia and seized Kolwezi itself, where hundreds of African and European civilians were killed; French Foreign Legion paratroopers dropped on the town on 19 May and Belgian paratroopers arrived the next day. Mobutu and his Western allies accused Angola, Cuba and the Soviet Union of backing the invasions; Angola and Zaire made peace in 1978, and the FNLC was disarmed."
+countries: [cd, ao, zm, ma, fr, be]
+sides:
+  - id: zr
+    name: Zaire (with Moroccan, French and Belgian troops)
+    polities: [dr-congo, morocco, france, belgium]
+    ink: blue
+    moves: Zairian and allied moves
+    success: Zairian and allied success
+  - id: fnlc
+    name: Congolese National Liberation Front (FNLC)
+    polities: [fnlc]
+    ink: orange
+    moves: FNLC moves
+    success: FNLC success
+notes:
+  - "Outside support for the FNLC is disputed. Zaire, Morocco and France claimed Cuban and Soviet involvement; the Carter administration said in 1977 that it had no evidence of it, and Cuba denied it, although the FNLC had been armed in Angola, whose government sheltered it. The Moroccan airlift of 1977 was organised through the Safari Club, an anti-communist alliance of France, Morocco, Egypt, Iran and Saudi Arabia."
+  - "Casualty figures for Kolwezi in 1978: about 700 African civilians and 120–170 Europeans were killed, most in massacres by the FNLC, and some 250–400 FNLC fighters; five French legionnaires and one Belgian paratrooper died. Zairian troops also executed hundreds of people they accused of helping the rebels."
+sources:
+  - title: Shaba I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Shaba_I
+  - title: Shaba II (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Shaba_II
+  - title: Battle of Kolwezi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kolwezi
+  - title: Congolese National Liberation Front (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Congolese_National_Liberation_Front
+steps:
+  - title: Shaba I
+    date: March – May 1977
+    when: "1977-03-08"
+    borders: "1977-04-25"
+    countries: [cd, ao, ma, fr]
+    body:
+      - On 8 March 1977 FNLC fighters under Nathaniel Mbumba crossed the Angolan border in three columns, some on bicycles. They took Dilolo, Kisenge and Kapanga within days, and the local Lunda population, long hostile to Mobutu, largely welcomed them. Zairian troops withdrew with little fighting, and on 25 March the FNLC entered Mutshatsha on the railway, some 110 km west of Kolwezi, whose copper and cobalt mines earned most of Zaire’s foreign currency.
+      - Mobutu called it an invasion by Cuban-backed mercenaries and appealed for help. The United States sent only non-military supplies. On 9 April eleven French transport aircraft flew some 1,500 Moroccan troops to Kolwezi, Egypt sent pilots and technicians for Zaire’s Mirage jets, and Saudi Arabia paid. The Moroccan and Zairian counter-offensive retook Mutshatsha on 25 April, and by 26 May the FNLC had withdrawn into Angola without a decisive battle. Mobutu’s troops then took reprisals against Lunda villagers suspected of helping the invaders.
+    facts:
+      - [FNLC crosses the border, "8 March 1977"]
+      - [FNLC takes Mutshatsha, "25 March 1977"]
+      - [Moroccan airlift to Kolwezi, "9 April 1977"]
+      - [Last FNLC fighters withdraw, "26 May 1977"]
+    markers:
+      - kind: taken
+        side: fnlc
+        name: Dilolo
+        date: March 1977
+        text: Border town taken in the first days of the invasion.
+        lonlat: [22.47, -10.47]
+        lp: l
+      - kind: taken
+        side: fnlc
+        name: Kapanga
+        date: March 1977
+        text: Taken by the northern column; American missionaries there were held under house arrest.
+        lonlat: [22.58, -8.35]
+      - kind: taken
+        side: zr
+        name: Mutshatsha
+        date: 25 March and 25 April 1977
+        text: Taken by the FNLC, the closest it came to Kolwezi in 1977; retaken by Moroccan and Zairian troops a month later.
+        lonlat: [24.45, -10.65]
+      - kind: held
+        side: zr
+        name: Kolwezi
+        date: April 1977
+        text: The Moroccan troops landed here and launched the counter-offensive.
+        lonlat: [25.47, -10.72]
+    arrows:
+      - side: fnlc
+        phase: 1
+        via: [[22.10, -10.60], [22.30, -10.50], [22.47, -10.47]]
+      - side: fnlc
+        phase: 1
+        via: [[21.90, -8.60], [22.30, -8.50], [22.58, -8.35]]
+      - side: fnlc
+        phase: 2
+        via: [[22.47, -10.47], [23.40, -10.40], [24.40, -10.63]]
+      - side: zr
+        label: Moroccan and Zairian counter-offensive
+        phase: 3
+        via: [[25.47, -10.72], [24.90, -10.70], [24.50, -10.65]]
+    areas:
+      - style: occupied
+        side: fnlc
+        label: Held by the FNLC, late March 1977 (approximate)
+        polygon: [[21.90, -8.10], [23.20, -8.10], [23.60, -9.50], [24.60, -10.40], [24.50, -10.90], [22.40, -11.10], [22.00, -10.40]]
+  - title: Shaba II and Kolwezi
+    date: May – June 1978
+    when: "1978-05-13"
+    borders: "1978-05-20"
+    countries: [cd, zm, fr, be]
+    body:
+      - In May 1978 several thousand FNLC fighters, avoiding the route of the year before, crossed a corner of Zambia and on 13 May seized Kolwezi, a town with about 3,000 European residents. Zairian paratroopers dropped on 15 May were beaten off. In the following days FNLC fighters and local supporters killed hundreds of people, Zairians and Europeans, some of them in massacres of hostages; others were killed by Zairian troops.
+      - "On 19 May about 400 men of the French Foreign Legion’s 2nd Foreign Parachute Regiment, flown from Corsica by way of Kinshasa, jumped onto Kolwezi, and on 20 May Belgian paratroopers, staged through Kamina, landed at the airport to evacuate Europeans. Within days the town was retaken and the FNLC retreated through Zambia to Angola. An Inter-African Force of Moroccan, Senegalese, Togolese and Gabonese troops, with Ivorian medics, then held Shaba for a year. Angola and Zaire agreed later in 1978 to stop supporting each other’s rebels: Angola disarmed the FNLC, and Zaire stopped sheltering the FNLA and FLEC."
+    facts:
+      - [FNLC seizes Kolwezi, "13 May 1978"]
+      - [French paratroopers drop on Kolwezi, "19 May 1978"]
+      - [Belgian paratroopers land, "20 May 1978"]
+      - [Civilians killed, "about 700 Africans and 120–170 Europeans"]
+    markers:
+      - kind: taken
+        side: zr
+        name: Kolwezi
+        date: 13–20 May 1978
+        text: Seized by the FNLC on 13 May; French Legion paratroopers dropped on 19 May and Belgian paratroopers landed on 20 May.
+        lonlat: [25.47, -10.72]
+      - kind: held
+        side: zr
+        name: Kamina
+        date: May 1978
+        text: The Belgian paratroopers regrouped at the Kamina base before going on to Kolwezi.
+        lonlat: [25.25, -8.64]
+    arrows:
+      - side: fnlc
+        label: FNLC through Zambia
+        via: [[23.90, -11.60], [24.50, -11.50], [25.20, -11.20], [25.45, -10.80]]
+      - side: zr
+        label: French paratroopers from Kinshasa
+        via: [[23.00, -8.00], [24.40, -9.60], [25.45, -10.70]]
+      - side: fnlc
+        label: FNLC withdraws
+        via: [[25.30, -10.90], [24.80, -11.40], [24.00, -11.70]]
+    areas:
+      - style: occupied
+        side: fnlc
+        label: Kolwezi and its mines, held by the FNLC, 13–20 May 1978
+        polygon: [[25.20, -10.55], [25.75, -10.55], [25.75, -10.95], [25.20, -10.95]]

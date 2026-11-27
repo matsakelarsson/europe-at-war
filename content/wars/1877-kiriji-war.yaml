@@ -1,0 +1,123 @@
+id: kiriji-war
+name: Kiriji War
+start: "1877-07-31"
+end: "1893-03-14"
+tier: B
+summary: "The last and longest of the 19th-century Yoruba wars, also called the Ekiti Parapo war. By the 1870s Ibadan, the military city-state that had defeated Ilorin and destroyed Ijaye, ruled much of eastern Yorubaland, the Ekiti, Ijesha, Igbomina and Akoko country, through resident agents, the ajele, whose exactions were deeply resented. In 1877 Ibadan, under Are Latosisa, went to war with the Egba and Ijebu, who blocked its roads to the coast. In the east the towns rose against the ajele and formed an alliance, the Ekiti Parapo (‘Ekiti together’), led from 1879 by the Ijesha war chief Ogedengbe and armed with breech-loading rifles bought through Lagos by Ekiti and Ijesha emigrants there; the noise of their guns gave the war its name. Ilorin, the Egba and Ijebu joined against Ibadan. From 1879 the two armies faced each other for seven years in fortified camps on the hills near Igbajo and Imesi-Ile, which grew into towns of tens of thousands. War-weariness, the death of Latosisa in 1885 and the mediation of the British governor of Lagos, through the Yoruba clergymen Samuel Johnson and Charles Phillips, led to a peace treaty in 1886, but Ilorin fought on around Offa, and the camps were finally broken up only in March 1893, when British officials took over the mediation and Yorubaland passed under British protection."
+countries: [ng]
+sides:
+  - id: ib
+    name: Ibadan
+    polities: [ibadan]
+    ink: brown
+    moves: Ibadan moves
+    success: Ibadan success
+  - id: ek
+    name: Ekiti Parapo and its allies (Ijesha, Ekiti, Egba, Ijebu, Ilorin)
+    polities: [ekiti-parapo, egba, ijebu]
+    ink: green
+    moves: Ekiti Parapo moves
+    success: Ekiti Parapo success
+notes:
+  - "The history of the war rests mainly on Samuel Johnson’s History of the Yorubas, written by one of the peace envoys, on local traditions of the Ekiti and Ijesha towns, and on missionary and Lagos government records. Dates and numbers vary between them; the camp populations of about 40,000 and 60,000 are traditional figures that include the warriors’ families."
+  - "The positions of the two war camps, a few kilometres apart on facing hills between Igbajo and Imesi-Ile, are shown approximately."
+sources:
+  - title: Kiriji War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kiriji_War
+  - title: Ogedengbe (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ogedengbe
+  - title: Ibadan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ibadan
+  - title: The History of the Yorubas, by Samuel Johnson (Internet Archive)
+    url: https://archive.org/details/historyofyorubas00john
+steps:
+  - title: The eastern towns rise
+    date: 1877 – 1878
+    when: "1878-08"
+    borders: "1878-06-01"
+    countries: [ng]
+    body:
+      - "Ibadan could not buy arms or sell its goods on the coast without passing through the lands of the Egba and Ijebu, who had blockaded it since the Ijaye war. On 31 July 1877 Latosisa declared war on the Egba, and the Ijebu sided with them. At about the same time, at Okemesi in the Ekiti country, the young warrior Fabunmi killed the ajele and his household after a quarrel with the agent’s men, and Ibadan’s agents and their followers were killed in town after town of the east."
+      - The eastern rulers and war chiefs met at Okemesi and swore to fight until Ibadan’s rule was broken, taking the name Ekiti Parapo, which an association of Ekiti and Ijesha emigrants in Lagos, many of them Christians who had returned from Sierra Leone, had already adopted; the association sent arms and advisers by the new Ondo road, outside Ibadan’s reach. Ilorin, hoping to replace Ibadan as overlord, sent troops.
+      - "In August 1878 the allies burnt Igbajo, a town loyal to Ibadan, and besieged Ikirun. An Ibadan army under Balogun Ajayi Ogboriefon routed them; many Ilorin soldiers drowned in the Otin river, which gave the battle its Yoruba name, Jalumi, recalling the plunge into the river. But Ibadan was too stretched, fighting the Egba and Ijebu in the south at the same time, to follow up its victory."
+    facts:
+      - [Ibadan declares war on the Egba, "31 July 1877"]
+      - [Battle of Ikirun (Jalumi), "1878"]
+    markers:
+      - kind: capital
+        side: ib
+        name: Ibadan
+        date: 1877–1893
+        text: The military city-state that dominated Yorubaland after the fall of Oyo, ruled by its war chiefs.
+        lonlat: [3.92, 7.40]
+      - kind: event
+        side: ek
+        name: Okemesi
+        date: "1877"
+        text: Fabunmi killed Ibadan’s agent here, and the eastern war chiefs met to form the Ekiti Parapo.
+        lonlat: [4.92, 7.82]
+      - kind: battle
+        side: ib
+        name: Ikirun (Jalumi)
+        date: "1878"
+        text: The Ibadan army relieved the town and routed the Ekiti Parapo and Ilorin armies besieging it.
+        lonlat: [4.67, 7.91]
+        lp: l
+      - kind: taken
+        side: ek
+        name: Igbajo
+        date: "1878"
+        text: A town loyal to Ibadan, burnt by the Ekiti Parapo at the start of their campaign.
+        lonlat: [4.81, 7.91]
+    arrows:
+      - side: ek
+        label: Ekiti Parapo
+        via: [[4.92, 7.82], [4.86, 7.88], [4.80, 7.92], [4.70, 7.91]]
+      - side: ib
+        label: Ibadan army
+        via: [[3.95, 7.42], [4.20, 7.60], [4.45, 7.80], [4.64, 7.90]]
+  - title: Kiriji and the peace
+    date: 1879 – 1893
+    when: "1882"
+    borders: "1886-09-23"
+    countries: [ng]
+    body:
+      - "In 1879 the allies returned and dug in on a hill near Imesi-Ile, and Ibadan set up its own camp on a facing hill near Igbajo, an hour’s walk away. Ogedengbe of Ilesha, a renowned war chief who had once fought for Ibadan, joined the alliance with his own army and took command. The Ekiti Parapo had long-range rifles that Ibadan could not match, and Ibadan built mud walls and trenches to shelter from them. Neither side could break the other, and for seven years the camps, with their farms, markets, smithies and shrines, became towns of tens of thousands of people."
+      - In 1882 the war spread to Ife, where Ibadan backed its Oyo-Yoruba settlers of Modakeke against the town and the Ekiti Parapo and Ijebu came to Ife’s help. Ibadan suffered losses on every front, and in August 1885 Latosisa died in the camp at Igbajo. The war was financed largely by selling captives, and slave raiding spread across the region.
+      - "The governor of Lagos, Alfred Moloney, worried by French ambitions inland and by the closed trade routes, sent two Yoruba clergymen, Samuel Johnson and Charles Phillips, between the camps. A treaty was signed in Lagos in June 1886, and on 23 September 1886 British commissioners proclaimed peace in the camps, where Ogedengbe and the Ibadan commander Osungbekun swore friendship. But Ilorin refused to make peace; its army took Offa in 1887, and the camps stayed in arms until 14 March 1893, when Captain Robert Bower, sent from Lagos after Governor Gilbert Carter’s treaties with the Yoruba states, had them dispersed. Later that year Ibadan accepted a British resident."
+    facts:
+      - [Death of Latosisa, "August 1885"]
+      - [Peace proclaimed in the camps, "23 September 1886"]
+      - [Camps dispersed, "14 March 1893"]
+    link: { href: "#/war/ijebu-expedition", text: The Ijebu expedition }
+    markers:
+      - kind: held
+        side: ek
+        name: Ekiti Parapo camp (Kiriji)
+        date: 1879–1893
+        text: The allied war camp on a hill near Imesi-Ile, commanded by Ogedengbe. Today the Kiriji war memorial stands nearby.
+        lonlat: [4.83, 7.85]
+        lp: r
+      - kind: held
+        side: ib
+        name: Ibadan camp
+        date: 1879–1893
+        text: Ibadan’s fortified camp on a hill near Igbajo, facing the allies across a valley.
+        lonlat: [4.81, 7.89]
+        lp: l
+      - kind: battle
+        name: Ife and Modakeke
+        date: "1882"
+        text: The war spread to Ife, where Ibadan backed the Modakeke settlers against the town.
+        lonlat: [4.56, 7.48]
+        lp: l
+      - kind: taken
+        name: Offa
+        date: "1887"
+        text: Taken by Ilorin, which refused the peace of 1886 and kept its army in the field until 1893.
+        lonlat: [4.72, 8.15]
+      - kind: treaty
+        name: Lagos
+        date: June 1886
+        text: The British colony from which the peace was mediated, and where the Ekiti Parapo bought its rifles.
+        lonlat: [3.39, 6.45]

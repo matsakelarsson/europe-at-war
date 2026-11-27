@@ -215,7 +215,32 @@ below are the number of new war entries (tiers A, B and C).
   Done: 2,053 polities, 1,418 shipped; first load en 1.07 MB gzip, fr and sv
   1.13 (were 1.09, 1.16 and 1.15). Translations are still checked against
   every polity, so a translated actor name is not an error.*
-- [ ] Wave 13: Africa south of the Sahara (~100)
+- [x] Wave 13: Africa south of the Sahara (~100)
+  *Done: 142 wars (35 tier A, 59 B, 48 C; 381 steps), 141 new and the
+  Portuguese Colonial War rewritten, from the Hausa wars (from about 1450) to
+  the wars in Kivu, Cabo Delgado and the Anglophone regions of Cameroon (all
+  ongoing), with the Portuguese wars in Kongo, Ndongo, Mutapa and on the
+  Swahili coast, the rise of Asante, Dahomey and the Zulu kingdom, the Fulani
+  jihads, the Xhosa and Boer wars, the conquests of the scramble for Africa,
+  the Herero and Nama genocide, Maji Maji, the African campaigns of the First
+  World War, Mau Mau, the wars of independence in Portuguese Africa and
+  Rhodesia, the Congo crisis, Biafra, apartheid and the border war, the
+  genocide against the Tutsi and the Congo wars, the Liberian and Sierra
+  Leonean civil wars and the Boko Haram insurgency. Borders are curated from
+  800 for every country south of the Sahara in `events/africa-south.yaml`
+  (364 events, checked by two fact-checkers), on 32 new splits
+  (`splits/99e-africa-south.geojson`: the Swahili and Mozambique coasts,
+  Lunda, Luba and Kasanje, Zululand and the New Republic, British
+  Bechuanaland, the Conquered Territory and others), with 114 new polities,
+  133 war actors, 207 capital tenures and 27 labels. A state keeps its own
+  colour until it is conquered or absorbed, not when it signs a protectorate
+  treaty; German colonies become mandates on 10 January 1920; Rhodesia is
+  shown under Zimbabwe’s names. Catalogue text, polity names, border notes,
+  capitals and labels are in French and Swedish. Known limits: tribute is
+  not shown, nor bantustans or rebel states (Biafra, Katanga), which are war
+  areas; Neukamerun is approximated by four provinces, and Northern
+  Cameroons, German Dagbon, Mayotte, Witu, Venda and Barue are not shown.
+  First load 1.09 MB gzip (fr and sv 1.15).*
 - [ ] Wave 14: North America and the Caribbean (~100)
 - [ ] Wave 15: Central and South America (~100)
 - [ ] Wave 16: Oceania, and the non-European theatres of the world wars and of

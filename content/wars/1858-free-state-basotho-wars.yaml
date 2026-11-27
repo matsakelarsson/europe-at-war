@@ -1,0 +1,188 @@
+id: free-state-basotho-wars
+name: Free State–Basotho wars
+start: "1858-03-19"
+end: "1869-02-12"
+tier: B
+summary: "Three wars between the Orange Free State and the Basotho kingdom of Moshoeshoe over the fertile lowlands of the Caledon valley. Moshoeshoe had built his kingdom around the mountain stronghold of Thaba Bosiu in the 1820s, and his people farmed the lowlands on both sides of the Caledon, where white farmers also settled from the 1830s. British attempts to draw a boundary, the Warden Line of 1849, failed; the Basotho defeated a British force at Viervoet in 1851 and fought another to a standstill at Berea in 1852, and in 1854 Britain withdrew and left the Orange Free State to deal with the Basotho. In Senekal’s War of 1858 Free State commandos failed to take Thaba Bosiu and the governor of the Cape, Sir George Grey, mediated a peace. In the Seqiti War of 1865–1866 the Free State, under President Jan Brand, again failed to storm Thaba Bosiu but destroyed crops and seized cattle until Moshoeshoe, short of food, ceded most of his arable land. When war resumed in 1867 the Free State overran almost everything but Thaba Bosiu, and Moshoeshoe asked for British protection. On 12 March 1868 Britain proclaimed Basutoland British territory, and the Convention of Aliwal North of 1869 fixed the border that Lesotho has today, leaving the Conquered Territory west of the Caledon to the Free State."
+countries: [ls, za, gb]
+sides:
+  - id: ofs
+    name: Orange Free State
+    polities: [orange-free-state]
+    ink: orange
+    moves: Free State moves
+    success: Free State success
+  - id: sot
+    name: Basotho kingdom (Moshoeshoe)
+    polities: [lesotho]
+    ink: blue
+    moves: Basotho moves
+    success: Basotho success
+  - id: gb
+    name: Britain and the Cape
+    polities: [united-kingdom, cape-colony]
+    ink: red
+    moves: British moves
+    success: British success
+notes:
+  - "The wars are known in Lesotho by their own names: the 1865–1866 war is called Ntoa ea Seqiti, after the sound of the Free State’s new cannon. The date of the peace of Thaba Bosiu in 1866 is given as 3 April or 11 April in different sources, and the start of the first war as 19 or 22 March 1858."
+  - The Basotho kingdom, ruled by Moshoeshoe and his sons, absorbed many refugees of the wars of the 1820s; its people are the Basotho, its language Sesotho, and the British territory was called Basutoland until Lesotho’s independence in 1966.
+sources:
+  - title: Free State–Basotho Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Free_State%E2%80%93Basotho_Wars
+  - title: The three Basotho Wars (1858–68) and the formation of Lesotho (South African History Online)
+    url: https://sahistory.org.za/article/basotho-wars-1858-1868
+  - title: Moshoeshoe I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Moshoeshoe_I
+  - title: Thaba Bosiu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Thaba_Bosiu
+  - title: History of Lesotho (Wikipedia)
+    url: https://en.wikipedia.org/wiki/History_of_Lesotho
+steps:
+  - title: Senekal’s War
+    date: 1858
+    when: "1858-03-19"
+    borders: "1858-05-01"
+    countries: [ls, za]
+    body:
+      - The border between the Free State and the Basotho had never been agreed. The British Resident, Major Henry Warden, drew a line in 1849 that gave farmers much land the Basotho regarded as theirs; Moshoeshoe rejected it, defeated Warden’s force at Viervoet in 1851, and held off an army under the Cape governor Sir George Cathcart at Berea in December 1852, after which he sent Cathcart a conciliatory letter that let both sides claim success. By the Bloemfontein Convention of February 1854 Britain gave up the Orange River Sovereignty, and the new Orange Free State inherited the dispute. Raids for cattle and quarrels over farms went on.
+      - On 19 March 1858 President Jacobus Boshof declared war. Free State commandos under Jacobus Senekal advanced into the lowlands, burned the French Protestant mission at Morija and other stations, and in May reached Thaba Bosiu. They could not take the mountain, whose few paths up the cliffs Moshoeshoe’s men held. Meanwhile Basotho horsemen raided the farms behind them, and the burghers rode home to protect their families.
+      - Boshof asked Sir George Grey, governor of the Cape, to mediate. An armistice was agreed on 1 June 1858, and by the Treaty of Aliwal North of 29 September 1858 Grey confirmed a boundary close to Warden’s line, with some changes in the Basotho’s favour. Neither side regarded it as final.
+    facts:
+      - [War declared, "19 March 1858"]
+      - [Armistice, "1 June 1858"]
+      - [Treaty of Aliwal North, "29 September 1858"]
+    markers:
+      - kind: held
+        side: sot
+        name: Thaba Bosiu
+        date: May 1858
+        text: Moshoeshoe’s mountain stronghold, which the Free State commandos could not take.
+        lonlat: [27.671, -29.354]
+      - kind: taken
+        side: ofs
+        name: Morija
+        date: "1858"
+        text: The mission of the Paris Evangelical Missionary Society, burned by the Free State commandos.
+        lonlat: [27.514, -29.625]
+        lp: l
+      - kind: capital
+        side: ofs
+        name: Bloemfontein
+        date: "1858"
+        text: Capital of the Orange Free State.
+        lonlat: [26.215, -29.116]
+      - kind: treaty
+        side: gb
+        name: Aliwal North
+        date: 29 September 1858
+        text: Sir George Grey’s settlement of the border, close to the Warden Line.
+        lonlat: [26.71, -30.70]
+    arrows:
+      - side: ofs
+        label: Senekal
+        phase: 1
+        via: [[26.90, -29.60], [27.25, -29.62], [27.50, -29.48], [27.64, -29.37]]
+      - side: sot
+        label: Basotho raids
+        phase: 2
+        via: [[27.40, -29.20], [27.00, -29.10], [26.60, -29.30]]
+    areas:
+      - style: contested
+        side: sot
+        label: Disputed lowlands of the Caledon valley (approximate)
+        polygon: [[26.85, -29.80], [27.35, -29.60], [27.60, -29.20], [28.00, -28.80], [28.25, -28.62], [27.90, -28.50], [27.45, -28.90], [27.05, -29.25], [26.80, -29.55]]
+  - title: The Seqiti War
+    date: 1865–1866
+    when: "1865-08-15"
+    borders: "1865-08-15"
+    countries: [ls, za]
+    body:
+      - In 1864 the Cape governor Sir Philip Wodehouse, asked to arbitrate, upheld the 1858 line, but Basotho continued to farm and graze beyond it. In June 1865 the Free State president, Jan Brand, declared war. The Free State had new cannon and its commandos, under Commandant-General Johan Fick, moved against the Basotho strongholds.
+      - In August 1865 the burghers twice tried to storm Thaba Bosiu. On 15 August Commandant Louw Wepener led an assault up one of the passes and was shot dead near the top, and the attack failed. The Boers then laid siege to the mountain and, when that too failed, turned to destroying the Basotho’s crops and driving off their cattle across the lowlands, a strategy that brought hunger to the kingdom over the following winter.
+      - In March 1866 Moshoeshoe’s son Molapo, in the north, made a separate peace and accepted Free State rule. In April 1866 Moshoeshoe, his people short of food, accepted the peace of Thaba Bosiu, which gave the Free State most of the kingdom’s arable lowlands, the Conquered Territory. Basotho families who stayed on the ceded land were to be removed.
+    facts:
+      - [War declared, "June 1865"]
+      - [Death of Louw Wepener at Thaba Bosiu, "15 August 1865"]
+      - [Peace of Thaba Bosiu, "April 1866"]
+    markers:
+      - kind: battle
+        side: sot
+        name: Thaba Bosiu
+        date: 15 August 1865
+        text: The Free State’s assaults on the mountain failed; Commandant Louw Wepener was killed leading the second.
+        lonlat: [27.671, -29.354]
+      - kind: treaty
+        side: ofs
+        name: Leribe
+        date: March 1866
+        text: Molapo, Moshoeshoe’s son, made a separate peace with the Free State here, in the north of the kingdom.
+        lonlat: [28.043, -28.871]
+      - kind: capital
+        side: ofs
+        name: Bloemfontein
+        date: "1865"
+        text: Capital of the Orange Free State.
+        lonlat: [26.215, -29.116]
+    arrows:
+      - side: ofs
+        label: Fick
+        phase: 1
+        via: [[27.00, -29.15], [27.35, -29.25], [27.63, -29.35]]
+      - side: ofs
+        phase: 2
+        via: [[27.45, -29.20], [27.80, -29.00], [28.00, -28.88]]
+    areas:
+      - style: lost
+        side: sot
+        label: Conquered Territory, ceded by the Basotho in 1866 (approximate)
+        polygon: [[26.85, -29.80], [27.35, -29.60], [27.60, -29.20], [28.00, -28.80], [28.25, -28.62], [27.90, -28.50], [27.45, -28.90], [27.05, -29.25], [26.80, -29.55]]
+  - title: The third war and British protection
+    date: 1867–1869
+    when: "1867-07"
+    borders: "1869-02-12"
+    countries: [ls, za, gb]
+    body:
+      - The Basotho could not live without the lowlands, and many returned to plough. After two white men were killed near Ladybrand in June 1867, the Free State resumed the war in July. This time its commandos took one Basotho stronghold after another and overran nearly all the kingdom except Thaba Bosiu, and Moshoeshoe, now about eighty, faced the end of his state.
+      - For years he had asked to be taken under British protection, “to rest under the large folds of the flag of England”, as he wrote. Wodehouse, worried that the Free State would absorb the Basotho and their land, persuaded London to agree, and on 12 March 1868 he proclaimed the Basotho British subjects and their country British territory. The Free State, which could not fight Britain, ended the war under protest.
+      - By the Convention of Aliwal North of 12 February 1869, Britain and the Free State agreed the border. The Conquered Territory west of the Caledon stayed with the Free State, and the land east of it became Basutoland, the territory of today’s Lesotho. Moshoeshoe died at Thaba Bosiu on 11 March 1870. In 1871 Britain handed Basutoland to the Cape Colony, whose attempt to disarm the Basotho led to the Gun War of 1880–1881.
+    facts:
+      - [Third war begins, "July 1867"]
+      - [Basutoland proclaimed British territory, "12 March 1868"]
+      - [Convention of Aliwal North, "12 February 1869"]
+    markers:
+      - kind: held
+        side: sot
+        name: Thaba Bosiu
+        date: 1867–1868
+        text: The only Basotho stronghold the Free State did not take.
+        lonlat: [27.671, -29.354]
+      - kind: event
+        side: ofs
+        name: Ladybrand
+        date: June 1867
+        text: The killing of two white men nearby gave the Free State its reason to resume the war.
+        lonlat: [27.458, -29.193]
+        lp: l
+      - kind: treaty
+        side: gb
+        name: Aliwal North
+        date: 12 February 1869
+        text: Britain and the Free State fixed the border of Basutoland, today’s border of Lesotho.
+        lonlat: [26.71, -30.70]
+    arrows:
+      - side: ofs
+        phase: 1
+        via: [[27.20, -29.50], [27.50, -29.70], [27.85, -29.95]]
+      - side: ofs
+        phase: 1
+        via: [[27.50, -29.05], [27.90, -28.95], [28.20, -28.85]]
+    areas:
+      - style: occupied
+        side: ofs
+        label: Overrun by Free State commandos, 1867–1868 (approximate)
+        polygon: [[27.05, -29.85], [27.40, -29.65], [27.60, -29.25], [27.95, -28.85], [28.30, -28.65], [28.50, -28.85], [28.20, -29.20], [27.90, -29.55], [27.70, -30.10], [27.35, -30.30]]
+      - style: outline
+        side: gb
+        label: Basutoland, under British protection from 12 March 1868
+        atoms: [LS-A, LS-B, LS-C, LS-D, LS-E, LS-F, LS-G, LS-H, LS-J, LS-K]

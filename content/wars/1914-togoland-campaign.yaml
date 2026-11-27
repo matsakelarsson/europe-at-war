@@ -1,0 +1,183 @@
+id: togoland-campaign
+name: Togoland campaign
+start: "1914-08-06"
+end: "1914-08-26"
+tier: B
+summary: "The British and French conquest of the German colony of Togoland in August 1914, the first Allied campaign of the First World War. Germany had ruled Togoland since 1884; its value to Berlin in 1914 lay in the new wireless station at Kamina, near Atakpamé, which linked Germany with its colonies, its warships and South America. The acting governor, Major Hans-Georg von Doering, had only about 1,500 police, reservists and levies, and offered neutrality, which Britain refused. French troops from Dahomey crossed the Mono on 6 August and took Aného; the British from the Gold Coast entered Lomé, which the Germans gave up without a fight, and advanced up the railway towards Kamina while smaller French and British columns closed in from the east, the west and the north. The German police delayed them at Agbeluvoe (15 August) and on the Khra river (22 August), then blew up the wireless masts and surrendered unconditionally on 26 August. Britain and France divided the colony between them; in 1922 it became the League of Nations mandates of British Togoland, which joined Ghana in 1957, and French Togoland, independent as Togo in 1960. The partition cut through the lands of the Ewe."
+countries: [tg, gh, bj]
+sides:
+  - id: gb
+    name: Britain (Gold Coast Regiment)
+    polities: [united-kingdom, ghana]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: fr
+    name: France (Dahomey and French West Africa)
+    polities: [france, french-dahomey, french-west-africa]
+    ink: navy
+    moves: French moves
+    success: French success
+  - id: de
+    name: Germany (Togoland police)
+    polities: [togoland, germany]
+    ink: slate
+    moves: German moves
+    success: German success
+notes:
+  - "The German force was not an army but the colonial police (Polizeitruppe), African soldiers under German officers, with settlers who had military training; most of its African members deserted before the surrender. The British force was the Gold Coast Regiment of the West African Frontier Force, the French force tirailleurs, police and mounted levies from Dahomey and French West Africa; both relied on thousands of African carriers."
+  - "Most accounts come from British and French officers. Togolese civilians, many of whom helped the invaders with information and guides, left few written records of the campaign."
+sources:
+  - title: Togoland campaign (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Togoland_campaign
+  - title: Affair of Khra (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Affair_of_Khra
+  - title: Funkstation Kamina (German Wikipedia)
+    url: https://de.wikipedia.org/wiki/Funkstation_Kamina
+  - title: Togoland (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Togoland
+  - title: British Togoland (Wikipedia)
+    url: https://en.wikipedia.org/wiki/British_Togoland
+  - title: French Togoland (Wikipedia)
+    url: https://en.wikipedia.org/wiki/French_Togoland
+steps:
+  - title: Lomé and the coast
+    date: 6–12 August 1914
+    when: "1914-08-08"
+    borders: "1914-08-12"
+    countries: [tg, gh, bj]
+    body:
+      - "German Togoland, a narrow colony of about a million people between the British Gold Coast and French Dahomey, had three railways running inland from Lomé, to Aného on the coast, to Kpalimé and to Atakpamé. Near Atakpamé, about 160 km inland, the Germans had just finished a great wireless station at Kamina, which relayed messages between the transmitter at Nauen near Berlin, the colonies, the navy and South America. There were no German army units in the colony, only 693 colonial police under Captain Georg Pfähler and about 300 settlers with military training; with reservists and levies the Germans raised about 1,500 men. The acting governor, Major Hans-Georg von Doering, proposed that the colony stay neutral, appealing to the Congo Act of 1885 and to the common interests of the European colonies in West Africa. London refused on 6 August, and the governor of Dahomey took the proposal as a declaration of war."
+      - Late on 6 August French police occupied the German customs posts on the Mono river, and on 8 August a French column took Aného unopposed; Togolese townspeople burned down the government house at Sebe. On the British side, the acting commander of the Gold Coast Regiment, Captain Frederick Bryant, sent officers to Lomé with a demand for surrender. Doering had already decided to fight only at Kamina. He withdrew inland with his police, calling up reservists and taking civilians with him as carriers, and left the district officer of Lomé free to surrender the colony as far as the Khra river, about 120 km up the railway, so that the capital would not be shelled from the sea.
+      - The British flag was raised over Lomé on 8 August, and British troops who had marched along the coast from the Gold Coast arrived the next day. Bryant brought the main force round by sea and landed it through the surf at Lomé on 12 August, and the British and French agreed to converge on Kamina. In all the invaders had about 2,500 soldiers, police and mounted levies, about half of them British and half French, with more than 2,300 African carriers.
+    facts:
+      - [French cross the Mono, "6–7 August 1914"]
+      - [Aného taken, "8 August 1914"]
+      - [Lomé surrendered, "8–9 August 1914"]
+      - [German force, "about 1,500 police, reservists and levies"]
+    markers:
+      - kind: taken
+        side: gb
+        name: Lomé
+        date: 8–9 August 1914
+        text: The capital was given up without a fight so that it would not be bombarded; British troops raised their flag on 8 August, and the main force landed on 12 August.
+        lonlat: [1.215, 6.131]
+        lp: b
+      - kind: taken
+        side: fr
+        name: Aného
+        date: 8 August 1914
+        text: Taken unopposed by a French column from Dahomey; Togolese civilians burned the German government house nearby.
+        lonlat: [1.600, 6.233]
+        lp: b
+      - kind: event
+        side: de
+        name: Kamina
+        date: August 1914
+        text: The German wireless station near Atakpamé, finished in 1914, the link between Berlin, the colonies, the navy and South America. Doering made it his last stand.
+        lonlat: [1.171, 7.506]
+    arrows:
+      - side: fr
+        label: French column
+        via: [[1.82, 6.30], [1.72, 6.27], [1.62, 6.24]]
+      - side: gb
+        label: British from the Gold Coast
+        via: [[0.99, 5.93], [1.10, 6.04], [1.20, 6.12]]
+      - side: de
+        label: Doering withdraws
+        via: [[1.21, 6.16], [1.21, 6.43], [1.17, 6.95], [1.17, 7.48]]
+  - title: Kamina
+    date: 13–26 August 1914
+    when: "1914-08-22"
+    borders: "1914-08-26"
+    countries: [tg]
+    body:
+      - Bryant’s force, about 560 soldiers with more than 2,000 carriers, advanced up the railway and the road towards Atakpamé through swamp, high grass and scrub. Doering sent parties south by train to destroy bridges and slow it down. Early on 15 August, near Agbeluvoe, British soldiers guided by a Togolese villager blocked the line behind two German trains; one was derailed and the other stopped, and in the fighting that followed Captain Pfähler was killed and about a quarter of the German party became casualties. In the north-east a French company that had crossed from Dahomey was driven back near Bafilo on 13 August.
+      - The Germans made their stand on the Khra river, where they had blown the railway bridge and mined the approaches. On 22 August Bryant attacked the trenches on the far bank with British and French troops and was repulsed with the loss of about 75 men, a sixth of those engaged; Lieutenant George Thompson, killed there, was the first British officer to die in action in the war. But French columns were advancing from Tchetti in Dahomey and from the north, where mounted troops from the French colonies of the Sahel reached Sansanné-Mango on 23 August, and a British column from Kete Krachi reached Kpalimé the same day. The Germans left their trenches in the night.
+      - On the night of 24–25 August the Germans blew up the nine wireless masts at Kamina and smashed the equipment, after the station had passed 229 messages since the start of the war. Doering offered terms at Glei on 25 August; Bryant demanded unconditional surrender, and on 26 August Doering surrendered with about 200 men, the rest of his police having deserted. The campaign had cost the British 83 casualties, the French about 54 and the Germans 41.
+    facts:
+      - [Agbeluvoe, "15 August 1914"]
+      - [Khra river, "22 August 1914, British and French attack repulsed"]
+      - [Kamina destroyed, "night of 24–25 August 1914"]
+      - [German surrender, "26 August 1914"]
+    markers:
+      - kind: battle
+        side: gb
+        name: Agbeluvoe
+        date: 15 August 1914
+        text: German trains sent south to destroy bridges were trapped and stopped; Captain Pfähler, the police commander, was killed.
+        lonlat: [1.167, 6.673]
+        lp: l
+      - kind: battle
+        side: de
+        name: Khra river
+        date: 22 August 1914
+        text: The German police beat off the British and French attack on their trenches, then withdrew in the night as other Allied columns closed in.
+        lonlat: [1.159, 7.171]
+        lp: l
+      - kind: taken
+        side: gb
+        name: Kamina
+        date: 26 August 1914
+        text: The masts were blown up on the night of 24–25 August; Doering surrendered unconditionally to Bryant with about 200 men, and French troops entered Kamina the next day.
+        lonlat: [1.171, 7.506]
+      - kind: battle
+        side: de
+        name: Bafilo
+        date: 13 August 1914
+        text: A French company from Dahomey met stronger German resistance than it expected and fell back.
+        lonlat: [1.267, 9.350]
+      - kind: taken
+        side: fr
+        name: Sansanné-Mango
+        date: 23 August 1914
+        text: Reached by French mounted troops who had ridden down from the Sahel.
+        lonlat: [0.470, 10.360]
+      - kind: taken
+        side: gb
+        name: Kpalimé
+        date: 23 August 1914
+        text: Reached unopposed by the British column from Kete Krachi.
+        lonlat: [0.633, 6.900]
+        lp: l
+    arrows:
+      - side: gb
+        label: Bryant
+        via: [[1.21, 6.16], [1.21, 6.43], [1.17, 6.70], [1.16, 7.10], [1.17, 7.45]]
+      - side: fr
+        label: Maroix
+        via: [[1.66, 7.83], [1.45, 7.66], [1.22, 7.53]]
+      - side: gb
+        label: Krachi column
+        via: [[-0.05, 7.80], [0.25, 7.35], [0.60, 6.93]]
+      - side: fr
+        label: French cavalry
+        via: [[0.60, 11.20], [0.52, 10.80], [0.48, 10.42]]
+  - title: Partition
+    date: 1914–1922
+    when: "1916-12-27"
+    borders: "1922-07-20"
+    countries: [tg, gh]
+    body:
+      - After the surrender the two allies governed the colony in separate zones, the British holding Lomé and running the railways. On 27 December 1916 they divided it into British and French administrative zones that cut across the German districts and the lands of its peoples, and at the peace conference both asked for a new line. Under the Treaty of Versailles Germany gave up its colonies, and in July 1922 the League of Nations made the two parts mandates. France received about 60 per cent of the colony, with Lomé, the coast and the railways (the British handed Lomé over at the end of September 1920); Britain received the smaller, poorer western strip, which it governed from the Gold Coast.
+      - The border divided the Ewe, the largest people of the south, between British and French rule, and Ewe leaders campaigned for reunification at the United Nations after the Second World War. In a plebiscite in May 1956 a majority in British Togoland voted to join the Gold Coast, and the territory became part of Ghana at its independence on 6 March 1957; French Togoland became independent as Togo on 27 April 1960.
+    facts:
+      - [Administrative zones, "27 December 1916"]
+      - [League of Nations mandates, "July 1922"]
+      - [British Togoland joins Ghana, "6 March 1957"]
+      - [Togo independent, "27 April 1960"]
+    markers:
+      - kind: capital
+        side: fr
+        name: Lomé
+        date: "1922"
+        text: Capital of French Togoland, held by the British until it was handed to France at the end of September 1920.
+        lonlat: [1.215, 6.131]
+        lp: b
+      - kind: capital
+        side: gb
+        name: Ho
+        date: "1922"
+        text: Administrative centre of British Togoland, today the capital of Ghana’s Volta Region.
+        lonlat: [0.471, 6.601]
+        lp: l

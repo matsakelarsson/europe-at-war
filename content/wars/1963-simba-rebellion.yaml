@@ -1,0 +1,221 @@
+id: simba-rebellion
+name: Simba rebellion
+start: "1963-08"
+end: "1965-11"
+tier: B
+summary: "Risings in 1963–1965 by followers of the murdered prime minister Patrice Lumumba against the government of the Congo (Léopoldville). Pierre Mulele led a peasant rising in Kwilu from January 1964, and in the east the National Liberation Council (CNL) of Christophe Gbenye and Gaston Soumialot raised an army of young fighters, the Simbas (“lions” in Swahili), who in 1964 took about half the country and proclaimed a People’s Republic of the Congo at Stanleyville. Prime Minister Moïse Tshombe’s army, white mercenaries and Katangese gendarmes, with American aircraft and Belgian officers, drove them back; on 24 November 1964 Belgian paratroopers landed at Stanleyville to free hundreds of foreign hostages (Operation Dragon Rouge). A Cuban column under Che Guevara fought with the rebels near Lake Tanganyika in 1965 and left in November, when the last major rebel stronghold fell. The rebels killed thousands of Congolese they saw as enemies and some 200–400 foreigners; the repression killed tens of thousands more."
+countries: [cd, be, us, cu]
+sides:
+  - id: gov
+    name: Congolese government (ANC, Katangese gendarmes and white mercenaries)
+    polities: [dr-congo]
+    ink: blue
+    moves: Government and mercenary moves
+    success: Government success
+  - id: sim
+    name: Simba and Mulelist rebels (CNL, People’s Republic of the Congo)
+    polities: [simbas]
+    ink: red
+    moves: Rebel moves
+    success: Rebel success
+  - id: bel
+    name: Belgium and the United States
+    polities: [belgium, united-states]
+    ink: purple
+    moves: Belgian and American moves
+    success: Belgian and American success
+  - id: cub
+    name: Cuban volunteers (Che Guevara)
+    polities: [cuba]
+    ink: orange
+    moves: Cuban moves
+    success: Cuban success
+notes:
+  - "The name Simba (“lion”) was used by the eastern rebels themselves; their fighters, many of them teenagers, went into battle after rituals (dawa) that were believed to turn bullets into water. Death tolls are rough: the rebels executed at least 20,000 Congolese and, by one count, 392 Europeans and Americans; the government’s campaigns against the Kwilu rising alone are estimated to have killed 60,000–70,000 people."
+  - "The rebels received arms and training from the Soviet Union, China, Algeria, Egypt and Cuba, and supplies through Sudan, Uganda, Tanzania and Burundi; the government relied on American aircraft (some flown by Cuban exiles hired by the CIA), Belgian officers and mercenaries."
+sources:
+  - title: Simba rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Simba_rebellion
+  - title: Kwilu rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kwilu_rebellion
+  - title: Operation Dragon Rouge (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Dragon_Rouge
+  - title: "Odom, Dragon Operations: Hostage Rescues in the Congo, 1964–1965 (Leavenworth Papers 14, US Army Combat Studies Institute)"
+    url: https://archive.org/details/DTIC_ADA211790
+  - title: The Congo, Decolonization, and the Cold War, 1960–1965 (US Office of the Historian)
+    url: https://history.state.gov/milestones/1961-1968/congo-decolonization
+  - title: Che Guevara (Britannica)
+    url: https://www.britannica.com/biography/Che-Guevara
+steps:
+  - title: Kwilu and the east rise
+    date: August 1963 – August 1964
+    when: "1964-01-16"
+    borders: "1964-08-04"
+    countries: [cd]
+    body:
+      - Lumumba’s followers had lost power in Léopoldville and their Stanleyville government had collapsed in 1962. Pierre Mulele, a minister in Lumumba’s government who had trained in China, returned to his home region of Kwilu in 1963 and organised young men and women in forest camps. On 16 January 1964 his partisans rose around Idiofa and Gungu, attacking government posts, missions and anyone linked to the state; the army’s counter-campaign, which went on into 1965, was brutal, and the government did not declare the rebellion over until 1968.
+      - In Brazzaville, across the river, Lumumbist leaders founded the National Liberation Council (CNL) in October 1963. Gaston Soumialot entered South Kivu from Burundi and took Uvira on 15 May 1964; Albertville (Kalemie) fell after a rising on 19 June, and Kindu, the capital of Maniema, on 22 July. The ANC often fled before the Simbas. On 4 August the rebels under Nicolas Olenga took Stanleyville, but in mid-August their attack on Bukavu was beaten off. By then they held about half of the Congo.
+    facts:
+      - [CNL founded in Brazzaville, "3 October 1963"]
+      - [Kwilu rising, "16 January 1964"]
+      - [Simbas take Uvira, "15 May 1964"]
+      - [Simbas take Stanleyville, "4 August 1964"]
+    markers:
+      - kind: event
+        side: sim
+        name: Idiofa
+        date: 16 January 1964
+        text: Mulele’s partisans rose here and around Gungu, the start of the Kwilu rebellion.
+        lonlat: [19.59, -4.97]
+      - kind: event
+        side: sim
+        name: Gungu
+        date: January 1964
+        text: Second centre of the Kwilu rising.
+        lonlat: [19.32, -5.73]
+        lp: l
+      - kind: taken
+        side: sim
+        name: Uvira
+        date: 15 May 1964
+        text: Taken by Soumialot’s fighters coming from Burundi.
+        lonlat: [29.15, -3.40]
+      - kind: taken
+        side: sim
+        name: Albertville (Kalemie)
+        date: 19 June 1964
+        text: Taken after a rising in the town, on Lake Tanganyika.
+        lonlat: [29.19, -5.91]
+      - kind: taken
+        side: sim
+        name: Kindu
+        date: 22 July 1964
+        text: The capital of Maniema, taken by the Simbas as they advanced north from Lake Tanganyika.
+        lonlat: [25.95, -2.95]
+      - kind: taken
+        side: sim
+        name: Stanleyville (Kisangani)
+        date: 4 August 1964
+        text: The third city of the Congo fell to Olenga’s Simbas when the ANC garrison fled.
+        lonlat: [25.20, 0.52]
+      - kind: held
+        side: gov
+        name: Bukavu
+        date: August 1964
+        text: The ANC beat off the Simba attack on the capital of Kivu.
+        lonlat: [28.86, -2.51]
+        lp: l
+    arrows:
+      - side: sim
+        phase: 1
+        via: [[29.20, -3.20], [29.17, -3.35], [29.15, -3.40]]
+      - side: sim
+        phase: 1
+        via: [[29.10, -3.50], [29.10, -4.50], [29.19, -5.85]]
+      - side: sim
+        phase: 2
+        via: [[27.00, -4.80], [26.40, -3.80], [25.95, -2.95]]
+      - side: sim
+        phase: 3
+        via: [[25.95, -2.95], [25.60, -1.20], [25.20, 0.50]]
+    areas:
+      - style: occupied
+        side: sim
+        label: Held by the Simbas, August 1964 (approximate)
+        polygon: [[23.0, 3.5], [27.5, 3.8], [29.4, 1.2], [29.0, -1.4], [28.9, -2.3], [29.2, -3.5], [29.3, -6.2], [27.0, -6.5], [25.5, -4.5], [23.5, -2.5], [22.5, 0.5]]
+      - style: occupied
+        side: sim
+        label: Mulele’s rising in Kwilu
+        polygon: [[18.7, -4.5], [20.2, -4.6], [20.4, -5.6], [19.6, -6.2], [18.8, -5.8]]
+  - title: Stanleyville and Dragon Rouge
+    date: September – November 1964
+    when: "1964-11-24"
+    borders: "1964-11-24"
+    countries: [cd, be, us]
+    body:
+      - On 7 September 1964 the rebels proclaimed a People’s Republic of the Congo in Stanleyville, with Gbenye as president. In the towns they held, Simbas and their supporters executed thousands of people seen as enemies, among them officials, teachers, clerks and others with an education, many in front of the monument to Lumumba in Stanleyville. As government columns advanced, the rebels took Belgian, American and other foreign residents hostage, holding several hundred in Stanleyville to deter attack.
+      - Tshombe, prime minister since July, rebuilt the army with Katangese gendarmes recalled from Angola and with white mercenaries from South Africa, Rhodesia and Europe under Mike Hoare and others, led by Belgian officers under Colonel Frédéric Vandewalle. A mechanised column, the Ommegang, fought its way north from Kindu. On 24 November 1964, in Operation Dragon Rouge, some 320–350 Belgian paratroopers jumped from American C-130 aircraft onto Stanleyville airport; as they reached the town, Simbas opened fire on hostages gathered in the street, killing at least eighteen. The paratroopers and the column, which arrived the same day, evacuated some 1,800 foreigners over two days, and a second drop, Dragon Noir, took Paulis (Isiro) on 26 November. Hundreds of foreigners and many Congolese were killed by rebels elsewhere, and mercenaries and soldiers killed many Congolese civilians in the reconquest.
+    facts:
+      - [People’s Republic of the Congo proclaimed, "7 September 1964"]
+      - [Operation Dragon Rouge, "24 November 1964"]
+      - [Operation Dragon Noir, Paulis, "26 November 1964"]
+      - [Foreigners evacuated from Stanleyville, "about 1,800"]
+    markers:
+      - kind: taken
+        side: bel
+        name: Stanleyville (Kisangani)
+        date: 24 November 1964
+        text: Belgian paratroopers dropped on the airport at Simi-Simi and freed hostages; the Ommegang column entered the town the same day.
+        lonlat: [25.20, 0.52]
+      - kind: taken
+        side: bel
+        name: Paulis (Isiro)
+        date: 26 November 1964
+        text: Second Belgian airborne operation, Dragon Noir.
+        lonlat: [27.62, 2.77]
+      - kind: taken
+        side: gov
+        name: Kindu
+        date: 6 November 1964
+        text: Retaken by the Ommegang column, which then drove north to Stanleyville.
+        lonlat: [25.95, -2.95]
+      - kind: held
+        side: bel
+        name: Kamina
+        date: November 1964
+        text: The paratroopers were flown in from Belgium by way of Ascension Island and staged here before the drop.
+        lonlat: [25.25, -8.64]
+        lp: l
+    arrows:
+      - side: gov
+        label: Ommegang column
+        via: [[25.95, -2.95], [25.50, -1.40], [25.25, 0.40]]
+      - side: bel
+        label: Dragon Rouge
+        via: [[25.25, -8.64], [25.60, -4.00], [25.16, 0.52]]
+      - side: bel
+        label: Dragon Noir
+        via: [[25.20, 0.60], [26.40, 1.80], [27.60, 2.75]]
+  - title: Guevara’s column and the end of the rising
+    date: 1965
+    when: "1965-04-24"
+    borders: "1965-11-21"
+    countries: [cd, cu]
+    body:
+      - The rebels lost their towns one after another in early 1965, and mercenary-led operations along the Ugandan and Sudanese borders cut their supply routes. In April 1965 Che Guevara crossed Lake Tanganyika from Tanzania with about 100 Afro-Cuban volunteers to train the rebels of the Fizi–Baraka hills, where Laurent-Désiré Kabila was one of the leaders. Guevara found the rebels divided and their leaders mostly absent, and his diary called the campaign a failure.
+      - In September 1965 the ANC and Hoare’s mercenaries launched Operation South against Fizi and Baraka, attacking across the lake as well as overland. Baraka fell in late September and Fizi in October, and on 21 November the Cubans withdrew across the lake. Four days later Mobutu took power. Small groups, Kabila’s among them, held out in the hills of South Kivu for decades; Mulele, lured back from exile in 1968 with a promise of amnesty, was tortured and killed.
+    facts:
+      - [Guevara arrives on Lake Tanganyika, "April 1965"]
+      - [Operation South begins, "September 1965"]
+      - [Cubans withdraw, "21 November 1965"]
+    markers:
+      - kind: event
+        side: cub
+        name: Fizi–Baraka hills
+        date: April – November 1965
+        text: The Cubans’ base area with Kabila’s rebels, on the western shore of Lake Tanganyika.
+        lonlat: [28.94, -4.30]
+        lp: l
+      - kind: taken
+        side: gov
+        name: Baraka
+        date: late September 1965
+        text: Taken by mercenaries and the ANC in Operation South.
+        lonlat: [29.09, -4.10]
+      - kind: taken
+        side: gov
+        name: Uvira
+        date: 1965
+        text: Retaken by government forces and mercenaries advancing along the lake and the Ruzizi.
+        lonlat: [29.15, -3.40]
+    arrows:
+      - side: cub
+        label: Cubans withdraw to Tanzania
+        via: [[29.10, -4.20], [29.40, -4.50], [29.62, -4.85]]
+      - side: gov
+        via: [[29.15, -3.40], [29.15, -3.80], [29.10, -4.08]]
+    areas:
+      - style: occupied
+        side: sim
+        label: Rebel-held hills of Fizi and Baraka, 1965 (approximate)
+        polygon: [[28.55, -3.75], [29.15, -3.70], [29.25, -4.40], [28.90, -4.75], [28.50, -4.40]]

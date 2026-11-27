@@ -1,0 +1,196 @@
+id: portuguese-mutapa-wars
+name: Portuguese–Mutapa wars
+start: "1569-04-16"
+end: "1695"
+tier: B
+summary: "More than a century of Portuguese attempts to reach and control the gold of the Zimbabwe plateau, and of resistance by its rulers. The Portuguese, established at Sofala and Mozambique Island since the early 1500s and as traders at Sena and Tete on the Zambezi, sent Francisco Barreto with a royal army in 1569 to conquer the mines of the Mwenemutapa, the ruler of the kingdom of Mutapa; disease and the Tonga peoples of the Zambezi valley destroyed the expedition, and his successor Vasco Fernandes Homem found only modest gold workings in Manyika. In the 1600s the Portuguese exploited Mutapa’s succession wars: Gatsi Rusere granted them the mines for help against rebels, and in 1629 they drove out the Mwenemutapa Kapararidze and made his rival Mavura sign a treaty of vassalage to the Portuguese crown. Portuguese traders and backland adventurers then spread over the plateau, living at trading fairs such as Masapa and Dambarare. Their power there was broken by Changamire Dombo, the founder of the Rozvi state, who defeated a Portuguese army at Maungwe in about 1684, sacked Dambarare in 1693 and drove the Portuguese from the plateau; they kept only the Zambezi towns and, later, the fairs of Manyika and Zumbo."
+countries: [zw, mz, pt]
+sides:
+  - id: pt
+    name: Portugal
+    polities: [portugal, mozambique]
+    ink: green
+    moves: Portuguese moves
+    success: Portuguese success
+  - id: mut
+    name: Kingdom of Mutapa
+    polities: [mutapa]
+    ink: orange
+    moves: Mutapa moves
+    success: Mutapa success
+  - id: roz
+    name: Changamire Dombo’s Rozvi
+    polities: [rozvi]
+    ink: red
+    moves: Rozvi moves
+    success: Rozvi success
+notes:
+  - The events are known almost entirely from Portuguese chronicles, letters and missionary accounts, read alongside Shona oral traditions and archaeology; dates for the plateau before 1700, including that of the battle of Maungwe (given as 1683 or 1684), are approximate.
+  - “Mwenemutapa” (Monomotapa in Portuguese) was the title of the ruler; the Portuguese also used it for the kingdom.
+sources:
+  - title: Kingdom of Mutapa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kingdom_of_Mutapa
+  - title: Francisco Barreto (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Francisco_Barreto
+  - title: Changamire Dombo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Changamire_Dombo
+  - title: Rozvi Empire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rozvi_Empire
+  - title: Gonçalo da Silveira (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Gon%C3%A7alo_da_Silveira
+steps:
+  - title: Barreto’s army and the road to the mines
+    date: 1569–1575
+    when: "1571"
+    borders: "1572-01-01"
+    countries: [mz, zw, pt]
+    body:
+      - The Portuguese had held Sofala since 1505 and Mozambique Island since 1507, hoping to take over the gold trade that Swahili merchants carried from the plateau to the coast. Its source was the kingdom of Mutapa, whose ruler, the Mwenemutapa, held court between the Zambezi escarpment and the Mazowe. In 1561 the Jesuit Gonçalo da Silveira reached the court and baptised the young ruler Negomo, but was strangled within weeks, on the advice, Portuguese writers said, of Muslim traders who called him a spy. His death gave Lisbon a reason for war; the gold gave it a motive.
+      - "King Sebastião named Francisco Barreto, a former governor of Portuguese India, “conqueror of the mines”. He sailed from Lisbon on 16 April 1569 with three ships and an army that Portuguese sources put at about 1,000 to 2,000 men, and after long delays at Mozambique took them up the Zambezi in November 1571, reaching Sena on 18 December. There, with the Jesuit Francisco de Monclaros at his side, he had the Muslim traders of the town killed, blaming them for the sickness among his men and horses. In 1572 his army marched up the river against the Tonga of the Mongas country, who barred the way to the plateau. Its guns won several fights, but fever, hunger and the loss of horses and oxen wore it down. Barreto had to go back to Mozambique to deal with a rival officer, and he died at Sena soon after his return, on 9 July 1573."
+      - His successor, Vasco Fernandes Homem, gave up the Zambezi route and in 1574–1575 marched from Sofala through the kingdom of Uteve to Manyika, burning villages on the way. In Manyika he found the gold that was panned and dug in small workings, not the great mines of legend, and made a treaty with its ruler. A garrison he left at the reputed silver mines of Chicova, above Tete, was later wiped out. The Mwenemutapa, who had lost nothing and gained from the Portuguese defeats, let them trade at fairs under his authority.
+    facts:
+      - [Barreto leaves Lisbon, "16 April 1569"]
+      - [Arrival at Sena, "18 December 1571"]
+      - [Death of Barreto, "9 July 1573, at Sena"]
+    markers:
+      - kind: capital
+        side: pt
+        name: Mozambique Island
+        date: "1570"
+        text: The Portuguese fortress and base on the coast, where Barreto’s army waited before going up the Zambezi.
+        lonlat: [40.735, -15.035]
+      - kind: event
+        side: pt
+        name: Sena
+        date: 1571–1573
+        text: Barreto’s base on the Zambezi. He had the Muslim traders of the town killed, and died here on 9 July 1573.
+        lonlat: [35.03, -17.445]
+      - kind: held
+        side: pt
+        name: Tete
+        date: "1572"
+        text: Portuguese trading post up the river, at the edge of the plateau.
+        lonlat: [33.587, -16.160]
+      - kind: held
+        side: pt
+        name: Sofala
+        date: "1574"
+        text: The old Portuguese fort on the coast, from which Homem set out for Manyika.
+        lonlat: [34.738, -20.156]
+      - kind: treaty
+        side: pt
+        name: Manyika
+        date: 1574–1575
+        text: Homem reached the capital of Manyika, found only small gold workings and made a treaty with its ruler.
+        lonlat: [32.88, -18.94]
+        lp: l
+    arrows:
+      - side: pt
+        label: Barreto
+        phase: 1
+        via: [[36.30, -18.75], [35.70, -18.20], [35.03, -17.47]]
+      - side: pt
+        phase: 2
+        via: [[35.03, -17.40], [34.50, -16.90], [33.95, -16.50]]
+      - side: pt
+        label: Homem
+        phase: 3
+        via: [[34.738, -20.156], [34.20, -19.60], [33.40, -19.20], [32.92, -18.95]]
+  - title: The fall of Kapararidze and the treaty of 1629
+    date: 1607–1632
+    when: "1629"
+    borders: "1629-06-01"
+    countries: [zw, mz, pt]
+    body:
+      - In the early 1600s the kingdom of Mutapa was torn by rebellions and rival claimants. The Mwenemutapa Gatsi Rusere, who had lost his capital to a rebel, Matuzianhe, turned to the Portuguese of Tete, and in about 1607 granted them all the mines of his kingdom in return for their help; the backland captain Diogo Simões Madeira fought his wars and built a fort at Chicova. Gatsi later stopped paying the tribute the Portuguese owed and his men attacked the fort, and relations swung between alliance and limited war.
+      - His son Nyambo Kapararidze, Mwenemutapa from about 1623, broke with the Portuguese in 1628, when a Portuguese envoy was killed at his court, and declared war on them. The Portuguese of the Zambezi, with the Mutapa prince Mavura (Mamvura) and his followers, defeated his army in 1629 and installed Mavura in his place. On 24 May 1629 Mavura signed a treaty declaring himself a vassal of the king of Portugal; he promised to expel the Muslim traders, admit missionaries, open the mines and let the Portuguese trade freely. The historian S. I. Mudenge wrote that its terms had more teeth on paper than in reality.
+      - In 1631 Kapararidze came back and raised the Zambezi valley against the Portuguese settlers, who fled to Tete, Sena and the fairs; many who did not escape were killed. In 1632 a Portuguese force from the coast, with Mavura’s army, defeated him again, and he fled. For the next half-century Portuguese traders, prazo holders and their African soldiers were the strongest power on the northern plateau, and Mavura and his successors depended on them.
+    facts:
+      - [Treaty of vassalage, "24 May 1629"]
+      - [Kapararidze’s rising, "1631"]
+    markers:
+      - kind: battle
+        side: pt
+        name: Masapa
+        date: "1629"
+        text: The chief Portuguese fair on the plateau, near Mount Fura (Mount Darwin), where Kapararidze’s forces were defeated (marker approximate).
+        lonlat: [31.62, -16.78]
+      - kind: held
+        side: pt
+        name: Tete
+        date: "1631"
+        text: Refuge of the Portuguese settlers during Kapararidze’s rising.
+        lonlat: [33.587, -16.160]
+      - kind: held
+        side: pt
+        name: Sena
+        date: "1631"
+        text: Refuge of the Portuguese settlers during Kapararidze’s rising.
+        lonlat: [35.03, -17.445]
+    arrows:
+      - side: pt
+        phase: 1
+        via: [[33.587, -16.160], [32.80, -16.30], [32.10, -16.60], [31.66, -16.76]]
+      - side: mut
+        label: Kapararidze
+        phase: 2
+        via: [[31.40, -16.40], [32.20, -16.10], [33.40, -16.05]]
+  - title: Changamire Dombo drives the Portuguese from the plateau
+    date: 1684–1695
+    when: "1684"
+    borders: "1695-06-01"
+    countries: [zw, mz, pt]
+    body:
+      - Changamire Dombo came from the north-east of the plateau, between the Mazowe and Nyadire rivers. Portuguese records first mention him in the 1670s, as a herdsman of the Mwenemutapa’s cattle who had become a war leader with a following of his own. In about 1684, at Maungwe (in the Makoni country near today’s Rusape), his army defeated a Portuguese force led, Portuguese sources say, by the governor of Mozambique, and then the army the Mwenemutapa sent against him. He turned south-west, took over the kingdom of Butua, the heir of the Torwa state around Khami, and built the Rozvi state, with its capital at Danamombe (Dhlo-Dhlo).
+      - In 1693, invited, by most accounts, by the new Mwenemutapa Nyakunembire, whom the Portuguese opposed and who wanted to be rid of them, Dombo’s army fell on the fair of Dambarare, north of today’s Harare. It killed the Portuguese and their dependants and destroyed the church. The other fairs on the plateau were abandoned, and the traders fled to Tete. In 1695 Dombo invaded Manyika, closed its fair at Masekesa and placed his own candidate on its throne. He died in about 1696, and the Portuguese, who had feared for Tete, Sena and Sofala, were spared further attacks by a succession dispute among his sons.
+      - The Portuguese never regained the plateau. They reopened a fair in Manyika in about 1715 and founded Zumbo, at the meeting of the Luangwa and the Zambezi, in about 1720, but they traded there on Rozvi terms. The Rozvi state dominated most of the plateau for over a century, and the Mwenemutapa dynasty, reduced to the Zambezi valley, held out until the Portuguese conquests of the late nineteenth and early twentieth centuries.
+    facts:
+      - [Battle of Maungwe, "about 1684"]
+      - [Sack of Dambarare, "1693"]
+      - [Invasion of Manyika, "1695"]
+    markers:
+      - kind: battle
+        side: roz
+        name: Maungwe
+        date: about 1684
+        text: Changamire Dombo defeated the Portuguese army of the rivers here, in the Makoni country (marker approximate).
+        lonlat: [32.13, -18.45]
+      - kind: taken
+        side: roz
+        name: Dambarare
+        date: "1693"
+        text: The Portuguese fair north of today’s Harare, near Mazowe, sacked by Dombo’s army. Its people were killed and its church destroyed (marker approximate).
+        lonlat: [31.00, -17.40]
+      - kind: taken
+        side: roz
+        name: Masekesa (Manyika fair)
+        date: "1695"
+        text: Dombo invaded Manyika, closed the fair and installed his own candidate as ruler.
+        lonlat: [32.88, -18.94]
+        lp: b
+      - kind: held
+        side: pt
+        name: Tete
+        date: 1693–1695
+        text: The traders who fled the plateau took refuge here.
+        lonlat: [33.587, -16.160]
+      - kind: held
+        side: pt
+        name: Sena
+        date: 1693–1695
+        text: Held by the Portuguese, who feared an attack that never came.
+        lonlat: [35.03, -17.445]
+    arrows:
+      - side: roz
+        label: Changamire Dombo
+        phase: 1
+        via: [[32.13, -18.45], [31.30, -18.80], [30.20, -19.40]]
+      - side: roz
+        phase: 2
+        via: [[30.20, -19.30], [30.70, -18.40], [31.00, -17.45]]
+      - side: roz
+        phase: 3
+        via: [[31.05, -17.50], [32.00, -18.40], [32.84, -18.92]]
+      - side: pt
+        phase: 2
+        via: [[31.05, -17.35], [32.20, -16.70], [33.55, -16.18]]

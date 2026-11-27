@@ -1,0 +1,70 @@
+id: battle-of-kansala
+name: Battle of Kansala
+start: "1867"
+end: "1867"
+tier: B
+summary: "The siege and destruction of Kansala, the capital of Kaabu, by the army of the Imamate of Futa Jallon and the Fula of Kaabu who had risen under Alfa Molo, remembered by the Mandinka as Turban Keloo, the war of annihilation. Kaabu, a federation of Mandinka kingdoms that had begun as a western province of the Mali Empire, had ruled the lands between the Gambia river and the Geba for three centuries and grown rich on the slave trade. In the 19th century it was weakened by the end of that trade, by the jihad of Futa Jallon to the south, and by the revolt of the Fula herders who lived among its Mandinka nobility, the Nyancho. In 1867, by the usual dating, Futa Jallon’s army and Alfa Molo’s Fula besieged Kansala; after an assault that lasted, by tradition, eleven days, Mansaba Janke Waali Sanneh opened the gates and had his sons fire the town’s powder stores, killing the defenders and many of the attackers. Kaabu ceased to exist as a power, Futa Jallon carried off thousands of captives, and Alfa Molo founded the kingdom of Fuladu in its eastern lands. The battle is told mainly by griots, and some historians think tradition has enlarged or merged it with earlier fighting."
+countries: [gw, sn, gm, gn]
+sides:
+  - id: kb
+    name: Kaabu (Mansaba Janke Waali)
+    polities: [kaabu]
+    ink: red
+    moves: Kaabu’s moves
+    success: Kaabu’s success
+  - id: fj
+    name: Futa Jallon and Alfa Molo’s Fula
+    polities: [futa-jallon, fuladu]
+    ink: green
+    moves: Fula moves
+    success: Fula success
+notes:
+  - "The date and the scale of the battle are uncertain. Most accounts give 1867, others 1864 or 1865. Contemporary European sources do not mention it and the remains at Kansala are small, so the historian George Brooks has argued that oral tradition exaggerated it or merged it with the fall of the fortress of Berekolong, which had held out against Fula armies until about 1850–1851. The numbers below come from oral tradition as collected by the historian Djibril Tamsir Niane."
+sources:
+  - title: Battle of Kansala (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kansala
+  - title: Kaabu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kaabu
+  - title: Alfa Molo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Alfa_Molo
+  - title: Mussa Moloh (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mussa_Moloh
+  - title: Soninke–Marabout wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Soninke%E2%80%93Marabout_wars
+steps:
+  - title: The fall of Kansala
+    date: "1867"
+    when: "1867-05-13"
+    borders: "1866-12-31"
+    countries: [gw, sn, gm, gn]
+    body:
+      - "By the 1860s Kaabu was a shrinking federation of Mandinka kingdoms ruled from Kansala, near today’s Gabú in Guinea-Bissau. Its warrior nobility had lived from raiding and selling captives, and as the Atlantic slave trade ended it taxed its peasants harder. The Fula herders who had settled among the Mandinka, many of them refugees from Futa Jallon, were treated as a possible enemy within and squeezed for cattle and tribute. From the late 1840s Alfa Molo, a Fula born a slave, raided Mandinka villages from his fort at Ndorna; when Kaabu struck back he called in the Imamate of Futa Jallon, whose Muslim rulers had been at war with Kaabu for decades. Kaabu’s fortresses fell one by one, among them Berekolong and the core kingdom of Jimara."
+      - "In 1867, by the usual dating, the army of Futa Jallon and Alfa Molo’s Fula surrounded Kansala. Oral tradition puts Kaabu’s whole strength at 25,000 men, half of them in Kansala, and the attackers at 12,000 to 32,000. It tells of a siege of one to three months in which neither side would fire first, because marabouts had told both leaders that the side that fired first would lose, until a Mandinka shot began the battle on 13 May. For eleven days the Fula, unable to use their cavalry against the walls, lost many men on the scaling ladders. Then Mansaba Janke Waali, seeing that he could not hold out, ordered the gates opened; Mandinka women threw themselves into the wells rather than be enslaved, and when the town was full of attackers his sons fired six of its seven powder stores. The explosion killed the defenders and, by tradition, all but about 4,000 of the attackers."
+      - "Kaabu’s power ended at Kansala, although Mandinka kingdoms that had belonged to it lived on along the Gambia. Futa Jallon took about 15,000 captives. Alfa Molo made the eastern lands of Kaabu into the kingdom of Fuladu, which he and his son Musa Molo ruled until the British, French and Portuguese divided it between them; Musa Molo was driven out by the French in 1903. For the Mandinka griots of Senegambia the fall of Kansala remains one of their best-known stories."
+    facts:
+      - [Battle, "1867 (by tradition from 13 May; some sources 1864 or 1865)"]
+      - [Kaabu, "about 25,000 men in all (oral tradition)"]
+      - [Attackers, "12,000–32,000 (oral tradition)"]
+      - [Captives taken, "about 15,000"]
+    markers:
+      - kind: siege
+        side: fj
+        name: Kansala
+        date: "1867"
+        text: The capital of Kaabu, besieged by Futa Jallon and Alfa Molo’s Fula. Mansaba Janke Waali opened the gates and had the powder stores blown up, destroying the town with defenders and attackers.
+        lonlat: [-14.195, 12.536]
+      - kind: capital
+        side: fj
+        name: Timbo
+        date: "1867"
+        text: Capital of the Imamate of Futa Jallon, whose almamis had waged jihad against Kaabu since the early 19th century.
+        lonlat: [-11.833, 10.633]
+    arrows:
+      - side: fj
+        label: Futa Jallon’s army
+        via: [[-11.85, 10.70], [-12.28, 11.32], [-13.40, 12.00], [-14.15, 12.48]]
+    areas:
+      - style: lost
+        side: kb
+        label: Kaabu’s heartland
+        atoms: [GW-GA, GW-BA]

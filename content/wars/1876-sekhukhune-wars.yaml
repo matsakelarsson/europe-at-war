@@ -1,0 +1,179 @@
+id: sekhukhune-wars
+name: Sekhukhune wars
+start: "1876-05-16"
+end: "1879-12-02"
+tier: B
+summary: "The wars in which the Pedi kingdom of Sekhukhune, in the Leolo mountains of the eastern Transvaal, resisted first the South African Republic and then the British. The Pedi, ruled by the Maroteng dynasty from their capital Tsate, had rebuilt their power after the wars of the 1820s; many of their young men worked at the Kimberley diamond fields and came home with guns. Disputes over land, labour and tax led President Thomas Burgers to declare war in May 1876. The Republic’s commandos and their Swazi allies failed to take Tsate in August, and a war of forts and raids ended in an uneasy peace in February 1877. The Republic’s failure helped Britain justify its annexation of the Transvaal in April 1877, and the British in turn demanded Sekhukhune’s submission; their campaigns of 1878 also failed. After the Anglo-Zulu War, Sir Garnet Wolseley attacked with about 2,000 British and colonial troops and some 8,000 to 10,000 Swazi, and on 28 November 1879 Tsate was stormed with heavy loss of life. Sekhukhune was captured on 2 December and imprisoned in Pretoria; released after the Transvaal regained its independence in 1881, he was murdered by his rival Mampuru in 1882."
+countries: [za, sz, gb]
+sides:
+  - id: pedi
+    name: Pedi kingdom (Sekhukhune)
+    polities: [pedi]
+    ink: red
+    moves: Pedi moves
+    success: Pedi success
+  - id: zar
+    name: South African Republic
+    polities: [transvaal]
+    ink: purple
+    moves: Republic’s moves
+    success: Republic’s success
+  - id: brit
+    name: British Empire
+    polities: [united-kingdom]
+    ink: navy
+    moves: British moves
+    success: British success
+  - id: swa
+    name: Swazi kingdom (allied with the Republic in 1876 and Britain in 1879)
+    polities: [eswatini]
+    ink: gold
+    moves: Swazi moves
+    success: Swazi success
+notes:
+  - "Sources differ on numbers. About 1,000 Pedi are said to have been killed at Tsate in 1879, among them Sekhukhune’s heir Morwamotše; British losses among European troops were small, while the Swazi, who led the assault on the hills, lost several hundred men, by some accounts about 500."
+  - Tsate is also written Tjate or Tshate; the site, below the hill of Thaba Mosego, is a provincial heritage site.
+sources:
+  - title: Sekhukhune (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sekhukhune
+  - title: King Sekhukhune is defeated by the British (South African History Online)
+    url: https://sahistory.org.za/dated-event/king-sekhukhune-defeated-british-war
+  - title: Pedi people (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pedi_people
+  - title: Garnet Wolseley (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Garnet_Wolseley,_1st_Viscount_Wolseley
+steps:
+  - title: The Republic’s war
+    date: May 1876 – February 1877
+    when: "1876-05-16"
+    borders: "1876-08-02"
+    countries: [za, sz]
+    body:
+      - Sekhukhune became paramount of the Pedi in September 1861, on the death of his father Sekwati, and drove his half-brother and rival Mampuru into exile. From Tsate, on the eastern side of the Leolo mountains between the Olifants and Steelpoort rivers, he ruled a kingdom that the South African Republic claimed as part of its territory. The Boers of the Lydenburg district wanted Pedi land and labour; the Pedi refused to pay tax and bought guns with wages earned at the diamond fields. A quarrel came to a head when Sekhukhune’s half-brother Johannes Dinkwanyane, a Christian convert from the Botshabelo mission, settled with his followers on land the Boers claimed and refused the Republic’s authority.
+      - On 16 May 1876 President Thomas Burgers declared war. His commandos marched with a Swazi army, which stormed Dinkwanyane’s stronghold in mid-July; Dinkwanyane was mortally wounded, and the Swazi killed many women and children there before going home, angered that the Boers had not supported their assault. On 2 August 1876 the commandos’ attack on Tsate failed, and many burghers left for home.
+      - The Republic then built forts, among them Fort Burgers on the Steelpoort, and hired the Lydenburg Volunteer Corps of foreign adventurers under Conrad von Schlickmann, paid with promises of land and loot. Its raids and the killings of which Field-Cornet Abel Erasmus was accused drew protests from British officials; von Schlickmann was killed in a Pedi ambush on 17 November. With his cattle taken and his people hungry, Sekhukhune agreed to a peace at Botshabelo on 16 February 1877, but the war had emptied the Republic’s treasury and damaged its standing.
+    facts:
+      - [War declared, "16 May 1876"]
+      - [Attack on Tsate fails, "2 August 1876"]
+      - [Peace of Botshabelo, "16 February 1877"]
+    markers:
+      - kind: held
+        side: pedi
+        name: Tsate
+        date: 2 August 1876
+        text: Sekhukhune’s capital below the Leolo mountains. The Republic’s attack failed.
+        lonlat: [30.016, -24.506]
+        lp: l
+      - kind: held
+        side: zar
+        name: Fort Burgers
+        date: 1876–1877
+        text: The Republic’s fort on the Steelpoort, base of the Lydenburg Volunteer Corps; the town of Burgersfort is named after it.
+        lonlat: [30.33, -24.67]
+      - kind: treaty
+        side: zar
+        name: Botshabelo
+        date: 16 February 1877
+        text: The peace that ended the Republic’s war, signed at the Berlin mission station.
+        lonlat: [29.41, -25.70]
+      - kind: capital
+        side: zar
+        name: Pretoria
+        date: "1876"
+        text: Capital of the South African Republic.
+        lonlat: [28.188, -25.746]
+      - kind: event
+        side: zar
+        name: Lydenburg
+        date: "1876"
+        text: The Boer town nearest the Pedi kingdom, base of the commandos.
+        lonlat: [30.459, -25.099]
+    arrows:
+      - side: zar
+        label: Burgers’s commandos
+        phase: 1
+        via: [[30.45, -25.05], [30.32, -24.85], [30.15, -24.65], [30.04, -24.53]]
+      - side: swa
+        label: Swazi army
+        phase: 1
+        via: [[31.10, -25.80], [30.75, -25.35], [30.40, -24.90]]
+  - title: British demands and the campaigns of 1878
+    date: April 1877 – 1878
+    when: "1878"
+    borders: "1878-10-01"
+    countries: [za, gb]
+    body:
+      - On 12 April 1877 Sir Theophilus Shepstone annexed the Transvaal for Britain, pointing among other reasons to the Republic’s failure against Sekhukhune as proof that it could not keep order. The new British administration demanded that Sekhukhune pay the fine of cattle agreed in 1877 and accept British authority. He refused, and in 1878 Pedi forces attacked chiefs who had sided with the government and raided towards Lydenburg.
+      - British and colonial troops under Captain Clarke, and then a larger force under Colonel Hugh Rowlands, moved against the Pedi in 1878. Drought, horse-sickness and the strength of the Pedi positions defeated them; in October 1878 Rowlands came close to Tsate and withdrew. The coming war with the Zulu kingdom then drew the British troops away, and Sekhukhune remained independent for another year.
+    facts:
+      - [Annexation of the Transvaal, "12 April 1877"]
+      - [Rowlands withdraws, "October 1878"]
+    markers:
+      - kind: held
+        side: pedi
+        name: Tsate
+        date: October 1878
+        text: Rowlands’s column came near the capital and withdrew.
+        lonlat: [30.016, -24.506]
+        lp: l
+      - kind: held
+        side: brit
+        name: Lydenburg
+        date: "1878"
+        text: Base of the British forces in the east.
+        lonlat: [30.459, -25.099]
+      - kind: capital
+        side: brit
+        name: Pretoria
+        date: "1877"
+        text: Seat of the British administration of the Transvaal after the annexation.
+        lonlat: [28.188, -25.746]
+    arrows:
+      - side: brit
+        label: Rowlands
+        via: [[30.45, -25.05], [30.30, -24.82], [30.12, -24.62]]
+      - side: pedi
+        label: Pedi raids
+        via: [[30.10, -24.65], [30.30, -24.90], [30.42, -25.02]]
+  - title: Wolseley storms Tsate
+    date: November – December 1879
+    when: "1879-11-28"
+    borders: "1879-11-28"
+    countries: [za, sz, gb]
+    body:
+      - After the defeat of the Zulu kingdom, Sir Garnet Wolseley, now high commissioner for south-eastern Africa, turned against the Pedi. In November 1879 he gathered about 2,000 British soldiers, colonial horse and African levies at Fort Burgers and called on the Swazi king Mbandzeni, who sent some 8,000 to 10,000 men. Sekhukhune refused a last ultimatum.
+      - On 28 November 1879 the British advanced on Tsate along the valley while the Swazi attacked the Pedi positions on the mountain slopes above it. The town was taken and burned, and the Pedi made their last stand on a fortified hill in the valley, which the British called the Fighting Kopje; it was stormed after hours of fighting. About 1,000 Pedi were killed, among them Sekhukhune’s heir Morwamotše, and the Swazi lost several hundred men.
+      - Sekhukhune escaped to a cave in the mountains, Mamatamageng, and was captured there on 2 December 1879. He was taken to Pretoria and imprisoned. The British broke up his kingdom among chiefs who accepted their rule. After the First Boer War the Pretoria Convention of 1881 provided for Sekhukhune’s release; he returned to his country and was murdered there by Mampuru on 13 August 1882. Mampuru was hanged in Pretoria in November 1883.
+    facts:
+      - [Storming of Tsate, "28 November 1879"]
+      - [Sekhukhune captured, "2 December 1879"]
+      - [Sekhukhune murdered, "13 August 1882"]
+    markers:
+      - kind: taken
+        side: brit
+        name: Tsate
+        date: 28 November 1879
+        text: The Pedi capital was taken by the British and the Swazi, and the Fighting Kopje stormed. Sekhukhune was captured in a nearby cave on 2 December.
+        lonlat: [30.016, -24.506]
+        lp: l
+      - kind: event
+        side: brit
+        name: Fort Burgers
+        date: November 1879
+        text: Wolseley’s assembly point for the advance on Tsate.
+        lonlat: [30.33, -24.67]
+      - kind: event
+        side: brit
+        name: Pretoria
+        date: 9 December 1879
+        text: Sekhukhune was imprisoned here until 1881.
+        lonlat: [28.188, -25.746]
+    arrows:
+      - side: brit
+        label: Wolseley
+        phase: 1
+        via: [[30.32, -24.68], [30.18, -24.60], [30.04, -24.52]]
+      - side: swa
+        label: Swazi army
+        phase: 1
+        via: [[30.45, -24.35], [30.22, -24.42], [30.05, -24.49]]

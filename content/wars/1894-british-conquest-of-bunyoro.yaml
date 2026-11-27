@@ -1,0 +1,137 @@
+id: british-conquest-of-bunyoro
+name: British conquest of Bunyoro
+start: "1894-01-01"
+end: "1899-04-09"
+tier: B
+summary: "The war in which Britain and its Ganda allies conquered the kingdom of Bunyoro-Kitara in western Uganda. Omukama Kabalega, who had rebuilt Bunyoro’s power with a standing army armed with guns, resisted the advance of British influence from Buganda and backed Buganda’s Muslim party. In December 1893 Colonel Henry Colvile invaded with Sudanese troops and a large Ganda army under Semei Kakungulu; Britain declared war on 1 January 1894, and Kabalega abandoned his capital, Mparo. For five years he fought on from the Budongo forest and the country north of the Nile, while the British built forts across his kingdom and gave large parts of it to Buganda and Toro. In 1897 Kabaka Mwanga II of Buganda rose against the British, was defeated and, after a mutiny of the protectorate’s Sudanese troops, joined Kabalega. Both were captured in Lango on 9 April 1899 and exiled to the Seychelles. The lands south of the Kafu given to Buganda remained a grievance in Bunyoro; two of the “lost counties” voted to return to it in a referendum in 1964."
+countries: [ug]
+sides:
+  - id: bun
+    name: Bunyoro-Kitara (Kabalega), and from 1897 Mwanga’s followers
+    polities: [bunyoro]
+    ink: red
+    moves: Bunyoro moves
+    success: Bunyoro success
+  - id: br
+    name: Uganda Protectorate (Britain)
+    polities: [uganda, united-kingdom]
+    ink: navy
+    moves: British moves
+    success: British success
+  - id: bug
+    name: Buganda
+    polities: [buganda]
+    ink: blue
+    moves: Ganda moves
+    success: Ganda success
+notes:
+  - "British officers wrote most contemporary accounts and described Kabalega as a cruel tyrant, an image that shaped colonial histories and Bunyoro’s treatment under British rule. Banyoro traditions and later historians present him as the defender of his kingdom’s independence; Uganda declared him a national hero in 2009."
+  - "Dates for the start of the invasion vary: Colvile’s force crossed into Bunyoro in late December 1893, the formal declaration of war is dated 1 January 1894, and Mparo is said to have been taken on 2 or 5 January."
+sources:
+  - title: Kabalega (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kabalega
+  - title: Mwanga II of Buganda (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mwanga_II_of_Buganda
+  - title: Bunyoro (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bunyoro
+  - title: 1964 Ugandan lost counties referendum (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1964_Ugandan_lost_counties_referendum
+  - title: "Expeditions in Unyoro and on the Nile (Hansard, House of Commons, 13 May 1895)"
+    url: https://api.parliament.uk/historic-hansard/commons/1895/may/13/expeditions-in-unyoro-and-on-the-nile
+  - title: "Uganda: kingdom to sue over war crimes allegedly committed in 1890s (The New Humanitarian)"
+    url: https://www.thenewhumanitarian.org/report/48996/uganda-kingdom-sue-over-war-crimes-allegedly-committed-1890s
+steps:
+  - title: Colvile’s invasion
+    date: 1891 – January 1894
+    when: "1894-01-01"
+    borders: "1894-01-31"
+    countries: [ug]
+    body:
+      - "Kabalega had become Omukama of Bunyoro-Kitara in 1870 after a war of succession. He built a standing army, the abarusura, armed with guns bought from traders, used it to bring back provinces that had broken away, and in 1872 drove off the Egyptian expedition of Samuel Baker. Buganda was Bunyoro’s old rival, and Kabalega gave refuge and help to its Muslim party after 1889. When Frederick Lugard of the Imperial British East Africa Company marched west in 1891, he restored the prince Kasagama in Toro, a province that had broken away from Bunyoro, and built a line of forts on its border held by Sudanese soldiers. Raids and counter-raids followed."
+      - "In December 1893 Colonel Henry Colvile, the acting commissioner of the new British administration, invaded Bunyoro with Sudanese troops under British officers and a large Ganda army led by Semei Kakungulu, crossing the Kafu river in late December. Britain declared war on 1 January 1894. Kabalega did not risk his army in battle: he abandoned his capital at Mparo, which the invaders occupied in early January, and withdrew into the Budongo forest. Colvile built a chain of forts from the Kafu ford to Kibiro on Lake Albert to cut the kingdom in two."
+    facts:
+      - [Colvile crosses the Kafu, "late December 1893"]
+      - [Britain declares war on Bunyoro, "1 January 1894"]
+      - [Mparo occupied, "early January 1894"]
+    markers:
+      - kind: taken
+        side: br
+        name: Mparo
+        date: January 1894
+        text: Kabalega’s capital, near present-day Hoima. He abandoned it before Colvile’s army arrived.
+        lonlat: [31.37, 1.45]
+      - kind: event
+        side: br
+        name: Kibiro
+        date: "1894"
+        text: The British line of forts ran from the Kafu ford to this salt-making town on Lake Albert, cutting Bunyoro in two.
+        lonlat: [31.23, 1.68]
+        lp: l
+      - kind: held
+        side: bun
+        name: Budongo forest
+        date: 1894–1895
+        text: Kabalega withdrew into the forest and fought a guerrilla war from it.
+        lonlat: [31.58, 1.78]
+      - kind: event
+        side: br
+        name: Kampala
+        date: December 1893
+        text: Seat of the British administration, from which Colvile’s army set out.
+        lonlat: [32.57, 0.31]
+        lp: l
+    arrows:
+      - side: br
+        label: Colvile and Kakungulu
+        via: [[32.5, 0.35], [32.0, 0.8], [31.65, 1.2], [31.4, 1.42]]
+  - title: Mwanga joins Kabalega
+    date: 1894 – April 1899
+    when: "1899-04-09"
+    borders: "1899-04-09"
+    countries: [ug, tz]
+    body:
+      - "For five years Kabalega fought on, from the Budongo forest and then from the country north of the Victoria Nile, in Lango and Acholi, where Acholi chiefs such as Awich of Payira sheltered him. British columns with Sudanese troops and Ganda levies burned villages, seized cattle and built forts at Hoima and other places. Colvile had promised Buganda all of Bunyoro south of the Kafu river, and those lands were given to Ganda chiefs who had fought in the war, while Toro also gained land; the Uganda Agreement of 1900 confirmed the counties given to Buganda."
+      - "Kabaka Mwanga II, resentful of his loss of power, rose against the British on 6 July 1897 and was defeated in Buddu on 20 July; he fled into German territory and was held at Bukoba, and the British deposed him in favour of his infant son Daudi Chwa. In September 1897 the Sudanese soldiers of a British expedition, unpaid and overworked, mutinied in Busoga and held out for months, and the British had to bring troops from India. Mwanga escaped and returned to Buganda in January 1898 with a rebel force; defeated again, he went north and joined Kabalega."
+      - "On 9 April 1899 a British-led column with Ganda allies caught the two kings in Lango, near Kangai in present-day Dokolo District. Kabalega was badly wounded. Both were sent first to Kismayu and then into exile in the Seychelles, where Mwanga died in 1903. Kabalega was allowed to return in 1923 and died at Jinja on his way home. Bunyoro was ruled by the British through Ganda agents, which provoked the Nyangire protest of 1907; two of the “lost counties”, Buyaga and Bugangaizi, voted to return to Bunyoro in a referendum on 4 November 1964."
+    facts:
+      - [Mwanga’s rising, "6 July 1897"]
+      - [Sudanese mutiny, "September 1897"]
+      - [Capture of Kabalega and Mwanga, "9 April 1899"]
+    markers:
+      - kind: battle
+        side: br
+        name: Buddu
+        date: 20 July 1897
+        text: Mwanga’s rebels were defeated here by British-led forces two weeks after his rising.
+        lonlat: [31.73, -0.33]
+      - kind: event
+        side: bun
+        name: Bukoba
+        date: 1897
+        text: Mwanga was held here by the Germans after fleeing Buganda.
+        lonlat: [31.81, -1.33]
+      - kind: taken
+        side: br
+        name: Kangai (Dokolo)
+        date: 9 April 1899
+        text: Kabalega and Mwanga were captured here in Lango by a British-led column with Ganda allies. Kabalega was badly wounded.
+        lonlat: [33.083, 1.783]
+      - kind: held
+        side: bun
+        name: Budongo forest
+        date: 1894–1898
+        text: Kabalega’s base for the first years of the guerrilla war.
+        lonlat: [31.58, 1.78]
+        lp: l
+    arrows:
+      - side: bun
+        label: Mwanga, 1898
+        via: [[31.8, -1.25], [32.0, -0.3], [32.4, 0.6], [32.8, 1.35], [33.06, 1.74]]
+      - side: bun
+        label: Kabalega
+        via: [[31.62, 1.82], [32.1, 2.05], [32.7, 1.98], [33.06, 1.81]]
+    areas:
+      - style: lost
+        side: bun
+        label: Buyaga and Bugangaizi, the “lost counties” given to Buganda
+        atoms: [UG-407]

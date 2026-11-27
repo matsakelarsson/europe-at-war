@@ -1,0 +1,238 @@
+id: south-west-africa-campaign
+name: South West Africa campaign
+start: "1914-09-15"
+end: "1915-07-09"
+tier: B
+summary: "The First World War campaign in which the Union of South Africa conquered German South West Africa (Namibia) for the British Empire. At Britain’s request to seize the colony’s ports and wireless stations, Prime Minister Louis Botha’s government sent troops in September 1914. The invasion was delayed by a defeat at Sandfontein and by an armed rising of Afrikaners who refused to fight Germany for Britain, the Maritz Rebellion, which Botha had largely crushed by the end of 1914. In 1915 Botha advanced inland from Swakopmund and Jan Smuts from the south, taking Windhoek in May. Outnumbered many times over, the German forces under Governor Theodor Seitz and Colonel Victor Franke surrendered at Khorab on 9 July 1915. On the colony’s northern border German troops had also fought the Portuguese in Angola, defeating them at Naulila in December 1914. South Africa ruled the territory under military law until 1920, and then as a League of Nations mandate."
+countries: [na, za, ao, de, gb, pt]
+sides:
+  - id: union
+    name: Union of South Africa (British Empire)
+    polities: [south-africa, united-kingdom]
+    ink: red
+    moves: Union moves
+    success: Union success
+  - id: ger
+    name: German South West Africa
+    polities: [german-south-west-africa, germany]
+    ink: slate
+    moves: German moves
+    success: German success
+  - id: reb
+    name: Boer rebels (the Maritz Rebellion)
+    polities: [maritz-rebels]
+    ink: orange
+    moves: Rebel moves
+    success: Rebel success
+  - id: por
+    name: Portugal (Angola)
+    polities: [portugal, angola]
+    ink: green
+    moves: Portuguese moves
+    success: Portuguese success
+notes:
+  - "The base map keeps the colony German until the peace settlement took effect on 10 January 1920; the land held by the Union’s forces in 1915 is drawn as an area."
+  - "Losses were light by the standards of the war: the Union lost 113 killed and 153 dead of disease or accidents, the Germans 103 killed and 890 taken prisoner before the surrender. At least 124 rebels were killed in battle in the rising of 1914. Many Black and Coloured South Africans served as drivers, labourers and scouts, but the Union did not let them carry arms."
+sources:
+  - title: South West Africa campaign (Wikipedia)
+    url: https://en.wikipedia.org/wiki/South_West_Africa_campaign
+  - title: Maritz rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Maritz_rebellion
+  - title: Battle of Sandfontein (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sandfontein
+  - title: Battle of Naulila (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Naulila
+  - title: Battle of Otavi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Otavi
+  - title: Klaus Dierks, Chronology of Namibian History, 1915
+    url: https://www.klausdierks.com/Chronology/73.htm
+  - title: The South-West African campaign (National Army Museum)
+    url: https://www.nam.ac.uk/explore/south-west-african-campaign
+  - title: Imperial German forces surrender at Khorab, 9 July 1915 (South African History Online)
+    url: https://www.sahistory.org.za/dated-event/imperial-german-forces-forced-unconditional-surrender-union-south-africa-forces-during
+  - title: W. Whittall, With Botha and Smuts in Africa (1917, Internet Archive)
+    url: https://archive.org/details/withbothasmutsin00whitrich
+steps:
+  - title: Sandfontein and the Maritz Rebellion
+    date: September 1914 – February 1915
+    when: "1914-10-12"
+    borders: "1914-10-12"
+    countries: [na, za, ao]
+    body:
+      - "When Britain declared war in August 1914, Botha told London that South Africa would defend itself and agreed to invade the German colony. In September Union troops landed at Lüderitz, and a force under Henry Lukin crossed the Orange River from the Cape. On 26 September at Sandfontein, just north of the river, German troops under Joachim von Heydebreck surrounded an advance party of some 250 men with artillery, and after a day of fighting the South Africans surrendered."
+      - "Many Afrikaners, twelve years after the Boer republics’ defeat, refused to fight Germany on Britain’s behalf. Lieutenant-Colonel Manie Maritz, commanding Union troops on the north-western border, went over to the Germans with part of his force in October 1914; General Christiaan Beyers, who had resigned as commander of the Union Defence Force, Christiaan de Wet and Jan Kemp raised commandos in the Free State and the Transvaal. About 12,000 men joined the rising. Botha declared martial law and led some 32,000 loyal troops, most of them Afrikaners, against them. He scattered De Wet’s commando at Mushroom Valley on 12 November; De Wet was captured on 1 December and Beyers drowned in the Vaal River on 8 December. Maritz and Kemp attacked Upington from German territory on 24 January 1915 and were beaten off; Kemp surrendered on 4 February and Maritz fled to Angola. Jopie Fourie, an officer who had joined the rebels without resigning, was the only one executed; the other leaders were jailed and released within two years."
+      - "On the northern border a dispute at the Portuguese fort of Naulila on 19 October 1914 ended with the deaths of three members of a German party, an official and two officers, who had crossed the border. Franke led a German force into southern Angola and on 18 December defeated the Portuguese at Naulila. The Portuguese withdrew from the south, and the Kwanyama under their king Mandume ya Ndemufayo rose against them; Portugal reoccupied the region in 1915."
+    facts:
+      - [Battle of Sandfontein, "26 September 1914"]
+      - [Rebels, "about 12,000"]
+      - [Battle of Mushroom Valley, "12 November 1914"]
+      - [Battle of Naulila, "18 December 1914"]
+    markers:
+      - kind: event
+        side: union
+        name: Lüderitz
+        date: September 1914
+        text: Union troops landed and occupied the port.
+        lonlat: [15.154, -26.646]
+      - kind: battle
+        side: ger
+        name: Sandfontein
+        date: 26 September 1914
+        text: German troops surrounded Lukin’s advance party, which surrendered after a day’s fighting.
+        lonlat: [18.517, -28.685]
+      - kind: battle
+        side: union
+        name: Mushroom Valley
+        date: 12 November 1914
+        text: Botha’s troops scattered De Wet’s rebel commando.
+        lonlat: [27.174, -28.744]
+      - kind: battle
+        side: union
+        name: Upington
+        date: 24 January 1915
+        text: Maritz and Kemp attacked the town from German territory and were beaten off.
+        lonlat: [21.25, -28.45]
+      - kind: battle
+        side: union
+        name: Kakamas
+        date: 4 February 1915
+        text: A German attack on the Union post on the Orange River was driven off.
+        lonlat: [20.622, -28.758]
+        lp: l
+      - kind: battle
+        side: ger
+        name: Naulila
+        date: 18 December 1914
+        text: Franke’s troops defeated the Portuguese, who withdrew from southern Angola.
+        lonlat: [14.684, -17.196]
+    arrows:
+      - side: union
+        label: Lukin
+        via: [[17.20, -29.00], [17.90, -28.90], [18.50, -28.70]]
+      - side: ger
+        label: Franke
+        via: [[15.90, -19.30], [15.20, -18.10], [14.70, -17.25]]
+    areas:
+      - style: contested
+        side: reb
+        label: Boer rising, October–December 1914
+        polygon: [[26.00, -27.80], [27.10, -25.70], [28.40, -25.80], [28.90, -27.20], [28.30, -28.80], [26.60, -29.00]]
+  - title: Botha’s and Smuts’s offensives
+    date: February – May 1915
+    when: "1915-04-26"
+    borders: "1915-05-12"
+    countries: [na, za]
+    body:
+      - "With the rising over, the Union attacked with a force many times larger than the German garrison of regular soldiers and reservists. Union troops had occupied Swakopmund in mid-January; Botha himself took command there in the north on 11 February 1915 and built up his force at Walvis Bay. In March his columns advanced up the Swakop valley and its railway, defeating the Germans at Riet, Pforte and Jakalswater on 20 March. A German attack on the railway station of Trekkopjes on 26 April was beaten off with the help of armoured cars. Botha took Karibib on 5 May and Okahandja on 7 May; Windhoek, the capital, was handed over to him without a fight on 12 May."
+      - "In the south, Smuts directed three converging columns: from Lüderitz through Aus, from the Orange River through Warmbad and Kalkfontein, and from Kimberley across the Kalahari. Outnumbered, the Germans abandoned the south. Van Deventer’s column entered Keetmanshoop, abandoned by the Germans, on 19 April, and McKenzie’s mounted troops caught part of the retreating German force at Gibeon on 27–28 April; the Germans withdrew north to join their main force. Seitz proposed a truce that would have left the north of the colony in German hands until the end of the war; Botha refused."
+    facts:
+      - [Botha lands at Swakopmund, "11 February 1915"]
+      - [Battle of Trekkopjes, "26 April 1915"]
+      - [Keetmanshoop taken, "19 April 1915"]
+      - [Battle of Gibeon, "27–28 April 1915"]
+      - [Windhoek taken, "12 May 1915"]
+    markers:
+      - kind: battle
+        side: union
+        name: Jakalswater
+        date: 20 March 1915
+        text: Botha’s columns drove the Germans from their positions in the Swakop valley.
+        lonlat: [15.350, -22.617]
+      - kind: battle
+        side: union
+        name: Trekkopjes
+        date: 26 April 1915
+        text: A German attack on the railway station was beaten off with armoured cars.
+        lonlat: [15.101, -22.293]
+        lp: l
+      - kind: taken
+        side: union
+        name: Windhoek
+        date: 12 May 1915
+        text: The German capital, handed over to Botha by its mayor and occupied by his army.
+        lonlat: [17.084, -22.570]
+      - kind: taken
+        side: union
+        name: Keetmanshoop
+        date: 19 April 1915
+        text: The main town of the south, abandoned by the Germans.
+        lonlat: [18.133, -26.579]
+      - kind: battle
+        side: union
+        name: Gibeon
+        date: 27–28 April 1915
+        text: McKenzie’s troops caught part of the German force retreating north at Gibeon station, the decisive battle in the south.
+        lonlat: [17.835, -25.166]
+      - kind: event
+        side: union
+        name: Swakopmund
+        date: 11 February 1915
+        text: Occupied by Union troops in January; Botha took command of the northern army here.
+        lonlat: [14.533, -22.683]
+    arrows:
+      - side: union
+        label: Botha
+        phase: 1
+        via: [[14.55, -22.68], [15.10, -22.55], [15.86, -21.94], [16.92, -21.99], [17.08, -22.55]]
+      - side: union
+        label: McKenzie
+        phase: 1
+        via: [[15.16, -26.64], [16.27, -26.67], [17.16, -26.50], [17.77, -26.00]]
+      - side: union
+        label: Van Deventer
+        phase: 1
+        via: [[18.60, -28.70], [18.74, -28.45], [18.75, -28.02], [18.13, -26.60]]
+      - side: union
+        label: Berrangé
+        phase: 1
+        via: [[22.40, -27.40], [20.90, -27.20], [19.70, -26.90], [18.20, -26.58]]
+      - side: union
+        phase: 2
+        via: [[17.77, -26.00], [17.82, -25.60], [17.84, -25.19]]
+  - title: Otavi and the surrender at Khorab
+    date: June – July 1915
+    when: "1915-07-09"
+    borders: "1915-07-09"
+    countries: [na, za]
+    view:
+      center: [17.50, -19.78]
+      size: [100, 130]
+    body:
+      - "Botha resumed the advance in mid-June with four columns, two on the flanks and two along the railway to the north, moving fast across the dry country with some 13,000 mounted men. On 1 July the Germans made a last stand at Otavifontein, but their positions were outflanked and they fell back to Khorab, a farm a few kilometres north of Otavi, while Union columns reached Tsumeb and the end of the railway and cut off their retreat."
+      - "On 9 July 1915 Seitz and Franke surrendered at Khorab with some 3,500–4,000 men. The terms were generous: officers kept their swords and reservists could go home to their farms. South Africa ruled the territory under martial law; in 1920 the League of Nations gave it to the Union as a mandate, and South Africa governed it, from 1948 under apartheid laws, until Namibia’s independence in 1990."
+    facts:
+      - [Battle of Otavifontein, "1 July 1915"]
+      - [German surrender at Khorab, "9 July 1915"]
+      - [Union deaths in the campaign, "113 killed, 153 died of disease or accident"]
+    markers:
+      - kind: battle
+        side: union
+        name: Otavifontein
+        date: 1 July 1915
+        text: The last battle of the campaign; the Germans were outflanked and withdrew to Khorab.
+        lonlat: [17.386, -19.656]
+        lp: l
+      - kind: treaty
+        name: Khorab
+        date: 9 July 1915
+        text: Seitz and Franke surrendered the German forces here.
+        lonlat: [17.384, -19.606]
+        lp: t
+      - kind: taken
+        side: union
+        name: Tsumeb
+        date: early July 1915
+        text: Union troops reached the end of the railway, cutting off the German retreat.
+        lonlat: [17.713, -19.248]
+    arrows:
+      - side: union
+        label: Botha
+        via: [[17.05, -20.30], [17.22, -19.98], [17.36, -19.70]]
+      - side: union
+        label: Manie Botha
+        via: [[17.75, -20.30], [17.86, -19.75], [17.72, -19.28]]
+    areas:
+      - style: occupied
+        side: union
+        label: Held by Union forces, July 1915
+        polygon: [[14.40, -22.40], [16.00, -20.20], [17.40, -19.40], [18.20, -19.40], [18.80, -22.40], [20.00, -24.50], [20.00, -28.40], [16.50, -28.60], [15.10, -26.70], [14.90, -24.00]]

@@ -1,0 +1,258 @@
+id: guinea-bissau-war-of-independence
+name: Guinea-Bissau War of Independence
+start: "1963-01-23"
+end: "1974-09-10"
+tier: A
+summary: "The war of the African Party for the Independence of Guinea and Cape Verde (PAIGC) against Portuguese rule in Portuguese Guinea, the Guinean theatre of the Portuguese Colonial War. The PAIGC, founded in 1956 by Amílcar Cabral and others, turned to armed struggle after Portuguese police killed striking dockworkers at Pidjiguiti in Bissau in 1959, and opened the war with an attack on the barracks at Tite on 23 January 1963. Its guerrillas, based in neighbouring Guinea and later Senegal, held the island of Como against a large Portuguese offensive in 1964 and by the late 1960s claimed to control two-thirds of the countryside, where the party set up schools, clinics, courts and stores. Portugal kept some 30,000 soldiers in the colony, many of them Africans; from 1968 the governor, General António de Spínola, combined reforms with raids such as the attack on Conakry in 1970. Cabral was assassinated in Conakry in January 1973, but Soviet anti-aircraft missiles ended Portuguese air superiority that spring, and the PAIGC declared independence in the Boé hills on 24 September 1973. After the Carnation Revolution in Lisbon, Portugal recognised Guinea-Bissau on 10 September 1974. About 2,000 Portuguese soldiers, some 6,000 PAIGC fighters and about 5,000 civilians were killed."
+countries: [gw, pt, gn, sn, cv]
+sides:
+  - id: paigc
+    name: PAIGC
+    polities: [paigc]
+    ink: green
+    moves: PAIGC moves
+    success: PAIGC success
+  - id: pt
+    name: Portugal
+    polities: [portugal, guinea-bissau]
+    ink: red
+    moves: Portuguese moves
+    success: Portuguese success
+notes:
+  - "Support. The PAIGC had bases and rear areas in the Republic of Guinea, whose president Ahmed Sékou Touré gave it a headquarters in Conakry, and from 1966 in Senegal. It received weapons and training from the Soviet Union, Cuba, China, Algeria and other states; Cuban instructors, artillerymen and doctors served with it, and Yugoslavia ran a hospital for it at Boké. Sweden was its largest civilian donor. A smaller nationalist movement, the FLING, played little part in the fighting."
+  - "Casualties. Portugal lost 2,069 soldiers killed and over 8,000 wounded in Guinea; the PAIGC lost about 6,000 fighters, and about 5,000 civilians died, according to the figures collected by Wikipedia; all are estimates. After independence the new government executed many African soldiers who had served in Portuguese units, especially the African commandos; the number is disputed, and one estimate is 7,447."
+  - Places held by the PAIGC and the Portuguese changed often, and both sides’ claims about the extent of the liberated zones were part of the war of propaganda; the areas shown are approximate.
+sources:
+  - title: Guinea-Bissau War of Independence (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Guinea-Bissau_War_of_Independence
+  - title: Amílcar Cabral (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Am%C3%ADlcar_Cabral
+  - title: Pidjiguiti massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pidjiguiti_massacre
+  - title: Operation Green Sea (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Green_Sea
+  - title: "Guinea Bissau: 24 September 1973 and Beyond (Rhode Island College digital collections)"
+    url: https://digitalcollections.ric.edu/record/1758/files/Guinea_Bissau_24_September_1973_and_Beyond.pdf
+  - title: Guinea-Bissau War of Independence (GlobalSecurity.org)
+    url: https://www.globalsecurity.org/military/world/war/guineabissau.htm
+steps:
+  - title: From Pidjiguiti to Tite
+    date: 1956 – January 1963
+    when: "1963-01-23"
+    borders: "1963-01-23"
+    countries: [gw, gn]
+    body:
+      - Portuguese Guinea was a small colony of rice-growing and cattle-keeping peoples, the Balanta, Fula, Manjaco, Mandinka, Pepel and others, ruled by a few thousand Portuguese and by Cape Verdeans who served as clerks and officials. Under the Estado Novo dictatorship of António de Oliveira Salazar, which called the colonies overseas provinces of Portugal, almost all Africans were classed as “natives” without civil rights. In 1956 Amílcar Cabral, an agronomist born in Bafatá to Cape Verdean parents, founded the PAIGC in Bissau with Aristides Pereira, his half-brother Luís Cabral and others, to win independence for Guinea and Cape Verde together.
+      - On 3 August 1959 dockworkers at the Pidjiguiti quay in Bissau went on strike for higher pay; police and armed civilians fired on them, killing at least fifty. The PAIGC concluded that peaceful protest was useless, moved its leadership to Conakry in newly independent Guinea in 1960 and trained cadres there to organise the peasants of the countryside, above all the Balanta of the south. On 23 January 1963 PAIGC fighters attacked the Portuguese barracks at Tite, south of the Geba estuary, and the war began; within months the guerrillas were active across the south.
+    facts:
+      - [PAIGC founded, "19 September 1956 (date given by the party)"]
+      - [Pidjiguiti massacre, "3 August 1959, at least 50 killed"]
+      - [Attack on Tite, "23 January 1963"]
+    markers:
+      - kind: event
+        side: pt
+        name: Bissau (Pidjiguiti)
+        date: 3 August 1959
+        text: Capital of the colony. Police and armed civilians fired on striking dockworkers at the Pidjiguiti quay, killing at least fifty.
+        lonlat: [-15.58, 11.86]
+        lp: l
+      - kind: capital
+        side: paigc
+        name: Conakry
+        date: from 1960
+        text: Capital of independent Guinea and seat of the PAIGC’s leadership and party school.
+        lonlat: [-13.70, 9.52]
+      - kind: battle
+        side: paigc
+        name: Tite
+        date: 23 January 1963
+        text: The PAIGC’s attack on the Portuguese barracks opened the war.
+        lonlat: [-15.40, 11.78]
+        lp: b
+    arrows:
+      - side: paigc
+        via: [[-14.70, 11.30], [-15.00, 11.45], [-15.25, 11.65], [-15.38, 11.76]]
+  - title: Como and the congress of Cassacá
+    date: January – March 1964
+    when: "1964-01-15"
+    borders: "1964-03-01"
+    countries: [gw]
+    body:
+      - "In January 1964 the Portuguese launched Operation Tridente (Trident) to retake the island of Como in the far south, which the PAIGC had made a base. About 3,000 Portuguese troops with aircraft and naval support fought for more than two months among the island’s rice fields and mangroves, and then withdrew; the guerrillas, who numbered a few hundred, stayed. Both sides claimed victory, but Como became a symbol of the PAIGC’s ability to hold ground."
+      - "During the battle, in February 1964, the PAIGC held its first congress at Cassacá on the mainland nearby. Cabral used it to curb local commanders who had abused villagers and to bring the guerrilla bands under the party’s control. The congress created a regular army, the Revolutionary Armed Forces of the People (FARP), alongside local militias, and divided the country into fronts in the south, the north and the east."
+    facts:
+      - [Operation Tridente, "January – March 1964"]
+      - [Portuguese force, "about 3,000 men"]
+      - [Congress of Cassacá, "February 1964"]
+    markers:
+      - kind: battle
+        side: paigc
+        name: Como
+        date: January – March 1964
+        text: The Portuguese assault on the island failed to dislodge the PAIGC after more than two months.
+        lonlat: [-15.34, 11.21]
+        lp: l
+      - kind: event
+        side: paigc
+        name: Cassacá
+        date: February 1964
+        text: The PAIGC’s first congress, which reorganised the guerrillas and created the FARP.
+        lonlat: [-15.04, 11.04]
+    arrows:
+      - side: pt
+        label: Operation Tridente
+        via: [[-15.58, 11.70], [-15.55, 11.45], [-15.42, 11.28], [-15.35, 11.22]]
+    areas:
+      - style: occupied
+        side: paigc
+        label: Main PAIGC zone in the south, 1964 (approximate)
+        polygon: [[-15.45, 11.75], [-15.10, 11.75], [-14.80, 11.45], [-14.75, 11.10], [-15.05, 10.95], [-15.40, 11.15], [-15.50, 11.45]]
+  - title: The liberated zones
+    date: 1964–1968
+    when: "1966"
+    borders: "1967-01-01"
+    countries: [gw, gn, sn]
+    body:
+      - By 1968 the PAIGC claimed to control about two-thirds of the country, in three fronts, the south (Quinara and Tombali), the north around the forest of Morés and the Oio, and the east around the Boé hills. In these liberated zones the party set up its own administration, with elected village committees, schools, clinics, people’s courts and people’s stores that bartered cloth and tools for rice. The Portuguese army held the towns and a network of fortified posts linked by roads and rivers, bombed the PAIGC zones from the air, at times with napalm, and moved villagers into protected settlements.
+      - The guerrillas had their rear bases in the Republic of Guinea, along the southern border near Boké and Kandiafara, and from 1966 Senegal allowed them to use its territory to the north. The Soviet Union, Cuba and other states sent weapons, including artillery and rockets; Cuban advisers and doctors joined the PAIGC from 1966. Cabral travelled widely and became one of the best-known leaders and theorists of African liberation.
+    facts:
+      - [PAIGC claim, "two-thirds of the country by 1967–1968"]
+      - [Portuguese troops, "about 25,000–30,000 by the late 1960s"]
+    markers:
+      - kind: held
+        side: paigc
+        name: Morés
+        date: 1964–1974
+        text: The forest of Morés in the Oio was the centre of the PAIGC’s northern front.
+        lonlat: [-15.27, 12.24]
+      - kind: held
+        side: pt
+        name: Madina do Boé
+        date: until 1969
+        text: An isolated Portuguese post in the Boé hills, at the heart of the PAIGC’s eastern front.
+        lonlat: [-14.21, 11.75]
+      - kind: event
+        side: paigc
+        name: Boké
+        date: 1960s–1974
+        text: Town in Guinea near the border, with a PAIGC base and a hospital run with Yugoslav help.
+        lonlat: [-14.30, 10.94]
+      - kind: capital
+        side: pt
+        name: Bissau
+        date: 1964–1968
+        text: Seat of the Portuguese governor and military command.
+        lonlat: [-15.58, 11.86]
+        lp: l
+    areas:
+      - style: occupied
+        side: paigc
+        label: Areas largely held by the PAIGC outside the Portuguese posts, about 1968 (approximate)
+        polygons:
+          - [[-15.50, 11.78], [-15.10, 11.80], [-14.80, 11.50], [-14.72, 11.10], [-15.05, 10.95], [-15.42, 11.15], [-15.55, 11.45]]
+          - [[-15.55, 12.30], [-15.35, 12.45], [-15.05, 12.40], [-14.95, 12.20], [-15.20, 12.08], [-15.45, 12.12]]
+          - [[-14.45, 11.95], [-14.05, 11.95], [-13.75, 11.80], [-13.75, 11.60], [-14.10, 11.55], [-14.45, 11.70]]
+  - title: Spínola’s “Better Guinea”
+    date: 1968–1972
+    when: "1969-02-06"
+    borders: "1970-01-01"
+    countries: [gw, gn, sn]
+    body:
+      - "In May 1968 General António de Spínola became governor and commander-in-chief. Under the slogan “For a Better Guinea” he built schools, clinics and roads, held “people’s congresses” of chiefs and notables and raised African units, including African commandos and marines, so that by 1974 most of Portugal’s soldiers in Guinea were Africans. He also concentrated his forces: in February 1969 the post of Madina do Boé was given up, and on 6 February, as the garrison crossed the Corubal River at Cheche, a ferry overturned and 47 soldiers drowned."
+      - "Spínola also tried to split the PAIGC. Talks he held secretly with local PAIGC commanders in the Manjaco country ended on 20 April 1970, when three Portuguese majors and their interpreter were killed at the meeting place near Canchungo. On 22 November 1970 a force of Portuguese and African commandos and Guinean exiles raided Conakry (Operation Green Sea), freeing 26 Portuguese prisoners but failing to kill Cabral or overthrow Sékou Touré; the United Nations condemned Portugal. In May 1972 Spínola met President Léopold Sédar Senghor of Senegal at Cap Skirring to explore a negotiated settlement, but the Portuguese prime minister, Marcelo Caetano, rejected it. In April 1972 a United Nations mission visited the liberated zones, and later that year the PAIGC held elections there for a national assembly."
+    facts:
+      - [Spínola governor, "May 1968 – August 1973"]
+      - [Cheche ferry disaster, "6 February 1969, 47 soldiers drowned"]
+      - [Killings near Canchungo, "20 April 1970"]
+      - [Operation Green Sea, "22 November 1970"]
+    markers:
+      - kind: event
+        side: paigc
+        name: Madina do Boé
+        date: February 1969
+        text: The Portuguese gave up the post; 47 soldiers of the departing garrison drowned when a ferry capsized on the Corubal at Cheche.
+        lonlat: [-14.21, 11.75]
+      - kind: event
+        side: paigc
+        name: Canchungo
+        date: 20 April 1970
+        text: Three Portuguese majors sent to secret talks with PAIGC commanders in the Manjaco country were killed.
+        lonlat: [-16.03, 12.07]
+        lp: l
+      - kind: battle
+        side: pt
+        name: Conakry
+        date: 22 November 1970
+        text: Operation Green Sea, the Portuguese raid that freed prisoners of the PAIGC but failed in its main aims.
+        lonlat: [-13.70, 9.52]
+      - kind: event
+        side: none
+        name: Cap Skirring
+        date: May 1972
+        text: Spínola met Senegal’s President Senghor here to discuss a negotiated end to the war; Lisbon refused.
+        lonlat: [-16.74, 12.38]
+        lp: l
+    arrows:
+      - side: pt
+        label: Operation Green Sea
+        via: [[-15.55, 11.60], [-15.10, 10.80], [-14.20, 9.90], [-13.75, 9.55]]
+  - title: Cabral’s murder and the missiles
+    date: January – July 1973
+    when: "1973-01-20"
+    borders: "1973-05-22"
+    countries: [gw, gn]
+    body:
+      - On the night of 20 January 1973 Amílcar Cabral was shot dead outside his home in Conakry by a group of PAIGC members led by Inocêncio Kani, a former naval commander. The killers, who resented the party’s Cape Verdean leaders, were arrested with Guinean help; many suspected Portuguese involvement, which has never been proven. Aristides Pereira succeeded Cabral as secretary-general.
+      - From March 1973 the PAIGC used Soviet Strela-2 (SA-7) shoulder-fired missiles, which shot down several Portuguese aircraft in a few weeks; the Portuguese air force, which had moved troops and supplied the posts freely, now flew low and seldom. In May the PAIGC attacked posts on both borders, besieging Guidage in the north from 8 May and shelling Guileje in the south, which the Portuguese abandoned on 22 May (some accounts say 25 May); the garrison and villagers withdrew to Gadamael, which the PAIGC then shelled for weeks. Portuguese officers spoke of a military collapse, and Spínola left Guinea in August.
+    facts:
+      - [Cabral assassinated, "20 January 1973, Conakry"]
+      - [First missiles used, "March 1973"]
+      - [Guileje abandoned, "22 May 1973 (some sources 25 May)"]
+    markers:
+      - kind: event
+        side: none
+        name: Conakry
+        date: 20 January 1973
+        text: Amílcar Cabral was assassinated outside his home by PAIGC dissidents.
+        lonlat: [-13.70, 9.52]
+      - kind: taken
+        side: paigc
+        name: Guileje
+        date: 22 May 1973
+        text: The Portuguese garrison, cut off and shelled, destroyed its equipment and withdrew to Gadamael with the villagers.
+        lonlat: [-14.87, 11.33]
+      - kind: capital
+        side: pt
+        name: Bissau
+        date: "1973"
+        text: The Portuguese command in Bissau now had to supply its posts by road and river.
+        lonlat: [-15.58, 11.86]
+        lp: l
+  - title: Independence
+    date: September 1973 – September 1974
+    when: "1973-09-24"
+    borders: "1974-09-10"
+    countries: [gw, pt, cv]
+    body:
+      - On 24 September 1973 the People’s National Assembly elected in the liberated zones met at Lugajole in the Boé hills, near Madina do Boé, and proclaimed the Republic of Guinea-Bissau, with Luís Cabral as head of state. Dozens of states recognised it within weeks, and on 2 November 1973 the United Nations General Assembly welcomed its independence by 93 votes to 7 and condemned the Portuguese occupation of parts of its territory.
+      - "On 25 April 1974 officers of the Armed Forces Movement, many of whom had served in Guinea, overthrew Caetano’s government in the Carnation Revolution in Lisbon; Spínola, whose book Portugal and the Future had argued that the wars could not be won militarily, became president. Fighting in Guinea soon stopped. By the Algiers Accord of 26 August 1974 Portugal agreed to recognise Guinea-Bissau, which it did on 10 September 1974, and its troops left by October. Cape Verde became independent separately on 5 July 1975; the union of the two countries that Cabral had planned ended with a coup in Bissau in 1980."
+    facts:
+      - [Declaration of independence, "24 September 1973, Lugajole (Boé)"]
+      - [UN General Assembly vote, "2 November 1973, 93–7"]
+      - [Carnation Revolution, "25 April 1974"]
+      - [Algiers Accord, "26 August 1974"]
+      - [Portugal recognises independence, "10 September 1974"]
+    markers:
+      - kind: treaty
+        side: paigc
+        name: Lugajole (Boé)
+        date: 24 September 1973
+        text: The People’s National Assembly proclaimed the Republic of Guinea-Bissau here.
+        lonlat: [-13.85, 11.81]
+      - kind: capital
+        side: paigc
+        name: Bissau
+        date: September – October 1974
+        text: The PAIGC took over the capital as the Portuguese withdrew; it became the capital of independent Guinea-Bissau.
+        lonlat: [-15.58, 11.86]
+        lp: l

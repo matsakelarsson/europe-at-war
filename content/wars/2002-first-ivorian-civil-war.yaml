@@ -1,0 +1,139 @@
+id: first-ivorian-civil-war
+name: First Ivorian Civil War
+start: "2002-09-19"
+end: "2007-03-04"
+tier: B
+summary: "The war that split Côte d’Ivoire into a rebel-held north and a government-held south. After the death of the country’s founding president, Félix Houphouët-Boigny, in 1993, the idea of “Ivoirité”, Ivorian identity, was used to exclude northerners and the opposition leader Alassane Ouattara from politics, and a coup in 1999 and a disputed election in 2000 brought Laurent Gbagbo to power. On 19 September 2002 soldiers attacked Abidjan, Bouaké and Korhogo; the attack on Abidjan failed, but the rebels, later the Forces Nouvelles under Guillaume Soro, took the north, and two further rebel groups took the far west with Liberian fighters. French troops of Operation Licorne and later a United Nations force held a buffer zone between the two halves. Power-sharing agreements at Linas-Marcoussis in 2003 and Pretoria in 2005 broke down; in November 2004 an Ivorian air raid killed nine French soldiers at Bouaké, and France destroyed the Ivorian air force. The Ouagadougou agreement of 4 March 2007 made Soro prime minister and ended the war. Estimates of the dead range from about 900 to 4,000, and some 750,000 people were displaced."
+countries: [ci, fr, lr, bf]
+sides:
+  - id: ci
+    name: Côte d’Ivoire (Gbagbo’s government)
+    polities: [ivory-coast]
+    ink: green
+    moves: Government moves
+    success: Government success
+  - id: fn
+    name: Forces Nouvelles (MPCI, MPIGO and MJP)
+    polities: [forces-nouvelles]
+    ink: orange
+    moves: Forces Nouvelles moves
+    success: Forces Nouvelles success
+  - id: fr
+    name: France (Operation Licorne) and the United Nations (UNOCI)
+    polities: [france, un-peacekeepers]
+    ink: blue
+    moves: French and UN moves
+    success: French or UN success
+notes:
+  - The northern rebellion, the Patriotic Movement of Côte d’Ivoire (MPCI), merged with the two western movements, the MPIGO and the MJP, as the Forces Nouvelles in December 2002. The government accused Burkina Faso of backing the rebels, which it denied; Liberian fighters, some sent by Charles Taylor, fought with the western rebels, and others were recruited by the government.
+  - "Figures are uncertain. The Uppsala Conflict Data Program’s estimates of deaths range from about 900 to 4,000; the UNHCR counted about 750,000 people displaced. Death squads in Abidjan, militias on both sides and the rebels in the west were accused of killings of civilians, and many people from Burkina Faso, Mali and the north were attacked as “foreigners”."
+sources:
+  - title: First Ivorian Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Ivorian_Civil_War
+  - title: Linas-Marcoussis Agreement (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Linas-Marcoussis_Agreement
+  - title: Opération Licorne (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Op%C3%A9ration_Licorne
+  - title: United Nations Operation in Côte d’Ivoire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/United_Nations_Operation_in_C%C3%B4te_d%27Ivoire
+  - title: Ouagadougou Political Agreement (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ouagadougou_Political_Agreement
+steps:
+  - title: The rebellion and the partition
+    date: September 2002 – 2003
+    when: "2002-09-19"
+    borders: "2003-01-26"
+    countries: [ci, fr, lr]
+    body:
+      - "On 19 September 2002 soldiers, many of them northerners facing demobilisation, attacked military and government targets in Abidjan, Bouaké and Korhogo. In Abidjan loyal forces beat them off, and the former military ruler Robert Guéï and the interior minister were among those killed; but the rebels, who called themselves the Patriotic Movement of Côte d’Ivoire (MPCI), held Bouaké, the second city, and Korhogo and soon the whole north. France, which had a base in Abidjan, launched Operation Licorne on 22 September to protect foreigners, and its troops halted the rebel advance towards Yamoussoukro; a ceasefire was agreed on 17 October."
+      - "In late November two new rebel groups, the MPIGO and the MJP, took Man and Danané in the west, with Liberian fighters on both sides, and the fighting there brought massacres of civilians. In January 2003, at talks at Linas-Marcoussis near Paris, the government and the rebels agreed to a government of national reconciliation that would include the rebels, now called the Forces Nouvelles. Gbagbo’s supporters, the Young Patriots, rioted against the agreement and against France, and its terms were never fully carried out. French troops and a West African force, later the United Nations, held a buffer zone, the Zone of Confidence, between north and south."
+    facts:
+      - [Attacks on Abidjan, Bouaké and Korhogo, "19 September 2002"]
+      - [Operation Licorne, "from 22 September 2002"]
+      - [Ceasefire, "17 October 2002"]
+      - [Linas-Marcoussis Agreement, "January 2003"]
+    markers:
+      - kind: battle
+        side: ci
+        name: Abidjan
+        date: 19 September 2002
+        text: Loyal forces defeated the attack on the economic capital; Robert Guéï was killed.
+        lonlat: [-4.02, 5.33]
+        lp: b
+      - kind: taken
+        side: fn
+        name: Bouaké
+        date: 19 September 2002
+        text: The second city, held by the rebels and the headquarters of the Forces Nouvelles until 2007.
+        lonlat: [-5.03, 7.69]
+      - kind: taken
+        side: fn
+        name: Korhogo
+        date: September 2002
+        text: The main city of the north.
+        lonlat: [-5.63, 9.46]
+      - kind: taken
+        side: fn
+        name: Man
+        date: November 2002
+        text: Taken by the MPIGO and MJP in the west.
+        lonlat: [-7.55, 7.41]
+      - kind: held
+        side: fr
+        name: Yamoussoukro
+        date: September 2002
+        text: The political capital; French troops halted the rebel advance to the north of it.
+        lonlat: [-5.28, 6.82]
+        lp: b
+    arrows:
+      - side: fn
+        via: [[-5.03, 7.69], [-5.15, 7.30], [-5.25, 7.00]]
+    areas:
+      - style: occupied
+        side: fn
+        label: Held by the Forces Nouvelles, 2003 (approximate)
+        atoms: [CI-03, CI-04, CI-10, CI-14, CI-17, CI-06]
+  - title: Bouaké, 2004, and the Ouagadougou agreement
+    date: 2004 – March 2007
+    when: "2004-11-06"
+    borders: "2004-11-06"
+    countries: [ci, fr, bf]
+    body:
+      - "The United Nations Operation in Côte d’Ivoire (UNOCI) took over from the West African force in April 2004. In November 2004 Gbagbo broke the ceasefire with air raids on rebel towns, Operation Dignité. On 6 November an Ivorian Sukhoi jet bombed a French base in Bouaké, killing nine French soldiers and an American aid worker. France destroyed the Ivorian air force on the ground at Yamoussoukro and Abidjan; the Young Patriots attacked French and other foreigners in Abidjan, French troops fired on crowds near the Hôtel Ivoire, killing a number of Ivorians that is still disputed, and some 8,000 foreigners were evacuated. The UN imposed an arms embargo."
+      - "Talks under South African mediation at Pretoria in 2005 kept a power-sharing government alive, and elections were postponed again and again. Gbagbo then negotiated directly with Soro under the mediation of President Blaise Compaoré of Burkina Faso. The Ouagadougou Political Agreement of 4 March 2007 made Soro prime minister, provided for dismantling the Zone of Confidence, merging the armies and registering voters, and ended the war; the presidential election it prepared was held only in 2010."
+    facts:
+      - [UNOCI deployed, "April 2004"]
+      - [Bouaké air raid, "6 November 2004, nine French soldiers killed"]
+      - [Ouagadougou Political Agreement, "4 March 2007"]
+    markers:
+      - kind: air
+        side: ci
+        name: Bouaké
+        date: 6 November 2004
+        text: An Ivorian air raid on the French base killed nine French soldiers and an American aid worker.
+        lonlat: [-5.03, 7.69]
+      - kind: air
+        side: fr
+        name: Yamoussoukro
+        date: 6 November 2004
+        text: French forces destroyed the Ivorian air force’s aircraft on the ground.
+        lonlat: [-5.28, 6.82]
+        lp: b
+      - kind: event
+        side: none
+        name: Abidjan
+        date: 6–9 November 2004
+        text: Anti-French riots; French troops fired on crowds near the Hôtel Ivoire, and foreigners were evacuated.
+        lonlat: [-4.02, 5.33]
+        lp: b
+      - kind: treaty
+        side: none
+        name: Ouagadougou
+        date: 4 March 2007
+        text: Gbagbo and Soro signed the agreement that ended the war, mediated by Blaise Compaoré.
+        lonlat: [-1.53, 12.37]
+    areas:
+      - style: occupied
+        side: fn
+        label: Held by the Forces Nouvelles, 2004–2007 (approximate)
+        atoms: [CI-03, CI-04, CI-10, CI-14, CI-17, CI-06]

@@ -1,0 +1,392 @@
+id: zulu-wars-of-expansion
+name: Zulu wars of expansion and the Mfecane
+start: "1816"
+end: "1828-09"
+tier: A
+summary: "The wars in which the Zulu kingdom was built under Shaka, and the wider upheaval among the peoples of south-eastern Africa known as the Mfecane (in Sotho the Difaqane or Lifaqane). Around 1800 larger states were forming between the Phongolo and Thukela rivers, led by the Mthethwa of Dingiswayo and the Ndwandwe of Zwide. Shaka, who became chief of the small Zulu chiefdom in 1816 with Dingiswayo’s help, took over the leadership of the Mthethwa alliance after Zwide killed Dingiswayo, defeated the Ndwandwe in 1818–1820 and made the Zulu kingdom the strongest power in the region, until his assassination in September 1828. The Ndwandwe dispersed: Soshangane founded the Gaza kingdom in southern Mozambique and Zwangendaba led the Ngoni north across the Zambezi. Mzilikazi broke away from Shaka and took his Ndebele onto the highveld; the Hlubi, the amaNgwane of Matiwane and the Tlokwa of MaNthatisi fought and raided across the Caledon valley; Moshoeshoe gathered the survivors into the Basotho kingdom at Thaba Bosiu; and Sebetwane led the Kololo to the upper Zambezi. Many communities were destroyed or uprooted, and the new kingdoms remade the map of the region. Historians disagree about the causes and scale of the upheaval: older accounts blamed Shaka for one or two million deaths, while since the 1980s historians have pointed to drought, competition for land and the ivory and cattle trade at Delagoa Bay, slave and cattle raiding by Griqua and colonial groups, and the self-serving exaggerations of colonial writers."
+countries: [za, sz, ls, mz, zw, bw, zm, mw]
+sides:
+  - id: zulu
+    name: Zulu kingdom (with the Mthethwa until 1818)
+    polities: [zulu-kingdom, mthethwa]
+    ink: brown
+    moves: Zulu moves
+    success: Zulu success
+  - id: ndw
+    name: Ndwandwe, and the Gaza and Ngoni who came from them
+    polities: [ndwandwe, gaza-empire]
+    ink: purple
+    moves: Ndwandwe, Gaza and Ngoni moves
+    success: Ndwandwe success
+  - id: nde
+    name: Mzilikazi’s Ndebele
+    polities: [ndebele-kingdom]
+    ink: red
+    moves: Ndebele moves
+    success: Ndebele success
+  - id: hlu
+    name: amaHlubi of Mpangazitha
+    polities: [hlubi]
+    ink: navy
+    moves: Hlubi moves
+    success: Hlubi success
+  - id: ngw
+    name: amaNgwane of Matiwane
+    polities: [amangwane]
+    ink: magenta
+    moves: Ngwane moves
+    success: Ngwane success
+  - id: tlo
+    name: Batlokwa of MaNthatisi
+    polities: [tlokwa]
+    ink: orange
+    moves: Tlokwa moves
+    success: Tlokwa success
+  - id: sot
+    name: Moshoeshoe’s Basotho
+    polities: [lesotho]
+    ink: blue
+    moves: Basotho moves
+    success: Basotho success
+  - id: kol
+    name: Sebetwane’s Fokeng (Kololo)
+    polities: [kololo]
+    ink: teal
+    moves: Kololo moves
+    success: Kololo success
+  - id: cape
+    name: Cape Colony and its allies (Griqua, Tlhaping, Thembu, Gcaleka, Mpondo)
+    polities: [cape-colony, griqua, tswana, xhosa]
+    ink: slate
+    moves: Colonial and allied moves
+    success: Colonial and allied success
+notes:
+  - "Almost everything known about Shaka and the wars between the Thukela and the Phongolo comes from Zulu oral tradition, recorded decades later (above all by the magistrate James Stuart around 1900), and from the writings of the Port Natal traders Henry Francis Fynn and Nathaniel Isaacs, who had reasons to portray Shaka as a tyrant. Many famous details, such as the invention of the short stabbing spear, come from later popular books. Dates before 1824 are approximate and differ between sources by a year or two."
+  - "“Mfecane” (roughly “the crushing”) is a term of the twentieth century, not of the time. The historian Julian Cobbing argued in 1988 that the idea of a Zulu-caused catastrophe was an alibi for colonial land-taking and for slave raiding from Delagoa Bay and the Cape frontier; later work, notably by Elizabeth Eldredge, rejected much of his slave-trade argument, but she and others, among them Dan Wylie, agreed that the old picture of a single Zulu-driven explosion, and its death toll, cannot stand. No reliable count of the dead exists."
+sources:
+  - title: Mfecane (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mfecane
+  - title: Shaka (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Shaka
+  - title: Shaka Zulu (South African History Online)
+    url: https://sahistory.org.za/people/shaka-zulu
+  - title: Dingiswayo (South African History Online)
+    url: https://sahistory.org.za/people/chief-dingiswayo
+  - title: Ndwandwe–Zulu War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ndwandwe%E2%80%93Zulu_War
+  - title: Battle of Gqokli Hill (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Gqokli_Hill
+  - title: Zwide kaLanga (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Zwide_kaLanga
+  - title: Mzilikazi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mzilikazi
+  - title: Matiwane (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Matiwane
+  - title: Moshoeshoe I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Moshoeshoe_I
+  - title: Jere Ngoni Kingdom (Zwangendaba) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Zwangendaba
+  - title: Bulawayo (Zulu empire) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bulawayo_(Zulu_empire)
+steps:
+  - title: Mthethwa, Ndwandwe and the rise of Shaka
+    date: about 1800–1818
+    when: "1816"
+    borders: "1817-01-01"
+    countries: [za, sz]
+    body:
+      - In the late 1700s the many small chiefdoms between the Phongolo and Thukela rivers began to be drawn into larger states. The Mthethwa, near the coast under Dingiswayo, and the Ndwandwe, in the north under Zwide, were the strongest; the Ngwane of Sobhuza (the later Swazi), the Qwabe and the Hlubi were others. Historians link the change to a growing population and competition for good grazing, to severe droughts, among them the famine remembered as Madlathule early in the 1800s, and to the trade in ivory and cattle at Delagoa Bay, whose profits went to the chiefs who controlled it. Chiefs organised young men into age-regiments (amabutho) that served them in war, hunting and work, and used them to bring weaker neighbours under their rule.
+      - Shaka, a son of Senzangakhona, chief of the small Zulu chiefdom on the White Mfolozi, grew up away from his father’s court and served in Dingiswayo’s regiments. When Senzangakhona died in 1816, Dingiswayo helped Shaka take the chieftainship from his half-brother Sigujana, who was killed. Shaka drilled his regiments hard and fought in close order; later tradition credits him with the short stabbing spear and the “horns of the buffalo” encircling formation, though historians now see these as developments of existing practice.
+      - Zwide drove Sobhuza’s Ngwane north of the Phongolo, into what became Swaziland, and fought the Mthethwa. In late 1817 or early 1818 Dingiswayo was captured by the Ndwandwe and put to death at Zwide’s homestead. The Mthethwa alliance broke up, and its members and their regiments turned to Shaka, who became the leader of the coalition against Zwide.
+    facts:
+      - [Shaka becomes Zulu chief, "1816"]
+      - [Death of Dingiswayo, "late 1817 or early 1818"]
+    markers:
+      - kind: capital
+        side: ndw
+        name: Zwide’s capital
+        date: about 1818
+        text: The Ndwandwe capital, near present-day Nongoma. Dingiswayo was put to death here.
+        lonlat: [31.648, -27.911]
+      - kind: capital
+        side: zulu
+        name: Zulu chiefdom
+        date: "1816"
+        text: The small Zulu chiefdom on the White Mfolozi, around the emaKhosini valley where its chiefs were buried.
+        lonlat: [31.30, -28.42]
+        lp: l
+    areas:
+      - style: outline
+        side: ndw
+        label: Ndwandwe lands (approximate)
+        polygon: [[31.25, -27.55], [31.90, -27.35], [32.30, -27.60], [32.20, -28.00], [31.70, -28.15], [31.30, -28.00]]
+      - style: outline
+        side: zulu
+        label: Mthethwa and allied chiefdoms (approximate)
+        polygon: [[31.70, -28.25], [32.35, -28.15], [32.45, -28.45], [32.05, -28.85], [31.70, -28.70]]
+      - style: outline
+        side: zulu
+        label: Zulu chiefdom, 1816 (approximate)
+        polygon: [[31.15, -28.30], [31.50, -28.25], [31.55, -28.45], [31.20, -28.52]]
+  - title: Shaka against Zwide
+    date: 1818–1820
+    when: "1818-04"
+    borders: "1819-06-01"
+    countries: [za]
+    body:
+      - According to tradition, Zwide’s first army, led by his son Nomahlanjana, attacked the Zulu in 1818 and was beaten at Gqokli Hill near the White Mfolozi, where Shaka’s smaller force held the hilltop and Nomahlanjana was killed. The detailed accounts of the battle, with their numbers of about 5,000 Zulu against 12,000 Ndwandwe, go back to E. A. Ritter’s popular biography of 1955, and the historian Dan Wylie doubts that the battle took place as described; the South African History Online biography mentions only that a first Ndwandwe expedition was defeated at Gqokli.
+      - Zwide then sent his whole army into Zululand. Shaka withdrew south across the Mfolozi and the Mhlatuze, driving off the cattle and hiding or destroying the grain, and drew the Ndwandwe into the broken, forested country of Nkandla. When the hungry invaders turned back, the Zulu attacked them as they crossed the Mhlatuze, in 1819 or 1820 (sources differ), and broke them in a running fight over two days. A Zulu force went on to Zwide’s capital near Nongoma, reaching it before news of the defeat, and destroyed it.
+      - Zwide escaped north with part of his people and rebuilt his power beyond the Phongolo, near the Nkomati. Shaka absorbed the defeated chiefdoms and those that had sided with Zwide, among them the Qwabe, and built a new and much larger kwaBulawayo, named after his first royal homestead, in the former Qwabe country near present-day Eshowe. By about 1820 the Zulu kingdom held the country from the Phongolo to the Thukela, and its regiments were raiding beyond both rivers.
+    facts:
+      - [Gqokli Hill, "1818, by tradition"]
+      - [Battle of the Mhlatuze, "1819 or 1820"]
+    markers:
+      - kind: battle
+        side: zulu
+        name: Gqokli Hill
+        date: 1818 (by tradition)
+        text: Shaka’s regiments held the hill against Zwide’s first army; the details of the battle rest on disputed later accounts.
+        lonlat: [31.361, -28.381]
+      - kind: battle
+        side: zulu
+        name: Mhlatuze
+        date: 1819 or 1820
+        text: The Zulu fell on the starving Ndwandwe as they recrossed the Mhlatuze, south of present-day Melmoth. The exact site is uncertain.
+        lonlat: [31.47, -28.73]
+      - kind: taken
+        side: zulu
+        name: Zwide’s capital
+        date: 1819 or 1820
+        text: A Zulu force reached the Ndwandwe capital before news of the defeat and destroyed it.
+        lonlat: [31.648, -27.911]
+      - kind: capital
+        side: zulu
+        name: kwaBulawayo
+        date: about 1820
+        text: Shaka’s new capital, in the former Qwabe country near present-day Eshowe, where the Port Natal traders first met him in 1824 (marker approximate).
+        lonlat: [31.56, -28.82]
+    arrows:
+      - side: ndw
+        label: Zwide’s army
+        phase: 1
+        via: [[31.62, -27.98], [31.45, -28.30], [31.25, -28.55], [31.15, -28.68]]
+      - side: zulu
+        phase: 2
+        via: [[31.45, -28.70], [31.52, -28.40], [31.60, -28.10], [31.64, -27.95]]
+      - side: ndw
+        label: Zwide
+        phase: 3
+        via: [[31.70, -27.85], [31.80, -27.20], [31.75, -26.40]]
+    areas:
+      - style: gained
+        side: zulu
+        label: Zulu kingdom, about 1820 (approximate)
+        polygon: [[30.70, -28.00], [31.50, -27.55], [32.40, -27.80], [32.45, -28.55], [31.55, -29.20], [30.85, -28.90]]
+  - title: The Ndwandwe scatter, and Mzilikazi breaks away
+    date: 1819–1835
+    when: "1821"
+    borders: "1823-01-01"
+    countries: [za, mz, zw, sz, zm, mw]
+    body:
+      - The defeat broke the Ndwandwe into several groups that carried war and new kinds of state far to the north. Soshangane led his followers to the country behind Delagoa Bay, conquered the Tsonga-speaking communities there and founded the Gaza kingdom, which he moved to the lower Limpopo in about 1827. Zwangendaba and Nxaba led others north through Mozambique and onto the Zimbabwe plateau, where Zwangendaba’s people raided the Rozvi state and a related band killed its ruler. Zwangendaba’s Ngoni crossed the Zambezi in 1835 (tradition dates the crossing by an eclipse, which fell on 20 November 1835) and founded Ngoni kingdoms in what are now Malawi, Zambia and Tanzania. Zwide himself died in about 1825; in 1826 his son Sikhunyane attacked the Zulu and was crushed in the Izindololwane hills, and the Ndwandwe kingdom came to an end.
+      - Mzilikazi, chief of the Khumalo and one of Shaka’s commanders, kept the cattle from a raid instead of sending them to the king, in about 1821–1823, and fled with his followers. They crossed the Drakensberg onto the highveld, where, joined by many local people, they became the Ndebele (to the Sotho-Tswana, the Matabele). Raiding Sotho-Tswana communities for cattle and captives, they settled first in the east, then from about 1827 north of the Magaliesberg near present-day Pretoria, and in 1832, after Zulu and Griqua attacks, in the Marico valley in the west.
+    facts:
+      - [Gaza kingdom moved to the lower Limpopo, "about 1827"]
+      - [Ngoni cross the Zambezi, "1835"]
+      - [Ndwandwe defeated at Izindololwane, "1826"]
+    markers:
+      - kind: event
+        side: ndw
+        name: Delagoa Bay
+        date: 1820s
+        text: Soshangane’s Ndwandwe settled in the country behind the bay, where Portuguese and other traders bought ivory and cattle.
+        lonlat: [32.57, -25.97]
+      - kind: event
+        side: ndw
+        name: Zambezi crossing
+        date: "1835"
+        text: Zwangendaba’s Ngoni crossed the river near Zumbo, by tradition on the day of the eclipse of 20 November 1835.
+        lonlat: [30.50, -15.62]
+      - kind: capital
+        side: nde
+        name: Mzilikazi’s towns
+        date: about 1827–1832
+        text: The Ndebele capitals north of the Magaliesberg, near present-day Pretoria.
+        lonlat: [28.10, -25.62]
+        lp: l
+    arrows:
+      - side: ndw
+        label: Soshangane
+        phase: 1
+        via: [[31.70, -27.70], [32.20, -26.90], [32.55, -26.05], [33.10, -24.90]]
+      - side: ndw
+        label: Zwangendaba
+        phase: 2
+        via: [[31.90, -26.30], [32.60, -23.80], [32.10, -20.80], [31.20, -17.60], [30.55, -15.70]]
+      - side: nde
+        label: Mzilikazi
+        phase: 1
+        via: [[31.30, -27.60], [30.40, -26.80], [29.40, -25.90], [28.20, -25.65]]
+      - side: nde
+        phase: 2
+        via: [[28.05, -25.62], [27.10, -25.62], [26.15, -25.62]]
+  - title: War on the highveld
+    date: 1822–1828
+    when: "1822"
+    borders: "1824-07-01"
+    countries: [za, ls, bw]
+    body:
+      - The wars east of the Drakensberg pushed several communities onto the highveld. In about 1821–1822 the amaNgwane of Matiwane, attacked by the Ndwandwe and the Zulu, fell on the amaHlubi, and the Hlubi under Mpangazitha crossed the mountains and attacked the Batlokwa near present-day Harrismith. The Tlokwa, led by MaNthatisi, regent for her son Sekonyela, in turn raided their way across the Caledon valley, living off the grain and cattle of Sotho communities. The Ngwane followed the Hlubi across the mountains, and the three fought each other for years; Matiwane’s Ngwane killed Mpangazitha in about 1825–1826 and dominated the Caledon valley. Fields went unplanted, and in some districts people were reduced to hunger and, by later accounts, to cannibalism.
+      - Raiders also moved west. In June 1823 a large host of Fokeng under Sebetwane, with Phuting and Hlakwana, attacked Dithakong, the capital of the Tlhaping. The missionary Robert Moffat brought Griqua horsemen with guns from Griquatown, who with the Tlhaping beat off the attack with heavy losses. Sebetwane’s Fokeng moved north, became known as the Kololo, crossed the Kalahari and by about 1840 had conquered the Lozi kingdom on the upper Zambezi.
+      - Moshoeshoe, a young Sotho chief at Butha-Buthe, survived a Tlokwa siege there and in July 1824 moved his people to Thaba Bosiu, a flat-topped mountain that could be defended from below. He paid tribute when he had to, to Matiwane and to Shaka, lent cattle to refugees who joined him and built the Basotho kingdom from the survivors. Matiwane, threatened by the Zulu and the Ndebele, moved south into the lands of the Thembu in 1827–1828. The Cape government, believing a Zulu army was approaching its frontier, sent troops under Lieutenant-Colonel Henry Somerset, and with Thembu, Gcaleka and Mpondo forces they destroyed the Ngwane at Mbholompo, near present-day Mthatha, in late August 1828. Many survivors were taken into the colony as labourers; Matiwane later went to Dingane, who had him killed.
+    facts:
+      - [Attack on Dithakong, "June 1823"]
+      - [Moshoeshoe moves to Thaba Bosiu, "July 1824"]
+      - [Battle of Mbholompo, "late August 1828"]
+    markers:
+      - kind: battle
+        side: hlu
+        name: Batlokwa attacked
+        date: about 1822
+        text: The Hlubi of Mpangazitha, driven over the Drakensberg, fell on the Tlokwa near present-day Harrismith.
+        lonlat: [29.13, -28.27]
+      - kind: battle
+        side: cape
+        name: Dithakong
+        date: June 1823
+        text: Griqua horsemen brought by Robert Moffat and the Tlhaping beat off Sebetwane’s Fokeng and their allies.
+        lonlat: [23.85, -27.083]
+      - kind: capital
+        side: sot
+        name: Thaba Bosiu
+        date: July 1824
+        text: Moshoeshoe’s mountain stronghold, never taken by storm, and the centre of the Basotho kingdom.
+        lonlat: [27.671, -29.354]
+        lp: l
+      - kind: held
+        side: sot
+        name: Butha-Buthe
+        date: "1824"
+        text: Moshoeshoe’s first stronghold, besieged by the Tlokwa.
+        lonlat: [28.25, -28.77]
+      - kind: battle
+        side: cape
+        name: Mbholompo
+        date: late August 1828
+        text: Colonial troops with Thembu, Gcaleka and Mpondo allies destroyed Matiwane’s amaNgwane near present-day Mthatha.
+        lonlat: [28.75, -31.62]
+    arrows:
+      - side: hlu
+        label: Mpangazitha
+        phase: 1
+        via: [[30.10, -28.10], [29.60, -28.15], [29.20, -28.25]]
+      - side: tlo
+        label: MaNthatisi
+        phase: 2
+        via: [[29.10, -28.32], [28.40, -28.50], [27.70, -28.30], [27.95, -28.80]]
+      - side: ngw
+        label: Matiwane
+        phase: 2
+        via: [[30.20, -28.20], [29.40, -28.50], [28.40, -29.00], [27.90, -29.60]]
+      - side: ngw
+        phase: 3
+        via: [[27.95, -29.85], [28.30, -30.60], [28.72, -31.55]]
+      - side: kol
+        label: Sebetwane
+        phase: 1
+        via: [[26.80, -26.90], [25.40, -27.00], [24.00, -27.07]]
+      - side: kol
+        phase: 2
+        via: [[24.10, -26.80], [25.00, -24.20], [25.40, -21.00]]
+      - side: cape
+        label: Somerset
+        phase: 3
+        via: [[27.40, -32.60], [28.10, -32.00], [28.70, -31.66]]
+  - title: Shaka’s kingdom at its height
+    date: 1824–1828
+    when: "1826"
+    borders: "1827-01-01"
+    countries: [za, mz]
+    body:
+      - In 1824 a party of British traders led by Francis Farewell and Henry Francis Fynn settled at Port Natal and visited Shaka at kwaBulawayo. He allowed them to stay, claimed them as subjects and used them as go-betweens with the Cape; they in turn claimed that he had granted them the land around the bay. In 1826 Shaka crushed Sikhunyane’s Ndwandwe, and in the same year he built a new royal homestead at kwaDukuza, south of the Thukela and some 80 km from kwaBulawayo, to be nearer the traders. The kingdom ruled perhaps a quarter of a million people, and chiefdoms as far south as the Mzimkhulu paid tribute.
+      - When Shaka’s mother Nandi died in October 1827, the mourning he decreed was enforced with killings; Fynn put the dead at 7,000, a figure historians treat with caution. In 1828 Zulu regiments raided south against the Mpondo of Faku, as far as the Mzimvubu, which alarmed the Cape government. Shaka then sent them, without rest, on a long campaign north against Soshangane near Delagoa Bay, the Bhalule campaign, in which many died of hunger and fever.
+      - While the army was away, on 22 or 24 September 1828 (sources differ), Shaka was stabbed to death at kwaDukuza by his half-brothers Dingane and Mhlangana and his servant Mbopha. Dingane then killed Mhlangana and became king. He built a new capital, uMgungundlovu, in the emaKhosini valley, and the kingdom his half-brother had made survived him by half a century, until the British invasion of 1879.
+    facts:
+      - [Traders settle at Port Natal, "1824"]
+      - [Death of Nandi, "October 1827"]
+      - [Shaka assassinated, "22 or 24 September 1828"]
+    markers:
+      - kind: capital
+        side: zulu
+        name: kwaBulawayo
+        date: "1824"
+        text: Shaka’s capital, where Farewell and Fynn first met him (marker approximate).
+        lonlat: [31.56, -28.82]
+      - kind: event
+        side: zulu
+        name: kwaDukuza
+        date: September 1828
+        text: Shaka’s royal homestead from 1826, on the site of present-day KwaDukuza (Stanger), where he was assassinated by Dingane, Mhlangana and Mbopha.
+        lonlat: [31.288, -29.338]
+        lp: l
+      - kind: event
+        side: none
+        name: Port Natal
+        date: "1824"
+        text: The British traders’ settlement on the bay, the later Durban.
+        lonlat: [31.03, -29.87]
+        lp: l
+      - kind: event
+        side: ndw
+        name: Delagoa Bay
+        date: "1828"
+        text: Shaka’s last campaign, against Soshangane in the country behind the bay, ended in hunger and disease.
+        lonlat: [32.57, -25.97]
+    arrows:
+      - side: zulu
+        label: Raid on the Mpondo, 1828
+        phase: 1
+        via: [[31.25, -29.40], [30.55, -30.20], [29.90, -30.90], [29.55, -31.30]]
+      - side: zulu
+        label: Bhalule campaign, 1828
+        phase: 2
+        via: [[31.30, -29.30], [31.60, -28.40], [32.10, -27.20], [32.50, -26.10]]
+    areas:
+      - style: outline
+        side: zulu
+        label: Zulu kingdom and its tributaries, about 1827 (approximate)
+        polygon: [[30.60, -27.65], [31.60, -27.35], [32.60, -27.00], [32.60, -28.30], [31.90, -29.00], [31.00, -29.90], [30.30, -30.65], [29.80, -30.30], [29.80, -29.05], [30.20, -28.20]]
+  - title: A new map of south-eastern Africa
+    date: 1828–1840
+    when: "1828-09"
+    borders: "1836-01-01"
+    countries: [za, ls, sz, mz, zw, zm, bw, mw]
+    body:
+      - By the time of Shaka’s death the region looked very different from a generation before. Where there had been many chiefdoms there were now a few large kingdoms built around regiments and royal capitals, each formed by conquest and by the absorption of refugees and captives. The Zulu kingdom held the land between the Phongolo and the Thukela; Sobhuza’s Swazi kingdom lay north of the Phongolo; Moshoeshoe’s Basotho held the mountains around Thaba Bosiu; Mzilikazi’s Ndebele dominated the western highveld until the Voortrekkers and the Zulu drove them across the Limpopo in 1837–1838; Soshangane’s Gaza ruled southern Mozambique; and the Ngoni and Kololo founded kingdoms far to the north. Large areas of the highveld and of Natal south of the Thukela were thinly peopled for a time.
+      - Colonial writers later used these empty-looking lands as an argument that the Voortrekkers and British settlers who arrived in the 1830s and 1840s had taken land that belonged to no one, and they put the blame for the destruction on Shaka alone. Fynn wrote of a million dead, a claim with no basis in any count. The historian Julian Cobbing argued in 1988 that the whole idea of the Mfecane was a colonial myth that hid slave raiding from Delagoa Bay and labour raiding from the Cape frontier. Most historians now accept part of his critique, that colonial accounts exaggerated Zulu violence and the depopulation and ignored colonial and Griqua raiding, but reject his claim that slave raiding from Delagoa Bay set off the wars of the 1810s, and see the upheaval as the result of several causes working together.
+    markers:
+      - kind: capital
+        side: zulu
+        name: uMgungundlovu
+        date: from 1829
+        text: Dingane’s capital, in the emaKhosini valley.
+        lonlat: [31.268, -28.436]
+      - kind: capital
+        side: sot
+        name: Thaba Bosiu
+        date: from 1824
+        text: Moshoeshoe’s capital, centre of the Basotho kingdom.
+        lonlat: [27.671, -29.354]
+      - kind: capital
+        side: nde
+        name: Mosega
+        date: 1832–1837
+        text: Mzilikazi’s main town in the Marico valley, until the Voortrekkers destroyed it in January 1837.
+        lonlat: [26.07, -25.66]
+        lp: l
+      - kind: event
+        side: kol
+        name: Barotse valley
+        date: about 1840
+        text: Sebetwane’s Kololo conquered the Lozi kingdom on the upper Zambezi.
+        lonlat: [23.10, -15.25]

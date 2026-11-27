@@ -1,0 +1,207 @@
+id: abushiri-revolt
+name: Abushiri revolt
+start: "1888-08"
+end: "1890-05"
+tier: B
+summary: "The rising of the Swahili coast of present-day Tanzania against the German East Africa Company. In April 1888 Sultan Khalifa of Zanzibar leased the mainland coast to the company, and when its agents arrived in August, hauled down the sultan’s flags and took over the customs houses, the towns rose. Led at Pangani by Abushiri ibn Salim al-Harthi, a planter of Arab and Oromo descent, and at Saadani by Bwana Heri, Swahili townspeople, Arab planters and traders and the peoples of the hinterland drove the company out of every port except Bagamoyo and Dar es Salaam, which held out with the help of German warships. Germany and Britain blockaded the coast, and in 1889 the imperial commissioner Hermann von Wissmann, with an army of African soldiers recruited in Egypt and Mozambique, stormed Abushiri’s fort near Bagamoyo (8 May) and retook the northern ports. Abushiri was betrayed and hanged at Pangani on 15 December 1889; Bwana Heri submitted early in 1890, and Kilwa, Lindi and Mikindani were retaken in May. The German government took over the colony from the company on 1 January 1891, and Wissmann’s force became the core of the Schutztruppe."
+countries: [tz, de]
+sides:
+  - id: cst
+    name: Coastal resistance (Abushiri, Bwana Heri and their allies)
+    polities: [abushiri-rising]
+    ink: red
+    moves: Moves of the coastal resistance
+    success: Success of the coastal resistance
+  - id: de
+    name: German East Africa Company and Germany
+    polities: [german-east-africa, germany]
+    ink: slate
+    moves: German moves
+    success: German success
+notes:
+  - "German writers of the time called the rising the Arab Revolt (Araberaufstand), presenting it as the work of slave traders resisting abolition. Historians since the 1960s, among them John Iliffe and Jonathon Glassman, have shown that it was a broad rising of the coast: Swahili townspeople, Arab and Swahili planters who used slave labour, caravan traders and Zigua, Yao and other peoples of the hinterland, each with their own grievances against the company."
+  - "The Royal Navy took part in the blockade of the coast from December 1888, which was declared against the import of arms and the export of slaves; British forces did not fight on land."
+sources:
+  - title: Abushiri revolt (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Abushiri_revolt
+  - title: Abushiri (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Abushiri
+  - title: German East Africa Company (Wikipedia)
+    url: https://en.wikipedia.org/wiki/German_East_Africa_Company
+  - title: Hermann Wissmann (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hermann_Wissmann
+  - title: Heligoland–Zanzibar Treaty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Heligoland%E2%80%93Zanzibar_Treaty
+  - title: Geschichte der deutschen Kolonialherrschaft in Ostafrika (Bundeszentrale für politische Bildung)
+    url: https://www.bpb.de/themen/kolonialismus-imperialismus/postkolonialismus-und-globalgeschichte/spuren-deutscher-kolonialgeschichte/571519/geschichte-der-deutschen-kolonialherrschaft-in-ostafrika/
+steps:
+  - title: The company takes the coast
+    date: April – December 1888
+    when: "1888-09"
+    borders: "1888-12-01"
+    countries: [tz]
+    body:
+      - "Carl Peters’ treaties with chiefs of the interior in 1884 had brought Germany a claim to the mainland behind Zanzibar, and in 1886 Germany and Britain agreed that a strip of the coast about ten miles deep should remain the sultan’s. On 28 April 1888 Sultan Khalifa bin Said, under German pressure, leased it to the German East Africa Company, which was to collect the customs and govern in his name. In August 1888 the company’s agents landed in the coastal towns, ran up its flag beside or in place of the sultan’s, took over the customs houses and demanded proof of title to land and new taxes. At Pangani the attempt of the agent Emil von Zelewski to raise the company’s flag over the town caused particular anger."
+      - "In September the coast rose. At Pangani the planter Abushiri ibn Salim al-Harthi led townspeople and the men of the plantations and the hinterland against the company; Bwana Heri, ruler of Saadani and its Zigua hinterland, joined. The company’s men were driven out of Tanga and Pangani, two of its agents were killed at Kilwa, and those at Lindi and Mikindani fled. Only Bagamoyo and Dar es Salaam, where the company’s men were protected by marines and the guns of German warships, held out, and they were attacked again and again. Benedictine missionaries at Pugu, near Dar es Salaam, were killed or taken prisoner in January 1889."
+    facts:
+      - [Coast leased to the company, "28 April 1888"]
+      - [Company takes over the towns, "August 1888"]
+      - [Rising begins, "September 1888"]
+    markers:
+      - kind: capital
+        name: Zanzibar
+        date: "1888"
+        text: Seat of Sultan Khalifa bin Said, who leased the coast to the company and lost what authority he had there.
+        lonlat: [39.190, -6.162]
+      - kind: event
+        side: cst
+        name: Pangani
+        date: September 1888
+        text: Abushiri’s home district, where the rising began. The company’s agents were driven out.
+        lonlat: [38.98, -5.43]
+      - kind: taken
+        side: cst
+        name: Tanga
+        date: September 1888
+        text: The company’s men were driven out of the town.
+        lonlat: [39.10, -5.07]
+        lp: l
+      - kind: held
+        side: cst
+        name: Saadani
+        date: 1888–1890
+        text: The seat of Bwana Heri, who led the Zigua of the hinterland in the rising.
+        lonlat: [38.77, -6.04]
+        lp: l
+      - kind: held
+        side: de
+        name: Bagamoyo
+        date: 1888–1889
+        text: Held by the company with German marines and warships, and besieged by the rebels.
+        lonlat: [38.90, -6.43]
+        lp: l
+      - kind: held
+        side: de
+        name: Dar es Salaam
+        date: 1888–1889
+        text: The other port the company kept, under the guns of German warships.
+        lonlat: [39.28, -6.82]
+        lp: l
+      - kind: taken
+        side: cst
+        name: Kilwa
+        date: September 1888
+        text: Two of the company’s agents were killed when the town rose.
+        lonlat: [39.40, -8.75]
+      - kind: taken
+        side: cst
+        name: Lindi
+        date: September 1888
+        text: The company’s agents fled. Yao fighters from the interior played a large part in the rising in the south.
+        lonlat: [39.71, -10.00]
+    areas:
+      - style: occupied
+        side: cst
+        label: Coast held by the rising, end of 1888
+        atoms: [TZ-25~coast, TZ-19~coast, TZ-12~coast, TZ-17~coast]
+  - title: Wissmann and the death of Abushiri
+    date: January – December 1889
+    when: "1889-05-08"
+    borders: "1889-12-15"
+    countries: [tz, de]
+    body:
+      - "The company could not put down the rising, and early in 1889 Bismarck made Hermann von Wissmann, an officer who had explored the Congo basin, imperial commissioner with funds from the Reichstag. Wissmann hired German officers and NCOs and recruited several hundred African soldiers, Sudanese veterans of the Egyptian army and Shangaan men from Mozambique. German and British warships had blockaded the coast since December 1888 to stop arms coming in."
+      - "Abushiri’s alliance with the peoples of the hinterland had begun to break down, and he had hired Arab mercenaries to hold a stockade outside Bagamoyo. After a truce, Wissmann’s force, landed at Bagamoyo, stormed the fort on 8 May 1889, killing many of its defenders; Abushiri escaped inland. In June and July Wissmann’s troops, carried and covered by the navy, took Saadani, Pangani and Tanga. Abushiri raised new followers among the Mbunga and others inland, but his attacks on Dar es Salaam and Bagamoyo failed and his men deserted. In December a Zigua headman seized him and handed him over to the Germans, who hanged him at Pangani on 15 December 1889."
+    facts:
+      - [Wissmann made imperial commissioner, "early 1889"]
+      - [Abushiri’s fort stormed, "8 May 1889"]
+      - [Abushiri hanged at Pangani, "15 December 1889"]
+    markers:
+      - kind: battle
+        side: de
+        name: Bagamoyo
+        date: 8 May 1889
+        text: Wissmann’s force stormed Abushiri’s fortified camp outside the town; many of its defenders were killed. Abushiri escaped.
+        lonlat: [38.90, -6.43]
+        lp: l
+      - kind: taken
+        side: de
+        name: Saadani
+        date: June 1889
+        text: Bwana Heri’s town, taken by Wissmann’s troops with naval support. Bwana Heri withdrew inland.
+        lonlat: [38.77, -6.04]
+        lp: l
+      - kind: taken
+        side: de
+        name: Pangani
+        date: July 1889
+        text: Retaken by Wissmann’s troops. Abushiri was hanged here on 15 December 1889.
+        lonlat: [38.98, -5.43]
+      - kind: taken
+        side: de
+        name: Tanga
+        date: July 1889
+        text: Retaken by Wissmann’s troops.
+        lonlat: [39.10, -5.07]
+        lp: l
+      - kind: held
+        side: de
+        name: Dar es Salaam
+        date: "1889"
+        text: Abushiri’s attack on the town failed.
+        lonlat: [39.28, -6.82]
+        lp: l
+    arrows:
+      - side: de
+        label: Wissmann
+        phase: 1
+        via: [[39.15, -6.55], [38.97, -6.48], [38.88, -6.45]]
+      - side: cst
+        label: Abushiri
+        phase: 2
+        via: [[38.85, -6.45], [38.4, -6.6], [37.9, -6.85]]
+      - side: de
+        phase: 3
+        via: [[39.05, -6.35], [39.0, -5.9], [39.05, -5.55], [39.0, -5.45]]
+  - title: Bwana Heri and the south
+    date: December 1889 – January 1891
+    when: "1890-05"
+    borders: "1891-01-01"
+    countries: [tz, de]
+    body:
+      - "Bwana Heri fought on in the Zigua country behind Saadani and in December 1889 drove back a German column, but further expeditions in early 1890 forced him to come in and submit. In the south the rising, carried on by Yao and coastal leaders, had held Kilwa, Lindi and Mikindani for a year and a half. In May 1890 Wissmann sailed south with the navy and retook them, but Machemba, the Yao leader of the Makonde plateau, refused to submit and drove back the forces sent against him."
+      - "By the Anglo-German agreement of 1 July 1890 Britain recognised the German sphere on the mainland, and the sultan sold the coastal strip to Germany for four million marks. On 1 January 1891 the German government took over the colony from the company, and Wissmann’s soldiers became the core of the Schutztruppe, the colonial army. The rising had cost the coast heavily: its towns had been shelled and burned and its trade cut off by the blockade, and the Germans now ruled it directly, through officials and akidas, local agents who were often hated."
+    facts:
+      - [Bwana Heri submits, "early 1890"]
+      - [Kilwa, Lindi and Mikindani retaken, "May 1890"]
+      - [German government takes over, "1 January 1891"]
+    markers:
+      - kind: event
+        side: de
+        name: Saadani
+        date: early 1890
+        text: Bwana Heri submitted to the Germans after expeditions into the Zigua country behind the town.
+        lonlat: [38.77, -6.04]
+      - kind: taken
+        side: de
+        name: Kilwa
+        date: May 1890
+        text: Retaken by Wissmann’s troops landed from German warships.
+        lonlat: [39.40, -8.75]
+      - kind: taken
+        side: de
+        name: Lindi
+        date: May 1890
+        text: Retaken by Wissmann’s troops.
+        lonlat: [39.71, -10.00]
+        lp: l
+      - kind: taken
+        side: de
+        name: Mikindani
+        date: May 1890
+        text: Retaken by Wissmann’s troops.
+        lonlat: [40.12, -10.28]
+    arrows:
+      - side: de
+        label: Wissmann, May 1890
+        via: [[39.5, -7.0], [39.8, -8.2], [39.6, -8.75], [39.85, -9.6], [40.05, -10.2]]

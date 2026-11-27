@@ -1,0 +1,186 @@
+id: ugandan-bush-war
+name: Ugandan Bush War
+start: "1980-10-06"
+end: "1986-03"
+tier: B
+summary: "The civil war in Uganda between the governments of Milton Obote and, from July 1985, Tito Okello, with their Uganda National Liberation Army (UNLA), and several rebel groups, above all Yoweri Museveni’s National Resistance Army (NRA), which won it in January 1986. After Tanzania and Ugandan exiles overthrew Idi Amin in 1979, Obote returned to power in disputed elections in December 1980. Former Amin soldiers had already risen in West Nile in October 1980, and the UNLA’s reprisals there drove some 250,000 people into exile. Museveni, who said the elections had been rigged, began a guerrilla war on 6 February 1981 with an attack on Kabamba barracks; his Popular Resistance Army merged with Yusuf Lule’s fighters into the National Resistance Movement and its army, with its base in the Luwero Triangle north of Kampala. The UNLA, advised by North Korean officers, fought the NRA there with massacres, looting and the forced removal of hundreds of thousands of civilians into camps, notably in Operation Bonanza from June 1983. After Acholi officers under Bazilio Olara-Okello and Tito Okello overthrew Obote in July 1985, the NRA refused a power-sharing deal signed in Nairobi in December, took Masaka and Mbarara and entered Kampala on 26 January 1986; Museveni was sworn in as president on 29 January, and the NRA took the north in March. Estimates of the dead range from about 100,000 to 500,000, most of them civilians; the International Committee of the Red Cross estimated in 1985 that the Obote government was responsible for more than 300,000 civilian deaths since 1980. The NRA also committed abuses and used child soldiers, the kadogo. The defeated northern soldiers formed new rebel groups, among them those that led to the Lord’s Resistance Army."
+countries: [ug]
+sides:
+  - id: nra
+    name: National Resistance Movement and Army (NRM/NRA)
+    polities: [nrm]
+    ink: gold
+    moves: NRA moves
+    success: NRA success
+  - id: ug
+    name: Governments of Milton Obote and Tito Okello (UNLA)
+    polities: [uganda]
+    ink: navy
+    moves: UNLA moves
+    success: UNLA success
+  - id: wn
+    name: West Nile rebels (former Uganda Army, UNRF and FUNA)
+    polities: [west-nile-rebels]
+    ink: slate
+    moves: West Nile rebel moves
+    success: West Nile rebel success
+notes:
+  - "The war is also called the Luwero War or, in Uganda, the Resistance War or the NRM revolution. The numbers of dead in the Luwero Triangle are disputed and have been the subject of political argument in Uganda since; the government of Obote denied the massacres, while NRA abuses, including the recruitment of child soldiers, received less attention."
+sources:
+  - title: Ugandan Bush War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ugandan_Bush_War
+  - title: Luwero Triangle (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Luwero_Triangle
+  - title: Uganda (Britannica)
+    url: https://www.britannica.com/place/Uganda
+  - title: 1980 Ugandan general election (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1980_Ugandan_general_election
+steps:
+  - title: West Nile and the first attacks
+    date: October 1980 – 1982
+    when: "1981-02-06"
+    borders: "1981-02-06"
+    countries: [ug]
+    body:
+      - "After Tanzanian troops and Ugandan exiles took Kampala in April 1979, the Uganda National Liberation Front (UNLF) went through three presidents in a year, and in December 1980 Milton Obote’s Uganda People’s Congress won elections that the Democratic Party and Museveni’s Uganda Patriotic Movement called rigged. Even before the vote, on 6 October 1980, some 500 former soldiers of Idi Amin crossed from Sudan and Zaire and attacked Koboko in West Nile, Amin’s home region. The UNLA drove them back, levelled the town of Arua and killed more than 1,000 civilians, and over 250,000 people fled to Sudan and Zaire. The West Nile rebels later split into the Uganda National Rescue Front (UNRF) of Moses Ali and the Former Uganda National Army (FUNA)."
+      - "On 6 February 1981 Museveni and a few dozen men of his Popular Resistance Army attacked the army barracks at Kabamba in Mubende district; the raid failed to seize the armoury, but the fighters escaped into the bush and began a guerrilla war, recruiting among the Baganda of the countryside north and west of Kampala. In June 1981 they joined Yusuf Lule’s Uganda Freedom Fighters to form the National Resistance Movement, with Lule as chairman and Museveni as commander of its army, the NRA. Andrew Kayiira’s Uganda Freedom Movement, which raided Kampala in February 1982, was another opponent. Several of the NRA’s early fighters, among them Fred Rwigyema and Paul Kagame, were Rwandan Tutsi refugees."
+    facts:
+      - [Attack on Koboko, "6 October 1980"]
+      - [Ugandan general election, "December 1980"]
+      - [Attack on Kabamba barracks, "6 February 1981"]
+      - [National Resistance Movement formed, "June 1981"]
+    markers:
+      - kind: battle
+        side: wn
+        name: Koboko
+        date: 6 October 1980
+        text: About 500 former Amin soldiers attacked the town, the start of the war in West Nile.
+        lonlat: [30.960, 3.410]
+      - kind: event
+        side: ug
+        name: Arua
+        date: October 1980
+        text: The UNLA levelled the town and killed more than 1,000 civilians; over 250,000 people fled West Nile.
+        lonlat: [30.911, 3.035]
+        lp: l
+      - kind: battle
+        side: ug
+        name: Kabamba
+        date: 6 February 1981
+        text: Museveni’s fighters attacked the barracks; the raid failed, but it began the NRA’s guerrilla war.
+        lonlat: [31.185, 0.250]
+        lp: l
+      - kind: capital
+        side: ug
+        name: Kampala
+        date: "1981"
+        text: Seat of Obote’s government, which was backed by Tanzanian troops until 1981 and by North Korean military advisers.
+        lonlat: [32.581, 0.314]
+    areas:
+      - style: occupied
+        side: wn
+        label: Areas of West Nile rebel activity, 1980–1981 (approximate)
+        atoms: [UG-303, UG-313]
+  - title: The Luwero Triangle
+    date: 1982 – mid-1985
+    when: "1983-06-16"
+    borders: "1983-06-16"
+    countries: [ug]
+    body:
+      - "The NRA made the Luwero Triangle, the farmland of Buganda bounded by the roads from Kampala to Hoima and Gulu, its main area of operations, while recruiting in Ankole in the west as well. It lived among the population, set up village resistance councils and attacked army posts and convoys. The UNLA, many of its soldiers from the Acholi and Langi of the north, treated the people of the triangle as rebel supporters. On 16 June 1983 it launched Operation Bonanza, using up to half its forces, which killed tens of thousands of people and drove hundreds of thousands from their homes into guarded camps."
+      - "Obote’s chief of staff, David Oyite-Ojok, was killed in a helicopter crash in December 1983, and the army began to break up into rival factions. The NRA escaped encirclement at Birembo in January 1985 and in June 1985 defeated the UNLA at Kembogo and Rubona. The International Committee of the Red Cross estimated that by July 1985 the Obote government had been responsible for more than 300,000 civilian deaths across Uganda."
+    facts:
+      - [Operation Bonanza, "from 16 June 1983"]
+      - [Death of David Oyite-Ojok, "December 1983"]
+      - [Civilian deaths attributed to the Obote government by July 1985, "more than 300,000 (ICRC estimate)"]
+    markers:
+      - kind: held
+        side: nra
+        name: Luwero Triangle
+        date: 1981–1985
+        text: The NRA’s main area of operations, where the UNLA’s counter-insurgency killed tens of thousands of civilians and emptied whole villages.
+        lonlat: [32.400, 0.800]
+      - kind: event
+        side: ug
+        name: Nakaseke
+        date: 1983
+        text: In the heart of the Triangle; Operation Bonanza swept the area in 1983.
+        lonlat: [32.415, 0.730]
+        lp: l
+      - kind: capital
+        side: ug
+        name: Kampala
+        date: "1983"
+        text: Seat of Obote’s government.
+        lonlat: [32.581, 0.314]
+    areas:
+      - style: contested
+        side: nra
+        label: Luwero Triangle, the NRA’s main area of operations
+        atoms: [UG-104, UG-115, UG-103]
+  - title: The Okello coup and the NRA victory
+    date: July 1985 – March 1986
+    when: "1986-01-26"
+    borders: "1986-01-26"
+    countries: [ug]
+    body:
+      - "In July 1985 Acholi troops led by Brigadier Bazilio Olara-Okello marched from the north, took Lira and entered Kampala; Obote fled to Tanzania and General Tito Okello became head of state. Okello brought several rebel groups, including FEDEMU and FUNA, into his government, and the UNLA dissolved into marauding bands. The NRA joined peace talks in Nairobi, chaired by Kenya’s President Daniel arap Moi, but kept fighting: from August 1985 it besieged and took the garrisons of Masaka and Mbarara and held most of the west and south-west. The Nairobi agreement signed on 17 December 1985 never took effect."
+      - "In January 1986 the NRA advanced on Kampala, by then grown to about 10,000 fighters, many of them recruited in the territory it had taken, among them child soldiers. It took the capital on 26 January 1986, and Museveni was sworn in as president on 29 January. The NRA pushed east and north, taking Jinja and Tororo and, in March 1986, Gulu and Kitgum, where Olara-Okello’s holdouts dispersed; the Okellos and Obote went into exile. Estimates of the deaths in the war range from about 100,000 to 500,000. The defeat of the northern army left the Acholi region disarmed and resentful, and within months new insurgencies began there, among them Alice Lakwena’s Holy Spirit Movement and later Joseph Kony’s Lord’s Resistance Army."
+    facts:
+      - [Fall of Obote, "27 July 1985"]
+      - [Masaka and Mbarara taken by the NRA, "late 1985"]
+      - [Nairobi agreement, "17 December 1985"]
+      - [NRA takes Kampala, "26 January 1986"]
+      - [Museveni sworn in, "29 January 1986"]
+      - [Deaths, "estimates from about 100,000 to 500,000"]
+    markers:
+      - kind: taken
+        side: nra
+        name: Kampala
+        date: 26 January 1986
+        text: The NRA took the capital; Museveni was sworn in as president three days later.
+        lonlat: [32.581, 0.314]
+        lp: b
+      - kind: siege
+        side: nra
+        name: Masaka
+        date: late 1985
+        text: The NRA besieged and took the garrison town.
+        lonlat: [31.736, -0.341]
+        lp: l
+      - kind: siege
+        side: nra
+        name: Mbarara
+        date: late 1985
+        text: The NRA took the main garrison of the west.
+        lonlat: [30.658, -0.613]
+        lp: l
+      - kind: taken
+        side: nra
+        name: Gulu
+        date: March 1986
+        text: The NRA took the town; the last UNLA holdouts under Bazilio Olara-Okello dispersed.
+        lonlat: [32.299, 2.782]
+      - kind: taken
+        side: ug
+        name: Lira
+        date: July 1985
+        text: Bazilio Olara-Okello’s troops took the town on their march from Gulu to Kampala that ended Obote’s rule.
+        lonlat: [32.900, 2.247]
+    arrows:
+      - side: ug
+        label: Olara-Okello’s march on Kampala, July 1985
+        phase: 1
+        via: [[32.299, 2.782], [32.900, 2.247], [32.70, 1.30], [32.581, 0.40]]
+      - side: nra
+        label: NRA offensive in the west, August – December 1985
+        phase: 1
+        via: [[31.10, 0.25], [30.658, -0.613], [31.736, -0.341]]
+      - side: nra
+        label: NRA advance on Kampala, January 1986
+        phase: 2
+        via: [[31.736, -0.341], [32.10, -0.05], [32.48, 0.22]]
+      - side: nra
+        label: NRA advance to the north, March 1986
+        phase: 3
+        via: [[32.581, 0.45], [32.30, 1.40], [32.24, 2.25], [32.299, 2.70]]

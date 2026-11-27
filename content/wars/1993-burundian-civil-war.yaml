@@ -1,0 +1,143 @@
+id: burundian-civil-war
+name: Burundian Civil War
+start: "1993-10-21"
+end: "2005-08-26"
+tier: B
+summary: "The civil war in Burundi that followed the murder of the country’s first elected Hutu president, Melchior Ndadaye, by Tutsi army officers on 21 October 1993, and was fought between the Tutsi-dominated army and Hutu rebel movements, chiefly the CNDD-FDD and PALIPEHUTU-FNL. In the weeks after the coup Hutu peasants and local officials killed Tutsi neighbours and the army killed Hutu in reprisal; estimates for the first year range from 50,000 to 100,000 dead. Ndadaye’s successor, Cyprien Ntaryamira, died in the plane shot down over Kigali on 6 April 1994 with Rwanda’s president, and the war grew alongside the Rwandan genocide and the Congo wars: Hutu rebels used bases in Zaire, while Tutsi militias and the army fought them in the hills and in Bujumbura. Major Pierre Buyoya took power in a coup on 25 July 1996, and Burundi’s neighbours imposed an embargo. Peace talks at Arusha, led by Julius Nyerere and after his death by Nelson Mandela, produced the Arusha Peace and Reconciliation Agreement of 28 August 2000, which the main rebel groups did not sign at first. South African troops, an African Union mission and from 2004 a UN operation supported a transition; the CNDD-FDD signed a ceasefire on 3 December 2002 and joined the government in 2003, and after elections its leader, Pierre Nkurunziza, was sworn in as president on 26 August 2005, the date usually taken as the end of the war. The FNL fought on until a ceasefire in 2006, renewed fighting in 2008 and its disarmament in 2009. About 300,000 people were killed in the war, and hundreds of thousands fled to Tanzania."
+countries: [bi, tz, cd, rw]
+sides:
+  - id: gov
+    name: Burundian government and army, and Tutsi militias
+    polities: [burundi]
+    ink: red
+    moves: Government moves
+    success: Government success
+  - id: fdd
+    name: CNDD-FDD
+    polities: [cndd-fdd]
+    ink: green
+    moves: CNDD-FDD moves
+    success: CNDD-FDD success
+  - id: fnl
+    name: PALIPEHUTU-FNL
+    polities: [palipehutu-fnl]
+    ink: orange
+    moves: FNL moves
+    success: FNL success
+notes:
+  - "Death toll estimates for the war as a whole are rough; about 300,000 is the figure usually given. Both the army and the rebel groups killed civilians, and Burundi’s Truth and Reconciliation Commission, set up in 2014, was given the task of investigating crimes from 1962 to 2008."
+sources:
+  - title: Burundian Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Burundian_Civil_War
+  - title: 1993 Burundian coup attempt (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1993_Burundian_coup_attempt
+  - title: Arusha Accords (Burundi) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Arusha_Accords_(Burundi)
+  - title: Titanic Express massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Titanic_Express_massacre
+  - title: Burundi (Britannica)
+    url: https://www.britannica.com/place/Burundi
+steps:
+  - title: The murder of Ndadaye and the killings of 1993
+    date: June 1993 – July 1996
+    when: "1993-10-21"
+    borders: "1993-10-21"
+    countries: [bi, rw]
+    body:
+      - "In June 1993 Burundians elected Melchior Ndadaye of the Front for Democracy in Burundi (FRODEBU) as their first Hutu president, defeating Major Pierre Buyoya, who accepted the result. The army and the civil service remained overwhelmingly Tutsi. On 21 October 1993 Tutsi officers launched a coup in Bujumbura and murdered Ndadaye and other leading members of FRODEBU. The coup collapsed within days under internal and international pressure, but the murder set off killings across the country: Hutu peasants and FRODEBU officials killed Tutsi, and the army killed Hutu in reprisal. Estimates of the dead in the following months range from 50,000 to 100,000, and hundreds of thousands of Hutu fled to Rwanda, Zaire and Tanzania."
+      - "Ndadaye’s successor, Cyprien Ntaryamira, was killed on 6 April 1994 when the plane carrying him and Rwanda’s President Juvénal Habyarimana was shot down over Kigali. A weak coalition under Sylvestre Ntibantunganya could not control the army or the Tutsi militias, such as the Sans Échec, which drove Hutu out of districts of Bujumbura. Ndadaye’s former interior minister, Léonard Nyangoma, founded the CNDD and its armed wing, the FDD, while the older PALIPEHUTU and its armed wing, the FNL, fought on in the hills around the capital."
+    facts:
+      - [Election of Melchior Ndadaye, "June 1993"]
+      - [Coup and murder of Ndadaye, "21 October 1993"]
+      - [Killed in the following months, "estimates from 50,000 to 100,000"]
+      - [Death of Cyprien Ntaryamira, "6 April 1994"]
+    markers:
+      - kind: event
+        side: gov
+        name: Bujumbura
+        date: 21 October 1993
+        text: Tutsi army officers murdered President Ndadaye in a failed coup, setting off killings of Tutsi and reprisal killings of Hutu across the country.
+        lonlat: [29.366, -3.363]
+        lp: l
+      - kind: event
+        name: Kigali
+        date: 6 April 1994
+        text: The plane carrying Burundi’s President Ntaryamira and Rwanda’s President Habyarimana was shot down as it landed.
+        lonlat: [30.115, -1.952]
+      - kind: toll
+        name: Gitega
+        date: October – December 1993
+        text: Like the other provinces, the central highlands saw massacres of Tutsi and reprisals by the army against Hutu.
+        lonlat: [29.925, -3.428]
+  - title: Buyoya’s coup and the Arusha agreement
+    date: July 1996 – 2001
+    when: "2000-08-28"
+    borders: "2000-08-28"
+    countries: [bi, tz, cd]
+    body:
+      - "On 25 July 1996 the army brought Pierre Buyoya back to power in a coup. Burundi’s neighbours, led by Tanzania, imposed an economic embargo. The CNDD-FDD raided from bases around Uvira and Bukavu in eastern Zaire, and after the fall of Mobutu in 1997 it pushed into Bururi and Makamba in the south; the army answered by forcing hundreds of thousands of rural Hutu into regroupment camps. Rwandan troops, fighting their own Hutu insurgents, also crossed into Burundi. Both the army and the rebels massacred civilians."
+      - "Formal peace talks opened at Arusha in Tanzania on 15 June 1998 with Julius Nyerere as mediator; after his death in 1999 Nelson Mandela took over. On 28 August 2000 the government and most of the political parties signed the Arusha Peace and Reconciliation Agreement, which set out a transition and a sharing of power and of the army between Hutu and Tutsi. The main rebel groups, the CNDD-FDD and the FNL, did not sign and fought on; on 28 December 2000 gunmen killed 21 passengers of a Titanic Express bus near Bujumbura. A transitional government took office in November 2001, with Buyoya as president for 18 months, protected by South African troops."
+    facts:
+      - [Buyoya’s coup, "25 July 1996"]
+      - [Arusha talks open, "15 June 1998"]
+      - [Arusha Peace and Reconciliation Agreement, "28 August 2000"]
+      - [Transitional government, "1 November 2001"]
+    markers:
+      - kind: event
+        side: gov
+        name: Bujumbura
+        date: 25 July 1996
+        text: The army removed President Ntibantunganya and brought Pierre Buyoya back to power.
+        lonlat: [29.366, -3.363]
+        lp: r
+      - kind: held
+        side: fdd
+        name: Uvira
+        date: 1994–1996
+        text: The CNDD-FDD had major bases around Uvira and Bukavu in eastern Zaire, from which it raided Burundi.
+        lonlat: [29.150, -3.400]
+        lp: l
+      - kind: treaty
+        name: Arusha
+        date: 28 August 2000
+        text: The Arusha Peace and Reconciliation Agreement was signed under the mediation of Nelson Mandela.
+        lonlat: [36.683, -3.367]
+      - kind: battle
+        side: fdd
+        name: Bururi
+        date: "1997"
+        text: The CNDD-FDD carried the war into Bururi and Makamba provinces, the home region of much of the Tutsi elite.
+        lonlat: [29.617, -3.950]
+        lp: l
+    arrows:
+      - side: fdd
+        label: CNDD-FDD raids from Zaire
+        via: [[29.00, -3.60], [29.30, -3.85], [29.617, -3.95]]
+  - title: Ceasefire, transition and Nkurunziza
+    date: 2002 – 2005
+    when: "2005-08-26"
+    borders: "2005-08-26"
+    countries: [bi]
+    body:
+      - "After being promised places in the government and the army, the main wings of the CNDD-FDD signed a ceasefire on 3 December 2002. An African Union mission, mostly South African, Ethiopian and Mozambican troops, deployed from April 2003, and on 30 April 2003 Domitien Ndayizeye of FRODEBU succeeded Buyoya as president. Under a power-sharing deal of October 2003 the CNDD-FDD of Pierre Nkurunziza joined the government, and its fighters were merged with the army. A UN operation, ONUB, took over from the African Union in 2004. The FNL fought on around Bujumbura; on 13 August 2004 its fighters killed about 160 Congolese Tutsi (Banyamulenge) refugees in a UN camp at Gatumba."
+      - "A new constitution was approved by referendum in February 2005, and the CNDD-FDD won the elections that followed. On 26 August 2005 Pierre Nkurunziza was sworn in as president, elected by parliament, the date usually taken as the end of the war. The curfew in force since 1993 was lifted in April 2006. The FNL signed a ceasefire in Dar es Salaam in September 2006, fought again in 2008 and disarmed in 2009. About 300,000 people had been killed in the war."
+    facts:
+      - [CNDD-FDD ceasefire, "3 December 2002"]
+      - [Gatumba massacre, "13 August 2004, about 160 killed"]
+      - [Pierre Nkurunziza sworn in, "26 August 2005"]
+      - [Deaths in the war, "about 300,000"]
+    markers:
+      - kind: capital
+        side: fdd
+        name: Bujumbura
+        date: 26 August 2005
+        text: Pierre Nkurunziza, leader of the former rebel CNDD-FDD, was sworn in as president.
+        lonlat: [29.366, -3.363]
+        lp: r
+      - kind: toll
+        side: fnl
+        name: Gatumba
+        date: 13 August 2004
+        text: FNL fighters killed about 160 Banyamulenge refugees in a UN camp near the Congolese border.
+        lonlat: [29.250, -3.333]
+        lp: l

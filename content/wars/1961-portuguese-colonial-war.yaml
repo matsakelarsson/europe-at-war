@@ -2,21 +2,147 @@ id: portuguese-colonial-war
 name: Portuguese Colonial War
 start: "1961-02-04"
 end: "1974-04-25"
-tier: C
+tier: B
 summary: The wars fought by Portugal’s Estado Novo dictatorship against independence movements in its African colonies, in Angola from 1961, Portuguese Guinea (Guinea-Bissau) from 1963 and Mozambique from 1964. Portugal held most of the territory with large conscript armies, by one count mobilising some 1.4 million men for military and support service over the years, but the guerrillas of the MPLA, FNLA and UNITA in Angola, the PAIGC in Guinea and FRELIMO in Mozambique could not be defeated. Weariness with the war led army officers to overthrow the regime in the Carnation Revolution of 25 April 1974, and all five African colonies became independent in 1974–1975.
-countries: [pt, ao, gw, mz]
+countries: [pt, ao, gw, mz, cv, st]
 sides:
   - id: pt
     name: Portugal
-    polities: [portugal]
-    ink: green
+    polities: [portugal, angola, guinea-bissau, mozambique]
+    ink: blue
+    moves: Portuguese moves
+    success: Portuguese success
   - id: ind
     name: African independence movements
+    polities: [mpla, fnla, unita, paigc, frelimo]
     ink: red
+    moves: Independence movements’ moves
+    success: Independence movements’ success
 notes:
-  - The fighting took place in Africa, outside the map. Portugal lost about 8,000–9,000 soldiers killed; losses among the guerrillas and especially civilians were far higher, with estimates of civilian deaths ranging from about 70,000 to 110,000. Atrocities were committed on all sides, among them the massacre of settlers and others by the UPA in northern Angola in March 1961 and the massacre of villagers by Portuguese troops at Wiriyamu in Mozambique in 1972.
+  - "Casualty figures are estimates. Portugal lost about 8,800 soldiers dead in the three wars, including deaths from accidents and disease; estimates of guerrillas killed run to some 40,000–46,000 and of civilians killed from about 70,000 to 110,000. Atrocities were committed on all sides, among them the massacre of settlers and African workers by the UPA in northern Angola in March 1961, the reprisals that followed, and the massacre of villagers by Portuguese commandos at Wiriyamu in Mozambique in December 1972, where estimates of the dead range from about 150 to at least 385."
+  - African soldiers made up about 18 per cent of Portugal’s forces in Africa in 1961 and, by one estimate, more than half by 1974. The three wars are told in their own stories, the Angolan War of Independence, the Guinea-Bissau War of Independence and the Mozambican War of Independence.
 sources:
   - title: Portuguese Colonial War (Wikipedia)
     url: https://en.wikipedia.org/wiki/Portuguese_Colonial_War
   - title: Carnation Revolution (Wikipedia)
     url: https://en.wikipedia.org/wiki/Carnation_Revolution
+  - title: Revolution of the Carnations (Britannica)
+    url: https://www.britannica.com/topic/Revolution-of-the-Carnations
+  - title: Wiriyamu massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Wiriyamu_massacre
+steps:
+  - title: Three wars in Africa
+    date: 1961 – 1974
+    when: "1961-02-04"
+    borders: "1970-01-01"
+    countries: [ao, gw, mz, pt]
+    body:
+      - Salazar’s Portugal refused to give up its colonies when Britain, France and Belgium were leaving theirs, calling them overseas provinces of a single nation. The war began in Angola, with the attack on the Luanda prisons on 4 February 1961 and the UPA rising in the north on 15 March. In Portuguese Guinea the PAIGC of Amílcar Cabral attacked the barracks at Tite on 23 January 1963 and within a few years held much of the south and east. In Mozambique FRELIMO, led by Eduardo Mondlane, opened its war with an attack on the administrative post of Chai in Cabo Delgado on 25 September 1964 and built its strongholds on the Makonde plateau and in Niassa, later also in Tete.
+      - Portugal fought all three wars at once, with an average of more than 100,000 troops in Africa each year, a growing share of them African. In Guinea General António de Spínola tried to win the population with reforms as well as force, and Portuguese commandos raided Conakry in 1970; in Mozambique General Kaúlza de Arriaga’s Operation Gordian Knot of 1970 hit FRELIMO’s bases in the north without ending the war. Portugal was allied in secret with South Africa and Rhodesia. Mondlane was killed by a parcel bomb in 1969 and Cabral was shot in Conakry on 20 January 1973, but the PAIGC proclaimed Guinea-Bissau’s independence in the Boé hills near Madina do Boé on 24 September 1973, and dozens of states recognised it.
+    facts:
+      - [Angola, "from 4 February 1961"]
+      - [Guinea, "from 23 January 1963"]
+      - [Mozambique, "from 25 September 1964"]
+      - [Guinea-Bissau declares independence, "24 September 1973"]
+    link: { href: "#/war/angolan-war-of-independence", text: "The war in Angola" }
+    markers:
+      - kind: battle
+        side: ind
+        name: Luanda
+        date: 4 February 1961
+        text: The attack on the city’s prisons began the war in Angola.
+        lonlat: [13.24, -8.83]
+        lp: l
+      - kind: battle
+        side: ind
+        name: Tite
+        date: 23 January 1963
+        text: The PAIGC’s attack on the barracks began the war in Guinea.
+        lonlat: [-15.40, 11.78]
+        lp: l
+      - kind: treaty
+        side: ind
+        name: Madina do Boé
+        date: 24 September 1973
+        text: The PAIGC’s assembly proclaimed the Republic of Guinea-Bissau at Lugajole, in its liberated zone in the Boé hills near the town.
+        lonlat: [-14.22, 11.75]
+      - kind: battle
+        side: ind
+        name: Chai (Cabo Delgado)
+        date: 25 September 1964
+        text: FRELIMO’s attack on the administrative post of Chai began the war in Mozambique.
+        lonlat: [40.11, -11.93]
+      - kind: event
+        side: none
+        name: Conakry
+        date: 1970 and 1973
+        text: Portuguese commandos raided the PAIGC’s base city in November 1970; Amílcar Cabral was assassinated here on 20 January 1973.
+        lonlat: [-13.71, 9.51]
+        lp: b
+    areas:
+      - style: occupied
+        side: ind
+        label: Largely held by the PAIGC by 1973 (approximate)
+        polygon: [[-15.60, 11.50], [-15.20, 11.95], [-14.70, 12.40], [-13.70, 12.40], [-13.70, 11.70], [-14.70, 10.95], [-15.30, 11.00]]
+      - style: contested
+        side: ind
+        label: FRELIMO’s main zones by 1974 (approximate)
+        polygon: [[38.80, -10.50], [40.40, -10.50], [40.20, -12.20], [38.50, -13.30], [35.50, -13.50], [34.80, -12.00], [35.80, -11.40]]
+  - title: The Carnation Revolution and independence
+    date: April 1974 – November 1975
+    when: "1974-04-25"
+    borders: "1975-11-11"
+    countries: [pt, ao, gw, mz, cv, st]
+    body:
+      - In February 1974 Spínola, now deputy chief of staff, published Portugal and the Future, arguing that the wars could not be won. On 25 April 1974 the Armed Forces Movement, mostly captains and majors who had served in Africa, overthrew the regime of Salazar’s successor, Marcelo Caetano, almost without bloodshed; soldiers put carnations in their rifles, and the revolution took its name from them.
+      - The new rulers moved quickly to end the wars. Portugal recognised Guinea-Bissau on 10 September 1974; the Lusaka Accord of 7 September 1974 handed Mozambique to FRELIMO, which took power at independence on 25 June 1975; Cape Verde became independent on 5 July and São Tomé and Príncipe on 12 July 1975. In Angola the three movements could not share power, and independence on 11 November 1975 came in the middle of a civil war. Hundreds of thousands of settlers, the retornados, returned to Portugal.
+    facts:
+      - [Carnation Revolution, "25 April 1974"]
+      - [Guinea-Bissau recognised, "10 September 1974"]
+      - [Mozambique independent, "25 June 1975"]
+      - [Cape Verde independent, "5 July 1975"]
+      - [São Tomé and Príncipe independent, "12 July 1975"]
+      - [Angola independent, "11 November 1975"]
+    link: { href: "#/war/angolan-civil-war", text: "Angola after independence: the Angolan Civil War" }
+    markers:
+      - kind: event
+        side: none
+        name: Lisbon
+        date: 25 April 1974
+        text: The Armed Forces Movement overthrew the Estado Novo in the Carnation Revolution.
+        lonlat: [-9.15, 38.72]
+      - kind: treaty
+        side: ind
+        name: Bissau
+        date: 10 September 1974
+        text: Portugal recognised the independence of Guinea-Bissau.
+        lonlat: [-15.58, 11.86]
+        lp: l
+      - kind: treaty
+        side: ind
+        name: Praia
+        date: 5 July 1975
+        text: Cape Verde became independent.
+        lonlat: [-23.51, 14.92]
+        lp: l
+      - kind: treaty
+        side: ind
+        name: São Tomé
+        date: 12 July 1975
+        text: São Tomé and Príncipe became independent.
+        lonlat: [6.73, 0.34]
+        lp: l
+      - kind: treaty
+        side: ind
+        name: Luanda
+        date: 11 November 1975
+        text: The MPLA proclaimed Angola’s independence while fighting the FNLA and UNITA.
+        lonlat: [13.24, -8.83]
+        lp: l
+      - kind: treaty
+        side: ind
+        name: Lourenço Marques (Maputo)
+        date: 25 June 1975
+        text: Mozambique became independent under FRELIMO.
+        lonlat: [32.57, -25.97]
+        lp: l

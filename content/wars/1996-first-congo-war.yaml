@@ -1,0 +1,304 @@
+id: first-congo-war
+name: First Congo War
+start: "1996-10-24"
+end: "1997-05-17"
+tier: A
+summary: "The war in which Rwanda, Uganda and their allies overthrew Mobutu Sese Seko, who had ruled Zaire since 1965. After the genocide of 1994, more than a million Rwandan Hutu refugees, among them the soldiers and militiamen who had carried out the genocide, settled in camps along Zaire’s eastern border, from which they raided Rwanda and attacked Congolese Tutsi. In October 1996 Rwanda’s army and Congolese Tutsi fighters attacked the camps, under the cover of a new rebel coalition, the Alliance of Democratic Forces for the Liberation of Congo-Zaire (AFDL), led by the veteran rebel Laurent-Désiré Kabila. Several hundred thousand refugees went home; others fled west across the country, where AFDL and Rwandan troops hunted them down and killed tens of thousands, killings a UN report of 2010 said might be classed as genocide if proven in court. Joined by Uganda, Burundi and Angola, the AFDL crossed Zaire in seven months against a collapsing army. Mobutu fled Kinshasa on 16 May 1997, and the next day Kabila declared himself president of the Democratic Republic of the Congo. His break with his Rwandan and Ugandan backers led to the Second Congo War in 1998."
+countries: [cd, rw, ug, bi, ao]
+sides:
+  - id: afdl
+    name: AFDL (Laurent-Désiré Kabila)
+    polities: [afdl]
+    ink: green
+    moves: AFDL moves
+    success: AFDL success
+  - id: rwa
+    name: Rwanda, Uganda, Burundi and Angola
+    polities: [rwanda, uganda, burundi, angola]
+    ink: red
+    moves: Rwandan and allied moves
+    success: Rwandan and allied success
+  - id: zr
+    name: Zaire (Mobutu’s army, with UNITA and foreign mercenaries)
+    polities: [dr-congo, unita]
+    ink: blue
+    moves: Zairian moves
+    success: Zairian success
+  - id: hutu
+    name: Rwandan Hutu forces in exile (ex-FAR and Interahamwe)
+    polities: [fdlr]
+    ink: brown
+    moves: Ex-FAR and Interahamwe moves
+    success: Ex-FAR and Interahamwe success
+notes:
+  - "Rwanda planned and led the campaign; its defence minister and vice-president, Paul Kagame, said so publicly in July 1997, and Rwandan officers such as James Kabarebe commanded the AFDL’s troops. Eritrea and Zambia also gave help, and the United States, while not a party, was close to the Rwandan and Ugandan governments."
+  - "The number of Hutu refugees killed is disputed. The UN Mapping Report of 2010 documented massacres of refugees and Congolese Hutu by AFDL and Rwandan troops at dozens of places and said the attacks, if proven before a court, might be characterised as crimes of genocide; Rwanda rejected the report. Estimates of refugees who died or disappeared range from tens of thousands to more than 200,000. Mobutu’s army and the ex-FAR also killed and looted as they retreated."
+sources:
+  - title: First Congo War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Congo_War
+  - title: DRC Mapping Exercise Report (Wikipedia)
+    url: https://en.wikipedia.org/wiki/DRC_Mapping_Exercise_Report
+  - title: "Report of the Mapping Exercise documenting the most serious violations of human rights and international humanitarian law committed within the territory of the DRC between March 1993 and June 2003 (UN OHCHR, 2010)"
+    url: https://www.ohchr.org/sites/default/files/Documents/Countries/CD/DRC_MAPPING_REPORT_FINAL_EN.pdf
+  - title: Battle of Kisangani (1997) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kisangani_(1997)
+  - title: Capture of Lubumbashi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Capture_of_Lubumbashi
+  - title: "What Kabila is hiding: civilian killings and impunity in Congo (Human Rights Watch, 1997)"
+    url: https://www.hrw.org/reports/1997/congo/
+  - title: Mobutu Sese Seko (Britannica)
+    url: https://www.britannica.com/biography/Mobutu-Sese-Seko
+steps:
+  - title: The camps and the Banyamulenge
+    date: July 1994 – October 1996
+    when: "1996-10-07"
+    borders: "1996-10-18"
+    countries: [cd, rw, bi]
+    body:
+      - When the Rwandan Patriotic Front ended the genocide against the Tutsi in July 1994, more than a million Hutu fled into eastern Zaire, led by the defeated army (the ex-FAR) and the Interahamwe militias. Huge camps grew up around Goma, among them Mugunga, Kibumba and Katale, and around Bukavu and Uvira, fed by the UN refugee agency. The former army and militias controlled the camps, rearmed with help from Mobutu’s officers, and raided across the border into Rwanda.
+      - The camps sharpened old conflicts over land and citizenship in the Kivus. Zaire had stripped people of Rwandan origin of citizenship in 1981, and in North Kivu fighting between Hunde, Nyanga and Nande militias and Banyarwanda killed thousands from 1993; with the ex-FAR’s help, Tutsi were driven out of Masisi in 1996. In South Kivu the Banyamulenge, Tutsi long settled on the high plateaux above Uvira, were told by the deputy governor on 7 October 1996 to leave the country within a week.
+      - Rwanda had been training and arming Banyamulenge for months. Fighting with Zairian troops broke out around Uvira in September and October, and on 18 October 1996 the Alliance of Democratic Forces for the Liberation of Congo-Zaire (AFDL) was announced at Lemera, joining four small rebel groups under Laurent-Désiré Kabila, who had kept up a small rebellion in the hills of South Kivu since the 1960s.
+    facts:
+      - [Rwandan refugees in Zaire, "more than 1 million (1994–1996)"]
+      - [Banyamulenge ordered to leave, "7 October 1996"]
+      - [AFDL founded, "18 October 1996"]
+    markers:
+      - kind: event
+        side: none
+        name: Goma camps
+        date: 1994–1996
+        text: Mugunga, Kibumba, Katale and other camps around Goma held some 700,000 refugees, controlled by the ex-FAR and Interahamwe.
+        lonlat: [29.23, -1.68]
+      - kind: event
+        side: none
+        name: Bukavu camps
+        date: 1994–1996
+        text: Camps for several hundred thousand refugees around Bukavu at the south end of Lake Kivu.
+        lonlat: [28.86, -2.51]
+        lp: l
+      - kind: event
+        side: afdl
+        name: Lemera
+        date: 18 October 1996
+        text: Where the AFDL was announced, in the hills above the Ruzizi plain.
+        lonlat: [28.99, -3.03]
+        lp: l
+      - kind: battle
+        side: afdl
+        name: Uvira
+        date: September – October 1996
+        text: Banyamulenge fighters, armed by Rwanda, fought Zairian troops in the plain and hills around the town.
+        lonlat: [29.15, -3.40]
+    areas:
+      - style: outline
+        side: afdl
+        label: Banyamulenge high plateaux (approximate)
+        polygon: [[28.55, -3.20], [29.00, -3.20], [29.10, -3.70], [28.90, -4.20], [28.55, -4.10]]
+  - title: The camps broken
+    date: October – December 1996
+    when: "1996-11-15"
+    borders: "1996-11-15"
+    countries: [cd, rw, ug, bi]
+    body:
+      - Rwandan, Burundian and AFDL troops took Uvira on 24–25 October 1996 and Bukavu on 29–30 October, where the Catholic archbishop, Christophe Munzihirwa, was shot dead; Goma fell on 1–2 November after Rwandan artillery shelled it from Gisenyi across the border. The Zairian army fled, looting as it went. The refugees in the southern camps scattered into the forests, while hundreds of thousands crowded into Mugunga, west of Goma.
+      - On 15 November the attackers shelled Mugunga and opened a road east. Over the next few days some 500,000–600,000 refugees walked back to Rwanda, while the ex-FAR, the Interahamwe and hundreds of thousands of other refugees fled west into the forests. A Canadian-led multinational force, authorised by the UN Security Council on 15 November to protect the refugees, was called off in December, its backers arguing that most had gone home. Ugandan troops entered from the north and took Bunia and the north-east in December, and Rwanda began to treat the war as a march on Kinshasa.
+    facts:
+      - [Uvira taken, "24–25 October 1996"]
+      - [Bukavu taken, "29–30 October 1996"]
+      - [Goma taken, "1–2 November 1996"]
+      - [Refugees returning to Rwanda, "500,000–600,000 (mid-November 1996)"]
+    markers:
+      - kind: taken
+        side: rwa
+        name: Uvira
+        date: 24–25 October 1996
+        text: Taken by Rwandan, Burundian and Banyamulenge forces; the camps nearby emptied.
+        lonlat: [29.15, -3.40]
+      - kind: taken
+        side: rwa
+        name: Bukavu
+        date: 29–30 October 1996
+        text: Taken by the AFDL and the Rwandan army; Archbishop Munzihirwa was killed.
+        lonlat: [28.86, -2.51]
+        lp: l
+      - kind: taken
+        side: rwa
+        name: Goma and Mugunga
+        date: 1–15 November 1996
+        text: Goma fell on 1–2 November; on 15 November the attack on Mugunga camp sent most of its refugees back to Rwanda.
+        lonlat: [29.23, -1.68]
+      - kind: taken
+        side: rwa
+        name: Bunia
+        date: December 1996
+        text: Ugandan troops and the AFDL took the town and the north-east.
+        lonlat: [30.25, 1.57]
+    arrows:
+      - side: rwa
+        phase: 1
+        via: [[29.25, -2.95], [29.20, -3.20], [29.15, -3.38]]
+      - side: rwa
+        phase: 2
+        via: [[29.00, -2.40], [28.92, -2.48], [28.87, -2.51]]
+      - side: rwa
+        phase: 3
+        via: [[29.29, -1.70], [29.26, -1.69], [29.23, -1.68]]
+      - side: none
+        label: Refugees return to Rwanda
+        phase: 4
+        via: [[29.10, -1.62], [29.25, -1.66], [29.40, -1.70]]
+      - side: hutu
+        label: Ex-FAR and refugees flee west
+        phase: 4
+        via: [[29.00, -1.60], [28.30, -1.40], [27.30, -1.00]]
+    areas:
+      - style: occupied
+        side: afdl
+        label: Held by the AFDL and its allies, December 1996 (approximate)
+        polygon: [[29.30, 2.10], [31.00, 2.20], [30.90, 1.20], [29.70, -0.70], [29.30, -1.40], [29.40, -2.40], [29.20, -3.40], [29.20, -4.40], [28.60, -4.20], [28.50, -2.80], [28.30, -1.80], [28.80, -0.30], [29.10, 1.10]]
+  - title: Across Zaire
+    date: December 1996 – April 1997
+    when: "1997-03-15"
+    borders: "1997-04-09"
+    countries: [cd, rw, ug, ao]
+    body:
+      - After a pause the AFDL and its allies pushed west on several lines. Mobutu, ill with cancer and long absent in Europe, hired mercenaries, among them Serbian pilots and soldiers of the so-called White Legion, and turned to UNITA and the ex-FAR; but his unpaid soldiers mostly fled. Kindu fell in early March and Kisangani, Zaire’s third city, on 15 March 1997 after a short battle.
+      - In February 1997 Angola entered the war against Mobutu, who had long supplied UNITA, sending its own troops and the Katangese “Tigers”, descendants of the gendarmes who had fought for Katanga and in the Shaba invasions. The diamond town of Mbuji-Mayi fell on 4 April and Lubumbashi, the capital of Katanga, on 9 April, and by late April the AFDL held Kikwit on the road to Kinshasa. Mining companies began to sign deals with Kabila’s representatives.
+    facts:
+      - [Angola enters the war, "February 1997"]
+      - [Kisangani taken, "15 March 1997"]
+      - [Mbuji-Mayi taken, "4 April 1997"]
+      - [Lubumbashi taken, "9 April 1997"]
+    markers:
+      - kind: taken
+        side: afdl
+        name: Kindu
+        date: early March 1997
+        text: The main town of Maniema, on the Lualaba.
+        lonlat: [25.95, -2.95]
+      - kind: taken
+        side: afdl
+        name: Kisangani
+        date: 15 March 1997
+        text: Taken after a short battle against Zairian troops, ex-FAR and mercenaries, whose aircraft had bombed AFDL towns.
+        lonlat: [25.20, 0.52]
+      - kind: taken
+        side: afdl
+        name: Mbuji-Mayi
+        date: 4 April 1997
+        text: The centre of Zaire’s diamond mining.
+        lonlat: [23.60, -6.13]
+      - kind: taken
+        side: afdl
+        name: Lubumbashi
+        date: 9 April 1997
+        text: The capital of Katanga, Zaire’s mining heartland, taken with Angolan-backed Katangese fighters.
+        lonlat: [27.48, -11.66]
+      - kind: taken
+        side: afdl
+        name: Kikwit
+        date: late April 1997
+        text: The last large town on the road to Kinshasa.
+        lonlat: [18.82, -5.04]
+    arrows:
+      - side: afdl
+        phase: 1
+        via: [[28.50, -2.80], [27.20, -3.00], [26.00, -2.95]]
+      - side: afdl
+        phase: 2
+        via: [[28.30, -1.50], [27.00, -0.70], [25.25, 0.50]]
+      - side: afdl
+        phase: 3
+        via: [[26.00, -3.00], [25.00, -4.80], [23.65, -6.10]]
+      - side: afdl
+        phase: 3
+        via: [[29.10, -5.90], [28.20, -8.50], [27.50, -11.60]]
+      - side: afdl
+        phase: 4
+        via: [[23.60, -6.13], [21.50, -5.40], [18.85, -5.04]]
+    areas:
+      - style: occupied
+        side: afdl
+        label: Held by the AFDL and its allies, April 1997 (approximate)
+        polygon: [[29.30, 4.20], [31.00, 2.20], [29.70, -0.70], [29.20, -3.40], [29.40, -6.50], [30.70, -8.40], [28.90, -8.50], [28.70, -10.70], [27.60, -12.20], [25.70, -11.70], [23.00, -11.00], [21.80, -8.00], [20.00, -6.50], [18.70, -5.30], [20.50, -4.00], [22.50, -2.00], [23.50, 0.50], [24.50, 2.80], [27.00, 4.50]]
+  - title: The hunt for the refugees
+    date: December 1996 – May 1997
+    when: "1997-04-22"
+    borders: "1997-05-13"
+    countries: [cd, rw]
+    body:
+      - Several hundred thousand Rwandan refugees, among them the ex-FAR and Interahamwe but mostly women, children and the old, fled west across Zaire on foot. Some 150,000 gathered at Tingi-Tingi near Lubutu, where aid agencies fed them until the AFDL advanced at the end of February 1997; others reached camps at Kasese and Biaro on the railway south of Kisangani. In April AFDL and Rwandan troops closed off the camps to aid workers and journalists, and tens of thousands of refugees disappeared; witnesses reported massacres and mass graves.
+      - The survivors were pursued for more than 1,500 km. At Mbandaka on the Congo River, on 13 May 1997, soldiers killed hundreds of refugees as they tried to cross into Congo-Brazzaville; others reached the Central African Republic, Congo-Brazzaville and Angola. Kabila refused UN investigations. The UN Mapping Report of 2010 described systematic killings by AFDL and Rwandan troops at dozens of sites, which it said might be crimes of genocide if proven in court; Rwanda rejected its findings.
+    facts:
+      - [Tingi-Tingi camp overrun, "end of February 1997"]
+      - [Killings at Kasese and Biaro, "April 1997"]
+      - [Mbandaka massacre, "13 May 1997"]
+      - [UN Mapping Report published, "1 October 2010"]
+    markers:
+      - kind: event
+        side: rwa
+        name: Tingi-Tingi
+        date: February – March 1997
+        text: Camp near Lubutu that held some 150,000 refugees until the AFDL advance (position approximate).
+        lonlat: [26.58, -0.74]
+      - kind: event
+        side: rwa
+        name: Kasese and Biaro
+        date: April 1997
+        text: Camps south of Kisangani, where many refugees were killed or disappeared after the AFDL and the Rwandan army sealed them off (position approximate).
+        lonlat: [25.30, 0.20]
+        lp: b
+      - kind: event
+        side: rwa
+        name: Mbandaka
+        date: 13 May 1997
+        text: Hundreds of refugees were killed at the river port as they tried to cross the Congo.
+        lonlat: [18.26, 0.05]
+    arrows:
+      - side: hutu
+        label: Flight of the refugees
+        via: [[28.30, -1.40], [26.60, -0.75], [25.30, 0.30], [22.00, 0.10], [18.40, 0.05]]
+  - title: The fall of Kinshasa
+    date: May 1997
+    when: "1997-05-17"
+    borders: "1997-05-17"
+    countries: [cd, ao, za]
+    body:
+      - South Africa’s president, Nelson Mandela, brought Mobutu and Kabila together aboard the South African naval ship Outeniqua off Pointe-Noire on 4 May 1997, but Kabila refused any deal that would delay his entry into Kinshasa. In early May AFDL troops, with Angolan and Rwandan support, broke the last resistance of Mobutu’s Presidential Division and UNITA fighters at Kenge, about 200 km east of the capital.
+      - On 16 May Mobutu left Kinshasa for his palace at Gbadolite and then for exile in Togo and Morocco, where he died of cancer on 7 September 1997. AFDL troops entered Kinshasa on 17 May with little fighting, and Kabila declared himself president and renamed Zaire the Democratic Republic of the Congo. Within a year he fell out with his Rwandan and Ugandan backers, and when he ordered their troops to leave in July 1998, a new war began.
+    facts:
+      - [Talks aboard the SAS Outeniqua, "4 May 1997"]
+      - [Mobutu leaves Kinshasa, "16 May 1997"]
+      - [AFDL enters Kinshasa, "17 May 1997"]
+      - [Death of Mobutu, "7 September 1997"]
+    link: { href: "#/war/second-congo-war", text: "What followed: the Second Congo War" }
+    markers:
+      - kind: battle
+        side: afdl
+        name: Kenge
+        date: May 1997
+        text: The last battle of the war, against Mobutu’s Presidential Division and UNITA fighters.
+        lonlat: [17.04, -4.81]
+      - kind: taken
+        side: afdl
+        name: Kinshasa
+        date: 17 May 1997
+        text: AFDL troops entered the capital the day after Mobutu left; Kabila declared himself president.
+        lonlat: [15.31, -4.32]
+        lp: l
+      - kind: treaty
+        side: none
+        name: SAS Outeniqua, off Pointe-Noire
+        date: 4 May 1997
+        text: Mandela’s meeting with Mobutu and Kabila, which failed to agree a transition.
+        lonlat: [11.70, -4.85]
+        lp: l
+      - kind: event
+        side: zr
+        name: Gbadolite
+        date: 16–18 May 1997
+        text: Mobutu’s home town and palace, from which he flew into exile.
+        lonlat: [21.02, 4.28]
+    arrows:
+      - side: afdl
+        via: [[18.82, -5.04], [17.90, -4.95], [17.04, -4.81], [15.40, -4.35]]

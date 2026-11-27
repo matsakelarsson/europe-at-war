@@ -1,0 +1,124 @@
+id: hut-tax-war
+name: Hut Tax War
+start: "1898-02"
+end: "1898-11-11"
+tier: B
+summary: "The armed resistance of 1898 to British rule in the new Protectorate of Sierra Leone, set off by Governor Frederic Cardew’s tax on houses. Britain had ruled the coastal Colony around Freetown since 1808 and in 1896 declared a protectorate over the interior to secure it against other European powers; from 1 January 1898 every house there was to pay five or ten shillings a year, collected by the chiefs under the eye of district commissioners and the Frontier Police. Chiefs petitioned against it as an attack on their authority. In the north the Temne and Loko under Bai Bureh, ruler of Kasseh near Port Loko, fought a guerrilla war from February to November 1898 that tied down British and West Indian troops for months. In the south-east, from late April, Mende chiefs and warriors, organised through the Poro society, rose suddenly and killed several hundred Creole traders, missionaries, officials and others seen as agents of the government, before columns under Lieutenant-Colonel Marshall put the rising down in about two months. British troops burned villages and farms to break the resistance. Bai Bureh was captured on 11 November 1898 and exiled to the Gold Coast with the Mende leaders Nyagua and Kpana Lewis, and 96 men were hanged for murder. A royal commissioner, Sir David Chalmers, found that the tax and the way it was enforced had caused the rising, but the tax stayed."
+countries: [sl]
+sides:
+  - id: gb
+    name: Britain (Sierra Leone)
+    polities: [united-kingdom, sierra-leone]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: bb
+    name: Bai Bureh’s Temne and Loko
+    polities: [temne-chiefdoms]
+    ink: purple
+    moves: Bai Bureh’s moves
+    success: Bai Bureh’s success
+  - id: mc
+    name: Mende chiefs and the Poro
+    polities: [mende-chiefdoms]
+    ink: teal
+    moves: Mende moves
+    success: Mende success
+notes:
+  - "Cardew blamed the rising on chiefs who resented the end of slave raiding and the slave trade, and he cast Bai Bureh as its instigator; Chalmers called the attempt to arrest Bai Bureh “aggression pure and simple”, and later historians have also seen the war as a defence of the chiefs’ authority and of a social order that included slavery. Figures for those killed in the Mende rising range from about 300 to more than 1,000."
+sources:
+  - title: Hut Tax War of 1898 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hut_Tax_War_of_1898
+  - title: Bai Bureh (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bai_Bureh
+  - title: Bai Bureh, Temne leader of the 1898 rebellion (The Sierra Leone Web)
+    url: https://sierra-leone.org/Heroes/heroes5.html
+  - title: "Foreign Relations of the United States 1898: Sierra Leone, massacre of missionaries"
+    url: https://history.state.gov/historicaldocuments/frus1898/ch42
+  - title: Sierra Leone, treatment of native chiefs (Hansard, 7 August 1899)
+    url: https://api.parliament.uk/historic-hansard/commons/1899/aug/07/sierra-leone-treatment-of-native-chiefs
+steps:
+  - title: Bai Bureh’s war
+    date: February–November 1898
+    when: "1898-02-19"
+    borders: "1898-02-19"
+    countries: [sl]
+    body:
+      - "Bai Bureh, born around 1840 and trained as a warrior at Gbendembu, had become ruler of Kasseh near Port Loko in 1886 and the leading war chief of the Temne and Loko north. He had already crossed the British by raiding into French Guinea and rejecting a treaty they made with the Limba. When he and other chiefs refused to collect the hut tax, the district commissioner, Captain W. S. Sharpe, tried to arrest him with the Frontier Police in February 1898. Fighting broke out at once, and by 19 February Bai Bureh’s men had cut the river and road links between Freetown and Port Loko."
+      - "Bai Bureh fought from hidden stockades of logs and thorn, the war fences, from which his men ambushed British columns in the bush and then slipped away; by some accounts the Limba ruler Almamy Suluku sent fighters and arms, and he later carried Bai Bureh’s peace offers to the British. For four months the British, with the Frontier Police, the West India Regiment and the new West African Regiment, could do little more than hold Port Loko and the posts and escort supply columns, at heavy cost on both sides. Cardew refused Bai Bureh’s peace offers of April and June because they were not unconditional surrender, offered £100 for his capture and ordered villages and farms in the country that supported him burned. With food running out, Bai Bureh’s war wound down; on 11 November 1898 a patrol tracked him down in the swamps, and he was captured (some accounts say he surrendered) and taken to Freetown."
+    facts:
+      - [Hut tax in force, "1 January 1898"]
+      - [Freetown–Port Loko links cut, "by 19 February 1898"]
+      - [Bai Bureh captured, "11 November 1898"]
+      - [Exile, "Gold Coast, 1899–1905"]
+    markers:
+      - kind: held
+        side: gb
+        name: Port Loko
+        date: February–November 1898
+        text: The British base in the Temne country, close to Bai Bureh’s town of Kasseh; its links with Freetown were cut by 19 February and had to be reopened with escorted columns.
+        lonlat: [-12.787, 8.767]
+      - kind: capital
+        side: gb
+        name: Freetown
+        date: "1898"
+        text: Capital of the Colony and Protectorate of Sierra Leone, where Bai Bureh was brought as a prisoner in November 1898.
+        lonlat: [-13.236, 8.487]
+        lp: b
+      - kind: event
+        side: bb
+        name: Kambia
+        date: "1898"
+        text: Northern Temne town near the Guinea border, in the country that supported Bai Bureh.
+        lonlat: [-12.917, 9.117]
+        lp: t
+    arrows:
+      - side: gb
+        label: Columns from Freetown
+        via: [[-13.20, 8.52], [-13.05, 8.62], [-12.85, 8.74]]
+    areas:
+      - style: contested
+        side: bb
+        label: Bai Bureh’s war (approximate)
+        polygon: [[-13.10, 8.65], [-12.55, 8.55], [-12.25, 8.85], [-12.25, 9.25], [-12.70, 9.30], [-13.05, 9.05]]
+  - title: The Mende rising
+    date: April–July 1898
+    when: "1898-05-03"
+    borders: "1898-05-03"
+    countries: [sl]
+    body:
+      - "On 27 April 1898 the Mende country of the south and south-east rose, organised through the Poro society, with some Sherbro taking part. Bands attacked district headquarters, mission stations and trading towns and killed almost every outsider they caught: Creole traders and clergy from Freetown, African employees of the government, and European and American missionaries. Five American missionaries of the United Brethren were killed at Rotifunk and others at Taiama. Estimates of the dead range from about 300 to more than 1,000."
+      - "Cardew sent columns under Lieutenant-Colonel J. W. A. Marshall, with West Indian troops, a naval brigade and African levies, which relieved the posts and broke organised resistance in the south within about two months. The Mende rising lacked a single leader and a clear plan; Nyagua of Panguma and Kpana Lewis of the Sherbro were among the rulers the British held responsible and exiled. Most of the 96 men hanged for murder after the war were Mende. The British forces lost 67 killed and 184 wounded, besides 90 carriers dead and uncounted levies; losses among the people of the Protectorate were not recorded."
+    facts:
+      - [Rising begins, "27 April 1898"]
+      - [Killed in the rising, "about 300 to more than 1,000"]
+      - [British losses, "67 killed, 184 wounded"]
+      - [Hanged, "96"]
+    markers:
+      - kind: event
+        side: mc
+        name: Rotifunk
+        date: May 1898
+        text: Five American missionaries of the United Brethren mission were killed here in the first days of the rising.
+        lonlat: [-12.683, 8.233]
+      - kind: event
+        side: mc
+        name: Taiama
+        date: May 1898
+        text: Missionaries and their followers were killed at this mission town on the road inland.
+        lonlat: [-12.060, 8.200]
+      - kind: event
+        side: mc
+        name: Panguma
+        date: "1898"
+        text: Town of Nyagua, a leading Mende ruler, whom the British exiled to the Gold Coast after the war.
+        lonlat: [-11.131, 8.185]
+    arrows:
+      - side: gb
+        label: Marshall’s columns
+        via: [[-13.10, 8.40], [-12.90, 8.30], [-12.70, 8.24]]
+    areas:
+      - style: contested
+        side: mc
+        label: Mende rising (approximate)
+        polygon: [[-12.95, 7.85], [-12.75, 8.40], [-12.00, 8.50], [-11.40, 8.25], [-11.45, 7.55], [-12.40, 7.40]]

@@ -1,0 +1,128 @@
+id: hehe-wars
+name: Hehe wars
+start: "1891-07"
+end: "1898-07-19"
+tier: B
+summary: "The war of the Hehe kingdom of the southern highlands of Tanzania against the German conquest. The Hehe, united by Munyigumba and his son Mkwawa in the 1870s and 1880s, dominated the country around Iringa and raided their neighbours and the caravan routes to the interior. In 1891 a German column under Emil von Zelewski marched against them, and on 17 August Mkwawa’s warriors ambushed it at Lugalo and killed Zelewski and most of his men, one of the worst defeats of German colonial troops in Africa. In October 1894 Governor Friedrich von Schele stormed Mkwawa’s walled capital at Kalenga, but Mkwawa escaped and fought a guerrilla war for almost four years, while the Germans burned crops and villages and set up a fort at Iringa. Cornered in July 1898, Mkwawa shot himself rather than be captured; his head was taken to Germany, and the Treaty of Versailles required its return. A skull believed to be his was handed back in 1954 and is kept at Kalenga."
+countries: [tz, de]
+sides:
+  - id: hehe
+    name: Hehe kingdom (Mkwawa)
+    polities: [hehe]
+    ink: orange
+    moves: Hehe moves
+    success: Hehe success
+  - id: de
+    name: German East Africa
+    polities: [german-east-africa, germany]
+    ink: slate
+    moves: German moves
+    success: German success
+notes:
+  - "Numbers for Lugalo differ: the German column had about 320 African soldiers (askari) with German officers and NCOs, porters and light artillery; the Hehe attackers are put at about 3,000. Estimates of the Hehe dead range from about 60 on the field and perhaps 200 more who died of their wounds (Tom von Prince’s estimate, followed by later historians) to German claims of about 700."
+  - "Mkwawa’s full name is given as Mkwavinyika Munyigumba Mwamuyinga. The German governor’s dates for the storming of Kalenga are given as 28 or 30 October 1894."
+  - "Some historians doubt that the skull returned in 1954 is really Mkwawa’s; the German Federal Agency for Civic Education calls its whereabouts unclear."
+sources:
+  - title: Mkwawa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mkwawa
+  - title: Emil von Zelewski (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Emil_von_Zelewski
+  - title: Lugalo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Lugalo
+  - title: Kalenga (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kalenga
+  - title: Mlambalasi Rock Shelter (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mlambalasi_Rock_Shelter
+  - title: "The 1891 Battle of Lugalo: an initial archaeological investigation of the Hehe–German battlefields in Iringa, Tanzania (Tanzania Zamani, University of Dar es Salaam)"
+    url: https://journals.udsm.ac.tz/index.php/tz/article/view/4619
+  - title: An emotional visit to Mkwawa’s Lugalo historical battle valley (The Citizen, Tanzania)
+    url: https://www.thecitizen.co.tz/tanzania/oped/-an-emotional-visit-to-mkwawa-s-lugalo-historical-battle-valley-3274230
+  - title: The Battle of Lugalo, 17 August 1891 (Warhistory.org)
+    url: https://warhistory.org/2020/03/07/the-battle-of-lugalo-17-august-1891/
+steps:
+  - title: Lugalo
+    date: July – August 1891
+    when: "1891-08-17"
+    borders: "1891-08-17"
+    countries: [tz, de]
+    body:
+      - "In the 1870s Munyigumba, a chief of the Hehe, united the small chiefdoms of the Iringa highlands into a kingdom with a disciplined army, which conquered and raided its neighbours. His son Mkwawa, who succeeded him in 1879, extended Hehe power east and north towards the caravan routes from the coast to Tabora and Lake Tanganyika, which the Germans needed to control. The Germans, who had just taken over the colony from the German East Africa Company, saw the Hehe as the main obstacle in the south."
+      - "In July 1891 the imperial commissioner Emil von Zelewski marched into Hehe country with about 320 askari, German officers and NCOs, porters and light guns. Near Lugalo, east of present-day Iringa, on the morning of 17 August 1891, his column was strung out along a path through thick bush when some 3,000 Hehe warriors, hidden on both sides, rushed it. In close combat their spears outmatched the soldiers’ rifles; about ten Germans, Zelewski among them, and some 250–300 askari were killed, and with the porters the dead numbered about 400. Part of the rearguard escaped. The Hehe lost a few hundred men."
+    facts:
+      - [Battle of Lugalo, "17 August 1891"]
+      - [German column, "about 320 askari with officers, porters and guns"]
+      - [German side killed, "about ten Germans, Zelewski among them, and some 250–300 askari"]
+    markers:
+      - kind: battle
+        side: hehe
+        name: Lugalo
+        date: 17 August 1891
+        text: The Hehe ambushed Zelewski’s column on the march and destroyed most of it in close combat. Zelewski was among the dead.
+        lonlat: [35.878, -7.737]
+      - kind: capital
+        side: hehe
+        name: Kalenga
+        date: "1891"
+        text: Mkwawa’s capital in the Little Ruaha valley, which he fortified after Lugalo.
+        lonlat: [35.600, -7.800]
+        lp: l
+    arrows:
+      - side: de
+        label: Zelewski
+        via: [[36.55, -7.25], [36.3, -7.5], [36.05, -7.66], [35.9, -7.73]]
+  - title: The storming of Kalenga
+    date: 1892 – October 1894
+    when: "1894-10-28"
+    borders: "1894-10-30"
+    countries: [tz, de]
+    body:
+      - "After Lugalo the Hehe attacked caravans and German posts on the central route, and the two sides sent envoys, but the Germans would accept only submission. Mkwawa strengthened Kalenga with a long wall. In 1894 Governor Friedrich von Schele led a large expedition of askari with artillery against it. After shelling the town, his troops stormed the walls on 28–30 October 1894 and took Kalenga after fierce fighting. Mkwawa escaped with part of his army."
+    facts:
+      - [Kalenga stormed, "28–30 October 1894"]
+    markers:
+      - kind: taken
+        side: de
+        name: Kalenga
+        date: 28–30 October 1894
+        text: Governor von Schele’s troops shelled and stormed Mkwawa’s walled capital. Mkwawa escaped.
+        lonlat: [35.600, -7.800]
+    arrows:
+      - side: de
+        label: Von Schele
+        via: [[36.3, -7.3], [36.0, -7.55], [35.75, -7.72], [35.62, -7.79]]
+      - side: hehe
+        label: Mkwawa
+        via: [[35.58, -7.78], [35.55, -7.65], [35.5, -7.5]]
+  - title: Mkwawa’s last war
+    date: 1894 – July 1898
+    when: "1898-07-19"
+    borders: "1898-07-19"
+    countries: [tz, de]
+    body:
+      - "Mkwawa fought on from the bush for nearly four years, attacking German patrols and the chiefs who went over to them. In 1896 the Germans built a fortified station at Iringa, from which Captain Tom von Prince led columns through the Hehe country, burning villages and crops to deny the warriors food. Hunger and the rewards the Germans offered wore down Mkwawa’s following, and many Hehe leaders submitted."
+      - "In July 1898, sick and with only a few companions left, Mkwawa was tracked to the rock shelter at Mlambalasi, some 30 km north-west of Iringa. On 19 July, as the Germans closed in, he shot himself rather than be taken. A German sergeant cut off his head, which was sent to Germany. Article 246 of the Treaty of Versailles (1919) required Germany to hand over “the skull of the Sultan Mkwawa”; a skull identified as his in a Bremen museum was returned on 9 July 1954 and is kept in the Mkwawa Memorial Museum at Kalenga. The Hehe were ruled by the Germans through appointed chiefs, and their resistance became part of Tanzania’s national history."
+    facts:
+      - [Iringa station built, "1896"]
+      - [Death of Mkwawa, "19 July 1898"]
+      - [Skull returned, "9 July 1954"]
+    markers:
+      - kind: event
+        side: de
+        name: Iringa
+        date: from 1896
+        text: The German station from which the columns hunted Mkwawa.
+        lonlat: [35.69, -7.77]
+      - kind: event
+        side: hehe
+        name: Mlambalasi
+        date: 19 July 1898
+        text: Cornered at the rock shelter here, Mkwawa shot himself to avoid capture. He is buried nearby.
+        lonlat: [35.500, -7.591]
+        lp: l
+      - kind: event
+        side: hehe
+        name: Kalenga
+        date: "1954"
+        text: The skull returned from Germany in 1954 is kept in the Mkwawa Memorial Museum here.
+        lonlat: [35.600, -7.800]
+        lp: l

@@ -1,0 +1,151 @@
+id: cameroonian-independence-war
+name: Cameroonian independence war
+start: "1955-05-22"
+end: "1971-01-15"
+tier: B
+summary: "The war between the Union of the Peoples of Cameroon (UPC), the nationalist party that demanded immediate independence and the reunification of the French and British Cameroons, and the French colonial authorities and, after independence in 1960, the government of Ahmadou Ahidjo with French military support. France banned the UPC after riots in May 1955; its leader Ruben Um Nyobè took to the forests of the Sanaga-Maritime in 1956 and was killed by a French-led patrol in September 1958. From 1959 the UPC’s army fought in the Bamileke country of western Cameroon and in the Mungo, where French and Cameroonian troops waged a counter-insurgency of resettlement camps, burned villages and air strikes into the mid-1960s. Félix-Roland Moumié, the UPC’s president in exile, was poisoned by a French agent in Geneva in 1960, and the last guerrilla leader, Ernest Ouandié, was executed in Bafoussam in January 1971. Estimates of the dead range from about 10,000 to well over 100,000; most historians give figures in the tens of thousands. In 2025 France officially acknowledged that it had waged a war in Cameroon."
+countries: [cm, fr]
+sides:
+  - id: fr
+    name: France and the Cameroonian government (French Cameroons, from 1960 the Republic of Cameroon)
+    polities: [france, cameroon]
+    ink: blue
+    moves: French and government moves
+    success: French or government success
+  - id: upc
+    name: UPC and its armies (the CNO, from 1959 the ALNK)
+    polities: [upc]
+    ink: red
+    moves: UPC moves
+    success: UPC success
+notes:
+  - "Death toll. No count was made, and the war was long passed over in silence in both countries. General Max Briand, the French commander, reported some 20,000 people killed in 1960 alone; a British embassy estimate of 1964 put civilian deaths at 61,300–76,300, about 80% of them in the Bamileke region; the historian Bernard Droz estimated about 10,000 deaths for 1955–1959; and some writers give figures of 100,000 to 400,000 for 1959–1964, which other historians, such as Meredith Terretta, consider not credible."
+  - "In January 2025 a commission of French and Cameroonian historians, set up in 2022, submitted its report on France’s role in the repression of the independence movement, and on 12 August 2025 a letter from President Emmanuel Macron to President Paul Biya was published in which France acknowledged that it had waged a war in Cameroon from 1945 to 1971."
+  - Cameroon was a German colony divided in 1919 into French and British mandates, later UN trust territories; the UPC appealed to the United Nations for independence and reunification throughout the 1950s.
+sources:
+  - title: Cameroon War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cameroon_War
+  - title: Union of the Peoples of Cameroon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Union_of_the_Peoples_of_Cameroon
+  - title: Ruben Um Nyobè (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ruben_Um_Nyob%C3%A8
+  - title: Félix-Roland Moumié (Wikipedia)
+    url: https://en.wikipedia.org/wiki/F%C3%A9lix-Roland_Moumi%C3%A9
+  - title: Ernest Ouandié (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ernest_Ouandi%C3%A9
+steps:
+  - title: The UPC and the maquis of the Sanaga-Maritime
+    date: May 1955 – September 1958
+    when: "1955-05-22"
+    borders: "1958-09-13"
+    countries: [cm, fr]
+    body:
+      - "The UPC, founded in 1948 by Ruben Um Nyobè and others, became the largest nationalist party in French Cameroon, demanding independence and reunification with the British Cameroons and petitioning the United Nations. In May 1955 meetings and strikes turned into riots in Douala, Yaoundé and other towns from 22 to 30 May; the security forces put them down, killing dozens of people by official figures and more by other accounts. The French High Commissioner, Roland Pré, blamed the UPC, which was banned on 13 July 1955; its leaders fled to the British Cameroons and abroad."
+      - "Um Nyobè stayed and, after the UPC was excluded from the elections of December 1956, organised an armed movement, the National Organisation Committee (CNO), in his home region of the Sanaga-Maritime, among the Bassa. In December 1957 the French set up a military “pacification zone” there under Lieutenant Colonel Jean Lamberton, moving villagers into guarded camps along the roads. On 13 September 1958 a French army patrol, guided to his hiding place, found and shot Um Nyobè in the forest near Boumnyébel, his home village."
+    facts:
+      - [Riots, "22–30 May 1955"]
+      - [UPC banned, "13 July 1955"]
+      - [Um Nyobè killed, "13 September 1958"]
+    markers:
+      - kind: event
+        side: upc
+        name: Douala
+        date: 22–30 May 1955
+        text: The largest of the riots of May 1955, after which the UPC was banned.
+        lonlat: [9.71, 4.05]
+        lp: l
+      - kind: event
+        side: fr
+        name: Boumnyébel
+        date: 13 September 1958
+        text: Ruben Um Nyobè was killed in the forest nearby by a French-led patrol.
+        lonlat: [10.85, 3.88]
+        lp: t
+      - kind: held
+        side: upc
+        name: Éséka
+        date: 1956–1958
+        text: Town at the centre of the Sanaga-Maritime, where the UPC’s maquis operated.
+        lonlat: [10.77, 3.64]
+        lp: b
+      - kind: capital
+        side: fr
+        name: Yaoundé
+        date: 1955–1958
+        text: Seat of the French administration of Cameroon.
+        lonlat: [11.52, 3.87]
+    areas:
+      - style: contested
+        side: upc
+        label: UPC maquis in the Sanaga-Maritime, 1956–1958 (approximate)
+        polygon: [[10.00, 4.15], [10.90, 4.20], [11.15, 3.75], [10.95, 3.40], [10.35, 3.40], [9.95, 3.70]]
+  - title: War in the Bamileke country
+    date: 1959–1964
+    when: "1960-01-01"
+    borders: "1961-10-01"
+    countries: [cm, fr]
+    body:
+      - "From exile the UPC’s president, Félix-Roland Moumié, launched the National Liberation Army of Kamerun (ALNK) in 1959. Its fighters, many of them young Bamileke angered by land shortage and by chiefs who sided with the administration, attacked chiefs, officials, missions and plantations in the Bamileke highlands and the Mungo valley, and sometimes Douala. Cameroon became independent on 1 January 1960 under Ahmadou Ahidjo, whom the UPC rejected as France’s choice, and in October 1961 the southern British Cameroons joined it."
+      - "Under defence agreements French troops under General Max Briand fought alongside the new Cameroonian army. They moved the population into guarded villages, burned settlements and used aircraft against the guerrillas; Briand reported some 20,000 people killed in 1960 alone, and estimates for the whole period range much higher. On 15 October 1960 Moumié was poisoned with thallium in Geneva by an agent of the French secret service and died on 3 November. By 1964 the large guerrilla bands had been broken up."
+    facts:
+      - [ALNK launched, "1959"]
+      - [Independence, "1 January 1960"]
+      - [Moumié poisoned in Geneva, "15 October 1960 (died 3 November)"]
+      - [Southern Cameroons joins Cameroon, "1 October 1961"]
+    markers:
+      - kind: battle
+        side: none
+        name: Bafoussam
+        date: 1959–1964
+        text: The main town of the Bamileke region, the centre of the war.
+        lonlat: [10.42, 5.48]
+      - kind: battle
+        side: none
+        name: Dschang
+        date: 1959–1964
+        text: The ALNK attacked the town and the surrounding chiefdoms.
+        lonlat: [10.05, 5.45]
+        lp: l
+      - kind: battle
+        side: none
+        name: Bafang
+        date: 1959–1964
+        text: French and Cameroonian troops regrouped the population of the area into guarded villages.
+        lonlat: [10.18, 5.16]
+        lp: b
+      - kind: capital
+        side: fr
+        name: Yaoundé
+        date: 1 January 1960
+        text: Capital of independent Cameroon under Ahmadou Ahidjo.
+        lonlat: [11.52, 3.87]
+    areas:
+      - style: contested
+        side: upc
+        label: Main area of the ALNK’s war, 1959–1964 (approximate)
+        polygon: [[9.85, 5.75], [10.40, 5.85], [10.80, 5.55], [10.65, 5.05], [10.10, 4.75], [9.85, 4.80], [9.80, 5.30]]
+  - title: Ouandié and the end of the maquis
+    date: 1964 – January 1971
+    when: "1970-08"
+    borders: "1971-01-15"
+    countries: [cm]
+    body:
+      - Ernest Ouandié, the UPC’s vice-president, who had returned from exile in 1961, kept up the guerrilla war with small groups in the forests of the west and the Mungo for years after the main bands were broken. Hunted and isolated, he surrendered to the authorities near Loum on 19 August 1970. Albert Ndongmo, the Catholic bishop of Nkongsamba, who had sheltered him, was arrested and accused of conspiring with him.
+      - After a trial by a military court, Ouandié was shot by a firing squad on the main square of Bafoussam on 15 January 1971, before his appeals had been heard. Ndongmo was also sentenced to death; his sentence was commuted to life imprisonment, and after his release in 1975 he went into exile. The UPC remained banned until the return of multi-party politics in 1991, and the war was rarely spoken of in Cameroon or France until historians began to publish on it in the 2000s.
+    facts:
+      - [Ouandié surrenders, "August 1970"]
+      - [Ouandié executed, "15 January 1971, Bafoussam"]
+    markers:
+      - kind: event
+        side: fr
+        name: Bafoussam
+        date: 15 January 1971
+        text: Ernest Ouandié was executed by firing squad on the town’s main square.
+        lonlat: [10.42, 5.48]
+      - kind: event
+        side: none
+        name: Nkongsamba
+        date: "1970"
+        text: The see of Bishop Albert Ndongmo, who had sheltered Ouandié and was sentenced to death for conspiring with him.
+        lonlat: [9.94, 4.95]
+        lp: l

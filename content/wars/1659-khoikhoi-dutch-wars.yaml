@@ -1,0 +1,139 @@
+id: khoikhoi-dutch-wars
+name: Khoikhoi–Dutch wars
+start: "1659-05"
+end: "1677-06-24"
+tier: B
+summary: "Two wars between the Dutch East India Company’s station at the Cape of Good Hope and the Khoikhoi, the herding peoples of the south-western Cape. The Company founded its refreshment station on Table Bay in 1652 to supply its ships with meat bought from the Khoikhoi. In 1657 it settled free burghers on farms along the Liesbeek River, on the dry-season grazing of the Peninsula Khoikhoi, and in May 1659 Doman (Nommoa), a Khoikhoi interpreter who had been to Batavia, led the Goringhaiqua and Gorachouqua in raids on the farms’ cattle, striking in the rain when the settlers’ matchlocks would not fire. The Company built a line of watch-houses and later planted a hedge of wild almond to close the settlement, and the peace of April 1660 left the settlers on the land they had taken. In 1673–1677 the Company fought the Cochoqua of the chief Gonnema, the largest Khoikhoi community near the Cape, who had killed hunting parties and attacked the Company’s post at Saldanha Bay. Company soldiers, burghers and Khoikhoi allies, the Chainouqua among them, raided the Cochoqua and carried off thousands of cattle and sheep, until Gonnema made peace in June 1677 and agreed to a yearly tribute of cattle. The wars opened the way for Dutch settlement beyond the peninsula; over the next decades the Khoikhoi of the south-western Cape lost their herds and grazing, and with the smallpox epidemic of 1713 their independence, and most became labourers on colonial farms."
+countries: [za, nl]
+sides:
+  - id: voc
+    name: Dutch East India Company (VOC) and free burghers
+    polities: [cape-colony]
+    ink: navy
+    moves: Company moves
+    success: Company success
+  - id: kh
+    name: Khoikhoi (the Peninsula Khoikhoi, then the Cochoqua)
+    polities: [khoikhoi]
+    ink: brown
+    moves: Khoikhoi moves
+    success: Khoikhoi success
+notes:
+  - "Almost everything known about the wars comes from the Company’s own records, above all Jan van Riebeeck’s journal; there is no Khoikhoi account. The names of Khoikhoi groups are given as the Dutch wrote them. Older writers called the Khoikhoi “Hottentots”, a name now regarded as offensive."
+sources:
+  - title: Khoikhoi–Dutch Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Khoikhoi%E2%80%93Dutch_Wars
+  - title: Van Riebeeck’s Hedge (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Van_Riebeeck%27s_Hedge
+  - title: Autshumato (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Autshumao
+  - title: "Shula Marks, “Khoisan resistance to the Dutch in the seventeenth and eighteenth centuries”, Journal of African History 13 (1972)"
+    url: https://doi.org/10.1017/S0021853700000268
+  - title: Jan van Riebeeck (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jan_van_Riebeeck
+steps:
+  - title: Doman’s war for the Liesbeek grazing
+    date: May 1659 – April 1660
+    when: "1659-05"
+    borders: "1659-06-01"
+    countries: [za]
+    view:
+      center: [18.50, -33.96]
+      size: [70, 55]
+    body:
+      - The Company’s fort on Table Bay, founded by Jan van Riebeeck in April 1652, depended on cattle and sheep bartered from the Khoikhoi, who moved their herds around the Cape peninsula and the Cape Flats with the seasons. To cut costs the Company released some of its servants in 1657 as free burghers and gave them farms along the Liesbeek River, behind Table Mountain. The farms took the best grazing and water of the Goringhaiqua and Gorachouqua, the Peninsula Khoikhoi, and blocked their routes. Van Riebeeck also seized cattle and hostages in 1658 to force the trade, and sent the interpreter Autshumao, leader of the small Goringhaicona community, to Robben Island.
+      - In May 1659 Doman, called Nommoa by his people, a Khoikhoi interpreter who had been taken to Batavia and come back convinced that the Dutch meant to stay, led the Goringhaiqua and Gorachouqua in raids on the burghers’ cattle. He timed them for the wet winter, when the settlers’ matchlock muskets could not be fired. The burghers abandoned their farms and took refuge at the fort, and the Company ordered that Khoikhoi found near the settlement be seized or shot. In August it built three redoubts, Kijkuit, Keert de Koe and Ruijterwacht, along the Liesbeek. Doman was wounded in a skirmish, and his raiders lost the initiative.
+      - At the peace talks in April 1660, Van Riebeeck recorded, the Khoikhoi envoys complained that the Dutch were taking more and more of the land that had always been theirs, and asked whether they would be allowed to do the same if they came to Holland. He told them that they had lost the land in war and could not expect it back. By the peace of 6 April 1660 the settlers kept their farms, the Khoikhoi were to enter the settlement only by fixed paths for trade, and neither side would punish the other for the war. Van Riebeeck then closed the boundary with a line of watch-houses linked by fences and a hedge of wild almond, part of which still grows at Kirstenbosch.
+    facts:
+      - [Raids begin, "May 1659"]
+      - [Peace, "6 April 1660"]
+    markers:
+      - kind: capital
+        side: voc
+        name: Fort de Goede Hoop
+        date: "1659"
+        text: The Company’s fort on Table Bay, where the burghers took refuge.
+        lonlat: [18.425, -33.925]
+        lp: l
+      - kind: event
+        side: kh
+        name: Liesbeek farms
+        date: May–August 1659
+        text: The free burghers’ farms along the Liesbeek, raided by Doman’s men and abandoned.
+        lonlat: [18.475, -33.955]
+      - kind: event
+        side: voc
+        name: Van Riebeeck’s hedge
+        date: "1660"
+        text: The boundary of watch-houses, fences and wild almond hedge that closed the settlement after the peace. Part of it survives at Kirstenbosch.
+        lonlat: [18.430, -33.988]
+        lp: l
+    arrows:
+      - side: kh
+        label: Doman’s raiders
+        via: [[18.66, -34.02], [18.56, -33.98], [18.48, -33.957]]
+    areas:
+      - style: outline
+        side: voc
+        label: Free burgher farms on the Liesbeek (approximate)
+        polygon: [[18.46, -33.93], [18.50, -33.93], [18.49, -33.99], [18.46, -34.01], [18.44, -33.98]]
+  - title: Gonnema’s war
+    date: 1673–1677
+    when: "1673-07"
+    borders: "1674-03-01"
+    countries: [za]
+    body:
+      - By the 1670s the Company traded and allied with several Khoikhoi communities beyond the peninsula, among them the Chainouqua, whose chief the Dutch called Klaas. Gonnema, chief of the Cochoqua, the largest Khoikhoi community near the Cape, with its herds in the Swartland and around Saldanha Bay, resented the Company’s dealings with his rivals. In 1672 and June 1673 his men killed parties of Dutch hunters, and on 6 July 1673 Cochoqua men posing as traders attacked the Company’s post on Saldanha Bay and killed four soldiers.
+      - The Company answered with mounted expeditions of soldiers and burghers, guided and joined by Chainouqua allies. In July 1673 Ensign Hieronymus Cruse found a deserted Cochoqua camp and drove off about 800 cattle and 900 sheep, beating off a Cochoqua attempt to recover them. In March 1674 a second expedition seized about 800 cattle and 4,000 sheep near the kloof at present-day Tulbagh. Gonnema struck back at the Company’s allies, raiding Chainouqua herders at the Tygerberg in November 1675, and a further expedition in 1676 took more of his livestock.
+      - Weakened by the loss of his herds, Gonnema sent envoys in June 1677, and on 24 June a peace was signed. The Cochoqua were to pay the Company 30 cattle a year, stop raiding and leave its allies alone. The Company, no longer facing a strong Khoikhoi neighbour, founded Stellenbosch in 1679 and spread its farms inland; the Khoikhoi of the south-western Cape, divided and stripped of their cattle, were drawn into colonial service, and the smallpox epidemic of 1713 completed the collapse of their independent communities.
+    facts:
+      - [Attack on Saldanha Bay post, "6 July 1673"]
+      - [Peace with the Cochoqua, "24 June 1677"]
+      - [Cochoqua tribute, "30 cattle a year"]
+    markers:
+      - kind: taken
+        side: kh
+        name: Saldanha Bay post
+        date: 6 July 1673
+        text: Cochoqua men posing as traders attacked the Company’s post on the bay and killed four soldiers.
+        lonlat: [18.06, -33.13]
+        lp: l
+      - kind: event
+        side: voc
+        name: Tulbagh kloof
+        date: March 1674
+        text: A Company expedition with Chainouqua allies seized about 800 cattle and 4,000 sheep from the Cochoqua here.
+        lonlat: [19.12, -33.29]
+      - kind: event
+        side: kh
+        name: Tygerberg
+        date: November 1675
+        text: Gonnema’s men raided Chainouqua herders allied to the Company.
+        lonlat: [18.62, -33.87]
+        lp: b
+      - kind: capital
+        side: voc
+        name: Cape Town
+        date: "1673"
+        text: The Company’s fort and settlement, from which the expeditions set out.
+        lonlat: [18.425, -33.925]
+        lp: l
+      - kind: event
+        side: voc
+        name: Stellenbosch
+        date: "1679"
+        text: Founded two years after the peace, the first Company settlement beyond the Cape Flats.
+        lonlat: [18.86, -33.935]
+    arrows:
+      - side: voc
+        label: Cruse, July 1673
+        phase: 1
+        via: [[18.44, -33.90], [18.55, -33.62], [18.62, -33.40]]
+      - side: voc
+        phase: 2
+        via: [[18.46, -33.90], [18.85, -33.65], [19.10, -33.32]]
+    areas:
+      - style: outline
+        side: kh
+        label: Cochoqua grazing lands (approximate)
+        polygon: [[17.95, -32.85], [18.70, -32.80], [19.15, -33.15], [19.00, -33.55], [18.55, -33.65], [18.25, -33.45], [18.00, -33.20]]

@@ -1,0 +1,273 @@
+id: angolan-war-of-independence
+name: Angolan War of Independence
+start: "1961-02-04"
+end: "1974-04-25"
+tier: A
+summary: "The war fought in 1961–1974 by Angolan nationalist movements against Portuguese rule, the first and longest theatre of the Portuguese Colonial War. A strike by cotton workers in the Baixa de Cassanje in January 1961 was crushed from the air; on 4 February militants attacked the prisons of Luanda, and on 15 March fighters of Holden Roberto’s UPA rose in the coffee country of the north, killing about 1,000 settlers and thousands of African workers. Portugal’s army and settler militias answered with reprisals that killed tens of thousands and drove hundreds of thousands of Bakongo into the Congo. The war then became a guerrilla war fought from neighbouring countries by three rival movements: the FNLA from Zaire, the MPLA of Agostinho Neto from Congo-Brazzaville and, from 1966, Zambia, and Jonas Savimbi’s UNITA in the east. Portugal, with up to some 65,000 troops, held the towns and most of the country, and the movements fought each other as well as the Portuguese. The war ended with the Carnation Revolution in Lisbon on 25 April 1974; the Alvor Agreement of January 1975 set independence for 11 November 1975, but the movements were already fighting the civil war that followed."
+countries: [ao, pt, cd, cg, zm]
+sides:
+  - id: pt
+    name: Portugal
+    polities: [portugal, angola]
+    ink: blue
+    moves: Portuguese moves
+    success: Portuguese success
+  - id: mpla
+    name: MPLA
+    polities: [mpla]
+    ink: red
+    moves: MPLA moves
+    success: MPLA success
+  - id: fnla
+    name: UPA, from 1962 the FNLA
+    polities: [fnla]
+    ink: orange
+    moves: UPA/FNLA moves
+    success: UPA/FNLA success
+  - id: unita
+    name: UNITA
+    polities: [unita]
+    ink: green
+    moves: UNITA moves
+    success: UNITA success
+notes:
+  - "Casualty figures are estimates. Portugal lost some 2,700 soldiers killed in Angola; estimates of nationalist fighters killed run from 10,000 to 25,000 and of civilians from 30,000 to 50,000, most of them in 1961. Between 300,000 and 500,000 people fled to the Congo or to Luanda in the first year."
+  - "Who organised the attack of 4 February 1961 is disputed: the MPLA later claimed it, while other accounts credit a group around the Luanda priest Manuel das Neves. The UPA’s attacks of 15 March were aimed at settlers and at Ovimbundu contract workers from the south alike; the Portuguese reprisals that followed were far deadlier."
+  - The movements had different bases and backers. The FNLA drew on the Bakongo of the north and was backed by Mobutu’s Congo (Zaire), for a time the United States and later China; the MPLA drew on the Mbundu of the Luanda region and the urban, often mixed-race, elite, and was backed by the Soviet bloc and Cuba; UNITA drew on the Ovimbundu of the central highlands and the peoples of the east.
+sources:
+  - title: Angolan War of Independence (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Angolan_War_of_Independence
+  - title: Strike in Baixa do Cassange (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Strike_in_Baixa_do_Cassange
+  - title: Portuguese Colonial War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Portuguese_Colonial_War
+  - title: Alvor Agreement (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Alvor_Agreement
+  - title: Revolution of the Carnations (Britannica)
+    url: https://www.britannica.com/topic/Revolution-of-the-Carnations
+  - title: UNITA (Britannica)
+    url: https://www.britannica.com/topic/UNITA
+steps:
+  - title: Cotton, prisons and the north rise
+    date: January – March 1961
+    when: "1961-02-04"
+    borders: "1961-03-15"
+    countries: [ao, pt]
+    body:
+      - Angola had been a Portuguese colony, in parts, since the 1500s, and the Estado Novo dictatorship of António de Oliveira Salazar called it an “overseas province” and encouraged settlement; by 1960 some 170,000 Portuguese lived there. Africans were subject to forced labour and compulsory crops. On 3–4 January 1961 workers of the cotton company Cotonang in the Baixa de Cassanje, east of Malanje, burned their identity cards and attacked company traders. The Portuguese Air Force bombed some twenty villages; the MPLA later spoke of 10,000 dead, and most estimates run from 400 to 7,000.
+      - Early on 4 February, a few hundred men armed mostly with machetes attacked the São Paulo prison and police posts in Luanda to free political prisoners. Seven members of the security forces and, by different accounts, 25 to 40 attackers were killed, and settlers and police then killed hundreds of Africans in the city’s musseques. The day is celebrated in Angola as the start of the armed struggle.
+      - On 15 March, Holden Roberto’s Union of the Peoples of Angola (UPA), based in Léopoldville, sent several thousand fighters into the coffee districts of the north. With local farm workers they attacked farms, administrative posts and towns such as Quitexe, killing about 1,000 Portuguese settlers and several thousand Africans, many of them Ovimbundu contract workers from the south, and destroying roads and bridges. Within days the UPA held much of the north up to the Dembos forest, where it declared Nambuangongo its capital.
+    facts:
+      - [Baixa de Cassanje revolt, "3–4 January 1961"]
+      - [Attack on the Luanda prisons, "4 February 1961"]
+      - [UPA rising in the north, "15 March 1961"]
+      - [Settlers killed in March 1961, "about 1,000"]
+    markers:
+      - kind: event
+        side: none
+        name: Baixa de Cassanje
+        date: January 1961
+        text: Cotton workers’ revolt crushed by air raids on some twenty villages (position approximate).
+        lonlat: [17.10, -9.20]
+      - kind: event
+        side: mpla
+        name: Luanda
+        date: 4 February 1961
+        text: Attack on the São Paulo prison and police posts, followed by killings in the African quarters.
+        lonlat: [13.24, -8.83]
+        lp: l
+      - kind: battle
+        side: fnla
+        name: Quitexe
+        date: 15 March 1961
+        text: One of the places where UPA fighters killed settlers and farm workers on the first day.
+        lonlat: [15.04, -7.94]
+        lp: l
+      - kind: held
+        side: pt
+        name: Carmona (Uíge)
+        date: March 1961
+        text: Capital of the coffee district, held by the Portuguese and a refuge for settlers.
+        lonlat: [15.05, -7.62]
+      - kind: capital
+        side: fnla
+        name: Nambuangongo
+        date: March – August 1961
+        text: Village in the Dembos forest that the UPA declared its capital.
+        lonlat: [14.20, -8.02]
+        lp: l
+    arrows:
+      - side: fnla
+        label: UPA from the Congo
+        via: [[14.50, -5.90], [14.70, -6.80], [15.00, -7.80]]
+      - side: fnla
+        via: [[13.60, -6.00], [13.90, -7.00], [14.20, -7.95]]
+    areas:
+      - style: occupied
+        side: fnla
+        label: Rising of March 1961 (approximate)
+        polygon: [[13.00, -6.10], [14.50, -5.90], [16.20, -6.20], [16.30, -7.60], [15.30, -8.70], [14.00, -8.70], [13.30, -7.60]]
+  - title: “To Angola, quickly and in force”
+    date: April – October 1961
+    when: "1961-08-09"
+    borders: "1961-08-09"
+    countries: [ao, pt, cd]
+    body:
+      - After defeating an attempted coup by his defence minister, Júlio Botelho Moniz, Salazar took over the defence ministry and on 13 April announced on television, “To Angola, quickly and in force”. Troops were flown and shipped out, and in the meantime settler militias and the army took revenge across the north, killing many Africans suspected of supporting the rising, among them educated men who had nothing to do with it. In the first year of the war 20,000 to 30,000 Angolans were killed, and between 300,000 and 500,000 people fled, most of them Bakongo crossing into the Congo.
+      - From July the army went over to the offensive. In Operation Viriato three columns converged on Nambuangongo and retook it on 9 August, and Portugal’s first airborne assault took Quipedro soon after; by October the army had reoccupied the north, although the UPA kept bands in the forests. In September Portugal abolished the indigenato, the legal status that set Africans apart, and forced labour, but kept up the war.
+    facts:
+      - [Salazar’s broadcast, "13 April 1961"]
+      - [Nambuangongo retaken, "9 August 1961"]
+      - [Angolans killed in 1961, "20,000–30,000 (estimate)"]
+      - [Refugees in the first year, "300,000–500,000"]
+    markers:
+      - kind: taken
+        side: pt
+        name: Nambuangongo
+        date: 9 August 1961
+        text: Retaken by Portuguese columns in Operation Viriato, the army’s first large operation of the war.
+        lonlat: [14.20, -8.02]
+        lp: l
+      - kind: taken
+        side: pt
+        name: Quitexe
+        date: 1961
+        text: Reoccupied by the army as it moved north from Carmona and Luanda.
+        lonlat: [15.04, -7.94]
+        lp: l
+      - kind: event
+        side: none
+        name: Mbanza Kongo (São Salvador)
+        date: 1961
+        text: Seat of the old Kingdom of Kongo, from whose region many of the refugees crossed into the Congo.
+        lonlat: [14.25, -6.27]
+    arrows:
+      - side: pt
+        label: Operation Viriato
+        via: [[13.66, -8.58], [13.95, -8.30], [14.18, -8.04]]
+      - side: pt
+        via: [[15.05, -7.62], [14.70, -7.80], [14.25, -8.00]]
+      - side: none
+        label: Refugees to the Congo
+        via: [[14.80, -6.80], [14.60, -6.10], [14.50, -5.40]]
+  - title: Three movements in exile
+    date: 1962 – 1966
+    when: "1962-03-27"
+    borders: "1966-03-13"
+    countries: [ao, cd, cg, zm]
+    body:
+      - In March 1962 the UPA merged with a smaller Bakongo party into the National Front for the Liberation of Angola (FNLA), and in April Roberto formed a government in exile, the GRAE, recognised by the Congo and in 1963 by the Organisation of African Unity. Its army trained at Kinkuzu in the Congo, and Roberto received money from the CIA. The MPLA, which dated its founding to 1956 and was led from 1962 by the poet and doctor Agostinho Neto, was expelled from Léopoldville in 1963 and moved to Brazzaville, from where it opened a front in the enclave of Cabinda in 1964 and supplied its fighters in the Dembos forest north of Luanda.
+      - Jonas Savimbi, an Ovimbundu who had been the GRAE’s foreign minister, broke with Roberto in 1964, accusing him of tribalism and dependence on the United States. On 13 March 1966 he founded the National Union for the Total Independence of Angola (UNITA) at Muangai in Moxico, in the east. UNITA’s first attack, on 25 December 1966, stopped trains on the Benguela Railway at Teixeira de Sousa (Luau) on the Zambian border; when it cut the line again in 1967, Zambia, which sent its copper by that railway, expelled UNITA, and Savimbi went back inside Angola.
+    facts:
+      - [FNLA formed, "27 March 1962"]
+      - [MPLA moves to Brazzaville, "1963"]
+      - [UNITA founded, "13 March 1966"]
+      - [UNITA’s first attack, "25 December 1966"]
+    markers:
+      - kind: capital
+        side: none
+        name: Léopoldville and Brazzaville
+        date: from 1962–1963
+        text: Facing each other across the Congo River. Léopoldville (Kinshasa) was the seat of the FNLA and its government in exile, the GRAE; Brazzaville became the MPLA’s headquarters in 1963, after its expulsion from Léopoldville.
+        lonlat: [15.29, -4.30]
+        lp: l
+      - kind: battle
+        side: mpla
+        name: Cabinda
+        date: from 1964
+        text: The MPLA opened its first front from Congo-Brazzaville in the enclave.
+        lonlat: [12.19, -5.56]
+        lp: l
+      - kind: battle
+        side: unita
+        name: Teixeira de Sousa (Luau)
+        date: 25 December 1966
+        text: UNITA’s first attack stopped traffic on the Benguela Railway at the Zambian border.
+        lonlat: [22.22, -10.71]
+    areas:
+      - style: contested
+        side: mpla
+        label: MPLA guerrilla zone in the Dembos (approximate)
+        polygon: [[14.00, -8.00], [14.90, -8.00], [15.20, -8.70], [14.60, -9.10], [13.90, -8.70]]
+      - style: contested
+        side: fnla
+        label: FNLA guerrilla zone in the north (approximate)
+        polygon: [[14.20, -5.90], [16.20, -6.20], [16.30, -7.40], [15.40, -7.60], [14.40, -7.00]]
+  - title: The eastern front
+    date: 1966 – 1972
+    when: "1968-01-01"
+    borders: "1970-01-01"
+    countries: [ao, zm, pt]
+    body:
+      - When Zambia became independent in 1964 the MPLA gained a new rear base. From 1966 its fighters crossed into the thinly populated savanna of Moxico and Cuando Cubango, and by 1969–1970 its columns were moving west towards Bié and the central highlands along supply routes they called the Agostinho Neto trail. UNITA, much smaller, fought in the same region and clashed with the MPLA as often as with the Portuguese.
+      - Portugal answered with helicopters and airborne troops, with the Flechas, an African special unit of the PIDE secret police, and with “aldeamentos”, fortified villages into which rural people were moved to cut the guerrillas off from them. South African helicopters and pilots helped in the south-east from bases such as Cuito Cuanavale, under a secret alliance with South Africa and Rhodesia (Exercise Alcora). From 1971 the army’s eastern campaign under General Bettencourt Rodrigues broke up the MPLA’s fronts; documents later showed that Portuguese commanders had a secret understanding with Savimbi, Operation Madeira, under which UNITA fought the MPLA.
+    facts:
+      - [MPLA opens the eastern front, "1966"]
+      - [Portuguese troops in Angola, "about 65,000 by 1974"]
+      - [Portuguese eastern campaign, "1971–1972"]
+    markers:
+      - kind: event
+        side: mpla
+        name: Zambian border
+        date: from 1966
+        text: The MPLA’s fighters and supplies came across the border from bases in Zambia.
+        lonlat: [23.60, -12.80]
+      - kind: held
+        side: pt
+        name: Luso (Luena)
+        date: 1966–1974
+        text: Headquarters of the Portuguese eastern military zone, on the Benguela Railway.
+        lonlat: [19.91, -11.79]
+        lp: l
+      - kind: held
+        side: pt
+        name: Cuito Cuanavale
+        date: 1968–1974
+        text: Portuguese base in the south-east, where South African helicopters were stationed under Exercise Alcora.
+        lonlat: [19.17, -15.17]
+        lp: l
+    arrows:
+      - side: mpla
+        label: MPLA columns
+        via: [[23.80, -12.50], [22.00, -12.30], [20.00, -12.60], [18.00, -12.40]]
+      - side: mpla
+        via: [[22.50, -15.80], [21.00, -15.20], [19.80, -14.60]]
+    areas:
+      - style: contested
+        side: mpla
+        label: MPLA eastern front, about 1970 (approximate)
+        polygon: [[19.50, -11.20], [24.00, -11.00], [24.00, -13.00], [22.00, -16.30], [20.50, -16.80], [19.00, -14.50]]
+  - title: Revolution in Lisbon and the Alvor Agreement
+    date: April 1974 – November 1975
+    when: "1974-04-25"
+    borders: "1975-01-15"
+    countries: [ao, pt]
+    body:
+      - By 1974 Portugal held all the towns and most of Angola, which was earning more than ever from coffee, diamonds and the oil found off Cabinda; the MPLA was split by the revolts of Daniel Chipenda in the east (1973) and of a group of intellectuals (1974), and the FNLA was largely confined to the north. The war was decided in Lisbon. On 25 April 1974 young officers of the Armed Forces Movement, weary of wars in three colonies that took some 40 per cent of the state budget, overthrew the dictatorship in the Carnation Revolution.
+      - UNITA agreed a ceasefire in June 1974 and the FNLA and MPLA in October. On 15 January 1975, at Alvor in the Algarve, Portugal and the three movements agreed on a transitional government and set independence for 11 November 1975. But each movement kept its army, foreign backers poured in arms, and from March 1975 the FNLA and MPLA fought for Luanda; by July the MPLA had driven its rivals out of the capital. Most of the 300,000 or more Portuguese settlers left in 1975. On 11 November the MPLA proclaimed the People’s Republic of Angola in Luanda, in the middle of a civil war.
+    facts:
+      - [Carnation Revolution, "25 April 1974"]
+      - [Alvor Agreement, "15 January 1975"]
+      - [Independence, "11 November 1975"]
+    link: { href: "#/war/angolan-civil-war", text: "What followed: the Angolan Civil War" }
+    markers:
+      - kind: capital
+        side: mpla
+        name: Luanda
+        date: July – November 1975
+        text: The MPLA drove the FNLA and UNITA out of the capital and proclaimed independence here on 11 November 1975.
+        lonlat: [13.24, -8.83]
+        lp: l
+      - kind: held
+        side: fnla
+        name: Ambriz
+        date: 1975
+        text: The FNLA’s base on the coast north of Luanda.
+        lonlat: [13.12, -7.85]
+        lp: l
+      - kind: held
+        side: unita
+        name: Huambo (Nova Lisboa)
+        date: 1975
+        text: UNITA’s stronghold in the central highlands.
+        lonlat: [15.74, -12.78]

@@ -1,0 +1,264 @@
+id: maji-maji-rebellion
+name: Maji Maji war
+start: "1905-07"
+end: "1907-08"
+tier: A
+summary: "The largest rising against German rule in Africa, fought across the south of German East Africa (mainland Tanzania). Head taxes, forced labour and above all the communal cotton fields that Governor Gustav Adolf von Götzen imposed from 1902 had made German rule hated, and the drought of 1905 brought hunger. The healer Kinjikitile Ngwale gave his followers maji, water that was to turn German bullets to water. In late July 1905 the Matumbi people of the hills north-west of Kilwa uprooted the cotton and attacked traders and officials, and within weeks the rising spread across much of the south of the colony, uniting peoples of many languages, among them the Ngindo, Pogoro, Mbunga and the Ngoni of Songea. The machine guns of the German stations, above all at Mahenge on 30 August, broke the great assaults, and from October German columns of African soldiers (askari) and auxiliaries burned villages, crops and food stores to starve the rebels into surrender. The main fighting ended in April 1906 and the last bands in 1907–1908. Estimates of the dead, most of whom died of the famine that followed, range from 75,000 to 300,000; German losses were 15 Europeans and about 390 African soldiers and auxiliaries."
+countries: [tz, de]
+sides:
+  - id: mm
+    name: Maji Maji fighters
+    polities: [maji-maji]
+    ink: green
+    moves: Maji Maji moves
+    success: Maji Maji success
+  - id: de
+    name: German East Africa
+    polities: [german-east-africa, germany]
+    ink: slate
+    moves: German moves
+    success: German success
+notes:
+  - "German officials called it the Maji-Maji-Aufstand (Maji Maji rising or rebellion). In Tanzania it is known as the Maji Maji war, and nationalists, Julius Nyerere among them, presented it as the first common struggle of the country’s peoples against colonial rule. Historians such as John Iliffe and Gilbert Gwassa have studied how the maji cult carried the rising across ethnic lines, and how far it was one war or many local ones."
+  - "Most of the German side’s soldiers were Africans: askari of the Schutztruppe and auxiliaries (ruga-ruga) recruited locally. Some peoples stayed out of the rising or fought for the Germans, among them the Hehe, who had been defeated in the 1890s, and many Yao."
+  - "Dates differ between sources: the first rising at Nandete is dated about 20 July, the attack on Liwale 13 or 15 August and that on Ifakara 16 or 17 August 1905. German figures for their own dead are 15 Europeans, 73 askari and 316 auxiliaries; the German Historical Museum gives about 450 African soldiers and porters."
+sources:
+  - title: Maji Maji Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Maji_Maji_Rebellion
+  - title: Maji-Maji-Aufstand (Wikipedia, German)
+    url: https://de.wikipedia.org/wiki/Maji-Maji-Krieg
+  - title: Kinjikitile Ngwale (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kinjikitile_Ngwale
+  - title: Liwale District (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Liwale
+  - title: Der Maji-Maji-Krieg (Lebendiges Museum Online, Deutsches Historisches Museum)
+    url: https://www.dhm.de/lemo/kapitel/kaiserreich/aussenpolitik/maji-maji-krieg.html
+  - title: Geschichte der deutschen Kolonialherrschaft in Ostafrika (Bundeszentrale für politische Bildung)
+    url: https://www.bpb.de/themen/kolonialismus-imperialismus/postkolonialismus-und-globalgeschichte/spuren-deutscher-kolonialgeschichte/571519/geschichte-der-deutschen-kolonialherrschaft-in-ostafrika/
+  - title: "John Iliffe, “The Organization of the Maji Maji Rebellion”, Journal of African History 8 (1967)"
+    url: https://www.jstor.org/stable/179482
+steps:
+  - title: Cotton and the water
+    date: 1898 – July 1905
+    when: "1905-07"
+    borders: "1905-07-01"
+    countries: [tz]
+    body:
+      - "German rule in the south of the colony was thin: a few military stations, and below them akidas, mostly coastal Swahili or Arab agents, and village headmen (jumbes) who collected the taxes and called out labour. A head tax was introduced in 1898, payable in money, which forced men to work for wages on plantations or caravans. In 1902 Governor Gustav Adolf von Götzen ordered the villages of the south to grow cotton for export on communal fields. The work was forced, supervised by the akidas and their men with the whip, and the pay was tiny or nothing; it took people from their own fields. When the rains failed in 1905, hunger came on top of the anger."
+      - "At Ngarambe, in the hinterland of the Rufiji delta, a healer named Kinjikitile Ngwale said in 1904 that he had been possessed by a spirit, Hongo, through whom he spoke for the deity Bokero (or Bokera). Pilgrims came to him from far away and took home maji, water mixed with millet and castor oil, which was to protect them from the Germans’ bullets and unite them against the foreigners. The medicine was carried from village to village by his agents and gave peoples who had often fought one another a common cause and a promise of victory."
+    facts:
+      - [Head tax introduced, "1898"]
+      - [Communal cotton fields ordered, "1902"]
+      - [Kinjikitile’s maji, "from 1904"]
+    markers:
+      - kind: capital
+        side: de
+        name: Dar es Salaam
+        date: "1905"
+        text: Capital of German East Africa and seat of Governor von Götzen.
+        lonlat: [39.28, -6.82]
+      - kind: event
+        side: mm
+        name: Matumbi hills
+        date: 1904–1905
+        text: Pilgrims from the surrounding country, the Matumbi among them, went to Kinjikitile at Ngarambe for the maji.
+        lonlat: [38.92, -8.48]
+      - kind: event
+        side: de
+        name: Kilwa
+        date: "1905"
+        text: The German district headquarters for the south-east coast and its hinterland, where the cotton scheme was enforced.
+        lonlat: [39.40, -8.75]
+  - title: The rising begins
+    date: July – August 1905
+    when: "1905-07-31"
+    borders: "1905-08-17"
+    countries: [tz]
+    body:
+      - "In mid-July 1905 the German authorities, alarmed by the pilgrimages, arrested several healers, Kinjikitile among them. Around 20 July men of Nandete, in the Matumbi hills, pulled up the cotton in the communal field, and the police sent to punish them were beaten off. On 31 July the Matumbi marched on Samanga on the coast and destroyed the cotton crop and the trading post. Kinjikitile was hanged for treason on 4 August, but the rising was already spreading. Fighters killed akidas, Arab and Indian traders, missionaries and the few German settlers, and burned stations, shops and mission churches."
+      - "The Ngindo of the wide, thinly peopled country to the south-west rose next. In mid-August they took the German post at Liwale after a siege of three days, killing two Germans and several askari. On 14 August Ngindo fighters killed the Benedictine bishop Cassian Spiss and four companions who were travelling through the interior. On 16 August the rising reached the Kilombero valley, where fighters wiped out the small garrison at Ifakara; the road to the station at Mahenge lay open."
+    facts:
+      - [Cotton uprooted at Nandete, "about 20 July 1905"]
+      - [Kinjikitile hanged, "4 August 1905"]
+      - [Liwale and Ifakara taken, "mid-August 1905"]
+    markers:
+      - kind: event
+        side: mm
+        name: Nandete and the Matumbi hills
+        date: late July 1905
+        text: The rising began here when men pulled up the cotton in the communal field and beat off the police sent against them.
+        lonlat: [38.876, -8.427]
+      - kind: event
+        side: de
+        name: Mohoro
+        date: July – August 1905
+        text: The German district station on the Rufiji delta, which arrested Kinjikitile and other healers in July.
+        lonlat: [39.17, -8.13]
+      - kind: taken
+        side: mm
+        name: Liwale
+        date: mid-August 1905
+        text: The German post fell to Ngindo fighters after a three-day siege. Two Germans and several askari were killed.
+        lonlat: [37.93, -9.77]
+      - kind: taken
+        side: mm
+        name: Ifakara
+        date: 16 August 1905
+        text: Fighters destroyed the small German garrison, opening the way to Mahenge.
+        lonlat: [36.68, -8.13]
+      - kind: held
+        side: de
+        name: Kilwa
+        date: "1905"
+        text: The coastal towns stayed in German hands, protected by the navy.
+        lonlat: [39.40, -8.75]
+        lp: l
+    arrows:
+      - side: mm
+        phase: 1
+        via: [[38.92, -8.5], [39.05, -8.4], [39.2, -8.35]]
+      - side: mm
+        phase: 2
+        via: [[38.85, -8.6], [38.5, -9.0], [38.15, -9.45], [37.95, -9.72]]
+      - side: mm
+        phase: 3
+        via: [[38.8, -8.45], [38.1, -8.3], [37.4, -8.2], [36.72, -8.14]]
+    areas:
+      - style: contested
+        side: mm
+        label: Main area of the rising, August 1905 (approximate)
+        polygon: [[39.3, -7.7], [38.4, -7.4], [37.4, -7.6], [36.5, -7.9], [36.4, -8.6], [37.2, -9.4], [37.6, -10.2], [38.5, -10.0], [39.2, -9.2], [39.35, -8.5]]
+  - title: Mahenge
+    date: 30 August 1905
+    when: "1905-08-30"
+    borders: "1905-08-30"
+    countries: [tz]
+    body:
+      - "Mahenge, a German station on a plateau above the Kilombero valley, was held by Lieutenant Theodor von Hassel with about 60 askari, a few hundred local auxiliaries and two machine guns. On 30 August 1905 several thousand fighters, Pogoro and Mbunga men who had taken the maji, attacked it in two great columns. The machine guns opened fire at about a thousand metres; the first column broke, and the second, of about 1,200 men, was shot down close to the defenders’ line. At least 600 attackers were killed; the German side lost no more than about twenty men."
+      - "Mahenge showed that the maji did not stop bullets. But the rising went on, and the station remained cut off and under threat for weeks, while bands controlled the country around it. Other German posts held out too, and the coastal towns could be supplied by sea."
+    facts:
+      - [Attack on Mahenge, "30 August 1905"]
+      - [Defenders, "about 60 askari, a few hundred auxiliaries, 2 machine guns"]
+      - [Attackers killed, "at least 600"]
+    markers:
+      - kind: battle
+        side: de
+        name: Mahenge
+        date: 30 August 1905
+        text: Several thousand Maji Maji fighters attacked the German station in two waves. Machine-gun fire broke the assault; at least 600 attackers died.
+        lonlat: [36.72, -8.68]
+      - kind: taken
+        side: mm
+        name: Ifakara
+        date: August 1905
+        text: The attackers of Mahenge gathered in the Kilombero valley after taking Ifakara.
+        lonlat: [36.68, -8.13]
+        lp: l
+    arrows:
+      - side: mm
+        via: [[36.68, -8.18], [36.62, -8.4], [36.7, -8.64]]
+      - side: mm
+        via: [[37.3, -8.6], [37.0, -8.65], [36.76, -8.68]]
+  - title: The Ngoni and the German counter-attack
+    date: September – November 1905
+    when: "1905-10-21"
+    borders: "1905-11-30"
+    countries: [tz]
+    body:
+      - "In September the rising spread south-west to the Ngoni of Songea, a powerful kingdom of warriors whose leaders, among them Nduna Songea Mbano, hoped to win back the power they had lost to the Germans in the 1890s. With the Ngoni, the war covered almost the whole south of the colony, from the Rufiji to the Ruvuma and west towards Lake Nyasa. The Hehe of Iringa, defeated by the Germans a few years before, refused to join, and many Yao chiefs stayed loyal to the Germans."
+      - "The Germans rushed in reinforcements. Two cruisers brought marines to the coast, new askari and auxiliaries were recruited, and early in 1906 even a contingent of recruits from German New Guinea was shipped in. On 21 October a force from Mahenge attacked a camp of some 5,000 Ngoni warriors, who fell back under machine-gun fire; one is reported to have shouted that the maji was a lie. In early November the officer Robert von Krieg brought ammunition from Iringa to the hard-pressed station at Mahenge, and Major Kurt Johannes led a column from Kilwa through Liwale into the Ngoni country, reaching Songea at the end of November."
+    facts:
+      - [Ngoni join the rising, "September 1905"]
+      - [Ngoni camp attacked, "21 October 1905"]
+      - [Johannes reaches Songea, "end of November 1905"]
+    markers:
+      - kind: battle
+        side: de
+        name: Mahenge
+        date: 21 October 1905
+        text: From Mahenge German troops attacked a camp of about 5,000 Ngoni warriors, who retreated.
+        lonlat: [36.72, -8.68]
+      - kind: event
+        side: de
+        name: Iringa
+        date: early November 1905
+        text: Robert von Krieg set out from the German station here with an ammunition convoy for Mahenge.
+        lonlat: [35.69, -7.77]
+      - kind: event
+        side: de
+        name: Kilwa
+        date: November 1905
+        text: Major Johannes’s column set out from here for the Ngoni country.
+        lonlat: [39.40, -8.75]
+      - kind: taken
+        side: de
+        name: Songea
+        date: end of November 1905
+        text: The centre of the Ngoni country. Johannes’s column reached it after marching through Liwale.
+        lonlat: [35.65, -10.68]
+    arrows:
+      - side: de
+        label: Johannes
+        via: [[39.35, -8.8], [38.6, -9.3], [37.93, -9.77], [36.8, -10.3], [35.7, -10.65]]
+      - side: de
+        label: Von Krieg
+        via: [[35.72, -7.8], [36.1, -8.1], [36.5, -8.5], [36.68, -8.66]]
+    areas:
+      - style: contested
+        side: mm
+        label: Area of the rising, late 1905 (approximate)
+        polygon: [[39.4, -7.4], [38.4, -7.0], [37.4, -7.3], [36.5, -7.8], [35.9, -8.6], [34.9, -9.6], [34.8, -11.0], [35.9, -11.5], [37.4, -11.4], [38.6, -10.8], [39.6, -10.1], [39.6, -8.8]]
+  - title: Scorched earth
+    date: November 1905 – 1907
+    when: "1906-02-27"
+    borders: "1906-04-30"
+    countries: [tz]
+    body:
+      - "The Germans could not catch the bands in the bush, so they made war on the land that fed them. Columns of askari and auxiliaries marched through the south burning villages, looting granaries, destroying stores of food and cutting down or burning the crops in the fields; women and children were taken captive. “Only hunger and want can bring about a final submission,” Captain Wangenheim wrote in 1905. Von Krieg reported that his auxiliaries understood the burning of villages and fields “quite well”."
+      - "Leaders who were captured were tried by court martial and hanged. At Songea in February 1906 the Germans hanged dozens of Ngoni leaders, among them Nduna Songea Mbano, whose name the town bears; the executions are commemorated there every year on 27 February. By April 1906 the heaviest fighting was over and most of the peoples of the south had submitted, but in parts of the south-east bands fought on until August 1907, and the last guerrilla leaders were captured and executed in 1908."
+    facts:
+      - [Ngoni leaders hanged at Songea, "February 1906"]
+      - [Main fighting ends, "April 1906"]
+      - [Last bands, "1907–1908"]
+    markers:
+      - kind: event
+        side: de
+        name: Songea
+        date: February 1906
+        text: The Germans hanged dozens of Ngoni leaders here, among them Nduna Songea Mbano. The Maji Maji Memorial Museum stands by their graves.
+        lonlat: [35.65, -10.68]
+      - kind: event
+        side: de
+        name: Liwale
+        date: 1905–1906
+        text: German columns marching through the Ngindo country burned villages and food stores.
+        lonlat: [37.93, -9.77]
+    areas:
+      - style: lost
+        side: mm
+        label: Villages, fields and stores burned by German columns (approximate)
+        polygon: [[39.3, -7.6], [38.4, -7.3], [37.4, -7.5], [36.5, -7.9], [35.9, -8.7], [35.0, -9.8], [35.0, -10.9], [36.0, -11.3], [37.4, -11.2], [38.6, -10.6], [39.5, -10.0], [39.5, -8.8]]
+  - title: The great hunger
+    date: 1906 – 1908
+    when: "1907-08"
+    borders: "1907-08-31"
+    countries: [tz]
+    body:
+      - "The famine that the scorched earth caused killed far more people than the fighting. Estimates of the dead of the war and the hunger range from 75,000, the figure German officials gave, to 300,000; the German Historical Museum considers about 180,000 likely. The historian Gilbert Gwassa estimated that a third of the population of the war zone died, and a study of Ulanga, around Mahenge, found that the birth rate of surviving women fell by about a quarter. Large parts of the south were left thinly peopled for decades. The German side lost 15 Europeans and about 390 askari and auxiliaries killed."
+      - "Together with the war against the Herero and Nama in German South West Africa, the war led to a debate in Germany about colonial rule and to reforms under the new colonial secretary, Bernhard Dernburg. In East Africa the new governor, Albrecht von Rechenberg, dropped the forced communal cotton fields and favoured African peasant farming over settler plantations. In independent Tanzania the war became a founding story of the nation. In November 2023 the German president, Frank-Walter Steinmeier, visited the Maji Maji museum at Songea and apologised for the crimes of German colonial rule."
+    facts:
+      - [Deaths, "estimates range from 75,000 to 300,000"]
+      - [Population of the war zone, "fell by about a third"]
+      - [German side killed, "15 Europeans, about 390 askari and auxiliaries"]
+    markers:
+      - kind: toll
+        name: Southern German East Africa
+        date: 1905–1908
+        text: "Estimates of the dead of the war and the famine range from 75,000 to 300,000."
+        lonlat: [37.3, -9.3]
+      - kind: event
+        side: mm
+        name: Songea
+        date: November 2023
+        text: The German president Frank-Walter Steinmeier visited the Maji Maji museum here and apologised for German colonial crimes.
+        lonlat: [35.65, -10.68]

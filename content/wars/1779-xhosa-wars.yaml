@@ -1,0 +1,461 @@
+id: xhosa-wars
+name: Xhosa Wars (Cape Frontier Wars)
+start: "1779-12"
+end: "1879"
+tier: A
+summary: "A century of intermittent war on the eastern frontier of the Cape Colony, between the Xhosa chiefdoms and the Dutch and then British colonial state, in which the Xhosa lost their independence and most of their land west of the Mbhashe. Nine wars are usually counted. In the first three (1779–1803) Boer commandos and Xhosa chiefdoms fought over the grazing of the Zuurveld, between the Bushmans and Great Fish rivers, and in 1799 Khoikhoi servants rose and joined the Xhosa. In 1811–1812 British troops drove the Xhosa of the Zuurveld across the Fish. In 1819 the prophet Makhanda led an attack on Grahamstown, and after its defeat the colony took the land up to the Keiskamma. The wars of 1834–1836 (in which the Gcaleka king Hintsa was killed while in British custody), 1846–1847 (the War of the Axe) and 1850–1853 (Mlanjeni’s War, with a rising of Khoikhoi in the Kat River settlement) ended with the land between the Keiskamma and the Kei annexed as British Kaffraria and the Ngqika driven from the Amatola mountains. In 1856–1857, after years of defeat, drought and cattle disease, the Xhosa followed the prophecies of Nongqawuse and killed their cattle; some 40,000 people died of hunger and the colony took much of their remaining land. The last war, in 1877–1878, brought Gcalekaland under colonial rule, and the Cape took over the rest of the Transkei by 1894."
+countries: [za, gb]
+sides:
+  - id: xh
+    name: Xhosa chiefdoms
+    polities: [xhosa]
+    ink: green
+    moves: Xhosa moves
+    success: Xhosa success
+  - id: col
+    name: Cape Colony and Britain
+    polities: [cape-colony, united-kingdom]
+    ink: navy
+    moves: Colonial and British moves
+    success: Colonial and British success
+  - id: kh
+    name: Khoikhoi rebels
+    polities: [khoikhoi]
+    ink: brown
+    moves: Khoikhoi moves
+    success: Khoikhoi success
+notes:
+  - "The Xhosa were not one state: the Gcaleka paramounts east of the Kei (Khawuta, Hintsa, Sarhili) were senior, but the western or Rharhabe Xhosa (the chiefdoms of Ngqika, Ndlambe and their sons) and the smaller chiefdoms of the Zuurveld acted on their own, and often fought one another. Colonial writers called the wars the “Kaffir Wars”, using a term that is now a grave insult; South African historians call them the Frontier Wars or the wars of dispossession."
+  - "The Mfengu (Fingo), refugees who had settled among the Gcaleka and moved into the colony in 1835, fought on the colonial side in the later wars, as did many Khoikhoi soldiers of the Cape Regiment and Cape Mounted Rifles; Thembu and Khoikhoi groups fought on both sides. Casualty figures are mostly unknown; colonial sources counted settler losses and captured cattle far more carefully than Xhosa dead."
+sources:
+  - title: Xhosa Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Xhosa_Wars
+  - title: Battle of Grahamstown (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Grahamstown
+  - title: Hintsa kaKhawuta (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hintsa_kaKhawuta
+  - title: Sandile kaNgqika (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sandile_kaNgqika
+  - title: Xhosa cattle-killing movement (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Xhosa_cattle-killing_movement
+  - title: Makhanda (prophet) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Makhanda_(prophet)
+  - title: Maqoma (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Maqoma
+  - title: Nongqawuse (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nongqawuse
+  - title: Graaff-Reinet (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Graaff-Reinet
+steps:
+  - title: The Zuurveld frontier
+    date: 1779–1793
+    when: "1779-12"
+    borders: "1781-01-01"
+    countries: [za]
+    body:
+      - By the 1770s the stock farmers of the Cape Colony, the trekboers, had moved east with their herds into the country between the Sundays and Great Fish rivers. The western Xhosa chiefdoms, among them the Gqunukhwebe, Ntinde, Mbalu, Dange and Gwali, already grazed their cattle there, in the Zuurveld (“sour grassland”) near the coast. Both sides raided and traded cattle, hunted the same game and hired each other’s men; neither recognised a fixed border. In 1778 Governor Joachim van Plettenberg agreed with some minor chiefs that the Fish River should divide them.
+      - The first war began with clashes over cattle in December 1779. In 1780 the Company proclaimed the Fish River the colony’s eastern boundary, and in 1781 the frontier commandant Adriaan van Jaarsveld led commandos into the Zuurveld. At one meeting he scattered tobacco on the ground and, as the Xhosa stooped to pick it up, his men opened fire, killing between 100 and 200 people, among them the Dange chief Jalamba. The commandos seized thousands of cattle and drove the chiefdoms across the Fish, but many soon returned.
+      - In 1786 the Company founded Graaff-Reinet as the seat of a new frontier district. The second war (1789–1793) began when the Gqunukhwebe moved back into the Zuurveld. The frontier farmers allied with Ndlambe, the regent of the Rharhabe Xhosa east of the Fish, who had his own quarrels with the Zuurveld chiefdoms; their commando achieved little, many farms were abandoned, and a peace was patched up in 1793 that left the Xhosa where they were.
+    facts:
+      - [First war, "1779–1781"]
+      - [Fish River proclaimed the boundary, "1780"]
+      - [Second war, "1789–1793"]
+    markers:
+      - kind: event
+        side: col
+        name: Graaff-Reinet
+        date: "1786"
+        text: Founded by the Company as the seat of the frontier district, whose burghers formed the commandos.
+        lonlat: [24.537, -32.252]
+      - kind: event
+        side: col
+        name: Van Jaarsveld’s commando
+        date: "1781"
+        text: The commandos killed Jalamba and many of his people at a meeting and drove the Zuurveld chiefdoms across the Fish (marker approximate).
+        lonlat: [26.45, -33.35]
+    arrows:
+      - side: col
+        label: Commandos, 1781
+        via: [[25.90, -33.50], [26.40, -33.42], [26.95, -33.35]]
+    areas:
+      - style: contested
+        side: xh
+        label: The Zuurveld, grazed by Xhosa chiefdoms and colonial farmers
+        polygon: [[26.67, -33.69], [27.13, -33.49], [26.95, -33.35], [26.62, -33.13], [26.30, -33.05], [26.05, -33.25], [26.20, -33.55]]
+      - style: front
+        side: col
+        label: Boundary proclaimed by the Company, 1780 (Great Fish River)
+        line: [[27.13, -33.49], [26.95, -33.35], [26.78, -33.20], [26.62, -33.13], [26.30, -32.95], [25.95, -32.80], [25.80, -32.72]]
+  - title: The Khoikhoi rising and the expulsion from the Zuurveld
+    date: 1799–1812
+    when: "1799-01"
+    borders: "1812-03-01"
+    countries: [za, gb]
+    body:
+      - The British, who had taken the Cape in 1795, faced a second rising of the Graaff-Reinet burghers in January 1799 and sent troops under General Thomas Vandeleur to the frontier. While they put it down, many Khoikhoi servants left the frontier farms with guns and horses and joined the Zuurveld Xhosa. Led by Klaas Stuurman, Hans Trompetter and Boesak, they demanded land of their own and wages for their work, and together with the Gqunukhwebe of Chungwa they drove Vandeleur’s patrols back and raided farms as far west as the Langkloof and the Oudtshoorn district. This third war dragged on until a peace was arranged in February 1803, as the Cape was handed over to the Batavian Republic; the Xhosa stayed in the Zuurveld, and some Khoikhoi were given land, among them at the London Missionary Society’s station of Bethelsdorp near Algoa Bay.
+      - In 1811 Governor John Cradock decided to clear the Zuurveld. Colonel John Graham, with British regulars, the Khoikhoi soldiers of the Cape Regiment and burgher commandos, swept through it from December 1811 to February 1812, burning homesteads and crops and driving some 20,000 people of Ndlambe’s and the Zuurveld chiefdoms across the Fish. The aged chief Chungwa was shot dead as he lay ill. Cradock reported that no more blood had been shed than was needed to instil “a proper degree of terror and respect”.
+      - Graham’s headquarters became the town of Grahamstown, and a line of military posts was built along the Fish. In 1820 the British government settled about 4,000 emigrants from Britain, the “1820 Settlers”, on the cleared Zuurveld, now called Albany, to hold the frontier.
+    facts:
+      - [Third war, "1799–1803"]
+      - [Fourth war, "1811–1812"]
+      - [Grahamstown founded, "1812"]
+    markers:
+      - kind: event
+        side: kh
+        name: Khoikhoi rising
+        date: "1799"
+        text: Khoikhoi servants under Klaas Stuurman and Hans Trompetter joined the Zuurveld Xhosa and raided westward.
+        lonlat: [26.20, -33.45]
+        lp: l
+      - kind: event
+        side: col
+        name: Bethelsdorp
+        date: "1803"
+        text: The mission station near Algoa Bay where many Khoikhoi settled after the peace.
+        lonlat: [25.511, -33.872]
+        lp: b
+      - kind: event
+        side: kh
+        name: Oudtshoorn district
+        date: "1799"
+        text: The farthest point reached by the Khoikhoi and Xhosa raids in 1799.
+        lonlat: [22.204, -33.590]
+      - kind: capital
+        side: col
+        name: Grahamstown
+        date: "1812"
+        text: Founded on the site of Colonel Graham’s headquarters after the expulsion from the Zuurveld.
+        lonlat: [26.527, -33.310]
+    arrows:
+      - side: kh
+        label: Raids, 1799
+        phase: 1
+        via: [[26.10, -33.45], [25.20, -33.70], [23.80, -33.75], [22.40, -33.62]]
+      - side: col
+        label: Graham, 1811–1812
+        phase: 2
+        via: [[25.90, -33.55], [26.40, -33.45], [26.95, -33.40]]
+      - side: xh
+        label: Xhosa driven across the Fish
+        phase: 2
+        via: [[26.85, -33.30], [27.15, -33.15], [27.45, -32.95]]
+    areas:
+      - style: lost
+        side: xh
+        label: The Zuurveld, cleared of its Xhosa inhabitants in 1812
+        polygon: [[26.67, -33.69], [27.13, -33.49], [26.95, -33.35], [26.62, -33.13], [26.30, -33.05], [26.05, -33.25], [26.20, -33.55]]
+  - title: Amalinde, Makhanda and Grahamstown
+    date: 1817–1819
+    when: "1819-04-22"
+    borders: "1819-04-22"
+    countries: [za, gb]
+    body:
+      - In 1817 Governor Lord Charles Somerset made an agreement with Ngqika, the young chief of the Rharhabe Xhosa, treating him as the ruler of all the Xhosa west of the Kei and holding him responsible for every cattle theft. Most chiefs did not accept Ngqika’s authority. His uncle Ndlambe, backed by the Gcaleka king Hintsa and by the prophet Makhanda (also called Nxele), who preached a Xhosa faith of his own that drew on Christian teaching, defeated Ngqika at the battle of Amalinde in 1818. Ngqika appealed to the colony, and in December a British force under Colonel Thomas Brereton raided Ndlambe’s people and took some 23,000 cattle.
+      - Makhanda, telling his followers that the British bullets would turn to water, gathered an army of perhaps 6,000 to 10,000 men and, with Ndlambe’s son Mdushane in command, attacked Grahamstown in daylight on 22 April 1819. Lieutenant-Colonel Thomas Willshire had about 350 soldiers, and at the height of the battle a party of about 130 Khoikhoi hunters under Jan Boesak arrived to help. Musket and cannon fire broke the attack; about 1,000 Xhosa were killed and three of the garrison. The Xhosa remember the place as Egazini, “the place of blood”.
+      - British and colonial columns then crossed the Fish and drove Ndlambe’s people back to the Kei. In August 1819 Makhanda gave himself up, hoping to end the suffering of his people; he was sent to Robben Island and drowned in 1820 trying to escape. In October 1819 Somerset made Ngqika give up the land between the Fish and the Keiskamma as a neutral belt to be kept empty of people, the “Ceded Territory”. It was soon settled by colonial farmers and, from 1829, by Khoikhoi at the Kat River settlement.
+    facts:
+      - [Battle of Amalinde, "1818"]
+      - [Battle of Grahamstown, "22 April 1819"]
+      - [Xhosa killed at Grahamstown, "about 1,000"]
+      - [Ceded Territory, "October 1819"]
+    markers:
+      - kind: battle
+        side: xh
+        name: Amalinde
+        date: "1818"
+        text: Ndlambe’s army, with Gcaleka allies and the followers of Makhanda, defeated Ngqika on the plain near present-day Debe Nek.
+        lonlat: [27.18, -32.85]
+      - kind: battle
+        side: col
+        name: Grahamstown
+        date: 22 April 1819
+        text: Makhanda’s army attacked the town in daylight and was repulsed by the garrison and Jan Boesak’s Khoikhoi hunters.
+        lonlat: [26.527, -33.310]
+        lp: l
+    arrows:
+      - side: col
+        label: Brereton, December 1818
+        phase: 1
+        via: [[26.55, -33.25], [26.85, -33.05], [27.15, -32.92]]
+      - side: xh
+        label: Makhanda
+        phase: 2
+        via: [[27.10, -32.95], [26.85, -33.15], [26.56, -33.30]]
+      - side: col
+        phase: 3
+        via: [[26.60, -33.28], [27.10, -33.00], [27.70, -32.75], [28.10, -32.55]]
+    areas:
+      - style: gained
+        side: col
+        label: The Ceded Territory, 1819 (between the Fish and the Keiskamma)
+        polygon: [[27.13, -33.49], [27.50, -33.29], [27.30, -33.05], [27.05, -32.85], [26.85, -32.65], [26.55, -32.50], [26.30, -32.65], [26.30, -32.95], [26.62, -33.13], [26.95, -33.35]]
+  - title: The Sixth War and the death of Hintsa
+    date: 1834–1836
+    when: "1834-12-21"
+    borders: "1835-05-12"
+    countries: [za, gb]
+    body:
+      - The Rharhabe chiefs Maqoma and Tyhali, sons of Ngqika, had been driven out of the Kat River valley in 1829, and colonial patrols that seized cattle in reprisal for thefts kept their people in constant fear. In early December 1834 a patrol wounded Tyhali’s brother Xhoxho. On 21 December some 10,000 to 12,000 Xhosa crossed into the colony, overran the Albany district and reached the outskirts of Uitenhage. In a few weeks about 40 colonists were killed, 416 farmhouses burned and tens of thousands of cattle, sheep and horses carried off; the farmers took refuge in the towns.
+      - Colonel Harry Smith rode from Cape Town to Grahamstown in six days and arrived on 6 January 1835. British troops, burghers and Khoikhoi levies cleared the colony and in April 1835 Governor Sir Benjamin D’Urban, holding the Gcaleka king Hintsa responsible for the raids, crossed the Kei to his great place near present-day Butterworth. Hintsa came into the British camp to negotiate and was held there while D’Urban demanded 50,000 cattle. On 10 May D’Urban proclaimed the land between the Keiskamma and the Kei a British territory, the Province of Queen Adelaide. On 12 May, while guiding a British patrol to collect cattle, Hintsa tried to escape; he was shot dead on the banks of the Nqabara River by George Southey, and his ears were cut off. Colonial accounts of his death were disputed even at the time.
+      - As D’Urban’s army withdrew from Gcalekaland it took with it about 17,000 Mfengu, refugees from the wars in Natal who had lived among the Gcaleka, with their cattle. They were settled near Fort Peddie and became the colony’s allies. Fighting in the Amatola mountains went on until September 1836, when Andries Stockenström, the new lieutenant-governor, made treaties with the chiefs. The British government, persuaded that the war had been provoked, ordered Queen Adelaide Province abandoned in December 1836.
+    facts:
+      - [Xhosa invasion, "21 December 1834"]
+      - [Province of Queen Adelaide proclaimed, "10 May 1835"]
+      - [Death of Hintsa, "12 May 1835"]
+      - [Province abandoned, "December 1836"]
+    markers:
+      - kind: taken
+        side: xh
+        name: Albany
+        date: December 1834
+        text: The Xhosa armies of Maqoma and Tyhali swept through the farms of the district, reaching the outskirts of Uitenhage.
+        lonlat: [26.30, -33.45]
+        lp: l
+      - kind: held
+        side: col
+        name: Grahamstown
+        date: "1835"
+        text: The colonists took refuge here; Harry Smith arrived on 6 January 1835.
+        lonlat: [26.527, -33.310]
+      - kind: event
+        side: col
+        name: Hintsa’s great place
+        date: April 1835
+        text: D’Urban’s army reached the Gcaleka capital near present-day Butterworth (Gcuwa), and Hintsa came to negotiate.
+        lonlat: [28.144, -32.332]
+        lp: l
+      - kind: event
+        side: col
+        name: Death of Hintsa
+        date: 12 May 1835
+        text: Hintsa, held as a hostage, was shot dead while trying to escape on the banks of the Nqabara River, and his body was mutilated (site approximate).
+        lonlat: [28.65, -32.19]
+      - kind: capital
+        side: col
+        name: King William’s Town
+        date: "1835"
+        text: Founded as the seat of the short-lived Province of Queen Adelaide.
+        lonlat: [27.394, -32.880]
+    arrows:
+      - side: xh
+        label: Maqoma and Tyhali
+        phase: 1
+        via: [[26.95, -32.80], [26.70, -33.10], [26.30, -33.40], [25.75, -33.62]]
+      - side: col
+        label: D’Urban
+        phase: 2
+        via: [[26.55, -33.25], [27.10, -32.95], [27.70, -32.65], [28.12, -32.36]]
+      - side: col
+        label: Mfengu
+        phase: 3
+        via: [[28.10, -32.40], [27.60, -32.85], [27.15, -33.18]]
+    areas:
+      - style: gained
+        side: col
+        label: Province of Queen Adelaide, May 1835 – December 1836
+        polygon: [[27.50, -33.29], [28.376, -32.681], [28.15, -32.45], [27.90, -32.25], [27.45, -32.30], [27.05, -32.50], [26.85, -32.65], [27.05, -32.85], [27.30, -33.05]]
+  - title: The War of the Axe
+    date: 1846–1847
+    when: "1846-03"
+    borders: "1847-12-24"
+    countries: [za, gb]
+    body:
+      - Stockenström’s treaties kept an uneasy peace for nearly ten years, until Governor Sir Peregrine Maitland replaced them with harsher terms in 1844, and drought in 1845–1846 sharpened the struggle for land and cattle. In March 1846 a Xhosa man accused of stealing an axe at Fort Beaufort was being taken to Grahamstown for trial, handcuffed to a Khoikhoi prisoner, when a party of his kinsmen freed him, cutting off the other prisoner’s hand and killing him. The Ngqika chief Sandile, Ngqika’s son and heir, refused to hand over the killers, and the colony declared war.
+      - In April 1846 a British column entered the Amatola mountains towards Sandile’s homestead near Burnshill mission and was ambushed; the Ngqika captured a large part of its wagon train. Xhosa forces then invaded the colony again. On 28 May about 8,000 men attacked Fort Peddie, held by British troops and Mfengu, and were driven off after a long exchange of fire, and on 7 June Colonel Henry Somerset’s cavalry caught a large Ndlambe force in the open by the Gwangqa River near the fort and killed several hundred. The war then became one of attrition in the mountains and bush, with colonial columns burning crops and seizing cattle; hunger forced the chiefs to submit one by one, and Sandile was taken during negotiations in late 1847.
+      - Sir Harry Smith, back as governor, met the chiefs at King William’s Town on 23 December 1847, publicly humiliated them, and proclaimed the land between the Keiskamma and the Kei a separate British crown territory, British Kaffraria, ruled by magistrates through the chiefs; the Ceded Territory was annexed to the Cape. Smith also took the land between the Orange and the Vaal in 1848, and the Xhosa chiefs lost much of their authority to colonial officials.
+    facts:
+      - [Outbreak, "March 1846"]
+      - [Attack on Fort Peddie, "28 May 1846"]
+      - [Battle of the Gwangqa, "7 June 1846"]
+      - [British Kaffraria proclaimed, "23 December 1847"]
+    markers:
+      - kind: event
+        side: xh
+        name: Fort Beaufort
+        date: March 1846
+        text: The prisoner accused of stealing an axe here was freed by his kinsmen on the road to Grahamstown, and the colony went to war.
+        lonlat: [26.631, -32.778]
+        lp: l
+      - kind: battle
+        side: xh
+        name: Burnshill
+        date: April 1846
+        text: Sandile’s Ngqika ambushed a British column in the Amatola foothills and took much of its wagon train.
+        lonlat: [27.055, -32.768]
+      - kind: battle
+        side: col
+        name: Fort Peddie and the Gwangqa
+        date: 28 May – 7 June 1846
+        text: About 8,000 Xhosa attacked the fort on 28 May and were driven off; on 7 June Somerset’s cavalry defeated an Ndlambe army by the Gwangqa River nearby.
+        lonlat: [27.115, -33.199]
+      - kind: treaty
+        side: col
+        name: King William’s Town
+        date: 23 December 1847
+        text: Harry Smith proclaimed British Kaffraria here before the assembled chiefs.
+        lonlat: [27.394, -32.880]
+    arrows:
+      - side: col
+        label: British column, April 1846
+        phase: 1
+        via: [[26.64, -32.79], [26.85, -32.79], [27.04, -32.77]]
+      - side: xh
+        label: Xhosa invasion
+        phase: 2
+        via: [[27.20, -32.95], [27.15, -33.10], [26.85, -33.25], [26.60, -33.33]]
+    areas:
+      - style: gained
+        side: col
+        label: British Kaffraria, proclaimed 23 December 1847
+        polygon: [[27.50, -33.29], [28.376, -32.681], [28.15, -32.45], [27.90, -32.25], [27.45, -32.30], [27.05, -32.50], [26.85, -32.65], [27.05, -32.85], [27.30, -33.05]]
+  - title: Mlanjeni’s War and the Kat River rising
+    date: 1850–1853
+    when: "1850-12-24"
+    borders: "1851-06-01"
+    countries: [za, gb]
+    view:
+      center: [26.95, -32.75]
+      size: [150, 110]
+    body:
+      - The Ngqika resented the magistrates and the loss of their land, and a young prophet, Mlanjeni, promised that the colonists would be driven out if the people purified themselves. In October 1850 Smith declared Sandile deposed. On 24 December 1850 a column of about 650 men under Colonel George Mackinnon, sent to arrest him, was ambushed in the Boomah Pass and suffered about 40 casualties; on Christmas Day the Ngqika destroyed the military villages of Woburn, Auckland and Juanasburg in the Tyumie valley, killing the settled ex-soldiers. Smith himself was cut off in Fort Cox for some days.
+      - The war drew in the colony’s own subjects. Many Khoikhoi of the Kat River settlement, embittered by land losses, a vagrancy law they feared and their treatment in earlier wars, rose under Hermanus Matroos and Willem Uithaalder and took Fort Armstrong; some men of the Cape Mounted Rifles deserted to them. Hermanus was killed attacking Fort Beaufort on 7 January 1851. Maqoma made the forested ravines of the Waterkloof, north of Fort Beaufort, a stronghold that British troops failed to take for more than a year. Reinforcements were sent from Britain; the troopship Birkenhead, carrying some of them, sank off the Cape in February 1852 with heavy loss of life.
+      - General Sir George Cathcart, who replaced Smith in March 1852, fought a war of destruction, burning crops and homesteads and taking cattle. The Waterkloof was cleared in September 1852, and he carried the war across the Kei against Sarhili, Hintsa’s son and successor, whom he accused of helping the Ngqika. Starving, the Ngqika chiefs submitted in early 1853. It was the longest and most costly of the frontier wars. The Ngqika were expelled from the Amatola mountains, which were given to Mfengu and white settlers, and the Kat River settlement was broken up.
+    facts:
+      - [Boomah Pass, "24 December 1850"]
+      - [Attack on Fort Beaufort, "7 January 1851"]
+      - [Ngqika submission, "early 1853"]
+    markers:
+      - kind: battle
+        side: xh
+        name: Boomah Pass
+        date: 24 December 1850
+        text: Mackinnon’s column was ambushed here on its way to arrest Sandile.
+        lonlat: [27.10, -32.71]
+      - kind: held
+        side: col
+        name: Fort Beaufort
+        date: 7 January 1851
+        text: The Khoikhoi rebels’ attack on the town failed and their leader Hermanus Matroos was killed.
+        lonlat: [26.631, -32.778]
+        lp: b
+      - kind: held
+        side: xh
+        name: Waterkloof
+        date: 1851–1852
+        text: Maqoma’s stronghold in the forested ravines, held against British columns until September 1852.
+        lonlat: [26.57, -32.62]
+        lp: l
+      - kind: event
+        side: kh
+        name: Kat River settlement
+        date: January 1851
+        text: Many of its Khoikhoi rose under Hermanus Matroos and Willem Uithaalder and took Fort Armstrong.
+        lonlat: [26.72, -32.53]
+        lp: t
+      - kind: held
+        side: col
+        name: King William’s Town
+        date: 1850–1853
+        text: Headquarters of the British forces in British Kaffraria.
+        lonlat: [27.394, -32.880]
+    arrows:
+      - side: col
+        label: Mackinnon
+        phase: 1
+        via: [[27.39, -32.87], [27.20, -32.80], [27.11, -32.72]]
+      - side: kh
+        label: Hermanus
+        phase: 2
+        via: [[26.70, -32.55], [26.66, -32.66], [26.64, -32.76]]
+    areas:
+      - style: occupied
+        side: xh
+        label: Amatola and Waterkloof strongholds (approximate)
+        polygon: [[26.50, -32.58], [26.70, -32.52], [27.00, -32.55], [27.25, -32.62], [27.30, -32.72], [27.05, -32.73], [26.75, -32.65], [26.55, -32.66]]
+  - title: The cattle-killing
+    date: 1856–1858
+    when: "1856-04"
+    borders: "1857-02-18"
+    countries: [za]
+    body:
+      - In 1854 lungsickness, a cattle disease brought with imported cattle, began killing Xhosa herds. In April 1856 Nongqawuse, a girl of about fifteen living near the mouth of the Gxarha River in Gcalekaland, told her uncle Mhlakaza that strangers at a pool had told her the dead would rise, the colonists would be driven into the sea and new herds and harvests would come, if the people killed their cattle and destroyed their grain. Sarhili, the Gcaleka paramount, accepted the prophecy, and it spread among the Gcaleka and the Ngqika of British Kaffraria. Many chiefs and people refused, and the movement split communities between believers and unbelievers.
+      - The killing went on through 1856, and the great day was finally set for 18 February 1857. When the sun rose and set as usual and the dead did not return, famine followed. More than 400,000 cattle had been killed; about 40,000 people died of hunger, and some 50,000 went into the colony looking for food and work. The Xhosa population of British Kaffraria fell from about 105,000 to fewer than 40,000; some counts give fewer than 27,000.
+      - The governor, Sir George Grey, refused relief to those who would not sign labour contracts, blamed the movement on a plot of the chiefs, imprisoned many of them on Robben Island and confiscated large areas of their land, which were opened to white settlers. In 1858 colonial police drove Sarhili and the Gcaleka across the Mbhashe. Peires concluded that Grey encouraged the movement and then exploited its failure; the long Xhosa resistance was broken.
+    facts:
+      - [Nongqawuse’s prophecy, "April 1856"]
+      - [Day of the prophecy, "18 February 1857"]
+      - [Cattle killed, "over 400,000"]
+      - [Deaths from hunger, "about 40,000"]
+    markers:
+      - kind: event
+        side: none
+        name: Gxarha River
+        date: April 1856
+        text: Nongqawuse had her visions at a pool near the mouth of the river, in Gcalekaland.
+        lonlat: [28.40, -32.66]
+      - kind: event
+        side: none
+        name: Sarhili’s country
+        date: 1856–1857
+        text: The Gcaleka paramount Sarhili accepted the prophecy and killed his cattle; his people were driven across the Mbhashe in 1858.
+        lonlat: [28.35, -32.20]
+      - kind: capital
+        side: col
+        name: King William’s Town
+        date: "1857"
+        text: Seat of British Kaffraria, from which Grey’s officials directed relief only in return for labour contracts.
+        lonlat: [27.394, -32.880]
+    arrows:
+      - side: col
+        label: Sarhili driven across the Mbhashe, 1858
+        via: [[28.15, -32.40], [28.50, -32.20], [28.80, -32.05]]
+    areas:
+      - style: outline
+        side: xh
+        label: Where the cattle-killing spread (approximate)
+        polygon: [[27.10, -32.55], [27.70, -32.40], [28.20, -32.10], [28.75, -31.95], [28.95, -32.25], [28.376, -32.681], [27.80, -33.00], [27.30, -33.00]]
+  - title: The last frontier war
+    date: 1877–1878
+    when: "1877-09-29"
+    borders: "1878-06-01"
+    countries: [za, gb]
+    body:
+      - After 1858 Sarhili was allowed back to part of Gcalekaland, and the Mfengu were settled on much of his former land, in Fingoland. Drought in 1875–1877 sharpened rivalry over grazing. In August 1877 a brawl at a Mfengu beer party attended by Gcaleka guests turned into fighting between the two peoples. The Cape’s Frontier Armed and Mounted Police came to the Mfengu’s aid, and on 29 September 1877 about 8,000 Gcaleka attacked the police post at Ibeka and were beaten off by rifle and artillery fire.
+      - The governor and high commissioner, Sir Bartle Frere, who wanted to bring all of southern Africa under British control in a confederation, declared Sarhili deposed and sent colonial police, volunteers and Mfengu levies under Commandant Charles Griffith into Gcalekaland. In December the Ngqika under Sandile, living within the colony, rose as well, and British regulars were brought in. On 7 February 1878 a combined Gcaleka and Ngqika force attacked the fortified British camp at Centane (Kentani) and was driven off with heavy losses.
+      - The war then became a pursuit through the Amatola forests. On 29 May 1878 Sandile was mortally wounded in a skirmish with Mfengu levies, and by mid-1878 the last fighters had surrendered or been killed; Sarhili escaped across the Mbhashe and lived in exile among the Bomvana. Gcalekaland was put under colonial magistrates, the Ngqika were removed from the Amatolas, and between 1879 and 1894 the Cape annexed the remaining independent territories of the Transkei, Pondoland last. Frere’s dismissal of the Cape ministry during the war, and his war against the Zulu kingdom that followed, led to his recall in 1880.
+    facts:
+      - [Battle of Ibeka, "29 September 1877"]
+      - [Battle of Centane, "7 February 1878"]
+      - [Death of Sandile, "wounded 29 May 1878"]
+    markers:
+      - kind: battle
+        side: col
+        name: Ibeka
+        date: 29 September 1877
+        text: About 8,000 Gcaleka attacked the police post and were beaten off (marker approximate).
+        lonlat: [28.20, -32.27]
+      - kind: battle
+        side: col
+        name: Centane
+        date: 7 February 1878
+        text: Gcaleka and Ngqika forces attacked the British camp and were repulsed with heavy losses.
+        lonlat: [28.317, -32.500]
+      - kind: event
+        side: col
+        name: Death of Sandile
+        date: 29 May 1878
+        text: The Ngqika chief was mortally wounded by Mfengu levies in the forests of the Amatola foothills; his grave is near Stutterheim (marker approximate).
+        lonlat: [27.33, -32.62]
+    arrows:
+      - side: xh
+        phase: 1
+        via: [[28.45, -32.20], [28.32, -32.24], [28.22, -32.27]]
+      - side: col
+        label: Griffith and the Mfengu levies
+        phase: 2
+        via: [[27.80, -32.55], [28.15, -32.38], [28.55, -32.20]]
+    areas:
+      - style: gained
+        side: col
+        label: Gcalekaland, occupied and put under colonial rule
+        polygon: [[28.376, -32.681], [28.93, -32.24], [28.70, -31.95], [28.30, -31.98], [27.95, -32.25], [28.15, -32.45]]

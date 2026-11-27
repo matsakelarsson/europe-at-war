@@ -1,0 +1,157 @@
+id: buganda-religious-wars
+name: Buganda civil wars
+start: "1888-09"
+end: "1892-04"
+tier: B
+summary: "The wars between the Muslim, Catholic and Protestant parties of the kingdom of Buganda, which opened the way to British rule in Uganda. Converts to Islam and to the two Christian missions, many of them young chiefs and royal pages, had become powerful at the court, and Kabaka Mwanga II, who had had dozens of Christians killed in 1885–1887, tried to break them. In August or September 1888 Muslims and Christians together deposed him and enthroned his brother Kiwewa; within weeks the Muslims drove out the Christians and made another brother, Kalema, kabaka. Mwanga escaped and joined the Christian exiles, who won back the capital in October 1889, lost it, and took it for good in February 1890; Kalema withdrew towards Bunyoro. The victors then split into a Catholic party, the Fransa, and a Protestant party, the Ingleza. Frederick Lugard of the Imperial British East Africa Company, who arrived in December 1890, sided with the Protestants, and on 24 January 1892 his Maxim gun decided the battle of Mengo against the Catholics and Mwanga. The settlement that followed divided Buganda’s chieftaincies between the parties, and Buganda became a British protectorate in 1894."
+countries: [ug, tz, gb]
+sides:
+  - id: kab
+    name: Kabaka Mwanga II
+    polities: [buganda]
+    ink: gold
+    moves: Mwanga’s moves
+    success: Mwanga’s success
+  - id: mus
+    name: Muslim party (Kalema)
+    polities: [buganda-muslims]
+    ink: green
+    moves: Muslim moves
+    success: Muslim success
+  - id: chr
+    name: Christian army, 1888–1890
+    polities: [buganda-catholics, buganda-protestants]
+    ink: navy
+    moves: Christian moves
+    success: Christian success
+  - id: cat
+    name: Catholic party (Fransa)
+    polities: [buganda-catholics]
+    ink: purple
+    moves: Catholic moves
+    success: Catholic success
+  - id: pro
+    name: Protestant party (Ingleza) and the Imperial British East Africa Company
+    polities: [buganda-protestants, ibeac]
+    ink: blue
+    moves: Protestant and company moves
+    success: Protestant and company success
+notes:
+  - "The parties were named after the missions that had converted their leaders: the Fransa after the French Catholic White Fathers, the Ingleza after the English Protestants of the Church Missionary Society. They were political factions competing for chieftaincies and land as much as religious communities, and Muslims, Catholics and Protestants were all Baganda."
+  - "Sources differ on several dates: Mwanga’s overthrow is dated 2 August or 10 September 1888, and the battle of Mengo 21 or 24 January 1892. Much of the story was first written by the missionaries of both churches and by Lugard, each defending their own side; the Ganda chief and historian Apolo Kaggwa, a Protestant leader in the wars, wrote another account."
+sources:
+  - title: Mwanga II of Buganda (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mwanga_II_of_Buganda
+  - title: Kiweewa of Buganda (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kiweewa_of_Buganda
+  - title: Kalema of Buganda (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kalema_of_Buganda
+  - title: Battle of Kampala Hill (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kampala_Hill
+  - title: History of Buganda (Wikipedia)
+    url: https://en.wikipedia.org/wiki/History_of_Buganda
+  - title: Mwanga (Britannica)
+    url: https://www.britannica.com/biography/Mwanga
+  - title: "Fighting in Uganda (Hansard, House of Commons, 28 April 1892)"
+    url: https://api.parliament.uk/historic-hansard/commons/1892/apr/28/fighting-in-uganda
+  - title: "King Mwanga of Uganda signs contract with the British East Africa Company (South African History Online)"
+    url: https://sahistory.org.za/dated-event/king-mwanga-uganda-signs-contract-british-east-africa-company
+steps:
+  - title: Three kings in one year
+    date: 1885 – October 1888
+    when: "1888-09"
+    borders: "1888-10-21"
+    countries: [ug, tz]
+    body:
+      - "Buganda, on the northern shore of Lake Victoria, was the strongest kingdom of the region, ruled by its kabaka through appointed chiefs. Kabaka Mutesa I had welcomed Muslim traders from the coast and, from 1877, Protestant missionaries of the Church Missionary Society and Catholic White Fathers, and many young men at his court became Muslims or Christians. His son Mwanga II, still in his teens when he succeeded in 1884, came to see the converts’ loyalty to their new faiths as a threat to his authority. In October 1885 he had the Anglican bishop James Hannington killed on his way into the country, and between 1885 and 1887 some forty-five Christian converts, Catholics and Anglicans, were put to death, many of them burned at Namugongo in June 1886; the Catholic Church honours them as the Uganda Martyrs."
+      - "The converts nonetheless rose in the kabaka’s service, commanding new regiments armed with guns. In 1888, fearing that Mwanga meant to be rid of them, Muslims and Christians together turned on him; he fled across the lake to the south, and they made his brother Kiwewa kabaka and shared out the great offices. The alliance lasted a few weeks. In October 1888 the Muslims, backed by Arab traders, drove the Christian chiefs and the missionaries out of the country and on 21 October replaced Kiwewa with another brother, Kalema. The Christians found refuge on the borders of Ankole."
+    facts:
+      - [Uganda Martyrs killed, "1885–1887"]
+      - [Mwanga deposed, "August or September 1888"]
+      - [Kalema made kabaka, "21 October 1888"]
+    markers:
+      - kind: taken
+        side: mus
+        name: Mengo
+        date: October 1888
+        text: The kabaka’s capital. Mwanga was driven out in 1888, and in October the Muslim chiefs expelled the Christians and enthroned Kalema.
+        lonlat: [32.565, 0.305]
+    arrows:
+      - side: kab
+        label: Mwanga’s flight, 1888
+        via: [[32.6, 0.25], [32.7, -0.8], [32.85, -1.8], [32.95, -2.4]]
+      - side: chr
+        label: Christian exiles, October 1888
+        via: [[32.5, 0.28], [31.9, 0.0], [31.3, -0.3], [30.9, -0.5]]
+  - title: The Christians return
+    date: 1889 – February 1890
+    when: "1889-10-05"
+    borders: "1890-02-28"
+    countries: [ug]
+    body:
+      - "Mwanga escaped from the Arab traders who held him south of the lake and found shelter with the White Fathers. In 1889 he made common cause with the Christian exiles, who promised to restore him, and with boats and guns from the trader Charles Stokes he set himself up on the Sese and Bulingugwe islands in the lake. Under Kalema the Muslims, fearing a return of the old line, killed Kiwewa and many princes and princesses of the royal family."
+      - "The Christian army, Catholics and Protestants together, took Mengo on 5 October 1889 and restored Mwanga. Kalema’s forces counter-attacked and drove Mwanga back to Bulingugwe in November, but in February 1890 the Christians took the capital for good. The Muslims withdrew to Singo on the border of Bunyoro, whose king Kabalega supported them; Kalema died there of smallpox in early 1891. That February the German Carl Peters reached Mengo and Mwanga signed a treaty with him, but in July 1890 Germany recognised Buganda as part of the British sphere."
+    facts:
+      - [Mengo taken by the Christian army, "5 October 1889"]
+      - [Muslim counter-attack, "November 1889"]
+      - [Christians take Mengo for good, "February 1890"]
+    markers:
+      - kind: taken
+        side: chr
+        name: Mengo
+        date: October 1889 – February 1890
+        text: Taken by the Christian army on 5 October 1889 and retaken by Kalema in November. The Christians won it back for good in February 1890.
+        lonlat: [32.565, 0.305]
+        lp: l
+      - kind: held
+        side: kab
+        name: Bulingugwe island
+        date: 1889–1890
+        text: Mwanga’s refuge in the lake while the capital changed hands.
+        lonlat: [32.64, 0.23]
+    arrows:
+      - side: chr
+        label: Christian army
+        phase: 1
+        via: [[30.9, -0.5], [31.5, -0.3], [32.1, 0.05], [32.52, 0.28]]
+      - side: mus
+        label: Kalema to Singo
+        phase: 2
+        via: [[32.52, 0.35], [32.1, 0.65], [31.7, 0.95]]
+  - title: Lugard and the battle of Mengo
+    date: December 1890 – spring 1892
+    when: "1892-01-24"
+    borders: "1892-04-30"
+    countries: [ug, gb]
+    body:
+      - "Victory split the Christians. The Catholic party, the Fransa, and the Protestant party, the Ingleza, quarrelled over the chieftaincies, above all the office of katikiro (chief minister), which went to the Protestant Apolo Kaggwa, and Mwanga leaned towards the Catholics. In December 1890 Captain Frederick Lugard arrived with a small force for the Imperial British East Africa Company, built a fort on Kampala hill beside the capital and on 26 December persuaded Mwanga to sign a treaty accepting the company’s protection. In 1891 he led the Christian army against the Muslims on the Bunyoro border and then marched west through Toro to Lake Albert, where he enlisted the Sudanese soldiers left behind by Emin Pasha."
+      - "In January 1892 a killing in the capital led to open war between the parties. Lugard gave rifles to the Protestants, and on 24 January the Maxim gun on his fort turned the battle against the Catholics; the Protestants burned the Catholic mission at Rubaga. Mwanga and the Catholic chiefs fled to Bulingugwe island, where the company’s troops attacked them with a Maxim gun and many were killed or drowned, and then to Buddu in the south-west. The fighting was reported in Europe as a massacre of Catholics, and France protested to Britain."
+      - "Mwanga returned to his capital in the spring of 1892 and accepted the company’s terms. The chieftaincies were divided: the Catholics received the province of Buddu, the Protestants most of the rest, and in 1893 the Muslims three small counties. The company could not afford to stay; Britain took over, and declared a protectorate over Buganda in 1894. In 1897 Mwanga rose against the British himself."
+    facts:
+      - [Lugard’s treaty with Mwanga, "26 December 1890"]
+      - [Battle of Mengo, "24 January 1892"]
+      - [British protectorate, "1894"]
+    markers:
+      - kind: battle
+        side: pro
+        name: Mengo and Kampala hill
+        date: 24 January 1892
+        text: Lugard’s Maxim gun on the company fort on Kampala hill decided the fight between the parties around the kabaka’s capital. The Catholic mission at Rubaga was burned.
+        lonlat: [32.565, 0.31]
+        lp: l
+      - kind: taken
+        side: pro
+        name: Bulingugwe island
+        date: January 1892
+        text: Mwanga and the Catholic chiefs fled here. The company’s troops attacked the island with a Maxim gun, and many were killed or drowned.
+        lonlat: [32.64, 0.23]
+      - kind: event
+        side: cat
+        name: Buddu
+        date: 1892
+        text: Mwanga and the Catholics fled here after Bulingugwe. In the settlement Buddu became the Catholic province.
+        lonlat: [31.73, -0.33]
+    arrows:
+      - side: cat
+        label: Mwanga and the Catholics
+        via: [[32.62, 0.22], [32.3, -0.1], [31.95, -0.3], [31.78, -0.33]]

@@ -1,0 +1,173 @@
+id: second-liberian-civil-war
+name: Second Liberian Civil War
+start: "1999-04-21"
+end: "2003-08-18"
+tier: B
+summary: "The war against President Charles Taylor’s government by two rebel movements, Liberians United for Reconciliation and Democracy (LURD), which attacked from Guinea from 1999, and the Movement for Democracy in Liberia (MODEL), which entered from Côte d’Ivoire in 2003. LURD fought its way through Lofa County to the outskirts of Monrovia by 2002, while United Nations sanctions punished Taylor for arming Sierra Leone’s RUF; in 2003 MODEL took the south-east and LURD besieged the capital in three assaults from June to August, killing hundreds of civilians with mortar fire. On 4 June 2003 the Special Court for Sierra Leone announced its indictment of Taylor for war crimes. A West African force, ECOMIL, landed in August; Taylor resigned on 11 August and went into exile in Nigeria, and the factions signed a comprehensive peace agreement at Accra on 18 August 2003. A United Nations mission, UNMIL, disarmed more than 100,000 fighters, and Ellen Johnson Sirleaf was elected president in 2005. About 50,000 people were killed in the war."
+countries: [lr, gn, ci, ng, us]
+sides:
+  - id: gov
+    name: Charles Taylor’s government (the AFL, the Anti-Terrorist Unit and militias)
+    polities: [liberia]
+    ink: red
+    moves: Government moves
+    success: Government success
+  - id: lurd
+    name: Liberians United for Reconciliation and Democracy (LURD)
+    polities: [lurd]
+    ink: purple
+    moves: LURD moves
+    success: LURD success
+  - id: model
+    name: Movement for Democracy in Liberia (MODEL)
+    polities: [model]
+    ink: brown
+    moves: MODEL moves
+    success: MODEL success
+  - id: ecomil
+    name: ECOWAS Mission in Liberia (ECOMIL), then the UN Mission in Liberia (UNMIL)
+    polities: [ecomog, un-peacekeepers]
+    ink: green
+    moves: ECOMIL and UNMIL moves
+    success: ECOMIL or UNMIL success
+notes:
+  - "Foreign backing. Guinea, whose border regions Taylor’s forces and the RUF had raided in 2000–2001, gave LURD bases and supplies; MODEL was backed by the government of Côte d’Ivoire, which accused Taylor of supporting rebels in its own civil war. Taylor’s forces included the Anti-Terrorist Unit, commanded by his son Chuckie Taylor, and former fighters of the RUF."
+  - All sides used child soldiers and committed killings, rape and looting. Liberians named the three LURD assaults on Monrovia in June, July and August 2003 “World War I, II and III”. About 50,000 people are estimated to have been killed, and hundreds of thousands were displaced.
+sources:
+  - title: Second Liberian Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Liberian_Civil_War
+  - title: Liberians United for Reconciliation and Democracy (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Liberians_United_for_Reconciliation_and_Democracy
+  - title: Movement for Democracy in Liberia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Movement_for_Democracy_in_Liberia
+  - title: Accra Comprehensive Peace Agreement (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Accra_Comprehensive_Peace_Agreement
+  - title: United Nations Mission in Liberia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/United_Nations_Mission_in_Liberia
+  - title: Charles Taylor (Liberian politician) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Charles_Taylor_(Liberian_politician)
+steps:
+  - title: LURD comes out of Guinea
+    date: April 1999 – 2002
+    when: "2000-07"
+    borders: "2002-02-15"
+    countries: [lr, gn]
+    body:
+      - Taylor ruled Liberia after 1997 as he had ruled “Greater Liberia”, through his own security forces and through the sale of timber and diamonds, much of it smuggled from Sierra Leone, where he backed the RUF. In April 1999 armed exiles attacked Voinjama in Lofa County from Guinea; by mid-2000 they had come together as Liberians United for Reconciliation and Democracy (LURD), drawn largely from former ULIMO fighters, Mandingo and Krahn, and backed by Guinea. Taylor’s forces and the RUF raided into Guinea in return.
+      - "In 2001 the United Nations Security Council imposed an arms embargo, a ban on Liberian diamond exports and a travel ban on Taylor’s officials. LURD fought its way south through Lofa, and in February 2002, when its fighters reached Klay Junction, about 44 km from Monrovia, Taylor declared a state of emergency."
+    facts:
+      - [First attacks from Guinea, "April 1999"]
+      - [UN sanctions on Liberian diamonds, "2001"]
+      - [LURD at Klay Junction, "February 2002"]
+    markers:
+      - kind: taken
+        side: lurd
+        name: Voinjama
+        date: 1999–2000
+        text: The capital of Lofa County, attacked from Guinea in 1999 and taken by LURD in 2000.
+        lonlat: [-9.75, 8.42]
+      - kind: battle
+        side: lurd
+        name: Klay Junction
+        date: February 2002
+        text: LURD’s advance came within about 44 km of Monrovia.
+        lonlat: [-10.87, 6.70]
+        lp: l
+      - kind: capital
+        side: gov
+        name: Monrovia
+        date: 1999–2002
+        text: Taylor’s capital, under a state of emergency from February 2002.
+        lonlat: [-10.80, 6.31]
+        lp: l
+    arrows:
+      - side: lurd
+        label: LURD
+        via: [[-9.60, 8.75], [-9.75, 8.42], [-10.20, 7.60], [-10.60, 6.95], [-10.85, 6.72]]
+    areas:
+      - style: occupied
+        side: lurd
+        label: Largely held by LURD, early 2002 (approximate)
+        atoms: [LR-LO]
+  - title: MODEL and the siege of Monrovia
+    date: March – August 2003
+    when: "2003-06-04"
+    borders: "2003-07-30"
+    countries: [lr, ci, gn]
+    body:
+      - In early 2003 a second rebel movement, MODEL, mostly Krahn and backed by Côte d’Ivoire, crossed from the east, took Zwedru and pushed down to the coast, taking Greenville and, in July, the port of Buchanan. On 4 June 2003, as Taylor arrived for peace talks in Accra, the Special Court for Sierra Leone announced that it had indicted him for war crimes in Sierra Leone; Ghana let him fly home.
+      - "LURD attacked Monrovia three times, in June, July and August 2003. Its fighters took Bushrod Island and the Freeport and fought government forces for the bridges into the city centre, while their mortar fire fell on crowded neighbourhoods and on displaced people sheltering near the American embassy, killing hundreds. Food and water ran out in the besieged city, and Liberians piled bodies outside the embassy to demand that the United States intervene."
+    facts:
+      - [Taylor indicted, "announced 4 June 2003"]
+      - [Assaults on Monrovia, "June, July and August 2003"]
+      - [MODEL takes Buchanan, "July 2003"]
+    markers:
+      - kind: battle
+        side: gov
+        name: Monrovia
+        date: June – August 2003
+        text: LURD held Bushrod Island and the port; government forces held the city centre across the river bridges.
+        lonlat: [-10.80, 6.31]
+        lp: l
+      - kind: taken
+        side: model
+        name: Buchanan
+        date: July 2003
+        text: The country’s second port, taken by MODEL.
+        lonlat: [-10.05, 5.88]
+      - kind: taken
+        side: model
+        name: Greenville
+        date: "2003"
+        text: The port of Sinoe County, taken by MODEL.
+        lonlat: [-9.04, 5.01]
+      - kind: taken
+        side: model
+        name: Zwedru
+        date: "2003"
+        text: The capital of Grand Gedeh County, taken by MODEL after it crossed from Côte d’Ivoire.
+        lonlat: [-8.13, 6.07]
+    arrows:
+      - side: lurd
+        via: [[-10.87, 6.70], [-10.84, 6.50], [-10.79, 6.36]]
+      - side: model
+        label: MODEL
+        via: [[-7.60, 6.10], [-8.13, 6.07], [-8.80, 5.40], [-9.04, 5.05]]
+      - side: model
+        via: [[-9.04, 5.05], [-9.50, 5.40], [-10.05, 5.90]]
+    areas:
+      - style: occupied
+        side: lurd
+        label: Largely held by LURD, July 2003 (approximate)
+        atoms: [LR-LO, LBR-1459, LR-CM, LR-BM]
+      - style: occupied
+        side: model
+        label: Largely held by MODEL, July 2003 (approximate)
+        atoms: [LR-GG, LBR-1458, LR-GK, LR-SI, LR-RI, LR-MY]
+  - title: Taylor’s exile and the Accra agreement
+    date: August – October 2003
+    when: "2003-08-11"
+    borders: "2003-08-18"
+    countries: [lr, ng, us, gh]
+    body:
+      - "On 4 August 2003 the first Nigerian troops of a new ECOWAS force, ECOMIL, landed at Roberts International Airport, and American warships stood off the coast. On 11 August Taylor handed power to his vice-president, Moses Blah, and flew into exile in Calabar in Nigeria. On 14 August LURD withdrew from the port and Bushrod Island, which ECOMIL took over with a small force of American marines."
+      - "On 18 August 2003 the government, LURD, MODEL and the political parties signed the Accra Comprehensive Peace Agreement, which set up a transitional government under the businessman Gyude Bryant, who took office on 14 October. The UN Security Council created the United Nations Mission in Liberia (UNMIL) on 19 September; it took over from ECOMIL on 1 October 2003, grew to some 15,000 troops and disarmed more than 100,000 fighters. Ellen Johnson Sirleaf won the election of 2005, becoming Africa’s first elected woman head of state. Taylor was handed over in 2006 to the Special Court for Sierra Leone, which convicted him in 2012."
+    facts:
+      - [ECOMIL lands, "4 August 2003"]
+      - [Taylor resigns and leaves for Nigeria, "11 August 2003"]
+      - [Accra Comprehensive Peace Agreement, "18 August 2003"]
+      - [UNMIL takes over, "1 October 2003"]
+    markers:
+      - kind: event
+        side: none
+        name: Monrovia
+        date: 11 August 2003
+        text: Taylor resigned and left for exile in Nigeria; LURD withdrew from the port three days later.
+        lonlat: [-10.80, 6.31]
+        lp: l
+      - kind: held
+        side: ecomil
+        name: Roberts International Airport
+        date: 4 August 2003
+        text: The first Nigerian troops of ECOMIL landed here.
+        lonlat: [-10.36, 6.23]

@@ -1,0 +1,132 @@
+id: second-ivorian-civil-war
+name: Second Ivorian Civil War
+start: "2010-11-28"
+end: "2011-04-11"
+tier: B
+summary: "The war that followed Côte d’Ivoire’s disputed presidential election of 2010. After the run-off of 28 November 2010 the electoral commission declared Alassane Ouattara the winner, and the United Nations, which had certified the vote, the African Union and ECOWAS recognised him; but the Constitutional Council, headed by an ally of the incumbent, Laurent Gbagbo, annulled results from the north and declared Gbagbo re-elected. Both men were sworn in. Ouattara’s government sat in the Golf Hotel in Abidjan under UN protection while fighting spread in the city’s northern suburbs and in the west. In late March 2011 the former rebels of the north, now the Republican Forces of Côte d’Ivoire (FRCI), swept south to Yamoussoukro, San-Pédro and Abidjan; at Duékoué hundreds of civilians were massacred. After UN and French helicopters destroyed Gbagbo’s heavy weapons, the FRCI captured him in his residence on 11 April 2011. About 3,000 people were killed and more than a million displaced; Gbagbo was tried at the International Criminal Court and acquitted."
+countries: [ci, fr, lr]
+sides:
+  - id: gbagbo
+    name: Laurent Gbagbo’s government (the Defence and Security Forces, the Young Patriots and militias)
+    polities: [ivory-coast]
+    ink: green
+    moves: Pro-Gbagbo moves
+    success: Pro-Gbagbo success
+  - id: ouattara
+    name: Alassane Ouattara’s government (the Forces Nouvelles, from March 2011 the FRCI)
+    polities: [forces-nouvelles]
+    ink: orange
+    moves: Pro-Ouattara moves
+    success: Pro-Ouattara success
+  - id: un
+    name: United Nations (UNOCI) and France (Operation Licorne)
+    polities: [un-peacekeepers, france]
+    ink: blue
+    moves: UN and French moves
+    success: UN or French success
+notes:
+  - "Both sides committed atrocities, according to a UN commission of inquiry and human rights organisations: pro-Gbagbo forces, militias and Liberian mercenaries killed suspected Ouattara supporters, northerners and West African immigrants, especially in Abidjan and the far west; pro-Ouattara forces and allied Dozo hunters killed civilians of the Guéré and other peoples seen as Gbagbo supporters, above all at Duékoué. Ouattara’s government prosecuted many Gbagbo supporters but few of its own."
+  - "The International Criminal Court tried Gbagbo and his youth leader Charles Blé Goudé for crimes against humanity; both were acquitted in 2019, a verdict confirmed on appeal in 2021. His wife Simone Gbagbo, sentenced in Côte d’Ivoire, was amnestied in 2018."
+sources:
+  - title: Second Ivorian Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Ivorian_Civil_War
+  - title: 2010 Ivorian presidential election (Wikipedia)
+    url: https://en.wikipedia.org/wiki/2010_Ivorian_presidential_election
+  - title: "Ivory Coast: UN presses Ouattara over Duekoue massacre (BBC News, April 2011)"
+    url: https://www.bbc.com/news/world-africa-12951990
+  - title: United Nations Security Council Resolution 1975 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/United_Nations_Security_Council_Resolution_1975
+  - title: Laurent Gbagbo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Laurent_Gbagbo
+steps:
+  - title: Two presidents
+    date: November 2010 – March 2011
+    when: "2010-12-04"
+    borders: "2010-12-04"
+    countries: [ci, lr]
+    body:
+      - "The election of 2010, delayed for five years, was meant to close the first civil war. In the run-off on 28 November Gbagbo faced Ouattara, who was backed by the former president Henri Konan Bédié. On 2 December the Independent Electoral Commission announced that Ouattara had won with about 54% of the vote; the next day the Constitutional Council annulled the results of seven northern departments for alleged fraud and declared Gbagbo the winner with about 51%. On 4 December both men took the oath of office. The UN mission, which had certified the results, ECOWAS and the African Union recognised Ouattara, who governed from the Golf Hotel in Abidjan under the protection of UN peacekeepers and Forces Nouvelles troops, with Guillaume Soro as his prime minister."
+      - "Gbagbo kept the army, the state media and the south. His security forces and militias killed and abducted suspected Ouattara supporters in Abidjan, and on 3 March 2011 soldiers fired on a women’s march in Abobo, killing seven. In Abobo, the large northern suburb, an armed group known as the “Invisible Commando” drove Gbagbo’s forces out, and Abobo was shelled. In the far west the Forces Nouvelles began to advance from February, taking Toulepleu on the Liberian border on 7 March; some 100,000 refugees fled into Liberia."
+    facts:
+      - [Run-off, "28 November 2010"]
+      - [Both men sworn in, "4 December 2010"]
+      - [Women’s march fired on in Abobo, "3 March 2011"]
+      - [Toulepleu taken, "7 March 2011"]
+    markers:
+      - kind: capital
+        side: ouattara
+        name: Golf Hotel
+        date: from December 2010
+        text: Ouattara’s headquarters, guarded by UN peacekeepers and Forces Nouvelles troops.
+        lonlat: [-3.97, 5.33]
+        lp: r
+      - kind: battle
+        side: ouattara
+        name: Abobo
+        date: January – March 2011
+        text: The “Invisible Commando” drove Gbagbo’s forces out of the northern suburb; seven women were shot at a march on 3 March.
+        lonlat: [-4.02, 5.43]
+        lp: l
+      - kind: taken
+        side: ouattara
+        name: Toulepleu
+        date: 7 March 2011
+        text: Taken by the Forces Nouvelles in their advance on the Liberian border.
+        lonlat: [-8.42, 6.58]
+    areas:
+      - style: occupied
+        side: ouattara
+        label: Held by the Forces Nouvelles, December 2010 (approximate)
+        atoms: [CI-03, CI-04, CI-10, CI-14, CI-17, CI-06]
+  - title: Duékoué and the battle for Abidjan
+    date: March – April 2011
+    when: "2011-03-29"
+    borders: "2011-04-11"
+    countries: [ci, fr]
+    body:
+      - "On 28 March 2011 Ouattara’s forces, now named the Republican Forces of Côte d’Ivoire (FRCI), launched a general offensive. Gbagbo’s army collapsed: the FRCI took Duékoué on 29 March, Yamoussoukro on 30 March and the port of San-Pédro on 31 March, and reached Abidjan the same day. In Duékoué, a town of the Guéré people in the west, FRCI soldiers and Dozo hunters killed hundreds of men in the Carrefour quarter on 29 March; the Red Cross said at least 800 people died, Caritas more than 1,000, and the UN counted 330, more than 100 of them killed by pro-Gbagbo forces."
+      - "In Abidjan Gbagbo’s Republican Guard and militias held out around the presidential palace and his residence in Cocody. On 30 March the UN Security Council demanded that he step down, and from 4 April UN and French helicopters attacked his heavy weapons, which the UN said were being used against civilians. On 11 April 2011 FRCI troops, supported by French armour, stormed the residence and captured Gbagbo, who was taken to the Golf Hotel. Fighting with militias in Yopougon went on into May. Ouattara was inaugurated in Yamoussoukro on 21 May 2011."
+    facts:
+      - [General offensive, "from 28 March 2011"]
+      - [Duékoué massacre, "29 March 2011; estimates from 330 to over 1,000 killed"]
+      - [UN Security Council Resolution 1975, "30 March 2011"]
+      - [Gbagbo captured, "11 April 2011"]
+    markers:
+      - kind: event
+        side: ouattara
+        name: Duékoué
+        date: 29 March 2011
+        text: Hundreds of civilians were massacred as the FRCI took the town.
+        lonlat: [-7.34, 6.75]
+      - kind: taken
+        side: ouattara
+        name: Yamoussoukro
+        date: 30 March 2011
+        text: The political capital fell without heavy fighting.
+        lonlat: [-5.28, 6.82]
+      - kind: taken
+        side: ouattara
+        name: San-Pédro
+        date: 31 March 2011
+        text: The cocoa port, taken by the FRCI.
+        lonlat: [-6.64, 4.75]
+      - kind: taken
+        side: ouattara
+        name: Abidjan (Cocody)
+        date: 11 April 2011
+        text: FRCI troops captured Gbagbo in his residence after UN and French helicopters had destroyed his heavy weapons.
+        lonlat: [-3.99, 5.35]
+        lp: b
+    arrows:
+      - side: ouattara
+        phase: 1
+        via: [[-7.55, 7.41], [-7.40, 6.95], [-7.34, 6.77]]
+      - side: ouattara
+        phase: 2
+        via: [[-7.34, 6.75], [-6.90, 5.80], [-6.64, 4.78]]
+      - side: ouattara
+        phase: 1
+        via: [[-5.03, 7.69], [-5.20, 7.20], [-5.28, 6.85]]
+      - side: ouattara
+        phase: 2
+        via: [[-5.28, 6.82], [-4.70, 6.20], [-4.20, 5.70], [-4.00, 5.38]]

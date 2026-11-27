@@ -1,0 +1,226 @@
+id: congo-arab-war
+name: Congo Arab war
+start: "1892-05"
+end: "1894-03"
+tier: B
+summary: "The war in which the Congo Free State of Leopold II destroyed the power of the Swahili-Arab traders in the eastern Congo. From the 1860s traders from Zanzibar’s sphere, led by Tippu Tip, had built a commercial empire in Maniema and on the upper Congo, based on ivory and on raids that took slaves and recruited soldiers, from towns such as Nyangwe, Kasongo and Stanley Falls. In 1887 Leopold made Tippu Tip governor of Stanley Falls for the Free State, but the two powers competed for the same ivory, and when Tippu Tip went back to Zanzibar in 1890 his son Sefu at Kasongo, his nephew Rashid at Stanley Falls and the Lake Tanganyika trader Rumaliza turned against the state. In 1892 the Free State officer Francis Dhanis defeated Tippu Tip’s former vassal Ngongo Lutete, who changed sides with his Tetela and Kusu warriors, and Sefu’s men killed the trader Arthur Hodister’s expedition. From November 1892 Dhanis’s Force Publique, a few dozen European officers with African regulars armed with modern rifles and thousands of African auxiliaries, drove Sefu back across the Lomami, took Nyangwe on 4 March and Kasongo on 22 April 1893, and relieved Stanley Falls. Rumaliza then came west with a large army and held the Free State off in fortified camps on the Luama River until November 1893; Sefu was killed in the fighting. On 14 January 1894 Dhanis stormed Rumaliza’s camps before Kabambare, and Rumaliza fled to German East Africa. The Free State presented the war in Europe as a crusade against the slave trade; historians see it above all as a war for ivory and territory, in which the Free State itself recruited soldiers through slave raids and its auxiliaries raided and killed on a large scale. It lost 16 European officers and NCOs; the African dead, soldiers, auxiliaries and civilians, are not known, with estimates running from tens of thousands to possibly more than 100,000."
+countries: [cd, tz]
+sides:
+  - id: fs
+    name: Congo Free State and its allies (Ngongo Lutete from 1892)
+    polities: [belgian-congo]
+    ink: teal
+    moves: Free State moves
+    success: Free State success
+  - id: ar
+    name: Swahili-Arab traders (Sefu, Rashid, Rumaliza)
+    polities: [congo-arabs]
+    ink: red
+    moves: Swahili-Arab moves
+    success: Swahili-Arab success
+notes:
+  - "European writers called the traders’ side “Arabs”; most of its leaders were Swahili-speaking Muslims from the East African coast and Zanzibar, some of Omani descent, and most of its fighters were Congolese, among them the ruga-ruga irregulars and soldiers raised in Maniema. The Free State’s army was also overwhelmingly African. The account of the war comes almost entirely from Free State officers; dates differ between sources, notably for Sefu’s death (20 October or 19 November 1893)."
+  - "Bruce Vandervort called the war one of the most obscure colonial wars of the period. Its losses are poorly documented: the figures for African deaths are rough estimates, and the destruction of Nyangwe and Kasongo, with tens of thousands of inhabitants each, emptied the main markets of Maniema."
+sources:
+  - title: Congo Arab war (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Congo_Arab_war
+  - title: "Mario Draper, The Force Publique’s Campaigns in the Congo-Arab War, 1892–1894 (Small Wars & Insurgencies, 2019; open access)"
+    url: https://kar.kent.ac.uk/75365/1/The%20Force%20Publique.pdf
+  - title: Tippu Tip (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tippu_Tip
+  - title: Sefu bin Hamid (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sefu_bin_Hamid
+  - title: Rumaliza (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rumaliza
+  - title: Ngongo Lutete (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ngongo_Lutete
+  - title: Francis Dhanis (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Francis_Dhanis
+steps:
+  - title: Ngongo Lutete and the road to war
+    date: 1887–1892
+    when: "1892-05"
+    borders: "1892-06-01"
+    countries: [cd]
+    body:
+      - "On 24 February 1887 Tippu Tip, the greatest of the Swahili-Arab traders of the upper Congo, accepted Leopold II’s offer to govern the Stanley Falls district for the Congo Free State. He was to send his ivory down the Congo to the Atlantic instead of east to Zanzibar, but he regarded himself as an ally rather than an official, and the other traders, above all Rumaliza, the master of Ujiji on Lake Tanganyika, did not accept the arrangement. The Free State, for its part, used traders as recruiting agents: Draper notes that it paid Tippu Tip’s son Sefu a bonus for each recruit he supplied, recruits whom he could only find by raiding. In 1890 Tippu Tip returned to Zanzibar, leaving Sefu at Kasongo and his nephew Rashid at Stanley Falls. Free State officers seized ivory from traders and taxed it, and by 1892 the traders of Maniema, led by Sefu’s uncle Mohara, had united against the state."
+      - "Ngongo Lutete, a former slave who had become one of Tippu Tip’s most powerful vassals, led Tetela and Kusu warriors from his town of Ngandu between the Lomami and the Sankuru. In April 1892, when his army tried to cross the Sankuru on a slave raid, Lieutenant Francis Dhanis, from the Free State post at Lusambo, defeated him four times in three weeks: at Mona-Kialo on 24 April, at Batubenge on 5 and 9 May and at Kisima-Souri on 12 May. Ngongo then changed sides, bringing thousands of warriors to the Free State. In the same months Sefu’s men attacked Free State agents, and in May 1892 the expedition of the British ivory trader Arthur Hodister was massacred at Riba-Riba on the Lualaba. On Lake Tanganyika, Rumaliza’s forces besieged the post of Albertville, founded on 3 January 1892 by Captain Alphonse Jacques of the Belgian Anti-Slavery Society, from 5 April."
+    facts:
+      - [Tippu Tip governor of Stanley Falls, "24 February 1887"]
+      - [Ngongo Lutete defeated by Dhanis, "24 April – 12 May 1892"]
+      - [Hodister expedition killed, "May 1892"]
+    markers:
+      - kind: capital
+        side: ar
+        name: Kasongo
+        date: 1890–1892
+        text: Tippu Tip’s capital in Maniema, held by his son Sefu after 1890; a town of some 20,000 people.
+        lonlat: [26.65, -4.45]
+      - kind: held
+        side: ar
+        name: Stanley Falls
+        date: 1887–1892
+        text: Tippu Tip’s seat as Free State governor; his nephew Rashid held it after 1890, beside a small Free State station.
+        lonlat: [25.2, 0.517]
+      - kind: toll
+        side: ar
+        name: Riba-Riba
+        date: May 1892
+        text: The trading expedition of Arthur Hodister was massacred here on Sefu’s orders; according to The Times, Hodister’s head was displayed on a pole.
+        lonlat: [25.761, -2.532]
+      - kind: held
+        side: fs
+        name: Lusambo
+        date: 1890–1892
+        text: Free State post on the Sankuru, from which Dhanis campaigned against Ngongo Lutete.
+        lonlat: [23.437, -4.973]
+      - kind: capital
+        side: ar
+        name: Ujiji
+        date: 1880s–1893
+        text: Rumaliza’s base on Lake Tanganyika, on the caravan route to Tabora and the coast.
+        lonlat: [29.675, -4.911]
+      - kind: siege
+        side: ar
+        name: Albertville
+        date: From 5 April 1892
+        text: Anti-slavery post founded by Captain Alphonse Jacques; Rumaliza’s forces besieged it for about nine months.
+        lonlat: [29.19, -5.913]
+        lp: l
+    arrows:
+      - side: fs
+        label: Dhanis
+        via: [[23.44, -4.97], [23.9, -4.9], [24.4, -4.75]]
+    areas:
+      - style: outline
+        side: ar
+        label: Lands under the Swahili-Arab traders, 1892 (approximate)
+        polygon: [[24.8, 1.0], [26.3, 1.0], [27.2, -1.5], [28.2, -3.4], [29.9, -4.0], [30.0, -6.2], [28.6, -6.4], [27.2, -5.4], [26.0, -5.0], [25.2, -4.6], [25.1, -2.6]]
+  - title: Nyangwe, Kasongo and Stanley Falls
+    date: November 1892 – June 1893
+    when: "1893-03-04"
+    borders: "1893-05-01"
+    countries: [cd]
+    body:
+      - "By October 1892 Sefu had gathered some 10,000 men, about 500 of them Swahili-Arab officers and the rest Congolese, and in November he crossed the Lomami to attack Ngongo Lutete. Fighting went on almost daily in November and December. Accounts of the first clashes on the Lomami differ, a failed Free State attack on Sefu’s fort in some and a victory for Lieutenant Michaux in others, but by December, while Dhanis and Ngongo’s warriors dealt with Mohara’s son on the Lualaba, Sefu’s army was falling back east. At Kasongo the two Free State residents, Lieutenants Joseph Lippens and Henri De Bruyne, were killed, which gave Dhanis the reason his superiors had lacked for open war. In early January 1893 Mohara was killed in battle, and on 28 January the Free State column reached the Lualaba opposite Nyangwe, the great slave and ivory market of the region."
+      - On 4 March 1893 Dhanis’s troops crossed the river in about 100 dugout canoes paddled by Genia fishermen and entered Nyangwe, which its defenders had abandoned; when its people rose on 13 March the town was burnt. On 22 April Dhanis took Kasongo, whose population had swollen with refugees to perhaps 60,000; its defenders, civilians and slaves fled, and Sefu withdrew south-east to join Rumaliza at Kabambare. In the north, Captain Louis-Napoléon Chaltin came up the Lomami from Basoko by steamer and marched overland to Riba-Riba, which he found in flames on 30 April, then went on to Stanley Falls, where he relieved the Free State garrison besieged by Rashid’s men; the traders withdrew south towards Kabambare.
+    facts:
+      - [Nyangwe taken, "4 March 1893"]
+      - [Kasongo taken, "22 April 1893"]
+      - [Free State force, "About 10,000 men in all, mostly auxiliaries"]
+    markers:
+      - kind: taken
+        side: fs
+        name: Nyangwe
+        date: 4 March 1893
+        text: Free State troops crossed the Lualaba in dugout canoes and took the abandoned town; it was burnt after its people rose on 13 March.
+        lonlat: [26.183, -4.217]
+        lp: l
+      - kind: taken
+        side: fs
+        name: Kasongo
+        date: 22 April 1893
+        text: Tippu Tip’s capital fell almost without a fight; Sefu fled to Rumaliza at Kabambare.
+        lonlat: [26.65, -4.45]
+        lp: r
+      - kind: taken
+        side: fs
+        name: Riba-Riba
+        date: 30 April 1893
+        text: Chaltin found the town in flames after its governor had withdrawn towards Stanley Falls.
+        lonlat: [25.761, -2.532]
+      - kind: siege
+        side: fs
+        name: Stanley Falls
+        date: May 1893
+        text: Chaltin relieved the Free State station, besieged by Rashid’s men since the Hodister killing.
+        lonlat: [25.2, 0.517]
+      - kind: held
+        side: fs
+        name: Basoko
+        date: "1893"
+        text: Free State camp at the mouth of the Aruwimi, from which Chaltin set out.
+        lonlat: [23.6, 1.233]
+    arrows:
+      - side: ar
+        label: Sefu
+        phase: 1
+        via: [[26.6, -4.45], [25.8, -4.5], [25.0, -4.6]]
+      - side: fs
+        label: Dhanis
+        phase: 2
+        via: [[24.4, -4.75], [25.2, -4.5], [25.8, -4.3], [26.1, -4.22]]
+      - side: fs
+        phase: 3
+        via: [[26.2, -4.25], [26.45, -4.35], [26.62, -4.44]]
+      - side: fs
+        label: Chaltin
+        phase: 2
+        via: [[23.6, 1.23], [24.3, 0.75], [24.6, -1.2], [25.2, -2.3], [25.72, -2.52]]
+      - side: fs
+        phase: 3
+        via: [[25.76, -2.5], [25.6, -1.3], [25.25, 0.45]]
+    areas:
+      - style: gained
+        side: fs
+        label: Taken by the Free State, 1892–1893 (approximate)
+        polygon: [[24.4, 1.0], [25.9, 1.0], [26.3, -1.6], [26.9, -4.3], [26.8, -4.8], [25.4, -4.9], [24.5, -4.8], [24.6, -2.4]]
+  - title: Rumaliza and the fall of Kabambare
+    date: October 1893 – March 1894
+    when: "1894-01-14"
+    borders: "1894-03-01"
+    countries: [cd, tz]
+    body:
+      - "Rumaliza, Muhammad bin Khalfan al-Barwani, now came west from Lake Tanganyika with a large army to retake Maniema, and built fortified camps (bomas) on the Luama River, threatening Kasongo. Dhanis attacked them on 15 October 1893 but could not take them; the defenders’ sorties killed many of his men, among them Commandant Pierre Ponthier, and Dhanis tried to starve the camps out. On the night of 15–16 November Rumaliza slipped away. Sefu was killed in the fighting, on 20 October according to some accounts and in a clash with the Free State’s pursuing column at Ogella on 19 November according to others."
+      - Rumaliza fell back to a line of bomas across the road to Kabambare, on the Lulindi River. Dhanis returned with 15 Europeans, 700 regulars and about 2,000 auxiliaries, was joined in mid-December by Captain Hubert Lothaire with 300 more men and brought up artillery. On 14 January 1894 (9 January in some accounts) his troops stormed the outer bomas; a shell from a Krupp mountain gun set the main boma on fire, its defenders fled and the other bomas surrendered. Rumaliza escaped with a few followers. Lothaire took Kabambare and pursued him to Lake Tanganyika, where the Free State made contact with Jacques’s anti-slavery force, and Rumaliza crossed into German East Africa. By March 1894 the Free State held the east; bands under Said bin Abedi fought on in the Ituri forest until later in the year. The Free State kept much of the traders’ administration, and recruited many of its soldiers among the Tetela and Kusu who had fought in the war.
+    facts:
+      - [Fighting on the Luama, "15 October – 16 November 1893"]
+      - [Bomas before Kabambare stormed, "14 January 1894"]
+      - [Free State losses, "16 European officers and NCOs (six by disease)"]
+    markers:
+      - kind: held
+        side: fs
+        name: Kasongo
+        date: October 1893
+        text: Free State base threatened by Rumaliza’s advance; his bomas on the Luama lay to the south-east.
+        lonlat: [26.65, -4.45]
+      - kind: battle
+        side: fs
+        name: Kabambare
+        date: 14 January 1894
+        text: Dhanis stormed Rumaliza’s bomas on the Lulindi covering Kabambare; a shell set the main boma ablaze, and Lothaire then took the town.
+        lonlat: [27.72, -4.70]
+      - kind: event
+        side: ar
+        name: Ujiji
+        date: "1894"
+        text: Rumaliza’s old base, in German East Africa, where he took refuge after his defeat.
+        lonlat: [29.675, -4.911]
+      - kind: held
+        side: fs
+        name: Albertville
+        date: "1894"
+        text: Jacques’s anti-slavery post, where Lothaire’s pursuit reached Lake Tanganyika.
+        lonlat: [29.19, -5.913]
+        lp: l
+    arrows:
+      - side: ar
+        label: Rumaliza
+        phase: 1
+        via: [[29.6, -4.95], [28.6, -4.8], [27.8, -4.7], [27.1, -4.55]]
+      - side: fs
+        label: Dhanis
+        phase: 2
+        via: [[26.7, -4.48], [27.2, -4.6], [27.65, -4.7]]
+      - side: fs
+        label: Lothaire
+        phase: 3
+        via: [[27.75, -4.7], [28.5, -5.2], [29.15, -5.85]]
+      - side: ar
+        phase: 3
+        via: [[27.8, -4.65], [28.6, -4.55], [29.6, -4.85]]
+    areas:
+      - style: gained
+        side: fs
+        label: Taken by the Free State, 1893–1894 (approximate)
+        polygon: [[26.6, -3.8], [28.3, -3.4], [29.4, -4.6], [29.3, -6.2], [28.4, -6.4], [27.0, -5.4], [26.5, -4.9]]

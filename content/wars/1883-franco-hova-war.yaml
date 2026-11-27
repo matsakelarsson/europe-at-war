@@ -1,0 +1,120 @@
+id: franco-hova-war
+name: Franco-Hova War
+start: "1883-05"
+end: "1885-12-17"
+tier: B
+summary: "The first French war against the Merina kingdom of Madagascar, called the Hova by the French. France pressed old claims: to a protectorate over the Sakalava of the north-west, whose chiefs had signed treaties with France in 1840–1841, and to the estates of the French businessman Jean Laborde and the concessions Radama II had granted to Joseph-François Lambert. In May 1883 Admiral Pierre bombarded the Merina posts on the north-west coast and occupied Majunga, and when Queen Ranavalona II’s government rejected his ultimatum he bombarded and occupied Tamatave in June. The queen died in July; Ranavalona III and her prime minister and husband Rainilaiarivony fought on. For two years the French blockaded and raided the coasts but could not break the Merina lines at Farafaty outside Tamatave. The Treaty of Tamatave of 17 December 1885 gave France the bay of Diego Suarez, 10 million francs to settle French and other foreign claims, and a resident at Antananarivo to handle Madagascar’s foreign relations; France called it a protectorate, the Merina government did not, and the dispute led to the French conquest of 1895."
+countries: [mg, fr]
+sides:
+  - id: mer
+    name: Kingdom of Madagascar (Merina)
+    polities: [merina]
+    ink: red
+    moves: Merina moves
+    success: Merina success
+  - id: fr
+    name: France
+    polities: [france]
+    ink: navy
+    moves: French moves
+    success: French success
+notes:
+  - "“Hova”, the name of the free commoner class among the Merina, was what the French and British of the time called the Merina and their government; the war keeps that name in French and English. The Merina government called its state the Kingdom of Madagascar."
+  - "Some accounts give the dates of the bombardment of Tamatave and the occupation of Majunga differently; the treaty, ratified in 1886, is sometimes dated to that year."
+sources:
+  - title: Franco-Hova Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Franco-Hova_War
+  - title: First Madagascar expedition (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Madagascar_expedition
+  - title: "Madagascar: capture of Tamatave by the French (Hansard, House of Commons, 19 June 1883)"
+    url: https://api.parliament.uk/historic-hansard/commons/1883/jun/19/madagascar-capture-of-tamatave-by-the
+  - title: "Madagascar: hostile operations of France (Hansard, House of Commons, 5 July 1883)"
+    url: https://api.parliament.uk/historic-hansard/commons/1883/jul/05/madagascar-hostile-operations-of-france
+  - title: "Treaty between France and Madagascar, 17 December 1885 (Foreign Relations of the United States, 1886)"
+    url: https://history.state.gov/historicaldocuments/frus1886/d146
+  - title: Rainilaiarivony (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rainilaiarivony
+steps:
+  - title: Majunga and Tamatave
+    date: May – July 1883
+    when: "1883-06-11"
+    borders: "1883-06-11"
+    countries: [mg, fr]
+    body:
+      - "By the 1880s the Merina kingdom, ruled by Queen Ranavalona II and her prime minister and husband Rainilaiarivony, governed most of Madagascar from Antananarivo and had made Protestant Christianity the religion of the court. France had held the islands of Nosy Be and Mayotte since 1840–1841, when Sakalava chiefs who had fled the Merina placed themselves under French protection, and French colonial circles in Réunion claimed that this gave France rights over the whole north-west coast. They also took up the claims of the heirs of Jean Laborde, the French engineer who had built the queen’s foundries and died in 1878, to his estates, which Merina law did not allow foreigners to own, and the land concessions Radama II had granted to Joseph-François Lambert in the 1860s and the monarchy had revoked."
+      - "In May 1883 a French squadron under Rear Admiral Pierre bombarded the Merina posts along the north-west coast and occupied Majunga. Pierre sent an ultimatum to Antananarivo demanding recognition of French rights in the north, a French protectorate over the Sakalava, the right of French citizens to own land and an indemnity of 1.5 million francs. When it was refused, he bombarded Tamatave, the main port of the east coast, and occupied it on 11 June. There he arrested the British missionary George Shaw, accused of helping the Merina, which caused a quarrel with Britain that ended with France paying him compensation."
+      - "Ranavalona II died on 13 July 1883, and Rainilaiarivony married her young successor, Ranavalona III, and kept power. Pierre, worn out by the campaign, was relieved and died later that year. The Merina withdrew their garrisons from the coast to positions inland and prepared for a long war."
+    facts:
+      - [Majunga occupied, "May 1883"]
+      - [Tamatave occupied, "11 June 1883"]
+      - [Death of Ranavalona II, "13 July 1883"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Majunga (Mahajanga)
+        date: May 1883
+        text: Bombarded and occupied by Admiral Pierre’s squadron, which also destroyed the Merina posts along the north-west coast.
+        lonlat: [46.317, -15.717]
+      - kind: taken
+        side: fr
+        name: Tamatave (Toamasina)
+        date: 11 June 1883
+        text: Bombarded and occupied after the Merina government rejected the French ultimatum.
+        lonlat: [49.402, -18.149]
+      - kind: capital
+        side: mer
+        name: Antananarivo
+        date: "1883"
+        text: Seat of Queen Ranavalona II, who died on 13 July 1883, and of her prime minister Rainilaiarivony.
+        lonlat: [47.522, -18.910]
+      - kind: held
+        side: fr
+        name: Nosy Be
+        date: since 1841
+        text: French island off the north-west coast, the base of the French claims to the Sakalava coast.
+        lonlat: [48.27, -13.33]
+    arrows:
+      - side: fr
+        label: Admiral Pierre
+        phase: 1
+        via: [[48.2, -13.5], [47.4, -14.3], [46.5, -15.4]]
+      - side: fr
+        phase: 2
+        via: [[46.9, -15.0], [48.4, -12.6], [49.6, -11.8], [50.6, -14.0], [49.55, -18.0]]
+  - title: Farafaty and the Treaty of Tamatave
+    date: 1884 – December 1885
+    when: "1885-09"
+    borders: "1885-12-17"
+    countries: [mg, fr]
+    body:
+      - "Admiral Galiber and then Rear Admiral Miot continued the war with too few troops to march inland. The French blockaded the coasts, bombarded ports and sought allies among the Sakalava and Antankarana chiefs of the north, old enemies of the Merina. Outside Tamatave the Merina army, under the town’s governor Rainandriamampandry, held entrenched lines at Farafaty (Farafatra), a few kilometres inland, which the French could not break; an attack in September 1885 was repulsed. France, which was also fighting China in Tonkin, was tired of the war, and the Merina government wanted the ports back."
+      - "The Treaty of Tamatave was signed on 17 December 1885 aboard a French warship in Tamatave harbour by Miot and the diplomat Salvator Patrimonio for France and by Digby Willoughby, a British officer commanding the Malagasy forces, for the queen. It gave France the right to occupy the bay of Diego Suarez in the far north, where it built a naval base, and 10 million francs to settle the claims of French and other foreign subjects, and installed a French resident at Antananarivo who was to represent Madagascar in its relations with other countries. The Merina government kept control of its internal affairs. France treated the treaty as a protectorate; the Malagasy, supported by an explanatory letter from the French negotiators that was never shown to the French parliament, said it was not. Britain recognised a French protectorate over Madagascar in 1890, and in 1894–1895 France settled the question by conquest."
+    facts:
+      - [French attack on Farafaty repulsed, "September 1885"]
+      - [Treaty of Tamatave, "17 December 1885"]
+      - [Payment for French and foreign claims, "10 million francs"]
+    markers:
+      - kind: battle
+        side: mer
+        name: Farafaty and Tamatave
+        date: September and 17 December 1885
+        text: The entrenched Merina lines at Farafaty, just inland from French-held Tamatave, held out against the French attack. The treaty that ended the war was signed in Tamatave harbour.
+        lonlat: [49.38, -18.14]
+        lp: l
+      - kind: event
+        side: fr
+        name: Diego Suarez (Antsiranana)
+        date: "1885"
+        text: The bay was ceded to France by the treaty, and the French built a naval base here.
+        lonlat: [49.29, -12.28]
+      - kind: capital
+        side: mer
+        name: Antananarivo
+        date: "1885"
+        text: Seat of Ranavalona III and Rainilaiarivony, and from 1886 of a French resident.
+        lonlat: [47.522, -18.910]
+    areas:
+      - style: gained
+        side: fr
+        label: Ceded to France, 1885
+        polygon: [[49.05, -11.95], [49.55, -11.95], [49.6, -12.45], [49.35, -12.6], [49.05, -12.4]]

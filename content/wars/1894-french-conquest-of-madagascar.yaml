@@ -1,0 +1,275 @@
+id: french-conquest-of-madagascar
+name: French conquest of Madagascar
+start: "1894-12-12"
+end: "1897-06"
+tier: A
+summary: "The French invasion that ended the independence of the Merina kingdom of Madagascar, and the Menalamba rising that followed. After Queen Ranavalona III’s government refused a full French protectorate in October 1894, French forces occupied Tamatave in December and Majunga in January 1895. An expeditionary corps of about 15,000 men under General Jacques Duchesne landed at Majunga and marched up the Betsiboka, building a road for its carts as it went; malaria and other diseases killed more than 5,700 of its men, while only 25 died in combat. From Andriba a flying column of some 4,250 men pushed through to Antananarivo, shelled the royal palace on 30 September 1895 and forced the queen to accept a protectorate. In November 1895 the Menalamba (“red shawls”), a rural rising against the French, the Christian court and its forced labour, broke out around the capital and by mid-1896 besieged it. France annexed Madagascar in August 1896 and sent General Joseph Gallieni, who executed leading Merina nobles, crushed the rising by mid-1897, deposed and exiled the queen and abolished the monarchy on 28 February 1897. Resistance continued in other parts of the island for some years; estimates of the Malagasy dead in the rising and its suppression run up to about 100,000."
+countries: [mg, fr]
+sides:
+  - id: mer
+    name: Kingdom of Madagascar (Merina)
+    polities: [merina]
+    ink: red
+    moves: Merina moves
+    success: Merina success
+  - id: fr
+    name: France
+    polities: [france, madagascar]
+    ink: navy
+    moves: French moves
+    success: French success
+  - id: men
+    name: Menalamba
+    polities: [menalamba]
+    ink: orange
+    moves: Menalamba moves
+    success: Menalamba success
+notes:
+  - "French writers called the Merina government and army “Hova”, and the war of 1894–1895 the Second Madagascar Expedition or the second Franco-Hova war."
+  - "The Menalamba took their name from the shawls (lamba) of the rural people, said to be stained red with the laterite earth of the highlands. Historians disagree about the rising’s aims: Hubert Deschamps and Stephen Ellis stressed its rejection of the Christian state church and of the old regime’s officials, Gwyn Campbell the burden of forced labour (fanompoana) that the court and the mission churches had imposed."
+  - "Numbers differ between accounts. The figures for the French expedition (about 15,000 soldiers and 7,000 drivers and porters; 25 killed in action and 5,756 dead of disease) are those usually cited from French official sources; the Malagasy army’s strength and losses are not well known."
+sources:
+  - title: Second Madagascar expedition (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Madagascar_expedition
+  - title: Expédition de Madagascar (Wikipedia, French)
+    url: https://fr.wikipedia.org/wiki/Exp%C3%A9dition_de_Madagascar
+  - title: Franco-Hova Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Franco-Hova_War
+  - title: Menalamba rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Menalamba_rebellion
+  - title: Ranavalona III (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ranavalona_III
+  - title: Rainilaiarivony (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rainilaiarivony
+  - title: Andriba (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Andriba
+  - title: "Kevin Shillington, “The Debate: The Menalamba Revolt” (History of Africa, 4th edition, Bloomsbury student resources)"
+    url: https://res.cloudinary.com/bloomsbury-online-resources/raw/upload/RGP/S/shillington-history-of-africa-4e/student-zone/debates/The%20Menalamba%20Revolt%20(Ch19).pdf
+  - title: 1er octobre 1895, les Français entrent à Tananarive (Hérodote)
+    url: https://www.herodote.net/1er_octobre_1895-evenement-18951001.php
+steps:
+  - title: The ultimatum
+    date: October 1894 – January 1895
+    when: "1894-12-12"
+    borders: "1895-01-14"
+    countries: [mg, fr]
+    body:
+      - "The treaty of 1885 had left France and the Merina government arguing for nine years over what the French resident at Antananarivo was entitled to do. In the Anglo-French convention of 5 August 1890 Britain recognised a French protectorate over Madagascar, and France a British one over Zanzibar, which left the Merina without a European friend. In October 1894 the former governor of Cochinchina, Charles Le Myre de Vilers, brought Queen Ranavalona III and her prime minister Rainilaiarivony a treaty that would have given France control of the island’s government and army. They refused, the French residents left the capital, and the French parliament voted the money for an expedition."
+      - "On 12 December 1894 French troops occupied Tamatave, the main port of the east coast, and on 14 January 1895 the navy landed at Majunga in the north-west, which was to be the base for the march inland. The Merina army was large on paper, with tens of thousands of soldiers and reserves, and had bought modern rifles and some artillery, but its men were poorly trained and paid, many of its officers owed their rank to purchase or favour, and its commander-in-chief, Rainilaiarivony, was 66 years old. The British officers who had trained it had left. The government counted on the island’s distances, forests and fevers, “General Hazo and General Tazo” (forest and fever) as an old saying had it, to defeat the invaders."
+    facts:
+      - [Le Myre de Vilers’ ultimatum refused, "October 1894"]
+      - [Tamatave occupied, "12 December 1894"]
+      - [Majunga occupied, "14 January 1895"]
+    markers:
+      - kind: capital
+        side: mer
+        name: Antananarivo
+        date: "1894"
+        text: Seat of Queen Ranavalona III and Rainilaiarivony, who refused the French treaty.
+        lonlat: [47.522, -18.910]
+      - kind: taken
+        side: fr
+        name: Tamatave (Toamasina)
+        date: 12 December 1894
+        text: Occupied by French troops at the start of hostilities.
+        lonlat: [49.402, -18.149]
+      - kind: taken
+        side: fr
+        name: Majunga (Mahajanga)
+        date: 14 January 1895
+        text: Occupied by the navy and made the base of the expeditionary corps.
+        lonlat: [46.317, -15.717]
+      - kind: held
+        side: fr
+        name: Diego Suarez (Antsiranana)
+        date: since 1885
+        text: The French naval base in the far north.
+        lonlat: [49.29, -12.28]
+    arrows:
+      - side: fr
+        phase: 1
+        via: [[49.6, -12.6], [50.6, -14.2], [50.0, -16.6], [49.5, -18.05]]
+      - side: fr
+        phase: 2
+        via: [[49.1, -12.0], [47.9, -13.2], [46.9, -14.6], [46.36, -15.62]]
+  - title: Up the Betsiboka
+    date: March – June 1895
+    when: "1895-06-09"
+    borders: "1895-06-09"
+    countries: [mg, fr]
+    body:
+      - "The vanguard of the expeditionary corps reached Majunga on 1 March 1895, and the main body began to land on 23 April; General Jacques Duchesne arrived with it on 6 May. He had about 15,000 soldiers, French infantry and marines, the Foreign Legion and Algerian and other colonial troops, and some 7,000 drivers and porters, many of them Kabyles from Algeria. The War Ministry had decided that supplies would go inland in thousands of light metal carts, the voitures Lefebvre, which needed a road; the soldiers had to build it as they advanced, through swamps and across rivers, in heat and rain."
+      - "The army moved up the valley of the Betsiboka. The Merina posts on the lower river, among them Marovoay, Mahabo and Miadana, fell in a series of small fights between March and May, and on 9 June the French took the fort of Mevatanana, the main Merina position on the river. Duchesne set up his headquarters at nearby Suberbieville, a gold-mining settlement founded by a French concessionaire. The Merina commanders fell back rather than risk their army in the open."
+    facts:
+      - [French expeditionary corps, "about 15,000 soldiers and 7,000 drivers and porters"]
+      - [Carts, "4,000–5,000 voitures Lefebvre"]
+      - [Mevatanana taken, "9 June 1895"]
+    markers:
+      - kind: event
+        side: fr
+        name: Majunga (Mahajanga)
+        date: March – May 1895
+        text: The expeditionary corps landed here. Duchesne arrived on 6 May.
+        lonlat: [46.317, -15.717]
+        lp: l
+      - kind: taken
+        side: fr
+        name: Marovoay
+        date: spring 1895
+        text: One of the Merina posts on the lower Betsiboka taken in the first weeks of the advance.
+        lonlat: [46.644, -16.111]
+      - kind: taken
+        side: fr
+        name: Mevatanana (Maevatanana)
+        date: 9 June 1895
+        text: The main Merina fort on the Betsiboka. Duchesne made his headquarters at Suberbieville nearby.
+        lonlat: [46.833, -16.950]
+    arrows:
+      - side: fr
+        label: Duchesne
+        via: [[46.33, -15.75], [46.6, -16.05], [46.68, -16.4], [46.76, -16.7], [46.82, -16.92]]
+  - title: Fever and Andriba
+    date: June – September 1895
+    when: "1895-08-22"
+    borders: "1895-08-22"
+    countries: [mg, fr]
+    body:
+      - "The road was the expedition’s undoing. Malaria, dysentery and typhoid swept through the soldiers who built it, and the hospitals at Majunga and along the route filled with the sick and dying; the young soldiers from France suffered worst. By the end of the campaign 5,756 men of the expedition had died of disease, about one in three, against 25 killed in action."
+      - "Rainilaiarivony tried to stop the French at Tsarasaotra on 29 June, but the attack failed. At Andriba, a strong position on the plateau edge, the French found the Merina entrenched; they reached it on 20 August, and on 22 August General Voyron’s troops took it after brief fighting, the defenders falling back. Andriba was still about 150 km from Antananarivo, the rainy season was coming, and the road could not be pushed much further with the men still fit to work."
+    facts:
+      - [Merina attack at Tsarasaotra fails, "29 June 1895"]
+      - [Andriba taken, "22 August 1895"]
+      - [French dead, "25 killed in action, 5,756 dead of disease"]
+    markers:
+      - kind: held
+        side: fr
+        name: Mevatanana (Maevatanana)
+        date: June – September 1895
+        text: Duchesne’s headquarters and a hospital and supply base on the road.
+        lonlat: [46.833, -16.950]
+        lp: l
+      - kind: taken
+        side: fr
+        name: Andriba
+        date: 22 August 1895
+        text: The Merina position on the edge of the plateau, taken by General Voyron’s troops.
+        lonlat: [46.933, -17.583]
+    arrows:
+      - side: fr
+        via: [[46.85, -16.98], [46.9, -17.2], [46.92, -17.55]]
+    areas:
+      - style: outline
+        side: fr
+        label: The French military road, Majunga to Andriba
+        line: [[46.33, -15.75], [46.6, -16.05], [46.68, -16.4], [46.76, -16.7], [46.83, -16.95], [46.9, -17.2], [46.93, -17.58]]
+  - title: The flying column and the fall of Antananarivo
+    date: 14 September – 1 October 1895
+    when: "1895-09-30"
+    borders: "1895-10-01"
+    countries: [mg, fr]
+    body:
+      - "Duchesne left the road and the sick behind and formed a light column of the fittest men: about 4,250 soldiers with three batteries of artillery, 1,500 Kabyle drivers and 2,800 mules, carrying twenty days’ food. It left Andriba on 14 September and covered the 150 km to the capital in sixteen days. The Merina tried to hold the passes and fought at Tsinainondry on 15 September, at the Kiangara pass on 17 September and in the Ambohimena mountains on 19 September, but each time the French artillery and rifles drove them back."
+      - "At the end of September the column reached the hills around Antananarivo, and on 30 September, after fighting on the heights outside the city, its guns opened fire on the Rova, the royal palace on the summit. Rainilaiarivony sent an interpreter with a white flag, and his son came out to ask for terms; that afternoon the French entered the capital."
+      - "On 1 October 1895 Ranavalona III signed a treaty that made Madagascar a French protectorate. The French removed Rainilaiarivony, who had governed the kingdom for 31 years, and put him under house arrest on 15 October; in February 1896 he was sent into exile in Algiers, where he died on 17 July 1896. The queen stayed on her throne under a French resident-general."
+    facts:
+      - [Flying column, "about 4,250 soldiers, 1,500 drivers, 2,800 mules"]
+      - [Antananarivo taken, "30 September 1895"]
+      - [Protectorate treaty, "1 October 1895"]
+    markers:
+      - kind: event
+        side: fr
+        name: Andriba
+        date: 14 September 1895
+        text: The flying column set out from here for the capital.
+        lonlat: [46.933, -17.583]
+      - kind: taken
+        side: fr
+        name: Antananarivo
+        date: 30 September 1895
+        text: The French guns shelled the royal palace, and Rainilaiarivony sent out a white flag. The protectorate treaty was signed the next day.
+        lonlat: [47.522, -18.910]
+    arrows:
+      - side: fr
+        label: Flying column
+        via: [[46.93, -17.6], [47.0, -17.95], [47.12, -18.32], [47.35, -18.65], [47.5, -18.86]]
+  - title: The red shawls
+    date: November 1895 – September 1896
+    when: "1896-03"
+    borders: "1896-08-06"
+    countries: [mg, fr]
+    body:
+      - "Less than eight weeks after the French entered Antananarivo, in late November 1895, about 2,000 people rose at Amboanana, west of the capital, and killed a British Quaker missionary family and a Merina governor. The rising spread through the countryside of Imerina, and in March 1896 it became general. Its fighters, called Menalamba after their red-stained shawls, burned hundreds of churches and killed Malagasy pastors and teachers, Merina officials and five European missionaries. They called on the old royal talismans and the ancestors against the Christian state church, the forced labour and taxes of the old regime and the French who now protected it. They did not seek to restore the queen’s government, whose officials they attacked."
+      - "The strongest bands held the forests and hills of the north and north-east around Anjozorobe, under leaders such as Rabezavana and Rabozaka, and Vakinankaratra in the south under Rainibetsimisaraka; bands of outlaws, the fahavalo, joined them. At its height the rising may have controlled areas with up to 300,000 people. In July, August and September 1896 the Menalamba blockaded Antananarivo, and a state of siege was declared."
+      - "In Paris the government decided to end the protectorate. The law annexing Madagascar as a French colony was promulgated on 6 August 1896. In late September the outgoing resident-general, Hippolyte Laroche, proclaimed the abolition of slavery, which freed several hundred thousand people and deprived Merina slave-owners of their labour."
+    facts:
+      - [Rising at Amboanana, "late November 1895"]
+      - [Blockade of Antananarivo, "July – September 1896"]
+      - [Annexation, "6 August 1896"]
+    markers:
+      - kind: event
+        side: men
+        name: Arivonimamo
+        date: late November 1895
+        text: At Amboanana, near this town west of the capital, about 2,000 people rose and killed a British missionary family and a Merina governor. The first outbreak of the rising.
+        lonlat: [47.18, -19.02]
+        lp: l
+      - kind: held
+        side: men
+        name: Anjozorobe
+        date: 1896
+        text: The forests and hills north-east of the capital were the stronghold of Rabezavana and Rabozaka.
+        lonlat: [47.87, -18.40]
+      - kind: held
+        side: men
+        name: Antsirabe
+        date: 1896
+        text: In Vakinankaratra, south of the capital, the rising was led by Rainibetsimisaraka.
+        lonlat: [47.03, -19.87]
+      - kind: siege
+        side: men
+        name: Antananarivo
+        date: July – September 1896
+        text: The Menalamba blockaded the capital, held by the French and the queen’s government.
+        lonlat: [47.522, -18.910]
+        lp: l
+    areas:
+      - style: contested
+        side: men
+        label: Main areas of the Menalamba rising, 1896 (approximate)
+        polygons:
+          - [[47.3, -17.8], [48.2, -17.6], [48.4, -18.3], [47.9, -18.75], [47.4, -18.6], [47.1, -18.2]]
+          - [[46.6, -19.4], [47.4, -19.3], [47.5, -20.1], [46.9, -20.4], [46.5, -20.0]]
+          - [[46.6, -18.8], [47.3, -18.85], [47.35, -19.2], [46.7, -19.3]]
+  - title: Gallieni and the end of the monarchy
+    date: September 1896 – mid-1897
+    when: "1897-02-28"
+    borders: "1897-02-28"
+    countries: [mg, fr]
+    body:
+      - "General Joseph Gallieni arrived in September 1896 with full civil and military powers, and soon became governor-general. He blamed the rising on the Merina court. On 15 October 1896 he had Prince Ratsimamanga, the queen’s uncle, and the minister Rainandriamampandry, who had defended Tamatave against the French in 1885, shot after a court martial for supporting the rebels; many others were exiled or imprisoned."
+      - "Gallieni and his officers, among them Hubert Lyautey, fought the rising with what they called the oil stain (tache d’huile): a spreading network of military posts, columns that burned the rebels’ villages and crops, amnesties for those who surrendered and markets and roads for the areas brought under control. Hunger drove many bands to give up. Rabezavana surrendered in May 1897, and by about June 1897 the rising in Imerina was over, though fighting went on in other parts of the island, among the Sakalava and in the south and east, into the 1900s."
+      - "On 27 February 1897 Gallieni sent Ranavalona III into exile. She was taken to Tamatave and then to Réunion, and on 28 February 1897 the Merina monarchy was abolished; in 1899 she was moved to Algiers, where she died in 1917. The dead of the rising and its suppression are not known: estimates of Malagasy deaths run as high as 100,000, many of them from hunger and disease, while French losses, mostly from disease, were in the hundreds. Madagascar remained a French colony until 1960."
+    facts:
+      - [Ratsimamanga and Rainandriamampandry executed, "15 October 1896"]
+      - [Monarchy abolished, "28 February 1897"]
+      - [Rabezavana surrenders, "May 1897"]
+    markers:
+      - kind: event
+        side: fr
+        name: Antananarivo
+        date: 15 October 1896 and 28 February 1897
+        text: Two leading Merina nobles were executed here in October 1896. In February 1897 the queen was deposed and the monarchy abolished.
+        lonlat: [47.522, -18.910]
+        lp: l
+      - kind: event
+        side: fr
+        name: Tamatave (Toamasina)
+        date: March 1897
+        text: Ranavalona III was taken from here into exile on Réunion.
+        lonlat: [49.402, -18.149]
+      - kind: taken
+        side: fr
+        name: Anjozorobe
+        date: 1897
+        text: French posts and columns broke up the northern Menalamba bands. Rabezavana surrendered in May 1897.
+        lonlat: [47.87, -18.40]

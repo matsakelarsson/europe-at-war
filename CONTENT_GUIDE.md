@@ -272,6 +272,11 @@ they ever border, keeping curated colours.
   (Moroccan, Mauritanian and Polisario control are areas); Abd al-Qadir's
   state in Algeria, the Rif Republic, the Dervish state, Azawad and the
   zones held by rebels and jihadist groups in the Sahel are areas.
+  In `africa-south.yaml` Rhodesia (1965–1979) and Zimbabwe Rhodesia are
+  `zimbabwe` under their own names, and the bantustans are not shown;
+  Biafra, Katanga, South Kasai, the Ambazonian, Casamance and Cabinda
+  rebels, UNITA's Jamba, RENAMO's bases and the zones of the Congo wars are
+  areas.
   Somaliland, which no United Nations member recognised until Israel did in
   2025, is shown on its own from 1991 because it has governed itself since. Occupied France, the Low Countries, Denmark,
   Norway, Greece, Albania after 1943, Italy after the armistice and Hungary
@@ -576,6 +581,67 @@ they ever border, keeping curated colours.
   Natural Earth's Eritrean codes are mixed up: `ER-DU` is Northern Red Sea
   (Massawa), `ER-AN` Maekel (Asmara), `ER-MA` Debub, `ER-SK` Anseba (Keren);
   the names in atoms.json are right.
+- **Africa south of the Sahara** (`africa-south.yaml`). African states keep
+  their polity until they are conquered, annexed or absorbed into a colony's
+  administration (not when they sign a protectorate treaty); Zanzibar,
+  Lesotho and Eswatini stay apart. Land that no state ruled passes to a
+  colony at the treaty or proclamation that claimed it, and stateless
+  peoples are `none`. West Africa: `takrur`, `jolof` (1350; `cayor`,
+  `baol`, `waalo`, `sine` and `saloum` from 1549), `futa-toro` (the
+  Denianke kingdom from about 1512, the imamate from 1776), `bundu`,
+  `kaabu`, `fuladu`, `futa-jallon` (1725), `wassoulou-empire` (Samori,
+  1878–1898), `kong-empire`, `gyaman`, `bono`, `dagbon`, `mamprugu`,
+  `gonja`, `akwamu` (to 1730), `akyem` (1730–1742), `denkyira` (to 1701),
+  `asante` (1701–1902), `fante`, `allada` and `whydah` (to 1724 and 1727),
+  `dahomey`, `porto-novo`, `borgu`, the Hausa kingdoms (`kano`, `katsina`,
+  `zazzau`, `zamfara`, `gobir`, `kebbi`), `sokoto-caliphate` (1808–1903),
+  `benin-kingdom` (to 1897), `igala`, `nupe`, `oyo`, `ijebu`, `egba`,
+  `ibadan`, `mandara` and `bamum`. Central Africa: `kongo` (to 1914), `tio`,
+  `ndongo` (to 1671), `matamba`, `kasanje` (about 1620–1910), `loango`, `ovimbundu`, `luba`, `lunda`,
+  `kazembe`, `kuba`, `yeke` (1856–1891) and `dar-al-kuti` (1830–1911). East
+  Africa: `kilwa`, `mombasa` (the Mazrui 1746–1837), `malindi`, `pate`,
+  `oman` on the coast from 1698 and `zanzibar` from 1856, `karagwe`,
+  `bunyoro`, `buganda`, `ankole`, `toro`, `rwanda`, `burundi`, `hehe`, and
+  in Madagascar `merina`, `sakalava` and `betsimisaraka`; the
+  `comoro-sultanates` until 1912. Southern Africa:
+  `mapungubwe` (about 1075–1220), `great-zimbabwe` (to about 1450),
+  `mutapa`, `torwa`, `rozvi` (1684–1834), `maravi`, `barotse` and `kololo`
+  (1840–1864), `gaza-empire` (1825–1895), `ndebele-kingdom`,
+  `zulu-kingdom` (1819–1879), `xhosa`, `pedi`, `tswana`, `ovambo`,
+  `bemba` (about 1800–1899), `lesotho` and `eswatini`; the Boer republics
+  `natalia`, `transvaal`, `orange-free-state` and `new-republic`, and `griqualand-west`. European colonies are their
+  own polities: `cape-colony` (1652; Dutch, Batavian and British under its
+  names), `natal`, `british-bechuanaland`, `rhodesia-bsac`, `lagos-colony`,
+  `niger-coast-protectorate`, `royal-niger-company`, `northern-nigeria`,
+  `southern-nigeria`, `french-senegal`, `french-guinea`,
+  `french-ivory-coast` and `french-dahomey` (until `french-west-africa`
+  takes them over in 1895–1899), `togoland`, `kamerun`,
+  `german-east-africa` and `german-south-west-africa` (to 1920), the
+  mandates `british-togoland`, `british-cameroons`, `ruanda-urundi`,
+  `tanzania` (Tanganyika) and `namibia` (South West Africa), and
+  `rhodesia-nyasaland` (1953–1963). The other modern states carry their
+  colonial names (`ghana` is the Gold Coast, `zambia` Northern Rhodesia,
+  `malawi` Nyasaland, `belgian-congo` the Congo Free State to 1908).
+  Portugal's colonies are `angola`, `mozambique`, `guinea-bissau`,
+  `cabo-verde` and `sao-tome-and-principe` from their first posts. The
+  Dutch hold Luanda and Benguela in 1641–1648; Mauritius is Dutch,
+  then French (1715) and British (1810). Not shown: Northern Cameroons
+  (joined to Nigeria in 1961), German Dagbon, Mayotte, and the tribute that
+  one African state paid another. Splits
+  (`99e-africa-south.geojson`): `KE-300~lamu`, `KE-300~malindi`,
+  `KE-300~mombasa`, the Swahili coast of Tanzania (`TZ-25~coast`,
+  `TZ-19~coast`, `TZ-12~coast`, `TZ-17~coast`) and Mozambique (`MZ-P`,
+  `MZ-N`, `MZ-Q`, `MZ-S`, `MZ-I`, `MZ-G`, `MZ-L` `~coast`),
+  `CD-KA~north` (Luba, east of about 24° E), `CD-KA~lunda` (the Lunda
+  heartland west of it), `CD-KW~kuba`, `AO-MAL~kasanje` (the Baixa de
+  Cassange), `ZA-EC~ciskei`, `ZA-EC~transkei`,
+  `ZA-NL~zululand` (with `ZA-NL~zululand~vryheid`, the New Republic
+  of 1884–1888), `ZA-FS~conquered` (the Conquered Territory of 1866),
+  `ZA-NC~griqualand`, `ZA-NW~bechuanaland` (British
+  Bechuanaland), `NA-ER~walvis`, `GH-NP~gonja`, `GH-NP~mamprugu` (`GH-NP!`
+  is Dagbon), `GH-CP~fante`, `NG-OY~ibadan` (south of 7.62° N),
+  `NG-OG~ijebu` and `BJ-AQ~whydah`. Neukamerun (1911–1920) is
+  approximated by `CF-SE`, `CF-HS`, `CG-13` and `GA-9`.
 - **Checking borders.** After a build, `node tools/owners-at.mjs <date>
   [polities…] [--atoms <regex>]` lists who owns what on a date, and
   `node tools/owner-history.mjs <regex> [from] [to]` lists every change to the

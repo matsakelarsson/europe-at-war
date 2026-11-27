@@ -1,0 +1,152 @@
+id: casamance-conflict
+name: Casamance conflict
+start: "1982-12-26"
+end: ongoing
+tier: B
+summary: "The separatist conflict in Casamance, the part of Senegal south of the Gambia, between the Senegalese state and the Movement of Democratic Forces of Casamance (MFDC). Casamance, with its own Jola, Mandinka, Balanta and other peoples, its forests and rice fields and its long separation from the north by the Gambia, had grievances over land, neglect and northern officials. A march for independence in Ziguinchor on 26 December 1982, led by the priest Augustin Diamacoune Senghor, was put down, and from 1985 the MFDC’s armed wing, Atika, waged a guerrilla war from bases near the borders with Guinea-Bissau and the Gambia. The fighting was heaviest in the 1990s. Ceasefires in 1991, 1993 and 1999 and a general peace accord in 2004 did not end it, and after Diamacoune’s death in 2007 the MFDC split into factions. Salif Sadio declared a unilateral ceasefire in 2014, but the army attacked rebel bases in 2021 and 2022; the faction of César Atoute Badiate signed a peace agreement in 2022, about 250 fighters of another group laid down their arms in 2023, and the government announced a further agreement with MFDC factions in 2025. By 2026 the rebellion was much weakened and displaced people were returning, but some armed groups, above all in the forests near the Gambian border, had not laid down their arms, and no comprehensive peace agreement has been signed. Some 5,000 people are estimated to have been killed since 1982 and about 60,000 displaced."
+countries: [sn, gw, gm]
+sides:
+  - id: sn
+    name: Senegal
+    polities: [senegal]
+    ink: green
+    moves: Senegalese moves
+    success: Senegalese success
+  - id: mfdc
+    name: MFDC and its armed wing, Atika
+    polities: [mfdc]
+    ink: olive
+    moves: MFDC moves
+    success: MFDC success
+notes:
+  - "Figures are uncertain. About 5,000 deaths since 1982 is the estimate most often cited, with over a thousand battle deaths in 1992–2001; tens of thousands of people fled to the Gambia and Guinea-Bissau, and landmines laid during the war have killed and maimed hundreds. Senegalese soldiers and MFDC fighters were both accused of killing civilians, and the MFDC also of robbery and of trading cannabis and timber."
+  - "Guinea-Bissau and the Gambia have been both refuges for the rebels and mediators. The MFDC’s links with Ansumane Mané, a Bissau-Guinean general accused of supplying it with weapons, helped set off the Guinea-Bissau Civil War of 1998–1999, in which Senegalese troops intervened."
+sources:
+  - title: Casamance conflict (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Casamance_conflict
+  - title: Movement of Democratic Forces of Casamance (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Movement_of_Democratic_Forces_of_Casamance
+  - title: Augustin Diamacoune Senghor (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Augustin_Diamacoune_Senghor
+  - title: "Senegal signs historic peace deal with Casamance separatists (Africanews, 25 February 2025)"
+    url: https://www.africanews.com/2025/02/25/senegal-signs-historic-peace-deal-with-casamance-separatists/
+  - title: "Casamance : main tendue du président Diomaye aux combattants du MFDC (Sud Quotidien via AllAfrica, 22 December 2025)"
+    url: https://fr.allafrica.com/stories/202512220279.html
+  - title: "Sénégal : en Casamance, des rebelles affaiblis mais la paix minée par le cannabis (AFP via Seneweb, 15 May 2026)"
+    url: https://www.seneweb.com/fr/news/8/casamance-des-rebelles-affaiblis-mais-la-paix-minee-par-le-cannabis_n_492622.html
+steps:
+  - title: From Ziguinchor to the maquis
+    date: 1982–1999
+    when: "1982-12-26"
+    borders: "1990-06-01"
+    countries: [sn, gw]
+    body:
+      - On 26 December 1982 several hundred people marched in Ziguinchor, the main town of Casamance, to call for independence; police broke up the march and arrested many of the marchers. The movement’s leader, Father Augustin Diamacoune Senghor, a Catholic priest, argued that Casamance had been administered separately under French rule and should have become independent on its own. Another protest a year later ended in many deaths, and Diamacoune was sentenced to ten years in prison; he was released in 1991. The MFDC formed an armed wing, Atika (“warrior” in Jola), in 1985, and after mass protests were suppressed in 1990 it began a guerrilla war, attacking army posts and officials from the forests along the borders.
+      - "The Senegalese army sent thousands of troops and was accused of arresting, torturing and killing suspected supporters. A ceasefire signed at Cacheu in Guinea-Bissau in May 1991 soon broke down, and in 1992 the movement split between a Northern Front that accepted talks and a Southern Front that fought on. A new ceasefire in 1993 was followed by more fighting; in 1995 the disappearance of four French tourists was blamed on the rebels, who denied it. The fighting was heaviest in the 1990s; in 1999 shelling reached Ziguinchor itself and some 20,000 people fled the border areas, before peace talks began at Banjul in December 1999."
+    facts:
+      - [March in Ziguinchor, "26 December 1982"]
+      - [Armed wing Atika founded, "1985"]
+      - [Ceasefire of Cacheu, "May 1991"]
+    markers:
+      - kind: event
+        side: mfdc
+        name: Ziguinchor
+        date: 26 December 1982
+        text: The march for independence, which police broke up.
+        lonlat: [-16.27, 12.56]
+      - kind: treaty
+        side: none
+        name: Cacheu
+        date: May 1991
+        text: The first ceasefire between the government and the MFDC was signed in this town in Guinea-Bissau.
+        lonlat: [-16.17, 12.27]
+        lp: l
+      - kind: treaty
+        side: none
+        name: Banjul
+        date: "1999"
+        text: Peace talks between the government and the MFDC began in the Gambian capital in December 1999.
+        lonlat: [-16.58, 13.45]
+        lp: l
+    areas:
+      - style: outline
+        side: mfdc
+        label: Casamance, claimed by the MFDC
+        atoms: [SN-ZG, SN-SE, SN-KD]
+  - title: Accords and splinters
+    date: 2000–2014
+    when: "2004-12-30"
+    borders: "2005-01-01"
+    countries: [sn, gw, gm]
+    body:
+      - President Abdoulaye Wade, elected in 2000, promised a quick peace. On 30 December 2004 Diamacoune and the interior minister signed a general peace accord in Ziguinchor, but hardline commanders rejected it, and fighting broke out again in 2006. Diamacoune died in Paris on 13 January 2007, and the movement split into rival political wings and armed factions, the strongest led by Salif Sadio along the Gambian border north of the Casamance River and by César Atoute Badiate in the south near Guinea-Bissau.
+      - "Attacks on soldiers and civilians continued at a low level, with the rebels and the army trading accusations. After Macky Sall became president in 2012, talks were held through the Community of Sant’Egidio in Rome, and on 1 May 2014 Sadio declared a unilateral ceasefire. Many of the displaced began to return, and the region was largely quiet for some years."
+    facts:
+      - [General peace accord, "30 December 2004, Ziguinchor"]
+      - [Death of Diamacoune, "13 January 2007"]
+      - [Sadio’s unilateral ceasefire, "1 May 2014"]
+    markers:
+      - kind: treaty
+        side: none
+        name: Ziguinchor
+        date: 30 December 2004
+        text: The general peace accord signed by Diamacoune and the government.
+        lonlat: [-16.27, 12.56]
+      - kind: held
+        side: mfdc
+        name: Sindian
+        date: 2007–2022
+        text: The area of Salif Sadio’s faction, along the Gambian border north of the Casamance River.
+        lonlat: [-16.18, 12.97]
+    areas:
+      - style: contested
+        side: mfdc
+        label: Main areas of the MFDC armed factions (approximate)
+        polygons:
+          - [[-16.55, 13.08], [-15.90, 13.10], [-15.85, 12.90], [-16.20, 12.85], [-16.55, 12.90]]
+          - [[-16.40, 12.45], [-15.95, 12.42], [-15.90, 12.33], [-16.40, 12.33]]
+  - title: Offensives and peace agreements
+    date: 2018 – November 2026
+    when: "2022-03-13"
+    borders: "2026-11-27"
+    countries: [sn, gm, gw]
+    body:
+      - Last updated 27 November 2026. On 6 January 2018 gunmen killed 13 or 14 young men collecting wood in the Boffa-Bayotte forest near Ziguinchor; MFDC leaders denied responsibility. In January and February 2021 the army attacked and overran rebel bases near the border with Guinea-Bissau. In January 2022 fighters of Sadio’s faction attacked Senegalese soldiers of the ECOWAS mission in the Gambia, killing four and capturing seven, who were later released; on 13 March 2022 the army launched an offensive against Sadio’s bases along the Gambian border, and thousands of villagers fled into the Gambia.
+      - "In August 2022 Badiate’s faction signed a peace agreement with the government in Bissau, and in May 2023 about 250 fighters of the commander Fatoma Coly laid down their arms. On 25 February 2025 Prime Minister Ousmane Sonko, of the government of President Bassirou Diomaye Faye, announced in Bissau an agreement with MFDC factions to end the conflict, after three days of talks mediated by Guinea-Bissau’s president, Umaro Sissoco Embaló; which factions it covered and its terms were not made fully public."
+      - "In December 2025 President Faye, on a visit to the Ziguinchor region, appealed to the MFDC fighters still under arms to join the peace process. By 2026 the rebellion was much weakened, with ageing, residual forces divided into factions and cut off from supplies now that the Gambia and Guinea-Bissau cooperate with Dakar, and displaced people were returning to most of the region. But some armed groups still refused to give up their weapons, especially in the forests of northern Sindian near the Gambian border, where the army destroys cannabis fields that it says finance them: a soldier was killed and six wounded on 11 March 2026, and three soldiers died in an explosion during an anti-cannabis operation on 17 March. No comprehensive peace agreement has been signed, and how many fighters remain under arms is unclear."
+    facts:
+      - [Boffa-Bayotte killings, "6 January 2018"]
+      - [Offensive against Sadio’s bases, "from 13 March 2022"]
+      - [Badiate faction’s peace agreement, "August 2022"]
+      - [Further agreement, "25 February 2025"]
+    markers:
+      - kind: event
+        side: none
+        name: Ziguinchor
+        date: 6 January 2018
+        text: Gunmen killed 13 or 14 woodcutters in the Boffa-Bayotte forest near the city; the MFDC denied involvement.
+        lonlat: [-16.27, 12.56]
+        lp: b
+      - kind: battle
+        side: sn
+        name: Sindian
+        date: March 2022
+        text: The army overran bases of Sadio’s faction along the Gambian border.
+        lonlat: [-16.18, 12.97]
+      - kind: event
+        side: none
+        name: Mongone
+        date: May 2023
+        text: About 250 fighters of Fatoma Coly’s group laid down their arms.
+        lonlat: [-16.46, 12.98]
+        lp: l
+      - kind: treaty
+        side: none
+        name: Bissau
+        date: August 2022 and February 2025
+        text: Guinea-Bissau hosted the talks that led to the agreement with Badiate’s faction in 2022 and to the agreement announced in February 2025.
+        lonlat: [-15.58, 11.86]
+    arrows:
+      - side: sn
+        label: Offensive of March 2022
+        via: [[-16.27, 12.60], [-16.25, 12.80], [-16.19, 12.95]]

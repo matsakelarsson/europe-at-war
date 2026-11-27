@@ -1,0 +1,166 @@
+id: kongo-portuguese-wars
+name: Kongo–Portuguese wars
+start: "1622-12"
+end: "1670-10-18"
+tier: B
+summary: "Three wars between the Kingdom of Kongo, Christian since the early 16th century and long Portugal’s partner in trade, and the Portuguese colony of Angola, founded in 1575 on land that Kongo claimed. In 1622 the governor João Correia de Sousa, hoping for captives as his predecessor had taken them from Ndongo, sent an army with Imbangala mercenaries into Kongo’s southern province of Mbamba; it won at Mbumbi on 18 December 1622, killing the duke of Mbamba, but King Pedro II beat it at Mbanda Kasi in January 1623, the governor was driven out by Luanda’s own settlers, and Kongo captives were returned. Pedro II then proposed an alliance to the Dutch, which bore fruit when the Dutch held Luanda in 1641–1648 (see the Dutch occupation of Luanda). After the Portuguese came back, the rivalry turned on the Dembos, the small states between the two powers. In 1665 a succession dispute in one of them, Mbwila, brought both armies into the field, and on 29 October 1665 the Portuguese under Luís Lopes de Sequeira destroyed the Kongo army; King António I was killed and beheaded, and his death opened the Kongo Civil War. In 1670 an Angolan army invaded Soyo, the breakaway coastal province that dominated Kongo’s politics, but on 18 October 1670 the Soyo army, with troops from Ngoyo and guns from the Dutch, annihilated it at Kitombo. Portugal did not attack Kongo again until the 19th century, and a papal mediation later secured recognition of Soyo’s independence. Each war fed the Atlantic slave trade: captives taken by the Angolan armies and their Imbangala allies were shipped from Luanda, mostly to Brazil."
+countries: [ao]
+sides:
+  - id: kg
+    name: Kingdom of Kongo
+    polities: [kongo]
+    ink: red
+    moves: Kongo moves
+    success: Kongo success
+  - id: pt
+    name: Portuguese Angola and its allies
+    polities: [angola, portugal]
+    ink: green
+    moves: Portuguese moves
+    success: Portuguese success
+  - id: sy
+    name: Soyo and Ngoyo
+    polities: [soyo]
+    ink: teal
+    moves: Soyo moves
+    success: Soyo success
+notes:
+  - "The Portuguese side is known from governors’ letters and from António de Oliveira de Cadornega’s História geral das guerras angolanas (1680), written by a veteran of the Angolan army; Kongo’s side from the kings’ letters, Capuchin missionaries and, for Mbanda Kasi, a letter preserved in the Dutch archives and published by John Thornton and Andrea Mosterman (2010). Army sizes are contemporary estimates and differ widely."
+  - "Accounts of the 1670 campaign differ on who led Soyo: in some, its ruler Estêvão da Silva was killed in a first battle on the Mbidizi River in June and his brother Pedro led the army at Kitombo; in others Estêvão commanded and died at Kitombo."
+sources:
+  - title: Battle of Mbumbi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Mbumbi
+  - title: Battle of Mbanda Kasi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Mbanda_Kasi
+  - title: Battle of Mbwila (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Mbwila
+  - title: Battle of Kitombo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kitombo
+  - title: António I of Kongo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ant%C3%B3nio_I_of_Kongo
+  - title: Kongo Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kongo_Civil_War
+  - title: "Angola: The Defeat of Kongo and Ndongo (Library of Congress country study)"
+    url: https://countrystudies.us/angola/7.htm
+steps:
+  - title: Mbumbi and Mbanda Kasi
+    date: 1622–1623
+    when: "1622-12-18"
+    borders: "1623-01-31"
+    countries: [ao]
+    body:
+      - "Governor João Correia de Sousa, who took office in Luanda in 1621, first sent his troops against Kazanze, a forested district on Kongo’s border that sheltered slaves who had fled from the colony, and then ordered Captain-Major Pedro de Sousa Coelho, with an army said to number 20,000 Mbundu archers and 10,000 Portuguese soldiers and Imbangala, into Nambu a Ngongo in the province of Mbamba. When its lord fled to the market town of Mbumbi, the duke of Mbamba, Paulo Afonso, and the marquis of Pemba, Cosme, brought a few thousand archers and about 200 heavy infantry to meet the invaders. On 18 December 1622 the Kongo troops first routed the Mbundu archers, but the Imbangala counter-attacked and destroyed them; the duke, the marquis, 90 lesser nobles and thousands of soldiers were killed. According to Jesuit accounts, the Portuguese took many slaves and sacked the town, and the Imbangala ate many of the dead and the prisoners."
+      - "The defeat set off anti-Portuguese riots across Kongo, and the new king, Pedro II, took the Portuguese he could save into his camp at Mbanda Kasi while he gathered his army. In January 1623 he defeated the Portuguese army there and drove it out of Kongo. A battle that Portuguese writers hardly mention, it is known mainly from Kongo letters to the Dutch. In Luanda the settlers, fearing the loss of the Kongo trade, forced Correia de Sousa out of office, and many Kongo captives were sent back. Pedro II wrote to the States General of the Dutch Republic proposing a joint attack on Luanda; a Dutch fleet under Piet Hein tried to take the town in late 1624, after Pedro’s death, and failed."
+    facts:
+      - [Battle of Mbumbi, "18 December 1622, Portuguese victory"]
+      - [Battle of Mbanda Kasi, "January 1623, Kongo victory"]
+      - [Kongo’s first proposal to the Dutch, "1622–1623"]
+    markers:
+      - kind: capital
+        side: kg
+        name: Mbanza Kongo (São Salvador)
+        date: "1622"
+        text: Capital of Kongo, where Pedro II was elected king in 1622.
+        lonlat: [14.248, -6.268]
+      - kind: capital
+        side: pt
+        name: Luanda
+        date: "1623"
+        text: Capital of Portuguese Angola; its settlers forced Governor Correia de Sousa out after the defeat at Mbanda Kasi.
+        lonlat: [13.244, -8.827]
+    arrows:
+      - side: pt
+        label: Pedro de Sousa Coelho
+        phase: 1
+        via: [[13.3, -8.75], [13.55, -8.3], [13.8, -7.8], [13.9, -7.4]]
+      - side: kg
+        label: Pedro II
+        phase: 2
+        via: [[14.2, -6.35], [14.1, -6.9], [13.95, -7.35]]
+    areas:
+      - style: contested
+        side: pt
+        label: Mbamba province of Kongo, invaded 1622 (approximate)
+        polygon: [[13.0, -6.9], [14.3, -6.8], [14.4, -7.9], [13.2, -8.2]]
+  - title: Mbwila
+    date: "1665"
+    when: "1665-10-29"
+    borders: "1665-11-01"
+    countries: [ao]
+    body:
+      - After the Dutch were expelled from Luanda in 1648, Kongo’s King Garcia II had to sign a harsh treaty in 1649, and the governors of Angola pressed into the Dembos, the zone of small states between the colony and Kongo that both claimed. Garcia’s son António I, king from 1661, sought help from Spain against Portugal and sent envoys into the Dembos to win them over. In 1665 Mbwila, one of these states, fell into a succession dispute between a claimant and his aunt, Dona Isabel; Kongo backed the claimant and Angola, under governor André Vidal de Negreiros, the regent, and both sent armies.
+      - "They met on 29 October 1665 in the valley of the Ulanga River, just south of Mbwila’s capital. The Portuguese force under Luís Lopes de Sequeira had about 450 musketeers, among them soldiers from Brazil of African and Native American descent, two light guns and some 15,000 Imbangala and other African troops. The Kongo army had perhaps 15,000 archers, 5,000 heavy infantry with shields and swords, and 380 musketeers, 29 of them Portuguese. The musketeers formed a diamond-shaped formation around the guns and held against the Kongo attacks; when António I was killed the Kongo army broke. Some 5,000 Kongo soldiers were killed or captured, among them two of the king’s sons, two nephews, four governors, 95 title holders and 400 other nobles. His head was buried in the chapel of Our Lady of Nazareth on the bay of Luanda, and his crown and sceptre were sent to Lisbon. Captives were shipped to Brazil; Brazilian tradition holds that the princess Aqualtune, mother of Ganga Zumba, the leader of the maroon kingdom of Palmares, was taken at Mbwila."
+    facts:
+      - [Battle of Mbwila (Ambuila), "29 October 1665"]
+      - [Kongo losses, "King António I, much of the nobility, thousands killed or captured"]
+      - [Result, "Portuguese victory; Kongo falls into civil war"]
+    markers:
+      - kind: battle
+        side: pt
+        name: Mbwila (Ambuila)
+        date: 29 October 1665
+        text: Battle in the Ulanga valley just south of Mbwila’s capital; King António I was killed and the Kongo army destroyed.
+        lonlat: [14.65, -7.47]
+      - kind: capital
+        side: kg
+        name: Mbanza Kongo (São Salvador)
+        date: "1665"
+        text: António I marched south from his capital to Mbwila.
+        lonlat: [14.248, -6.268]
+      - kind: capital
+        side: pt
+        name: Luanda
+        date: "1665"
+        text: The king’s head was buried here, in the chapel of Our Lady of Nazareth.
+        lonlat: [13.244, -8.827]
+    arrows:
+      - side: kg
+        label: António I
+        via: [[14.25, -6.32], [14.4, -6.8], [14.6, -7.38]]
+      - side: pt
+        label: Sequeira
+        via: [[13.3, -8.75], [13.9, -8.4], [14.4, -7.9], [14.62, -7.54]]
+  - title: Kitombo
+    date: "1670"
+    when: "1670-10-18"
+    borders: "1670-11-01"
+    countries: [ao]
+    body:
+      - After Mbwila, Soyo, the coastal province at the mouth of the Congo that had been all but independent since the 1640s and traded freely with the Dutch, made and unmade kings in São Salvador. In 1670 King Rafael I, who had come to the throne against Soyo’s will, asked Angola for help against it. The governor, Francisco de Távora, sent João Soares de Almeida with the strongest colonial army yet raised in Central Africa, about 400 musketeers, a detachment of cavalry, four light guns, bowmen and Imbangala auxiliaries, with ships along the coast. In June 1670 it won a battle on the Mbidizi River, in which, by some accounts, Soyo’s ruler was killed.
+      - Soyo called on its northern neighbour Ngoyo, which sent soldiers, and rearmed with guns and light field pieces from the Dutch. On 18 October 1670, St Luke’s Day, the Soyo–Ngoyo army met the invaders at the forest of Nfinda Ngula near Kitombo, where the Portuguese artillery could not be brought into play, and charged and routed them. Almeida was killed, and almost none of his army escaped death or capture; many drowned trying to cross the river. Portugal made no further attempt to conquer Kongo until the 19th century, and Soyo, through Capuchin missionaries, persuaded the pope to obtain from Portugal a recognition of its independence. The victory is still celebrated in parts of northern Angola on St Luke’s Day.
+    facts:
+      - [Battle of the Mbidizi River, "June 1670, Portuguese victory"]
+      - [Battle of Kitombo, "18 October 1670, Soyo victory"]
+      - [Portuguese force, "About 400 musketeers, cavalry, 4 guns, Imbangala and bowmen"]
+    markers:
+      - kind: battle
+        side: sy
+        name: Kitombo (Soyo, approximate)
+        date: 18 October 1670
+        text: The Soyo–Ngoyo army destroyed the Angolan army at the forest of Nfinda Ngula near Kitombo, in Soyo’s territory near its capital, Mbanza Soyo. The exact site is not known; the marker is placed at Soyo.
+        lonlat: [12.37, -6.13]
+      - kind: capital
+        side: kg
+        name: Mbanza Kongo (São Salvador)
+        date: "1670"
+        text: Seat of King Rafael I, who had asked Angola to march against Soyo.
+        lonlat: [14.248, -6.268]
+      - kind: capital
+        side: pt
+        name: Luanda
+        date: "1670"
+        text: The expedition sailed and marched north from here.
+        lonlat: [13.244, -8.827]
+    arrows:
+      - side: pt
+        label: Soares de Almeida
+        phase: 1
+        via: [[13.25, -8.75], [13.15, -7.85], [12.88, -7.2], [12.6, -6.6]]
+      - side: sy
+        phase: 2
+        via: [[12.3, -5.75], [12.35, -6.05], [12.45, -6.25]]
+    areas:
+      - style: outline
+        side: sy
+        label: Soyo (approximate)
+        polygon: [[12.2, -5.95], [13.1, -5.9], [13.3, -6.6], [12.75, -7.1], [12.3, -6.6]]

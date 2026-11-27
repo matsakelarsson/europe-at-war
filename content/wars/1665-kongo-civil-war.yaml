@@ -1,0 +1,150 @@
+id: kongo-civil-war
+name: Kongo Civil War
+start: "1665-10-29"
+end: "1709-10-04"
+tier: B
+summary: "The war of succession that divided the Kingdom of Kongo for more than forty years after King António I was killed by the Portuguese at Mbwila in 1665. Two branches of the royal family, the House of Kinlaza, to which António belonged, and the House of Kimpanzu, fought for the throne, while the rulers of Soyo, the da Silva, made and unmade kings. In 1678 the Kinlaza king Pedro III, with hired Jaga soldiers, attacked São Salvador (Mbanza Kongo), killed the Kimpanzu king Daniel I and burned the city, and the old capital was abandoned. For a generation rival kings ruled from mountain strongholds: the Kinlaza at Mbula (Lemba) and Kibangu, the Kimpanzu at Mbamba Lovata on Soyo’s border. From 1704 a young noblewoman, Beatriz Kimpa Vita, who said that St Anthony had possessed her, led thousands of followers, the Antonians, to resettle the ruined capital and demand a reunited kingdom; King Pedro IV of Kibangu had her burned as a heretic on 2 July 1706. On 15 February 1709 Pedro IV took São Salvador from the Antonians, and on 4 October 1709 he defeated his last Kinlaza rival, João II, at Mbula. He pardoned the Kimpanzu and arranged for the crown to rotate between the branches, which kept a fragile peace for half a century, but Kongo never regained its former power. The war fed the Atlantic slave trade: every faction sold captives, and more than 30,000 Antonians are said to have been sold after Pedro IV’s victory, through Loango to Dutch and English ships bound for the Caribbean and North America and through Luanda to Brazil."
+countries: [ao, cd]
+sides:
+  - id: kz
+    name: House of Kinlaza (Pedro III, João II of Mbula)
+    polities: [kongo]
+    ink: red
+    moves: Kinlaza moves
+    success: Kinlaza success
+  - id: kp
+    name: House of Kimpanzu (Daniel I, the Nóbrega of Mbamba Lovata)
+    polities: [kongo]
+    ink: purple
+    moves: Kimpanzu moves
+    success: Kimpanzu success
+  - id: sy
+    name: Soyo (the da Silva)
+    polities: [soyo]
+    ink: teal
+    moves: Soyo moves
+    success: Soyo success
+  - id: ar
+    name: Kibangu (Água Rosada; Pedro IV)
+    polities: [kongo]
+    ink: blue
+    moves: Pedro IV’s moves
+    success: Pedro IV’s success
+  - id: an
+    name: Antonians (Kimpa Vita, Pedro Constantinho da Silva)
+    polities: [antonians]
+    ink: gold
+    moves: Antonian moves
+    success: Antonian success
+notes:
+  - "The war is unusually well documented for its last years, thanks to the reports of Italian Capuchin missionaries, above all Bernardo da Gallo and Lorenzo da Lucca, and the records of Kimpa Vita’s trial, studied by John Thornton in The Kongolese Saint Anthony (1998). The early years rest on fewer sources, and the order and dates of the kings of the 1660s and 1670s differ in detail between historians."
+  - "Kongo’s factions were branches (kanda) of one royal lineage descended from King Afonso I; the Água Rosada of Kibangu, Pedro IV’s family, descended from both the Kinlaza and the Kimpanzu. All of them were Catholic. The exact locations of Kibangu (in the Serra do Canda), Mbula and Mbamba Lovata are not shown on the map."
+sources:
+  - title: Kongo Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kongo_Civil_War
+  - title: Kimpa Vita (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kimpa_Vita
+  - title: Pedro IV of Kongo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pedro_IV_of_Kongo
+  - title: Kinlaza (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kinlaza
+  - title: Kimpanzu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kimpanzu
+  - title: Battle of Kitombo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kitombo
+steps:
+  - title: Soyo’s kings and the fall of São Salvador
+    date: 1665–1678
+    when: "1666"
+    borders: "1678-12-31"
+    countries: [ao]
+    body:
+      - At Mbwila the Portuguese killed António I and many of the Kinlaza nobility and captured the boy heir, and Kongo had no undisputed successor. The Kinlaza, the line of Garcia II and António, were opposed by the Kimpanzu, an older branch whose partisans had found refuge in Soyo, the coastal province ruled by the da Silva family that had become all but independent in Garcia’s reign. A Kimpanzu partisan, Afonso II, took the throne first, but the Kinlaza forced him out in favour of Álvaro VII. Álvaro made himself hated, and in 1666 the army of Soyo marched on São Salvador and helped the people overthrow and kill him. Under Soyo’s eye the electors chose Álvaro VIII, another Kinlaza, and when the next Kinlaza king, Pedro III, crowned in January 1669, proved less pliant, Soyo removed him too and put a Kimpanzu, Álvaro IX, on the throne. Pedro III fled north to Mbula (Lemba).
+      - In 1670 Rafael I, a Kinlaza, overthrew Álvaro IX and called in the Portuguese against Soyo, whose army destroyed theirs at Kitombo on 18 October 1670 (see the Kongo–Portuguese wars). Kings followed one another quickly. In 1678 Pedro III marched on São Salvador with Jaga mercenaries; in the battle the Kimpanzu king Daniel I was killed and most of the city was burned. The capital, with its cathedral and churches, was abandoned, and rival claimants could only crown themselves among the ruins and withdraw before their enemies came.
+    facts:
+      - [Soyo overthrows Álvaro VII, "1666"]
+      - [Pedro III crowned, "January 1669"]
+      - [São Salvador sacked and abandoned, "1678"]
+    markers:
+      - kind: battle
+        side: kz
+        name: Mbwila (Ambuila)
+        date: 29 October 1665
+        text: António I was killed by the Portuguese, leaving Kongo without an undisputed heir.
+        lonlat: [14.65, -7.47]
+      - kind: capital
+        side: sy
+        name: Mbanza Soyo
+        date: 1665–1678
+        text: Seat of the da Silva rulers of Soyo, the kingmakers of Kongo after Mbwila.
+        lonlat: [12.37, -6.13]
+      - kind: taken
+        side: kz
+        name: São Salvador (Mbanza Kongo)
+        date: "1678"
+        text: Pedro III’s army with Jaga mercenaries killed King Daniel I and burned the city, which was then abandoned.
+        lonlat: [14.248, -6.268]
+    arrows:
+      - side: sy
+        label: Soyo
+        via: [[12.45, -6.15], [13.2, -6.2], [13.8, -6.25], [14.2, -6.27]]
+    areas:
+      - style: outline
+        side: sy
+        label: Soyo (approximate)
+        polygon: [[12.2, -5.95], [13.1, -5.9], [13.3, -6.6], [12.75, -7.1], [12.3, -6.6]]
+  - title: A kingdom of mountain strongholds
+    date: 1678–1704
+    when: "1688"
+    borders: "1700-01-01"
+    countries: [ao]
+    body:
+      - With São Salvador in ruins, the claimants ruled from mountain fortresses. The Kinlaza line of Pedro III held Mbula, or Lemba, in the north; Pedro III was murdered under a flag of truce in 1680 by Manuel de Nóbrega, brother of Daniel I, and his younger brother João II succeeded him there. Another Kinlaza branch held the mountain of Kibangu, in the Serra do Canda, which João II tried and failed to take. The Kimpanzu, led by Manuel de Nóbrega and the old queen Suzana de Nóbrega, ruled Mbamba Lovata on the southern border of Soyo and, with Soyo’s backing, made war on the Kinlaza within their reach. In 1688 two brothers of the Água Rosada family, born of a Kimpanzu father and a Kinlaza mother, overthrew the king of Kibangu; the elder, Álvaro X, ruled there until his death in December 1695, and the younger succeeded him as Pedro IV.
+      - Without a centre for trade and government, the kingdom ceased to function as a state for two decades. Whole populations were called up for the armies, neighbouring peoples were hired as soldiers, and the captives every faction took, its rivals’ partisans and their families, were sold to Atlantic slave traders, at Loango to the Dutch and English and at Luanda to the Portuguese. Pedro IV worked for a settlement through negotiation, with the help of the Kinlaza matriarch, Queen Ana Afonso de Leão, and of Capuchin missionaries; most claimants, even the Kimpanzu, came to acknowledge him, but João II did not, and Pedro, briefly crowned in the ruined capital in the 1690s, withdrew again to Kibangu. After 1700 he sent groups of settlers to reoccupy São Salvador.
+    facts:
+      - [Pedro III murdered, "1680"]
+      - [Água Rosada take Kibangu, "1688"]
+      - [Pedro IV king at Kibangu, "December 1695"]
+    markers:
+      - kind: event
+        side: ar
+        name: São Salvador (Mbanza Kongo)
+        date: 1678–1704
+        text: The ruined capital, a place where claimants crowned themselves and quickly withdrew; Pedro IV sent settlers back after 1700.
+        lonlat: [14.248, -6.268]
+      - kind: capital
+        side: sy
+        name: Mbanza Soyo
+        date: 1678–1704
+        text: Soyo backed the Kimpanzu of Mbamba Lovata, on its southern border.
+        lonlat: [12.37, -6.13]
+    areas:
+      - style: outline
+        side: sy
+        label: Soyo (approximate)
+        polygon: [[12.2, -5.95], [13.1, -5.9], [13.3, -6.6], [12.75, -7.1], [12.3, -6.6]]
+  - title: Kimpa Vita and Pedro IV’s restoration
+    date: 1704–1709
+    when: "1709-02-15"
+    borders: "1709-10-04"
+    countries: [ao]
+    body:
+      - "Beatriz Kimpa Vita, a young noblewoman born near Mount Kibangu about 1684, fell ill in 1704 and declared that St Anthony had taken possession of her. She preached that Christ was angered by the civil wars and that Kongo must be reunited under one king, taught that Jesus, Mary and St Francis had been Kongolese, burned charms (minkisi) and denounced the Capuchin missionaries. After Pedro IV and João II refused to heed her, she led her followers into the ruins of São Salvador in late 1704 or 1705, and thousands, most of them peasants tired of war, came to resettle the capital. Her movement, the Antonians, spread into Mbamba Lovata, and Pedro Constantinho da Silva Kibenga, a commander Pedro IV had sent to reoccupy the city, joined her and turned against the king. In 1706 she was captured near her home, tried under Kongo law with the counsel of the Capuchins Bernardo da Gallo and Lorenzo da Lucca, and burned as a heretic at Evululu, Pedro IV’s camp, on 2 July 1706."
+      - On 15 February 1709 Pedro IV marched on São Salvador and routed the Antonians; Kibenga was beheaded as he tried to surrender, and most of the movement’s noble followers returned to the Church. More than 30,000 Antonians are said to have been sold into the Atlantic slave trade. The survivors fled to Mbula, and on 4 October 1709, St Francis’s Day, João II’s army, coming south against Pedro, was defeated in the Mbula country; Pedro renamed his base São Francisco de Kibangu in gratitude. He then pardoned the Kimpanzu, made their leading claimant, Manuel Makasa, his son-in-law and heir, and established a rotation of the crown between the branches. When Pedro IV died in 1718 the capital was again at São Salvador, but Kongo remained a loose union of provinces. Kimpa Vita’s movement left its mark on Kongo religious art, and some see later Congolese prophetic churches, such as Kimbanguism, as its successors.
+    facts:
+      - [Antonians reoccupy São Salvador, "Late 1704 or 1705"]
+      - [Kimpa Vita burned at Evululu, "2 July 1706"]
+      - [Pedro IV takes São Salvador, "15 February 1709"]
+    markers:
+      - kind: taken
+        side: ar
+        name: São Salvador (Mbanza Kongo)
+        date: 15 February 1709
+        text: Held by the Antonians from 1704–1705; Pedro IV took it back and restored the capital.
+        lonlat: [14.248, -6.268]
+      - kind: capital
+        side: sy
+        name: Mbanza Soyo
+        date: "1705"
+        text: Soyo’s prince expelled the Antonian missionaries.
+        lonlat: [12.37, -6.13]

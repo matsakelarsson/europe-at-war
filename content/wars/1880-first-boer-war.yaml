@@ -1,0 +1,217 @@
+id: first-boer-war
+name: First Boer War
+start: "1880-12-16"
+end: "1881-03-23"
+tier: B
+summary: "The short war in which the Boers of the Transvaal won back the independence of the South African Republic, which Britain had annexed in 1877. After three years of petitions, a mass meeting at Paardekraal proclaimed the republic restored in December 1880 under a triumvirate of Paul Kruger, Piet Joubert and Marthinus Wessel Pretorius. Boer commandos besieged the seven small British garrisons in the Transvaal, destroyed a column of the 94th Regiment at Bronkhorstspruit on 20 December, and held the Natal border against the relief force of Major-General Sir George Colley, beating it at Laing’s Nek (28 January 1881) and Schuinshoogte (8 February) and killing Colley on Majuba Hill on 27 February. Gladstone’s government made peace on 23 March 1881. By the Pretoria Convention of August 1881 the Transvaal became self-governing under British suzerainty, which the London Convention of 1884 reduced to a British veto on its treaties. Some 400 British soldiers and about 40 Boers were killed. Afrikaners call it the First War of Independence."
+countries: [za, gb]
+sides:
+  - id: boer
+    name: Transvaal Boers (the restored South African Republic)
+    polities: [transvaal-boers]
+    ink: orange
+    moves: Boer moves
+    success: Boer success
+  - id: brit
+    name: Britain (the British Transvaal and Natal)
+    polities: [united-kingdom, transvaal, natal]
+    ink: red
+    moves: British moves
+    success: British success
+notes:
+  - "The Transvaal had been the South African Republic (Zuid-Afrikaansche Republiek) until its annexation on 12 April 1877; the base map shows it as the British Transvaal until the restoration of self-government in August 1881. The Pretoria Convention called it the Transvaal State; the London Convention of 1884 restored the old name."
+  - "Casualty figures differ between sources. Those given here follow the regimental returns used in the battle articles cited; Wikipedia’s summary gives 409 British soldiers killed and 359 wounded in the whole war, and 43 Boers killed and 58 wounded."
+sources:
+  - title: First Boer War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Boer_War
+  - title: The First Anglo-Boer War (South African History Online)
+    url: https://www.sahistory.org.za/article/first-anglo-boer-war
+  - title: Battle of Bronkhorstspruit (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Bronkhorstspruit
+  - title: Battle of Laing’s Nek (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Laing%27s_Nek
+  - title: Battle of Schuinshoogte (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Schuinshoogte
+  - title: Battle of Majuba Hill (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Majuba_Hill
+  - title: Pretoria Convention (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pretoria_Convention
+steps:
+  - title: Annexation and revolt
+    date: April 1877 – December 1880
+    when: "1880-12-16"
+    borders: "1880-12-16"
+    countries: [za, gb]
+    body:
+      - "On 12 April 1877 Sir Theophilus Shepstone read a proclamation in Church Square, Pretoria, annexing the South African Republic to the British Empire. The colonial secretary, Lord Carnarvon, wanted to unite the colonies, republics and African kingdoms of South Africa in a confederation under British rule, and the republic, bankrupt and unable to subdue the Pedi kingdom of Sekhukhune, offered no armed resistance. British troops defeated the Zulu kingdom and the Pedi in 1879, removing the threats that had been used to justify the annexation. Paul Kruger led two delegations to London, the second with a petition signed by more than 6,500 Boers, and the Boers hoped that William Gladstone, who had condemned the annexation in opposition, would undo it when he took office in April 1880; he did not."
+      - "The administrator, Sir Owen Lanyon, pressed for taxes. In November 1880 Piet Bezuidenhout of Potchefstroom refused to pay a charge on his wagon, and on 11 November about 100 armed burghers under Piet Cronjé took the seized wagon back from the sheriff’s auction. From 8 December some 8,000–10,000 Boers gathered at Paardekraal, near today’s Krugersdorp. They chose a triumvirate of Kruger, Piet Joubert and Marthinus Wessel Pretorius, proclaimed the republic restored on 13 December, and on 16 December, the anniversary of Blood River, raised its flag, the Vierkleur, at Heidelberg, the provisional capital. The first shots of the war were exchanged that day at Potchefstroom, where Cronjé’s commando besieged the British fort."
+      - "On 20 December 1880 a column of the 94th Regiment under Lieutenant-Colonel Philip Anstruther, marching from Lydenburg to reinforce Pretoria with a long wagon train, was stopped at Bronkhorstspruit by a commando under Frans Joubert. Anstruther refused to turn back, and in a few minutes of firing 157 of his soldiers were killed or wounded, by the count of most historians; the Boers lost one or two killed and four or five wounded. Anstruther died of his wounds. The British garrisons at Pretoria, Potchefstroom, Rustenburg, Lydenburg, Marabastad, Standerton and Wakkerstroom, about 1,800 soldiers in all, were cut off. The Boers did not try to storm them, but starved them: the fort at Potchefstroom surrendered after 95 days, on 21 March 1881."
+    facts:
+      - [Annexation of the Transvaal, "12 April 1877"]
+      - [Republic proclaimed restored, "13 December 1880 (flag raised at Heidelberg on 16 December)"]
+      - [Battle of Bronkhorstspruit, "20 December 1880; 157 British soldiers killed or wounded"]
+      - [Besieged British garrisons, "seven, about 1,800 soldiers"]
+    markers:
+      - kind: event
+        side: boer
+        name: Paardekraal
+        date: 8–15 December 1880
+        text: Some 8,000–10,000 Boers met here, chose the triumvirate and resolved to restore the republic.
+        lonlat: [27.80, -26.11]
+        lp: l
+      - kind: capital
+        side: boer
+        name: Heidelberg
+        date: 16 December 1880
+        text: The provisional capital of the restored republic, where the Vierkleur was raised on 16 December.
+        lonlat: [28.36, -26.505]
+      - kind: battle
+        side: boer
+        name: Bronkhorstspruit
+        date: 20 December 1880
+        text: Frans Joubert’s commando destroyed Anstruther’s column of the 94th Regiment on the road to Pretoria.
+        lonlat: [28.742, -25.840]
+      - kind: siege
+        side: brit
+        name: Pretoria
+        date: December 1880 – March 1881
+        text: The seat of the British administration. Its 5,000 inhabitants were moved into two military camps; the Boers blockaded the town but did not attack it.
+        lonlat: [28.188, -25.745]
+        lp: l
+      - kind: siege
+        side: boer
+        name: Potchefstroom
+        date: 16 December 1880 – 21 March 1881
+        text: The first shots of the war were fired here. The British fort, short of food, surrendered after 95 days.
+        lonlat: [27.10, -26.717]
+        lp: l
+      - kind: held
+        side: brit
+        name: Rustenburg
+        date: December 1880 – March 1881
+        text: A small British garrison in a mud fort, besieged until the armistice.
+        lonlat: [27.242, -25.668]
+        lp: l
+      - kind: held
+        side: brit
+        name: Lydenburg
+        date: 6 January – 30 March 1881
+        text: Fewer than a hundred soldiers under Lieutenant Walter Long held the fort for 84 days.
+        lonlat: [30.444, -25.096]
+      - kind: held
+        side: brit
+        name: Marabastad
+        date: 29 December 1880 – 2 April 1881
+        text: A military post in the north, held by about 60 soldiers until April 1881.
+        lonlat: [29.371, -23.996]
+      - kind: held
+        side: brit
+        name: Standerton
+        date: December 1880 – March 1881
+        text: A British garrison on the road to Natal, besieged throughout the war.
+        lonlat: [29.242, -26.934]
+      - kind: held
+        side: brit
+        name: Wakkerstroom
+        date: December 1880 – March 1881
+        text: A British garrison near the Natal border, besieged throughout the war.
+        lonlat: [30.144, -27.355]
+    arrows:
+      - side: brit
+        label: Anstruther
+        via: [[30.444, -25.096], [29.90, -25.55], [29.30, -25.78], [28.80, -25.835]]
+  - title: Laing’s Nek, Schuinshoogte and Majuba
+    date: January – February 1881
+    when: "1881-01-28"
+    borders: "1881-01-28"
+    countries: [za, gb]
+    view:
+      center: [29.88, -27.585]
+      size: [60, 56]
+    body:
+      - "Colley, governor of Natal and commander in south-eastern Africa, gathered the Natal Field Force, about 1,200 soldiers, at Newcastle to march to the relief of the garrisons. Piet Joubert’s commandos held Laing’s Nek, the pass over the Drakensberg by which the road from Natal entered the Transvaal. On 28 January 1881 Colley attacked: the 58th Regiment advanced uphill in close order, carrying its colours (the last time a British regiment did so in battle), and was shot down by Boers firing from cover. The British lost 84 killed and 113 wounded; the Boers reported 14 killed and 27 wounded."
+      - "On 8 February Colley led about 300 men south to clear the road to Newcastle and was attacked by Boers under Nicolaas Smit on the ridge of Schuinshoogte above the Ingogo River. After a day of fighting in heavy rain the survivors withdrew across the swollen river at night, having lost 66 killed and 77 wounded; the Boers lost 8 killed. Peace feelers were already passing between Kruger, the British government and President Jan Brand of the Orange Free State, and on 21 February Colley sent the Boers terms with 48 hours to reply."
+      - "Before Kruger’s answer reached him, Colley led some 550 soldiers and sailors by night up Majuba Hill, leaving parties on the way, so that about 400 reached the summit, which overlooked the Boer camps at Laing’s Nek. At dawn on 27 February the Boers saw them on the summit. While marksmen kept the British under fire, storming parties under Nicolaas Smit, Stephanus Roos, Joachim Ferreira and D. J. K. Malan worked their way up the slopes and overran the hilltop. The British lost 92 killed, 134 wounded and 59 taken prisoner; Colley was shot dead. The Boers lost one man killed and five wounded, one of whom died."
+    facts:
+      - [Battle of Laing’s Nek, "28 January 1881"]
+      - [Battle of Schuinshoogte (Ingogo), "8 February 1881"]
+      - [Battle of Majuba Hill, "27 February 1881; Colley killed"]
+      - [British losses at Majuba, "92 killed, 134 wounded, 59 captured"]
+    markers:
+      - kind: battle
+        side: boer
+        name: Laing’s Nek
+        date: 28 January 1881
+        text: Joubert’s commandos beat back Colley’s attack on the pass; the 58th Regiment lost more than a third of its men.
+        lonlat: [29.869, -27.461]
+      - kind: battle
+        side: boer
+        name: Majuba Hill
+        date: 27 February 1881
+        text: Boer storming parties climbed the hill and drove Colley’s force off the summit. Colley was killed.
+        lonlat: [29.8505, -27.4768]
+        lp: l
+      - kind: event
+        side: brit
+        name: Mount Prospect
+        date: January – March 1881
+        text: Colley’s camp below the Drakensberg, from which he attacked Laing’s Nek and climbed Majuba.
+        lonlat: [29.838, -27.520]
+        lp: l
+      - kind: battle
+        side: boer
+        name: Schuinshoogte (Ingogo)
+        date: 8 February 1881
+        text: Smit’s Boers pinned down Colley’s escort on the ridge above the Ingogo River for a day; the British escaped across the river at night.
+        lonlat: [29.878, -27.616]
+      - kind: event
+        side: brit
+        name: Newcastle
+        date: January 1881
+        text: The Natal Field Force gathered here before marching on Laing’s Nek.
+        lonlat: [29.931, -27.758]
+    arrows:
+      - side: brit
+        label: Colley
+        phase: 1
+        via: [[29.931, -27.758], [29.905, -27.66], [29.865, -27.565], [29.845, -27.525]]
+      - side: brit
+        phase: 2
+        via: [[29.845, -27.515], [29.858, -27.49], [29.866, -27.468]]
+      - side: brit
+        phase: 3
+        via: [[29.838, -27.515], [29.842, -27.50], [29.849, -27.482]]
+      - side: boer
+        phase: 3
+        via: [[29.872, -27.462], [29.862, -27.468], [29.853, -27.475]]
+  - title: Peace and the Pretoria Convention
+    date: March – October 1881
+    when: "1881-03-06"
+    borders: "1881-03-23"
+    countries: [za, gb]
+    body:
+      - "Colley’s successor, Sir Evelyn Wood, agreed an armistice with Joubert on 6 March 1881, and on 23 March, after talks at O’Neil’s Cottage below Majuba, he and Kruger, Joubert and Pretorius signed a peace agreement. Gladstone’s cabinet had no wish to fight a long war for a colony annexed by its predecessors, and it feared a rising of Afrikaners in the Cape Colony and the Orange Free State, which had openly sympathised with the Transvaal. Some of the besieged garrisons heard of the peace only weeks later; Marabastad held out until 2 April."
+      - "A royal commission worked out the terms, set down in the Pretoria Convention, signed on 3 August 1881 and ratified by the Volksraad on 25 October. The Transvaal State received complete self-government under the suzerainty of Queen Victoria; Britain kept control of its relations with foreign states and with the African peoples beyond its borders, and a British Resident was to watch over the treatment of the African population, much of which had paid taxes to the British administration and feared the return of Boer rule. The republic’s government took office in Pretoria again on 8 August 1881. By the London Convention of 27 February 1884 the name South African Republic was restored and suzerainty dropped, leaving Britain only a veto over its treaties."
+      - "For the Boers the victory became a founding story of Afrikaner nationalism. For many in Britain it was a humiliation, and “Remember Majuba” was a soldiers’ cry in the Second Boer War of 1899–1902, which began after gold had been found on the Witwatersrand in 1886 and turned the small republic into the richest state in southern Africa."
+    facts:
+      - [Armistice, "6 March 1881"]
+      - [Peace agreement at O’Neil’s Cottage, "23 March 1881"]
+      - [Pretoria Convention, "signed 3 August 1881, ratified 25 October 1881"]
+      - [London Convention, "27 February 1884"]
+    markers:
+      - kind: treaty
+        name: O’Neil’s Cottage
+        date: 23 March 1881
+        text: The farmhouse below Majuba where Wood and Kruger agreed the peace.
+        lonlat: [29.845, -27.495]
+      - kind: treaty
+        name: Pretoria
+        date: 3 August 1881
+        text: The Pretoria Convention was signed here; the republic’s government took office again on 8 August.
+        lonlat: [28.188, -25.745]
+      - kind: held
+        side: brit
+        name: Marabastad
+        date: until 2 April 1881
+        text: The last of the besieged garrisons to stop fighting.
+        lonlat: [29.371, -23.996]

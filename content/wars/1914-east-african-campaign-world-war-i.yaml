@@ -1,0 +1,415 @@
+id: east-african-campaign-world-war-i
+name: East African campaign (First World War)
+start: "1914-08-08"
+end: "1918-11-25"
+tier: A
+summary: "The First World War in East Africa, fought for four years over German East Africa (mainland Tanzania, Rwanda and Burundi) and the neighbouring British, Belgian and Portuguese colonies. The German commander, Paul von Lettow-Vorbeck, set out to tie down as many Allied troops as he could. His Schutztruppe, mostly African soldiers (askari), threw back a British landing at Tanga in November 1914. In 1916 the South African general Jan Smuts invaded from Kenya, while Belgian troops from the Congo took Rwanda, Burundi and Tabora and British forces came in from Nyasaland and Northern Rhodesia; by the end of the year the Allies held the north and centre of the colony and its railways. Lettow-Vorbeck withdrew south, fought a costly battle at Mahiwa in October 1917, and in November crossed the Rovuma into Portuguese Mozambique. He marched through Mozambique for ten months, came back through German East Africa into Northern Rhodesia and surrendered at Abercorn on 25 November 1918, two weeks after the armistice in Europe. The war was fought largely by Africans and borne by them: about 11,000 British Empire soldiers and some 95,000 of its African carriers died, and famine and disease caused by the war killed hundreds of thousands of civilians."
+countries: [tz, ke, mz, zm, mw, rw, bi, ug, cd, de, gb, za, in, be, pt]
+sides:
+  - id: de
+    name: German East Africa (Schutztruppe)
+    polities: [german-east-africa, germany]
+    ink: slate
+    moves: German moves
+    success: German success
+  - id: gb
+    name: British Empire
+    polities: [united-kingdom, kenya, uganda, malawi, zambia, south-africa, british-india]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: be
+    name: Belgium (Force Publique of the Belgian Congo)
+    polities: [belgium, belgian-congo]
+    ink: gold
+    moves: Belgian moves
+    success: Belgian success
+  - id: pt
+    name: Portugal
+    polities: [portugal, mozambique]
+    ink: green
+    moves: Portuguese moves
+    success: Portuguese success
+notes:
+  - "German East Africa remains German on the base map until the Treaty of Versailles came into force on 10 January 1920; the areas taken by British and Belgian forces during the war are shown as occupied."
+  - "Lettow-Vorbeck was celebrated in Germany after the war as the commander who was never defeated, and the legend was used by the Nazi regime. Historians such as Hew Strachan and Edward Paice have stressed the cost of his strategy to the people of East Africa, whose food, cattle and men both sides requisitioned."
+  - "Casualty figures are uncertain, especially for carriers and civilians. Figures cited include 11,189 dead for British Empire soldiers and about 95,000 for its carriers, 2,620 Belgian soldiers and 15,650 carriers, 5,533 Portuguese soldiers, and about 2,000–2,500 dead on the German side (734 Europeans and 1,798 Africans by one count); estimates of civilian deaths from war-related famine and disease in the region run from about 300,000 to more than 350,000."
+sources:
+  - title: East African campaign (World War I) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/East_African_campaign_(World_War_I)
+  - title: Battle of Tanga (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tanga
+  - title: Battle of Kondoa Irangi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kondoa_Irangi
+  - title: Battle of Tabora (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tabora
+  - title: Battle of Mahiwa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Mahiwa
+  - title: Battle of Ngomano (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ngomano
+  - title: Paul von Lettow-Vorbeck (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Paul_von_Lettow-Vorbeck
+  - title: SMS Königsberg (1905) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/SMS_K%C3%B6nigsberg_(1905)
+  - title: The East Africa Campaign (National Army Museum)
+    url: https://www.nam.ac.uk/explore/east-africa-campaign
+  - title: East Africa (1914–1918 Online, International Encyclopedia of the First World War)
+    url: https://encyclopedia.1914-1918-online.net/article/east_africa
+steps:
+  - title: The war comes to East Africa
+    date: August – September 1914
+    when: "1914-09-20"
+    borders: "1914-09-30"
+    countries: [tz, ke]
+    body:
+      - "When war broke out in Europe, the governor of German East Africa, Heinrich Schnee, hoped to keep the colony out of it, and some British officials in Kenya felt the same. On 8 August 1914 the British cruiser Astraea shelled the wireless station at Dar es Salaam. The new commander of the Schutztruppe, Lieutenant-Colonel Paul von Lettow-Vorbeck, meant to fight: if he could draw British troops to East Africa, they would not be on the Western Front. His force had 260 Germans and about 2,470 askari in fourteen field companies, with settler reservists, and it began recruiting at once."
+      - "On 15 August two companies seized the border town of Taveta, at the foot of Kilimanjaro, and German patrols began raiding the Uganda Railway, the British line from Mombasa to Lake Victoria. At sea the cruiser Königsberg, which had slipped out of Dar es Salaam before the war, surprised the British cruiser Pegasus in Zanzibar harbour on 20 September and sank it, then took refuge in the channels of the Rufiji delta."
+    facts:
+      - [Dar es Salaam wireless station shelled, "8 August 1914"]
+      - [Taveta taken, "15 August 1914"]
+      - [Pegasus sunk at Zanzibar, "20 September 1914"]
+    markers:
+      - kind: naval
+        side: gb
+        name: Dar es Salaam
+        date: 8 August 1914
+        text: The British cruiser Astraea shelled the German wireless station, the first act of the war in East Africa.
+        lonlat: [39.28, -6.82]
+        lp: l
+      - kind: taken
+        side: de
+        name: Taveta
+        date: 15 August 1914
+        text: Two German askari companies seized the border town, from which patrols raided the Uganda Railway.
+        lonlat: [37.68, -3.40]
+      - kind: naval
+        side: de
+        name: Zanzibar
+        date: 20 September 1914
+        text: The German cruiser Königsberg sank the British cruiser Pegasus in the harbour.
+        lonlat: [39.19, -6.16]
+        lp: r
+      - kind: held
+        side: gb
+        name: Mombasa
+        date: "1914"
+        text: The main British port, at the head of the Uganda Railway.
+        lonlat: [39.67, -4.05]
+    arrows:
+      - side: de
+        label: Raids on the Uganda Railway
+        via: [[37.7, -3.38], [38.0, -3.2], [38.4, -3.0]]
+  - title: Tanga
+    date: 2–5 November 1914
+    when: "1914-11-04"
+    borders: "1914-11-05"
+    countries: [tz, ke]
+    body:
+      - "Britain sent an expeditionary force from India to seize the port of Tanga, the terminus of the German northern railway. Some 8,000 men under Major-General Arthur Aitken, most of them inexperienced Indian troops, began landing near the town on 2–3 November 1914, giving the Germans time to bring reinforcements down the railway. Lettow-Vorbeck gathered about 1,000 men. On 4 November the British attacked through plantations and bush; the German askari counter-attacked, several Indian units broke, and swarms of angry bees disturbed by the fighting attacked both sides. On 5 November the British re-embarked, leaving behind rifles, machine guns and some 600,000 rounds of ammunition."
+      - "British losses were 360 killed, 487 wounded and 148 missing; the Germans lost 16 Germans and 55 askari killed, among them Captain Tom von Prince, and 76 wounded. At the same time a second British force failed to take Longido, north-west of Kilimanjaro. Tanga made Lettow-Vorbeck’s name, armed his growing army, and persuaded the British to stand on the defensive until they could assemble a much larger force."
+    facts:
+      - [British force, "about 8,000"]
+      - [German force, "about 1,000"]
+      - [Losses, "British 360 killed, 487 wounded, 148 missing; German 71 killed, 76 wounded"]
+    markers:
+      - kind: battle
+        side: de
+        name: Tanga
+        date: 3–5 November 1914
+        text: The German askari threw back a British landing several times their number. The British re-embarked, leaving their arms behind.
+        lonlat: [39.10, -5.07]
+      - kind: battle
+        side: de
+        name: Longido
+        date: 3 November 1914
+        text: A British attack from Kenya on the German post failed.
+        lonlat: [36.68, -2.73]
+    arrows:
+      - side: gb
+        label: Indian Expeditionary Force B
+        via: [[39.6, -5.3], [39.35, -5.15], [39.15, -5.1]]
+      - side: de
+        label: Reinforcements by rail
+        via: [[37.4, -3.4], [37.9, -4.2], [38.4, -4.8], [39.05, -5.07]]
+  - title: Königsberg and the lakes
+    date: 1915 – February 1916
+    when: "1915-07-11"
+    borders: "1916-02-09"
+    countries: [tz, cd, ug]
+    body:
+      - "For more than a year the fighting on land was limited to raids and small actions on the Kenyan border and around the lakes. The Königsberg, trapped in the Rufiji delta, held down a British squadron until two shallow-draught monitors, Severn and Mersey, were brought out from Britain and, guided by spotter aircraft, wrecked it on 11 July 1915. Its crew and guns went ashore and joined the war on land."
+      - "On Lake Victoria British steamers had the upper hand, and in June 1915 a British force raided the German port of Bukoba. On Lake Tanganyika the Germans ruled the water with armed steamers until the Royal Navy sent two motor boats, Mimi and Toutou, overland from the Cape by rail, road and river. From the Belgian base at Lukuga (Albertville) they captured the German Kingani on 26 December 1915 and sank the Hedwig von Wissmann on 9 February 1916."
+    facts:
+      - [Königsberg destroyed, "11 July 1915"]
+      - [Kingani captured, "26 December 1915"]
+      - [Hedwig von Wissmann sunk, "9 February 1916"]
+    markers:
+      - kind: naval
+        side: gb
+        name: Rufiji delta
+        date: 11 July 1915
+        text: The British monitors Severn and Mersey destroyed the Königsberg. Its guns were taken ashore for the war on land.
+        lonlat: [39.27, -7.83]
+      - kind: event
+        side: gb
+        name: Bukoba
+        date: June 1915
+        text: A British force crossing Lake Victoria raided the German port.
+        lonlat: [31.81, -1.33]
+      - kind: naval
+        side: gb
+        name: Lake Tanganyika
+        date: December 1915 – February 1916
+        text: The British motor boats Mimi and Toutou, operating from Lukuga (Albertville), captured the Kingani and sank the Hedwig von Wissmann.
+        lonlat: [29.6, -6.0]
+  - title: Smuts’s offensive
+    date: February – May 1916
+    when: "1916-03-13"
+    borders: "1916-05-31"
+    countries: [tz, ke, rw]
+    body:
+      - "Early in 1916 the general chosen to command the British forces, Horace Smith-Dorrien, fell ill, and the South African general and politician Jan Smuts was appointed in his place, bringing large South African reinforcements. Before he took command, an attack by newly arrived South African troops on the German positions at Salaita Hill, near Taveta, failed on 12 February. Smuts then outflanked the Germans around Kilimanjaro: after hard fighting at Latema Nek on 11–12 March, the Germans fell back, and Moshi and the northern railway fell to his troops on 13 March. Lettow-Vorbeck withdrew south towards the Pare and Usambara mountains, avoiding the decisive battle Smuts sought."
+      - "Smuts sent Jacob van Deventer’s mounted brigade south-west across the Masai steppe to cut the central railway. Van Deventer took Kondoa Irangi on 19 April, but the rains came, horses died of tsetse-borne disease by the thousand, and on 7–10 May Lettow-Vorbeck, who had moved some 4,000 men by the central railway, attacked the town. The South Africans held on. In the west, Belgian troops of the Force Publique under General Charles Tombeur crossed from the Congo; they took Kigali on 6 May 1916 and had occupied Rwanda and Burundi by mid-June."
+    facts:
+      - [Repulse at Salaita Hill, "12 February 1916"]
+      - [Moshi taken, "13 March 1916"]
+      - [Kigali taken by the Belgians, "6 May 1916"]
+    markers:
+      - kind: battle
+        side: de
+        name: Taveta and Salaita Hill
+        date: 12 February – 12 March 1916
+        text: The British attack on Salaita Hill failed in February. In March the Germans held Latema Nek nearby for a day before falling back.
+        lonlat: [37.68, -3.40]
+      - kind: taken
+        side: gb
+        name: Moshi
+        date: 13 March 1916
+        text: The terminus of the German northern railway, taken by Smuts’s troops.
+        lonlat: [37.34, -3.35]
+        lp: l
+      - kind: battle
+        side: gb
+        name: Kondoa Irangi
+        date: 7–10 May 1916
+        text: Van Deventer’s South Africans took the town on 19 April and beat off Lettow-Vorbeck’s attacks in May.
+        lonlat: [35.79, -4.91]
+      - kind: taken
+        side: be
+        name: Kigali
+        date: 6 May 1916
+        text: Taken by the Belgian Force Publique invading from the Congo.
+        lonlat: [30.06, -1.95]
+    arrows:
+      - side: gb
+        label: Smuts
+        phase: 1
+        via: [[37.9, -3.35], [37.68, -3.42], [37.5, -3.38], [37.36, -3.35]]
+      - side: gb
+        label: Van Deventer
+        phase: 2
+        via: [[37.0, -3.4], [36.5, -3.9], [36.1, -4.4], [35.82, -4.88]]
+      - side: be
+        label: Tombeur
+        phase: 2
+        via: [[29.0, -1.7], [29.6, -1.8], [30.0, -1.93]]
+    areas:
+      - style: occupied
+        side: gb
+        label: Occupied by British forces, May 1916
+        atoms: [TZ-09, TZ-01]
+      - style: occupied
+        side: be
+        label: Occupied by Belgian forces, June 1916
+        atoms: [RW-01, RW-02, RW-03, RW-04, RW-05, BI-BB, BI-BL, BI-BM, BI-BR, BI-CA, BI-CI, BI-GI, BI-KI, BI-KR, BI-KY, BI-MA, BI-MU, BI-MW, BI-MY, BI-NG, BI-RT, BI-RY]
+  - title: The railways fall
+    date: May – September 1916
+    when: "1916-09-04"
+    borders: "1916-09-19"
+    countries: [tz, rw, bi, mw, zm]
+    body:
+      - "In May Smuts’s main force advanced down the Pangani valley along the northern railway, then turned south through Handeni towards the central railway, the line from Dar es Salaam to Lake Tanganyika. Lettow-Vorbeck fought rearguard actions and withdrew each time Smuts tried to encircle him. Smuts took Morogoro on 26 August 1916, and Dar es Salaam surrendered to the Royal Navy on 4 September. British forces landed at the other ports, among them Kilwa and Lindi. The Germans fell back into the Uluguru mountains and then south to the Rufiji."
+      - "From the west the Belgians advanced in two brigades: one took Kigoma on Lake Tanganyika on 28 July, the other reached Lake Victoria near Mwanza. Both converged on Tabora, the colony’s inland capital, which surrendered to them on 19 September after more than a week of fighting with the German western force under Major-General Kurt Wahle. A smaller British force under Charles Crewe, advancing from Lake Victoria, arrived too late. From the south a British column under Edward Northey advanced from Nyasaland and Northern Rhodesia and reached Iringa in August. Smuts’s troops, decimated by malaria and dysentery, were exhausted; from late 1916 most South African, Indian and Rhodesian units were sent home and replaced by African soldiers of the King’s African Rifles and the Nigerian and Gold Coast regiments."
+    facts:
+      - [Morogoro taken, "26 August 1916"]
+      - [Dar es Salaam surrenders, "4 September 1916"]
+      - [Tabora taken by the Belgians, "19 September 1916"]
+    markers:
+      - kind: taken
+        side: gb
+        name: Morogoro
+        date: 26 August 1916
+        text: Taken by Smuts’s main force on the central railway.
+        lonlat: [37.66, -6.82]
+      - kind: taken
+        side: gb
+        name: Dar es Salaam
+        date: 4 September 1916
+        text: The capital of German East Africa surrendered to the Royal Navy.
+        lonlat: [39.28, -6.82]
+      - kind: taken
+        side: be
+        name: Tabora
+        date: 19 September 1916
+        text: The inland capital, taken by the Belgian Force Publique after more than a week of fighting.
+        lonlat: [32.80, -5.02]
+      - kind: taken
+        side: be
+        name: Kigoma
+        date: 28 July 1916
+        text: The port on Lake Tanganyika at the end of the central railway, taken by Belgian troops.
+        lonlat: [29.63, -4.88]
+      - kind: taken
+        side: gb
+        name: Iringa
+        date: August 1916
+        text: Reached by Northey’s column advancing from Nyasaland and Northern Rhodesia.
+        lonlat: [35.69, -7.77]
+    arrows:
+      - side: gb
+        label: Smuts
+        phase: 1
+        via: [[37.6, -3.9], [38.2, -4.6], [38.1, -5.4], [37.7, -6.2], [37.66, -6.78]]
+      - side: be
+        label: Tombeur
+        phase: 1
+        via: [[30.2, -2.6], [30.6, -3.6], [31.6, -4.4], [32.75, -5.0]]
+      - side: gb
+        label: Northey
+        phase: 1
+        via: [[33.6, -9.6], [34.2, -9.0], [35.0, -8.3], [35.65, -7.8]]
+      - side: de
+        label: Lettow-Vorbeck
+        phase: 2
+        via: [[37.6, -7.0], [37.8, -7.5], [38.2, -7.9]]
+    areas:
+      - style: occupied
+        side: gb
+        label: Occupied by British forces, September 1916 (approximate)
+        atoms: [TZ-01, TZ-09, TZ-26, TZ-25, TZ-25~coast, TZ-03, TZ-23, TZ-02, TZ-19, TZ-19~coast, TZ-16, TZ-18, TZ-13, TZ-22, TZ-30, TZ-27, TZ-05, TZ-04, TZ-14, TZ-20, TZ-28]
+      - style: occupied
+        side: be
+        label: Occupied by Belgian forces, September 1916
+        atoms: [TZ-08, TZ-24, RW-01, RW-02, RW-03, RW-04, RW-05, BI-BB, BI-BL, BI-BM, BI-BR, BI-CA, BI-CI, BI-GI, BI-KI, BI-KR, BI-KY, BI-MA, BI-MU, BI-MW, BI-MY, BI-NG, BI-RT, BI-RY]
+  - title: Mahiwa
+    date: 1917
+    when: "1917-10-17"
+    borders: "1917-11-28"
+    countries: [tz]
+    body:
+      - "Smuts left for London in January 1917, claiming the campaign was all but over; it went on for almost two more years. His successors, Arthur Hoskins and from May 1917 Jacob van Deventer, pressed the Germans into the south-east of the colony. Their armies depended on tens of thousands of African carriers, recruited and often conscripted in Kenya, Uganda, Nyasaland and the occupied territory, who died in great numbers of disease, overwork and hunger. Both sides took the food of the country, and after the rains failed in 1917 famine spread through German East Africa."
+      - "In October 1917 the Germans, under Lettow-Vorbeck and General Wahle, held a position near Mahiwa, west of Lindi. From 15 to 18 October British, Indian, African and Nigerian troops attacked it head-on and lost about 2,700 men, killed and wounded; the Germans lost about 500–600, a loss they could not replace. Belgian columns took Mahenge in October, and a German detachment under Theodor Tafel, cut off and starving, surrendered at the end of November. Lettow-Vorbeck chose to leave the colony with his fittest men rather than give up."
+    facts:
+      - [Battle of Mahiwa, "15–18 October 1917"]
+      - [Losses at Mahiwa, "British about 2,700; German about 500–600"]
+      - [Tafel’s detachment surrenders, "end of November 1917"]
+    markers:
+      - kind: battle
+        side: de
+        name: Mahiwa
+        date: 15–18 October 1917
+        text: The British lost about 2,700 men in frontal attacks on the German position. The Germans held but lost men they could not replace.
+        lonlat: [39.27, -10.34]
+      - kind: held
+        side: gb
+        name: Lindi
+        date: from September 1916
+        text: The British base for the advance inland against the German positions.
+        lonlat: [39.71, -10.00]
+      - kind: held
+        side: gb
+        name: Kilwa
+        date: from September 1916
+        text: The British base for the advance from the north.
+        lonlat: [39.40, -8.75]
+      - kind: taken
+        side: be
+        name: Mahenge
+        date: October 1917
+        text: Taken by a Belgian column.
+        lonlat: [36.72, -8.68]
+    arrows:
+      - side: gb
+        label: Van Deventer
+        via: [[39.7, -10.0], [39.5, -10.15], [39.3, -10.32]]
+      - side: gb
+        via: [[39.35, -8.85], [39.2, -9.3], [39.25, -10.2]]
+    areas:
+      - style: occupied
+        side: gb
+        label: Occupied by British forces in 1917
+        atoms: [TZ-12, TZ-12~coast, TZ-17, TZ-17~coast, TZ-21, TZ-29]
+  - title: Into Mozambique
+    date: November 1917 – September 1918
+    when: "1918-07-03"
+    borders: "1918-09-28"
+    countries: [mz, tz]
+    body:
+      - "Portugal had been at war with Germany since March 1916 but its troops in northern Mozambique were few, badly supplied and spread thin. On 25 November 1917 Lettow-Vorbeck’s advance guard crossed the Rovuma and stormed the Portuguese post at Negomano, held by about 900 men under João Teixeira Pinto, who was killed. The Germans captured some 250,000 rounds of ammunition, six machine guns, hundreds of rifles, food and Portuguese uniforms. For the next ten months his force of some 2,000 Germans and askari, with carriers and camp followers, lived off the Portuguese posts and the villages of northern Mozambique, while British columns tried to corner it."
+      - "In 1918 the Germans marched south almost to the Zambezi. In early July they attacked the Portuguese and British garrison at Nhamacurra, a sugar estate and railway station near Quelimane, and after three days captured it with large stocks of supplies; many of the defenders drowned trying to escape across a river. Then Lettow-Vorbeck turned north again, fought off British columns at Lioma and the Pere hills, and on 28 September 1918 crossed back into German East Africa. The population of northern Mozambique, already hit by Portuguese forced labour and recruiting, suffered heavily from the requisitions and fighting of both sides."
+    facts:
+      - [Negomano taken, "25 November 1917"]
+      - [Nhamacurra taken, "early July 1918"]
+      - [Back across the Rovuma, "28 September 1918"]
+    markers:
+      - kind: taken
+        side: de
+        name: Negomano
+        date: 25 November 1917
+        text: The Germans stormed the Portuguese post at the meeting of the Rovuma and the Lugenda, capturing arms, ammunition and food.
+        lonlat: [38.49, -11.43]
+      - kind: taken
+        side: de
+        name: Nhamacurra
+        date: early July 1918
+        text: The Germans captured the Portuguese and British garrison and its supplies after three days of fighting.
+        lonlat: [37.02, -17.49]
+      - kind: held
+        side: pt
+        name: Quelimane
+        date: "1918"
+        text: The Portuguese port nearest to the southernmost point of the German march.
+        lonlat: [36.89, -17.88]
+        lp: r
+    arrows:
+      - side: de
+        label: Lettow-Vorbeck, 1917–1918
+        via: [[38.45, -11.0], [38.3, -12.6], [37.6, -14.6], [37.2, -16.4], [37.05, -17.4]]
+      - side: de
+        label: Northward, July – September 1918
+        via: [[37.3, -17.3], [38.6, -16.0], [39.0, -14.2], [38.4, -12.5], [37.9, -11.3]]
+  - title: Northern Rhodesia and the surrender
+    date: September – November 1918
+    when: "1918-11-25"
+    borders: "1918-11-25"
+    countries: [tz, zm]
+    body:
+      - "Lettow-Vorbeck marched north-west through the south of German East Africa, then turned west round the north end of Lake Nyasa and in early November crossed into Northern Rhodesia, where the British had few troops. His men occupied Kasama, which the British had evacuated, and on 12 November captured a rubber factory on the Chambeshi river after a four-hour fight. On 14 November a British messenger brought word of the armistice that had been signed in Europe on 11 November. Lettow-Vorbeck agreed to a ceasefire, and on 25 November 1918 he surrendered at Abercorn to Brigadier-General William Edwards with 30 German officers, 125 other German ranks, 1,168 askari and about 3,500 carriers and camp followers."
+      - "The campaign had cost East Africa dearly. About 11,000 soldiers of the British Empire died, more of disease than in battle, and some 95,000 of its African carriers; the Belgians lost about 2,600 soldiers and 15,650 carriers, the Portuguese about 5,500 soldiers, and the Schutztruppe about 2,000–2,500. Famine and disease caused by the war killed many more civilians: estimates for German East Africa alone run to about 300,000, and the influenza of 1918 followed. Under the Treaty of Versailles Germany gave up its colony. Most of it became the British mandate of Tanganyika, Rwanda and Burundi the Belgian mandate of Ruanda-Urundi, and the Kionga triangle south of the Rovuma went to Portugal."
+    facts:
+      - [Armistice news reaches the Germans, "14 November 1918"]
+      - [Surrender at Abercorn, "25 November 1918"]
+      - [Carriers of the British Empire who died, "about 95,000"]
+    markers:
+      - kind: taken
+        side: de
+        name: Kasama
+        date: November 1918
+        text: Occupied by the Germans after the British evacuated it. Nearby, at the Chambeshi river, Lettow-Vorbeck learned of the armistice on 14 November.
+        lonlat: [31.18, -10.21]
+      - kind: treaty
+        name: Abercorn (Mbala)
+        date: 25 November 1918
+        text: Lettow-Vorbeck surrendered here with 155 Germans, 1,168 askari and about 3,500 carriers and camp followers.
+        lonlat: [31.37, -8.84]
+      - kind: toll
+        name: German East Africa
+        date: 1914–1918
+        text: "Estimates of civilian deaths from war-related famine and disease in German East Africa run to about 300,000."
+        lonlat: [34.5, -6.5]
+    arrows:
+      - side: de
+        label: Lettow-Vorbeck, September – November 1918
+        via: [[37.9, -11.2], [36.0, -10.4], [34.9, -9.5], [33.5, -9.3], [32.3, -9.6], [31.25, -10.15]]
+      - side: de
+        via: [[31.2, -10.1], [31.3, -9.4], [31.36, -8.9]]

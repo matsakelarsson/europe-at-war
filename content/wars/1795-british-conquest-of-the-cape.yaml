@@ -1,0 +1,184 @@
+id: british-conquest-of-the-cape
+name: British conquest of the Cape
+start: "1795-06-11"
+end: "1806-01-18"
+tier: B
+summary: "The two British invasions that took the Cape of Good Hope from the Dutch, an outcome of the French Revolutionary and Napoleonic Wars. When French armies overran the Dutch Republic in 1795 and the Batavian Republic was proclaimed, Britain moved to keep the Cape, the half-way station on the sea route to India, out of French hands. A squadron under Vice-Admiral George Elphinstone, with troops under Major-General James Craig, anchored in False Bay in June 1795, bearing letters from the exiled stadtholder William V asking the Dutch East India Company’s governor, Abraham Sluysken, to admit them. He refused; the British forced the Muizenberg pass on 7 August, and when reinforcements under General Alured Clarke arrived in September the colony capitulated. A Batavian squadron sent to retake it surrendered in Saldanha Bay in August 1796. The Peace of Amiens returned the Cape to the Batavian Republic, which took it over in February 1803, but when war resumed Britain sent a second expedition: Sir David Baird’s army landed north of Cape Town, defeated Governor Jan Willem Janssens’s smaller and mixed force at Blaauwberg on 8 January 1806, took Cape Town on 10 January and received Janssens’s capitulation on 18 January. The Netherlands ceded the colony to Britain in 1814."
+countries: [za, gb, nl]
+sides:
+  - id: gb
+    name: Great Britain
+    polities: [united-kingdom]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: nl
+    name: Dutch Cape (the Company, then the Batavian Republic)
+    polities: [cape-colony, dutch-republic, netherlands]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+notes:
+  - The Cape was governed by the Dutch East India Company (VOC) until 1795. The Batavian Republic, which succeeded the Dutch Republic, governed it directly from 1803 to 1806.
+  - The capitulation of 1795 is dated 15 September in some accounts and 16 September in others; the governor accepted the British terms on the first day and the articles were signed on the second.
+sources:
+  - title: Invasion of the Cape Colony (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Invasion_of_the_Cape_Colony_(1795)
+  - title: Capitulation of Saldanha Bay (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Capitulation_of_Saldanha_Bay
+  - title: Battle of Blaauwberg (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Blaauwberg
+  - title: Graaff-Reinet (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Graaff-Reinet
+  - title: Kew Letters (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kew_Letters
+steps:
+  - title: Muizenberg
+    date: June – September 1795
+    when: "1795-08-07"
+    borders: "1795-08-07"
+    countries: [za, gb, nl]
+    view:
+      center: [18.47, -34.04]
+      size: [60, 60]
+    body:
+      - In January 1795 French armies overran the Dutch Republic and local revolutionaries proclaimed the Batavian Republic. The stadtholder, William V, fled to England and from Kew wrote to the governors of the Dutch colonies telling them to admit British troops to protect them from the French. A British squadron under Vice-Admiral Sir George Elphinstone, with about 1,800 soldiers under Major-General James Craig, anchored in Simon’s Bay, in False Bay, on 11 June 1795. The Company’s commissioner-governor, Abraham Sluysken, and the garrison commander, Colonel Robert Jacob Gordon, played for time, uncertain whom to obey; many burghers favoured the new republic, and the colony itself was in turmoil, as the frontier districts had just thrown out the Company’s officials.
+      - Craig landed at Simon’s Town on 14 July. The road to Cape Town ran along the shore under the mountains at Muizenberg, where the Dutch held a fortified camp with Company regulars, burgher militia and the Pandour corps of Khoikhoi and free black soldiers, about 3,600 men in all across the colony. On 7 August 1795 Craig attacked with soldiers and about 1,000 seamen while ships’ guns bombarded the camp from the bay, and the defenders fell back to Wynberg. Through August the British held Muizenberg against Dutch counter-attacks and burgher raids.
+      - On 3 September a fleet of East India Company ships brought about 4,000 more troops under General Alured Clarke. They advanced on Cape Town, brushing aside the Dutch at Wynberg on 14 September, and Sluysken, given a 24-hour ultimatum, surrendered the colony on 15 September; the articles of capitulation were signed the next day. British losses in the campaign were a few killed and some 70 wounded.
+    facts:
+      - [British squadron in Simon’s Bay, "11 June 1795"]
+      - [Battle of Muizenberg, "7 August 1795"]
+      - [Capitulation, "15–16 September 1795"]
+    markers:
+      - kind: event
+        side: gb
+        name: Simon’s Town
+        date: 14 July 1795
+        text: The British landed here and occupied the town and its anchorage.
+        lonlat: [18.433, -34.193]
+        lp: l
+      - kind: battle
+        side: gb
+        name: Muizenberg
+        date: 7 August 1795
+        text: British soldiers and seamen, supported by ships’ guns, drove the Dutch from their fortified camp on the coast road.
+        lonlat: [18.47, -34.105]
+      - kind: battle
+        side: gb
+        name: Wynberg
+        date: 14 September 1795
+        text: Clarke’s army drove the Dutch from their last line before Cape Town.
+        lonlat: [18.468, -34.003]
+      - kind: treaty
+        side: gb
+        name: Cape Town
+        date: 15–16 September 1795
+        text: Sluysken surrendered the colony after a 24-hour ultimatum.
+        lonlat: [18.423, -33.925]
+        lp: l
+    arrows:
+      - side: gb
+        label: Elphinstone
+        phase: 1
+        via: [[18.62, -34.32], [18.52, -34.24], [18.45, -34.19]]
+      - side: gb
+        label: Craig
+        phase: 2
+        via: [[18.433, -34.185], [18.445, -34.140], [18.465, -34.112]]
+      - side: gb
+        label: Clarke
+        phase: 3
+        via: [[18.47, -34.10], [18.475, -34.05], [18.47, -34.01], [18.44, -33.94]]
+  - title: The frontier, Saldanha Bay and the Batavian interlude
+    date: 1795–1803
+    when: "1796-08-17"
+    borders: "1803-03-01"
+    countries: [za, gb, nl]
+    body:
+      - The colony the British took was not at peace. In February 1795 the burghers of Graaff-Reinet, angry at Company taxes and at a landdrost who tried to restrain their commandos against the Xhosa and the San, had expelled him and proclaimed themselves independent; Swellendam followed in June. Both were made to submit to the British, Graaff-Reinet in 1796, but the frontier burghers rose again in 1799 under Marthinus Prinsloo, and in the same year Khoikhoi servants and Xhosa chiefdoms began the long fighting on the eastern frontier known as the Third Frontier War.
+      - In August 1796 a Batavian squadron of three ships of the line and several frigates under Rear-Admiral Engelbertus Lucas arrived to retake the Cape. It anchored in Saldanha Bay, where Elphinstone’s much stronger fleet trapped it, and on 17 August Lucas surrendered without a fight; many of his crews had no wish to fight for the new republic.
+      - By the Peace of Amiens (1802) Britain returned the Cape to the Batavian Republic, which took it over on 21 February 1803. Its commissioner-general, Jacob Abraham de Mist, and governor, Jan Willem Janssens, began reforms of local government, the church and schools, and Janssens travelled to the eastern frontier to make peace with the Xhosa chiefs. The Batavian administration lasted less than three years.
+    facts:
+      - [Graaff-Reinet expels the landdrost, "February 1795"]
+      - [Capitulation of Saldanha Bay, "17 August 1796"]
+      - [Cape returned to the Batavian Republic, "21 February 1803"]
+    markers:
+      - kind: naval
+        side: gb
+        name: Saldanha Bay
+        date: 17 August 1796
+        text: Lucas’s Batavian squadron, trapped by Elphinstone’s fleet, surrendered without a fight.
+        lonlat: [17.98, -33.04]
+      - kind: event
+        side: none
+        name: Graaff-Reinet
+        date: 1795–1799
+        text: The frontier burghers expelled the Company’s landdrost in 1795 and rose again in 1799.
+        lonlat: [24.537, -32.252]
+      - kind: event
+        side: none
+        name: Swellendam
+        date: June 1795
+        text: The burghers of the district followed Graaff-Reinet in rejecting the Company’s officials.
+        lonlat: [20.442, -34.021]
+      - kind: treaty
+        side: nl
+        name: Cape Town
+        date: 21 February 1803
+        text: The British handed the colony to the Batavian Republic under the Peace of Amiens.
+        lonlat: [18.423, -33.925]
+        lp: b
+    arrows:
+      - side: gb
+        label: Elphinstone
+        via: [[18.40, -33.70], [18.10, -33.30], [17.99, -33.08]]
+  - title: Blaauwberg
+    date: January 1806
+    when: "1806-01-08"
+    borders: "1806-01-08"
+    countries: [za, gb, nl]
+    view:
+      center: [18.63, -33.91]
+      size: [80, 75]
+    body:
+      - When war between Britain and France resumed in 1803, the Batavian Cape became a target again. A fleet under Commodore Sir Home Popham carried about 6,600 troops under Major-General Sir David Baird into Table Bay on 4 January 1806. Heavy surf delayed the landing, and on 6 January the troops began coming ashore at Melkbosstrand, north of the town, where a merchant ship was run aground to break the waves; one boat capsized and 36 Highlanders drowned.
+      - Governor Janssens marched out with about 2,000 men, a mixed force of Batavian regulars, German mercenaries of the Waldeck battalion, French sailors and marines from wrecked ships, burgher cavalry, Khoikhoi light infantry, and Javanese artillerymen and enslaved Mozambicans serving the guns. On 8 January 1806 the two armies met on the plain below the Blaauwberg. The Waldeck battalion broke at the first British bayonet charge, and Janssens withdrew; the British lost 15 killed and 189 wounded, the Batavians and their allies about 340 killed, wounded and missing.
+      - Cape Town capitulated on 10 January. Janssens had retreated with his remaining troops to the Hottentots-Holland mountains, hoping to hold out in the interior, but with the colony’s capital lost and no help coming he capitulated on 18 January, and he and his soldiers were shipped back to the Netherlands. In the Convention of London of 13 August 1814 the Netherlands ceded the Cape to Britain, which ruled it as a colony until the Union of South Africa in 1910.
+    facts:
+      - [British army at Blaauwberg, "about 5,400 men"]
+      - [Batavian army, "about 2,000 men"]
+      - [Battle of Blaauwberg, "8 January 1806"]
+      - [Janssens’s capitulation, "18 January 1806"]
+    markers:
+      - kind: battle
+        side: gb
+        name: Blaauwberg
+        date: 8 January 1806
+        text: Baird’s army, which had landed at Melkbosstrand, a few kilometres north, defeated Janssens’s force on the plain below the hill.
+        lonlat: [18.466, -33.760]
+        lp: l
+      - kind: taken
+        side: gb
+        name: Cape Town
+        date: 10 January 1806
+        text: The town and the castle capitulated two days after the battle.
+        lonlat: [18.423, -33.925]
+        lp: l
+      - kind: treaty
+        side: gb
+        name: Hottentots-Holland
+        date: 18 January 1806
+        text: Janssens, who had withdrawn to the mountains here, capitulated with the rest of his army (place approximate).
+        lonlat: [18.85, -34.08]
+    arrows:
+      - side: gb
+        label: Baird
+        phase: 1
+        via: [[18.30, -33.70], [18.40, -33.71], [18.445, -33.722]]
+      - side: gb
+        phase: 2
+        via: [[18.455, -33.735], [18.470, -33.800], [18.450, -33.880], [18.430, -33.915]]
+      - side: nl
+        label: Janssens
+        phase: 2
+        via: [[18.50, -33.80], [18.62, -33.90], [18.75, -34.00], [18.84, -34.07]]

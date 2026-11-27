@@ -1,0 +1,185 @@
+id: merina-conquest-of-madagascar
+name: Merina conquest of Madagascar
+start: "1787"
+end: "1828-07-27"
+tier: B
+summary: "The wars in which the Merina kingdom of the central highlands united Imerina and conquered much of Madagascar. In about 1787 Andrianampoinimerina took power at Ambohimanga, one of four rival Merina kingdoms, and by diplomacy and war reunited Imerina, taking Antananarivo in 1793 and pushing south into the Betsileo country; he paid for firearms by selling captives to French slave traders for Mauritius and Réunion. His son Radama I (1810–1828) made Madagascar an ally of Britain: by the treaty of 23 October 1817 he banned the export of slaves in return for arms, money and military instructors, and Britain recognised him as King of Madagascar. With his new army he took the Betsimisaraka east coast and Toamasina (1817), fought the Sakalava of Menabe (1820–1822), took Mahajanga, the port of the Sakalava kingdom of Boina (1824), and Fort Dauphin in the far south (1825). When he died in 1828 the Merina ruled about two thirds of the island, though the Sakalava and the peoples of the south and west remained unconquered."
+countries: [mg, mu]
+sides:
+  - id: mer
+    name: Merina kingdom (Imerina)
+    polities: [merina]
+    ink: red
+    moves: Merina moves
+    success: Merina success
+  - id: sak
+    name: Sakalava kingdoms (Menabe and Boina)
+    polities: [sakalava]
+    ink: green
+    moves: Sakalava moves
+    success: Sakalava success
+  - id: bet
+    name: Betsimisaraka
+    polities: [betsimisaraka]
+    ink: teal
+    moves: Betsimisaraka moves
+    success: Betsimisaraka success
+notes:
+  - "The history of Andrianampoinimerina’s reign rests mostly on Merina royal traditions written down in the nineteenth century (the Tantara ny Andriana), and its dates are approximate; his accession is usually dated 1787, sometimes 1785 or earlier. Radama I’s reign is also known from British and missionary records."
+  - "Europeans of the time often called the Merina “Hova”, after the free commoner class of Merina society."
+sources:
+  - title: Andrianampoinimerina (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Andrianampoinimerina
+  - title: Radama I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Radama_I
+  - title: Merina Kingdom (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Merina_Kingdom
+  - title: Menabe (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Menabe
+  - title: Boina Kingdom (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Boina_Kingdom
+  - title: Andrianampoinimerina (Britannica)
+    url: https://www.britannica.com/biography/Andrianampoinimerina
+  - title: Radama I (Britannica)
+    url: https://www.britannica.com/biography/Radama-I
+  - title: The Kingdoms of Madagascar (Lumen Learning, World Civilization)
+    url: https://courses.lumenlearning.com/suny-worldhistory/chapter/the-kingdoms-of-madagascar/
+steps:
+  - title: Andrianampoinimerina unites Imerina
+    date: about 1787–1810
+    when: "1787"
+    borders: "1810-07-06"
+    countries: [mg]
+    body:
+      - "In the eighteenth century the Merina kingdom of the highlands around Antananarivo had split among the heirs of King Andriamasinavalona into four rival states, which fought each other for land, rice fields and captives. In about 1787 a prince of Ambohimanga, Ramboasalama, deposed his uncle Andrianjafy and took the throne under the name Andrianampoinimerina, “the prince in the heart of Imerina”."
+      - "From his fortified hill town of Ambohimanga he won over or defeated the other Merina rulers one by one, through marriages, oaths and treaties as well as war. He took Antananarivo in 1793, and by about 1795 all of Imerina recognised him; he later moved his court to Antananarivo. He organised the drainage of the Betsimitatatra marshes for rice and drafted his subjects into public works, and pushed his rule south into Vakinankaratra and the Betsileo highlands and east over the Bezanozano, though his campaigns against the Sakalava failed."
+      - "The wars produced captives, and the king sold many of them, perhaps about 1,800 a year, to slave traders, mainly French merchants who carried them to the plantations of Mauritius and Réunion, in return for muskets and powder. He died on 6 July 1810, leaving his son Radama, according to tradition, the charge that “the sea is the limit of my rice field”: all Madagascar should be Merina."
+    facts:
+      - [Accession at Ambohimanga, "about 1787"]
+      - [Antananarivo taken, "1793"]
+      - [Death of Andrianampoinimerina, "6 July 1810"]
+    markers:
+      - kind: capital
+        side: mer
+        name: Ambohimanga
+        date: from about 1787
+        text: The fortified royal hill from which Andrianampoinimerina began his conquests.
+        lonlat: [47.563, -18.759]
+        lp: r
+      - kind: taken
+        side: mer
+        name: Antananarivo
+        date: "1793"
+        text: Taken from a rival Merina king and later made the capital of the reunited kingdom.
+        lonlat: [47.522, -18.910]
+        lp: l
+    arrows:
+      - side: mer
+        label: Into the Betsileo highlands
+        via: [[47.45, -19.1], [47.2, -19.8], [47.05, -20.5]]
+    areas:
+      - style: gained
+        side: mer
+        label: Imerina, reunited by about 1795
+        polygon: [[47.05, -18.25], [47.85, -18.3], [48.0, -18.85], [47.6, -19.25], [47.0, -19.2], [46.8, -18.7]]
+      - style: outline
+        side: mer
+        label: Vakinankaratra and the northern Betsileo lands, brought under Merina rule
+        polygon: [[46.8, -19.3], [47.55, -19.35], [47.4, -20.6], [46.9, -21.0], [46.6, -20.2]]
+  - title: Radama I, Britain and the east coast
+    date: 1810–1822
+    when: "1817"
+    borders: "1822-12-31"
+    countries: [mg, mu]
+    body:
+      - "Radama I was about 17 when he succeeded his father. Britain had taken Mauritius from France in 1810, and its governor, Robert Farquhar, wanted to end the slave trade from Madagascar and to gain influence there. His envoy James Hastie negotiated a treaty, signed on 23 October 1817, by which Radama banned the export of slaves; in return Britain sent him each year money, arms, powder and uniforms, trained his soldiers and recognised him as King of Madagascar. The treaty lapsed when Farquhar’s deputy stopped the payments in 1818 and was renewed in 1820, when missionaries of the London Missionary Society came to Antananarivo to open schools and write down the Malagasy language."
+      - "Radama built a standing army of musketeers drilled in the British manner. In 1817 he marched to the east coast, where the Betsimisaraka confederation founded by Ratsimilaho a century before had broken up into quarrelling chiefdoms. He took Toamasina, whose leading trader, Jean René, accepted his rule and became his governor, and Merina garrisons were posted along the coast. Revolts there were put down in the years that followed."
+      - "In 1820, 1821 and 1822 Radama led large armies west against the Sakalava kingdom of Menabe. His troops suffered from hunger and disease in the dry country, and the Sakalava avoided pitched battle. King Ramitraho gave Radama his daughter Rasalimo in marriage to seal a peace, but Menabe was never conquered in his lifetime; its southern part fell to the Merina only in the 1830s."
+    facts:
+      - [Anglo-Merina treaty, "23 October 1817, renewed 1820"]
+      - [Toamasina taken, "1817"]
+      - [Campaigns against Menabe, "1820, 1821 and 1822"]
+    markers:
+      - kind: capital
+        side: mer
+        name: Antananarivo
+        date: 1810–1828
+        text: Radama’s capital, where Hastie and the missionaries lived.
+        lonlat: [47.522, -18.910]
+      - kind: taken
+        side: mer
+        name: Toamasina (Tamatave)
+        date: "1817"
+        text: The chief port of the east coast. Its trader-ruler Jean René accepted Radama’s rule and became his governor.
+        lonlat: [49.402, -18.149]
+      - kind: treaty
+        name: Port Louis
+        date: 23 October 1817
+        text: Seat of the British governor of Mauritius, Robert Farquhar, whose envoy James Hastie negotiated the treaty with Radama.
+        lonlat: [57.502, -20.162]
+        lp: l
+    arrows:
+      - side: mer
+        label: Radama, 1817
+        phase: 1
+        via: [[47.6, -18.9], [48.2, -18.8], [48.9, -18.4], [49.33, -18.18]]
+      - side: mer
+        label: Against Menabe, 1820–1822
+        phase: 2
+        via: [[47.45, -18.95], [46.6, -19.4], [45.6, -19.9], [44.9, -20.2]]
+    areas:
+      - style: gained
+        side: mer
+        label: East coast taken from the Betsimisaraka chiefdoms, 1817
+        atoms: [MDG-5868, MG-A]
+      - style: contested
+        side: sak
+        label: Menabe, invaded by Radama in 1820–1822
+        polygon: [[44.2, -19.0], [45.6, -19.2], [45.8, -20.8], [44.9, -22.0], [43.8, -21.6], [43.9, -20.2]]
+  - title: Mahajanga, Fort Dauphin and Radama’s death
+    date: 1823–1828
+    when: "1824"
+    borders: "1828-07-27"
+    countries: [mg]
+    body:
+      - "Radama then turned on Boina, the northern Sakalava kingdom, which controlled the great north-western port of Mahajanga (Majunga) and its trade with Arab, Swahili and Indian merchants. In 1824 his army occupied Mahajanga and King Andriantsoly submitted; he later fled and in 1832 settled on Mayotte in the Comoros. The same year Merina posts were set up in the far north at Vohemar and Diego Suarez, and in 1825 Radama’s troops took the small French post at Fort Dauphin in the far south-east and set up posts at Farafangana on the south-east coast. His last campaign, in 1827, was against the Antaisaka of the south-east."
+      - "Radama died on 27 July 1828, still in his thirties. He left a kingdom that held about two thirds of Madagascar, governed through Merina garrisons and officers in the conquered provinces, with an army fed by forced labour (fanompoana) and an economy that relied increasingly on slave labour as the wars brought captives to Imerina. The Sakalava of the west, the peoples of the south and parts of the east coast were still independent. His widow Ranavalona I continued the wars, and she broke with the British and the missionaries."
+    facts:
+      - [Mahajanga occupied, "1824"]
+      - [Fort Dauphin taken from the French, "1825"]
+      - [Death of Radama I, "27 July 1828"]
+    markers:
+      - kind: taken
+        side: mer
+        name: Mahajanga (Majunga)
+        date: "1824"
+        text: The port of the Sakalava kingdom of Boina, occupied by Radama’s army. King Andriantsoly submitted.
+        lonlat: [46.317, -15.717]
+      - kind: event
+        side: mer
+        name: Vohemar
+        date: "1824"
+        text: One of the Merina posts set up on the northern coasts.
+        lonlat: [50.003, -13.358]
+      - kind: taken
+        side: mer
+        name: Fort Dauphin
+        date: "1825"
+        text: Radama’s troops took over the small French post at the south-eastern tip of the island.
+        lonlat: [46.983, -25.032]
+      - kind: event
+        side: mer
+        name: Antananarivo
+        date: 27 July 1828
+        text: Radama I died here in his palace. His widow Ranavalona I succeeded him.
+        lonlat: [47.522, -18.910]
+        lp: l
+    arrows:
+      - side: mer
+        label: To Boina, 1824
+        phase: 1
+        via: [[47.45, -18.8], [47.0, -17.6], [46.7, -16.6], [46.36, -15.8]]
+      - side: mer
+        label: To the south-east, 1825
+        phase: 2
+        via: [[47.4, -19.1], [47.2, -21.2], [47.3, -23.2], [46.98, -24.95]]

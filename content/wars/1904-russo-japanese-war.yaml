@@ -1,0 +1,430 @@
+id: russo-japanese-war
+name: Russo-Japanese War
+start: "1904-02-08"
+end: "1905-09-05"
+tier: A
+summary: "A war between the Russian Empire and the Empire of Japan over Manchuria and Korea, fought mostly on Chinese soil and in the seas around Korea. Japan opened it with a surprise torpedo attack on the Russian fleet at Port Arthur (Lüshun) in February 1904, landed armies in Korea and on the Liaodong peninsula, crossed the Yalu and drove the Russians north at Liaoyang. After a five-month siege Port Arthur surrendered in January 1905; in March the Japanese won the vast battle of Mukden (Shenyang), and in May Admiral Tōgō Heihachirō destroyed the Russian Baltic Fleet at Tsushima. With both sides exhausted and Russia shaken by revolution, the Treaty of Portsmouth, mediated by President Theodore Roosevelt, gave Japan the Kwantung lease, the South Manchuria Railway and southern Sakhalin and a free hand in Korea. It was the first victory of an Asian power over a European great power in modern times. Some 80,000 Japanese and 40,000–70,000 Russian soldiers died, as did many Chinese civilians."
+countries: [cn, ru, jp, kr, kp]
+sides:
+  - id: jp
+    name: Empire of Japan
+    polities: [japan]
+    ink: red
+    moves: Japanese moves
+    success: Japanese success
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+notes:
+  - China and Korea were officially neutral. Most of the land war was fought in Manchuria, nominally Qing territory under Russian occupation since 1900, and Japan occupied Korea from the first days of the war; in 1905 it made Korea a protectorate and in 1910 annexed it.
+  - Russia then still used the Julian calendar; dates here are Gregorian. Japanese and Russian casualty figures differ between sources; the ranges given are those of recent studies.
+  - Places are given by their names of the time with today’s pinyin where it helps (Port Arthur, today Lüshun; Dalny, today Dalian; Mukden, today Shenyang; Chemulpo, today Incheon).
+sources:
+  - title: Russo-Japanese War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russo-Japanese_War
+  - title: Russo-Japanese War (Britannica)
+    url: https://www.britannica.com/event/Russo-Japanese-War
+  - title: Siege of Port Arthur (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Port_Arthur
+  - title: Battle of Mukden (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Mukden
+  - title: Battle of Tsushima (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tsushima
+  - title: Battle of Tsushima (Britannica)
+    url: https://www.britannica.com/event/Battle-of-Tsushima
+  - title: The Treaty of Portsmouth and the Russo-Japanese War, 1904–1905 (Office of the Historian, US Department of State)
+    url: https://history.state.gov/milestones/1899-1913/portsmouth-treaty
+  - title: Treaty of Portsmouth (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Portsmouth
+steps:
+  - title: Port Arthur and Chemulpo
+    date: February – April 1904
+    when: "1904-02-08"
+    borders: "1904-02-10"
+    countries: [cn, kr, ru, jp]
+    body:
+      - Russia had leased Port Arthur and Dalny on the Liaodong peninsula in 1898, three years after it had joined France and Germany in forcing Japan to hand the same peninsula back to China. It occupied Manchuria in 1900 and did not leave, and Russian interests reached into Korea, which Japan regarded as its own sphere. Backed by its alliance of 1902 with Britain, Japan offered to recognise Russia’s position in Manchuria in return for a free hand in Korea. Talks dragged on, and on 6 February 1904 Japan broke off relations.
+      - On the night of 8–9 February Japanese destroyers made a torpedo attack on the Russian Pacific Squadron in the outer roads of Port Arthur, damaging two battleships and a cruiser. On 9 February a Japanese squadron covering troop landings at Chemulpo, the port of Seoul, forced the cruiser Varyag and the gunboat Korietz into action, and their crews scuttled them. Japan declared war on 10 February. The Japanese First Army under General Kuroki Tamemoto landed in Korea and marched north, and on 23 February Korea had to sign a protocol giving Japan military use of its territory. At Port Arthur the energetic Admiral Stepan Makarov took command of the fleet, but on 13 April his flagship, the Petropavlovsk, struck a mine and sank with him and most of its crew.
+    facts:
+      - [Attack on Port Arthur, "night of 8–9 February 1904"]
+      - [Battle of Chemulpo Bay, "9 February 1904"]
+      - [Japan declares war, "10 February 1904"]
+      - [Makarov killed, "13 April 1904"]
+    markers:
+      - kind: naval
+        side: jp
+        name: Port Arthur
+        date: 8–9 February 1904
+        text: Japanese destroyers torpedoed the battleships Tsesarevich and Retvizan and the cruiser Pallada in the roadstead.
+        lonlat: [121.250, 38.790]
+        lp: b
+      - kind: naval
+        side: jp
+        name: Chemulpo
+        date: 9 February 1904
+        text: The cruiser Varyag and gunboat Korietz fought their way out against a Japanese squadron, were badly damaged and were scuttled in the harbour.
+        lonlat: [126.600, 37.470]
+        lp: l
+      - kind: taken
+        side: jp
+        name: Seoul
+        date: February 1904
+        text: Japanese troops occupied the Korean capital. The Korean government, which had declared neutrality, was forced to accept a Japanese alliance.
+        lonlat: [126.980, 37.570]
+      - kind: event
+        side: ru
+        name: Petropavlovsk
+        date: 13 April 1904
+        text: The flagship of Admiral Makarov sank in minutes after striking a Japanese mine off Port Arthur.
+        lonlat: [121.300, 38.740]
+        lp: r
+    arrows:
+      - side: jp
+        label: Tōgō
+        phase: 1
+        via: [[124.200, 37.000], [122.800, 38.200], [121.330, 38.780]]
+      - side: jp
+        label: Kuroki
+        phase: 2
+        via: [[126.600, 37.480], [126.980, 37.560], [125.750, 39.020], [124.900, 39.700], [124.450, 40.100]]
+    areas:
+      - style: occupied
+        side: jp
+        label: Occupied by Japanese troops, February – April 1904
+        atoms: [KR-11, KR-28, KR-41, KP-05, KP-06, KP-01, KP-02, KP-03]
+      - style: occupied
+        side: ru
+        label: Occupied by Russia since 1900
+        atoms: [CN-LN, CN-JL, CN-HL]
+  - title: The Yalu, Nanshan and the road to Port Arthur
+    date: April – June 1904
+    when: "1904-04-30"
+    borders: "1904-05-30"
+    countries: [cn, kp, ru, jp]
+    body:
+      - On 30 April – 1 May 1904 Kuroki’s First Army forced the crossing of the Yalu river at Jiuliancheng, opposite Uiju, against a Russian force less than half its size. It was the first major land battle of the war and showed that the Japanese could beat a European army. On 5 May the Second Army under General Oku Yasukata began landing at Pitzuwo (Pikou) on the Liaodong peninsula, cutting Port Arthur off by land.
+      - On 26 May Oku stormed the Russian entrenchments on the Nanshan hill at the neck of the peninsula, losing some 4,000–6,000 men in a day against barbed wire and machine guns. The Russians abandoned the commercial port of Dalny, which the Japanese entered on 30 May and made their supply base. A Russian corps sent south to relieve Port Arthur under General Georgy Stackelberg was beaten at Telissu (Wafangou) on 14–15 June. A new Third Army under General Nogi Maresuke landed to besiege the fortress, while Oku turned north.
+    facts:
+      - [Battle of the Yalu, "30 April – 1 May 1904, Japanese victory"]
+      - [Landing at Pitzuwo, "from 5 May 1904"]
+      - [Battle of Nanshan, "25–26 May 1904, Japanese victory"]
+      - [Battle of Telissu, "14–15 June 1904, Japanese victory"]
+    markers:
+      - kind: battle
+        side: jp
+        name: Yalu river
+        date: 30 April – 1 May 1904
+        text: The First Army crossed the river by pontoon bridges and turned the Russian positions at Jiuliancheng.
+        lonlat: [124.400, 40.150]
+      - kind: event
+        side: jp
+        name: Pitzuwo (Pikou)
+        date: 5 May 1904
+        text: The Second Army landed here unopposed, on the east coast of the Liaodong peninsula.
+        lonlat: [122.350, 39.380]
+      - kind: battle
+        side: jp
+        name: Nanshan
+        date: 25–26 May 1904
+        text: The fortified hill at Jinzhou guarding the approach to Port Arthur, taken at heavy cost.
+        lonlat: [121.710, 39.100]
+        lp: l
+      - kind: taken
+        side: jp
+        name: Dalny (Dalian)
+        date: 30 May 1904
+        text: The new Russian commercial port, abandoned almost undamaged.
+        lonlat: [121.620, 38.920]
+        lp: b
+      - kind: battle
+        side: jp
+        name: Telissu
+        date: 14–15 June 1904
+        text: Stackelberg’s attempt to relieve Port Arthur was turned back by Oku’s army.
+        lonlat: [121.980, 39.620]
+        lp: l
+    arrows:
+      - side: jp
+        label: Kuroki
+        phase: 1
+        via: [[124.450, 40.050], [124.400, 40.160], [124.050, 40.500], [123.700, 40.800]]
+      - side: jp
+        label: Oku
+        phase: 2
+        via: [[122.700, 39.200], [122.350, 39.380], [121.900, 39.250], [121.720, 39.110]]
+      - side: jp
+        phase: 3
+        via: [[121.900, 39.300], [121.980, 39.620], [122.300, 40.200], [122.700, 40.600]]
+      - side: ru
+        label: Stackelberg
+        phase: 3
+        via: [[122.800, 40.700], [122.200, 40.100], [121.990, 39.660]]
+  - title: The Yellow Sea and Ulsan
+    date: August 1904
+    when: "1904-08-10"
+    borders: "1904-08-14"
+    countries: [cn, kr, ru, jp]
+    body:
+      - As Nogi’s guns came within range of the harbour, the tsar ordered the Port Arthur squadron to break out to Vladivostok. On 10 August 1904 Admiral Wilgelm Vitgeft sailed with six battleships and was intercepted by Tōgō’s fleet in the Yellow Sea. For hours the Russians seemed to be getting away, until two Japanese shells hit the bridge of the flagship Tsesarevich, killing Vitgeft and jamming its helm. The Russian line fell into confusion; most ships returned to Port Arthur, while others fled to neutral ports and were interned.
+      - Four days later, on 14 August, Admiral Kamimura Hikonojō’s cruisers caught the Vladivostok cruiser squadron, which had come south to meet the Port Arthur ships, off Ulsan on the Korean coast. The Rurik was sunk and the other two cruisers were badly damaged. Japan now controlled the seas between its islands and the mainland, and the remaining Russian battleships were trapped in Port Arthur.
+    facts:
+      - [Battle of the Yellow Sea, "10 August 1904"]
+      - [Battle off Ulsan, "14 August 1904"]
+    markers:
+      - kind: naval
+        side: jp
+        name: Battle of the Yellow Sea
+        date: 10 August 1904
+        text: Vitgeft was killed on the bridge of the Tsesarevich; his squadron scattered and most of it returned to Port Arthur.
+        lonlat: [122.600, 38.200]
+      - kind: naval
+        side: jp
+        name: Battle off Ulsan
+        date: 14 August 1904
+        text: The armoured cruiser Rurik was sunk; the Rossia and Gromoboi escaped to Vladivostok.
+        lonlat: [129.800, 35.500]
+      - kind: held
+        side: ru
+        name: Port Arthur
+        date: August 1904
+        text: The Pacific Squadron’s base, now under siege from the land.
+        lonlat: [121.250, 38.810]
+        lp: b
+    arrows:
+      - side: ru
+        label: Vitgeft
+        phase: 1
+        via: [[121.250, 38.780], [122.000, 38.500], [122.600, 38.250]]
+      - side: ru
+        phase: 2
+        via: [[122.550, 38.200], [121.900, 38.500], [121.280, 38.770]]
+      - side: ru
+        label: Vladivostok cruisers
+        phase: 1
+        via: [[131.900, 43.000], [131.000, 39.500], [130.200, 36.600], [129.850, 35.550]]
+  - title: Liaoyang and the Shaho
+    date: August – October 1904
+    when: "1904-08-24"
+    borders: "1904-09-04"
+    countries: [cn, ru, jp]
+    body:
+      - The three Japanese field armies of Kuroki, Oku and Nozu Michitsura, under Field Marshal Ōyama Iwao, converged on Liaoyang, where the Russian commander-in-chief, General Aleksey Kuropatkin, had built three lines of defences. The battle, from 24 August to 4 September 1904, involved some 125,000 Japanese and 158,000 Russians. When Kuroki crossed the Taizi river to threaten his line of retreat, Kuropatkin, although the Japanese had lost more men, withdrew in good order to Mukden. Each side lost some 17,000–23,000 men.
+      - Reinforced by the Trans-Siberian Railway, Kuropatkin attacked south in October. In the battle of the Shaho, 5–17 October, the Russians were beaten back with about 40,000 casualties to the Japanese 20,000, and both armies dug in for the winter facing each other along the Shaho river. The fighting devastated the Chinese villages of the region, whose people were pressed into labour by both sides and lost their crops and houses.
+    facts:
+      - [Battle of Liaoyang, "24 August – 4 September 1904, Japanese victory"]
+      - [Battle of the Shaho, "5–17 October 1904, Japanese victory"]
+    markers:
+      - kind: battle
+        side: jp
+        name: Liaoyang
+        date: 24 August – 4 September 1904
+        text: Kuropatkin abandoned his fortified lines when Kuroki outflanked him and fell back to Mukden.
+        lonlat: [123.170, 41.270]
+        lp: l
+      - kind: battle
+        side: jp
+        name: Shaho
+        date: 5–17 October 1904
+        text: Kuropatkin’s offensive south of Mukden failed, and the front froze along the river for the winter.
+        lonlat: [123.350, 41.570]
+      - kind: held
+        side: ru
+        name: Mukden (Shenyang)
+        date: from September 1904
+        text: Russian headquarters in Manchuria after the retreat from Liaoyang.
+        lonlat: [123.430, 41.800]
+    arrows:
+      - side: jp
+        label: Ōyama
+        phase: 1
+        via: [[122.600, 40.500], [122.900, 40.900], [123.150, 41.220]]
+      - side: jp
+        label: Kuroki
+        phase: 1
+        via: [[123.700, 40.800], [123.500, 41.100], [123.400, 41.300]]
+      - side: ru
+        label: Kuropatkin
+        phase: 2
+        via: [[123.200, 41.320], [123.350, 41.550], [123.420, 41.760]]
+  - title: The siege of Port Arthur
+    date: August 1904 – January 1905
+    when: "1904-12-05"
+    borders: "1905-01-02"
+    countries: [cn, ru, jp]
+    body:
+      - Port Arthur was ringed by modern forts on the hills around the town and harbour, held by some 50,000 men under General Anatoly Stessel, with General Roman Kondratenko directing the defence. Nogi’s Third Army made its first general assault in August 1904 and lost about 15,000 men without taking the main forts. Further assaults in September, October and November, now supported by huge 280 mm howitzers brought from Japan, were also bloodily repulsed, while Japanese sappers tunnelled under the forts.
+      - At the end of November Nogi turned on 203 Metre Hill, west of the town, from which the harbour could be seen. It was taken on 5 December after ten days of fighting that cost the Japanese about 8,000 casualties and the Russians some 5,000. Directed from its summit, the howitzers sank the trapped battleships one after another. Kondratenko was killed on 15 December, the eastern forts fell, and on 2 January 1905 Stessel surrendered with some 25,000 men, many of them sick or wounded. The siege cost the Japanese some 57,000–60,000 killed and wounded and the Russians about 31,000; Nogi lost both his sons in the war.
+    facts:
+      - [First general assault, "19–24 August 1904"]
+      - [203 Metre Hill taken, "5 December 1904"]
+      - [Port Arthur surrenders, "2 January 1905"]
+      - [Japanese casualties, "some 57,000–60,000 killed and wounded"]
+    markers:
+      - kind: siege
+        side: jp
+        name: Port Arthur
+        date: 2 January 1905
+        text: Surrendered by Stessel, who was later court-martialled in Russia for giving up the fortress too early.
+        lonlat: [121.250, 38.810]
+        lp: b
+      - kind: battle
+        side: jp
+        name: 203 Metre Hill
+        date: 5 December 1904
+        text: Taken after repeated assaults. From the summit Japanese observers directed howitzer fire onto the Russian fleet in the harbour.
+        lonlat: [121.220, 38.830]
+        lp: l
+      - kind: event
+        side: jp
+        name: Nogi’s headquarters
+        date: "1904"
+        text: The Third Army’s base north of the fortress, at Liushufang.
+        lonlat: [121.300, 38.930]
+    arrows:
+      - side: jp
+        label: Nogi
+        phase: 1
+        via: [[121.700, 39.050], [121.500, 38.950], [121.330, 38.860]]
+      - side: jp
+        phase: 2
+        via: [[121.320, 38.900], [121.250, 38.870], [121.225, 38.840]]
+    areas:
+      - style: front
+        side: jp
+        label: Japanese siege lines, autumn 1904 (approximate)
+        line: [[121.120, 38.800], [121.180, 38.860], [121.260, 38.880], [121.330, 38.860], [121.380, 38.820]]
+  - title: Mukden
+    date: 20 February – 10 March 1905
+    when: "1905-02-20"
+    borders: "1905-03-10"
+    countries: [cn, ru, jp]
+    body:
+      - With Nogi’s veterans freed from Port Arthur, Ōyama attacked the Russian lines south of Mukden in February 1905. It was the largest land battle fought anywhere before the First World War, with about 270,000 Japanese and some 300,000–330,000 Russians on a front of more than 100 km. A new Fifth Army under General Kawamura Kageaki attacked in the mountains on the east, drawing in Russian reserves, while Nogi’s Third Army swept round the western flank towards the railway north of the city.
+      - Threatened with encirclement, Kuropatkin ordered a retreat on 9 March, and the Japanese entered Mukden the next day; the Russians fell back to Tieling and then to Siping. Russian losses are given as about 90,000 killed, wounded and captured, Japanese losses as about 70,000–75,000. Japan had won, but it had no more trained reserves and was running out of money, and the Russian army, still growing, had not been destroyed.
+    facts:
+      - [Battle of Mukden, "20 February – 10 March 1905, Japanese victory"]
+      - [Troops engaged, "about 270,000 Japanese and 300,000–330,000 Russians"]
+      - [Losses, "about 90,000 Russian and 70,000–75,000 Japanese"]
+    markers:
+      - kind: battle
+        side: jp
+        name: Mukden (Shenyang)
+        date: 10 March 1905
+        text: Entered by the Japanese after Kuropatkin’s retreat. The Qing ancestral palace and tombs were spared.
+        lonlat: [123.430, 41.800]
+        lp: l
+      - kind: event
+        side: ru
+        name: Tieling
+        date: March 1905
+        text: The Russian army retreated through Tieling to new positions around Siping, where it stayed until the peace.
+        lonlat: [123.840, 42.290]
+    arrows:
+      - side: jp
+        label: Nogi
+        phase: 1
+        via: [[123.050, 41.250], [122.750, 41.600], [122.900, 41.950], [123.400, 42.000]]
+      - side: jp
+        label: Kawamura
+        phase: 1
+        via: [[124.100, 41.200], [124.000, 41.500], [123.800, 41.700]]
+      - side: jp
+        label: Oku and Nozu
+        phase: 2
+        via: [[123.300, 41.500], [123.380, 41.650], [123.420, 41.780]]
+      - side: ru
+        label: Kuropatkin
+        phase: 3
+        via: [[123.450, 41.830], [123.700, 42.050], [123.840, 42.280]]
+  - title: Tsushima
+    date: 27–28 May 1905
+    when: "1905-05-27"
+    borders: "1905-05-28"
+    countries: [ru, jp]
+    body:
+      - In October 1904 Russia sent its Baltic Fleet, renamed the Second Pacific Squadron, around the world under Admiral Zinovy Rozhestvensky. On the way it fired on British fishing boats on the Dogger Bank, mistaking them for Japanese torpedo boats, and nearly caused a war with Britain. After a voyage of some 33,000 km, coaling from German colliers and waiting for weeks off Madagascar and in French Indochina, it entered the Tsushima Strait between Korea and Japan on 27 May 1905, heading for Vladivostok.
+      - Tōgō’s fleet, faster, better trained and using better shells, met it in the strait that afternoon and crossed ahead of its line. Within an hour the Russian flagship Knyaz Suvorov was disabled and Rozhestvensky wounded. By the next day the Russians had lost all eight battleships engaged, sunk or captured, and most of their other ships; only a cruiser and two destroyers reached Vladivostok. About 5,000 Russian sailors were killed and some 6,000 captured; the Japanese lost three torpedo boats and about 117 men. It was one of the most complete naval victories in history.
+    facts:
+      - [Second Pacific Squadron sails, "October 1904"]
+      - [Battle of Tsushima, "27–28 May 1905, Japanese victory"]
+      - [Russian losses, "about 5,000 killed, 6,000 captured, 21 ships sunk"]
+      - [Japanese losses, "about 117 killed, 3 torpedo boats"]
+    markers:
+      - kind: naval
+        side: jp
+        name: Battle of Tsushima
+        date: 27–28 May 1905
+        text: Tōgō’s flagship Mikasa led the Combined Fleet across the head of the Russian line in the strait north-east of Tsushima island.
+        lonlat: [129.783, 34.567]
+      - kind: event
+        side: ru
+        name: Vladivostok
+        date: May 1905
+        text: The destination of the Russian squadron. Only the cruiser Almaz and two destroyers arrived.
+        lonlat: [131.886, 43.116]
+    arrows:
+      - side: ru
+        label: Rozhestvensky
+        phase: 1
+        via: [[127.500, 32.500], [128.800, 33.700], [129.700, 34.500]]
+      - side: jp
+        label: Tōgō
+        phase: 1
+        via: [[129.000, 35.100], [129.500, 34.900], [129.800, 34.650]]
+      - side: ru
+        label: Survivors
+        phase: 2
+        via: [[129.900, 34.800], [130.800, 37.000], [131.500, 40.500], [131.880, 43.050]]
+  - title: Sakhalin and the Treaty of Portsmouth
+    date: July – September 1905
+    when: "1905-07-07"
+    borders: "1905-09-05"
+    countries: [ru, jp, cn, kr, us]
+    body:
+      - Tsushima and the revolution that had broken out in Russia in January 1905 made both governments ready to talk, and President Theodore Roosevelt offered to mediate. To have something more to bargain with, Japan landed troops on Sakhalin on 7 July 1905; by the end of the month the island’s small garrison and convict militia had surrendered. The talks opened at Portsmouth, New Hampshire, in August, with Sergei Witte for Russia and Komura Jutarō for Japan.
+      - By the Treaty of Portsmouth of 5 September 1905 Russia recognised Japan’s paramount interests in Korea, transferred to Japan, with China’s consent, its lease of the Kwantung territory with Port Arthur and Dalny and the railway from Changchun to Port Arthur, and ceded Sakhalin south of the 50th parallel. Both sides were to leave the rest of Manchuria to China. Japan received no indemnity, and riots broke out in Tokyo at the news. In November Japan made Korea a protectorate. Roosevelt received the Nobel Peace Prize. Japan lost some 80,000 dead, more than a quarter of them from disease, and Russia 40,000–70,000; the number of Chinese civilians killed is unknown but was large.
+    facts:
+      - [Japanese landing on Sakhalin, "7 July 1905"]
+      - [Treaty of Portsmouth, "5 September 1905"]
+      - [Japanese dead, "about 80,000–86,000"]
+      - [Russian dead, "about 43,000–71,000"]
+    markers:
+      - kind: taken
+        side: jp
+        name: Korsakov (Sakhalin)
+        date: 7–8 July 1905
+        text: The Japanese landed in Aniva Bay and took the southern port; the island’s main force under General Lyapunov surrendered at the end of July.
+        lonlat: [142.780, 46.630]
+      - kind: taken
+        side: jp
+        name: Alexandrovsk
+        date: 24 July 1905
+        text: The administrative centre of northern Sakhalin, occupied by a second landing force. Northern Sakhalin was returned to Russia by the treaty.
+        lonlat: [142.160, 50.900]
+        lp: l
+      - kind: event
+        side: jp
+        name: Port Arthur (Lüshun)
+        date: 5 September 1905
+        text: With Dalny and the southern Liaodong peninsula, leased to Japan as the Kwantung territory until 1945.
+        lonlat: [121.250, 38.810]
+        lp: b
+    arrows:
+      - side: jp
+        phase: 1
+        via: [[141.700, 45.000], [142.400, 46.000], [142.750, 46.580]]
+      - side: jp
+        phase: 2
+        via: [[140.900, 49.000], [141.700, 50.300], [142.120, 50.880]]
+    areas:
+      - style: gained
+        side: jp
+        label: Gained by Japan, 1905
+        atoms: [CN-LN~kwantung]
+      - style: gained
+        side: jp
+        label: Gained by Japan, 1905
+        polygon: [[142.050, 50.000], [143.250, 50.000], [143.400, 49.300], [144.750, 48.650], [143.100, 49.100], [142.900, 47.300], [143.600, 46.600], [143.400, 46.100], [142.600, 46.600], [142.100, 45.900], [141.800, 46.600], [142.000, 48.000], [142.100, 49.500]]

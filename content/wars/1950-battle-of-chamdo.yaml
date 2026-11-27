@@ -1,0 +1,184 @@
+id: battle-of-chamdo
+name: Battle of Chamdo
+start: "1950-10-06"
+end: "1951-10-26"
+tier: B
+summary: "The People’s Liberation Army’s campaign of October 1950 against the Tibetan army at Chamdo, in eastern Tibet, and the incorporation of Tibet into the People’s Republic of China that followed. After failed talks, between 20,000 and 30,000 PLA troops of the 18th Army and a cavalry force from Qinghai crossed the upper Yangtze (Drichu) on 6–7 October 1950 and in less than two weeks surrounded the Tibetan army in Kham; its commander, the governor Ngabo Ngawang Jigme, surrendered with about 2,700 men after Chamdo fell on 19 October. The PLA halted there and offered talks. Tibet’s appeal to the United Nations was shelved, and on 23 May 1951 a Tibetan delegation led by Ngabo signed the Seventeen Point Agreement in Beijing, accepting that Tibet was part of China while keeping the Dalai Lama’s government in place. The Dalai Lama accepted it in October 1951, and the PLA entered Lhasa. The People’s Republic calls these events the “peaceful liberation of Tibet”; the Tibetan government in exile calls them an invasion and the start of an occupation."
+countries: [cn]
+sides:
+  - id: cn
+    name: People’s Republic of China
+    polities: [china]
+    ink: red
+    moves: PLA moves
+    success: PLA success
+  - id: tib
+    name: Tibet
+    polities: [tibet]
+    ink: slate
+    moves: Tibetan moves
+    success: Tibetan success
+notes:
+  - From 1913 to 1950 the Dalai Lama’s government governed central and western Tibet and the part of Kham west of the upper Yangtze itself, with its own army, currency, posts and officials. The Republic of China and then the People’s Republic regarded Tibet as part of China, and no major state recognised it as independent. The Tibetan government in exile holds that Tibet was an independent state invaded in 1950; the People’s Republic holds that it was always part of China.
+  - Casualty figures differ widely. Chinese figures give 114 PLA and 180 Tibetan soldiers killed or wounded, with about 3,000 Tibetans captured; other Chinese accounts give over 5,700 Tibetan troops put out of action, and the Peace Research Institute Oslo estimates about 2,000 deaths on each side, including civilians.
+  - The Dalai Lama later said he had accepted the Seventeen Point Agreement under pressure, and repudiated it after his flight to India in 1959.
+sources:
+  - title: Battle of Chamdo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Chamdo
+  - title: 1951 Chinese annexation of Tibet (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1951_Chinese_annexation_of_Tibet
+  - title: Seventeen Point Agreement (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Seventeen_Point_Agreement
+  - title: Ngapoi Ngawang Jigme (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ngapoi_Ngawang_Jigme
+  - title: United Nations Assembly (Tibet), House of Commons, 27 November 1950 (Hansard)
+    url: https://api.parliament.uk/historic-hansard/commons/1950/nov/27/united-nations-assembly-tibet
+steps:
+  - title: The road to Chamdo
+    date: January – October 1950
+    when: "1950-07-22"
+    borders: "1950-10-05"
+    countries: [cn]
+    body:
+      - The People’s Republic made the incorporation of Tibet one of its first aims, and at the end of 1949 Mao Zedong ordered preparations for a march into Tibet. Lhasa sought arms and support from India, Britain and the United States, with little result, and sent envoys to talk to the Chinese through India. In September 1950 China’s envoy set out its terms, that Tibet be regarded as part of China and that China take charge of its defence, trade and foreign relations; Lhasa did not accept them.
+      - The PLA’s 18th Army under Zhang Guohua, of the South-West Military Region of Liu Bocheng and Deng Xiaoping, reached Ya’an in February 1950 and Kangding (Dartsedo) in March, building a road as it went, and by the end of July had gathered at Garzê (Kandze), while a cavalry detachment from Qinghai reached Jyekundo (Gyegu) on 22 July, ready to strike from the north. In June a PLA unit seized the Tibetan radio post at Dengko on the Yangtze, which Khampa militia raided in July. On the Tibetan side the governor of Chamdo, Ngabo Ngawang Jigme, had about 8,500 troops and local levies along the river. Many Khampas resented rule from Lhasa, and the Chinese offered some of their leaders favourable terms to stay neutral.
+    facts:
+      - [PLA at Kangding, "March 1950"]
+      - [Qinghai cavalry at Jyekundo, "22 July 1950"]
+      - [Tibetan forces in Chamdo, "about 8,500 men"]
+    markers:
+      - kind: event
+        side: cn
+        name: Kangding (Dartsedo)
+        date: March 1950
+        text: Reached by the 18th Army, which built a road towards Tibet as it advanced.
+        lonlat: [101.962, 30.050]
+      - kind: event
+        side: cn
+        name: Garzê (Kandze)
+        date: July 1950
+        text: The 18th Army gathered here at the end of July 1950.
+        lonlat: [99.986, 31.634]
+      - kind: event
+        side: cn
+        name: Jyekundo (Gyegu)
+        date: 22 July 1950
+        text: Reached by the cavalry detachment from Qinghai, the northern arm of the pincer.
+        lonlat: [97.007, 33.004]
+      - kind: taken
+        side: cn
+        name: Dengko
+        date: June 1950
+        text: About 50 PLA soldiers took the Tibetan radio post here. Some 800 Khampa militia, among them 300 monks, raided the town in July.
+        lonlat: [97.980, 32.460]
+        lp: l
+      - kind: capital
+        side: tib
+        name: Chamdo
+        date: "1950"
+        text: Seat of the Tibetan governor of eastern Tibet, Ngabo Ngawang Jigme.
+        lonlat: [97.172, 31.137]
+    arrows:
+      - side: cn
+        label: 18th Army
+        phase: 1
+        via: [[103.000, 29.980], [101.962, 30.050], [100.900, 30.900], [99.990, 31.620]]
+      - side: cn
+        phase: 1
+        via: [[101.780, 36.620], [99.500, 35.400], [97.900, 34.000], [97.050, 33.050]]
+    areas:
+      - style: front
+        side: tib
+        label: The upper Yangtze (Drichu), the de facto border
+        line: [[97.350, 33.050], [97.980, 32.460], [98.450, 31.750], [98.700, 31.000], [98.950, 30.100], [98.950, 29.600]]
+  - title: The fall of Chamdo
+    date: 6–24 October 1950
+    when: "1950-10-19"
+    borders: "1950-10-24"
+    countries: [cn]
+    body:
+      - On 6–7 October 1950 the PLA crossed the upper Yangtze at five places. The main force of the 18th Army struck west towards Chamdo, other columns moved on the south, and the Qinghai cavalry swung round to the north and west to cut the roads to Lhasa. Some Tibetan units fought, but the Tibetan army was outnumbered, and many local Khampas gave it little help.
+      - Two PLA units entered Chamdo on 19 October, and Ngabo surrendered with about 2,700 men; the PLA released most of its prisoners after lectures on socialism and a small payment. All operations ended on 24 October. The PLA did not advance further; it sent its terms to Lhasa through Ngabo, while Chinese troops occupied the whole of the Chamdo region.
+    facts:
+      - [PLA crosses the upper Yangtze, "6–7 October 1950"]
+      - [Chamdo taken, "19 October 1950"]
+      - [Operations end, "24 October 1950"]
+      - [Losses (Chinese figures), "PLA 114 killed or wounded; Tibetans 180 killed or wounded and about 3,000 captured"]
+    markers:
+      - kind: taken
+        side: cn
+        name: Chamdo
+        date: 19 October 1950
+        text: Entered by two PLA units. The governor Ngabo Ngawang Jigme surrendered with about 2,700 men.
+        lonlat: [97.172, 31.137]
+      - kind: event
+        side: cn
+        name: Jyekundo (Gyegu)
+        date: October 1950
+        text: The Qinghai cavalry set out from here to cut the Tibetan army’s retreat.
+        lonlat: [97.007, 33.004]
+      - kind: event
+        side: cn
+        name: Garzê (Kandze)
+        date: October 1950
+        text: Base of the 18th Army’s main force.
+        lonlat: [99.986, 31.634]
+    arrows:
+      - side: cn
+        label: 18th Army
+        phase: 1
+        via: [[99.990, 31.630], [98.900, 31.750], [98.000, 31.450], [97.250, 31.170]]
+      - side: cn
+        phase: 1
+        via: [[99.100, 30.000], [98.600, 29.750], [97.800, 30.300], [97.250, 31.050]]
+      - side: cn
+        label: Qinghai cavalry
+        phase: 1
+        via: [[97.010, 33.000], [96.700, 32.300], [96.500, 31.600], [96.700, 31.250]]
+    areas:
+      - style: occupied
+        side: cn
+        label: Taken by the PLA, October 1950
+        atoms: [CN-XZ~chamdo]
+  - title: The Seventeen Point Agreement
+    date: November 1950 – October 1951
+    when: "1951-05-23"
+    borders: "1951-10-26"
+    countries: [cn]
+    body:
+      - In November 1950 the Tibetan government appealed to the United Nations. El Salvador asked for the appeal to be placed on the agenda of the General Assembly, but on 24 November its General Committee postponed the question, with Britain and India urging a peaceful settlement. In Lhasa the Dalai Lama, then 15, was given full powers, and in December he moved to Dromo (Yadong), near the border with Sikkim, ready to leave the country.
+      - In the spring of 1951 a Tibetan delegation led by Ngabo went to Beijing, where on 23 May it signed the Agreement on Measures for the Peaceful Liberation of Tibet, known as the Seventeen Point Agreement. Tibet was to “return to the big family of the motherland”, the PLA was to enter Tibet, and Beijing was to handle its foreign affairs, while the Dalai Lama’s position and the existing political system were not to be changed. Tibetan accounts say the delegates had not been authorised to sign a final agreement and signed under threat of a further advance.
+      - The Dalai Lama returned to Lhasa in the summer of 1951, and after debate in Tibet’s National Assembly he accepted the agreement in a telegram to Mao on 24 October 1951. PLA advance units had reached Lhasa in September, and the main force under Zhang Guohua entered the city on 26 October 1951. The Dalai Lama’s government continued to run central Tibet alongside a growing Chinese administration until 1959.
+    facts:
+      - [Tibet’s appeal to the UN postponed, "24 November 1950"]
+      - [Seventeen Point Agreement signed, "23 May 1951, Beijing"]
+      - [Dalai Lama accepts the agreement, "24 October 1951"]
+      - [PLA main force enters Lhasa, "26 October 1951"]
+    markers:
+      - kind: capital
+        side: tib
+        name: Lhasa
+        date: "1951"
+        text: Seat of the Dalai Lama’s government, entered by the PLA’s main force on 26 October 1951.
+        lonlat: [91.117, 29.654]
+      - kind: event
+        side: tib
+        name: Dromo (Yadong)
+        date: December 1950 – summer 1951
+        text: The Dalai Lama waited here, near the border with Sikkim, while his delegation negotiated in Beijing.
+        lonlat: [88.906, 27.486]
+      - kind: event
+        side: cn
+        name: Chamdo
+        date: 1950–1951
+        text: Held by the PLA after October 1950.
+        lonlat: [97.172, 31.137]
+    arrows:
+      - side: cn
+        label: PLA to Lhasa
+        via: [[97.172, 31.137], [95.700, 30.750], [93.250, 29.980], [91.200, 29.660]]
+    areas:
+      - style: gained
+        side: cn
+        label: Incorporated into the People’s Republic, 1950–1951
+        atoms: ["CN-XZ!", CN-XZ~chamdo, CN-XZ~ngari]

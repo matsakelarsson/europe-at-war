@@ -1,0 +1,184 @@
+id: siege-of-fort-zeelandia
+name: Siege of Fort Zeelandia
+start: "1661-04-30"
+end: "1662-02-01"
+tier: B
+summary: "The Ming loyalist commander Zheng Chenggong (Koxinga) took Taiwan from the Dutch East India Company (VOC) in 1661–1662. Defeated before Nanjing in 1659 and squeezed by the Qing on the Fujian coast, he needed a new base. On 30 April 1661 his fleet of several hundred junks, carrying about 25,000 men, slipped through the shallow Luermen channel into the bay behind Tayouan, landed on the main island, routed a Dutch sortie and forced Fort Provintia to surrender within days. Governor Frederick Coyett held Fort Zeelandia, the Company’s castle on the Tayouan sandbar, through a nine-month siege. A relief fleet from Batavia failed to break the blockade, and after a deserter showed Koxinga how to take the Utrecht redoubt overlooking the castle, Coyett surrendered on 1 February 1662. Koxinga made Taiwan the seat of a Zheng state, later called the Kingdom of Tungning, and died there in June 1662."
+countries: [tw, cn, nl]
+sides:
+  - id: zheng
+    name: Zheng Chenggong (Koxinga)
+    polities: [tungning]
+    ink: teal
+    moves: Zheng moves
+    success: Zheng success
+  - id: voc
+    name: Dutch East India Company (VOC)
+    polities: [dutch-formosa]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+notes:
+  - Dates are given in the Western (Gregorian) calendar used by the Dutch records. Chinese accounts use the lunar calendar of the Yongli reign, which Koxinga still followed; the landing on the first day of the fourth month corresponds to 29–30 April 1661.
+  - Most of the detail comes from the Dutch side, from the Zeelandia daily journals and from ’t Verwaerloosde Formosa (1675), a defence written for Coyett after the Company had tried him and banished him to the Banda Islands. Chinese sources include the memoir of Koxinga’s quartermaster Yang Ying. Numbers of troops and losses differ between them.
+sources:
+  - title: Siege of Fort Zeelandia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Fort_Zeelandia
+  - title: Koxinga (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Koxinga
+  - title: Zheng Chenggong (Britannica)
+    url: https://www.britannica.com/biography/Zheng-Chenggong
+  - title: Fort Zeelandia (Taiwan) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fort_Zeelandia_(Taiwan)
+  - title: Fort Provintia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fort_Provintia
+  - title: “The shameful fall of Fort Zeelandia” (VOC Warfare, chapter of a Leiden thesis)
+    url: https://vocwarfare.net/thesis/4/fort-zeelandia
+  - title: Kingdom of Tungning (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kingdom_of_Tungning
+steps:
+  - title: The landing at Luermen
+    date: April – May 1661
+    when: "1661-04-30"
+    borders: "1661-04-29"
+    countries: [tw, cn, nl]
+    body:
+      - The Dutch East India Company had held Tayouan, on the south-west coast of Taiwan, since 1624. Its castle, Fort Zeelandia, stood on a long sandbar across the bay from the main island, where the smaller Fort Provintia guarded the Chinese settlers’ town of Sakam. Tens of thousands of farmers from Fujian worked the land under Company rule, and many villages of the plains peoples paid it tribute. After his defeat at Nanjing in 1659 and a narrow victory over a Qing fleet at Xiamen in 1660, Zheng Chenggong, known to Europeans as Koxinga, looked for a base beyond the Qing’s reach. A former Company interpreter, He Bin, brought him maps and told him that his junks could enter the bay at high tide by the shallow Luermen channel, which the Dutch thought unusable for large ships.
+      - Koxinga sailed from Kinmen in late April 1661 and, after waiting for wind at Penghu, appeared off Tayouan at dawn on 30 April. While the castle watched, his junks passed through the Luermen channel and landed thousands of men on the main island and on the Baxemboy sandbar north of the castle. On 1 May the Dutch struck back on land and sea. Captain Thomas Pedel led about 240 musketeers against the troops on Baxemboy, expecting the Chinese to run; they were outflanked, and Pedel and about half his men were killed. In the bay the Company’s largest ship, the Hector, blew up in battle with the junks.
+      - Fort Provintia, held by about 140 soldiers under the landdrost Jacobus Valentijn, was cut off without water and surrendered on 4 May. Koxinga demanded the surrender of Zeelandia as well, offering the Dutch free departure with their goods. Coyett refused, and the Dutch burned the Chinese town around the castle and pulled its people inside.
+    facts:
+      - [Zheng force, "about 25,000 men in several hundred junks"]
+      - [Garrison of Fort Zeelandia, "about 1,700 people, some 900 of them soldiers"]
+      - [Pedel’s sortie, "1 May 1661, about 240 men, half killed"]
+      - [Fort Provintia surrendered, "4 May 1661"]
+    markers:
+      - kind: event
+        side: zheng
+        name: Kinmen
+        date: late April 1661
+        text: Koxinga’s fleet gathered here and sailed for Taiwan by way of Penghu.
+        lonlat: [118.380, 24.440]
+        lp: l
+      - kind: event
+        side: zheng
+        name: Penghu
+        date: April 1661
+        text: The fleet waited here for a favourable wind and left a small garrison behind.
+        lonlat: [119.583, 23.567]
+      - kind: event
+        side: zheng
+        name: Luermen channel
+        date: 30 April 1661
+        text: The shallow channel north of Tayouan, by which the junks entered the bay at high tide and landed their troops.
+        lonlat: [120.138, 23.045]
+      - kind: battle
+        side: zheng
+        name: Baxemboy
+        date: 1 May 1661
+        text: Thomas Pedel’s 240 musketeers were outflanked by a much larger Zheng force; Pedel and about half his men fell.
+        lonlat: [120.150, 23.022]
+        lp: l
+      - kind: taken
+        side: zheng
+        name: Fort Provintia
+        date: 4 May 1661
+        text: Jacobus Valentijn surrendered the fort and its 140 soldiers, cut off from Zeelandia and short of water.
+        lonlat: [120.203, 22.997]
+      - kind: held
+        side: voc
+        name: Fort Zeelandia
+        date: May 1661
+        text: Governor Frederick Coyett rejected Koxinga’s demand for surrender.
+        lonlat: [120.161, 23.002]
+        lp: b
+    arrows:
+      - side: zheng
+        label: Koxinga
+        phase: 1
+        via: [[118.430, 24.400], [118.900, 24.000], [119.480, 23.600]]
+      - side: zheng
+        phase: 2
+        via: [[119.620, 23.520], [119.850, 23.250], [120.100, 23.070], [120.150, 23.040]]
+  - title: Nine months behind the walls
+    date: May 1661 – January 1662
+    when: "1661-08"
+    borders: "1661-08-12"
+    countries: [tw, nl]
+    view:
+      center: [120.25, 23.05]
+      size: [110, 110]
+    body:
+      - In late May Koxinga’s gunners bombarded the castle and his troops stormed it, but Dutch cannon fire broke the assault with heavy losses; Dutch accounts put the attackers’ dead at about a thousand. Koxinga settled down to a blockade and sent much of his army out across the plains to grow food, for his own supplies were running short. Many villages of the plains peoples submitted to him. Dutch men caught in the countryside, among them the minister Antonius Hambroek, were taken prisoner; Hambroek, sent into the castle with a call to surrender, urged the garrison to hold out, returned to Koxinga’s camp as he had promised, and was later executed with other prisoners.
+      - A ship that slipped past the junks on 1 May reached Batavia in June, and the Company sent a relief fleet of about ten ships and 700 soldiers under Jacob Caeuw. It came in sight of Tayouan on 12 August, but storms drove it out to sea for weeks. When the Dutch finally attacked the Zheng positions and junks in the bay that autumn, the assault failed with the loss of two ships, several boats and about 130 men. In November the Qing governor-general of Fujian offered to join the Dutch against the Zheng bases on the mainland; Caeuw left with three ships in December to meet the Qing fleet, but sailed on to Siam and Batavia instead.
+      - Disease and hunger thinned the garrison. By the winter only a few hundred men were fit to fight, while the castle’s guns kept the besiegers at a distance.
+    facts:
+      - [Failed assault on the castle, "late May 1661"]
+      - [Relief fleet, "about 10 ships and 700 soldiers, sighted 12 August 1661"]
+      - [Dutch counter-attack in the bay, "autumn 1661, about 130 men lost"]
+    markers:
+      - kind: siege
+        side: voc
+        name: Fort Zeelandia
+        date: May 1661 – January 1662
+        text: The castle held out behind its bastions and guns. About 1,700 people were inside at the start, a third of them soldiers.
+        lonlat: [120.161, 23.002]
+        lp: b
+      - kind: capital
+        side: zheng
+        name: Chengtian (Sakam)
+        date: "1661"
+        text: Koxinga made the captured Fort Provintia his headquarters and named the district Chengtian, the seat of his government on Taiwan.
+        lonlat: [120.203, 22.997]
+      - kind: naval
+        side: zheng
+        name: Tayouan bay
+        date: autumn 1661
+        text: The relief fleet’s attack on the Zheng junks and batteries failed. The Dutch lost two ships and about 130 men.
+        lonlat: [120.180, 23.030]
+        lp: t
+    arrows:
+      - side: voc
+        label: Relief fleet from Batavia
+        via: [[119.700, 22.500], [119.950, 22.800], [120.130, 22.990]]
+    areas:
+      - style: occupied
+        side: zheng
+        label: Held by the Zheng army, 1661
+        polygon: [[120.08, 23.45], [120.42, 23.45], [120.45, 23.10], [120.42, 22.62], [120.25, 22.55], [120.10, 22.85], [120.13, 23.03], [120.10, 23.20]]
+  - title: The Utrecht redoubt and the surrender
+    date: January – February 1662
+    when: "1662-01-25"
+    borders: "1662-02-01"
+    countries: [tw, nl]
+    view:
+      center: [120.19, 23.01]
+      size: [40, 40]
+    body:
+      - Late in 1661 a German sergeant, Hans Jürgen Radis, deserted to Koxinga and told him that the castle depended on the Utrecht redoubt, a small fort on the dune above it. Coyett’s account blames him for what followed; Chinese records do not mention him. Koxinga built batteries in the European manner and, on 25 January 1662, bombarded the redoubt with some 2,500 shots in a day. The Dutch abandoned it that evening, leaving a charge that blew it up, and Koxinga’s guns could now fire down into the castle.
+      - On 27 January Coyett’s council voted to negotiate. Under the treaty of 1 February 1662 the Company gave up the castle, its guns and its stores of trade goods, and its people were allowed to leave with their personal belongings and enough food to reach Batavia. They sailed on 9 February. Koxinga renamed Tayouan Anping, after his home town in Fujian, and began settling his soldiers and their families on the land. He died on 23 June 1662, probably of malaria, aged 37, and his son Zheng Jing ruled Taiwan after him. The Dutch returned to the coast in 1663–1664 in alliance with the Qing, helping to drive the Zheng from Xiamen and Kinmen, and held Keelung in the north of the island from 1664 to 1668, but never regained Tayouan.
+    facts:
+      - [Utrecht redoubt abandoned, "25 January 1662"]
+      - [Treaty of surrender, "1 February 1662"]
+      - [Dutch departure, "9 February 1662"]
+      - [Death of Koxinga, "23 June 1662"]
+    markers:
+      - kind: taken
+        side: zheng
+        name: Utrecht redoubt
+        date: 25 January 1662
+        text: After a day-long bombardment the Dutch abandoned the redoubt on the dune above the castle and blew it up behind them.
+        lonlat: [120.163, 22.996]
+        lp: b
+      - kind: treaty
+        side: zheng
+        name: Fort Zeelandia
+        date: 1 February 1662
+        text: Coyett surrendered the castle; the Company’s people left for Batavia on 9 February. Koxinga renamed the place Anping.
+        lonlat: [120.161, 23.002]
+        lp: l
+      - kind: capital
+        side: zheng
+        name: Chengtian (Sakam)
+        date: "1662"
+        text: Seat of Koxinga’s government on Taiwan, which his son Zheng Jing took over after his death on 23 June 1662.
+        lonlat: [120.203, 22.997]

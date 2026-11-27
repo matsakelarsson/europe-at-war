@@ -1,0 +1,131 @@
+id: qing-conquest-of-tungning
+name: Qing conquest of Taiwan
+start: "1683-07-08"
+end: "1683-10-05"
+tier: B
+summary: "The campaign that ended the Zheng kingdom on Taiwan, the Kingdom of Tungning, the last state to keep the Ming calendar. After the Three Feudatories were defeated, the Kangxi emperor gave command of the Fujian fleet to Shi Lang, a former officer of Zheng Chenggong (Koxinga) who had gone over to the Qing. In July 1683 Shi sailed from Tongshan with about 240 ships and 21,000 men and, on 16–17 July, destroyed the Zheng fleet under Liu Guoxuan in the bay of Magong in the Penghu islands; Qing reports counted about 12,000 Zheng dead against a few hundred of their own. The court of the young king Zheng Keshuang, divided since a succession coup in 1681, offered unconditional surrender in September, and Shi Lang took over Taiwan without further fighting in October 1683. Zheng Keshuang was taken to Beijing and given a dukedom. In 1684 the Qing made Taiwan a prefecture of Fujian province, its first rule over the island."
+countries: [tw, cn]
+sides:
+  - id: qing
+    name: Qing China
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+  - id: zheng
+    name: Kingdom of Tungning (the Zheng)
+    polities: [tungning]
+    ink: teal
+    moves: Zheng moves
+    success: Zheng success
+notes:
+  - Dates are converted to the Gregorian calendar from the lunar dates of the Chinese sources. The Zheng state counted years by the reign of the Yongli emperor of the Southern Ming, who had died in 1662.
+  - The figures for the battle of Penghu come mainly from Shi Lang’s own reports to the throne; the Zheng side left few records. The name Tungning (Dongning, “eastern pacification”) was used by the Zheng government for Taiwan; Western writers also call the state the Kingdom of Formosa or Ming Zheng.
+sources:
+  - title: Battle of Penghu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Penghu
+  - title: Kingdom of Tungning (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kingdom_of_Tungning
+  - title: Shi Lang (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Shi_Lang
+  - title: Zheng Keshuang (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Zheng_Keshuang
+  - title: Taiwan under Qing rule (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Taiwan_under_Qing_rule
+  - title: Taiwan, history (Britannica)
+    url: https://www.britannica.com/place/Taiwan/History
+steps:
+  - title: The battle of Penghu
+    date: July 1683
+    when: "1683-07-16"
+    borders: "1683-07-18"
+    countries: [tw, cn]
+    body:
+      - Zheng Jing, Koxinga’s son, had used the Revolt of the Three Feudatories to land again in Fujian in 1674, but by 1680 he had lost all his mainland ports. He died in March 1681, and his ministers Feng Xifan and Liu Guoxuan backed a coup in which his eldest son and regent, Zheng Kezang, was killed and a younger son, the boy Zheng Keshuang, put on the throne. In Beijing the Kangxi emperor, his hands now free, appointed Shi Lang commander of the Fujian fleet in 1681. Shi had served Koxinga until the two fell out in 1651; Koxinga then had his father and brother killed, and Shi spent thirty years urging the Qing to invade Taiwan.
+      - After two attempts in 1683 were turned back by the winds, Shi sailed from Tongshan on the southern Fujian coast on 8 July with about 240 ships and 21,000 men. Liu Guoxuan held the Penghu islands, halfway to Taiwan, with some 200 ships and more than 20,000 men behind shore batteries. In a first clash on 10 July the Qing fleet was beaten back and Shi was hit in the eye; he regrouped at Bazhao island in the south of the group and waited for reinforcements. On 16 July he attacked again, his main fleet in squadrons of seven ships, each concentrating its fire on one Zheng ship at a time while two flotillas made feints. By the end of the next day the Zheng fleet was destroyed. Shi reported about 12,000 Zheng soldiers killed or drowned and nearly 5,000 taken, against 329 Qing dead. Liu Guoxuan escaped to Taiwan with a few dozen small boats, and the garrisons of Penghu surrendered on 18 July.
+    facts:
+      - [Qing fleet, "about 240 ships, 21,000 men"]
+      - [Zheng forces at Penghu, "about 200 ships, over 20,000 men"]
+      - [Main battle, "16–17 July 1683, in the bay of Magong"]
+      - [Losses (Qing report), "about 12,000 Zheng dead, 329 Qing dead"]
+    markers:
+      - kind: event
+        side: qing
+        name: Tongshan
+        date: 8 July 1683
+        text: Shi Lang’s fleet sailed from this island on the southern Fujian coast.
+        lonlat: [117.430, 23.700]
+        lp: l
+      - kind: event
+        side: qing
+        name: Bazhao island
+        date: 11–16 July 1683
+        text: Shi Lang regrouped here after the first clash and waited for his heavy ships.
+        lonlat: [119.510, 23.365]
+        lp: l
+      - kind: naval
+        side: qing
+        name: Battle of Penghu
+        date: 16–17 July 1683
+        text: Squadron by squadron, the Qing fleet destroyed the Zheng warships in the bay of Magong. Liu Guoxuan escaped to Taiwan.
+        lonlat: [119.560, 23.545]
+      - kind: capital
+        side: zheng
+        name: Chengtian (Tainan)
+        date: "1683"
+        text: Seat of the Zheng court of Zheng Keshuang.
+        lonlat: [120.203, 22.997]
+    arrows:
+      - side: qing
+        label: Shi Lang
+        phase: 1
+        via: [[117.450, 23.680], [118.300, 23.500], [119.100, 23.380], [119.480, 23.360]]
+      - side: qing
+        phase: 2
+        via: [[119.510, 23.380], [119.540, 23.460], [119.560, 23.530]]
+      - side: zheng
+        label: Liu Guoxuan
+        phase: 2
+        via: [[119.600, 23.560], [119.900, 23.300], [120.130, 23.050]]
+    areas:
+      - style: gained
+        side: qing
+        label: Taken by the Qing, July 1683
+        atoms: [TW-PEN]
+  - title: Surrender and annexation
+    date: August 1683 – 1684
+    when: "1683-10-05"
+    borders: "1683-10-05"
+    countries: [tw, cn]
+    body:
+      - With the fleet gone, Liu Guoxuan advised surrender, and Feng Xifan agreed. A first petition in August asked that the Zheng family keep Taiwan as a vassal; Shi Lang rejected it, and a second, offering unconditional surrender, reached Penghu on 5 September. The Ming prince Zhu Shugui, Prince of Ningjing, who had lived on Taiwan since the 1660s, hanged himself rather than submit. Shi Lang’s fleet entered the bay of Tainan by the Luermen channel and he came ashore in early October. The Zheng leaders shaved their heads in the Manchu style, the Yongli calendar was given up, and there were no executions; the people were excused taxes for three years.
+      - Zheng Keshuang, his family and his chief officers were taken to Beijing, where he was made Duke of Hanjun and enrolled in the Eight Banners. Seventeen Ming princes living on the island were sent back to the mainland, and many Zheng soldiers were resettled there. At court some officials argued that the island should be abandoned; Shi Lang argued for keeping it as a shield for the coast, and in 1684 the emperor made Taiwan a prefecture of Fujian, with the counties of Taiwan, Fengshan and Zhuluo and a garrison of about 10,000 men. The Qing then lifted the sea ban on the coast, though migration to the island was restricted for decades.
+    facts:
+      - [Unconditional surrender offered, "5 September 1683"]
+      - [Shi Lang takes over Taiwan, "early October 1683"]
+      - [Taiwan Prefecture created, "1684"]
+    markers:
+      - kind: event
+        side: qing
+        name: Luermen channel
+        date: October 1683
+        text: Shi Lang’s fleet entered the bay of Tainan by the same channel Koxinga had used in 1661.
+        lonlat: [120.138, 23.045]
+        lp: l
+      - kind: treaty
+        side: qing
+        name: Chengtian (Tainan)
+        date: October 1683
+        text: Zheng Keshuang and his court surrendered to Shi Lang. The town became the seat of the new Qing prefecture of Taiwan.
+        lonlat: [120.203, 22.997]
+      - kind: held
+        side: qing
+        name: Penghu
+        date: from July 1683
+        text: The Qing fleet’s base for the takeover of Taiwan.
+        lonlat: [119.583, 23.567]
+        lp: l
+    arrows:
+      - side: qing
+        label: Shi Lang
+        via: [[119.600, 23.540], [119.900, 23.250], [120.100, 23.060], [120.180, 23.000]]

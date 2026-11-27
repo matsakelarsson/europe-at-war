@@ -1,0 +1,162 @@
+id: chinese-expedition-to-tibet-1910
+name: Zhao Erfeng’s campaigns and the Chinese expedition to Tibet
+start: "1905-04"
+end: "1912-01"
+tier: B
+summary: "The last Qing attempt to bring Tibet and the Tibetan lands of Kham under direct rule. After the British expedition to Lhasa in 1903–1904, the Qing court began to settle Chinese farmers and open mines in Kham. In April 1905 the people and monks of Batang rose and killed the assistant amban Feng Quan. Zhao Erfeng, sent from Sichuan, crushed the rising, besieged and destroyed the great monastery of Sampheling at Chatreng in 1906, and over the next five years abolished the Tibetan chiefdoms of Kham one by one, replacing them with Chinese counties. In 1909 a Sichuan army under Zhong Ying marched on Lhasa; it entered the city on 12 February 1910, and the 13th Dalai Lama fled to British India, where the Qing declared him deposed. Zhao’s troops took Chamdo and pushed into Pome and Zayul. After the Xinhai Revolution, revolutionaries in Chengdu executed Zhao in December 1911, and the Qing garrison in Lhasa fell apart."
+countries: [cn, in]
+sides:
+  - id: qing
+    name: Qing China
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+  - id: tib
+    name: Tibet and the Tibetan chiefdoms and monasteries of Kham
+    polities: [tibet, tibetan-chiefdoms]
+    ink: slate
+    moves: Tibetan moves
+    success: Tibetan success
+notes:
+  - Zhao Erfeng’s campaigns are remembered in Tibetan sources for the destruction of monasteries and the killing of monks and lay people, and earned him the nickname “Butcher Zhao”; Chinese historians have often praised his reforms of the frontier. Numbers of the dead are not known.
+  - The expulsion of the Qing garrisons from Tibet in 1912–1913 has its own entry, as does the British expedition to Tibet of 1903–1904.
+sources:
+  - title: Chinese expedition to Tibet (1910) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Chinese_expedition_to_Tibet_(1910)
+  - title: Zhao Erfeng (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Zhao_Erfeng
+  - title: Batang uprising (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Batang_uprising
+  - title: Thub-bstan-rgya-mtsho, 13th Dalai Lama (Britannica)
+    url: https://www.britannica.com/biography/Thub-bstan-rgya-mtsho
+  - title: "W. G. Surkhang, Tibet in the Early 20th Century, Case Western Reserve University"
+    url: https://case.edu/artsci/tibet/sites/default/files/2022-05/Tibet%20in%20the%20early%2020th%20century%20-W.G.Surkhang.pdf
+steps:
+  - title: Batang and Chatreng
+    date: 1905 – 1908
+    when: "1905-04"
+    borders: "1906-06"
+    countries: [cn]
+    body:
+      - The road from Sichuan to Lhasa ran through Kham, a land of Tibetan chiefdoms and powerful monasteries that had acknowledged the Qing since the 1720s but governed themselves. In 1904 the new assistant amban Feng Quan stopped at Batang on his way to Chamdo and began to settle Chinese farmers on monastery land and to limit the number of monks. In April 1905 the monks and people of Batang rose, killed him and his escort, and destroyed the Catholic missions of the area, killing several missionaries.
+      - Zhao Erfeng, a Sichuan official, retook Batang in mid-1905 and executed the chiefs and many monks. The rising spread to Litang and Chatreng, where the monks of Sampheling, one of the largest monasteries of Kham, held out for months against his siege. When it fell in 1906 the monastery was destroyed and many of its monks killed. Zhao began to abolish the hereditary chiefs and replace them with Chinese magistrates, and in 1908 he was made commissioner for the Sichuan–Yunnan frontier and also amban of Tibet.
+    facts:
+      - [Batang rising, "April 1905"]
+      - [Sampheling monastery taken, "1906"]
+      - [Zhao Erfeng made frontier commissioner, "1908"]
+    markers:
+      - kind: event
+        side: tib
+        name: Batang
+        date: April 1905
+        text: The assistant amban Feng Quan was killed here in a rising against the new settlement policy.
+        lonlat: [99.110, 30.000]
+      - kind: siege
+        side: qing
+        name: Sampheling (Chatreng)
+        date: 1905–1906
+        text: The monastery was besieged by Zhao Erfeng’s troops for months, then destroyed.
+        lonlat: [99.790, 28.930]
+      - kind: taken
+        side: qing
+        name: Litang
+        date: "1905"
+        text: The monks of Litang joined the rising and were defeated by Zhao’s forces.
+        lonlat: [100.270, 30.000]
+        lp: r
+      - kind: event
+        side: qing
+        name: Dartsedo (Kangding)
+        date: 1905–1911
+        text: The gateway town of Kham and the base of Zhao’s campaigns.
+        lonlat: [101.960, 30.050]
+    arrows:
+      - side: qing
+        label: Zhao Erfeng
+        phase: 1
+        via: [[101.960, 30.050], [101.000, 30.050], [100.270, 30.000], [99.110, 30.000]]
+      - side: qing
+        phase: 2
+        via: [[100.270, 29.950], [100.000, 29.400], [99.790, 28.960]]
+    areas:
+      - style: contested
+        side: tib
+        label: Rising in Kham, 1905–1906
+        atoms: [CN-SC~kham]
+  - title: The march on Lhasa
+    date: 1909 – 1910
+    when: "1910-02-12"
+    borders: "1910-02-12"
+    countries: [cn, in]
+    body:
+      - The 13th Dalai Lama, who had fled to Mongolia before the British reached Lhasa in 1904, returned to Lhasa in December 1909 after a visit to Beijing. By then Zhao had taken the large kingdom of Derge, and the amban Lianyu had called for troops. An army of about 2,000 men from Sichuan under Zhong Ying marched on Lhasa, while Zhao’s forces occupied Chamdo and the lands along the road. Tibetan troops tried to stop the column on the way but were pushed aside.
+      - Zhong Ying’s troops entered Lhasa on 12 February 1910, firing shots in the streets. That night the Dalai Lama and his ministers fled south, through Phari to Sikkim and then to Darjeeling in British India; on 25 February the Qing declared him deposed. Britain protested but did not intervene. The Qing ruled Lhasa directly through the amban, and Zhao’s troops pushed on into Pome and Zayul in the south-east, close to the Assam frontier.
+    facts:
+      - [Qing troops enter Lhasa, "12 February 1910"]
+      - [Dalai Lama declared deposed, "25 February 1910"]
+      - [Qing force, "about 2,000 men"]
+    markers:
+      - kind: taken
+        side: qing
+        name: Lhasa
+        date: 12 February 1910
+        text: Zhong Ying’s Sichuan troops entered the city; the Dalai Lama fled the same night.
+        lonlat: [91.130, 29.650]
+      - kind: taken
+        side: qing
+        name: Chamdo
+        date: "1909"
+        text: Occupied by Zhao Erfeng’s troops on the road to Lhasa.
+        lonlat: [97.170, 31.140]
+      - kind: event
+        side: tib
+        name: Darjeeling
+        date: 1910–1912
+        text: The 13th Dalai Lama lived here in exile under British protection.
+        lonlat: [88.260, 27.040]
+        lp: l
+      - kind: taken
+        side: qing
+        name: Derge
+        date: "1909"
+        text: The largest kingdom of Kham, taken over by Zhao and turned into Chinese counties.
+        lonlat: [98.580, 31.810]
+        lp: r
+    arrows:
+      - side: qing
+        label: Zhong Ying
+        phase: 1
+        via: [[97.170, 31.140], [95.500, 30.700], [93.250, 29.880], [91.200, 29.660]]
+      - side: tib
+        label: Flight of the Dalai Lama
+        phase: 2
+        via: [[91.130, 29.600], [89.900, 28.900], [89.150, 27.750], [88.600, 27.330], [88.270, 27.060]]
+    areas:
+      - style: occupied
+        side: qing
+        label: Under Qing military control, 1910–1911
+        atoms: [CN-SC~kham, CN-XZ~chamdo, CN-XZ!]
+  - title: Revolution and the fall of Zhao Erfeng
+    date: 1911 – 1912
+    when: "1911-12-22"
+    borders: "1911-12-22"
+    countries: [cn]
+    body:
+      - In 1911 Zhao returned to Sichuan as governor-general, leaving his subordinate Fu Songmu in charge of the frontier. The railway protests in Sichuan grew into a revolution, and in November the province declared its independence. Zhao handed over power but stayed in Chengdu with his troops, and on 22 December 1911 the revolutionary officer Yin Changheng had him arrested and beheaded.
+      - In Lhasa the news of the revolution split the Qing garrison. Soldiers turned on their officers and looted the city, and in 1912 Tibetan forces, organised from India by the Dalai Lama, rose against them; the end of Qing rule in Tibet is told in its own entry. Many of the counties Zhao had created in Kham remained under Chinese control and later became the province of Xikang.
+    facts:
+      - [Sichuan declares independence, "27 November 1911"]
+      - [Zhao Erfeng executed, "22 December 1911"]
+    markers:
+      - kind: event
+        side: qing
+        name: Chengdu
+        date: 22 December 1911
+        text: Zhao Erfeng was seized and beheaded by revolutionaries.
+        lonlat: [104.070, 30.670]
+      - kind: event
+        name: Lhasa
+        date: November 1911
+        text: The Qing garrison broke up after news of the revolution arrived.
+        lonlat: [91.130, 29.650]

@@ -1,0 +1,133 @@
+id: panthay-rebellion
+name: Panthay Rebellion
+start: "1856-04"
+end: "1873-05"
+tier: B
+summary: "A rising of the Hui (Chinese-speaking Muslims) of Yunnan, joined by other peoples of the province, against the Qing. After years of violence between Hui and Han miners and settlers, officials and militias massacred Hui in and around Kunming in 1856, and risings broke out across the province. In western Yunnan Du Wenxiu took Dali and founded a state he called Pingnan Guo, the “Pacified South”, with himself as its ruler, known to Muslims and foreigners as Sultan Suleiman; it governed with Hui and Han officials and held much of the west for sixteen years. In the east the rebel leader Ma Rulong went over to the Qing in 1862. Du’s armies besieged Kunming in 1867–1868 but failed, and the Qing governor Cen Yuying, with modern artillery, slowly took back the province. Dali fell in January 1873 after Du Wenxiu had poisoned himself; thousands of its people were massacred. Estimates of the dead run as high as a million."
+countries: [cn, mm]
+sides:
+  - id: qing
+    name: Qing China (with Ma Rulong from 1862)
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+  - id: pn
+    name: Du Wenxiu’s Pingnan state and other Hui rebels
+    polities: [pingnan-guo, hui-rebels]
+    ink: green
+    moves: Rebel moves
+    success: Rebel success
+notes:
+  - “Panthay” is the Burmese name for the Chinese Muslims of Yunnan who traded with Burma; it was not used in Yunnan. Chinese historians call the rising the Du Wenxiu rebellion.
+  - The war was fought along many lines at once, between Hui and Han, between rebel leaders, and with Yi, Bai and other peoples of the province on both sides. Massacres were committed by all sides. Yunnan lost a large part of its population to war, famine and the plague that spread in these years; the figures are estimates.
+sources:
+  - title: Panthay Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Panthay_Rebellion
+  - title: Panthay Rebellion (Britannica)
+    url: https://www.britannica.com/topic/Panthay-Rebellion
+  - title: "China: the Muslim rebellions (Britannica)"
+    url: https://www.britannica.com/place/China/Muslim-rebellions
+  - title: Du Wenxiu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Du_Wenxiu
+  - title: Ma Rulong (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ma_Rulong
+  - title: Cen Yuying (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cen_Yuying
+steps:
+  - title: The Kunming massacre and the Pingnan state
+    date: 1856 – 1868
+    when: "1856-04"
+    borders: "1856-09"
+    countries: [cn]
+    body:
+      - Yunnan’s silver and copper mines drew Han and Hui miners, and quarrels over mines, land and trade had led to massacres of Hui in the 1840s. After fighting between Han and Hui miners in central Yunnan in 1855, officials in Kunming encouraged Han militias to attack the Hui; in the spring of 1856 thousands of Hui in and around the provincial capital were killed. Hui across the province took up arms, and Yi, Bai and other peoples joined in many places.
+      - In September 1856 Du Wenxiu, a Hui scholar from Baoshan, took Dali, the main city of the west, and set up a government there. Known to his Muslim subjects as Sultan Suleiman, he called for the Manchus to be driven out and for Hui and Han to unite, appointed many Han officials and protected the local religions. In the east and south, Ma Rulong and the cleric Ma Dexin led the Hui and twice besieged Kunming, but in 1862 they made terms with the Qing and Ma Rulong became a Qing general, fighting his former allies. In 1867 Du Wenxiu sent a large army east, which took dozens of towns and besieged Kunming for more than a year.
+    facts:
+      - [Massacre of Hui at Kunming, "spring 1856"]
+      - [Du Wenxiu takes Dali, "September 1856"]
+      - [Ma Rulong goes over to the Qing, "1862"]
+      - [Siege of Kunming by Du’s army, "1867–1868"]
+    markers:
+      - kind: event
+        side: qing
+        name: Kunming
+        date: spring 1856
+        text: Officials and Han militias killed thousands of Hui in and around the provincial capital.
+        lonlat: [102.710, 25.040]
+      - kind: capital
+        side: pn
+        name: Dali
+        date: September 1856
+        text: Taken by Du Wenxiu and made the capital of his Pingnan state.
+        lonlat: [100.160, 25.690]
+      - kind: event
+        side: pn
+        name: Baoshan (Yongchang)
+        date: 1845–1856
+        text: Du Wenxiu’s home district, where Hui had been massacred in 1845.
+        lonlat: [99.170, 25.120]
+        lp: l
+      - kind: siege
+        side: qing
+        name: Kunming
+        date: 1867–1868
+        text: Du Wenxiu’s army besieged the capital until Qing reinforcements under Cen Yuying broke the siege.
+        lonlat: [102.710, 25.040]
+        lp: b
+    arrows:
+      - side: pn
+        label: Du Wenxiu’s eastern campaign
+        phase: 1
+        via: [[100.230, 25.600], [100.900, 25.300], [101.550, 25.030], [102.400, 25.000]]
+    areas:
+      - style: occupied
+        side: pn
+        label: Ruled by Du Wenxiu’s state, 1860s (approximate)
+        polygon: [[98.300, 24.600], [98.400, 26.200], [99.600, 26.600], [100.800, 26.600], [101.900, 25.600], [101.600, 24.700], [100.200, 24.500], [99.200, 24.300]]
+  - title: The fall of Dali
+    date: 1868 – 1873
+    when: "1872-12"
+    borders: "1873-01-15"
+    countries: [cn, mm, gb]
+    body:
+      - The siege of Kunming failed, and Cen Yuying, made governor of Yunnan, took the offensive with Ma Rulong, using artillery with the help of French advisers. In 1868 a British mission from Burma under Major Edward Sladen visited the rebel-held town of Tengyue (Momien), and in 1872 Du Wenxiu sent his adopted son Hassan through Burma to London to ask Queen Victoria for recognition. Britain declined to intervene.
+      - Town after town of the west fell, and in 1872 the Qing armies surrounded Dali. At the end of December, to save the city, Du Wenxiu took poison and gave himself up; he was beheaded before he died, and his head was sent to Beijing. Despite the surrender, Qing troops massacred thousands of the city’s Hui in January 1873. Tengyue, the last stronghold, was stormed in May 1873. Many Hui fled to Burma, where their descendants are known as Panthay.
+    facts:
+      - [Sladen mission to Tengyue, "May – July 1868"]
+      - [Du Wenxiu’s death, "December 1872"]
+      - [Massacre at Dali, "January 1873"]
+      - [Tengyue stormed, "May 1873"]
+    markers:
+      - kind: taken
+        side: qing
+        name: Dali
+        date: January 1873
+        text: Surrendered after Du Wenxiu took his own life; Qing troops then massacred many of the inhabitants.
+        lonlat: [100.160, 25.690]
+      - kind: taken
+        side: qing
+        name: Tengyue (Momien)
+        date: May 1873
+        text: The last rebel town, near the Burmese border, stormed by Qing troops.
+        lonlat: [98.490, 25.020]
+        lp: l
+      - kind: event
+        name: Bhamo
+        date: "1868"
+        text: Sladen’s mission set out from here up the old caravan road to Yunnan.
+        lonlat: [97.240, 24.270]
+        lp: l
+    arrows:
+      - side: qing
+        label: Cen Yuying
+        phase: 1
+        via: [[102.710, 25.040], [101.550, 25.030], [100.600, 25.400], [100.250, 25.650]]
+      - side: qing
+        phase: 2
+        via: [[100.160, 25.650], [99.170, 25.120], [98.520, 25.020]]
+    areas:
+      - style: contested
+        side: pn
+        label: Last rebel-held towns, 1872
+        polygon: [[98.300, 24.700], [98.400, 25.600], [99.600, 26.100], [100.400, 26.000], [100.400, 25.300], [99.400, 24.700]]

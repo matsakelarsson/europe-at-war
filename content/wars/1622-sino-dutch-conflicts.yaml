@@ -1,0 +1,169 @@
+id: sino-dutch-conflicts
+name: Sino-Dutch conflicts
+start: "1622-06"
+end: "1633-10-22"
+tier: B
+summary: "Fighting between the Dutch East India Company (VOC) and Ming China over the Company’s demand for trade on the coast of Fujian. After the Portuguese beat off a Dutch attack on Macau in June 1622, a VOC fleet under Cornelis Reijersen occupied the Penghu (Pescadores) islands, built a fort with forced Chinese labour and raided the Fujian coast to force the Ming to open trade. In 1624 Ming troops under Yu Zigao landed on Penghu and besieged the fort; in August the Dutch agreed to pull down the fort and withdraw to Tayouan on Taiwan, outside Ming rule, where they built what became Fort Zeelandia and the colony of Dutch Formosa. Trade with Taiwan grew through Chinese merchants, but in 1633 the governor Hans Putmans, allied with the pirate Liu Xiang, burned the new fleet of the Ming admiral Zheng Zhilong at Xiamen (Amoy) to force direct trade. On 22 October 1633 Zheng defeated the Dutch and Liu Xiang’s junks with fire ships in Liaoluo Bay off Kinmen. The Company afterwards traded through Zheng Zhilong’s merchants at Tayouan."
+countries: [cn, tw, nl]
+sides:
+  - id: mg
+    name: Ming China
+    polities: [ming]
+    ink: red
+    moves: Ming moves
+    success: Ming success
+  - id: nl
+    name: Dutch East India Company (VOC)
+    polities: [dutch-republic]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+notes:
+  - "Dutch dates are in the Gregorian calendar; Chinese records use the lunar calendar. Numbers of ships and troops differ between Dutch and Chinese accounts."
+  - "Taiwan was not then ruled by the Ming. The Ming tolerated the Company’s move there in 1624 because it took the Dutch out of Penghu, which the Ming regarded as Chinese territory."
+sources:
+  - title: Sino-Dutch conflicts (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sino-Dutch_conflicts
+  - title: Battle of Liaoluo Bay (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Liaoluo_Bay
+  - title: Fengguiwei Fort (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fengguiwei_Fort
+  - title: Dutch Formosa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dutch_Formosa
+  - title: "Taiwan in Time: When the Dutch were twice kicked out of Penghu (Taipei Times)"
+    url: https://taipeitimes.com/News/feat/archives/2022/07/31/2003782707
+steps:
+  - title: Macau and the Pescadores
+    date: 1622–1623
+    when: "1622-07"
+    borders: "1622-08-01"
+    countries: [cn, tw]
+    body:
+      - The Dutch East India Company wanted a share of the trade in Chinese silk and porcelain that the Portuguese carried on from Macau and the Spanish from Manila. In June 1622 a fleet sent from Batavia under Cornelis Reijersen attacked Macau and was beaten off by the Portuguese. Reijersen sailed on to the Penghu (Pescadores) islands in the Taiwan Strait, where the Ming kept only seasonal patrols, and in the summer of 1622 began a fort at Fengguiwei on the main island, at the mouth of Magong harbour. Chinese captured at sea and local people were forced to build it; by one account 1,300 of the 1,500 labourers died.
+      - From Penghu the Dutch demanded the right to trade on the Fujian coast and seized Chinese junks to press their demand. The governor of Fujian, Shang Zhouzuo, told them on 19 September 1622 to withdraw to Taiwan, outside Ming rule; in October and November they raided Xiamen (Amoy) and the nearby coast. His successor, Nan Juyi, prepared for war. In 1623 a Dutch ship was lost off Liuao, and in October Chinese forces at Xiamen captured the Dutch commander Christiaen Francx, who had come to negotiate, and burned one of his ships.
+    facts:
+      - [Dutch attack on Macau, "June 1622"]
+      - [Fort at Fengguiwei begun, "summer 1622"]
+      - [Raids on Xiamen, "October – November 1622"]
+    markers:
+      - kind: battle
+        name: Macau
+        date: June 1622
+        text: The Portuguese defeated Reijersen’s attack on their trading city. The Dutch fleet then sailed for Penghu.
+        lonlat: [113.54, 22.19]
+      - kind: held
+        side: nl
+        name: Fengguiwei fort
+        date: 1622–1624
+        text: The Company’s fort on Penghu, built by forced Chinese labour at the entrance to Magong harbour.
+        lonlat: [119.548, 23.553]
+      - kind: battle
+        side: mg
+        name: Xiamen (Amoy)
+        date: 1622–1623
+        text: Raided by the Dutch in late 1622. In October 1623 Chinese forces seized Christiaen Francx here and burned a Dutch ship.
+        lonlat: [118.08, 24.45]
+        lp: l
+    arrows:
+      - side: nl
+        label: Reijersen
+        via: [[113.70, 22.10], [115.50, 22.60], [117.70, 23.10], [119.45, 23.50]]
+      - side: nl
+        label: Dutch raids
+        via: [[119.50, 23.60], [119.10, 23.95], [118.60, 24.30], [118.15, 24.42]]
+    areas:
+      - style: occupied
+        side: nl
+        label: Occupied by the Dutch, 1622–1624
+        atoms: [TW-PEN]
+  - title: The siege of the Penghu fort
+    date: February – September 1624
+    when: "1624-02"
+    borders: "1624-08-03"
+    countries: [cn, tw]
+    body:
+      - In February 1624 Ming forces under Yu Zigao landed on Penghu. Over the following months they built up a force that Chinese and Dutch accounts put at 5,000 to 10,000 soldiers and 40 to 200 ships, and on 30 July 1624, under Yu and Wang Mengxiong, they closed in on the Dutch fort, which was commanded by the new governor, Martinus Sonck.
+      - Outnumbered and cut off from supplies, the Dutch asked for terms on 3 August, and the Chinese merchant Li Dan, known to Europeans as Captain China, helped to broker a settlement. They agreed to pull down the fort and leave Penghu, and the Ming let them settle at Tayouan, a sandbank off the south-west coast of Taiwan (today Anping in Tainan), where Chinese merchants could trade with them. The last Dutch left Penghu in September. At Tayouan they built a fort that was later rebuilt in stone as Fort Zeelandia, the seat of the colony of Dutch Formosa until Zheng Chenggong (Koxinga) took it in 1662.
+    facts:
+      - [Ming landing on Penghu, "February 1624"]
+      - [Dutch ask for terms, "3 August 1624"]
+      - [Move to Tayouan, "August – September 1624"]
+    markers:
+      - kind: siege
+        side: mg
+        name: Fengguiwei fort
+        date: 30 July – 3 August 1624
+        text: Surrounded by Yu Zigao’s and Wang Mengxiong’s troops. The Dutch agreed to demolish it and leave.
+        lonlat: [119.548, 23.553]
+      - kind: event
+        side: nl
+        name: Tayouan (Fort Zeelandia)
+        date: from 1624
+        text: The Company’s new base on Taiwan, at today’s Anping in Tainan.
+        lonlat: [120.160, 23.001]
+    arrows:
+      - side: mg
+        label: Yu Zigao
+        phase: 1
+        via: [[118.35, 24.40], [118.80, 24.05], [119.25, 23.75], [119.52, 23.58]]
+      - side: nl
+        label: Withdrawal to Tayouan
+        phase: 2
+        via: [[119.58, 23.53], [119.80, 23.30], [120.00, 23.10], [120.14, 23.01]]
+    areas:
+      - style: lost
+        side: nl
+        label: Left by the Dutch, 1624
+        atoms: [TW-PEN]
+      - style: gained
+        side: nl
+        label: Dutch post at Tayouan, from 1624
+        atoms: [TW-TNN]
+  - title: Zheng Zhilong and Liaoluo Bay
+    date: 1628–1633
+    when: "1633-07-07"
+    borders: "1633-10-22"
+    countries: [cn, tw]
+    body:
+      - Zheng Zhilong, a Fujianese merchant and sea captain who had worked as an interpreter for the Dutch and then led his own fleet of armed junks, accepted a Ming commission in 1628 as patrolling admiral and used it to destroy his rivals on the coast. The Company still had no direct trade with the mainland. In 1633 its governor at Tayouan, Hans Putmans, decided to force it. On 7 July 1633, without a declaration of war, his ships attacked Zheng’s new fleet in the harbour of Xiamen, which was not yet fully manned, and burned it. The Dutch then raided the coast, joined by the junks of the pirate Liu Xiang.
+      - The governor of Fujian, Zou Weilian, gave Zheng the means to rebuild. On 22 October 1633 Zheng’s fleet of about 150 junks, some 50 of them large war junks, attacked Putmans’ eight ships and Liu Xiang’s junks in Liaoluo Bay on the south coast of Kinmen, using fire ships. Two Dutch ships were burned or sunk and one captured, with about 250 Dutch killed and wounded; Ming officials hailed a “miracle at sea”. Putmans withdrew to Tayouan, and his superiors told him to stay away from the coast. Trade then passed through Zheng Zhilong’s merchants, who sailed to Tayouan, and Zheng became one of the richest men in China.
+    facts:
+      - [Dutch attack at Xiamen, "7 July 1633"]
+      - [Battle of Liaoluo Bay, "22 October 1633"]
+      - [Dutch losses at Liaoluo Bay, "2 ships lost, 1 captured, about 250 killed and wounded"]
+    markers:
+      - kind: battle
+        side: nl
+        name: Xiamen (Amoy)
+        date: 7 July 1633
+        text: Putmans’ surprise attack burned Zheng Zhilong’s new fleet in the harbour.
+        lonlat: [118.08, 24.45]
+        lp: l
+      - kind: naval
+        side: mg
+        name: Liaoluo Bay
+        date: 22 October 1633
+        text: Zheng Zhilong’s fleet, with fire ships, defeated the Dutch and Liu Xiang’s junks off the south coast of Kinmen.
+        lonlat: [118.43, 24.41]
+        lp: b
+      - kind: event
+        side: mg
+        name: Anhai
+        date: 1628–1646
+        text: Zheng Zhilong’s home port and headquarters.
+        lonlat: [118.47, 24.72]
+      - kind: held
+        side: nl
+        name: Tayouan (Fort Zeelandia)
+        date: "1633"
+        text: The Company’s base on Taiwan, where Putmans’ fleet withdrew.
+        lonlat: [120.160, 23.001]
+    arrows:
+      - side: nl
+        label: Putmans
+        phase: 1
+        via: [[120.12, 23.03], [119.50, 23.60], [118.80, 24.15], [118.15, 24.42]]
+      - side: mg
+        label: Zheng Zhilong
+        phase: 2
+        via: [[118.47, 24.68], [118.55, 24.55], [118.50, 24.45], [118.44, 24.42]]

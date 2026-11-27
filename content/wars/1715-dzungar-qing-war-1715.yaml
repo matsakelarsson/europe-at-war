@@ -1,0 +1,161 @@
+id: dzungar-qing-war-1715
+name: Dzungar–Qing War (1715–1739)
+start: "1715"
+end: "1739"
+tier: B
+summary: "The second round of wars between the Dzungar Khanate and the Qing empire, fought on the oasis road east of the Tian Shan, in Khalkha and, in 1717–1720, in Tibet. It began in 1715 when Tsewang Rabtan’s Dzungars attacked Hami, a Qing dependency since 1696–1697. The Kangxi emperor stationed armies and military farms at Barkol and Hami, and in 1720 Qing troops reached Turfan, whose people, led by Emin Khoja, went over to the Qing. After a truce under the Yongzheng emperor the war flared up again in 1729, when the Dzungars refused to hand over the Khoshut rebel Lobzang Danjin. At Khoton Nor in the Altai, in July 1731, Galdan Tseren’s army destroyed the Qing northern army under Furdan, but in 1732 the Khalkha prince Tsering defeated a Dzungar invasion of Khalkha near Erdene Zuu. Talks from 1734 ended in an agreement in 1739 that fixed the line between the Dzungar and Khalkha pastures in the Altai and opened trade, and the frontier stayed at peace until the Dzungar civil wars of the 1740s and 1750s."
+countries: [cn, mn]
+sides:
+  - id: dz
+    name: Dzungar Khanate (Tsewang Rabtan, then Galdan Tseren)
+    polities: [dzungar-khanate]
+    ink: brown
+    moves: Dzungar moves
+    success: Dzungar success
+  - id: qing
+    name: Qing empire and its Khalkha subjects
+    polities: [qing, khalkha]
+    ink: gold
+    moves: Qing and Khalkha moves
+    success: Qing or Khalkha success
+notes:
+  - "The Dzungar invasion of Tibet in 1717 and the Qing expedition of 1720, and the revolt of Lobzang Danjin in Kokonor (1723–1724), were part of the same contest; they have their own entries."
+  - Dates are converted from the Chinese lunar calendar. Qing records are the main source for numbers, and figures for the battles of 1731 and 1732 differ widely between them and later accounts.
+  - The fighting of these years against the Kazakhs, which the Dzungars waged at the same time, is told in the Kazakh–Dzungar wars.
+sources:
+  - title: Dzungar–Qing Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dzungar%E2%80%93Qing_Wars
+  - title: Tsewang Rabtan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tsewang_Rabtan
+  - title: Emin Khoja (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Emin_Khoja
+  - title: Timeline of Xinjiang under Qing rule (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Timeline_of_Xinjiang_under_Qing_rule
+  - title: 和通泊之战 (Battle of Khoton Nor) (Chinese Wikipedia)
+    url: https://zh.wikipedia.org/wiki/%E5%92%8C%E9%80%9A%E6%B3%8A%E4%B9%8B%E6%88%98
+  - title: 光显寺之战 (Battle of Erdene Zuu) (Chinese Wikipedia)
+    url: https://zh.wikipedia.org/wiki/%E5%85%89%E6%98%BE%E5%AF%BA%E4%B9%8B%E6%88%98
+  - title: "China: the Qing empire (Britannica)"
+    url: https://www.britannica.com/place/China/The-Qing-empire
+  - title: Dzungar Khanate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dzungar_Khanate
+steps:
+  - title: Hami, Barkol and Turfan
+    date: 1715–1722
+    when: "1715"
+    borders: "1715-06-01"
+    countries: [cn]
+    body:
+      - Tsewang Rabtan had rebuilt the Dzungar Khanate after his uncle Galdan’s death and pushed its power west against the Kazakhs. Hami, whose ruler ʿAbd Allah Beg had gone over to the Qing in 1696–1697, lay between the two empires on the road from the Tarim oases to Gansu. In the spring of 1715 about 2,000 Dzungar horsemen attacked it. Its defenders held out until Qing troops came up, and the Dzungars withdrew.
+      - The Kangxi emperor answered by moving armies to the frontier. A western army under Funingga was stationed at Barkol, north-west of Hami, and a northern army in Khalkha, and military farms were opened at Barkol and Hami to feed them. Two years later the Dzungars struck instead at Tibet. In 1720, while the main Qing effort went to Lhasa, Qing columns from Barkol advanced to Turfan and raided Dzungar lands; the Muslims of Turfan, led by Emin Khoja, rose against the Dzungars and went over to the Qing.
+      - Kangxi died in December 1722. His son, the Yongzheng emperor, faced with the revolt of Lobzang Danjin in Kokonor in 1723, agreed to a truce with the Dzungars and pulled back much of the army from Barkol.
+    facts:
+      - [Dzungar attack on Hami, "spring 1715, repulsed"]
+      - [Turfan goes over to the Qing, "1720"]
+      - [Death of the Kangxi emperor, "20 December 1722"]
+    markers:
+      - kind: held
+        side: qing
+        name: Hami
+        date: spring 1715
+        text: About 2,000 Dzungar horsemen attacked the oasis and were driven off.
+        lonlat: [93.515, 42.819]
+      - kind: event
+        side: qing
+        name: Barkol
+        date: 1715–1725
+        text: Base of the Qing western army, with military farms to feed it.
+        lonlat: [93.017, 43.599]
+      - kind: taken
+        side: qing
+        name: Turfan
+        date: "1720"
+        text: The Turfan Muslims under Emin Khoja rose against the Dzungars and submitted to the Qing.
+        lonlat: [89.189, 42.951]
+    arrows:
+      - side: dz
+        phase: 1
+        via: [[88.000, 43.800], [90.500, 43.300], [92.300, 43.000], [93.400, 42.850]]
+      - side: qing
+        phase: 2
+        label: Qing columns, 1720
+        via: [[93.017, 43.599], [91.800, 43.300], [90.400, 43.050], [89.300, 42.960]]
+  - title: Khoton Nor and Erdene Zuu
+    date: 1729–1732
+    when: "1731-07"
+    borders: "1731-07-01"
+    countries: [cn, mn]
+    body:
+      - Lobzang Danjin had fled to the Dzungars in 1724. When Tsewang Rabtan’s son and successor Galdan Tseren refused to hand him over, the Yongzheng emperor resumed the war in 1729. A northern army under Furdan advanced to Khovd in western Khalkha; a western army under Yue Zhongqi gathered at Barkol. The council the emperor set up to run the war in secret grew into the Grand Council, the inner cabinet of the later Qing.
+      - In the summer of 1731 Furdan, misled by false reports that the Dzungars were weak and scattered, marched west from Khovd into the Altai. At Khoton Nor (Hetong po) the two Dzungar generals named Tseren Dondub surrounded his army of about 10,000 men; several of his senior officers were killed, and Chinese accounts say only about 2,000 men got back to Khovd. It was the worst Qing defeat of the Dzungar wars. Yue Zhongqi’s raid on Ürümqi the same year gained nothing lasting.
+      - The Dzungars then invaded Khalkha. In August 1732 the Khalkha prince Tsering, a son-in-law of the Kangxi emperor, ambushed the smaller Tseren Dondub’s army near the monastery of Erdene Zuu on the Orkhon and inflicted heavy losses; many Dzungars drowned crossing the river. The Qing general Marsai failed to cut off their retreat and was executed for it. In the same year the Dzungars attacked Turfan, and Emin Khoja led its people east to resettle at Guazhou in Gansu.
+    facts:
+      - [Battle of Khoton Nor, "June–July 1731, Dzungar victory"]
+      - [Battle of Erdene Zuu, "August 1732, Khalkha and Qing victory"]
+      - [Turfanis resettled at Guazhou, "1732"]
+    markers:
+      - kind: battle
+        side: dz
+        name: Khoton Nor
+        date: June – July 1731
+        text: Furdan’s northern army was surrounded and largely destroyed. Only about 2,000 men reached Khovd.
+        lonlat: [88.300, 48.650]
+      - kind: event
+        side: qing
+        name: Khovd
+        date: 1730–1731
+        text: Base of Furdan’s northern army in western Khalkha.
+        lonlat: [91.641, 48.004]
+      - kind: battle
+        side: qing
+        name: Erdene Zuu
+        date: August 1732
+        text: Tsering’s Khalkha troops ambushed the Dzungar army near the monastery on the Orkhon and drove it back with heavy losses.
+        lonlat: [102.843, 47.202]
+      - kind: event
+        side: qing
+        name: Barkol
+        date: 1729–1732
+        text: Base of Yue Zhongqi’s western army.
+        lonlat: [93.017, 43.599]
+        lp: l
+      - kind: event
+        name: Guazhou
+        date: "1732"
+        text: Emin Khoja and the people of Turfan were resettled here, in the Gansu corridor, after Dzungar attacks.
+        lonlat: [95.780, 40.520]
+    arrows:
+      - side: qing
+        label: Furdan
+        phase: 1
+        via: [[91.641, 48.004], [90.600, 48.300], [89.400, 48.550], [88.450, 48.650]]
+      - side: qing
+        phase: 1
+        label: Yue Zhongqi
+        via: [[93.017, 43.599], [91.000, 43.700], [89.000, 43.800], [87.700, 43.850]]
+      - side: dz
+        phase: 2
+        via: [[89.000, 47.500], [93.500, 47.000], [98.500, 47.000], [102.600, 47.150]]
+  - title: The Altai line
+    date: 1733–1739
+    when: "1739"
+    borders: "1739-12-01"
+    countries: [cn, mn]
+    body:
+      - Both sides were exhausted. Talks began in 1734 and went on after the Qianlong emperor came to the throne in 1735. They ended in 1739 with an agreement that fixed the line between the Khalkha and Dzungar pastures in the Altai mountains, with a belt between them that neither side’s herders were to enter, though scholars differ on exactly where the line ran.
+      - The Dzungars were allowed to send trade missions to Beijing and to the border town of Suzhou (Jiuquan) and to make pilgrimages to Tibet under Qing supervision. The Qing kept Hami and Barkol; Turfan, abandoned by its people, stayed in Dzungar hands. The frontier was quiet until Galdan Tseren’s death in 1745 opened a succession struggle that ended with the Qing conquest of the khanate in 1755–1758.
+    facts:
+      - [Peace talks, "1734–1739"]
+      - [Boundary, "the Altai mountains"]
+    markers:
+      - kind: treaty
+        name: Altai mountains
+        date: "1739"
+        text: The agreement of 1739 divided the Dzungar pastures west of the Altai from Qing Khalkha in the east.
+        lonlat: [91.630, 46.970]
+      - kind: event
+        side: dz
+        name: Suzhou (Jiuquan)
+        date: from 1739
+        text: Border town in Gansu where Dzungar trade missions were received.
+        lonlat: [98.490, 39.730]

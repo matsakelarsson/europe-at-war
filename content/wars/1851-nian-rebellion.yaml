@@ -1,0 +1,160 @@
+id: nian-rebellion
+name: Nian Rebellion
+start: "1851"
+end: "1868-08-16"
+tier: B
+summary: "A rising of armed bands, the Nian, in the Huaibei region of northern Anhui and the neighbouring parts of Henan, Shandong and Jiangsu, at the same time as the Taiping Rebellion. Poverty, raiding and the disastrous floods of the Yellow River, which broke its banks in 1851 and changed its course to the north in 1855, swelled the bands, which raided far and wide from fortified villages. In 1856 they formed an alliance under Zhang Lexing, who accepted titles from the Taiping. The Mongol general Senggelinqin defeated and executed Zhang in 1863, but Taiping veterans reorganised the Nian as a fast-moving cavalry army that killed Senggelinqin in 1865. Zeng Guofan’s strategy of hemming them in with fortified river lines was carried through by Li Hongzhang and Zuo Zongtang, and in 1868 the Eastern Nian were destroyed in Shandong and Jiangsu and the Western Nian, after a raid towards Beijing, in north-western Shandong."
+countries: [cn]
+sides:
+  - id: qing
+    name: Qing China
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+  - id: nian
+    name: Nian rebels
+    polities: [nian]
+    ink: brown
+    moves: Nian moves
+    success: Nian success
+notes:
+  - The word nian, from the local dialect, meant a band or gang. The Nian had no single creed or programme; historians such as Elizabeth Perry have seen them as a product of the survival strategies of a poor, flood-prone region, in which villages walled themselves in and both raided and defended against their neighbours.
+  - The war devastated the North China Plain. There is no reliable count of its dead.
+sources:
+  - title: Nian Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nian_Rebellion
+  - title: Nian Rebellion (Britannica)
+    url: https://www.britannica.com/event/Nian-Rebellion
+  - title: Senggelinqin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sengge_Rinchen
+  - title: Li Hongzhang (Britannica)
+    url: https://www.britannica.com/biography/Li-Hongzhang
+  - title: Lai Wenguang (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Lai_Wenguang
+steps:
+  - title: Floods, fortified villages and Zhang Lexing
+    date: 1851 – 1863
+    when: "1856"
+    borders: "1856"
+    countries: [cn]
+    body:
+      - The plain between the Huai river and the Yellow River was poor and often flooded, and its people had long lived by salt smuggling, raiding and feuds, organised in bands called nian. In 1851 the Yellow River broke its dikes, and in 1855, at Tongwaxiang in Henan, it burst out of its old bed south of Shandong and found a new course to the sea north of the province, flooding huge areas. The Qing, drained by the Taiping war, could give little relief, and the bands grew into small armies whose cavalry raided across four provinces from earth-walled villages.
+      - In 1856 the leaders of several bands met at Zhihe in northern Anhui and chose Zhang Lexing as their chief. The alliance was organised in coloured banners, each based on a group of related villages, and was never tightly controlled. Zhang accepted the title of prince from the Taiping, and Nian and Taiping armies sometimes fought together, but they never merged. In 1862 the court sent Senggelinqin, who had destroyed the Taiping Northern Expedition, against them. He stormed Zhihe, and in 1863 Zhang Lexing, betrayed by an ally, was captured and executed.
+    facts:
+      - [Yellow River changes course, "1855"]
+      - [Alliance of Zhihe, "1856, under Zhang Lexing"]
+      - [Zhang Lexing executed, "1863"]
+    markers:
+      - kind: event
+        side: nian
+        name: Zhihe
+        date: "1856"
+        text: The market town where the Nian leaders formed their alliance under Zhang Lexing; today the county town of Guoyang.
+        lonlat: [116.210, 33.500]
+      - kind: event
+        name: Tongwaxiang
+        date: "1855"
+        text: The Yellow River burst its dikes here and changed course, flowing north of Shandong instead of south of it.
+        lonlat: [114.820, 34.820]
+    arrows:
+      - side: nian
+        label: Nian raids
+        via: [[116.200, 33.500], [115.200, 34.200], [114.300, 34.700]]
+      - side: nian
+        via: [[116.300, 33.600], [116.800, 34.500], [116.600, 35.300]]
+    areas:
+      - style: contested
+        side: nian
+        label: Nian heartland in Huaibei
+        atoms: [CN-AH~huaibei]
+  - title: The death of Senggelinqin
+    date: 1864 – 1866
+    when: "1865-05-18"
+    borders: "1865-05-18"
+    countries: [cn]
+    body:
+      - After the fall of Nanjing in 1864, Taiping commanders such as Lai Wenguang who had been fighting in the north joined the Nian with their veterans and reorganised them as a mobile army of horsemen that could cover great distances and avoid pitched battle. Senggelinqin pursued them for months across Henan, Hubei and Shandong until his men and horses were exhausted. On 18 May 1865 the Nian ambushed his army at Gaolouzhai near Caozhou in south-western Shandong; Senggelinqin was killed and much of his cavalry destroyed.
+      - The court gave the command to Zeng Guofan, the victor over the Taiping, who planned to pen the Nian in with fortified lines along rivers and canals and to cut them off from their home villages, which were registered and watched. The method was slow, and in October 1866 the Nian broke through his line on the Jialu river near Kaifeng. Zeng was replaced by his protégé Li Hongzhang. At the end of 1866 the Nian split into an Eastern army under Lai Wenguang and a Western army under Zhang Zongyu, a nephew of Zhang Lexing, which marched into Shaanxi to join the Hui rebels.
+    facts:
+      - [Battle of Gaolouzhai, "18 May 1865, Nian victory"]
+      - [Nian break the Jialu river line, "October 1866"]
+      - [Split into Eastern and Western Nian, "late 1866"]
+    markers:
+      - kind: battle
+        side: nian
+        name: Gaolouzhai
+        date: 18 May 1865
+        text: Senggelinqin’s exhausted army was surrounded and destroyed near Caozhou (today Heze). He was killed in the fighting.
+        lonlat: [115.350, 35.300]
+      - kind: battle
+        side: nian
+        name: Kaifeng
+        date: October 1866
+        text: The Nian broke through Zeng Guofan’s defence line on the Jialu river near the city.
+        lonlat: [114.307, 34.797]
+        lp: l
+    arrows:
+      - side: nian
+        label: Eastern Nian
+        phase: 1
+        via: [[114.400, 34.700], [115.400, 34.600], [116.800, 34.800], [118.300, 35.200]]
+      - side: nian
+        label: Western Nian
+        phase: 1
+        via: [[114.200, 34.700], [112.400, 34.600], [110.400, 34.500], [109.000, 34.300]]
+  - title: The destruction of the Nian
+    date: 1867 – 1868
+    when: "1868-01"
+    borders: "1868-08-16"
+    countries: [cn]
+    body:
+      - Li Hongzhang’s Huai Army, armed with Western rifles and guns, used Zeng’s method on a larger scale. The Eastern Nian were driven into the Shandong peninsula and penned behind lines along the Grand Canal and other rivers. Their commander Ren Zhu was killed at Ganyu in November 1867, the army was crushed near Shouguang in December, and Lai Wenguang was captured near Yangzhou in January 1868 and executed.
+      - To relieve the Eastern Nian, Zhang Zongyu led the Western Nian back from Shaanxi across Shanxi into Zhili in the winter of 1867–1868 and raided towards Baoding and Tianjin, alarming Beijing. Li Hongzhang and Zuo Zongtang turned all their forces against them and trapped them in the land between the Yellow River, the Grand Canal and the Tuhai river in north-western Shandong. The last Nian army was destroyed near Chiping in August 1868; Zhang Zongyu disappeared, probably drowned in the Tuhai.
+    facts:
+      - [Eastern Nian crushed, "December 1867 – January 1868"]
+      - [Lai Wenguang captured, "January 1868"]
+      - [Western Nian destroyed, "August 1868"]
+    markers:
+      - kind: battle
+        side: qing
+        name: Shouguang
+        date: December 1867
+        text: The Eastern Nian lost most of their army in battle with the Huai Army here.
+        lonlat: [118.790, 36.880]
+      - kind: battle
+        side: qing
+        name: Ganyu
+        date: November 1867
+        text: The Eastern Nian commander Ren Zhu was killed here.
+        lonlat: [119.110, 34.840]
+      - kind: event
+        side: qing
+        name: Yangzhou
+        date: January 1868
+        text: Lai Wenguang, the former Taiping commander who led the Eastern Nian, was captured near here.
+        lonlat: [119.420, 32.390]
+      - kind: event
+        side: nian
+        name: Baoding
+        date: early 1868
+        text: The Western Nian raided this far north before turning back into Shandong.
+        lonlat: [115.465, 38.875]
+      - kind: battle
+        side: qing
+        name: Chiping
+        date: August 1868
+        text: The Western Nian were trapped by the Tuhai river and destroyed.
+        lonlat: [116.250, 36.580]
+    arrows:
+      - side: nian
+        label: Western Nian
+        phase: 1
+        via: [[109.500, 34.900], [111.600, 36.000], [113.500, 37.600], [115.400, 38.800]]
+      - side: nian
+        phase: 2
+        via: [[115.500, 38.700], [116.300, 37.900], [116.300, 37.000], [116.250, 36.620]]
+      - side: nian
+        label: Eastern Nian
+        phase: 1
+        via: [[118.800, 36.850], [119.100, 35.500], [119.110, 34.860], [119.400, 32.450]]

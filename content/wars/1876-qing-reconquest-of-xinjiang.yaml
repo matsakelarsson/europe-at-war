@@ -1,0 +1,208 @@
+id: qing-reconquest-of-xinjiang
+name: Qing reconquest of Xinjiang
+start: "1876-04"
+end: "1878-01-02"
+tier: B
+summary: "The campaign in which the Qing general Zuo Zongtang destroyed Yakub Beg’s state of Yettishar (Kashgaria) and restored Qing rule in Xinjiang, the last phase of the Dungan Revolt. After the court decided in 1875, against the advice of Li Hongzhang, to spend the money on the north-west rather than on coastal defence, Zuo’s armies, financed by foreign loans and armed with modern rifles and Krupp guns, took Ürümqi and Manas in 1876. In April 1877 they took Dabancheng, Turfan and Toksun, and in May Yakub Beg died at Korla. His state broke up in a struggle among his sons, and between October 1877 and January 1878 Liu Jintang’s troops advanced through Karashahr, Kucha and Aksu to Kashgar, Yarkand and Khotan. The Ili valley, occupied by Russia since 1871, was recovered by treaty in 1881, and Xinjiang became a province of the Qing empire in 1884."
+countries: [cn]
+sides:
+  - id: qing
+    name: Qing China
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+  - id: yb
+    name: Yakub Beg’s Kashgaria (Yettishar) and the Hui of Bai Yanhu
+    polities: [yettishar, hui-rebels]
+    ink: magenta
+    moves: Moves of Yakub Beg’s and Bai Yanhu’s forces
+    success: Success of Yakub Beg’s and Bai Yanhu’s forces
+notes:
+  - Zuo Zongtang’s army included Hui units led by commanders who had earlier fought against the Qing in Shaanxi and Gansu, among them Ma Anliang, Cui Wei and Hua Dacai. The Shaanxi Hui leader Bai Yanhu, who had fled to Xinjiang in 1873, fought on Yakub Beg’s side and escaped into Russian territory at the end.
+  - Yakub Beg’s death in May 1877 was variously ascribed by contemporaries to a stroke, to poison or to murder; historians still disagree.
+sources:
+  - title: Qing reconquest of Xinjiang (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Qing_reconquest_of_Xinjiang
+  - title: Yakub Beg (Britannica)
+    url: https://www.britannica.com/biography/Yakub-Beg
+  - title: Zuo Zongtang (Britannica)
+    url: https://www.britannica.com/biography/Zuo-Zongtang
+  - title: Yettishar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yettishar
+  - title: Dungan Revolt (1862–1877) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dungan_Revolt_(1862%E2%80%931877)
+steps:
+  - title: Ürümqi and Manas
+    date: April – November 1876
+    when: "1876-08-13"
+    borders: "1876-08-18"
+    countries: [cn]
+    body:
+      - In 1874–1875 the Qing court debated whether, after Japan’s expedition to Taiwan, it should spend its scarce funds on a navy, as Li Hongzhang urged, or on recovering Xinjiang, as Zuo Zongtang argued. Zuo won, and in 1875 he was given command. He spent a year bringing grain, camels and munitions some 1,300 km along the Gansu corridor and borrowed millions of taels from foreign banks. In 1876 his commanders Liu Jintang and Jin Shun crossed the desert from Hami and Barkol to Gucheng (Qitai), north of the Tian Shan, with tens of thousands of troops.
+      - On 13 August 1876 Liu Jintang stormed the fort of Gumadi north of Ürümqi, held by Hui troops of Bai Yanhu and others; thousands of its defenders were killed. Ürümqi was taken a few days later without a fight. Manas, the strongest Hui town in the north, was besieged from early September and surrendered on 6 November; its garrison was killed as it marched out. Yakub Beg, who had expected the Qing to stop at Ürümqi, fortified the passes to Turfan.
+    facts:
+      - [Battle of Gumadi, "13 August 1876"]
+      - [Ürümqi taken, "18 August 1876"]
+      - [Manas surrenders, "6 November 1876"]
+    markers:
+      - kind: battle
+        side: qing
+        name: Gumadi
+        date: 13 August 1876
+        text: Liu Jintang’s artillery breached the walls of the fort, and its Hui defenders were killed in large numbers.
+        lonlat: [87.660, 43.960]
+        lp: r
+      - kind: taken
+        side: qing
+        name: Ürümqi
+        date: 18 August 1876
+        text: Abandoned by its defenders, who fled south to Yakub Beg.
+        lonlat: [87.620, 43.800]
+        lp: b
+      - kind: siege
+        side: qing
+        name: Manas
+        date: 2 September – 6 November 1876
+        text: The Hui garrison surrendered after a two-month siege and was massacred as it left the town.
+        lonlat: [86.220, 44.300]
+        lp: l
+      - kind: event
+        side: qing
+        name: Gucheng (Qitai)
+        date: "1876"
+        text: Zuo’s forward base north of the Tian Shan, where his armies gathered after crossing from Barkol.
+        lonlat: [89.590, 44.010]
+      - kind: held
+        side: qing
+        name: Hami
+        date: "1876"
+        text: The Qing base in eastern Xinjiang, from which Zhang Yao’s army would advance on Turfan.
+        lonlat: [93.510, 42.830]
+    arrows:
+      - side: qing
+        label: Liu Jintang and Jin Shun
+        phase: 1
+        via: [[93.010, 43.600], [91.000, 43.900], [89.590, 44.010]]
+      - side: qing
+        phase: 2
+        via: [[89.590, 44.010], [88.500, 44.000], [87.700, 43.950], [87.630, 43.820]]
+      - side: qing
+        phase: 3
+        via: [[87.600, 43.900], [86.900, 44.150], [86.250, 44.290]]
+    areas:
+      - style: occupied
+        side: yb
+        label: Ruled by Yakub Beg, early 1876
+        atoms: [CN-XJ!, CN-XJ~kashgar, CN-XJ~khotan, CN-XJ~turfan]
+  - title: Turfan and the death of Yakub Beg
+    date: April – May 1877
+    when: "1877-04-16"
+    borders: "1877-05-30"
+    countries: [cn]
+    body:
+      - In April 1877 the Qing attacked on two fronts. Liu Jintang took the pass fort of Dabancheng, on the road from Ürümqi to Turfan, between 16 and 20 April, while Zhang Yao advanced from Hami and took Pichan. On 26 April the two armies took Turfan and Toksun. Many of Yakub Beg’s soldiers deserted or surrendered; some of the captured were released and sent back to spread word of the Qing advance.
+      - Yakub Beg fell back to Korla, where he died suddenly at the end of May 1877. His sons and commanders fought one another for the succession; his son Beg Kuli Beg made himself master of Kashgar, while other towns of the oases changed sides or declared for local rulers. The Qing armies halted for the summer heat and to bring up supplies.
+    facts:
+      - [Dabancheng taken, "16–20 April 1877"]
+      - [Turfan and Toksun taken, "26 April 1877"]
+      - [Death of Yakub Beg, "May 1877, at Korla"]
+    markers:
+      - kind: battle
+        side: qing
+        name: Dabancheng
+        date: 16–20 April 1877
+        text: The fortress guarding the pass between Ürümqi and the Turfan depression, taken by Liu Jintang.
+        lonlat: [88.310, 43.360]
+        lp: l
+      - kind: taken
+        side: qing
+        name: Turfan
+        date: 26 April 1877
+        text: Taken by the converging armies of Liu Jintang and Zhang Yao.
+        lonlat: [89.190, 42.950]
+      - kind: taken
+        side: qing
+        name: Toksun
+        date: 26 April 1877
+        text: Yakub Beg’s forward base, abandoned as his army fell back.
+        lonlat: [88.650, 42.790]
+        lp: b
+      - kind: event
+        side: yb
+        name: Korla
+        date: May 1877
+        text: Yakub Beg died here. His death broke up the state he had built.
+        lonlat: [86.150, 41.760]
+    arrows:
+      - side: qing
+        label: Liu Jintang
+        phase: 1
+        via: [[87.620, 43.750], [88.300, 43.380], [88.700, 42.850]]
+      - side: qing
+        label: Zhang Yao
+        phase: 1
+        via: [[93.510, 42.830], [91.500, 42.900], [90.210, 42.870], [89.250, 42.950]]
+      - side: yb
+        label: Yakub Beg
+        phase: 2
+        via: [[88.600, 42.750], [87.500, 42.300], [86.570, 42.060], [86.180, 41.780]]
+  - title: The Tarim Basin
+    date: October 1877 – January 1878
+    when: "1877-10"
+    borders: "1878-01-02"
+    countries: [cn, kg]
+    body:
+      - The Qing advance resumed in the autumn. Karashahr and Korla were taken in early October 1877 although the defenders had flooded the land by damming the Kaidu river. Bai Yanhu retreated west, burning crops and driving the population of the towns with him; Jin Shun’s cavalry caught up with the column near Bugur, scattered the soldiers and freed the people. Kucha and Aksu were taken in October and Ush soon after, and the troops of Liu Jintang and Dong Fuxiang pressed on towards Kashgar.
+      - Kashgar fell on 17 December 1877, Yarkand a few days later and Khotan on 2 January 1878. Beg Kuli Beg and Bai Yanhu escaped with their followers over the mountains into the Russian Empire, where Russia refused to hand them over. The Qing executed many of Yakub Beg’s officials, and his body was exhumed and burned. Zuo’s campaign had restored Qing rule everywhere in Xinjiang except the Ili valley, which Russia gave up only by the Treaty of Saint Petersburg in 1881. In 1884 Xinjiang was made a province, with Liu Jintang as its first governor.
+    facts:
+      - [Karashahr and Korla taken, "early October 1877"]
+      - [Kashgar taken, "17 December 1877"]
+      - [Khotan taken, "2 January 1878"]
+      - [Xinjiang province created, "1884"]
+    markers:
+      - kind: taken
+        side: qing
+        name: Kashgar
+        date: 17 December 1877
+        text: Taken by Liu Jintang’s and Dong Fuxiang’s troops; the last capital of Yettishar.
+        lonlat: [75.990, 39.470]
+      - kind: taken
+        side: qing
+        name: Khotan
+        date: 2 January 1878
+        text: The last town of Yakub Beg’s state to be taken.
+        lonlat: [79.920, 37.110]
+      - kind: taken
+        side: qing
+        name: Kucha
+        date: October 1877
+        text: The townspeople were fighting Bai Yanhu’s rearguard when the Qing arrived.
+        lonlat: [82.960, 41.720]
+      - kind: taken
+        side: qing
+        name: Aksu
+        date: October 1877
+        text: Surrendered as the Qing approached.
+        lonlat: [80.260, 41.170]
+      - kind: taken
+        side: qing
+        name: Yarkand
+        date: December 1877
+        text: Occupied a few days after Kashgar.
+        lonlat: [77.240, 38.420]
+    arrows:
+      - side: qing
+        label: Liu Jintang
+        phase: 1
+        via: [[86.570, 42.060], [86.150, 41.760], [84.300, 41.800], [82.960, 41.720], [80.300, 41.200]]
+      - side: qing
+        phase: 2
+        via: [[80.260, 41.170], [78.800, 40.300], [77.400, 39.700], [76.050, 39.480]]
+      - side: qing
+        phase: 3
+        via: [[76.100, 39.400], [77.240, 38.450], [79.850, 37.150]]
+      - side: yb
+        label: Bai Yanhu
+        phase: 2
+        via: [[76.000, 39.550], [75.700, 40.300], [75.900, 41.200]]

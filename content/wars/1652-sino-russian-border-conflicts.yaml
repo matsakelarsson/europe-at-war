@@ -1,0 +1,176 @@
+id: sino-russian-border-conflicts
+name: Sino-Russian border conflicts
+start: "1652"
+end: "1689-09-06"
+tier: B
+summary: "Intermittent fighting between Russian Cossack bands and the Qing empire over the Amur valley, ending with the Treaty of Nerchinsk. From 1650 Yerofey Khabarov and his successor Onufriy Stepanov raided the Daur and Ducher peoples along the Amur for fur tribute and grain. The Qing, who counted these peoples as their tributaries, attacked Khabarov’s winter fort at Achansk in 1652, fought Stepanov on the Sungari in 1654 with the help of Korean musketeers, besieged him at Kumarsk in 1655 and destroyed his flotilla in 1658. The Russians returned in 1665, when a band of fugitives settled at Albazin, which became the centre of Russian farming and tribute-taking on the upper Amur. After crushing the Revolt of the Three Feudatories, the Kangxi emperor built forts at Aigun and besieged Albazin twice, taking it in 1685 and starving its rebuilt fort in 1686. The Treaty of Nerchinsk (6 September 1689), the first between China and a European state, set the border on the Argun river and the Stanovoy watershed; Russia gave up the Amur and gained the right to trade."
+countries: [ru, cn]
+sides:
+  - id: qing
+    name: Qing China, with Daur and Ducher allies and Korean musketeers
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+  - id: rus
+    name: Russia (the Cossacks of the Amur)
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+notes:
+  - Russian documents of the 17th century use the Julian calendar, ten days behind the Gregorian; Qing and Korean records use the lunar calendar. The sources therefore give different dates for the same events (the 1654 battle on the Sungari is dated anywhere from April to July). The treaty is dated 27 August 1689 in the Julian calendar, 6 September in the Gregorian.
+  - The site of Khabarov’s fort at Achansk is disputed; the most widely accepted view places it at the Nanai village of Odzhal, renamed Achan in 1977. The 1654 battle site on the Sungari is not known exactly.
+  - The Russian advance across Siberia that brought the Cossacks to the Amur is told in the Russian conquest of eastern Siberia (1607–1689).
+sources:
+  - title: Sino-Russian border conflicts (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sino-Russian_border_conflicts
+  - title: Battle of Hutong (1654) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Hutong_(1654)
+  - title: Battle of Hutong (1658) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Hutong_(1658)
+  - title: Осада Кумарского острога (1655) (Russian Wikipedia)
+    url: https://ru.wikipedia.org/wiki/Осада_Кумарского_острога_(1655)
+  - title: Siege of Albazin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Albazin
+  - title: Treaty of Nerchinsk (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Nerchinsk
+  - title: Нерчинский договор (Russian Wikipedia)
+    url: https://ru.wikipedia.org/wiki/Нерчинский_договор
+  - title: Treaty of Nerchinsk (Britannica)
+    url: https://www.britannica.com/event/Treaty-of-Nerchinsk
+  - title: Yerofey Khabarov (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yerofey_Khabarov
+steps:
+  - title: Khabarov and Stepanov on the Amur
+    date: 1652–1658
+    when: "1652"
+    borders: "1655-01-01"
+    countries: [ru, cn, kr]
+    body:
+      - In 1649–1650 the Yakutsk promyshlennik Yerofey Khabarov led a band of Cossacks and hunters over the mountains to the Amur, where the Daur and Ducher peoples farmed and paid tribute to the Manchus. He took the Daur stronghold of Albazin in 1651, sailed down the river taking hostages and fur tribute, and wintered at Achansk in the country of the Nanai. Early in the spring of 1652 a force from the Qing base at Ninguta, about 600 Manchu soldiers with some 1,500 Daurs and Duchers, attacked the fort and was driven off with heavy losses; its commander, Haise, was executed for the failure. Khabarov left Achansk when the ice broke and withdrew upriver.
+      - Khabarov was recalled to Moscow in 1653, and Onufriy Stepanov led the 400–500 men who stayed. In 1654, sailing up the Sungari in search of grain, they met a Qing army under Sarhuda with a contingent of Korean musketeers sent by Joseon under Byeon Geup, and were driven back. In March 1655 a Qing army of about 1,000 bannermen with 15 guns and several thousand Daur and Ducher auxiliaries, under Minggadari, besieged Stepanov at Kumarsk, a fort on an island at the mouth of the Kumara river; after three weeks and a failed assault they withdrew, short of food. The Qing then moved the Daurs and Duchers south, away from the river, leaving the Cossacks nothing to take.
+      - In 1658 Sarhuda came down the Sungari again with some forty boats and about 1,400 men, among them 260 Korean musketeers under Shin Ryu. On 10 July they caught Stepanov’s eleven boats on the Amur below the mouth of the Sungari. Stepanov and more than two hundred of his men were killed, and only one boat got away. For a few years there were no Russians on the middle Amur.
+    facts:
+      - [Attack on Achansk, "spring 1652"]
+      - [Battle on the Sungari, "1654"]
+      - [Siege of Kumarsk, "March–April 1655"]
+      - [Destruction of Stepanov’s flotilla, "10 July 1658"]
+    markers:
+      - kind: held
+        side: rus
+        name: Achansk
+        date: spring 1652
+        text: Khabarov’s winter fort among the Nanai, attacked by a Qing force from Ninguta. The attack failed, and the Cossacks left when the ice broke.
+        lonlat: [136.619, 49.890]
+      - kind: battle
+        side: qing
+        name: Sungari
+        date: "1654"
+        text: Stepanov’s boats, sailing up the Sungari for grain, were driven back by a Qing army and Korean musketeers. The exact site is not known.
+        lonlat: [129.600, 46.400]
+      - kind: siege
+        side: rus
+        name: Kumarsk
+        date: March – April 1655
+        text: Stepanov’s fort at the mouth of the Kumara held out for three weeks against Minggadari’s army, which withdrew when its food ran out.
+        lonlat: [126.747, 51.647]
+      - kind: naval
+        side: qing
+        name: Below the Sungari mouth
+        date: 10 July 1658
+        text: Sarhuda’s boats, with Shin Ryu’s Korean musketeers, destroyed Stepanov’s flotilla. Stepanov was killed.
+        lonlat: [132.700, 47.900]
+      - kind: event
+        side: qing
+        name: Ninguta
+        date: 1650s
+        text: The Qing garrison town from which the campaigns on the Amur were mounted.
+        lonlat: [129.462, 44.343]
+        lp: l
+    arrows:
+      - side: qing
+        label: Sarhuda, 1658
+        via: [[129.500, 44.600], [129.600, 46.300], [130.800, 47.000], [132.500, 47.700]]
+      - side: rus
+        label: Khabarov, 1652
+        via: [[136.600, 49.950], [135.200, 48.600], [131.000, 47.700], [127.500, 49.700]]
+  - title: Albazin
+    date: 1665–1687
+    when: "1685-06"
+    borders: "1685-06-26"
+    countries: [ru, cn]
+    view:
+      center: [126.0, 52.0]
+      size: [900, 700]
+    body:
+      - In 1665 Nikifor Chernigovsky, a Polish exile who had killed the voivode of Ilimsk, fled with his band to the Amur and rebuilt the fort at Albazin. Moscow pardoned him in 1672 and made Albazin the seat of its own voivode in 1682. Peasants settled around it, and its Cossacks took tribute from the peoples of the Zeya and the Bureya. Peking protested for years. Once the Three Feudatories were defeated, the Kangxi emperor turned north. In 1683 his general Sabsu built forts at Aigun on the Amur, and Qing troops cleared the Russian posts on the Zeya and the lower river.
+      - In June 1685 an army of about 3,000 men with siege guns, under Pengchun and Langtan, came up the Amur to Albazin, held by about 450 men under Alexei Tolbuzin. After a day’s bombardment, as the besiegers piled brushwood against the wooden walls, Tolbuzin surrendered. The garrison was allowed to leave for Nerchinsk; about 45 men chose to stay and were taken to Beijing, where they formed a company of the Bordered Yellow Banner, the origin of the city’s small Russian Orthodox community. The Qing burned the fort but left the fields standing.
+      - Tolbuzin came back within weeks, brought in the harvest and, with the Prussian officer Afanasy Beiton, built a stronger fort of earth and timber. Langtan returned in July 1686 with about 3,000 men. Tolbuzin was killed by a cannon shot early in the siege, and Beiton held out through the autumn, while scurvy and hunger reduced some 800 defenders to little more than a hundred, and by some accounts a few dozen. When Russian envoys reached Beijing proposing talks, the emperor called off the siege in December 1686, and the Qing army withdrew in 1687.
+    facts:
+      - [First siege of Albazin, "June 1685, about 450 defenders"]
+      - [Second siege, "July–December 1686, about 800 defenders"]
+      - [Qing armies, "about 3,000 men each time"]
+    markers:
+      - kind: taken
+        side: qing
+        name: Albazin
+        date: June 1685
+        text: Taken after a day’s bombardment; Tolbuzin surrendered and the fort was burned. Rebuilt within weeks, it was besieged again from July to December 1686.
+        lonlat: [124.078, 53.391]
+      - kind: event
+        side: qing
+        name: Aigun
+        date: "1683"
+        text: Qing forts and the seat of the new military governor of Heilongjiang, the base for the campaigns against Albazin.
+        lonlat: [127.490, 49.978]
+      - kind: held
+        side: rus
+        name: Nerchinsk
+        date: 1685–1686
+        text: The Russian fort on the Shilka, where the garrison of Albazin went in 1685 and from which Tolbuzin returned.
+        lonlat: [116.556, 51.994]
+        lp: l
+    arrows:
+      - side: qing
+        label: Pengchun and Langtan, 1685
+        via: [[127.450, 50.000], [126.700, 51.600], [125.600, 52.900], [124.200, 53.350]]
+      - side: rus
+        label: Tolbuzin, 1685
+        via: [[116.700, 52.000], [119.500, 52.800], [121.600, 53.300], [123.900, 53.400]]
+  - title: The Treaty of Nerchinsk
+    date: 1686–1689
+    when: "1689-09-06"
+    borders: "1689-09-06"
+    countries: [ru, cn]
+    body:
+      - In 1686 Moscow sent Fyodor Golovin east with an escort of streltsy and Cossacks to negotiate a frontier. His journey took three years; while he waited in Transbaikalia, the Dzungar ruler Galdan invaded the lands of the Khalkha Mongols in 1688, which made the Qing more willing to settle with Russia. The talks were held outside Nerchinsk in August and September 1689. The Qing envoys, Songgotu and Tong Guogang, came with an army and a river fleet, put at anything from 3,000 to 15,000 men, against a Russian garrison and escort of a few thousand at most. The Jesuits Jean-François Gerbillon and Thomas Pereira interpreted for the Qing, and the negotiations were conducted in Latin.
+      - The treaty was signed on 6 September 1689 (27 August in the Russian calendar). The border ran up the Argun river, then from the Shilka along the little Gorbitsa river and the crest of the Stanovoy mountains to the Sea of Okhotsk; the land between the Uda river and the mountains was left undecided. Russia agreed to destroy Albazin and gave up the whole Amur basin, and subjects of both states with passports could cross the border to trade. The Latin text was authoritative, with Russian and Manchu versions; boundary stones were later inscribed in five languages. The treaty kept the peace on this frontier for 170 years, until Russia annexed the left bank of the Amur by the treaties of Aigun (1858) and Peking (1860).
+    facts:
+      - [Treaty of Nerchinsk, "6 September 1689"]
+      - [Negotiators, "Fyodor Golovin; Songgotu and Tong Guogang"]
+      - [Border, "the Argun, the Gorbitsa and the Stanovoy watershed"]
+    markers:
+      - kind: treaty
+        name: Nerchinsk
+        date: 6 September 1689
+        text: The treaty was negotiated in Latin in a tent camp outside the town and signed on 6 September (27 August Old Style).
+        lonlat: [116.556, 51.994]
+        lp: l
+      - kind: event
+        side: qing
+        name: Albazin
+        date: "1689"
+        text: To be destroyed under the treaty; neither side was to build on the site.
+        lonlat: [124.078, 53.391]
+      - kind: event
+        name: Gorbitsa
+        date: "1689"
+        text: Near here, where the little Gorbitsa river joins the Shilka, the treaty border left the river and followed the Gorbitsa up to the watershed.
+        lonlat: [119.219, 53.102]
+        lp: t
+    areas:
+      - style: lost
+        side: rus
+        label: The Amur lands Russia gave up
+        atoms: [RU-AMU, RU-KHA~amur, RU-YEV]

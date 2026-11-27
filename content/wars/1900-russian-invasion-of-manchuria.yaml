@@ -1,0 +1,202 @@
+id: russian-invasion-of-manchuria
+name: Russian invasion of Manchuria
+start: "1900-06"
+end: "1900-10"
+tier: B
+summary: "The Russian conquest of Manchuria during the Boxer Rebellion. When Boxers and Qing troops attacked the Chinese Eastern Railway, which Russia was building across Manchuria to Vladivostok and Port Arthur, and Qing guns at Aigun shelled Blagoveshchensk across the Amur in July 1900, Russia sent columns into Manchuria from the Amur, the Ussuri, Transbaikalia and the Liaodong peninsula. In Blagoveshchensk the Russian authorities drove the Chinese residents into the Amur, where thousands drowned, and the Sixty-Four Villages east of the river were emptied of their Manchu, Daur and Han inhabitants. The Russians took Aigun, relieved Harbin, and by October held Qiqihar, Jilin and Mukden (Shenyang), with all of Manchuria. Russia’s failure to withdraw as it had promised was a main cause of the Russo-Japanese War of 1904."
+countries: [cn, ru]
+sides:
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: qing
+    name: Qing troops and Boxers
+    polities: [qing, boxers]
+    ink: gold
+    moves: Qing and Boxer moves
+    success: Qing and Boxer success
+notes:
+  - Russia also took part in the Eight-Nation Alliance in Zhili (see the Boxer Rebellion), but the war in Manchuria was fought by Russia alone. Russian dates in the sources are often given in the Julian calendar, twelve days behind the Gregorian dates used here.
+  - The number of people killed at Blagoveshchensk and in the Sixty-Four Villages is uncertain; estimates of the drowned at Blagoveshchensk range from about 3,000 to more than 5,000. Russian army losses in the campaign were reported as 242 killed and about 1,280 wounded; Chinese losses were not recorded and were much higher.
+sources:
+  - title: Russian invasion of Manchuria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russian_invasion_of_Manchuria
+  - title: 1900 Amur anti-Chinese pogroms (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1900_Amur_anti-Chinese_pogroms
+  - title: Sixty-Four Villages East of the River (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sixty-Four_Villages_East_of_the_River
+  - title: "History of China: late Qing (Britannica)"
+    url: https://www.britannica.com/topic/history-of-China/Late-Qing
+  - title: Blagoveshchensk (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Blagoveshchensk
+  - title: Boxer Rebellion (Britannica)
+    url: https://www.britannica.com/event/Boxer-Rebellion
+steps:
+  - title: The railway and the Amur
+    date: June – August 1900
+    when: "1900-07-15"
+    borders: "1900-07-20"
+    countries: [cn, ru]
+    body:
+      - Since 1897 Russia had been building the Chinese Eastern Railway, a short cut for the Trans-Siberian line across Manchuria to Vladivostok, and from 1898 a southern branch to its leased base at Port Arthur (Lüshun), guarded by its own troops. In June 1900, as the Boxer rising spread, Boxers and Qing troops in Manchuria tore up the line, burned stations and besieged the railway headquarters at Harbin. Russia mobilised its Far Eastern forces.
+      - On 15 July Qing batteries at Aigun and Heihe opened fire across the Amur on Blagoveshchensk and on Russian steamers. The Russian military governor, Konstantin Gribsky, ordered all Qing subjects out of the town. From 17 July police, Cossacks and armed volunteers drove the Chinese residents, several thousand people, into the Amur at a place with no boats; most drowned, and those who swam were shot. In the following days Cossacks burned the Sixty-Four Villages east of the river, a Qing enclave left under Qing jurisdiction by the Treaty of Aigun, and drove out or killed their Manchu, Daur and Han inhabitants. At the beginning of August Russian troops crossed the Amur, took Heihe and Aigun, and burned Aigun to the ground. A column from Khabarovsk sailed up the Sungari and relieved Harbin on 3 August.
+    facts:
+      - [Blagoveshchensk shelled, "15 July 1900"]
+      - [Blagoveshchensk massacre, "17–21 July 1900, about 3,000 to more than 5,000 drowned"]
+      - [Aigun taken and burned, "early August 1900"]
+      - [Harbin relieved, "3 August 1900"]
+    markers:
+      - kind: event
+        side: ru
+        name: Blagoveshchensk
+        date: 17–21 July 1900
+        text: The Chinese residents of the town were marched to the river bank above the town and forced into the Amur, where most of them drowned.
+        lonlat: [127.530, 50.270]
+        lp: l
+      - kind: taken
+        side: ru
+        name: Aigun
+        date: early August 1900
+        text: The old Qing administrative centre on the Amur, taken and burned by Russian troops.
+        lonlat: [127.490, 49.978]
+        lp: l
+      - kind: taken
+        side: ru
+        name: Heihe (Sakhalyan)
+        date: 2 August 1900
+        text: The Qing town opposite Blagoveshchensk, from which the batteries had fired on the Russian side.
+        lonlat: [127.490, 50.240]
+        lp: b
+      - kind: siege
+        side: ru
+        name: Harbin
+        date: July – 3 August 1900
+        text: The railway town, defended by railway guards and staff, was besieged by Qing troops and Boxers until a river flotilla from Khabarovsk arrived.
+        lonlat: [126.630, 45.750]
+    arrows:
+      - side: ru
+        phase: 1
+        via: [[127.560, 50.280], [127.520, 50.200], [127.500, 50.000]]
+      - side: ru
+        label: Sakharov from Khabarovsk
+        phase: 1
+        via: [[135.070, 48.480], [132.500, 47.900], [130.300, 46.800], [128.000, 45.900], [126.700, 45.780]]
+    areas:
+      - style: lost
+        side: qing
+        label: Sixty-Four Villages East of the River, emptied by Russian troops in July 1900
+        polygon: [[127.550, 50.230], [127.640, 50.250], [127.850, 50.050], [127.720, 49.880], [127.560, 49.980]]
+  - title: Five columns across Manchuria
+    date: August – October 1900
+    when: "1900-08"
+    borders: "1900-10-01"
+    countries: [cn, ru]
+    body:
+      - Russian columns advanced from five directions, from the Amur, from the Ussuri by way of Hunchun and Ningguta, from Transbaikalia by Hailar and over the Greater Khingan, from Harbin and from Port Arthur in the south, while the railway guard held out along the line. Russia eventually sent some 100,000 men into Manchuria. The Qing troops, among them many Manchu bannermen defending their home garrisons, were defeated in a series of battles; Yingkou, the main port of southern Manchuria, was taken on 4–5 August.
+      - The military governor of Heilongjiang, Shoushan, killed himself before the Russians entered Qiqihar at the end of August. Jilin surrendered in September, and on 1 October Russian troops entered Mukden (Shenyang), the old Qing capital, from which the military governor had fled. Russian officers reported that villages were burned and Chinese civilians killed in reprisal for attacks on the railway; a few Cossacks were later court-martialled for crimes against civilians. By the end of the year the whole of Manchuria was in Russian hands.
+    facts:
+      - [Yingkou taken, "4–5 August 1900"]
+      - [Qiqihar taken, "end of August 1900"]
+      - [Mukden (Shenyang) entered, "1 October 1900"]
+      - [Russian losses, "242 killed, about 1,280 wounded"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Qiqihar
+        date: late August 1900
+        text: The seat of the military governor of Heilongjiang, Shoushan, who killed himself as the Russians approached.
+        lonlat: [123.950, 47.350]
+      - kind: taken
+        side: ru
+        name: Jilin
+        date: September 1900
+        text: The capital of Jilin province surrendered without serious fighting.
+        lonlat: [126.550, 43.840]
+      - kind: taken
+        side: ru
+        name: Mukden (Shenyang)
+        date: 1 October 1900
+        text: The Qing ancestral capital and seat of the military governor of Fengtian, occupied by troops from the south.
+        lonlat: [123.430, 41.800]
+        lp: l
+      - kind: taken
+        side: ru
+        name: Yingkou
+        date: 4–5 August 1900
+        text: The port of Niuzhuang at the mouth of the Liao river, taken by a column from Port Arthur.
+        lonlat: [122.230, 40.670]
+        lp: l
+      - kind: taken
+        side: ru
+        name: Hailar
+        date: August 1900
+        text: Taken by the Transbaikal column under General Orlov on its way over the Greater Khingan.
+        lonlat: [119.730, 49.210]
+      - kind: held
+        side: ru
+        name: Port Arthur (Lüshun)
+        date: "1900"
+        text: Russia’s leased naval base since 1898, starting point of the southern column.
+        lonlat: [121.250, 38.810]
+        lp: b
+    arrows:
+      - side: ru
+        label: Transbaikal column
+        phase: 1
+        via: [[117.400, 49.600], [119.730, 49.210], [122.000, 48.100], [123.900, 47.350]]
+      - side: ru
+        label: From Blagoveshchensk
+        phase: 1
+        via: [[127.490, 49.950], [126.600, 49.100], [125.200, 48.100], [124.000, 47.400]]
+      - side: ru
+        label: From the Ussuri
+        phase: 1
+        via: [[131.900, 43.300], [130.400, 42.900], [129.500, 44.200], [127.500, 44.200], [126.600, 43.900]]
+      - side: ru
+        label: From Port Arthur
+        phase: 2
+        via: [[121.250, 38.900], [121.900, 39.700], [122.230, 40.670], [123.170, 41.270], [123.430, 41.780]]
+    areas:
+      - style: occupied
+        side: ru
+        label: Occupied by Russia, end of 1900
+        atoms: [CN-HL, CN-JL, CN-LN, CN-NM~hulunbuir]
+  - title: The occupation and the road to war with Japan
+    date: 1900 – 1905
+    when: "1902-04-08"
+    borders: "1902-04-08"
+    countries: [cn, ru, jp]
+    body:
+      - In November 1900 the Russian commander in the Far East, Admiral Yevgeny Alekseyev, made the Tartar general of Fengtian accept a Russian resident and the disbanding of his troops. Under pressure from Japan, Britain and the United States, Russia agreed on 8 April 1902 to withdraw from Manchuria in three stages over eighteen months. It carried out the first stage, in south-western Fengtian, in October 1902, but in 1903 it stopped and pressed new demands on China, while Russian timber concessions on the Yalu reached into Korea.
+      - Japan, which had been forced by Russia, France and Germany to give up the Liaodong peninsula in 1895, saw Russian Manchuria as a threat to its plans in Korea. Talks broke down, and in February 1904 Japan attacked Port Arthur. Russian troops left southern Manchuria only after their defeat in the Russo-Japanese War, and the Treaty of Portsmouth of 1905 returned Manchuria, except for the Kwantung lease and the railway zones, to Qing administration. In the Sixty-Four Villages the inhabitants were never allowed to return.
+    facts:
+      - [Russian–Chinese evacuation agreement, "8 April 1902"]
+      - [First stage of withdrawal, "October 1902"]
+      - [Russo-Japanese War begins, "8 February 1904"]
+    markers:
+      - kind: treaty
+        name: Beijing
+        date: 8 April 1902
+        text: Russia agreed to evacuate Manchuria within eighteen months. It withdrew from part of Fengtian, then halted.
+        lonlat: [116.397, 39.917]
+      - kind: held
+        side: ru
+        name: Mukden (Shenyang)
+        date: 1900–1905
+        text: Under Russian military occupation until the Japanese victory here in March 1905.
+        lonlat: [123.430, 41.800]
+        lp: l
+      - kind: held
+        side: ru
+        name: Harbin
+        date: 1900–1905
+        text: The headquarters of the Chinese Eastern Railway, growing into a Russian city in China.
+        lonlat: [126.630, 45.750]
+    areas:
+      - style: occupied
+        side: ru
+        label: Occupied by Russia, 1902
+        atoms: [CN-HL, CN-JL, CN-LN, CN-NM~hulunbuir]

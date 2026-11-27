@@ -1,0 +1,533 @@
+id: taiping-rebellion
+name: Taiping Rebellion
+start: "1850-12"
+end: "1864-11-18"
+tier: A
+summary: "A civil war between the Qing dynasty and the Taiping Heavenly Kingdom, a state founded by Hong Xiuquan, a Hakka from Guangdong who believed he was the younger brother of Jesus. His God Worshipping Society rose at Jintian in Guangxi in January 1851, marched north through Hunan to the Yangtze and took Nanjing in March 1853, making it the Heavenly Capital (Tianjing). A Taiping army came close to Tianjin in 1853, and at its height the kingdom ruled much of the Yangtze valley. A bloody purge of its leaders in 1856 weakened it; it recovered under Li Xiucheng and Chen Yucheng and took Suzhou and Hangzhou in 1860–1861, but the provincial armies of Zeng Guofan, Li Hongzhang and Zuo Zongtang, helped from 1862 by British and French forces and Western-officered units around Shanghai, wore it down. Nanjing fell on 19 July 1864. It was the deadliest civil war of the 19th century; most estimates of the dead range from 20 to 30 million, and some are far higher."
+countries: [cn]
+sides:
+  - id: qing
+    name: Qing China
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+  - id: tp
+    name: Taiping Heavenly Kingdom
+    polities: [taiping]
+    ink: red
+    moves: Taiping moves
+    success: Taiping success
+  - id: west
+    name: British and French forces (from 1860)
+    polities: [united-kingdom, france]
+    ink: blue
+    moves: British and French moves
+    success: British and French success
+notes:
+  - The Taiping called their state Taiping Tianguo, the Heavenly Kingdom of Great Peace. The Qing called them “long-haired rebels” (changmao) because they gave up the Manchu queue. The rebellion overlapped with other risings that sometimes cooperated with it, among them the Nian in the north, the Small Swords in Shanghai and the Red Turbans in Guangdong, which have their own entries.
+  - Most of the dead were civilians who died of famine, disease and massacres by both sides; whole districts of Jiangsu, Zhejiang and Anhui were depopulated. Estimates of the total range from 20 to 30 million, the most widely cited figure, to 70 million or more; no census allows a precise count.
+  - The areas shaded on the maps are approximate; Taiping control outside the walled towns was often loose and changed from month to month.
+sources:
+  - title: Taiping Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Taiping_Rebellion
+  - title: Taiping Rebellion (Britannica)
+    url: https://www.britannica.com/event/Taiping-Rebellion
+  - title: Hong Xiuquan (Britannica)
+    url: https://www.britannica.com/biography/Hong-Xiuquan
+  - title: Taiping Heavenly Kingdom (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Taiping_Heavenly_Kingdom
+  - title: Tianjing incident (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tianjing_incident
+  - title: Northern Expedition (Taiping Rebellion) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Northern_Expedition_(Taiping_Rebellion)
+  - title: Zeng Guofan (Britannica)
+    url: https://www.britannica.com/biography/Zeng-Guofan
+  - title: Ever Victorious Army (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ever_Victorious_Army
+  - title: Third Battle of Nanking (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Third_Battle_of_Nanking
+  - title: The Taiping Rebellion, 1850–1864 (Asia for Educators, Columbia University)
+    url: http://afe.easia.columbia.edu/special/china_1750_taiping.htm
+steps:
+  - title: The God Worshippers rise at Jintian
+    date: 1843 – April 1852
+    when: "1851-01-11"
+    borders: "1851-01-11"
+    countries: [cn]
+    body:
+      - Hong Xiuquan, a Hakka village teacher from near Guangzhou, failed the civil service examinations four times. After a breakdown in 1837 he had visions which, after reading a Christian tract in 1843, he understood to mean that he was the second son of God, sent to destroy demons, among whom he came to count the Manchu rulers. His follower Feng Yunshan built up the God Worshipping Society among Hakka charcoal burners, miners and poor farmers in the Thistle Mountain (Zijing Shan) district of Guangxi, a province torn by armed robbery, feuds between Hakka and older settlers, and the hard times that followed the Opium War.
+      - In 1850 the society gathered its members, perhaps 10,000–20,000 people, at the village of Jintian, where they pooled their property and organised as an army in which men and women served in separate units. Late in December 1850 and in January 1851 they beat off the Qing troops sent against them, and on 11 January 1851, Hong’s birthday, he proclaimed the Taiping Tianguo, the Heavenly Kingdom of Great Peace.
+      - In September 1851 the Taiping took the walled town of Yongan (today Mengshan), where Hong named five kings under him, Yang Xiuqing (the East King), Xiao Chaogui, Feng Yunshan, Wei Changhui and Shi Dakai. Besieged there by Qing armies through the winter, they broke out in April 1852 and marched north.
+    facts:
+      - [Jintian uprising, "January 1851"]
+      - [Heavenly Kingdom proclaimed, "11 January 1851"]
+      - [Yongan held, "September 1851 – April 1852"]
+    markers:
+      - kind: event
+        side: tp
+        name: Jintian
+        date: 11 January 1851
+        text: The God Worshippers gathered at this village below Thistle Mountain, near Guiping. Hong Xiuquan proclaimed the Heavenly Kingdom here.
+        lonlat: [110.116, 23.588]
+      - kind: taken
+        side: tp
+        name: Yongan (Mengshan)
+        date: 25 September 1851
+        text: The first walled town the Taiping held. The five kings were named here in December 1851.
+        lonlat: [110.522, 24.203]
+      - kind: event
+        name: Guangzhou
+        date: 1827–1843
+        text: Hong Xiuquan sat the examinations here. In 1836 he was handed a Christian tract in the city, which he read in 1843 and which shaped his understanding of his visions.
+        lonlat: [113.264, 23.130]
+    arrows:
+      - side: tp
+        phase: 1
+        via: [[110.116, 23.588], [110.300, 23.850], [110.450, 24.050], [110.510, 24.190]]
+      - side: tp
+        phase: 2
+        via: [[110.522, 24.210], [110.400, 24.700], [110.300, 25.200]]
+  - title: From Guangxi to the Heavenly Capital
+    date: April 1852 – March 1853
+    when: "1852-04"
+    borders: "1853-03-19"
+    countries: [cn]
+    body:
+      - The Taiping failed to take Guilin in April–May 1852, and in June Feng Yunshan was killed in an ambush at Suoyi Ford on the Xiang river. Turning into Hunan, the army grew quickly as miners, boatmen, members of secret societies and the poor joined it. Xiao Chaogui was killed at the siege of Changsha, which held out from September to November 1852. The Taiping then took Yuezhou, with its arsenal and its boats, and sailed down to the Yangtze, where they captured Hanyang and, on 12 January 1853, Wuchang, the capital of Hubei.
+      - With a fleet of thousands of boats and an army now said to number half a million people, they swept down the Yangtze, taking Jiujiang and Anqing in February. On 19 March 1853 they stormed Nanjing, the old Ming capital, which became Tianjing, the Heavenly Capital. The Manchu garrison and its families, tens of thousands of people, were killed almost to the last. Zhenjiang and Yangzhou fell within weeks. The Qing set up two siege camps outside Nanjing, the Jiangnan camp to the south and the Jiangbei camp at Yangzhou, which would watch the city for years.
+    facts:
+      - [Feng Yunshan killed, "June 1852"]
+      - [Siege of Changsha, "September – November 1852"]
+      - [Wuchang taken, "12 January 1853"]
+      - [Nanjing taken, "19 March 1853"]
+    markers:
+      - kind: battle
+        side: qing
+        name: Guilin
+        date: April – May 1852
+        text: The provincial capital of Guangxi held out for a month against the Taiping.
+        lonlat: [110.290, 25.274]
+        lp: l
+      - kind: battle
+        side: qing
+        name: Suoyi Ford
+        date: June 1852
+        text: The Taiping boats were ambushed on the Xiang river near Quanzhou. Feng Yunshan, the movement’s organiser, died of his wounds.
+        lonlat: [111.120, 26.030]
+        lp: l
+      - kind: siege
+        side: qing
+        name: Changsha
+        date: September – November 1852
+        text: The capital of Hunan resisted an 80-day siege; the West King Xiao Chaogui was killed outside its walls.
+        lonlat: [112.970, 28.200]
+        lp: l
+      - kind: taken
+        side: tp
+        name: Wuchang
+        date: 12 January 1853
+        text: The capital of Hubei, taken after the Taiping tunnelled under its walls.
+        lonlat: [114.305, 30.550]
+      - kind: taken
+        side: tp
+        name: Anqing
+        date: 24 February 1853
+        text: The capital of Anhui, taken on the way down the Yangtze.
+        lonlat: [117.050, 30.520]
+        lp: b
+      - kind: capital
+        side: tp
+        name: Nanjing (Tianjing)
+        date: 19 March 1853
+        text: Stormed after a short siege and made the Heavenly Capital. Its Manchu garrison and their families were massacred.
+        lonlat: [118.780, 32.060]
+        lp: b
+    arrows:
+      - side: tp
+        phase: 1
+        via: [[110.300, 25.250], [111.120, 26.000], [111.600, 25.550], [112.600, 26.900], [112.950, 28.150]]
+      - side: tp
+        phase: 2
+        via: [[112.980, 28.250], [113.100, 29.370], [113.900, 30.050], [114.300, 30.540]]
+      - side: tp
+        label: Down the Yangtze
+        phase: 3
+        via: [[114.350, 30.560], [115.990, 29.720], [117.050, 30.500], [118.150, 31.400], [118.760, 32.050]]
+    areas:
+      - style: occupied
+        side: tp
+        label: Held by the Taiping, spring 1853
+        polygon: [[118.450, 31.850], [118.550, 32.250], [119.000, 32.480], [119.600, 32.520], [119.750, 32.180], [119.300, 31.950], [118.850, 31.800]]
+  - title: The Northern Expedition
+    date: May 1853 – May 1855
+    when: "1853-05"
+    borders: "1853-10-30"
+    countries: [cn]
+    body:
+      - In May 1853 an army of perhaps 20,000–70,000 men under Lin Fengxiang and Li Kaifang set out from Yangzhou to take Beijing. It marched through Anhui and Henan, failed to take Kaifeng, crossed the Yellow River and swung through southern Shanxi into Zhili. In Beijing the court prepared to flee. At the end of October the expedition reached Jinghai, within 30 km of Tianjin, but there it stopped, short of supplies, unused to the northern winter and facing the Mongol cavalry of Senggelinqin.
+      - The army retreated south in February 1854 and was besieged in fortified villages on the Grand Canal. A relief force sent from Anqing was destroyed in Shandong. Senggelinqin flooded Lin Fengxiang’s position at Lianzhen with water from the canal and took it in March 1855; Li Kaifang held out at Fengguantun until May. Both were taken to Beijing and executed. The defeat ended the Taiping’s only serious attempt to overthrow the dynasty in the north.
+    facts:
+      - [Expedition sets out, "May 1853"]
+      - [Farthest advance, "Jinghai, near Tianjin, October 1853"]
+      - [Lianzhen taken, "7 March 1855"]
+      - [Fengguantun taken, "31 May 1855"]
+    markers:
+      - kind: event
+        side: tp
+        name: Yangzhou
+        date: May 1853
+        text: The expedition set out from here and from Pukou, opposite Nanjing.
+        lonlat: [119.420, 32.390]
+        lp: r
+      - kind: battle
+        side: qing
+        name: Kaifeng
+        date: June 1853
+        text: The expedition failed to take the capital of Henan and crossed the Yellow River further west.
+        lonlat: [114.307, 34.797]
+      - kind: event
+        side: tp
+        name: Jinghai
+        date: October 1853
+        text: The northernmost point the Taiping reached, about 30 km from Tianjin and 130 km from Beijing.
+        lonlat: [116.920, 38.940]
+      - kind: siege
+        side: qing
+        name: Lianzhen
+        date: March 1855
+        text: Senggelinqin flooded the Taiping camps here and captured Lin Fengxiang.
+        lonlat: [116.550, 38.050]
+        lp: l
+      - kind: siege
+        side: qing
+        name: Fengguantun
+        date: May 1855
+        text: The last remnant of the expedition, under Li Kaifang, was taken here after its position was flooded.
+        lonlat: [116.300, 36.620]
+        lp: l
+      - kind: capital
+        side: qing
+        name: Beijing
+        date: "1853"
+        text: The court of the Xianfeng emperor; officials sent their families away as the Taiping approached.
+        lonlat: [116.391, 39.906]
+    arrows:
+      - side: tp
+        label: Lin Fengxiang and Li Kaifang
+        phase: 1
+        via: [[119.000, 32.300], [117.300, 33.300], [115.700, 33.900], [114.400, 34.700], [113.300, 34.950]]
+      - side: tp
+        phase: 2
+        via: [[113.200, 35.000], [112.500, 35.700], [114.300, 36.700], [115.500, 38.000], [116.900, 38.900]]
+      - side: tp
+        phase: 3
+        via: [[116.880, 38.880], [116.600, 38.300], [116.550, 38.070]]
+  - title: The western war and the Xiang Army
+    date: 1853 – 1856
+    when: "1854-04"
+    borders: "1855-04"
+    countries: [cn]
+    body:
+      - A second army went west up the Yangtze in 1853 to secure the river and the rice of Jiangxi and Hubei. It besieged Nanchang, retook Wuchang in June 1854 and pushed into Hunan. There it met the Xiang (Hunan) Army raised by Zeng Guofan, a Confucian scholar-official who recruited peasants through local gentry networks, paid them well and built a river fleet. The Xiang Army won at Xiangtan in May 1854, retook Wuchang in October and fought its way down to Jiujiang.
+      - In January and February 1855 the Taiping commander Shi Dakai trapped part of Zeng’s fleet in Lake Poyang at Hukou and destroyed the rest on the Yangtze; Zeng tried to drown himself. The Taiping retook Wuchang in April 1855 and held much of Jiangxi. In June 1856 they broke the Jiangbei and Jiangnan siege camps outside Nanjing, and the Qing commander Xiang Rong died soon after. It was the Heavenly Kingdom’s strongest moment.
+    facts:
+      - [Battle of Xiangtan, "May 1854, Xiang Army victory"]
+      - [Battle of Hukou, "January – February 1855, Taiping victory"]
+      - [Siege camps outside Nanjing broken, "June 1856"]
+    markers:
+      - kind: battle
+        side: qing
+        name: Xiangtan
+        date: May 1854
+        text: The first great victory of Zeng Guofan’s Xiang Army, which drove the Taiping out of Hunan.
+        lonlat: [112.940, 27.830]
+        lp: l
+      - kind: taken
+        side: qing
+        name: Wuchang
+        date: October 1854
+        text: Retaken by the Xiang Army, then lost again in April 1855. It changed hands six times during the war.
+        lonlat: [114.305, 30.550]
+      - kind: battle
+        side: tp
+        name: Hukou
+        date: January – February 1855
+        text: Shi Dakai cut Zeng Guofan’s fleet in two where Lake Poyang meets the Yangtze and destroyed much of it.
+        lonlat: [116.220, 29.740]
+        lp: b
+      - kind: siege
+        name: Nanchang
+        date: June – September 1853
+        text: The capital of Jiangxi held out against a three-month Taiping siege.
+        lonlat: [115.890, 28.680]
+        lp: l
+      - kind: battle
+        side: tp
+        name: Jiangnan camp
+        date: June 1856
+        text: The Qing siege camp south-east of Nanjing was overrun and its commander, Xiang Rong, died soon after.
+        lonlat: [118.880, 32.040]
+        lp: r
+    arrows:
+      - side: tp
+        label: Western Expedition
+        phase: 1
+        via: [[118.700, 32.000], [117.050, 30.500], [116.000, 29.700], [114.320, 30.560], [113.100, 29.370]]
+      - side: qing
+        label: Xiang Army
+        phase: 2
+        via: [[112.950, 27.880], [113.100, 29.300], [114.300, 30.550], [115.900, 29.750]]
+    areas:
+      - style: occupied
+        side: tp
+        label: Held by the Taiping, 1855 (approximate)
+        polygon: [[114.100, 30.350], [114.400, 30.800], [115.800, 30.150], [116.600, 30.700], [117.400, 31.050], [118.400, 32.250], [119.600, 32.450], [119.600, 31.950], [118.600, 31.600], [117.400, 30.450], [116.300, 29.000], [115.500, 28.700], [115.000, 29.700]]
+  - title: The Tianjing incident
+    date: September 1856 – 1857
+    when: "1856-09-02"
+    borders: "1856-09-02"
+    countries: [cn]
+    body:
+      - Inside Nanjing, Hong Xiuquan had withdrawn into his palace and left the government to Yang Xiuqing, the East King, who claimed to speak with the voice of God the Father and ruled with an elaborate system of officials and spies. In August 1856 Yang demanded the same title as Hong. Hong secretly called back Wei Changhui, the North King, who entered the city with his troops on the night of 1–2 September and killed Yang and his family. In the weeks that followed Wei’s men killed thousands of Yang’s followers and their families, by many accounts some 20,000 people.
+      - Shi Dakai, the Wing King, protested and fled; Wei killed his family. Hong then had Wei and his associate Qin Rigang put to death in November. Shi returned to run the government, but Hong, now trusting only his own relatives, sidelined him, and in June 1857 Shi left Nanjing with a large part of the army. He fought on his own for six years across Jiangxi, Zhejiang, Fujian, Hunan, Guangxi and Guizhou, until in June 1863 he was trapped at Anshunchang on the Dadu river in Sichuan, surrendered and was executed in Chengdu. The purge cost the kingdom most of its founding leaders.
+    facts:
+      - [Yang Xiuqing killed, "2 September 1856"]
+      - [Dead in the purge, "some 20,000 by many accounts"]
+      - [Shi Dakai leaves Nanjing, "June 1857"]
+      - [Shi Dakai surrenders on the Dadu river, "June 1863"]
+    markers:
+      - kind: event
+        side: tp
+        name: Tianjing (Nanjing)
+        date: 2 September 1856
+        text: Wei Changhui’s troops killed the East King Yang Xiuqing in his palace, then massacred his followers.
+        lonlat: [118.780, 32.060]
+        lp: b
+      - kind: event
+        side: qing
+        name: Anshunchang
+        date: June 1863
+        text: Shi Dakai’s army was trapped against the flooded Dadu river by Qing troops and local Yi chiefs. He gave himself up hoping to save his men, most of whom were killed.
+        lonlat: [102.276, 29.269]
+        lp: l
+      - kind: event
+        name: Chengdu
+        date: 25 June 1863
+        text: Shi Dakai was executed here by slow slicing.
+        lonlat: [104.066, 30.660]
+    arrows:
+      - side: tp
+        label: Shi Dakai, 1857–1863
+        phase: 1
+        via: [[118.600, 31.900], [116.000, 28.700], [111.500, 26.500], [106.500, 27.000], [102.400, 29.250]]
+  - title: Revival and the eastern campaign
+    date: 1858 – 1861
+    when: "1860-05"
+    borders: "1860-06-02"
+    countries: [cn]
+    body:
+      - Two younger commanders, Chen Yucheng, the Brave King, and Li Xiucheng, the Loyal King, rebuilt the Taiping armies. In November 1858 they destroyed a Xiang Army force at Sanhe in Anhui, killing its commander Li Xubin and some 6,000 of his men. In 1859 Hong’s cousin Hong Rengan, who had lived among missionaries in Hong Kong, arrived in Nanjing and became chief minister with plans for railways, banks and a modern state that were never carried out.
+      - In May 1860 Li Xiucheng drew the Qing away with a feint on Hangzhou and then destroyed the Jiangnan camp outside Nanjing a second time. His armies swept into the rich lowlands of southern Jiangsu, taking Changzhou on 26 May and Suzhou on 2 June. In August they reached Shanghai, but British and French troops, whose governments were then at war with the Qing in the north, beat them off from the walls.
+      - Upriver, Zeng Guofan’s brother Zeng Guoquan besieged Anqing, the key to Nanjing’s western approaches. Chen Yucheng tried to relieve it by marching on Wuhan in 1861, but turned back, and on 5 September 1861 Anqing fell; its defenders were killed. Chen was betrayed and executed in 1862. In the east, Li Xiucheng took Ningbo on 9 December and Hangzhou at the end of December 1861 after a two-month siege in which tens of thousands starved.
+    facts:
+      - [Battle of Sanhe, "November 1858, Taiping victory"]
+      - [Jiangnan camp destroyed, "May 1860"]
+      - [Suzhou taken, "2 June 1860"]
+      - [Anqing falls to the Xiang Army, "5 September 1861"]
+      - [Hangzhou taken, "December 1861"]
+    markers:
+      - kind: battle
+        side: tp
+        name: Sanhe
+        date: November 1858
+        text: Chen Yucheng and Li Xiucheng surrounded and destroyed Li Xubin’s Xiang Army force.
+        lonlat: [117.240, 31.510]
+        lp: l
+      - kind: taken
+        side: tp
+        name: Suzhou
+        date: 2 June 1860
+        text: The great silk city of the lower Yangtze, taken with little fighting. It became the capital of Li Xiucheng’s domain.
+        lonlat: [120.620, 31.300]
+        lp: b
+      - kind: taken
+        side: tp
+        name: Changzhou
+        date: 26 May 1860
+        text: Taken as the Qing armies of the Jiangnan camp collapsed.
+        lonlat: [119.970, 31.780]
+        lp: t
+      - kind: battle
+        side: west
+        name: Shanghai
+        date: August 1860
+        text: British and French troops and Qing forces repelled Li Xiucheng’s attack on the city.
+        lonlat: [121.490, 31.230]
+      - kind: taken
+        side: qing
+        name: Anqing
+        date: 5 September 1861
+        text: After a siege of more than a year, Zeng Guoquan’s troops stormed the city and killed its defenders.
+        lonlat: [117.050, 30.520]
+        lp: b
+      - kind: taken
+        side: tp
+        name: Hangzhou
+        date: 29–31 December 1861
+        text: The capital of Zhejiang, taken after a long siege in which much of its population died of hunger.
+        lonlat: [120.160, 30.270]
+        lp: b
+      - kind: taken
+        side: tp
+        name: Ningbo
+        date: 9 December 1861
+        text: The treaty port fell to the Taiping without a fight; it was retaken with British and French help in May 1862.
+        lonlat: [121.550, 29.870]
+    arrows:
+      - side: tp
+        label: Li Xiucheng
+        phase: 1
+        via: [[118.850, 32.000], [119.500, 31.850], [119.970, 31.780], [120.600, 31.330]]
+      - side: tp
+        phase: 2
+        via: [[120.650, 31.300], [121.100, 31.250], [121.450, 31.230]]
+      - side: tp
+        phase: 3
+        via: [[119.900, 31.000], [120.150, 30.400], [121.000, 30.000], [121.530, 29.880]]
+      - side: qing
+        label: Zeng Guoquan
+        phase: 1
+        via: [[116.000, 29.700], [116.600, 30.200], [117.000, 30.500]]
+    areas:
+      - style: occupied
+        side: tp
+        label: Held by the Taiping, end of 1861 (approximate)
+        atoms: [CN-JS!, CN-AH!, CN-ZJ]
+  - title: Shanghai, the foreigners and the siege of Nanjing
+    date: 1862 – 1863
+    when: "1862-05"
+    borders: "1862-05-30"
+    countries: [cn, gb, fr]
+    body:
+      - After the Convention of Peking ended their war with the Qing in 1860, Britain and France, anxious for their trade, moved from neutrality to support of the dynasty. In 1862 British and French troops cleared the Taiping from a 30-mile zone around Shanghai and helped retake Ningbo; the French admiral Auguste Protet was killed in one of these actions. A force of Chinese soldiers led by Western officers, raised by the American Frederick Townsend Ward and called the Ever Victorious Army, fought alongside them; Ward was killed at Cixi in September 1862 and was succeeded in 1863 by the British officer Charles Gordon. In April 1862 British steamers carried Li Hongzhang’s new Huai Army from Anqing to Shanghai.
+      - In May 1862 Zeng Guoquan’s army reached the walls of Nanjing and dug in on the hill of Yuhuatai. Li Xiucheng came back from the east with a large army and attacked his lines for 46 days in October and November, but could not break them, while an epidemic killed many on both sides. In the west, Zuo Zongtang’s army entered Zhejiang from Jiangxi, and in December 1863 Suzhou was surrendered by Taiping commanders who had negotiated with Li Hongzhang and Gordon. Li had the surrendered kings put to death, and Gordon, who had guaranteed their safety, briefly refused to serve.
+    facts:
+      - [Huai Army reaches Shanghai, "April 1862"]
+      - [Siege of Nanjing begins, "May 1862"]
+      - [Ward killed at Cixi, "21 September 1862"]
+      - [Suzhou surrenders, "5 December 1863"]
+    markers:
+      - kind: battle
+        side: west
+        name: Shanghai
+        date: "1862"
+        text: British and French troops and the Ever Victorious Army drove the Taiping back from the city and the surrounding towns.
+        lonlat: [121.490, 31.230]
+      - kind: siege
+        side: qing
+        name: Yuhuatai
+        date: from May 1862
+        text: Zeng Guoquan’s fortified camp below Nanjing’s south gate, which Li Xiucheng failed to break in late 1862.
+        lonlat: [118.780, 31.990]
+        lp: b
+      - kind: taken
+        side: qing
+        name: Suzhou
+        date: 5 December 1863
+        text: Surrendered by Taiping commanders after they killed their superior, Tan Shaoguang. Li Hongzhang then executed them.
+        lonlat: [120.620, 31.300]
+        lp: b
+      - kind: battle
+        side: qing
+        name: Cixi
+        date: 21 September 1862
+        text: Frederick Townsend Ward was mortally wounded storming the town near Ningbo.
+        lonlat: [121.446, 29.995]
+        lp: l
+    arrows:
+      - side: qing
+        label: Huai Army (by sea)
+        phase: 1
+        via: [[117.050, 30.480], [118.700, 32.100], [120.300, 31.950], [121.450, 31.300]]
+      - side: qing
+        label: Zeng Guoquan
+        phase: 1
+        via: [[117.100, 30.550], [117.900, 31.300], [118.450, 31.700], [118.760, 31.990]]
+      - side: tp
+        label: Li Xiucheng
+        phase: 2
+        via: [[120.500, 31.300], [119.900, 31.700], [119.200, 31.900], [118.850, 31.990]]
+    areas:
+      - style: occupied
+        side: tp
+        label: Held by the Taiping, 1862 (approximate)
+        polygon: [[118.300, 31.700], [118.600, 32.150], [119.300, 32.050], [120.000, 31.850], [120.900, 31.550], [121.000, 31.050], [120.400, 30.300], [119.600, 29.900], [118.900, 30.300], [118.400, 30.900]]
+  - title: The fall of the Heavenly Capital
+    date: 1864 – 1866
+    when: "1864-07-19"
+    borders: "1864-07-19"
+    countries: [cn]
+    body:
+      - In the spring of 1864 Zuo Zongtang retook Hangzhou (31 March) and Li Hongzhang’s Huai Army and the Ever Victorious Army took Changzhou (May), closing the ring around Nanjing. Hong Xiuquan, refusing to leave the city, fell ill after eating wild plants when food ran short and died on 1 June 1864; his teenage son Hong Tianguifu succeeded him. On 19 July Zeng Guoquan’s troops blew a breach in the wall with a mine and stormed the city. Zeng Guofan reported that some 100,000 rebels died in the fighting and the sack, and soldiers looted and burned for days.
+      - Li Xiucheng escaped with the young king, but was captured, wrote a long account of the movement and was executed on 7 August. Hong Tianguifu was caught in Jiangxi in October and executed in Nanchang on 18 November 1864, as was Hong Rengan. Taiping armies fought on. Li Shixian and Wang Haiyang held Zhangzhou in Fujian in 1864–1865, and the last of them was destroyed at Jiaying in Guangdong in January 1866, while other former Taiping, such as Lai Wenguang, joined the Nian in the north.
+      - The war left the Yangtze provinces devastated and the Qing dependent on the regional armies and their Han Chinese commanders, Zeng Guofan, Li Hongzhang and Zuo Zongtang, who would lead the dynasty’s reforms and wars for the next generation. Most estimates of the dead range from 20 to 30 million.
+    facts:
+      - [Hangzhou retaken, "31 March 1864"]
+      - [Death of Hong Xiuquan, "1 June 1864"]
+      - [Fall of Nanjing, "19 July 1864"]
+      - [Hong Tianguifu executed, "18 November 1864"]
+      - [Last Taiping army defeated, "Jiaying, January 1866"]
+    markers:
+      - kind: taken
+        side: qing
+        name: Nanjing (Tianjing)
+        date: 19 July 1864
+        text: Stormed through a breach blown by a mine under the wall. Much of the city burned in the sack that followed.
+        lonlat: [118.780, 32.060]
+        lp: b
+      - kind: taken
+        side: qing
+        name: Hangzhou
+        date: 31 March 1864
+        text: Retaken by Zuo Zongtang’s army with the help of a French-officered force.
+        lonlat: [120.160, 30.270]
+        lp: b
+      - kind: taken
+        side: qing
+        name: Changzhou
+        date: 11 May 1864
+        text: Taken by Li Hongzhang’s Huai Army and Gordon’s Ever Victorious Army, which was disbanded soon after.
+        lonlat: [119.970, 31.780]
+        lp: t
+      - kind: event
+        side: qing
+        name: Nanchang
+        date: 18 November 1864
+        text: Hong Tianguifu, the second and last Heavenly King, was executed here.
+        lonlat: [115.890, 28.680]
+        lp: l
+      - kind: battle
+        side: qing
+        name: Jiaying
+        date: January 1866
+        text: The last Taiping army in the south, under Wang Haiyang, was destroyed here.
+        lonlat: [116.120, 24.290]
+    arrows:
+      - side: qing
+        label: Zuo Zongtang
+        phase: 1
+        via: [[118.200, 29.000], [119.500, 29.600], [120.130, 30.240]]
+      - side: qing
+        label: Li Hongzhang and Gordon
+        phase: 1
+        via: [[120.600, 31.330], [120.300, 31.580], [120.000, 31.770]]
+      - side: tp
+        label: Remnants
+        phase: 2
+        via: [[118.700, 31.950], [118.200, 30.300], [117.500, 28.400], [117.600, 24.600], [116.150, 24.300]]
+    areas:
+      - style: contested
+        side: tp
+        label: Last Taiping strongholds, spring 1864
+        polygon: [[118.500, 31.800], [118.650, 32.150], [119.100, 32.100], [119.700, 31.500], [120.100, 30.900], [119.700, 30.700], [119.100, 31.100], [118.600, 31.500]]

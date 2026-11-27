@@ -1,0 +1,152 @@
+id: ming-conquest-of-yunnan
+name: Ming conquest of Yunnan
+start: "1381-09"
+end: "1383-02"
+tier: B
+summary: "The campaign that brought Yunnan, the last province held for the Yuan inside China, under the Ming dynasty. Basalawarmi, the Yuan Prince of Liang, governed Yunnan from Kunming and stayed loyal to the Yuan court in Mongolia, refusing the Hongwu Emperor’s embassies and killing his envoy Wang Wei in 1374. In September 1381 the emperor sent Fu Youde with Lan Yu and Mu Ying and an army of about 250,000–300,000 men through Guizhou. Mu Ying defeated the Yuan army of more than 100,000 at the Baishi River near Qujing, and Basalawarmi killed himself on 6 January 1382 as Kunming surrendered. In April Lan Yu and Mu Ying stormed the passes of Dali and captured Duan Shi, the last of the hereditary Duan governors; the final stronghold fell in February 1383. Mu Ying stayed in Yunnan with a large military colony, and his descendants commanded the province until the end of the dynasty."
+countries: [cn]
+sides:
+  - id: mg
+    name: Ming dynasty
+    polities: [ming]
+    ink: red
+    moves: Ming moves
+    success: Ming success
+  - id: yy
+    name: Yuan Yunnan (Prince of Liang)
+    polities: [northern-yuan, yuan]
+    ink: olive
+    moves: Yuan moves
+    success: Yuan success
+  - id: dl
+    name: Duan of Dali
+    polities: [duan-dali]
+    ink: brown
+    moves: Dali moves
+    success: Dali success
+notes:
+  - "Dates are converted from the Chinese lunar calendar. Army sizes are those of the Ming records and are certainly rounded; the Hongwu Emperor is quoted as saying the campaign cost him about 50,000 men from battle, desertion and disease."
+  - "Both armies had large numbers of Muslim (Hui) soldiers, descendants of the Central Asians settled in Yunnan under the Yuan; Mu Ying and Lan Yu led Muslim troops on the Ming side."
+sources:
+  - title: Ming conquest of Yunnan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ming_conquest_of_Yunnan
+  - title: Basalawarmi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Basalawarmi
+  - title: Fu Youde (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fu_Youde
+  - title: 沐英 (Mu Ying) (Chinese Wikipedia)
+    url: https://zh.wikipedia.org/wiki/%E6%B2%90%E8%8B%B1
+  - title: 明平雲南之戰 (Chinese Wikipedia)
+    url: https://zh.wikipedia.org/wiki/%E6%98%8E%E5%B9%B3%E9%9B%B2%E5%8D%97%E4%B9%8B%E6%88%B0
+  - title: "Ming Shi-lu, Hong-wu 14/9/1 (18 September 1381), trans. Geoff Wade (NUS Press)"
+    url: https://epress.nus.edu.sg/msl/reign/hong-wu/year-14-month-9-day-1
+  - title: "Ming Shi-lu, Hong-wu 15/intercalary 2/23 (7 April 1382), trans. Geoff Wade (NUS Press)"
+    url: https://epress.nus.edu.sg/msl/reign/hong-wu/year-15-month-intercalary-2-day-23
+  - title: Zheng He (Britannica)
+    url: https://www.britannica.com/biography/Zheng-He
+steps:
+  - title: Qujing and Kunming
+    date: September 1381 – January 1382
+    when: "1381-12"
+    borders: "1381-12-31"
+    countries: [cn]
+    body:
+      - "On 18 September 1381 the Hongwu Emperor named Fu Youde General for Subduing the South, with Lan Yu and Mu Ying as his deputies, and ordered them to take Yunnan. The main army marched up the Yuan River through western Hunan into Guizhou, where it took Puding and Pu’an, while a second column came south from Sichuan towards Wusa. The Prince of Liang, Basalawarmi, sent his general Dalima with more than 100,000 men to hold the road at Qujing, the gateway to the Yunnan plateau."
+      - "Mu Ying reached the Baishi River at Qujing under cover of fog. When it lifted, he kept his main army on the bank as if to cross there, while a detachment crossed downstream and appeared behind the Yuan lines. As the Yuan army turned, the Ming crossed in force and broke it with cavalry. Dalima was captured. The Ming histories say the dead covered more than ten li."
+      - "Basalawarmi fled from Kunming. On 6 January 1382 he drowned his wife, ordered his ministers to kill themselves and took his own life; his family was later exiled to Jeju Island in Korea. The Yuan officials surrendered Kunming, and the prefectures around it submitted. Fu Youde turned north-east to fight the Yi chiefs of Wusa and Wumeng, who resisted the Ming for several more years."
+    facts:
+      - [Ming army, "about 250,000–300,000"]
+      - [Battle of the Baishi River (Qujing), "late December 1381"]
+      - [Death of Basalawarmi, "6 January 1382"]
+    markers:
+      - kind: taken
+        side: mg
+        name: Pu’an
+        date: "1381"
+        text: Taken with Puding on the march through western Guizhou.
+        lonlat: [104.953, 25.784]
+        lp: t
+      - kind: battle
+        side: mg
+        name: Baishi River (Qujing)
+        date: December 1381
+        text: Mu Ying feinted a crossing and turned the Yuan flank. The Yuan general Dalima was captured.
+        lonlat: [103.796, 25.490]
+      - kind: taken
+        side: mg
+        name: Kunming
+        date: January 1382
+        text: Seat of the Yuan Prince of Liang. His officials surrendered the city after his death.
+        lonlat: [102.712, 25.040]
+        lp: l
+      - kind: event
+        side: mg
+        name: Wusa
+        date: 1382–1384
+        text: The Yi chiefs of Wusa (today’s Weining) and Wumeng fought on against Fu Youde.
+        lonlat: [104.280, 26.860]
+    arrows:
+      - side: mg
+        label: Fu Youde
+        phase: 1
+        via: [[110.400, 28.450], [109.680, 27.440], [107.900, 26.600], [106.700, 26.580], [105.740, 26.300]]
+      - side: mg
+        phase: 2
+        via: [[105.740, 26.300], [104.950, 25.784], [104.300, 25.600], [103.830, 25.500]]
+      - side: mg
+        label: Sichuan column
+        phase: 1
+        via: [[105.440, 28.160], [105.000, 27.500], [104.300, 26.880]]
+      - side: mg
+        phase: 3
+        via: [[103.796, 25.490], [103.300, 25.250], [102.750, 25.060]]
+  - title: The passes of Dali
+    date: April 1382 – February 1383
+    when: "1382-04-07"
+    borders: "1382-04-07"
+    countries: [cn]
+    body:
+      - "West of Kunming, the old kingdom of Dali was still governed by the Duan family, who had ruled it as kings before the Mongol conquest of 1253 and as hereditary governors under the Yuan. Duan Shi, the thirteenth governor, offered to send tribute but refused to accept Ming officials. Lan Yu and Mu Ying marched on Dali in the spring of 1382. Duan Shi held the Lower Pass at the southern end of the narrow plain between Lake Erhai and the Cang mountains."
+      - "A Ming detachment climbed the Cang mountains by night and raised its banners above the pass, and Mu Ying led an attack across the river, so that the defenders were caught from front and rear. The pass fell, Dali was taken on 7 April 1382, and Duan Shi was captured. The last Duan stronghold, Dengchuan, fell in February 1383, and the family was taken to Nanjing."
+      - "Risings broke out across Yunnan and Guizhou as soon as the main armies moved on, and Fu Youde and Lan Yu did not return until 1384. Mu Ying stayed behind with a large garrison whose soldiers were settled with hereditary status as military colonists; many married local women, and their descendants, the Tunbao people, still live in Guizhou. The Mu family held the chief command in Yunnan until the end of the dynasty. Among the captives taken in Yunnan were boys who were castrated and sent to serve at court, one of them the Muslim boy Ma He, later the admiral Zheng He."
+    facts:
+      - [Dali taken, "7 April 1382"]
+      - [Dengchuan, last Duan stronghold, "February 1383"]
+      - [Main armies return, "1384"]
+    markers:
+      - kind: battle
+        side: mg
+        name: Lower Pass (Xiaguan)
+        date: April 1382
+        text: Duan Shi’s main defence at the southern entrance to the Dali plain, turned by a night climb over the mountains.
+        lonlat: [100.232, 25.590]
+        lp: b
+      - kind: taken
+        side: mg
+        name: Dali
+        date: 7 April 1382
+        text: The old capital of the Nanzhao and Dali kingdoms. Duan Shi was captured.
+        lonlat: [100.160, 25.693]
+        lp: l
+      - kind: taken
+        side: mg
+        name: Dengchuan
+        date: February 1383
+        text: The last stronghold of the Duan family.
+        lonlat: [100.050, 26.000]
+        lp: l
+      - kind: held
+        side: mg
+        name: Kunming
+        date: from 1382
+        text: Seat of Mu Ying, who stayed in Yunnan as commander of its garrisons.
+        lonlat: [102.712, 25.040]
+    arrows:
+      - side: mg
+        label: Lan Yu and Mu Ying
+        via: [[102.712, 25.040], [101.900, 25.050], [101.000, 25.300], [100.260, 25.570]]
+    areas:
+      - style: gained
+        side: mg
+        label: Taken by the Ming, 1381–1383
+        atoms: [CN-YN]

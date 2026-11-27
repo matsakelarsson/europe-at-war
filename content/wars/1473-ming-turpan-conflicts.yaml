@@ -1,0 +1,202 @@
+id: ming-turpan-conflicts
+name: Ming–Turfan conflicts
+start: "1473"
+end: "1529"
+tier: B
+summary: "A long struggle between Ming China and the Turfan Khanate, the eastern successor of Moghulistan, over the oasis of Hami (Kumul) at the western end of the Gansu corridor. Hami, ruled by a branch of the Chinggisid house known in Chinese as the Hami Guard, was the Ming’s gate to Central Asia and a vassal that sent tribute. Sultan Ali of Turfan seized it in 1473; Ming-backed Hami princes retook it in 1482, Ali’s son Ahmad took it again in 1488 and 1493, and the Ming answered with trade embargoes, the closing of the Jiayu Pass and, in 1495, a raid that briefly retook the oasis. Under Mansur Khan, Turfan annexed Hami in 1513 and raided the Gansu corridor in 1516–1517, 1524 and 1528, besieging Suzhou (Jiuquan). The garrisons held, but in 1529 the Ming court decided not to restore the Hami Guard and to accept Turfan’s tribute, leaving Hami to Turfan."
+countries: [cn]
+sides:
+  - id: mg
+    name: Ming China and the Hami princes
+    polities: [ming, kara-del]
+    ink: red
+    moves: Ming and Hami moves
+    success: Ming success
+  - id: tf
+    name: Turfan Khanate
+    polities: [turfan-khanate]
+    ink: teal
+    moves: Turfan moves
+    success: Turfan success
+notes:
+  - Most of the record is Chinese, from the Ming Veritable Records and the History of Ming, which tell the story from the court’s side; Persian and Turkic sources such as Mirza Haidar Dughlat’s Tarikh-i Rashidi say little about Hami. Years are given as in those sources; exact days are rarely known.
+  - Names are given in their common English forms with the Chinese forms used in the Ming sources in brackets where they help (Sultan Ali for Sutan Ali, Ahmad for Aheima, Mansur for Mansu’er, Yaghlan for Yalan).
+sources:
+  - title: Ming–Turpan conflict (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ming%E2%80%93Turpan_conflict
+  - title: Kara Del (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kara_Del
+  - title: Ahmad Alaq (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ahmad_Alaq
+  - title: Mansur Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mansur_Khan_(Moghul_Khan)
+  - title: Ping Fan shimo, Xu Jin’s account of the 1495 campaign (ChinaKnowledge.de)
+    url: http://www.chinaknowledge.de/Literature/Historiography/pingfanshimo.html
+  - title: History of Ming, chapter 329, Hami and Turfan (Chinese, Wikisource)
+    url: https://zh.wikisource.org/wiki/%E6%98%8E%E5%8F%B2/%E5%8D%B7329
+steps:
+  - title: Turfan takes Hami
+    date: 1473–1482
+    when: "1473"
+    borders: "1473-06-01"
+    countries: [cn]
+    body:
+      - Hami lay on the road from the Gansu corridor to the oases of the Tarim basin. Its rulers, descendants of the Chagatai prince Gunashiri, had accepted a Ming guard and the title of Loyal and Obedient Prince (Zhongshun Wang) in 1404–1406, and Hami became the station where missions from Central Asia were checked and fed on their way to Beijing. By the 1460s it was weak, raided by Mongols and ruled by the widow of a prince. Turfan, to the west, had absorbed the neighbouring oases of Qara-Khoja and Lukchun and grown strong under its ruler Sultan Ali (Sutan Ali in Chinese), who styled himself sultan; some historians identify him with Yunus Khan of Moghulistan.
+      - In the spring of 1473 Sultan Ali took Hami, carried off the princess dowager and the gold seal of the Hami princes, and left his brother-in-law Yaghlan to hold the town. The Ming court sent the generals Li Wen and Liu Wen to Gansu. In the winter of 1474 they led troops of the Hami chief Hanshen and the Mongol and Tibetan guards of Chijin and Handong as far as the Bulongjir river near Guazhou, but turned back without fighting. The Ming built a new fort at Kuyu, inside the frontier, for the Hami refugees and moved the Hami Guard there.
+      - In the spring of 1482 Hanshen gathered about 10,000 men, 1,300 of them from Chijin and Handong, attacked Hami by night and took it. Yaghlan fled, and eight more towns were retaken. According to the History of Ming, Sultan Ali had died in 1478 and been succeeded by his son Ahmad.
+    facts:
+      - [Turfan takes Hami, "spring 1473"]
+      - [Ming expedition turns back, "winter 1474"]
+      - [Hanshen retakes Hami, "spring 1482"]
+    markers:
+      - kind: taken
+        side: tf
+        name: Hami
+        date: "1473"
+        text: Taken by Sultan Ali, who carried off the princess dowager and the seal. Yaghlan held it until 1482.
+        lonlat: [93.510, 42.830]
+      - kind: capital
+        side: tf
+        name: Turfan
+        date: "1473"
+        text: Seat of the khans of eastern Moghulistan, called Turfan in the Ming sources.
+        lonlat: [89.190, 42.950]
+      - kind: held
+        side: mg
+        name: Jiayu Pass
+        date: "1473"
+        text: The fortified gate at the western end of the Great Wall, through which missions from the west entered China.
+        lonlat: [98.226, 39.802]
+      - kind: event
+        side: mg
+        name: Guazhou
+        date: "1474"
+        text: The Ming expedition advanced to the Bulongjir river, near here, and withdrew without fighting.
+        lonlat: [95.780, 40.520]
+    arrows:
+      - side: tf
+        label: Sultan Ali
+        phase: 1
+        via: [[89.190, 42.950], [90.800, 42.800], [92.300, 42.900], [93.450, 42.840]]
+      - side: mg
+        label: Hanshen
+        phase: 2
+        via: [[96.000, 40.400], [95.000, 41.200], [94.000, 42.200], [93.550, 42.780]]
+    areas:
+      - style: occupied
+        side: tf
+        label: Held by Turfan, 1473–1482
+        atoms: [CN-XJ~hami]
+  - title: Ahmad, the embargo and Xu Jin’s raid
+    date: 1488–1499
+    when: "1493"
+    borders: "1493-06-01"
+    countries: [cn]
+    body:
+      - In 1488, the year the Ming finally made Hanshen prince, Ahmad (Ahmad Alaq, called Aheima in Chinese) came to Hami offering a marriage alliance, lured Hanshen to a meeting and killed him, and put Yaghlan back in the town. Hami officers retook it the next year with help from Chijin and Handong, and in 1491, under pressure from the Ming, Ahmad handed back the seal. In 1492 the Ming installed Shanba, a descendant of the old princely house, as prince. In the spring of 1493 Ahmad attacked again, captured Shanba and had the Hami commander Amulang put to death.
+      - This time the Ming used trade as a weapon. The court detained Turfan’s envoys, expelled the Uyghurs and other western traders from Gansu and closed the Jiayu Pass to missions from the west. Since Turfan’s wealth came from the caravan trade, the embargo also turned Ahmad’s neighbours against him. In 1495 the governor of Gansu, Xu Jin, and the general Liu Ning made a surprise night march on Hami; Yaghlan escaped, but his garrison was killed or surrendered. The History of Ming notes that no Ming army had been there since the beginning of the dynasty.
+      - Ahmad attacked Hami once more and failed, but its people, unable to hold out, burned their houses and fled to Suzhou. In 1497, with the trade still closed, Ahmad sent Shanba and the Hami people home and asked for tribute to be restored. Trade reopened, Shanba was reinstated in 1498 and peace was made in 1499, which freed Ahmad to campaign against the Oirats in the north. Ahmad died in 1504, and his son Mansur succeeded him in Turfan.
+    facts:
+      - [Hanshen killed by Ahmad, "1488"]
+      - [Shanba captured, "spring 1493"]
+      - [Xu Jin’s raid on Hami, "1495"]
+      - [Shanba returned and trade restored, "1497–1499"]
+    markers:
+      - kind: taken
+        side: tf
+        name: Hami
+        date: 1488 and 1493
+        text: Taken twice by Ahmad. In 1493 he captured the Ming-appointed prince Shanba and killed the commander Amulang.
+        lonlat: [93.510, 42.830]
+      - kind: taken
+        side: mg
+        name: Hami
+        date: "1495"
+        text: Retaken by Xu Jin’s surprise night march; the first Ming army at Hami since the dynasty’s beginning.
+        lonlat: [93.510, 42.830]
+        lp: b
+      - kind: event
+        side: mg
+        name: Jiayu Pass
+        date: 1493–1497
+        text: Closed to Turfan’s envoys and to the caravans from the west while the embargo lasted.
+        lonlat: [98.226, 39.802]
+      - kind: event
+        side: mg
+        name: Suzhou (Jiuquan)
+        date: "1495"
+        text: Where the people of Hami fled when they could no longer hold out against Ahmad.
+        lonlat: [98.510, 39.740]
+        lp: b
+    arrows:
+      - side: tf
+        label: Ahmad
+        phase: 1
+        via: [[89.190, 42.950], [90.800, 42.800], [92.300, 42.900], [93.450, 42.840]]
+      - side: mg
+        label: Xu Jin
+        phase: 2
+        via: [[98.226, 39.802], [96.500, 40.400], [95.000, 41.300], [93.560, 42.780]]
+  - title: Mansur and the end of the Hami Guard
+    date: 1513–1529
+    when: "1524"
+    borders: "1524-09-01"
+    countries: [cn]
+    body:
+      - In 1513 Baiyaji, Shanba’s son, who had been made prince in 1505, went over to Turfan, and Mansur Khan sent Khoja Tajidin to hold Hami, which became part of the Turfan Khanate and was converted to Islam. The Ming envoy Peng Ze paid Turfan to give the town back in 1516, but in the winter of 1516–1517 Tajidin seized it again, raided Shazhou (Dunhuang) and marched into the Gansu corridor. At Shaziba a Ming detachment of 700 men under Rui Ning was wiped out, and Suzhou (Jiuquan) was threatened until its commander, Chen Jiuchou, uncovered the plotters inside the city. The raiders were beaten at Guazhou on their way back.
+      - In the autumn of 1524 Mansur himself, with a force put at 20,000 horsemen, besieged Suzhou and sent raiders towards Ganzhou (Zhangye). Chen Jiuchou, now governor of Gansu, and the general Jiang Shi drove them off, and Tajidin was killed. Turfan attacked Suzhou again in 1525. In Beijing the war became part of a bitter factional struggle, and Chen Jiuchou was later imprisoned on charges of having provoked it.
+      - In 1528 Yaghlan, the old commander of Hami, deserted to the Ming with his followers, and a Turfan force with some 2,000 Oirat horsemen raided towards Suzhou and was beaten. The minister of war Hu Shining then argued that Hami, whose prince served Turfan and whose people had scattered, could not be restored and was not worth the cost. The court agreed in 1529, kept the Jiayu Pass as its frontier and allowed Turfan to send tribute again. Hami stayed under Turfan, and the Ming never returned to the oasis.
+    facts:
+      - [Hami annexed by Turfan, "1513"]
+      - [Siege of Suzhou, "autumn 1524"]
+      - [Ming decides not to restore Hami, "1529"]
+    markers:
+      - kind: taken
+        side: tf
+        name: Hami
+        date: "1513"
+        text: The prince Baiyaji went over to Turfan, and Mansur’s commander Tajidin took the town. Hami remained Turfan’s.
+        lonlat: [93.510, 42.830]
+      - kind: siege
+        side: mg
+        name: Suzhou (Jiuquan)
+        date: 1517, 1524 and 1525
+        text: The main Ming garrison of western Gansu, besieged by Turfan forces and held each time.
+        lonlat: [98.510, 39.740]
+        lp: b
+      - kind: held
+        side: mg
+        name: Ganzhou (Zhangye)
+        date: "1524"
+        text: The seat of the Gansu command. Turfan horsemen raided its district in 1524.
+        lonlat: [100.450, 38.930]
+      - kind: battle
+        side: mg
+        name: Guazhou
+        date: "1517"
+        text: Turfan raiders returning from Suzhou were beaten by the Ming general Zheng Lian and Hami troops.
+        lonlat: [95.780, 40.520]
+      - kind: event
+        side: tf
+        name: Shazhou (Dunhuang)
+        date: 1514–1517
+        text: Raided by Turfan forces during the struggle for Hami.
+        lonlat: [94.660, 40.140]
+        lp: b
+      - kind: capital
+        side: tf
+        name: Turfan
+        date: "1524"
+        text: Seat of Mansur Khan, who ruled Turfan from 1504 until his death in 1543.
+        lonlat: [89.190, 42.950]
+    arrows:
+      - side: tf
+        label: Mansur
+        via: [[93.510, 42.830], [95.200, 41.300], [96.800, 40.300], [98.450, 39.780]]
+      - side: tf
+        via: [[98.600, 39.700], [99.400, 39.350], [100.350, 38.980]]
+    areas:
+      - style: gained
+        side: tf
+        label: Hami, part of the Turfan Khanate from 1513
+        atoms: [CN-XJ~hami]

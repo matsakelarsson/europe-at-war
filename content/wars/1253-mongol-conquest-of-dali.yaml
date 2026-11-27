@@ -1,0 +1,142 @@
+id: mongol-conquest-of-dali
+name: Mongol conquest of the Dali Kingdom
+start: "1253-09"
+end: "1254"
+tier: B
+summary: "The campaign in which the Mongols conquered the Dali Kingdom, the Bai state in today’s Yunnan that had succeeded Nanzhao in 937. To outflank the Southern Song from the west, the Great Khan Möngke sent his brother Kublai south through the Tibetan borderlands in 1253 with the general Uriyangkhadai. After the Dali court, dominated by the Gao family of chief ministers, had killed the Mongol envoys, three Mongol columns crossed the upper Yangtze (the Jinsha) and converged on the capital, Dali, which was taken around the turn of 1253–1254 and spared. The chief minister Gao Taixiang was caught and executed, and King Duan Xingzhi fled east to Shanchan (Kunming), where Uriyangkhadai captured him in 1254. Möngke kept Duan as ruler under Mongol overlordship, with the title of maharaja, and Uriyangkhadai subdued the rest of Yunnan by 1256. Yunnan became a Mongol base for attacks on the Song and Đại Việt, and later a province of the Yuan."
+countries: [cn]
+sides:
+  - id: mon
+    name: Mongol Empire
+    polities: [mongol-empire]
+    ink: olive
+    moves: Mongol moves
+    success: Mongol success
+  - id: dali
+    name: Dali Kingdom
+    polities: [dali]
+    ink: purple
+    moves: Dali moves
+    success: Dali success
+notes:
+  - Dates are converted from the Chinese calendar as the sources give them. The fall of the capital is dated to December 1253 or January 1254, and Duan Xingzhi’s capture or surrender to 1254, 1255 or 1256, in different accounts.
+  - The routes of the three columns are known only in outline; the arrows are approximate. The story of the crossing of the Jinsha on rafts of inflated skins comes from Chinese accounts.
+  - The Dali Kingdom was ruled by the Duan dynasty of the Bai people, but real power had long been with the Gao family of chief ministers. Its lands included many Yi and other peoples who were only loosely under its rule.
+sources:
+  - title: Dali Kingdom (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dali_Kingdom
+  - title: Mongol conquest of Dali (Chinese Wikipedia)
+    url: https://zh.wikipedia.org/wiki/蒙古灭大理之战
+  - title: Kublai Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kublai_Khan
+  - title: Möngke Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/M%C3%B6ngke_Khan
+  - title: Uriyangkhadai (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Uriyangkhadai
+  - title: Timeline of the Yuan dynasty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Timeline_of_the_Yuan_dynasty
+  - title: Nanzhao (Britannica)
+    url: https://www.britannica.com/place/Nanzhao
+  - title: Dali (Britannica)
+    url: https://www.britannica.com/place/Dali-historical-China
+  - title: Yunnan, history (Britannica)
+    url: https://www.britannica.com/place/Yunnan/History
+steps:
+  - title: Across the Jinsha to Dali
+    date: September 1253 – January 1254
+    when: "1253-09"
+    borders: "1253-12-01"
+    countries: [cn]
+    body:
+      - Since the Mongols had failed to break the Song defences in Sichuan and on the Yangtze, Möngke planned to encircle the Song from the west. In 1252 he gave his brother Kublai command of an expedition against the Dali Kingdom, the old Bai state in Yunnan that had kept its independence for three centuries between Tibet, the Song and the kingdoms of Southeast Asia. Mongol envoys sent to demand its submission were killed by the court, where the Gao family of chief ministers held power under King Duan Xingzhi.
+      - Kublai gathered his army at Lintao in the summer of 1253 and in the autumn split it into three columns. Uriyangkhadai, son of the great general Subutai, led the western column through the Tibetan lands of Kham; Wang Dezhen led the eastern through Sichuan and Jianchang; Kublai himself led the centre. Dali’s army defended the line of the Jinsha, the upper Yangtze, and beat back several attempts to cross it, until Kublai’s men crossed at night, by Chinese accounts on rafts of inflated skins, and routed it.
+      - The three columns met before the capital, Dali, which lay between Erhai Lake and the Cang Mountains, defended by fortified passes at either end. The city was taken at the turn of 1253 and 1254. Although his envoys had been killed, Kublai, urged by his Chinese advisers, forbade a massacre and spared its people. Duan Xingzhi and his chief minister Gao Taixiang fled; Gao was caught at Yaozhou and beheaded at Dali.
+    facts:
+      - [Campaign ordered, "1252"]
+      - [Columns divide, "autumn 1253"]
+      - [Dali taken, "December 1253 or January 1254"]
+    markers:
+      - kind: event
+        side: mon
+        name: Lintao
+        date: summer 1253
+        text: Kublai’s army gathered here before marching south through the Tibetan borderlands.
+        lonlat: [103.86, 35.38]
+      - kind: battle
+        side: mon
+        name: Crossing of the Jinsha
+        date: autumn 1253
+        text: Kublai’s men crossed the upper Yangtze at night in the Lijiang region and routed the Dali army holding the river.
+        lonlat: [100.42, 27.58]
+      - kind: taken
+        side: mon
+        name: Dali
+        date: December 1253 – January 1254
+        text: The capital of the Dali Kingdom, taken by the three Mongol columns. Kublai spared the city.
+        lonlat: [100.16, 25.70]
+        lp: l
+      - kind: event
+        side: mon
+        name: Yaozhou
+        date: "1254"
+        text: The chief minister Gao Taixiang was captured here in his flight and taken back to Dali to be beheaded.
+        lonlat: [101.24, 25.50]
+    arrows:
+      - side: mon
+        label: Kublai
+        phase: 1
+        via: [[103.86, 35.38], [103.20, 32.80], [102.00, 30.10], [100.90, 28.40], [100.42, 27.58]]
+      - side: mon
+        phase: 2
+        via: [[100.42, 27.58], [100.23, 26.87], [100.17, 25.85]]
+      - side: mon
+        label: Uriyangkhadai
+        phase: 1
+        via: [[103.30, 34.80], [100.60, 31.60], [99.70, 27.83], [99.95, 26.30], [100.10, 25.80]]
+      - side: mon
+        label: Wang Dezhen
+        phase: 1
+        via: [[103.00, 29.98], [102.26, 27.89], [101.30, 26.60], [100.30, 25.75]]
+  - title: Shanchan and the end of the kingdom
+    date: 1254–1256
+    when: "1254"
+    borders: "1254-12-01"
+    countries: [cn]
+    body:
+      - Kublai went back north in 1254 and left Uriyangkhadai to finish the conquest. Duan Xingzhi had fled east to Shanchan, today’s Kunming, the kingdom’s eastern capital, and rallied local lords against the Mongols. Uriyangkhadai took Shanchan and captured the king near Kunze (Yiliang) in 1254; other accounts date his surrender to 1256.
+      - Möngke chose to rule through the old dynasty. Duan Xingzhi was received at the Mongol court, presented maps of Yunnan to the Great Khan and was sent back with the title of maharaja, and the Duan family went on governing Dali under Mongol princes and governors until the Ming conquest of 1381–1382. Uriyangkhadai spent the next two years subduing the Yi and other peoples of Yunnan and the Tibetan tribes to the north, and set up Mongol military units in the conquered lands, with local troops under them. Resistance around Shanchan continued for years.
+      - Yunnan gave the Mongols a base south-west of the Song. In 1257–1258 Uriyangkhadai invaded Đại Việt and took its capital, Thăng Long, and in 1259 he marched north through Guangxi and Hunan to join Kublai on the Yangtze. In 1274 Kublai sent Sayyid Ajall Shams al-Din to govern Yunnan, which became a province of the Yuan.
+    facts:
+      - [Duan Xingzhi captured, "1254 (1256 in some accounts)"]
+      - [Yunnan subdued, "by 1256"]
+      - [Province of Yunnan under Sayyid Ajall, "from 1274"]
+    markers:
+      - kind: taken
+        side: mon
+        name: Shanchan (Kunming)
+        date: "1254"
+        text: The eastern capital of the kingdom, where Duan Xingzhi tried to rally resistance. Uriyangkhadai took it.
+        lonlat: [102.71, 25.04]
+        lp: b
+      - kind: event
+        side: mon
+        name: Kunze (Yiliang)
+        date: "1254"
+        text: Duan Xingzhi was captured here, according to Chinese accounts.
+        lonlat: [103.14, 24.92]
+      - kind: capital
+        side: dali
+        name: Dali
+        date: from 1254
+        text: Seat of the Duan family, who governed under Mongol and then Yuan overlordship until 1382.
+        lonlat: [100.16, 25.70]
+        lp: l
+    arrows:
+      - side: mon
+        label: Uriyangkhadai
+        via: [[100.20, 25.68], [101.24, 25.50], [102.20, 25.10], [102.70, 25.06], [103.10, 24.93]]
+    areas:
+      - style: gained
+        side: mon
+        label: Dali Kingdom, conquered by the Mongols 1253–1256
+        atoms: [CN-YN, CN-SC~jianchang]

@@ -1,0 +1,200 @@
+id: jiajing-wokou-raids
+name: Jiajing wokou raids
+start: "1540"
+end: "1567"
+tier: B
+summary: "Raids on the coasts of Zhejiang, Jiangsu, Fujian and Guangdong in the reign of the Jiajing Emperor, at their height in the 1550s. The Ming had banned private sea trade since 1371 (the haijin), but Japanese silver and the demand for Chinese silk and porcelain made smuggling very profitable, and from about 1540 merchants of Fujian and Zhejiang ran an illegal trading port at Shuangyu off Ningbo with Japanese and Portuguese partners. When officials enforced the ban, destroying Shuangyu in 1548, the trade turned into raiding. The Ming called the raiders wokou, “Japanese pirates”, but most of them were Chinese: Chinese records put the Japanese at about three in ten. Fleets of up to 20,000 men plundered towns far inland in the 1550s. The supreme commander Hu Zongxian destroyed the band of Xu Hai in 1556 and lured the merchant chief Wang Zhi back from Japan, to be executed in 1560; the armies that Qi Jiguang and Yu Dayou trained drove the last large bands out of Zhejiang in 1561 and Fujian in 1563–1565. The raids ended for good after the court in 1567 allowed licensed merchants to trade overseas from Yuegang, except with Japan."
+countries: [cn, jp]
+sides:
+  - id: mg
+    name: Ming China
+    polities: [ming]
+    ink: red
+    moves: Ming moves
+    success: Ming success
+  - id: wk
+    name: Wokou (smugglers and raiders)
+    polities: [wokou]
+    ink: navy
+    moves: Wokou moves
+    success: Wokou success
+notes:
+  - "Wokou (in Japanese wakō, in Korean waegu) means “Japanese pirates”. The raiders of the 14th century were mostly Japanese; those of the 16th century were mostly Chinese merchants and sailors, with Japanese, Portuguese and others among them. Zhu Wan, the official who destroyed Shuangyu, wrote that “doing away with foreign pirates is easy, but doing away with Chinese pirates is difficult”."
+  - "Dates are converted from the Chinese lunar calendar as the sources give them, in the Julian calendar. Numbers of raiders and of heads taken come from Ming reports and are uncertain."
+sources:
+  - title: Jiajing wokou raids (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jiajing_wokou_raids
+  - title: Wakō (Britannica)
+    url: https://www.britannica.com/topic/wako
+  - title: Wang Zhi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Wang_Zhi_(pirate)
+  - title: Qi Jiguang (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Qi_Jiguang
+  - title: Haijin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Haijin
+  - title: "Waegu/Wokou/Wakō piracy (ORIAS, University of California, Berkeley)"
+    url: https://orias.berkeley.edu/waeguwokouwako-piracy
+steps:
+  - title: Smugglers and the sea ban
+    date: 1540–1550
+    when: "1548"
+    borders: "1548-06-01"
+    countries: [cn, jp]
+    body:
+      - Since 1371 the Ming had forbidden private sea trade, allowing foreign trade only with tribute missions. After the Ningbo incident of 1523, when the rival Japanese embassies of the Ōuchi and the Hosokawa fought each other in the streets of Ningbo, the court restricted Japanese trade still further. Yet Japan had silver, newly mined in quantity, and wanted Chinese silk, porcelain and copper coins, and the profits of smuggling were great. From about 1540 merchants from Fujian and Huizhou, among them the Xu brothers and, from 1544, Wang Zhi, made Shuangyu, an anchorage on Liuheng island off Ningbo, into a busy illegal port where Chinese, Japanese and Portuguese traders met, with the protection of coastal gentry families who invested in the trade.
+      - In 1547 the court made Zhu Wan grand coordinator of Zhejiang and Fujian with orders to enforce the ban. His fleet sailed from Wenzhou in April 1548 and in June attacked Shuangyu at night; estimates of the smugglers killed range from 55 to a few hundred, and the harbour was blocked with stones. In March 1549 he had 96 captured smugglers executed after a fight at Zoumaxi in southern Fujian. The gentry who had lost by his campaign had him impeached, and he poisoned himself in January 1550.
+      - Wang Zhi gathered the remnants of the Shuangyu trade, moved his base to the Gotō Islands and Hirado in Japan under the protection of local lords, and styled himself King of Hui. In 1551 the court rejected his request to make the trade legal. Shut out of lawful trade, the smuggling fleets turned more and more to raiding.
+    facts:
+      - [Sea ban (haijin), "from 1371"]
+      - [Ningbo incident, "1523"]
+      - [Shuangyu destroyed, "June 1548"]
+      - [Zhu Wan’s suicide, "January 1550"]
+    markers:
+      - kind: taken
+        side: mg
+        name: Shuangyu
+        date: June 1548
+        text: The smugglers’ port on Liuheng island, destroyed in a night attack by Zhu Wan’s fleet under Lu Tang and Ke Qiao. Its harbour was filled with stones.
+        lonlat: [122.12, 29.75]
+      - kind: event
+        name: Ningbo
+        date: "1523"
+        text: Rival Japanese tribute embassies fought here. The Ming then closed Ningbo to Japanese trade.
+        lonlat: [121.55, 29.87]
+        lp: l
+      - kind: event
+        side: wk
+        name: Gotō Islands
+        date: from about 1550
+        text: Wang Zhi’s base after the fall of Shuangyu, with Hirado on the nearby coast of Kyushu.
+        lonlat: [128.84, 32.70]
+    arrows:
+      - side: mg
+        label: Zhu Wan’s fleet
+        phase: 1
+        via: [[120.70, 28.00], [121.40, 28.60], [121.95, 29.30], [122.10, 29.70]]
+      - side: wk
+        label: Wang Zhi
+        phase: 2
+        via: [[122.25, 29.80], [124.50, 30.70], [126.80, 31.90], [128.70, 32.65]]
+  - title: The great raids of the 1550s
+    date: 1552–1559
+    when: "1555"
+    borders: "1555-05-10"
+    countries: [cn]
+    body:
+      - From 1552 raiding fleets, some of them thousands strong, fell on the coast of Zhejiang and southern Jiangsu, the richest part of China. At their peak in 1555 they numbered up to 20,000 men. They built fortified camps on the shore, such as Zhelin south of Shanghai, sacked market towns and marched far inland, while the Ming coastal garrisons, run down by a century of peace, often failed to stop them. Wang Zhi denied leading any raid in person, but the court held him responsible and ordered his capture.
+      - The court sent Zhang Jing with troops from Guangxi and elsewhere. On 10 May 1555 he won the greatest Ming victory of the decade at Wangjiangjing near Jiaxing, where Ming reports counted 1,900 heads, but he had been accused of delay by the court’s envoy Zhao Wenhua and was executed in November. Hu Zongxian, supreme commander from 1556, mixed war with negotiation. When Xu Hai’s band besieged Tongxiang from 31 May 1556, Hu persuaded Xu to submit and turn on other leaders, then destroyed his band at the Shen family estate near Pinghu at the end of September; up to 1,600 raiders were killed and Xu Hai was found dead in a stream.
+      - Hu also sent envoys to Wang Zhi in Japan with the promise of a pardon and open trade. Wang came to Cengang on Zhoushan in October 1557 to negotiate, but the court would not pardon him; he was imprisoned at Hangzhou and beheaded on 22 January 1560. His followers held out at Cengang against Yu Dayou and Qi Jiguang in 1558 and then moved south to Fujian. By the summer of 1559 the bands in the Yangtze delta had been destroyed.
+    facts:
+      - [Raiders at their peak, "up to 20,000 men (1555)"]
+      - [Battle of Wangjiangjing, "10 May 1555"]
+      - [Xu Hai killed, "September 1556"]
+      - [Wang Zhi executed, "22 January 1560"]
+    markers:
+      - kind: held
+        side: wk
+        name: Zhelin
+        date: 1554–1555
+        text: The raiders’ main fortified camp on the coast south of Shanghai.
+        lonlat: [121.52, 30.85]
+      - kind: battle
+        side: mg
+        name: Wangjiangjing
+        date: 10 May 1555
+        text: Zhang Jing’s victory over a large raiding army. Ming reports counted 1,900 heads.
+        lonlat: [120.72, 30.88]
+        lp: l
+      - kind: siege
+        side: mg
+        name: Tongxiang
+        date: May – June 1556
+        text: Besieged for about a month by Xu Hai’s band, which then submitted to Hu Zongxian.
+        lonlat: [120.56, 30.63]
+        lp: l
+      - kind: battle
+        side: mg
+        name: Shen family estate
+        date: 27–29 September 1556
+        text: Hu Zongxian’s troops destroyed Xu Hai’s band near Pinghu. Xu Hai died in the fighting.
+        lonlat: [121.03, 30.68]
+        lp: b
+      - kind: event
+        side: mg
+        name: Cengang (Zhoushan)
+        date: October 1557 – 1558
+        text: Wang Zhi landed here to negotiate his surrender. His followers held the harbour against Ming troops into 1558.
+        lonlat: [121.98, 30.08]
+      - kind: event
+        side: mg
+        name: Hangzhou
+        date: 22 January 1560
+        text: Hu Zongxian’s headquarters. Wang Zhi was imprisoned and executed here.
+        lonlat: [120.16, 30.27]
+        lp: l
+    areas:
+      - style: contested
+        side: wk
+        label: Coast raided most heavily, 1552–1559
+        atoms: [CN-SH, "CN-JS!", CN-ZJ]
+  - title: Qi Jiguang and the end of the raids
+    date: 1561–1567
+    when: "1561"
+    borders: "1563-05-01"
+    countries: [cn]
+    body:
+      - Qi Jiguang, posted to Zhejiang in 1555, recruited miners and farmers from Yiwu, drilled them in small squads that combined long and short weapons, the “mandarin duck” formation, and built warships. In the spring of 1561, when raiders landed in force around Taizhou, his army beat them in a series of battles at Xinhe, Huajie, Shangfengling and elsewhere; Chinese accounts speak of nine victories in nine battles. After this the raids on Zhejiang died down.
+      - The bands moved to Fujian. In July 1562 Qi marched south with 6,000 men and in two months destroyed their camps at Hengyu, Niutian and Lindun. When he returned to Zhejiang the raiders took the prefectural city of Xinghua (today Putian) in December 1562 after a month’s siege. In the spring of 1563 Qi, Yu Dayou and Liu Xian, under the new grand coordinator of Fujian, Tan Lun, defeated them at Pinghai Wei and retook Xinghua. In 1565 Qi and Yu Dayou destroyed the band of Wu Ping on Nan’ao island, and the last raiders in Guangdong were defeated by 1566.
+      - The Jiajing Emperor died in January 1567. In the same year the court of his successor, the Longqing Emperor, allowed licensed merchants to sail from Yuegang (Moon Harbour) near Zhangzhou, renamed Haicheng, and trade overseas anywhere but Japan; weapons and metals stayed banned. Raiding fell to a low level. Many historians see the raids as the product of the trade ban more than of a foreign invasion.
+    facts:
+      - [Taizhou victories, "spring 1561"]
+      - [Xinghua taken by raiders, "December 1562"]
+      - [Pinghai Wei and Xinghua retaken, "spring 1563"]
+      - [Sea ban relaxed at Yuegang, "1567"]
+    markers:
+      - kind: battle
+        side: mg
+        name: Taizhou
+        date: spring 1561
+        text: Qi Jiguang’s army won a series of battles around the prefectural city (today Linhai) and on the coast.
+        lonlat: [121.13, 28.85]
+      - kind: taken
+        side: mg
+        name: Hengyu
+        date: August 1562
+        text: An island camp off Ningde, stormed by Qi Jiguang’s troops across the tidal flats.
+        lonlat: [119.60, 26.72]
+      - kind: taken
+        side: mg
+        name: Xinghua (Putian)
+        date: December 1562 – spring 1563
+        text: The prefectural city fell to the raiders after a month’s siege and was retaken by Qi Jiguang in 1563.
+        lonlat: [119.01, 25.43]
+        lp: l
+      - kind: battle
+        side: mg
+        name: Pinghai Wei
+        date: spring 1563
+        text: Qi Jiguang, Yu Dayou and Liu Xian defeated the raiders at this coastal garrison.
+        lonlat: [119.26, 25.20]
+      - kind: battle
+        side: mg
+        name: Nan’ao
+        date: September 1565
+        text: Qi Jiguang and Yu Dayou destroyed Wu Ping’s band on this island off the Guangdong–Fujian border.
+        lonlat: [117.03, 23.43]
+      - kind: event
+        name: Yuegang (Haicheng)
+        date: "1567"
+        text: The port near Zhangzhou from which licensed merchants were allowed to trade overseas after 1567.
+        lonlat: [117.83, 24.45]
+        lp: l
+    arrows:
+      - side: mg
+        label: Qi Jiguang, 1562
+        phase: 1
+        via: [[121.00, 28.70], [120.40, 27.80], [119.90, 27.10], [119.62, 26.75]]
+      - side: mg
+        label: Qi Jiguang, 1563
+        phase: 2
+        via: [[119.55, 26.65], [119.35, 26.10], [119.10, 25.55], [119.03, 25.45]]

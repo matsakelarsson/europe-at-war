@@ -1,0 +1,199 @@
+id: kenesary-rebellion
+name: Kenesary’s rebellion
+start: "1837"
+end: "1847"
+tier: B
+summary: "The longest Kazakh rising against Russian rule, led by Kenesary Kasymov (Kenesary Kasymuly), a grandson of Ablai Khan, against the district administration that had replaced the khans of the Middle Zhuz in 1822 and against the Khanate of Kokand in the south. Kenesary burned the Russian fortress of Akmola in 1838, and in 1841 an assembly of the three zhuzes elected him khan. For a few years he ruled much of the central steppe, fought Kokand for the towns of the Syr Darya and the Karatau, and eluded the Russian columns and loyal Kazakh sultans sent against him; at its height his army numbered about 20,000. Pushed south-east by new forts and by sultans who went over to Russia, he invaded the lands of the northern Kyrgyz in 1847, was defeated by Ormon Khan near Tokmok, captured and put to death. His death opened Semirechye to the Russian advance. In Kazakhstan he is honoured as the last khan of the Kazakhs; in Kyrgyz tradition his invasion is remembered for the burning of auls and Ormon’s victory over him."
+countries: [kz, kg, ru, uz]
+sides:
+  - id: kz
+    name: Kenesary’s khanate
+    polities: [kenesary-khanate]
+    ink: teal
+    moves: Kenesary’s moves
+    success: Kenesary’s success
+  - id: rus
+    name: Russian Empire and loyal Kazakh sultans
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: kok
+    name: Khanate of Kokand
+    polities: [kokand]
+    ink: orange
+    moves: Kokandi moves
+    success: Kokandi success
+  - id: kgz
+    name: Kyrgyz tribes under Ormon Khan
+    polities: [kyrgyz-tribes]
+    ink: red
+    moves: Kyrgyz moves
+    success: Kyrgyz success
+notes:
+  - Russian dates are Old Style (Julian), 12 days behind the Gregorian calendar; sources do not always say which they use.
+  - Accounts of the rising come mostly from Russian military reports and from Kazakh historians, who call it a national liberation movement. The figures for Kenesary’s army (5,000 in 1841, about 20,000 at its height) and for the army that invaded Kyrgyz lands in 1847 (10,000–20,000) are rough.
+  - Kenesary’s camps and raids moved across the whole steppe; the area on the map is only a rough guide to where his authority was recognised. Some accounts place the peace of August 1847 at Taldykorgan rather than Kopal.
+sources:
+  - title: Kenesary’s Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kenesary%27s_Rebellion
+  - title: Kenesary Kasymov (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kenesary_Kasymov
+  - title: Siege of Akmolinsk (1838) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Akmolinsk_(1838)
+  - title: Ormon Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ormon_Khan
+  - title: Восстание Кенесары Касымова (Russian Wikipedia)
+    url: https://ru.wikipedia.org/wiki/Восстание_Кенесары_Касымова
+  - title: Revolt of 1837–1847 under the leadership of khan Kenesary (e-history.kz)
+    url: https://e-history.kz/en/history-of-kazakhstan/show/9571
+steps:
+  - title: Akmola and the Turgai steppe
+    date: 1837–1840
+    when: "1837"
+    borders: "1838-06-02"
+    countries: [kz, ru]
+    body:
+      - The khans of the Junior and Middle Zhuz had sworn allegiance to Russia in 1731 and 1740, but the steppe went on governing itself until the Charter on the Siberian Kirghiz, drafted by Mikhail Speransky and signed in 1822, abolished the khan’s power in the Middle Zhuz. Its lands were divided into districts run from new outposts such as Kokshetau (1824), Karkaraly and Akmola, and Cossacks were settled on some of the best land. Kenesary’s family, the descendants of Ablai Khan, resisted. His brother Sarzhan was killed in 1836 on the orders of the Kokandi governor of Tashkent, until then the family’s ally, and his father Kasym in 1840.
+      - In 1837 Kenesary’s men attacked a caravan from Petropavlovsk to Tashkent guarded by 55 Cossacks. In May 1838 about 2,000 of his horsemen besieged the fortress of Akmola, on the Ishim where Astana stands today. Archers shot burning arrows into it, and while the garrison fought the fires Kenesary’s batyrs broke in; the commandant, Ivan Karbyshev, and the senior sultan Konyrkulzha Kudaimendin escaped at night, and the fort burned. Kenesary then moved west into the Turgai steppe, where Zholaman batyr’s men joined him, and Russian columns with artillery went after him. In letters to the governor of Orenburg he asked for the forts to be removed and the seized lands returned.
+    facts:
+      - [Charter on the Siberian Kirghiz, "1822"]
+      - [Siege of Akmola, "late May – early June 1838, Kazakh victory"]
+      - [Kenesary’s force at Akmola, "about 2,000 men against about 500"]
+    markers:
+      - kind: taken
+        side: kz
+        name: Akmola
+        date: May – June 1838
+        text: The Russian fortress and district seat on the Ishim, stormed and burned by Kenesary’s men. Today’s Astana grew from it.
+        lonlat: [71.43, 51.17]
+      - kind: held
+        side: rus
+        name: Kokshetau
+        date: from 1824
+        text: One of the first district seats of the new administration, in the lands of Kenesary’s family.
+        lonlat: [69.38, 53.28]
+      - kind: held
+        side: rus
+        name: Petropavlovsk
+        date: "1837"
+        text: The fortress on the Siberian line where the caravan Kenesary attacked had set out for Tashkent.
+        lonlat: [69.15, 54.87]
+      - kind: event
+        side: kz
+        name: Turgai steppe
+        date: 1838–1840
+        text: Kenesary’s refuge after Akmola, between the Orenburg and Siberian lines.
+        lonlat: [63.50, 49.63]
+    arrows:
+      - side: kz
+        label: Kenesary
+        phase: 1
+        via: [[71.35, 51.05], [68.50, 50.60], [65.50, 50.00], [63.70, 49.70]]
+  - title: Khan of the three zhuzes
+    date: 1841–1845
+    when: "1841-09"
+    borders: "1844-08-14"
+    countries: [kz, ru, uz]
+    body:
+      - In September 1841 representatives of the three zhuzes, meeting near the Turgai river, elected Kenesary khan. He ruled with a council of batyrs, biys and sultans, raised taxes on herds and harvests, organised his army in hundreds and thousands, banned feuding raids and encouraged farming to feed his men; the emir of Bukhara recognised him. In 1841 his forces turned south against the Khanate of Kokand, whose forts on the Syr Darya and the Karatau held the southern Kazakhs. They besieged Sozak, Zhanakorgan, Zhulek and Ak-Mechet and took several of them.
+      - On 27 June 1843 Nicholas I approved a large expedition. A column under Lebedev, which grew to about 1,900 men, and a force of about 5,000 Cossacks and loyal Kazakhs under Colonel Bizyanov failed to bring Kenesary to battle. In February 1844 a raid on his camp on the Kengir rivers captured his wife Kunimzhan, but on the night of 20–21 July he destroyed the detachment of Sultan Akhmet Zhantorin, a Kazakh loyal to Russia, and on 14 August he attacked the Cossack settlement of Yekaterininskaya, burning its outskirts and taking captives. Russian columns closed in on him at the Mugodzhar hills on 22 August, but he slipped away. In 1845 he told Russian envoys he would accept Russian protection only if the forts were pulled down and the seized lands given back.
+    facts:
+      - [Kenesary elected khan, "September 1841"]
+      - [Sultan Zhantorin’s detachment destroyed, "20–21 July 1844"]
+      - [Kenesary’s army at its height, "about 20,000 men (1844–1845)"]
+    markers:
+      - kind: event
+        side: kz
+        name: Turgai river
+        date: September 1841
+        text: The assembly that elected Kenesary khan met in the Turgai country.
+        lonlat: [63.50, 49.63]
+        lp: l
+      - kind: siege
+        side: kz
+        name: Sozak
+        date: "1841"
+        text: A Kokandi fort in the Karatau, besieged by Kenesary’s army. Sozak had been the first capital of the Kazakh khans in the 15th century.
+        lonlat: [68.47, 44.13]
+      - kind: siege
+        side: kz
+        name: Zhanakorgan
+        date: "1841"
+        text: A Kokandi fort on the Syr Darya, besieged by Kenesary’s army.
+        lonlat: [67.25, 43.92]
+        lp: b
+      - kind: held
+        side: kok
+        name: Ak-Mechet
+        date: "1841"
+        text: Kokand’s main fort on the lower Syr Darya, today Kyzylorda. Russia took it in 1853.
+        lonlat: [65.51, 44.85]
+        lp: l
+      - kind: event
+        side: kz
+        name: Mugodzhar hills
+        date: 22 August 1844
+        text: The Russian columns closed in here, but Kenesary escaped the encirclement.
+        lonlat: [58.60, 49.00]
+      - kind: held
+        side: rus
+        name: Orsk
+        date: 1843–1844
+        text: Fortress on the Orenburg line, base of the columns sent after Kenesary.
+        lonlat: [58.57, 51.20]
+    arrows:
+      - side: kz
+        label: Kenesary
+        phase: 1
+        via: [[65.50, 47.50], [67.20, 45.90], [68.30, 44.40]]
+      - side: rus
+        label: Russian columns
+        phase: 2
+        via: [[58.60, 51.10], [59.20, 50.20], [58.80, 49.20]]
+    areas:
+      - style: contested
+        side: kz
+        label: Main area of Kenesary’s khanate, 1841–1845 (approximate)
+        polygon: [[61.5, 50.8], [65.5, 51.3], [69.0, 50.2], [72.5, 48.0], [72.5, 45.5], [69.0, 44.6], [65.5, 45.5], [62.0, 47.0]]
+  - title: Semirechye and Maitobe
+    date: 1846–1847
+    when: "1846"
+    borders: "1847-04-01"
+    countries: [kz, kg]
+    body:
+      - New Russian forts and the sultans who went over to Russia drove Kenesary out of the Middle Zhuz in 1846. A Russian force under General Vishnevsky, with Kazakh sultans, caught him by Lake Balkhash and penned him on a peninsula, but he broke out, and at the end of the year he held a hard-to-reach peninsula at the mouth of the Ili, from which he raided Kyrgyz lands. In June 1846 the sultans and biys of the Senior Zhuz swore allegiance to Russia, and in 1847 the fort of Kopal was built in Semirechye.
+      - In April 1847 Kenesary invaded the Chüy valley with an army put at 10,000–20,000 men and camped at Maitobe near today’s Tokmok, to make the northern Kyrgyz submit; his men burned Kyrgyz auls. The Kyrgyz, led by Ormon Khan of the Sarybagysh, lit many campfires in the passes to look stronger than they were and then attacked. Sultans Rustem and Sypatai deserted Kenesary with much of the army, and the rest was driven into a marsh near Mykan and destroyed. Kenesary was captured with some thirty sultans and, after a few months in captivity, put to death; his head was sent to the Russian governor-general at Omsk. On 22 August 1847 Kyrgyz manaps and Senior Zhuz sultans made peace at Kopal, and Russia rewarded Ormon with a medal, a sabre and the rank of lieutenant colonel.
+    facts:
+      - [Battle of Maitobe, "April 1847, Kyrgyz victory"]
+      - [Kenesary put to death, "1847"]
+      - [Peace of Kopal, "22 August 1847"]
+    markers:
+      - kind: held
+        side: kz
+        name: Ili delta
+        date: end of 1846
+        text: Kenesary’s last refuge, on a peninsula at the mouth of the Ili on Lake Balkhash.
+        lonlat: [74.13, 45.40]
+      - kind: battle
+        side: kgz
+        name: Maitobe, near Tokmok
+        date: April 1847
+        text: Ormon Khan’s Kyrgyz defeated Kenesary’s army after part of it deserted; Kenesary was captured soon after.
+        lonlat: [75.28, 42.83]
+        lp: b
+      - kind: treaty
+        side: rus
+        name: Kopal
+        date: 22 August 1847
+        text: The new Russian fort in Semirechye, where Kyrgyz manaps and Kazakh sultans made peace after Kenesary’s death.
+        lonlat: [79.05, 45.13]
+    arrows:
+      - side: kz
+        label: Kenesary, 1846
+        phase: 1
+        via: [[69.50, 47.50], [72.50, 46.50], [74.10, 45.50]]
+      - side: kz
+        label: Kenesary, 1847
+        phase: 2
+        via: [[74.30, 45.20], [74.80, 44.00], [75.20, 43.00]]

@@ -228,6 +228,8 @@ they ever border, keeping curated colours.
   | 1801–today | Iranian Azerbaijan (East and West Azerbaijan, Ardabil) | `iran-central-asia.yaml` |
   | 800–today | Saudi Arabia, Yemen, Oman, the United Arab Emirates, Qatar, Bahrain, Kuwait | `arabia.yaml` |
   | 800–today | India, Pakistan, Bangladesh, Sri Lanka, Nepal, Bhutan, the Maldives | `south-asia.yaml` |
+  | 800–today | China, Mongolia, Taiwan, Hong Kong, Macau, eastern and southern Kazakhstan, Siberia (without Sakhalin and the Kurils) | `east-asia.yaml` (`russia.yaml` for 1917 and 1991) |
+  | 1236–today | Western Kazakhstan (West Kazakhstan, Atyrau, Aktobe, Mangystau, Kostanay) | `east-asia.yaml`, `rus-and-russia.yaml` (1242, 1440), `russia.yaml` |
 
   Other event files (`central-europe.yaml`) correct drafts outside any curated range; there, the next keyframe can
   still override an event. `central-europe.yaml` is a first pass made for the
@@ -392,6 +394,31 @@ they ever border, keeping curated colours.
   Portuguese, the Dutch (1656/58) and the British (1795/1815). Remainders of
   split provinces are written with `!` (`IN-MP!` is Gondwana, `IN-UP!` Awadh,
   `IN-MH!` Desh, `IN-KA!` Mysore, `IN-KL!` Travancore, `IN-RJ!` Dhundhar).
+- **East Asia and Siberia.** In 800 Tang China has lost the north-west to the
+  Tibetan Empire; the Uyghur Khaganate rules Mongolia, Balhae Manchuria and
+  Nanzhao (`dali`) Yunnan. Then the Five Dynasties (one id, `five-dynasties`,
+  with the dynasty names as earlier names) and Ten Kingdoms, the Song (`song`,
+  Southern Song from 1127), the Liao, Western Xia and Jurchen Jin, the Mongols
+  (`mongol-empire` until Ariq Böke surrenders in 1264, then `yuan`), the Ming,
+  the Northern Yuan, Oirats, Khalkha and Dzungars, the Qing (`qing`, Later Jin
+  until 1636), the Republic (`roc`, which keeps Taiwan after 1949) and the
+  People’s Republic (`china`). Tibet is one id throughout (`tibet`, labelled as
+  under the Yuan and as a Qing protectorate); Amdo and Kham fall to
+  `tibetan-chiefdoms` between empires. The Tarim has Qocho, Khotan, the
+  Karakhanids, Qara Khitai, the Chagatayids, Moghulistan, Yarkent, Turfan,
+  Yettishar (1865–1877) and Russia in Ili (1871–1882). Taiwan: `formosan-peoples`,
+  Dutch Formosa, the Spanish north, Tungning, the Qing (west 1683, Yilan 1812,
+  mountains and east 1875), Japan and the ROC. Leased territories (Hong Kong in
+  three steps, Macau, Kwantung, Kiautschou, Weihaiwei, Guangzhouwan) have their
+  own splits. Siberia goes to Russia fort by fort (1586–1778) from
+  `finno-ugric-taiga-hunter-gatherers` and `siberian-peoples`; the Amur and
+  Primorye in 1858 and 1860. Puppet states on the base map: Manchukuo,
+  Mengjiang, the Far Eastern Republic, Tuva. Remainders: `CN-HE!` is southern
+  Hebei, `CN-SX!` central Shanxi, `CN-SN!` Guanzhong, `CN-GS!` Lanzhou and
+  Gannan, `CN-NM!` central Inner Mongolia, `CN-LN!` Liaodong, `CN-JS!` and
+  `CN-AH!` the land south of the Yangtze, `CN-FJ!` north-western Fujian,
+  `CN-SC!` the Sichuan basin, `CN-XJ!` the northern Tarim, `CN-XZ!` Ü-Tsang,
+  `CN-QH!` Qinghai without Xining, `RU-KHA!` the Okhotsk coast.
 - **Checking borders.** After a build, `node tools/owners-at.mjs <date>
   [polities…] [--atoms <regex>]` lists who owns what on a date, and
   `node tools/owner-history.mjs <regex> [from] [to]` lists every change to the

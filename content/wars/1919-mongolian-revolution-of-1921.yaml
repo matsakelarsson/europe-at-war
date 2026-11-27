@@ -1,0 +1,181 @@
+id: mongolian-revolution-of-1921
+name: Mongolian Revolution of 1921
+start: "1919-10"
+end: "1921-09-15"
+tier: B
+summary: "The struggle over Outer Mongolia after the Russian Revolution, which ended with a Soviet-backed revolutionary government in Urga. In 1919 the Beiyang government of the Republic of China sent troops under Xu Shuzheng, who made the Mongolian nobles give up the autonomy Mongolia had won in 1911–1915. In February 1921 the White general Roman von Ungern-Sternberg and his Asiatic Cavalry Division drove the Chinese out of Urga and restored the Bogd Khan, the head of the Mongolian Buddhist church, as monarch, while killing Jews and suspected Bolsheviks. In March the Mongolian People’s Party, under Damdin Sükhbaatar, formed a provisional government on the Soviet border and took the Chinese post at Kyakhta. When Ungern attacked Soviet territory in June, the Red Army and the Mongolian partisans defeated him and entered Urga on 6 July 1921. The Bogd Khan stayed on as a limited monarch under a people’s government, Ungern was captured and shot, and Soviet troops remained until 1925; after the Bogd Khan’s death in 1924 the Mongolian People’s Republic was proclaimed."
+countries: [mn, cn, ru]
+sides:
+  - id: cn
+    name: Republic of China (Beiyang government)
+    polities: [roc]
+    ink: gold
+    moves: Chinese moves
+    success: Chinese success
+  - id: ungern
+    name: Ungern-Sternberg’s Asiatic Cavalry Division
+    polities: [ungern-division]
+    ink: slate
+    moves: Ungern’s moves
+    success: Ungern’s success
+  - id: mpp
+    name: Mongolian People’s Party and its partisans
+    polities: [mongolian-peoples-party]
+    ink: orange
+    moves: Mongolian revolutionary moves
+    success: Mongolian revolutionary success
+  - id: su
+    name: Soviet Russia and the Far Eastern Republic
+    polities: [ussr, far-eastern-republic]
+    ink: red
+    moves: Red Army moves
+    success: Red success
+notes:
+  - Under the Kyakhta agreement of 1915 Outer Mongolia was an autonomous state under Chinese suzerainty, ruled by the Bogd Khan (the Eighth Jebtsundamba Khutughtu). The Republic of China regarded the abolition of autonomy in 1919 as the restoration of its sovereignty; Mongolian nationalists saw it as an occupation. The Republic of China recognised Mongolia’s independence only in 1946, after a plebiscite, and the People’s Republic of China in 1949.
+  - Mongolian and Soviet histories long presented the events as a people’s revolution; many historians stress the decisive role of the Red Army and of Comintern advisers. Some sources date the revolution from the party conference of 1 March 1921 to the enthronement of 11 July 1921.
+  - Urga is today’s Ulaanbaatar. Kyakhta Maimaicheng, the Chinese trading town opposite Russian Kyakhta (then Troitskosavsk), is today’s Altanbulag.
+sources:
+  - title: Mongolian Revolution of 1921 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mongolian_Revolution_of_1921
+  - title: Occupation of Mongolia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Occupation_of_Mongolia
+  - title: Roman von Ungern-Sternberg (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Roman_von_Ungern-Sternberg
+  - title: Damdin Sükhbaatar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Damdin_S%C3%BCkhbaatar
+  - title: Mongolia, independence and revolution (Britannica)
+    url: https://www.britannica.com/place/Mongolia/Independence-and-revolution
+  - title: Baron Roman von Ungern-Sternberg (Britannica)
+    url: https://www.britannica.com/biography/Baron-Roman-von-Ungern-Sternberg
+  - title: Bogd Khaan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bogd_Khaan
+steps:
+  - title: Xu Shuzheng and the end of autonomy
+    date: October 1919 – November 1920
+    when: "1919-10"
+    borders: "1920-02-01"
+    countries: [mn, cn, ru]
+    body:
+      - The Russian Revolution removed the power that had protected Mongolia’s autonomy. A few hundred Chinese soldiers came to Urga in 1918 at the request of Mongolian ministers worried by the Russian civil war, and in 1919 the pan-Mongol plans of the Cossack ataman Grigory Semyonov alarmed both the Mongolian nobility and Beijing. In October 1919 Xu Shuzheng, a general of the Anhui clique that then dominated the Beiyang government, arrived in Urga with about 4,000 troops, followed by more. On 17 November he accepted a petition from Mongolian ministers, which the Bogd Khan did not sign, renouncing autonomy, and at a ceremony that followed (sources date it to December 1919 or February 1920) the Bogd Khan’s government had to bow before Xu and the Chinese flag. Xu was recalled after the Anhui clique lost the Zhili–Anhui war in July 1920, but the troops stayed.
+      - In Urga two secret circles of young Mongols, among them the soldier Damdin Sükhbaatar and Khorloogiin Choibalsan, merged on 25 June 1920 into the Mongolian People’s Party, and that summer a party delegation travelled to Soviet Russia to ask for help. In October 1920 a new force entered Mongolia from Transbaikalia, the Asiatic Cavalry Division of the Baltic German general Roman von Ungern-Sternberg, about 1,500 Cossacks, Buryats, Mongols and others who had served under Semyonov. Its attacks on Urga on 26–27 October and 2–4 November were beaten off by the Chinese garrison with heavy losses.
+    facts:
+      - [Xu Shuzheng arrives in Urga, "October 1919, with about 4,000 troops"]
+      - [Autonomy renounced, "17 November 1919"]
+      - [Mongolian People’s Party founded, "25 June 1920"]
+      - [Ungern repulsed at Urga, "26 October – 4 November 1920"]
+    markers:
+      - kind: held
+        side: cn
+        name: Urga
+        date: 1919–1920
+        text: Seat of the Bogd Khan and of the Chinese garrison, which beat off Ungern’s first attacks in the autumn of 1920.
+        lonlat: [106.917, 47.919]
+      - kind: event
+        side: mpp
+        name: Kyakhta
+        date: summer 1920
+        text: The border town through which the Mongolian People’s Party’s delegates crossed into Soviet territory on their way to Irkutsk and Moscow.
+        lonlat: [106.452, 50.355]
+    arrows:
+      - side: cn
+        label: Xu Shuzheng
+        phase: 1
+        via: [[114.883, 40.817], [111.980, 43.650], [109.500, 45.600], [107.000, 47.850]]
+      - side: ungern
+        label: Ungern
+        phase: 2
+        via: [[112.800, 50.000], [111.200, 48.800], [109.000, 48.200], [107.150, 47.950]]
+    areas:
+      - style: occupied
+        side: cn
+        label: Held by Chinese troops, 1919–1921
+        atoms: [MN-1, MN-035, MN-037, MN-039, MN-041, MN-043, MN-046, MN-047, MN-049, MN-051, MN-053, MN-055, MN-057, MN-059, MN-061, MN-063, MN-064, MN-065, MN-067, MN-069, MN-071, MN-073]
+  - title: Ungern takes Urga
+    date: February – March 1921
+    when: "1921-02-04"
+    borders: "1921-02-22"
+    countries: [mn, cn, ru]
+    body:
+      - Ungern attacked again at the start of February 1921. Fighting for the Chinese outer lines began on 2 February, and on 4 February his troops stormed the barracks and the Chinese trading quarter; the city fell that evening. The Chinese garrison, perhaps 7,000 men by one account, lost about 1,500 dead, Ungern about 60, and many of the Chinese fled north towards the Russian border. In the following weeks the Chinese garrisons and officials in Uliastai and Khovd withdrew to Xinjiang. On 22 February Ungern restored the Bogd Khan as monarch of an independent Mongolia. His men looted the Chinese shops and killed the Russian Jews of Urga, some 43–50 people, and suspected Bolsheviks; a list of the deaths ordered by or in the name of Ungern during his time in Mongolia counts 846 people.
+      - The Mongolian People’s Party, with Soviet weapons and advisers, held its first congress in secret at Kyakhta on 1–3 March 1921 and formed a provisional government on 13 March. On 18 March its partisan army, about 400 men under Sükhbaatar, took the Chinese garrison of Kyakhta Maimaicheng, just across the border; the date is still celebrated as the founding day of the Mongolian army. By April the partisans numbered about 800.
+    facts:
+      - [Urga taken by Ungern, "4 February 1921"]
+      - [Bogd Khan restored, "22 February 1921"]
+      - [Provisional people’s government formed, "13 March 1921"]
+      - [Kyakhta Maimaicheng taken by Sükhbaatar, "18 March 1921"]
+    markers:
+      - kind: taken
+        side: ungern
+        name: Urga
+        date: 4 February 1921
+        text: Ungern’s division stormed the Chinese positions and took the city. The Bogd Khan was restored here on 22 February.
+        lonlat: [106.917, 47.919]
+      - kind: taken
+        side: mpp
+        name: Kyakhta Maimaicheng
+        date: 18 March 1921
+        text: The Chinese border post opposite Russian Kyakhta, taken by Sükhbaatar’s partisans. The provisional government was based here. Today it is Altanbulag.
+        lonlat: [106.483, 50.317]
+    arrows:
+      - side: ungern
+        phase: 1
+        via: [[107.700, 47.750], [107.250, 47.860], [106.960, 47.915]]
+      - side: cn
+        label: Chinese retreat
+        phase: 2
+        via: [[106.900, 47.990], [106.500, 48.900], [106.470, 50.200]]
+      - side: mpp
+        label: Sükhbaatar
+        phase: 3
+        via: [[106.400, 50.450], [106.450, 50.380], [106.480, 50.330]]
+    areas:
+      - style: occupied
+        side: ungern
+        label: Held by Ungern’s forces, February 1921
+        atoms: [MN-1, MN-047]
+  - title: The Red Army in Urga
+    date: May – September 1921
+    when: "1921-06-11"
+    borders: "1921-07-11"
+    countries: [mn, ru]
+    body:
+      - In May 1921 Ungern, hoping to raise Transbaikalia against the Bolsheviks, ordered an attack on Soviet territory. One brigade under General Boris Rezukhin raided across the border west of the Selenga, while Ungern’s own brigade moved on Troitskosavsk, the Russian half of Kyakhta, where Soviet and Mongolian troops beat it in fighting on 11–13 June. Soviet troops of the 5th Army and of the Far Eastern Republic, with Sükhbaatar’s partisans, crossed into Mongolia on 28 June and entered Urga with little resistance on 6 July 1921.
+      - On 10 July the party proclaimed a people’s government under Dogsomyn Bodoo, with the Bogd Khan as a monarch with limited powers; he was enthroned again on 11 July, which became Mongolia’s national day. Ungern made a last raid north in July and reached Novoselenginsk on 1 August before turning back. His officers rose against him, his Mongol escort left him, and on 20 August he was taken by a Red partisan detachment under Petr Shchetinkin. After a six-hour trial in Novonikolayevsk (today Novosibirsk) on 15 September 1921 he was shot the same night.
+      - Soviet troops stayed in Mongolia until 1925. Sükhbaatar died in 1923, and after the Bogd Khan’s death in May 1924 the Mongolian People’s Republic was proclaimed on 26 November 1924, a one-party state closely tied to the Soviet Union. China did not recognise the new order.
+    facts:
+      - [Ungern defeated at Troitskosavsk, "11–13 June 1921"]
+      - [Red Army and partisans enter Urga, "6 July 1921"]
+      - [People’s government and limited monarchy, "10–11 July 1921"]
+      - [Ungern shot, "15 September 1921, Novonikolayevsk"]
+    markers:
+      - kind: battle
+        side: su
+        name: Troitskosavsk
+        date: 11–13 June 1921
+        text: Ungern’s attack on the Russian border town failed with heavy losses. Today the town is called Kyakhta.
+        lonlat: [106.452, 50.355]
+        lp: l
+      - kind: taken
+        side: su
+        name: Urga
+        date: 6 July 1921
+        text: Entered by Soviet and Mongolian troops. The people’s government was proclaimed here on 10 July and the Bogd Khan enthroned as a limited monarch on 11 July.
+        lonlat: [106.917, 47.919]
+      - kind: taken
+        side: ungern
+        name: Novoselenginsk
+        date: 1 August 1921
+        text: The farthest point of Ungern’s last raid into Soviet territory. He turned back the next day.
+        lonlat: [106.649, 51.104]
+    arrows:
+      - side: ungern
+        label: Ungern
+        phase: 1
+        via: [[106.850, 48.000], [106.400, 49.000], [106.430, 50.250]]
+      - side: su
+        label: Red Army and Sükhbaatar
+        phase: 2
+        via: [[106.480, 50.280], [106.150, 49.400], [106.500, 48.600], [106.880, 47.970]]
+      - side: ungern
+        phase: 3
+        via: [[105.700, 49.700], [106.100, 50.500], [106.600, 51.060]]

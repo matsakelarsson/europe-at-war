@@ -1,0 +1,170 @@
+id: yongle-mongol-campaigns
+name: Yongle Emperor’s campaigns against the Mongols
+start: "1409-09"
+end: "1424-08-12"
+tier: B
+summary: "Five expeditions that the Yongle Emperor led in person into Mongolia between 1410 and 1424, after a Ming army under Qiu Fu was destroyed on the Kherlen River in 1409. The Mongols were divided between the Eastern Mongols, led by the chancellor Arughtai and his khan Bunyashiri, and the Oirats of the west under Mahmud. In 1410 the emperor defeated Bunyashiri on the Onon and Arughtai near the Taor River; in 1414 his cannon broke the Oirats between the Tuul and the Kherlen. The campaigns of 1422, 1423 and 1424, with armies of more than 200,000 men and enormous supply trains, failed to bring Arughtai to battle, and the emperor died on the way home from the last of them, on 12 August 1424. The expeditions kept the Mongols divided but won no lasting settlement; his successors gave them up and pulled the frontier back to the Great Wall line."
+countries: [cn, mn]
+sides:
+  - id: mg
+    name: Ming dynasty
+    polities: [ming]
+    ink: red
+    moves: Ming moves
+    success: Ming success
+  - id: em
+    name: Eastern Mongols (Arughtai)
+    polities: [northern-yuan]
+    ink: olive
+    moves: Eastern Mongol moves
+    success: Eastern Mongol success
+  - id: oi
+    name: Oirats
+    polities: [oirats]
+    ink: brown
+    moves: Oirat moves
+    success: Oirat success
+notes:
+  - "Dates are converted from the Chinese lunar calendar. The Ming histories give much larger armies than are likely (500,000 for 1410); modern estimates are given where they exist. Britannica gives 5 August 1424 for the emperor’s death; most sources give 12 August."
+  - "The Ming called the Eastern Mongols the Tatars (Dada) and the Oirats the Wala. Many battle sites in the steppe are known only by the river or district named in the Chinese records, and the markers for them are approximate."
+sources:
+  - title: Yongle Emperor’s campaigns against the Mongols (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yongle_Emperor%27s_campaigns_against_the_Mongols
+  - title: Battle of Kherlen (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kherlen
+  - title: Yongle Emperor (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yongle_Emperor
+  - title: "Yongle: Foreign policy (Britannica)"
+    url: https://www.britannica.com/biography/Yongle/Foreign-policy
+  - title: Arughtai (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Arughtai
+  - title: Northern Yuan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Northern_Yuan
+steps:
+  - title: The Kherlen and the first campaign
+    date: September 1409 – September 1410
+    when: "1410-06-15"
+    borders: "1410-06-15"
+    countries: [cn, mn]
+    body:
+      - "In 1403 the Yongle Emperor withdrew the garrisons his father had placed beyond the Great Wall around Daning and left the land to the Uriankhai Mongols, who were Ming vassals. In the steppe the Eastern Mongol chancellor Arughtai had put Bunyashiri, a descendant of the Yuan emperors, on the throne as khan. In 1409 Bunyashiri had a Ming envoy, Guo Ji, put to death. The emperor sent Qiu Fu against him with an army the Ming histories put at 100,000 cavalry. On the Kherlen River Qiu Fu believed a captured Mongol who told him the enemy was in disorder, rode ahead with about 1,000 horsemen in pursuit and was cut off and killed with his generals on 23 September 1409."
+      - "The emperor then took the field himself. He left Beijing on 25 March 1410 with an army probably of about 100,000 men and 30,000 carts, marched north by Xuanfu and Xinghe and reached the Kherlen in May. Bunyashiri and Arughtai had quarrelled and split up. On 15 June the Ming army caught Bunyashiri on the Onon River and destroyed his force, though he escaped; the army then turned east and defeated Arughtai near the Taor River. The emperor was back in Beijing on 15 September. Arughtai sent tribute horses and was given a Ming title, and in 1412 the Oirats killed Bunyashiri."
+    facts:
+      - [Qiu Fu’s defeat on the Kherlen, "23 September 1409"]
+      - [First campaign, "25 March – 15 September 1410"]
+      - [Bunyashiri defeated on the Onon, "15 June 1410"]
+    markers:
+      - kind: battle
+        side: em
+        name: Kherlen River
+        date: September 1409
+        text: Qiu Fu and his advance guard were cut off and killed while pursuing the Mongols across the river. The exact site is not known.
+        lonlat: [110.650, 47.320]
+      - kind: battle
+        side: mg
+        name: Onon River
+        date: 15 June 1410
+        text: Bunyashiri’s force was destroyed, but the khan escaped. The site is approximate.
+        lonlat: [110.600, 48.600]
+      - kind: battle
+        side: mg
+        name: Taor River
+        date: summer 1410
+        text: Arughtai was defeated and fled. The site is approximate.
+        lonlat: [121.300, 46.300]
+      - kind: capital
+        side: mg
+        name: Beijing
+        date: "1410"
+        text: The emperor’s northern capital and the starting point of all five campaigns. It became the official capital in 1421.
+        lonlat: [116.397, 39.909]
+        lp: b
+    arrows:
+      - side: em
+        label: Qiu Fu’s defeat
+        phase: 1
+        via: [[115.060, 40.610], [114.000, 43.500], [112.500, 46.000], [110.800, 47.250]]
+      - side: mg
+        label: Yongle Emperor
+        phase: 2
+        via: [[116.397, 39.909], [115.060, 40.610], [114.700, 41.160], [113.500, 44.500], [111.500, 47.100], [110.700, 48.500]]
+      - side: mg
+        phase: 3
+        via: [[110.700, 48.550], [114.000, 48.000], [118.000, 47.000], [121.200, 46.350]]
+  - title: Against the Oirats
+    date: April – August 1414
+    when: "1414-06"
+    borders: "1414-06-15"
+    countries: [cn, mn]
+    body:
+      - "With the Eastern Mongols weakened, the Oirats of western Mongolia became the stronger power. Their leader Mahmud had a khan of his own, Delbeg, besieged Karakorum in 1413 and sent 30,000 men to the Kherlen. Arughtai, now a Ming vassal, reported their advance and asked for help."
+      - "The emperor left Beijing on 6 April 1414. In the summer his army met the Oirats between the upper Tuul and Kherlen rivers, and the Ming cannon broke the Oirat cavalry charges. Mahmud and Delbeg fled, and the emperor returned to Beijing in August. In 1416 Arughtai attacked and killed Mahmud and Delbeg, and the Oirats fell back to the west."
+    facts:
+      - [Second campaign, "6 April – August 1414"]
+      - [Battle between the Tuul and the Kherlen, "summer 1414, Ming victory"]
+    markers:
+      - kind: battle
+        side: mg
+        name: Upper Tuul and Kherlen
+        date: summer 1414
+        text: Ming cannon routed the Oirat cavalry. The site is approximate.
+        lonlat: [108.000, 47.800]
+      - kind: event
+        side: oi
+        name: Karakorum
+        date: "1413"
+        text: Besieged by Mahmud’s Oirats in 1413.
+        lonlat: [102.834, 47.202]
+    arrows:
+      - side: oi
+        label: Mahmud
+        phase: 1
+        via: [[102.834, 47.202], [104.500, 47.600], [106.500, 47.900], [107.800, 47.850]]
+      - side: mg
+        label: Yongle Emperor
+        phase: 1
+        via: [[116.397, 39.909], [115.060, 40.610], [113.000, 44.000], [110.500, 46.800], [108.200, 47.800]]
+  - title: The last three campaigns
+    date: 1422–1424
+    when: "1422-04-12"
+    borders: "1424-08-12"
+    countries: [cn, mn]
+    body:
+      - "Arughtai stopped sending tribute in 1421, and in 1422 he overran the frontier fortress of Xinghe and brought the Uriankhai under his control. On 12 April 1422 the emperor marched out with one of the largest armies China had sent into the steppe: 235,146 men, 340,000 donkeys, 117,573 carts and 370,000 dan of grain. Arughtai, camped near Dolon Nor, retreated into the steppe, and the Ming army destroyed his camps and fell on three Uriankhai tribes that had played no part in the raids. The army was back on 23 September. The minister of war, Fang Bin, who had opposed the expedition, killed himself, and the minister of revenue, Xia Yuanji, was imprisoned for the same reason."
+      - "In August 1423 the emperor set out again by Xinghe and Wanquan. Arughtai again withdrew, and the Eastern Mongol commander Esen Tügel came over to the Ming. In April 1424 he made a fifth expedition, by Tumu to Kaiping, the old Shangdu; Arughtai again could not be found, and the emperor, judging that his army had gone far enough, turned back. He fell ill on the march and died on 12 August 1424 at Yumuchuan, in what is now Duolun County."
+      - "The campaigns had cost enormous sums and won no decisive victory. His successors gave them up; the Ming abandoned Kaiping in 1430 and the Great Wall line became the frontier. In the following years the Oirats rebuilt their power under Toghon and his son Esen, and the next Ming expedition into the steppe, in 1449, ended at Tumu."
+    facts:
+      - [Third campaign, "12 April – 23 September 1422, 235,146 men"]
+      - [Fourth campaign, "August – December 1423"]
+      - [Fifth campaign, "April – August 1424"]
+      - [Death of the Yongle Emperor, "12 August 1424, at Yumuchuan"]
+    markers:
+      - kind: taken
+        side: em
+        name: Xinghe
+        date: "1422"
+        text: The frontier fortress north of the Wall, overrun by Arughtai.
+        lonlat: [114.700, 41.160]
+        lp: l
+      - kind: event
+        side: mg
+        name: Kaiping (Shangdu)
+        date: "1424"
+        text: The farthest point of the fifth campaign. The Ming garrison was withdrawn in 1430.
+        lonlat: [116.179, 42.360]
+      - kind: event
+        side: mg
+        name: Yumuchuan
+        date: 12 August 1424
+        text: The Yongle Emperor died here on the march home, in what is now Duolun County. The site is approximate.
+        lonlat: [116.400, 42.300]
+        lp: b
+    arrows:
+      - side: em
+        label: Arughtai
+        phase: 1
+        via: [[114.000, 43.500], [114.400, 42.300], [114.680, 41.200]]
+      - side: mg
+        label: Yongle Emperor, 1422
+        phase: 2
+        via: [[116.397, 39.909], [115.060, 40.610], [115.900, 41.700], [116.400, 42.700], [117.000, 43.500]]

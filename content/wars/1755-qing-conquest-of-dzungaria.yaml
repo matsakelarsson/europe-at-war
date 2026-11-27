@@ -1,0 +1,307 @@
+id: qing-conquest-of-dzungaria
+name: Qing conquest of the Dzungar Khanate
+start: "1755-03"
+end: "1758"
+tier: A
+summary: "The campaigns in which the Qing empire destroyed the Dzungar Khanate, the last great nomad state of Inner Asia, and most of the Dzungar people with it. After the death of Galdan Tseren in 1745 the khanate broke up in succession wars, and in 1754 the defeated prince Amursana went over to the Qing. In 1755 two Qing armies, with Amursana, marched to the Ili valley almost unopposed; the khan Dawachi was captured and the khanate dissolved. When the Qianlong emperor offered Amursana only a share of the Dzungar lands, he rebelled in September 1755, and the Khalkha prince Chingünjav rose in 1756. In 1757–1758 the Qing crushed both risings, and the emperor ordered that the Dzungar men be killed. War, massacre, a smallpox epidemic, Kazakh raids and flight destroyed the Dzungars as a people: of a population put at about 600,000, most estimates of the dead range from about 420,000 to 480,000. Amursana died in Russian exile in 1757. The Qing resettled Dzungaria with soldiers and farmers from elsewhere in the empire and, after conquering the Tarim basin in 1759, called the new territory Xinjiang."
+countries: [cn, mn, kz, ru]
+sides:
+  - id: qing
+    name: Qing empire, with Khalkha and Oirat allies
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+  - id: dz
+    name: Dzungar Khanate (Dawachi), then Amursana and the Oirat rebels
+    polities: [dzungar-khanate]
+    ink: brown
+    moves: Dzungar and Oirat moves
+    success: Dzungar or Oirat success
+  - id: kh
+    name: Chingünjav’s Khalkha rising
+    polities: [khalkha]
+    ink: navy
+    moves: Khalkha rebel moves
+    success: Khalkha rebel success
+  - id: kz
+    name: Kazakhs (Ablai Khan)
+    polities: [kazakh-khanate]
+    ink: teal
+    moves: Kazakh moves
+    success: Kazakh success
+notes:
+  - "Most dates are converted from the Chinese lunar calendar and differ by a few weeks between sources (the Qing entry into Ili is dated May or June 1755)."
+  - "The destruction of the Dzungars is widely described by historians as a genocide; Mark Levene called it “arguably the eighteenth century genocide par excellence”, and Peter Perdue and Michael Clarke describe the extermination of the Dzungars as a people. Others ask how far the deaths were planned rather than caused by epidemic and war, and Chinese official histories present the campaigns as the unification of the north-west and the suppression of rebellion. The population figures come from the Qing scholar Wei Yuan (1794–1857) and are estimates."
+  - The Oirats (western Mongols) included the Choros (the ruling Dzungar clan), the Dörbet, the Khoit and the Khoshut; the Torghuts had moved to the Volga in the 1630s and returned in 1771.
+  - The Kazakh side of these years is told in the Kazakh–Dzungar wars, and the revolt of the Altishahr Khojas in the Tarim basin (1757–1759) has its own entry.
+sources:
+  - title: Dzungar–Qing Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dzungar%E2%80%93Qing_Wars
+  - title: Dzungar genocide (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dzungar_genocide
+  - title: Amursana (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Amursana
+  - title: Chingünjav (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ching%C3%BCnjav
+  - title: Ten Great Campaigns (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ten_Great_Campaigns
+  - title: "China: the Qing empire (Britannica)"
+    url: https://www.britannica.com/place/China/The-Qing-empire
+  - title: History of Kazakhstan (Britannica)
+    url: https://www.britannica.com/topic/history-of-Kazakhstan
+  - title: Chronology of the Qianlong battle prints (National Palace Museum, Taipei)
+    url: https://theme.npm.edu.tw/etching/year_en.html
+  - title: Xinjiang under Qing rule (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Xinjiang_under_Qing_rule
+  - title: Huiyuan, Xinjiang (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Huiyuan,_Xinjiang
+steps:
+  - title: The Dzungar succession wars
+    date: 1745–1754
+    when: "1754"
+    borders: "1754-12-01"
+    countries: [cn, mn, kz]
+    body:
+      - Galdan Tseren, who had ruled the Dzungars since 1727 and made peace with the Qing in 1739, died in 1745. His young son Tsewang Dorji Namjal was blinded and deposed in 1750 by his half-brother Lama Dorji, who was in turn overthrown and killed in the winter of 1752–1753 by two nobles who had taken refuge among the Kazakhs, Dawachi, a grandson of the general Tseren Dondub, and his ally Amursana, a prince of the Khoit. Dawachi became khan, but the two soon fell out.
+      - The fighting drove whole Oirat groups to seek Qing protection. In 1753 the Dörbet under their three chiefs named Tseren crossed into Qing territory, and in the summer of 1754 Amursana, beaten by Dawachi, followed with about 5,000 fighting men and 20,000 women and children. The Qianlong emperor received him at his summer palace at Chengde late in 1754 and decided, against the advice of many of his officials, to put an end to the Dzungar state.
+    facts:
+      - [Death of Galdan Tseren, "1745"]
+      - [Dawachi becomes khan, "1753"]
+      - [Amursana goes over to the Qing, "summer 1754"]
+    markers:
+      - kind: capital
+        side: dz
+        name: Ili
+        date: 1745–1754
+        text: Centre of the Dzungar Khanate, in the Ili valley near today’s Ghulja (Yining), where the succession struggles were fought out.
+        lonlat: [81.278, 43.908]
+      - kind: event
+        side: qing
+        name: Chengde
+        date: late 1754
+        text: The Qianlong emperor received Amursana at his summer palace and planned the campaign against Dawachi.
+        lonlat: [117.938, 40.987]
+      - kind: event
+        side: qing
+        name: Uliastai
+        date: "1754"
+        text: Qing frontier post in western Khalkha, where the Oirat refugees were received and the northern army gathered.
+        lonlat: [96.844, 47.742]
+    arrows:
+      - side: dz
+        label: Amursana, 1754
+        via: [[83.000, 46.700], [87.500, 47.200], [92.000, 47.600], [96.500, 47.750]]
+  - title: The march on Ili
+    date: March – July 1755
+    when: "1755-06"
+    borders: "1755-07-15"
+    countries: [cn, mn]
+    body:
+      - In the spring of 1755 two Qing armies, each of about 25,000 men, set out for the Ili valley, the northern one from Uliastai under Bandi, with Amursana as one of its generals, the western one from Barkol under Yongchang and Sarel. Their supplies were planned for a short campaign. Few Dzungars fought for Dawachi; nobles and their people came over to the Qing all along the way, among them the Khoja brothers Burhan al-Din and Khoja Jahan, Afaqi leaders of the Tarim oases whom the Dzungars had held hostage at Ili. The armies met at Bortala and entered the Ili valley in early summer without a battle.
+      - Dawachi fell back with about 10,000 men to the Gädän mountain (Gedeng) south of the Ili. There, in a night raid celebrated by the Qing, the Oirat officer Ayusi, who had gone over to the Qing, rode into his camp with about two dozen horsemen, and Dawachi’s army broke up. Dawachi fled south over the Tian Shan to Uch Turfan, where the local hakim beg, Khojis, seized him and handed him to the Qing in July. He was taken to Beijing, pardoned and given a princely title.
+      - Qianlong now planned to divide the Dzungar lands among four Oirat khans, of the Choros, Dörbet, Khoit and Khoshut, under Qing supervision. Amursana, who had expected to rule all the Dzungars, was to be khan of the Khoit only. Bandi was left at Ili with a few hundred men, and the rest of the army went home.
+    facts:
+      - [Qing armies, "two of about 25,000 men each"]
+      - [Ili taken, "May–June 1755, without a battle"]
+      - [Dawachi captured, "July 1755, at Uch Turfan"]
+    markers:
+      - kind: taken
+        side: qing
+        name: Ili
+        date: May – June 1755
+        text: Entered by the Qing armies without a battle. The Dzungar nobles submitted one after another.
+        lonlat: [81.278, 43.908]
+      - kind: battle
+        side: qing
+        name: Gädän mountain (Gedeng)
+        date: "1755"
+        text: Ayusi’s night raid scattered Dawachi’s last army. Qianlong later set up a stele on the mountain to commemorate the victory.
+        lonlat: [80.420, 43.120]
+      - kind: event
+        side: qing
+        name: Uch Turfan
+        date: July 1755
+        text: The local ruler Khojis seized the fleeing Dawachi and handed him over to the Qing.
+        lonlat: [79.223, 41.214]
+      - kind: event
+        side: qing
+        name: Bortala
+        date: "1755"
+        text: The northern and western Qing armies joined here before entering the Ili valley.
+        lonlat: [82.051, 44.854]
+      - kind: event
+        side: qing
+        name: Barkol
+        date: spring 1755
+        text: Starting point of the western army under Yongchang and Sarel.
+        lonlat: [93.017, 43.599]
+    arrows:
+      - side: qing
+        label: Bandi and Amursana
+        phase: 1
+        via: [[96.844, 47.742], [92.000, 47.200], [87.500, 46.500], [84.000, 45.500], [82.200, 44.900]]
+      - side: qing
+        label: Yongchang and Sarel
+        phase: 1
+        via: [[93.017, 43.599], [89.500, 44.000], [86.000, 44.400], [83.500, 44.800], [82.300, 44.850]]
+      - side: qing
+        phase: 2
+        via: [[82.051, 44.700], [81.700, 44.300], [81.350, 43.950]]
+      - side: dz
+        label: Dawachi
+        phase: 3
+        via: [[80.420, 43.120], [80.400, 42.400], [79.700, 41.700], [79.250, 41.250]]
+    areas:
+      - style: occupied
+        side: qing
+        label: Under Qing control, summer 1755
+        atoms: [CN-XJ~dzungaria, CN-XJ~ili, CN-XJ~turfan]
+  - title: Amursana and Chingünjav
+    date: September 1755 – January 1757
+    when: "1755-09-24"
+    borders: "1756-06-01"
+    countries: [cn, mn, kz]
+    body:
+      - On 24 September 1755 Amursana slipped away from his escort on the way to an audience at Chengde, returned to the Tarbagatai and called the Oirats to rise. Many did. At Ili, Bandi and his small force were surrounded; on 4 October Bandi and his colleague Ebilun took their own lives. The Qianlong emperor, who had been warned against trusting Amursana, punished the officials who had let him go.
+      - In the spring of 1756 a new Qing army retook Ili, and Amursana fled to the Kazakhs, whose khan Ablai refused to hand him over. That summer the Khalkha prince Chingünjav, a descendant of Chinggis Khan who had plotted with Amursana and was alarmed by the execution of the Khalkha noble who had commanded Amursana’s escort, left his post in the Uriankhai with his men and sent the emperor a list of grievances. Unrest spread across Khalkha; Qing posts were attacked, Chinese merchants robbed and the relay stations across Mongolia disrupted for months. But the Jebtsundamba Khutugtu and the other great nobles did not join him, and he never had more than one or two thousand men. Deserted by most of them, he was captured near Khankh at the northern end of Lake Khövsgöl in January 1757 without a battle, and executed in Beijing on 11 March 1757 with almost all his family.
+      - In December 1756 Oirat groups who had submitted rose again, seized Ürümqi and forced the Qing general Zhaohui to fall back from Ili to Barkol.
+    facts:
+      - [Amursana escapes, "24 September 1755"]
+      - [Death of Bandi at Ili, "4 October 1755"]
+      - [Ili retaken, "spring 1756"]
+      - [Chingünjav’s rising, "summer 1756 – January 1757"]
+      - [Chingünjav executed, "11 March 1757, Beijing"]
+    markers:
+      - kind: event
+        side: dz
+        name: Tarbagatai
+        date: September 1755
+        text: Amursana returned to his pastures here after escaping from his escort, and raised the Oirats against the Qing.
+        lonlat: [82.987, 46.752]
+      - kind: taken
+        side: dz
+        name: Ili
+        date: October 1755
+        text: Bandi’s small garrison was surrounded; Bandi and Ebilun took their own lives. The Qing retook the valley in the spring of 1756.
+        lonlat: [81.278, 43.908]
+      - kind: event
+        side: qing
+        name: Khankh (Wang Tolgoi)
+        date: January 1757
+        text: Chingünjav was captured here with about fifty remaining followers, and executed in Beijing in March.
+        lonlat: [100.690, 51.500]
+      - kind: taken
+        side: dz
+        name: Ürümqi
+        date: December 1756
+        text: Seized by Oirat rebels; Zhaohui withdrew from Ili to Barkol.
+        lonlat: [87.612, 43.822]
+    arrows:
+      - side: dz
+        label: Amursana
+        phase: 1
+        via: [[82.987, 46.752], [80.500, 46.300], [77.500, 45.500], [74.500, 44.700]]
+      - side: kh
+        label: Chingünjav
+        phase: 1
+        via: [[96.900, 47.900], [98.000, 49.200], [99.400, 50.800], [100.600, 51.450]]
+    areas:
+      - style: contested
+        side: dz
+        label: Oirat rising against the Qing, 1755–1757
+        atoms: [CN-XJ~dzungaria, CN-XJ~ili, CN-XJ~turfan]
+      - style: contested
+        side: kh
+        label: Chingünjav’s rising, 1756
+        atoms: [MN-041, MN-057, MN-046]
+  - title: The destruction of the Dzungars
+    date: 1757–1758
+    when: "1757-06"
+    borders: "1758-06-01"
+    countries: [cn, mn, kz, ru]
+    body:
+      - In 1757 the Qing sent fresh armies under Zhaohui and the Khalkha prince Cenggunjab. Amursana returned to Dzungaria, was beaten again and fled once more to the Kazakhs; Ablai Khan then made his peace with the Qing and sent tribute. In July Amursana crossed into Russian territory at Semipalatinsk on the Irtysh. He died of smallpox at Tobolsk on 21 September 1757, and the Russians refused Qing demands for his body.
+      - The Qianlong emperor had decided that the Dzungars could not be trusted to submit again. His edicts ordered his generals to show no mercy, to kill the young and strong men, and to give the women, children and old people to Qing soldiers and allies as servants; commanders were rewarded or punished according to their zeal. Qing troops and their Khalkha and Oirat auxiliaries hunted down Dzungar groups across Dzungaria in 1757 and 1758, while a smallpox epidemic spread through the camps. Kazakh and Kyrgyz raiders, and Muslims of the Tarim oases, took many Dzungars captive.
+      - The Qing scholar Wei Yuan, writing in the 1840s, estimated that of about 600,000 Dzungars in 200,000 households, some four in ten died of smallpox, two in ten fled to Russia or the Kazakhs and three in ten were killed by the army. Modern estimates of the dead range from about 420,000 to 480,000, some 70 to 80 per cent of the population, with higher figures in some works. Survivors were scattered among the Kazakhs and in Russia, or enrolled in Qing banners; the name Dzungar all but disappeared.
+    facts:
+      - [Death of Amursana, "21 September 1757, Tobolsk"]
+      - [Dzungar population before 1755, "about 600,000 (Wei Yuan)"]
+      - [Estimated dead, "about 420,000 to 480,000 (Perdue, Clarke)"]
+    markers:
+      - kind: event
+        side: dz
+        name: Semipalatinsk
+        date: July 1757
+        text: Amursana crossed into Russian territory at this fort on the Irtysh and asked for asylum.
+        lonlat: [80.267, 50.433]
+      - kind: event
+        side: dz
+        name: Tobolsk
+        date: 21 September 1757
+        text: Amursana died here of smallpox. The Russians refused to hand over his body.
+        lonlat: [68.267, 58.200]
+      - kind: event
+        side: qing
+        name: Ili
+        date: 1757–1758
+        text: Centre of the Qing campaigns against the remaining Dzungar groups.
+        lonlat: [81.278, 43.908]
+    arrows:
+      - side: qing
+        label: Zhaohui
+        phase: 1
+        via: [[93.017, 43.599], [89.000, 43.900], [85.000, 44.300], [81.500, 43.950]]
+      - side: dz
+        label: Amursana
+        phase: 2
+        via: [[82.900, 46.700], [82.000, 48.500], [80.500, 50.300]]
+    areas:
+      - style: contested
+        side: qing
+        label: Dzungar lands hunted through by Qing troops, 1757–1758
+        atoms: [CN-XJ~dzungaria, CN-XJ~ili, CN-XJ~turfan]
+  - title: Xinjiang
+    date: 1758–1771
+    when: "1760"
+    borders: "1760-01-01"
+    countries: [cn, mn, kz, ru]
+    body:
+      - Dzungaria was left nearly empty. After the conquest of the Tarim basin in 1759 the Qing named the whole territory Xinjiang, the “new frontier”, and in 1762 placed it under a military governor, the General of Ili, who from 1763 had his seat at the new fortress city of Huiyuan in the Ili valley. Western Mongolia around Khovd and the Tannu Uriankhai (today’s Tuva) were also taken into the empire.
+      - To fill the land and guard the frontier the Qing brought in Manchu, Xibe, Solon, Chahar and Oirat soldiers with their families; the Xibe, who arrived from Manchuria in 1765, still live south of the Ili. Han and Hui farmers, convicts and merchants settled around Ürümqi and Barkol (James Millward counts about 155,000 Han settlers on state farms between 1760 and 1830), and Turkic Muslim farmers from the Tarim, later called Taranchi, were moved to the Ili valley. The Kazakhs moved into the western pastures as Qing tributaries. In 1771 the Torghuts, Oirats who had lived on the Volga since the 1630s, returned to Dzungaria and were settled under Qing rule.
+      - The Qianlong emperor counted the war among his Ten Great Campaigns, commemorated it with temples at Chengde and with a set of battle engravings made in Paris from paintings by the Jesuit artists at his court.
+    facts:
+      - [General of Ili, "from 1762"]
+      - [Xibe arrive in the Ili valley, "1765"]
+      - [Return of the Torghuts, "1771"]
+    markers:
+      - kind: capital
+        side: qing
+        name: Huiyuan
+        date: from 1763
+        text: Seat of the General of Ili, the military governor of Xinjiang, and the largest of the nine Qing towns in the Ili valley.
+        lonlat: [80.907, 43.992]
+      - kind: event
+        side: qing
+        name: Chabchal (Qapqal)
+        date: "1765"
+        text: The Xibe soldiers and their families, sent from Manchuria in 1764, settled here south of the Ili.
+        lonlat: [81.151, 43.841]
+        lp: b
+      - kind: event
+        side: qing
+        name: Ürümqi
+        date: from 1760s
+        text: Centre of Han and Hui farming settlement in Dzungaria.
+        lonlat: [87.612, 43.822]
+      - kind: event
+        side: qing
+        name: Khovd
+        date: from 1760s
+        text: Qing garrison town for western Mongolia.
+        lonlat: [91.641, 48.004]
+    areas:
+      - style: gained
+        side: qing
+        label: Former Dzungar lands under the Qing
+        atoms: [CN-XJ~dzungaria, CN-XJ~ili, CN-XJ~turfan, MN-071, MN-043, MN-046, RU-TY]

@@ -1,0 +1,375 @@
+id: boxer-rebellion
+name: Boxer Rebellion
+start: "1899-10"
+end: "1901-09-07"
+tier: A
+summary: "An anti-foreign and anti-Christian rising in North China, and the war it led to between the Qing court and eight foreign powers. The Boxers, the Yihetuan or “Militia United in Righteousness”, grew among villagers in Shandong and Zhili hit by drought, floods and the German seizure of Jiaozhou Bay; practising martial arts and rituals they believed made them invulnerable, they attacked missionaries, Chinese Christians, railways and telegraphs. In June 1900 they poured into Beijing and Tianjin. When foreign troops seized the Dagu forts, the Empress Dowager Cixi declared war on the powers, and Qing troops and Boxers besieged the foreign legations in Beijing for 55 days. An international army of about 20,000, mostly Japanese, Russian, British and American, took Tianjin and relieved Beijing on 14 August 1900; the court fled to Xi’an, and foreign troops looted the capital and sent punitive columns through Zhili while Russia occupied Manchuria. The Boxer Protocol of September 1901 imposed an indemnity of 450 million taels. About 32,000 Chinese Christians and some 200 foreign missionaries were killed, and estimates of the total dead are around 100,000."
+countries: [cn, jp, ru, gb, us, fr, de, it, at]
+sides:
+  - id: allies
+    name: Eight-Nation Alliance
+    polities: [japan, russia, united-kingdom, united-states, france, germany, italy, austria-hungary]
+    ink: blue
+    moves: Allied moves
+    success: Allied success
+  - id: boxers
+    name: Boxers (Yihetuan)
+    polities: [boxers]
+    ink: red
+    moves: Boxer moves
+    success: Boxer success
+  - id: qing
+    name: Qing China (at war from 21 June 1900)
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+notes:
+  - Neither side formally declared war in the usual way. The court’s edict of 21 June 1900 was a declaration of war in all but name; the powers treated it as the act of a faction and fought, as they put it, to rescue their nationals and put down a rebellion. The governors of the southern and eastern provinces, led by Li Hongzhang, Zhang Zhidong and Liu Kunyi, refused to obey the edict and agreed with the consuls to keep the peace (the Mutual Protection of the Southeast), so the war was confined to the north.
+  - The name “Boxers” was given by foreigners to the martial-arts practice of the movement. Contemporary Western accounts were written mostly by the besieged and the armies of the alliance; reports of atrocities on all sides, by Boxers, Qing troops and allied soldiers, are well documented, though some details, such as eyewitness accounts of the Taiyuan killings, have been questioned.
+  - Russia’s invasion of Manchuria in 1900, part of the same war, has its own entry.
+sources:
+  - title: Boxer Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Boxer_Rebellion
+  - title: Boxer Rebellion (Britannica)
+    url: https://www.britannica.com/event/Boxer-Rebellion
+  - title: Siege of the International Legations (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_the_International_Legations
+  - title: Seymour Expedition (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Seymour_Expedition
+  - title: Battle of Tientsin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tientsin
+  - title: Boxer Protocol (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Boxer_Protocol
+  - title: "The Boxer Rebellion: Bluejackets and Marines in China (Naval History and Heritage Command)"
+    url: https://history.navy.mil/browse-by-topic/wars-conflicts-and-operations/early-20th-century-conflicts/boxer-rebellion.html
+  - title: U.S. Marines in the Boxer Rebellion (Prologue Magazine, US National Archives)
+    url: https://www.archives.gov/publications/prologue/1999/winter/boxer-rebellion-1.html
+  - title: Mutual Protection of Southeast China (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mutual_Protection_of_Southeast_China
+steps:
+  - title: “Support the Qing, destroy the foreigners”
+    date: November 1897 – May 1900
+    when: "1899-10"
+    borders: "1899-10-18"
+    countries: [cn, de]
+    body:
+      - After China’s defeat by Japan in 1895 the powers scrambled for bases and spheres of influence. In November 1897 two German Catholic missionaries were killed in Juye county in south-western Shandong, and Germany used the killings to seize Jiaozhou Bay, with Qingdao, and to claim rights to railways and mines in the province. Russia leased Lüshun (Port Arthur) and Dalian in 1898, Britain Weihaiwei and the New Territories of Hong Kong, and France Guangzhouwan. Missionaries, protected by treaty, intervened in lawsuits for their converts, and quarrels over church property set Christian and non-Christian villagers against each other.
+      - In 1898 the Yellow River flooded western Shandong, and drought followed. Village groups that practised boxing and spirit-possession rituals, which they believed made them immune to swords and bullets, spread across the plain, attacking Christians under the slogan “Support the Qing, destroy the foreigners”. In October 1899, at the Senluo temple in Pingyuan county, Qing troops fought a band that for the first time called itself the Yihetuan, the Militia United in Righteousness. Yuan Shikai, made governor of Shandong in December 1899, suppressed the Boxers there with his modern troops, and the movement moved north into Zhili, where officials were divided over whether to crush it or use it.
+    facts:
+      - [Juye incident, "1 November 1897"]
+      - [Germany occupies Jiaozhou Bay, "14 November 1897"]
+      - [Battle of Senluo temple, "18 October 1899"]
+      - [Yuan Shikai governor of Shandong, "December 1899"]
+    markers:
+      - kind: event
+        name: Juye
+        date: 1 November 1897
+        text: Two German missionaries of the Society of the Divine Word were killed here; their colleague Georg Stenz, the target of the attack, escaped.
+        lonlat: [116.090, 35.400]
+      - kind: taken
+        side: allies
+        name: Qingdao (Jiaozhou Bay)
+        date: 14 November 1897
+        text: Occupied by German marines and leased to Germany for 99 years in March 1898.
+        lonlat: [120.320, 36.070]
+      - kind: battle
+        side: boxers
+        name: Senluo temple
+        date: 18 October 1899
+        text: A clash between Boxers led by Zhu Hongdeng and Qing troops near Pingyuan. The Boxers here first called themselves the Yihetuan.
+        lonlat: [116.420, 37.130]
+      - kind: event
+        side: qing
+        name: Jinan
+        date: December 1899
+        text: Seat of the governor of Shandong. Yuan Shikai’s suppression drove many Boxers north into Zhili.
+        lonlat: [117.000, 36.665]
+        lp: b
+    arrows:
+      - side: boxers
+        label: Spread of the Boxers
+        via: [[116.100, 35.600], [116.300, 36.700], [116.420, 37.300], [116.200, 38.200], [115.900, 39.000]]
+  - title: The Boxers in Zhili and the Seymour expedition
+    date: May – June 1900
+    when: "1900-05-28"
+    borders: "1900-06-16"
+    countries: [cn, gb, ru, jp, de, fr, us, it, at]
+    body:
+      - In May 1900 the Boxers, now tens of thousands strong, attacked Christian villages around Baoding and Laishui, ambushed and killed a Qing colonel sent against them, occupied the walled town of Zhuozhou and burned stations on the new Beijing–Baoding railway. On 31 May about 400 foreign marines and sailors arrived by train to guard the legations in Beijing. On 5 June the railway to Tianjin was cut, and in mid-June Boxers entered Beijing, burned churches and foreign houses and killed Chinese Christians. On 11 June soldiers of the Gansu troops of Dong Fuxiang, who were friendly to the Boxers, killed Sugiyama Akira, the chancellor of the Japanese legation.
+      - On 10 June the British admiral Sir Edward Seymour set out from Tianjin by train with about 2,100 sailors and marines of eight nations to reach Beijing. Boxers and then Qing troops, who had orders to stop him, blocked the line, and after fighting at Langfang on 18 June Seymour turned back. His column retreated along the river on foot, seized the Xigu arsenal outside Tianjin and held out there until a relief force arrived on 25 June. It had lost about 62 killed and 230 wounded.
+    facts:
+      - [Legation guards arrive in Beijing, "31 May 1900"]
+      - [Railway to Tianjin cut, "5 June 1900"]
+      - [Sugiyama Akira killed, "11 June 1900"]
+      - [Seymour expedition, "10–26 June 1900, about 2,100 men"]
+    markers:
+      - kind: taken
+        side: boxers
+        name: Zhuozhou
+        date: late May 1900
+        text: The Boxers occupied this walled town on the railway south-west of Beijing, and local officials did not resist.
+        lonlat: [115.970, 39.490]
+        lp: l
+      - kind: event
+        side: boxers
+        name: Fengtai
+        date: 28 May 1900
+        text: The railway station and workshops at the junction south of Beijing were burned.
+        lonlat: [116.287, 39.858]
+        lp: l
+      - kind: event
+        side: boxers
+        name: Laishui
+        date: May 1900
+        text: Boxers killed Christian villagers and ambushed a Qing force, killing its commander, Colonel Yang Futong.
+        lonlat: [115.710, 39.390]
+        lp: l
+      - kind: battle
+        side: qing
+        name: Langfang
+        date: 18 June 1900
+        text: Dong Fuxiang’s troops and Boxers attacked the Seymour column at the railway station, forcing it to retreat.
+        lonlat: [116.700, 39.520]
+      - kind: held
+        side: allies
+        name: Xigu arsenal
+        date: 22–25 June 1900
+        text: Seymour’s column took the Qing arsenal north-west of Tianjin and held it until relieved.
+        lonlat: [117.140, 39.180]
+        lp: l
+      - kind: event
+        side: qing
+        name: Beijing
+        date: 11 June 1900
+        text: Sugiyama Akira was killed near the Yongding Gate by Dong Fuxiang’s soldiers.
+        lonlat: [116.393, 39.866]
+    arrows:
+      - side: allies
+        label: Seymour
+        phase: 1
+        via: [[117.170, 39.130], [116.900, 39.330], [116.720, 39.510]]
+      - side: allies
+        phase: 2
+        via: [[116.700, 39.500], [116.950, 39.350], [117.140, 39.200]]
+    areas:
+      - style: contested
+        side: boxers
+        label: Boxer bands active, June 1900 (approximate)
+        polygon: [[115.300, 38.700], [115.600, 39.600], [116.300, 39.950], [117.300, 39.300], [117.000, 38.600], [116.000, 38.400]]
+  - title: The Dagu forts, the declaration of war and the siege of the legations
+    date: 17 June – 14 August 1900
+    when: "1900-06-17"
+    borders: "1900-06-21"
+    countries: [cn, gb, ru, jp, de, fr, us, it, at]
+    body:
+      - On 17 June an allied flotilla under the Russian admiral Yevgeny Alekseyev took the Dagu forts at the mouth of the Hai river after the Qing commander refused to hand them over; the United States did not take part. For the court, this was an act of war. On 20 June the German minister, Baron Clemens von Ketteler, was shot dead in the street by a Manchu officer on his way to the Zongli Yamen, and that afternoon Qing troops and Boxers opened fire on the Legation Quarter. On 21 June the Empress Dowager Cixi issued an edict declaring war on the foreign powers.
+      - In the Legation Quarter, south-east of the Forbidden City, 473 foreign civilians, about 409 soldiers and marines of eight nations and some 3,000 Chinese Christians held out under the British minister, Sir Claude MacDonald. A few kilometres away, about 3,200 Chinese Catholics, 43 French and Italian sailors and the priests and nuns of the Beitang (North Cathedral) under Bishop Alphonse Favier were besieged separately. The attackers burned the buildings around the British legation, including the Hanlin Academy and its library, and mined the French legation, but never made an all-out assault. Some at court, among them the commander Ronglu, held back, and a truce in mid-July let food into the legations.
+      - In the south, the governors-general Li Hongzhang, Zhang Zhidong and Liu Kunyi refused to obey the declaration of war. They agreed with the foreign consuls to protect foreigners in their provinces if the powers kept their troops out, and the Yangtze valley and the south stayed at peace.
+    facts:
+      - [Dagu forts taken, "17 June 1900"]
+      - [Ketteler killed, "20 June 1900"]
+      - [Declaration of war, "21 June 1900"]
+      - [Siege of the legations, "20 June – 14 August 1900 (55 days)"]
+      - [Besieged in the Legation Quarter, "about 900 foreigners and 3,000 Chinese Christians"]
+    markers:
+      - kind: taken
+        side: allies
+        name: Dagu forts
+        date: 17 June 1900
+        text: Stormed by British, Russian, German, Japanese, French, Italian and Austrian landing parties after a night bombardment.
+        lonlat: [117.705, 38.977]
+      - kind: siege
+        side: allies
+        name: Legation Quarter
+        date: 20 June – 14 August 1900
+        text: The foreign legations of Beijing, held by a mixed force of guards and volunteers behind improvised barricades.
+        lonlat: [116.403, 39.901]
+        lp: b
+      - kind: siege
+        side: allies
+        name: Beitang
+        date: 15 June – 16 August 1900
+        text: The Catholic North Cathedral, defended by a handful of sailors and its Chinese congregation; hundreds of those inside died, many of hunger.
+        lonlat: [116.374, 39.926]
+        lp: l
+      - kind: event
+        side: qing
+        name: Forbidden City
+        date: 21 June 1900
+        text: The court issued its edict of war on the powers after a series of councils in which several ministers who argued against it were later executed.
+        lonlat: [116.397, 39.917]
+        lp: t
+    arrows:
+      - side: allies
+        label: Alekseyev
+        via: [[118.200, 38.850], [117.850, 38.950], [117.720, 38.975]]
+  - title: Tianjin and the killing of Christians
+    date: June – July 1900
+    when: "1900-07-13"
+    borders: "1900-07-14"
+    countries: [cn, gb, ru, jp, de, fr, us, it, at]
+    body:
+      - From mid-June the foreign concessions of Tianjin, defended by a few thousand allied troops, were shelled and attacked by Qing troops and Boxers. Allied reinforcements landed at Dagu, and on 9 July the Qing general Nie Shicheng, who had fought the Boxers before he was ordered to fight the foreigners, was killed. On 13–14 July several thousand Japanese, Russian, British, American, French and Austrian troops stormed the walled Chinese city of Tianjin; the Americans and Japanese lost heavily in the assault. The city was looted and many civilians were killed.
+      - Across North China and in Inner Mongolia, Boxers and some officials killed missionaries and, in far greater numbers, Chinese Christians, both Catholic and Protestant. The worst killings were in Shanxi, whose governor Yuxian had 44 foreign men, women and children, mostly missionaries and their families, put to death in Taiyuan on 9 July, and in Zhili. In all about 32,000 Chinese Christians and some 200 foreign missionaries were killed. Many people suspected of Boxer sympathies were in turn killed by allied troops and Qing officials.
+    facts:
+      - [Battle of Tianjin, "13–14 July 1900, allied victory"]
+      - [Taiyuan killings, "9 July 1900, 44 foreigners"]
+      - [Christians killed, "about 32,000 Chinese and some 200 foreign missionaries"]
+    markers:
+      - kind: taken
+        side: allies
+        name: Tianjin
+        date: 14 July 1900
+        text: The walled city was stormed after the south gate was blown in. Its fall opened the way to Beijing.
+        lonlat: [117.170, 39.140]
+        lp: l
+      - kind: held
+        side: allies
+        name: Tianjin concessions
+        date: June – July 1900
+        text: The foreign settlements along the Hai river, besieged and shelled for a month.
+        lonlat: [117.210, 39.115]
+        lp: b
+      - kind: event
+        side: qing
+        name: Taiyuan
+        date: 9 July 1900
+        text: The governor of Shanxi, Yuxian, had 44 foreigners and a number of Chinese Christians put to death at his yamen.
+        lonlat: [112.550, 37.870]
+      - kind: event
+        side: boxers
+        name: Baoding
+        date: 30 June – 1 July 1900
+        text: American Presbyterian and Congregational missionaries and their children were killed here, together with Chinese Christians.
+        lonlat: [115.465, 38.875]
+    arrows:
+      - side: allies
+        via: [[117.700, 39.000], [117.450, 39.060], [117.220, 39.120]]
+  - title: The relief of Beijing
+    date: 4 – 16 August 1900
+    when: "1900-08-04"
+    borders: "1900-08-14"
+    countries: [cn, gb, ru, jp, de, fr, us, it, at]
+    body:
+      - On 4 August a relief army of about 20,000 men left Tianjin, its largest contingents Japanese (about 10,000), Russian, British (mostly Indian troops) and American, with smaller French, Austrian and Italian detachments; the German reinforcements had not yet arrived. It beat Qing forces at Beicang on 5 August and Yangcun on 6 August. The Qing commander Li Bingheng killed himself after his defeat, and the march to Tongzhou met little resistance.
+      - On 14 August the allies attacked the gates of Beijing. Russian and Japanese troops fought their way in through the eastern gates, and British Indian troops, entering through a water gate under the wall, were first to reach the Legation Quarter that afternoon. The Beitang was relieved on 16 August. Early on 15 August the Empress Dowager and the Guangxu emperor fled in disguise, travelling by way of Taiyuan to Xi’an. The allied troops, and many civilians and missionaries, looted the city for days; the British held public auctions of loot.
+    facts:
+      - [Relief army, "about 20,000 men"]
+      - [Battle of Beicang, "5 August 1900"]
+      - [Battle of Yangcun, "6 August 1900"]
+      - [Beijing relieved, "14 August 1900"]
+    markers:
+      - kind: battle
+        side: allies
+        name: Beicang
+        date: 5 August 1900
+        text: Japanese troops took the Qing entrenchments astride the river north of Tianjin.
+        lonlat: [117.140, 39.225]
+        lp: l
+      - kind: battle
+        side: allies
+        name: Yangcun
+        date: 6 August 1900
+        text: Russian, American and British troops broke the Qing line at the railway bridge.
+        lonlat: [117.050, 39.380]
+        lp: l
+      - kind: event
+        side: allies
+        name: Tongzhou
+        date: 12 August 1900
+        text: The allies’ last halt before Beijing; the town was abandoned by its defenders.
+        lonlat: [116.660, 39.910]
+      - kind: taken
+        side: allies
+        name: Beijing
+        date: 14 August 1900
+        text: The allied armies broke into the city; British Indian troops reached the legations first.
+        lonlat: [116.403, 39.901]
+        lp: b
+      - kind: event
+        side: qing
+        name: Xi’an
+        date: October 1900
+        text: The court reached Xi’an after two months on the road and stayed there until the peace.
+        lonlat: [108.940, 34.260]
+    arrows:
+      - side: allies
+        label: Relief army
+        phase: 1
+        via: [[117.170, 39.150], [117.140, 39.230], [117.050, 39.380], [116.800, 39.700], [116.660, 39.900]]
+      - side: allies
+        phase: 2
+        via: [[116.660, 39.900], [116.500, 39.905], [116.420, 39.902]]
+      - side: qing
+        label: Flight of the court
+        phase: 3
+        via: [[116.380, 39.930], [115.000, 40.300], [112.550, 37.900], [110.400, 35.300], [108.950, 34.280]]
+  - title: Occupation and punitive expeditions
+    date: August 1900 – 1901
+    when: "1900-10"
+    borders: "1900-10-20"
+    countries: [cn, de, fr, gb, ru, jp, us, it, at]
+    body:
+      - The German field marshal Alfred von Waldersee arrived in late September 1900 as allied commander-in-chief, after the main fighting was over. Kaiser Wilhelm II had told the departing German troops to make themselves feared “as the Huns under their King Attila” had been. From the autumn of 1900 to the spring of 1901 allied columns, the German ones most often, made dozens of punitive expeditions into the Zhili countryside, to Baoding in October and, in early 1901, to the passes leading into Shanxi. Villages suspected of harbouring Boxers were burned and many people were executed without trial, often on the word of local Christians or missionaries; foreign observers and newspapers reported looting, rape and killings by troops of several nations.
+      - Allied troops occupied Beijing, Tianjin and much of Zhili, the Shanhaiguan forts and the railway to the sea, and divided Beijing into national sectors. In Manchuria Russia used the attacks on its railway to occupy the whole region. Yuan Shikai’s troops, and Qing officials anxious to make peace, crushed the remaining Boxer bands in Shandong and Zhili. Peace talks were led for the court by Li Hongzhang and Prince Qing.
+    facts:
+      - [Waldersee arrives, "late September 1900"]
+      - [Baoding expedition, "October 1900"]
+    markers:
+      - kind: taken
+        side: allies
+        name: Baoding
+        date: October 1900
+        text: Occupied by a British, French, German and Italian column; several provincial officials were tried by an allied court and beheaded for the killings of missionaries.
+        lonlat: [115.465, 38.875]
+      - kind: taken
+        side: allies
+        name: Shanhaiguan
+        date: October 1900
+        text: The forts where the Great Wall meets the sea, occupied by allied troops.
+        lonlat: [119.753, 40.000]
+      - kind: event
+        side: allies
+        name: Beijing
+        date: 1900–1901
+        text: Divided into sectors under the different allied armies. Waldersee made his headquarters in the imperial palace complex.
+        lonlat: [116.397, 39.917]
+        lp: b
+    arrows:
+      - side: allies
+        label: Punitive columns
+        phase: 1
+        via: [[116.300, 39.850], [115.900, 39.400], [115.465, 38.900]]
+      - side: allies
+        phase: 1
+        via: [[117.300, 39.250], [118.200, 39.600], [119.000, 39.850], [119.720, 40.000]]
+    areas:
+      - style: occupied
+        side: allies
+        label: Occupied by the allied armies, 1900–1901 (approximate)
+        atoms: [CN-BJ, CN-TJ, CN-HE~yan]
+  - title: The Boxer Protocol
+    date: 7 September 1901
+    when: "1901-09-07"
+    borders: "1901-09-07"
+    countries: [cn, gb, ru, jp, de, fr, us, it, at]
+    body:
+      - The Boxer Protocol was signed in Beijing on 7 September 1901 by China and eleven foreign states. China was to pay an indemnity of 450 million taels of silver, about one tael for each of its people, over 39 years at 4 per cent interest, nearly 1,000 million taels in all, secured on its customs and salt revenues. The forts at Dagu and between Beijing and the sea were to be razed, foreign troops could be stationed in the Legation Quarter, which was closed to Chinese residents, and along the railway to the sea, and imports of arms were banned for two years. Prince Duan (Zaiyi), the patron of the Boxers, was exiled, and other officials, among them Yuxian, were executed or ordered to kill themselves. Prince Chun went to Berlin to apologise for Ketteler’s death.
+      - Most foreign troops left Beijing in September 1901, and the court returned in January 1902. The defeat discredited the conservatives at court and led to the late Qing reforms, but also to growing nationalist and revolutionary opposition. The United States and later other powers returned part of their share of the indemnity, the Americans using theirs for scholarships and to found what became Tsinghua University. Estimates of the total dead of the rising and the war are around 100,000, most of them Chinese civilians.
+    facts:
+      - [Boxer Protocol signed, "7 September 1901"]
+      - [Indemnity, "450 million taels over 39 years"]
+      - [Court returns to Beijing, "January 1902"]
+    markers:
+      - kind: treaty
+        name: Beijing
+        date: 7 September 1901
+        text: Signed by Li Hongzhang and Prince Qing with the ministers of Germany, Austria-Hungary, Belgium, Spain, the United States, France, Britain, Italy, Japan, the Netherlands and Russia.
+        lonlat: [116.403, 39.901]
+        lp: b
+      - kind: event
+        name: Dagu forts
+        date: "1901"
+        text: To be demolished under the protocol, leaving the sea approach to Beijing undefended.
+        lonlat: [117.705, 38.977]

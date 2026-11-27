@@ -1,0 +1,198 @@
+id: altan-khan-wars
+name: Altan Khan’s wars with the Ming
+start: "1529"
+end: "1571-04-21"
+tier: B
+summary: "Four decades of raiding on the northern frontier of Ming China by Altan Khan (1507/08–1582), ruler of the Tümed Mongols and leader of the right wing of the Eastern Mongols, who wanted regular trade and tribute relations with China and was repeatedly refused. His horsemen raided Shanxi, the Ordos frontier and the region of Beijing almost every year; in 1542 they plundered the country around Taiyuan, and in the autumn of 1550, in the Gengxu incident, they broke through the wall at Gubeikou and burned the suburbs of Beijing for three days while the Ming armies stayed behind the walls. Horse markets opened in 1551 were closed again within a year. Peace came in 1570–1571, after Altan’s grandson defected to the Ming: in April 1571 the Longqing Emperor named Altan Shunyi Wang (Obedient and Righteous Prince), and regular markets on the frontier kept the peace with the western Mongols for decades."
+countries: [cn, mn]
+sides:
+  - id: mg
+    name: Ming China
+    polities: [ming]
+    ink: red
+    moves: Ming moves
+    success: Ming success
+  - id: mo
+    name: Tümed and the right-wing Mongols (Altan Khan)
+    polities: [northern-yuan]
+    ink: olive
+    moves: Mongol moves
+    success: Mongol success
+notes:
+  - The Ming records date events by the Chinese lunar calendar and cyclical days; they are converted here to the Julian calendar, as in most English accounts (so the Mongols reached Beijing on 1 October 1550, the 22nd day of the 8th month of the 29th year of Jiajing). The Gengxu incident takes its name from the cyclical year 1550.
+  - Altan was not the grand khan of the Mongols, who was the Chahar khan in the east, but he was the most powerful Mongol ruler of his time. The Ming sources call him Anda and his people Dada (Tatars). Numbers of raiders and victims in the Ming records are rough.
+sources:
+  - title: Altan Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Altan_Khan
+  - title: Qiu Luan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Qiu_Luan
+  - title: Timeline of the Northern Yuan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Timeline_of_the_Northern_Yuan
+  - title: Altan (Britannica)
+    url: https://www.britannica.com/biography/Altan
+  - title: History of Ming, chapter 18, annals of the Jiajing Emperor (Chinese, Wikisource)
+    url: https://zh.wikisource.org/wiki/%E6%98%8E%E5%8F%B2/%E5%8D%B718
+  - title: History of Ming, chapter 327, the Tatars (Chinese, Wikisource)
+    url: https://zh.wikisource.org/wiki/%E6%98%8E%E5%8F%B2/%E5%8D%B7327
+steps:
+  - title: Raids and refused trade
+    date: 1529–1549
+    when: "1542-08"
+    borders: "1542-08-01"
+    countries: [cn, mn]
+    body:
+      - Dayan Khan had divided the Eastern Mongols among his sons and grandsons. His grandson Altan, born in 1507 or 1508, received the Tümed, who pastured north of the bend of the Yellow River and the Shanxi frontier, while his elder brother Gün Bilig held the Ordos. The Mongols needed grain, cloth, iron pots and tea, and wanted the official tribute and markets the Ming had allowed in the past; the Jiajing Emperor, suspicious of every Mongol approach, refused them. Altan raided the frontier from 1529 onwards, and after Gün Bilig’s death in 1542 he led the whole right wing.
+      - In the autumn of 1541 Altan sent an envoy, Shi Tianjue, to the wall at Datong to ask for tribute relations. The court refused and put a price on Altan’s head, and his horsemen came down through the Shiling Pass towards Taiyuan. When Shi Tianjue came back in the summer of 1542, the governor of Datong seized him and sent him to Beijing, where he was executed in the market. Altan answered with the largest raid yet. His army defeated the Ming at Guangwu on 4 August, plundered the suburbs of Taiyuan and went south as far as Qinzhou and Changzi before leaving by the Yanmen Pass.
+      - Raids followed almost every year, against Datong, Xuanfu, the Ordos frontier and Shaanxi. Altan asked again for trade in 1546, 1547 and 1548; one of his envoys was killed by frontier soldiers. A plan by the supreme commander Zeng Xian to drive the Mongols out of the Ordos, backed by the grand secretary Xia Yan, ended in 1548 with both men executed after the emperor changed his mind.
+    facts:
+      - [Altan’s envoy executed, "1542"]
+      - [Battle of Guangwu, "4 August 1542, Mongol victory"]
+      - [Zeng Xian and Xia Yan executed, "1548"]
+    markers:
+      - kind: event
+        side: mo
+        name: Datong
+        date: 1541–1542
+        text: Altan’s envoy Shi Tianjue came to the wall here to ask for trade. The second time he was seized and executed in Beijing.
+        lonlat: [113.300, 40.090]
+      - kind: battle
+        side: mo
+        name: Guangwu
+        date: 4 August 1542
+        text: The Mongols defeated a Ming force inside the wall south of Datong and went on towards Taiyuan.
+        lonlat: [112.930, 39.350]
+      - kind: event
+        side: mo
+        name: Taiyuan
+        date: August 1542
+        text: The suburbs of the capital of Shanxi were plundered. The raiders went south as far as Qinzhou and Changzi.
+        lonlat: [112.550, 37.870]
+      - kind: event
+        side: mo
+        name: Shiling Pass
+        date: autumn 1541
+        text: Altan’s raiders came through this pass north of Taiyuan.
+        lonlat: [112.660, 38.180]
+        lp: l
+    arrows:
+      - side: mo
+        label: Altan, 1542
+        phase: 1
+        via: [[112.900, 40.400], [112.930, 39.400], [112.700, 38.600], [112.560, 37.950]]
+      - side: mo
+        phase: 2
+        via: [[112.600, 37.700], [112.400, 37.000], [112.600, 36.300], [112.880, 36.200]]
+    areas:
+      - style: contested
+        side: mo
+        label: Pastures of the Tümed and the Ordos Mongols
+        atoms: [CN-NM~ordos]
+  - title: The Gengxu incident
+    date: July – October 1550
+    when: "1550-10-01"
+    borders: "1550-10-01"
+    countries: [cn]
+    body:
+      - In the spring of 1550 Altan moved his camp to the lake of Weining Haizi beyond Datong. On 8 July his horsemen defeated the Datong army, killing its commanders Zhang Da and Lin Chun. Their successor, Qiu Luan, chose to pay the Mongols to move along the frontier rather than fight them. Altan called up the other Mongol chiefs and came east along the Chao river, and on 26 September he attacked Gubeikou. While part of his army held the defenders’ attention at the pass, picked horsemen broke through the wall by a side route, and the Jizhou garrison fled.
+      - The Mongols plundered Huairou, besieged Shunyi and on 27 September reached Tongzhou, east of Beijing, where they burned the imperial stables and spread out across the capital region. On 1 October they were at the walls of Beijing. Qiu Luan and other commanders arrived with relief armies, but neither they nor the minister of war, Ding Ruqi, dared to attack, and the gates were kept shut while the suburbs burned. After three days and nights of plunder the Mongols withdrew on 3 October. On 6 October they turned on Qiu Luan’s pursuing army at the Baiyang Pass and routed it, and then left at their leisure through Gubeikou.
+      - The emperor had Ding Ruqi and the governor Yang Shouqian executed. While at the walls, Altan had sent a captured eunuch into the city with a letter asking for tribute relations, and in the spring of 1551 the court opened horse markets at Datong and Xuanfu. Altan’s raids soon resumed, and in the autumn of 1552 the markets were closed again; Qiu Luan, who had championed them, died in disgrace and his corpse was mutilated.
+    facts:
+      - [Datong army defeated, "8 July 1550"]
+      - [Gubeikou broken through, "26 September 1550"]
+      - [Mongols at Beijing, "1–3 October 1550"]
+      - [Horse markets, "opened spring 1551, closed autumn 1552"]
+    markers:
+      - kind: taken
+        side: mo
+        name: Gubeikou
+        date: 26 September 1550
+        text: The Mongols broke through the wall beside this pass, and the Jizhou frontier troops fled.
+        lonlat: [117.150, 40.690]
+      - kind: siege
+        side: mo
+        name: Shunyi
+        date: September 1550
+        text: Besieged by the Mongols after they plundered Huairou.
+        lonlat: [116.650, 40.130]
+        lp: r
+      - kind: event
+        side: mo
+        name: Tongzhou
+        date: 27 September 1550
+        text: The Mongols plundered the district and burned the imperial horse stables.
+        lonlat: [116.660, 39.910]
+        lp: r
+      - kind: held
+        side: mg
+        name: Beijing
+        date: 1–3 October 1550
+        text: The gates were kept shut while the Mongols burned the suburbs for three days and nights.
+        lonlat: [116.397, 39.916]
+        lp: l
+      - kind: battle
+        side: mo
+        name: Baiyang Pass
+        date: 6 October 1550
+        text: Qiu Luan’s pursuing army was routed when the Mongols suddenly turned back on it; more than a thousand men were killed or wounded.
+        lonlat: [116.100, 40.350]
+        lp: l
+      - kind: battle
+        side: mo
+        name: Datong
+        date: 8 July 1550
+        text: The Datong army was defeated and its commanders Zhang Da and Lin Chun killed.
+        lonlat: [113.300, 40.090]
+    arrows:
+      - side: mo
+        label: Altan
+        phase: 1
+        via: [[116.900, 41.500], [117.050, 41.000], [117.150, 40.700]]
+      - side: mo
+        phase: 2
+        via: [[117.100, 40.650], [116.650, 40.350], [116.660, 39.950], [116.440, 39.930]]
+      - side: mo
+        phase: 3
+        via: [[116.420, 39.960], [116.300, 40.200], [116.130, 40.340]]
+      - side: mo
+        phase: 4
+        via: [[116.200, 40.400], [116.700, 40.550], [117.130, 40.720]]
+  - title: Raids, a defection and the Longqing peace
+    date: 1551–1571
+    when: "1570-11"
+    borders: "1571-04-21"
+    countries: [cn, mn]
+    body:
+      - The raids continued for twenty years, from Liaodong to Gansu; in 1557 the Mongols besieged Datong’s Right Garrison for six months, and in 1567 they sacked Shizhou in western Shanxi, where the Ming records say tens of thousands of people were killed. Altan meanwhile built up a settled base around the old Yuan town of Fengzhou, near today’s Hohhot. Chinese deserters and refugees, many of them followers of the White Lotus sect led by Zhao Quan and Qiu Fu, farmed the land in villages called baishing (banshen, “houses”) and advised Altan in war.
+      - In the winter of 1570 Altan took for himself the bride promised to his grandson Daiching Ejei (Bahanaji in Chinese), and the young man rode to the Ming frontier with ten followers and surrendered at Datong. The governor of Datong, Fang Fengshi, and the supreme commander Wang Chonggu saw a chance for peace. They gave Daiching Ejei a Ming rank and offered to return him in exchange for Zhao Quan and the other Chinese leaders at Altan’s court. Altan handed them over, and they were executed; his grandson came home.
+      - Wang Chonggu then proposed a settlement, supported by the grand secretaries Gao Gong and Zhang Juzheng against much opposition at court. On 21 April 1571 the Longqing Emperor named Altan Shunyi Wang, gave Ming titles to his brothers, sons and nephews, and allowed yearly tribute and markets at Datong, Xuanfu and the Shanxi and Shaanxi frontiers. The first fair, in the autumn of 1571, traded more than 500 horses. Altan kept the peace and punished raiders; his town was named Guihua by the Ming. After his death in 1582 his widow, Jönggen Qatun (Sanniangzi), kept the treaty for decades, while the eastern Mongols under the Chahar khans went on raiding Liaodong.
+    facts:
+      - [Shizhou sacked, "1567"]
+      - [Daiching Ejei defects, "winter 1570"]
+      - [Altan named Shunyi Wang, "21 April 1571"]
+      - [Altan’s death, "1582"]
+    markers:
+      - kind: event
+        side: mo
+        name: Shizhou
+        date: "1567"
+        text: Sacked in a raid deep into western Shanxi. The Ming records speak of tens of thousands of dead.
+        lonlat: [111.140, 37.520]
+      - kind: capital
+        side: mo
+        name: Fengzhou (Hohhot)
+        date: 1560s
+        text: Altan’s base, with Chinese farming villages around it. The town he built here was later named Guihua by the Ming.
+        lonlat: [111.650, 40.820]
+      - kind: treaty
+        side: mg
+        name: Datong
+        date: 1570–1571
+        text: Daiching Ejei surrendered here in 1570. The exchange and the peace of 1571 were negotiated through the Datong command.
+        lonlat: [113.300, 40.090]
+        lp: b
+      - kind: event
+        side: mg
+        name: Zhangjiakou
+        date: from 1571
+        text: Market outside the wall north of Xuanfu where horses were traded for Chinese goods after the peace.
+        lonlat: [114.890, 40.830]

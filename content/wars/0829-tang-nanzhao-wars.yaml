@@ -1,0 +1,169 @@
+id: tang-nanzhao-wars
+name: Tang–Nanzhao wars
+start: "829"
+end: "875"
+tier: B
+summary: "The wars between Tang China and Nanzhao, the kingdom of the Erhai lake in Yunnan, after their alliance against Tibet broke down. In 829 the Nanzhao general Wang Cuodian invaded Xichuan (Sichuan), plundered the country around Chengdu and carried off thousands of captives before withdrawing in 830. Under King Shilong, who took the title of emperor in 859, Nanzhao attacked on two fronts. In Annan (northern Vietnam), allied with local chiefs, its armies took the capital Songping (Hanoi) in 861 and again in 863 and held the delta for three years, until the Tang general Gao Pian retook it in 864–866. In Sichuan it took Xizhou and besieged Chengdu in 869–870, and raided to the walls of Chengdu again in 874. Gao Pian, sent to Chengdu, drove the Nanzhao army back across the Dadu River in 875. The wars exhausted both states. A Tang official wrote that the conscription and the supplies they demanded had emptied the treasury and turned peasants into robbers, and the great rebellion of Huang Chao began in the same years."
+countries: [cn, vn]
+sides:
+  - id: tang
+    name: Tang China
+    polities: [tang]
+    ink: red
+    moves: Tang moves
+    success: Tang success
+  - id: nz
+    name: Nanzhao and its allies
+    polities: [dali]
+    ink: purple
+    moves: Nanzhao moves
+    success: Nanzhao success
+notes:
+  - The wars are known from the Tang histories, the Zizhi Tongjian and the Manshu of Fan Chuo, a Tang official who served in Annan in the 860s. Their numbers are large and round.
+  - Nanzhao is shown with the Dali Kingdom that later ruled the same lands. Its kingdom was called Dameng until 859 and Dali (大禮) from 859.
+sources:
+  - title: Nanzhao (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nanzhao
+  - title: Tang–Nanzhao conflicts in Annan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tang%E2%80%93Nanzhao_conflicts_in_Annan
+  - title: Siege of Songping (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Songping
+  - title: Gao Pian (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Gao_Pian
+  - title: Nanzhao (Britannica)
+    url: https://www.britannica.com/place/Nanzhao
+steps:
+  - title: Wang Cuodian before Chengdu
+    date: 829–831
+    when: "829"
+    borders: "829-12-01"
+    countries: [cn]
+    body:
+      - After Nanzhao broke with Tibet in 794 it had been a Tang ally, sending its young nobles to study in Chengdu. In 829 the regent and general Wang Cuodian took advantage of disorder in Xichuan, whose governor Du Yuanying had neglected the frontier garrisons, and marched north almost unopposed. His army took Xizhou and other border towns, reached Chengdu and plundered the surrounding country, and withdrew in 830 with thousands of captives, among them artisans and Buddhist and Daoist clergy.
+      - Wang Cuodian claimed that Nanzhao was still a loyal tributary and had only come to punish a bad governor. Relations were mended. In 831, at the request of the new governor Li Deyu, Nanzhao sent back more than 4,000 prisoners, and its envoys came to Chang’an regularly until 846.
+    facts:
+      - [Nanzhao invasion of Xichuan, "829–830"]
+      - [Prisoners returned, "more than 4,000, in 831"]
+    markers:
+      - kind: event
+        side: nz
+        name: Chengdu
+        date: 829–830
+        text: The country around the capital of Xichuan was plundered by Wang Cuodian’s army.
+        lonlat: [104.063, 30.660]
+      - kind: taken
+        side: nz
+        name: Xizhou (Xichang)
+        date: "829"
+        text: Tang frontier prefecture on the road from Nanzhao to Chengdu.
+        lonlat: [102.264, 27.894]
+        lp: l
+      - kind: capital
+        side: nz
+        name: Yangjumie (Dali)
+        date: "829"
+        text: Capital of Nanzhao on the Erhai lake.
+        lonlat: [100.160, 25.690]
+        lp: b
+    arrows:
+      - side: nz
+        label: Wang Cuodian
+        phase: 1
+        via: [[100.160, 25.690], [101.400, 26.700], [102.264, 27.894], [102.650, 29.350], [103.900, 30.500]]
+      - side: nz
+        phase: 2
+        via: [[103.900, 30.400], [102.700, 29.200], [102.200, 27.700]]
+  - title: Annan, 858–866
+    date: 858–866
+    when: "863"
+    borders: "863-03-01"
+    countries: [vn, cn]
+    body:
+      - In Annan, the Tang protectorate in the Red River delta, quarrels between the governor Li Zhuo and the local chiefs drove some of them, among them the powerful Đỗ family, into alliance with Nanzhao. Nanzhao forces attacked the capital Songping in 858; in January 861 the Đỗ family, with Nanzhao contingents, took the city, which the Tang general Li Hu retook that summer. Early in 863 a Nanzhao army of about 50,000 under Yang Sijin besieged Songping again. The defenders under Cai Xi held out for some six weeks; the city fell late in February, Cai Xi drowned trying to escape, and Nanzhao held the delta for three years, while a Tang administration in exile gathered troops and a supply fleet at Haimen on the coast. The local people, who had at first welcomed the invaders, suffered heavily from them, and many fled to the hills.
+      - In 864 the court gave the command to Gao Pian, a general known from the northern frontier. In September 865 his 5,000 men surprised a Nanzhao army scattered to gather rice in the villages, and in 866, reinforced to about 12,000, he defeated a fresh army and besieged Songping. He retook it in the autumn of 866, executing the Nanzhao commander Duan Qiuqian; the Tang histories claim 30,000 heads. Gao Pian rebuilt the city as Đại La and Annan became a military circuit, Jinghai.
+    facts:
+      - [Songping taken, "January 861 and February 863"]
+      - [Nanzhao army in 863, "about 50,000"]
+      - [Songping retaken by Gao Pian, "autumn 866"]
+    markers:
+      - kind: siege
+        side: nz
+        name: Songping (Hanoi)
+        date: January – February 863
+        text: The capital of Annan, taken by Nanzhao after the defenders under Cai Xi were worn down. Retaken by Gao Pian in 866.
+        lonlat: [105.850, 21.030]
+      - kind: held
+        side: tang
+        name: Haimen
+        date: 863–864
+        text: Base of the Tang government of Annan in exile, near today’s Hạ Long Bay.
+        lonlat: [107.000, 20.950]
+      - kind: event
+        side: nz
+        name: Yongzhou (Nanning)
+        date: "861"
+        text: Raided by Nanzhao forces in 861.
+        lonlat: [108.328, 22.817]
+    arrows:
+      - side: nz
+        label: Yang Sijin
+        phase: 1
+        via: [[103.500, 23.300], [104.500, 22.400], [105.300, 21.500], [105.800, 21.100]]
+      - side: tang
+        label: Gao Pian
+        phase: 2
+        via: [[107.000, 20.950], [106.500, 20.950], [106.100, 21.000], [105.900, 21.030]]
+    areas:
+      - style: occupied
+        side: nz
+        label: Held by Nanzhao and its local allies, 863–866
+        polygon: [[105.200, 21.600], [106.300, 21.450], [106.800, 21.000], [106.400, 20.300], [105.700, 20.250], [105.150, 20.800]]
+  - title: Chengdu besieged, and the Dadu River
+    date: 869–875
+    when: "870"
+    borders: "870-03-01"
+    countries: [cn]
+    body:
+      - Shilong turned on Sichuan in 869. The Dongman people of Xizhou, Tang allies in the wars against Tibet but badly treated by their Tang governor, opened the gates of Xizhou to him, and his army marched north to Chengdu. For more than a month it assaulted the city with ladders, battering rams and a “bamboo tank” for undermining the walls, while the defenders under Lu Dan used hooks, burning oil and molten iron. Talks broke down in mutual suspicion. In the second month of the siege a relief army under Yan Qingfu, governor of Dongchuan, arrived and defeated the besiegers, killing about 5,000, and Shilong withdrew.
+      - Nanzhao came back in the winter of 873–874, taking Qiongzhou and plundering the suburbs of Chengdu for three days, and raided Qianzhong in the east. In 875 the court sent Gao Pian to Chengdu. With 5,000 men he pursued the Nanzhao army to the Dadu River and defeated it there, and he rebuilt the city’s walls. In 877 a local force under the Yang family drove Nanzhao out of Bozhou (Zunyi), and Shilong died the same year. His successor Longshun agreed a marriage alliance with the Tang in 880, but the Huang Chao rebellion prevented it.
+    facts:
+      - [Siege of Chengdu, "869–870, over a month"]
+      - [Battle on the Dadu River, "875"]
+      - [Death of Shilong, "877"]
+    markers:
+      - kind: siege
+        side: tang
+        name: Chengdu
+        date: 869–870
+        text: Held by Lu Dan against Shilong’s army until Yan Qingfu’s relief force arrived.
+        lonlat: [104.063, 30.660]
+      - kind: taken
+        side: nz
+        name: Xizhou (Xichang)
+        date: "869"
+        text: Opened to Nanzhao by the Dongman.
+        lonlat: [102.264, 27.894]
+        lp: l
+      - kind: taken
+        side: nz
+        name: Qiongzhou
+        date: 873–874
+        text: Taken in the winter campaign of 873–874, about 70 km from Chengdu.
+        lonlat: [103.460, 30.410]
+        lp: l
+      - kind: battle
+        side: tang
+        name: Dadu River
+        date: "875"
+        text: Gao Pian caught the retreating Nanzhao army on the Dadu River and defeated it.
+        lonlat: [102.652, 29.344]
+        lp: l
+    arrows:
+      - side: nz
+        label: Shilong
+        phase: 1
+        via: [[100.160, 25.690], [101.400, 26.700], [102.264, 27.894], [102.700, 29.300], [103.950, 30.550]]
+      - side: tang
+        label: Gao Pian
+        phase: 2
+        via: [[104.000, 30.600], [103.400, 30.000], [102.700, 29.400]]

@@ -1,0 +1,387 @@
+id: dungan-revolt
+name: Dungan Revolt
+start: "1862-04"
+end: "1877-12"
+tier: A
+summary: "A series of risings of the Hui (Chinese-speaking Muslims, called Dungans in Central Asia) and other Muslims against the Qing in north-western China, also called the Tongzhi Hui Revolt. Fighting between Hui and Han militias in Shaanxi in 1862, as Taiping and Nian armies approached, turned into a war of massacres on both sides; the Hui besieged Xi’an and then fell back into Gansu, where leaders such as Ma Hualong of the Jahriyya Sufi order held much of the province. In 1864 the Muslims of Xinjiang rose too, and Qing rule there collapsed. Yakub Beg, an officer from Kokand, built a state in the Tarim Basin and took Ürümqi from the Dungans in 1870, while Russia occupied the Ili valley. From 1867 Zuo Zongtang reconquered Shaanxi and Gansu, taking Jinjibao in 1871, Hezhou and Xining in 1872 and Suzhou in 1873, with mass executions and deportations, and in 1876–1877 he retook Xinjiang. The north-west lost a large part of its population; estimates of the dead range from about 8 to 12 million, and one demographic study puts the total loss, by violence, famine, plague and flight, at about 21 million."
+countries: [cn]
+sides:
+  - id: qing
+    name: Qing China
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+  - id: hui
+    name: Hui (Dungan) rebels
+    polities: [hui-rebels]
+    ink: teal
+    moves: Hui moves
+    success: Hui success
+  - id: yb
+    name: Yakub Beg’s Kashgaria (Yettishar)
+    polities: [yettishar]
+    ink: magenta
+    moves: Moves of Yakub Beg’s forces
+    success: Success of Yakub Beg’s forces
+  - id: ili
+    name: Taranchi Sultanate of Ili
+    polities: [ili-sultanate]
+    ink: olive
+    moves: Taranchi moves
+    success: Taranchi success
+notes:
+  - The revolt was not one movement. The Hui of Shaanxi and Gansu, the Hui and Turkic-speaking Muslims (the ancestors of today’s Uyghurs) of Xinjiang, the Sufi orders and local leaders fought the Qing, and often each other; some Hui leaders, such as Ma Zhan’ao, changed sides and later served the Qing.
+  - Massacres were committed by all sides. The fighting began with killings of Han by Hui and of Hui by Han militias in Shaanxi; the Qing armies and militias later killed or deported most of the Hui of Shaanxi, and Muslim forces in Xinjiang massacred Manchu, Han and Hui garrisons and civilians. Figures for the dead are estimates from population records before and after the war.
+  - The Panthay Rebellion in Yunnan (1856–1873), Russia’s occupation of Ili (1871–1881) and the Qing reconquest of Xinjiang (1876–1878) have their own entries.
+sources:
+  - title: Dungan Revolt (1862–1877) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dungan_Revolt_(1862%E2%80%931877)
+  - title: "China: the Muslim rebellions (Britannica)"
+    url: https://www.britannica.com/place/China/Muslim-rebellions
+  - title: Zuo Zongtang (Britannica)
+    url: https://www.britannica.com/biography/Zuo-Zongtang
+  - title: Yakub Beg (Britannica)
+    url: https://www.britannica.com/biography/Yakub-Beg
+  - title: Ma Hualong (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ma_Hualong
+  - title: Yettishar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yettishar
+  - title: Bai Yanhu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bai_Yanhu
+steps:
+  - title: Shaanxi
+    date: 1862 – 1864
+    when: "1862-04"
+    borders: "1862-06"
+    countries: [cn]
+    body:
+      - The Hui of the Wei river valley in Shaanxi, some of them prosperous traders, had long quarrelled with their Han neighbours over land, water and lawsuits. In 1862, as a Taiping army and Nian bands moved into southern Shaanxi, both communities raised militias. In the spring a dispute at Shengshan in Huazhou over bamboo poles, which the Hui were buying in bulk to make spears, ended in killings, and Han militia burned Hui villages. Hui bands attacked Han villages and towns across the valley, and the violence spread from one district to the next; in many places Han militias killed whole Hui communities.
+      - By late June 1862 Hui forces had surrounded Xi’an, the provincial capital, whose own Hui quarter stayed loyal. The siege lasted more than a year, until the Manchu general Dolongga, called in from the war against the Taiping, broke it in 1863 and stormed the Hui strongholds of the valley; he was killed in 1864. Most of the Shaanxi Hui who survived fled west into Gansu with their families, organised in eighteen “battalions”. Of a Hui population once counted in millions, only a small remnant was left in Shaanxi after the war.
+    facts:
+      - [Shengshan bamboo incident, "spring 1862"]
+      - [Siege of Xi’an, "June 1862 – 1863"]
+    markers:
+      - kind: event
+        side: hui
+        name: Huazhou (Shengshan)
+        date: spring 1862
+        text: A quarrel over bamboo poles here was one of the sparks of the rising; the killings that followed spread up the Wei valley.
+        lonlat: [109.770, 34.510]
+      - kind: siege
+        side: qing
+        name: Xi’an
+        date: June 1862 – 1863
+        text: Besieged by Hui forces for more than a year; relieved by Dolongga’s army.
+        lonlat: [108.940, 34.260]
+        lp: b
+      - kind: event
+        side: hui
+        name: Dongzhiyuan
+        date: 1864–1869
+        text: On this loess plateau near Qingyang the Shaanxi Hui battalions regrouped after their flight from the Wei valley.
+        lonlat: [107.650, 35.700]
+    arrows:
+      - side: qing
+        label: Dolongga
+        phase: 1
+        via: [[111.000, 34.700], [110.000, 34.550], [109.000, 34.300]]
+      - side: hui
+        label: Flight of the Shaanxi Hui
+        phase: 2
+        via: [[109.500, 34.500], [108.700, 34.800], [107.700, 35.500], [106.700, 35.600]]
+    areas:
+      - style: contested
+        side: hui
+        label: Fighting between Hui and Han, 1862–1863
+        atoms: [CN-SN!]
+  - title: Gansu and Ningxia
+    date: 1862 – 1868
+    when: "1864"
+    borders: "1866"
+    countries: [cn]
+    body:
+      - The rising spread to Gansu, a province that then included Ningxia and the area around Xining. Ma Hualong, head of the Jahriyya, a Sufi order of the Naqshbandi tradition with a large trading network, held Jinjibao on the Yellow River in Ningxia and took Lingzhou. Ma Zhan’ao led the Hui of Hezhou (today Linxia) south-west of Lanzhou, Ma Guiyuan held the region of Xining, and Ma Wenlu took Suzhou (today Jiuquan) in the Hexi Corridor. Guyuan, Pingliang and many other towns fell, and the Qing held little more than Lanzhou and scattered forts.
+      - The Qing commanders, short of men and money while the Taiping war went on, tried to negotiate. In 1866 Ma Hualong formally submitted and was given an official title, but kept his power and his arms. The court made Zuo Zongtang, one of the generals who had beaten the Taiping, governor-general of Shaanxi and Gansu in 1866, but he first had to fight the Western Nian, who had moved into Shaanxi, and did not begin his campaign in the north-west until 1868.
+    facts:
+      - [Rising in Gansu and Ningxia, "from 1862"]
+      - [Zuo Zongtang made governor-general, "1866"]
+    markers:
+      - kind: capital
+        side: hui
+        name: Jinjibao
+        date: 1862–1871
+        text: The fortified base of Ma Hualong and the Jahriyya order on the Yellow River in Ningxia.
+        lonlat: [106.130, 37.930]
+        lp: l
+      - kind: event
+        side: hui
+        name: Hezhou (Linxia)
+        date: 1862–1872
+        text: The main centre of the Gansu Hui, led by Ma Zhan’ao of the Khufiyya order.
+        lonlat: [103.210, 35.600]
+        lp: l
+      - kind: event
+        side: hui
+        name: Xining
+        date: 1862–1872
+        text: Held by Ma Guiyuan, who also sheltered refugees from Shaanxi.
+        lonlat: [101.780, 36.620]
+        lp: l
+      - kind: taken
+        side: hui
+        name: Suzhou (Jiuquan)
+        date: "1865"
+        text: Taken by Ma Wenlu’s forces, cutting the road to Xinjiang.
+        lonlat: [98.490, 39.730]
+      - kind: held
+        side: qing
+        name: Lanzhou
+        date: 1862–1873
+        text: The provincial capital, held by the Qing throughout the revolt.
+        lonlat: [103.830, 36.060]
+    areas:
+      - style: contested
+        side: hui
+        label: Areas held by Hui forces in Gansu (approximate)
+        atoms: [CN-NX, CN-GS~longdong, CN-GS~hexi, CN-QH~xining]
+  - title: Xinjiang rises
+    date: 1864 – 1866
+    when: "1864-06-04"
+    borders: "1864-11-10"
+    countries: [cn]
+    body:
+      - News of the risings in Gansu, and rumours that the authorities planned to disarm or kill the Hui, set off revolts in Xinjiang. On the night of 3–4 June 1864 the Hui of Kucha rose and were joined by the Turkic Muslims of the town, who made a local religious leader, Rashidin Khoja, their ruler. On 26 June the Hui soldiers of the Ürümqi garrison rebelled under Tuo Ming (Daud Khalifa), who proclaimed a Muslim kingdom; the Manchu fortress there fell in October, and Manas and Wusu soon after. Yarkand rose in July, and Khotan, where the cleric Habibullah took power, soon followed.
+      - In the Ili valley, the seat of the Qing military governor of Xinjiang, Hui and Taranchis (Turkic farmers) rose on 10 November 1864. The fortress of Huining fell in April 1865 and its defenders were massacred; Huiyuan, the governor’s seat, fell in early 1866, and the governor, Mingxu, blew himself up with his family in the citadel. The Taranchis then turned on the Hui and set up a sultanate of their own under Ala Khan. In the south, Kyrgyz and Hui fighters besieged the Qing garrisons of Kashgar. By 1866 the Qing held almost nothing in Xinjiang except the eastern towns of Hami and Barkol.
+    facts:
+      - [Kucha rising, "3–4 June 1864"]
+      - [Ürümqi rising, "26 June 1864"]
+      - [Ili rising, "10 November 1864"]
+      - [Huiyuan falls, "1866"]
+    markers:
+      - kind: event
+        side: hui
+        name: Kucha
+        date: 3–4 June 1864
+        text: The first rising in Xinjiang. Its leader, Rashidin Khoja, sent armies east and west to spread the revolt.
+        lonlat: [82.960, 41.720]
+      - kind: taken
+        side: hui
+        name: Ürümqi
+        date: 26 June – 3 October 1864
+        text: The Hui garrison rose under Tuo Ming, and the Manchu fortress fell in October.
+        lonlat: [87.620, 43.800]
+      - kind: taken
+        side: ili
+        name: Huiyuan (Ili)
+        date: "1866"
+        text: The seat of the Qing military governor of Xinjiang. Its fall ended Qing rule in the north.
+        lonlat: [80.893, 44.030]
+        lp: l
+      - kind: event
+        side: hui
+        name: Yarkand
+        date: 26 July 1864
+        text: The Hui soldiers of the garrison rose and killed many of the Qing troops and officials.
+        lonlat: [77.240, 38.420]
+      - kind: event
+        side: hui
+        name: Khotan
+        date: "1864"
+        text: The cleric Habibullah took power and ruled the oasis until Yakub Beg captured it in 1867.
+        lonlat: [79.920, 37.110]
+      - kind: held
+        side: qing
+        name: Hami
+        date: 1864–1877
+        text: One of the few places in Xinjiang the Qing kept, with Barkol.
+        lonlat: [93.510, 42.830]
+    arrows:
+      - side: hui
+        phase: 1
+        via: [[82.960, 41.720], [84.500, 41.900], [86.150, 41.760], [87.500, 43.700]]
+      - side: hui
+        phase: 2
+        via: [[87.620, 43.800], [86.220, 44.300], [84.900, 44.400]]
+    areas:
+      - style: contested
+        side: hui
+        label: Muslim risings in Xinjiang, 1864–1866
+        atoms: [CN-XJ~ili, CN-XJ~dzungaria, CN-XJ~turfan, CN-XJ!, CN-XJ~kashgar, CN-XJ~khotan]
+  - title: Yakub Beg’s Kashgaria
+    date: 1865 – 1872
+    when: "1865-09"
+    borders: "1871-07"
+    countries: [cn, ru]
+    body:
+      - The rebels of Kashgar asked Kokand for help, and early in 1865 Buzurg Khan, a member of the Afaqi khoja family that had led earlier invasions, arrived with a small force commanded by Yakub Beg, a Kokandi officer. Yakub Beg took the Qing fortress of Kashgar in September 1865, pushed Buzurg aside, and in the next two years took Yarkand, Khotan, where Habibullah was killed, and Kucha. In 1870 he defeated the Hui of Ürümqi, with the help of a Han militia under Xu Xuegong, and took Turfan.
+      - His state, which he called Yettishar (the “Seven Cities”), ruled the Tarim Basin and part of the north with a Kokandi army and officials, collected heavy taxes and enforced Islamic law. Many local people resented his foreign officials, but he won recognition and arms from the Ottoman sultan, who named him emir in 1873, and trade treaties with Russia (1872) and British India (1874). In July 1871 Russia, worried that he would take the Ili valley, occupied it and ended the Taranchi sultanate there, promising to hand it back when the Qing could hold it.
+    facts:
+      - [Yakub Beg takes Kashgar, "September 1865"]
+      - [Ürümqi taken from the Hui, "1870"]
+      - [Russia occupies Ili, "July 1871"]
+    markers:
+      - kind: capital
+        side: yb
+        name: Kashgar
+        date: September 1865
+        text: Yakub Beg took the Qing fort here; its commander blew himself up. Kashgar became the capital of Yettishar.
+        lonlat: [75.990, 39.470]
+      - kind: taken
+        side: yb
+        name: Khotan
+        date: January 1867
+        text: Taken by treachery; its ruler Habibullah and many of his followers were killed.
+        lonlat: [79.920, 37.110]
+      - kind: taken
+        side: yb
+        name: Kucha
+        date: "1867"
+        text: The domain of Rashidin Khoja, conquered by Yakub Beg.
+        lonlat: [82.960, 41.720]
+      - kind: taken
+        side: yb
+        name: Ürümqi
+        date: "1870"
+        text: Taken from the Hui state of Tuo Ming, who submitted to Yakub Beg.
+        lonlat: [87.620, 43.800]
+      - kind: taken
+        name: Kulja (Ili)
+        date: July 1871
+        text: Occupied by Russian troops from Semirechye, who ended the Taranchi sultanate.
+        lonlat: [81.320, 43.920]
+        lp: l
+    arrows:
+      - side: yb
+        label: Yakub Beg
+        phase: 1
+        via: [[75.990, 39.470], [77.240, 38.420], [79.920, 37.150]]
+      - side: yb
+        phase: 2
+        via: [[76.300, 39.600], [79.000, 40.500], [82.900, 41.700], [86.100, 41.800], [87.550, 43.700]]
+    areas:
+      - style: occupied
+        side: yb
+        label: Ruled by Yakub Beg, about 1872
+        atoms: [CN-XJ!, CN-XJ~kashgar, CN-XJ~khotan, CN-XJ~turfan]
+  - title: Zuo Zongtang and Jinjibao
+    date: 1868 – 1871
+    when: "1869-09"
+    borders: "1871-01"
+    countries: [cn]
+    body:
+      - Zuo Zongtang prepared his campaign carefully. He raised loans from foreign banks through the southern provinces, set up an arsenal at Lanzhou, settled soldiers on farms to grow their own grain, and advanced only when his supplies were secure. After destroying the Western Nian in 1868 he cleared Shaanxi and the Hui battalions on the Dongzhiyuan plateau in 1869, and in the autumn of 1869 laid siege to Jinjibao.
+      - The siege lasted sixteen months. One of Zuo’s best commanders, Liu Songshan, was killed in 1870, and the Hui flooded the approaches by breaking the irrigation canals. In January 1871 Ma Hualong, out of food, surrendered to save his followers. Zuo had him and his son put to death, with some eighty of his officers; many of the people of the district were killed and thousands of Hui were deported to other parts of the province.
+    facts:
+      - [Western Nian destroyed, "1868"]
+      - [Siege of Jinjibao, "autumn 1869 – January 1871"]
+      - [Ma Hualong surrenders, "January 1871"]
+    markers:
+      - kind: siege
+        side: qing
+        name: Jinjibao
+        date: January 1871
+        text: Ma Hualong surrendered after a sixteen-month siege and was executed in March.
+        lonlat: [106.130, 37.930]
+        lp: l
+      - kind: event
+        side: qing
+        name: Lanzhou
+        date: "1871"
+        text: Zuo Zongtang set up his headquarters and an arsenal here.
+        lonlat: [103.830, 36.060]
+    arrows:
+      - side: qing
+        label: Zuo Zongtang
+        phase: 1
+        via: [[108.940, 34.300], [107.600, 35.700], [106.900, 36.700], [106.200, 37.800]]
+      - side: qing
+        label: Liu Songshan
+        phase: 1
+        via: [[109.700, 37.000], [108.000, 37.600], [106.300, 37.950]]
+    areas:
+      - style: contested
+        side: hui
+        label: Held by Hui forces, 1869–1871 (approximate)
+        atoms: [CN-NX, CN-GS~hexi, CN-QH~xining]
+  - title: Hezhou, Xining and Suzhou
+    date: 1872 – 1873
+    when: "1872-02"
+    borders: "1873-10-24"
+    countries: [cn]
+    body:
+      - In 1872 Zuo turned against Hezhou. At Taiziside in February Ma Zhan’ao’s Hui inflicted a heavy defeat on the Qing army, but then, to the surprise of both sides, he surrendered. Zuo accepted, and Ma Zhan’ao and his officers, including his son Ma Anliang, joined the Qing forces; the Hui of Hezhou were allowed to stay, and their descendants became the Muslim generals who dominated the north-west in the Republic. Liu Jintang took Xining in November 1872 after a three-month campaign; the Shaanxi refugees there were resettled in isolated parts of southern Gansu.
+      - The last stronghold in Gansu was Suzhou, held by Ma Wenlu with many Hui from Xining and Shaanxi. Zuo besieged it from September 1873 with heavy guns, and the city fell in October. Zuo had about 7,000 of its Hui put to death and moved the rest away, leaving no Hui population in the Hexi Corridor between Lanzhou and Dunhuang. Bai Yanhu, a commander of the Shaanxi Hui, escaped west into Xinjiang.
+    facts:
+      - [Battle of Taiziside, "February 1872, Hui victory"]
+      - [Ma Zhan’ao surrenders, "1872"]
+      - [Xining taken, "November 1872"]
+      - [Suzhou falls, "October 1873"]
+    markers:
+      - kind: battle
+        side: hui
+        name: Taiziside
+        date: February 1872
+        text: Ma Zhan’ao defeated the Qing army here, then submitted to Zuo and changed sides.
+        lonlat: [103.570, 35.480]
+        lp: b
+      - kind: taken
+        side: qing
+        name: Xining
+        date: November 1872
+        text: Taken by Liu Jintang. Ma Guiyuan fled and was later captured and executed.
+        lonlat: [101.780, 36.620]
+        lp: l
+      - kind: taken
+        side: qing
+        name: Suzhou (Jiuquan)
+        date: October 1873
+        text: Stormed after a long siege. Ma Wenlu and about 7,000 Hui were executed.
+        lonlat: [98.490, 39.730]
+    arrows:
+      - side: qing
+        label: Zuo Zongtang
+        phase: 1
+        via: [[103.830, 36.060], [103.600, 35.700], [103.560, 35.500]]
+      - side: qing
+        label: Liu Jintang
+        phase: 2
+        via: [[103.830, 36.100], [102.800, 36.400], [101.800, 36.600]]
+      - side: qing
+        label: Zuo Zongtang
+        phase: 3
+        via: [[103.830, 36.150], [102.600, 37.900], [100.450, 38.930], [98.550, 39.700]]
+      - side: hui
+        label: Bai Yanhu
+        phase: 3
+        via: [[98.400, 39.800], [95.800, 40.300], [93.500, 42.700], [89.200, 42.950]]
+  - title: The end of the revolt and the Dungan exodus
+    date: 1876 – 1878
+    when: "1877-12"
+    borders: "1877-12-31"
+    countries: [cn, kg, kz]
+    body:
+      - With Gansu subdued, Zuo prepared the reconquest of Xinjiang. In 1876 his armies took Ürümqi and the Hui towns north of the Tian Shan, and in 1877 they drove into the Tarim Basin, where Yakub Beg had died in May. In December 1877, as Kashgar fell, Bai Yanhu led several thousand Hui men, women and children over the snowbound passes of the Tian Shan into the Russian Empire. They and other refugees from Ili in the early 1880s settled in Semirechye and the Chüy valley, where their descendants, the Dungan people of Kyrgyzstan and Kazakhstan, still live.
+      - The revolt changed the north-west. Gansu and Shaanxi lost much of their population; the Hui survived mainly in the communities that had submitted, such as Hezhou, and in later decades their leaders, the Ma family warlords, ruled Gansu, Qinghai and Ningxia. In 1884 Xinjiang became a province of the Qing empire.
+    facts:
+      - [Bai Yanhu crosses into Russia, "December 1877"]
+      - [Xinjiang made a province, "1884"]
+    markers:
+      - kind: event
+        side: hui
+        name: Karakol (Przhevalsk)
+        date: 1877–1878
+        text: Bai Yanhu’s followers settled near here, by Lake Issyk-Kul, and in the Chüy valley; their descendants are the Dungans of Kyrgyzstan and Kazakhstan.
+        lonlat: [78.390, 42.490]
+        lp: l
+      - kind: taken
+        side: qing
+        name: Kashgar
+        date: December 1877
+        text: Taken by Liu Jintang’s troops; the fall of Yakub Beg’s capital ended the last organised resistance.
+        lonlat: [75.990, 39.470]
+        lp: b
+    arrows:
+      - side: hui
+        label: Bai Yanhu
+        via: [[76.100, 39.600], [75.900, 40.600], [76.000, 41.400], [77.500, 42.200], [78.300, 42.450]]

@@ -1,0 +1,398 @@
+id: revolt-of-the-three-feudatories
+name: Revolt of the Three Feudatories
+start: "1673-12-28"
+end: "1681-12"
+tier: A
+summary: "A civil war in southern and western China between the Kangxi Emperor of the Qing and the three Chinese generals who had conquered the south for the dynasty and ruled it as princes: Wu Sangui in Yunnan and Guizhou, Shang Kexi and his son Shang Zhixin in Guangdong, and Geng Jingzhong in Fujian. When the young emperor accepted their offers to retire in 1673 and ordered their domains abolished, Wu Sangui rose at Kunming in December 1673 and took Hunan and Sichuan within months; Geng Jingzhong in Fujian, Sun Yanling in Guangxi and Wang Fuchen in Shaanxi joined him, and Zheng Jing crossed from Taiwan to the Fujian coast. The rebels never crossed the Yangtze, and the Qing defeated them one at a time: Wang Fuchen and Geng Jingzhong surrendered in 1676 and Shang Zhixin in 1677. Wu Sangui proclaimed himself emperor of Zhou at Hengzhou in March 1678 but died that October. Qing armies, most of them Chinese Green Standard troops, retook Hunan in 1679 and Sichuan and Guizhou in 1680, and in December 1681 Kunming fell and Wu’s grandson Wu Shifan killed himself. The victory left the Kangxi Emperor master of all China except Taiwan, which the Qing took in 1683."
+countries: [cn, tw]
+sides:
+  - id: qing
+    name: Qing dynasty (the Kangxi Emperor)
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+  - id: feud
+    name: Wu Sangui’s Zhou and the feudatories
+    polities: [three-feudatories]
+    ink: red
+    moves: Moves of Wu Sangui and his allies
+    success: Success for Wu Sangui and his allies
+  - id: zheng
+    name: Kingdom of Tungning (Zheng Jing)
+    polities: [tungning]
+    ink: teal
+    moves: Zheng moves
+    success: Zheng success
+notes:
+  - "“Feudatory” (fan) translates the Chinese term for the three princely domains. Wu Sangui’s rising called for the Ming to be restored, but he did not enthrone a Ming prince, and in 1678 proclaimed his own dynasty, Zhou. Some Chinese histories call the war the Rebellion of Wu Sangui."
+  - "Army sizes are uncertain. Modern accounts give the Qing some 400,000 Green Standard soldiers and 150,000 bannermen, and Wu Sangui about 200,000 men at the start; casualty totals are not known. Dates are converted from the Chinese calendar."
+sources:
+  - title: Revolt of the Three Feudatories (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Revolt_of_the_Three_Feudatories
+  - title: 三藩之亂 (Chinese Wikipedia)
+    url: https://zh.wikipedia.org/wiki/%E4%B8%89%E8%97%A9%E4%B9%8B%E4%BA%82
+  - title: Wu Sangui (Britannica)
+    url: https://www.britannica.com/biography/Wu-Sangui
+  - title: Wu Sangui (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Wu_Sangui
+  - title: Shang Kexi (Britannica)
+    url: https://www.britannica.com/biography/Shang-Kexi
+  - title: Geng Jingzhong (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Geng_Jingzhong
+  - title: Kangxi Emperor (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kangxi_Emperor
+  - title: Zheng Jing (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Zheng_Jing
+steps:
+  - title: The princes of the south
+    date: 1673
+    when: "1673-12-28"
+    borders: "1673-12-28"
+    countries: [cn]
+    body:
+      - "The Qing had conquered southern China with the help of Ming generals who went over to them, and rewarded three of them with princely titles and the government of whole provinces. Wu Sangui, who had let the Qing through Shanhai Pass in 1644 and hunted down the last Ming emperor in Burma, held Yunnan and Guizhou; Shang Kexi held Guangdong; and Geng Jimao, followed in 1671 by his son Geng Jingzhong, held Fujian. Each had his own army, appointed his own officials and kept the taxes of his province, and the court paid huge subsidies for their armies."
+      - "In 1673 the aged Shang Kexi asked to retire to Liaodong and leave Guangdong to his son Shang Zhixin. The 19-year-old Kangxi Emperor accepted his retirement but not the succession. Wu Sangui and Geng Jingzhong then offered to retire too, expecting to be asked to stay; against the advice of most of his council, the emperor accepted and ordered all three domains abolished and the princes resettled in Manchuria."
+      - "On 28 December 1673 Wu Sangui rose at Kunming. He had the governor of Yunnan, Zhu Guozhi, killed, called on the country to drive out the Manchus and restore the Ming, and ordered his men to let their hair grow and wear Ming-style dress. The governor of Guizhou declared for him at once."
+    facts:
+      - [Shang Kexi asks to retire, "1673"]
+      - [Wu Sangui rises at Kunming, "28 December 1673"]
+      - [Wu Sangui’s army, "about 200,000 men"]
+    markers:
+      - kind: event
+        side: feud
+        name: Kunming
+        date: 28 December 1673
+        text: Wu Sangui, Prince Pingxi, rose against the Qing and had the governor of Yunnan killed.
+        lonlat: [102.712, 25.040]
+      - kind: capital
+        side: qing
+        name: Beijing
+        date: "1673"
+        text: The Kangxi Emperor decided, against most of his council, to abolish the three feudatories.
+        lonlat: [116.397, 39.917]
+      - kind: event
+        name: Guangzhou (Canton)
+        date: "1673"
+        text: Seat of Shang Kexi, Prince Pingnan, whose request to retire began the crisis.
+        lonlat: [113.264, 23.129]
+      - kind: event
+        name: Fuzhou
+        date: "1673"
+        text: Seat of Geng Jingzhong, Prince Jingnan.
+        lonlat: [119.296, 26.074]
+    areas:
+      - style: outline
+        side: feud
+        label: The three feudatories
+        atoms: [CN-YN, CN-GZ, CN-GD, CN-FJ]
+  - title: To the Yangtze
+    date: 1674
+    when: "1674-03"
+    borders: "1674-06-01"
+    countries: [cn]
+    body:
+      - "Wu Sangui’s armies marched through Guizhou into Hunan and in the first months of 1674 took Changde, Changsha, Hengzhou and Yuezhou on the Dongting Lake, while the governor and the army commander of Sichuan joined him and handed over that province. In Guangxi, Sun Yanling, the son-in-law of the late Kong Youde, killed the provincial commander and declared for Wu."
+      - "At Beijing the Kangxi Emperor had Wu’s son, Wu Yingxiong, who lived at court as a hostage, executed in April 1674. He sent Manchu princes south with banner armies, but relied above all on the Green Standard troops, Chinese soldiers under Chinese generals. The Qing held Jingzhou and Wuchang on the Yangtze, and Wu Sangui, perhaps hoping for a negotiated division of the empire, did not try to cross the river. The front settled along the Yangtze and the Dongting Lake around Yuezhou, where it stayed for almost five years."
+    facts:
+      - [Wu Sangui takes Hunan, "early 1674"]
+      - [Execution of Wu Yingxiong, "April 1674"]
+    markers:
+      - kind: taken
+        side: feud
+        name: Changsha
+        date: "1674"
+        text: Abandoned by its Qing governor as Wu Sangui’s armies advanced.
+        lonlat: [112.938, 28.228]
+      - kind: taken
+        side: feud
+        name: Yuezhou
+        date: "1674"
+        text: The town at the mouth of the Dongting Lake, Wu Sangui’s forward base on the Yangtze until 1679.
+        lonlat: [113.129, 29.357]
+      - kind: held
+        side: qing
+        name: Jingzhou
+        date: 1674–1679
+        text: The main Qing base on the middle Yangtze, facing Wu’s armies across the river.
+        lonlat: [112.240, 30.330]
+        lp: l
+      - kind: taken
+        side: feud
+        name: Changde
+        date: "1674"
+        text: Taken by Wu Sangui’s army at the start of the Hunan campaign.
+        lonlat: [111.699, 29.032]
+        lp: l
+      - kind: taken
+        side: feud
+        name: Guilin
+        date: "1674"
+        text: Sun Yanling declared for Wu Sangui here and brought Guangxi over to the rising.
+        lonlat: [110.290, 25.274]
+      - kind: event
+        side: feud
+        name: Chengdu
+        date: "1674"
+        text: The governor and army commander of Sichuan joined Wu Sangui.
+        lonlat: [104.066, 30.657]
+    arrows:
+      - side: feud
+        phase: 1
+        via: [[102.712, 25.040], [104.800, 25.900], [106.630, 26.647], [108.300, 27.200], [109.990, 27.550]]
+      - side: feud
+        phase: 2
+        via: [[109.990, 27.550], [111.000, 28.400], [111.690, 29.030]]
+      - side: feud
+        phase: 2
+        via: [[109.990, 27.550], [111.500, 27.700], [112.900, 28.180], [113.100, 29.300]]
+      - side: qing
+        label: Banner armies from Beijing
+        phase: 3
+        via: [[116.397, 39.917], [114.500, 35.700], [113.200, 32.300], [112.300, 30.400]]
+    areas:
+      - style: occupied
+        side: feud
+        label: Held by Wu Sangui and his allies, 1674
+        atoms: [CN-YN, CN-GZ, CN-HN, CN-SC!, CN-SC~jianchang, CN-CQ, CN-GX]
+  - title: Fujian, Taiwan and the sea
+    date: 1674–1677
+    when: "1674-04"
+    borders: "1676-11-01"
+    countries: [cn, tw]
+    body:
+      - "Geng Jingzhong rose at Fuzhou in April 1674, imprisoned the governor-general of Fujian and sent armies into Zhejiang and Jiangxi. He invited Zheng Jing, the son of Zheng Chenggong (Koxinga), who ruled Taiwan as the Kingdom of Tungning, to join him. Zheng Jing’s fleet occupied Xiamen and the coast, and in 1674–1676 held Quanzhou, Zhangzhou and, with the help of its commander, Chaozhou, but the two allies soon fell out over the coastal towns and fought each other."
+      - "A Qing army under the prince Giyesu cleared Zhejiang and in 1676 crossed the mountains into northern Fujian. With his army divided and Zheng Jing’s men in the south of his province, Geng Jingzhong surrendered in the autumn of 1676 and joined the Qing against Zheng. Shang Zhixin, who had seized power in Guangdong from his father and declared for Wu in early 1676, changed sides again in 1677. Zheng Jing held on to Xiamen and the Haicheng coast until 1680, when he withdrew to Taiwan."
+    facts:
+      - [Geng Jingzhong rises, "April 1674"]
+      - [Geng Jingzhong surrenders, "autumn 1676"]
+      - [Shang Zhixin returns to the Qing, "1677"]
+      - [Zheng Jing withdraws to Taiwan, "1680"]
+    markers:
+      - kind: event
+        side: feud
+        name: Fuzhou
+        date: April 1674
+        text: Geng Jingzhong rose here and imprisoned the Qing governor-general, Fan Chengmo, who was later killed.
+        lonlat: [119.296, 26.074]
+      - kind: taken
+        side: zheng
+        name: Xiamen
+        date: "1674"
+        text: Zheng Jing’s base on the mainland coast until 1680.
+        lonlat: [118.090, 24.480]
+      - kind: taken
+        side: zheng
+        name: Quanzhou
+        date: "1674"
+        text: Taken by Zheng Jing’s forces, who quarrelled with Geng Jingzhong over it.
+        lonlat: [118.589, 24.908]
+      - kind: taken
+        side: zheng
+        name: Chaozhou
+        date: 1674–1677
+        text: Its Qing commander joined the rising and turned to Zheng Jing, whose power reached this far along the coast.
+        lonlat: [116.622, 23.657]
+        lp: l
+      - kind: event
+        side: qing
+        name: Guangzhou (Canton)
+        date: 1676–1677
+        text: Shang Zhixin declared for Wu Sangui in early 1676 and returned to the Qing in 1677.
+        lonlat: [113.264, 23.129]
+        lp: l
+      - kind: capital
+        side: zheng
+        name: Tainan
+        date: "1674"
+        text: Capital of the Kingdom of Tungning, ruled by Zheng Jing.
+        lonlat: [120.200, 22.990]
+    arrows:
+      - side: zheng
+        label: Zheng Jing
+        phase: 1
+        via: [[120.150, 23.000], [119.500, 23.900], [118.300, 24.420]]
+      - side: feud
+        label: Geng Jingzhong
+        phase: 1
+        via: [[119.296, 26.074], [119.700, 27.300], [120.300, 28.300]]
+      - side: qing
+        label: Giyesu
+        phase: 2
+        via: [[120.155, 30.200], [119.650, 29.080], [118.870, 28.940], [118.430, 28.240], [118.170, 26.700]]
+  - title: The north-west and the Chahar
+    date: 1674–1676
+    when: "1675"
+    borders: "1676-07-01"
+    countries: [cn]
+    body:
+      - "In December 1674 Wang Fuchen, the Qing commander in western Shaanxi, mutinied at Ningqiang; the Qing commissioner Mo Luo was killed by an arrow. Wang declared for Wu Sangui and his forces spread into Gansu, taking Pingliang, Lanzhou and other towns, so that the rising now stretched from Yunnan to the Yellow River."
+      - "In 1675, with many banner troops in the south, the Chahar Mongol prince Burni rose beyond the Great Wall. The court raised an army of household slaves and bannermen under Tuhai, who defeated Burni within weeks; Burni was killed. Tuhai was then sent to Shaanxi, where he besieged Wang Fuchen at Pingliang and took the heights that commanded the city. Wang surrendered in the summer of 1676 and was pardoned, and the north-west was quiet again."
+    facts:
+      - [Wang Fuchen’s mutiny, "December 1674, Ningqiang"]
+      - [Burni’s rising, "1675"]
+      - [Wang Fuchen surrenders, "summer 1676, Pingliang"]
+    markers:
+      - kind: event
+        side: feud
+        name: Ningqiang
+        date: December 1674
+        text: Wang Fuchen’s troops mutinied here and killed the Qing commissioner Mo Luo.
+        lonlat: [106.257, 32.829]
+      - kind: siege
+        side: qing
+        name: Pingliang
+        date: 1676
+        text: Tuhai besieged Wang Fuchen here; Wang surrendered after the Qing took the hills above the city.
+        lonlat: [106.665, 35.543]
+      - kind: taken
+        side: feud
+        name: Lanzhou
+        date: "1675"
+        text: Taken by Wang Fuchen’s allies and retaken by the Qing in 1676.
+        lonlat: [103.834, 36.061]
+        lp: l
+      - kind: battle
+        side: qing
+        name: Chahar
+        date: "1675"
+        text: Tuhai defeated the Chahar prince Burni, who had risen while the banner armies were in the south.
+        lonlat: [116.000, 42.200]
+    arrows:
+      - side: feud
+        label: Wang Fuchen
+        phase: 1
+        via: [[106.257, 32.829], [106.000, 34.000], [106.300, 35.000], [106.600, 35.500]]
+      - side: qing
+        label: Tuhai
+        phase: 2
+        via: [[116.000, 42.200], [113.300, 40.000], [110.500, 37.300], [108.940, 34.300], [106.700, 35.500]]
+  - title: Emperor of Zhou
+    date: 1676–1678
+    when: "1678-03-23"
+    borders: "1678-10-02"
+    countries: [cn]
+    body:
+      - "By 1677 Wu Sangui stood alone. He had Sun Yanling killed on suspicion of planning to change sides, and his armies in Jiangxi were driven back from Ji’an and the Gan valley. In Hunan the front on the Dongting Lake held, and Wu’s troops fought a long siege of Yongxing in the south of the province in 1678, but Qing armies were gathering on every side."
+      - "On 23 March 1678 Wu Sangui proclaimed himself emperor of a new dynasty, Zhou, at Hengzhou (Hengyang), with the reign name Zhaowu. Five months later he fell ill, and he died at Hengzhou on 2 October 1678. His grandson Wu Shifan succeeded him and withdrew to Yunnan, leaving the generals in Hunan to fight on."
+    facts:
+      - [Wu Sangui proclaimed emperor, "23 March 1678, Hengzhou"]
+      - [Death of Wu Sangui, "2 October 1678"]
+    markers:
+      - kind: capital
+        side: feud
+        name: Hengzhou (Hengyang)
+        date: 23 March 1678
+        text: Wu Sangui was enthroned here as the Zhaowu Emperor of Zhou, and died here in October.
+        lonlat: [112.572, 26.894]
+      - kind: siege
+        side: feud
+        name: Yongxing
+        date: "1678"
+        text: Wu’s armies besieged the Qing garrison here; the siege was abandoned after his death.
+        lonlat: [113.110, 26.130]
+      - kind: taken
+        side: qing
+        name: Ji’an
+        date: "1677"
+        text: Held by Wu Sangui’s troops from 1676 and recovered by the Qing, ending his hopes in Jiangxi.
+        lonlat: [114.993, 27.113]
+      - kind: held
+        side: feud
+        name: Yuezhou
+        date: 1674–1679
+        text: Wu’s fortified base on the Dongting Lake, which the Qing could not take while he lived.
+        lonlat: [113.129, 29.357]
+    areas:
+      - style: occupied
+        side: feud
+        label: Held by Wu Sangui’s Zhou, 1678
+        atoms: [CN-YN, CN-GZ, CN-HN, CN-SC!, CN-SC~jianchang, CN-CQ]
+  - title: Hunan, Sichuan and Guizhou retaken
+    date: 1679–1680
+    when: "1679-01"
+    borders: "1680-12-01"
+    countries: [cn, tw]
+    body:
+      - "Without Wu Sangui his generals lost heart. In early 1679 the Qing took Yuezhou, after cutting it off on the lake with a fleet built for the purpose, and then Changsha, Changde and Hengzhou, and the Zhou armies fell back into Guizhou and western Hunan. In Guangxi too the Qing recovered the towns held by Sun Yanling’s former followers."
+      - "In 1680 the Green Standard generals Zhao Liangdong and Wang Jinbao advanced from Shaanxi into Sichuan and took Chengdu and Chongqing, while armies from Hunan and Guangxi entered Guizhou. In Fujian, Zheng Jing’s forces were driven from Xiamen and the coast and returned to Taiwan. Shang Zhixin, suspected of disloyalty, was ordered to kill himself in 1680, and Geng Jingzhong was arrested; he was executed in 1682. By the end of 1680 Wu Shifan held only Yunnan."
+    facts:
+      - [Yuezhou retaken, "early 1679"]
+      - [Chengdu retaken, "1680"]
+      - [Zheng Jing leaves the mainland, "1680"]
+    markers:
+      - kind: taken
+        side: qing
+        name: Yuezhou
+        date: early 1679
+        text: Retaken after a Qing fleet cut its supply lines across the Dongting Lake.
+        lonlat: [113.129, 29.357]
+      - kind: taken
+        side: qing
+        name: Changsha
+        date: "1679"
+        text: Abandoned by the Zhou armies after the fall of Yuezhou.
+        lonlat: [112.938, 28.228]
+        lp: l
+      - kind: taken
+        side: qing
+        name: Hengzhou (Hengyang)
+        date: "1679"
+        text: Wu Sangui’s capital, abandoned as the Zhou armies withdrew to the south-west.
+        lonlat: [112.572, 26.894]
+        lp: l
+      - kind: taken
+        side: qing
+        name: Chengdu
+        date: "1680"
+        text: Retaken by the Green Standard armies of Zhao Liangdong and Wang Jinbao.
+        lonlat: [104.066, 30.657]
+      - kind: taken
+        side: qing
+        name: Xiamen
+        date: "1680"
+        text: Zheng Jing’s last base on the mainland, given up as he withdrew to Taiwan.
+        lonlat: [118.090, 24.480]
+    arrows:
+      - side: qing
+        label: Zhao Liangdong and Wang Jinbao
+        phase: 2
+        via: [[107.030, 33.070], [106.200, 32.300], [105.500, 31.300], [104.150, 30.700]]
+      - side: qing
+        phase: 1
+        via: [[112.300, 30.300], [113.000, 29.500], [112.950, 28.300], [112.600, 26.950]]
+      - side: zheng
+        phase: 2
+        via: [[118.090, 24.420], [119.200, 23.700], [120.100, 23.050]]
+  - title: The siege of Kunming
+    date: 1681
+    when: "1681-12"
+    borders: "1681-12-08"
+    countries: [cn]
+    body:
+      - "In 1681 three Qing armies converged on Yunnan: Zhangtai’s from Guizhou, Laita’s from Guangxi and Zhao Liangdong’s from Sichuan. They defeated the Zhou army outside Kunming and laid siege to the city, which held out for months while the besiegers cut off its supplies. In the autumn Zhao Liangdong’s troops broke into the outer defences."
+      - "In early December 1681 Wu Shifan hanged himself, and the next day his generals surrendered the city. Wu Sangui’s body was exhumed and its remains were sent to the provinces as a warning, and his officers were executed. The Kangxi Emperor, now 27, had broken the power of the generals who had won China for his house; the south was governed by ordinary officials from then on. Two years later his admiral Shi Lang took Taiwan from the Zheng family."
+    facts:
+      - [Siege of Kunming, "1681"]
+      - [Suicide of Wu Shifan and fall of Kunming, "early December 1681"]
+    link: { href: "#/war/qing-conquest-of-tungning", text: Qing conquest of Taiwan (1683) }
+    markers:
+      - kind: siege
+        side: qing
+        name: Kunming
+        date: 1681
+        text: Besieged by three converging Qing armies. Wu Shifan killed himself, and the city surrendered in December.
+        lonlat: [102.712, 25.040]
+    arrows:
+      - side: qing
+        label: Zhangtai
+        phase: 1
+        via: [[106.630, 26.647], [105.100, 25.900], [103.800, 25.500], [102.800, 25.080]]
+      - side: qing
+        label: Laita
+        phase: 1
+        via: [[108.320, 22.817], [106.600, 23.900], [104.500, 24.500], [102.800, 24.980]]
+      - side: qing
+        label: Zhao Liangdong
+        phase: 1
+        via: [[104.066, 30.657], [103.700, 28.500], [103.200, 26.800], [102.720, 25.120]]

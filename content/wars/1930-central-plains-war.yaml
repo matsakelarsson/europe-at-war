@@ -1,0 +1,178 @@
+id: central-plains-war
+name: Central Plains War
+start: "1930-05"
+end: "1930-11-04"
+tier: B
+summary: "A civil war in 1930 between Chiang Kai-shek’s Nationalist government in Nanjing and a coalition of the generals who had fought beside him in the Northern Expedition: Yan Xishan of Shanxi, Feng Yuxiang of the Northwest Army and Li Zongren of the Guangxi clique, with Wang Jingwei’s faction of the Kuomintang. It grew out of Chiang’s plans to cut the regional armies and the wars of 1929 against the Guangxi clique and Feng. From May to October 1930 well over a million men fought along the railways of Henan, Shandong and Anhui, on the plains of the middle Yellow River, in the largest war of the warlord era. The coalition took Jinan and set up a rival national government in Beiping in September, but Chiang held the Longhai railway and retook Jinan, and the war was decided when Zhang Xueliang, ruler of the north-east, declared for Nanjing on 18 September and sent his army through the Shanhai Pass to occupy Beiping and Tianjin. Feng’s army fell apart and Yan withdrew to Shanxi; both resigned their posts on 4 November. The government admitted 30,000 dead and 60,000 wounded on its own side; losses on both sides and among civilians were much higher. Chiang emerged as China’s leading figure, but the war drained his government, and Zhang’s move south left Manchuria weakly defended a year before the Japanese invasion."
+countries: [cn]
+sides:
+  - id: nj
+    name: Nationalist government (Chiang Kai-shek)
+    polities: [roc]
+    ink: blue
+    moves: Government moves
+    success: Government success
+  - id: co
+    name: Anti-Chiang coalition (Yan Xishan, Feng Yuxiang, Li Zongren)
+    polities: [shanxi-clique, guominjun, new-guangxi-clique]
+    ink: gold
+    moves: Coalition moves
+    success: Coalition success
+  - id: ne
+    name: Northeastern Army (Zhang Xueliang), from September
+    polities: [fengtian-clique]
+    ink: navy
+    moves: Northeastern Army moves
+    success: Northeastern Army success
+notes:
+  - The war’s dates are given differently. Some historians count the fighting against the Guangxi clique and Feng Yuxiang in 1929 as its first phase; the main war began with Chiang’s offensive of 11 May 1930.
+  - Troop figures on paper were much larger than the forces that actually fought, and casualty figures are rough.
+sources:
+  - title: Central Plains War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Central_Plains_War
+  - title: Yan Xishan (Britannica)
+    url: https://www.britannica.com/biography/Yan-Xishan
+  - title: Feng Yuxiang (Britannica)
+    url: https://www.britannica.com/biography/Feng-Yuxiang
+  - title: Zhang Xueliang (Britannica)
+    url: https://www.britannica.com/biography/Zhang-Xueliang
+  - title: Shanxi clique (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Shanxi_clique
+  - title: New Guangxi clique (Wikipedia)
+    url: https://en.wikipedia.org/wiki/New_Guangxi_clique
+steps:
+  - title: Three armies against Nanjing
+    date: May – August 1930
+    when: "1930-05-11"
+    borders: "1930-06-25"
+    countries: [cn]
+    body:
+      - The Northern Expedition of 1926–1928 had unified China under the Nationalist government in name, but four great armies remained. Chiang Kai-shek’s Central Army held the lower Yangtze; Feng Yuxiang’s Northwest Army held Henan, Shaanxi and Gansu; Yan Xishan’s Shanxi Army held Shanxi, Hebei, Beiping (as Beijing was now called) and Tianjin; and the Guangxi clique of Li Zongren and Bai Chongxi had held Guangxi and the middle Yangtze. When Chiang proposed to disband most of the regional troops, the Guangxi clique rose and was beaten in the spring of 1929, and Feng’s generals rose and were beaten in the autumn. In February 1930 Yan demanded that Chiang step down, and in April Yan, Feng and Li, with Wang Jingwei’s Reorganisation faction of the Kuomintang, formed a coalition with Yan as commander-in-chief.
+      - The decisive front was the Longhai railway, which runs west from Xuzhou through Guide (Shangqiu) and Kaifeng to Zhengzhou. Chiang’s offensive began on 11 May and reached the outskirts of Kaifeng, but Feng’s veterans fought hard on the flat, open plain; in late May his cavalry raided the railway near Guide and nearly captured Chiang. On the Tianjin–Pukou railway in Shandong the Shanxi Army advanced south and took Jinan on 25 June. Far to the south, the Guangxi army marched north into Hunan and took Changsha and Yuezhou in June, but Cantonese troops loyal to Nanjing cut its line behind it, and it was beaten near Hengyang and driven back into Guangxi.
+    facts:
+      - [Chiang’s general offensive, "11 May 1930"]
+      - [Jinan taken by the Shanxi Army, "25 June 1930"]
+      - [Coalition strength, "about 700,000 on paper"]
+      - [Government strength, "about 300,000 Central Army troops, with southern allies"]
+    markers:
+      - kind: capital
+        side: nj
+        name: Nanjing
+        date: "1930"
+        text: Seat of the Nationalist government from 1927.
+        lonlat: [118.797, 32.060]
+        lp: b
+      - kind: capital
+        side: co
+        name: Taiyuan
+        date: "1930"
+        text: Yan Xishan’s capital and the coalition’s headquarters.
+        lonlat: [112.549, 37.870]
+      - kind: battle
+        side: nj
+        name: Kaifeng
+        date: May – August 1930
+        text: Chiang’s armies advanced along the railway to the outskirts of the city, held by Feng’s Northwest Army.
+        lonlat: [114.307, 34.797]
+        lp: l
+      - kind: battle
+        side: co
+        name: Guide (Shangqiu)
+        date: late May 1930
+        text: Feng Yuxiang’s cavalry raided the railway here and nearly captured Chiang Kai-shek at his headquarters train.
+        lonlat: [115.651, 34.417]
+        lp: b
+      - kind: taken
+        side: co
+        name: Jinan
+        date: 25 June 1930
+        text: The Shanxi Army took the capital of Shandong.
+        lonlat: [117.000, 36.651]
+      - kind: taken
+        side: co
+        name: Changsha
+        date: June 1930
+        text: The Guangxi army took the capital of Hunan, and then Yuezhou on the Yangtze, before being cut off.
+        lonlat: [112.938, 28.228]
+      - kind: battle
+        side: nj
+        name: Hengyang
+        date: July 1930
+        text: Cantonese troops loyal to Nanjing beat the Guangxi army as it fell back south.
+        lonlat: [112.572, 26.894]
+    arrows:
+      - side: nj
+        label: Central Army
+        via: [[117.184, 34.262], [116.370, 34.420], [115.651, 34.417], [114.900, 34.700]]
+      - side: co
+        label: Shanxi Army
+        via: [[116.360, 37.430], [116.700, 37.050], [117.000, 36.700]]
+      - side: co
+        label: Guangxi army
+        via: [[110.290, 25.274], [111.600, 26.200], [112.572, 26.894], [112.938, 28.228], [113.129, 29.357]]
+    areas:
+      - style: occupied
+        side: co
+        label: Held by the anti-Chiang coalition, May 1930
+        atoms: [CN-SX, CN-HE!, CN-HE~yan, CN-HE~chahar, CN-BJ, CN-TJ, CN-NM!, CN-NM~ordos, CN-HA, CN-SN, CN-GS, CN-NX, CN-GX]
+  - title: Zhang Xueliang decides
+    date: August – November 1930
+    when: "1930-08-15"
+    borders: "1930-11-04"
+    countries: [cn]
+    body:
+      - In August Chiang’s troops, landed at Qingdao and advancing west along the railway, retook Jinan on 15 August, and the Shanxi Army fell back across the Yellow River. A last offensive by Feng on the Longhai railway failed. On 9 September the coalition’s Enlarged Conference set up a rival national government in Beiping, with Yan Xishan as its chairman and Wang Jingwei as its leading civilian.
+      - Both sides had courted Zhang Xueliang, the young ruler of the north-east, whose army of several hundred thousand men had stayed out of the war. On 18 September he declared for Nanjing, and within days his Northeastern Army came through the Shanhai Pass and occupied Tianjin and Beiping without a fight. The Beiping government fled to Taiyuan. Yan’s troops withdrew into Shanxi, and Feng’s Northwest Army broke up as one commander after another went over to Chiang, who took Zhengzhou and Luoyang in October. On 4 November Yan and Feng gave up all their posts.
+      - The war confirmed Chiang Kai-shek as China’s leading figure and gave Zhang Xueliang control of North China, but it cost the government dearly. The Shanxi and Guangxi cliques kept their provinces, and many of Feng’s troops, reorganised under Song Zheyuan and others, would later defend the north against Japan. With much of the Northeastern Army now south of the Great Wall, Manchuria was left lightly defended when Japan struck a year later.
+    facts:
+      - [Jinan retaken, "15 August 1930"]
+      - [Beiping government proclaimed, "9 September 1930"]
+      - [Zhang Xueliang declares for Nanjing, "18 September 1930"]
+      - [Yan Xishan and Feng Yuxiang resign, "4 November 1930"]
+    markers:
+      - kind: taken
+        side: nj
+        name: Jinan
+        date: 15 August 1930
+        text: Retaken by government troops advancing from Qingdao.
+        lonlat: [117.000, 36.651]
+      - kind: event
+        side: co
+        name: Beiping
+        date: 9 September 1930
+        text: The Enlarged Conference proclaimed a national government here under Yan Xishan. Northeastern troops entered the city a few days after 18 September.
+        lonlat: [116.397, 39.907]
+      - kind: taken
+        side: ne
+        name: Tianjin
+        date: September 1930
+        text: Occupied by the Northeastern Army without fighting.
+        lonlat: [117.200, 39.125]
+      - kind: taken
+        side: nj
+        name: Zhengzhou
+        date: October 1930
+        text: The railway junction where the Longhai and Beijing–Hankou lines meet, taken as Feng’s army broke up.
+        lonlat: [113.625, 34.747]
+        lp: l
+      - kind: event
+        side: ne
+        name: Shenyang
+        date: 18 September 1930
+        text: Zhang Xueliang announced his support for the Nanjing government from his capital.
+        lonlat: [123.431, 41.806]
+    arrows:
+      - side: nj
+        label: From Qingdao
+        via: [[120.383, 36.067], [119.100, 36.700], [118.000, 36.800], [117.050, 36.670]]
+      - side: ne
+        label: Northeastern Army
+        via: [[121.127, 41.095], [119.754, 40.009], [118.180, 39.630], [117.300, 39.300], [116.500, 39.880]]
+      - side: nj
+        label: Government advance
+        via: [[114.900, 34.700], [114.307, 34.797], [113.625, 34.747], [112.454, 34.619]]
+    areas:
+      - style: occupied
+        side: ne
+        label: Occupied by the Northeastern Army
+        atoms: [CN-BJ, CN-TJ, CN-HE~yan]

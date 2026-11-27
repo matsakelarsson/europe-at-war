@@ -1,0 +1,177 @@
+id: kazakh-uzbek-wars
+name: Kazakh–Uzbek wars
+start: "1465"
+end: "1513"
+tier: B
+summary: "The wars between the Kazakh sultans Kerei and Janibek and their successors and the Uzbek descendants of Abu’l-Khayr Khan, in which the Kazakh Khanate was founded and took the steppe north of the Syr Darya. In 1457 or soon after, Kerei and Janibek, Jochid princes of a rival line, left Abu’l-Khayr’s Uzbek Khanate with their followers and settled in the Chu and Talas valleys with the permission of the khan of Moghulistan; the Kazakh Khanate is usually dated from about 1465. When Abu’l-Khayr died on a campaign against them in 1468, his realm broke up and many of his people joined the Kazakhs. His grandson Muhammad Shaybani fought the Kazakh khans Burunduk and Kasym for the towns of the middle Syr Darya (Sighnaq, Sauran, Otrar, Yasi) for three decades, then turned south and conquered Mawarannahr in 1500–1507. His last campaign against the Kazakhs failed in the winter of 1509–1510, months before he was killed fighting the Safavids at Merv, and under Kasym Khan the Kazakh Khanate became the leading power of the steppe."
+countries: [kz, uz, kg]
+sides:
+  - id: kz
+    name: Kazakh Khanate
+    polities: [kazakh-khanate]
+    ink: teal
+    moves: Kazakh moves
+    success: Kazakh success
+  - id: uz
+    name: Abu’l-Khayr’s Uzbeks and the Shaybanids
+    polities: [abulkhair-khanate, bukhara]
+    ink: green
+    moves: Uzbek moves
+    success: Uzbek success
+notes:
+  - Kazakh historiography dates the founding of the khanate to 1465–1466, following the Tarikh-i Rashidi of Mirza Haidar Dughlat; Russian historians have dated it to Abu’l-Khayr’s death in 1468–1471. Kazakh writers call the wars of 1468–1500 the Kazakh War of Independence.
+  - The main written sources are Persian chronicles written for the Shaybanids, such as the Shaybani-nama, and Mirza Haidar Dughlat’s history, written by a Moghul prince who knew the Kazakhs. Their dates often differ, and numbers such as the million men later credited to Kasym Khan are not reliable.
+  - Abu’l-Khayr’s own wars before 1468 have their own entry.
+sources:
+  - title: Kazakh War of Independence (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kazakh_War_of_Independence
+  - title: Kazakh Khanate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kazakh_Khanate
+  - title: Uzbek Khanate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Uzbek_Khanate
+  - title: Muhammad Shaybani (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Muhammad_Shaybani
+  - title: Kasym Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kasym_Khan
+  - title: Sighnaq (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sighnaq
+  - title: Sauran (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sauran
+steps:
+  - title: Kerei and Janibek leave Abu’l-Khayr
+    date: 1457–1471
+    when: "1465"
+    borders: "1466-01-01"
+    countries: [kz, kg]
+    body:
+      - Kerei and Janibek were Jochid princes of the house of Barak, a khan of the eastern steppe killed in 1428 (Janibek was his son), and they did not accept the rule of Abu’l-Khayr, the Shaybanid khan who had brought most of the eastern Jochid lands under his rule. After the Oirats defeated Abu’l-Khayr near Sighnaq in 1457, the two sultans led their followers east into Moghulistan. Its khan, Esen Buqa II, who needed allies against his brother Yunus and against the Uzbeks, gave them pastures in the valleys of the Chu and the Talas. People who left their rulers in this way were called qazaq, “free wanderers”, and the name stuck to them.
+      - Kazakh tradition dates the founding of the Kazakh Khanate, with Kerei as its first khan, to about 1465. In 1468 Abu’l-Khayr set out against them but died on the way, and his Uzbek Khanate fell apart. His son and heir Shaykh Haydar was attacked by Ibak, khan of Tyumen, and the Nogais, and was killed in 1471; many Uzbek clans went over to the Kazakhs, who took over much of the steppe north of the Syr Darya.
+    facts:
+      - [Migration to Moghulistan, "1457 or soon after"]
+      - [Founding of the Kazakh Khanate, "about 1465"]
+      - [Death of Abu’l-Khayr, "1468"]
+    markers:
+      - kind: capital
+        side: uz
+        name: Sighnaq
+        date: 1457
+        text: Abu’l-Khayr’s capital on the Syr Darya.
+        lonlat: [66.964, 44.157]
+      - kind: capital
+        side: kz
+        name: Sozak
+        date: about 1465
+        text: The first seat of the Kazakh khans, in the Karatau foothills.
+        lonlat: [68.475, 44.140]
+    arrows:
+      - side: kz
+        label: Kerei and Janibek
+        phase: 1
+        via: [[67.800, 45.400], [70.200, 44.700], [72.500, 43.900], [74.000, 43.300]]
+    areas:
+      - style: gained
+        side: kz
+        label: Pastures granted by Esen Buqa in the Chu and Talas valleys (approximate)
+        polygon: [[70.9, 42.6], [72.6, 42.3], [74.6, 42.7], [75.6, 43.4], [74.6, 44.6], [72.0, 44.7], [70.8, 43.6]]
+  - title: Shaybani and the Syr Darya towns
+    date: 1470–1500
+    when: "1473"
+    borders: "1496-01-01"
+    countries: [kz, uz]
+    body:
+      - Abu’l-Khayr’s grandson Muhammad Shaybani, backed at times by the Timurids of Samarkand, tried again and again to win back the towns of the middle Syr Darya, the trading and farming centres the steppe khans needed. In 1470 he took several fortresses, but the Kazakh sultans Mahmud and Erenshy took Sozak and Sauran and drove him back to Bukhara. After Kerei’s death in 1473 his son Burunduk became khan and beat Shaybani in a series of fights in the Karatau and around Otrar, Yasi (Turkestan) and Arquq, and Shaybani withdrew to the Mangyshlak.
+      - In 1485–1486, now allied with the Moghul khan Mahmud, Shaybani seized Sighnaq, Arquq and Uzgend, but Burunduk and Janibek’s son Kasym drove him out again. Mahmud rewarded Shaybani with the town of Yasi for deserting the Timurid army in a battle on the Chirchiq in 1488, and in about 1495–1496 Burunduk and Shaybani agreed to share the region. The Kazakhs kept Sighnaq and the northern towns, and the Shaybanids Otrar, Yasi, Arquq and Uzgend. Shaybani then turned south, took Samarkand in 1500–1501 and Bukhara in the following years, and by 1507 ruled Mawarannahr and Herat.
+    facts:
+      - [Khan Burunduk, "1473–1511"]
+      - [Division of the Syr Darya towns, "about 1495–1496"]
+      - [Shaybani takes Samarkand, "1500–1501"]
+    markers:
+      - kind: taken
+        side: kz
+        name: Sauran
+        date: "1470"
+        text: Taken by the Kazakh sultan Erenshy, who then defeated Shaybani.
+        lonlat: [67.769, 43.515]
+        lp: l
+      - kind: taken
+        side: kz
+        name: Sozak
+        date: "1470"
+        text: Taken by Sultan Mahmud.
+        lonlat: [68.475, 44.140]
+      - kind: battle
+        side: kz
+        name: Otrar
+        date: 1470s
+        text: One of the places where Burunduk beat Shaybani; later held by the Shaybanids under the agreement of the 1490s.
+        lonlat: [68.303, 42.852]
+      - kind: event
+        side: uz
+        name: Yasi (Turkestan)
+        date: "1488"
+        text: Given to Shaybani by the Moghul khan Mahmud.
+        lonlat: [68.269, 43.302]
+        lp: b
+      - kind: held
+        side: kz
+        name: Sighnaq
+        date: 1486–1496
+        text: Taken by Shaybani in 1485–1486, then retaken; kept by the Kazakhs under the agreement of the 1490s.
+        lonlat: [66.964, 44.157]
+      - kind: taken
+        side: uz
+        name: Samarkand
+        date: 1500–1501
+        text: The Timurid capital, taken by Shaybani.
+        lonlat: [66.975, 39.654]
+    arrows:
+      - side: uz
+        label: Shaybani
+        phase: 1
+        via: [[64.400, 39.800], [66.500, 41.800], [67.500, 43.300], [67.700, 43.500]]
+      - side: kz
+        label: Burunduk
+        phase: 2
+        via: [[68.500, 44.300], [68.400, 43.600], [68.300, 42.900]]
+      - side: uz
+        phase: 3
+        via: [[68.200, 43.200], [68.100, 41.700], [67.300, 40.200], [66.980, 39.700]]
+  - title: Kasym Khan and the end of Shaybani
+    date: 1508–1513
+    when: "1510"
+    borders: "1511-01-01"
+    countries: [kz, uz]
+    body:
+      - Shaybani tried to cut the Kazakhs off from the trade of the Syr Darya towns and in 1508–1509 raided north into their lands. In the winter of 1509–1510 he led a large army against the camps of Kasym, Janibek’s son and the leading Kazakh sultan, in the foothills of the Ulytau, but the campaign failed with heavy losses. In the autumn of 1510 the Safavid shah Ismail I invaded Khorasan, and on 2 December 1510 Shaybani was defeated and killed near Merv.
+      - Kasym became khan of the Kazakhs on Burunduk’s fall in 1511. He backed the Timurid Babur against the Shaybanids, took Sayram in 1513 and pushed towards Tashkent before he was wounded and turned back. Under Kasym the Kazakh Khanate ruled the steppe from the Syr Darya and the Karatau to Lake Balkhash and the Yaik, and in about 1520 he took the Nogai capital Saray-Juk. Shaybani’s successors held Bukhara and Samarkand, and the frontier between the two peoples remained the Syr Darya towns, which changed hands again in the wars of the 16th century.
+    facts:
+      - [Shaybani’s winter campaign, "1509–1510, Kazakh victory"]
+      - [Battle of Merv, "2 December 1510, Shaybani killed by the Safavids"]
+      - [Sayram taken by Kasym Khan, "1513"]
+    markers:
+      - kind: battle
+        side: kz
+        name: Ulytau
+        date: winter 1509–1510
+        text: Shaybani’s army marched against Kasym’s winter camps in these hills and was beaten back.
+        lonlat: [67.010, 48.650]
+      - kind: battle
+        name: Merv
+        date: 2 December 1510
+        text: Shah Ismail I of Persia defeated the Uzbeks here; Shaybani was killed.
+        lonlat: [62.190, 37.660]
+      - kind: taken
+        side: kz
+        name: Sayram
+        date: "1513"
+        text: Taken by Kasym Khan from the Shaybanids.
+        lonlat: [69.770, 42.300]
+    arrows:
+      - side: uz
+        label: Shaybani
+        phase: 1
+        via: [[68.270, 43.400], [67.600, 45.300], [67.100, 47.300], [67.000, 48.450]]
+      - side: kz
+        label: Kasym
+        phase: 2
+        via: [[67.300, 47.600], [68.300, 45.500], [69.300, 43.500], [69.750, 42.400]]

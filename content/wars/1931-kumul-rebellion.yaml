@@ -1,0 +1,219 @@
+id: kumul-rebellion
+name: Kumul rebellion
+start: "1931-02-20"
+end: "1937-10-15"
+tier: B
+summary: "A series of wars in Xinjiang in 1931–1937 that began with a rising of the Uyghurs of Kumul (Hami) against the provincial governor Jin Shuren. The revolt drew in the Hui commander Ma Zhongying and his 36th Division from Gansu and spread to the oases of the south, where Uyghur and Kyrgyz leaders proclaimed the Turkic Islamic Republic of East Turkestan in Kashgar in November 1933. Jin was overthrown in April 1933 by his own officers, and his successor Sheng Shicai turned to the Soviet Union, whose troops invaded in January 1934 and drove Ma Zhongying from the north. Ma’s Hui troops destroyed the East Turkestan Republic in 1934, and he himself crossed into the Soviet Union. A second rising in the south in 1937 was crushed by Sheng with Soviet help. Fighting and massacres between Uyghurs, Kyrgyz, Hui and Han killed thousands, and Sheng Shicai was left ruling Xinjiang as a Soviet client within the Republic of China."
+countries: [cn]
+sides:
+  - id: prov
+    name: Xinjiang provincial government (Jin Shuren, then Sheng Shicai)
+    polities: [xinjiang-clique]
+    ink: navy
+    moves: Provincial moves
+    success: Provincial success
+  - id: ussr
+    name: Soviet Union
+    polities: [ussr]
+    ink: red
+    moves: Soviet moves
+    success: Soviet success
+  - id: ma
+    name: 36th Division (Ma Zhongying, then Ma Hushan)
+    polities: [ma-clique]
+    ink: brown
+    moves: Moves of the 36th Division
+    success: Success of the 36th Division
+  - id: etr
+    name: Uyghur and Kyrgyz insurgents and the East Turkestan Republic
+    polities: [tiret]
+    ink: teal
+    moves: Insurgent moves
+    success: Insurgent success
+notes:
+  - Xinjiang remained part of the Republic of China throughout; the Nationalist government in Nanjing recognised each provincial ruler in turn and gave Ma Zhongying’s troops the number of a division of its army, but had no forces in the province. It played down the Soviet interventions.
+  - Accounts of the fighting, many of them by foreign travellers, consuls and missionaries, differ on dates and numbers; casualty figures are estimates.
+  - The East Turkestan Republic of 1933–1934 is also called the First East Turkestan Republic, to tell it apart from the republic founded in Ghulja in 1944 (see the Ili rebellion).
+sources:
+  - title: Kumul Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kumul_Rebellion
+  - title: First East Turkestan Republic (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_East_Turkestan_Republic
+  - title: Soviet invasion of Xinjiang (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Soviet_invasion_of_Xinjiang
+  - title: 1937 Islamic rebellion in Xinjiang (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1937_Islamic_rebellion_in_Xinjiang
+  - title: Yulbars Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yulbars_Khan
+  - title: Ma Hushan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ma_Hushan
+steps:
+  - title: The Kumul rising and the fall of Jin Shuren
+    date: 1931–1933
+    when: "1931-02-20"
+    borders: "1933-04-12"
+    countries: [cn]
+    body:
+      - Jin Shuren had governed Xinjiang since the murder of Yang Zengxin in 1928, through Han relatives and officials, with heavy taxes, restrictions on travel and frequent executions. When Maqsud Shah, the last khan of Kumul (Hami), died in March 1930, Jin abolished the semi-autonomous Kumul Khanate, raised its taxes and gave its land to Han settlers. On 20 February 1931 the Uyghurs of Kumul rose and killed many of the settlers and Han soldiers; accounts of the spark differ, one being a Han officer’s attempt to force a Uyghur girl to marry him. Their leaders, Khoja Niyaz and the former chancellor of the khanate, Yulbars Khan, asked for help from Ma Zhongying, a young Hui commander in Gansu.
+      - Ma Zhongying’s troops crossed the desert and besieged the provincial forces in the old town of Kumul but could not take it. In October 1931 Ma was wounded and withdrew to Gansu, and on 30 November the siege was lifted. Jin bought aircraft from the Soviet Union, signed a secret agreement with it, and enlisted White Russian émigrés. The revolt went on spreading. In February 1933 a committee at Khotan set up a government under Sabit Damulla and Muhammad Amin Bughra, rebels entered Aksu and killed its Han and Hui inhabitants, and in the spring Uyghur and Kyrgyz forces marched on Kashgar. Ma Zhongying returned, and his officer Ma Shiming led Hui and Uyghur forces to the walls of Ürümqi.
+      - On 12 April 1933 White Russian troops and provincial officers in Ürümqi overthrew Jin Shuren, who fled the province. The army’s chief of staff, Sheng Shicai, a Manchurian officer, took power and made Khoja Niyaz his deputy for a time, while fighting Ma Zhongying’s forces.
+    facts:
+      - [Kumul rising, "20 February 1931"]
+      - [Siege of Kumul lifted, "30 November 1931"]
+      - [Jin Shuren overthrown, "12 April 1933"]
+    markers:
+      - kind: siege
+        side: prov
+        name: Kumul (Hami)
+        date: 1931
+        text: The rising began here in February 1931. The provincial troops held the old town against Ma Zhongying until the siege was lifted on 30 November 1931.
+        lonlat: [93.515, 42.819]
+      - kind: capital
+        side: prov
+        name: Ürümqi
+        date: 12 April 1933
+        text: Seat of the provincial government. Jin Shuren was overthrown here by White Russian troops and his own officers.
+        lonlat: [87.617, 43.825]
+      - kind: event
+        side: etr
+        name: Khotan
+        date: 20 February 1933
+        text: A Committee for National Revolution set up a government here under Sabit Damulla, with Muhammad Amin Bughra commanding its forces.
+        lonlat: [79.920, 37.110]
+      - kind: taken
+        side: etr
+        name: Aksu
+        date: 25 February 1933
+        text: Rebels entered the old town and killed Han and Hui inhabitants.
+        lonlat: [80.260, 41.170]
+    arrows:
+      - side: ma
+        label: Ma Zhongying
+        phase: 1
+        via: [[96.000, 40.500], [95.130, 41.800], [94.200, 42.550], [93.600, 42.780]]
+      - side: ma
+        phase: 2
+        via: [[93.400, 42.850], [91.000, 43.000], [89.200, 43.100], [87.800, 43.700]]
+  - title: The East Turkestan Republic and the Soviet invasion
+    date: 1933–1934
+    when: "1934-01"
+    borders: "1934-02-06"
+    countries: [cn, ru]
+    body:
+      - In the south the rebels set up governments of their own. On 12 November 1933 Sabit Damulla proclaimed the Turkic Islamic Republic of East Turkestan in Kashgar, with Khoja Niyaz, who stayed in Aksu, as its president. It sought independence and an Islamic state, raised an army of perhaps 22,000 men and asked the Soviet Union, Afghanistan, Turkey, Iran and British India for recognition, which none gave. Kashgar itself was divided, its New City held by the Hui troops of Ma Zhancang. The fighting brought massacres on all sides, of Han and Hui by Uyghur and Kyrgyz fighters, and of Uyghurs by Hui troops; Hindu traders and Swedish missionaries in the south were also attacked.
+      - In the north Ma Zhongying besieged Ürümqi again from December 1933, joined by Zhang Peiyuan, the commander at Ghulja, who changed sides. Sheng Shicai turned to Moscow, and in January 1934 about 7,000 Soviet OGPU and Red Army troops with aircraft, armoured cars and artillery crossed the border. Zhang Peiyuan was defeated and killed himself. On the frozen Tutung River west of Ürümqi Ma’s troops fought the Soviets for weeks before withdrawing; at Dawancheng they destroyed most of a Soviet armoured column, but Soviet bombing, reportedly with mustard gas, forced them back to Turfan in February.
+      - Ma Zhongying’s army retreated south-west along the Tarim basin. On 6 February 1934 its Hui troops under Ma Fuyuan stormed the Old City of Kashgar and killed about 1,700 to 2,000 Uyghur civilians; the East Turkestan government fled to Yengisar, which fell on 16 April, and Khoja Niyaz came to terms with the Soviets and Sheng Shicai. Ma Zhongying reached Kashgar in April and in July 1934 crossed into the Soviet Union, from which he never returned. His officer Ma Hushan took Khotan and ruled the southern oases as a Hui fief, while Sheng Shicai, backed by Soviet advisers and loans, ruled the rest of Xinjiang.
+    facts:
+      - [East Turkestan Republic proclaimed, "12 November 1933, Kashgar"]
+      - [Soviet troops enter Xinjiang, "January 1934, about 7,000 men"]
+      - [Kashgar Old City stormed, "6 February 1934"]
+      - [Ma Zhongying crosses into the Soviet Union, "July 1934"]
+    markers:
+      - kind: taken
+        side: ma
+        name: Kashgar
+        date: 6 February 1934
+        text: The East Turkestan Republic was proclaimed here on 12 November 1933. Hui troops stormed the Old City in February 1934 and massacred its inhabitants.
+        lonlat: [75.990, 39.470]
+        lp: l
+      - kind: taken
+        side: ma
+        name: Yengisar
+        date: 16 April 1934
+        text: The last refuge of the East Turkestan government, taken when its citadel walls were breached.
+        lonlat: [76.175, 38.930]
+        lp: l
+      - kind: held
+        side: ma
+        name: Khotan
+        date: 1934–1937
+        text: Ma Hushan’s seat after the Bughra brothers were defeated in July 1934.
+        lonlat: [79.920, 37.110]
+      - kind: capital
+        side: prov
+        name: Ürümqi
+        date: December 1933 – January 1934
+        text: Besieged by Ma Zhongying and relieved by the Soviet troops.
+        lonlat: [87.617, 43.825]
+        lp: l
+      - kind: battle
+        side: ussr
+        name: Tutung River
+        date: January 1934
+        text: Weeks of fighting on the frozen river ended with Ma Zhongying ordering a withdrawal, after heavy losses on both sides.
+        lonlat: [87.400, 43.900]
+        lp: t
+      - kind: battle
+        side: ma
+        name: Dawancheng
+        date: early 1934
+        text: Ma’s troops destroyed most of a Soviet armoured car column in the pass, but were bombed out of their positions.
+        lonlat: [88.307, 43.360]
+        lp: b
+    arrows:
+      - side: ussr
+        phase: 1
+        via: [[82.900, 46.900], [84.700, 45.400], [86.200, 44.300], [87.300, 43.950]]
+      - side: ussr
+        phase: 1
+        via: [[80.300, 44.200], [81.300, 43.950], [83.500, 44.300], [86.000, 44.250]]
+      - side: ma
+        label: Ma Zhongying’s retreat
+        phase: 2
+        via: [[88.300, 43.300], [89.100, 42.900], [86.200, 41.700], [80.300, 41.200], [76.100, 39.500]]
+    areas:
+      - style: occupied
+        side: etr
+        label: Held mostly by the East Turkestan Republic and its allies, late 1933
+        atoms: [CN-XJ~kashgar, CN-XJ~khotan]
+  - title: The rising of 1937
+    date: April – October 1937
+    when: "1937-04-02"
+    borders: "1937-10-15"
+    countries: [cn, ru]
+    body:
+      - Sheng Shicai ruled with Soviet advisers and Soviet loans. In April 1937 he moved against Mahmut Muhiti, the Uyghur commander of the 6th Division at Kashgar, who fled to British India on 2 April. Uyghur troops then rose at Yengisar, Yarkand and Artush, killing pro-Soviet officials and several Soviet advisers, and the officers Kichik Akhund and Abdul Niyaz set up their own administration. Ma Hushan’s 36th Division joined in for its own ends; it attacked Kashgar in May and occupied the city on 2 June.
+      - In August about 5,000 Red Army troops with aircraft and an armoured regiment entered Xinjiang at Sheng’s request. With White Russian and provincial troops they defeated Kichik Akhund near Aksu in late August. Ma Hushan, whose officer Ma Shenggui had been bribed to turn against him, fled with his gold to India on 7 September; Yarkand fell on 9 September and Abdul Niyaz was executed on 15 September. On 15 October Soviet aircraft bombed Khotan, reportedly with some gas bombs. Casualties in the rising are put at about 2,000.
+      - Sheng Shicai now controlled all of Xinjiang as a Soviet client. He purged many real and supposed opponents, until he broke with Moscow and turned to the Nationalist government in 1942.
+    facts:
+      - [Mahmut Muhiti flees, "2 April 1937"]
+      - [Soviet troops enter, "August 1937, about 5,000 men"]
+      - [Ma Hushan flees to India, "7 September 1937"]
+    markers:
+      - kind: taken
+        side: ussr
+        name: Kashgar
+        date: September 1937
+        text: Occupied by Ma Hushan’s troops on 2 June 1937, and taken back by Soviet and provincial forces in September.
+        lonlat: [75.990, 39.470]
+        lp: l
+      - kind: battle
+        side: ussr
+        name: Aksu
+        date: late August 1937
+        text: Soviet aircraft bombed Kichik Akhund’s troops in the open; he escaped to Kashgar with about 200 men.
+        lonlat: [80.260, 41.170]
+      - kind: taken
+        side: ussr
+        name: Yarkand
+        date: 9 September 1937
+        text: The last rebel stronghold in the west. Abdul Niyaz was executed six days later.
+        lonlat: [77.240, 38.420]
+        lp: l
+      - kind: event
+        side: ussr
+        name: Khotan
+        date: 15 October 1937
+        text: Bombed by Soviet aircraft, the last act of the campaign.
+        lonlat: [79.920, 37.110]
+    arrows:
+      - side: ussr
+        phase: 1
+        via: [[87.600, 43.800], [86.600, 42.100], [83.000, 41.700], [80.400, 41.200]]
+      - side: ussr
+        phase: 2
+        via: [[80.200, 41.100], [78.000, 40.000], [76.100, 39.500], [77.200, 38.500]]
+      - side: ma
+        label: Ma Hushan’s flight to India
+        phase: 2
+        via: [[79.920, 37.110], [78.800, 36.300], [78.000, 35.300], [77.580, 34.200]]

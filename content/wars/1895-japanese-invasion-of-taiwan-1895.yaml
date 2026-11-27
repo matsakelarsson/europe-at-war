@@ -1,0 +1,188 @@
+id: japanese-invasion-of-taiwan-1895
+name: Japanese invasion of Taiwan (1895)
+start: "1895-03-23"
+end: "1895-11-18"
+tier: B
+summary: "The Japanese conquest of Taiwan after the First Sino-Japanese War, called the Yiwei War in Chinese. Japan seized the Penghu Islands in March 1895, and by the Treaty of Shimonoseki of 17 April China ceded Taiwan and Penghu to Japan. In late May officials and gentry in Taipei proclaimed a Republic of Formosa, with the Qing governor Tang Jingsong as president, to resist the handover. The Japanese landed near Keelung on 29 May; Tang fled, and Taipei was occupied on 7 June. The advance south was then slowed by Hakka militias around Hsinchu and Miaoli and by guerrilla attacks, but the Japanese won the decisive battle at Baguashan near Changhua on 27 August. In October three Japanese forces closed in on Tainan, where the general Liu Yongfu led the republic; he fled to the mainland, and Tainan surrendered on 21 October. Japan declared the island subdued in November, although armed resistance went on for years. About 14,000 Chinese and Taiwanese soldiers and militiamen are estimated to have died; Japan lost 164 killed in battle and thousands more to cholera and malaria."
+countries: [tw]
+sides:
+  - id: jp
+    name: Empire of Japan
+    polities: [japan]
+    ink: red
+    moves: Japanese moves
+    success: Japanese success
+  - id: fr
+    name: Republic of Formosa and Taiwanese militias
+    polities: [formosa-republic]
+    ink: blue
+    moves: Formosan moves
+    success: Formosan success
+notes:
+  - The Republic of Formosa was proclaimed by Qing officials and local gentry and claimed loyalty to the Qing emperor; many of its soldiers were Qing troops from the mainland, who often fled or surrendered, while local Hakka and other militias did much of the hardest fighting.
+  - Japanese counts of the dead found on the battlefields came to about 7,000; the total of Chinese and Taiwanese dead, including militiamen and civilians killed in reprisals, is not known exactly, and some Taiwanese estimates are far higher than the figure of about 14,000.
+sources:
+  - title: 1895 Japanese invasion of Taiwan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1895_Japanese_invasion_of_Taiwan
+  - title: Republic of Formosa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Republic_of_Formosa
+  - title: "Taiwan: Taiwan as part of the Japanese empire (Britannica)"
+    url: https://www.britannica.com/place/Taiwan/Taiwan-as-part-of-the-Japanese-empire
+  - title: Treaty of Shimonoseki (Britannica)
+    url: https://www.britannica.com/event/Treaty-of-Shimonoseki
+  - title: "James W. Davidson, The Island of Formosa, Past and Present (1903), Internet Archive"
+    url: https://archive.org/details/islandofformosap00davi
+steps:
+  - title: Penghu, Shimonoseki and the landing in the north
+    date: March – June 1895
+    when: "1895-05-29"
+    borders: "1895-06-07"
+    countries: [tw]
+    body:
+      - While peace talks went on at Shimonoseki, Japan, which had kept Taiwan and Penghu out of the armistice, seized the Penghu Islands between 23 and 26 March 1895 against little resistance; soon afterwards cholera killed more than 1,500 of the occupying troops. The Treaty of Shimonoseki, signed on 17 April, ceded Taiwan and Penghu to Japan. In Taiwan, the gentry leader Qiu Fengjia and others proclaimed the Republic of Formosa in Taipei on 23 May; the governor, Tang Jingsong, took office as its president on 25 May, and its leaders hoped in vain for intervention by the European powers.
+      - On 29 May the Imperial Guards Division under Prince Kitashirakawa Yoshihisa landed at Audi, east of Keelung, and on 3 June took the Keelung forts; the same day the formal handover of the island was signed aboard a ship off Keelung. Tang Jingsong fled to Xiamen, unpaid soldiers looted Taipei, and the Japanese entered the city on 7 June, invited in by its merchants.
+    facts:
+      - [Penghu occupied, "23–26 March 1895"]
+      - [Treaty of Shimonoseki, "17 April 1895"]
+      - [Republic of Formosa proclaimed, "23–25 May 1895"]
+      - [Japanese landing at Audi, "29 May 1895"]
+      - [Taipei occupied, "7 June 1895"]
+    markers:
+      - kind: taken
+        side: jp
+        name: Magong (Penghu)
+        date: 23–26 March 1895
+        text: The Japanese occupied the islands in three days; cholera then killed more than 1,500 of their soldiers.
+        lonlat: [119.570, 23.570]
+      - kind: event
+        side: jp
+        name: Audi
+        date: 29 May 1895
+        text: The Imperial Guards Division came ashore on the beach here, east of Keelung.
+        lonlat: [121.912, 25.022]
+        lp: r
+      - kind: taken
+        side: jp
+        name: Keelung
+        date: 3 June 1895
+        text: The forts were taken from the rear; Japanese losses were 2 dead and 26 wounded.
+        lonlat: [121.740, 25.130]
+      - kind: taken
+        side: jp
+        name: Taipei
+        date: 7 June 1895
+        text: Occupied without a fight after Tang Jingsong had fled and the city had been looted.
+        lonlat: [121.510, 25.040]
+        lp: l
+    arrows:
+      - side: jp
+        label: Imperial Guards
+        phase: 1
+        via: [[121.912, 25.022], [121.830, 25.100], [121.740, 25.130]]
+      - side: jp
+        phase: 2
+        via: [[121.740, 25.130], [121.650, 25.080], [121.510, 25.045]]
+  - title: Hsinchu, Miaoli and Baguashan
+    date: June – September 1895
+    when: "1895-08-27"
+    borders: "1895-08-27"
+    countries: [tw]
+    body:
+      - The Japanese took Hsinchu on 22 June, but south of it the Hakka militias of Jiang Shaozu, Wu Tangxing and Xu Xiang fought hard. In June and July they attacked Hsinchu and the Japanese supply lines, and the Japanese answered with sweeps that burned villages and killed many civilians. At Jianbishan near Miaoli on 10 July the militias were defeated, and Miaoli was occupied in mid-August.
+      - The walled city of Changhua and the fortified heights of Baguashan above it were the strongest position in central Taiwan. In a night crossing of the Dadu river on 26–27 August, Japanese columns took the Bagua battery and the city by surprise at dawn on 27 August. It was the largest battle ever fought on Taiwanese soil; Wu Tangxing and Wu Pengnian were among the many Formosan dead. Malaria then swept the Japanese camps at Changhua and killed more than 2,000 men.
+    facts:
+      - [Hsinchu taken, "22 June 1895"]
+      - [Miaoli occupied, "14 August 1895"]
+      - [Battle of Baguashan, "27 August 1895"]
+    markers:
+      - kind: taken
+        side: jp
+        name: Hsinchu
+        date: 22 June 1895
+        text: Taken with little resistance, but then attacked for weeks by Hakka militias.
+        lonlat: [120.970, 24.800]
+      - kind: battle
+        side: jp
+        name: Jianbishan
+        date: 10 July 1895
+        text: The Japanese defeated the Hakka militias on the heights near Miaoli.
+        lonlat: [120.895, 24.680]
+        lp: l
+      - kind: battle
+        side: jp
+        name: Baguashan (Changhua)
+        date: 27 August 1895
+        text: A dawn attack took the Bagua battery and Changhua; the decisive battle of the campaign.
+        lonlat: [120.553, 24.075]
+    arrows:
+      - side: jp
+        label: Imperial Guards
+        phase: 1
+        via: [[121.450, 25.000], [121.300, 24.990], [121.000, 24.830]]
+      - side: jp
+        phase: 2
+        via: [[120.970, 24.790], [120.820, 24.560], [120.650, 24.250], [120.560, 24.090]]
+    areas:
+      - style: occupied
+        side: jp
+        label: Held by Japan, early September 1895
+        atoms: [TW-TPE, TW-TPQ, TW-KEE, TW-TAO, TW-HSQ, TW-HSZ, TW-MIA, TW-ILA, TW-PEN]
+  - title: Tainan
+    date: October – November 1895
+    when: "1895-10-21"
+    borders: "1895-11-18"
+    countries: [tw]
+    body:
+      - With reinforcements from Japan, the advance on Tainan began in October from three directions. The Imperial Guards marched south from Changhua and stormed Chiayi on 9 October; Prince Fushimi’s brigade landed at Budai on the coast, and Nogi Maresuke’s division of 6,330 men landed at Fangliao in the far south on 10 October, fought the bloodiest action of the campaign for the Japanese at Jiadong and moved on Takow (Kaohsiung), which the navy had already taken. At Xiaolong on 19 October nearly a thousand militiamen trapped in the village were killed.
+      - Liu Yongfu, the former commander of the Black Flag Army, had led the republic from Tainan since June. His offers of a conditional surrender were refused, and on the night of 19–20 October he escaped from Anping aboard a British steamer bound for Xiamen. Tainan surrendered on 21 October and the republic ended. Prince Kitashirakawa died of malaria in Tainan a week later. On 18 November the Japanese governor-general declared the island subdued, but armed resistance continued in many places into the early 1900s.
+    facts:
+      - [Battle of Chiayi, "9 October 1895"]
+      - [Nogi lands at Fangliao, "10 October 1895"]
+      - [Tainan surrenders, "21 October 1895"]
+      - [Japanese killed in battle, "164"]
+      - [Chinese and Taiwanese dead, "about 14,000 (estimate)"]
+    markers:
+      - kind: battle
+        side: jp
+        name: Chiayi
+        date: 9 October 1895
+        text: The second-largest battle of the campaign; the Imperial Guards stormed the walled city.
+        lonlat: [120.450, 23.480]
+      - kind: battle
+        side: jp
+        name: Jiadong
+        date: 11 October 1895
+        text: Nogi’s division beat a militia force here, with the heaviest Japanese battle losses of the campaign.
+        lonlat: [120.550, 22.430]
+        lp: l
+      - kind: taken
+        side: jp
+        name: Tainan
+        date: 21 October 1895
+        text: Surrendered after Liu Yongfu fled; the end of the Republic of Formosa.
+        lonlat: [120.200, 22.990]
+      - kind: event
+        side: fr
+        name: Anping
+        date: 19–20 October 1895
+        text: Liu Yongfu escaped from the harbour here on a British steamer.
+        lonlat: [120.160, 23.000]
+        lp: l
+    arrows:
+      - side: jp
+        label: Imperial Guards
+        phase: 1
+        via: [[120.550, 24.060], [120.500, 23.700], [120.450, 23.490], [120.300, 23.200], [120.220, 23.010]]
+      - side: jp
+        label: Fushimi
+        phase: 1
+        via: [[119.900, 23.380], [120.170, 23.380], [120.230, 23.150], [120.210, 23.010]]
+      - side: jp
+        label: Nogi
+        phase: 1
+        via: [[120.400, 22.200], [120.590, 22.370], [120.400, 22.620], [120.210, 22.970]]
+    areas:
+      - style: occupied
+        side: jp
+        label: Held by Japan, mid-October 1895
+        atoms: [TW-TPE, TW-TPQ, TW-KEE, TW-TAO, TW-HSQ, TW-HSZ, TW-MIA, TW-ILA, TW-PEN, TW-TXG, TW-CHA, TW-YUN, TW-NAN, TW-CYI, TW-CYQ]

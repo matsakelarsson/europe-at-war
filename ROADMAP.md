@@ -120,7 +120,23 @@ below are the number of new war entries (tiers A, B and C).
   Diu, so it shows as Portuguese until 1961; Aksai Chin has no atom of its own
   and is drawn in war steps only. Site 32 MB, first load 1.03 MB gzip (fr and
   sv 1.07).*
-- [ ] Wave 9: China, Mongolia, Tibet and the steppe east of the Urals (~120)
+- [x] Wave 9: China, Mongolia, Tibet and the steppe east of the Urals (~120)
+  *Done: 156 wars (37 tier A, 61 B, 58 C; 436 steps), from the Tang–Tibetan
+  war of 801 to the Xinjiang conflict and the Kazakh unrest of 2022. Borders
+  are curated from 800 for China, Mongolia, Taiwan, Hong Kong, Macau, eastern
+  Kazakhstan and Siberia (without Sakhalin and the Kurils, which come with
+  wave 10), and from 1236 for western Kazakhstan, in `events/east-asia.yaml`
+  (278 events, checked by two fact-checkers and against the writers' stories),
+  on 45 new splits for the historical regions of Hebei, Shanxi, Gansu, Inner
+  Mongolia, Liaoning, Xinjiang, Tibet and the leased territories
+  (`splits/99-east-asia.geojson`), with 63 new polities, 80 war actors, 116
+  capital tenures and 39 labels. Catalogue text, polity names, border notes,
+  capitals and labels are in French and Swedish. Known limits: Derge and the
+  1917–1932 Sino-Tibetan line in Kham have no atom of their own; occupations
+  (Japan in China 1937–1945, Hong Kong 1941–1945) and the warlord and Communist
+  zones are drawn in war steps only. Side move and success labels in war legends
+  are still English in French and Swedish for every wave (1,652 strings).
+  Site 35 MB, first load 1.05 MB gzip (fr and sv 1.10).*
 - [ ] Wave 10: Korea and Japan (~60)
 - [ ] Wave 11: Southeast Asia (~70)
 - [ ] Wave 12: North Africa, the Sahel and the Horn of Africa (~70)

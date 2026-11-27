@@ -1,0 +1,195 @@
+id: she-an-rebellion
+name: She–An rebellion
+start: "1621-10"
+end: "1630"
+tier: B
+summary: "A revolt of two Nuosu (Yi) chieftains of the south-west against the Ming, named after She Chongming of Yongning in southern Sichuan and An Bangyan of Shuixi in north-western Guizhou. Ordered to send troops and grain for the war against the Later Jin in Liaodong, She Chongming’s soldiers rose at Chongqing in the autumn of 1621, killed the grand coordinator of Sichuan and proclaimed the state of Daliang; they besieged Chengdu for 102 days but failed to take it. In 1622 An Bangyan, regent of Shuixi, joined the revolt and besieged Guiyang for about ten months, until early 1623; most of the city’s people died of hunger. The Ming retook Chongqing in 1622 and Yongning in 1623, but the war dragged on in the mountains of Guizhou until Zhu Xieyuan’s armies killed She Chongming and An Bangyan in 1629. Shuixi surrendered in 1630. The war drew money and soldiers from the Ming at the time it was fighting the Later Jin in the north-east."
+countries: [cn]
+sides:
+  - id: mg
+    name: Ming China and allied chiefs
+    polities: [ming]
+    ink: red
+    moves: Ming moves
+    success: Ming success
+  - id: ys
+    name: Yongning (She Chongming)
+    polities: [yongning]
+    ink: brown
+    moves: Yongning moves
+    success: Yongning success
+  - id: sx
+    name: Shuixi (An Bangyan)
+    polities: [shuixi]
+    ink: teal
+    moves: Shuixi moves
+    success: Shuixi success
+notes:
+  - "Dates are converted from the Chinese lunar calendar; the Chongqing rising on the 17th day of the 9th month of the first Tianqi year fell at about the end of October 1621. Ming accounts are the main source, and their numbers of troops and dead vary widely."
+  - "Some modern accounts call She Chongming’s state Shu; the Chinese histories give its name as Daliang (Great Liang)."
+  - Many of the soldiers on the Ming side were themselves raised by hereditary chiefs (tusi), among them the troops of Qin Liangyu, the woman commander of Shizhu.
+sources:
+  - title: She–An Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/She%E2%80%93An_Rebellion
+  - title: 奢安之乱 (Chinese Wikipedia)
+    url: https://zh.wikipedia.org/wiki/%E5%A5%A2%E5%AE%89%E4%B9%8B%E4%B9%B1
+  - title: Qin Liangyu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Qin_Liangyu
+  - title: Tusi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tusi
+steps:
+  - title: Yongning rises
+    date: October 1621 – summer 1622
+    when: "1621-10"
+    borders: "1621-12-01"
+    countries: [cn]
+    body:
+      - The Ming governed much of the south-west through hereditary chiefs, the tusi, who owed troops and tribute. She Chongming, of the Nuosu (Yi) family that held the Yongning pacification commission in southern Sichuan, was one of the chiefs called on in 1621 to send soldiers and grain for the war against the Later Jin in Liaodong. He sent his son She Yin with some 20,000 men, who gathered at Chongqing. In the autumn, after the grand coordinator of Sichuan, Xu Keqiu, ordered most of them home without supplies for the march, they rose, killed Xu and other officials and took the city. She Chongming proclaimed the state of Daliang (Great Liang). Some Ming writers believed he had planned the rising from the start.
+      - His forces took Hejiang, Naxi and Zunyi in the south and a string of towns up the river valleys towards Chengdu, the provincial capital, which they besieged from about the beginning of December 1621. Zhu Xieyuan, the senior official in the city, held it for 102 days with a small garrison, luring the attackers under the walls with false offers of surrender, until the siege was lifted in March 1622.
+      - Relief came from the east. Troops sent by Qin Liangyu of Shizhu and the regional commander Du Wenhuan took the passes guarding Chongqing, and in the summer of 1622 the Ming retook the city and killed the rebel commanders there.
+    facts:
+      - [Rising at Chongqing, "about the end of October 1621"]
+      - [Siege of Chengdu, "December 1621 – March 1622, 102 days"]
+      - [Chongqing retaken, "summer 1622"]
+    markers:
+      - kind: capital
+        side: ys
+        name: Yongning
+        date: 1621–1623
+        text: Seat of the She family, chieftains of Yongning (today Xuyong in southern Sichuan).
+        lonlat: [105.44, 28.17]
+      - kind: taken
+        side: ys
+        name: Chongqing
+        date: autumn 1621
+        text: She Chongming’s troops, gathered here for the war in Liaodong, rose and killed the grand coordinator Xu Keqiu. The Ming retook the city in 1622.
+        lonlat: [106.55, 29.56]
+      - kind: siege
+        side: mg
+        name: Chengdu
+        date: December 1621 – March 1622
+        text: The provincial capital, held by Zhu Xieyuan through a siege of 102 days.
+        lonlat: [104.07, 30.66]
+      - kind: taken
+        side: ys
+        name: Zunyi
+        date: "1621"
+        text: Taken by She Chongming’s forces early in the revolt.
+        lonlat: [106.93, 27.70]
+      - kind: event
+        side: mg
+        name: Shizhu
+        date: "1621"
+        text: Home of Qin Liangyu, who sent troops to relieve Chengdu and retake Chongqing.
+        lonlat: [108.11, 30.00]
+    arrows:
+      - side: ys
+        label: She Chongming’s army
+        phase: 1
+        via: [[106.50, 29.62], [105.70, 29.85], [104.85, 30.30], [104.15, 30.62]]
+      - side: mg
+        label: Qin Liangyu’s troops
+        phase: 2
+        via: [[108.11, 30.00], [107.60, 29.90], [107.10, 29.70], [106.62, 29.58]]
+    areas:
+      - style: outline
+        side: ys
+        label: Yongning chieftaincy (approximate)
+        polygon: [[105.0, 28.5], [105.9, 28.5], [106.2, 28.1], [105.9, 27.75], [105.3, 27.8], [104.9, 28.1]]
+  - title: Shuixi and the siege of Guiyang
+    date: 1622–1623
+    when: "1622-03"
+    borders: "1622-06-01"
+    countries: [cn]
+    body:
+      - Shuixi, the land west of the Wu River in north-western Guizhou, was held by the An family, Nuosu chiefs with the rank of pacification commissioner. The chief, An Wei, was a child, and his uncle An Bangyan governed for him. In early 1622, when the Ming would not feed the troops he had sent instead of grain, An Bangyan joined the revolt, with Song Wanhua of Shuidong on the other side of the river. His forces took Bijie, Anshun and Zhanyi and laid siege to Guiyang, the capital of Guizhou, with an army that the sources put at 100,000 men or more.
+      - The grand coordinator Li Yun held Guiyang with a few thousand soldiers from about March 1622 into January 1623, nearly ten months; Chinese accounts count 296 days. Relief attempts failed. Food ran out, and most of the people in the city died of hunger; accounts of how many survived range from a few hundred defenders to some twenty thousand people. The new grand coordinator, Wang Sanshan, fought his way through and relieved the city at the beginning of 1623.
+      - The Ming then struck at Yongning, which fell in 1623; the Yongning chieftaincy was abolished and She Chongming and his son fled to Shuixi to join An Bangyan. Wang Sanshan pushed on into Shuixi but was killed when his army withdrew.
+    facts:
+      - [Siege of Guiyang, "about March 1622 – January 1623"]
+      - [Yongning taken by the Ming, "1623"]
+    markers:
+      - kind: capital
+        side: sx
+        name: Dafang
+        date: "1622"
+        text: Seat of the An family, chieftains of Shuixi.
+        lonlat: [105.61, 27.14]
+      - kind: siege
+        side: mg
+        name: Guiyang
+        date: about March 1622 – January 1623
+        text: The capital of Guizhou, held by Li Yun through a siege of nearly ten months. Most of its people died of hunger.
+        lonlat: [106.71, 26.58]
+      - kind: taken
+        side: sx
+        name: Bijie
+        date: "1622"
+        text: Taken by An Bangyan’s forces at the start of the rising.
+        lonlat: [105.29, 27.30]
+        lp: l
+      - kind: taken
+        side: sx
+        name: Anshun
+        date: "1622"
+        text: Taken by An Bangyan’s forces, cutting the road from Guiyang to Yunnan.
+        lonlat: [105.93, 26.25]
+        lp: l
+      - kind: taken
+        side: mg
+        name: Yongning
+        date: "1623"
+        text: Taken by Ming troops. The She family’s chieftaincy was abolished.
+        lonlat: [105.44, 28.17]
+    arrows:
+      - side: sx
+        label: An Bangyan
+        phase: 1
+        via: [[105.61, 27.14], [105.95, 26.95], [106.35, 26.75], [106.65, 26.60]]
+      - side: mg
+        label: Wang Sanshan
+        phase: 2
+        via: [[107.90, 26.60], [107.40, 26.60], [106.95, 26.58], [106.76, 26.58]]
+    areas:
+      - style: outline
+        side: sx
+        label: Shuixi (approximate)
+        polygon: [[105.0, 27.6], [105.9, 27.6], [106.4, 27.1], [106.5, 26.8], [106.0, 26.5], [105.3, 26.7], [104.6, 27.0]]
+  - title: Zhu Xieyuan’s war
+    date: 1623–1630
+    when: "1629"
+    borders: "1629-09-01"
+    countries: [cn]
+    body:
+      - The war settled into years of raids and ambushes in the mountains of western Guizhou. The Ming could not supply large armies there while the war in Liaodong took most of its money, and Ming reports of thousands of rebels killed each year brought no end. She Yin was killed by his own followers in 1626.
+      - In 1628 the new Chongzhen Emperor gave Zhu Xieyuan, the defender of Chengdu, command of the armies of five south-western provinces. In 1629 She Chongming, now calling himself King of Daliang, and An Bangyan gathered their forces and in August attacked Chishui and Yongning. Ming armies beat An Bangyan at Wufengshan and Taohongba and drove him back; the pursuers then trapped the rebel leaders at Hongtuchuan, where She Chongming and An Bangyan were killed.
+      - Zhu Xieyuan then blockaded Shuixi until An Wei surrendered in 1630. He kept his family’s office, though in 1637 part of Shuixi’s land was given to lesser chiefs and to Chinese who had served in the war; Yongning was governed by appointed officials. The south-west was quiet only a few years before the rebellions that ended the dynasty.
+    facts:
+      - [Zhu Xieyuan in command, "from 1628"]
+      - [She Chongming and An Bangyan killed, "1629"]
+      - [An Wei surrenders, "1630"]
+    markers:
+      - kind: event
+        side: ys
+        name: Chishui
+        date: August 1629
+        text: Attacked by She Chongming and An Bangyan in their last offensive.
+        lonlat: [105.70, 28.59]
+      - kind: event
+        side: ys
+        name: Yongning
+        date: August 1629
+        text: Attacked in the rebels’ last offensive, which ended in their defeat and death.
+        lonlat: [105.44, 28.17]
+        lp: l
+      - kind: treaty
+        side: mg
+        name: Dafang
+        date: "1630"
+        text: Shuixi was blockaded until An Wei surrendered.
+        lonlat: [105.61, 27.14]
+    areas:
+      - style: outline
+        side: sx
+        label: Shuixi (approximate)
+        polygon: [[105.0, 27.6], [105.9, 27.6], [106.4, 27.1], [106.5, 26.8], [106.0, 26.5], [105.3, 26.7], [104.6, 27.0]]

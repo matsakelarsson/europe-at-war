@@ -1,0 +1,313 @@
+id: xinhai-revolution
+name: Xinhai Revolution
+start: "1911-10-10"
+end: "1912-02-12"
+tier: A
+summary: "The revolution that ended the Qing dynasty and two thousand years of imperial rule in China, also called the 1911 Revolution. After a summer of protest in Sichuan against the nationalisation of the provincial railways, revolutionary soldiers of the New Army rose at Wuchang on 10 October 1911 and set up a military government for Hubei. Within two months most provinces of the south and centre had declared their independence of the Qing, often after killing or driving out the Manchu garrisons. The court recalled Yuan Shikai, whose Beiyang Army retook Hankou and Hanyang, but the revolutionaries took Nanjing in December, and on 1 January 1912 Sun Yat-sen was inaugurated there as provisional president of the Republic of China. Yuan negotiated with both sides, and on 12 February 1912 the empress dowager Longyu issued the abdication of the six-year-old Xuantong emperor, Puyi. Sun stepped down and Yuan became president of the Republic. Outer Mongolia and Tibet broke away from Chinese rule in the same months."
+countries: [cn]
+sides:
+  - id: rev
+    name: Revolutionaries (from 1 January 1912 the Republic of China)
+    polities: [xinhai-revolutionaries, roc]
+    ink: red
+    moves: Revolutionary moves
+    success: Revolutionary success
+  - id: qing
+    name: Qing dynasty
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+notes:
+  - The revolution is named after the xinhai year of the Chinese sexagenary cycle (1911). 10 October, the day of the Wuchang Uprising, is still celebrated as National Day (Double Ten Day) in Taiwan.
+  - Many provinces changed sides without fighting, when their governors, the provincial assemblies or the New Army commanders declared independence. In several cities the revolutionaries massacred the Manchu bannermen and their families, at Xi’an, Wuchang, Taiyuan, Zhenjiang, Nanjing and Fuzhou among other places; at Xi’an an estimated 10,000 to 20,000 were killed. There is no reliable count of the dead of the revolution as a whole.
+  - The independence of Outer Mongolia (December 1911) and the expulsion of the Qing troops from Tibet (1912–1913) have their own entries.
+sources:
+  - title: 1911 Revolution (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1911_Revolution
+  - title: Chinese Revolution (1911–12) (Britannica)
+    url: https://www.britannica.com/event/Chinese-Revolution-1911-1912
+  - title: Wuchang Uprising (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Wuchang_uprising
+  - title: Battle of Yangxia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Yangxia
+  - title: Railway Protection Movement (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Railway_Protection_Movement
+  - title: Sun Yat-sen (Britannica)
+    url: https://www.britannica.com/biography/Sun-Yat-sen
+  - title: Yuan Shikai (Britannica)
+    url: https://www.britannica.com/biography/Yuan-Shikai
+  - title: Imperial Edict of the Abdication of the Qing Emperor (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Imperial_Edict_of_the_Abdication_of_the_Qing_Emperor
+steps:
+  - title: The railway protest in Sichuan
+    date: May – September 1911
+    when: "1911-09-07"
+    borders: "1911-09-07"
+    countries: [cn]
+    body:
+      - After the Boxer War the Qing court had begun reforms, building a modern New Army, abolishing the civil service examinations and promising a constitution, but in May 1911 it named a cabinet in which most ministers were Manchu princes. In the same month it nationalised the provincial railway companies, in which gentry and merchants had invested, in order to raise a foreign loan from a consortium of British, French, German and American banks for the Hankou–Guangzhou and Hankou–Sichuan lines. The terms offered to Sichuan’s shareholders were the worst, and a Railway Protection League there organised strikes, boycotts and tax refusal.
+      - On 7 September 1911 the acting governor-general of Sichuan, Zhao Erfeng, arrested the league’s leaders, and his guards fired on the crowd that gathered outside his yamen in Chengdu, killing several dozen people. The countryside rose, armed bands of the Gelaohui secret society besieged Chengdu, and the court sent the official Duanfang with New Army troops from Hubei to restore order, leaving the garrison of Wuhan weakened. Revolutionary societies had long been organising among the Hubei soldiers. Sun Yat-sen’s Revolutionary Alliance (Tongmenghui), founded in Tokyo in 1905, had staged a series of failed risings in the south, the last at Guangzhou in April 1911.
+    facts:
+      - [Railways nationalised, "May 1911"]
+      - [Chengdu shootings, "7 September 1911"]
+      - [Last failed Tongmenghui rising, "Guangzhou, 27 April 1911"]
+    markers:
+      - kind: event
+        side: qing
+        name: Chengdu
+        date: 7 September 1911
+        text: Zhao Erfeng’s guards fired on protesters outside the governor-general’s yamen. Armed bands then besieged the city.
+        lonlat: [104.066, 30.660]
+      - kind: event
+        side: rev
+        name: Guangzhou
+        date: 27 April 1911
+        text: A Tongmenghui attack on the governor-general’s yamen led by Huang Xing failed; 72 of the dead were buried at Huanghuagang.
+        lonlat: [113.264, 23.130]
+      - kind: event
+        name: Wuhan
+        date: September 1911
+        text: Part of the Hubei New Army left for Sichuan with Duanfang. Revolutionary societies were active among the troops that stayed behind.
+        lonlat: [114.300, 30.580]
+    arrows:
+      - side: qing
+        label: Duanfang
+        via: [[114.300, 30.570], [111.300, 30.700], [108.400, 30.800], [106.550, 29.570], [105.000, 29.800]]
+  - title: The Wuchang Uprising
+    date: 9 – 12 October 1911
+    when: "1911-10-10"
+    borders: "1911-10-12"
+    countries: [cn]
+    body:
+      - On 9 October 1911 a bomb went off by accident in a house in the Russian concession of Hankou where members of the Progressive Association were making explosives. The police found lists of members, and arrests and executions followed. Fearing they would all be caught, soldiers of the New Army’s 8th Engineer Battalion in Wuchang rose on the evening of 10 October, seized the arsenal and, joined by other units, attacked the governor-general’s yamen. The governor-general, Ruicheng, fled to a gunboat on the Yangtze, and by the morning of 11 October the city was in revolutionary hands.
+      - Lacking a well-known leader, the soldiers made Li Yuanhong, a brigade commander, military governor of the new Hubei military government, reportedly at gunpoint. Hanyang, with its arsenal and ironworks, and Hankou were taken on 11 and 12 October. The new government proclaimed the Republic of China, called on the other provinces to rise, and promised the foreign consuls to respect the treaties; the powers declared themselves neutral. In Wuchang a number of Manchu residents were killed.
+    facts:
+      - [Bomb explodes in Hankou, "9 October 1911"]
+      - [Wuchang Uprising, "10 October 1911"]
+      - [Hubei military government, "11 October 1911, under Li Yuanhong"]
+    markers:
+      - kind: taken
+        side: rev
+        name: Wuchang
+        date: 10–11 October 1911
+        text: New Army soldiers took the arsenal and the governor-general’s yamen in one night.
+        lonlat: [114.305, 30.550]
+        lp: r
+      - kind: taken
+        side: rev
+        name: Hanyang
+        date: 11 October 1911
+        text: The arsenal and ironworks across the river, taken by revolutionary troops.
+        lonlat: [114.240, 30.555]
+        lp: l
+      - kind: taken
+        side: rev
+        name: Hankou
+        date: 12 October 1911
+        text: The commercial city with the foreign concessions, where the bomb had gone off on 9 October.
+        lonlat: [114.285, 30.600]
+        lp: t
+    arrows:
+      - side: rev
+        via: [[114.320, 30.540], [114.280, 30.570], [114.250, 30.560]]
+    areas:
+      - style: occupied
+        side: rev
+        label: Held by the Hubei military government, October 1911
+        polygon: [[114.100, 30.450], [114.100, 30.700], [114.450, 30.700], [114.500, 30.450]]
+  - title: The provinces declare independence
+    date: October – November 1911
+    when: "1911-10-22"
+    borders: "1911-11-27"
+    countries: [cn]
+    body:
+      - The rising spread along the networks of the New Army, the secret societies and the provincial assemblies. On 22 October revolutionaries took Changsha in Hunan and Xi’an in Shaanxi, where they stormed the walled Manchu quarter and killed most of its inhabitants over three days; estimates of the dead range from 10,000 to 20,000. Jiangxi, Shanxi (29 October) and Yunnan, where Cai E led the New Army at Kunming (30 October), followed. On 3–4 November Chen Qimei’s fighters took Shanghai and its arsenal, and in the following days Zhejiang, Jiangsu (except Nanjing), Guizhou, Guangxi, Anhui, Fujian and Guangdong broke with Beijing. In Fuzhou the Manchu garrison resisted and was overcome with heavy loss of life.
+      - In Sichuan, Chongqing declared independence on 22 November and Chengdu on 27 November. On the same day Duanfang was killed by his own troops, who had turned against him, at Zizhou, and in December Zhao Erfeng was executed by the new authorities in Chengdu. By the end of November fourteen provinces had renounced the Qing. In the north the court kept Zhili, Henan, Shandong (where independence was declared and then withdrawn), Gansu, Xinjiang and Manchuria.
+    facts:
+      - [Changsha and Xi’an, "22 October 1911"]
+      - [Kunming, "30 October 1911"]
+      - [Shanghai, "3–4 November 1911"]
+      - [Provinces against the Qing, "14 by the end of November 1911"]
+    markers:
+      - kind: taken
+        side: rev
+        name: Xi’an
+        date: 22–24 October 1911
+        text: Revolutionaries of the Tongmenghui and the Gelaohui took the city; the Manchu quarter was stormed and burned and its people killed.
+        lonlat: [108.940, 34.260]
+      - kind: taken
+        side: rev
+        name: Changsha
+        date: 22 October 1911
+        text: The first province to follow Hubei. New Army units took the capital of Hunan with little resistance.
+        lonlat: [112.970, 28.200]
+      - kind: taken
+        side: rev
+        name: Kunming
+        date: 30 October 1911
+        text: The Yunnan New Army under Cai E overthrew the provincial government after a night of fighting.
+        lonlat: [102.710, 25.040]
+      - kind: taken
+        side: rev
+        name: Shanghai
+        date: 3–4 November 1911
+        text: Taken by revolutionaries led by Chen Qimei after a fight for the Jiangnan Arsenal.
+        lonlat: [121.490, 31.230]
+      - kind: taken
+        side: rev
+        name: Taiyuan
+        date: 29 October 1911
+        text: The Shanxi New Army under Yan Xishan declared independence; the Manchu quarter was shelled.
+        lonlat: [112.550, 37.870]
+      - kind: taken
+        side: rev
+        name: Fuzhou
+        date: 9 November 1911
+        text: The Manchu banner garrison fought the revolutionary New Army and was defeated.
+        lonlat: [119.300, 26.080]
+      - kind: taken
+        side: rev
+        name: Chengdu
+        date: 27 November 1911
+        text: The governor-general handed power to a Sichuan military government. Zhao Erfeng was seized and beheaded in December.
+        lonlat: [104.066, 30.660]
+    areas:
+      - style: occupied
+        side: rev
+        label: Provinces that renounced the Qing by the end of November 1911 (approximate)
+        atoms: [CN-HB, CN-HN, CN-SN, CN-JX, CN-SX, CN-YN, CN-GZ, CN-SH, CN-ZJ, CN-GX, CN-AH, CN-FJ, CN-GD!, CN-SC!, CN-SC~jianchang]
+  - title: The battle of Yangxia
+    date: 18 October – 1 December 1911
+    when: "1911-11-01"
+    borders: "1911-11-27"
+    countries: [cn]
+    body:
+      - The court sent the Beiyang Army, the best of the New Army divisions, south by the Beijing–Hankou railway, and on 14 October recalled Yuan Shikai, the general who had built that army and whom the regent had dismissed in 1909. Yuan took his time, accepted command only on his own terms, and on 1 November was made prime minister. Meanwhile his commander Feng Guozhang attacked Hankou, defended by Hubei troops and volunteers under Huang Xing, who arrived from Hong Kong at the end of October. Hankou fell on 1 November after days of street fighting, and much of the city was burned.
+      - Huang Xing’s counter-attack across the Han river failed, and on 27 November the Beiyang troops took Hanyang and its arsenal, from which their guns could fire on Wuchang. The revolutionaries lost several thousand men in the fighting for the three cities. Yuan stopped there. On 1 December a truce was agreed at Wuhan with the help of the British consul, and Yuan, who wanted to be the arbiter between court and revolution, opened talks with the south.
+    facts:
+      - [Yuan Shikai recalled, "14 October 1911"]
+      - [Hankou retaken, "1 November 1911"]
+      - [Hanyang retaken, "27 November 1911"]
+      - [Truce at Wuhan, "1–3 December 1911"]
+    markers:
+      - kind: battle
+        side: qing
+        name: Hankou
+        date: 1 November 1911
+        text: Retaken by Feng Guozhang’s troops after street fighting; fires burned much of the Chinese city.
+        lonlat: [114.285, 30.600]
+        lp: t
+      - kind: battle
+        side: qing
+        name: Hanyang
+        date: 27 November 1911
+        text: Taken by the Beiyang Army after Huang Xing’s counter-attack failed. Huang left for Shanghai.
+        lonlat: [114.240, 30.555]
+        lp: l
+      - kind: held
+        side: rev
+        name: Wuchang
+        date: November 1911
+        text: Under fire from Hanyang, the Hubei military government held on until the truce.
+        lonlat: [114.305, 30.550]
+        lp: r
+      - kind: capital
+        side: qing
+        name: Beijing
+        date: November 1911
+        text: Yuan Shikai arrived on 13 November to form a cabinet as prime minister.
+        lonlat: [116.397, 39.917]
+    arrows:
+      - side: qing
+        label: Beiyang Army
+        phase: 1
+        via: [[116.000, 39.500], [114.600, 36.000], [114.050, 32.200], [114.200, 31.000], [114.280, 30.620]]
+      - side: qing
+        label: Feng Guozhang
+        phase: 2
+        via: [[114.280, 30.620], [114.250, 30.580], [114.240, 30.560]]
+    areas:
+      - style: occupied
+        side: rev
+        label: Provinces against the Qing, November 1911 (approximate)
+        atoms: [CN-HB, CN-HN, CN-JX, CN-AH]
+  - title: Nanjing and the Republic
+    date: December 1911 – January 1912
+    when: "1911-12-02"
+    borders: "1912-01-01"
+    countries: [cn]
+    body:
+      - At Nanjing the loyalist general Zhang Xun, whose troops had killed suspected revolutionaries in the city, held out against an allied army of New Army units from Jiangsu and Zhejiang under Xu Shaozhen. After the revolutionaries took the Purple Mountain (Zijin Shan) above the city, Zhang withdrew north across the Yangtze, and Nanjing fell on 2 December. Peace talks between Yuan’s envoy Tang Shaoyi and the south’s Wu Tingfang opened in Shanghai on 18 December.
+      - Sun Yat-sen, who had learned of the Wuchang Uprising from a newspaper in Denver, returned to Shanghai on 25 December after seeking support in the United States and Europe. On 29 December delegates of seventeen provinces meeting in Nanjing elected him provisional president, and he was inaugurated there on 1 January 1912, the first day of the Republic of China, which also adopted the Gregorian calendar. In the north, officers at Luanzhou in Zhili called for a republic and were crushed in January.
+    facts:
+      - [Nanjing taken, "2 December 1911"]
+      - [Peace talks in Shanghai, "from 18 December 1911"]
+      - [Sun Yat-sen inaugurated, "1 January 1912"]
+    markers:
+      - kind: taken
+        side: rev
+        name: Nanjing
+        date: 2 December 1911
+        text: Taken by the Jiangsu–Zhejiang army after the battle for the Purple Mountain; Zhang Xun withdrew north.
+        lonlat: [118.780, 32.060]
+        lp: b
+      - kind: capital
+        side: rev
+        name: Nanjing
+        date: 1 January 1912
+        text: Sun Yat-sen was inaugurated as provisional president of the Republic of China in the former viceroy’s yamen.
+        lonlat: [118.795, 32.045]
+      - kind: event
+        name: Shanghai
+        date: 18 December 1911
+        text: Tang Shaoyi for Yuan Shikai and Wu Tingfang for the revolutionary provinces began the peace talks here.
+        lonlat: [121.490, 31.230]
+      - kind: battle
+        side: qing
+        name: Luanzhou
+        date: January 1912
+        text: A republican rising of New Army officers near the Great Wall was put down by loyal troops.
+        lonlat: [118.700, 39.740]
+    arrows:
+      - side: rev
+        label: Xu Shaozhen
+        phase: 1
+        via: [[120.600, 31.300], [119.900, 31.800], [119.200, 32.000], [118.850, 32.060]]
+      - side: qing
+        label: Zhang Xun
+        phase: 2
+        via: [[118.760, 32.090], [118.600, 32.300], [117.900, 33.300], [117.300, 34.200]]
+    areas:
+      - style: occupied
+        side: rev
+        label: Provinces of the Republic, January 1912 (approximate)
+        atoms: [CN-HB, CN-HN, CN-SN, CN-JX, CN-SX, CN-YN, CN-GZ, CN-SH, CN-ZJ, CN-JS, CN-GX, CN-AH, CN-FJ, CN-GD!, CN-SC!, CN-SC~jianchang]
+  - title: The abdication
+    date: January – March 1912
+    when: "1912-02-12"
+    borders: "1912-02-12"
+    countries: [cn]
+    body:
+      - Sun Yat-sen had promised to give up the presidency to Yuan Shikai if Yuan brought about the end of the dynasty. Yuan pressed the court, while the princes who wanted to fight lost their support. On 26 January 1912 the Manchu leader of the war party, Liangbi, was mortally wounded by a revolutionary bomb, and on the same day more than forty Beiyang generals led by Duan Qirui telegraphed the court demanding a republic. The empress dowager Longyu accepted terms under which the emperor would keep his title, his palace and a large annual allowance.
+      - On 12 February 1912 she issued the edict of abdication for the six-year-old Xuantong emperor, Puyi, which handed power to Yuan to form a republican government. Sun resigned the next day, and on 15 February the provisional senate in Nanjing elected Yuan provisional president; he was inaugurated in Beijing, which remained the capital, on 10 March. The Republic claimed all the lands of the Qing, but Outer Mongolia had declared its independence in December 1911, and in Tibet the Qing garrison was being driven out. Yuan’s rule soon turned into a struggle with the revolutionaries of the Nationalist Party (Kuomintang), the start of a long period of division and civil war.
+    facts:
+      - [Liangbi assassinated, "26 January 1912"]
+      - [Abdication of the Xuantong emperor, "12 February 1912"]
+      - [Yuan Shikai elected provisional president, "15 February 1912"]
+      - [Yuan inaugurated in Beijing, "10 March 1912"]
+    markers:
+      - kind: event
+        side: qing
+        name: Forbidden City
+        date: 12 February 1912
+        text: The edict of abdication was issued in the name of Puyi, who was allowed to go on living in the inner palace until 1924.
+        lonlat: [116.397, 39.917]
+        lp: b
+      - kind: capital
+        side: rev
+        name: Nanjing
+        date: 15 February 1912
+        text: The provisional senate elected Yuan Shikai president in place of Sun Yat-sen.
+        lonlat: [118.780, 32.060]
+        lp: b

@@ -1,0 +1,146 @@
+id: toluid-civil-war
+name: Toluid civil war
+start: "1260-05-05"
+end: "1264-08-21"
+tier: B
+summary: "The war of succession between two grandsons of Genghis Khan, the brothers Kublai and Ariq Böke, sons of Tolui, after the death of the Great Khan Möngke at the siege of Diaoyu in Sichuan in August 1259. Ariq Böke, left in charge at Karakorum, had the backing of most of Möngke’s family and court; Kublai, who commanded the armies in China, had himself elected Great Khan at Kaiping (later Shangdu) on 5 May 1260, and Ariq Böke was proclaimed at Karakorum a month later. Kublai’s generals won Gansu and the Hexi Corridor, and his blockade of grain from China starved Mongolia. Ariq Böke lost Karakorum twice, was beaten at Shimultai in 1261 and then fought Alghu, the Chagatayid khan he had installed, who had changed sides; his harsh rule in the Ili valley and famine cost him his followers, and on 21 August 1264 he surrendered to Kublai at Shangdu. The war left Kublai master of China and Mongolia, but the khans of the Golden Horde, the Chagatai lands and the house of Ögedei never fully accepted him, and the Mongol Empire was never again ruled as one."
+countries: [cn, mn]
+sides:
+  - id: kub
+    name: Kublai Khan
+    polities: [yuan]
+    ink: olive
+    moves: Kublai’s moves
+    success: Kublai’s success
+  - id: ariq
+    name: Ariq Böke
+    polities: [ariq-boke]
+    ink: brown
+    moves: Ariq Böke’s moves
+    success: Ariq Böke’s success
+  - id: alg
+    name: Chagatai Khanate (Alghu)
+    polities: [chagatai-khanate]
+    ink: teal
+    moves: Alghu’s moves
+    success: Alghu’s success
+notes:
+  - "Both brothers claimed to be the lawful Great Khan, each elected by a kurultai of his own supporters. Kublai’s was held outside Mongolia and attended mainly by the princes and commanders of the east; Ariq Böke’s was held in the homeland and had the support of most of Möngke’s family and of the Golden Horde. Kublai’s victory decided the matter, and the Chinese and Persian histories, written under his descendants and allies, tell the story from his side."
+  - "The places of the battles of 1261 in Mongolia, Shimultai and the battle near the Khingan, are not known closely and have no markers."
+sources:
+  - title: Toluid Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Toluid_Civil_War
+  - title: Ariq Böke (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ariq_B%C3%B6ke
+  - title: Kublai Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kublai_Khan
+  - title: Timeline of the Yuan dynasty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Timeline_of_the_Yuan_dynasty
+  - title: Division of the Mongol Empire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Division_of_the_Mongol_Empire
+  - title: Diaoyu Fortress (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Diaoyu_Fortress
+  - title: Almaliq (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Almaliq,_Xinjiang
+steps:
+  - title: Two Great Khans
+    date: August 1259 – winter 1260
+    when: "1260-05-05"
+    borders: "1260-06"
+    countries: [cn, mn]
+    body:
+      - The Great Khan Möngke died on 11 August 1259 during the siege of the Song fortress of Diaoyu, near Chongqing. His brother Kublai, besieging Ezhou (Wuchang) on the Yangtze, learned that their youngest brother Ariq Böke, regent in Karakorum, was raising troops and calling an assembly. Kublai agreed a truce with the Song and hurried north. On 5 May 1260 a kurultai of his supporters at his summer capital Kaiping, mostly princes and commanders from northern China and Manchuria, elected him Great Khan; about a month later a kurultai at Karakorum proclaimed Ariq Böke, who had the support of most of Möngke’s family and of the khan of the Golden Horde, Berke. Their brother Hülegü, in Iran, sided with Kublai.
+      - The war was decided by supplies. Mongolia depended on grain and goods from China, and Kublai cut them off. In Gansu and the Hexi Corridor his cousin Kadan defeated and killed Ariq Böke’s general Alandar, and the official Lian Xixian defeated Liu Taiping and drove Ariq Böke’s supporters from Liangzhou and Ganzhou, securing Sichuan and the north-west. In the autumn Kublai’s army advanced on Karakorum, and Ariq Böke withdrew north-west to the upper Yenisei, the land of the Kyrgyz, for the winter.
+    facts:
+      - [Möngke dies, "11 August 1259, at Diaoyu"]
+      - [Kublai elected at Kaiping, "5 May 1260"]
+      - [Ariq Böke proclaimed at Karakorum, "about a month later"]
+    markers:
+      - kind: event
+        name: Diaoyu
+        date: 11 August 1259
+        text: Möngke died during the siege of this Song mountain fortress, of wounds or of disease according to different sources.
+        lonlat: [106.315, 30.005]
+      - kind: event
+        side: kub
+        name: Ezhou (Wuchang)
+        date: autumn 1259
+        text: Kublai was besieging the city when he heard of Möngke’s death. He made a truce with the Song and turned north.
+        lonlat: [114.300, 30.550]
+      - kind: capital
+        side: kub
+        name: Kaiping (Shangdu)
+        date: 5 May 1260
+        text: Kublai’s summer capital, where his supporters elected him Great Khan. It was renamed Shangdu, “upper capital”, in 1263.
+        lonlat: [116.180, 42.360]
+      - kind: capital
+        side: ariq
+        name: Karakorum
+        date: June 1260
+        text: The imperial capital, where Ariq Böke was proclaimed Great Khan. Kublai’s army took it in the autumn.
+        lonlat: [102.830, 47.200]
+      - kind: battle
+        side: kub
+        name: Ganzhou
+        date: "1260"
+        text: In the Hexi Corridor Kadan defeated and killed Ariq Böke’s general Alandar, and Lian Xixian drove Ariq Böke’s supporters from Liangzhou and Ganzhou.
+        lonlat: [100.450, 38.930]
+    arrows:
+      - side: kub
+        label: Kublai
+        phase: 1
+        via: [[114.300, 30.550], [114.300, 34.800], [115.500, 39.000], [116.180, 42.300]]
+      - side: kub
+        phase: 2
+        via: [[116.180, 42.360], [112.000, 44.500], [106.500, 46.500], [102.900, 47.200]]
+      - side: ariq
+        label: Ariq Böke
+        phase: 2
+        via: [[102.800, 47.300], [99.000, 49.500], [95.000, 51.000], [93.000, 51.800]]
+    areas:
+      - style: occupied
+        side: ariq
+        label: Held by Ariq Böke, summer 1260 (approximate)
+        atoms: [MN-035, MN-037, MN-041, MN-043, MN-046, MN-047, MN-049, MN-053, MN-055, MN-057, MN-059, MN-065, MN-067, MN-069, MN-071, MN-073, MN-1]
+  - title: Shimultai, Almaliq and the surrender
+    date: 1261 – August 1264
+    when: "1262"
+    borders: "1264-08-21"
+    countries: [mn, cn, kz]
+    body:
+      - In 1261 Ariq Böke returned and retook Karakorum. Kublai’s army defeated him at Shimultai, and ten days later a second battle near the Khingan mountains, without Kublai, ended in a stalemate. A rebellion in Shandong, led by the Chinese commander Li Tan, then drew Kublai back to China in 1262. Ariq Böke turned west against Alghu, the grandson of Chagatai whom he had made khan of the Chagatai lands and who had gone over to Kublai, seizing the goods and animals collected for Ariq Böke’s army.
+      - Alghu defeated Ariq Böke’s vanguard near the Ili, but Ariq Böke took his headquarters at Almaliq and wintered there in 1262–1263. His troops’ killing of Alghu’s men and the famine that followed in the Ili valley drove many of his princes and soldiers to desert him, and Alghu came back. With no grain, no allies left within reach and his following melting away, Ariq Böke rode to Shangdu and surrendered to his brother on 21 August 1264. Kublai had his chief supporters executed and kept Ariq Böke under guard; he died in 1266, and rumours said he had been poisoned.
+      - Kublai had won, but he was never accepted as Great Khan by all the Mongols. Berke and Hülegü had spent the war fighting each other in the Caucasus, the house of Ögedei under Kaidu refused to come to his court, and from 1268 Kaidu waged a war against him that lasted beyond his death. Kublai ruled from China, and in 1271 named his dynasty Yuan.
+    facts:
+      - [Battle of Shimultai, "1261, Kublai’s victory"]
+      - [Ariq Böke takes Almaliq, "1262"]
+      - [Ariq Böke surrenders at Shangdu, "21 August 1264"]
+      - [Ariq Böke dies, "1266"]
+    markers:
+      - kind: taken
+        side: ariq
+        name: Almaliq
+        date: 1262–1263
+        text: Alghu’s headquarters in the Ili valley, taken by Ariq Böke, who wintered here. Famine and the killing of prisoners cost him his followers.
+        lonlat: [80.533, 44.240]
+      - kind: taken
+        side: ariq
+        name: Karakorum
+        date: "1261"
+        text: Retaken by Ariq Böke after his winter on the Yenisei. He lost it again later.
+        lonlat: [102.830, 47.200]
+      - kind: treaty
+        side: kub
+        name: Shangdu
+        date: 21 August 1264
+        text: Ariq Böke surrendered to Kublai here, ending the war.
+        lonlat: [116.180, 42.360]
+    arrows:
+      - side: ariq
+        label: Ariq Böke
+        phase: 1
+        via: [[102.800, 47.300], [96.000, 47.000], [88.000, 45.500], [80.700, 44.250]]
+      - side: alg
+        label: Alghu
+        phase: 2
+        via: [[76.000, 39.500], [78.500, 42.000], [80.400, 44.100]]

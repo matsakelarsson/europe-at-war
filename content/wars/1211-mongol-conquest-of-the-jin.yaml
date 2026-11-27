@@ -1,0 +1,664 @@
+id: mongol-conquest-of-the-jin
+name: Mongol conquest of the Jin dynasty
+start: "1211"
+end: "1234-02-09"
+tier: A
+summary: "The 23-year war in which the Mongols destroyed the Jurchen Jin dynasty, which ruled northern China and Manchuria. Genghis Khan invaded in 1211, routed the Jin field army at Yehuling, and in 1213–1214 his armies ravaged the north China plain while the Jin court was torn by a coup. The Jin bought a truce in 1214 with a princess and tribute, then moved their capital from Zhongdu (today Beijing) to Kaifeng; the Mongols returned and took Zhongdu on 31 May 1215. In the north-east the Khitan Yelü Liuge and the Jurchen general Puxian Wannu, founder of Eastern Xia, broke away. From 1217 Muqali turned raiding into occupation north of the Yellow River, helped by Chinese and Khitan commanders who changed sides, while the Jin fought the Song and Western Xia as well. Under Ögedei the Mongols outflanked the Jin defences by marching through Song territory, destroyed the last Jin army at Sanfengshan in February 1232 and besieged Kaifeng, which surrendered in May 1233 after an epidemic. The last Jin emperor, Aizong, killed himself at Caizhou on 9 February 1234 as a Mongol and Song army broke in. The war devastated northern China, though how many died is unknown."
+countries: [cn, mn, ru]
+sides:
+  - id: mon
+    name: Mongol Empire and its allies
+    polities: [mongol-empire]
+    ink: olive
+    moves: Mongol moves
+    success: Mongol success
+  - id: jin
+    name: Jin dynasty
+    polities: [jurchen-jin]
+    ink: gold
+    moves: Jin moves
+    success: Jin success
+  - id: xia
+    name: Western Xia (Mongol vassal, at war with the Jin 1210–1225)
+    polities: [western-xia]
+    ink: brown
+    moves: Xia moves
+    success: Xia success
+  - id: liao
+    name: Liao of Yelü Liuge (Mongol ally)
+    polities: [eastern-liao]
+    ink: teal
+    moves: Moves of Yelü Liuge
+    success: Success of Yelü Liuge
+  - id: exia
+    name: Eastern Xia (Puxian Wannu)
+    polities: [eastern-xia]
+    ink: teal
+    moves: Eastern Xia moves
+    success: Eastern Xia success
+  - id: song
+    name: Southern Song (Mongol ally from 1233)
+    polities: [song]
+    ink: red
+    moves: Song moves
+    success: Song success
+notes:
+  - Dates are converted from the Chinese lunar calendar as the sources give them (Julian calendar). The Yuan history compresses several years’ campaigns, and the Chinese, Persian and Mongol accounts disagree on the order of some events; Jebe’s capture of Liaoyang, for example, is dated to the winter of 1211–1212 in some accounts and to 1212–1213 in others, and Zhongdu’s surrender to 31 May or 1 June 1215.
+  - The sizes of the armies are very uncertain. For 1211 Paul Ratchnevsky estimated about 65,000 Mongols and 10,000 Önggüd allies; Jin numbers in the sources range from 30,000–50,000 to more than 600,000 at Yehuling. At Sanfengshan Christopher Atwood puts Tolui’s army at 20,000–40,000 men and the Jin at 100,000–200,000.
+  - The Jin called Kaifeng (Bianjing) their Southern Capital, Nanjing, after 1153; Eastern Xia’s capital near Yanji was also called Nanjing. Place names are those of the time, with today’s names in brackets.
+  - Much of the war was fought by Khitan, Chinese and Jurchen commanders on both sides, and many changed sides. The areas drawn for the Mongol conquests, Eastern Xia and the Jin territory are approximate.
+sources:
+  - title: Mongol conquest of the Jin dynasty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Jin_dynasty
+  - title: Jin dynasty (1115–1234) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jin_dynasty_(1115%E2%80%931234)
+  - title: Battle of Yehuling (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Yehuling
+  - title: Siege of Zhongdu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Zhongdu
+  - title: Eastern Liao (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Eastern_Liao
+  - title: Eastern Xia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Eastern_Xia
+  - title: Muqali (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Muqali
+  - title: Jebe (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jebe
+  - title: Battle of Sanfengshan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sanfengshan
+  - title: Siege of Kaifeng (1232) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kaifeng_(1232)
+  - title: Mongol siege of Kaifeng (Britannica)
+    url: https://www.britannica.com/event/Mongol-Siege-of-Kaifeng
+  - title: Siege of Caizhou (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Caizhou
+  - title: Yelü Chucai (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yel%C3%BC_Chucai
+  - title: Genghis Khan (Britannica)
+    url: https://www.britannica.com/biography/Genghis-Khan
+  - title: Yuan Shi, chapter 1, annals of Genghis Khan (Chinese, Wikisource)
+    url: https://zh.wikisource.org/wiki/%E5%85%83%E5%8F%B2/%E5%8D%B7001
+  - title: Jin Shi, chapter 17, annals of Aizong (Chinese, Wikisource)
+    url: https://zh.wikisource.org/wiki/%E9%87%91%E5%8F%B2/%E5%8D%B717
+  - title: Jin Shi, chapter 18, annals of Aizong (Chinese, Wikisource)
+    url: https://zh.wikisource.org/wiki/%E9%87%91%E5%8F%B2/%E5%8D%B718
+steps:
+  - title: Yehuling
+    date: Spring – autumn 1211
+    when: "1211-03"
+    borders: "1211-03-01"
+    countries: [cn, mn]
+    body:
+      - The Jurchen Jin dynasty had ruled Manchuria and northern China since it destroyed the Liao in 1125 and drove the Song south in 1127. Its capital was Zhongdu (today Beijing), and its census of 1207 counted some 45 million people. The Jin kept large armies of Jurchen, Khitan and Chinese troops, a ring of walled cities, and a frontier of walls and ditches on the edge of the steppe, guarded by allied tribes such as the Önggüd. For generations they had played the steppe peoples against one another; in the 12th century they had put to death the Mongol khan Ambaghai, and in 1196 they had fought the Tatars with Temüjin as their ally.
+      - By 1210 Genghis Khan had united the Mongols and made Western Xia his vassal. When a Jin envoy came to announce the accession of the emperor Wanyan Yongji, he refused to receive the edict on his knees. The Önggüd, whose chief Alaqush had joined him years before, opened the frontier. In the spring of 1211 Genghis Khan assembled his army on the Kherlen River; the historian Paul Ratchnevsky estimated it at about 65,000 Mongols with 10,000 Önggüd.
+      - The Mongols crossed the Gobi, took the frontier forts of Wushabao and Wuyueying and the town of Fuzhou, and met the main Jin army under the chancellor Wanyan Chengyu and the general Wanyan Jiujin in the passes of Yehuling (Wild Fox Ridge), north of today’s Zhangjiakou. The Khitan officer Shimo Ming’an, sent by the Jin to negotiate, went over to the Mongols and told them where the Jin troops stood. In late summer Muqali led a charge up the defile of Huan’erzui (Badger’s Mouth); the Jin centre broke, Jiujin was killed, and the army fled. Its survivors were caught and destroyed at Huihebao. The Mongols took Xuande and Dexing, Jebe forced the Juyong Pass, and Mongol riders reached the walls of Zhongdu, but they had no means of taking it. They carried off the Jin’s great state horse herds on the northern pastures.
+    facts:
+      - [Mongol army, "about 65,000 with 10,000 Önggüd (Ratchnevsky’s estimate)"]
+      - [Battle of Yehuling, "late summer 1211, Mongol victory"]
+      - [Huihebao, "autumn 1211, the Jin survivors destroyed"]
+    markers:
+      - kind: taken
+        side: mon
+        name: Fuzhou (Zhangbei)
+        date: "1211"
+        text: The Jin frontier town on the plateau, abandoned as the Jin army fell back to the passes.
+        lonlat: [114.700, 41.150]
+        lp: l
+      - kind: battle
+        side: mon
+        name: Yehuling
+        date: Late summer 1211
+        text: Muqali’s charge at the Badger’s Mouth broke the Jin army in the passes of Wild Fox Ridge.
+        lonlat: [114.730, 41.030]
+      - kind: taken
+        side: mon
+        name: Juyong Pass
+        date: Autumn 1211
+        text: The pass north-west of Zhongdu, forced by Jebe. The Mongols reached the capital but could not take it.
+        lonlat: [116.068, 40.289]
+      - kind: held
+        side: jin
+        name: Zhongdu (Beijing)
+        date: "1211"
+        text: The Jin capital, one of the largest walled cities in the world.
+        lonlat: [116.350, 39.870]
+        lp: b
+    arrows:
+      - side: mon
+        label: Genghis Khan
+        phase: 1
+        via: [[112.800, 44.600], [113.900, 42.700], [114.600, 41.450], [114.730, 41.080]]
+      - side: mon
+        phase: 2
+        via: [[114.850, 40.950], [115.050, 40.620], [115.600, 40.450], [116.000, 40.330]]
+      - side: mon
+        label: Jebe
+        phase: 3
+        via: [[116.068, 40.289], [116.250, 40.050], [116.330, 39.920]]
+  - title: Liaoyang, Xijing and the Khitan rising
+    date: Winter 1211 – 1213
+    when: "1212"
+    borders: "1212-06-01"
+    countries: [cn, mn]
+    body:
+      - The Mongols wintered on the Jin frontier. While the princes Jochi, Chagatai and Ögedei raided the towns of northern Shanxi, Jebe rode east to Dongjing (Liaoyang), the Jin eastern capital. He feigned a retreat, leaving his baggage behind, then returned by forced marches and took the city while its garrison was off guard; like most of the towns taken in these years, it was plundered and abandoned. In 1212 Genghis Khan besieged Xijing (Datong), the western capital, but was wounded by an arrow and lifted the siege, and the Mongols withdrew to the steppe for the summer. The Jin reoccupied much of what they had lost.
+      - In the north-east the Mongols found an ally. Yelü Liuge, a Khitan officer of the old Liao imperial clan, rose against the Jin in 1212 at Long’an (Nong’an) and sent envoys to Genghis Khan. In 1213 he proclaimed himself King of Liao, made his capital at Xianping (Kaiyuan), and with Mongol help defeated a Jin army sent against him. He declined to take the title of emperor and remained a Mongol ally until his death in 1220.
+    facts:
+      - [Jebe takes Dongjing (Liaoyang), "winter 1211–1212 (some accounts 1212–1213)"]
+      - [Siege of Xijing, "1212, Genghis Khan wounded"]
+      - [Yelü Liuge’s rising, "1212; King of Liao 1213"]
+    markers:
+      - kind: taken
+        side: mon
+        name: Dongjing (Liaoyang)
+        date: Winter 1211–1212
+        text: The Jin eastern capital, taken by Jebe after a feigned retreat and then abandoned.
+        lonlat: [123.170, 41.270]
+      - kind: siege
+        side: jin
+        name: Xijing (Datong)
+        date: "1212"
+        text: Genghis Khan was wounded by an arrow during the siege of the western capital and withdrew.
+        lonlat: [113.300, 40.090]
+      - kind: event
+        side: liao
+        name: Long’an (Nong’an)
+        date: "1212"
+        text: Yelü Liuge gathered his followers here and declared himself commander, sending envoys to Genghis Khan.
+        lonlat: [125.180, 44.430]
+      - kind: capital
+        side: liao
+        name: Xianping (Kaiyuan)
+        date: 1213–1215
+        text: Capital of Yelü Liuge’s kingdom of Liao, proclaimed in 1213.
+        lonlat: [124.040, 42.550]
+        lp: l
+    arrows:
+      - side: mon
+        label: Jebe
+        via: [[118.000, 42.600], [120.500, 42.050], [122.500, 41.600], [123.120, 41.300]]
+  - title: Through the passes
+    date: July 1213 – spring 1214
+    when: "1213-07"
+    borders: "1213-10-01"
+    countries: [cn]
+    body:
+      - In the summer of 1213 Genghis Khan returned. He took Xuande and Dexing, beat a Jin army under Wanyan Gang and Zhuhu Gaoqi at Huailai and pursued it to the Juyong Pass, which the Jin had fortified strongly. Leaving a force before the pass, he led the main army south-west through the Zijing Pass, beat the Jin at the Wuhui Ridge and took Zhuozhou and Yizhou, while Jebe took the Juyong Pass from the south. The Mongols were again before Zhongdu.
+      - The defeats brought a crisis in the capital. In the autumn of 1213 the general Heshilie Zhizhong, known as Hushahu, who had fled from Xijing, seized Zhongdu, killed Wanyan Yongji and put the late emperor’s nephew Wanyan Xun on the throne as the Xuanzong emperor. Within weeks Hushahu was himself killed by Zhuhu Gaoqi, who took his place as the leading general.
+      - Leaving troops before Zhongdu, the Mongols split into three armies for the autumn and winter. The princes Jochi, Chagatai and Ögedei marched south along the Taihang Mountains and back north through Shanxi; Genghis Khan’s brother Qasar rode along the coast towards Liaoxi; Genghis Khan and his son Tolui swept across the Hebei plain into Shandong. They sacked some ninety prefectures, driving captured peasants before them in their assaults, and only a handful of walled cities held out. In the spring of 1214 the armies met again north of Zhongdu.
+    facts:
+      - [Battle of Huailai, "1213, Mongol victory"]
+      - [Juyong Pass taken by Jebe, "autumn 1213"]
+      - [Murder of Wanyan Yongji, "autumn 1213"]
+      - [Prefectures sacked, "about 90"]
+    markers:
+      - kind: battle
+        side: mon
+        name: Huailai
+        date: Summer 1213
+        text: Genghis Khan beat the Jin army of Wanyan Gang and Zhuhu Gaoqi and drove it back to the Juyong Pass.
+        lonlat: [115.550, 40.400]
+        lp: l
+      - kind: taken
+        side: mon
+        name: Juyong Pass
+        date: Autumn 1213
+        text: The strongly held pass, taken from the south by Jebe after Genghis Khan had gone round it.
+        lonlat: [116.068, 40.289]
+      - kind: event
+        side: mon
+        name: Zijing Pass
+        date: Autumn 1213
+        text: Genghis Khan’s route round the Jin defences, through the mountains west of the Hebei plain.
+        lonlat: [115.164, 39.420]
+        lp: l
+      - kind: taken
+        side: mon
+        name: Zhuozhou
+        date: Autumn 1213
+        text: Taken with Yizhou after the Mongol victory at the Wuhui Ridge.
+        lonlat: [115.970, 39.490]
+        lp: b
+      - kind: held
+        side: jin
+        name: Zhongdu (Beijing)
+        date: 1213–1214
+        text: The capital held out. Inside, Hushahu killed the emperor and set up Xuanzong.
+        lonlat: [116.350, 39.870]
+    arrows:
+      - side: mon
+        label: Genghis Khan
+        phase: 1
+        via: [[115.550, 40.400], [115.350, 40.000], [115.164, 39.450]]
+      - side: mon
+        phase: 2
+        via: [[115.200, 39.400], [115.600, 39.440], [115.950, 39.480]]
+      - side: mon
+        label: Jebe
+        phase: 3
+        via: [[116.000, 39.600], [116.150, 40.000], [116.080, 40.270]]
+      - side: mon
+        label: Jochi, Chagatai and Ögedei
+        phase: 4
+        via: [[115.500, 39.300], [114.500, 37.600], [113.900, 35.600], [112.500, 36.100], [112.550, 37.850]]
+      - side: mon
+        label: Genghis Khan and Tolui
+        phase: 4
+        via: [[116.200, 39.400], [116.400, 37.800], [117.000, 36.650], [118.500, 36.700]]
+      - side: mon
+        label: Qasar
+        phase: 4
+        via: [[116.800, 39.800], [118.600, 39.850], [119.600, 40.050], [120.900, 40.650]]
+    areas:
+      - style: contested
+        side: mon
+        label: Ravaged by the Mongol armies, autumn 1213 – spring 1214
+        atoms: [CN-HE, CN-TJ, CN-SD, CN-SX]
+  - title: A princess, and the flight to Kaifeng
+    date: Spring – summer 1214
+    when: "1214-04"
+    borders: "1214-08-01"
+    countries: [cn]
+    body:
+      - In the spring of 1214 the Mongols camped north of Zhongdu. Their generals urged an assault, but the army was weakened by disease and the city was too strong, and Genghis Khan offered terms instead. Xuanzong accepted. He sent Genghis Khan a princess of the imperial house, the Princess of Qiguo, a daughter of the murdered emperor, with 500 boys and girls, 3,000 horses and great quantities of gold and silk. In May the Mongols withdrew through the Juyong Pass to summer on the steppe.
+      - Xuanzong did not trust the peace. In June 1214, over the objections of some of his ministers, he left Zhongdu with his court for the Southern Capital, Bianjing (Kaifeng), behind the Yellow River, leaving the crown prince and his generals to hold the old capital. On the march the Khitan auxiliaries of the escort rose near Liangxiang, killed their officers and went over to the Mongols, seizing the Lugou Bridge south-west of Zhongdu.
+      - Genghis Khan treated the move as a breach of the peace. Late in 1214 he sent his armies back under Samuqa, with Shimo Ming’an and the Khitan deserters, to besiege Zhongdu. The crown prince was called away to Kaifeng.
+    facts:
+      - [Peace before Zhongdu, "April 1214"]
+      - [Tribute, "a princess, 500 boys and girls, 3,000 horses, gold and silk"]
+      - [Court leaves Zhongdu, "June 1214; reaches Kaifeng in August"]
+    markers:
+      - kind: treaty
+        name: Zhongdu (Beijing)
+        date: April 1214
+        text: The Jin bought a truce with a princess and tribute, and the Mongols withdrew.
+        lonlat: [116.350, 39.870]
+        lp: l
+      - kind: event
+        side: mon
+        name: Lugou Bridge
+        date: Summer 1214
+        text: The Khitan auxiliaries who went over to the Mongols took the bridge over the Yongding River, cutting Zhongdu off from the south.
+        lonlat: [116.213, 39.849]
+        lp: b
+      - kind: capital
+        side: jin
+        name: Bianjing (Kaifeng)
+        date: August 1214
+        text: The Southern Capital, the old Northern Song capital, became the seat of the Jin court.
+        lonlat: [114.350, 34.790]
+    arrows:
+      - side: mon
+        label: Withdrawal
+        phase: 1
+        via: [[116.250, 40.000], [116.068, 40.289], [115.900, 40.900], [116.100, 41.800]]
+      - side: jin
+        label: Xuanzong’s court
+        phase: 1
+        via: [[116.300, 39.800], [115.600, 38.200], [114.900, 36.300], [114.400, 34.850]]
+      - side: mon
+        label: Samuqa
+        phase: 2
+        via: [[116.000, 41.600], [116.068, 40.350], [116.300, 39.950]]
+  - title: The fall of Zhongdu
+    date: Winter 1214 – May 1215
+    when: "1215-05-31"
+    borders: "1215-06-01"
+    countries: [cn]
+    body:
+      - Through the winter the Jin commanders around Zhongdu went over to the Mongols one by one; early in 1215 Pucha Qijin surrendered Tongzhou, east of the city, with his troops. The court in Kaifeng sent a relief column with grain under Li Ying, but it was routed at Bazhou in the spring and its supplies captured. Inside Zhongdu food ran out, and later writers told of people eating the dead.
+      - The commander of the city, Wanyan Chenghui, took poison, and his fellow general Moran Jinzhong fled south. Zhongdu surrendered on 31 May 1215. The Mongols sacked it; thousands were killed and much of the city burned. Genghis Khan, who was camped on the steppe to the north, sent officers to take over the treasury. Among those who entered his service was the Khitan scholar Yelü Chucai, who later became an adviser to Genghis Khan and Ögedei.
+      - In the same year Muqali took the Jin Northern Capital, Dading, and the lands of Liaoxi. Genghis Khan returned to Mongolia in 1216, leaving the north China plain a battleground in which Mongol garrisons, Jin officers and local strongmen with their own militias fought for control.
+    facts:
+      - [Tongzhou surrenders, "early 1215"]
+      - [Relief column routed at Bazhou, "spring 1215"]
+      - [Zhongdu surrenders, "31 May 1215"]
+      - [Dading taken by Muqali, "1215"]
+    markers:
+      - kind: taken
+        side: mon
+        name: Zhongdu (Beijing)
+        date: 31 May 1215
+        text: Surrendered after its commander took poison. The city was sacked and much of it burned.
+        lonlat: [116.350, 39.870]
+      - kind: battle
+        side: mon
+        name: Bazhou
+        date: Spring 1215
+        text: Li Ying’s relief column, bringing grain to Zhongdu, was routed and its convoy taken.
+        lonlat: [116.390, 39.120]
+      - kind: taken
+        side: mon
+        name: Dading (Northern Capital)
+        date: "1215"
+        text: The old Liao central capital, the Jin Northern Capital, taken by Muqali.
+        lonlat: [119.180, 41.590]
+    arrows:
+      - side: jin
+        label: Li Ying
+        phase: 1
+        via: [[115.600, 38.200], [116.100, 38.700], [116.370, 39.080]]
+      - side: mon
+        label: Muqali
+        phase: 1
+        via: [[118.000, 42.800], [118.700, 42.200], [119.150, 41.650]]
+    areas:
+      - style: gained
+        side: mon
+        label: Held by the Mongols and their allies after 1215 (approximate)
+        atoms: [CN-BJ, CN-TJ, CN-HE~yan, CN-HE~chahar, CN-HE~rehe, CN-LN~liaoxi, CN-NM~chifeng]
+  - title: Liaodong, Yelü Liuge and Eastern Xia
+    date: 1213–1233
+    when: "1215"
+    borders: "1217-06-01"
+    countries: [cn, ru]
+    body:
+      - In Liaodong the Jin lost control of the old Jurchen and Khitan heartland. Yelü Liuge took Dongjing (Liaoyang) in 1215 and went in person to Genghis Khan to submit. In his absence some of his followers, led by Yelü Sibu, rejected Mongol overlordship and in 1216 proclaimed a rival Liao; driven east into Korea, they were destroyed at Kangdong in 1219 by a Mongol, Eastern Xia and Korean army. Yelü Liuge died in 1220, and his family went on serving the Mongols.
+      - Puxian Wannu, a Jurchen general whom the Jin had sent to Liaodong in 1214, was beaten by Yelü Liuge near Kaiyuan. In 1215 he broke with the Jin and proclaimed a state of his own at Dongjing. He submitted to the Mongols in 1216 and sent his son Tege as a hostage, but in 1217 he broke away again, killed the Mongol residents and moved east into the mountains of the upper Tumen and Mudan rivers. There he ruled as king of Eastern Xia (Dongxia), with his capital at Nanjing near today’s Yanji, over Jurchen lands that reached to the Sea of Japan in today’s Russian Primorye.
+      - Eastern Xia outlasted the Jin rule in Manchuria by more than a decade, sometimes allied with the Mongols and sometimes defying them. In 1233 Ögedei sent his son Güyük against it; Nanjing was taken, Puxian Wannu was captured and killed, and Eastern Xia came to an end.
+    facts:
+      - [Yelü Liuge takes Dongjing, "1215"]
+      - [Puxian Wannu’s state proclaimed, "1215"]
+      - [Eastern Xia breaks with the Mongols, "1217"]
+      - [Eastern Xia conquered by Güyük, "1233"]
+    markers:
+      - kind: capital
+        side: liao
+        name: Xianping (Kaiyuan)
+        date: 1213–1220
+        text: Capital of Yelü Liuge’s Liao, a Mongol ally.
+        lonlat: [124.040, 42.550]
+      - kind: taken
+        side: liao
+        name: Dongjing (Liaoyang)
+        date: "1215"
+        text: The Jin eastern capital changed hands several times; Yelü Liuge and Puxian Wannu each held it in 1215.
+        lonlat: [123.170, 41.270]
+        lp: l
+      - kind: taken
+        side: mon
+        name: Nanjing (Eastern Xia)
+        date: "1233"
+        text: The mountain capital of Eastern Xia, east of today’s Yanji, taken by Güyük. Puxian Wannu was captured.
+        lonlat: [129.670, 42.930]
+    arrows:
+      - side: exia
+        label: Puxian Wannu, 1217
+        phase: 1
+        via: [[123.200, 41.350], [125.300, 42.300], [127.600, 42.900], [129.600, 42.940]]
+      - side: mon
+        label: Güyük, 1233
+        phase: 2
+        via: [[124.100, 42.700], [126.500, 43.600], [128.600, 43.400], [129.600, 43.000]]
+    areas:
+      - style: outline
+        side: exia
+        label: Eastern Xia, about 1220 (approximate)
+        polygon: [[126.800, 41.600], [128.300, 41.500], [129.900, 42.400], [130.700, 42.300], [131.300, 43.300], [133.000, 42.800], [134.600, 44.000], [134.300, 45.600], [132.000, 45.800], [129.800, 45.600], [128.400, 44.800], [127.300, 43.600]]
+  - title: Muqali in the north
+    date: 1217–1223
+    when: "1217"
+    borders: "1220-06-01"
+    countries: [cn]
+    body:
+      - In 1217 Genghis Khan made Muqali “Prince of State” (guowang) and gave him command of the war in northern China, while he himself turned west against Khwarazm. Muqali had perhaps 20,000 Mongol troops; with the Önggüd, Khitan, Jurchen and Chinese auxiliaries his forces may have numbered 40,000 to 70,000. He changed the war from raiding to occupation, taking towns in Hebei and Shandong in 1217 and Taiyuan, Pingyang and the other cities of Shanxi in 1218.
+      - Much of the conquest was done by Chinese commanders who had raised militias in the chaos and now went over to the Mongols, keeping their troops and lands. Among them were Zhang Rou, captured in 1218, Shi Tianni, Yan Shi at Dongping and Wu Xian, who surrendered Zhending in 1220. They became the hereditary lords of the Mongol north. In Shandong the Red Coat bands of Yang An’er and Li Quan played the Jin, the Song and the Mongols against one another.
+      - The Jin, hemmed in to Henan, Shaanxi and the land between the Yellow River and the Huai, attacked the Song in 1217 to make up their losses and fought Western Xia as well; neither war gained them anything. In 1221–1222 Muqali crossed the Ordos into Shaanxi and took the towns of the north, and late in 1222 he took Hezhong on the Yellow River, but Jingzhao (Chang’an) and Fengxiang held out. He died in the spring of 1223 at Wenxi in Shanxi. The new Jin emperor, Aizong, who came to the throne in 1224, made peace with the Song that year and with Western Xia in 1225.
+    facts:
+      - [Muqali’s command, "1217–1223"]
+      - [Taiyuan taken, "1218"]
+      - [Zhending surrenders, "1220"]
+      - [Jin–Song war, "1217–1224"]
+      - [Death of Muqali, "spring 1223"]
+    markers:
+      - kind: taken
+        side: mon
+        name: Taiyuan
+        date: "1218"
+        text: The chief city of Shanxi, taken by Muqali in his campaign of 1218.
+        lonlat: [112.550, 37.870]
+      - kind: taken
+        side: mon
+        name: Zhending (Zhengding)
+        date: "1220"
+        text: Surrendered by the Jin commander Wu Xian, who served the Mongols until he changed sides again in 1225.
+        lonlat: [114.570, 38.150]
+      - kind: taken
+        side: mon
+        name: Hezhong (Puzhou)
+        date: Late 1222
+        text: The Jin fortress at the great bend of the Yellow River, taken by Muqali.
+        lonlat: [110.320, 34.840]
+        lp: l
+      - kind: siege
+        side: jin
+        name: Fengxiang
+        date: Early 1223
+        text: Besieged by Muqali with Xia troops, it held out. Muqali fell ill and withdrew.
+        lonlat: [107.390, 34.520]
+      - kind: event
+        side: mon
+        name: Wenxi
+        date: Spring 1223
+        text: Muqali died here on his way back across the Yellow River.
+        lonlat: [111.220, 35.360]
+        lp: b
+    arrows:
+      - side: mon
+        label: Muqali, 1218
+        phase: 1
+        via: [[113.300, 40.050], [112.800, 39.000], [112.580, 37.920]]
+      - side: mon
+        label: Muqali, 1221
+        phase: 2
+        via: [[110.600, 39.700], [110.300, 38.600], [109.600, 37.600]]
+      - side: mon
+        label: Muqali, 1222
+        phase: 3
+        via: [[111.700, 36.700], [111.100, 35.600], [110.360, 34.880]]
+      - side: mon
+        label: Muqali, 1223
+        phase: 4
+        via: [[110.300, 34.800], [109.000, 34.450], [107.450, 34.530]]
+    areas:
+      - style: outline
+        side: jin
+        label: Main Jin territory after 1215 (approximate)
+        atoms: [CN-HA, CN-SN, CN-GS~longdong, CN-GS~tianshui, CN-JS~huaibei, CN-AH~huaibei]
+  - title: Ögedei’s war and Tolui’s march
+    date: 1229 – January 1232
+    when: "1231"
+    borders: "1231-12-01"
+    countries: [cn]
+    body:
+      - After Muqali’s death and Genghis Khan’s in 1227, the Jin recovered ground in Shaanxi and along the Yellow River. Their generals Wanyan Heda and Yila Pu’a held a line from Tongguan along the river, and the Zhongxiao army of Wanyan Chenheshang won victories at Dachangyuan and elsewhere. Ögedei, elected Great Khan in 1229, refused Jin offers of peace. In 1230–1231 the Jin drove the Mongols from Weizhou, and Subutai was beaten at Tongguan and at Daohuigu. In the spring of 1231 Ögedei and Tolui took Fengxiang after a long siege, and the Jin abandoned Jingzhao (Chang’an).
+      - The Jin line along the Yellow River and the fortress of Tongguan were too strong to force, and the Mongols planned to come at Kaifeng from several directions at once; some accounts say Genghis Khan had advised a march through Song territory before he died. While Ögedei led the main army towards the river from Shanxi, Tolui, with perhaps 30,000 horsemen, was to cross Song territory and strike from the south. The Song refused passage and a Mongol envoy was killed, and in the autumn of 1231 Tolui forced his way over the Qinling Mountains into the Hanzhong basin, plundered the Song towns there and followed the Han River east. In January 1232 he crossed the Han near Guanghua into Jin territory.
+      - The main Jin army, under Heda and Pu’a, marched south from the Yellow River to Dengzhou to meet him. At the end of January 1232 Ögedei’s army, under Subutai’s command, crossed the frozen Yellow River at Baipo and took Zhengzhou.
+    facts:
+      - [Ögedei elected Great Khan, "1229"]
+      - [Fengxiang taken, "spring 1231"]
+      - [Tolui crosses the Han River, "January 1232"]
+      - [Ögedei’s army crosses the Yellow River, "28 January 1232"]
+    markers:
+      - kind: taken
+        side: mon
+        name: Fengxiang
+        date: Spring 1231
+        text: Taken by Ögedei and Tolui after a siege of about two months. The Jin then abandoned Chang’an.
+        lonlat: [107.390, 34.520]
+      - kind: held
+        side: jin
+        name: Tongguan
+        date: 1230–1231
+        text: The fortress guarding the road from the Wei valley into Henan, where Subutai was turned back.
+        lonlat: [110.290, 34.610]
+      - kind: event
+        side: mon
+        name: Hanzhong
+        date: Autumn 1231
+        text: Song territory, plundered by Tolui’s army on its way round the Jin defences.
+        lonlat: [107.030, 33.070]
+        lp: b
+      - kind: event
+        side: mon
+        name: Guanghua
+        date: January 1232
+        text: Tolui crossed the Han River near here into Jin territory.
+        lonlat: [111.670, 32.390]
+        lp: b
+      - kind: taken
+        side: mon
+        name: Zhengzhou
+        date: February 1232
+        text: Surrendered to Ögedei’s army after it crossed the Yellow River.
+        lonlat: [113.650, 34.750]
+    arrows:
+      - side: mon
+        label: Tolui
+        phase: 1
+        via: [[107.390, 34.520], [107.100, 34.000], [107.030, 33.100], [109.000, 32.700], [111.600, 32.420]]
+      - side: jin
+        label: Heda and Pu’a
+        phase: 1
+        via: [[110.300, 34.600], [111.400, 33.800], [112.000, 33.000], [112.090, 32.720]]
+      - side: mon
+        label: Ögedei and Subutai
+        phase: 2
+        via: [[112.500, 36.100], [112.600, 35.200], [112.750, 34.850], [113.600, 34.760]]
+  - title: Sanfengshan
+    date: January – February 1232
+    when: "1232-02-09"
+    borders: "1232-02-10"
+    countries: [cn]
+    body:
+      - The Jin army, by most accounts well over 100,000 men, met Tolui at Mount Yu near Dengzhou. The fighting was indecisive, and the Jin claimed a victory, but Tolui split his force and slipped past them to the north, plundering the country on the way to Kaifeng. Ordered back to defend the capital, Heda and Pu’a followed him north, harassed by Mongol horsemen who cut off their supplies.
+      - Near Junzhou (today Yuzhou) the Jin army was caught in a snowstorm that lasted three days. It reached the hill of Sanfengshan exhausted and short of food, while reinforcements from Ögedei joined Tolui. On 9 February 1232 the Mongols let the Jin begin to retreat along a road that seemed open and then fell on them, and the army collapsed. Heda and Wanyan Chenheshang escaped to Junzhou and were killed when it fell; Chenheshang is said to have refused to kneel. Pu’a was captured and later executed.
+      - The battle destroyed the last Jin field army. The towns of Henan surrendered or were taken, the garrison of Tongguan gave up, and the emperor Aizong was left with the troops in Kaifeng.
+    facts:
+      - [Battle of Sanfengshan, "9 February 1232, Mongol victory"]
+      - [Mongol army, "Tolui’s 20,000–40,000 with Ögedei’s reinforcements (Atwood)"]
+      - [Jin army, "100,000–200,000 (Atwood)"]
+    markers:
+      - kind: event
+        side: jin
+        name: Dengzhou
+        date: January 1232
+        text: The Jin army gathered here to meet Tolui and fought him at nearby Mount Yu.
+        lonlat: [112.090, 32.690]
+        lp: l
+      - kind: battle
+        side: mon
+        name: Sanfengshan
+        date: 9 February 1232
+        text: The Jin army, worn out by the snow and the march, was destroyed south-west of Junzhou.
+        lonlat: [113.380, 34.070]
+        lp: l
+      - kind: taken
+        side: mon
+        name: Junzhou (Yuzhou)
+        date: February 1232
+        text: Taken after the battle. Wanyan Heda and Wanyan Chenheshang were killed.
+        lonlat: [113.470, 34.150]
+      - kind: taken
+        side: mon
+        name: Tongguan
+        date: "1232"
+        text: The Jin garrison surrendered after Sanfengshan.
+        lonlat: [110.290, 34.610]
+    arrows:
+      - side: mon
+        label: Tolui
+        phase: 1
+        via: [[111.750, 32.500], [112.300, 33.000], [112.800, 33.600], [113.300, 34.000]]
+      - side: jin
+        label: Heda and Pu’a
+        phase: 1
+        via: [[112.090, 32.720], [112.550, 33.350], [113.050, 33.850], [113.350, 34.040]]
+      - side: mon
+        label: From Ögedei
+        phase: 2
+        via: [[113.650, 34.700], [113.550, 34.400], [113.420, 34.110]]
+  - title: The siege of Kaifeng
+    date: April 1232 – May 1233
+    when: "1232-04-08"
+    borders: "1232-06-01"
+    countries: [cn]
+    body:
+      - Kaifeng, the old Northern Song capital, had huge walls and was crowded with refugees. Subutai laid siege to it on 8 April 1232. In sixteen days of assaults the defenders used thunder-crash bombs (zhentianlei), iron casings filled with gunpowder thrown from trebuchets, and fire lances, tubes of gunpowder on spears that shot flame several metres; the Mongols answered with catapults and dug approaches under cowhide shelters. Talks led to a pause, and Ögedei and Tolui returned north, leaving Subutai in command.
+      - In the summer of 1232 an epidemic struck the city. The Jin history records that in fifty days more than 900,000 dead were carried out of its gates, not counting the poor who could not be buried. The number may be exaggerated, and historians still debate what the disease was; some have suggested plague. The talks ended when the Mongol envoy Tang Qing and his party were killed in the city.
+      - In January 1233 Aizong left Kaifeng with an army, crossed the Yellow River and tried to take Weizhou. Beaten at Baigongmiao, he slipped back across the river at night and reached Guide (Shangqiu). In Kaifeng the general Cui Li killed the ministers left in charge and surrendered to Subutai, and the Mongols entered the city on 29 May 1233. The men of the Jin imperial clan were killed and the empress dowager and court ladies taken north. Subutai wanted to massacre the city that had resisted so long; according to his biography in the Yuan history, Yelü Chucai persuaded Ögedei to punish only the imperial clan, and 1,470,000 people sheltering in Kaifeng were spared.
+    facts:
+      - [Siege begins, "8 April 1232"]
+      - [Epidemic, "summer 1232; over 900,000 dead in 50 days, by the Jin history’s count"]
+      - [Aizong leaves Kaifeng, "January 1233"]
+      - [Kaifeng surrenders, "29 May 1233"]
+    markers:
+      - kind: taken
+        side: mon
+        name: Bianjing (Kaifeng)
+        date: 29 May 1233
+        text: Surrendered by Cui Li after a siege of more than a year and an epidemic that killed a large part of its people.
+        lonlat: [114.350, 34.790]
+      - kind: battle
+        side: mon
+        name: Weizhou
+        date: January – February 1233
+        text: Aizong’s army failed to take the town and was beaten nearby at Baigongmiao.
+        lonlat: [114.070, 35.400]
+        lp: l
+      - kind: battle
+        side: jin
+        name: Guide (Shangqiu)
+        date: Summer 1233
+        text: Aizong’s refuge. The Jin general Pucha Guannu destroyed a Mongol camp outside the city in a night attack by boat with fire lances.
+        lonlat: [115.650, 34.380]
+    arrows:
+      - side: jin
+        label: Aizong
+        phase: 1
+        via: [[114.350, 34.830], [114.600, 35.150], [114.130, 35.370]]
+      - side: jin
+        phase: 2
+        via: [[114.250, 35.300], [114.900, 35.000], [115.600, 34.430]]
+  - title: Caizhou and the end of the Jin
+    date: August 1233 – 9 February 1234
+    when: "1234-02-09"
+    borders: "1234-02-08"
+    countries: [cn]
+    body:
+      - At Guide the general Pucha Guannu made himself master of the court and killed many officials; after his night victory over the Mongols, Aizong had him killed and in August 1233 moved to Caizhou (Runan), further south. He asked the Song for grain, warning that once the Jin were gone the Mongols would turn on the Song. The Song court, which had lost the north to the Jin a century earlier, chose instead to ally with the Mongols, who promised it part of Henan.
+      - Late in 1233 a Mongol army under Taghachar besieged Caizhou, and a Song army under Meng Gong and Jiang Hai joined it, 10,000 men by the Jin history’s account and 20,000 by others, bringing 300,000 shi of grain. The besiegers drained the lake and river that protected the walls, broke into the outer city in January 1234, and starved the defenders.
+      - On 9 February 1234, as the Mongols and the Song broke in, Aizong handed the throne to the general Wanyan Chenglin and hanged himself. Chenglin, the last Jin emperor, was killed in the street fighting the same day. Meng Gong carried part of Aizong’s remains back to the Song court. Months later Song armies marched north to occupy Kaifeng and Luoyang, beginning the long war between the Song and the Mongols. Northern China, fought over for 23 years, was devastated; later registers counted far fewer households than the Jin census, but how much of the fall came from killing, famine, disease, flight south or escape from registration is debated.
+    facts:
+      - [Siege of Caizhou, "December 1233 – 9 February 1234"]
+      - [Song contingent, "10,000–20,000 men and 300,000 shi of grain"]
+      - [Death of Aizong, "9 February 1234"]
+      - [End of the Jin dynasty, "9 February 1234"]
+    link: { href: "#/war/mongol-conquest-of-the-song", text: Mongol conquest of the Song dynasty }
+    markers:
+      - kind: taken
+        side: mon
+        name: Caizhou (Runan)
+        date: 9 February 1234
+        text: The last Jin refuge, taken by the Mongols and the Song. Aizong hanged himself, and his successor died in the fighting.
+        lonlat: [114.360, 33.010]
+      - kind: event
+        side: song
+        name: Xiangyang
+        date: "1233"
+        text: The Song stronghold on the Han River from which Meng Gong marched to Caizhou.
+        lonlat: [112.140, 32.010]
+        lp: b
+    arrows:
+      - side: jin
+        label: Aizong
+        phase: 1
+        via: [[115.650, 34.380], [115.000, 33.800], [114.420, 33.060]]
+      - side: song
+        label: Meng Gong
+        phase: 2
+        via: [[112.140, 32.050], [113.000, 32.450], [113.800, 32.800], [114.320, 33.000]]
+      - side: mon
+        label: Taghachar
+        phase: 2
+        via: [[114.350, 34.750], [114.300, 34.000], [114.360, 33.060]]

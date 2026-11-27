@@ -1,0 +1,118 @@
+id: japanese-invasion-of-taiwan-1874
+name: Japanese invasion of Taiwan (1874)
+start: "1874-05-06"
+end: "1874-12-03"
+tier: B
+summary: "Japan’s first overseas military expedition of the Meiji era, also called the Taiwan Expedition or, in Taiwan and China, the Mudan Incident. In December 1871 a ship from the Ryukyu Kingdom was wrecked on the south-east coast of Taiwan, and 54 of its crew were killed by Paiwan people of Mudan and Kuskus. Japan, which was claiming the Ryukyus, argued that the indigenous lands of Taiwan lay outside Qing rule and in May 1874 landed some 3,600 troops under Saigō Jūdō in the south of the island. They defeated the Paiwan at Stone Gate on 22 May and burned their villages, but malaria killed 561 men while the soldiers waited in camp. The Qing sent troops to Taiwan, and in Beijing Ōkubo Toshimichi negotiated an agreement, signed at the end of October, by which China paid 500,000 taels and called the expedition an act to protect Japanese subjects. Japan withdrew in December; it later used the wording to support its annexation of the Ryukyus in 1879, and the Qing began to strengthen its hold on Taiwan."
+countries: [tw, jp]
+sides:
+  - id: jp
+    name: Empire of Japan
+    polities: [japan]
+    ink: red
+    moves: Japanese moves
+    success: Japanese success
+  - id: tw
+    name: Paiwan villages of Mudan and Kuskus
+    polities: [formosan-peoples]
+    ink: brown
+    moves: Paiwan moves
+    success: Paiwan success
+  - id: qing
+    name: Qing China (not a combatant)
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+notes:
+  - Japanese and Western sources of the time called the indigenous peoples of Taiwan “savages” and their lands terra nullius; the Qing held that the whole island was Chinese even where its officials did not govern. Japan’s campaign was planned with the help of the former American consul at Xiamen, Charles Le Gendre.
+  - Japanese losses were 12 killed in battle and 561 dead of disease, according to Japanese figures. The Paiwan lost some 30 or more men in the fighting, including the Mudan chief Agulu and his son, and many villages were burned.
+sources:
+  - title: 1874 Japanese expedition to Taiwan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1874_Japanese_expedition_to_Taiwan
+  - title: Mudan incident (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mudan_incident
+  - title: "Robert Eskildsen, “Of Civilization and Savages: The Mimetic Imperialism of Japan’s 1874 Expedition to Taiwan”, American Historical Review (2002)"
+    url: https://doi.org/10.1086/532290
+steps:
+  - title: The landing and the Battle of Stone Gate
+    date: May – June 1874
+    when: "1874-05-22"
+    borders: "1874-05-22"
+    countries: [tw]
+    body:
+      - The Japanese government decided on the expedition in April 1874, over the objections of the British and American ministers, and sent it off under Saigō Jūdō, the younger brother of Saigō Takamori. An advance force landed at Sheliao on Langqiao Bay (today Checheng in Pingtung) on 6–7 May and built a camp, and some of the southern villages made terms with it. On 17 and 21 May small parties were ambushed by fighters from Mudan; a soldier was killed and beheaded.
+      - On 22 May, the day Saigō arrived with the main force, a column of about 150 men under Sakuma Samata pushed up the river valley into the gorge of Shimen (Stone Gate), where some 70 Mudan men waited behind the rocks. After more than an hour of fighting Japanese riflemen climbed the cliffs above and the Paiwan withdrew, losing 16 men, among them their chief Agulu and his son. In early June three Japanese columns marched into the hills and burned Mudan, Kuskus and other villages, and on 1 July the leaders of Mudan and Kuskus submitted.
+    facts:
+      - [Mudan incident, "December 1871, 54 Ryukyuans killed"]
+      - [Japanese landing, "6–7 May 1874"]
+      - [Battle of Stone Gate, "22 May 1874"]
+      - [Japanese troops, "about 3,600"]
+    markers:
+      - kind: event
+        side: jp
+        name: Sheliao (Checheng)
+        date: 6–7 May 1874
+        text: The Japanese landed on Langqiao Bay here and set up their main camp.
+        lonlat: [120.708, 22.075]
+        lp: l
+      - kind: battle
+        side: jp
+        name: Stone Gate (Shimen)
+        date: 22 May 1874
+        text: A Japanese column fought its way through a Paiwan ambush in the gorge; the Mudan chief Agulu was killed.
+        lonlat: [120.757, 22.121]
+      - kind: event
+        side: tw
+        name: Bayao Bay
+        date: December 1871
+        text: The Ryukyuan ship was wrecked here; 54 of the 66 men who reached the shore were later killed inland.
+        lonlat: [120.880, 22.060]
+      - kind: taken
+        side: jp
+        name: Mudan
+        date: June 1874
+        text: The Paiwan villages of Mudan were burned by the Japanese columns.
+        lonlat: [120.795, 22.150]
+        lp: r
+    arrows:
+      - side: jp
+        label: Saigō Jūdō
+        phase: 1
+        via: [[120.400, 22.000], [120.600, 22.050], [120.705, 22.075]]
+      - side: jp
+        phase: 2
+        via: [[120.710, 22.080], [120.740, 22.110], [120.760, 22.125], [120.790, 22.148]]
+    areas:
+      - style: outline
+        side: tw
+        label: Paiwan lands of the south, outside Qing administration
+        polygon: [[120.720, 22.030], [120.740, 22.250], [120.820, 22.330], [120.900, 22.200], [120.880, 21.990], [120.800, 21.950]]
+  - title: Malaria and the Peking agreement
+    date: June – December 1874
+    when: "1874-10-30"
+    borders: "1874-12-03"
+    countries: [tw, cn, jp]
+    body:
+      - The Japanese built lasting camps and showed no sign of leaving. The Qing sent the commissioner Shen Baozhen to Taiwan with troops and warships, and the two sides held talks in camp in June without result. In the summer malaria broke out among the Japanese; hundreds were sick by August and September, and by the end 561 had died, many times the number killed in battle.
+      - Ōkubo Toshimichi went to Beijing in September, and after weeks of difficult talks, with the British minister Thomas Wade acting as a go-between, an agreement was signed at the end of October 1874. The Qing paid an indemnity of 500,000 taels, of which 100,000 was for the families of the dead Ryukyuans, and described the expedition as a lawful act to protect Japanese subjects; Japan accepted that Taiwan was Chinese. The troops left on 3 December. Afterwards the Qing built roads into the mountains, encouraged settlement and in 1885 made Taiwan a province.
+    facts:
+      - [Peking agreement, "October 1874"]
+      - [Indemnity, "500,000 taels"]
+      - [Japanese dead from disease, "561"]
+      - [Japanese withdrawal, "3 December 1874"]
+    markers:
+      - kind: event
+        side: qing
+        name: Tainan
+        date: June 1874
+        text: The capital of Taiwan prefecture, where Shen Baozhen landed troops to counter the Japanese.
+        lonlat: [120.200, 22.990]
+        lp: l
+      - kind: toll
+        side: jp
+        name: Japanese camp at Langqiao Bay
+        date: July – November 1874
+        text: Malaria swept the camps in the summer; 561 Japanese soldiers died of disease, against 12 killed in action.
+        lonlat: [120.700, 22.060]
+        lp: l

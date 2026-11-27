@@ -348,7 +348,7 @@ function buildWar(w, file, ctx) {
     const first = ctx.pol.list[ctx.pol.index.get((s.polities || [])[0])];
     const ink = s.ink || first?.ink || ['blue', 'red', 'purple', 'orange'][i % 4];
     if (!INKS.includes(ink)) err(`${where}: side ${s.id}: unknown ink ${ink}`);
-    return { id: s.id, name: s.name, ink, polities: (s.polities || []).map((p) => ctx.pol.index.get(p)).filter((v) => v !== undefined), moves: s.moves || null, success: s.success || null };
+    return { id: s.id, name: s.name, ink, polities: (s.polities || []).map((p) => ctx.renumber.get(ctx.pol.index.get(p))).filter((v) => v !== undefined), moves: s.moves || null, success: s.success || null };
   });
   const sideIds = new Set(sides.map((s) => s.id).concat('none'));
   const countries = new Set(w.countries || []);
@@ -523,6 +523,19 @@ async function main() {
   const pol = await buildPolities();
   const borders = await buildBorders(pol, topo);
   const labels = await buildLabels(pol, borders, topo);
+  // The site needs only the polities it can draw: owners in the border
+  // timeline and the states of capitals. War sides also name armies, rebels
+  // and coalitions that never hold land on the base map; the site never shows
+  // those (legends list a side's polities only where they are on the map), so
+  // they stay out of borders.json and the language indexes, which keeps the
+  // first load from growing with every wave's war actors (ROADMAP.md).
+  const onMap = new Set();
+  for (const t of borders.timeline) for (let j = 1; j < t.c.length; j += 2) if (t.c[j] >= 0) onMap.add(t.c[j]);
+  for (const c of labels.capitals) if (c.owner >= 0) onMap.add(c.owner);
+  const shipped = pol.list.map((_, i) => i).filter((i) => onMap.has(i));
+  const renumber = new Map(shipped.map((old, i) => [old, i]));
+  const shipIndex = (v) => (v < 0 ? v : renumber.get(v));
+  for (const c of labels.capitals) c.owner = shipIndex(c.owner);
 
   const locales = await loadLocales(err);
   if (!CHECK) await prepareLocaleOutput(locales, OUT);
@@ -537,7 +550,7 @@ async function main() {
       const f = batch[i];
       if (seen.has(w.id)) err(`war ${f}: duplicate id ${w.id}`);
       seen.add(w.id);
-      const { war, core, detail } = buildWar(w, f, { pol, borders });
+      const { war, core, detail } = buildWar(w, f, { pol, borders, renumber });
       wars.push(core);
       catalogue.push({ id: core.id, sk: core.sk || '0000', detail });
       return { war, entry: { name: core.name, detail } };
@@ -553,12 +566,12 @@ async function main() {
   // date, and data/borders/<century>.json the changes themselves (atom index,
   // polity index pairs) and their notes, after a full snapshot of the owners
   // before the century's first change. The site loads the century it shows.
-  const timeline = borders.timeline.map((t) => ({ d: t.d, k: t.k, s: t.s, c: t.c }));
+  const timeline = borders.timeline.map((t) => ({ d: t.d, k: t.k, s: t.s, c: t.c.map((v, j) => (j % 2 ? shipIndex(v) : v)) }));
   const bordersOut = {
     home: boxView([FRAME.x0, FRAME.y0, FRAME.x1 - FRAME.x0, FRAME.y1 - FRAME.y0]),
     // site/relief.webp: a raster over DATA_CLIP in the authoring projection.
     relief: { bounds: [DATA_CLIP.x0, DATA_CLIP.y0, DATA_CLIP.x1 - DATA_CLIP.x0, DATA_CLIP.y1 - DATA_CLIP.y0], center: CENTER },
-    polities: pol.list.map((p) => {
+    polities: shipped.map((i) => pol.list[i]).map((p) => {
       const hints = p.label ? (Array.isArray(p.label[0]) ? p.label : [p.label]) : [];
       const names = (p.names || []).map(([until, n]) => [dateKey(until), n]);
       for (const [k] of names) if (!k) err(`polity ${p.id}: bad date in names`);
@@ -571,7 +584,12 @@ async function main() {
     countries: await buildCountries(topo, new Set(wars.flatMap((w) => w.countries))),
   };
   // Translated map strings and border notes, needed to size the buckets.
-  compileLocaleMaps(locales, { polities: bordersOut.polities, timeline }, labels, err);
+  // Translations are checked against every polity (a key for a war actor is
+  // not an error), then the indexes keep only the names of shipped ones.
+  const politiesOut = (list) => list.map((p) => ({ name: p.name, names: (p.names || []).map(([until, n]) => [dateKey(until), n]) }));
+  compileLocaleMaps(locales, { polities: politiesOut(pol.list), timeline }, labels, err);
+  const shippedNames = new Set(bordersOut.polities.flatMap((p) => [p.name, ...(p.names || []).map(([, n]) => n)]));
+  for (const { translatedMap } of locales) if (translatedMap.polities) translatedMap.polities = Object.fromEntries(Object.entries(translatedMap.polities).filter(([k]) => shippedNames.has(k)));
   // Buckets are sized by their largest language, so each language's copy of a
   // file stays under the limit.
   const largestNote = (s) => Math.max(textSize(s ?? null), ...locales.map(({ notes }) => textSize(notes.get(s) ?? s ?? null)));
@@ -618,7 +636,7 @@ async function main() {
     for (const f of files) { try { const b = await readFile(join(OUT, f)); raw += b.length; gz += gzipSync(b).length; } catch {} }
     return { raw, gz };
   };
-  console.log(`polities ${pol.list.length}, atoms ${borders.order.length}, timeline entries ${borders.timeline.length}, wars ${wars.length}`);
+  console.log(`polities ${pol.list.length} (${shipped.length} on the map), atoms ${borders.order.length}, timeline entries ${borders.timeline.length}, wars ${wars.length}`);
   if (!CHECK) {
     // Showing a year also takes one bucket of borders and one of the
     // catalogue: count the largest of each. Other languages load translated

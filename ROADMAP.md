@@ -207,6 +207,14 @@ below are the number of new war entries (tiers A, B and C).
   Wassoulou, Rabih’s Bornu and the Boko Haram war reach into wave 13 lands
   and wait for it; Congo and Tanzania still show inherited names there.
   First load 1.09 MB gzip (fr 1.16, sv 1.15), close to the 1.2 MB budget.*
+- [x] Keep the first load from growing with war actors: `borders.json` and the
+  language indexes carry only the polities the map can draw (owners in the
+  border timeline and states of capitals). The armies, rebels and coalitions
+  that only war sides name stay out, since the site never draws them.
+  *Needed before wave 13: the French first load reached 1.16 MB with wave 12.
+  Done: 2,053 polities, 1,418 shipped; first load en 1.07 MB gzip, fr and sv
+  1.13 (were 1.09, 1.16 and 1.15). Translations are still checked against
+  every polity, so a translated actor name is not an error.*
 - [ ] Wave 13: Africa south of the Sahara (~100)
 - [ ] Wave 14: North America and the Caribbean (~100)
 - [ ] Wave 15: Central and South America (~100)

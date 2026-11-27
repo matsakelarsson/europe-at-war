@@ -14,10 +14,10 @@ whose 67 steps are included here as the Sweden view (`#/country/se`).
 - **Static site.** Vanilla JavaScript, canvas and SVG, no framework. The only
   runtime dependency is `topojson-client`, vendored in `site/vendor/`.
 - **A globe.** The map is a globe you can turn and zoom (`site/globe.js`).
-  Borders cover the whole world: hand-curated for Europe and the lands its wars
-  reached, drafted from historical-basemaps elsewhere. Wars and capitals cover
-  Europe so far; [ROADMAP.md](ROADMAP.md) has the plan for the rest of the
-  world.
+  Borders cover the whole world: hand-curated for Europe, the Near East, Iran,
+  Arabia and Central Asia, drafted from historical-basemaps elsewhere. Wars and
+  capitals cover the same regions so far; [ROADMAP.md](ROADMAP.md) has the plan
+  for the rest of the world.
 - **Atoms.** The map is built from all of Natural Earth's admin-1 regions
   (provinces, states, counties), cut further where history needs finer lines
   (`content/borders/splits/`). Atoms in Europe and around it keep the most

@@ -1,0 +1,271 @@
+id: gulf-war
+name: Gulf War
+start: "1990-08-02"
+end: "1991-04-11"
+tier: A
+summary: The war that followed Iraq’s invasion and annexation of Kuwait on 2 August 1990. Saddam Hussein’s government, deep in debt after the war with Iran, accused Kuwait of overproducing oil and drilling into Iraq’s Rumaila field, and revived an old claim to the emirate. The UN Security Council condemned the invasion and imposed sanctions, and a coalition of some 35 countries led by the United States gathered more than 900,000 troops in Saudi Arabia. After Iraq ignored a UN deadline of 15 January 1991, the coalition bombed Iraq and Iraqi forces in Kuwait for five and a half weeks from 17 January, and in a ground offensive of 24–28 February drove them out of Kuwait in about 100 hours. Iraqi forces set fire to more than 600 Kuwaiti oil wells as they left. The ceasefire left Saddam in power, under UN sanctions and weapons inspections. Estimates of Iraqi military dead range from about 8,000 to 50,000 and more; the coalition lost about 300 killed.
+countries: [iq, kw, sa, us, il]
+sides:
+  - id: iq
+    name: Iraq
+    polities: [iraq]
+    ink: brown
+    moves: Iraqi moves
+    success: Iraqi success
+  - id: coal
+    name: US-led coalition
+    polities: [kuwait, united-states, united-kingdom, saudi-arabia, france, egypt, syria]
+    ink: blue
+    moves: Coalition moves
+    success: Coalition success
+notes:
+  - Iraqi casualties are uncertain. Estimates of military dead range from about 8,000 to 50,000 or more, with 20,000–35,000 often cited; about 3,500 Iraqi civilians are estimated to have died from the bombing itself, and many more from the destruction of power and water systems and the sanctions that followed. About 1,000 Kuwaiti civilians were killed during the occupation, and several hundred Kuwaitis taken to Iraq were never returned.
+  - The occupation of Kuwait is shown as an area; Iraq’s annexation of Kuwait was declared void by the UN Security Council and is not shown on the base map.
+  - Coalition deaths were about 300, of which 147 US service members were killed in action; about a quarter of the US combat dead were killed by friendly fire.
+sources:
+  - title: Gulf War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Gulf_War
+  - title: Persian Gulf War (Britannica)
+    url: https://www.britannica.com/event/Persian-Gulf-War
+  - title: Iraqi invasion of Kuwait (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Iraqi_invasion_of_Kuwait
+  - title: United Nations Security Council Resolution 678 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/United_Nations_Security_Council_Resolution_678
+  - title: Amiriyah shelter bombing (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Amiriyah_shelter_bombing
+  - title: Battle of Khafji (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Khafji
+  - title: Highway of Death (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Highway_of_Death
+  - title: Kuwaiti oil fires (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kuwaiti_oil_fires
+  - title: United Nations Security Council Resolution 687 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/United_Nations_Security_Council_Resolution_687
+  - title: Resolution 687 (1991) (United Nations)
+    url: https://undocs.org/S/RES/687(1991)
+steps:
+  - title: Iraq invades Kuwait
+    date: August 1990
+    when: "1990-08-02"
+    borders: "1990-08-08"
+    countries: [iq, kw]
+    body:
+      - Iraq ended its war with Iran in 1988 owing tens of billions of dollars, much of it to Kuwait and Saudi Arabia. Saddam Hussein demanded that the debts be forgiven, accused Kuwait of keeping oil prices low by producing above its OPEC quota and of slant-drilling into the Rumaila field on the border, and massed troops on the frontier in July 1990. Talks in Jeddah broke down on 1 August.
+      - Early on 2 August about 100,000 Iraqi troops of the Republican Guard crossed the border, while helicopters landed commandos in Kuwait City. Kuwait’s small army was overwhelmed within a day. The emir, Sheikh Jaber al-Ahmad, escaped to Saudi Arabia, but his brother Sheikh Fahad was killed defending the Dasman Palace. Iraq set up a puppet “Provisional Free Government”, announced the annexation of Kuwait on 8 August and made it Iraq’s 19th province on 28 August. The UN Security Council demanded withdrawal the same day as the invasion (Resolution 660), imposed a trade embargo on 6 August (661) and declared the annexation void on 9 August (662).
+    facts:
+      - [Invasion, "2 August 1990"]
+      - [Annexation announced, "8 August 1990"]
+      - [UN Security Council resolutions, "660 (2 August), 661 (6 August), 662 (9 August)"]
+    markers:
+      - kind: taken
+        side: iq
+        name: Kuwait City
+        date: 2 August 1990
+        text: Iraqi tanks reached the capital within hours. The occupation that followed brought looting, arrests, torture and executions of Kuwaitis, and some 400,000 Kuwaitis and many foreign workers fled.
+        lonlat: [47.98, 29.37]
+      - kind: battle
+        side: iq
+        name: Dasman Palace
+        date: 2 August 1990
+        text: The emir’s palace, defended by his guard; Sheikh Fahad al-Ahmad was killed here.
+        lonlat: [48.00, 29.39]
+        lp: t
+      - kind: taken
+        side: iq
+        name: Jahra
+        date: 2 August 1990
+        text: The main Iraqi column passed through Jahra on the road from the border to the capital.
+        lonlat: [47.66, 29.34]
+        lp: l
+    arrows:
+      - side: iq
+        label: Republican Guard
+        via: [[47.72, 30.1], [47.7, 29.75], [47.66, 29.4], [47.95, 29.36]]
+      - side: iq
+        via: [[47.3, 30.0], [47.3, 29.4], [47.75, 29.1], [48.05, 29.3]]
+    areas:
+      - style: occupied
+        side: iq
+        label: Occupied by Iraq
+        atoms: [KW-AH, KW-FA, KW-HA, KW-JA, KW-KU, KW-MU]
+  - title: Desert Shield
+    date: August 1990 – January 1991
+    when: "1990-08-07"
+    borders: "1990-11-29"
+    countries: [sa, kw, iq, us]
+    body:
+      - Fearing that Iraq would move on the Saudi oil fields, King Fahd agreed on 6 August to let US troops into the kingdom, and the first arrived the next day. Over five months the United States, Britain, France, Egypt, Syria, the Gulf states and some 25 other countries built up a force of more than 900,000 troops, about 700,000 of them American, under US General Norman Schwarzkopf and Saudi Prince Khalid bin Sultan. Japan and Germany, which sent no combat troops, paid a large part of the costs.
+      - Iraq held thousands of Western and other foreigners as hostages, some at military and industrial sites as “human shields”, until December. Diplomacy failed; Saddam offered to withdraw only if Israel left the occupied Palestinian territories, which the coalition rejected. On 29 November the Security Council, in Resolution 678, authorised member states to use “all necessary means” if Iraq did not leave Kuwait by 15 January 1991. On 12 January the US Congress authorised the use of force.
+    facts:
+      - [First US troops arrive, "7 August 1990"]
+      - [Coalition forces, "more than 900,000, from about 35 countries"]
+      - [Resolution 678, "29 November 1990, deadline 15 January 1991"]
+    markers:
+      - kind: event
+        side: coal
+        name: Dhahran
+        date: from 7 August 1990
+        text: The air base and ports of the Eastern Province received most of the coalition’s troops and equipment.
+        lonlat: [50.10, 26.29]
+      - kind: capital
+        side: coal
+        name: Riyadh
+        date: 1990–1991
+        text: The coalition’s headquarters.
+        lonlat: [46.72, 24.69]
+      - kind: event
+        side: coal
+        name: Hafar al-Batin
+        date: 1990–1991
+        text: King Khalid Military City, where Arab and other coalition divisions massed.
+        lonlat: [45.97, 28.43]
+    areas:
+      - style: occupied
+        side: iq
+        label: Occupied by Iraq
+        atoms: [KW-AH, KW-FA, KW-HA, KW-JA, KW-KU, KW-MU]
+  - title: The air war
+    date: 17 January – 23 February 1991
+    when: "1991-01-17"
+    borders: "1991-01-17"
+    countries: [iq, kw, sa, il]
+    body:
+      - In the early hours of 17 January 1991 coalition aircraft and cruise missiles began the air campaign of Operation Desert Storm. In about 100,000 sorties over five and a half weeks they destroyed Iraq’s air defences, command centres, power stations, bridges and suspected weapons plants, and pounded the Iraqi army in Kuwait and southern Iraq. On 13 February two US bombs destroyed the Amiriyah shelter in Baghdad, which the United States believed was a command bunker, killing 408 civilians sheltering there.
+      - Iraq fired some 88 Scud missiles at Israel and Saudi Arabia, trying to draw Israel into the war and split the Arab members of the coalition. Israel, under US pressure, did not retaliate. On 25 February a Scud hit a US barracks at Dhahran, killing 28 soldiers. Late in January Iraqi forces released millions of barrels of crude oil into the Gulf, and on 29 January Iraqi troops raided across the border and took the empty Saudi town of Khafji, which Saudi and Qatari troops, with US air and artillery support, retook on 1 February.
+    facts:
+      - [Air campaign, "17 January – 23 February 1991"]
+      - [Amiriyah shelter, "13 February 1991, 408 civilians killed"]
+      - [Battle of Khafji, "29 January – 1 February 1991"]
+    markers:
+      - kind: air
+        side: coal
+        name: Baghdad
+        date: from 17 January 1991
+        text: Bombed nightly from the first hours of the war, which were broadcast live around the world.
+        lonlat: [44.37, 33.31]
+      - kind: event
+        side: coal
+        name: Amiriyah shelter
+        date: 13 February 1991
+        text: Two laser-guided bombs went through the roof of a public air-raid shelter, killing hundreds of women and children.
+        lonlat: [44.29, 33.30]
+        lp: l
+      - kind: battle
+        side: coal
+        name: Khafji
+        date: 29 January – 1 February 1991
+        text: The only large Iraqi ground attack of the war. The town was retaken by Saudi and Qatari forces.
+        lonlat: [48.49, 28.42]
+      - kind: event
+        side: iq
+        name: Tel Aviv
+        date: from 18 January 1991
+        text: Scuds hit Tel Aviv, Haifa and Ramat Gan. Two Israelis were killed directly, and others died of heart attacks or suffocation in gas masks.
+        lonlat: [34.78, 32.08]
+      - kind: event
+        side: iq
+        name: Dhahran
+        date: 25 February 1991
+        text: A Scud struck a barracks used by US reservists, the deadliest single attack on coalition troops.
+        lonlat: [50.10, 26.29]
+    arrows:
+      - side: iq
+        via: [[48.25, 28.75], [48.4, 28.6], [48.48, 28.45]]
+    areas:
+      - style: occupied
+        side: iq
+        label: Occupied by Iraq
+        atoms: [KW-AH, KW-FA, KW-HA, KW-JA, KW-KU, KW-MU]
+  - title: The 100-hour ground war
+    date: 24–28 February 1991
+    when: "1991-02-24"
+    borders: "1991-02-28"
+    countries: [kw, iq, sa]
+    body:
+      - The ground offensive began on 24 February. US Marines and Saudi, Egyptian, Syrian and Gulf troops broke through the Iraqi lines in Kuwait, while far to the west, in the “left hook”, the US XVIII Airborne Corps and French troops drove deep into the Iraqi desert to the Euphrates, and the US VII Corps, with a British division, swung north and then east to destroy the Republican Guard. Many Iraqi conscripts, short of food after weeks of bombing, surrendered in their thousands.
+      - On 26 February Saddam ordered his forces out of Kuwait. Coalition aircraft attacked the columns of vehicles fleeing north on the road past Mutla Ridge, which became known as the Highway of Death. Coalition and Kuwaiti forces entered Kuwait City on 26–27 February. In the last two days US armoured divisions fought the Republican Guard in some of the largest tank battles since 1945, but several Republican Guard divisions escaped through Basra. President George H. W. Bush declared a ceasefire on 28 February, after 100 hours of ground fighting. The retreating Iraqi forces set fire to more than 600 oil wells, which burned until November 1991.
+    facts:
+      - [Ground offensive, "24–28 February 1991"]
+      - [Kuwait City retaken, "26–27 February 1991"]
+      - [Oil wells set on fire, "more than 600"]
+    markers:
+      - kind: taken
+        side: coal
+        name: Kuwait City
+        date: 26–27 February 1991
+        text: Arab coalition forces entered first, by agreement, followed by US Marines.
+        lonlat: [47.98, 29.37]
+      - kind: event
+        side: coal
+        name: Mutla Ridge
+        date: 26–27 February 1991
+        text: Hundreds of vehicles, many filled with loot from Kuwait, were destroyed on the road north from Jahra; estimates of the dead vary widely.
+        lonlat: [47.67, 29.42]
+        lp: l
+      - kind: event
+        side: iq
+        name: Burgan oil field
+        date: February 1991
+        text: Iraqi troops blew up the wells of Kuwait’s largest oil field. Teams from many countries put out the last fire on 6 November 1991.
+        lonlat: [47.95, 28.95]
+      - kind: taken
+        side: coal
+        name: As-Salman
+        date: 25 February 1991
+        text: Taken by the French 6th Light Armoured Division and US paratroopers on the western flank.
+        lonlat: [44.55, 30.50]
+      - kind: taken
+        side: coal
+        name: Tallil air base
+        date: 27 February 1991
+        text: The US 24th Infantry Division reached the Euphrates near Nasiriyah, cutting the main road from Kuwait to Baghdad.
+        lonlat: [46.09, 30.94]
+    arrows:
+      - side: coal
+        label: XVIII Airborne Corps
+        via: [[43.49, 29.63], [44.55, 30.45], [45.6, 30.85], [46.1, 30.95]]
+      - side: coal
+        label: VII Corps
+        via: [[45.6, 28.95], [45.9, 29.7], [46.7, 30.1], [47.4, 30.25]]
+      - side: coal
+        via: [[47.55, 28.6], [47.6, 29.0], [47.9, 29.3]]
+      - side: coal
+        via: [[48.4, 28.5], [48.2, 28.9], [48.05, 29.3]]
+      - side: iq
+        label: Retreat
+        via: [[47.95, 29.36], [47.67, 29.42], [47.7, 29.9], [47.78, 30.45]]
+    areas:
+      - style: occupied
+        side: coal
+        label: Taken by the coalition in southern Iraq
+        polygon: [[43.0, 29.4], [44.4, 30.6], [45.7, 31.05], [46.4, 30.95], [47.5, 30.3], [47.7, 30.0], [47.4, 29.95], [46.5, 29.1], [44.7, 29.2]]
+  - title: The ceasefire
+    date: March – April 1991
+    when: "1991-03-03"
+    borders: "1991-04-11"
+    countries: [iq, kw]
+    body:
+      - On 3 March General Schwarzkopf and Iraqi generals met in a tent at Safwan airfield in southern Iraq to agree the terms of the ceasefire. Schwarzkopf allowed Iraq to keep flying helicopters, which its forces then used to crush the uprisings that had broken out in the south and the Kurdish north. On 3 April the Security Council passed Resolution 687, which Iraq accepted on 6 April; the ceasefire took formal effect on 11 April.
+      - The resolution required Iraq to destroy its chemical and biological weapons and long-range missiles under UN inspection, to give up any nuclear weapons programme, to pay compensation from its oil revenues and to accept a new, UN-demarcated border with Kuwait, watched by a UN observer force. Sanctions stayed in force until Iraq complied, and lasted until 2003. Kuwait was restored to the Al Sabah family, and coalition forces left southern Iraq by May.
+    facts:
+      - [Safwan talks, "3 March 1991"]
+      - [Resolution 687, "3 April 1991"]
+      - [Formal ceasefire, "11 April 1991"]
+    markers:
+      - kind: treaty
+        name: Safwan
+        date: 3 March 1991
+        text: The ceasefire talks between the coalition commanders and Iraqi generals.
+        lonlat: [47.71, 30.11]
+      - kind: event
+        side: iq
+        name: Basra
+        date: March 1991
+        text: Retreating soldiers began the uprising in the south here; it was crushed within weeks.
+        lonlat: [47.78, 30.51]
+        lp: l
+    areas:
+      - style: outline
+        side: coal
+        label: Coalition-held southern Iraq, until May 1991
+        polygon: [[43.0, 29.4], [44.4, 30.6], [45.7, 31.05], [46.4, 30.95], [47.5, 30.3], [47.7, 30.0], [47.4, 29.95], [46.5, 29.1], [44.7, 29.2]]

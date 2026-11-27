@@ -193,6 +193,7 @@ they ever border, keeping curated colours.
   owners:
     sweden: [SE-M, SE-K, SE-N, DK-84~bornholm]
     "-": [XX-1]          # "-" means: fall back to the drafted keyframes
+    none: [XX-2]         # no state: plain land (tribal lands, deserts)
 ```
 
 - `content/borders/curated.yaml` lists date ranges in which keyframes are
@@ -223,6 +224,9 @@ they ever border, keeping curated colours.
   | 800–today | Hungary, Slovakia, Romania, the former Yugoslavia, Albania, Greece, Bulgaria, Cyprus, Turkey (without Kars, Ardahan, Artvin and Iğdır before 1801) and Carpathian Ruthenia | `balkans.yaml`, `anatolia.yaml` (Anatolia, and Turkey from 1922), `ww2.yaml` (1941–1945) |
   | 800–1801 | Kars, Ardahan, Artvin and Iğdır | `anatolia.yaml` |
   | 800–today | Syria, Lebanon, Israel, Palestine, Jordan, Egypt | `levant.yaml` |
+  | 800–today | Iran (without Azerbaijan before 1801), Iraq, Afghanistan, Uzbekistan, Turkmenistan, Tajikistan, Kyrgyzstan | `iran-central-asia.yaml` (`russia.yaml` for 1991) |
+  | 1801–today | Iranian Azerbaijan (East and West Azerbaijan, Ardabil) | `iran-central-asia.yaml` |
+  | 800–today | Saudi Arabia, Yemen, Oman, the United Arab Emirates, Qatar, Bahrain, Kuwait | `arabia.yaml` |
 
   Other event files (`central-europe.yaml`) correct drafts outside any curated range; there, the next keyframe can
   still override an event. `central-europe.yaml` is a first pass made for the
@@ -345,6 +349,28 @@ they ever border, keeping curated colours.
   Desmond count as Irish) until the Tudor conquest (1556–1603); the
   Commonwealth union 1653/54–1660; Great Britain 1707; the United Kingdom 1801;
   the Irish Free State 1922.
+- **Iran, Iraq, Afghanistan and Central Asia.** The Abbasids in 800, then the
+  Tahirids (821), Saffarids (861), Samanids (873), Alids of Tabaristan,
+  Ziyarids, Buyids (934–1062), Ghaznavids (962) and Karakhanids (999); the
+  Seljuks (1038–1157), Khwarazmshahs, Ghurids and Qara Khitai; the Mongols
+  (1220), the Ilkhanate (1256) and the Chagatai Khanate (1260); the break-up
+  of 1338 (Jalayirids, Chobanids, Injuids, Muzaffarids, Kartids, Sarbadars);
+  Timur (1370–1405), the Kara and Aq Qoyunlu; then Safavid `persia` (1501),
+  the Shaybanids (`bukhara`, 1500), Khiva (1511), Babur and the Mughals in
+  Kabul (1504) and Kandahar, the Ottomans in Iraq (1534), the Hotaki (1709),
+  Nader Shah, the Durrani Empire (`afghanistan`, 1747), Kokand, the Qajars
+  (1779/1794) and the Russian conquest (1862–1895). Tribal lands with no state
+  (Ghor before the Ghurids, the Turkmen steppe 1599–1881, Kyrgyz lands after
+  1570 and 1758) use `none`.
+- **Arabia.** Abbasid governors in the Hejaz, Yemen and Bahrayn in 800; Najd,
+  Asir, Dhofar and Hadramawt are `none` until a state takes them. The
+  Qarmatians (899) and their successors in eastern Arabia (`hasa`), the Yemeni
+  dynasties (Ziyadids, Yufirids, the Zaydi imams, Sulayhids, Rasulids,
+  Tahirids), the Sharifate of Mecca (`hejaz`, 967), Oman and Hormuz (the
+  Omani coast 1320–1622), the Portuguese, the Ottomans (1517–1918), the Saudi
+  states (`saudi-arabia`, 1744/1824/1902), the Rashidis, the Trucial States
+  (1820) and Aden (1839). The eastern-Arabian dynasties hold the Eastern
+  Province atom, which also covers the Empty Quarter: read it as the coast.
 - **Checking borders.** After a build, `node tools/owners-at.mjs <date>
   [polities…] [--atoms <regex>]` lists who owns what on a date, and
   `node tools/owner-history.mjs <regex> [from] [to]` lists every change to the

@@ -1,0 +1,188 @@
+id: central-asian-revolt-1916
+name: Central Asian revolt of 1916
+start: "1916-07-17"
+end: "1917-02"
+tier: B
+summary: A rising against Russian rule in Turkestan and the Kazakh steppe, set off by a wartime decree of July 1916 that called up the region’s Muslim men, until then exempt from military service, for labour behind the front. Rebels killed officials and Russian settlers, above all in Semirechye. The army, Cossacks and settler militias put the revolt down with mass killings, and hundreds of thousands of Kyrgyz and Kazakhs fled across the Tian Shan into China, the flight Kyrgyz remember as the Urkun. Estimates of the Central Asian dead range from about 40,000 to 270,000 or more.
+countries: [kz, kg, uz, tj, tm]
+sides:
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: reb
+    name: Rebels
+    polities: [rebels-1916]
+    ink: orange
+    moves: Rebel moves and flight
+    success: Rebel success
+notes:
+  - Dates are New Style (Gregorian). Russian documents use the Julian calendar, then 13 days behind, so the decree is dated 25 June 1916 and the first clash at Khujand 4 July in Russian sources.
+  - Towns are shown under their present names. Russian sources call Karakol Przhevalsk, Bishkek Pishpek, Almaty Verny and Torgay Turgai.
+  - The number of dead is very uncertain. Russian officials counted settler deaths; nobody counted the Central Asians who were killed or who died in flight, of hunger or of disease, and modern estimates differ widely.
+sources:
+  - title: Central Asian revolt of 1916 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Central_Asian_revolt_of_1916
+  - title: Aleksey Kuropatkin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Aleksey_Kuropatkin
+  - title: Basmachi movement (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Basmachi_movement
+  - title: Remembering the Great Urkun (Radio Free Europe/Radio Liberty)
+    url: https://www.rferl.org/a/qishloq-ovozi-remembering-great-urkun/27706415.html
+  - title: X. Hallez and I. Ohayon, “Making political rebellion” (chapter of The Central Asian Revolt of 1916, Manchester University Press 2019, preprint on HAL)
+    url: https://halshs.archives-ouvertes.fr/halshs-02568166v1/file/Making%20political%20rebellion%20eng%20halshs.pdf
+steps:
+  - title: The labour decree
+    date: July 1916
+    when: "1916-07-17"
+    borders: "1916-07-17"
+    countries: [uz, tj, kg, kz]
+    body:
+      - With its armies short of men after two years of war, the Russian government decided to call up men aged 19 to 43 from the Muslim peoples of Turkestan and the steppe, who had never been liable for military service, to dig trenches and work behind the front. Nicholas II signed the decree on 8 July 1916. It came in the middle of the harvest, with no preparation, and the local headmen who drew up the lists were accused of sparing the rich for bribes. It fell on a region already angry at the loss of land to Russian and Ukrainian settlers and at wartime requisitions and prices.
+      - The first blood was shed at Khujand on 17 July, when police and soldiers fired on a crowd protesting outside the district office. Within days there were protests and clashes across the Ferghana Valley and in Tashkent, Andijan and Namangan. The most violent rising was in the Jizzakh district from 26 July, where rebels killed officials, cut the railway and telegraph and attacked Russian settlements, killing 83 settlers and carrying off 70. Martial law was declared on 30 July. A punitive force from Tashkent retook Jizzakh and Zaamin in August and destroyed many villages. The former war minister, General Aleksey Kuropatkin, was made governor-general of Turkestan and postponed the call-up to mid-September, but by then the revolt had spread to the steppe.
+    facts:
+      - [Labour decree, "8 July 1916 (25 June Old Style)"]
+      - [First clash, "Khujand, 17 July 1916"]
+      - [Jizzakh rising, "from 26 July 1916"]
+    markers:
+      - kind: event
+        side: reb
+        name: Khujand
+        date: 17 July 1916
+        text: A crowd gathered outside the district office to protest against the lists of men to be called up. The police and troops opened fire.
+        lonlat: [69.632, 40.279]
+        lp: b
+      - kind: event
+        name: Tashkent
+        date: July 1916
+        text: The seat of the governor-general of Turkestan. Crowds in the old city tried to stop the drawing up of the lists and were dispersed by gunfire.
+        lonlat: [69.28, 41.311]
+      - kind: event
+        side: reb
+        name: Andijan
+        date: 22 July 1916
+        text: Protesters clashed with the police and were dispersed with gunfire. Similar clashes followed in Namangan.
+        lonlat: [72.334, 40.783]
+      - kind: taken
+        side: reb
+        name: Jizzakh
+        date: 26 July 1916
+        text: Rebels killed the district officials and attacked Russian settlements. Troops from Tashkent retook the district in August and razed many villages.
+        lonlat: [67.842, 40.116]
+        lp: l
+      - kind: event
+        side: reb
+        name: Zaamin
+        date: July 1916
+        text: Kasim-Khoja, imam of the main mosque, proclaimed a holy war, had a police officer killed and named himself bek before troops retook the village.
+        lonlat: [68.394, 39.963]
+        lp: b
+    arrows:
+      - side: ru
+        label: Punitive force
+        via: [[69.28, 41.31], [68.78, 40.5], [68.2, 40.15], [67.9, 40.12]]
+    areas:
+      - style: contested
+        side: reb
+        label: Protests and risings, July 1916
+        atoms: [UZ-TK, UZ-TO, UZ-SI, UZ-JI, UZ-SA, UZ-FA, UZ-AN, UZ-NG, TJ-SU, KG-O, KG-J]
+  - title: Semirechye and the Urkun
+    date: August–October 1916
+    when: "1916-08-21"
+    borders: "1916-08-21"
+    countries: [kg, kz, cn]
+    body:
+      - In Semirechye, in the Chu valley and around Lake Issyk-Kul, Kyrgyz and Kazakh herders had lost much of their best land to settlers in the years before the war. In the second week of August they rose in the Pishpek, Przhevalsk and Verny districts. Near Tokmak the rebels of the Chu valley proclaimed Kanaat Abukin their khan. Rebels cut the telegraph and the roads, seized weapons from army convoys and attacked post stations and settler villages, and in the Przhevalsk district Dungans joined in. With most settler men away at the front, many of the dead were women, children and old people. Kuropatkin reported 3,478 settlers dead or missing in the Przhevalsk district alone.
+      - Troops brought in from the front, with Cossacks and settler militias, crushed the revolt by the end of September. Military courts sentenced rebels to death, soldiers and settlers burned villages and killed people without distinction, and in Przhevalsk settlers killed Kyrgyz and Dungan men held in the town. Kuropatkin planned to clear the Kyrgyz from the land around Issyk-Kul and in the Chu valley and give it to Russian settlers.
+      - From September whole communities fled with their herds south over the Tian Shan into Chinese Xinjiang, by the Bedel pass at more than 4,000 metres, by the Torugart and by other passes. Thousands died of cold and hunger on the way or were shot by pursuing troops, and bones still lay along the Bedel route decades later. Kyrgyz call the flight the Urkun, “the exodus”. Estimates of the number who fled run to the hundreds of thousands.
+    facts:
+      - [Rising in Semirechye, "from about 21 August 1916"]
+      - [Revolt put down, "late September – October 1916"]
+      - [Settlers dead or missing, "3,478 in the Przhevalsk district (Kuropatkin, August 1916)"]
+    markers:
+      - kind: event
+        side: reb
+        name: Tokmak
+        date: August 1916
+        text: The rebels of the Chu valley chose Kanaat Abukin as their khan in the hills near the town.
+        lonlat: [75.283, 42.833]
+        lp: b
+      - kind: event
+        name: Almaty
+        date: August – September 1916
+        text: Verny, the capital of Semirechye province. Punitive columns of troops and Cossacks set out from here for Issyk-Kul.
+        lonlat: [76.95, 43.233]
+      - kind: held
+        side: ru
+        name: Karakol
+        date: August 1916
+        text: Przhevalsk, the district town, held out with its garrison and armed settlers. Settlers there killed Kyrgyz and Dungan men held in the town.
+        lonlat: [78.392, 42.49]
+      - kind: event
+        side: reb
+        name: Bedel pass
+        date: September – October 1916
+        text: The main refugee route from Issyk-Kul to Uqturpan in Xinjiang, crossing the Tian Shan at about 4,300 metres. Many died here.
+        lonlat: [78.408, 41.408]
+        lp: l
+      - kind: event
+        side: reb
+        name: Torugart pass
+        date: September – October 1916
+        text: Refugees from the Naryn valley crossed here towards Kashgar.
+        lonlat: [75.417, 40.583]
+        lp: l
+      - kind: event
+        name: Uqturpan
+        date: autumn 1916
+        text: The first Chinese town on the Bedel route, where many refugees settled for the winter.
+        lonlat: [79.223, 41.214]
+        lp: b
+    arrows:
+      - side: ru
+        label: Punitive columns
+        phase: 1
+        via: [[76.95, 43.23], [77.9, 43.05], [78.6, 42.78], [78.4, 42.52]]
+      - side: ru
+        phase: 1
+        via: [[71.37, 42.9], [72.9, 42.8], [74.6, 42.87], [75.25, 42.83]]
+      - side: reb
+        label: The Urkun
+        phase: 2
+        via: [[78.0, 42.3], [78.25, 41.85], [78.41, 41.42], [79.15, 41.22]]
+      - side: reb
+        phase: 2
+        via: [[75.8, 42.1], [76.0, 41.43], [75.6, 40.95], [75.42, 40.6], [75.95, 39.5]]
+    areas:
+      - style: contested
+        side: reb
+        label: Rising in Semirechye, August–September 1916
+        atoms: [KG-C, KG-GB, KG-Y, KG-T, KG-N, KZ-ALA, KAZ-4829]
+  - title: Turgai, and the toll
+    date: October 1916 – February 1917
+    when: "1916-11-04"
+    borders: "1916-11-04"
+    countries: [kz, kg, tm]
+    link: { href: "#/war/basmachi-movement", text: The Basmachi movement }
+    body:
+      - On the Kazakh steppe the call-up met resistance in every province. The longest rising was in Turgai, where the rebel clans chose Abdulgafar Zhanbosynov as their khan and Amangeldy Imanov as their military leader. In November they besieged the town of Turgai. Troops relieved it, but Imanov’s horsemen kept up a guerrilla war in the steppe through the winter. In Transcaspia, Yomut Turkmen also rose, and the last fighting there ended in January 1917. The February Revolution of 1917 brought down the government that had ordered the call-up, and the revolt died away.
+      - Russian officials counted 2,325 settlers killed and 1,384 missing. Nobody counted the Central Asian dead. Estimates of those killed by troops and settlers or who died in flight, of hunger or of disease range from about 40,000, the figure of the Kyrgyz historian Shayyrkul Batyrbaeva, to 270,000, the estimate of the American historian Edward Sokol in 1954, and some writers give higher figures still. Kyrgyz historians reckon that up to 40 per cent of the Kyrgyz people died. Refugees who came back from China from 1917 found their land in settlers’ hands, and many died in the famine that followed.
+      - Soviet historians long treated the revolt as either a national liberation struggle or a reactionary rising, and the killings were little discussed. In 2016 a public commission in Kyrgyzstan called the repression a genocide, which Russian officials rejected. The anger left by 1916 fed the Basmachi movement that followed the Russian Revolution.
+    facts:
+      - [Siege of Turgai, "November 1916"]
+      - [Settlers, "2,325 killed and 1,384 missing (official figures)"]
+      - [Central Asian dead, "estimates from about 40,000 to 270,000 or more"]
+    markers:
+      - kind: siege
+        side: ru
+        name: Torgay
+        date: November 1916
+        text: Rebels led by Amangeldy Imanov besieged the town of Turgai. Its garrison held out until troops arrived.
+        lonlat: [63.5, 49.63]
+    areas:
+      - style: contested
+        side: reb
+        label: Turgai province in revolt, 1916–1917
+        atoms: [KZ-KUS, KZ-AKT]

@@ -1,0 +1,188 @@
+id: buyid-conquests
+name: Buyid conquests
+start: "933"
+end: "946-08"
+tier: B
+summary: The rise of the Buyids, three brothers from Daylam south of the Caspian Sea who began as officers of Daylamite warlords and within twelve years ruled western Iran and Iraq. Ali ibn Buya took Fars in 934, his brother Hasan won the Jibal from the Ziyarids with Isfahan and Rayy, and the youngest, Ahmad, took Khuzestan and in December 945 entered Baghdad, where he deposed the caliph and made his successors figureheads under Buyid protection. A Hamdanid attempt to take Baghdad from him failed in 946.
+countries: [ir, iq]
+sides:
+  - id: buy
+    name: Buyids
+    polities: [buyids]
+    ink: blue
+    moves: Buyid moves
+    success: Buyid success
+  - id: ab
+    name: Abbasid Caliphate and its commanders
+    polities: [abbasid]
+    ink: green
+    moves: Abbasid moves
+    success: Abbasid success
+  - id: ziy
+    name: Ziyarids
+    polities: [ziyarids]
+    ink: purple
+    moves: Ziyarid moves
+    success: Ziyarid success
+  - id: ham
+    name: Hamdanids
+    polities: [hamdanid]
+    ink: red
+    moves: Hamdanid moves
+    success: Hamdanid success
+notes:
+  - The brothers are known by the honorific titles the caliph gave them in 945, Imad al-Dawla (Ali), Rukn al-Dawla (Hasan) and Mu’izz al-Dawla (Ahmad), “pillar”, “support” and “strengthener of the state”. The family is also called the Buwayhids.
+  - The Buyids were Shi’a, but they kept the Sunni Abbasid caliphs as the source of legitimate authority. The dates of the early campaigns in Fars differ by a year among the sources.
+sources:
+  - title: Buyid dynasty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Buyid_dynasty
+  - title: Imad al-Dawla (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Imad_al-Dawla
+  - title: Mu’izz al-Dawla (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mu%27izz_al-Dawla
+  - title: Rukn al-Dawla (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rukn_al-Dawla
+  - title: Vushmgir (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Vushmgir
+  - title: Buyids (Encyclopaedia Iranica)
+    url: https://www.iranicaonline.org/articles/buyids/
+  - title: Deylamites ii. In the Islamic period (Encyclopaedia Iranica)
+    url: https://www.iranicaonline.org/articles/deylamites/deylamites-ii-in-the-islamic-period/
+steps:
+  - title: Ali ibn Buya takes Fars
+    date: 932–935
+    when: "934"
+    borders: "934-06"
+    countries: [ir]
+    body:
+      - The Buyids were three brothers, Ali, Hasan and Ahmad, sons of a fisherman named Buya from Daylam, the mountain country south-west of the Caspian whose foot soldiers served in armies across Iran and Iraq. They rose as officers of Daylamite warlords, first Makan ibn Kaki and then the Ziyarid Mardavij, who had made himself master of northern and central Iran in 930–931. Mardavij gave Ali the town of Karaj in the Jibal in 932, but Ali soon broke with him and, with a few hundred Daylamites, made for Fars, which the caliph’s governor Yaqut held.
+      - Ali took Arrajan, on the border of Fars and Khuzestan, in 933 and wintered there. In 934 he defeated Yaqut after a series of battles and in May or June entered Shiraz, which became the Buyid capital. The caliph confirmed him as governor in return for a tribute that was never paid. In January 935 Mardavij was murdered in Isfahan by his own Turkish soldiers, and the Buyids were rid of their most dangerous rival.
+    facts:
+      - [Arrajan taken, "933"]
+      - [Shiraz entered, "May or June 934"]
+      - [Mardavij murdered, "January 935"]
+    markers:
+      - kind: taken
+        side: buy
+        name: Arrajan
+        date: "933"
+        text: The Buyids’ first base in the south, near today’s Behbahan.
+        lonlat: [50.26, 30.65]
+        lp: l
+      - kind: taken
+        side: buy
+        name: Shiraz
+        date: May or June 934
+        text: Ali ibn Buya entered the capital of Fars after defeating the caliph’s governor, Yaqut.
+        lonlat: [52.53, 29.61]
+      - kind: event
+        side: ziy
+        name: Isfahan
+        date: January 935
+        text: Mardavij, the Ziyarid ruler of northern and central Iran, was murdered here by his Turkish guards.
+        lonlat: [51.67, 32.65]
+    arrows:
+      - side: buy
+        label: Ali ibn Buya
+        phase: 1
+        via: [[50.0, 34.0], [50.6, 32.2], [50.3, 30.72]]
+      - side: buy
+        phase: 2
+        via: [[50.35, 30.6], [51.6, 30.0], [52.45, 29.65]]
+  - title: Isfahan, Rayy and Khuzestan
+    date: 935–944
+    when: "943"
+    borders: "943"
+    countries: [ir, iq]
+    body:
+      - After Mardavij’s death the brothers divided the work. Hasan fought Mardavij’s brother and successor Vushmgir for the Jibal. Isfahan changed hands several times before Hasan took it for good in 940, and in 943 he took Rayy, which became his capital. Ahmad, the youngest, was sent to Kerman in 935–936, where he was badly wounded and failed to hold the province, and then to Khuzestan. There the Baridi brothers, tax farmers turned warlords, were fighting the caliph’s commanders for control of Iraq.
+      - In Baghdad the caliphs had become the puppets of military strongmen who from 936 took the title amir al-umara, “commander of commanders”, among them Ibn Ra’iq, the Hamdanid Nasir al-Dawla of Mosul and the Turk Tuzun. In 944 Ahmad took Wasit, but he fell back to Ahvaz in July when Tuzun broke the bridge on the road to Baghdad.
+    facts:
+      - [Isfahan taken for good, "940"]
+      - [Rayy taken, "943"]
+      - [Wasit taken and given up, "944"]
+    markers:
+      - kind: taken
+        side: buy
+        name: Isfahan
+        date: "940"
+        text: Hasan took the city from Vushmgir for the last time after several changes of hands.
+        lonlat: [51.67, 32.65]
+      - kind: taken
+        side: buy
+        name: Rayy
+        date: "943"
+        text: Hasan’s capital from 943, near today’s Tehran.
+        lonlat: [51.44, 35.59]
+      - kind: event
+        side: buy
+        name: Kerman
+        date: 935–936
+        text: Ahmad’s first campaign, in which he was badly wounded, did not bring the province under Buyid rule.
+        lonlat: [57.08, 30.28]
+      - kind: taken
+        side: buy
+        name: Wasit
+        date: "944"
+        text: Ahmad took the city but withdrew when Tuzun cut the road to Baghdad.
+        lonlat: [46.3, 32.19]
+      - kind: capital
+        side: buy
+        name: Shiraz
+        date: 934–949
+        text: Ali ibn Buya’s capital, from which he directed his brothers’ campaigns.
+        lonlat: [52.53, 29.61]
+    arrows:
+      - side: buy
+        label: Hasan
+        phase: 1
+        via: [[51.65, 32.75], [51.3, 34.0], [51.42, 35.5]]
+      - side: buy
+        label: Ahmad
+        phase: 1
+        via: [[52.6, 29.7], [55.0, 29.9], [57.0, 30.25]]
+      - side: buy
+        phase: 2
+        via: [[50.3, 30.7], [48.7, 31.3], [47.3, 31.95], [46.35, 32.18]]
+  - title: Baghdad
+    date: 945–946
+    when: "945-12-19"
+    borders: "946-08"
+    countries: [iq]
+    body:
+      - In 945, after Tuzun’s death, Ahmad invaded Iraq again, joined by the caliph’s officer Yanal Kushah, and on 19 December 945 he entered Baghdad without a fight. The caliph al-Mustakfi made him amir al-umara and gave the three brothers their honorific titles, Imad al-Dawla, Rukn al-Dawla and Mu’izz al-Dawla. In January 946 Ahmad had al-Mustakfi blinded and deposed, and put al-Muti’ in his place.
+      - Nasir al-Dawla, the Hamdanid ruler of Mosul, then marched south, and on 15 April 946 he took western Baghdad. For about three months the Tigris divided the city between the two armies. On 1 August Buyid troops crossed the river and took the eastern side, the Hamdanids withdrew, and peace was made at Ukbara. The Abbasid caliphs stayed in Baghdad as religious figureheads under Buyid rule until the Seljuk Tughril entered the city in 1055.
+    facts:
+      - [Ahmad enters Baghdad, "19 December 945"]
+      - [Al-Mustakfi deposed, "January 946"]
+      - [Hamdanids driven out, "1 August 946"]
+    markers:
+      - kind: taken
+        side: buy
+        name: Baghdad
+        date: 19 December 945
+        text: Ahmad entered the city unopposed. In January 946 he deposed and blinded the caliph al-Mustakfi.
+        lonlat: [44.37, 33.33]
+        lp: l
+      - kind: event
+        side: ham
+        name: Samarra
+        date: March 946
+        text: Nasir al-Dawla advanced to the old caliphal capital before attacking Baghdad.
+        lonlat: [43.87, 34.2]
+        lp: l
+      - kind: capital
+        side: ham
+        name: Mosul
+        date: "946"
+        text: The seat of the Hamdanid Nasir al-Dawla.
+        lonlat: [43.13, 36.34]
+    arrows:
+      - side: buy
+        label: Ahmad (Mu’izz al-Dawla)
+        phase: 1
+        via: [[48.6, 31.35], [47.3, 31.95], [46.3, 32.25], [45.4, 32.6], [44.45, 33.28]]
+      - side: ham
+        label: Nasir al-Dawla
+        phase: 2
+        via: [[43.15, 36.25], [43.6, 34.7], [43.9, 34.1], [44.3, 33.42]]

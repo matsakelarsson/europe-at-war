@@ -78,7 +78,24 @@ border notes and a sample of wars, translate the catalogue (names, summaries,
 step titles) into French and Swedish, then build, check and push. Rough sizes
 below are the number of new war entries (tiers A, B and C).
 
-- [ ] Wave 7: Iran, Mesopotamia, Arabia, Afghanistan and Central Asia (~80)
+- [x] Wave 7: Iran, Mesopotamia, Arabia, Afghanistan and Central Asia (~80)
+  *Done: 101 wars (21 tier A, 53 B, 27 C; 256 steps), from the Fourth Fitna
+  (811) to the Yemeni Civil War and the 2026 Iran war (both ongoing, last
+  updated 27 November 2026). Borders are curated from 800 in
+  `events/iran-central-asia.yaml` and `events/arabia.yaml` (265 events,
+  fact-checked), with 70 new polities, 99 capital tenures and 14 labels; `none`
+  marks land outside any state. Catalogue text, polity names, border notes,
+  capitals and labels are in French and Swedish. Known limits: the Eastern
+  Province atom also covers the Empty Quarter, and in Afghanistan Natural
+  Earth's `AF-PAR` lies in Panjshir and `AFG-1753` ("Urozgan") is Daykundi.
+  Drafts outside the region still show in some steps until their waves: Pakistan
+  appears as the Maratha Confederacy in 1842 (wave 8), and the Kazakh steppe as
+  "Turan" in the 1860s (wave 9).*
+- [ ] Keep the first load under budget as the catalogue grows: French and
+  Swedish visitors load one translated century file instead of the English one
+  plus a translation map, and heavy centuries (the 1900s) are split into
+  smaller files. *Needed before wave 8: the French first load reached 1.18 MB
+  of the 1.2 MB budget with wave 7.*
 - [ ] Wave 8: South Asia (~100)
 - [ ] Wave 9: China, Mongolia, Tibet and the steppe east of the Urals (~120)
 - [ ] Wave 10: Korea and Japan (~60)

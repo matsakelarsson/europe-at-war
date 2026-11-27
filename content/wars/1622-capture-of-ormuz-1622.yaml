@@ -1,0 +1,90 @@
+id: capture-of-ormuz-1622
+name: Capture of Ormuz (1622)
+start: "1622-02-09"
+end: "1622-04-23"
+tier: B
+summary: A joint campaign of Safavid Persia and the English East India Company that took the island fortress of Hormuz from the Portuguese, who had controlled it and the trade of the Persian Gulf since 1515. Shah Abbas I had already taken Bahrain in 1602 and the mainland port of Comoran (Gombroon) in 1614–1615. In 1622 English ships bombarded the Portuguese fort on Qeshm and then Hormuz, while Persian troops under Imam Quli Khan besieged the castle, which surrendered on 23 April. The Portuguese moved their base to Muscat, and Abbas built up Gombroon as Bandar Abbas.
+countries: [ir, om]
+sides:
+  - id: per
+    name: Safavid Persia and the English East India Company
+    polities: [persia, england]
+    ink: green
+    moves: Persian and English moves
+    success: Persian and English success
+  - id: pt
+    name: Portugal and the Kingdom of Hormuz
+    polities: [portugal, hormuz]
+    ink: orange
+    moves: Portuguese moves
+    success: Portuguese success
+notes:
+  - England and Portugal, then ruled by the king of Spain, were not at war. The East India Company’s part caused a dispute in London, which the company settled by paying £10,000 each to the Duke of Buckingham and King James I.
+sources:
+  - title: Anglo-Persian capture of Hormuz (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Anglo-Persian_capture_of_Hormuz
+  - title: Kingdom of Hormuz (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kingdom_of_Hormuz
+  - title: Abbas the Great (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Abbas_the_Great
+  - title: Hormuz ii. Islamic period (Encyclopaedia Iranica)
+    url: https://www.iranicaonline.org/articles/hormuz-ii
+steps:
+  - title: Qeshm and Hormuz
+    date: February – April 1622
+    when: "1622-02-09"
+    borders: "1622-04-23"
+    countries: [ir, om]
+    body:
+      - Shah Abbas wanted Persian silk to reach Europe without passing through Ottoman or Portuguese hands. His governor of Fars, Allahverdi Khan, had taken Bahrain from the vassals of Hormuz in 1602, and by 1615 the Persians held Lar and the mainland port of Comoran, opposite Hormuz. When the Portuguese commander Rui Freire de Andrade built a fort on the island of Qeshm in 1621 to secure Hormuz’s water and food, Persian troops besieged it. Imam Quli Khan, the son of Allahverdi Khan, then won the help of the English East India Company, whose ships were trading at Jask, in return for half of the spoils and of the customs of Hormuz.
+      - The English fleet of five warships and four pinnaces bombarded the fort on Qeshm, which surrendered quickly; the explorer William Baffin was among the few English dead. On 9 February 1622 the allies moved against Hormuz. The Persians, about 3,000 strong with the English, landed and took the town, and the English guns pounded the castle and sank the Portuguese ships in the harbour. The garrison of about 1,000 held out for two months, until it mutinied on 22 April; the castle was occupied the next day. The kingdom of Hormuz, ruled by its own kings for some six centuries, came to an end. The Portuguese moved their headquarters to Muscat and tried in vain to retake Hormuz in 1623–1627, while trade shifted to Bandar Abbas, where the English and later the Dutch opened trading posts.
+    facts:
+      - [Siege of Hormuz, "9 February – 23 April 1622"]
+      - [English fleet, "5 warships and 4 pinnaces"]
+      - [Portuguese garrison, "about 1,000"]
+    markers:
+      - kind: taken
+        side: per
+        name: Qeshm
+        date: January – February 1622
+        text: The new Portuguese fort surrendered after an English bombardment. William Baffin, the Arctic explorer, was killed.
+        lonlat: [56.27, 26.95]
+        lp: l
+      - kind: siege
+        side: per
+        name: Hormuz
+        date: 9 February – 23 April 1622
+        text: Besieged by Persian troops and bombarded by the English fleet. The Portuguese garrison mutinied and surrendered the castle.
+        lonlat: [56.46, 27.1]
+        lp: r
+      - kind: event
+        side: per
+        name: Comoran (Bandar Abbas)
+        date: "1615"
+        text: Taken by Persia from the Portuguese and their Hormuzi vassals. After 1622 it became the port of Bandar Abbas.
+        lonlat: [56.27, 27.19]
+        lp: t
+      - kind: held
+        side: pt
+        name: Muscat
+        date: 1622–1650
+        text: The main Portuguese base in the Gulf after the fall of Hormuz, until the Omanis took it in 1650.
+        lonlat: [58.59, 23.62]
+    arrows:
+      - side: per
+        label: English fleet
+        phase: 1
+        via: [[57.77, 25.65], [56.9, 26.4], [56.35, 26.9]]
+      - side: per
+        label: Imam Quli Khan
+        phase: 2
+        via: [[56.27, 26.95], [56.36, 27.04], [56.44, 27.08]]
+      - side: pt
+        label: Portuguese, to Muscat
+        phase: 3
+        via: [[56.5, 27.0], [56.65, 26.4], [57.3, 24.9], [58.55, 23.68]]
+    areas:
+      - style: gained
+        side: per
+        label: Hormuz island, taken by Persia
+        polygon: [[56.42, 27.1], [56.47, 27.11], [56.51, 27.07], [56.49, 27.02], [56.44, 27.01], [56.41, 27.05]]

@@ -1,0 +1,190 @@
+id: ottoman-zaydi-wars
+name: Ottoman–Zaydi wars in Yemen
+start: "1538"
+end: "1636"
+tier: B
+summary: The century-long struggle between the Ottoman Empire and the Zaydi imams of the Yemeni highlands. The Ottomans took Aden and the coastal plain of the Tihama in 1538–1539, as a base against the Portuguese in the Indian Ocean, and Sanaa in 1547. Imam al-Mutahhar drove them almost out of the country in 1567–1568, but Sinan Pasha reconquered it in 1569–1570 and by 1583–1585 the whole of Yemen was Ottoman. In 1597 Imam al-Mansur al-Qasim began a new revolt, and his son al-Mu’ayyad Muhammad took Sanaa in 1629 and forced the last Ottoman garrisons to leave Zabid and Mocha by 1636. Yemen remained an independent Zaydi state until the Ottomans returned in 1849.
+countries: [ye, sa]
+sides:
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+  - id: zy
+    name: Zaydi imamate
+    polities: [zaydi-imamate]
+    ink: green
+    moves: Zaydi moves
+    success: Zaydi success
+  - id: tah
+    name: Tahirid sultanate
+    polities: [tahirids-yemen]
+    ink: orange
+    moves: Tahirid moves
+    success: Tahirid success
+notes:
+  - Dates for the last phase differ between sources. Sanaa is said to have been handed over in 1628 or on 9 March 1629, and the final Ottoman withdrawal from Zabid and Mocha is dated 1634, 1635 or 1636.
+  - Ottoman writers describe Yemen as the graveyard of their soldiers; one figure, of 80,000 men sent from Egypt in 1539–1547 of whom only 7,000 survived, comes from an Ottoman official and cannot be checked.
+sources:
+  - title: Yemen Eyalet (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yemen_Eyalet
+  - title: Özdemir Pasha (Wikipedia)
+    url: https://en.wikipedia.org/wiki/%C3%96zdemir_Pasha
+  - title: Al-Mansur al-Qasim (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Al-Mansur_al-Qasim
+  - title: Al-Mu’ayyad Muhammad (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Al-Mu%27ayyad_Muhammad
+  - title: History of Yemen (Britannica)
+    url: https://www.britannica.com/topic/history-of-Yemen
+steps:
+  - title: Aden, Zabid and Sanaa
+    date: 1538–1561
+    when: "1538"
+    borders: "1552"
+    countries: [ye]
+    body:
+      - The Ottomans had inherited a foothold in the Tihama when they conquered Mamluk Egypt in 1517, and they wanted Yemen as a base against the Portuguese, who were trying to close the Red Sea. In 1538 the governor of Egypt, Hadım Suleiman Pasha, sailed with a fleet of some 90 ships on his way to attack the Portuguese at Diu in India. At Aden he seized the last Tahirid sultan, ‘Amir ibn Da’ud, and had him killed, and the port became Ottoman. In 1539 the Ottomans took Zabid, which became the seat of their province, and then the whole Tihama.
+      - The northern highlands, with Sanaa, were ruled by the Zaydi imam al-Mutawakkil Yahya Sharaf al-Din. When he chose his son Ali as his successor, another son, al-Mutahhar, turned to the Ottomans. With his tribal allies they stormed Taiz and in August 1547 entered Sanaa. Al-Mutahhar soon turned against the Ottomans and retook Sanaa, but Özdemir Pasha drove him back to his mountain fortress of Thula and governed Yemen from 1552 to 1560, building forts and securing the roads. Ottoman losses were heavy throughout; an Ottoman official wrote that Yemen melted armies “like salt dissolved in water”.
+    facts:
+      - [Aden taken, "1538"]
+      - [Sanaa taken, "August 1547"]
+    markers:
+      - kind: taken
+        side: ot
+        name: Aden
+        date: "1538"
+        text: Hadım Suleiman Pasha seized the port and killed its Tahirid ruler. Aden was the first Ottoman base on the Indian Ocean.
+        lonlat: [45.03, 12.79]
+      - kind: taken
+        side: ot
+        name: Zabid
+        date: "1539"
+        text: The old capital of the Tihama became the seat of the Ottoman governors of Yemen.
+        lonlat: [43.32, 14.2]
+        lp: l
+      - kind: taken
+        side: ot
+        name: Sanaa
+        date: August 1547
+        text: Taken by the Ottomans and their Zaydi ally al-Mutahhar, who then turned against them.
+        lonlat: [44.21, 15.35]
+      - kind: held
+        side: zy
+        name: Thula
+        date: 1550s
+        text: The mountain fortress of al-Mutahhar, which the Ottomans never took.
+        lonlat: [43.88, 15.58]
+        lp: l
+    arrows:
+      - side: ot
+        label: Hadım Suleiman Pasha
+        phase: 1
+        via: [[42.0, 15.5], [42.9, 13.4], [43.6, 12.6], [44.95, 12.75]]
+      - side: ot
+        phase: 2
+        via: [[43.32, 14.2], [44.02, 13.58], [44.4, 14.54], [44.2, 15.28]]
+    areas:
+      - style: gained
+        side: ot
+        label: Ottoman Yemen by 1552 (approximate)
+        atoms: [YE-HU, YE-RA, YE-IB, YE-TA, YE-AD, YE-DH, YE-SN, YE-SA, YE-MW, YE-HJ]
+  - title: Al-Mutahhar’s revolt and Sinan Pasha
+    date: 1567–1585
+    when: "1567"
+    borders: "1585"
+    countries: [ye, sa]
+    body:
+      - Özdemir’s successors governed harshly and set Yemen’s rival groups against Ottoman rule. In 1567 al-Mutahhar, now imam, led the highland tribes to take Sanaa. The Ottoman commander Murad Pasha was ambushed and, in a last battle near Dhamar around 1568, killed; his head was sent to al-Mutahhar. Only Zabid was left in Ottoman hands.
+      - Sultan Selim II ordered the whole Ottoman army of Egypt to Yemen under Sinan Pasha. In 1569–1570 Sinan retook Aden, Taiz and Ibb and besieged the stronghold of Shibam Kawkaban for seven months, until a truce was made; al-Mutahhar was pushed back into the mountains but not defeated. After his death in 1572 the Zaydis were divided, and in 1583 the Ottomans took Sanaa, Sa‘dah and Najran. The imam al-Nasir Hasan was captured in 1585 and sent to Constantinople, and a dozen years of peace followed.
+    facts:
+      - [Sanaa taken by al-Mutahhar, "1567"]
+      - [Siege of Shibam Kawkaban, "1570, seven months"]
+      - [Sa‘dah and Najran taken by the Ottomans, "1583"]
+    markers:
+      - kind: taken
+        side: zy
+        name: Sanaa
+        date: "1567"
+        text: Taken by al-Mutahhar and the highland tribes from the Ottoman governor Ridvan Pasha.
+        lonlat: [44.21, 15.35]
+      - kind: battle
+        side: zy
+        name: Dhamar
+        date: c. 1568
+        text: Murad Pasha was defeated and beheaded. Afterwards the Ottomans held only Zabid.
+        lonlat: [44.4, 14.54]
+      - kind: siege
+        side: ot
+        name: Shibam Kawkaban
+        date: "1570"
+        text: Sinan Pasha besieged the mountain stronghold for seven months. The siege ended in a truce.
+        lonlat: [43.89, 15.5]
+        lp: l
+      - kind: taken
+        side: ot
+        name: Sa‘dah
+        date: "1583"
+        text: The Zaydi heartland in the north was occupied after the imams fell out among themselves.
+        lonlat: [43.76, 16.94]
+    arrows:
+      - side: zy
+        label: Al-Mutahhar
+        phase: 1
+        via: [[43.88, 15.58], [44.1, 15.45], [44.2, 15.38]]
+      - side: ot
+        label: Sinan Pasha
+        phase: 2
+        via: [[43.32, 14.2], [44.02, 13.58], [44.18, 13.97], [44.3, 14.9], [43.95, 15.45]]
+  - title: Al-Qasim and the Ottoman withdrawal
+    date: 1597–1636
+    when: "1629-03-09"
+    borders: "1636"
+    countries: [ye]
+    body:
+      - Resentment at Ottoman rule and at the promotion of the Sunni Hanafi school over Zaydi teaching grew, and in September 1597 the scholar al-Qasim ibn Muhammad proclaimed himself imam as al-Mansur. His first years were hard, but after 1604 the lord of the mountain stronghold of Hajjah and others came over to him, and by 1608 he held most of the highlands and agreed a ten-year truce with the Ottomans. He died in 1620.
+      - His son al-Mu’ayyad Muhammad broke the truce in 1626, and the northern tribes, now well armed with muskets, rose behind him while the Ottomans were also fighting Shah Abbas in Iraq. Most of the Tihama fell; in 1627 Aden and Lahej were lost. On 9 March 1629, by one account, the Ottoman governor handed over Sanaa and withdrew to the coast, and Taiz fell the same year. A last Ottoman offensive failed, and the Ottomans agreed to give up Zabid, Mocha and Kamaran island, leaving Yemen by 1636. The Qasimid imams went on to rule most of Yemen, including the south, until the 18th century.
+    facts:
+      - [Al-Qasim proclaims the imamate, "September 1597"]
+      - [Sanaa handed over, "1628 or 1629"]
+      - [Last Ottoman garrisons leave, "1635–1636"]
+    markers:
+      - kind: event
+        side: zy
+        name: Shahara
+        date: "1597"
+        text: One of the mountain fortresses of the north from which al-Qasim and his sons fought the Ottomans.
+        lonlat: [43.7, 16.18]
+        lp: l
+      - kind: taken
+        side: zy
+        name: Sanaa
+        date: 1628–1629
+        text: Handed over by the Ottoman governor Haydar Pasha under a truce. The Ottomans withdrew to the coast.
+        lonlat: [44.21, 15.35]
+      - kind: taken
+        side: zy
+        name: Zabid
+        date: 1634–1635
+        text: The Ottoman capital in the Tihama was given up after the failure of their last offensive.
+        lonlat: [43.32, 14.2]
+        lp: l
+      - kind: event
+        side: ot
+        name: Mocha
+        date: c. 1636
+        text: The last Ottoman garrison left Yemen from this port, with the imam’s permission.
+        lonlat: [43.25, 13.32]
+        lp: l
+    arrows:
+      - side: zy
+        label: Al-Mu’ayyad Muhammad
+        via: [[43.76, 16.94], [43.9, 16.0], [44.2, 15.4], [44.02, 13.65]]
+      - side: ot
+        via: [[43.32, 14.2], [43.28, 13.7], [43.25, 13.38]]
+    areas:
+      - style: gained
+        side: zy
+        label: Won by the Zaydi imams by 1636
+        atoms: [YE-HU, YE-RA, YE-IB, YE-TA, YE-AD, YE-DH, YE-SN, YE-SA, YE-MW, YE-HJ, YE-LA]

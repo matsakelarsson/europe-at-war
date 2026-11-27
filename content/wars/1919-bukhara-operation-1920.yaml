@@ -1,0 +1,151 @@
+id: bukhara-operation-1920
+name: Soviet conquest of Khiva and Bukhara
+start: "1919-12"
+end: "1921-03"
+tier: B
+summary: The overthrow of the last two Central Asian monarchies by the Red Army in 1920. Khiva and Bukhara had been Russian protectorates and became independent in practice after the Russian Revolution. In Khiva, the Turkmen leader Junaid Khan was driven into the desert and the khan abdicated in February 1920; in Bukhara, Mikhail Frunze’s troops stormed the city on 2 September 1920 and the emir fled east and then to Afghanistan. Local reformers, the Young Khivans and Young Bukharans, headed the people’s soviet republics that replaced them, which were divided between new Soviet republics in 1924.
+countries: [uz, tm, tj]
+sides:
+  - id: sov
+    name: Soviet Russia, the Young Khivans and the Young Bukharans
+    polities: [ussr, khorezm-psr, bukharan-psr]
+    ink: red
+    moves: Red Army moves
+    success: Soviet success
+  - id: bkh
+    name: Emirate of Bukhara
+    polities: [bukhara]
+    ink: green
+    moves: Bukharan moves
+    success: Bukharan success
+  - id: khi
+    name: Khiva under Junaid Khan
+    polities: [khiva]
+    ink: purple
+    moves: Khivan moves
+    success: Khivan success
+notes:
+  - Russia made Bukhara a protectorate in 1868 and Khiva in 1873, keeping the land it had annexed, such as Samarkand and the right bank of the Amu Darya. After the Russian Revolution both states were independent in practice; the Soviet government recognised Bukhara’s independence after a failed attack in March 1918.
+  - The people’s soviet republics were formally independent states allied with Soviet Russia, but Soviet officials and the Red Army held the real power. Chardzhou is today Türkmenabat, Kagan (New Bukhara) is Kogon and Petro-Aleksandrovsk is Turtkul.
+sources:
+  - title: Bukhara operation (1920) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bukhara_operation_(1920)
+  - title: Bukharan People’s Soviet Republic (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bukharan_People%27s_Soviet_Republic
+  - title: Khorezm People’s Soviet Republic (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Khorezm_People%27s_Soviet_Republic
+  - title: Junaid Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Junaid_Khan_(Basmachi_leader)
+  - title: Sayyid Mir Muhammad Alim Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sayyid_Mir_Muhammad_Alim_Khan
+  - title: Young Bukharans (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Young_Bukharans
+  - title: Khanate of Khiva (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Khanate_of_Khiva
+steps:
+  - title: Khiva
+    date: December 1919 – April 1920
+    when: "1919-12"
+    borders: "1920-04-27"
+    countries: [uz, tm]
+    body:
+      - After the Russian Revolution, power in Khiva passed to Junaid Khan, a chief of the Yomut Turkmen whom the khan made commander of his army in January 1918. Junaid had the khan, Asfandiyar, killed later that year and put the khan’s elderly uncle Sayyid Abdullah on the throne, ruling in his name. He suppressed the reformist Young Khivans and drove out rival Turkmen chiefs, but his attack on the Bolshevik garrison of Petro-Aleksandrovsk, across the Amu Darya, failed.
+      - At the end of 1919 rival Turkmen and Uzbek leaders and the Young Khivans rose against Junaid and called on the Bolsheviks for help. Red Army detachments crossed the Amu Darya from Petro-Aleksandrovsk, and by the end of January 1920 Junaid’s forces were beaten. He withdrew into the Karakum desert with his followers. On 2 February Sayyid Abdullah abdicated, ending the Khanate of Khiva. On 26 April an assembly at Khiva proclaimed the Khorezm People’s Soviet Republic. Within a year its first Young Khivan leaders had been pushed aside by Soviet officials, while Junaid fought on from the desert.
+    facts:
+      - [Khan abdicates, "2 February 1920"]
+      - [Khorezm People’s Soviet Republic, "proclaimed 26 April 1920"]
+    markers:
+      - kind: taken
+        side: sov
+        name: Khiva
+        date: February 1920
+        text: The capital of the khanate. Its last khan, Sayyid Abdullah, abdicated on 2 February, and the new republic was proclaimed here on 26 April.
+        lonlat: [60.361, 41.381]
+        lp: l
+      - kind: held
+        side: sov
+        name: Turtkul
+        date: 1918–1920
+        text: Petro-Aleksandrovsk, the Russian fort on the right bank of the Amu Darya. Its garrison beat off Junaid Khan and was the base of the Red Army’s advance.
+        lonlat: [61.0, 41.55]
+      - kind: event
+        side: khi
+        name: Karakum desert
+        date: January 1920
+        text: Junaid Khan withdrew into the desert with his followers and raided the new republic from here for years.
+        lonlat: [59.6, 40.6]
+        lp: b
+    arrows:
+      - side: sov
+        label: Red Army
+        phase: 1
+        via: [[61.0, 41.55], [60.75, 41.5], [60.4, 41.39]]
+      - side: khi
+        label: Junaid Khan
+        phase: 2
+        via: [[60.25, 41.32], [59.95, 41.0], [59.65, 40.7]]
+  - title: Bukhara
+    date: August 1920 – March 1921
+    when: "1920-08-28"
+    borders: "1920-10-09"
+    countries: [uz, tm, tj, af]
+    body:
+      - In March 1918 a small Bolshevik force from Tashkent under Fyodor Kolesov, joined by the reformist Young Bukharans, had marched on Bukhara and been driven off; the emir, Sayyid Alim Khan, then had many reformers killed, and Soviet Russia recognised his independence. After the defeat of Admiral Kolchak in 1919 opened the railway from European Russia, the new Turkestan Front under Mikhail Frunze prepared to finish the emirate. The emir mobilised an army that Soviet sources put at about 35,000 men, but with only a few machine guns and old cannon.
+      - On the night of 28 August 1920 the Young Bukharans and their communist allies rose at Chardzhou and called on the Red Army. Red columns advanced on Bukhara along the railway from Chardzhou, by way of Qarakul, and from Kagan, the Russian settlement next to the old city, while others moved on the eastern towns. From 30 August heavy guns and aircraft bombarded the walls; Soviet accounts speak of 12,000 shells. On 2 September Red troops broke in, and the defenders of the Ark, the emir’s citadel, surrendered the same day after a bombardment that left it in ruins. Much of the old city burned and hundreds of civilians were killed. Frunze reported to Lenin that “the red flag of world revolution flies victoriously over the Registan”.
+      - The emir had fled east with about 1,000 men on 31 August and held out through the winter in eastern Bukhara. On 8 October an assembly proclaimed the Bukharan People’s Soviet Republic, headed by the Young Bukharan Fayzulla Khodzhayev. A Red Army expedition took Dushanbe in February 1921, and in March the emir crossed the Amu Darya into Afghanistan, where he lived until his death in Kabul in 1944. His supporters fought on as part of the Basmachi movement.
+    facts:
+      - [Rising at Chardzhou, "night of 28 August 1920"]
+      - [Bukhara stormed, "2 September 1920"]
+      - [Bukharan People’s Soviet Republic, "proclaimed 8 October 1920"]
+      - [Emir crosses into Afghanistan, "March 1921"]
+    link: { href: "#/war/basmachi-movement", text: The Basmachi movement }
+    markers:
+      - kind: event
+        side: sov
+        name: Türkmenabat
+        date: 28 August 1920
+        text: Chardzhou. The Young Bukharans and communists rose here and called on the Red Army, giving the invasion the look of a revolution from within.
+        lonlat: [63.567, 39.083]
+      - kind: taken
+        side: sov
+        name: Qarakul
+        date: August 1920
+        text: Taken by the Red column advancing from Chardzhou along the railway.
+        lonlat: [63.856, 39.503]
+        lp: b
+      - kind: event
+        side: sov
+        name: Kogon
+        date: August 1920
+        text: Kagan or New Bukhara, the Russian railway town 12 km from the old city, from which the main attack was made.
+        lonlat: [64.55, 39.717]
+      - kind: taken
+        side: sov
+        name: Bukhara
+        date: 2 September 1920
+        text: After three days of bombardment Red troops broke through the walls. The Ark surrendered the same day, and much of the old city burned.
+        lonlat: [64.423, 39.767]
+        lp: l
+      - kind: taken
+        side: sov
+        name: Dushanbe
+        date: February 1921
+        text: The emir’s refuge in eastern Bukhara over the winter of 1920–1921, taken by a Red Army expedition in February 1921.
+        lonlat: [68.78, 38.537]
+    arrows:
+      - side: sov
+        label: Chardzhou group
+        phase: 1
+        via: [[63.57, 39.08], [63.86, 39.5], [64.2, 39.7], [64.39, 39.76]]
+      - side: sov
+        phase: 1
+        via: [[64.55, 39.72], [64.44, 39.765]]
+      - side: bkh
+        label: Emir Alim Khan
+        phase: 2
+        via: [[64.47, 39.73], [65.79, 38.86], [67.2, 38.2], [68.72, 38.53]]
+    areas:
+      - style: occupied
+        side: bkh
+        label: Held by the emir’s supporters, winter 1920–1921
+        atoms: [TJ-DU, TJ-KT, TJK-368, UZ-SU]

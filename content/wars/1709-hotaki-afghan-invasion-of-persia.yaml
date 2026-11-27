@@ -1,0 +1,298 @@
+id: hotaki-afghan-invasion-of-persia
+name: Hotaki Afghan invasion of Persia
+start: "1709-04-21"
+end: "1730"
+tier: A
+summary: The revolt of the Ghilzai Afghans of Kandahar against Safavid Persia and their conquest of its capital. In 1709 the Hotaki chief Mirwais killed the Persian governor of Kandahar and beat off every army sent against him. His son Mahmud invaded Persia, routed the Safavid army at Gulnabad in March 1722 and starved Isfahan into surrender after a seven-month siege in which tens of thousands died; Shah Sultan Husayn gave him the crown. Russia and the Ottoman Empire seized the north and west of the country, while the Safavid prince Tahmasp held out in the north. Mahmud’s cousin Ashraf beat an Ottoman army in 1726, but from 1729 Tahmasp’s general Nader drove the Afghans out of Persia in a few months, and Ashraf was killed in 1730.
+countries: [af, ir, az, ge, am, ru]
+sides:
+  - id: hot
+    name: Hotaki Afghans
+    polities: [hotaki]
+    ink: red
+    moves: Afghan moves
+    success: Afghan success
+  - id: saf
+    name: Safavid Persia
+    polities: [persia]
+    ink: green
+    moves: Safavid moves
+    success: Safavid success
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: slate
+    moves: Russian moves
+    success: Russian success
+  - id: abd
+    name: Abdali Afghans of Herat
+    polities: [abdalis]
+    ink: olive
+    moves: Abdali moves
+    success: Abdali success
+notes:
+  - Army sizes and death tolls in the Persian, Afghan and European accounts vary widely. For Gulnabad the Safavid army is given as 42,000–50,000 and the Afghan as 10,000–18,000; for the siege of Isfahan the historian Michael Axworthy gives more than 80,000 deaths from hunger, disease and fighting.
+  - The Russian campaign of 1722–1723 on the Caspian coast is told in the story of the Russo-Persian War of 1722–1723.
+sources:
+  - title: Hotak dynasty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hotak_dynasty
+  - title: Mirwais Hotak (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mirwais_Hotak
+  - title: Mahmud Hotak (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mahmud_Hotak
+  - title: Battle of Gulnabad (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Gulnabad
+  - title: Siege of Isfahan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Isfahan
+  - title: Ottoman–Hotaki War (1726–1727) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ottoman%E2%80%93Hotaki_War_(1726%E2%80%931727)
+  - title: Battle of Damghan (1729) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Damghan_(1729)
+  - title: Ašraf Ḡilzay (Encyclopaedia Iranica)
+    url: https://iranicaonline.org/articles/asraf-gilzay-the-afghan-chief-who-ruled-as-shah-over-part-of-iran-from-1137-1725-to-1142-1729
+  - title: Safavid dynasty (Britannica)
+    url: https://www.britannica.com/topic/Safavid-dynasty
+steps:
+  - title: Revolt in Kandahar
+    date: 1709–1717
+    when: "1709-04-21"
+    borders: "1717"
+    countries: [af, ir]
+    body:
+      - By 1700 Safavid Persia was in decline under the pious and indecisive Shah Sultan Husayn. Kandahar, on the eastern frontier, was governed for him by the Georgian prince George XI of Kartli, known in Persia as Gurgin Khan, whose harsh rule and Shi‘i officials were resented by the Sunni Ghilzai Pashtuns. Mirwais, chief of the Hotaki clan, was sent to Isfahan as a prisoner but won the shah’s trust and returned. On 21 April 1709, while most of Gurgin Khan’s Georgian troops were away, Mirwais and his followers killed him at a feast outside the city and seized Kandahar.
+      - The Persian court first tried to negotiate, then sent army after army. The largest, said to number 42,000 under Gurgin Khan’s nephew Khusraw Khan, beat Mirwais near Girishk on the Helmand and besieged Kandahar in 1711, but the Afghans cut its supplies; in the retreat that autumn Khusraw Khan was killed and his army destroyed. Later expeditions fell apart for lack of money. Mirwais ruled Kandahar as an independent prince until his death in November 1715. In 1716–1717 the Abdali Afghans of Herat also threw off Persian rule. Mirwais’s brother Abdul Aziz wanted to make peace with Persia, and in 1717 Mirwais’s son Mahmud killed him and took power.
+    facts:
+      - [Gurgin Khan killed, "21 April 1709"]
+      - [Khusraw Khan’s army destroyed, "1711"]
+      - [Death of Mirwais, "November 1715"]
+    markers:
+      - kind: taken
+        side: hot
+        name: Kandahar
+        date: 21 April 1709
+        text: Mirwais killed the Persian governor, Gurgin Khan, and his guards and made himself master of the city.
+        lonlat: [65.62, 31.59]
+      - kind: battle
+        side: saf
+        name: Girishk
+        date: "1711"
+        text: Khusraw Khan’s large army beat Mirwais on the Helmand and marched on Kandahar, but was destroyed in its retreat.
+        lonlat: [64.57, 31.82]
+        lp: l
+      - kind: event
+        side: abd
+        name: Herat
+        date: 1716–1717
+        text: The Abdali Afghans rose against Persian rule and set up their own state in Herat.
+        lonlat: [62.2, 34.35]
+    arrows:
+      - side: saf
+        label: Khusraw Khan
+        via: [[62.12, 32.37], [63.6, 31.9], [64.57, 31.82], [65.5, 31.62]]
+    areas:
+      - style: gained
+        side: hot
+        label: Held by Mirwais
+        atoms: [AF-KAN, AF-HEL, AF-URU, AFG-1753, AF-ZAB]
+  - title: Kerman and Gulnabad
+    date: 1719 – March 1722
+    when: "1722-03-08"
+    borders: "1722-03-08"
+    countries: [ir, af]
+    body:
+      - Mahmud, still in his early twenties, began raiding Persia. His first attack on Kerman, across the deserts of Sistan, was beaten off in 1719–1720; he then defeated the Abdalis of Herat in 1720. In October 1721 he returned with about 10,000–18,000 men, took the town of Kerman but not its citadel, and in early 1722 failed again before Yazd. Rather than give up, he struck straight for Isfahan.
+      - Sultan Husayn’s court was divided, and his best commanders had been dismissed. An army of 42,000–50,000, with artillery, met the Afghans at Gulnabad, some 20 km east of Isfahan, on 8 March 1722. The Persian right wing drove back the Afghans, but the left was routed, the Afghan camel-mounted swivel guns (zamburaks) broke up the Persian centre, and the gunners were cut down beside their cannon. Between 5,000 and 15,000 Persians were killed, and the survivors fled to Isfahan.
+    facts:
+      - [Battle of Gulnabad, "8 March 1722, Afghan victory"]
+      - [Safavid army, "42,000–50,000"]
+      - [Afghan army, "10,000–18,000"]
+    markers:
+      - kind: siege
+        side: hot
+        name: Kerman
+        date: October 1721
+        text: Mahmud took the town but failed to take the citadel. About 1,500 of his men were lost.
+        lonlat: [57.08, 30.28]
+      - kind: siege
+        side: saf
+        name: Yazd
+        date: early 1722
+        text: The Afghans failed to take the town and marched on towards Isfahan.
+        lonlat: [54.37, 31.9]
+      - kind: battle
+        side: hot
+        name: Battle of Gulnabad
+        date: 8 March 1722
+        text: The Safavid army, several times larger than Mahmud’s, was routed. Between 5,000 and 15,000 Persians were killed.
+        lonlat: [51.93, 32.63]
+        lp: r
+    arrows:
+      - side: hot
+        label: Mahmud
+        via: [[65.62, 31.59], [62.0, 30.9], [58.36, 29.1], [57.08, 30.28], [54.37, 31.9]]
+      - side: hot
+        via: [[54.37, 31.9], [52.9, 32.3], [52.0, 32.6]]
+  - title: The siege of Isfahan
+    date: March – October 1722
+    when: "1722-10-23"
+    borders: "1722-10-25"
+    countries: [ir]
+    body:
+      - Mahmud had no siege guns, so he blockaded the great city, which may have had half a million inhabitants. He occupied the royal gardens at Farahabad and the Armenian suburb of New Julfa, which had to pay a large ransom, and gradually cut off the roads. Attempts to relieve the city came to nothing; Vakhtang VI of Kartli, angry at the court, refused to send his Georgians. In June the shah’s son Tahmasp escaped through the lines with about 600 men to raise an army, but achieved little.
+      - By the summer the city was starving. People ate horses, dogs and leather, and the historian Michael Axworthy estimates that more than 80,000 died of hunger, disease and fighting. On 23 October 1722 Sultan Husayn rode out to the Afghan camp, abdicated and placed the royal plume on Mahmud’s turban. Mahmud entered Isfahan as shah on 25 October. At first he ruled with moderation, keeping many Persian officials in their posts.
+    facts:
+      - [Siege of Isfahan, "8 March – 23 October 1722"]
+      - [Deaths in the city, "more than 80,000 (Axworthy)"]
+      - [Sultan Husayn abdicates, "23 October 1722"]
+    markers:
+      - kind: siege
+        side: hot
+        name: Isfahan
+        date: 8 March – 23 October 1722
+        text: Blockaded for seven months until famine forced the shah to surrender. Tens of thousands died.
+        lonlat: [51.67, 32.65]
+      - kind: event
+        side: hot
+        name: New Julfa
+        date: March 1722
+        text: The Armenian merchants’ suburb south of the river was occupied early in the siege and forced to pay a heavy ransom.
+        lonlat: [51.65, 32.62]
+        lp: b
+      - kind: event
+        side: saf
+        name: Qazvin
+        date: November 1722
+        text: Tahmasp, who had escaped from Isfahan, proclaimed himself shah here as Tahmasp II.
+        lonlat: [50.0, 36.27]
+    arrows:
+      - side: saf
+        label: Tahmasp
+        via: [[51.67, 32.7], [51.2, 34.0], [50.85, 34.65], [50.0, 36.22]]
+  - title: Persia partitioned
+    date: 1722–1727
+    when: "1724-06"
+    borders: "1727-10"
+    countries: [ir, az, ge, am, ru]
+    body:
+      - Mahmud never ruled more than central and southern Persia. Tahmasp II held out in the north, and in January 1723 the people of Qazvin rose and drove out the Afghan garrison sent against him. Fearing a general revolt, Mahmud invited Persian nobles and officials to a gathering and had them killed, and executed up to 3,000 of the former royal guards. Meanwhile Peter the Great of Russia took Derbent in 1722 and Rasht and Baku in 1723, and the Ottomans invaded from the west, taking Tiflis in 1723, Hamadan and Erivan in 1724 and Tabriz in 1725. In June 1724 Russia and the Ottoman Empire agreed in the Treaty of Constantinople to divide north-western Persia between them.
+      - In February 1725 Mahmud, now sick in body and mind, had the Safavid princes in his hands put to death, and in April he died or was killed and his cousin Ashraf took the throne. The Ottomans declared Ashraf a rebel, and in 1726 the governor of Baghdad, Ahmad Pasha, marched on Isfahan with some 70,000–80,000 men. Before the battle Ashraf had the former shah, Sultan Husayn, executed and sent his head to the Ottoman commander. In the battle that followed, late in 1726, Ashraf’s 12,000–17,000 Afghans defeated the much larger Ottoman army, many of whose Kurdish soldiers deserted. In the peace of Hamadan in October 1727 the Ottomans recognised Ashraf as shah, and he in turn recognised the Ottoman conquests in western Persia.
+    facts:
+      - [Treaty of Constantinople, "June 1724"]
+      - [Ashraf takes power, "April 1725"]
+      - [Peace of Hamadan, "October 1727"]
+    markers:
+      - kind: event
+        side: saf
+        name: Qazvin
+        date: January 1723
+        text: The townspeople rose against the Afghan garrison and drove it out.
+        lonlat: [50.0, 36.27]
+      - kind: taken
+        side: ot
+        name: Tabriz
+        date: "1725"
+        text: Taken by the Ottomans after an earlier siege had failed in 1724.
+        lonlat: [46.29, 38.08]
+      - kind: taken
+        side: ot
+        name: Erivan
+        date: "1724"
+        text: Taken by the Ottoman army after a long siege.
+        lonlat: [44.51, 40.18]
+      - kind: taken
+        side: ot
+        name: Hamadan
+        date: "1724"
+        text: Taken by Ahmad Pasha of Baghdad, who later led the Ottoman army against Ashraf.
+        lonlat: [48.52, 34.8]
+      - kind: taken
+        side: ru
+        name: Rasht
+        date: "1723"
+        text: The capital of Gilan was occupied by Russian troops landed from the Caspian.
+        lonlat: [49.58, 37.28]
+      - kind: capital
+        side: hot
+        name: Isfahan
+        date: 1722–1729
+        text: The Afghan shahs Mahmud and Ashraf ruled from the Safavid capital.
+        lonlat: [51.67, 32.65]
+    areas:
+      - style: occupied
+        side: ot
+        label: Occupied by the Ottomans
+        atoms: [IR-01, IR-02, IR-03, IR-24, IR-17, IR-05, IR-11, IR-28, AM-AG, AM-AR, AM-AV, AM-ER, AM-GR, AM-KT, AM-LO, AM-SH, AM-SU, AM-TV, AM-VD, GE-KK, GE-TB, GE-SK, GE-MM, GE-KA, AZ-NX, AZ-SAR, AZ-SAD, AZ-KAN, AZ-BAB, AZ-SAH, AZ-CUL, AZ-ORD, AZ-GA, AZ-SMI, AZ-SM, AZ-QBA, AZ-QUS, AZ-ISM, AZ-GOY, AZ-AGU, AZ-KUR]
+      - style: occupied
+        side: ru
+        label: Occupied by Russia
+        atoms: [IR-19, RU-DA~derbent, AZ-BA, AZ-ABS, AZ-XIZ, AZ-SBN, AZ-SIY, AZ-HAC]
+  - title: Nader and the fall of the Hotaki
+    date: 1726–1730
+    when: "1729-11-13"
+    borders: "1730"
+    countries: [ir, af]
+    body:
+      - In 1726 Tahmasp II won the support of Nader Qoli, an Afshar Turkmen chief who had made himself master of the country around Kalat and Abivard in northern Khorasan. In late 1726 Nader took Mashhad for Tahmasp, and in May 1729 he defeated the Abdali Afghans near Herat. Nader drilled his men in the use of muskets and field guns, and when Ashraf marched east against him, the two armies met at Mihmandust near Damghan on 29 September 1729. The Afghan cavalry charges broke against the Persian musket volleys and cannon, and some 10,000 Afghans are said to have been killed.
+      - Ashraf fell back towards Isfahan and took a stand at Murche-Khort, about 55 km to the north, with Ottoman guns and gunners. On 13 November 1729 Nader broke his army again. Ashraf fled south with captured Safavid princesses and treasure, and Nader entered Isfahan on 16 November; Tahmasp followed in December. Nader’s troops then plundered the townspeople to pay the army. In January 1730 Nader routed Ashraf once more at Zarghan near Shiraz. Ashraf fled east towards Kandahar and was killed on the way in 1730, probably by Baluch tribesmen or his own followers. Afghan rule in Persia was over, though Mirwais’s son Husayn held Kandahar until Nader took it in 1738.
+    facts:
+      - [Battle of Damghan, "29 September – 5 October 1729, Persian victory"]
+      - [Battle of Murche-Khort, "13 November 1729, Persian victory"]
+      - [Isfahan retaken, "16 November 1729"]
+    markers:
+      - kind: taken
+        side: saf
+        name: Mashhad
+        date: late 1726
+        text: Taken by Nader for Tahmasp II from the local ruler Malek Mahmud Sistani.
+        lonlat: [59.6, 36.3]
+      - kind: battle
+        side: saf
+        name: Battle of Damghan
+        date: 29 September 1729
+        text: Fought at Mihmandust. Nader’s musketeers and guns broke the Afghan cavalry charges.
+        lonlat: [54.5, 36.15]
+      - kind: battle
+        side: saf
+        name: Battle of Murche-Khort
+        date: 13 November 1729
+        text: Ashraf’s last attempt to hold Isfahan failed despite the help of Ottoman artillery.
+        lonlat: [51.47, 33.09]
+        lp: l
+      - kind: taken
+        side: saf
+        name: Isfahan
+        date: 16 November 1729
+        text: Nader entered the capital three days after Murche-Khort. Tahmasp II was restored there in December.
+        lonlat: [51.67, 32.65]
+      - kind: battle
+        side: saf
+        name: Battle of Zarghan
+        date: January 1730
+        text: Nader routed Ashraf’s remaining army near Shiraz. Ashraf fled towards Kandahar and was killed on the way.
+        lonlat: [52.72, 29.77]
+    arrows:
+      - side: saf
+        label: Nader
+        phase: 1
+        via: [[59.6, 36.3], [57.68, 36.21], [55.0, 36.2], [54.55, 36.15]]
+      - side: hot
+        label: Ashraf
+        phase: 1
+        via: [[51.67, 32.65], [51.4, 34.6], [52.4, 35.4], [54.4, 36.15]]
+      - side: saf
+        phase: 2
+        via: [[54.34, 36.17], [51.42, 35.69], [50.85, 34.65], [51.47, 33.1], [51.67, 32.7]]
+      - side: saf
+        phase: 3
+        via: [[51.67, 32.65], [52.0, 31.0], [52.72, 29.8]]
+    areas:
+      - style: gained
+        side: saf
+        label: Won back from the Afghans, 1729–1730
+        atoms: [IR-04, IR-08, IR-14, IR-06, IR-18, IR-15, IR-25, IR-07, IRN-5490, IR-12, IR-27, IR-21, IR-30, IR-31, IR-29, IR-26, IR-22]

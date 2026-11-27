@@ -1,0 +1,136 @@
+id: ottoman-safavid-war-1603
+name: Ottoman–Safavid War (1603–1618)
+start: "1603-09-26"
+end: "1618-09-26"
+tier: B
+summary: The war in which Shah Abbas I of Persia, with his reorganised army of slave soldiers, musketeers and artillery, won back the provinces lost to the Ottomans in 1590. While the Ottomans were tied down by their long war with the Habsburgs and the Celali revolts in Anatolia, Abbas took Tabriz in 1603, Erivan in 1604 after a long siege and Shirvan in 1606, and defeated an Ottoman army near Lake Urmia in 1605. The Treaty of Nasuh Pasha (1612) restored the frontier of 1555. Fighting resumed in 1615; the Ottomans failed before Erivan in 1616 and the Treaty of Serav (1618) confirmed the settlement.
+countries: [ir, az, am, ge, tr, iq]
+sides:
+  - id: saf
+    name: Safavid Persia
+    polities: [persia]
+    ink: green
+    moves: Safavid moves
+    success: Safavid success
+  - id: ot
+    name: Ottoman Empire
+    polities: [ottoman]
+    ink: teal
+    moves: Ottoman moves
+    success: Ottoman success
+notes:
+  - The date and place of the great Safavid victory of 1605 differ between sources; it is given as 9 September near Lake Urmia, or as the Battle of Sufiyan near Tabriz in November.
+  - During the retreat of 1604–1605 Abbas had the country between Kars and the Aras laid waste and deported its people, above all Armenians from Julfa and the Erivan plain, to the interior of Persia. Many died on the way; reliable numbers are not known, and the estimates given in the literature vary by tens of thousands.
+sources:
+  - title: Ottoman–Safavid war (1603–1612) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ottoman%E2%80%93Safavid_war_(1603%E2%80%931612)
+  - title: Treaty of Nasuh Pasha (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Nasuh_Pasha
+  - title: Treaty of Serav (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Serav
+  - title: Great Surgun (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Great_Surgun
+  - title: Abbas I, shah of Persia (Britannica)
+    url: https://www.britannica.com/biography/Abbas-I-Safavid-shah-of-Persia
+steps:
+  - title: Abbas retakes Tabriz, Erivan and Shirvan
+    date: 1603–1607
+    when: "1603-10-21"
+    borders: "1607"
+    countries: [ir, az, am, ge]
+    body:
+      - By 1603 the Ottomans were fighting the Habsburgs in Hungary, and much of Anatolia was in the hands of rebel Celali bands. Abbas had spent fifteen years building a standing army of Georgian, Armenian and Circassian slave soldiers (ghulams), Persian musketeers and artillerymen. He attacked on 26 September 1603, catching the Ottomans unprepared, first destroying their advance base at Nahavand and then marching on Tabriz, held by the Ottomans since 1585. The city fell on 21 October; its people rose against the Ottoman soldiers and killed many of them.
+      - Abbas went on to Nakhchivan, which the Ottomans had abandoned, and on 15 November laid siege to Erivan. The fortress held out through the winter and fell only in June 1604; Tiflis was taken as well, and Kartli and Kakheti became Persian dependencies again. When an Ottoman army under Cığalazade Sinan Pasha approached later that year, Abbas fell back, laying waste to the country behind him and driving its people into Persia. On 9 September 1605 his mainly cavalry army defeated the Ottomans near Lake Urmia, the first Safavid victory over an Ottoman army in a pitched battle; some 20,000 Ottoman soldiers are said to have been killed. Sinan Pasha died during the retreat, and in 1606–1607 the Safavids retook Ganja, Shamakhi and the rest of Shirvan.
+    facts:
+      - [Tabriz retaken, "21 October 1603"]
+      - [Erivan surrenders, "June 1604, after a siege of seven months"]
+      - [Victory near Lake Urmia, "9 September 1605"]
+    markers:
+      - kind: taken
+        side: saf
+        name: Tabriz
+        date: 21 October 1603
+        text: Taken by Abbas after a short siege in which the Safavids made heavy use of artillery for the first time. The townspeople took revenge on the Ottoman soldiers.
+        lonlat: [46.29, 38.08]
+      - kind: siege
+        side: saf
+        name: Erivan
+        date: November 1603 – June 1604
+        text: The Ottoman fortress held out through the winter. Abbas used mines and artillery, and the garrison surrendered in June.
+        lonlat: [44.51, 40.18]
+      - kind: event
+        side: saf
+        name: Julfa
+        date: 1604–1605
+        text: The Armenian merchant town on the Aras was emptied and its people sent to Isfahan, where they founded New Julfa.
+        lonlat: [45.62, 38.95]
+        lp: l
+      - kind: battle
+        side: saf
+        name: Lake Urmia
+        date: 9 September 1605
+        text: The first Safavid victory over an Ottoman army in a pitched battle. The Ottoman dead are given as some 20,000, and the governor of Erzurum was captured.
+        lonlat: [45.9, 38.0]
+        lp: b
+      - kind: taken
+        side: saf
+        name: Shamakhi
+        date: 1606–1607
+        text: The capital of Shirvan was retaken after a long siege, completing the reconquest of the province.
+        lonlat: [48.64, 40.63]
+    arrows:
+      - side: saf
+        label: Abbas I
+        phase: 1
+        via: [[51.67, 32.65], [50.0, 36.27], [48.5, 37.4], [46.35, 38.05]]
+      - side: saf
+        phase: 2
+        via: [[46.29, 38.08], [45.4, 39.2], [44.55, 40.1]]
+      - side: saf
+        phase: 3
+        via: [[45.6, 39.3], [46.36, 40.68], [48.6, 40.62]]
+    areas:
+      - style: gained
+        side: saf
+        label: Won back by Persia, 1603–1607
+        atoms: [IR-01, IR-02, AM-AG, AM-AR, AM-AV, AM-ER, AM-GR, AM-KT, AM-LO, AM-SH, AM-SU, AM-TV, AM-VD, AZ-NX, AZ-SAR, AZ-SAD, AZ-KAN, AZ-BAB, AZ-SAH, AZ-CUL, AZ-ORD, AZ-GA, AZ-SMI, AZ-BA, AZ-ABS, AZ-SM, AZ-XIZ, AZ-QOB, AZ-AGU, AZ-ISM, AZ-GOY, AZ-KUR, AZ-HAC, AZ-SIY, AZ-SBN, AZ-QBA, AZ-QUS, AZ-XAC, RU-DA~derbent]
+  - title: Erivan besieged and the Treaty of Serav
+    date: 1610–1618
+    when: "1616"
+    borders: "1618-09-26"
+    countries: [ir, am, az, tr]
+    body:
+      - In 1610 the grand vizier Kuyucu Murad Pasha, who had crushed the Celali revolts, marched on Tabriz, but Abbas avoided battle and the Ottomans withdrew. On 20 November 1612 the two sides made peace through the grand vizier Nasuh Pasha. The Ottomans gave up everything gained in 1590 and returned to the frontier of 1555, and Persia was to send 200 loads of silk every year.
+      - Abbas did not send the silk. In 1614–1616 he invaded Kakheti, whose king Teimuraz I had turned against him and fled to the Ottomans; tens of thousands of Georgians were killed or deported to Persia, and the war with the Ottomans resumed. In 1616 the grand vizier Öküz Mehmed Pasha besieged Erivan for 44 days but had to retreat in the autumn rains, and was dismissed. In 1618 the grand vizier Halil Pasha marched towards Ardabil with Crimean Tatar help. The Safavid governor of Tabriz, Qarachaqay Khan, fought the Ottoman and Crimean troops near Serav, and Abbas asked for peace, which was signed there on 26 September 1618. The Treaty of Serav confirmed the frontier of 1612, with small changes, and halved the silk tribute to 100 loads. The peace lasted only until 1623.
+    facts:
+      - [Treaty of Nasuh Pasha, "20 November 1612"]
+      - [Siege of Erivan, "1616, 44 days"]
+      - [Treaty of Serav, "26 September 1618"]
+    markers:
+      - kind: siege
+        side: saf
+        name: Erivan
+        date: "1616"
+        text: Öküz Mehmed Pasha’s army besieged the fortress for 44 days and withdrew when the autumn rains came.
+        lonlat: [44.51, 40.18]
+      - kind: treaty
+        name: Treaty of Serav
+        date: 26 September 1618
+        text: Signed at Sarab (Serav) between Tabriz and Ardabil. It restored the frontier of 1555 and 1612.
+        lonlat: [47.54, 37.94]
+      - kind: event
+        side: ot
+        name: Ardabil
+        date: "1618"
+        text: Halil Pasha’s army and its Crimean Tatar allies marched towards the Safavid dynastic shrine city before peace was made.
+        lonlat: [48.29, 38.25]
+        lp: r
+    arrows:
+      - side: ot
+        label: Öküz Mehmed Pasha
+        phase: 1
+        via: [[41.27, 39.9], [43.1, 40.6], [44.45, 40.2]]
+      - side: ot
+        label: Halil Pasha
+        phase: 2
+        via: [[43.35, 38.5], [45.0, 38.4], [46.3, 38.1], [47.45, 37.95]]

@@ -1,0 +1,213 @@
+id: basmachi-movement
+name: Basmachi movement
+start: "1918-02"
+end: "1934"
+tier: B
+summary: An armed resistance to Soviet rule in Central Asia, made up of many separate bands rather than one organisation. It began in the Ferghana Valley after Soviet troops sacked Kokand, the seat of the short-lived Turkestan Autonomy, in February 1918, and spread to Bukhara and Khiva after the Red Army overthrew their rulers in 1920. The former Ottoman war minister Enver Pasha led part of it until he was killed in 1922. Red Army offensives, religious and economic concessions and war-weariness broke the movement by the mid-1920s, but exiles raided from Afghanistan and the collectivisation of farming set off new revolts until the early 1930s.
+countries: [uz, tj, kg, tm, af]
+sides:
+  - id: bas
+    name: Basmachi
+    polities: [basmachi]
+    ink: olive
+    moves: Basmachi moves
+    success: Basmachi success
+  - id: sov
+    name: Soviet Russia (the Soviet Union from 1922) and the people’s republics of Bukhara and Khorezm
+    polities: [ussr, bukharan-psr, khorezm-psr]
+    ink: red
+    moves: Red Army moves
+    success: Soviet success
+notes:
+  - “Basmachi” comes from a Turkic word for raider or bandit. It was the Soviet name for the rebels, who called themselves mujahidin or followed their own commanders (kurbashi). Some sources date the movement from the revolt of 1916, which has its own entry; the fighting described here began in 1918.
+  - Estimates of the dead are uncertain. The sack of Kokand alone is said to have killed between 10,000 and 25,000 people, and some 200,000 people fled the Tajik lands in the early 1920s.
+sources:
+  - title: Basmachi movement (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Basmachi_movement
+  - title: Turkestan Autonomy (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kokand_Autonomy
+  - title: Enver Pasha (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Enver_Pasha
+  - title: Ibrahim Bek (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ibrahim_Bek
+  - title: Junaid Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Junaid_Khan_(Basmachi_leader)
+  - title: Basmachi Revolt (Britannica)
+    url: https://www.britannica.com/event/Basmachi-Revolt
+  - title: Basmachi Revolts (Russia’s Periphery, William & Mary)
+    url: https://russiasperiphery.pages.wm.edu/central-asia/general/basmachi-revolts/
+  - title: Tajikistan, a country study – The Basmachi (Library of Congress)
+    url: https://countrystudies.us/tajikistan/7.htm
+steps:
+  - title: Kokand and the Ferghana Valley
+    date: 1918–1920
+    when: "1918-02-19"
+    borders: "1918-03"
+    countries: [uz, kg, tj]
+    body:
+      - After the October Revolution the Tashkent Soviet, run by Russian railway workers and soldiers, refused to share power with the Muslim majority; its leader Fyodor Kolesov declared that taking Muslims into the government was “unacceptable at the present time”. In reply a Muslim congress at Kokand proclaimed the Turkestan Autonomy on 27 November 1917. In February 1918 Red Guards from Tashkent, with Armenian Dashnak volunteers, stormed Kokand and sacked it. Estimates of the townspeople killed range from about 10,000 to 25,000. Ergash, the autonomy’s last commander, a former police chief, escaped to the countryside and began the armed resistance. Grain requisitions and famine drove thousands to join him.
+      - By the end of 1918 bands totalling perhaps 20,000 men held much of the Ferghana countryside. Their leaders were rivals. Madamin Bek of Margilan, the most moderate, made an alliance in 1919 with Konstantin Monstrov’s Peasant Army, a militia of Russian settlers who had turned against the Bolsheviks, and the allies took Osh and Jalal-Abad and besieged Andijan in September. After the defeat of Admiral Kolchak opened the railway from Russia, Mikhail Frunze’s Turkestan Front brought in fresh troops, among them Volga Tatar units. Monstrov’s men made peace in January 1920 and Madamin Bek went over to the Soviets in March; he was killed by rival rebels soon after. When the Soviets began requisitioning food and calling up Muslims that summer, a new revolt broke out under Kurshirmat.
+    facts:
+      - [Turkestan Autonomy, "27 November 1917 – February 1918"]
+      - [Kokand sacked, "February 1918"]
+      - [Madamin Bek goes over to the Soviets, "March 1920"]
+    markers:
+      - kind: taken
+        side: sov
+        name: Kokand
+        date: February 1918
+        text: The seat of the Turkestan Autonomy. Soviet troops shelled the city, then sacked it and killed many of its people.
+        lonlat: [70.942, 40.529]
+        lp: b
+      - kind: event
+        side: sov
+        name: Tashkent
+        date: 1918–1920
+        text: Seat of the Tashkent Soviet and, from April 1918, of the Turkestan Autonomous Soviet Republic.
+        lonlat: [69.28, 41.311]
+      - kind: event
+        side: bas
+        name: Margilan
+        date: 1918–1920
+        text: Home of Madamin Bek, who led the most moderate of the Basmachi groups and in 1919 set up a provisional Ferghana government with Russian settlers.
+        lonlat: [71.725, 40.471]
+        lp: b
+      - kind: taken
+        side: bas
+        name: Jalal-Abad
+        date: 1919
+        text: Base of Monstrov’s Peasant Army of Russian settlers, Madamin Bek’s allies in 1919.
+        lonlat: [73.0, 40.933]
+      - kind: siege
+        side: sov
+        name: Andijan
+        date: September 1919
+        text: Besieged by Madamin Bek and Monstrov. The Soviet garrison held out until relieved.
+        lonlat: [72.334, 40.783]
+        lp: t
+      - kind: taken
+        side: bas
+        name: Osh
+        date: 1919
+        text: Taken by Madamin Bek and Monstrov’s settlers.
+        lonlat: [72.8, 40.53]
+    arrows:
+      - side: sov
+        label: Red Guards from Tashkent
+        via: [[69.28, 41.31], [69.63, 40.33], [70.5, 40.45], [70.9, 40.52]]
+    areas:
+      - style: contested
+        side: bas
+        label: Countryside largely held by the Basmachi, 1919
+        atoms: [UZ-FA, UZ-AN, UZ-NG, KG-O, KG-J]
+  - title: Enver Pasha in eastern Bukhara
+    date: 1920–1922
+    when: "1921-11"
+    borders: "1922-06"
+    countries: [tj, uz, tm, af]
+    link: { href: "#/war/bukhara-operation-1920", text: The Soviet conquest of Khiva and Bukhara }
+    body:
+      - The Red Army’s overthrow of the khan of Khiva and the emir of Bukhara in 1920 spread the war. In Khorezm, Junaid Khan’s Turkmen raided from the Karakum desert. In eastern Bukhara, the emir’s followers fought on under Ibrahim Bek, a chief of the Lakai Uzbeks, while the emir directed them from exile in Afghanistan. Some Young Bukharans who had helped the Soviets, disappointed by Russian control of their republic, went over to the rebels.
+      - In November 1921 Enver Pasha, the former Ottoman war minister and one of the main organisers of the Armenian genocide, arrived in Bukhara, sent by the Soviets, who hoped to use him. Within weeks he had gone over to the rebels. With Basmachi bands he took Dushanbe in February 1922 and styled himself commander-in-chief of the armies of Islam. His pan-Turkic aims meant little to most of the rebels, and Ibrahim Bek refused to serve under him. When Enver demanded in May that the Red Army leave Turkestan, Moscow sent reinforcements and aircraft, and at the same time gave back religious endowments, sharia courts and Quran schools and offered an amnesty. Defeated at Kafrun in June, Enver was driven east and was killed leading a cavalry charge near Baljuvon on 4 August 1922.
+    facts:
+      - [Enver Pasha joins the rebels, "November 1921"]
+      - [Dushanbe taken, "February 1922"]
+      - [Battle of Kafrun, "June 1922, Soviet victory"]
+      - [Enver killed, "4 August 1922, near Baljuvon"]
+    markers:
+      - kind: taken
+        side: bas
+        name: Dushanbe
+        date: February 1922
+        text: Enver Pasha and the Basmachi took the town from its Soviet garrison and made it their base until the summer.
+        lonlat: [68.78, 38.537]
+        lp: l
+      - kind: battle
+        side: sov
+        name: Kafrun
+        date: June 1922
+        text: Soviet troops under Nikolai Kakurin defeated Enver’s forces here, east of Dushanbe, and drove them east.
+        lonlat: [69.02, 38.56]
+      - kind: event
+        side: sov
+        name: Baljuvon
+        date: 4 August 1922
+        text: Enver Pasha was killed near here, leading a last charge against Red cavalry. His successor, Selim Pasha, fled to Afghanistan in 1923.
+        lonlat: [69.676, 38.308]
+      - kind: event
+        name: Bukhara
+        date: 1920–1922
+        text: Capital of the Bukharan People’s Soviet Republic, where Enver arrived in November 1921.
+        lonlat: [64.423, 39.767]
+    arrows:
+      - side: sov
+        label: Red Army, June–August 1922
+        via: [[68.82, 38.54], [69.02, 38.56], [69.45, 38.42], [69.65, 38.32]]
+    areas:
+      - style: contested
+        side: bas
+        label: Largely held by the Basmachi, spring 1922
+        atoms: [TJ-DU, TJ-KT, TJK-368, UZ-SU]
+  - title: The long end
+    date: 1923–1934
+    when: "1923-07"
+    borders: "1929-04"
+    countries: [tj, uz, tm, kg, af]
+    body:
+      - A Soviet offensive in the summer of 1923 drove the Basmachi out of Garm, and by 1924 Kurshirmat had given up in Ferghana and left for Afghanistan. Junaid Khan besieged Khiva in January 1924 but was driven off. In the national delimitation of October 1924 Bukhara and Khorezm were divided between the new Uzbek and Turkmen Soviet republics and the Tajik autonomous republic. In June 1926 Ibrahim Bek crossed into Afghanistan. The war had emptied eastern Bukhara; some 200,000 people had fled the Tajik lands, leaving two-thirds of the farmland abandoned.
+      - From northern Afghanistan, where Ibrahim Bek settled with thousands of refugees around Kunduz, the exiles raided across the Amu Darya. In April 1929 Fuzail Maksum’s men crossed the Panj and held Garm for a day. That month a Soviet force under Vitaly Primakov, dressed as Afghans, crossed from Termez and took Mazar-i-Sharif, officially to help the deposed King Amanullah, before withdrawing in June; another Soviet raid struck the exiles’ camps in 1930. Collectivisation of farming set off new revolts, and Ibrahim Bek came back to Tajikistan in 1931, but he was taken by Tajik villagers in June and shot on 31 August. The last large bands were broken up in the Karakum desert in 1933, and the movement had ended by 1934.
+      - Soviet histories presented the Basmachi as bandits and tools of foreign powers. Since independence they have been reassessed in Central Asia, where some see them as fighters for freedom and their faith; historians stress that the bands had no common programme and fought above all to defend their way of life against Soviet rule.
+    facts:
+      - [Garm retaken, "summer 1923"]
+      - [Ibrahim Bek to Afghanistan, "June 1926"]
+      - [Soviet raid into Afghanistan, "April–June 1929"]
+      - [Ibrahim Bek captured, "June 1931; shot 31 August 1931"]
+    markers:
+      - kind: taken
+        side: sov
+        name: Garm
+        date: 1923 and April 1929
+        text: Basmachi stronghold in the mountains of Karategin, taken by Soviet troops in 1923. Fuzail Maksum’s raiders held it briefly in April 1929.
+        lonlat: [70.383, 39.017]
+      - kind: held
+        side: sov
+        name: Khiva
+        date: January 1924
+        text: Junaid Khan besieged the capital of Khorezm but was driven off by Red Army reinforcements.
+        lonlat: [60.361, 41.381]
+      - kind: event
+        side: bas
+        name: Kunduz
+        date: 1926–1931
+        text: Ibrahim Bek and thousands of refugees from eastern Bukhara settled in this region of northern Afghanistan.
+        lonlat: [68.868, 36.728]
+        lp: b
+      - kind: taken
+        side: sov
+        name: Mazar-i-Sharif
+        date: April 1929
+        text: Taken by Primakov’s Soviet detachment of 700 to 1,000 men, which withdrew in June after King Amanullah gave up his fight for the throne.
+        lonlat: [67.117, 36.7]
+        lp: l
+      - kind: event
+        side: sov
+        name: Tashkent
+        date: 31 August 1931
+        text: Ibrahim Bek was tried and shot here after his capture.
+        lonlat: [69.28, 41.311]
+      - kind: event
+        side: sov
+        name: Karakum desert
+        date: October 1933
+        text: The last large bands of Turkmen rebels were defeated in the desert.
+        lonlat: [60.0, 39.6]
+        lp: b
+    arrows:
+      - side: bas
+        label: Fuzail Maksum, April 1929
+        phase: 1
+        via: [[70.9, 38.2], [70.79, 38.46], [70.47, 38.7], [70.4, 38.98]]
+      - side: sov
+        label: Primakov, April 1929
+        phase: 1
+        via: [[67.28, 37.22], [67.2, 36.95], [67.13, 36.73]]

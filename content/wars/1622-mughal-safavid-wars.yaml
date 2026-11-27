@@ -1,0 +1,108 @@
+id: mughal-safavid-wars
+name: Mughal–Safavid wars over Kandahar
+start: "1622-05-20"
+end: "1653-09-29"
+tier: B
+summary: The struggle between Safavid Persia and the Mughal Empire for Kandahar, the fortress city on the trade road between India and Iran. Shah Abbas I took it from the Mughals in 1622 after a 45-day siege. Its Persian governor, Ali Mardan Khan, handed it to Shah Jahan in 1638, but Shah Abbas II won it back in February 1649. Three great Mughal sieges, two under Prince Aurangzeb and one under Prince Dara Shikoh, failed in 1649, 1652 and 1653, and Kandahar stayed Persian until the Hotaki revolt of 1709.
+countries: [af, ir, in, pk]
+sides:
+  - id: saf
+    name: Safavid Persia
+    polities: [persia]
+    ink: green
+    moves: Safavid moves
+    success: Safavid success
+  - id: mug
+    name: Mughal Empire
+    polities: [mughals]
+    ink: orange
+    moves: Mughal moves
+    success: Mughal success
+notes:
+  - Kandahar had changed hands before. Humayun gave it to the Safavids after they helped him regain his throne, Akbar took it back in 1595, and a Safavid siege in 1605–1606 failed.
+sources:
+  - title: Mughal–Safavid war (1622–1623) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mughal%E2%80%93Safavid_war_(1622%E2%80%931623)
+  - title: Siege of Kandahar (1648–1649) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kandahar_(1648%E2%80%931649)
+  - title: Mughal sieges of Kandahar (1649–1653) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mughal_sieges_of_Kandahar_(1649%E2%80%931653)
+  - title: "Kandahar iv. From the Mongol invasion through the Safavid era (Encyclopaedia Iranica)"
+    url: https://www.iranicaonline.org/articles/kandahar-from-the-mongol-invasion-through-the-safavid-era
+steps:
+  - title: Abbas takes Kandahar
+    date: 1622–1638
+    when: "1622-06-22"
+    borders: "1623"
+    countries: [af, ir]
+    body:
+      - After his peace with the Ottomans in 1618, Shah Abbas I was free to turn east. In 1621 he gathered an army at Nishapur and, giving out that he was going hunting along the Helmand, appeared before Kandahar on 20 May 1622. The Mughal governor, Abdul Aziz Khan, refused to surrender, and his garrison of about 3,000 held out while the Persians, short of heavy guns, dug mines under the walls. Emperor Jahangir ordered his son Khurram, the future Shah Jahan, to lead a relief army, but the prince, afraid of losing his place at court, did not go. After 45 days, on 22 June, the towers collapsed and the garrison surrendered.
+      - Abbas made Ganj Ali Khan governor and returned through Ghur. Khurram rebelled against his father, and in the spring of 1623 Jahangir’s envoy accepted the loss of Kandahar. Fifteen years later, in 1638, the Persian governor Ali Mardan Khan, fearing the new shah Safi, handed the city to Shah Jahan and entered Mughal service.
+    facts:
+      - [Siege of Kandahar, "20 May – 22 June 1622"]
+      - [Mughal garrison, "about 3,000"]
+      - [Handed to the Mughals by Ali Mardan Khan, "1638"]
+    markers:
+      - kind: siege
+        side: saf
+        name: Kandahar
+        date: 20 May – 22 June 1622
+        text: Abbas’s army mined the walls until the towers fell, and the Mughal garrison surrendered after 45 days.
+        lonlat: [65.62, 31.59]
+      - kind: event
+        side: mug
+        name: Kandahar
+        date: "1638"
+        text: The Persian governor, Ali Mardan Khan, gave the city to the Mughals.
+        lonlat: [65.62, 31.59]
+        lp: b
+    arrows:
+      - side: saf
+        label: Abbas I
+        via: [[58.8, 36.21], [56.92, 33.6], [60.0, 32.4], [62.1, 32.37], [65.5, 31.6]]
+  - title: Kandahar retaken and the Mughal sieges
+    date: 1648–1653
+    when: "1649-02-22"
+    borders: "1653-10"
+    countries: [af, ir, in, pk]
+    body:
+      - In 1648, while the Mughal army was worn out by its failed campaign in Balkh and Badakhshan, Shah Abbas II marched on Kandahar with some 40,000 men, took Bost and on 28 December laid siege to the city. The Mughal garrison of 7,000 under Daulat Khan had left two hilltop watchtowers unguarded, and Persian guns firing from them reached the inside of the fort. Part of the garrison mutinied, and on 22 February 1649 Daulat Khan surrendered in exchange for safe passage to India.
+      - Shah Jahan sent three armies to win it back. Prince Aurangzeb, with about 50,000 men, besieged it from May to 5 September 1649, but lacked heavy guns and lost some 3,000 men. A second siege under Aurangzeb, from 2 May 1652, failed against the more accurate Persian gunners and was called off on 9 July. In 1653 Prince Dara Shikoh brought 70,000 men and new siege guns, but his assaults failed too, and on 29 September 1653 the Mughals gave up. They never tried again, and the war cost them much money and prestige.
+    facts:
+      - [Kandahar taken by Abbas II, "22 February 1649"]
+      - [Mughal sieges, "1649, 1652 and 1653, all failed"]
+    markers:
+      - kind: siege
+        side: saf
+        name: Kandahar
+        date: 28 December 1648 – 22 February 1649
+        text: Taken by Abbas II after a two-month siege. The Mughal garrison marched out with a promise of safe passage.
+        lonlat: [65.62, 31.59]
+      - kind: siege
+        side: saf
+        name: Mughal sieges
+        date: 1649, 1652, 1653
+        text: Aurangzeb twice and Dara Shikoh once besieged Kandahar without success. The last siege was lifted on 29 September 1653.
+        lonlat: [65.68, 31.55]
+        lp: b
+      - kind: taken
+        side: saf
+        name: Bost
+        date: "1648"
+        text: The fortress on the Helmand was taken by Abbas II on his way to Kandahar.
+        lonlat: [64.36, 31.49]
+        lp: l
+    arrows:
+      - side: saf
+        label: Abbas II
+        phase: 1
+        via: [[62.2, 34.35], [62.1, 32.37], [64.36, 31.49], [65.5, 31.6]]
+      - side: mug
+        label: Aurangzeb, Dara Shikoh
+        phase: 2
+        via: [[69.18, 34.53], [68.42, 33.55], [66.9, 32.1], [65.75, 31.62]]
+    areas:
+      - style: gained
+        side: saf
+        label: Kandahar, Persian from 1649
+        atoms: [AF-KAN, AF-HEL, AF-URU, AFG-1753]

@@ -1,0 +1,134 @@
+id: tajikistani-civil-war
+name: Tajikistani Civil War
+start: "1992-05-05"
+end: "1997-06-27"
+tier: B
+summary: The civil war that followed Tajikistan’s independence from the Soviet Union. It was fought between the old communist establishment, drawn mainly from the northern Leninabad (Khujand) region and the southern Kulob region, and an opposition of Islamists, democrats and Pamiri nationalists, drawn largely from the Gharm valley and Gorno-Badakhshan. After a coalition government formed in May 1992 collapsed, the pro-government Popular Front, backed by Russia and Uzbekistan, took the capital Dushanbe in December 1992, and its militias killed and expelled thousands of people from opposition regions in the south. The opposition, united from 1993 as the United Tajik Opposition (UTO), fought on from bases in Afghanistan and the eastern mountains, attacking Russian border posts on the Panj river. UN-sponsored talks from 1994 led to the General Agreement on the Establishment of Peace and National Accord, signed in Moscow on 27 June 1997 by President Emomali Rahmon and the UTO leader Sayid Abdullo Nuri, which gave the opposition 30 per cent of government posts.
+countries: [tj, af, ru, uz]
+sides:
+  - id: gov
+    name: Government and Popular Front, with Russia and Uzbekistan
+    polities: [tajikistan, russia, uzbekistan]
+    ink: red
+    moves: Government moves
+    success: Government success
+  - id: uto
+    name: United Tajik Opposition
+    polities: [united-tajik-opposition]
+    ink: green
+    moves: Opposition moves
+    success: Opposition success
+notes:
+  - Estimates of the dead range from about 20,000 to more than 100,000; most sources give 50,000 to 100,000, many of them civilians killed in 1992. About 1.2 million people, a fifth of the population, were displaced, and up to 150,000 fled to Afghanistan. Human Rights Watch and others documented summary executions and other abuses by both sides.
+  - The Russian 201st Motor Rifle Division stayed in Tajikistan throughout the war, and Russian border guards held the Afghan border; more than 300 Russian servicemen were killed. Areas of control are approximate.
+sources:
+  - title: Tajikistani Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tajikistani_Civil_War
+  - title: United Nations Mission of Observers in Tajikistan – Background (UN Peacekeeping)
+    url: https://peacekeeping.un.org/sites/default/files/past/unmot/UnmotB.htm
+  - title: Tajikistan – Background on the civil war (Human Rights Watch)
+    url: https://www.hrw.org/legacy/backgrounder/eca/tajikbkg1005.htm
+  - title: Popular Front of Tajikistan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Popular_Front_of_Tajikistan
+  - title: United Tajik Opposition (Wikipedia)
+    url: https://en.wikipedia.org/wiki/United_Tajik_Opposition
+steps:
+  - title: The war of 1992
+    date: May – December 1992
+    when: "1992-05-05"
+    borders: "1992-12-10"
+    countries: [tj, ru, uz]
+    body:
+      - In the spring of 1992 rival crowds faced each other for weeks on two squares in Dushanbe, supporters of President Rahmon Nabiev, a communist from Khujand, on one and the opposition on the other. In May, after armed clashes, Nabiev agreed to a coalition government that gave the opposition a third of the ministries. The old elite of Kulob and Khujand refused to accept it. In the cotton lands of the Vakhsh valley around Qurghonteppa, where Kulobis lived alongside settlers from Gharm and the Pamirs, fighting between militias became a war of villages, with massacres on both sides. In September opposition youths forced Nabiev to resign at Dushanbe airport.
+      - The Popular Front, led by Sangak Safarov, a Kulobi former convict, and armed from Soviet stocks with help from Uzbekistan, won the south in the autumn. A session of the Supreme Soviet in Khujand in November chose Emomali Rahmonov, a state farm director from the Kulob region, as head of state, and on 10 December the Popular Front entered Dushanbe. Its fighters hunted down people from Gharm and the Pamirs, killing thousands, and tens of thousands fled across the Panj river to Afghanistan. Government forces then pushed into the Gharm valley early in 1993.
+    facts:
+      - [Coalition government formed, "May 1992"]
+      - [Nabiev forced to resign, "7 September 1992"]
+      - [Popular Front takes Dushanbe, "10 December 1992"]
+    markers:
+      - kind: taken
+        side: gov
+        name: Dushanbe
+        date: 10 December 1992
+        text: The Popular Front took the capital from forces loyal to the coalition; a wave of killings followed.
+        lonlat: [68.78, 38.56]
+      - kind: battle
+        side: gov
+        name: Qurghonteppa
+        date: summer – autumn 1992
+        text: Centre of the fighting in the Vakhsh valley, where whole villages were destroyed.
+        lonlat: [68.78, 37.84]
+      - kind: capital
+        side: gov
+        name: Kulob
+        date: 1992
+        text: Home base of the Popular Front and of Rahmonov.
+        lonlat: [69.78, 37.91]
+      - kind: event
+        side: gov
+        name: Khujand
+        date: November 1992
+        text: The Supreme Soviet met here, in the northern stronghold of the old elite, and chose Rahmonov as head of state.
+        lonlat: [69.63, 40.28]
+    arrows:
+      - side: gov
+        via: [[69.78, 37.91], [69.2, 37.85], [68.8, 37.84]]
+      - side: gov
+        via: [[68.78, 37.9], [68.75, 38.2], [68.78, 38.5]]
+      - side: uto
+        label: Flight to Afghanistan
+        via: [[68.78, 37.84], [68.65, 37.4], [68.6, 37.1]]
+    areas:
+      - style: occupied
+        side: uto
+        label: Opposition strongholds, end of 1992 (approximate)
+        atoms: [TJK-368, TJ-GB]
+  - title: War on the border and the peace of 1997
+    date: 1993–1997
+    when: "1993-07-13"
+    borders: "1997-06-27"
+    countries: [tj, af, ru]
+    body:
+      - The opposition regrouped in northern Afghanistan, where the Islamic Renaissance Party’s leader Sayid Abdullo Nuri set up an exile government, and in the mountains of Gharm, Tavildara and Gorno-Badakhshan. On 13 July 1993 opposition fighters and Afghan allies attacked the 12th post of the Russian border guards on the Panj, killing 25 guards, and Russia answered with air and artillery strikes on northern Afghanistan. Russian and Central Asian troops were deployed as a peacekeeping force of the Commonwealth of Independent States. Fighting in the Tavildara valley changed hands several times in 1994–1996, and warlords on both sides mutinied against their commanders.
+      - Talks under UN auspices began in April 1994, and a temporary ceasefire was agreed in September; UN military observers (UNMOT) were deployed from December 1994. Rahmonov was elected president in November 1994. The rise of the Taliban in Afghanistan pushed both sides towards a deal, and on 27 June 1997 Rahmonov, Nuri and the UN envoy Gerd Merrem signed the General Agreement in Moscow. The opposition fighters were integrated into the army, Nuri returned to Dushanbe, and most refugees came home. In later years Rahmon pushed the opposition out of government, and the Islamic Renaissance Party was banned in 2015.
+    facts:
+      - [Attack on the 12th border post, "13 July 1993"]
+      - [UN observers deployed, "December 1994"]
+      - [General Agreement signed in Moscow, "27 June 1997"]
+    markers:
+      - kind: battle
+        side: uto
+        name: Tavildara
+        date: 1994–1996
+        text: The mountain valley changed hands several times between government and opposition forces.
+        lonlat: [70.49, 38.69]
+      - kind: held
+        side: uto
+        name: Gharm
+        date: 1993–1997
+        text: The opposition’s heartland in the Rasht valley.
+        lonlat: [70.38, 39.02]
+      - kind: event
+        side: uto
+        name: Taloqan
+        date: 1993–1997
+        text: In Afghanistan; the opposition leadership and many refugees were based in the north-east of the country.
+        lonlat: [69.53, 36.74]
+      - kind: event
+        name: Dushanbe
+        date: September 1997
+        text: Nuri returned to the capital to chair the Commission on National Reconciliation set up by the Moscow agreement.
+        lonlat: [68.78, 38.56]
+        lp: l
+    arrows:
+      - side: uto
+        via: [[69.53, 36.8], [69.7, 37.2], [69.9, 37.55]]
+    areas:
+      - style: occupied
+        side: uto
+        label: Held by the opposition, 1996 (approximate)
+        atoms: [TJK-368]
+      - style: contested
+        side: uto
+        label: Gorno-Badakhshan, outside government control for much of the war
+        atoms: [TJ-GB]

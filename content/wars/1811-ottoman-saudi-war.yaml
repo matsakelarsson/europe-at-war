@@ -1,0 +1,293 @@
+id: ottoman-saudi-war
+name: Ottoman–Saudi War
+start: "1811-10"
+end: "1818-09-11"
+tier: A
+summary: The war in which the Ottoman Empire, through its governor of Egypt, Muhammad Ali Pasha, destroyed the first Saudi state, the Emirate of Diriyah. Allied with the reformer Muhammad ibn Abd al-Wahhab, the Saudi emirs had united most of Arabia and in 1803–1805 taken Mecca and Medina, ending the Ottoman sultan’s role as protector of the holy cities. Egyptian armies under Muhammad Ali’s sons retook the Hejaz in 1812–1813 after an early defeat, fought the Saudis and their tribal allies in the mountains east of Mecca, and in 1816–1818, under Ibrahim Pasha, marched across Najd and besieged Diriyah. Abdullah ibn Saud surrendered on 11 September 1818 and was beheaded in Istanbul; Diriyah was razed. A second Saudi state rose at Riyadh in 1824.
+countries: [sa, eg]
+sides:
+  - id: ott
+    name: Ottoman Empire and Egypt
+    polities: [ottoman, egypt]
+    ink: purple
+    moves: Ottoman–Egyptian moves
+    success: Ottoman–Egyptian success
+  - id: saud
+    name: Emirate of Diriyah
+    polities: [saudi-arabia]
+    ink: green
+    moves: Saudi moves
+    success: Saudi success
+notes:
+  - The war is also called the Ottoman–Wahhabi or Egyptian–Wahhabi war. The Saudis called themselves al-Muwahhidun; "Wahhabi" was the name used by their opponents.
+  - Muhammad Ali governed Egypt in the sultan’s name. His army was raised and paid in Egypt and included Albanian and Turkish soldiers, Bedouin auxiliaries and, from 1816, French instructors.
+  - Numbers in the sources are uncertain, especially for the Saudi and tribal forces.
+sources:
+  - title: Ottoman–Wahhabi war (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ottoman%E2%80%93Wahhabi_war
+  - title: Emirate of Diriyah (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Emirate_of_Diriyah
+  - title: Battle of Al-Safra (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Al-Safra
+  - title: Siege of Diriyah (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Diriyah
+  - title: Ibrahim Pasha of Egypt (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ibrahim_Pasha_of_Egypt
+  - title: Saudi Arabia, The Wahhabi movement (Britannica)
+    url: https://www.britannica.com/place/Saudi-Arabia/The-Wahhabi-movement
+steps:
+  - title: Tusun Pasha lands at Yanbu
+    date: 1811–1812
+    when: "1811-10"
+    borders: "1811-10-01"
+    countries: [sa, eg]
+    body:
+      - By 1805 the Saudi emir Saud ibn Abd al-Aziz ruled from Diriyah over Najd, al-Hasa and the Hejaz, and his forces raided Iraq and Syria; in 1802 they had sacked the Shia shrine city of Karbala. After 1806 the Ottoman pilgrim caravans from Damascus and Cairo were turned away from Mecca, a blow to the sultan’s standing as protector of the holy cities. Sultan Mahmud II ordered Muhammad Ali, the governor of Egypt, to march against Diriyah in 1807, but troubles at home held him back until 1811, when he had the Mamluk beys massacred in the Cairo citadel.
+      - In October 1811 his seventeen-year-old son Tusun Pasha landed at Yanbu, whose small garrison surrendered. His army, about 8,000 regulars and perhaps 14,000 men with irregulars, took Badr and marched up the Wadi al-Safra towards Medina. There a larger Saudi force under Saud’s sons Abdullah and Faisal held the heights, and after three days of fighting the Egyptians broke and were cut down as they fled, losing 4,000 to 5,000 men by the Saudi chroniclers’ count and seven guns. Tusun fell back to Yanbu with some 3,000 men. Reinforced from Egypt and helped by gifts to the Harb and Juhayna tribes along the road, he advanced again in the autumn of 1812. In November his engineers blew a breach in the walls of Medina and his troops stormed the town; the garrison of the citadel surrendered three weeks later on a promise of safe passage, and many of them were killed as they came out.
+    facts:
+      - [Landing at Yanbu, "October 1811"]
+      - [Battle of al-Safra, "late 1811 or January 1812, Saudi victory"]
+      - [Medina taken, "November 1812"]
+    markers:
+      - kind: taken
+        side: ott
+        name: Yanbu
+        date: October 1811
+        text: The Red Sea port of Medina, where Tusun’s army landed. It was the Egyptian base for the rest of the war.
+        lonlat: [38.062, 24.089]
+        lp: l
+      - kind: battle
+        side: saud
+        name: Wadi al-Safra
+        date: late 1811 or January 1812
+        text: The Saudis held the heights of the valley on the pilgrim road to Medina and broke Tusun’s army as it pushed through the defile.
+        lonlat: [39.000, 23.920]
+        lp: b
+      - kind: siege
+        side: ott
+        name: Medina
+        date: November 1812
+        text: The town was stormed after its wall was mined. The citadel held out for three weeks; its garrison was attacked after surrendering on terms.
+        lonlat: [39.610, 24.470]
+      - kind: capital
+        side: saud
+        name: Diriyah
+        date: 1811
+        text: The Saudi capital in Wadi Hanifa, seat of Emir Saud ibn Abd al-Aziz and of the descendants of Muhammad ibn Abd al-Wahhab.
+        lonlat: [46.576, 24.733]
+    arrows:
+      - side: ott
+        label: Tusun Pasha
+        phase: 1
+        via: [[38.062, 24.089], [38.700, 23.850], [38.950, 23.910]]
+      - side: ott
+        phase: 2
+        via: [[38.200, 24.150], [38.900, 24.250], [39.560, 24.450]]
+    areas:
+      - style: occupied
+        side: saud
+        label: Hejaz, under Saudi rule since 1803–1806
+        atoms: [SA-02, SA-03, SA-11]
+  - title: Mecca, and war in the mountains
+    date: 1813–1814
+    when: "1813-01"
+    borders: "1813-06-01"
+    countries: [sa, eg]
+    body:
+      - Sharif Ghalib of Mecca, who had ruled under Saudi overlordship since 1806, now went over to the Egyptians. In January 1813 an Egyptian force entered Jeddah and Mecca without a fight, and Taif soon followed, so that by early 1813 all the towns of the Hejaz were again under Ottoman rule. Muhammad Ali came to Jeddah himself in September 1813 with some 2,000 infantry, 2,000 cavalry and 8,000 camels. Distrusting Ghalib, he had him arrested late in 1813 and sent into exile.
+      - The Saudi heartland was untouched, and the tribes of the mountains east and south of Mecca fought on. An Egyptian attack on the oasis of Turubah, defended by the tribe of Buqum under a woman leader, Ghaliya, failed in 1813, and in 1814 Egyptian columns were driven back in the Zahran and Ghamid country, besieged in Taif and forced out of the port of Qunfudhah. Emir Saud died at Diriyah on 1 May 1814 and was succeeded by his son Abdullah.
+    facts:
+      - [Mecca and Jeddah retaken, "January 1813"]
+      - [Muhammad Ali in the Hejaz, "September 1813 – June 1815"]
+      - [Death of Emir Saud, "1 May 1814"]
+    markers:
+      - kind: taken
+        side: ott
+        name: Mecca
+        date: January 1813
+        text: Entered without fighting, with the support of Sharif Ghalib. Ottoman prayers for the sultan were restored and the pilgrimage reopened.
+        lonlat: [39.823, 21.422]
+        lp: l
+      - kind: event
+        side: ott
+        name: Jeddah
+        date: September 1813
+        text: Muhammad Ali landed here to take command in person. He stayed in the Hejaz for almost two years.
+        lonlat: [39.173, 21.543]
+        lp: l
+      - kind: held
+        side: saud
+        name: Turubah
+        date: 1813–1814
+        text: Defended by the Buqum under Ghaliya, whom Egyptian soldiers believed to be a sorceress. The first Egyptian attacks failed.
+        lonlat: [41.633, 21.214]
+      - kind: taken
+        side: saud
+        name: Qunfudhah
+        date: 1814
+        text: The Egyptians took this Red Sea port but were driven out after about a month by tribal forces from Asir.
+        lonlat: [41.079, 19.126]
+        lp: l
+    arrows:
+      - side: ott
+        phase: 1
+        via: [[39.180, 21.560], [39.500, 21.500], [39.800, 21.430]]
+      - side: ott
+        phase: 2
+        via: [[39.850, 21.400], [40.400, 21.270], [41.000, 21.230], [41.580, 21.210]]
+    areas:
+      - style: gained
+        side: ott
+        label: Hejaz, retaken 1812–1813
+        atoms: [SA-02, SA-03]
+  - title: Bisil and the truce of 1815
+    date: 1815
+    when: "1815-01"
+    borders: "1815-06-01"
+    countries: [sa, eg]
+    body:
+      - In January 1815 Muhammad Ali met the main Saudi army, led by Abdullah’s brother Faisal and the tribes of the south, at Bisil near Taif. Using his cavalry to draw the Saudis out of their positions into the open plain, he won a clear victory and killed or captured many of them. He then took Turubah and marched south through Bisha into Asir, before going back to the coast.
+      - In the north, Tusun crossed into the Qassim, the northern gate of Najd, and occupied ar-Rass in the spring of 1815. Neither side felt able to win outright, and Tusun and Abdullah ibn Saud agreed a truce under which the Saudis gave up the Hejaz and acknowledged the sultan’s authority. Muhammad Ali, worried by Napoleon’s return from Elba and by unrest in Egypt, sailed home in June 1815. Neither he nor the sultan confirmed the truce, and in Cairo it was taken only as a pause.
+    facts:
+      - [Battle of Bisil, "January 1815, Egyptian victory"]
+      - [Tusun in the Qassim, "spring 1815"]
+      - [Truce with Abdullah ibn Saud, "1815, not ratified"]
+    markers:
+      - kind: taken
+        side: ott
+        name: Turubah
+        date: early 1815
+        text: Occupied after the victory at Bisil, which was fought near Taif. From here Muhammad Ali marched on to Ranyah and Bisha.
+        lonlat: [41.633, 21.214]
+      - kind: taken
+        side: ott
+        name: Bisha
+        date: 1815
+        text: The southern limit of Muhammad Ali’s campaign; his troops went on into the mountains of Asir before returning to Mecca.
+        lonlat: [42.600, 20.000]
+      - kind: treaty
+        name: Ar-Rass
+        date: spring 1815
+        text: Tusun reached this town in the Qassim, where he negotiated a truce with Emir Abdullah.
+        lonlat: [43.500, 25.867]
+    arrows:
+      - side: ott
+        label: Muhammad Ali
+        phase: 1
+        via: [[40.406, 21.275], [41.000, 21.200], [41.600, 21.200], [42.300, 20.500], [42.580, 20.050]]
+      - side: ott
+        label: Tusun
+        phase: 1
+        via: [[39.650, 24.500], [40.500, 24.870], [42.200, 25.500], [43.450, 25.850]]
+  - title: Ibrahim Pasha in Najd
+    date: 1816–1818
+    when: "1816-09"
+    borders: "1818-03-01"
+    countries: [sa, eg]
+    body:
+      - The war resumed in 1816 under Muhammad Ali’s eldest son, Ibrahim Pasha, who landed at Yanbu in the autumn with infantry, Bedouin cavalry, artillery and French instructors. Using the wells of al-Hanakiyah as his forward base, he won over the tribes of the northern steppe with money and reached the Qassim early in 1817, where he defeated Abdullah’s field army.
+      - The town of ar-Rass held out against him for more than three months in 1817 and was given terms rather than taken. Unayzah and Buraydah then submitted, and early in 1818 Ibrahim marched on into the Washm district, taking Shaqra after a siege. At Dhurma, which resisted, his troops are reported to have killed all the men they found. Abdullah fell back to Diriyah to make his stand.
+    facts:
+      - [Siege of ar-Rass, "1817, more than three months"]
+      - [Unayzah and Buraydah submit, "late 1817"]
+      - [Shaqra and Dhurma taken, "early 1818"]
+    markers:
+      - kind: event
+        side: ott
+        name: Al-Hanakiyah
+        date: 1816–1817
+        text: Ibrahim’s base on the road from Medina to Najd, where he gathered supplies and negotiated with the tribes.
+        lonlat: [40.500, 24.870]
+      - kind: siege
+        side: saud
+        name: Ar-Rass
+        date: 1817
+        text: The town’s resistance cost Ibrahim heavy losses. It came to terms after more than three months.
+        lonlat: [43.500, 25.867]
+        lp: l
+      - kind: taken
+        side: ott
+        name: Unayzah
+        date: late 1817
+        text: Like Buraydah, it submitted after the siege of ar-Rass.
+        lonlat: [43.994, 26.084]
+        lp: b
+      - kind: taken
+        side: ott
+        name: Buraydah
+        date: late 1817
+        text: The chief town of the northern Qassim opened its gates to Ibrahim.
+        lonlat: [43.967, 26.333]
+      - kind: taken
+        side: ott
+        name: Shaqra
+        date: January 1818
+        text: The main town of al-Washm surrendered after a short siege.
+        lonlat: [45.253, 25.245]
+      - kind: taken
+        side: ott
+        name: Dhurma
+        date: early 1818
+        text: Stormed after it refused to surrender. Accounts say its male inhabitants were put to death.
+        lonlat: [46.226, 24.617]
+        lp: b
+    arrows:
+      - side: ott
+        label: Ibrahim Pasha
+        phase: 1
+        via: [[38.062, 24.089], [39.600, 24.470], [40.500, 24.870], [42.400, 25.600], [43.450, 25.860]]
+      - side: ott
+        phase: 2
+        via: [[43.550, 25.900], [43.990, 26.080], [43.970, 26.300]]
+      - side: ott
+        phase: 3
+        via: [[44.050, 26.000], [45.200, 25.260], [46.200, 24.640]]
+    areas:
+      - style: occupied
+        side: ott
+        label: Occupied by Ibrahim Pasha, 1817–1818
+        atoms: [SA-05]
+  - title: The fall of Diriyah
+    date: April – September 1818
+    when: "1818-04"
+    borders: "1818-09-11"
+    countries: [sa, eg, tr]
+    body:
+      - Ibrahim reached Diriyah on 22 April 1818 with between 5,500 and 7,600 men and a dozen guns. The town was a string of walled quarters and palm groves along the steep valley of Wadi Hanifa, and its defenders fought for every barricade. On 21 June a fire blew up the Egyptian powder store, destroying about half of Ibrahim’s ammunition, and he had to send for supplies and reinforcements from the Qassim and the Hejaz. The siege lasted about five months, and each side lost well over a thousand dead. One by one the outer quarters fell, and on 11 September 1818 Abdullah ibn Saud, holding out in the citadel quarter of at-Turaif, surrendered in return for a promise to spare the town.
+      - Abdullah was sent to Cairo and then to Istanbul, where he was beheaded in December 1818. Diriyah was nevertheless razed on Muhammad Ali’s orders, and members of the Saud family and of the family of Muhammad ibn Abd al-Wahhab were deported to Egypt; a grandson of the reformer, the judge Sulayman ibn Abdullah, was executed. Ibrahim’s troops went on to occupy al-Hasa and Qatif and pulled down the walls of the Najdi towns before he returned to Egypt in 1819. Egyptian garrisons could not hold the interior, and in 1824 Turki ibn Abdullah took Riyadh and founded the second Saudi state.
+    facts:
+      - [Siege of Diriyah, "April – September 1818"]
+      - [Surrender of Abdullah ibn Saud, "11 September 1818"]
+      - [Abdullah executed in Istanbul, "December 1818"]
+    markers:
+      - kind: siege
+        side: ott
+        name: Diriyah
+        date: April – 11 September 1818
+        text: The Saudi capital surrendered after about five months. It was razed despite the terms, and a new Saudi capital was later built at nearby Riyadh.
+        lonlat: [46.576, 24.733]
+      - kind: event
+        name: Riyadh
+        date: 1824
+        text: Turki ibn Abdullah took the town from its Egyptian garrison and made it the capital of the second Saudi state.
+        lonlat: [46.717, 24.633]
+        lp: b
+      - kind: taken
+        side: ott
+        name: Al-Hasa
+        date: 1818–1819
+        text: Ibrahim’s troops occupied the oasis of Hofuf and the port of Qatif on the Gulf after the fall of Diriyah.
+        lonlat: [49.600, 25.361]
+    arrows:
+      - side: ott
+        label: Ibrahim Pasha
+        phase: 1
+        via: [[46.226, 24.617], [46.400, 24.700], [46.540, 24.730]]
+      - side: ott
+        phase: 2
+        via: [[46.650, 24.750], [47.800, 25.100], [49.550, 25.370]]
+    areas:
+      - style: occupied
+        side: ott
+        label: Occupied by Egyptian troops, 1818–1819
+        atoms: [SA-05, SA-01, SA-04]

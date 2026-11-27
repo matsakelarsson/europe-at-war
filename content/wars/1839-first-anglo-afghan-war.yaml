@@ -1,0 +1,401 @@
+id: first-anglo-afghan-war
+name: First Anglo-Afghan War
+start: "1838-10-01"
+end: "1842-12"
+tier: A
+summary: "The British East India Company’s invasion of Afghanistan to replace the Barakzai emir of Kabul, Dost Mohammad Khan, with the exiled Sadozai king Shah Shuja, whom it believed would keep Russian and Persian influence away from India. The Army of the Indus took Kandahar, stormed Ghazni and entered Kabul in 1839, and Dost Mohammad surrendered in 1840. But Shah Shuja’s rule depended on British bayonets and subsidies, and in November 1841 Kabul rose. The British envoy was killed, and in January 1842 the Kabul garrison of about 4,500 soldiers and 12,000 camp followers was destroyed on its retreat through the snowbound passes; only a handful reached Jalalabad. In 1842 two British armies fought their way back to Kabul, freed the hostages and destroyed much of the city and nearby towns before withdrawing. Shah Shuja had been killed, and Dost Mohammad returned to rule until 1863."
+countries: [af, pk, in]
+sides:
+  - id: gb
+    name: British India and Shah Shuja
+    polities: [united-kingdom]
+    ink: red
+    moves: British and allied moves
+    success: British success
+  - id: afg
+    name: Dost Mohammad Khan and the Afghan resistance
+    polities: [afghanistan]
+    ink: green
+    moves: Afghan moves
+    success: Afghan success
+notes:
+  - The invading army belonged to the East India Company, which ruled British India; it was made up of Company regiments (Indian sepoys with British officers), British Army regiments serving in India and Shah Shuja’s own levies. The Sikh Empire of Ranjit Singh was an ally under the Tripartite Treaty of 1838 and sent troops through the Khyber in 1839.
+  - Contemporary British accounts, above all the diaries of Lady Sale and the history by John Kaye, dominate the record. Afghan losses are not known.
+  - Place names are given in today’s forms (Jalalabad for the British “Jellalabad”, Ghazni for “Ghuznee”).
+sources:
+  - title: First Anglo-Afghan War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Anglo-Afghan_War
+  - title: 1842 retreat from Kabul (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1842_retreat_from_Kabul
+  - title: Battle of Ghazni (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ghazni
+  - title: Kabul Expedition (1842) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kabul_Expedition_(1842)
+  - title: Anglo-Afghan Wars (Britannica)
+    url: https://www.britannica.com/event/Anglo-Afghan-Wars
+  - title: Anglo-Afghan Wars (Encyclopædia Iranica)
+    url: https://www.iranicaonline.org/articles/anglo-afghan-wars
+  - title: Dost Mohammad Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dost_Mohammad_Khan
+steps:
+  - title: The Army of the Indus
+    date: October 1838 – May 1839
+    when: "1838-10-01"
+    borders: "1839-04-25"
+    countries: [af, pk, in]
+    body:
+      - Dost Mohammad Khan, emir of Kabul since 1826, wanted above all to win back Peshawar, which the Sikh ruler Ranjit Singh had taken in 1834. When the British would not help him and a Russian envoy, Yan Vitkevich, appeared in Kabul, the Governor-General of India, Lord Auckland, decided to replace him with Shah Shuja, the Sadozai king who had been driven out in 1809 and had lived on a British pension at Ludhiana since 1818. In June 1838 Britain, Ranjit Singh and Shah Shuja signed the Tripartite Treaty, and on 1 October Auckland’s Simla Manifesto announced the invasion. The Persian siege of Herat, its main justification, was lifted a few weeks earlier.
+      - Because Ranjit Singh would not let the army cross the Punjab, the Army of the Indus took the long way through Sindh. About 15,000 troops of the Bengal and Bombay armies under Sir John Keane, with some 6,000 levies raised for Shah Shuja, set out in December 1838 with about 38,000 camp followers and 30,000 camels. They crossed the Indus, struggled through the Bolan Pass in March 1839, losing many animals to heat and Baluch raiders, and reached Quetta. On 25 April the army entered Kandahar unopposed; its Barakzai rulers had fled to Persia. Shah Shuja was proclaimed king there on 8 May.
+    facts:
+      - [Simla Manifesto, "1 October 1838"]
+      - [Army of the Indus, "about 21,000 troops, including Shah Shuja’s levies"]
+      - [Kandahar entered, "25 April 1839"]
+    markers:
+      - kind: event
+        side: gb
+        name: Ferozepur
+        date: December 1838
+        text: The Bengal army gathered here, on the border with the Sikh Empire, and met Ranjit Singh before marching south along the Sutlej.
+        lonlat: [74.600, 30.917]
+        lp: l
+      - kind: event
+        side: gb
+        name: Shikarpur
+        date: February 1839
+        text: The army’s base in Upper Sindh, whose amirs were forced to give passage and supplies.
+        lonlat: [68.650, 27.950]
+      - kind: event
+        side: gb
+        name: Bolan Pass
+        date: March 1839
+        text: A narrow gorge of about 90 km, where the army lost baggage animals to heat, thirst and raids.
+        lonlat: [67.494, 29.453]
+      - kind: taken
+        side: gb
+        name: Kandahar
+        date: 25 April 1839
+        text: Abandoned by its Barakzai rulers. Shah Shuja was proclaimed king here on 8 May 1839.
+        lonlat: [65.716, 31.621]
+      - kind: capital
+        side: afg
+        name: Kabul
+        date: 1838
+        text: Dost Mohammad Khan’s capital. His rule did not reach Kandahar, held by his half-brothers, or Herat, held by Kamran Shah.
+        lonlat: [69.166, 34.533]
+    arrows:
+      - side: gb
+        label: Bengal army
+        phase: 1
+        via: [[74.600, 30.917], [71.683, 29.395], [68.857, 27.706], [68.650, 27.950]]
+      - side: gb
+        label: Bombay army
+        phase: 1
+        via: [[67.010, 24.860], [68.370, 25.390], [68.200, 27.000], [68.400, 28.300]]
+      - side: gb
+        label: Keane
+        phase: 2
+        via: [[68.600, 28.000], [67.650, 29.470], [67.017, 30.196], [66.550, 30.850], [65.716, 31.580]]
+  - title: Ghazni and Kabul
+    date: July 1839 – November 1840
+    when: "1839-07-23"
+    borders: "1839-08-07"
+    countries: [af, pk]
+    body:
+      - Keane left Kandahar on 27 June, leaving his siege guns behind, and found the walls of Ghazni stronger than expected. A nephew of Dost Mohammad who had deserted told him that the Kabul Gate was weakly blocked. Before dawn on 23 July 1839 engineers blew it in with powder bags and the troops stormed the town; British and Indian losses were under 200 killed and wounded, while about 500 defenders were killed and some 1,500 captured. Dost Mohammad’s army melted away near Kabul, and he fled over the Hindu Kush. On 7 August Shah Shuja entered Kabul, thirty years after he had lost it. A second force of Sikh troops and Shah Shuja’s son Timur under Colonel Claude Wade forced the Khyber Pass, taking the fort of Ali Masjid on 26 July.
+      - Most of the army went home, leaving about 8,000 men. On its way back the Bombay column stormed Kalat in Baluchistan on 13 November 1839 and killed its khan, Mehrab Khan. Dost Mohammad found refuge first with the Wali of Khulm and then in Bukhara, where he was held for a time, and in 1840 he returned with Uzbek help, only to be beaten near Bamyan in September. On 2 November 1840 his horsemen routed British cavalry at Parwan Darra north of Kabul, but two days later he rode into Kabul and surrendered to the British envoy, William Macnaghten. He was sent into exile in India.
+    facts:
+      - [Storming of Ghazni, "23 July 1839"]
+      - [Shah Shuja enters Kabul, "7 August 1839"]
+      - [Battle of Parwan Darra, "2 November 1840, Afghan victory"]
+      - [Dost Mohammad surrenders, "4 November 1840"]
+    markers:
+      - kind: taken
+        side: gb
+        name: Ghazni
+        date: 23 July 1839
+        text: The gate was blown in and the citadel taken in a few hours. The fall of this strong fortress broke Afghan resistance to the advance.
+        lonlat: [68.423, 33.549]
+      - kind: taken
+        side: gb
+        name: Kabul
+        date: 7 August 1839
+        text: Shah Shuja rode in to an unenthusiastic welcome and was restored to the Bala Hissar, the citadel of his fathers.
+        lonlat: [69.192, 34.506]
+        lp: b
+      - kind: taken
+        side: gb
+        name: Ali Masjid
+        date: 26 July 1839
+        text: The fort guarding the Khyber Pass, taken by Wade’s Sikh and Afghan force.
+        lonlat: [71.262, 34.029]
+        lp: b
+      - kind: taken
+        side: gb
+        name: Kalat
+        date: 13 November 1839
+        text: Stormed by the returning Bombay column; Mehrab Khan and many of his men were killed.
+        lonlat: [66.589, 29.030]
+      - kind: battle
+        side: afg
+        name: Parwan Darra
+        date: 2 November 1840
+        text: Dost Mohammad’s last battle in this war. Two squadrons of Bengal cavalry fled, leaving their officers to be cut down.
+        lonlat: [69.200, 35.100]
+      - kind: battle
+        side: gb
+        name: Bamyan
+        date: 18 September 1840
+        text: A small British force defeated Dost Mohammad and his Uzbek allies from Khulm, who then withdrew north.
+        lonlat: [67.817, 34.817]
+    arrows:
+      - side: gb
+        label: Keane
+        phase: 1
+        via: [[65.716, 31.660], [66.907, 32.106], [67.800, 32.900], [68.400, 33.500]]
+      - side: gb
+        label: Wade
+        phase: 1
+        via: [[71.567, 34.014], [71.262, 34.040], [70.453, 34.430], [69.700, 34.450]]
+      - side: gb
+        phase: 2
+        via: [[68.450, 33.600], [68.900, 34.150], [69.150, 34.480]]
+      - side: afg
+        label: Dost Mohammad
+        phase: 3
+        via: [[69.100, 34.550], [68.600, 34.700], [67.850, 34.820]]
+    areas:
+      - style: occupied
+        side: gb
+        label: Garrisoned by British and Shah Shuja’s troops, 1839–1841
+        atoms: [AF-KAB, AF-KAP, AF-PAR, AFG-1772, AF-WAR, AF-LOG, AF-NAN, AF-LAG, AF-GHA, AF-ZAB, AF-KAN]
+  - title: The Kabul rising
+    date: October – December 1841
+    when: "1841-11-02"
+    borders: "1841-11-02"
+    countries: [af]
+    body:
+      - Shah Shuja’s government rested on British troops and on subsidies to the chiefs, and both were resented. To save money, Macnaghten cut the payments to the eastern Ghilzai chiefs who kept the road to India open, and in October 1841 they closed the passes. A brigade under Sir Robert Sale fought its way through to Jalalabad, which it reached on 12 November and fortified. In Kabul the elderly and ailing General William Elphinstone commanded the main garrison from a badly sited cantonment on the plain, with its stores kept in a separate fort.
+      - On 2 November a crowd attacked the house of the political officer Sir Alexander Burnes in the city and killed him, his brother and their guards. The garrison did not react in force, and the rising spread. The commissariat fort was lost, an attack on the Bemaru heights on 23 November ended in defeat, and Dost Mohammad’s son Wazir Akbar Khan arrived to lead the resistance. A Gurkha regiment at Charikar was overwhelmed. Running out of food, Macnaghten negotiated with the chiefs while secretly trying to divide them; on 23 December, at a meeting outside the cantonment, he and three officers were seized and Macnaghten was killed by Akbar Khan’s party.
+    facts:
+      - [Rising in Kabul, Burnes killed, "2 November 1841"]
+      - [Sale reaches Jalalabad, "12 November 1841"]
+      - [Macnaghten killed, "23 December 1841"]
+    markers:
+      - kind: event
+        side: afg
+        name: Kabul
+        date: 2 November 1841
+        text: Burnes’s house in the old city was stormed at the start of the rising. Shah Shuja held the Bala Hissar but could do little.
+        lonlat: [69.166, 34.523]
+        lp: l
+      - kind: battle
+        side: afg
+        name: Bemaru
+        date: 23 November 1841
+        text: A village on the heights above the cantonment. The British attack failed and the troops broke and fled back to their lines.
+        lonlat: [69.210, 34.555]
+      - kind: taken
+        side: afg
+        name: Charikar
+        date: November 1841
+        text: The small Gurkha garrison was besieged, ran out of water and was destroyed while trying to break out.
+        lonlat: [69.167, 35.017]
+      - kind: held
+        side: gb
+        name: Jalalabad
+        date: from 12 November 1841
+        text: Sale’s brigade took over the town, repaired its walls and held it until it was relieved in April 1842.
+        lonlat: [70.453, 34.430]
+      - kind: held
+        side: gb
+        name: Kandahar
+        date: 1841–1842
+        text: The largest British garrison in the country, under General William Nott, held out all winter.
+        lonlat: [65.716, 31.621]
+    arrows:
+      - side: gb
+        label: Sale
+        phase: 1
+        via: [[69.200, 34.540], [69.360, 34.430], [69.830, 34.420], [70.038, 34.289], [70.420, 34.420]]
+      - side: afg
+        label: Akbar Khan
+        phase: 2
+        via: [[67.817, 34.817], [68.600, 34.650], [69.100, 34.540]]
+    areas:
+      - style: contested
+        side: afg
+        label: Rising against Shah Shuja and the British, November 1841
+        atoms: [AF-KAB, AF-KAP, AF-PAR, AFG-1772, AF-WAR, AF-LOG]
+  - title: The retreat from Kabul
+    date: 6–13 January 1842
+    when: "1842-01-06"
+    borders: "1842-01-13"
+    countries: [af]
+    body:
+      - On 1 January 1842 Elphinstone agreed to leave Afghanistan in return for a promise of safe conduct to Jalalabad, some 140 km away. On 6 January about 4,500 soldiers, some 690 of them European, and more than 12,000 camp followers, Indian servants, wives and children, marched out into deep snow. There was no escort and little food or fuel. Ghilzai tribesmen attacked from the first day, and in the narrow Khurd Kabul pass on 8 January thousands were killed or froze. On 9 January Akbar Khan took the British wives, children and married officers as hostages, and on 12 January Elphinstone himself; most of the hostages survived, though Elphinstone died in captivity in April.
+      - The column was cut to pieces at Tezin and Jagdalak. On the morning of 13 January the last organised group, some twenty officers and forty-five men of the 44th Foot, made a stand on a hill near Gandamak and was overwhelmed; a few were taken prisoner. That afternoon an army surgeon, William Brydon, rode into Jalalabad on a wounded pony. He was not quite the only survivor, for besides the hostages and prisoners, some sepoys and camp followers were enslaved or hid in the villages and came back later. But the army had ceased to exist.
+    facts:
+      - [Leaving Kabul, "6 January 1842"]
+      - [Khurd Kabul pass, "8 January 1842"]
+      - [Last stand at Gandamak, "13 January 1842"]
+      - [Losses, "about 4,500 soldiers and most of 12,000 camp followers killed, captured or missing"]
+    markers:
+      - kind: event
+        name: Kabul cantonment
+        date: 6 January 1842
+        text: The garrison marched out at mid-morning, leaving its guns and the sick behind.
+        lonlat: [69.200, 34.540]
+        lp: l
+      - kind: battle
+        side: afg
+        name: Khurd Kabul
+        date: 8 January 1842
+        text: Tribesmen fired down on the column in the five-mile defile; perhaps 3,000 people died here.
+        lonlat: [69.360, 34.430]
+        lp: b
+      - kind: battle
+        side: afg
+        name: Jagdalak
+        date: 12 January 1842
+        text: The survivors were held up by a barricade of thorn trees across the pass and slaughtered as they tried to break through.
+        lonlat: [69.830, 34.420]
+        lp: t
+      - kind: battle
+        side: afg
+        name: Gandamak
+        date: 13 January 1842
+        text: The last stand of the 44th Foot, on a hill near the village.
+        lonlat: [70.038, 34.289]
+        lp: b
+      - kind: held
+        side: gb
+        name: Jalalabad
+        date: 13 January 1842
+        text: Dr William Brydon reached Sale’s garrison here with the news. Lights and bugles were used for nights afterwards to guide stragglers in; few came.
+        lonlat: [70.453, 34.430]
+    arrows:
+      - side: gb
+        label: Elphinstone’s column
+        via: [[69.200, 34.540], [69.330, 34.500], [69.360, 34.430], [69.580, 34.380], [69.830, 34.420], [70.000, 34.300]]
+  - title: Jalalabad, Kandahar and Ghazni
+    date: January – April 1842
+    when: "1842-04-07"
+    borders: "1842-04-16"
+    countries: [af, pk]
+    body:
+      - Akbar Khan besieged Jalalabad, whose walls were shaken down by an earthquake on 19 February 1842 and rebuilt by the garrison. On 7 April Sale’s men sallied out and routed Akbar Khan’s army in its camp. Ghazni was less fortunate. Its sepoy garrison, short of water in the citadel, surrendered on 6 March, and many of the soldiers were killed after giving up their arms. In the south, Nott held Kandahar and the small fort of Qalat-i Ghilzai held out until relieved in May.
+      - In Kabul, Shah Shuja kept his throne for three months. On 5 April 1842, as he left the Bala Hissar to join the chiefs’ army against Jalalabad, he was shot dead by the men of Shuja al-Daula, son of a Barakzai chief. On the same day General George Pollock, with a new army from India, forced the Khyber Pass, and on 16 April he reached Jalalabad. A brigade from Quetta under General Richard England, beaten back at Haikalzai in March, broke through the Khojak Pass to Kandahar in May. The new Governor-General, Lord Ellenborough, wanted only to bring the armies home.
+    facts:
+      - [Surrender of Ghazni, "6 March 1842"]
+      - [Shah Shuja killed, "5 April 1842"]
+      - [Pollock forces the Khyber, "5 April 1842"]
+      - [Sale’s sortie at Jalalabad, "7 April 1842, British victory"]
+    markers:
+      - kind: battle
+        side: gb
+        name: Jalalabad
+        date: 7 April 1842
+        text: The garrison attacked the besiegers’ camp, scattered Akbar Khan’s army and took its guns.
+        lonlat: [70.453, 34.430]
+        lp: b
+      - kind: taken
+        side: afg
+        name: Ghazni
+        date: 6 March 1842
+        text: The garrison of Indian sepoys and a few British officers surrendered after a siege of three months; the officers were held as prisoners.
+        lonlat: [68.423, 33.549]
+      - kind: event
+        side: afg
+        name: Kabul
+        date: 5 April 1842
+        text: Shah Shuja was killed outside the Bala Hissar. His son Fath Jang briefly held the city.
+        lonlat: [69.192, 34.506]
+      - kind: taken
+        side: gb
+        name: Khyber Pass
+        date: 5 April 1842
+        text: Pollock seized the heights on both sides with light infantry and pushed his army through to Ali Masjid.
+        lonlat: [71.112, 34.110]
+        lp: b
+      - kind: held
+        side: gb
+        name: Kandahar
+        date: 1842
+        text: Nott’s garrison beat off attacks on the city and fought several battles in the surrounding country through the winter and spring.
+        lonlat: [65.716, 31.621]
+      - kind: held
+        side: gb
+        name: Qalat-i Ghilzai
+        date: winter 1841 – May 1842
+        text: A garrison of about 900 men held this hill fort between Kandahar and Ghazni until it was relieved.
+        lonlat: [66.907, 32.106]
+    arrows:
+      - side: gb
+        label: Pollock
+        phase: 1
+        via: [[71.567, 34.014], [71.262, 34.040], [71.000, 34.180], [70.480, 34.420]]
+      - side: gb
+        label: England
+        phase: 2
+        via: [[67.017, 30.196], [66.550, 30.850], [65.716, 31.580]]
+  - title: The Army of Retribution
+    date: August – December 1842
+    when: "1842-09-15"
+    borders: "1842-09-15"
+    countries: [af, pk, in]
+    body:
+      - Ellenborough let his generals withdraw “by way of” Kabul. Pollock left Jalalabad on 20 August, passing the bones of Elphinstone’s army, beat the Ghilzais at Jagdalak on 8 September and Akbar Khan’s main force at Tezin on 13 September, and entered Kabul on 15 September. Nott marched from Kandahar in early August, defeated an Afghan army near Ghazni, retook the town on 6 September and pulled down its citadel, carrying off a pair of gates that Ellenborough wrongly believed had been looted from the Hindu temple of Somnath. He reached Kabul on 17 September. Most of the hostages, held at Bamyan, bribed their guard and were met by a British detachment on their way back.
+      - Before leaving, the British blew up Kabul’s great covered bazaar, and a column under General John McCaskill sacked the town of Istalif in the Koh-i Daman, where many people were killed. Contemporaries, among them British officers, recorded the killing of civilians and destruction of villages along the line of march. The armies left Kabul on 12 October and were received at Ferozepur in December. Dost Mohammad was released, returned to Kabul in 1843 and ruled until his death in 1863, allied with Britain from 1855. The war had cost the Company many millions of pounds and, in the retreat alone, most of the 16,500 soldiers and camp followers who left Kabul; Afghan losses are unknown.
+    facts:
+      - [Battle of Tezin, "13 September 1842, British victory"]
+      - [Pollock enters Kabul, "15 September 1842"]
+      - [Ghazni retaken by Nott, "6 September 1842"]
+      - [Kabul evacuated, "12 October 1842"]
+    markers:
+      - kind: battle
+        side: gb
+        name: Tezin
+        date: 13 September 1842
+        text: Akbar Khan’s last attempt to stop Pollock, defeated in the passes east of Kabul.
+        lonlat: [69.580, 34.380]
+        lp: b
+      - kind: taken
+        side: gb
+        name: Kabul
+        date: 15 September 1842
+        text: Pollock raised the British flag over the Bala Hissar. Before leaving, his troops destroyed the covered bazaar where Macnaghten’s body had been displayed.
+        lonlat: [69.192, 34.506]
+      - kind: taken
+        side: gb
+        name: Ghazni
+        date: 6 September 1842
+        text: Retaken by Nott after a battle outside the town. The citadel was blown up.
+        lonlat: [68.423, 33.549]
+      - kind: taken
+        side: gb
+        name: Istalif
+        date: 29 September 1842
+        text: A prosperous town where Afghans from Kabul had taken refuge with their families. It was stormed, plundered and burnt.
+        lonlat: [69.077, 34.833]
+        lp: l
+      - kind: event
+        name: Bamyan
+        date: September 1842
+        text: The British hostages had been moved here. They bought their freedom from their guard and were met on the road by a British cavalry detachment.
+        lonlat: [67.817, 34.817]
+    arrows:
+      - side: gb
+        label: Pollock
+        phase: 1
+        via: [[70.453, 34.430], [70.038, 34.289], [69.830, 34.420], [69.580, 34.380], [69.230, 34.500]]
+      - side: gb
+        label: Nott
+        phase: 1
+        via: [[65.716, 31.660], [66.907, 32.106], [67.800, 32.900], [68.420, 33.520], [69.150, 34.470]]
+      - side: gb
+        phase: 2
+        via: [[69.150, 34.540], [69.100, 34.700], [69.077, 34.810]]
+      - side: gb
+        label: Withdrawal
+        phase: 3
+        via: [[69.250, 34.520], [70.453, 34.450], [71.262, 34.040], [71.567, 34.014]]

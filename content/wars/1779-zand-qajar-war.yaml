@@ -1,0 +1,146 @@
+id: zand-qajar-war
+name: Zand–Qajar war
+start: "1779-03"
+end: "1794-10-24"
+tier: B
+summary: The struggle for Iran after the death of Karim Khan Zand in 1779. Agha Mohammad Khan, chief of the Qajar tribe and for sixteen years a hostage at the Zand court in Shiraz, escaped to the Caspian provinces, fought off his own brothers and several Zand armies, and made Tehran his capital in 1786, while the Zand princes fought each other for the throne. He took Shiraz in 1792 and in 1794 captured Kerman, where the last Zand ruler, Lotf Ali Khan, had made his stand, punishing its people with mass blinding and enslavement. Lotf Ali Khan was handed over at Bam and put to death, and the Qajars ruled Iran until 1925.
+countries: [ir]
+sides:
+  - id: zand
+    name: Zand dynasty
+    polities: [persia]
+    ink: orange
+    moves: Zand moves
+    success: Zand success
+  - id: qaj
+    name: Agha Mohammad Khan Qajar
+    polities: [qajars]
+    ink: navy
+    moves: Qajar moves
+    success: Qajar success
+notes:
+  - The Zand rulers called themselves vakil (regent) rather than shah; Agha Mohammad Khan was enthroned in 1789 but crowned only in 1796. The base map shows Zand Iran and the Qajar north as separate states from 1779 to 1794.
+  - The numbers in the Persian chronicles are often round and large. The figure of 20,000 eyes demanded at Kerman comes from Qajar-era and European accounts; others speak of about 7,000 people blinded.
+sources:
+  - title: Agha Mohammad Khan Qajar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Agha_Mohammad_Khan_Qajar
+  - title: Lotf Ali Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Lotf_Ali_Khan
+  - title: Zand dynasty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Zand_dynasty
+  - title: Āqā Moḥammad Khan Qājār (Encyclopædia Iranica)
+    url: https://www.iranicaonline.org/articles/aqa-mohammad-khan-qajar
+  - title: Zand dynasty (Encyclopædia Iranica)
+    url: https://www.iranicaonline.org/articles/zand-dynasty
+steps:
+  - title: Agha Mohammad Khan takes the north
+    date: 1779–1786
+    when: "1779-03-01"
+    borders: "1786-03-12"
+    countries: [ir]
+    body:
+      - Karim Khan Zand died in Shiraz on 1 March 1779. On the same day Agha Mohammad Khan, the Qajar chief whom he had kept at his court since 1763, slipped away on a hunting trip and rode north to Mazandaran, the Qajar homeland on the Caspian. While the Zand princes fought over the succession in Shiraz, he spent the next years subduing his own half-brothers, who captured him at Babol in 1780 before another brother freed him, and bringing Gilan, Qumis and the towns along the road to Khorasan under his rule.
+      - Ali-Morad Khan Zand, who had made himself master of Isfahan and then of most of Zand Iran by 1782, sent army after army north. In June 1784 a large Zand force under his fifteen-year-old son Sheikh Veis Khan, said to number 60,000, overran Mazandaran, and some 8,000 men besieged Agha Mohammad Khan in Astarabad. The Qajars stripped the countryside until the besiegers ran out of food, then broke out; the Zand commander was caught and killed by Agha Mohammad Khan’s Yomut Turkmen allies, and by late November the Qajars had retaken Mazandaran. Ali-Morad died on 11 February 1785. Agha Mohammad Khan defeated a Zand army near Kashan and entered Isfahan on 2 May 1785, and when Tehran at last opened its gates to him he made the small town his capital on 12 March 1786. Isfahan changed hands twice more, but the Zand state was now essentially reduced to Fars, Kerman and the south.
+    facts:
+      - [Death of Karim Khan Zand, "1 March 1779"]
+      - [Zand siege of Astarabad, "summer 1784, Zand army routed"]
+      - [Tehran made the Qajar capital, "12 March 1786"]
+    markers:
+      - kind: capital
+        side: zand
+        name: Shiraz
+        date: 1779
+        text: The Zand capital, where Karim Khan died and where his heirs fought over the succession for the next ten years.
+        lonlat: [52.542, 29.610]
+      - kind: held
+        side: qaj
+        name: Astarabad
+        date: 1784
+        text: The Qajar tribal centre (today’s Gorgan). Agha Mohammad Khan held it against a Zand army in 1784 and then routed the besiegers.
+        lonlat: [54.437, 36.837]
+      - kind: taken
+        side: qaj
+        name: Isfahan
+        date: 2 May 1785
+        text: Taken after the death of Ali-Morad Khan, and looted. Jafar Khan Zand retook it twice before the Qajars held it for good.
+        lonlat: [51.670, 32.665]
+        lp: l
+      - kind: capital
+        side: qaj
+        name: Tehran
+        date: 12 March 1786
+        text: Agha Mohammad Khan made Tehran his capital, close to the Qajar lands and to Azerbaijan. It has been Iran’s capital ever since.
+        lonlat: [51.420, 35.680]
+    arrows:
+      - side: qaj
+        label: Agha Mohammad Khan
+        phase: 1
+        via: [[52.542, 29.700], [51.700, 32.600], [51.450, 35.500], [52.700, 36.500]]
+      - side: zand
+        label: Sheikh Veis Khan
+        phase: 2
+        via: [[51.420, 35.600], [52.800, 36.300], [54.300, 36.780]]
+      - side: qaj
+        phase: 3
+        via: [[51.420, 35.620], [51.500, 34.100], [51.680, 32.760]]
+    areas:
+      - style: gained
+        side: qaj
+        label: Under Agha Mohammad Khan by 1786
+        atoms: [IR-21, IR-27, IR-19, IR-12, IR-07, IRN-5490, IR-28, IR-11, IR-24, IR-26, IR-22, IR-04]
+  - title: Shiraz, Kerman and the end of the Zands
+    date: 1789–1794
+    when: "1789-06-25"
+    borders: "1794-11-01"
+    countries: [ir]
+    body:
+      - Jafar Khan Zand was poisoned in January 1789, and his son Lotf Ali Khan, about twenty years old, won the throne in Shiraz. Agha Mohammad Khan beat him outside the city on 25 June 1789 and besieged it until September without success. Lotf Ali Khan’s fortunes turned in 1791, when the mayor of Shiraz, Hajji Ebrahim, shut the gates on him while he was away on campaign and went over to the Qajars. Lotf Ali Khan defeated the Qajar reinforcements and besieged his own capital, and on 5 June 1792 he led a night raid on Agha Mohammad Khan’s camp near Persepolis. His men scattered to plunder, believing the Qajars routed, and at daybreak found the shah’s tent still standing. Lotf Ali Khan fled east, and Agha Mohammad Khan entered Shiraz on 21 July 1792.
+      - With the backing of the chiefs of Bam and Narmashir, Lotf Ali Khan took Kerman on 30 March 1794. Agha Mohammad Khan besieged the city from early summer, and on 24 October 1794 it fell through treachery. He took terrible revenge on its people. Contemporary accounts say that the men were killed or blinded, with figures that range from about 7,000 blinded to a demand for 20,000 eyes, and that thousands of women and children were enslaved. Lotf Ali Khan escaped to Bam, where its governor seized him and handed him over. He was blinded, tortured and killed in Tehran late in 1794. Agha Mohammad Khan was crowned shah in 1796, and his nephew Fath-Ali Shah succeeded him in 1797.
+    facts:
+      - [Battle outside Shiraz, "25 June 1789, Qajar victory"]
+      - [Night raid near Persepolis, "5 June 1792"]
+      - [Shiraz entered by the Qajars, "21 July 1792"]
+      - [Fall of Kerman, "24 October 1794"]
+    markers:
+      - kind: taken
+        side: qaj
+        name: Shiraz
+        date: 21 July 1792
+        text: Handed over by Hajji Ebrahim, who became Agha Mohammad Khan’s chief minister. The Qajars razed the city walls and moved Karim Khan’s remains to Tehran.
+        lonlat: [52.542, 29.610]
+        lp: l
+      - kind: battle
+        side: qaj
+        name: Persepolis
+        date: 5 June 1792
+        text: Lotf Ali Khan’s night attack broke into the Qajar camp, but the shah held out until morning and the Zand force melted away.
+        lonlat: [52.890, 29.935]
+      - kind: siege
+        side: qaj
+        name: Kerman
+        date: summer – 24 October 1794
+        text: Lotf Ali Khan held the city for about four months. After it fell, its people were massacred, blinded and enslaved, and much of the city was destroyed.
+        lonlat: [57.068, 30.291]
+      - kind: event
+        side: qaj
+        name: Bam
+        date: late 1794
+        text: The governor of Bam, fearing for his brother in Qajar hands, captured Lotf Ali Khan and handed him over.
+        lonlat: [58.357, 29.106]
+    arrows:
+      - side: qaj
+        label: Agha Mohammad Khan
+        phase: 1
+        via: [[51.420, 35.600], [51.680, 32.600], [52.500, 30.400], [52.800, 29.950]]
+      - side: zand
+        label: Lotf Ali Khan
+        phase: 2
+        via: [[54.300, 29.200], [56.000, 29.400], [57.000, 30.230]]
+      - side: qaj
+        phase: 3
+        via: [[52.700, 29.950], [55.000, 30.300], [56.950, 30.320]]
+    areas:
+      - style: gained
+        side: qaj
+        label: Last Zand lands, taken by the Qajars 1792–1794
+        atoms: [IR-14, IR-06, IR-18, IR-15, IR-25]

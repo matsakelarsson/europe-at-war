@@ -1,0 +1,157 @@
+id: afghan-civil-war-1996
+name: Afghan Civil War (1996–2001)
+start: "1996-09-27"
+end: "2001-10-07"
+tier: B
+summary: The war between the Taliban’s Islamic Emirate of Afghanistan, which took Kabul in September 1996, and the Northern Alliance (United Islamic Front), a coalition of the forces of Ahmad Shah Massoud, Abdul Rashid Dostum, the Hazara party Hezb-e Wahdat and others, which kept the internationally recognised government of Burhanuddin Rabbani alive in the north-east. The Taliban, supported by Pakistan and joined by thousands of foreign fighters including Osama bin Laden’s al-Qaeda, took Mazar-i-Sharif in 1998 after a failed attempt the year before, and by 2001 held about 85 to 90 per cent of the country. Both sides committed massacres of prisoners and civilians, often along ethnic lines. Massoud was killed by al-Qaeda suicide bombers two days before the attacks of 11 September 2001, and the war merged into the US-led invasion that began on 7 October 2001.
+countries: [af, pk, ir]
+sides:
+  - id: tal
+    name: Taliban (Islamic Emirate of Afghanistan)
+    polities: [taliban]
+    ink: olive
+    moves: Taliban moves
+    success: Taliban success
+  - id: na
+    name: Northern Alliance (United Islamic Front)
+    polities: [northern-alliance, junbish, hezb-e-wahdat]
+    ink: teal
+    moves: Northern Alliance moves
+    success: Northern Alliance success
+  - id: aq
+    name: al-Qaeda and foreign fighters
+    polities: [al-qaeda]
+    ink: brown
+    moves: al-Qaeda moves
+    success: al-Qaeda success
+notes:
+  - The Uppsala Conflict Data Program counts about 36,000 battle deaths in 1996–2001; deaths from massacres, displacement and the drought of 2000–2001 add many more. Only Pakistan, Saudi Arabia and the United Arab Emirates recognised the Taliban government; Rabbani’s government kept Afghanistan’s seat at the United Nations. The Northern Alliance was supported by Iran, Russia, India and Tajikistan.
+  - Areas of control are approximate; the front lines in the north moved repeatedly.
+sources:
+  - title: Afghan Civil War (1996–2001) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Afghan_Civil_War_(1996%E2%80%932001)
+  - title: Northern Alliance (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Northern_Alliance
+  - title: The Massacre in Mazar-e Sharif (Human Rights Watch, 1998)
+    url: https://www.hrw.org/legacy/reports98/afghan/Afrepor0.htm
+  - title: Massacres of Hazaras in Afghanistan (Human Rights Watch, 2001)
+    url: https://www.hrw.org/reports/2001/afghanistan/
+  - title: Casting Shadows – War Crimes and Crimes against Humanity, 1978–2001 (Afghanistan Justice Project, archived)
+    url: https://web.archive.org/web/20131004221455/http://www.afghanistanjusticeproject.org/warcrimesandcrimesagainsthumanity19782001.pdf
+steps:
+  - title: The battles for Mazar-i-Sharif
+    date: 1996–1998
+    when: "1997-05-19"
+    borders: "1998-09-13"
+    countries: [af, ir]
+    body:
+      - After losing Kabul, Massoud held the Panjshir valley and the north-east, and Dostum ruled the north from Mazar-i-Sharif. In May 1997 Dostum’s deputy, Abdul Malik Pahlawan, turned against him and let the Taliban into Mazar; Dostum fled to Turkey. Within days the Taliban’s attempt to disarm the Hazara and Uzbek fighters set off an uprising, and they were driven out with heavy losses. Malik’s forces killed some 2,000 to 3,000 Taliban prisoners, many of them suffocated in shipping containers or shot and buried in mass graves at Dasht-i-Laili.
+      - In August 1998 the Taliban returned. They took Mazar-i-Sharif on 8 August and for several days went from house to house killing men and boys, above all Hazaras; Human Rights Watch put the dead at at least 2,000, and some estimates exceed 4,000. They also killed eight Iranian diplomats and a journalist in the Iranian consulate, and Iran massed some 70,000 troops on the border before backing down. The Taliban took Bamyan, the Hazara heartland, in September. On 20 August 1998 the United States struck al-Qaeda camps near Khost with cruise missiles after the bombings of its embassies in Kenya and Tanzania.
+    facts:
+      - [Taliban expelled from Mazar-i-Sharif, "May 1997"]
+      - [Mazar-i-Sharif taken by the Taliban, "8 August 1998"]
+      - [Estimated dead in the 1998 massacre, "2,000 to more than 4,000"]
+    markers:
+      - kind: taken
+        side: tal
+        name: Mazar-i-Sharif
+        date: 8 August 1998
+        text: Taken after a defeat in 1997; Taliban fighters then killed thousands of civilians, most of them Hazaras.
+        lonlat: [67.11, 36.71]
+      - kind: event
+        side: na
+        name: Dasht-i-Laili
+        date: May – July 1997
+        text: Mass graves of Taliban prisoners killed by Malik’s forces were later found in the desert west of Mazar.
+        lonlat: [66.70, 36.75]
+        lp: l
+      - kind: taken
+        side: tal
+        name: Bamyan
+        date: 13 September 1998
+        text: The Hazara heartland, taken from Hezb-e Wahdat; it changed hands again in 1999 and 2001.
+        lonlat: [67.83, 34.82]
+      - kind: held
+        side: na
+        name: Panjshir
+        date: 1996–2001
+        text: Massoud’s home valley and stronghold, which the Taliban never took.
+        lonlat: [69.70, 35.40]
+      - kind: air
+        name: Khost
+        date: 20 August 1998
+        text: US cruise missiles struck al-Qaeda training camps after the embassy bombings in East Africa.
+        lonlat: [69.92, 33.34]
+    arrows:
+      - side: tal
+        via: [[65.9, 36.0], [66.5, 36.5], [67.05, 36.7]]
+      - side: tal
+        via: [[68.8, 34.4], [68.3, 34.6], [67.9, 34.8]]
+    areas:
+      - style: occupied
+        side: tal
+        label: Held by the Taliban, late 1998 (approximate)
+        atoms: [AF-KAN, AF-HEL, AF-URU, AF-ZAB, AF-GHA, AF-PIA, AF-PKA, AF-KHO, AF-WAR, AF-LOG, AF-FRA, AF-NIM, AF-HER, AF-BDG, AF-GHO, AF-NAN, AF-LAG, AF-KNR, AF-KAB, AF-BAL, AF-JOW, AF-FYB, AF-SAM, AF-SAR, AF-BAM, AFG-1753, AF-BGL, AF-KDZ]
+      - style: occupied
+        side: na
+        label: Held by the Northern Alliance (approximate)
+        atoms: [AF-BDS, AF-TAK, AF-KAP, AF-PAR]
+  - title: Taloqan, the Buddhas and the death of Massoud
+    date: 1999 – October 2001
+    when: "2000-09-05"
+    borders: "2001-09-09"
+    countries: [af, pk, us]
+    body:
+      - The Taliban’s offensives on the Shomali plain north of Kabul in 1999 drove out its Tajik population and burned villages and orchards. In September 2000 they took Taloqan, Massoud’s headquarters in Takhar, leaving the Northern Alliance with little more than Badakhshan, the Panjshir and pockets in the centre and north. The UN Security Council imposed sanctions on the Taliban for sheltering Osama bin Laden. In January 2001 Taliban forces killed some 170 Hazara civilians at Yakawlang, and in March they blew up the giant Buddha statues of Bamyan, carved in the 6th century, despite appeals from around the world.
+      - On 9 September 2001 two al-Qaeda members posing as journalists killed Massoud with a bomb hidden in their camera at Khwaja Bahauddin in the far north-east. Two days later al-Qaeda carried out the attacks of 11 September in the United States. When the Taliban refused to hand over bin Laden, the United States and Britain began bombing on 7 October 2001 and allied themselves with the Northern Alliance, whose forces, now led by Mohammed Fahim, swept the Taliban from the north and Kabul in November.
+    facts:
+      - [Taloqan taken by the Taliban, "5 September 2000"]
+      - [Bamyan Buddhas destroyed, "March 2001"]
+      - [Massoud killed, "9 September 2001"]
+    markers:
+      - kind: taken
+        side: tal
+        name: Taloqan
+        date: 5 September 2000
+        text: Massoud’s headquarters, lost after a month-long Taliban offensive.
+        lonlat: [69.53, 36.74]
+      - kind: event
+        side: tal
+        name: Bamyan Buddhas
+        date: March 2001
+        text: The two great statues, 55 and 38 metres tall, were destroyed with explosives and artillery.
+        lonlat: [67.83, 34.83]
+      - kind: event
+        side: tal
+        name: Yakawlang
+        date: January 2001
+        text: Taliban forces killed about 170 Hazara men after retaking the district, according to Human Rights Watch.
+        lonlat: [67.12, 34.73]
+        lp: l
+      - kind: event
+        side: aq
+        name: Khwaja Bahauddin
+        date: 9 September 2001
+        text: Massoud was killed here by two al-Qaeda suicide bombers posing as a television crew.
+        lonlat: [69.43, 37.43]
+      - kind: held
+        side: na
+        name: Faizabad
+        date: 1996–2001
+        text: Capital of Badakhshan, the province the Taliban never took, and seat of Rabbani’s government.
+        lonlat: [70.58, 37.12]
+    arrows:
+      - side: tal
+        via: [[68.9, 36.6], [69.2, 36.7], [69.5, 36.74]]
+      - side: tal
+        label: Shomali plain
+        via: [[69.17, 34.6], [69.15, 34.85], [69.25, 35.05]]
+    areas:
+      - style: occupied
+        side: tal
+        label: Held by the Taliban, September 2001 (approximate)
+        atoms: [AF-KAN, AF-HEL, AF-URU, AF-ZAB, AF-GHA, AF-PIA, AF-PKA, AF-KHO, AF-WAR, AF-LOG, AF-FRA, AF-NIM, AF-HER, AF-BDG, AF-GHO, AF-NAN, AF-LAG, AF-KNR, AF-KAB, AF-BAL, AF-JOW, AF-FYB, AF-SAM, AF-SAR, AF-BAM, AFG-1753, AF-BGL, AF-KDZ, AF-TAK]
+      - style: occupied
+        side: na
+        label: Held by the Northern Alliance (approximate)
+        atoms: [AF-BDS, AF-PAR, AF-KAP]

@@ -1,0 +1,175 @@
+id: iraqi-uprisings-1991
+name: 1991 Iraqi uprisings
+start: "1991-03-01"
+end: "1991-04-05"
+tier: B
+summary: The revolts that broke out across southern and northern Iraq after the Gulf War ceasefire, against Saddam Hussein’s government. Beginning in Basra on 1 March 1991 among soldiers retreating from Kuwait, the uprising spread within days through the Shia cities of the south, and from 5 March the Kurds rose in the north, taking Sulaymaniyah, Erbil and, on 20 March, Kirkuk. At their height the rebels held 14 of Iraq’s 18 provinces. But the Republican Guard had survived the war, the coalition allowed Iraq to fly helicopters, and the United States, which had called on Iraqis to rise, did not intervene. By early April loyal forces had crushed the revolts with great brutality, shelling the shrine cities of Najaf and Karbala and executing thousands. Nearly two million people, most of them Kurds, fled towards Turkey and Iran, and the UN Security Council’s Resolution 688 led to a Western-protected safe haven in the north and, later, Kurdish self-rule.
+countries: [iq, ir, tr]
+sides:
+  - id: iq
+    name: Iraqi government
+    polities: [iraq]
+    ink: brown
+    moves: Government moves
+    success: Government success
+  - id: reb
+    name: Rebels in the south
+    polities: [iraqi-rebels-1991]
+    ink: slate
+    moves: Rebel moves
+    success: Rebel success
+  - id: kurds
+    name: Kurdish rebels (Iraqi Kurdistan Front)
+    polities: [kdp, puk]
+    ink: gold
+    moves: Kurdish moves
+    success: Kurdish success
+  - id: coal
+    name: US-led coalition
+    polities: [united-states, united-kingdom, france]
+    ink: blue
+    moves: Coalition moves
+    success: Coalition success
+notes:
+  - Estimates of the dead range widely, from tens of thousands to as many as 180,000, and include many civilians and prisoners executed after the fighting; mass graves from 1991 were still being found after 2003. Human Rights Watch documented systematic killings in its 1992 report Endless Torment.
+  - The southern uprising was largely spontaneous, joined by army deserters, Shia clergy and, from Iran, fighters of the Supreme Council for the Islamic Revolution in Iraq (SCIRI). The Kurdish parties had formed the Iraqi Kurdistan Front in 1988. Rebel-held areas are drawn approximately; many cities changed hands within days.
+sources:
+  - title: 1991 Iraqi uprisings (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1991_Iraqi_uprisings
+  - title: Endless Torment – The 1991 Uprising in Iraq and Its Aftermath (Human Rights Watch, 1992)
+    url: https://www.hrw.org/reports/1992/Iraq926.htm
+  - title: Operation Provide Comfort (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Provide_Comfort
+  - title: United Nations Security Council Resolution 688 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/United_Nations_Security_Council_Resolution_688
+  - title: Iraqi no-fly zones conflict (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Iraqi_no-fly_zones_conflict
+steps:
+  - title: The uprising
+    date: 1–20 March 1991
+    when: "1991-03-01"
+    borders: "1991-03-20"
+    countries: [iq]
+    body:
+      - On 15 February 1991, during the Gulf War, President George H. W. Bush called on the Iraqi military and people to “take matters into their own hands” and force Saddam Hussein aside. Soon after the ceasefire, on 1 March, soldiers returning from the defeat in Kuwait turned their guns on Ba’ath party offices and portraits of Saddam in Basra. Within days the revolt spread to Nasiriyah, Amarah, Kut, Hilla, Diwaniyah and the holy cities of Najaf and Karbala, where rebels killed Ba’ath officials and security men, opened prisons and looked to the senior clergy for leadership. Fighters of SCIRI crossed from Iran with portraits of Ayatollah Khomeini, which alarmed Washington and the Gulf states.
+      - In the north the uprising began in Ranya on 5 March. Kurdish townspeople and Peshmerga of the Kurdistan Front took Sulaymaniyah, Erbil, Duhok and Zakho, and on 20 March Kirkuk. Many of the government’s Kurdish militiamen changed sides. In the south, though, the rebels had no common leadership or plan, and the coalition, whose troops still occupied the far south, stood aside.
+    facts:
+      - [Uprising begins in Basra, "1 March 1991"]
+      - [Kurdish uprising begins in Ranya, "5 March 1991"]
+      - [Kirkuk taken by the Kurds, "20 March 1991"]
+    markers:
+      - kind: event
+        side: reb
+        name: Basra
+        date: 1 March 1991
+        text: Retreating soldiers began the uprising, firing on a portrait of Saddam in the main square, by some accounts.
+        lonlat: [47.78, 30.51]
+      - kind: taken
+        side: reb
+        name: Najaf
+        date: March 1991
+        text: The rebels held the holy city and its shrine of Imam Ali for about two weeks.
+        lonlat: [44.33, 32.00]
+      - kind: taken
+        side: reb
+        name: Karbala
+        date: March 1991
+        text: Rebels fortified themselves around the shrines of Husayn and Abbas.
+        lonlat: [44.02, 32.62]
+        lp: l
+      - kind: taken
+        side: kurds
+        name: Ranya
+        date: 5 March 1991
+        text: The first town in the north to rise.
+        lonlat: [44.88, 36.25]
+      - kind: taken
+        side: kurds
+        name: Sulaymaniyah
+        date: 7 March 1991
+        text: Taken after fierce fighting for the security headquarters, where the rebels found evidence of torture.
+        lonlat: [45.43, 35.56]
+      - kind: taken
+        side: kurds
+        name: Kirkuk
+        date: 20 March 1991
+        text: The greatest Kurdish prize, held for only about a week.
+        lonlat: [44.39, 35.47]
+        lp: l
+    areas:
+      - style: occupied
+        side: reb
+        label: Largely in rebel hands, mid-March 1991 (approximate)
+        atoms: [IQ-BA, IQ-DQ, IQ-MA, IQ-QA, IQ-NA, IQ-KA, IQ-BB, IQ-WA]
+      - style: occupied
+        side: kurds
+        label: Held by the Kurdish rebels, late March 1991 (approximate)
+        atoms: [IQ-SU, IQ-AR, IQ-DA, IQ-TS]
+      - style: outline
+        side: coal
+        label: Occupied by the coalition
+        polygon: [[43.0, 29.4], [44.4, 30.6], [45.7, 31.05], [46.4, 30.95], [47.5, 30.3], [47.7, 30.0], [47.4, 29.95], [46.5, 29.1], [44.7, 29.2]]
+  - title: The crushing of the revolts and the safe haven
+    date: March – October 1991
+    when: "1991-03-05"
+    borders: "1991-10-31"
+    countries: [iq, tr, ir]
+    body:
+      - Republican Guard divisions, with tanks, artillery and helicopter gunships, retook the southern cities one by one in March. Najaf and Karbala were shelled and stormed, the shrines damaged, and thousands of young men were rounded up and shot; many rebels and civilians fled into the southern marshes or to the coalition lines and Saudi Arabia. At the end of March the army turned north, retook Kirkuk on 28–29 March, Erbil and Duhok on 30 March and Sulaymaniyah on 3 April. Fearing a repeat of the gassings of 1988, almost the entire Kurdish population of the cities fled into the mountains, and some 1.5 million Kurds made for the Iranian and Turkish borders in the cold and rain, and hundreds died each day in the camps on the Turkish side.
+      - On 5 April the UN Security Council condemned the repression in Resolution 688. The United States, Britain and France launched Operation Provide Comfort to drop supplies and, from mid-April, sent troops into northern Iraq to build camps in a safe haven around Zakho, protected by a no-fly zone north of the 36th parallel, so that the refugees could come down from the mountains. In October 1991 the government pulled its administration and troops out of most of the Kurdish provinces, which then governed themselves. A second no-fly zone over the south followed in August 1992, but it did not stop the army from draining the marshes and crushing the Shia resistance there.
+    facts:
+      - [Kirkuk retaken by the army, "28–29 March 1991"]
+      - [Resolution 688, "5 April 1991"]
+      - [Refugees, "nearly 2 million, most of them Kurds"]
+    markers:
+      - kind: taken
+        side: iq
+        name: Karbala
+        date: March 1991
+        text: The city centre around the shrines was devastated by the government counter-attack.
+        lonlat: [44.02, 32.62]
+        lp: l
+      - kind: taken
+        side: iq
+        name: Kirkuk
+        date: 28–29 March 1991
+        text: Retaken by the Republican Guard, setting off the Kurdish exodus.
+        lonlat: [44.39, 35.47]
+        lp: l
+      - kind: taken
+        side: iq
+        name: Sulaymaniyah
+        date: 3 April 1991
+        text: The last rebel-held city to fall.
+        lonlat: [45.43, 35.56]
+      - kind: event
+        side: coal
+        name: Zakho
+        date: from April 1991
+        text: Coalition troops built tent camps here for refugees coming down from the mountains.
+        lonlat: [42.68, 37.14]
+      - kind: event
+        name: Uludere
+        date: April 1991
+        text: Hundreds of thousands of Kurds were stranded on the mountains along the Turkish border, where Turkey at first refused to let them in.
+        lonlat: [42.85, 37.45]
+    arrows:
+      - side: iq
+        via: [[44.37, 33.31], [44.0, 32.85], [44.02, 32.65]]
+      - side: iq
+        via: [[44.2, 34.6], [44.35, 35.2], [44.39, 35.45]]
+      - side: kurds
+        label: Flight to Turkey
+        via: [[44.01, 36.19], [43.4, 36.6], [42.95, 37.0], [42.85, 37.4]]
+      - side: kurds
+        label: Flight to Iran
+        via: [[45.43, 35.56], [45.8, 35.9], [46.2, 36.15]]
+    areas:
+      - style: outline
+        side: coal
+        label: Safe haven, from April 1991
+        polygon: [[42.4, 37.35], [43.4, 37.35], [44.0, 37.1], [44.0, 36.75], [43.0, 36.7], [42.4, 36.9]]
+      - style: gained
+        side: kurds
+        label: Under Kurdish self-rule from October 1991
+        atoms: [IQ-DA, IQ-AR, IQ-SU]

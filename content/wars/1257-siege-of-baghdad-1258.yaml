@@ -1,0 +1,132 @@
+id: siege-of-baghdad-1258
+name: Siege of Baghdad (1258)
+start: "1257-11"
+end: "1258-02-20"
+tier: B
+summary: The Mongol conquest of Baghdad, capital of the Abbasid caliphate for five hundred years. After destroying the Nizari Ismailis, Hülegü demanded that the caliph al-Musta’sim submit; the caliph refused, and in the winter of 1257–1258 Mongol armies converged on Iraq from three directions. A caliphal army was destroyed by flooding near the Dujayl canal on 17 January, the city was surrounded, and after the walls were breached the caliph surrendered on 10 February. The Mongols sacked Baghdad for about a week and killed a great many of its people; the caliph was executed on 20 February. The fall of Baghdad ended the Abbasid caliphate there and made Iraq a province of the new Mongol Ilkhanate.
+countries: [iq, ir]
+sides:
+  - id: mon
+    name: Mongols (Hülegü) and their vassals
+    polities: [mongol-empire, ilkhanate, georgia]
+    ink: olive
+    moves: Mongol moves
+    success: Mongol success
+  - id: abb
+    name: Abbasid Caliphate
+    polities: [abbasid]
+    ink: green
+    moves: Abbasid moves
+    success: Abbasid success
+notes:
+  - The number of people killed is unknown. Later Muslim writers gave figures from 800,000 to two million, which are probably far too high; the true toll was certainly very large, and was raised further by epidemics in the weeks afterwards.
+  - The story that Hülegü locked the caliph up with his treasure to starve, told by Marco Polo and other Christian writers, is a legend.
+  - Some later Sunni writers accused the Shi’i vizier Ibn al-Alqami of betraying the caliph to the Mongols; modern historians treat the charge with caution.
+sources:
+  - title: Siege of Baghdad (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Baghdad
+  - title: Hulegu Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hulegu_Khan
+  - title: Al-Musta’sim (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Al-Musta%27sim
+  - title: Hulāgu Khan (Encyclopaedia Iranica)
+    url: https://www.iranicaonline.org/articles/hulagu-khan/
+  - title: "Baghdad ii. From the Mongol Invasion to the Ottoman Occupation (Encyclopaedia Iranica)"
+    url: https://www.iranicaonline.org/articles/baghdad/baghdad-iranian-connection-ii/
+steps:
+  - title: The road to Baghdad
+    date: September 1257 – January 1258
+    when: "1258-01-17"
+    borders: "1258-01-17"
+    countries: [iq, ir]
+    body:
+      - The Abbasid caliph al-Musta’sim, who had reigned since 1242, ruled little more than Iraq, and his court was divided between rival ministers; in 1256 Sunni–Shi’i rioting in Baghdad had ended with troops sacking the Shi’i quarter of Karkh. Hülegü had expected the caliph to send troops against the Nizaris, and he had not. In September 1257, from his camp on the plain of Hamadan, Hülegü wrote demanding that the caliph pull down the city’s outer walls and come to him in person. Al-Musta’sim answered that the whole Muslim world would rise to defend him; in fact the Mamluks of Egypt were hostile to him and the Ayyubid princes of Syria were looking to their own survival.
+      - In November 1257 the Mongols, with Georgian, Armenian and Seljuk contingents, moved on Iraq from three sides. Hülegü led the centre through the Zagros and sacked Kermanshah on 6 December. On the right, the general Baiju crossed the Tigris at Mosul with the help of its ruler Badr al-Din Lu’lu’ and marched south along the west bank, while princes of the Golden Horde came by way of the Shahrizor plain. On the left, Kitbuqa came through Luristan and Khuzistan. On 16 January 1258 the caliph’s commander, the dawatdar Aybak, with some 20,000 men drove back Baiju’s vanguard west of Baghdad. That night the Mongols broke the dykes of the Dujayl canal and flooded the Abbasid camp, and the next morning they routed the survivors; only a few, the dawatdar among them, got back to the city.
+    facts:
+      - [Kermanshah sacked, "6 December 1257"]
+      - [Battle at the Dujayl canal, "16–17 January 1258, Mongol victory"]
+      - [Mongol army, "perhaps 120,000–150,000 with its vassals"]
+    markers:
+      - kind: event
+        side: mon
+        name: Hamadan
+        date: summer 1257
+        text: Hülegü camped on the plain of Hamadan and from there began his correspondence with the caliph.
+        lonlat: [48.515, 34.798]
+      - kind: taken
+        side: mon
+        name: Kermanshah
+        date: 6 December 1257
+        text: Sacked by Hülegü’s centre on its way through the Zagros.
+        lonlat: [47.091, 34.337]
+      - kind: event
+        side: mon
+        name: Mosul
+        date: late 1257
+        text: Its ruler, Badr al-Din Lu’lu’, a Mongol vassal, helped Baiju’s army across the Tigris and sent it supplies.
+        lonlat: [43.129, 36.342]
+      - kind: battle
+        side: mon
+        name: Dujayl canal
+        date: 16–17 January 1258
+        text: The Mongols flooded the caliphal army’s camp by breaking the dykes and destroyed it the next morning. The exact site, north-west of Baghdad, is not known.
+        lonlat: [44.1, 33.6]
+        lp: l
+    arrows:
+      - side: mon
+        label: Hülegü
+        phase: 1
+        via: [[48.5, 34.8], [47.1, 34.35], [45.9, 34.3], [44.9, 33.7], [44.5, 33.38]]
+      - side: mon
+        label: Baiju
+        phase: 1
+        via: [[44.0, 36.2], [43.15, 36.3], [43.4, 35.0], [43.85, 34.0], [44.15, 33.65]]
+      - side: mon
+        label: Kitbuqa
+        phase: 1
+        via: [[48.3, 33.5], [47.4, 32.6], [45.8, 32.55], [44.65, 33.0], [44.38, 33.22]]
+      - side: abb
+        label: Dawatdar
+        phase: 2
+        via: [[44.33, 33.35], [44.2, 33.5], [44.12, 33.58]]
+  - title: Siege and sack
+    date: 22 January – 20 February 1258
+    when: "1258-02-10"
+    borders: "1258-02-20"
+    countries: [iq]
+    body:
+      - Hülegü reached the eastern suburbs on 22 January, while Kitbuqa and Baiju closed in on the western side. Within a day the Mongols surrounded the city with a palisade and a ditch, and they built pontoon bridges across the Tigris above and below it so that no one could escape by boat. Stones for the catapults were brought from the Jebel Hamrin, three days away. The assault began on 29 or 30 January; the first breach was made in the Ajami tower on 1 February, and by 4 February the Mongols held the whole eastern wall. The caliph sent envoys, among them his vizier and the Nestorian patriarch, but Hülegü would accept nothing but unconditional surrender. Soldiers who came out to surrender were killed.
+      - On 10 February al-Musta’sim came out with his sons and some 3,000 notables and surrendered. The people were ordered to lay down their arms and leave the city, and those who did were killed. The sack began on 13 February and lasted about a week. Christians, on whose behalf Hülegü’s Christian wife Doquz Khatun interceded, and some groups of scholars and merchants were spared; the rest of the city was plundered and many of its people killed, and mosques, palaces and libraries were burned. On 20 February, after Hülegü had stopped the killing and moved his camp away from the smell of the dead, the caliph and his family were executed; according to the usual account, the caliph was rolled in a carpet and trampled by horses, since the Mongols avoided shedding royal blood.
+      - Hilla and Kufa submitted, while Wasit resisted and was sacked. Hülegü sent much of the caliph’s treasure to his base in Azerbaijan and left Baghdad under a governor; under the Ilkhans it recovered, though it was no longer a capital. An Abbasid survivor was installed as caliph in Cairo by the Mamluk sultan Baybars in 1261, but he and his successors had no power of their own.
+    facts:
+      - [Assault begins, "29 or 30 January 1258"]
+      - [Caliph surrenders, "10 February 1258"]
+      - [Caliph executed, "20 February 1258"]
+    markers:
+      - kind: taken
+        side: mon
+        name: Baghdad
+        date: 10 February 1258
+        text: The caliph surrendered after the eastern wall fell. The city was sacked for about a week from 13 February.
+        lonlat: [44.366, 33.315]
+      - kind: event
+        side: mon
+        name: Hilla
+        date: "1258"
+        text: Its people, mostly Shi’i, submitted to the Mongols and were spared.
+        lonlat: [44.431, 32.477]
+      - kind: taken
+        side: mon
+        name: Wasit
+        date: "1258"
+        text: The town on the Tigris resisted a Mongol detachment and was sacked.
+        lonlat: [46.298, 32.188]
+    arrows:
+      - side: mon
+        phase: 1
+        via: [[44.42, 33.25], [45.3, 32.8], [46.25, 32.25]]
+    areas:
+      - style: gained
+        side: mon
+        label: Abbasid Iraq, taken by the Mongols in 1258
+        atoms: [IQ-BG, IQ-BB, IQ-KA, IQ-NA, IQ-QA, IQ-WA, IQ-DI, IQ-SD, IQ-AN, IQ-BA, IQ-MU, IQ-DQ, IQ-MA]

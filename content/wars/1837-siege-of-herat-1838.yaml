@@ -1,0 +1,127 @@
+id: siege-of-herat-1838
+name: Siege of Herat
+start: "1837-07"
+end: "1838-09-09"
+tier: B
+summary: "Mohammad Shah Qajar’s attempt to take Herat, held since 1818 by the last Sadozai prince, Kamran Shah, and his vizier Yar Mohammad Khan Alakozai. Iran regarded Herat as part of Khorasan, and Herati and Turkmen raids had laid waste the frontier. Encouraged by the Russian envoy Count Simonich and opposed by the British, the shah took the fort of Ghurian and besieged Herat from November 1837. The city, helped by a young British officer, Eldred Pottinger, and by a Sunni confederacy of Aimaq, Hazara, Uzbek and Turkmen tribes, held out for ten months and beat off a general assault on 24 June 1838. Britain occupied Kharg Island in the Gulf and threatened war, and on 9 September 1838 the shah lifted the siege. The crisis was the immediate occasion of the First Anglo-Afghan War."
+countries: [af, ir]
+sides:
+  - id: ir
+    name: Qajar Iran
+    polities: [persia]
+    ink: green
+    moves: Iranian moves
+    success: Iranian success
+  - id: her
+    name: Herat (Kamran Shah)
+    polities: [herat]
+    ink: olive
+    moves: Herati moves
+    success: Herati success
+  - id: gb
+    name: Britain
+    polities: [united-kingdom]
+    ink: red
+    moves: British moves
+    success: British success
+notes:
+  - Persian sources call the siege the First Herat War. Several of its dates differ by a day or two between accounts (the start of the siege is given as 23 or 24 November 1837).
+  - British accounts, beginning with John Kaye’s, give Pottinger the main credit for the defence; modern historians also stress Yar Mohammad Khan and the tribal confederacy that harried the Iranian flanks.
+sources:
+  - title: First Herat War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Herat_War
+  - title: Eldred Pottinger (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Eldred_Pottinger
+  - title: Mohammad Shah Qajar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mohammad_Shah_Qajar
+  - title: Yar Mohammad Khan Alakozai (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yar_Mohammad_Khan_Alakozai
+  - title: Central Asia viii. Relations with Persia in the 19th century (Encyclopædia Iranica)
+    url: https://www.iranicaonline.org/articles/central-asia-viii
+  - title: Moḥammad Shah Qājār (Encyclopædia Iranica)
+    url: https://www.iranicaonline.org/articles/mohammad-shah
+steps:
+  - title: Ghurian and the siege
+    date: July 1837 – May 1838
+    when: "1837-11-23"
+    borders: "1837-11-23"
+    countries: [af, ir]
+    body:
+      - Mohammad Shah left Tehran in July 1837 and gathered his army at Torbat-e Jam at the end of October. He hoped to take Herat and from there extend Iranian influence to the Amu Darya; the Russian envoy, Count Simonich, encouraged him, while the British minister, John McNeill, warned against it, since Britain regarded Herat as a gateway to India. An advance force of 8,000 men attacked the frontier fort of Ghurian, and after a week of bombardment its commander, Yar Mohammad’s brother Shir Mohammad Khan, submitted in mid-November.
+      - The shah arrived before Herat on 23 November 1837. Kamran Shah and Yar Mohammad had repaired the walls, and Eldred Pottinger, an Indian Army officer who had entered the city in disguise that August, became one of their advisers. The Iranians dug trenches towards the walls but did not close the ring. On their flank, a confederacy of Aimaq, Hazara, Uzbek and Turkmen tribes gathered by Sher Mohammad Khan Hazara of Qala-e Naw harassed them; the governor of Khorasan, Asef al-Dowleh, took Qala-e Naw but was ambushed in the snowbound valleys of the Murghab. The winter, short supplies and disease wore down both the besiegers and the town, which drove out hundreds of old men, women and children to save food.
+    facts:
+      - [Ghurian surrenders, "13–15 November 1837"]
+      - [Siege of Herat begins, "23 November 1837"]
+      - [Qala-e Naw taken by Asef al-Dowleh, "late 1837"]
+    markers:
+      - kind: event
+        side: ir
+        name: Torbat-e Jam
+        date: October 1837
+        text: The Iranian army gathered here before crossing into the lands of Herat.
+        lonlat: [60.623, 35.244]
+      - kind: taken
+        side: ir
+        name: Ghurian
+        date: mid-November 1837
+        text: The frontier fort was battered for a week before its commander came to the shah’s camp and submitted.
+        lonlat: [61.470, 34.340]
+        lp: b
+      - kind: siege
+        side: her
+        name: Herat
+        date: from 23 November 1837
+        text: Kamran Shah’s capital, with a garrison and armed townsmen estimated at about 22,000.
+        lonlat: [62.203, 34.342]
+      - kind: taken
+        side: ir
+        name: Qala-e Naw
+        date: late 1837
+        text: Centre of the Hazara chief Sher Mohammad Khan, whose tribal confederacy kept up attacks on the Iranian flank all winter.
+        lonlat: [63.129, 34.987]
+    arrows:
+      - side: ir
+        label: Mohammad Shah
+        phase: 1
+        via: [[60.623, 35.244], [61.100, 34.800], [61.470, 34.380]]
+      - side: ir
+        phase: 2
+        via: [[61.520, 34.330], [61.900, 34.320], [62.150, 34.330]]
+      - side: ir
+        label: Asef al-Dowleh
+        phase: 2
+        via: [[60.700, 35.200], [61.500, 35.000], [62.300, 35.050], [63.080, 34.990]]
+  - title: The assault, Kharg and the retreat
+    date: June – September 1838
+    when: "1838-06-24"
+    borders: "1838-09-09"
+    countries: [af, ir]
+    body:
+      - In the spring of 1838 McNeill came to the shah’s camp and persuaded him to put off a planned assault, but Simonich, who had arrived at the same time, gained the upper hand and in June McNeill left for Tehran. On 24 June the Iranians attacked at five points and broke into the south-eastern corner of the walls. For about an hour the breach was fought over; according to British accounts Pottinger drove the wavering Yar Mohammad forward, and the defenders threw the attackers back.
+      - Britain, unable to send an army across Afghanistan, sent ships from Bombay into the Gulf, and on 19 June 1838 troops occupied Kharg Island off Bushehr. On 11 August a British officer, Charles Stoddart, delivered McNeill’s warning to the shah that an attack on Herat would mean war with Britain. Russia, anxious about the British reaction, recalled Simonich and his colleague Vitkevich, saying that they had exceeded their instructions. On 9 September 1838 Mohammad Shah raised the siege and marched home. Herat had lost Farah and Sabzawar to the ruler of Kandahar, Kohandil Khan, who had come to terms with the shah during the siege. The threat that had justified British plans was gone, but within weeks Britain announced its invasion of Afghanistan.
+    facts:
+      - [General assault on Herat, "24 June 1838, repulsed"]
+      - [Kharg Island occupied, "19 June 1838"]
+      - [Siege lifted, "9 September 1838"]
+    markers:
+      - kind: battle
+        side: her
+        name: Herat
+        date: 24 June 1838
+        text: The Iranian assault, ordered by Simonich after he learned of his recall, broke through at one point but was driven back.
+        lonlat: [62.203, 34.342]
+      - kind: taken
+        side: gb
+        name: Kharg Island
+        date: 19 June 1838
+        text: Occupied by troops from Bombay to put pressure on the shah, who had been told that Britain would go to war over Herat.
+        lonlat: [50.310, 29.245]
+      - kind: event
+        name: Tehran
+        date: June – August 1838
+        text: McNeill broke off relations with the Iranian government and sent his ultimatum to the shah’s camp from here.
+        lonlat: [51.420, 35.680]
+    arrows:
+      - side: ir
+        label: Retreat, September 1838
+        via: [[62.100, 34.400], [61.300, 34.900], [60.623, 35.244], [59.600, 36.250]]

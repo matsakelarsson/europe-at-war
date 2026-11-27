@@ -1,0 +1,490 @@
+id: russian-conquest-of-central-asia
+name: Russian conquest of Central Asia
+start: "1839-11"
+end: "1885-03-30"
+tier: A
+summary: The campaigns in which the Russian Empire, advancing south from the Kazakh steppe and east from the Caspian Sea, conquered the khanates of Kokand, Bukhara and Khiva and the Turkmen tribes between 1839 and 1885. After a failed winter march on Khiva in 1839–1840, Russia built a line of forts along the Syr Darya, took Tashkent from Kokand in 1865, defeated Bukhara in 1866–1868, made Bukhara and Khiva protectorates, annexed Kokand in 1876 and conquered the Turkmen after the storming of Geok Tepe in 1881. The clash with Afghan troops at Panjdeh in 1885 nearly led to war with Britain and set the frontier of Russian Turkestan with Afghanistan.
+countries: [kz, uz, tm, tj, kg, af, ru]
+sides:
+  - id: ru
+    name: Russian Empire
+    polities: [russia]
+    ink: green
+    moves: Russian moves
+    success: Russian success
+  - id: kok
+    name: Khanate of Kokand
+    polities: [kokand]
+    ink: orange
+    moves: Kokandi moves
+    success: Kokandi success
+  - id: buk
+    name: Emirate of Bukhara
+    polities: [bukhara]
+    ink: teal
+    moves: Bukharan moves
+    success: Bukharan success
+  - id: khi
+    name: Khanate of Khiva
+    polities: [khiva]
+    ink: purple
+    moves: Khivan moves
+    success: Khivan success
+  - id: tur
+    name: Turkmen tribes
+    polities: [turkmen-tribes]
+    ink: olive
+    moves: Turkmen moves
+    success: Turkmen success
+  - id: afg
+    name: Emirate of Afghanistan
+    polities: [afghanistan]
+    ink: red
+    moves: Afghan moves
+    success: Afghan success
+notes:
+  - Dates are New Style (Gregorian). Russian sources use the Julian calendar, then 12 days behind, so Tashkent fell on 17 June 1865, Samarkand on 2 May 1868, Khiva on 29 May 1873, Geok Tepe on 12 January 1881 and Panjdeh on 18 March 1885 in Russian accounts.
+  - This was not one war but a series of campaigns, often begun by local commanders before Saint Petersburg had approved them. Bukhara (from 1868) and Khiva (from 1873) stayed on the map as Russian protectorates under their own rulers until 1920.
+  - Numbers for the Central Asian armies come almost entirely from Russian reports and are often inflated; Turkmen and Kokandi losses in particular are rough estimates.
+sources:
+  - title: Russian conquest of Central Asia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russian_conquest_of_Central_Asia
+  - title: Khivan campaign of 1839–1840 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Khivan_campaign_of_1839%E2%80%931840
+  - title: Siege of Ak-Mechet (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Ak-Mechet
+  - title: Siege of Tashkent (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Tashkent
+  - title: Battle of Irjar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Irjar
+  - title: Siege of Samarkand (1868) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Samarkand_(1868)
+  - title: Khivan campaign of 1873 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Khivan_campaign_of_1873
+  - title: Khanate of Kokand (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Khanate_of_Kokand
+  - title: Battle of Geok Tepe (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Geok_Tepe
+  - title: Panjdeh incident (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Panjdeh_incident
+  - title: Russian Turkestan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Russian_Turkestan
+  - title: "Central Asia vii. In the 18th–19th centuries (Encyclopædia Iranica)"
+    url: https://www.iranicaonline.org/articles/central-asia-vii
+  - title: Turkistan (Britannica)
+    url: https://www.britannica.com/place/Turkistan
+steps:
+  - title: Perovsky’s winter march on Khiva
+    date: 1839–1840
+    when: "1839-11"
+    borders: "1840-02"
+    countries: [kz, uz, ru]
+    body:
+      - By the 1830s Russia’s frontier ran along the Orenburg Line, and the Kazakh steppe to the south was slowly coming under Russian control. Russia complained that the Khanate of Khiva, an irrigated oasis on the lower Amu Darya some 1,200 km to the south, encouraged raids on the steppe and held Russian captives, many of them fishermen seized on the Caspian Sea and sold as slaves. In 1839 Nicholas I approved an expedition to put a khan friendly to Russia on the throne of Khiva, at a time when Britain was invading Afghanistan.
+      - The governor of Orenburg, Vasily Perovsky, set out in late November 1839 with about 5,000 men and some 10,000 camels hired or requisitioned from the Kazakhs, choosing winter to avoid the lack of water. The winter turned out to be exceptionally cold and snowy. Khivan horsemen attacked the advance fort at Ak-Bulak without success, but the camels died in thousands, and by February 1840, having covered less than half the distance, Perovsky turned back. More than 1,000 of his men died, mostly of cold, scurvy and disease, and only about 1,500 camels survived. In 1840 the khan, urged by British officers who had reached Khiva from Herat, released 416 Russian captives, and Russia set aside the conquest of Khiva for three decades.
+    facts:
+      - [Russian force, "about 5,000 men and 10,000 camels"]
+      - [Retreat ordered, "February 1840"]
+      - [Russian dead, "about 1,050, almost all from cold and disease"]
+    markers:
+      - kind: event
+        side: ru
+        name: Orenburg
+        date: November 1839
+        text: The capital of Russia’s steppe frontier and the starting point of Perovsky’s columns. The survivors were back on the Orenburg Line by June 1840.
+        lonlat: [55.1, 51.783]
+      - kind: held
+        side: khi
+        name: Khiva
+        date: 1840
+        text: Capital of the khanate. The khan freed his Russian captives in 1840 and sent them north, which removed Russia’s main reason for the war.
+        lonlat: [60.361, 41.381]
+    arrows:
+      - side: ru
+        label: Perovsky, turned back
+        via: [[55.1, 51.7], [56.6, 49.9], [57.6, 48.4], [58.2, 47.0]]
+  - title: The Syr Darya line and Ak-Mechet
+    date: 1847–1854
+    when: "1853-08-09"
+    borders: "1854-06"
+    countries: [kz, ru]
+    body:
+      - After the failure at Khiva, Russia advanced step by step across the steppe, building forts as it went. In 1847 it founded the Raim fort near the mouth of the Syr Darya and launched the first Russian ships on the Aral Sea, and in the same years Cossack outposts moved south into Semirechye, the land of the seven rivers south of Lake Balkhash. These advances, and the end of Kenesary Kasymov’s Kazakh revolt in 1847, brought Russia up against the Khanate of Kokand, which held the middle Syr Darya and taxed the Kazakhs there from a chain of forts.
+      - In the summer of 1853 Perovsky led more than 2,000 men up the river against Ak-Mechet, Kokand’s main northern fort, held by about 300 men. After a siege of more than three weeks, with trenches, batteries and mines, the Russians stormed it on 9 August; most of the defenders were killed. Renamed Fort Perovsky, it held out in December 1853 against a much larger Kokandi army sent to retake it. In 1854 Russia founded the fort of Vernyi, today’s Almaty, at the foot of the Tian Shan. Two lines of forts, along the Syr Darya and across Semirechye, now faced the khanates, with a gap of steppe and mountains between them.
+    facts:
+      - [Raim fort founded, "1847"]
+      - [Ak-Mechet stormed, "9 August 1853"]
+      - [Vernyi founded, "1854"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Ak-Mechet
+        date: 9 August 1853
+        text: Kokand’s fort on the Syr Darya, taken after a siege of 25 days and renamed Fort Perovsky. It is today’s Kyzylorda.
+        lonlat: [65.517, 44.85]
+      - kind: event
+        side: ru
+        name: Kazalinsk
+        date: 1853–1855
+        text: Fort No. 1, built on the lower Syr Darya; it replaced the Raim fort as the base of the Aral flotilla.
+        lonlat: [62.1, 45.767]
+        lp: l
+      - kind: event
+        side: ru
+        name: Vernyi
+        date: "1854"
+        text: A Russian fort in the foothills of the Tian Shan, the base for the advance into the lands of Kokand from the east. It grew into the city of Almaty.
+        lonlat: [76.95, 43.233]
+    arrows:
+      - side: ru
+        label: Perovsky
+        via: [[61.7, 46.7], [62.1, 45.8], [64.0, 45.3], [65.45, 44.88]]
+    areas:
+      - style: gained
+        side: ru
+        label: Russian forts and lines, 1847–1854
+        atoms: [KZ-KZY, KZ-ALA, KAZ-4829]
+  - title: Chimkent and Tashkent
+    date: 1864–1865
+    when: "1865-06-29"
+    borders: "1865-07"
+    countries: [kz, uz, kg, ru]
+    body:
+      - In 1864 Russia closed the gap between its two lines. Colonel Mikhail Chernyaev marched west from Vernyi and took Aulie-Ata (today’s Taraz) in June, while Colonel Nikolai Verevkin came up the Syr Darya and took the town of Turkestan with its great shrine of Ahmad Yasawi. Chernyaev stormed Chimkent in October and at once tried to take Tashkent, but his attack was beaten off. In December a sotnia of about 110 Ural Cossacks, caught near the village of Iqan by the Kokandi regent Alimqul with thousands of horsemen, fought its way out after three days; about half of the Cossacks were killed.
+      - The foreign minister, Alexander Gorchakov, told the powers that Russia now had a natural frontier and would go no further. But Chernyaev, given vague orders, marched on Tashkent in May 1865, the largest and richest city of Central Asia, with about 100,000 people. He cut its water supply, and on 21 May Alimqul was mortally wounded in a battle outside the walls. On the night of 26–27 June Chernyaev’s men, fewer than 2,000 in all, stormed the gates, and after two days of street fighting the city’s notables surrendered on 29 June. Tashkent became the seat of a new Turkestan province and, from 1867, of the Governor-General of Turkestan, Konstantin von Kaufman.
+    facts:
+      - [Aulie-Ata and Turkestan taken, "June 1864"]
+      - [Chimkent stormed, "4 October 1864"]
+      - [Tashkent surrendered, "29 June 1865"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Aulie-Ata
+        date: June 1864
+        text: Taken by Chernyaev’s column from Vernyi. Today it is Taraz in Kazakhstan.
+        lonlat: [71.367, 42.9]
+      - kind: taken
+        side: ru
+        name: Turkestan
+        date: June 1864
+        text: The town of the shrine of Ahmad Yasawi, taken by Verevkin’s column from the Syr Darya line.
+        lonlat: [68.269, 43.302]
+      - kind: taken
+        side: ru
+        name: Chimkent
+        date: 4 October 1864
+        text: Stormed by Chernyaev, who went on to make a first, failed attack on Tashkent.
+        lonlat: [69.596, 42.317]
+      - kind: taken
+        side: ru
+        name: Tashkent
+        date: 29 June 1865
+        text: Stormed against orders after a six-week siege. Russian losses were reported as about 25 killed.
+        lonlat: [69.28, 41.311]
+    arrows:
+      - side: ru
+        label: Chernyaev
+        phase: 1
+        via: [[74.6, 42.87], [73.0, 42.8], [71.4, 42.9], [69.65, 42.33]]
+      - side: ru
+        label: Verevkin
+        phase: 1
+        via: [[65.55, 44.83], [67.0, 44.1], [68.25, 43.33]]
+      - side: ru
+        label: Chernyaev
+        phase: 2
+        via: [[69.6, 42.3], [69.45, 41.8], [69.3, 41.36]]
+    areas:
+      - style: gained
+        side: ru
+        label: Taken from Kokand, 1864–1865
+        atoms: [KZ-ZHA, KZ-YUZ, KG-T, UZ-TK, UZ-TO]
+  - title: War with Bukhara
+    date: 1866–1868
+    when: "1866-05-20"
+    borders: "1868-07"
+    countries: [uz, tj, ru]
+    body:
+      - The emir of Bukhara, Muzaffar, claimed Tashkent for himself, detained a Russian mission and gathered an army on the Syr Darya. On 20 May 1866 General Dmitry Romanovsky, with about 3,000 men, routed the emir’s much larger army at Irjar, a narrow pass on the river between Chinaz and Khujand. The Russians then stormed Khujand in June, and Ura-Tyube and Jizzakh in October. In 1867 the conquered lands were made the Governor-Generalship of Turkestan under Kaufman.
+      - In May 1868, after the clergy of Bukhara declared a holy war, Kaufman marched on Samarkand, Timur’s old capital. He defeated the Bukharan army on the Chupan-Ata heights on 13 May, and the city opened its gates the next day. While Kaufman pursued the emir westwards, about 650 men left in the citadel were besieged for a week by Bukharan troops, the people of the city and the forces of Shahrisabz; they held out until Kaufman returned. On 14 June he destroyed the emir’s last army at Zerabulak. In the peace that followed, Bukhara gave up Samarkand and the upper Zarafshan valley, paid an indemnity and became a Russian protectorate.
+    facts:
+      - [Battle of Irjar, "20 May 1866, Russian victory"]
+      - [Samarkand taken, "14 May 1868"]
+      - [Battle of Zerabulak, "14 June 1868"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Khujand
+        date: June 1866
+        text: Stormed after a siege of about ten days, with heavy losses among the defenders and townspeople.
+        lonlat: [69.632, 40.279]
+      - kind: taken
+        side: ru
+        name: Ura-Tyube
+        date: October 1866
+        text: Today Istaravshan in Tajikistan, taken with Jizzakh to secure the road to Samarkand.
+        lonlat: [69.006, 39.911]
+        lp: b
+      - kind: taken
+        side: ru
+        name: Jizzakh
+        date: October 1866
+        text: A Bukharan fortress at the gate between the steppe and the Zarafshan valley.
+        lonlat: [67.842, 40.116]
+      - kind: siege
+        side: ru
+        name: Samarkand
+        date: 14 May – 20 June 1868
+        text: The city surrendered without a fight. Its citadel was then besieged for a week; the painter Vasily Vereshchagin fought among the defenders.
+        lonlat: [66.976, 39.655]
+        lp: b
+      - kind: event
+        side: buk
+        name: Bukhara
+        date: "1868"
+        text: The emir kept his throne and his capital, but from 1868 his foreign relations were in Russian hands.
+        lonlat: [64.423, 39.767]
+    arrows:
+      - side: ru
+        label: Romanovsky
+        phase: 1
+        via: [[69.28, 41.3], [68.76, 40.94], [69.2, 40.55], [69.6, 40.3]]
+      - side: ru
+        label: Kaufman
+        phase: 2
+        via: [[69.2, 41.25], [68.4, 40.5], [67.85, 40.12], [66.98, 39.68]]
+      - side: ru
+        phase: 3
+        via: [[66.9, 39.7], [66.26, 39.9]]
+    areas:
+      - style: gained
+        side: ru
+        label: Taken from Bukhara, 1866–1868
+        atoms: [TJ-SU, UZ-SI, UZ-JI, UZ-SA]
+      - style: outline
+        side: buk
+        label: Emirate of Bukhara, a Russian protectorate from 1868
+        atoms: [UZ-BU, UZ-NW, UZ-QA, UZ-SU, TM-L, TJ-DU, TJ-KT]
+  - title: Khiva
+    date: 1873
+    when: "1873-06-10"
+    borders: "1873-09"
+    countries: [uz, tm, kz, ru]
+    body:
+      - In 1869 Russian troops landed on the eastern shore of the Caspian and founded Krasnovodsk, and in 1873 Russia attacked Khiva from all sides at once. About 13,000 men in four columns set out across the deserts in early spring. Kaufman’s column from Tashkent and Kazalinsk nearly died of thirst in the Kyzylkum before reaching the Amu Darya; Verevkin’s from Orenburg came down the west shore of the Aral Sea and took Kungrad, where Colonel Nikolai Lomakin’s men from the Mangyshlak peninsula joined it; Colonel Vasily Markozov’s column from Chikishlyar on the Caspian ran out of water and turned back.
+      - Verevkin reached the walls of Khiva first and bombarded the city, and on 10 June Kaufman entered it; Khan Muhammad Rahim II, who had fled, was brought back and restored. Under the treaty signed on 24 August, Khiva became a Russian protectorate, gave Russia the right bank of the Amu Darya, agreed to pay an indemnity of 2.2 million roubles and abolished slavery; thousands of Persian slaves were freed. During the negotiations Kaufman demanded a heavy levy from the Yomut Turkmen, and when they could not pay, his troops burned their settlements and killed many of them, including women and children, as the American journalist Januarius MacGahan reported.
+    facts:
+      - [Russian force, "about 13,000 men in four columns"]
+      - [Khiva occupied, "10 June 1873"]
+      - [Treaty of Gandemian, "24 August 1873"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Khiva
+        date: 10 June 1873
+        text: Shelled by Verevkin before the khan surrendered to Kaufman, who entered through the western gate.
+        lonlat: [60.361, 41.381]
+        lp: l
+      - kind: taken
+        side: ru
+        name: Kungrad
+        date: May 1873
+        text: An abandoned fort at the north-western edge of the oasis, where the Orenburg and Mangyshlak columns met.
+        lonlat: [58.854, 43.05]
+      - kind: taken
+        side: ru
+        name: Hazarasp
+        date: early June 1873
+        text: A fortress at the head of the delta, left empty by the Khivans as Kaufman crossed the Amu Darya.
+        lonlat: [61.067, 41.317]
+        lp: b
+      - kind: event
+        side: ru
+        name: Petro-Alexandrovsk
+        date: "1873"
+        text: A Russian fort built on the annexed right bank of the Amu Darya to watch Khiva. Today it is Turtkul.
+        lonlat: [61.0, 41.55]
+      - kind: event
+        side: ru
+        name: Krasnovodsk
+        date: "1869"
+        text: The Russian base on the eastern shore of the Caspian, later the start of the Transcaspian Railway. Today it is Turkmenbashi.
+        lonlat: [52.967, 40.017]
+    arrows:
+      - side: ru
+        label: Kaufman
+        via: [[67.8, 40.2], [65.2, 41.6], [62.4, 41.5], [61.1, 41.33], [60.45, 41.38]]
+      - side: ru
+        label: Verevkin
+        via: [[57.6, 48.3], [58.0, 45.6], [58.85, 43.1], [59.9, 42.2], [60.33, 41.45]]
+      - side: ru
+        label: Lomakin
+        via: [[51.5, 44.3], [54.5, 43.7], [57.5, 43.2], [58.8, 43.07]]
+      - side: ru
+        label: Markozov, turned back
+        via: [[53.9, 37.65], [55.0, 38.6], [56.0, 39.6]]
+    areas:
+      - style: outline
+        side: khi
+        label: Khanate of Khiva, a Russian protectorate from 1873
+        atoms: [UZ-XO, TM-D]
+      - style: gained
+        side: ru
+        label: Right bank of the Amu Darya, annexed by Russia
+        polygon: [[61.6, 41.1], [61.0, 41.6], [60.4, 41.95], [59.6, 42.45], [59.15, 43.0], [59.1, 43.6], [59.9, 44.1], [61.3, 43.7], [62.6, 42.6], [62.3, 41.5]]
+  - title: The end of Kokand
+    date: 1875–1876
+    when: "1875-09-03"
+    borders: "1876-03-02"
+    countries: [uz, kg, tj, ru]
+    body:
+      - What was left of Kokand, the Ferghana valley and the mountains around it, was ruled by Khudayar Khan, whose heavy taxes and dependence on Russia made him hated. In the summer of 1875 his army and the Kipchak tribes rose against him under Abdurrahman Avtobachi and a pretender who called himself Pulat Khan. Khudayar fled to Russian Tashkent, and the rebels proclaimed a holy war and attacked Khujand and other Russian posts.
+      - Kaufman crossed into Kokand with about 4,000 men and on 3 September routed the rebel army at the fortress of Makhram on the Syr Darya, with Colonel Mikhail Skobelev leading the cavalry. Khudayar’s son Nasruddin made peace and gave up Namangan, but the revolt spread again. Skobelev stormed Andijan in January 1876, and his troops killed many of its people; Abdurrahman surrendered and Pulat Khan was captured and hanged in Margilan. On 2 March 1876 Kokand was annexed outright and became the Ferghana province of Russian Turkestan, with Skobelev as its first governor.
+    facts:
+      - [Battle of Makhram, "3 September 1875, Russian victory"]
+      - [Andijan stormed, "January 1876"]
+      - [Kokand annexed, "2 March 1876"]
+    markers:
+      - kind: battle
+        side: ru
+        name: Makhram
+        date: 3 September 1875
+        text: Kaufman’s artillery and Skobelev’s cavalry broke the rebel army, which Russian reports put at tens of thousands, at this fortress on the Syr Darya.
+        lonlat: [70.19, 40.245]
+        lp: b
+      - kind: taken
+        side: ru
+        name: Kokand
+        date: September 1875
+        text: The capital of the khanate opened its gates to Kaufman after Makhram. It was annexed with the rest of the khanate in March 1876.
+        lonlat: [70.942, 40.529]
+      - kind: taken
+        side: ru
+        name: Andijan
+        date: January 1876
+        text: The centre of the revolt in the eastern Ferghana valley, stormed by Skobelev after an earlier attack had failed in October 1875.
+        lonlat: [72.334, 40.783]
+      - kind: taken
+        side: ru
+        name: Namangan
+        date: September 1875
+        text: Ceded to Russia by Nasruddin Khan, and held against a rebel siege that autumn.
+        lonlat: [71.668, 41.001]
+      - kind: event
+        side: ru
+        name: Margilan
+        date: March 1876
+        text: Pulat Khan, the leader of the revolt, was hanged here.
+        lonlat: [71.725, 40.471]
+        lp: b
+    arrows:
+      - side: ru
+        label: Kaufman
+        phase: 1
+        via: [[69.65, 40.3], [70.19, 40.26], [70.9, 40.52]]
+      - side: ru
+        label: Skobelev
+        phase: 2
+        via: [[71.67, 41.0], [72.0, 40.95], [72.3, 40.8]]
+    areas:
+      - style: gained
+        side: ru
+        label: Kokand, annexed as the Ferghana province
+        atoms: [UZ-FA, UZ-AN, UZ-NG, KG-O, KG-J, KG-B]
+  - title: Geok Tepe
+    date: 1879–1881
+    when: "1881-01-24"
+    borders: "1881-02"
+    countries: [tm, ir, ru]
+    body:
+      - The Tekke Turkmen of the Akhal oasis, at the foot of the Kopet Dag mountains, were the last large people of the region outside Russian control; they raided Persia and the caravan routes and held thousands of Persian captives. In September 1879 a Russian expedition under General Nikolai Lomakin attacked their great fortress of Dengil-Tepe near Geok Tepe after a short bombardment and was thrown back with heavy losses.
+      - In 1880 General Mikhail Skobelev prepared a slower and much larger campaign, bringing up supplies from the Caspian by camel and by a new military railway. In December he laid siege to the fortress, whose mud walls enclosed tens of thousands of Tekke fighters and their families, and the defenders made costly night sorties. On 24 January 1881 a mine blew a wide breach in the wall and the Russians stormed in. Those who fled were pursued for 16 km by cavalry. Skobelev’s own report counted 6,500 bodies buried in the fortress and 8,000 people “of both sexes” killed in the pursuit; Russian losses in January were about 1,100 killed and wounded. About 600 Persian captives were freed. Ashgabat was occupied a few days later, Transcaspia became a Russian province, and a treaty with Persia in December 1881 fixed the border along the Atrek and the Kopet Dag.
+    facts:
+      - [First assault, "9 September 1879, Russian repulse"]
+      - [Storming of Geok Tepe, "24 January 1881"]
+      - [Akhal–Khorasan border treaty, "December 1881"]
+    markers:
+      - kind: siege
+        side: ru
+        name: Geok Tepe
+        date: 24 January 1881
+        text: The Tekke fortress of Dengil-Tepe, stormed after a three-week siege. The day is remembered in Turkmenistan as a day of mourning.
+        lonlat: [57.968, 38.167]
+      - kind: taken
+        side: ru
+        name: Ashgabat
+        date: 30 January 1881
+        text: A small settlement when the Russians took it; it became the capital of Transcaspia and later of Turkmenistan.
+        lonlat: [58.38, 37.938]
+        lp: b
+      - kind: event
+        side: ru
+        name: Kyzyl-Arvat
+        date: 1880–1881
+        text: The Transcaspian Railway, begun on Skobelev’s orders from the Caspian shore, reached here in 1881.
+        lonlat: [56.283, 38.983]
+        lp: l
+    arrows:
+      - side: ru
+        label: Skobelev
+        phase: 1
+        via: [[53.95, 37.6], [55.0, 37.95], [56.0, 38.4], [56.8, 38.7], [57.85, 38.2]]
+      - side: ru
+        label: Kuropatkin
+        phase: 1
+        via: [[60.3, 41.3], [59.6, 40.0], [58.1, 38.3]]
+      - side: ru
+        phase: 2
+        via: [[58.0, 38.15], [58.3, 37.97]]
+    areas:
+      - style: gained
+        side: ru
+        label: Transcaspia, conquered by 1881
+        atoms: [TM-B, TM-A]
+  - title: Merv and Panjdeh
+    date: 1884–1885
+    when: "1885-03-30"
+    borders: "1885-04"
+    countries: [tm, af, ru, gb]
+    body:
+      - After Geok Tepe, the Tekke of the great oasis of Merv had little hope of resisting. Persuaded by the Daghestani officer Alikhanov, their elders took an oath to the tsar in early 1884, and Russian troops entered the oasis in March; Sarakhs on the Persian border followed. Britain, which saw Merv as a step towards Herat and India, protested in vain. An Anglo-Russian commission was set up to mark the northern border of Afghanistan, which had never been defined.
+      - While the commissioners were on their way, Russian and Afghan troops faced each other at the oasis of Panjdeh, where the Kushk river joins the Murghab. On 30 March 1885 General Alexander Komarov attacked the Afghan force of about 4,000 men on the Kushk near the brick bridge of Pul-i-Khishti and drove it off. Komarov reported more than 500 Afghans killed; Russian losses were about 40 killed and wounded. Britain asked Parliament for war credits, but the Afghan amir, Abdur Rahman Khan, then visiting British India, played the clash down. Russia kept Panjdeh and gave up the Zulfikar pass, and a protocol of July 1887 fixed the border that still divides Turkmenistan and Afghanistan. Apart from the Pamirs in the 1890s, the Russian advance in Central Asia ended here.
+    facts:
+      - [Merv submits, "February–March 1884"]
+      - [Panjdeh incident, "30 March 1885, Russian victory"]
+      - [Border protocol, "22 July 1887"]
+    markers:
+      - kind: taken
+        side: ru
+        name: Merv
+        date: March 1884
+        text: The last Turkmen oasis to submit, without a battle. Its old fortress stood near today’s city of Mary.
+        lonlat: [61.834, 37.607]
+      - kind: taken
+        side: ru
+        name: Sarakhs
+        date: "1884"
+        text: Occupied by Russia on the Tejen river, opposite the Persian town of the same name.
+        lonlat: [61.21, 36.53]
+        lp: l
+      - kind: battle
+        side: ru
+        name: Panjdeh
+        date: 30 March 1885
+        text: Komarov drove the Afghan garrison from its positions on the Kushk. British officers with the boundary commission watched from nearby.
+        lonlat: [62.918, 35.93]
+      - kind: event
+        side: afg
+        name: Herat
+        date: 1885
+        text: The Afghan border city that Britain feared would be Russia’s next target. British officers helped strengthen its defences after Panjdeh.
+        lonlat: [62.203, 34.342]
+    arrows:
+      - side: ru
+        label: Komarov
+        via: [[61.83, 37.55], [62.3, 36.9], [62.65, 36.35], [62.9, 35.98]]
+    areas:
+      - style: gained
+        side: ru
+        label: Merv and Panjdeh, annexed by Russia
+        atoms: [TM-M]

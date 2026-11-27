@@ -1,0 +1,138 @@
+id: dhofar-rebellion
+name: Dhofar Rebellion
+start: "1965-06-09"
+end: "1976-03-11"
+tier: B
+summary: An insurgency in Dhofar, the mountainous southern province of the Sultanate of Muscat and Oman. It began among the Jebali tribes as a revolt against the neglect and harsh rule of Sultan Said bin Taimur, led from 1965 by the Dhofar Liberation Front, and from 1968, under the name Popular Front for the Liberation of the Occupied Arabian Gulf (PFLOAG), it became a Marxist movement supplied by South Yemen, China and the Soviet Union. By 1970 the rebels held almost all of Dhofar outside the town of Salalah. That year Said was overthrown by his son Qaboos, who combined reforms and an amnesty with a counter-insurgency campaign led by British officers and the SAS, and later with troops from Iran and Jordan. The rebels were pushed back towards the South Yemeni border, and Qaboos declared the war won in December 1975. Estimates of the dead range from a few thousand to about 10,000.
+countries: [om, ye]
+sides:
+  - id: om
+    name: Sultanate of Oman and its allies (Britain, Iran, Jordan)
+    polities: [oman, united-kingdom, persia, jordan]
+    ink: red
+    moves: Omani and allied moves
+    success: Omani and allied success
+  - id: dlf
+    name: Dhofar rebels (DLF, PFLOAG) and South Yemen
+    polities: [dhofar-rebels, south-yemen]
+    ink: orange
+    moves: Rebel moves
+    success: Rebel success
+notes:
+  - The origins of the revolt go back to a tribal rising in 1962–1963; the first attack of the Dhofar Liberation Front came on 9 June 1965. The end is dated variously from Qaboos’s declaration of victory on 11 December 1975 to the ceasefire with South Yemen in March 1976; isolated rebel groups held out for some years.
+  - Casualty figures are uncertain and not well sourced. One compilation gives 187 Omani, 719 Iranian and 24 British dead and about 1,400 rebels killed; other estimates of all deaths run to about 10,000.
+  - The rebel areas are drawn approximately. Britain’s role was kept largely secret at the time.
+sources:
+  - title: Dhofar rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dhofar_rebellion
+  - title: Battle of Mirbat (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Mirbat
+  - title: Popular Front for the Liberation of Oman (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Popular_Front_for_the_Liberation_of_Oman
+  - title: The Insurrection in Dhofar, 1964–1975 (S. A. Cheney, US Marine Corps Command and Staff College, 1984)
+    url: https://www.globalsecurity.org/military/library/report/1984/CSA.htm
+  - title: Oman (1912–present) (University of Central Arkansas, Dynamic Analysis of Dispute Management project, archived)
+    url: https://web.archive.org/web/20221218195436/https://uca.edu/politicalscience/dadm-project/middle-eastnorth-africapersian-gulf-region/oman-1912-present/
+steps:
+  - title: The revolt in the mountains
+    date: 1965–1970
+    when: "1965-06-09"
+    borders: "1970-07-22"
+    countries: [om, ye]
+    body:
+      - Said bin Taimur ruled Oman as a closed country, with almost no schools, hospitals or roads, and he lived in Salalah, the capital of Dhofar, whose Jebali mountain tribes, speaking South Arabian languages, felt themselves apart from the rest of Oman. Dhofari exiles working in the Gulf founded the Dhofar Liberation Front, which began attacking government posts and oil company vehicles in June 1965. In April 1966 soldiers of the sultan’s own guard tried to kill him.
+      - After the British left Aden in 1967, the new Marxist government of South Yemen gave the rebels a safe haven and supply route across the border. At a congress at Hamrin in September 1968 the movement adopted Marxism-Leninism and renamed itself the Popular Front for the Liberation of the Occupied Arabian Gulf, aiming at revolution throughout the Gulf monarchies; its cadres, some trained in China, also tried to uproot tribal and religious customs. In 1969 it took the coastal town of Rakhyut, and by 1970 the sultan’s small army held little more than Salalah and its plain.
+    facts:
+      - [First DLF attack, "9 June 1965"]
+      - [Hamrin congress, "September 1968"]
+      - [Rakhyut taken by the rebels, "August 1969"]
+    markers:
+      - kind: held
+        side: om
+        name: Salalah
+        date: 1965–1970
+        text: The sultan’s residence and the RAF airfield, often shelled by the rebels from the jebel above.
+        lonlat: [54.09, 17.02]
+      - kind: taken
+        side: dlf
+        name: Rakhyut
+        date: August 1969
+        text: The western coastal town, the first held by the rebels.
+        lonlat: [53.42, 16.74]
+      - kind: event
+        side: dlf
+        name: Hauf
+        date: 1967–1975
+        text: In South Yemen, just across the border; the rebels’ main base and supply depot.
+        lonlat: [52.97, 16.65]
+        lp: l
+    arrows:
+      - side: dlf
+        via: [[52.97, 16.65], [53.2, 16.85], [53.6, 17.05], [54.0, 17.2]]
+    areas:
+      - style: occupied
+        side: dlf
+        label: Held by the rebels, 1970 (approximate)
+        polygon: [[52.15, 16.75], [52.8, 16.95], [53.4, 17.0], [53.9, 17.1], [54.3, 17.12], [54.7, 17.1], [54.75, 17.3], [54.2, 17.4], [53.5, 17.45], [52.8, 17.35], [52.2, 17.1]]
+  - title: Qaboos, Mirbat and the end of the rebellion
+    date: 1970–1976
+    when: "1970-07-23"
+    borders: "1975-12-11"
+    countries: [om, ye, ir, gb, jo]
+    body:
+      - On 23 July 1970 Said bin Taimur was overthrown in a palace coup, with British backing, by his son Qaboos, who renamed the country the Sultanate of Oman. Qaboos offered an amnesty, began to build schools, clinics and wells in Dhofar, and enlarged the army. The SAS raised firqat, units of surrendered rebels who fought for the government in their own tribal areas. On 19 July 1972 some 250 rebels attacked the small garrison of Mirbat, held by nine SAS soldiers and a few dozen Omani gendarmes and tribal guards; with air support the defenders held, and the rebels lost dozens of fighters.
+      - Iran’s Shah sent a brigade in 1973, rising to some 4,000 troops, and Jordan sent a battalion. Army lines of barbed wire and mines, the Hornbeam Line and later the Damavand Line built by the Iranians after they retook Rakhyut in January 1975, cut the rebels off from their supplies in South Yemen. In October 1975 Omani forces captured the last rebel strongholds near the border, and the air force struck Hauf. On 11 December 1975 Qaboos declared the war over, and a ceasefire with South Yemen followed in March 1976.
+    facts:
+      - [Qaboos takes power, "23 July 1970"]
+      - [Battle of Mirbat, "19 July 1972"]
+      - [Rakhyut retaken by Iranian troops, "5 January 1975"]
+      - [War declared over, "11 December 1975"]
+    markers:
+      - kind: battle
+        side: om
+        name: Mirbat
+        date: 19 July 1972
+        text: The rebels’ largest attack, beaten off by the garrison and Strikemaster jets from Salalah; two SAS soldiers were killed.
+        lonlat: [54.69, 16.99]
+      - kind: event
+        side: om
+        name: Salalah
+        date: 23 July 1970
+        text: Qaboos deposed his father in the palace here; Said went into exile in London.
+        lonlat: [54.09, 17.02]
+        lp: l
+      - kind: taken
+        side: om
+        name: Rakhyut
+        date: 5 January 1975
+        text: Retaken by Iranian troops, who then built the Damavand Line inland from the town.
+        lonlat: [53.42, 16.74]
+        lp: b
+      - kind: taken
+        side: om
+        name: Sarfait
+        date: October 1975
+        text: From the hilltop base on the border, held since 1972, Omani forces descended to cut the last rebel supply routes.
+        lonlat: [53.10, 16.70]
+        lp: t
+      - kind: air
+        side: om
+        name: Hauf
+        date: October 1975
+        text: Omani aircraft struck the rebel base in South Yemen.
+        lonlat: [52.97, 16.65]
+        lp: l
+    arrows:
+      - side: om
+        via: [[54.09, 17.1], [53.7, 17.2], [53.3, 17.0], [53.15, 16.8]]
+      - side: om
+        via: [[53.42, 16.74], [53.3, 16.85], [53.25, 17.0]]
+    areas:
+      - style: front
+        side: om
+        label: Hornbeam Line (approximate)
+        line: [[53.82, 16.88], [53.8, 17.2], [53.85, 17.5]]
+      - style: front
+        side: om
+        label: Damavand Line (approximate)
+        line: [[53.42, 16.75], [53.4, 17.05], [53.45, 17.35]]

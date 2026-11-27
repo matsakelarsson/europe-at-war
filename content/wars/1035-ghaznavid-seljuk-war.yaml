@@ -1,0 +1,145 @@
+id: ghaznavid-seljuk-war
+name: Ghaznavid–Seljuk war
+start: "1035"
+end: "1040-05-23"
+tier: B
+summary: The war in which the Seljuk Turkmen, led by the brothers Tughril and Chaghri, took Khorasan from the Ghaznavid sultan Mas’ud I. After crossing the Oxus in 1035 they beat a Ghaznavid army at Nasa and were granted grazing lands on the edge of the Karakum desert. They then took Merv and, in 1038, Nishapur, where Tughril was proclaimed sultan. Mas’ud’s great campaign of 1039–1040 ended in his defeat at Dandanaqan, between Sarakhs and Merv, on 23 May 1040, which gave the Seljuks Khorasan and opened the way to their conquest of Iran.
+countries: [tm, ir, af]
+sides:
+  - id: sel
+    name: Seljuks
+    polities: [seljuk]
+    ink: olive
+    moves: Seljuk moves
+    success: Seljuk success
+  - id: gha
+    name: Ghaznavids
+    polities: [ghaznavids]
+    ink: orange
+    moves: Ghaznavid moves
+    success: Ghaznavid success
+notes:
+  - The size of the armies at Dandanaqan is uncertain. The Seljuks are usually put at about 16,000 men; estimates of the Ghaznavid army range from about the same to 50,000, with anything from a dozen to 300 war elephants.
+  - The Ghaznavid side of the war is described in detail by Mas’ud’s secretary, the historian Bayhaqi. Some accounts date the battle of Nasa and the grant of land to 1034. Dandanaqan lay in the desert about 10 farsakhs (60 km) from Merv on the road to Sarakhs; its marker is approximate.
+sources:
+  - title: Battle of Dandanaqan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Dandanaqan
+  - title: Battle of Nasa (1035) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Nasa_(1035)
+  - title: Battle of Nishapur (1038) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Nishapur_(1038)
+  - title: Battle of Sarakhs (1038) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sarakhs_(1038)
+  - title: Mas’ud I of Ghazni (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mas%27ud_I_of_Ghazni
+  - title: Tughril (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tughril
+  - title: Dandānqān (Encyclopaedia Iranica)
+    url: https://www.iranicaonline.org/articles/dandanqan-a-small-town-of-medieval-khorasan-in-the-qara-qum-or-sandy-desert-between-marv-and-saraks-10-farsaks-from-/
+  - title: Ghaznavids (Encyclopaedia Iranica)
+    url: https://www.iranicaonline.org/articles/ghaznavids/
+steps:
+  - title: Nasa, Merv and Nishapur
+    date: 1035–1038
+    when: "1035-06"
+    borders: "1038"
+    countries: [tm, ir]
+    body:
+      - The Seljuks were a family of chiefs of the Oghuz Turkmen, nomads who had moved south from the steppes north of the Aral Sea and taken service with the rulers of Transoxiana. After they lost their pastures in Transoxiana and Khwarazm to their enemies, and their ally Harun, the rebellious Ghaznavid governor of Khwarazm, was murdered in 1035, the Seljuks under Tughril, his brother Chaghri and their uncle Musa crossed the Oxus into Khorasan with their families and herds and asked Sultan Mas’ud I for grazing land.
+      - Mas’ud sent an army under the chamberlain Begtoghdi, which drove them away from Nasa but then fell to quarrelling over the spoils. Chaghri counter-attacked and routed it in June 1035, and Mas’ud granted the Seljuks Nasa, Farawa and Dihistan, on the edge of the desert, in return for their recognition of his authority. Their bands went on raiding the settled lands, and Mas’ud, occupied with campaigns in India, could not stop them. Merv submitted to the Seljuks in 1037. In 1038 they beat the Ghaznavid general Sübashi near Sarakhs, and Nishapur opened its gates. Tughril entered the city, sat on Mas’ud’s throne and had the Friday sermon read in his own name.
+    facts:
+      - [Battle of Nasa, "June 1035, Seljuk victory"]
+      - [Merv submits, "1037"]
+      - [Nishapur taken, "1038"]
+    markers:
+      - kind: battle
+        side: sel
+        name: Nasa
+        date: June 1035
+        text: Chaghri routed the Ghaznavid army under Begtoghdi, which had broken ranks to plunder the Seljuk camp.
+        lonlat: [58.2, 37.99]
+        lp: l
+      - kind: taken
+        side: sel
+        name: Merv
+        date: "1037"
+        text: The great oasis city of the Murghab submitted to the Seljuks; Chaghri made it his seat.
+        lonlat: [61.84, 37.66]
+      - kind: battle
+        side: sel
+        name: Sarakhs
+        date: "1038"
+        text: The Seljuks defeated the Ghaznavid general Sübashi, leaving Khorasan open to them.
+        lonlat: [61.16, 36.53]
+      - kind: taken
+        side: sel
+        name: Nishapur
+        date: "1038"
+        text: The city surrendered without a fight, and Tughril was proclaimed sultan.
+        lonlat: [58.8, 36.21]
+    arrows:
+      - side: sel
+        label: Tughril and Chaghri
+        phase: 1
+        via: [[60.5, 41.3], [59.5, 39.8], [58.35, 38.1]]
+      - side: gha
+        label: Begtoghdi
+        phase: 2
+        via: [[58.8, 36.3], [58.6, 37.1], [58.28, 37.9]]
+      - side: sel
+        phase: 3
+        via: [[58.4, 37.95], [60.2, 37.75], [61.75, 37.66]]
+      - side: sel
+        phase: 4
+        via: [[61.7, 37.55], [61.25, 36.62], [60.0, 36.4], [58.9, 36.25]]
+    areas:
+      - style: gained
+        side: sel
+        label: Nasa, Farawa and Dihistan, granted to the Seljuks in 1035 (approximate)
+        polygon: [[53.9, 37.4], [54.3, 38.4], [56.3, 39.15], [58.6, 38.35], [58.4, 37.85], [56.4, 38.4], [54.8, 37.45]]
+  - title: Dandanaqan
+    date: 1039–1040
+    when: "1040-05-23"
+    borders: "1040-06"
+    countries: [tm, ir, af]
+    body:
+      - In 1039 Mas’ud took the field himself with a large army and war elephants and drove the Seljuks out of Herat and Nishapur. The Seljuks avoided a pitched battle. Their horsemen harassed his columns, cut off his supplies and denied his men the wells, while drought and famine gripped Khorasan. In May 1040 Mas’ud marched from Sarakhs towards Merv through the sands, and on 23 May, near the small caravan town of Dandanaqan, his hungry and thirsty army was attacked by the Seljuks under Tughril, Chaghri and their kinsmen. Some of his Turkish troops went over to the enemy, and the Ghaznavid army broke.
+      - Mas’ud escaped to Ghazni and set out for India, where his own troops deposed him in favour of his brother Muhammad; he was killed in prison early in 1041. On the battlefield the Seljuk leaders proclaimed Tughril their sovereign, and they divided Khorasan among themselves, Chaghri keeping Merv and the east while Tughril turned west into Iran. The Ghaznavids never recovered western Khorasan and became a power of eastern Afghanistan and northern India.
+    facts:
+      - [Battle of Dandanaqan, "23 May 1040, Seljuk victory"]
+      - [Death of Mas’ud I, "early 1041"]
+    markers:
+      - kind: battle
+        side: sel
+        name: Battle of Dandanaqan
+        date: 23 May 1040
+        text: The starving Ghaznavid army was defeated by the Seljuks near this desert caravan town. Location approximate.
+        lonlat: [61.55, 37.2]
+      - kind: event
+        side: gha
+        name: Sarakhs
+        date: May 1040
+        text: Mas’ud’s army set out from here for Merv through the desert.
+        lonlat: [61.16, 36.53]
+        lp: l
+      - kind: held
+        side: sel
+        name: Merv
+        date: 1037–1040
+        text: Chaghri’s seat and the Seljuks’ main base in Khorasan.
+        lonlat: [61.84, 37.66]
+      - kind: taken
+        side: gha
+        name: Nishapur
+        date: "1039"
+        text: Mas’ud drove the Seljuks out of the city, but lost it again after his defeat.
+        lonlat: [58.8, 36.21]
+    arrows:
+      - side: gha
+        label: Mas’ud I
+        phase: 1
+        via: [[58.85, 36.2], [60.2, 36.25], [61.15, 36.6], [61.5, 37.12]]
+      - side: sel
+        label: Tughril and Chaghri
+        phase: 2
+        via: [[61.8, 37.58], [61.75, 37.35], [61.6, 37.23]]

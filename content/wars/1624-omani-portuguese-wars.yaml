@@ -1,0 +1,168 @@
+id: omani-portuguese-wars
+name: Omani–Portuguese wars
+start: "1624"
+end: "1698-12-13"
+tier: B
+summary: The wars in which the Ya‘rubi imams of Oman drove the Portuguese from the Omani coast and then fought them across the western Indian Ocean. Imam Nasir bin Murshid, elected in 1624, united the tribes of the interior and took Julfar in 1633, Sohar in 1643 and the other ports until only Muscat was left. His successor Sultan bin Saif captured Muscat in January 1650, ending Portuguese rule in Oman. With captured ships the Omanis built a navy that raided Portuguese ports in India and East Africa, and in 1698, after a siege of almost three years, took Fort Jesus at Mombasa, which made Oman the leading power on the Swahili coast.
+countries: [om, ae, ke, tz, in]
+sides:
+  - id: om
+    name: Imamate of Oman (Ya‘rubi dynasty)
+    polities: [oman]
+    ink: red
+    moves: Omani moves
+    success: Omani success
+  - id: pt
+    name: Portugal
+    polities: [portugal]
+    ink: green
+    moves: Portuguese moves
+    success: Portuguese success
+notes:
+  - The accounts of the fall of Muscat differ. Omani tradition tells of a night attack at Christmas helped by an Indian storekeeper who spoiled the powder; a Portuguese report gives the arrival of 700 refugees at Diu on 18 January 1650, and other sources date the surrender of the last fort to 28 January 1650. Portuguese sources give the Omani dead as 4,000–5,000, a number that cannot be checked.
+  - Persia also lost its forts on the coast to the Omanis, among them Julfar in 1633.
+sources:
+  - title: Siege of Muscat (1650) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Muscat_(1650)
+  - title: Nasir bin Murshid (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nasir_bin_Murshid
+  - title: Sultan bin Saif (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sultan_bin_Saif
+  - title: Siege of Mombasa (1696–1698) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Mombasa_(1696%E2%80%931698)
+  - title: Portuguese Oman (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Portuguese_Oman
+  - title: Yaʿrubid dynasty (Britannica)
+    url: https://www.britannica.com/topic/Yarubid-dynasty
+steps:
+  - title: The Ya‘rubi imams take the coast
+    date: 1624–1648
+    when: "1633"
+    borders: "1648-10-31"
+    countries: [om, ae]
+    body:
+      - After Hormuz fell to Persia in 1622, the Portuguese governed their forts on the Omani coast directly from Muscat. Inland, the old Nabhani dynasty had collapsed, and in 1624 an assembly of notables at Rustaq elected Nasir bin Murshid of the Ya‘ariba tribe as imam of the Ibadi community. He spent his first years subduing rival chiefs and made Nizwa his capital, then united the tribes against the Portuguese, who held Muscat, Sohar, Qurayyat, Sur and other ports.
+      - In 1633 his armies took the two forts of Julfar, one Persian and one Portuguese, and Dibba, but failed before Muscat. A long blockade of Sohar began the same year, and Sur and Qurayyat fell. On 7 November 1643, after ten years, the Omanis stormed Sohar. By 1648 the Portuguese held only Muscat, Muttrah and Khasab. That August the Omanis besieged Muscat, and on 31 October 1648 the garrison, short of powder and struck by plague, agreed to a treaty that gave the Omanis free trade and required the Portuguese to demolish their outer forts. In Lisbon the king was so displeased that he had the captain of Muscat arrested.
+    facts:
+      - [Nasir bin Murshid elected imam, "1624"]
+      - [Julfar taken, "1633"]
+      - [Sohar taken, "7 November 1643"]
+    markers:
+      - kind: capital
+        side: om
+        name: Nizwa
+        date: from 1625
+        text: The old seat of the Ibadi imams, which Nasir bin Murshid made his capital.
+        lonlat: [57.53, 22.93]
+      - kind: taken
+        side: om
+        name: Julfar
+        date: "1633"
+        text: The Omanis took first the Persian fort and then the Portuguese one. Between 30 and 40 Portuguese were killed.
+        lonlat: [55.95, 25.79]
+        lp: l
+      - kind: siege
+        side: om
+        name: Sohar
+        date: 1633–1643
+        text: The Omanis built a fort beside the Portuguese one and blockaded it from the land for ten years, then stormed it.
+        lonlat: [56.74, 24.35]
+        lp: l
+      - kind: siege
+        side: om
+        name: Muscat
+        date: August – October 1648
+        text: The siege ended in a treaty favourable to the Omanis. Muscat itself stayed Portuguese for one more year.
+        lonlat: [58.59, 23.62]
+    arrows:
+      - side: om
+        phase: 1
+        via: [[57.53, 22.93], [57.43, 23.39], [56.9, 24.15], [56.1, 25.6]]
+      - side: om
+        phase: 2
+        via: [[57.43, 23.39], [58.0, 23.55], [58.52, 23.6]]
+    areas:
+      - style: gained
+        side: om
+        label: Taken by the Omanis by 1648
+        atoms: [OM-BA, OM-BJ, OM-SH, OM-SS, AE-RK, AE-FU, ARE-344]
+  - title: Muscat falls
+    date: 1649–1650
+    when: "1650-01"
+    borders: "1650-02"
+    countries: [om]
+    body:
+      - Nasir bin Murshid died in April 1649 and was succeeded by his cousin Sultan bin Saif, who prepared at once to take Muscat. The town was held by a garrison of Portuguese and Indian soldiers from Goa, in the two harbour forts of São João and Capitão and in posts on the surrounding hills. The first Omani assaults on the hills were thrown back, but the Portuguese then withdrew into the forts and were besieged.
+      - According to Omani tradition, an Indian officer in charge of the stores, angry with the Portuguese captain, spoiled the gunpowder, and the Omanis stormed the walls at dawn while the garrison was celebrating Christmas. Most of the defenders were killed; about 700 refugees reached Diu on 18 January 1650, and the last fort surrendered at the end of January. Muttrah surrendered too. A Portuguese fleet sent from Goa in 1652 failed to retake Muscat, and the Portuguese left Khasab in the mid-1650s, ending their rule in Oman.
+    facts:
+      - [Muscat taken, "January 1650"]
+      - [Portuguese relief fleet fails, "1652"]
+    markers:
+      - kind: taken
+        side: om
+        name: Muscat
+        date: January 1650
+        text: Stormed by Sultan bin Saif’s army. Nearly the whole garrison was killed; according to Portuguese sources only 60 or 70 survived.
+        lonlat: [58.59, 23.62]
+      - kind: held
+        side: pt
+        name: Khasab
+        date: until about 1655
+        text: The last Portuguese post in Oman, on the Musandam peninsula.
+        lonlat: [56.24, 26.18]
+    arrows:
+      - side: om
+        label: Sultan bin Saif
+        via: [[57.43, 23.39], [58.1, 23.58], [58.56, 23.61]]
+  - title: The war at sea and Mombasa
+    date: 1650–1698
+    when: "1696-03-13"
+    borders: "1698-12-13"
+    countries: [ke, tz, in, om]
+    body:
+      - With ships captured at Muscat and others built or bought, Sultan bin Saif made Oman a naval power. Omani fleets raided Portuguese ports in India, attacking Bombay in 1661 and sacking Diu in 1668, and on the East African coast towns that resented Portuguese rule asked for Omani help. In 1660 the Omanis sacked the town of Mombasa, though the Portuguese held out in Fort Jesus.
+      - On 13 March 1696 an Omani army sent by Imam Saif bin Sultan besieged Fort Jesus, where the Portuguese garrison of between 50 and 70 soldiers and several hundred Africans and townspeople had taken refuge. Famine and disease, including smallpox, wore them down, and relief ships from Goa brought too few men. On 13 December 1698, after 33 months, the Omanis stormed the fort, where only a handful of defenders were left; a Portuguese relief fleet arrived a week later. Omani rule or overlordship spread along the coast of Kenya and Tanzania, with Pemba and Zanzibar, and the Omanis went on to take Kilwa and to attack Mozambique Island and Salsette near Bombay. The Portuguese held Mombasa again only briefly in 1728–1729.
+    facts:
+      - [Siege of Fort Jesus, "13 March 1696 – 13 December 1698"]
+      - [Portuguese garrison at the start, "50–70 soldiers"]
+    markers:
+      - kind: siege
+        side: om
+        name: Fort Jesus, Mombasa
+        date: 1696–1698
+        text: Besieged for almost three years. The fort fell on 13 December 1698, a week before a Portuguese relief fleet arrived.
+        lonlat: [39.68, -4.06]
+        lp: l
+      - kind: taken
+        side: om
+        name: Zanzibar
+        date: c. 1698
+        text: The Omanis drove out the remaining Portuguese and made the island’s ruler a vassal. Omani settlement of Zanzibar began.
+        lonlat: [39.19, -6.16]
+        lp: l
+      - kind: event
+        side: om
+        name: Diu
+        date: "1668"
+        text: The Portuguese town in Gujarat was sacked by an Omani fleet. It was attacked again in 1670 and 1676.
+        lonlat: [70.99, 20.71]
+      - kind: event
+        side: om
+        name: Bombay
+        date: "1661"
+        text: Attacked by an Omani fleet in 1661, the year Portugal promised the island to England as part of Catherine of Braganza’s dowry.
+        lonlat: [72.83, 18.94]
+        lp: r
+    arrows:
+      - side: om
+        label: Omani fleets
+        phase: 1
+        via: [[58.7, 23.5], [62.5, 21.5], [69.5, 20.6]]
+      - side: om
+        phase: 2
+        via: [[58.8, 22.7], [56.0, 15.0], [50.5, 7.0], [42.5, -1.5], [39.75, -4.0]]
+    areas:
+      - style: gained
+        side: om
+        label: Swahili coast under Omani rule
+        atoms: [KE-300, TZ-06, TZ-10, TZ-07, TZ-11, TZ-15]

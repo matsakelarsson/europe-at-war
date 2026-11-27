@@ -1,0 +1,221 @@
+id: jalal-al-din-campaigns
+name: Campaigns of Jalal al-Din Mangburni
+start: "1221-11"
+end: "1231-08"
+tier: B
+summary: The wars of the last Khwarazmshah, Jalal al-Din Mangburni, after Genghis Khan destroyed his father’s empire. Having escaped across the Indus in 1221, he spent three years in the Punjab and Sind, then came back to Iran in 1224 and built a new realm in Kerman, Fars, central Iran and Azerbaijan, taking Tabriz from the Eldiguzids in 1225. He crushed the Georgians at Garni and sacked Tbilisi, fought the Abbasid caliph and the Mongols, and took the Ayyubid town of Akhlat in 1230 after a long siege. That conquest united the Seljuks of Rum and the Ayyubids against him, and they defeated him near Erzincan in August 1230. When a new Mongol army came in 1231 his followers scattered, and he was killed by a Kurd near Mayyafariqin in August 1231.
+countries: [pk, ir, az, ge, am, tr]
+sides:
+  - id: kw
+    name: Jalal al-Din (Khwarazmians)
+    polities: [khwarazmian-dynasty]
+    ink: teal
+    moves: Khwarazmian moves
+    success: Khwarazmian success
+  - id: mon
+    name: Mongol Empire
+    polities: [mongol-empire]
+    ink: olive
+    moves: Mongol moves
+    success: Mongol success
+  - id: geo
+    name: Kingdom of Georgia
+    polities: [georgia]
+    ink: red
+    moves: Georgian moves
+    success: Georgian success
+  - id: ra
+    name: Sultanate of Rum and the Ayyubids
+    polities: [rum, ayyubid]
+    ink: blue
+    moves: Seljuk and Ayyubid moves
+    success: Seljuk and Ayyubid success
+  - id: eld
+    name: Eldiguzids
+    polities: [eldiguzids]
+    ink: brown
+    moves: Eldiguzid moves
+    success: Eldiguzid success
+notes:
+  - The main source is the biography of Jalal al-Din by his secretary, al-Nasawi, which is sympathetic to him; Juvayni and Ibn al-Athir are more critical. The dates of the battle of Garni (1225 in most accounts, 1226 in some) and of the battle with the Mongols near Isfahan (1227 or 1228) differ between the sources.
+  - The claim of a Georgian chronicle that 100,000 people were killed at Tbilisi for refusing to give up Christianity is not a reliable number, but the sack is well attested.
+sources:
+  - title: Jalal al-Din Mangburni (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jalal_al-Din_Mangburni
+  - title: Battle of Garni (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Garni
+  - title: Battle of Yassıçemen (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Yass%C4%B1%C3%A7emen
+  - title: Jalāl-al-Din Ḵvārazmšāh(i) Mengübirni (Encyclopaedia Iranica)
+    url: https://www.iranicaonline.org/articles/jalal-al-din-kvarazmsahi-mengbirni/
+  - title: "Khwarazmshahs iii. The Line of Anuštigin (Encyclopaedia Iranica)"
+    url: https://www.iranicaonline.org/articles/khwarazmshah/iii-the-line-of-anustigin/
+steps:
+  - title: India and the return to Iran
+    date: 1221–1224
+    when: "1222"
+    borders: "1224"
+    countries: [pk, in, ir]
+    body:
+      - Jalal al-Din got about 4,000 of his men across the Indus after his defeat in November 1221 and gathered them in the Salt Range of the Punjab. He asked Iltutmish, the sultan of Delhi, for refuge, but Iltutmish, unwilling to draw the Mongols onto his lands, sent gifts and kept him away. Jalal al-Din made alliances with local chiefs, fought others, and quarrelled with Nasir al-Din Qubacha, the ruler of Multan and Sind. A Mongol army under Dorbei followed him into the Punjab in 1222, took the fort of Nandana and besieged Multan for 42 days before the summer heat drove it back.
+      - In 1223 or 1224, hearing that his brother Ghiyath al-Din held much of western Iran, Jalal al-Din marched west through Makran. In Kerman he confirmed Buraq Hajib, a Qara Khitai commander who had seized the province, as its governor. In Fars he married a daughter of the Salghurid atabeg Sa’d, and in Isfahan his brother accepted him as overlord. He then clashed with the army of the Abbasid caliph al-Nasir, his father’s old enemy, and plundered the country north of Baghdad.
+    facts:
+      - [Crossing of the Indus, "November 1221, with about 4,000 men"]
+      - [Mongol siege of Multan, "1222, 42 days"]
+      - [Return through Kerman, "1224"]
+    markers:
+      - kind: event
+        side: kw
+        name: Salt Range
+        date: 1221–1223
+        text: Jalal al-Din gathered the survivors of his army in the hills of the northern Punjab.
+        lonlat: [72.6, 32.7]
+      - kind: event
+        name: Delhi
+        date: "1222"
+        text: Iltutmish refused Jalal al-Din a refuge, fearing to draw the Mongols into India.
+        lonlat: [77.23, 28.61]
+      - kind: siege
+        name: Multan
+        date: "1222"
+        text: The Mongols under Dorbei breached the walls but could not take the town, and withdrew after 42 days in the heat.
+        lonlat: [71.47, 30.198]
+      - kind: event
+        side: kw
+        name: Kerman
+        date: "1224"
+        text: Buraq Hajib, who had made himself master of Kerman, accepted Jalal al-Din as his overlord and was confirmed as governor.
+        lonlat: [57.057, 30.262]
+      - kind: event
+        side: kw
+        name: Isfahan
+        date: "1224"
+        text: Jalal al-Din’s brother Ghiyath al-Din, who held Isfahan and Hamadan, submitted to him.
+        lonlat: [51.67, 32.665]
+    arrows:
+      - side: mon
+        label: Dorbei
+        phase: 1
+        via: [[70.9, 33.5], [71.8, 32.3], [71.5, 30.3]]
+      - side: kw
+        label: Jalal al-Din
+        phase: 2
+        via: [[71.6, 30.0], [68.5, 27.5], [65.5, 26.0], [61.5, 26.4], [58.6, 28.6], [57.15, 30.15]]
+      - side: kw
+        phase: 3
+        via: [[57.0, 30.35], [54.6, 29.8], [52.6, 29.7], [51.8, 31.4], [51.65, 32.6]]
+  - title: Tabriz, Garni and Tbilisi
+    date: 1225–1226
+    when: "1225-08"
+    borders: "1225-08"
+    countries: [ir, az, am, ge]
+    body:
+      - In 1225 Jalal al-Din marched into Azerbaijan, whose Eldiguzid atabeg Özbeg had paid tribute to the Mongols, and took Tabriz on 25 July; Özbeg fled to Ganja and died soon after, and Jalal al-Din married his wife. He then demanded the submission of Queen Rusudan of Georgia, whose kingdom had raided Azerbaijan and Armenia for decades. In August 1225 he met the Georgian army near Garni. The Georgian vanguard under the brothers Shalva and Ivane Akhaltsikheli fought alone while the main army under the atabeg Ivane Mkhargrdzeli held back, which Georgian chroniclers blamed on a feud between the commanders, and the Georgians were routed. Ivane Akhaltsikheli was killed, and Shalva was captured and later executed.
+      - Rusudan withdrew to Kutaisi in western Georgia. In March 1226 Jalal al-Din took Tbilisi, according to the chroniclers after its Muslim inhabitants opened a gate; the city was sacked, its churches were destroyed and many Christians who refused to convert were killed. The same year he besieged the Ayyubid town of Akhlat on Lake Van without success and had to march east to put down a revolt by Buraq Hajib in Kerman. His realm now reached from Kerman to the Caucasus, but he ruled it mainly by plunder and constant campaigning.
+    facts:
+      - [Tabriz taken, "25 July 1225"]
+      - [Battle of Garni, "August 1225, Khwarazmian victory"]
+      - [Sack of Tbilisi, "March 1226"]
+    markers:
+      - kind: taken
+        side: kw
+        name: Tabriz
+        date: 25 July 1225
+        text: The Eldiguzid capital opened its gates to Jalal al-Din, who made it the seat of his new realm.
+        lonlat: [46.3, 38.067]
+      - kind: battle
+        side: kw
+        name: Battle of Garni
+        date: August 1225
+        text: The Georgian army was beaten in the hills near Garni, east of today’s Yerevan; a quarter of it is said to have been lost.
+        lonlat: [44.723, 40.119]
+      - kind: taken
+        side: kw
+        name: Tbilisi
+        date: March 1226
+        text: The Georgian capital was taken and sacked; Jalal al-Din had its churches destroyed and many of its people killed.
+        lonlat: [44.792, 41.722]
+      - kind: siege
+        side: ra
+        name: Akhlat
+        date: "1226"
+        text: The Ayyubid garrison held out against Jalal al-Din’s first siege.
+        lonlat: [42.494, 38.753]
+      - kind: event
+        side: geo
+        name: Kutaisi
+        date: "1225"
+        text: Queen Rusudan moved her court to Kutaisi after the defeat at Garni.
+        lonlat: [42.70, 42.27]
+    arrows:
+      - side: kw
+        label: Jalal al-Din
+        phase: 1
+        via: [[51.6, 32.7], [48.6, 34.8], [47.5, 37.0], [46.35, 38.05]]
+      - side: kw
+        phase: 2
+        via: [[46.3, 38.12], [45.6, 39.2], [44.78, 40.05]]
+      - side: kw
+        phase: 3
+        via: [[44.75, 40.2], [44.6, 41.0], [44.78, 41.65]]
+    areas:
+      - style: gained
+        side: kw
+        label: Jalal al-Din’s realm in 1225, with Fars and Kerman as vassals
+        atoms: [IR-01, IR-02, IR-03, IR-11, IR-28, IR-24, IR-22, IR-26, IR-07, IRN-5490, IR-04, IR-08, IR-14, IR-06, IR-18, IR-15, IR-25]
+  - title: Akhlat, Yassıçemen and the end
+    date: 1227–1231
+    when: "1230-08"
+    borders: "1230-08"
+    countries: [tr, ir, az]
+    body:
+      - In 1227 or 1228 a Mongol army invaded central Iran and fought Jalal al-Din outside Isfahan. Part of his army deserted, and the Mongols are usually counted the victors, but they lost so heavily that they withdrew across the Oxus. His brother Ghiyath al-Din rebelled and fled to Kerman, where Buraq Hajib had him killed. In 1229 Jalal al-Din besieged Akhlat again, and in April 1230 took it after about eight months and sacked it.
+      - The fall of Akhlat brought the Seljuk sultan of Rum, Kayqubad I, into alliance with the Ayyubid prince al-Ashraf, who had held the town. Jalal al-Din marched west, with the support of the rebel Seljuk governor of Erzurum, and met their combined army at Yassıçemen, west of Erzincan. After a first skirmish on 10 August 1230 that he won, the allies, with the advantage of numbers, beat off his attacks in two days of fighting, and he left the field and fled east.
+      - In 1231 a Mongol army of three tumens under Chormaqan, sent by the Great Khan Ögedei, rode into Azerbaijan. Jalal al-Din’s army melted away; he fled from the Mughan steppe westwards by way of Akhlat and Amid, and in August 1231 he was killed by a Kurd in a village near Mayyafariqin, today’s Silvan. The Mongols took over north-western Iran, from where they attacked Georgia and Armenia in the following years. Bands of his Khwarazmian soldiers took service with the Ayyubids in Syria, sacked Jerusalem in 1244 and fought on until they were destroyed near Homs in 1246.
+    facts:
+      - [Akhlat taken, "April 1230"]
+      - [Battle of Yassıçemen, "10–12 August 1230, Seljuk and Ayyubid victory"]
+      - [Death of Jalal al-Din, "August 1231, near Mayyafariqin"]
+    markers:
+      - kind: battle
+        name: Isfahan
+        date: 1227 or 1228
+        text: Jalal al-Din fought a Mongol army outside the city. The outcome is disputed, but the Mongols withdrew afterwards.
+        lonlat: [51.67, 32.665]
+      - kind: taken
+        side: kw
+        name: Akhlat
+        date: April 1230
+        text: Taken from the Ayyubids after a siege of about eight months, and sacked.
+        lonlat: [42.494, 38.753]
+      - kind: battle
+        side: ra
+        name: Battle of Yassıçemen
+        date: 10–12 August 1230
+        text: Fought on the plain west of Erzincan, whose exact site is not known. Kayqubad I and al-Ashraf defeated Jalal al-Din’s last army.
+        lonlat: [39.3, 39.73]
+      - kind: event
+        side: kw
+        name: Mayyafariqin
+        date: August 1231
+        text: Jalal al-Din was killed in a Kurdish village nearby while on the run from the Mongols.
+        lonlat: [41.001, 38.142]
+    arrows:
+      - side: kw
+        label: Jalal al-Din
+        phase: 1
+        via: [[46.25, 38.1], [44.5, 38.6], [43.3, 38.6], [42.55, 38.72]]
+      - side: kw
+        phase: 2
+        via: [[42.45, 38.8], [41.3, 39.5], [40.3, 39.75], [39.4, 39.73]]
+      - side: ra
+        label: Kayqubad I
+        phase: 2
+        via: [[37.05, 39.75], [38.2, 39.68], [39.2, 39.72]]
+      - side: mon
+        label: Chormaqan
+        phase: 3
+        via: [[51.4, 35.6], [49.5, 36.8], [47.6, 38.4], [46.45, 38.1]]
+      - side: kw
+        phase: 3
+        via: [[46.2, 38.15], [44.0, 38.4], [42.0, 38.45], [41.05, 38.18]]

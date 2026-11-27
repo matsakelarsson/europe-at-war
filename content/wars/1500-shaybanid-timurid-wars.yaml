@@ -1,0 +1,183 @@
+id: shaybanid-timurid-wars
+name: Shaybanid–Timurid wars
+start: "1500"
+end: "1512-11-12"
+tier: B
+summary: The wars in which the Uzbeks under Muhammad Shaybani drove the last Timurid princes out of Central Asia. Shaybani took Samarkand and Bukhara in 1500–1501, beating the young Babur at Sar-e-Pul, defeated the Moghul khans at Akhsi in 1503, conquered Khwarazm and in 1507 took Herat, the last Timurid capital. Babur escaped to Kabul. After Shah Ismail of Persia killed Shaybani at Merv in 1510, Babur, with Persian help, retook Samarkand in 1511, but the Uzbeks beat him at Kul-i Malik in 1512 and destroyed a Persian army at Ghazdewan. Transoxiana stayed Uzbek, and Babur turned towards India.
+countries: [uz, tj, af, tm, kg]
+sides:
+  - id: uz
+    name: Shaybanid Uzbeks
+    polities: [bukhara]
+    ink: gold
+    moves: Uzbek moves
+    success: Uzbek success
+  - id: tim
+    name: Timurids (Babur and his kin)
+    polities: [timurid-empire, mughals]
+    ink: red
+    moves: Timurid moves
+    success: Timurid success
+  - id: mog
+    name: Moghul khans
+    polities: [moghulistan]
+    ink: olive
+    moves: Moghul moves
+    success: Moghul success
+  - id: saf
+    name: Safavid Persia
+    polities: [persia]
+    ink: green
+    moves: Safavid moves
+    success: Safavid success
+notes:
+  - Babur’s own memoirs, the Baburnama, are the main source for the early years. They are vivid but written from his side.
+  - The Battle of Merv (1510), which ended Shaybani’s life, is told in the story of the Safavid conquest of Iran.
+sources:
+  - title: Muhammad Shaybani (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Muhammad_Shaybani
+  - title: Babur (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Babur
+  - title: Battle of Sar-e-Pul (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sar-e-Pul
+  - title: Battle of Akhsi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Akhsi
+  - title: Battle of Ghazdewan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ghazdewan
+  - title: Babur (Britannica)
+    url: https://www.britannica.com/biography/Babur
+  - title: Najm-e Ṯāni (Encyclopaedia Iranica)
+    url: https://iranicaonline.org/articles/najm-e-ani
+steps:
+  - title: Samarkand lost
+    date: 1500–1501
+    when: "1501-05"
+    borders: "1501"
+    countries: [uz]
+    body:
+      - By 1500 the Timurid realm in Central Asia had split among quarrelling princes. Muhammad Shaybani, a grandson of the Uzbek khan Abu’l-Khayr, led the Uzbek tribes south from the steppe and in 1500 took Samarkand from its Timurid ruler, and Bukhara too. Babur, the eighteen-year-old Timurid prince of Ferghana, who had held Samarkand for a hundred days in 1497, slipped into the city with a small band and retook it while Shaybani was away.
+      - In the spring of 1501 Shaybani returned from Bukhara. Babur marched out against him and, in April or May, was defeated at Sar-e-Pul on the Zarafshan river, where the larger Uzbek army turned his flank. He was besieged in Samarkand for months until hunger forced him to make terms; he gave his sister Khanzada to Shaybani as a wife and was allowed to leave. Samarkand became the capital of the Shaybanid khanate.
+    facts:
+      - [Battle of Sar-e-Pul, "April–May 1501, Uzbek victory"]
+      - [Samarkand surrendered to Shaybani, "1501"]
+    markers:
+      - kind: siege
+        side: uz
+        name: Samarkand
+        date: "1501"
+        text: Babur, beaten at Sar-e-Pul, was besieged in the city and left it under a settlement with Shaybani.
+        lonlat: [66.98, 39.65]
+      - kind: taken
+        side: uz
+        name: Bukhara
+        date: 1500–1501
+        text: Taken by Shaybani, who used it as his base against Samarkand.
+        lonlat: [64.42, 39.77]
+    arrows:
+      - side: uz
+        label: Shaybani
+        via: [[64.42, 39.77], [65.6, 39.85], [66.9, 39.67]]
+      - side: tim
+        label: Babur
+        via: [[71.51, 40.86], [69.0, 40.3], [67.1, 39.7]]
+  - title: Akhsi, Kabul and Herat
+    date: 1503–1507
+    when: "1503-06"
+    borders: "1507-12"
+    countries: [uz, kg, tm, af]
+    body:
+      - Babur went to his maternal uncles, the Moghul (Chagatai) khans Mahmud of Tashkent and Ahmad of eastern Moghulistan, who joined him to recover Ferghana. In June 1503 Shaybani surprised them at Akhsi in the Ferghana valley and took both khans prisoner. Tashkent and Ferghana passed to the Uzbeks, and Babur fled with a few hundred followers. In October 1504 he crossed the Hindu Kush and took Kabul from the Arghun chiefs, making it his new kingdom.
+      - Shaybani conquered Khwarazm in 1505. In Herat, the old Timurid ruler Husayn Bayqara died in 1506 while preparing a campaign against him, and his sons could not agree. In 1507 Shaybani took Herat, ending Timurid rule there, and occupied Khorasan, while his raids reached as far as Kerman. Babur, who had visited Herat shortly before, returned to Kabul and took the title of padshah, emperor, as the senior surviving Timurid.
+    facts:
+      - [Battle of Akhsi, "June 1503, Uzbek victory"]
+      - [Babur takes Kabul, "October 1504"]
+      - [Herat taken by Shaybani, "1507"]
+    markers:
+      - kind: battle
+        side: uz
+        name: Battle of Akhsi
+        date: June 1503
+        text: Shaybani surprised the Moghul khans Mahmud and Ahmad and took them both prisoner.
+        lonlat: [71.51, 40.86]
+        lp: l
+      - kind: taken
+        side: tim
+        name: Kabul
+        date: October 1504
+        text: Taken by Babur from the Arghun chiefs, who withdrew to Kandahar. Kabul was his capital until 1526.
+        lonlat: [69.18, 34.53]
+      - kind: taken
+        side: uz
+        name: Urgench
+        date: "1505"
+        text: The capital of Khwarazm fell to Shaybani after a siege.
+        lonlat: [59.15, 42.33]
+      - kind: taken
+        side: uz
+        name: Herat
+        date: "1507"
+        text: The last Timurid capital fell to Shaybani after the death of Husayn Bayqara.
+        lonlat: [62.2, 34.35]
+    arrows:
+      - side: uz
+        label: Shaybani
+        phase: 1
+        via: [[69.24, 41.31], [70.5, 41.0], [71.45, 40.88]]
+      - side: tim
+        label: Babur
+        phase: 2
+        via: [[69.0, 38.6], [68.8, 36.7], [69.0, 35.5], [69.18, 34.6]]
+      - side: uz
+        phase: 3
+        via: [[64.42, 39.77], [64.0, 37.6], [63.0, 36.0], [62.25, 34.45]]
+    areas:
+      - style: gained
+        side: uz
+        label: Conquered by Shaybani, 1503–1507
+        atoms: [UZ-TK, UZ-TO, UZ-SI, UZ-FA, UZ-AN, UZ-NG, TJ-SU, UZ-XO, UZ-QR, TM-D, TM-M, IR-30, IR-31, AF-HER, AF-BDG]
+  - title: Babur’s return and Ghazdewan
+    date: 1511–1512
+    when: "1512-11-12"
+    borders: "1512-12"
+    countries: [uz, tj, af]
+    body:
+      - After Shaybani’s death at Merv, Shah Ismail sent back Babur’s sister and offered him help. Babur accepted Persian overlordship, crossed the mountains with Persian troops and in 1511 took Samarkand for the third time, and Bukhara too. But his Persian alliance, and the Shi‘i Qizilbash dress he wore, cost him the support of the Sunni townspeople. In May 1512 Shaybani’s nephew Ubaydullah defeated him at Kul-i Malik near Bukhara, and he fell back to Hisar.
+      - Ismail sent his vakil Najm-e Sani with an army from Khorasan. Joined by Babur, the force, said to number 60,000, crossed the Amu Darya and stormed Qarshi, where the inhabitants were massacred without regard to age or sex, among them the poet Bana’i; Babur’s pleas to spare the town were ignored. On 12 November 1512 the Uzbeks under Ubaydullah defeated the army at Ghazdewan, near Bukhara. Najm-e Sani was captured and executed, and the survivors fled across the Amu Darya. Babur returned to Kabul, and the Shaybanids held Transoxiana for the rest of the century.
+    facts:
+      - [Babur retakes Samarkand, "1511"]
+      - [Battle of Kul-i Malik, "May 1512, Uzbek victory"]
+      - [Battle of Ghazdewan, "12 November 1512, Uzbek victory"]
+    markers:
+      - kind: taken
+        side: tim
+        name: Samarkand
+        date: "1511"
+        text: Retaken by Babur with Persian help. He held it for about eight months.
+        lonlat: [66.98, 39.65]
+      - kind: taken
+        side: saf
+        name: Qarshi
+        date: autumn 1512
+        text: Stormed by Najm-e Sani’s army. The inhabitants were massacred, among them many scholars and the poet Bana’i.
+        lonlat: [65.79, 38.86]
+      - kind: battle
+        side: uz
+        name: Battle of Ghazdewan
+        date: 12 November 1512
+        text: Ubaydullah’s Uzbeks routed the Persian army and its commander Najm-e Sani was executed.
+        lonlat: [64.68, 40.1]
+      - kind: held
+        side: tim
+        name: Hisar
+        date: "1512"
+        text: Babur fell back to this fortress after his defeat at Kul-i Malik.
+        lonlat: [68.57, 38.53]
+    arrows:
+      - side: tim
+        label: Babur
+        phase: 1
+        via: [[69.18, 34.53], [68.9, 36.7], [68.57, 38.53], [66.98, 39.6]]
+      - side: saf
+        label: Najm-e Sani
+        phase: 2
+        via: [[66.9, 36.76], [65.6, 37.6], [65.79, 38.86], [64.75, 40.05]]

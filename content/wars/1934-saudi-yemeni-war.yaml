@@ -1,0 +1,133 @@
+id: saudi-yemeni-war
+name: Saudi–Yemeni War
+start: "1934-03-20"
+end: "1934-05-20"
+tier: B
+summary: A short war between Saudi Arabia and the Mutawakkilite Kingdom of Yemen over Asir and Najran. After Imam Yahya sheltered the Idrisid ruler of Asir and occupied Najran, Saudi armies invaded Yemen in the spring of 1934. Crown Prince Saud’s advance in the northern mountains stalled, but Prince Faisal swept down the Tihama coast and took Hodeidah. By the Treaty of Taif, Yemen accepted Saudi rule over Asir, Jizan and Najran, and the Saudis withdrew from the Tihama.
+countries: [sa, ye]
+sides:
+  - id: sa
+    name: Saudi Arabia
+    polities: [saudi-arabia]
+    ink: green
+    moves: Saudi moves
+    success: Saudi success
+  - id: ye
+    name: Kingdom of Yemen
+    polities: [yemen]
+    ink: red
+    moves: Yemeni moves
+    success: Yemeni success
+notes:
+  - The size of the armies and the losses are poorly known. One estimate puts the dead at about 2,100 soldiers and civilians; figures for the armies range up to some 30,000 Saudi and 37,000 Yemeni fighters, most of them tribal levies.
+  - Accounts differ on some dates. Hodeidah is said to have fallen on 28 April or on 4 or 5 May, and the treaty, signed on 20 May 1934 and ratified on 22 June, is dated 14 June in some sources.
+sources:
+  - title: Saudi–Yemeni War (1934) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Saudi%E2%80%93Yemeni_war_(1934)
+  - title: Treaty of Taif (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Taif
+  - title: Idrisid Emirate of Asir (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Idrisid_Emirate_of_Asir
+  - title: Treaty of Al-Ṭāʾif (Britannica)
+    url: https://www.britannica.com/topic/Treaty-of-Al-Taif
+  - title: Yaḥyā (Britannica)
+    url: https://www.britannica.com/biography/Yahya
+steps:
+  - title: Asir, Najran and the northern mountains
+    date: 1932–1934
+    when: "1934-03"
+    borders: "1934-04-21"
+    countries: [sa, ye]
+    body:
+      - When the Ottomans left Yemen in 1918, the Zaydi imam Yahya Muhammad Hamid al-Din claimed all the lands of historic Yemen, including Asir and Najran. Ibn Saud had made the Idrisid emirate of Asir, on the Red Sea coast north of Yemen, a protectorate in 1926 and annexed it in 1930. In November 1932 its former ruler, Hasan al-Idrisi, rose against the Saudis with Yemeni help; the revolt was crushed early in 1933 and he fled to Yemen, and Yahya’s troops occupied the oasis of Najran. Talks failed, and on 20 March 1934 Ibn Saud declared war and sent two armies into Yemen.
+      - The eastern army under Crown Prince Saud took the border towns of the highlands and, on 21 April, Najran, and laid siege to Baqim on the way to Sa’dah. In the rugged mountains, though, the Zaydi tribesmen held the passes, and the advance made little headway; the imam’s kingdom was not threatened in its mountain heartland.
+    facts:
+      - [Idrisid revolt, "November 1932 – early 1933"]
+      - [Saudi declaration of war, "20 March 1934"]
+      - [Najran taken, "21 April 1934"]
+    markers:
+      - kind: taken
+        side: sa
+        name: Najran
+        date: 21 April 1934
+        text: The oasis, entered by Yemeni troops in 1933, was taken by the Saudis. It stayed Saudi under the Treaty of Taif.
+        lonlat: [44.132, 17.492]
+      - kind: held
+        side: ye
+        name: Sa’dah
+        date: April 1934
+        text: The northern stronghold of the Zaydi highlands. Saud’s army could not force its way through the mountains to reach it.
+        lonlat: [43.759, 16.940]
+        lp: l
+      - kind: event
+        name: Abha
+        date: "1934"
+        text: The capital of Saudi Asir and the base for the advance into the Yemeni highlands.
+        lonlat: [42.505, 18.217]
+      - kind: capital
+        side: ye
+        name: Sanaa
+        date: "1934"
+        text: The capital of Imam Yahya.
+        lonlat: [44.206, 15.348]
+    arrows:
+      - side: sa
+        label: Saud
+        via: [[44.5, 18.3], [44.15, 17.55], [43.85, 17.15]]
+  - title: Faisal on the Tihama and the Treaty of Taif
+    date: April – May 1934
+    when: "1934-04"
+    borders: "1934-05-20"
+    countries: [sa, ye]
+    body:
+      - The western army under Prince Faisal, Ibn Saud’s second son, advanced from Jizan down the hot coastal plain of the Tihama, where the Yemeni forces were thin. It took Midi and al-Luhayyah and, at the beginning of May, entered Hodeidah, Yemen’s main port, without serious resistance. A British sloop took off foreign residents, Italian warships arrived to protect Italian interests, and Britain and Italy, rivals in the Red Sea, both pressed for a quick peace.
+      - Imam Yahya asked for terms, and Ibn Saud, wary of a long war in the mountains and of foreign intervention, offered a moderate settlement. By the Treaty of Taif, signed on 20 May 1934, Yemen recognised Saudi rule over Asir, Jizan and Najran and agreed to pay an indemnity, and Saudi Arabia withdrew from Hodeidah and the other places it had taken; the last Saudi troops left in early July. The treaty was concluded for twenty years. The border it drew in the west lasted, and the whole frontier was settled only by the Treaty of Jeddah in 2000.
+    facts:
+      - [Hodeidah taken, "late April or early May 1934"]
+      - [Treaty of Taif, "20 May 1934"]
+    markers:
+      - kind: taken
+        side: sa
+        name: Hodeidah
+        date: early May 1934
+        text: Faisal’s troops occupied Yemen’s chief port and held it until the peace.
+        lonlat: [42.951, 14.802]
+      - kind: taken
+        side: sa
+        name: Al-Luhayyah
+        date: April – May 1934
+        text: A small port on the northern Tihama, taken on Faisal’s march south.
+        lonlat: [42.692, 15.704]
+        lp: l
+      - kind: taken
+        side: sa
+        name: Midi
+        date: April 1934
+        text: The first Yemeni port on the coast south of Jizan.
+        lonlat: [42.82, 16.32]
+        lp: l
+      - kind: event
+        side: sa
+        name: Jizan
+        date: April 1934
+        text: The former Idrisid capital, base of Faisal’s army.
+        lonlat: [42.561, 16.889]
+        lp: l
+      - kind: treaty
+        name: Treaty of Taif
+        date: 20 May 1934
+        text: The “Treaty of Islamic Friendship and Brotherhood”. It left Asir, Jizan and Najran to Saudi Arabia.
+        lonlat: [40.406, 21.275]
+    arrows:
+      - side: sa
+        label: Faisal
+        via: [[42.6, 16.85], [42.8, 16.3], [42.75, 15.7], [42.95, 14.85]]
+    areas:
+      - style: occupied
+        side: sa
+        label: Occupied by Saudi Arabia, May 1934
+        polygon: [[42.75, 16.45], [43.15, 16.45], [43.2, 15.7], [43.12, 14.75], [42.92, 14.7], [42.68, 15.6]]
+      - style: gained
+        side: sa
+        label: Najran, Saudi under the Treaty of Taif
+        atoms: [SA-10]

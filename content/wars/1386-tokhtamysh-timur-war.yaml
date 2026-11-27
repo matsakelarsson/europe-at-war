@@ -1,0 +1,196 @@
+id: tokhtamysh-timur-war
+name: Tokhtamysh–Timur war
+start: "1386"
+end: "1396"
+tier: B
+summary: The war between Timur, master of Transoxiana and Iran, and Tokhtamysh, khan of the Golden Horde, whom Timur had helped to power a decade earlier. Tokhtamysh, who had reunited the Horde and sacked Moscow in 1382, claimed Azerbaijan and Khwarazm and resented Timur’s growing power. He attacked Timur’s army in Karabakh in 1387 and raided Transoxiana while Timur was in Iran. Timur answered with two great campaigns into the steppe. In 1391 he marched across the Kazakh steppe and defeated Tokhtamysh on the Kondurcha, near the Volga; in 1395 he crossed the Caucasus, defeated him again on the Terek, and then sacked the cities of the Golden Horde, from Tana on the Sea of Azov to Astrakhan and Sarai on the Volga. The Golden Horde never recovered its strength, and Tokhtamysh, overthrown by Edigu, died a fugitive in Siberia around 1406.
+countries: [az, uz, kz, ru, ir]
+sides:
+  - id: tim
+    name: Timur
+    polities: [timurid-empire]
+    ink: purple
+    moves: Timurid moves
+    success: Timurid success
+  - id: gh
+    name: Golden Horde (Tokhtamysh)
+    polities: [golden-horde]
+    ink: blue
+    moves: Golden Horde moves
+    success: Golden Horde success
+notes:
+  - The main sources are Timur’s court histories, especially Sharaf al-Din Ali Yazdi, which glorify him; Russian chronicles and Mamluk envoys add details. The dates of the battle on the Terek are given as 14, 15 or 15–16 April 1395, and its exact site is not known.
+  - Tokhtamysh’s sack of Moscow in 1382 is part of the Muscovite–Horde war, and his invasion of Lithuania’s allies and the battle of the Vorskla in 1399 are told elsewhere.
+sources:
+  - title: Tokhtamysh–Timur war (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tokhtamysh%E2%80%93Timur_war
+  - title: Tokhtamysh (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tokhtamysh
+  - title: Battle of the Kondurcha River (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Kondurcha_River
+  - title: Battle of the Terek River (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Terek_River
+  - title: Golden Horde (Encyclopaedia Iranica)
+    url: https://www.iranicaonline.org/articles/golden-horde/
+  - title: "Chorasmia ii. In Islamic times (Encyclopaedia Iranica)"
+    url: https://www.iranicaonline.org/articles/chorasmia-ii/
+steps:
+  - title: Karabakh, Sawran and Gurganj
+    date: 1386–1389
+    when: "1387"
+    borders: "1389"
+    countries: [az, kz, uz, tm]
+    body:
+      - Tokhtamysh, a descendant of Jochi, had taken the throne of the eastern Horde with Timur’s help in 1378, then overthrown Mamai and united the whole Golden Horde. In the winter of 1384–1385 he crossed the Caucasus, stormed Tabriz, the capital of the Jalayirids, and carried off a vast booty and many thousands of captives. In 1386 Timur conquered Azerbaijan himself, and in the spring of 1387 Tokhtamysh’s army came through Derbent and fell on Timur’s forces wintering in Karabakh. Timur’s commanders were nearly beaten before his son Miran Shah arrived with reinforcements and drove the enemy off. Timur released the prisoners with gifts.
+      - In the winter of 1387–1388, while Timur was in Fars, Tokhtamysh invaded Transoxiana. Part of his army besieged Sawran on the Syr Darya and another crossed Khwarazm and laid siege to Bukhara. Timur hurried back from Shiraz in February 1388, and the Horde troops withdrew. Timur then turned on the Sufi dynasty of Khwarazm, which had sided with Tokhtamysh, and in 1388 razed its capital, Gurganj; according to his historians he had barley sown on the site. Tokhtamysh attacked Sawran again, was driven off by Timur in the snows of January 1389, came back later that year and plundered Yasi, today’s Turkistan, before Timur crossed the Syr Darya after him and took Sighnaq.
+    facts:
+      - [Battle in Karabakh, "spring 1387, Timurid victory"]
+      - [Horde invasion of Transoxiana, "winter 1387–1388"]
+      - [Gurganj razed, "1388"]
+    markers:
+      - kind: battle
+        side: tim
+        name: Karabakh
+        date: spring 1387
+        text: Tokhtamysh’s army surprised Timur’s troops in their winter quarters on the Karabakh plain; Miran Shah’s reinforcements turned the battle. The exact site is not known.
+        lonlat: [47.13, 40.37]
+      - kind: held
+        side: tim
+        name: Sawran
+        date: 1388–1389
+        text: The walled town on the Syr Darya held out against repeated attacks by the Horde.
+        lonlat: [67.769, 43.515]
+      - kind: held
+        side: tim
+        name: Bukhara
+        date: "1388"
+        text: Besieged by a Horde army that had crossed Khwarazm; the siege was lifted as Timur came back from Iran.
+        lonlat: [64.423, 39.767]
+      - kind: taken
+        side: tim
+        name: Gurganj
+        date: "1388"
+        text: Timur destroyed the capital of the Sufi dynasty of Khwarazm for its alliance with Tokhtamysh; the town was later rebuilt on a smaller scale.
+        lonlat: [59.152, 42.326]
+      - kind: taken
+        side: gh
+        name: Yasi
+        date: "1389"
+        text: Plundered by Tokhtamysh’s troops; today’s Turkistan.
+        lonlat: [68.269, 43.302]
+        lp: r
+    arrows:
+      - side: gh
+        label: Tokhtamysh
+        phase: 1
+        via: [[47.6, 43.3], [48.3, 42.1], [48.7, 41.2], [47.3, 40.45]]
+      - side: gh
+        phase: 2
+        via: [[66.0, 46.0], [67.2, 44.6], [67.7, 43.6]]
+      - side: gh
+        phase: 2
+        via: [[60.0, 44.5], [59.4, 42.6], [61.5, 40.8], [64.3, 39.85]]
+      - side: tim
+        label: Timur
+        phase: 3
+        via: [[66.9, 39.75], [63.5, 40.6], [61.0, 41.5], [59.3, 42.25]]
+  - title: Across the steppe to the Kondurcha
+    date: February – July 1391
+    when: "1391-06-18"
+    borders: "1391-07"
+    countries: [kz, ru]
+    body:
+      - Tokhtamysh sought allies against Timur, among them the Mamluk sultan Barquq. Timur decided to strike at the heart of the Horde. In February 1391 he set out from Tashkent with a large army, ignored Tokhtamysh’s envoys and marched north across the Kazakh steppe, where the army lived largely by hunting. On 28 April, in the Ulu Tagh hills, he had an inscription carved on a rock recording his passage. Only after reaching the upper Tobol did he learn that Tokhtamysh was waiting west of the Ural river; he crossed it upstream and pressed on towards the Volga before the Horde’s reinforcements could arrive.
+      - On 18 June 1391 he forced Tokhtamysh to battle on the Kondurcha, a tributary of the Sok east of the Volga. Tokhtamysh tried to envelop Timur’s flanks, but the Timurid army held and its counterattack broke the Horde. Tokhtamysh fled; many of his men, trapped against the Volga, were killed or captured. Timur’s army spent a month celebrating on the river and returned to Samarkand by the end of the year with great herds and many captives. He did not try to occupy the Horde’s lands, and Tokhtamysh, who had kept much of his army, soon re-established his rule.
+    facts:
+      - [Timur leaves Tashkent, "February 1391"]
+      - [Battle of the Kondurcha, "18 June 1391, Timurid victory"]
+      - [March across the steppe, "about four months"]
+    markers:
+      - kind: event
+        side: tim
+        name: Ulu Tagh
+        date: 28 April 1391
+        text: In these hills, today’s Ulytau, Timur had an inscription carved in Arabic and Chagatai Turkish recording his march against Tokhtamysh. It is now in the Hermitage.
+        lonlat: [67.0, 48.61]
+      - kind: battle
+        side: tim
+        name: Battle of the Kondurcha
+        date: 18 June 1391
+        text: Timur defeated Tokhtamysh after a hard-fought battle east of the Volga; the Horde army was driven against the river.
+        lonlat: [50.42, 53.48]
+    arrows:
+      - side: tim
+        label: Timur
+        phase: 1
+        via: [[69.2, 41.4], [67.5, 45.5], [66.9, 48.4], [63.5, 51.8], [57.5, 51.9]]
+      - side: tim
+        phase: 2
+        via: [[57.5, 51.9], [54.0, 52.6], [51.5, 53.2], [50.5, 53.45]]
+      - side: gh
+        label: Tokhtamysh
+        phase: 2
+        via: [[54.5, 51.4], [52.5, 52.4], [50.7, 53.35]]
+  - title: The Terek and the sack of the Horde’s cities
+    date: 1394–1396
+    when: "1395-04-15"
+    borders: "1396"
+    countries: [ru, az]
+    body:
+      - In the autumn of 1394 Tokhtamysh raided Shirvan, now a Timurid vassal, and withdrew as Timur approached. In March 1395 Timur marched north through Derbent. His army ravaged the land up to the Terek and destroyed the Horde’s vanguard, and on 15 April 1395 the two main armies met on the Terek. The battle was as hard-fought as the Kondurcha, and Timur himself was nearly killed in the fighting, but some of Tokhtamysh’s emirs, among them one named Aktau, left the field with their men, and his army broke. Tokhtamysh fled north.
+      - Timur’s troops pursued him to the Volga, and Timur himself advanced north to Yelets on the borders of Ryazan, which he sacked in August, before turning back without advancing on Moscow; Russian tradition credits the icon of the Virgin of Vladimir with saving the city. He then took Azaq, the Venetian and Genoese trading town of Tana at the mouth of the Don, enslaving its Christian merchants, ravaged Circassia, and in the winter of 1395–1396 destroyed the cities of the lower Volga, Hajji Tarkhan (Astrakhan) and Sarai, whose surviving people were driven off as slaves. In the spring of 1396 he returned through Derbent with his plunder and captives.
+      - The trading cities of the Horde never fully recovered, and the caravan trade shifted south to routes through Timur’s lands. Tokhtamysh lost his throne to Timur Qutlugh and the emir Edigu, fled to Lithuania, was defeated with the Lithuanians on the Vorskla in 1399, and was killed in Siberia around 1406.
+    facts:
+      - [Battle of the Terek, "15 April 1395, Timurid victory"]
+      - [Yelets sacked, "August 1395"]
+      - [Sarai and Astrakhan destroyed, "winter 1395–1396"]
+    markers:
+      - kind: battle
+        side: tim
+        name: Battle of the Terek
+        date: 15 April 1395
+        text: Timur defeated Tokhtamysh after part of the Horde army deserted. The site is usually placed on the middle Terek near today’s Yekaterinogradskaya, but this is not certain.
+        lonlat: [44.25, 43.75]
+      - kind: taken
+        side: tim
+        name: Yelets
+        date: August 1395
+        text: The northernmost point of Timur’s campaign; he sacked the town and turned back.
+        lonlat: [38.467, 52.617]
+      - kind: taken
+        side: tim
+        name: Tana
+        date: "1395"
+        text: Timur took gifts from the Italian merchants of Tana and Azaq, then enslaved the Christians and destroyed their trading posts.
+        lonlat: [39.418, 47.108]
+      - kind: taken
+        side: tim
+        name: Sarai
+        date: winter 1395–1396
+        text: The capital of the Golden Horde was sacked and burned. Its ruins are usually identified with the site near Tsarev on the Akhtuba.
+        lonlat: [45.373, 48.666]
+      - kind: taken
+        side: tim
+        name: Hajji Tarkhan
+        date: winter 1395–1396
+        text: The trading town at the mouth of the Volga, forerunner of Astrakhan, was destroyed.
+        lonlat: [48.035, 46.35]
+        lp: b
+    arrows:
+      - side: gh
+        label: Tokhtamysh
+        phase: 1
+        via: [[47.5, 43.6], [48.3, 42.2], [48.8, 41.3], [48.6, 40.8]]
+      - side: tim
+        label: Timur
+        phase: 2
+        via: [[48.4, 40.9], [48.3, 42.0], [47.3, 43.3], [44.4, 43.75]]
+      - side: tim
+        phase: 3
+        via: [[44.2, 43.9], [43.5, 46.5], [41.5, 49.5], [38.8, 52.4]]
+      - side: tim
+        phase: 4
+        via: [[38.6, 52.4], [39.2, 49.5], [39.45, 47.2], [40.5, 45.0], [45.2, 48.5]]
+      - side: tim
+        phase: 5
+        via: [[45.4, 48.6], [47.0, 47.4], [48.0, 46.4], [47.6, 43.6], [48.3, 42.1]]

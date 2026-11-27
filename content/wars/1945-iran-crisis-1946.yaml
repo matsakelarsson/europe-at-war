@@ -1,0 +1,138 @@
+id: iran-crisis-1946
+name: Iran crisis of 1946
+start: "1945-11-16"
+end: "1946-12-15"
+tier: B
+summary: One of the first crises of the Cold War. Soviet troops, who had occupied northern Iran with the British since 1941, stayed on after the war, and under their protection the Azerbaijan Democratic Party of Ja’far Pishevari set up an autonomous Azerbaijan People’s Government in Tabriz in December 1945, while Kurdish nationalists under Qazi Muhammad proclaimed the Republic of Mahabad in January 1946. Iran took its case to the new UN Security Council, and Prime Minister Ahmad Qavam persuaded Stalin to withdraw his troops in return for the promise of an oil concession. Once the Soviet troops had left, in May 1946, the Iranian army moved in; the Tabriz government collapsed and Iranian troops entered Tabriz on 13 December and Mahabad on 15 December 1946. Qazi Muhammad was hanged in 1947, and the Iranian parliament rejected the Soviet oil concession.
+countries: [ir, ru]
+sides:
+  - id: ir
+    name: Iran
+    polities: [persia]
+    ink: green
+    moves: Iranian government moves
+    success: Iranian government success
+  - id: sov
+    name: Soviet Union
+    polities: [ussr]
+    ink: red
+    moves: Soviet moves
+    success: Soviet success
+  - id: az
+    name: Azerbaijan People’s Government
+    polities: [azerbaijan-pg]
+    ink: orange
+    moves: Azerbaijani Democrat moves
+    success: Azerbaijani Democrat success
+  - id: kurd
+    name: Republic of Mahabad
+    polities: [mahabad]
+    ink: olive
+    moves: Kurdish moves
+    success: Kurdish success
+notes:
+  - The Azerbaijan People’s Government and the Republic of Mahabad were never recognised by any state; they are drawn as areas, and the base map shows the whole region as Iranian. Their borders are approximate; the Mahabad republic held only the towns of Mahabad, Bukan, Naqadeh, Oshnavieh and Piranshahr and the country around them.
+  - Casualty figures are uncertain. The fighting itself was limited, but hundreds of the Democrats’ supporters were killed by crowds and in reprisals as the Iranian army returned, and many more were imprisoned or fled to the Soviet Union.
+  - President Truman later said that he had sent Stalin an ultimatum over Iran in March 1946; historians have found no record of one, though the United States did protest strongly.
+sources:
+  - title: Iran crisis of 1946 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Iran_crisis_of_1946
+  - title: Azerbaijan People’s Government (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Azerbaijan_People%27s_Government
+  - title: Republic of Mahabad (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Republic_of_Mahabad
+  - title: Azarbaijan v. History from 1941 to 1947 (Encyclopaedia Iranica)
+    url: https://www.iranicaonline.org/articles/azerbaijan-v/
+  - title: Anglo-Soviet invasion of Iran (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Anglo-Soviet_invasion_of_Iran
+steps:
+  - title: Two governments under Soviet protection
+    date: November 1945 – May 1946
+    when: "1945-11-16"
+    borders: "1946-01-22"
+    countries: [ir, ru]
+    body:
+      - Britain and the Soviet Union had invaded Iran in August 1941 to secure its oil and a supply route to the Soviet Union, and promised in a treaty of 1942 to withdraw within six months of the end of the war, that is, by 2 March 1946. In 1944 the Iranian parliament refused the Soviet Union an oil concession in the north. In September 1945 Ja’far Pishevari, a veteran communist, founded the Azerbaijan Democratic Party in Tabriz, and in November its armed volunteers, supported by the Red Army, took over the government offices and police posts of the province. Soviet troops stopped an Iranian army column sent from Tehran near Qazvin. On 12 December 1945 a National Assembly in Tabriz proclaimed an autonomous government with Pishevari as prime minister, which made Azerbaijani Turkish the official language and began land reform.
+      - On 22 January 1946, in Mahabad, Qazi Muhammad proclaimed a Kurdish republic, defended by local tribesmen and by Mustafa Barzani’s Kurdish fighters from Iraq. Iran complained to the UN Security Council, its first case, and the Soviet troops stayed past the 2 March deadline. Prime Minister Ahmad Qavam negotiated in Moscow and, on 4 April 1946, agreed that the Soviet troops would leave, that a joint Soviet–Iranian oil company would be set up if the next parliament approved it, and that Azerbaijan was an internal Iranian matter. The last Soviet troops left in early May.
+    facts:
+      - [Azerbaijan People’s Government proclaimed, "12 December 1945"]
+      - [Republic of Mahabad proclaimed, "22 January 1946"]
+      - [Qavam–Sadchikov agreement, "4 April 1946"]
+    markers:
+      - kind: capital
+        side: az
+        name: Tabriz
+        date: 12 December 1945
+        text: Seat of the Azerbaijan People’s Government and its National Assembly.
+        lonlat: [46.29, 38.08]
+      - kind: capital
+        side: kurd
+        name: Mahabad
+        date: 22 January 1946
+        text: Qazi Muhammad proclaimed the republic in the town’s Chwarchira square.
+        lonlat: [45.72, 36.77]
+      - kind: event
+        side: sov
+        name: Qazvin
+        date: November 1945
+        text: Soviet troops stopped the Iranian army column sent to restore order in Azerbaijan.
+        lonlat: [50.00, 36.27]
+      - kind: event
+        side: ir
+        name: Tehran
+        date: January – May 1946
+        text: Qavam’s government negotiated with Moscow while Iran’s envoy pressed its case at the United Nations.
+        lonlat: [51.39, 35.69]
+    areas:
+      - style: occupied
+        side: az
+        label: Azerbaijan People’s Government (approximate)
+        atoms: [IR-01, IR-03, IR-11]
+        polygon: [[44.03, 39.38], [44.8, 39.75], [45.5, 38.95], [45.9, 38.3], [46.1, 37.3], [45.85, 37.05], [45.3, 37.2], [44.8, 37.15], [44.2, 37.9]]
+      - style: occupied
+        side: kurd
+        label: Republic of Mahabad (approximate)
+        polygon: [[44.9, 37.1], [45.8, 37.0], [46.35, 36.7], [46.2, 36.2], [45.6, 36.0], [45.1, 36.3], [44.85, 36.75]]
+      - style: occupied
+        side: sov
+        label: Other areas under Soviet occupation
+        atoms: [IR-19, IR-21, IR-27, IR-31, IR-30, IR-28]
+  - title: The army returns to Tabriz and Mahabad
+    date: December 1946 – 1947
+    when: "1946-12-10"
+    borders: "1946-12-15"
+    countries: [ir]
+    body:
+      - In June 1946 Tehran and Tabriz reached an agreement that left the Democrats in charge of the province, and Qavam took three ministers from the communist Tudeh party into his cabinet. But after a tribal revolt in the south he dropped them, and in November he announced that the army would enter Azerbaijan to supervise elections. Without Soviet support the Democrats’ militia melted away; on 10 December the army advanced from Zanjan, Pishevari fled to Soviet Azerbaijan, and crowds in Tabriz turned on the party’s followers before Iranian troops entered the city on 13 December 1946.
+      - Qazi Muhammad surrendered Mahabad, and the army entered it on 15 December. He was hanged there with his brother and cousin on 31 March 1947. Barzani and his fighters fought their way across Iran, Iraq and Turkey and crossed into the Soviet Union in June 1947. In October 1947 the new parliament rejected the Soviet oil agreement. The crisis showed that the Soviet Union could be made to back down, and became an early lesson of the Cold War.
+    facts:
+      - [Iranian troops enter Tabriz, "13 December 1946"]
+      - [Iranian troops enter Mahabad, "15 December 1946"]
+      - [Qazi Muhammad hanged, "31 March 1947"]
+    markers:
+      - kind: taken
+        side: ir
+        name: Tabriz
+        date: 13 December 1946
+        text: The anniversary, 21 Azar in the Iranian calendar, was long celebrated as Azerbaijan Day.
+        lonlat: [46.29, 38.08]
+      - kind: taken
+        side: ir
+        name: Mahabad
+        date: 15 December 1946
+        text: Surrendered without a fight. Its leaders were tried by a military court.
+        lonlat: [45.72, 36.77]
+      - kind: taken
+        side: ir
+        name: Mianeh
+        date: December 1946
+        text: The army’s advance from Zanjan passed through Mianeh on the road to Tabriz.
+        lonlat: [47.70, 37.42]
+    arrows:
+      - side: ir
+        via: [[48.48, 36.67], [47.70, 37.42], [46.9, 37.9], [46.35, 38.07]]
+      - side: ir
+        via: [[46.27, 36.25], [46.0, 36.5], [45.75, 36.75]]
+      - side: kurd
+        label: Barzani to the Soviet Union
+        via: [[45.72, 36.77], [44.6, 37.7], [44.6, 39.0], [45.4, 39.3]]

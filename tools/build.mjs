@@ -53,6 +53,7 @@ async function buildPolities() {
   for (const p of list) {
     if (!/^#[0-9a-f]{6}$/i.test(p.color || '')) err(`polity ${p.id}: bad color ${p.color}`);
     if (p.ink && !INKS.includes(p.ink)) err(`polity ${p.id}: unknown ink ${p.ink}`);
+    if (p.id === 'none') err('polity id "none" is reserved (it means no state in border events)');
   }
   return { list, index };
 }
@@ -115,8 +116,9 @@ async function buildBorders(pol, topo) {
       if (!dateKey(ev.date)) { err(`${where}: bad date ${ev.date}`); continue; }
       const set = new Map();
       for (const [p, ids] of Object.entries(ev.owners || {})) {
-        // "-" in an event means: no curated owner, use the latest keyframe.
-        const pi = p === '-' ? 'kf' : polIdx(p, where);
+        // "-" in an event means: no curated owner, use the latest keyframe;
+        // "none" means: no state (plain land), as for tribal lands.
+        const pi = p === '-' ? 'kf' : p === 'none' ? -1 : polIdx(p, where);
         // As in keyframes: an atom listed itself beats one reached through its parent.
         for (const id of ids) for (const i of expand(id, where)) if (!set.has(i) || order[i] === id) set.set(i, pi);
       }

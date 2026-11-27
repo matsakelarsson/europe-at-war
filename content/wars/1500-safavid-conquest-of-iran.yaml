@@ -1,0 +1,311 @@
+id: safavid-conquest-of-iran
+name: Safavid conquest of Iran
+start: "1500"
+end: "1510-12-02"
+tier: A
+summary: The campaigns in which Ismail, the teenage head of the Safavid Sufi order of Ardabil, and his Turkmen followers, the Qizilbash, conquered Iran in ten years. In 1500–1501 they killed the Shirvanshah, defeated the Aq Qoyunlu at Sharur and took Tabriz, where Ismail was proclaimed shah and made Twelver Shi‘ism the religion of the state. His victory at Hamadan in 1503 gave him western and central Iran; by 1508 he had taken Diyarbakır and Baghdad, ending the Aq Qoyunlu; and in 1510 he defeated and killed the Uzbek ruler Muhammad Shaybani at Merv and annexed Khorasan. The Safavid state lasted until 1736, and its frontiers roughly foreshadowed those of modern Iran.
+countries: [ir, az, iq, tr, tm, af, am]
+sides:
+  - id: saf
+    name: Safavids and the Qizilbash
+    polities: [persia]
+    ink: green
+    moves: Safavid moves
+    success: Safavid success
+  - id: aq
+    name: Aq Qoyunlu
+    polities: [aq-qoyunlu]
+    ink: blue
+    moves: Aq Qoyunlu moves
+    success: Aq Qoyunlu success
+  - id: sh
+    name: Shirvanshahs
+    polities: [shirvan]
+    ink: teal
+    moves: Shirvani moves
+    success: Shirvani success
+  - id: uz
+    name: Shaybanid Uzbeks
+    polities: [bukhara]
+    ink: gold
+    moves: Uzbek moves
+    success: Uzbek success
+notes:
+  - Army sizes come from later Safavid chronicles, which made Ismail’s victories as great as possible; the Aq Qoyunlu numbers at Sharur and Hamadan in particular are not reliable.
+  - The date of Ismail’s enthronement is uncertain. Most histories place it in Tabriz in the summer of 1501; the chronicler Hayati Tabrizi gives 22 December 1501.
+  - The conversion of Iran to Twelver Shi‘ism, begun by force under Ismail, took more than a century to complete.
+sources:
+  - title: Ismail I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ismail_I
+  - title: Battle of Sharur (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sharur
+  - title: Battle of Hamadan (1503) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Hamadan_(1503)
+  - title: Sultan Murad (Aq Qoyunlu) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sultan_Murad_(Aq_Qoyunlu)
+  - title: Battle of Merv (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Merv
+  - title: Ismāʿīl I, shah of Iran (Britannica)
+    url: https://www.britannica.com/biography/Ismail-I-shah-of-Iran
+  - title: Esmāʿil I Ṣafawi (Encyclopaedia Iranica)
+    url: https://www.iranicaonline.org/articles/esmail-i-safawi
+  - title: Safavids (Encyclopaedia Iranica)
+    url: https://www.iranicaonline.org/articles/safavids
+steps:
+  - title: The Qizilbash and Shirvan
+    date: 1499 – early 1501
+    when: "1500-12"
+    borders: "1500-12"
+    countries: [az, tr, ir]
+    body:
+      - The Safavids were the hereditary sheikhs of a Sufi order based at Ardabil, whose followers among the Turkmen tribes of eastern Anatolia and Azerbaijan revered them almost as divine. The Turkmen followers were called Qizilbash, “red heads”, after the red caps they wore. Ismail’s grandfather Junayd and his father Haydar had both been killed fighting the Shirvanshahs, in 1460 and 1488, and in 1494 the Aq Qoyunlu killed his elder brother Ali. Ismail, then seven, was hidden in Gilan. In 1499, aged twelve, he left Lahijan to claim his inheritance, while the Aq Qoyunlu confederation that ruled western Iran was splitting between rival princes.
+      - In the summer of 1500 about 7,000 Qizilbash of the Ustajlu, Shamlu, Rumlu, Takkalu, Dulkadir, Afshar, Qajar and other tribes gathered around him at Erzincan. Rather than attack the Aq Qoyunlu at once, Ismail led them against Shirvan to avenge his father. In December 1500 they crossed the Kura and defeated the Shirvanshah Farrukh Yasar, who was killed, in a battle near Shamakhi. The Qizilbash went on to take Baku in 1501. The Shirvanshahs survived as Safavid vassals until 1538.
+    facts:
+      - [Qizilbash gathered at Erzincan, "about 7,000, summer 1500"]
+      - [Farrukh Yasar of Shirvan killed, "December 1500"]
+    markers:
+      - kind: event
+        side: saf
+        name: Erzincan
+        date: summer 1500
+        text: Qizilbash from the Turkmen tribes of Anatolia and Syria joined Ismail here.
+        lonlat: [39.49, 39.75]
+      - kind: battle
+        side: saf
+        name: Battle of Jabani
+        date: December 1500
+        text: The Shirvanshah Farrukh Yasar was defeated and killed near Shamakhi, the capital of Shirvan.
+        lonlat: [48.55, 40.6]
+        lp: b
+      - kind: taken
+        side: saf
+        name: Baku
+        date: "1501"
+        text: Taken by the Qizilbash after the defeat of the Shirvanshah.
+        lonlat: [49.84, 40.37]
+      - kind: event
+        side: saf
+        name: Lahijan
+        date: 1494–1499
+        text: Ismail was hidden here as a child, under the protection of the local ruler of Gilan.
+        lonlat: [50.0, 37.2]
+        lp: b
+    arrows:
+      - side: saf
+        label: Ismail and the Qizilbash
+        via: [[39.49, 39.75], [41.27, 39.9], [43.1, 40.6], [46.36, 40.68], [48.5, 40.62]]
+      - side: saf
+        via: [[48.64, 40.63], [49.3, 40.5], [49.8, 40.38]]
+    areas:
+      - style: occupied
+        side: saf
+        label: Shirvan, overrun by the Qizilbash
+        atoms: [AZ-SMI, AZ-BA, AZ-ABS, AZ-SM, AZ-XIZ, AZ-QOB, AZ-AGU, AZ-ISM, AZ-GOY, AZ-KUR, AZ-HAC, AZ-SIY, AZ-SBN, AZ-QBA, AZ-QUS, AZ-XAC]
+  - title: Sharur and Tabriz
+    date: "1501"
+    when: "1501-07"
+    borders: "1501-12-22"
+    countries: [az, ir]
+    body:
+      - The Aq Qoyunlu prince Alvand, who held Azerbaijan, marched north from Tabriz across the Aras to stop the Qizilbash. In 1501 the two armies met at Sharur, near Nakhchivan. Alvand’s army is said to have been more than four times larger, but the Qizilbash routed it; a later Safavid account claims up to 18,000 of his men were killed. Alvand fled, and Ismail entered Tabriz, the Aq Qoyunlu capital, without resistance.
+      - In Tabriz Ismail, aged fourteen, was proclaimed shah. He made Twelver Shi‘ism, until then the faith of a minority in Iran, the religion of the state, and ordered the first three caliphs, revered by Sunnis, to be cursed in public. The new faith was imposed by force, and Sunni clerics who resisted were killed or fled. Alvand briefly retook Tabriz in 1502 but was driven out again, and the same year Ismail took Erzincan and Erzurum.
+    facts:
+      - [Battle of Sharur, "1501, Safavid victory"]
+      - [Safavid army, "about 7,000"]
+      - [Ismail proclaimed shah, "1501, in Tabriz"]
+    markers:
+      - kind: battle
+        side: saf
+        name: Battle of Sharur
+        date: "1501"
+        text: The Qizilbash routed the much larger army of Alvand Beg of the Aq Qoyunlu.
+        lonlat: [44.98, 39.55]
+        lp: l
+      - kind: capital
+        side: saf
+        name: Tabriz
+        date: "1501"
+        text: The Aq Qoyunlu capital became the first capital of Safavid Iran. Ismail was enthroned here.
+        lonlat: [46.29, 38.08]
+      - kind: event
+        side: saf
+        name: Ardabil
+        date: since the 14th century
+        text: Seat of the Safavid Sufi order and the shrine of its founder, Sheikh Safi al-Din.
+        lonlat: [48.29, 38.25]
+        lp: r
+    arrows:
+      - side: saf
+        label: Ismail
+        phase: 1
+        via: [[48.5, 40.6], [47.2, 40.1], [45.9, 39.7], [45.1, 39.55]]
+      - side: aq
+        label: Alvand
+        phase: 1
+        via: [[46.29, 38.08], [45.7, 38.9], [45.1, 39.45]]
+      - side: saf
+        phase: 2
+        via: [[44.98, 39.55], [45.5, 38.95], [46.2, 38.15]]
+    areas:
+      - style: gained
+        side: saf
+        label: Taken by Ismail in 1501
+        atoms: [IR-01, IR-02, IR-03, AZ-NX, AZ-SAR, AZ-SAD, AZ-KAN, AZ-BAB, AZ-SAH, AZ-CUL, AZ-ORD]
+  - title: Hamadan and the Iranian plateau
+    date: 1503–1504
+    when: "1503-06-21"
+    borders: "1504-12"
+    countries: [ir]
+    body:
+      - Southern and central Iran were ruled, mostly in name, by Alvand’s cousin Sultan Murad, whose provinces were wasted by war, famine and plague. Ismail offered him peace if he submitted. Murad refused and marched against him, and on 21 June 1503, near Hamadan, Ismail’s army of about 12,000 routed him. The chronicles give Murad 70,000 men or more and his losses as 10,000 or more. Murad fled west, and Ismail took Persian Iraq and Fars, entering Shiraz on 24 September 1503; Isfahan and Kerman also fell.
+      - In 1504 Ismail turned on the local rulers south of the Caspian. The fortress of Firuzkuh, held by the Gilani lord Kiya Husayn, was taken after a siege; its defenders were killed, Kiya Husayn was shut in a cage, where he died, and a court painting shows a captured Aq Qoyunlu commander being roasted on a spit. Mazandaran and Gorgan submitted, and Yazd was taken from a rebel ruler. By the end of 1504 Ismail ruled almost all of western and central Iran.
+    facts:
+      - [Battle of Hamadan, "21 June 1503, Safavid victory"]
+      - [Shiraz taken, "24 September 1503"]
+      - [Firuzkuh taken, "1504"]
+    markers:
+      - kind: battle
+        side: saf
+        name: Battle of Hamadan
+        date: 21 June 1503
+        text: Ismail’s army of about 12,000 defeated Sultan Murad’s much larger army. Murad’s supreme commander was among the dead.
+        lonlat: [48.52, 34.8]
+      - kind: taken
+        side: saf
+        name: Shiraz
+        date: 24 September 1503
+        text: The capital of Fars was handed to a Dulkadir Qizilbash chief, whose family governed it for almost fifty years.
+        lonlat: [52.53, 29.61]
+      - kind: taken
+        side: saf
+        name: Isfahan
+        date: "1503"
+        text: Taken after Hamadan and given to Durmish Khan Shamlu, Ismail’s brother-in-law.
+        lonlat: [51.67, 32.65]
+      - kind: siege
+        side: saf
+        name: Firuzkuh
+        date: "1504"
+        text: The mountain fortress was stormed. Its lord, Kiya Husayn, was shut in a cage and died in captivity.
+        lonlat: [52.77, 35.76]
+        lp: r
+      - kind: taken
+        side: saf
+        name: Yazd
+        date: "1504"
+        text: Taken from the rebel Muhammad Karra, who was put to death.
+        lonlat: [54.37, 31.9]
+    arrows:
+      - side: saf
+        label: Ismail
+        phase: 1
+        via: [[46.29, 38.08], [48.5, 36.67], [48.52, 34.85]]
+      - side: saf
+        phase: 2
+        via: [[48.52, 34.8], [50.9, 33.98], [51.67, 32.7], [52.53, 29.66]]
+      - side: saf
+        phase: 3
+        via: [[51.4, 35.7], [52.2, 35.75], [52.75, 35.75]]
+    areas:
+      - style: gained
+        side: saf
+        label: Conquered by Ismail, 1503–1504
+        atoms: [IR-11, IR-28, IR-24, IR-17, IR-20, IR-16, IR-22, IR-26, IR-05, IR-07, IRN-5490, IR-04, IR-08, IR-14, IR-06, IR-18, IR-15, IR-25, IR-21, IR-27, IR-12]
+  - title: Diyarbakır and Baghdad
+    date: 1507–1508
+    when: "1508"
+    borders: "1508-12"
+    countries: [tr, iq, ir]
+    body:
+      - The last Aq Qoyunlu princes found shelter in the west, and the Dulkadir prince Ala al-Dawla of Elbistan, a vassal of the Mamluks, refused to recognise Ismail. In 1507 Ismail marched against him across Ottoman territory, and his Qizilbash commander Muhammad Khan Ustajlu conquered Diyarbakır, the old Aq Qoyunlu homeland, where he became governor. The march through his lands, and the Safavid preaching among the Turkmen of Anatolia, worried the Ottoman sultan Bayezid II.
+      - In 1508 the rulers of Khuzestan, Luristan and Kurdistan accepted Ismail as their overlord. The same year Ismail and his commander Husayn Beg Shamlu marched on Baghdad, from which Sultan Murad had fled. The city was taken, ending the Aq Qoyunlu state, and on Ismail’s orders the tombs of Sunni figures revered across the Muslim world, among them Abu Hanifa, ‘Abd al-Qadir Gilani and the Abbasid caliphs, were destroyed.
+    facts:
+      - [Diyarbakır conquered, "1507"]
+      - [Baghdad taken, "1508"]
+    markers:
+      - kind: taken
+        side: saf
+        name: Diyarbakır
+        date: "1507"
+        text: Conquered by Muhammad Khan Ustajlu, who governed it until he was killed at Chaldiran in 1514.
+        lonlat: [40.23, 37.91]
+      - kind: taken
+        side: saf
+        name: Baghdad
+        date: "1508"
+        text: Taken by Ismail and Husayn Beg Shamlu. The Sunni tombs of the city were destroyed.
+        lonlat: [44.36, 33.34]
+      - kind: event
+        side: saf
+        name: Elbistan
+        date: "1507"
+        text: Seat of the Dulkadir prince Ala al-Dawla, the target of Ismail’s western campaign.
+        lonlat: [37.2, 38.2]
+        lp: l
+    arrows:
+      - side: saf
+        label: Ismail
+        phase: 1
+        via: [[46.29, 38.08], [43.6, 39.0], [41.3, 39.0], [39.5, 38.7], [37.6, 38.3]]
+      - side: saf
+        label: Muhammad Khan Ustajlu
+        phase: 1
+        via: [[43.33, 38.5], [41.8, 38.1], [40.3, 37.95]]
+      - side: saf
+        label: Ismail and Husayn Beg Shamlu
+        phase: 2
+        via: [[48.52, 34.8], [47.06, 34.32], [45.6, 34.45], [44.45, 33.38]]
+    areas:
+      - style: gained
+        side: saf
+        label: Taken by Ismail, 1507–1508
+        atoms: [TR-21, TR-47, IQ-BG, IQ-BB, IQ-KA, IQ-NA, IQ-QA, IQ-WA, IQ-DI, IQ-SD]
+  - title: Merv
+    date: 1510
+    when: "1510-12-02"
+    borders: "1510-12-02"
+    countries: [tm, ir, af]
+    body:
+      - While Ismail conquered the west, the Uzbek khan Muhammad Shaybani had taken Transoxiana from the Timurids, Khwarazm in 1505 and Herat and Khorasan in 1507, and his raids reached Kerman. Letters between the two rulers turned to insults; the Sunni khan called on Ismail to return to the faith of his forefathers. In 1510 Ismail marched east and took Mashhad, while Shaybani, whose army was scattered, fell back to the fortress of Merv to wait for help.
+      - After a month of siege the Safavids pretended to retreat. On 2 December 1510 Shaybani came out in pursuit and was trapped near Merv by about 17,000 Qizilbash. Some 10,000 Uzbeks are said to have been killed, and Shaybani was caught and killed as he fled. Ismail had his skull covered in gold and made into a drinking cup and sent parts of his body around the empire. Herat surrendered and Khorasan became a Safavid province, the base of a century of wars with the Uzbeks. Ismail sent back Babur’s sister, who had been married to Shaybani, and helped Babur in his attempt to win back Samarkand.
+    facts:
+      - [Battle of Merv, "2 December 1510, Safavid victory"]
+      - [Safavid army, "about 17,000"]
+      - [Uzbek dead, "some 10,000"]
+    markers:
+      - kind: battle
+        side: saf
+        name: Battle of Merv
+        date: 2 December 1510
+        text: A feigned retreat drew Shaybani out of the fortress. He was killed trying to escape.
+        lonlat: [62.0, 37.6]
+        lp: b
+      - kind: taken
+        side: saf
+        name: Mashhad
+        date: "1510"
+        text: Taken by Ismail as he advanced into Khorasan.
+        lonlat: [59.6, 36.3]
+      - kind: taken
+        side: saf
+        name: Herat
+        date: December 1510
+        text: The old Timurid capital surrendered after Shaybani’s death and became the seat of the Safavid governors of Khorasan.
+        lonlat: [62.2, 34.35]
+    arrows:
+      - side: saf
+        label: Ismail
+        phase: 1
+        via: [[51.4, 35.7], [54.35, 36.17], [57.7, 36.2], [59.6, 36.3]]
+      - side: saf
+        phase: 2
+        via: [[59.6, 36.3], [61.16, 36.53], [62.05, 37.5]]
+      - side: uz
+        label: Shaybani
+        phase: 1
+        via: [[62.2, 34.35], [62.4, 35.9], [62.18, 37.6]]
+    areas:
+      - style: gained
+        side: saf
+        label: Khorasan, taken from the Uzbeks
+        atoms: [IR-30, IR-31, IR-29, AF-HER, AF-BDG, TM-M]

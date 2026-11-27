@@ -304,15 +304,17 @@ footer li { margin: 0 0 2px; }
 .info-toggle { margin-inline-start: auto; }
 .info-toggle[aria-expanded="true"] { border-color: var(--accent); color: var(--accent); }
 .yearbar { display: block; }
-:root.fullmap .yearbar { display: flex; flex-wrap: wrap; align-items: center; gap: 0 18px; }
-:root.fullmap .yearbar .yearctl { flex: none; }
-:root.fullmap .yearbar .yearlabel { min-width: 4.2ch; }
-:root.fullmap #yearOut { font-size: 1.6rem; }
-:root.fullmap .yearbar .timeline { flex: 1 1 260px; margin: 0; }
+:root.fullmap .yearbar, :root.fullmap .stepbar { display: flex; align-items: center; gap: 10px; }
+/* The year is on the map already; the arrows go either side of the timeline,
+   and Next goes after the step dashes. */
+:root.fullmap .yearbar .yearctl, :root.fullmap .stepbar .stepper { display: contents; }
+:root.fullmap .yearbar .yearlabel { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+:root.fullmap #yprev, :root.fullmap #prev { order: 1; }
+:root.fullmap .yearbar .timeline { order: 2; flex: 1 1 auto; min-width: 0; margin: 0; }
 :root.fullmap .yearbar .tl-bars { height: 12px; margin-block: 0 2px; }
-:root.fullmap .stepbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; }
-:root.fullmap .stepbar .stepper { flex: 1 1 340px; max-width: 620px; }
-:root.fullmap .stepbar .progress { flex: 1 1 200px; margin: 0; }
+:root.fullmap .stepbar .jump { order: 2; flex: 0 1 460px; }
+:root.fullmap .stepbar .progress { order: 3; flex: 1 1 60px; min-width: 40px; margin: 0 6px; }
+:root.fullmap #ynext, :root.fullmap #next { order: 4; }
 :root.fullmap .mapwrap { grid-area: 2 / 1; position: relative; top: auto; height: auto; max-height: none; aspect-ratio: auto; }
 :root.fullmap #map { aspect-ratio: auto; height: 100%; max-height: none; }
 :root.fullmap .panel {
@@ -329,7 +331,11 @@ footer li { margin: 0 0 2px; }
   :root.fullmap .panel { align-self: end; justify-self: stretch; width: auto; max-height: 55%; margin: 6px; }
   :root.fullmap:not(.info-closed) .mapctl { inset-inline-end: 10px; }
   :root.fullmap .topbar { gap: 8px; padding: 6px 8px; }
-  :root.fullmap .topbar > .yearbar, :root.fullmap .topbar > .stepbar { flex-basis: 200px; }
+  :root.fullmap .topbar > .yearbar, :root.fullmap .topbar > .stepbar { flex-basis: 200px; gap: 6px; }
+  :root.fullmap .stepbar .jump { flex: 1 1 120px; }
+  :root.fullmap .stepbar .progress { flex: 1 1 40px; margin: 0; }
+  :root.fullmap .stepbar .navbtn { padding: 0; }
+  :root.fullmap .stepbar .navbtn .t { display: none; }
   :root.fullmap .topbar > .navbtn { padding: 0; width: 42px; }
   :root.fullmap .topbar > .navbtn .t { display: none; }
 }

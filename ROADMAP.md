@@ -241,13 +241,46 @@ below are the number of new war entries (tiers A, B and C).
   areas; Neukamerun is approximated by four provinces, and Northern
   Cameroons, German Dagbon, Mayotte, Witu, Venda and Barue are not shown.
   First load 1.09 MB gzip (fr and sv 1.15).*
-- [ ] Wave 14: North America and the Caribbean (~100)
+- [x] Wave 14: North America and the Caribbean (~100)
+  *Done: 153 wars (28 tier A, 70 B, 55 C; 432 steps), 152 new and the
+  Spanish–American War rewritten, from the Norse in Vinland (about 1003) and
+  the Tepanec War (1428) to the Mexican drug war and the gang war in Haiti
+  (both ongoing), with the Aztec wars, the Spanish conquests of the
+  Caribbean, the Aztec Empire, the Tarascan state and Yucatán, the Beaver
+  Wars and the colonial wars of New France, New England and New
+  Netherland, the Pueblo Revolt, the French and Indian War, the American
+  Revolutionary War, the Haitian Revolution, the War of 1812, the Mexican
+  and Cuban wars of independence, the Texas Revolution and the
+  Mexican–American War, the wars against the Native nations from the
+  Seminole wars to Wounded Knee, the American Civil War, the Caste War of
+  Yucatán, the French intervention in Mexico, the North-West Rebellion,
+  the Mexican and Cuban revolutions, the American occupations in the
+  Caribbean and the crises of the Cold War. Borders are curated from 800
+  for Mexico, the United States (without Hawaii), Canada, Bermuda and the
+  Caribbean in `events/north-america.yaml` (192 events, checked by two
+  fact-checkers), on 23 new splits (`splits/99f-north-america.geojson`: the
+  1783 line, the Red River basin, the Continental Divide, the Adams–Onís
+  line, the Nueces Strip, the Gadsden Purchase, the Florida Parishes and
+  the West Florida coast, southern Quebec and Ontario, Labrador, Cape
+  Breton, Vancouver Island, the Mixteca and the Delaware valley), with 38
+  new polities, 146 war actors, 81 capital tenures and 38 labels. The
+  Native nations north of Mexico are not on the base map (the provinces
+  are too coarse) and appear in the wars as areas; a colony is shown from
+  its first lasting settlement, other land from the treaty or formal
+  claim; rebel governments are war areas, except the Republic of Texas;
+  wartime occupations are war areas, except the American military
+  government of Cuba (1899–1902). Catalogue text, polity names, border
+  notes, capitals and labels are in French and Swedish. Known limits: Cape
+  Breton as a separate colony (1784–1820) and French Plaisance in
+  Newfoundland are not shown; Central America follows in wave 15 and
+  Hawaii in wave 16. First load 1.10 MB gzip (fr and sv 1.17).*
 - [ ] Wave 15: Central and South America (~100)
 - [ ] Wave 16: Oceania, and the non-European theatres of the world wars and of
-  wars already on the map (Seven Years' War in India and America, Napoleon in
-  Egypt, the Pacific War, the First World War in the Middle East and Africa) (~40
-  new, plus new steps); the Second World War in Burma, Malaya, the Dutch East
-  Indies and the Philippines came with wave 11
+  wars already on the map (Seven Years' War in India, Napoleon in Egypt, the
+  Pacific War, the First World War in the Middle East and Africa) (~40 new,
+  plus new steps); the Second World War in Burma, Malaya, the Dutch East
+  Indies and the Philippines came with wave 11, and the French and Indian War
+  with wave 14
 
 That is about 850 new wars, roughly 1,300 in all. More can follow at the same
 cost per war (about 50 KB of site each, in three languages).

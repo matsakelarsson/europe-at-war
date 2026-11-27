@@ -1,0 +1,207 @@
+id: invasion-of-jamaica
+name: Western Design and the conquest of Jamaica
+start: "1655-04"
+end: "1660-05"
+tier: B
+summary: "Oliver Cromwell’s attack on Spain’s Caribbean empire, the Western Design, and the five-year war for Jamaica that followed. A fleet under Admiral William Penn and an army under General Robert Venables, swelled in Barbados and the Leeward Islands to some 7,000 to 8,000 poorly trained men, landed on Hispaniola in April 1655 to take Santo Domingo, but the army was routed by a few hundred Spanish militia lancers and lost about a thousand men. Unwilling to return empty-handed, the commanders sailed for lightly defended Jamaica, where they landed in May 1655 and forced Governor Juan Ramírez de Arellano to capitulate. The Spanish colonists had freed many of the people they held in slavery, who formed free communities in the mountains, and under Francisco de Proenza and then Cristóbal Arnaldo de Ysassi the Spanish fought a guerrilla war alongside these maroons, led by Juan de Bolas and Juan de Serras. Disease killed most of the English troops, but Edward D’Oyley defeated Spanish landings from Cuba at Ocho Rios in 1657 and Rio Nuevo in 1658, and in 1660 won over Juan de Bolas, after which Ysassi left the island. Spain recognised English rule in Jamaica in the Treaty of Madrid of 1670."
+countries: [jm, do, cu, gb, es]
+sides:
+  - id: eng
+    name: England (the Commonwealth and Protectorate of Oliver Cromwell)
+    polities: [england, british-west-indies]
+    ink: red
+    moves: English moves
+    success: English success
+  - id: esp
+    name: Spain (Santo Domingo, Jamaica and Cuba)
+    polities: [spain, spanish-west-indies, dominican-republic, cuba]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+  - id: mar
+    name: Maroons of Jamaica (Juan de Bolas, Juan de Serras), allied with Spain until 1660
+    polities: [jamaican-maroons]
+    ink: green
+    moves: Maroon moves
+    success: Maroon success
+notes:
+  - "England kept the Julian calendar (Old Style), ten days behind the Gregorian calendar used by Spain: the English landed on Jamaica on 10 May 1655 by their own reckoning, 20 May by the Spanish. English dates in this story are Old Style unless stated otherwise."
+  - "The numbers in the English expedition vary by source because some counts include sailors; Spanish and English accounts of the fighting on Hispaniola disagree on the size of the defending force."
+  - The wider war between England and Spain, including the battles at Cádiz and Santa Cruz de Tenerife and the Battle of the Dunes, is told in the Anglo-Spanish War (1654–1660).
+sources:
+  - title: Invasion of Jamaica (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Invasion_of_Jamaica
+  - title: Western Design (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Western_Design
+  - title: Siege of Santo Domingo (1655) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Santo_Domingo_(1655)
+  - title: Battle of Ocho Rios (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ocho_Rios
+  - title: Battle of Rio Nuevo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Rio_Nuevo
+  - title: Juan de Bolas (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Juan_de_Bolas
+  - title: The Anglo-Spanish War 1655–1660 (British Civil Wars, Commonwealth and Protectorate, archived)
+    url: https://web.archive.org/web/20081102202826/http://www.british-civil-wars.co.uk/military/anglo-spanish-war.htm
+steps:
+  - title: The defeat at Santo Domingo
+    date: "April 1655"
+    when: "1655-04"
+    borders: "1655-04-25"
+    countries: [do, gb]
+    body:
+      - "Cromwell, at peace with the Dutch and looking for employment for his army and revenue for his treasury, was persuaded that Spain’s Caribbean colonies were weakly held and that a Protestant blow there would serve both God and trade. Penn’s fleet of some 38 ships left Portsmouth late in 1654 with about 2,500 soldiers, many of them raw recruits, and in Barbados, Montserrat, Nevis and Saint Kitts the commanders raised 3,000 to 4,000 more from indentured servants and freemen. Penn and Venables quarrelled, and supplies, arms and discipline were short."
+      - "Santo Domingo had been warned. Rather than land close to the city, Venables put the army ashore at the mouth of the Nizao river on 13–14 April 1655 (Old Style), some 50 km to the west, with scarcely any water. After days of marching in the heat through forest, the vanguard was ambushed near the city walls by Spanish lancers, mostly local militia and cattle hunters, sent by Governor Bernardino de Meneses, Count of Peñalba; a second advance a week later met the same fate. Some 600 English soldiers were killed and 400 wounded or captured, many of them men who broke and fled. Spanish tradition says the night-time noise of the land crabs on the beach at Haina alarmed the English, and the city later paraded a golden crab in thanks. The army re-embarked at the end of April."
+    facts:
+      - [English landing at the Nizao, "13–14 April 1655 (Old Style)"]
+      - [English losses, "about 600 killed, 400 wounded or captured"]
+      - [Spanish defenders in the ambush, "about 300 militia"]
+    markers:
+      - kind: capital
+        side: esp
+        name: Santo Domingo
+        date: "April 1655"
+        text: Defended by Governor Bernardino de Meneses, Count of Peñalba; the gate where the English were thrown back was renamed the Puerta del Conde in his honour.
+        lonlat: [-69.884, 18.473]
+        lp: r
+      - kind: battle
+        side: esp
+        name: Ambush before Santo Domingo
+        date: "April 1655"
+        text: Spanish lancers routed the English vanguard as it approached the city from the west; a second attack also failed.
+        lonlat: [-69.990, 18.445]
+        lp: t
+      - kind: event
+        side: eng
+        name: Mouth of the Nizao
+        date: "13–14 April 1655 (Old Style)"
+        text: The English army landed here, about 50 km west of the city.
+        lonlat: [-70.200, 18.250]
+        lp: b
+      - kind: event
+        name: Haina
+        date: "April 1655"
+        text: Where, by Spanish tradition, the noise of land crabs on the beach alarmed the English at night.
+        lonlat: [-70.030, 18.400]
+        lp: b
+    arrows:
+      - side: eng
+        label: Penn and Venables from Barbados
+        phase: 1
+        via: [[-68.40, 17.70], [-69.30, 18.05], [-69.90, 18.15], [-70.18, 18.22]]
+      - side: eng
+        label: Venables
+        phase: 2
+        via: [[-70.18, 18.28], [-70.10, 18.40], [-70.00, 18.43]]
+      - side: esp
+        label: Spanish lancers
+        phase: 3
+        via: [[-69.89, 18.48], [-69.94, 18.47], [-69.98, 18.45]]
+  - title: The capture of Jamaica
+    date: "May 1655"
+    when: "1655-05"
+    borders: "1655-05-20"
+    countries: [jm, gb]
+    body:
+      - "To salvage something from the expedition, Penn and Venables sailed west to Jamaica, a neglected Spanish colony of a few thousand people, many of them enslaved Africans, ruled from Santiago de la Vega, now Spanish Town. The Taíno who had lived there were almost gone. On 10 May 1655 (Old Style) the fleet entered the shallow bay at Caguaya, where the Passage Fort stood, silenced the small Spanish battery and put the army ashore, and the next day the English marched into Santiago de la Vega, which the colonists had abandoned."
+      - "Governor Juan Ramírez de Arellano agreed on 17 May (Old Style) to terms that required the Spanish colonists to leave the island, but many withdrew to the north coast and the hills instead, sending their families to Cuba. Before they went, many of them freed the Africans they held in slavery, who fled to the mountains and formed free communities; the largest, under Juan de Bolas, lay at Lluidas Vale in the centre of the island, and another, under Juan de Serras, at Los Vermejales. Penn and Venables sailed for England separately, each to blame the other, and Cromwell sent both to the Tower of London. The army left behind, unpaid and short of food, was dying of dysentery and fever: within a year thousands of the some 7,000 men who had landed were dead."
+    facts:
+      - [English land at Caguaya, "10 May 1655 (Old Style)"]
+      - [Ramírez agrees to capitulate, "17 May 1655 (Old Style)"]
+      - [English soldiers dead within a year, "thousands of some 7,000"]
+    markers:
+      - kind: taken
+        side: eng
+        name: Santiago de la Vega (Spanish Town)
+        date: "May 1655"
+        text: The Spanish capital of Jamaica, occupied by the English the day after they landed.
+        lonlat: [-76.955, 17.990]
+        lp: l
+      - kind: battle
+        side: eng
+        name: Passage Fort (Caguaya)
+        date: "10 May 1655 (Old Style)"
+        text: The English fleet silenced the Spanish battery here and landed the army; Port Royal, the later buccaneer capital, grew up on the spit across the harbour.
+        lonlat: [-76.868, 17.955]
+        lp: b
+      - kind: held
+        side: mar
+        name: Lluidas Vale
+        date: "1655"
+        text: The free community of Juan de Bolas in the hills of the centre of the island.
+        lonlat: [-77.150, 18.130]
+        lp: t
+    arrows:
+      - side: eng
+        label: Penn and Venables
+        via: [[-70.30, 18.05], [-72.50, 17.60], [-75.00, 17.55], [-76.60, 17.85], [-76.86, 17.93]]
+      - side: eng
+        via: [[-76.87, 17.96], [-76.91, 17.98], [-76.94, 17.99]]
+    areas:
+      - style: occupied
+        side: eng
+        label: Under English control (approximate)
+        polygon: [[-77.20, 17.85], [-77.15, 18.05], [-76.95, 18.10], [-76.70, 18.05], [-76.62, 17.92], [-76.85, 17.90]]
+  - title: Guerrilla war, Ocho Rios and Rio Nuevo
+    date: "1655–1660"
+    when: "1658"
+    borders: "1658-06-27"
+    countries: [jm, cu, gb]
+    body:
+      - "From the north coast and the hills Francisco de Proenza, and after him Cristóbal Arnaldo de Ysassi, whom the Crown named governor, waged a guerrilla war with a few hundred Spaniards and the maroons of Juan de Bolas and Juan de Serras, ambushing English soldiers who strayed from their camps and hoping for help from Cuba. The English governors Robert Sedgwick and William Brayne died within months of arriving, and Edward D’Oyley, a veteran of the invasion, took command."
+      - "In 1657 Ysassi gathered nearly 300 soldiers from Cuba and about 100 guerrillas at Las Chorreras, now Ocho Rios. D’Oyley sailed round the island with some 900 men, landed nearby and scattered them in late October. In May 1658 a larger force of 467 soldiers with their officers, recruited in New Spain, landed at the mouth of the Rio Nuevo and dug in. D’Oyley arrived by sea with 700 men in June, seized their transports, bombarded their redoubt for two days and broke it; the Spaniards lost over 300 killed and wounded and 150 prisoners, the English about 60. It was the largest battle ever fought in Jamaica."
+      - "D’Oyley then persuaded Juan de Bolas to change sides in return for freedom and land for his people, and de Bolas’s men led the English to the Spanish camps. In May 1660 Ysassi and his last followers left by canoe for Cuba. Juan de Bolas became colonel of a Black militia and hunted the maroons who refused terms; he was killed in an ambush in 1664, perhaps by de Serras’s people, who stayed free in the mountains and whose descendants are thought to have joined the maroons who fought Britain in the 1720s and 1730s. Buccaneers based at Port Royal now raided the Spanish Main, and Spain recognised English rule in Jamaica in the Treaty of Madrid in 1670."
+    facts:
+      - [Battle of Ocho Rios (Las Chorreras), "late October 1657"]
+      - [Battle of Rio Nuevo, "June 1658"]
+      - [Ysassi leaves for Cuba, "May 1660"]
+      - [Treaty of Madrid, "1670"]
+    markers:
+      - kind: battle
+        side: eng
+        name: Ocho Rios (Las Chorreras)
+        date: "October 1657"
+        text: D’Oyley’s 900 men routed Ysassi’s force of nearly 300 Spanish soldiers from Cuba and about 100 guerrillas.
+        lonlat: [-77.109, 18.408]
+        lp: l
+      - kind: battle
+        side: eng
+        name: Rio Nuevo
+        date: "June 1658"
+        text: D’Oyley’s 700 men destroyed the Spanish landing force from New Spain in a two-day battle; the site is now a heritage park.
+        lonlat: [-77.014, 18.410]
+        lp: r
+      - kind: held
+        side: mar
+        name: Lluidas Vale
+        date: "1655–1660"
+        text: Juan de Bolas’s community, which went over to the English in 1660.
+        lonlat: [-77.150, 18.130]
+        lp: b
+      - kind: capital
+        side: eng
+        name: Spanish Town
+        date: "1658"
+        text: The English seat of government; D’Oyley set out from the harbour at Port Royal.
+        lonlat: [-76.955, 17.990]
+        lp: b
+      - kind: held
+        side: esp
+        name: Santiago de Cuba
+        date: "1657–1658"
+        text: The Spanish base for the attempts to retake Jamaica.
+        lonlat: [-75.830, 20.020]
+        lp: b
+    arrows:
+      - side: esp
+        label: Ysassi’s reinforcements
+        phase: 1
+        via: [[-75.85, 19.95], [-76.40, 19.30], [-76.90, 18.70], [-77.02, 18.44]]
+      - side: eng
+        label: D’Oyley
+        phase: 2
+        via: [[-76.85, 17.93], [-76.25, 17.88], [-76.20, 18.25], [-76.70, 18.45], [-76.99, 18.43]]
+      - side: esp
+        label: Ysassi leaves, 1660
+        phase: 3
+        via: [[-77.00, 18.45], [-77.20, 19.00], [-77.40, 19.60], [-77.50, 19.90]]

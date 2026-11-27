@@ -1,0 +1,162 @@
+id: mixton-war
+name: Mixtón War
+start: "1540"
+end: "1542"
+tier: B
+summary: "A rising of the Caxcanes of New Galicia, in today’s Jalisco and southern Zacatecas, and their Zacateco and other allies against Spanish rule, named after the fortified hill of Mixtón where many of them made their stand. Ten years after Nuño de Guzmán’s conquest of the west, slave raids and forced labour drove the Caxcanes to revolt in 1540. They beat off the first Spanish attacks, and Pedro de Alvarado, conqueror of Guatemala, died of injuries received in a failed assault in June 1541. Viceroy Antonio de Mendoza then led 450 Spaniards and tens of thousands of Indigenous warriors from central Mexico against the strongholds, taking Nochistlán in November 1541 and Mixtón early in 1542. Thousands of captives were executed or enslaved; the Caxcan leader Francisco Tenamaztle held out in the mountains until 1550 or 1551."
+countries: [mx]
+sides:
+  - id: cx
+    name: Caxcanes, Zacatecos and their allies (Francisco Tenamaztle, Don Diego the Zacateco)
+    polities: [caxcanes, chichimecs]
+    ink: brown
+    moves: Caxcan moves
+    success: Caxcan success
+  - id: ns
+    name: New Spain and New Galicia (Cristóbal de Oñate, Pedro de Alvarado, Viceroy Antonio de Mendoza), with Indigenous allies from central Mexico
+    polities: [new-spain]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+notes:
+  - "Almost all the sources are Spanish: the reports of the viceroy and his captains, the inquiry into Mendoza’s conduct, and the chronicles of the friars. The Caxcan side survives mainly in Tenamaztle’s petition to the Council of the Indies in 1555, written with the help of Bartolomé de las Casas. The sources disagree on where Alvarado was defeated, at the fortified hill of Nochistlán or at Mixtón, and date the fall of Mixtón to December 1541 or early 1542."
+  - "Guadalajara, founded at Nochistlán in 1532, stood at Tlacotán during the war and was moved to its present site in the valley of Atemajac in February 1542. The Caxcanes are sometimes counted among the Chichimecs, but unlike most of them they were farmers living in towns."
+sources:
+  - title: Mixtón War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mixt%C3%B3n_War
+  - title: Francisco Tenamaztle (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Francisco_Tenamaztle
+  - title: Pedro de Alvarado (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pedro_de_Alvarado
+  - title: Guadalajara (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Guadalajara
+  - title: Nueva Galicia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nueva_Galicia
+steps:
+  - title: The rising
+    date: "1540–1541"
+    when: "1540"
+    borders: "1540-06-01"
+    countries: [mx]
+    body:
+      - The Caxcanes lived in the valleys of northern Jalisco and southern Zacatecas, the northernmost of the farming, town-dwelling peoples of western Mexico; beyond them lived the Zacatecos and other mostly nomadic peoples whom the Spaniards called Chichimecs. Since Nuño de Guzmán’s conquest of 1529–1531 the Spaniards of New Galicia had divided them among encomenderos and raided their lands for slaves.
+      - Early in 1540 Francisco Vázquez de Coronado led more than 1,600 Spaniards and Indigenous allies north from New Galicia in search of the Seven Cities of Cíbola, leaving the province short of soldiers. In the middle of the year the Spaniards arrested eighteen Caxcan leaders and hanged nine of them. Later in the year Caxcanes killed the encomendero Juan de Arce, the Spaniards heard of dances they called devilish, and after two priests were killed many people left the encomiendas for fortified hills in the mountains, above all Mixtón.
+      - The acting governor, Cristóbal de Oñate, marched against them with Spanish and Indigenous troops. The Caxcanes killed a delegation of one priest and ten soldiers sent to them, and beat back Oñate’s assault on the summit of Mixtón, and Oñate asked Mexico City for help. The most prominent of the Caxcan leaders was Francisco Tenamaztle, the baptised lord of Nochistlán.
+    facts:
+      - [Coronado’s expedition leaves, "early 1540"]
+      - [Rising begins, "mid-1540"]
+    markers:
+      - kind: held
+        side: cx
+        name: Mixtón
+        date: "1540–1541"
+        text: The fortified hill where many Caxcanes took refuge; they drove back Oñate’s assault on the summit. The hill is placed near Apozol, and its position is approximate.
+        lonlat: [-103.050, 21.490]
+        lp: l
+      - kind: event
+        side: cx
+        name: Nochistlán
+        date: "1540"
+        text: The town of Francisco Tenamaztle, the most prominent Caxcan leader.
+        lonlat: [-102.846, 21.363]
+        lp: r
+      - kind: capital
+        side: ns
+        name: Guadalajara (Tlacotán)
+        date: "1540"
+        text: The Spanish town of Guadalajara stood here during the war.
+        lonlat: [-103.240, 20.864]
+        lp: b
+      - kind: event
+        side: ns
+        name: Compostela
+        date: "early 1540"
+        text: The capital of New Galicia, from which Coronado’s expedition set out north, taking many of the province’s soldiers.
+        lonlat: [-104.901, 21.237]
+        lp: b
+    arrows:
+      - side: ns
+        label: Oñate
+        via: [[-103.24, 20.88], [-103.20, 21.15], [-103.10, 21.40], [-103.06, 21.47]]
+  - title: Alvarado and Guadalajara
+    date: "June–September 1541"
+    when: "1541-06-24"
+    borders: "1541-06-24"
+    countries: [mx]
+    body:
+      - Viceroy Antonio de Mendoza called on Pedro de Alvarado, the conqueror of Guatemala, who was preparing a fleet on the Pacific coast. Alvarado would not wait for reinforcements and attacked in June 1541 with 400 Spaniards and Indigenous allies, against a Caxcan and Zacateco army that the Spaniards put at 15,000 under Tenamaztle and Don Diego the Zacateco. The first assault was beaten back with ten Spaniards and many of their allies killed, and later attacks also failed. On 24 June a horse fell on Alvarado, and he died of his injuries on 4 July 1541.
+      - Encouraged by the victory, the Caxcanes and their allies attacked Guadalajara in September 1541 but were driven off, and withdrew to Nochistlán and their other strongholds. The Spanish authorities feared that the rising would spread across New Spain.
+    facts:
+      - [Alvarado crushed by a horse, "24 June 1541"]
+      - [Death of Alvarado, "4 July 1541"]
+      - [Attack on Guadalajara, "September 1541"]
+    markers:
+      - kind: battle
+        side: cx
+        name: Nochistlán
+        date: "June 1541"
+        text: Alvarado’s assaults on the Caxcan stronghold failed; the sources place them at the fortified hill of Nochistlán or at Mixtón. A horse fell on Alvarado during the fighting, and he died on 4 July.
+        lonlat: [-102.846, 21.363]
+        lp: r
+      - kind: held
+        side: cx
+        name: Mixtón
+        date: "1541"
+        text: The main Caxcan stronghold.
+        lonlat: [-103.050, 21.490]
+        lp: l
+      - kind: battle
+        side: ns
+        name: Guadalajara (Tlacotán)
+        date: "September 1541"
+        text: The Caxcanes and their allies attacked the town and were driven off.
+        lonlat: [-103.240, 20.864]
+        lp: b
+    arrows:
+      - side: ns
+        label: Alvarado
+        phase: 1
+        via: [[-103.24, 20.88], [-103.05, 21.10], [-102.90, 21.33]]
+      - side: cx
+        label: Caxcanes
+        phase: 2
+        via: [[-102.90, 21.35], [-103.10, 21.15], [-103.23, 20.90]]
+  - title: Mendoza’s campaign
+    date: "October 1541 – early 1542"
+    when: "1541-11-09"
+    borders: "1541-11-09"
+    countries: [mx]
+    body:
+      - Mendoza now led the campaign himself, with 450 Spaniards and 30,000 to 60,000 Nahua, Tlaxcalan and other Indigenous warriors from central Mexico, and took the Caxcan strongholds one by one in a war without quarter. On 9 November 1541 he took Nochistlán and captured Tenamaztle, who later escaped. Mixtón fell early in 1542, and the rising was over.
+      - Thousands of captives were led off in chains to the mines, and many of the survivors, mostly women and children, were taken from their homeland to work on Spanish farms. On the viceroy’s orders many of those captured at Mixtón were executed, some blown apart by cannon, some torn apart by dogs and others stabbed, and reports of the killings led the Council of the Indies to open a secret inquiry into Mendoza’s conduct. In February 1542 Guadalajara was moved to the valley of Atemajac, where it stands today.
+      - Tenamaztle held out in the mountains until 1550 or 1551, when he gave himself up to the bishop of New Galicia. He was sent to Spain and in 1555, with the help of Bartolomé de las Casas, told the Council of the Indies that the Caxcanes had not rebelled but had fled the cruelty of men such as Guzmán and Oñate; nothing is known of his fate after 1556. The Caxcanes later served as auxiliaries of the Spaniards in their advance north, which led to the silver of Zacatecas and the Chichimeca War.
+    facts:
+      - [Mendoza’s army, "450 Spaniards and 30,000–60,000 Indigenous allies"]
+      - [Nochistlán taken, "9 November 1541"]
+      - [Mixtón falls, "early 1542"]
+    markers:
+      - kind: taken
+        side: ns
+        name: Nochistlán
+        date: "9 November 1541"
+        text: Taken by Mendoza’s army; Tenamaztle was captured here but later escaped.
+        lonlat: [-102.846, 21.363]
+        lp: r
+      - kind: taken
+        side: ns
+        name: Mixtón
+        date: "early 1542"
+        text: The last Caxcan stronghold. Many of those captured here were executed on the viceroy’s orders.
+        lonlat: [-103.050, 21.490]
+        lp: l
+      - kind: capital
+        side: ns
+        name: Guadalajara
+        date: "14 February 1542"
+        text: The town was moved to its present site in the valley of Atemajac.
+        lonlat: [-103.348, 20.677]
+        lp: b
+    arrows:
+      - side: ns
+        label: Mendoza
+        via: [[-102.40, 20.35], [-103.00, 20.60], [-103.24, 20.88], [-102.88, 21.33], [-103.03, 21.47]]

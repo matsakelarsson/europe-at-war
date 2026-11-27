@@ -1,0 +1,186 @@
+id: first-maroon-war
+name: First Maroon War
+start: "1728"
+end: "1740"
+tier: B
+summary: "The war between the British colony of Jamaica and the Maroons, free communities of Africans and their descendants who had escaped slavery and lived in the island’s mountains. The Windward Maroons of the Blue Mountains, led by Nanny and Quao, and the Leeward Maroons of the Cockpit Country in the west, led by Cudjoe (Kojo), raided plantations, freed enslaved people and ambushed the troops sent against them. From 1728 Governor Robert Hunter, reinforced by regular regiments, sent expeditions into the mountains; the militia took Nanny Town more than once, the last time in 1734, but each time the Maroons slipped away and fought on, while the cost of the war, martial law and the flight of planters weakened the colony. In 1739 Governor Edward Trelawny made peace: Cudjoe signed a treaty with John Guthrie on 1 March 1739 (Old Style), and Quao one with Robert Bennett later that year or in 1740. The treaties recognised the Maroons’ freedom and their lands, about 1,500 acres for Cudjoe’s people, with self-government under their own leaders and a British superintendent, in return for returning runaways, helping to put down revolts and defending the island against invaders. Nanny received a grant of 500 acres in 1740, where Moore Town now stands. She is today Jamaica’s only female National Hero."
+countries: [jm, gb]
+sides:
+  - id: gb
+    name: Great Britain (the colony of Jamaica, its militia and regular troops)
+    polities: [united-kingdom, british-west-indies]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: mar
+    name: Jamaican Maroons (Windward Maroons under Nanny and Quao, Leeward Maroons under Cudjoe)
+    polities: [jamaican-maroons]
+    ink: green
+    moves: Maroon moves
+    success: Maroon success
+notes:
+  - "Jamaica used the Julian calendar (Old Style) until 1752. Cudjoe’s treaty is dated 1 March 1738 in documents of the time, which began the year on 25 March; it is 1 March 1739 by the modern reckoning of the year. The Windward treaty is dated June 1739 in some accounts and 1740 in others."
+  - "Much of what is known about Nanny comes from Maroon oral tradition and a few colonial records, including the 1740 land patent in her name; British sources barely mention her. Moore Town tradition holds that she did not sign the treaty with the British."
+  - "Earlier Maroon communities went back to the Spanish period and to the English conquest of 1655; the Leeward group grew from revolts of enslaved people in St Ann in 1673 and at Sutton’s estate in Clarendon in 1690."
+sources:
+  - title: First Maroon War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Maroon_War
+  - title: Jamaican Maroons (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jamaican_Maroons
+  - title: Nanny of the Maroons (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nanny_of_the_Maroons
+  - title: Cudjoe (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cudjoe
+  - title: Quao (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Quao
+  - title: Nanny Town (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nanny_Town
+  - title: Famous Maroons (Jamaica Information Service)
+    url: https://jis.gov.jm/information/get-the-facts/famous-maroons/
+  - title: Nanny of the Maroons (Royal Museums Greenwich)
+    url: https://www.rmg.co.uk/stories/maritime-history/nanny-maroons
+steps:
+  - title: Nanny Town and the Windward war
+    date: "1728–1734"
+    when: "1732"
+    borders: "1734"
+    countries: [jm, gb]
+    body:
+      - "By the 1720s Jamaica was a sugar colony of perhaps 80,000 enslaved Africans and fewer than 8,000 whites, and Maroon communities held much of its mountainous interior. In the east, in the rain-soaked Blue Mountains, the Windward Maroons lived at Nanny Town, high above the Rio Grande valley, under Nanny, a spiritual and military leader of Akan origin, and her brother Quao, with captains such as Jeddo and Welcome. They grew food in hidden provision grounds, traded and raided along the coast, and took in people who had escaped from the plantations."
+      - "In 1728 Governor Robert Hunter arrived with orders to end the Maroon threat, and more troops followed. Jeddo’s warriors attacked the new settlement at Port Antonio, and when Lieutenant Soaper’s militia pursued them they were ambushed; in 1730 a larger force under Soaper was beaten again. Two regular regiments arrived in 1731. Using lookouts, horns to signal and ambushes from the forest, the Maroons repeatedly cut up the columns of soldiers, militia and the “Black Shot”, enslaved and free Black auxiliaries, sent up the river valleys. In 1732 three parties occupied Nanny Town, but the cost of holding it was too great, and the Maroons returned when they left."
+      - "In 1734 Captain Stoddart led a party up the mountains by night, dragged small swivel guns to the heights above Nanny Town and bombarded it; the Windward Maroons abandoned the town and moved east into the John Crow Mountains, where they kept up the war. By the end of 1734 the colony was under martial law, sugar exports had fallen, and planters were abandoning estates exposed to Maroon raids."
+    facts:
+      - [Governor Hunter arrives, "1728"]
+      - [Nanny Town occupied, "1732, and again in 1734"]
+      - [Regular regiments sent from outside, "two in 1731"]
+    markers:
+      - kind: held
+        side: mar
+        name: Nanny Town
+        date: "1720s–1734"
+        text: The Windward Maroon stronghold in the Blue Mountains, led by Nanny and Quao; occupied by the militia in 1732 and abandoned after Stoddart’s attack in 1734.
+        lonlat: [-76.524, 18.068]
+        lp: l
+      - kind: battle
+        side: mar
+        name: Port Antonio
+        date: "1729–1730"
+        text: Jeddo’s Maroons raided the settlement and ambushed the militia sent after them.
+        lonlat: [-76.450, 18.180]
+        lp: t
+      - kind: capital
+        side: gb
+        name: Spanish Town
+        date: "1728"
+        text: Capital of the colony, from which Governor Hunter directed the war.
+        lonlat: [-76.955, 17.990]
+        lp: b
+      - kind: held
+        side: mar
+        name: John Crow Mountains
+        date: "1734"
+        text: Where the Windward Maroons withdrew after leaving Nanny Town (location approximate).
+        lonlat: [-76.340, 18.040]
+        lp: r
+    arrows:
+      - side: mar
+        label: Jeddo
+        phase: 1
+        via: [[-76.51, 18.09], [-76.48, 18.13], [-76.45, 18.17]]
+      - side: gb
+        label: Stoddart, 1734
+        phase: 2
+        via: [[-76.45, 18.16], [-76.53, 18.13], [-76.55, 18.10], [-76.53, 18.08]]
+      - side: mar
+        phase: 3
+        via: [[-76.51, 18.06], [-76.43, 18.05], [-76.35, 18.04]]
+    areas:
+      - style: outline
+        side: mar
+        label: Windward Maroon country, the Blue and John Crow Mountains (approximate)
+        polygon: [[-76.75, 18.10], [-76.60, 18.15], [-76.40, 18.13], [-76.30, 18.05], [-76.38, 17.97], [-76.62, 18.00]]
+  - title: Cudjoe and the Leeward treaty
+    date: "1735 – March 1739"
+    when: "1738"
+    borders: "1739-03-01"
+    countries: [jm, gb]
+    body:
+      - "In the west, the Leeward Maroons held the Cockpit Country, a maze of steep limestone hills and hollows. They were led by Cudjoe, by Maroon tradition the son of a leader of the rising at Sutton’s estate in 1690, who had united the western bands, with Accompong and other brothers and captains. In 1735 more than a hundred of Cudjoe’s warriors overran a military barracks in western Jamaica. Governors Ayscough and Gregory built new barracks and outposts around the Maroon country and ordered parties to keep pressing into it, but the Maroons ambushed them in the narrow passes and raids on coastal estates continued."
+      - "In 1738 Governor Edward Trelawny, convinced that the war could not be won, authorised Colonel John Guthrie to offer peace. Guthrie advanced into the Cockpit Country with a strong force, and after a tense approach Cudjoe met him and Lieutenant Francis Sadler at Petty River Bottom. The treaty they signed on 1 March 1739 (Old Style) declared Cudjoe’s people free and gave them some 1,500 acres between Trelawny Town (Cudjoe’s Town) and the Cockpits, with the right to grow and sell crops and hunt. Cudjoe was to govern them for life, with Accompong, Johnny, Cuffee and Quaco to succeed him, and two white residents were to live among them. In return the Maroons were to return future runaways for a reward, help put down rebellions and fight any invader."
+    facts:
+      - [Cudjoe’s warriors take a barracks, "1735"]
+      - [Leeward treaty, "1 March 1739 (Old Style)"]
+      - [Land granted to Cudjoe’s people, "about 1,500 acres"]
+    markers:
+      - kind: treaty
+        side: mar
+        name: Trelawny Town (Cudjoe’s Town)
+        date: "1 March 1739 (Old Style)"
+        text: Cudjoe’s town; the treaty was signed nearby at Petty River Bottom with John Guthrie and Francis Sadler.
+        lonlat: [-77.800, 18.330]
+        lp: t
+      - kind: held
+        side: mar
+        name: Accompong
+        date: "1739"
+        text: The town of Cudjoe’s brother and named successor Accompong; it remains a Maroon community.
+        lonlat: [-77.740, 18.230]
+        lp: b
+      - kind: capital
+        side: gb
+        name: Spanish Town
+        date: "1738"
+        text: Governor Edward Trelawny decided here to seek peace.
+        lonlat: [-76.955, 17.990]
+        lp: b
+    arrows:
+      - side: gb
+        label: Guthrie, 1739
+        via: [[-77.42, 18.10], [-77.58, 18.20], [-77.72, 18.28], [-77.79, 18.32]]
+    areas:
+      - style: pledged
+        side: mar
+        label: Cockpit Country, the Leeward Maroon heartland (approximate)
+        polygon: [[-77.88, 18.38], [-77.62, 18.42], [-77.45, 18.35], [-77.50, 18.20], [-77.68, 18.18], [-77.86, 18.25]]
+  - title: The Windward treaty and Nanny’s land
+    date: "1739–1740"
+    when: "1739"
+    borders: "1740"
+    countries: [jm, gb]
+    body:
+      - "Under pressure from the British and from the Leeward peace, the Windward Maroons also negotiated. Quao signed a treaty with Captain Robert Bennett, after the two men by tradition cut their fingers and mixed their blood in a calabash with rum; most accounts date it to June 1739, others to 1740. Its terms were harsher than Cudjoe’s: the Windward Maroons were to return even the runaways who had joined them in the last three years. Quao’s people settled at Crawford’s Town on the western edge of the Blue Mountains, while Nanny’s went east to the land granted to her by a patent of 1740, about 500 acres in Portland, where New Nanny Town, later Moore Town, grew up."
+      - "The treaties ended the war and made the Maroons free people under their own leaders. They also bound them to the slave system: in 1760 Maroons from the eastern towns would help put down Tacky’s Revolt. Disputes over land and the terms of the treaty led Trelawny Town into the Second Maroon War of 1795–1796, after which most of its people were deported to Nova Scotia and then Sierra Leone. Toussaint Louverture is said to have cited the Jamaican Maroons as proof that Black people could force a European power to make terms."
+    facts:
+      - [Windward treaty, "June 1739 (Old Style), or 1740"]
+      - [Nanny’s land patent, "1740, about 500 acres"]
+    markers:
+      - kind: treaty
+        side: mar
+        name: Crawford’s Town
+        date: "1739–1740"
+        text: Quao’s people settled here after the treaty; the town was destroyed in the 1750s and its people moved to Charles Town and Scott’s Hall.
+        lonlat: [-76.670, 18.180]
+        lp: l
+      - kind: held
+        side: mar
+        name: Moore Town (New Nanny Town)
+        date: "1740"
+        text: Founded on the land granted to Nanny in 1740; still the main Windward Maroon town.
+        lonlat: [-76.430, 18.070]
+        lp: r
+      - kind: event
+        side: mar
+        name: Nanny Town
+        date: "1734"
+        text: The old stronghold, left after 1734.
+        lonlat: [-76.524, 18.068]
+        lp: b
+    arrows:
+      - side: mar
+        label: Quao’s people
+        via: [[-76.52, 18.09], [-76.58, 18.13], [-76.65, 18.17]]
+    areas:
+      - style: pledged
+        side: mar
+        label: Nanny’s land grant, 1740 (approximate)
+        polygon: [[-76.47, 18.09], [-76.41, 18.10], [-76.39, 18.06], [-76.45, 18.04]]

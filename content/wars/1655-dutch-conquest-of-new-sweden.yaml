@@ -1,0 +1,132 @@
+id: dutch-conquest-of-new-sweden
+name: Dutch conquest of New Sweden
+start: "1655-09"
+end: "1655-09-15"
+tier: B
+summary: "The seizure of the Swedish colony on the Delaware River by New Netherland in 1655. New Sweden, founded at Fort Christina (Wilmington) in 1638 on land the Dutch claimed, traded for furs with the Lenape and the Susquehannock, and its few hundred Swedish and Finnish colonists farmed both banks of the river. In 1651 Peter Stuyvesant built Fort Casimir (New Castle) a few miles below Fort Christina to cut off its trade; in May 1654 the new Swedish governor, Johan Risingh, took it without a fight and renamed it Fort Trinity. On orders from the West India Company, Stuyvesant sailed from New Amsterdam in 1655 with seven ships and 317 soldiers. Fort Trinity surrendered on 11 September, and Fort Christina, besieged and short of men and powder, on 15 September; no one was killed in the fighting. The same day hundreds of Munsee entered New Amsterdam, leading to the Peach War. New Sweden became part of New Netherland, but its colonists kept their lands, church, courts and militia, and Swedish Lutheran congregations survived on the Delaware for more than a century. It was a conflict between the two trading companies, not between the Dutch Republic and Sweden, which were not at war."
+countries: [us]
+sides:
+  - id: nn
+    name: New Netherland (Peter Stuyvesant)
+    polities: [new-netherland, dutch-republic]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+  - id: ns
+    name: New Sweden (Johan Risingh)
+    polities: [new-sweden, sweden]
+    ink: blue
+    moves: Swedish moves
+    success: Swedish success
+notes:
+  - Sweden used the Julian calendar (Old Style) and New Netherland the Gregorian, so Swedish dates are ten days earlier than Dutch ones; dates here are Gregorian. Fort Casimir was taken on Trinity Sunday, 21 May 1654 by the Swedish calendar, 31 May by the Dutch.
+  - The main sources are Risingh’s journal and reports and Dutch official papers. The Lenape and the Susquehannock (whom the Swedes and Dutch called the Minquas) traded with both colonies and were courted by both; whether the Susquehannock had a hand in the Munsee entry into New Amsterdam on 15 September 1655 is debated.
+sources:
+  - title: New Sweden (Wikipedia)
+    url: https://en.wikipedia.org/wiki/New_Sweden
+  - title: Fort Casimir (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fort_Casimir
+  - title: Fort Christina (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fort_Christina
+  - title: Fort Christina, Wilmington (National Park Service)
+    url: https://www.nps.gov/places/fort-christina.htm
+  - title: New Sweden (Britannica)
+    url: https://www.britannica.com/place/New-Sweden
+  - title: Peach War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peach_War
+steps:
+  - title: Fort Casimir and Fort Trinity
+    date: 1651 – May 1654
+    when: "1654-05"
+    borders: "1654-06-01"
+    countries: [us]
+    view:
+      center: [-75.38, 39.76]
+      size: [90, 70]
+    body:
+      - New Sweden was small. Under Governor Johan Printz (1643–1653) its colonists, mostly Swedes and Finns with some Dutch and Germans, built Fort Nya Elfsborg on the east bank to control shipping, and Printz built his house at Fort Nya Göteborg on Tinicum Island. The Swedes bought land from the Lenape, who later said that they had sold far less than the colonists took, and traded cloth, metal goods and guns to the Susquehannock for beaver; they also helped the Susquehannock against Maryland. New Netherland had never given up its claim to the river. In 1651 Peter Stuyvesant came to the river with soldiers and ships, bought land from Lenape sachems and built Fort Casimir at what is now New Castle, a few miles below Fort Christina, so that ships bound for the Swedish forts had to pass Dutch guns.
+      - Printz left for Sweden in 1653, and the colony waited years for help. In May 1654 the ship Örn brought some 250 new colonists and Johan Risingh, the new commissioner, who on Trinity Sunday landed soldiers at Fort Casimir and demanded its surrender. Its small garrison had no powder and gave up without firing a shot; Risingh renamed it Fort Trinity (Trefaldighet). In June he renewed the Swedish alliance with the Lenape sachems.
+    facts:
+      - [Fort Casimir built, "1651"]
+      - [Taken by Risingh, "21 May 1654 (Old Style), without a fight"]
+      - [New colonists on the Örn, "about 250"]
+    markers:
+      - kind: capital
+        side: ns
+        name: Fort Christina (Wilmington)
+        date: "1638"
+        text: The first fort and seat of New Sweden, at the mouth of the Christina River.
+        lonlat: [-75.538, 39.737]
+        lp: r
+      - kind: taken
+        side: ns
+        name: Fort Casimir (New Castle)
+        date: May 1654
+        text: Built by Stuyvesant in 1651; surrendered to Risingh without a fight and renamed Fort Trinity.
+        lonlat: [-75.559, 39.662]
+        lp: l
+      - kind: event
+        side: ns
+        name: Fort Nya Göteborg (Tinicum Island)
+        date: "1643"
+        text: Printz’s seat, with his house, the Printzhof.
+        lonlat: [-75.290, 39.860]
+        lp: t
+      - kind: event
+        side: ns
+        name: Fort Nya Elfsborg
+        date: "1643"
+        text: Built on the east bank to control shipping on the river; plagued by mosquitoes, it was abandoned and burned in the 1650s.
+        lonlat: [-75.526, 39.548]
+        lp: r
+    arrows:
+      - side: ns
+        label: Risingh
+        phase: 1
+        via: [[-75.20, 39.40], [-75.45, 39.55], [-75.55, 39.66]]
+  - title: Stuyvesant takes New Sweden
+    date: September 1655
+    when: "1655-09"
+    borders: "1655-09-15"
+    countries: [us]
+    view:
+      center: [-75.40, 39.75]
+      size: [90, 70]
+    body:
+      - The West India Company ordered Stuyvesant to drive the Swedes from the river. Stuyvesant sailed from New Amsterdam with seven ships, among them the Amsterdam warship De Waag, and 317 soldiers. Fort Trinity, outnumbered and outgunned, was surrendered by its commander, Sven Skute, on 11 September. Stuyvesant then landed at Fort Christina, where Risingh had only a few dozen men, and surrounded it with batteries; the Dutch soldiers plundered the farms and killed the cattle around it. On 15 September Risingh signed the surrender. Swedes and Finns who wished could stay and keep their property and Lutheran faith; Risingh and some others were shipped home.
+      - The same morning about five hundred Munsee in sixty-four canoes landed at New Amsterdam, left almost undefended. After a day of searching houses and talks with the council they agreed to leave, but in the evening a colonist was wounded by an arrow and the guard opened fire. In the raids that followed on Pavonia and Staten Island, the Peach War, some forty colonists were killed and about a hundred taken captive, and Stuyvesant hurried back to ransom them.
+      - The Delaware became part of New Netherland. Fort Christina was renamed Fort Altena, and in 1656 the West India Company sold Fort Casimir and the land around it to the city of Amsterdam, which settled colonists there as New Amstel. The Swedish and Finnish colonists kept their own courts and militia, as they did again after the English took New Netherland in 1664.
+    facts:
+      - [Stuyvesant’s force, "7 ships and 317 soldiers"]
+      - [Fort Trinity surrendered, "11 September 1655"]
+      - [Fort Christina surrendered, "15 September 1655"]
+    markers:
+      - kind: taken
+        side: nn
+        name: Fort Trinity (Casimir)
+        date: 11 September 1655
+        text: Surrendered by Sven Skute without a fight. It became Fort Casimir again, and from 1657 the centre of the city of Amsterdam’s colony of New Amstel.
+        lonlat: [-75.559, 39.662]
+        lp: l
+      - kind: siege
+        side: nn
+        name: Fort Christina
+        date: 15 September 1655
+        text: Besieged by Stuyvesant’s batteries, Risingh surrendered without a battle. The fort was renamed Fort Altena.
+        lonlat: [-75.538, 39.737]
+        lp: r
+      - kind: event
+        side: ns
+        name: Fort Nya Göteborg (Tinicum Island)
+        date: "1655"
+        text: The Swedish settlements upriver surrendered with Fort Christina.
+        lonlat: [-75.290, 39.860]
+        lp: t
+    arrows:
+      - side: nn
+        label: Stuyvesant’s fleet
+        phase: 1
+        via: [[-75.10, 39.20], [-75.35, 39.45], [-75.53, 39.64]]
+      - side: nn
+        phase: 2
+        via: [[-75.55, 39.67], [-75.55, 39.71], [-75.54, 39.73]]

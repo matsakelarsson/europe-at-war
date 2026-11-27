@@ -1,0 +1,175 @@
+id: dominican-civil-war
+name: Dominican Civil War
+start: "1965-04-24"
+end: "1965-09-03"
+tier: B
+summary: "The civil war of 1965 in Santo Domingo, also called the April Revolution, between the Constitutionalists, officers and armed civilians who wanted to restore the elected president Juan Bosch and the constitution of 1963, and the Loyalists of the military establishment, and the American intervention that ended it. Bosch, the first freely elected president after the assassination of the dictator Rafael Trujillo in 1961, had been overthrown by the army in September 1963. On 24 April 1965 a group of officers rose against the civilian triumvirate that followed, crowds poured into the streets and the Constitutionalists, led militarily by Colonel Francisco Caamaño, armed civilians and drove back an attack by Loyalist tanks and aircraft under General Elías Wessin y Wessin at the Duarte Bridge on 27 April. On 28 April President Lyndon Johnson sent in the Marines, to protect American lives and, as he said, to stop a communist takeover; some 22,000 American troops landed, with more offshore, cut the rebel zone in the old city off from the rest of Santo Domingo and opened a corridor across the capital. The Organization of American States joined the occupation with an Inter-American Peace Force of troops from Brazil, Honduras, Paraguay, Nicaragua, Costa Rica and El Salvador. Loyalist forces under the Government of National Reconstruction of General Antonio Imbert Barrera cleared the northern districts in May, and fighting flared again in June, but OAS mediation led to an Act of Reconciliation, and on 3 September 1965 Héctor García-Godoy became provisional president. Joaquín Balaguer defeated Bosch in the elections of 1 June 1966, and the last foreign troops left in September 1966. Estimates of Dominican casualties, killed and wounded, run to about 6,000; the United States lost 27 killed in action and 44–47 dead in all."
+countries: [do, us]
+sides:
+  - id: con
+    name: Constitutionalists (Francisco Caamaño, for the return of Juan Bosch)
+    polities: [dominican-constitutionalists]
+    ink: red
+    moves: Constitutionalist moves
+    success: Constitutionalist success
+  - id: loy
+    name: Loyalists (Elías Wessin y Wessin’s forces, from 7 May 1965 the Government of National Reconstruction of Antonio Imbert Barrera)
+    polities: [dominican-republic]
+    ink: green
+    moves: Loyalist moves
+    success: Loyalist success
+  - id: us
+    name: United States and the Inter-American Peace Force of the OAS (Brazil, Honduras, Paraguay, Nicaragua, Costa Rica and El Salvador)
+    polities: [united-states, brazil, honduras, paraguay, nicaragua, costa-rica, el-salvador]
+    ink: blue
+    moves: American and OAS moves
+    success: American and OAS success
+notes:
+  - "Casualty figures vary widely between sources. Loyalist losses are given as about 500 soldiers and 325 police killed, and Constitutionalist losses as about 600 soldiers killed besides an unknown number of armed civilians; estimates of all Dominican casualties, killed and wounded, run to about 6,000. American losses were 27 killed in action and 44–47 dead from all causes."
+  - "The American claim that communists had taken over the revolt rested on a list of 53, later 58, alleged communists among the rebels, which journalists found to be unreliable; the intervention was widely criticised in Latin America and in the US Senate."
+sources:
+  - title: Dominican Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dominican_Civil_War
+  - title: United States occupation of the Dominican Republic (1965–1966) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/United_States_occupation_of_the_Dominican_Republic_(1965%E2%80%931966)
+  - title: Francisco Caamaño (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Francisco_Caama%C3%B1o
+  - title: Inter-American Peace Force (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Inter-American_Peace_Force
+  - title: Civil War of the Dominican Republic (EBSCO Research Starters)
+    url: https://www.ebsco.com/research-starters/history/civil-war-dominican-republic
+steps:
+  - title: The April Revolution
+    date: 24–28 April 1965
+    when: "1965-04-24"
+    borders: "1965-04-24"
+    countries: [do]
+    view:
+      center: [-69.83, 18.48]
+      size: [50, 40]
+    body:
+      - "Rafael Trujillo, dictator since 1930, was assassinated on 30 May 1961. In December 1962 Juan Bosch of the Dominican Revolutionary Party (PRD), a writer who had returned after more than twenty years in exile, won the country’s first free election in decades, but his reformist constitution of 1963 alarmed the army, the Church and the business elite, and the military overthrew him on 25 September 1963. A civilian triumvirate, led from late 1963 by Donald Reid Cabral, governed with the army’s backing, while a group of younger officers around Colonel Rafael Fernández Domínguez plotted to bring Bosch back."
+      - "On 24 April 1965 the plotters seized the army chief of staff and two barracks, and José Francisco Peña Gómez of the PRD called on the radio for people to come out into the streets. Reid Cabral resigned the next day and José Rafael Molina Ureña was sworn in as provisional president until Bosch could return from Puerto Rico. The senior generals at the San Isidro air base under General Elías Wessin y Wessin refused, and their aircraft strafed the National Palace. The Constitutionalists handed out weapons to thousands of civilians."
+      - "On 27 April Wessin’s tanks and infantry crossed the Duarte Bridge over the Ozama into the city. Molina Ureña took refuge in an embassy, but Colonel Francisco Caamaño rallied the Constitutionalist soldiers and armed civilians, who stopped the tanks in the streets and destroyed or captured many of them. The Constitutionalists held most of the capital and soon took the Ozama Fortress, the police headquarters, while on 28 April a Loyalist junta at San Isidro asked the United States for troops."
+    facts:
+      - [Assassination of Trujillo, "30 May 1961"]
+      - [Coup against Bosch, "25 September 1963"]
+      - [Constitutionalist revolt, "24 April 1965"]
+      - [Battle of the Duarte Bridge, "27 April 1965"]
+    markers:
+      - kind: battle
+        side: con
+        name: Duarte Bridge
+        date: 27 April 1965
+        text: Loyalist tanks and infantry from San Isidro crossed the bridge into the city, where Constitutionalist soldiers and armed civilians stopped them.
+        lonlat: [-69.878, 18.488]
+        lp: t
+      - kind: taken
+        side: con
+        name: Ciudad Nueva
+        date: 24–30 April 1965
+        text: The Constitutionalists held the old city and the centre of Santo Domingo, and took the Ozama Fortress, the police headquarters.
+        lonlat: [-69.893, 18.468]
+        lp: l
+      - kind: held
+        side: loy
+        name: San Isidro air base
+        date: April 1965
+        text: The base of General Wessin y Wessin’s armoured troops and the air force, which bombed and strafed the National Palace and the Constitutionalist zone.
+        lonlat: [-69.670, 18.503]
+    arrows:
+      - side: loy
+        label: Wessin’s tanks
+        via: [[-69.680, 18.502], [-69.780, 18.496], [-69.862, 18.490], [-69.884, 18.484]]
+  - title: The American intervention
+    date: 28 April – June 1965
+    when: "1965-04-28"
+    borders: "1965-05-21"
+    countries: [do, us]
+    view:
+      center: [-69.83, 18.48]
+      size: [50, 40]
+    body:
+      - "On the evening of 28 April President Johnson ordered Marines ashore, at first to evacuate Americans and other foreigners from the Hotel Embajador; on 30 April paratroopers of the 82nd Airborne Division landed at San Isidro. Johnson justified the intervention by the danger of a “second Cuba”, citing a list of communists among the rebels. American troops set up an International Security Zone around the embassies in the west of the city, and on 3 May they opened a corridor, the “line of communication”, from the Duarte Bridge to the security zone, cutting the Constitutionalists in Ciudad Nueva off from the northern districts and the rest of the country. Some 22,000 American troops were ashore by mid-May."
+      - "On 4 May the members of Congress elected in 1962 chose Caamaño as constitutional president; on 7 May the United States backed a rival Government of National Reconstruction under General Antonio Imbert Barrera, one of Trujillo’s assassins. On 6 May the Organization of American States voted narrowly to form an Inter-American Peace Force, which took command in late May under the Brazilian general Hugo Panasco Alvim, with about 1,750 Latin American troops serving alongside the Americans. Between 13 and 21 May Imbert’s forces, in Operation Clean-Up (Operación Limpieza), took the northern districts and the radio station from the Constitutionalists; Fernández Domínguez was killed attacking the National Palace on 19 May. On 15–16 June the heaviest fighting of the intervention broke out between the Constitutionalists and American troops, who advanced several blocks into Ciudad Nueva."
+    facts:
+      - [Marines land, "28 April 1965"]
+      - [82nd Airborne lands at San Isidro, "30 April 1965"]
+      - [Line of communication opened, "3 May 1965"]
+      - [Inter-American Peace Force created, "6 May 1965"]
+    markers:
+      - kind: event
+        side: us
+        name: Hotel Embajador
+        date: 28 April 1965
+        text: Marines landed by helicopter to evacuate foreigners; the area became the centre of the International Security Zone.
+        lonlat: [-69.948, 18.454]
+        lp: b
+      - kind: event
+        side: us
+        name: San Isidro air base
+        date: 30 April 1965
+        text: Paratroopers of the 82nd Airborne Division landed here and moved west to the Duarte Bridge.
+        lonlat: [-69.670, 18.503]
+      - kind: held
+        side: con
+        name: Ciudad Nueva
+        date: May – August 1965
+        text: The Constitutionalist zone, where Caamaño had his headquarters, surrounded by American and OAS troops.
+        lonlat: [-69.893, 18.468]
+        lp: l
+      - kind: taken
+        side: loy
+        name: Northern districts
+        date: 13–21 May 1965
+        text: Imbert’s forces cleared the Constitutionalists from the northern part of the city in Operation Clean-Up.
+        lonlat: [-69.915, 18.505]
+        lp: t
+    arrows:
+      - side: us
+        label: 82nd Airborne
+        phase: 1
+        via: [[-69.680, 18.500], [-69.780, 18.494], [-69.870, 18.489]]
+      - side: us
+        label: Line of communication
+        phase: 2
+        via: [[-69.940, 18.460], [-69.915, 18.476], [-69.882, 18.488]]
+      - side: loy
+        label: Operation Clean-Up
+        phase: 3
+        via: [[-69.960, 18.505], [-69.925, 18.502], [-69.890, 18.497]]
+    areas:
+      - style: occupied
+        side: con
+        label: Constitutionalist zone, from May 1965 (approximate)
+        polygon: [[-69.880, 18.473], [-69.882, 18.481], [-69.893, 18.482], [-69.905, 18.477], [-69.909, 18.468], [-69.900, 18.463], [-69.886, 18.466]]
+      - style: occupied
+        side: us
+        label: International Security Zone (approximate)
+        polygon: [[-69.913, 18.456], [-69.915, 18.468], [-69.935, 18.471], [-69.957, 18.463], [-69.957, 18.448], [-69.930, 18.446]]
+  - title: Reconciliation and elections
+    date: June 1965 – September 1966
+    when: "1965-09-03"
+    borders: "1965-09-03"
+    countries: [do, us]
+    body:
+      - "An OAS committee led by the American diplomat Ellsworth Bunker negotiated through the summer. On 31 August both sides signed the Act of Dominican Reconciliation and an Institutional Act, and on 3 September 1965 Héctor García-Godoy, a diplomat who had served under Trujillo and Bosch, took office as provisional president; Caamaño and Imbert stepped down, and the Constitutionalists handed in their weapons. Clashes went on: on 19 December 1965 army troops attacked Caamaño and his officers at the Hotel Matum in Santiago until the Peace Force intervened. In January 1966 Caamaño and the leading Loyalist officers were sent abroad, Caamaño as military attaché in London."
+      - "Bosch returned but campaigned little, fearing for his life, and on 1 June 1966 Joaquín Balaguer, who had been Trujillo’s figurehead president in 1960–1961, won the presidential election with American support. The last troops of the Peace Force left on 21 September 1966. Balaguer governed for the next twelve years, during which hundreds or, by some estimates, thousands of opponents were killed. Caamaño returned secretly in February 1973 at the head of a small guerrilla band and was captured and killed within weeks."
+    facts:
+      - [Act of Dominican Reconciliation, "31 August 1965"]
+      - [García-Godoy provisional president, "3 September 1965"]
+      - [Presidential election, "1 June 1966"]
+      - [Last foreign troops leave, "21 September 1966"]
+    markers:
+      - kind: treaty
+        side: none
+        name: Santo Domingo
+        date: 31 August – 3 September 1965
+        text: The Act of Dominican Reconciliation was signed and García-Godoy installed as provisional president.
+        lonlat: [-69.893, 18.468]
+      - kind: battle
+        side: loy
+        name: Santiago de los Caballeros
+        date: 19 December 1965
+        text: Army troops attacked Caamaño and his officers at the Hotel Matum; the Peace Force intervened to end the fighting.
+        lonlat: [-70.697, 19.451]

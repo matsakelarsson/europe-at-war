@@ -1,0 +1,136 @@
+id: english-conquest-of-new-netherland
+name: English conquest of New Netherland
+start: "1664-08"
+end: "1674-11-10"
+tier: B
+summary: "The English seizure of the Dutch colony of New Netherland in 1664, its brief Dutch recapture in 1673–1674 and its final return to England. In March 1664 Charles II granted the land between the Connecticut and the Delaware to his brother James, Duke of York, and sent four ships with some 450 men under Richard Nicolls, though England and the Dutch Republic were at peace. Outnumbered, short of powder and pressed by the townspeople, Peter Stuyvesant surrendered New Amsterdam without a fight on 8 September 1664; it became New York, Fort Orange became Albany, and in October Sir Robert Carr took New Amstel on the Delaware by storm. The seizure was one of the causes of the Second Anglo-Dutch War, and at the Peace of Breda in 1667 the Dutch let England keep the colony while they kept Suriname. In the Third Anglo-Dutch War a Dutch squadron under Cornelis Evertsen the Youngest and Jacob Binckes retook New York on 9 August 1673 and renamed it New Orange, but the Treaty of Westminster gave it back, and the Dutch governor Anthony Colve handed it over to Edmund Andros on 10 November 1674. The Dutch colonists kept their property, religion and inheritance customs under the English."
+countries: [us]
+sides:
+  - id: en
+    name: England (the Duke of York’s province of New York)
+    polities: [british-america, england]
+    ink: red
+    moves: English moves
+    success: English success
+  - id: nn
+    name: New Netherland and the Dutch Republic
+    polities: [new-netherland, dutch-republic]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+notes:
+  - England and its colonies used the Julian calendar (Old Style) and the Dutch the Gregorian, which ran ten days ahead; dates here are Gregorian. The surrender of New Amsterdam is often dated 27 August or 29 August 1664 (Old Style), and the Dutch recapture 30 July 1673 (Old Style).
+  - The naval wars in Europe are told in the Second and Third Anglo-Dutch Wars. The Munsee, Mohawk and Mahican nations around the colony, whose lands both powers claimed, took no part in the fighting; the Mohawk renewed their alliance with the English at Albany in 1664.
+sources:
+  - title: New Netherland (Wikipedia)
+    url: https://en.wikipedia.org/wiki/New_Netherland
+  - title: Richard Nicolls (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Richard_Nicolls
+  - title: Cornelis Evertsen the Youngest (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cornelis_Evertsen_the_Youngest
+  - title: Anthony Colve (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Anthony_Colve
+  - title: New Netherland Institute
+    url: https://www.newnetherlandinstitute.org/history-and-heritage/
+steps:
+  - title: Nicolls takes New Amsterdam
+    date: August – October 1664
+    when: "1664-08"
+    borders: "1664-09-08"
+    countries: [us]
+    body:
+      - New Netherland had grown to some 7,000 to 9,000 colonists, Dutch, Walloon, German, Scandinavian and English, with enslaved Africans, but it lay between New England and Virginia, and English towns on Long Island and in Connecticut pressed on its borders. In March 1664 Charles II gave his brother James, Duke of York, a charter for all the land between the Connecticut and the Delaware, and in late August four ships under Richard Nicolls, carrying some 450 men, most of them soldiers, anchored in Gravesend Bay below New Amsterdam. Militia from Long Island and Connecticut joined them, and Nicolls offered the colonists their property, trade and religion if they surrendered.
+      - Peter Stuyvesant, with about 150 soldiers, little powder and a fort open on the land side, wanted to fight. The town’s leading citizens, among them his own son, petitioned him to give up rather than see the town sacked, and the West India Company had sent no help. The articles of surrender were agreed on 6 September, and on 8 September the Dutch garrison marched out of Fort Amsterdam. The town and the province were renamed New York after the duke, and when Fort Orange surrendered later that month it became Albany. On the Delaware, Sir Robert Carr attacked the fort at New Amstel in October, killed three of its defenders, plundered the town and sold some of the captured soldiers as servants in Virginia.
+      - England declared war on the Dutch Republic in March 1665. In the Treaty of Breda, signed on 31 July 1667, each side kept what it held, so England kept New Netherland and the Dutch kept Suriname, which they had taken that year.
+    facts:
+      - [Nicolls’s force, "4 ships, about 450 men"]
+      - [New Amsterdam surrendered, "8 September 1664"]
+      - [Treaty of Breda, "31 July 1667"]
+    markers:
+      - kind: taken
+        side: en
+        name: New Amsterdam (New York)
+        date: 8 September 1664
+        text: Surrendered by Stuyvesant without a shot after the leading citizens petitioned him to give up.
+        lonlat: [-74.014, 40.704]
+        lp: r
+      - kind: event
+        side: en
+        name: Gravesend Bay
+        date: late August 1664
+        text: Nicolls’s four ships anchored here and landed troops on Long Island.
+        lonlat: [-74.020, 40.590]
+        lp: b
+      - kind: taken
+        side: en
+        name: Fort Orange (Albany)
+        date: September 1664
+        text: Surrendered to the English and renamed Albany after the duke’s Scottish title.
+        lonlat: [-73.750, 42.645]
+      - kind: taken
+        side: en
+        name: New Amstel (New Castle)
+        date: October 1664
+        text: Stormed by Sir Robert Carr; three defenders were killed and the town plundered.
+        lonlat: [-75.563, 39.658]
+    arrows:
+      - side: en
+        label: Nicolls
+        phase: 1
+        via: [[-73.40, 40.30], [-73.85, 40.45], [-74.02, 40.58], [-74.02, 40.69]]
+      - side: en
+        phase: 2
+        via: [[-74.01, 40.72], [-73.94, 41.40], [-73.96, 42.10], [-73.76, 42.63]]
+      - side: en
+        label: Carr
+        phase: 2
+        via: [[-74.02, 40.62], [-74.00, 40.10], [-74.60, 39.20], [-75.20, 39.20], [-75.55, 39.64]]
+  - title: The Dutch recapture, 1673–1674
+    date: August 1673 – November 1674
+    when: "1673-08"
+    borders: "1673-08-09"
+    countries: [us]
+    body:
+      - In the Third Anglo-Dutch War a squadron from Zeeland under Cornelis Evertsen the Youngest and one from Amsterdam under Jacob Binckes raided the English and French West Indies and in July 1673 fell on the Virginia and Maryland tobacco fleet in the James River, taking or burning much of it. Learning that New York was weakly held, they sailed north and on 7 August anchored off Manhattan with some twenty ships and about 1,600 men. Governor Francis Lovelace was away in Connecticut. After a short bombardment some six hundred Dutch marines landed north of the town under Anthony Colve, and on 9 August Captain John Manning surrendered Fort James and its garrison of fewer than a hundred men.
+      - The Dutch renamed the city New Orange and Albany Willemstad, and made Colve governor. The Dutch towns and New Jersey submitted; the English towns at the east end of Long Island, backed by Connecticut, refused, and in December 1673 Maryland troops burned the Dutch settlement at the Whorekill (Lewes) on the Delaware. Colve strengthened the fort against an attack from New England. But in the Treaty of Westminster in February 1674 the Dutch Republic, needing peace with England, gave the colony back. On 10 November 1674 Colve handed New Orange to the new English governor, Edmund Andros, and it became New York for good.
+    facts:
+      - [New York retaken, "9 August 1673"]
+      - [Dutch squadron, "about 20 ships and 1,600 men"]
+      - [Treaty of Westminster, "February 1674"]
+      - [Returned to England, "10 November 1674"]
+    markers:
+      - kind: taken
+        side: nn
+        name: New Orange (New York)
+        date: 9 August 1673
+        text: Fort James surrendered after a short bombardment and a landing of some 600 Dutch marines; returned to the English on 10 November 1674.
+        lonlat: [-74.014, 40.704]
+        lp: r
+      - kind: naval
+        side: nn
+        name: James River
+        date: July 1673
+        text: Evertsen and Binckes took or burned much of the Virginia and Maryland tobacco fleet.
+        lonlat: [-76.400, 36.980]
+      - kind: event
+        side: en
+        name: East Hampton
+        date: 1673–1674
+        text: The English towns of eastern Long Island refused to submit to the Dutch, with Connecticut’s support.
+        lonlat: [-72.185, 40.963]
+      - kind: event
+        side: en
+        name: Whorekill (Lewes)
+        date: December 1673
+        text: Burned by Maryland troops after its people swore allegiance to the Dutch.
+        lonlat: [-75.140, 38.775]
+    arrows:
+      - side: nn
+        label: Evertsen and Binckes
+        phase: 1
+        via: [[-76.30, 37.00], [-75.60, 37.30], [-74.60, 38.80], [-73.90, 40.20], [-74.02, 40.62]]
+    areas:
+      - style: occupied
+        side: nn
+        label: Dutch again, August 1673 – November 1674
+        atoms: [US-NY, US-NJ, US-DE]

@@ -1,0 +1,203 @@
+id: reform-war
+name: Reform War
+start: "1857-12-17"
+end: "1861-01-11"
+tier: B
+summary: "The civil war of 1857–1861 between Mexico’s Liberals and Conservatives over the Constitution of 1857 and the Liberal laws that ended the special courts of the Church and the army and forced the sale of church and communal lands. In December 1857 General Félix Zuloaga proclaimed the Plan of Tacubaya against the constitution and the Conservatives took Mexico City, while Benito Juárez, as president of the Supreme Court, claimed the presidency and set up a constitutional government, from May 1858 at Veracruz. For three years Mexico had two governments. The Conservative armies of Miguel Miramón, Leonardo Márquez and Tomás Mejía won most of the early battles, but twice failed to take Veracruz, and in 1859 Juárez answered with the Laws of Reform, which nationalised church property and separated church and state. In 1860 the Liberal armies of Jesús González Ortega and Ignacio Zaragoza won at Silao, took Guadalajara and destroyed Miramón’s army at Calpulalpan on 22 December, and Juárez returned to the capital on 11 January 1861. The war left the treasury empty and the Conservatives looking to Europe for a monarch, which led to the French intervention."
+countries: [mx]
+sides:
+  - id: lib
+    name: Liberals (Juárez’s constitutional government)
+    polities: [mexican-liberals, mexico]
+    ink: green
+    moves: Liberal moves
+    success: Liberal success
+  - id: con
+    name: Conservatives (the governments of Zuloaga and Miramón in Mexico City)
+    polities: [mexican-conservatives, mexico]
+    ink: navy
+    moves: Conservative moves
+    success: Conservative success
+notes:
+  - "Both sides claimed to be the government of Mexico. The United States recognised Juárez’s government in April 1859; Spain, France, Britain and the Pope dealt with the Conservative government in Mexico City. The base map shows Mexico as one country; much of it changed hands repeatedly."
+  - Casualty figures for the war are uncertain; it was fought largely by forced levies, guerrilla bands and reprisals, and both sides shot prisoners.
+sources:
+  - title: Reform War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Reform_War
+  - title: "Mexico: La Reforma (Britannica)"
+    url: https://www.britannica.com/place/Mexico/La-Reforma
+  - title: Benito Juárez (Britannica)
+    url: https://www.britannica.com/biography/Benito-Juarez
+  - title: Plan of Tacubaya (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Plan_of_Tacubaya
+  - title: Liberal reforms in Mexico, Laws of Reform (Wikipedia)
+    url: https://en.wikipedia.org/wiki/La_Reforma
+  - title: Battle of Silao (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Silao
+  - title: Battle of Calpulalpan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Calpulalpan
+  - title: Battle of Antón Lizardo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ant%C3%B3n_Lizardo
+  - title: McLane–Ocampo Treaty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/McLane%E2%80%93Ocampo_Treaty
+steps:
+  - title: Tacubaya and Juárez’s flight to Veracruz
+    date: December 1857 – May 1858
+    when: "1857-12-17"
+    borders: "1858-05-04"
+    countries: [mx]
+    body:
+      - "The Liberals who overthrew Santa Anna in the Revolution of Ayutla passed laws in 1855–1857 that abolished the special courts of the clergy and the army (the Juárez law), forced the Church and Indigenous communities to sell their corporate lands (the Lerdo law) and capped parish fees, and wrote them into the Constitution of 5 February 1857. The Church threatened to excommunicate those who swore to it. On 17 December 1857 General Félix Zuloaga proclaimed the Plan of Tacubaya, annulling the constitution; President Ignacio Comonfort first went along with it, then changed his mind and left the country. In January 1858 the Conservatives made Zuloaga president in Mexico City, while Benito Juárez, the president of the Supreme Court and so the constitutional successor, formed a government at Guanajuato."
+      - "The Conservatives, with most of the regular army, beat the Liberal militias at Salamanca on 10 March 1858. At Guadalajara mutinous soldiers nearly shot Juárez; the poet and minister Guillermo Prieto stood in front of him, crying “The brave do not murder!”. Juárez escaped to Colima and Manzanillo and sailed by way of Panama, Havana and New Orleans to Veracruz, which its governor held for the Liberals, arriving on 4 May 1858. Its port and customs revenues kept his government alive for the rest of the war."
+    facts:
+      - [Constitution, "5 February 1857"]
+      - [Plan of Tacubaya, "17 December 1857"]
+      - [Battle of Salamanca, "10 March 1858"]
+      - [Juárez reaches Veracruz, "4 May 1858"]
+    markers:
+      - kind: event
+        side: con
+        name: Tacubaya (Mexico City)
+        date: 17 December 1857
+        text: Zuloaga proclaimed the plan against the constitution at Tacubaya, on the edge of the capital, which the Conservatives held for three years.
+        lonlat: [-99.187, 19.401]
+      - kind: battle
+        side: con
+        name: Salamanca
+        date: 10 March 1858
+        text: Luis Osollo’s Conservative army defeated the Liberal militias of the interior states.
+        lonlat: [-101.197, 20.570]
+        lp: b
+      - kind: event
+        side: lib
+        name: Guanajuato
+        date: January – February 1858
+        text: Juárez formed his constitutional government here.
+        lonlat: [-101.257, 21.018]
+      - kind: event
+        side: lib
+        name: Guadalajara
+        date: 14 March 1858
+        text: Mutinous troops nearly shot Juárez; Guillermo Prieto saved him.
+        lonlat: [-103.347, 20.677]
+        lp: l
+      - kind: event
+        side: lib
+        name: Manzanillo
+        date: 11 April 1858
+        text: Juárez sailed from here for Panama on his way to Veracruz.
+        lonlat: [-104.316, 19.052]
+        lp: l
+      - kind: capital
+        side: lib
+        name: Veracruz
+        date: from 4 May 1858
+        text: Seat of Juárez’s government for the rest of the war.
+        lonlat: [-96.134, 19.190]
+    arrows:
+      - side: lib
+        label: Juárez
+        phase: 1
+        via: [[-101.257, 21.018], [-102.30, 20.90], [-103.30, 20.68], [-103.70, 19.30], [-104.30, 19.06]]
+      - side: lib
+        phase: 2
+        via: [[-90.07, 29.95], [-92.50, 26.00], [-95.00, 21.00], [-96.10, 19.22]]
+  - title: Two governments
+    date: 1858–1860
+    when: "1859-04-11"
+    borders: "1859-07-12"
+    countries: [mx, us, es]
+    body:
+      - "The Conservatives held Mexico City and most of the centre, and in 1858–1859 their young general Miguel Miramón, who became their president in early 1859, won battle after battle, at Ahualulco and elsewhere. The Liberals held Veracruz, much of the north and the far south, and kept raising new armies under Santos Degollado. In March 1859 Miramón besieged Veracruz but had to withdraw. On 11 April 1859 Leonardo Márquez beat Degollado at Tacubaya and had the prisoners shot, along with doctors and medical students who had been treating the wounded; he became known as the Tiger of Tacubaya."
+      - "In July 1859, at Veracruz, Juárez issued the Laws of Reform: church property was nationalised without compensation, monasteries were suppressed, marriage became a civil contract and births and deaths were registered by the state. Both governments sought foreign help. The United States recognised Juárez in April 1859, and in December his minister Melchor Ocampo signed the McLane–Ocampo Treaty, which would have given the United States perpetual rights of transit across Mexico; the US Senate never ratified it. The Conservatives signed the Mon–Almonte Treaty with Spain. In March 1860, when Miramón besieged Veracruz again, US warships seized at Antón Lizardo two steamers bought in Havana to blockade the port, and the siege failed."
+    facts:
+      - [Massacre at Tacubaya, "11 April 1859"]
+      - [Laws of Reform, "July 1859"]
+      - [McLane–Ocampo Treaty, "14 December 1859 (not ratified)"]
+      - [Antón Lizardo incident, "6 March 1860"]
+    markers:
+      - kind: capital
+        side: con
+        name: Mexico City
+        date: 1858–1860
+        text: Seat of the Conservative governments of Zuloaga and Miramón.
+        lonlat: [-99.133, 19.432]
+        lp: t
+      - kind: battle
+        side: con
+        name: Tacubaya
+        date: 11 April 1859
+        text: Márquez defeated Degollado and had prisoners, doctors and medical students shot.
+        lonlat: [-99.187, 19.401]
+        lp: b
+      - kind: held
+        side: lib
+        name: Veracruz
+        date: 1859 and 1860
+        text: Juárez’s capital withstood two sieges by Miramón; the Laws of Reform were issued here.
+        lonlat: [-96.134, 19.190]
+      - kind: naval
+        side: lib
+        name: Antón Lizardo
+        date: 6 March 1860
+        text: US warships seized the two steamers Miramón had bought in Havana to blockade Veracruz.
+        lonlat: [-95.983, 19.050]
+        lp: b
+      - kind: battle
+        side: con
+        name: Ahualulco
+        date: 29 September 1858
+        text: Miramón defeated Santiago Vidaurri’s northern Liberal army in San Luis Potosí (marker approximate).
+        lonlat: [-101.17, 22.40]
+    arrows:
+      - side: con
+        label: Miramón
+        phase: 1
+        via: [[-99.133, 19.432], [-98.20, 19.05], [-97.10, 18.90], [-96.30, 19.12]]
+  - title: Silao, Calpulalpan and the Liberal victory
+    date: August 1860 – June 1861
+    when: "1860-12-22"
+    borders: "1861-01-11"
+    countries: [mx]
+    body:
+      - "In 1860 the Liberal armies, now led by Jesús González Ortega and Ignacio Zaragoza, turned the war. On 10 August they defeated Miramón at Silao, capturing much of his army, and on 3 November Guadalajara surrendered after a siege. With about 11,000 men González Ortega met Miramón’s last army of some 8,000 at San Miguel Calpulalpan, north-west of the capital, on 22 December 1860 and routed it. Miramón fled abroad, and the Liberal army entered Mexico City on 25 December. Juárez returned on 11 January 1861 and expelled the papal nuncio and the Spanish ambassador."
+      - "The Conservatives fought on as guerrillas. In June 1861 Márquez’s men captured and shot Melchor Ocampo, and Santos Degollado and Leandro Valle were killed pursuing them. Juárez was elected president in 1861, but his government was bankrupt, and in July it suspended payment of the foreign debt, which brought Spanish, British and French troops to Veracruz."
+    facts:
+      - [Battle of Silao, "10 August 1860"]
+      - [Guadalajara surrenders, "3 November 1860"]
+      - [Battle of Calpulalpan, "22 December 1860"]
+      - [Juárez returns to Mexico City, "11 January 1861"]
+    link: { href: "#/war/french-intervention-in-mexico", text: The French intervention in Mexico }
+    markers:
+      - kind: battle
+        side: lib
+        name: Silao
+        date: 10 August 1860
+        text: González Ortega and Zaragoza defeated Miramón and captured much of his army.
+        lonlat: [-101.428, 20.948]
+      - kind: taken
+        side: lib
+        name: Guadalajara
+        date: 3 November 1860
+        text: Surrendered to the Liberals after a siege.
+        lonlat: [-103.347, 20.677]
+      - kind: battle
+        side: lib
+        name: Calpulalpan
+        date: 22 December 1860
+        text: González Ortega destroyed Miramón’s last army, ending the war (marker approximate).
+        lonlat: [-99.58, 19.97]
+      - kind: taken
+        side: lib
+        name: Mexico City
+        date: 25 December 1860
+        text: Entered by the Liberal army; Juárez returned on 11 January 1861.
+        lonlat: [-99.133, 19.432]
+    arrows:
+      - side: lib
+        label: González Ortega
+        phase: 1
+        via: [[-101.428, 20.948], [-100.70, 20.70], [-100.00, 20.30], [-99.62, 19.98]]
+      - side: lib
+        phase: 2
+        via: [[-99.58, 19.97], [-99.35, 19.70], [-99.15, 19.46]]

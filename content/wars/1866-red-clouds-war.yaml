@@ -1,0 +1,140 @@
+id: red-clouds-war
+name: Red Cloud’s War
+start: "1866-06"
+end: "1868-11-06"
+tier: B
+summary: "The war of 1866–1868 between the Lakota, Northern Cheyenne and Northern Arapaho and the United States over the Bozeman Trail, the road from the Oregon Trail to the Montana gold fields through the Powder River country east of the Bighorn Mountains. The Treaty of Fort Laramie of 1851 had recognised that country as Crow land, but by 1860 the Lakota and their allies had taken it from the Crow as their best remaining buffalo range. When the army began building forts along the trail in June 1866, during peace talks at Fort Laramie, the Oglala leader Red Cloud (Mahpiya Luta) and others left the council and made war. Lakota, Cheyenne and Arapaho warriors harassed the forts, their wood trains and travellers for two years, and on 21 December 1866 a decoy party that included the young Crazy Horse drew Captain William Fetterman and 80 men into an ambush near Fort Phil Kearny, where all were killed. Soldiers with new breech-loading rifles held off attacks at the Hayfield and Wagon Box fights in August 1867, but the trail stayed closed. With the Union Pacific Railroad offering another way west, the government gave in: by the Treaty of Fort Laramie of 1868 it abandoned the forts, which the Lakota and Cheyenne burned, closed the Powder River country to whites as unceded Indian territory and created the Great Sioux Reservation, including the Black Hills. Red Cloud signed on 6 November 1868. It is often called one of the few wars the United States lost to a Native nation; the treaty’s breach over the Black Hills led to the Great Sioux War of 1876."
+countries: [us]
+sides:
+  - id: nat
+    name: Lakota, Northern Cheyenne and Northern Arapaho (Red Cloud, Man Afraid of His Horses, Hump, Crazy Horse)
+    polities: [lakota, cheyenne, arapaho]
+    ink: brown
+    moves: Lakota, Cheyenne and Arapaho moves
+    success: Lakota, Cheyenne and Arapaho success
+  - id: us
+    name: United States (US Army)
+    polities: [united-states]
+    ink: blue
+    moves: US moves
+    success: US success
+  - id: crow
+    name: Crow (allied with the United States)
+    polities: [crow]
+    ink: slate
+notes:
+  - "The Crow, whose treaty land the forts stood on, supported the army against their Lakota enemies; the 1868 treaties gave the Powder River country to the Lakota and their allies and left the Crow a reservation on the Yellowstone. Lakota accounts call the Fetterman Fight the Battle of the Hundred in the Hands; estimates of Native losses there range from about 13 to as many as 160; Native accounts name between 11 and 21 dead."
+sources:
+  - title: Red Cloud’s War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Red_Cloud%27s_War
+  - title: Fetterman Fight (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fetterman_Fight
+  - title: Wagon Box Fight (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Wagon_Box_Fight
+  - title: Treaty of Fort Laramie (1868) (National Archives)
+    url: https://www.archives.gov/milestone-documents/fort-laramie-treaty
+  - title: Red Cloud (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Red_Cloud
+  - title: Fort Phil Kearny State Historic Site (Wyoming State Parks)
+    url: https://wyoparks.wyo.gov/index.php/places-to-go/fort-phil-kearny
+steps:
+  - title: The Bozeman Trail and the Fetterman Fight
+    date: June – December 1866
+    when: "1866-12-21"
+    borders: "1866-12-21"
+    countries: [us]
+    body:
+      - "Gold strikes in Montana from 1862 brought miners up the Bozeman Trail, opened in 1863, which left the Oregon Trail near Fort Laramie and ran north along the eastern foot of the Bighorn Mountains to Virginia City. It crossed the Powder River country, recognised as Crow land in 1851 but taken by the Lakota, Northern Cheyenne and Northern Arapaho, for whom it was now the richest buffalo range left. After the fighting of 1865, a peace commission met the Lakota at Fort Laramie in June 1866. During the talks Colonel Henry Carrington arrived with about 700 soldiers under orders to fortify the trail, and Red Cloud, Man Afraid of His Horses and others walked out."
+      - "Carrington took over Fort Reno on the Powder River, built Fort Phil Kearny below the Bighorns as his headquarters in July and Fort C. F. Smith on the Bighorn River in August. Warriors from the great camps on the Tongue River attacked the forts’ herds, wood trains and passing travellers again and again in the following months (fifteen attacks near Fort Phil Kearny alone between mid-July and late September); travel on the trail almost stopped."
+      - "On 21 December 1866 warriors attacked a wood train near Fort Phil Kearny, and a decoy party of about ten men, among them Crazy Horse, drew the relief force of Captain William Fetterman, 81 officers, soldiers and civilians, over Lodge Trail Ridge. There more than 1,000 Lakota, Cheyenne and Arapaho, with the Miniconjou Hump (High Backbone) prominent in the fighting, surrounded and killed them all within about half an hour. It was the army’s worst defeat on the plains until the Little Bighorn. Red Cloud had helped plan the attack; estimates of Native losses range from about a dozen to 160."
+    facts:
+      - [Fort Phil Kearny founded, "13 July 1866"]
+      - [Fetterman Fight, "21 December 1866, Lakota, Cheyenne and Arapaho victory"]
+      - [US dead, "81"]
+    markers:
+      - kind: treaty
+        name: Fort Laramie
+        date: June 1866
+        text: Red Cloud and other leaders left the peace council here when Carrington’s troops arrived to fortify the trail.
+        lonlat: [-104.536, 42.209]
+      - kind: held
+        side: us
+        name: Fort Reno
+        date: 1866–1868
+        text: Post on the Powder River, taken over and rebuilt by Carrington in 1866.
+        lonlat: [-106.240, 43.828]
+      - kind: battle
+        side: nat
+        name: Fetterman Fight
+        date: 21 December 1866
+        text: Decoys drew Captain Fetterman’s 81 men over Lodge Trail Ridge, north of Fort Phil Kearny, where Lakota, Cheyenne and Arapaho warriors killed them all.
+        lonlat: [-106.839, 44.571]
+      - kind: held
+        side: us
+        name: Fort C. F. Smith
+        date: 1866–1868
+        text: The northernmost fort on the trail, on the Bighorn River, in the Crow country.
+        lonlat: [-107.92, 45.31]
+    arrows:
+      - side: us
+        label: Carrington
+        phase: 1
+        via: [[-104.54, 42.21], [-105.50, 42.90], [-106.24, 43.83], [-106.80, 44.50]]
+      - side: us
+        phase: 2
+        via: [[-106.83, 44.55], [-107.30, 45.00], [-107.90, 45.30]]
+      - side: nat
+        phase: 2
+        via: [[-106.95, 44.95], [-106.88, 44.75], [-106.84, 44.59]]
+    areas:
+      - style: contested
+        side: nat
+        label: The Powder River country, Crow land under the 1851 treaty, held by the Lakota and their allies (approximate)
+        polygon: [[-104.3, 46.4], [-106.9, 46.3], [-108.0, 45.6], [-107.9, 44.8], [-107.2, 44.0], [-106.6, 43.3], [-106.3, 42.85], [-105.3, 43.3], [-104.3, 44.3]]
+  - title: Wagon boxes and the Treaty of Fort Laramie
+    date: August 1867 – November 1868
+    when: "1867-08-02"
+    borders: "1868-11-06"
+    countries: [us]
+    body:
+      - "In 1867 the forts received Springfield rifles converted to breech-loaders, which could be fired several times as fast as the old muzzle-loaders. On 1 August Cheyenne, Arapaho and Lakota warriors attacked soldiers and civilian hay-cutters near Fort C. F. Smith, who held out in a log corral (the Hayfield Fight); the next day several hundred Lakota attacked Captain James Powell’s 32 men guarding woodcutters near Fort Phil Kearny, who fought from behind a ring of wagon boxes until relief came (the Wagon Box Fight). The army counted both as victories, but the warriors kept the forts under siege and the trail closed."
+      - "A peace commission led by General William T. Sherman concluded that the forts were not worth keeping, now that the Union Pacific Railroad was being built across the plains to the south. The Treaty of Fort Laramie of 1868, signed by band after band from April, created the Great Sioux Reservation, all of today’s South Dakota west of the Missouri, including the Black Hills, “for the absolute and undisturbed use and occupation” of the Lakota, and closed the Powder River country to whites as unceded Indian territory. The army left the forts in August 1868, and the Lakota and Cheyenne burned them. Red Cloud came in and signed on 6 November."
+      - "Red Cloud never went to war again and settled at the agency that bore his name; others, such as Sitting Bull and Crazy Horse, kept to the buffalo country and never signed. The treaty required the consent of three-quarters of the adult men for any cession, a clause the United States broke when it took the Black Hills in 1877; in 1980 the Supreme Court ruled the taking illegal, and the compensation, which the Lakota have refused, has grown to more than a billion dollars."
+    facts:
+      - [Hayfield Fight, "1 August 1867"]
+      - [Wagon Box Fight, "2 August 1867"]
+      - [Treaty of Fort Laramie, "signed from 29 April 1868; by Red Cloud on 6 November 1868"]
+    markers:
+      - kind: held
+        side: us
+        name: Hayfield Fight
+        date: 1 August 1867
+        text: Soldiers and hay-cutters held a log corral near Fort C. F. Smith against Cheyenne, Arapaho and Lakota warriors.
+        lonlat: [-107.868, 45.335]
+      - kind: held
+        side: us
+        name: Wagon Box Fight
+        date: 2 August 1867
+        text: Captain Powell’s 32 men, with breech-loading rifles, held a ring of wagon boxes near Fort Phil Kearny against several hundred Lakota.
+        lonlat: [-106.898, 44.559]
+      - kind: taken
+        side: nat
+        name: Fort Phil Kearny
+        date: August 1868
+        text: Abandoned by the army under the treaty and burned by the Cheyenne.
+        lonlat: [-106.826, 44.532]
+        lp: b
+      - kind: treaty
+        name: Fort Laramie
+        date: April – November 1868
+        text: The treaty creating the Great Sioux Reservation was signed here; Red Cloud signed on 6 November 1868.
+        lonlat: [-104.536, 42.209]
+    areas:
+      - style: outline
+        side: nat
+        label: Great Sioux Reservation, Treaty of Fort Laramie, 1868
+        polygon: [[-104.05, 46.0], [-100.62, 46.0], [-100.48, 45.6], [-100.43, 45.0], [-100.35, 44.4], [-99.9, 44.1], [-99.33, 43.81], [-98.9, 43.4], [-98.5, 43.0], [-104.05, 43.0]]
+      - style: gained
+        side: nat
+        label: Unceded Indian territory, closed to whites by the treaty (approximate)
+        polygon: [[-104.05, 46.6], [-106.9, 46.3], [-108.0, 45.6], [-107.9, 44.8], [-107.2, 44.0], [-106.6, 43.3], [-106.3, 42.85], [-105.0, 42.3], [-104.05, 42.25]]

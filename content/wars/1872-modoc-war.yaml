@@ -1,0 +1,141 @@
+id: modoc-war
+name: Modoc War
+start: "1872-11-29"
+end: "1873-06"
+tier: B
+summary: "The war of 1872–1873 between a band of Modoc under Kintpuash (Captain Jack) and the United States Army in the lava beds south of Tule Lake, on the California–Oregon border. By the treaty of 1864 the Modoc gave up their lands on the Lost River and Tule Lake and were moved onto the Klamath Reservation with the Klamath, their old rivals; Kintpuash’s band of about 150 people went back to the Lost River, where settlers demanded their removal. On 29 November 1872 cavalry sent to bring them back tried to disarm them, fighting broke out, and the band fled to a natural fortress of lava trenches and caves, Captain Jack’s Stronghold, while Hooker Jim’s men killed 14 to 18 settlers on the way. With no more than about 53 fighting men, the Modoc beat off an attack by some 300 to 400 soldiers and volunteers on 17 January 1873 without loss. During peace talks on 11 April, under pressure from the band’s war faction, Kintpuash shot General Edward Canby, the only general killed in the wars against Native nations, and Boston Charley killed the Reverend Eleazer Thomas. Reinforced troops drove the Modoc from the Stronghold in April, but Scarfaced Charley’s warriors destroyed a patrol at Sand Butte on 26 April; after the Modoc’s first defeat at Dry Lake on 10 May the band split, Hooker Jim’s group surrendered and helped track Kintpuash, who was captured in early June. He and three others were hanged at Fort Klamath on 3 October 1873, and the 153 survivors of the band were sent as prisoners of war to Indian Territory, where they were held until 1909."
+countries: [us]
+sides:
+  - id: mod
+    name: Modoc (Kintpuash (Captain Jack), Schonchin John, Hooker Jim, Scarfaced Charley)
+    polities: [modoc]
+    ink: brown
+    moves: Modoc moves
+    success: Modoc success
+  - id: us
+    name: United States (US Army, Oregon and California volunteers, Klamath and Warm Springs scouts)
+    polities: [united-states]
+    ink: blue
+    moves: US moves
+    success: US success
+notes:
+  - "The war grew out of twenty years of violence on the emigrant road around Tule Lake: in 1852 Modoc killed an emigrant party at what Americans called Bloody Point, and a California militia under Ben Wright then killed about 41 Modoc at a peace parley. Historians of the California genocide such as Benjamin Madley end their account with the Modoc War."
+  - The photographer Eadweard Muybridge took pictures of the early campaign; newspapers across the country followed the war, and many Americans sympathised with Kintpuash until Canby’s death.
+sources:
+  - title: Modoc War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Modoc_War
+  - title: Lava Beds National Monument, the Modoc War (National Park Service)
+    url: https://www.nps.gov/labe/learn/historyculture/modoc-war.htm
+  - title: Kintpuash (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kintpuash
+  - title: Captain Jack’s Stronghold (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Captain_Jack%27s_Stronghold
+  - title: Battle of Sand Butte (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sand_Butte
+steps:
+  - title: Lost River and the Stronghold
+    date: November 1872 – January 1873
+    when: "1872-11-29"
+    borders: "1873-01-17"
+    countries: [us]
+    body:
+      - "By the treaty of 1864 the Modoc ceded their homeland around the Lost River, Tule Lake and Lower Klamath Lake and moved onto the Klamath Reservation in Oregon. There the Klamath treated them as intruders, and in 1865 and again in 1870 Kintpuash, whom the settlers called Captain Jack, led his band back to the Lost River. The superintendent of Indian affairs for Oregon, Alfred Meacham, asked Washington for a separate reservation for the band and never received an answer, while settlers on the land petitioned for their removal."
+      - "On 29 November 1872 Captain James Jackson’s cavalry came to the Modoc camp on the Lost River to bring the band back to the reservation. While the men were laying down their arms, Scarfaced Charley and Lieutenant Frazier Boutelle fired at each other and a short fight broke out. Kintpuash’s people crossed Tule Lake by boat, while Hooker Jim’s men rode around its eastern shore and killed 14 to 18 settlers (sources differ) on 29 and 30 November. All reached the lava beds south of the lake, a maze of trenches, ridges and caves that became known as Captain Jack’s Stronghold."
+      - "On 17 January 1873 Lieutenant Colonel Frank Wheaton attacked the Stronghold from west and east with some 300 to 400 regulars, Oregon and California volunteers and Klamath scouts. In thick fog the soldiers hardly saw their enemy, and by evening they retreated with dozens killed and wounded. The Modoc, with perhaps 52 or 53 fighting men among about 150 people, lost no one."
+    facts:
+      - [Battle of Lost River, "29 November 1872"]
+      - [First Battle of the Stronghold, "17 January 1873, Modoc victory"]
+      - [Modoc fighters, "about 52–53"]
+    markers:
+      - kind: battle
+        name: Lost River
+        date: 29 November 1872
+        text: Fighting broke out when cavalry tried to disarm Kintpuash’s band here, and the Modoc fled south.
+        lonlat: [-121.524, 41.996]
+      - kind: toll
+        side: mod
+        name: Tule Lake settlements
+        date: 29–30 November 1872
+        text: Hooker Jim’s band killed 14 to 18 settlers on ranches east of the lake as it rode to the lava beds (marker approximate).
+        lonlat: [-121.40, 41.95]
+        lp: r
+      - kind: held
+        side: mod
+        name: Captain Jack’s Stronghold
+        date: 17 January 1873
+        text: The Modoc beat off some 300 to 400 soldiers and volunteers attacking in fog, without losing a man.
+        lonlat: [-121.505, 41.822]
+        lp: l
+      - kind: event
+        side: us
+        name: Fort Klamath
+        date: "1872"
+        text: The army post by the Klamath Reservation, from which Captain Jackson’s cavalry set out.
+        lonlat: [-121.972, 42.692]
+    arrows:
+      - side: mod
+        label: Kintpuash
+        phase: 1
+        via: [[-121.53, 41.99], [-121.58, 41.92], [-121.52, 41.83]]
+      - side: mod
+        label: Hooker Jim
+        phase: 1
+        via: [[-121.50, 41.99], [-121.38, 41.94], [-121.43, 41.85], [-121.49, 41.825]]
+      - side: us
+        label: Wheaton
+        phase: 2
+        via: [[-121.68, 41.86], [-121.60, 41.84], [-121.52, 41.825]]
+  - title: Canby’s death, Sand Butte and exile
+    date: April – October 1873
+    when: "1873-04-11"
+    borders: "1873-06-01"
+    countries: [us]
+    body:
+      - "A peace commission under Meacham and General Edward Canby, commander of the Department of the Columbia, met Kintpuash several times between the lines. He asked for a pardon for his people, the withdrawal of the troops and a reservation of their own on the Lost River; the commissioners demanded that Hooker Jim’s men be handed over for trial. Schonchin John, Hooker Jim and others, believing that the army would leave if its leaders were killed, shamed Kintpuash into agreeing to kill the commissioners. On 11 April 1873, at the peace tent, he shot Canby dead, Boston Charley killed the Reverend Eleazer Thomas, and Meacham was badly wounded."
+      - "Canby’s death turned public opinion and tested President Grant’s peace policy. On 15–17 April several hundred troops with mortars and Warm Springs scouts attacked the Stronghold again and cut the Modoc off from the lake, and the Modoc slipped away south through the lava. On 26 April Scarfaced Charley and about two dozen men ambushed a patrol of some 80 soldiers and scouts under Captain Evan Thomas at Sand Butte and killed or wounded about 35 of them, five officers among the dead. On 10 May the Modoc attacked troops at Dry Lake and were beaten off with five dead, their first defeat. The band split up; Hooker Jim and his followers surrendered and guided the soldiers to Kintpuash, who was captured with his family near Langell Valley in early June."
+      - "A military court tried six men for the deaths of Canby and Thomas. Kintpuash, Schonchin John, Black Jim and Boston Charley were hanged at Fort Klamath on 3 October 1873, and two others were sent to Alcatraz; Hooker Jim, who had turned against Kintpuash, was not tried. The 153 survivors of the band were sent as prisoners of war to the Quapaw Agency in Indian Territory. In 1909 they were allowed to return; 29 went back to Oregon, and the rest stayed in Oklahoma, where the Modoc Nation is now recognised separately."
+    facts:
+      - [Canby and Thomas killed, "11 April 1873"]
+      - [Battle of Sand Butte (Thomas–Wright Battle), "26 April 1873, Modoc victory"]
+      - [Battle of Dry Lake, "10 May 1873, US victory"]
+      - [Executions at Fort Klamath, "3 October 1873"]
+    markers:
+      - kind: taken
+        side: us
+        name: Captain Jack’s Stronghold
+        date: 11–17 April 1873
+        text: Canby and Thomas were killed at the peace tent just west of the Stronghold on 11 April; troops took the Stronghold on 15–17 April after the Modoc left it.
+        lonlat: [-121.505, 41.822]
+        lp: l
+      - kind: battle
+        side: mod
+        name: Sand Butte
+        date: 26 April 1873
+        text: Scarfaced Charley’s two dozen or so warriors ambushed Captain Thomas’s patrol at the foot of the butte, now Hardin Butte.
+        lonlat: [-121.524, 41.760]
+        lp: l
+      - kind: battle
+        side: us
+        name: Dry Lake
+        date: 10 May 1873
+        text: The Modoc attacked an army camp at dawn and were driven off, losing five men (marker approximate).
+        lonlat: [-121.30, 41.70]
+      - kind: taken
+        side: us
+        name: Langell Valley
+        date: early June 1873
+        text: Kintpuash and his family were captured in this area, guided by Modoc who had surrendered (marker approximate).
+        lonlat: [-121.25, 42.05]
+      - kind: event
+        side: us
+        name: Fort Klamath
+        date: 3 October 1873
+        text: Kintpuash, Schonchin John, Black Jim and Boston Charley were hanged here.
+        lonlat: [-121.972, 42.692]
+    arrows:
+      - side: mod
+        phase: 1
+        via: [[-121.505, 41.81], [-121.46, 41.76], [-121.34, 41.71]]
+      - side: mod
+        phase: 2
+        via: [[-121.30, 41.73], [-121.22, 41.88], [-121.25, 42.03]]

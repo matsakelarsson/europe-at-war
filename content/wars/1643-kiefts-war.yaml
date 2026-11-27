@@ -1,0 +1,169 @@
+id: kiefts-war
+name: Kieft’s War (Wappinger War)
+start: "1643-02-25"
+end: "1645-08-30"
+tier: B
+summary: "A war between the Dutch colony of New Netherland and the Munsee-speaking Lenape and Wappinger peoples around New Amsterdam (New York), named after the colony’s director, Willem Kieft. From 1639 Kieft demanded tribute in corn, furs and wampum from the nations around Manhattan, and quarrels over stray livestock, killings and revenge followed. In February 1643, against the advice of the colonists’ elected council, he sent soldiers against Wecquaesgeek and Tappan refugees who had fled from Mohawk raids to Pavonia and Corlears Hook; some 120 men, women and children were killed in the night. The nations of the lower Hudson and Long Island rose, burned farms and villages from Staten Island to Westchester and killed many colonists, among them Anne Hutchinson and most of her family. Hired by Kieft, the Pequot War veteran John Underhill led Dutch and English soldiers who attacked Native villages in the winter of 1643–1644, killing some 500 to 700 people at Pound Ridge in March 1644. Peace was made at Fort Amsterdam on 30 August 1645. The Native losses in the war are usually put at more than a thousand; New Netherland’s farms were ruined and the West India Company recalled Kieft, who drowned on his way home in 1647."
+countries: [us]
+sides:
+  - id: nn
+    name: New Netherland (Willem Kieft)
+    polities: [new-netherland, dutch-republic]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+  - id: ln
+    name: Lenape (Munsee) bands of the lower Hudson and Long Island
+    polities: [lenape]
+    ink: green
+    moves: Lenape moves
+    success: Lenape success
+  - id: wp
+    name: Wappinger (Wecquaesgeek, Siwanoy, Tankiteke)
+    polities: [wappinger]
+    ink: olive
+    moves: Wappinger moves
+    success: Wappinger success
+  - id: mk
+    name: Mohawk and Mahican
+    polities: [haudenosaunee, mahican]
+    ink: purple
+    moves: Mohawk and Mahican moves
+    success: Mohawk and Mahican success
+notes:
+  - New Netherland used the Gregorian calendar; the English towns on Long Island and in New England used the Julian (Old Style), so some events are dated ten days apart in different sources.
+  - The war is known almost entirely from Dutch and English writings, among them the journal of the patroon David Pietersz. de Vries, who opposed Kieft, the colonists’ complaints to the West India Company, and Underhill’s own account. Native numbers and losses come from these sources and are rough; the site of the Pound Ridge village is disputed, and some accounts date the attack to February rather than March 1644.
+  - The bands of the lower Hudson, Long Island and northern New Jersey, among them the Hackensack, Tappan, Raritan, Wecquaesgeek, Siwanoy, Canarsee and Matinecock, spoke Munsee, a Lenape (Delaware) language; the sources group some of them as the Wappinger Confederacy.
+sources:
+  - title: Kieft’s War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kieft%27s_War
+  - title: Pound Ridge massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pound_Ridge_massacre
+  - title: Pavonia, New Netherland (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pavonia,_New_Netherland
+  - title: Peach War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Peach_War
+  - title: Anne Hutchinson (Britannica)
+    url: https://www.britannica.com/biography/Anne-Hutchinson
+steps:
+  - title: Tribute, revenge and the killings at Pavonia
+    date: 1639 – February 1643
+    when: "1643-02"
+    borders: "1643-02-25"
+    countries: [us]
+    view:
+      center: [-74.00, 40.70]
+      size: [60, 55]
+    body:
+      - Willem Kieft arrived as director of New Netherland in 1638, when the colony had grown from a trading post into a string of farms around New Amsterdam on lands bought from, or claimed against, the Munsee bands of the lower Hudson. In 1639, to pay for the garrison of Fort Amsterdam, he demanded tribute in corn, furs and wampum from the nearby nations, who refused. In 1640, blaming the Raritan for pigs stolen on Staten Island, which were later found to have been taken by colonists, he sent soldiers who killed several of them; the Raritan answered by burning David de Vries’s farm and killing four of his men, and Kieft put a bounty on Raritan heads. In August 1641 a Wecquaesgeek man killed the old wheelwright Claes Swits at Turtle Bay, in revenge, he said, for his uncle, killed by Dutchmen years before.
+      - Kieft called the colony’s first elected body, the Twelve Men, to back a war; they urged patience and asked for a say in government, and Kieft dissolved them. In February 1643 Mohawk and Mahican war parties armed with Dutch guns attacked the Wecquaesgeek and Tappan, and hundreds of refugees fled to the Hackensack country at Pavonia and to Corlears Hook on Manhattan, where they hoped for Dutch protection. On the night of 25–26 February Kieft’s soldiers and volunteers fell on both camps and killed some 120 people, by most accounts about 80 at Pavonia and 40 at Corlears Hook, many of them women and children. De Vries, who had warned Kieft against it, wrote of infants torn from their mothers’ breasts and hacked to pieces; Kieft rewarded the soldiers.
+    facts:
+      - [Tribute demanded, "1639"]
+      - [Killings at Pavonia and Corlears Hook, "25–26 February 1643"]
+      - [Killed, "about 120, by most accounts"]
+    markers:
+      - kind: capital
+        side: nn
+        name: New Amsterdam (Fort Amsterdam)
+        date: "1643"
+        text: The seat of the West India Company’s director, with a few hundred colonists.
+        lonlat: [-74.014, 40.704]
+        lp: b
+      - kind: toll
+        side: nn
+        name: Pavonia (Communipaw)
+        date: 25–26 February 1643
+        text: Soldiers sent by Kieft killed some 80 Wecquaesgeek and Tappan refugees in their camp here in the night.
+        lonlat: [-74.050, 40.714]
+        lp: l
+      - kind: toll
+        side: nn
+        name: Corlears Hook
+        date: 25–26 February 1643
+        text: About 40 refugees were killed here the same night by colonists acting with Kieft’s approval.
+        lonlat: [-73.977, 40.711]
+        lp: r
+      - kind: event
+        side: ln
+        name: Staten Island
+        date: 1640–1641
+        text: Kieft’s soldiers killed several Raritan here over stolen pigs; the Raritan burned de Vries’s farm in return.
+        lonlat: [-74.080, 40.600]
+        lp: l
+      - kind: event
+        side: wp
+        name: Turtle Bay
+        date: August 1641
+        text: A Wecquaesgeek man killed Claes Swits here in revenge for his uncle.
+        lonlat: [-73.968, 40.752]
+        lp: r
+    arrows:
+      - side: mk
+        label: Mohawk and Mahican raids
+        phase: 1
+        via: [[-73.92, 41.10], [-73.95, 40.95], [-74.00, 40.82]]
+      - side: wp
+        label: Refugees
+        phase: 2
+        via: [[-73.98, 40.90], [-74.03, 40.80], [-74.05, 40.72]]
+  - title: Two years of war and the peace of 1645
+    date: March 1643 – August 1645
+    when: "1643-08"
+    borders: "1645-08-30"
+    countries: [us]
+    body:
+      - The killings united the Munsee bands against the colony. Warriors from the Hackensack, Tappan, Wecquaesgeek, Raritan and Long Island bands burned farms and villages from Staten Island and Pavonia to the Bronx and Westchester, killed men and carried off women and children, and drove the colonists into New Amsterdam. A truce with some bands in the spring of 1643 did not last, and from August the Wappinger under the Tankiteke sachem Pacham attacked boats on the Hudson. In late August or September 1643 Siwanoy warriors killed the Puritan dissenter Anne Hutchinson and most of her household near Split Rock in what is now the Bronx; English refugees in Dutch territory were not spared.
+      - Kieft hired John Underhill, who had led the attack on the Pequot fort at Mystic in 1637, and a company of English and Dutch soldiers. In the winter of 1643–1644 they burned Wecquaesgeek villages and their winter stores and, by the colonists’ accounts, killed some 120 people on western Long Island. In March 1644 about 130 men guided from Stamford surrounded a large Wappinger village near what is now Pound Ridge by night and set it on fire with its people inside. The colonists reported 500 to 600 dead, the Native survivors more than 600; estimates range from 500 to 700, and only a handful escaped.
+      - The colonists blamed Kieft and petitioned the company to remove him. Worn down on both sides, the bands made peace one after another, and on 30 August 1645 the sachems, among them Oratam of the Hackensack, with Mohawk envoys as witnesses, made a general peace with Kieft at Fort Amsterdam. The war set back New Netherland for years. Kieft was recalled and drowned when his ship was wrecked off Wales in 1647, and Peter Stuyvesant took his place. Ten years later, on 15 September 1655, while Stuyvesant’s soldiers were away taking New Sweden, some five hundred Munsee came to New Amsterdam in canoes; fighting broke out that evening, and in the raids that followed on Pavonia and Staten Island, the Peach War, some forty colonists were killed and about a hundred taken captive.
+    facts:
+      - [Anne Hutchinson killed, "August or September 1643"]
+      - [Pound Ridge, "March 1644, an estimated 500–700 killed"]
+      - [Peace at Fort Amsterdam, "30 August 1645"]
+    markers:
+      - kind: toll
+        side: wp
+        name: Split Rock (Anne Hutchinson)
+        date: August–September 1643
+        text: Siwanoy warriors killed Anne Hutchinson and most of her household at their farm near here.
+        lonlat: [-73.811, 40.877]
+        lp: r
+      - kind: battle
+        side: wp
+        name: Hudson boats near Poughkeepsie
+        date: August 1643
+        text: Wappinger warriors under Pacham began attacking Dutch boats on the Hudson.
+        lonlat: [-73.930, 41.700]
+      - kind: toll
+        side: nn
+        name: Pound Ridge
+        date: March 1644
+        text: Underhill’s men burned a large Wappinger village by night; estimates of the dead range from 500 to 700. The exact site is disputed.
+        lonlat: [-73.574, 41.208]
+      - kind: toll
+        side: nn
+        name: Western Long Island (approximate)
+        date: early 1644
+        text: Underhill’s company is reported to have killed some 120 people here; accounts differ on the places (two villages, or a fort at Massapequa) and the date.
+        lonlat: [-73.620, 40.710]
+        lp: b
+      - kind: treaty
+        side: nn
+        name: Fort Amsterdam
+        date: 30 August 1645
+        text: The sachems of the lower Hudson made a general peace with Kieft here, with Mohawk envoys as witnesses.
+        lonlat: [-74.014, 40.704]
+        lp: l
+    arrows:
+      - side: nn
+        label: Underhill, March 1644
+        phase: 1
+        via: [[-74.01, 40.71], [-73.80, 40.88], [-73.62, 41.03], [-73.57, 41.20]]
+      - side: wp
+        label: Raids on the colony
+        phase: 1
+        via: [[-73.85, 41.20], [-73.88, 41.00], [-73.84, 40.88]]
+    areas:
+      - style: contested
+        side: ln
+        label: Farms and villages of New Netherland raided, 1643–1645
+        polygon: [[-74.25, 40.50], [-74.25, 40.90], [-74.00, 41.10], [-73.65, 41.00], [-73.55, 40.75], [-73.85, 40.55], [-74.10, 40.48]]

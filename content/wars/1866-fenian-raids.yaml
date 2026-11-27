@@ -1,0 +1,200 @@
+id: fenian-raids
+name: Fenian raids
+start: "1866-04"
+end: "1871-10-05"
+tier: B
+summary: "Armed raids from the United States into British North America by the Fenian Brotherhood, an Irish-American organisation that aimed to seize Canada and hold it hostage to force Britain to grant Ireland its independence. Many Fenians were veterans of the American Civil War. After a failed attempt on Campobello Island in New Brunswick in April 1866, John O’Neill crossed the Niagara River on 1 June 1866 with about a thousand men, defeated the Canadian militia at Ridgeway and Fort Erie the next day, and withdrew to the United States, where the US Navy intercepted his men. A second force entered Quebec at Pigeon Hill on 7 June and retreated within two days. The US government, which had tolerated the Fenians’ preparations, then enforced its neutrality laws. In May 1870 Canadian militia beat back Fenian raids at Eccles Hill and Trout River, and in October 1871 a small party under O’Neill seized a Hudson’s Bay Company post at Pembina, on the border of the new province of Manitoba, which turned out to be on American soil, and was arrested by US troops. The raids cost several dozen lives on both sides, and the danger they showed helped bring about the confederation of Canada in 1867."
+countries: [ca, us]
+sides:
+  - id: fen
+    name: Fenian Brotherhood (the Irish Republican Army)
+    polities: [fenian-brotherhood]
+    ink: green
+    moves: Fenian moves
+    success: Fenian success
+  - id: can
+    name: British North America (Canadian militia and volunteers, British regulars and the Royal Navy)
+    polities: [province-of-canada, canada, new-brunswick, united-kingdom]
+    ink: red
+    moves: Canadian and British moves
+    success: Canadian and British success
+  - id: us
+    name: United States (enforcing its neutrality laws)
+    polities: [united-states]
+    ink: blue
+    moves: US moves
+    success: US success
+notes:
+  - "The Fenians called their armed force the Irish Republican Army, the first use of the name. The Fenian Brotherhood split in 1865 between the followers of its founder John O’Mahony, who wanted to support a rising in Ireland, and the “Senate” faction of William R. Roberts and General Thomas W. Sweeny, which planned the invasion of Canada."
+  - "Casualty figures differ between sources, particularly for the Fenians; a Canadian militia report of 1868 counted 31 dead and 103 wounded or disabled by disease on the Canadian side in 1866."
+sources:
+  - title: Fenian raids (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fenian_raids
+  - title: Fenian Raids (The Canadian Encyclopedia)
+    url: https://www.thecanadianencyclopedia.ca/en/article/fenian-raids
+  - title: Fenian raids (Britannica)
+    url: https://www.britannica.com/event/Fenian-raids
+  - title: Battle of Ridgeway (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ridgeway
+  - title: Battle of Trout River (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Trout_River
+  - title: Battle of Eccles Hill (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Eccles_Hill
+  - title: Battle of Ridgeway (The Canadian Encyclopedia)
+    url: https://www.thecanadianencyclopedia.ca/en/article/battle-of-ridgeway-1866
+  - title: Ridgeway Battlefield National Historic Site (Parks Canada)
+    url: https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=504
+steps:
+  - title: Campobello, Ridgeway and Fort Erie
+    date: April – June 1866
+    when: "1866-06-02"
+    borders: "1866-06-02"
+    countries: [ca, us]
+    view:
+      center: [-79.03, 42.93]
+      size: [60, 50]
+    body:
+      - The Fenian Brotherhood was founded in New York in 1858 by John O’Mahony as the American wing of the Irish Republican Brotherhood. After the Civil War it could draw on tens of thousands of Irish-born veterans of the Union and Confederate armies, and its leaders believed that a war with Britain in North America would help Ireland win its freedom. In April 1866 O’Mahony’s wing gathered some 700 men at Eastport, Maine, opposite Campobello Island in New Brunswick. Royal Navy warships carrying about 700 soldiers came from Halifax, US troops under General George Meade seized the Fenians’ arms, and the men dispersed. The scare helped the supporters of Confederation win the elections in New Brunswick that summer.
+      - "The rival “Senate” wing planned a larger invasion, of which only one prong crossed in strength. In the early hours of 1 June 1866 Colonel John O’Neill, a Union cavalry veteran, crossed the Niagara River from Buffalo with about 1,000 men, took the village of Fort Erie and cut the telegraph and railway. On the morning of 2 June, near Ridgeway, some 850 Canadian volunteers, the Queen’s Own Rifles of Toronto, the 13th Battalion of Hamilton and two rifle companies from Haldimand County, under Lieutenant Colonel Alfred Booker, ran into O’Neill’s positions. After about two hours of fighting, a false alarm of Fenian cavalry led the Canadians to form a square, under fire, and then to break and retreat to Port Colborne. Seven of them were killed on the field and two died of wounds soon after, and four more died later of wounds or disease; Fenian losses are uncertain, from the one or two killed O’Neill admitted to about ten in other estimates."
+      - "That afternoon a small Canadian force under Lieutenant Colonel John Stoughton Dennis, the Welland Canal Field Battery and the Dunnville Naval Brigade, landed at Fort Erie from a tug and was overwhelmed when O’Neill’s men returned; most were taken prisoner. Learning that British regulars and more militia were closing in and that no reinforcements could cross, O’Neill released his prisoners and took his men back across the river on the night of 2–3 June, where the gunboat USS Michigan intercepted them; several hundred were detained. On 6 June President Andrew Johnson ordered the neutrality laws enforced, and Generals Grant and Meade went to the border to stop further crossings."
+    facts:
+      - [Campobello, "April 1866"]
+      - [Battle of Ridgeway, "2 June 1866, Fenian victory"]
+      - [Battle of Fort Erie, "2 June 1866"]
+      - [Canadian dead at Ridgeway, "9 killed or mortally wounded, 4 more died later"]
+    markers:
+      - kind: battle
+        side: fen
+        name: Ridgeway
+        date: 2 June 1866
+        text: O’Neill’s Fenians routed Booker’s Canadian volunteers north of the village.
+        lonlat: [-79.042, 42.904]
+        lp: l
+      - kind: battle
+        side: fen
+        name: Fort Erie
+        date: 1–2 June 1866
+        text: Taken by O’Neill on 1 June; on 2 June his men overwhelmed Dennis’s small force here before recrossing the river to Buffalo.
+        lonlat: [-78.920, 42.902]
+      - kind: event
+        side: can
+        name: Port Colborne
+        date: 1–2 June 1866
+        text: Booker’s volunteers came here by rail and fell back here after Ridgeway.
+        lonlat: [-79.25, 42.886]
+        lp: l
+      - kind: event
+        side: can
+        name: Chippawa
+        date: 2 June 1866
+        text: Colonel George Peacocke’s British regulars advanced from here towards Fort Erie.
+        lonlat: [-79.05, 43.05]
+        lp: t
+    arrows:
+      - side: fen
+        label: O’Neill
+        phase: 1
+        via: [[-78.90, 42.93], [-78.94, 42.93], [-79.00, 42.92], [-79.04, 42.91]]
+      - side: can
+        label: Booker
+        phase: 1
+        via: [[-79.24, 42.89], [-79.14, 42.89], [-79.05, 42.90]]
+      - side: fen
+        phase: 2
+        via: [[-79.03, 42.91], [-78.97, 42.91], [-78.93, 42.90]]
+      - side: can
+        label: Dennis
+        phase: 2
+        via: [[-78.96, 42.86], [-78.93, 42.88], [-78.922, 42.898]]
+    areas:
+      - style: occupied
+        side: fen
+        label: Held by the Fenians, 1–3 June 1866 (approximate)
+        polygon: [[-78.92, 42.88], [-78.93, 42.95], [-79.02, 42.95], [-79.07, 42.90], [-79.00, 42.88]]
+  - title: Pigeon Hill, Eccles Hill and Trout River
+    date: June 1866 – May 1870
+    when: "1870-05-25"
+    borders: "1870-05-25"
+    countries: [ca, us]
+    body:
+      - On 7 June 1866 General Samuel P. Spear led 1,000 or more Fenians across the Vermont border into Missisquoi County, Quebec, and occupied Pigeon Hill, Saint-Armand, Frelighsburg and Stanbridge. Short of arms, food and ammunition, which US authorities had seized, they plundered farms and waited for reinforcements that never came. When Canadian volunteers and British regulars advanced on 8 June, most of them retreated across the border; the cavalry of the Royal Guides took some prisoners. Canadian courts tried the captured raiders of 1866 and sentenced several to death, but the sentences were commuted. On 1 July 1867 New Brunswick, Nova Scotia and the Province of Canada united as the Dominion of Canada, and the Fenian threat had been one of the arguments for union.
+      - By 1870 O’Neill was president of the Brotherhood. On 25 May 1870 he led several hundred Fenians from Franklin, Vermont, towards Eccles Hill, just across the border, where Canadian militia under Lieutenant Colonel William Osborne Smith and local home guards under Brown Chamberlin waited on the ridge, warned by Thomas Billis Beach, a British spy in the Fenian leadership known as Henri Le Caron. Their fire stopped the Fenians at the border; two Fenians were killed, and O’Neill, returning to the American side, was arrested by a US marshal. On 27 May another Fenian force crossed from Malone, New York, near Trout River, west of Huntingdon, and was driven back by Canadian militia and the British 69th Regiment without loss.
+    facts:
+      - [Pigeon Hill raid, "7–8 June 1866"]
+      - [Battle of Eccles Hill, "25 May 1870, Canadian victory"]
+      - [Trout River, "27 May 1870"]
+    markers:
+      - kind: battle
+        side: can
+        name: Eccles Hill and Pigeon Hill
+        date: 1866 and 1870
+        text: Spear’s Fenians occupied Pigeon Hill in June 1866 and retreated; in May 1870 Canadian militia on Eccles Hill, 4 km away, stopped O’Neill’s raid at the border.
+        lonlat: [-72.904, 45.020]
+      - kind: battle
+        side: can
+        name: Trout River
+        date: 27 May 1870
+        text: Canadian militia and British regulars drove a Fenian force back across the border west of Huntingdon (location approximate).
+        lonlat: [-74.28, 45.00]
+        lp: l
+      - kind: event
+        side: fen
+        name: St. Albans
+        date: June 1866
+        text: The Fenians gathered here for the invasion of Quebec in 1866.
+        lonlat: [-73.083, 44.811]
+        lp: b
+      - kind: event
+        side: fen
+        name: Malone
+        date: May 1870
+        text: The base of the Fenian force that crossed at Trout River.
+        lonlat: [-74.29, 44.848]
+        lp: b
+      - kind: capital
+        side: can
+        name: Montreal
+        date: "1870"
+        text: Militia and British regulars were sent from here to the border.
+        lonlat: [-73.567, 45.508]
+    arrows:
+      - side: fen
+        label: Spear
+        phase: 1
+        via: [[-73.08, 44.82], [-73.00, 44.93], [-72.94, 45.04]]
+      - side: fen
+        label: O’Neill
+        phase: 2
+        via: [[-72.92, 44.97], [-72.91, 45.00], [-72.905, 45.015]]
+      - side: fen
+        phase: 2
+        via: [[-74.29, 44.86], [-74.29, 44.93], [-74.28, 44.99]]
+    areas:
+      - style: occupied
+        side: fen
+        label: Occupied by Spear’s Fenians, 7–8 June 1866 (approximate)
+        polygon: [[-73.05, 45.01], [-72.80, 45.01], [-72.80, 45.10], [-72.95, 45.16], [-73.05, 45.12]]
+  - title: Pembina and the end of the raids
+    date: October 1871
+    when: "1871-10-05"
+    borders: "1871-10-05"
+    countries: [ca, us]
+    body:
+      - The last raid was aimed at Manitoba, which had joined Canada in 1870 after the Red River Resistance. O’Neill and William B. O’Donoghue, an Irish-born teacher who had been treasurer of Louis Riel’s provisional government in 1869–1870, hoped the Métis would rise with them. Instead Riel and other Métis leaders offered their help to the lieutenant governor, Adams Archibald, who reviewed the mounted Métis at St. Boniface on 8 October 1871. On 5 October O’Neill, with about 35 men, seized the Hudson’s Bay Company post at Pembina, which proved to stand on the American side of the boundary; US soldiers under Captain Loyd Wheaton arrested him the same day, and Métis captured O’Donoghue and handed him to the Americans.
+      - The Fenian invasions were over. They had cost several dozen lives on both sides, many of the Canadian dead from disease in the militia camps, and the Canadian government had spent heavily on its militia. Canada’s claims for the raids were left out of the Treaty of Washington between Britain and the United States in 1871, and Britain compensated Canada with a guaranteed loan. In Canada the raids were long remembered as a threat that had helped unite the colonies; Ridgeway is described as the last battle fought in Ontario against a foreign invading force.
+    facts:
+      - [Pembina raid, "5 October 1871"]
+      - [Fenians in the raid, "about 35"]
+    markers:
+      - kind: taken
+        side: us
+        name: Pembina
+        date: 5 October 1871
+        text: O’Neill’s party seized the Hudson’s Bay Company post, which stood on the American side of the line, and was arrested by US troops.
+        lonlat: [-97.24, 48.966]
+      - kind: capital
+        side: can
+        name: Upper Fort Garry
+        date: October 1871
+        text: Seat of Manitoba’s government; Archibald reviewed the Métis horsemen at St. Boniface, across the Red River.
+        lonlat: [-97.131, 49.887]

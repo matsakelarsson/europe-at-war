@@ -1,0 +1,188 @@
+id: king-georges-war
+name: King George’s War
+start: "1744-03-15"
+end: "1748-10-18"
+tier: B
+summary: "The North American part of the War of the Austrian Succession, fought between Britain and France and their colonies and allies in Nova Scotia, Cape Breton and on the frontier of New England and New York. When France declared war in March 1744, troops from the French fortress of Louisbourg on Cape Breton burned the New England fishing post of Canso, and French troops and Mi’kmaq and Wolastoqiyik warriors twice besieged Annapolis Royal, the capital of British Nova Scotia, without taking it. In 1745 some 4,200 New England volunteers under William Pepperrell, with a Royal Navy squadron under Peter Warren, besieged Louisbourg for 47 days and took it, the greatest victory of colonial New England. A great French fleet sent to retake it in 1746 under the Duc d’Anville was destroyed by storms and disease. French, Canadian and Native war parties raided the frontier from Maine to Saratoga, and in February 1747 a Canadian and Mi’kmaq force surprised and defeated a New England detachment at Grand-Pré. The Treaty of Aix-la-Chapelle in 1748 returned Louisbourg to France in exchange for Madras, to the fury of New England."
+countries: [ca, us, fr, gb]
+sides:
+  - id: brit
+    name: Great Britain, New England and Nova Scotia, with some Mohawk allies
+    polities: [united-kingdom, british-america, nova-scotia]
+    ink: red
+    moves: British and New England moves
+    success: British and New England success
+  - id: fr
+    name: France and New France, with the Wabanaki (Mi’kmaq, Wolastoqiyik and Abenaki) and other Native allies
+    polities: [new-france, france, wabanaki]
+    ink: blue
+    moves: French and allied moves
+    success: French and allied success
+notes:
+  - The British colonies used the Julian calendar (Old Style) until 1752, eleven days behind the French; dates here are in the New Style unless marked. New England accounts give the siege of Louisbourg as 30 April – 17 June 1745.
+  - Named after George II, who reigned from 1727 to 1760. In French it is often called the Guerre de Succession d’Autriche or the third intercolonial war; for the European war see the War of the Austrian Succession, and for the war with Spain in the south that preceded it, the War of Jenkins’ Ear.
+  - The Haudenosaunee Confederacy stayed largely neutral, although William Johnson persuaded some Mohawk to raid towards Canada. Most Acadians also stayed neutral, which both sides held against them.
+sources:
+  - title: King George’s War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/King_George%27s_War
+  - title: Siege of Louisbourg (1745) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Louisbourg_(1745)
+  - title: Battle of Grand Pré (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Grand_Pr%C3%A9
+  - title: Duc d’Anville expedition (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Duc_d%27Anville_expedition
+  - title: Raid on Canso (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Raid_on_Canso
+  - title: Fortress of Louisbourg National Historic Site (Parks Canada)
+    url: https://parks.canada.ca/lhn-nhs/ns/louisbourg
+  - title: Pepperrell, Sir William (Dictionary of Canadian Biography)
+    url: http://www.biographi.ca/en/bio/pepperrell_william_3E.html
+steps:
+  - title: Canso and Annapolis Royal
+    date: 1744
+    when: "1744-05-23"
+    borders: "1744-05-23"
+    countries: [ca, fr, gb]
+    body:
+      - "France declared war on Britain on 15 March 1744, and the news reached Louisbourg before it reached Boston. On 23 May François Du Pont Duvivier sailed from Louisbourg with several hundred soldiers and privateers and took Canso, the New England fishing station on the Nova Scotia shore, burned it and carried its garrison and families to Louisbourg as prisoners."
+      - "In July about 300 Mi’kmaq and Wolastoqiyik warriors, with the missionary Jean-Louis Le Loutre, besieged Annapolis Royal, the small capital of British Nova Scotia, and withdrew after four days when ships brought 70 soldiers from Boston. From September Duvivier besieged the town again with French troops and Mi’kmaq, but the lieutenant governor, Paul Mascarene, held out, most Acadians would not join the French, and the warships Duvivier expected never came. In late September John Gorham arrived from Massachusetts with a company of Native rangers from Cape Cod, who raided a nearby Mi’kmaq camp and killed women and children; the Mi’kmaq withdrew, and on 5 October Duvivier gave up. The Canso prisoners, released from Louisbourg, brought news of its weakness to Boston, and Governor William Shirley of Massachusetts began to plan an attack."
+    facts:
+      - [France declares war, "15 March 1744"]
+      - [Raid on Canso, "23 May 1744"]
+      - [Sieges of Annapolis Royal, "July and September – October 1744"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Canso
+        date: 23 May 1744
+        text: Duvivier took and burned the New England fishing post.
+        lonlat: [-60.995, 45.335]
+        lp: b
+      - kind: held
+        side: brit
+        name: Annapolis Royal
+        date: July – October 1744
+        text: Mascarene held the fort through two sieges by the Mi’kmaq, Wolastoqiyik and French.
+        lonlat: [-65.515, 44.742]
+        lp: l
+      - kind: capital
+        side: fr
+        name: Louisbourg
+        date: "1744"
+        text: The French fortress on Île Royale (Cape Breton), base of the raids.
+        lonlat: [-59.985, 45.894]
+    arrows:
+      - side: fr
+        label: Duvivier
+        phase: 1
+        via: [[-59.99, 45.87], [-60.50, 45.55], [-60.97, 45.36]]
+      - side: fr
+        phase: 2
+        via: [[-64.20, 45.92], [-64.40, 45.25], [-65.15, 44.85], [-65.47, 44.76]]
+  - title: The siege of Louisbourg
+    date: May – June 1745
+    when: "1745-05-11"
+    borders: "1745-06-28"
+    countries: [ca, us, fr, gb]
+    view:
+      center: [-60.00, 45.89]
+      size: [50, 45]
+    body:
+      - "Shirley persuaded the Massachusetts assembly, by a single vote, to attack Louisbourg, the fortress that guarded the French fisheries and sheltered the privateers that preyed on New England shipping. William Pepperrell, a merchant of Kittery in Maine with no experience of war, led some 4,200 volunteers from Massachusetts, Connecticut and New Hampshire in about 90 ships; Rhode Island sent a ship and New York guns. At Canso they were joined by a Royal Navy squadron under Commodore Peter Warren. Inside the fortress the governor, Louis Du Pont Duchambon, had a garrison that had mutinied over pay and food the winter before."
+      - "The New Englanders landed at Gabarus Bay on 11 May. The French abandoned the Royal Battery across the harbour, and the attackers turned its guns on the town. Warren’s ships captured the French warship Vigilant with supplies for the garrison, and in June a night assault on the Island Battery at the harbour mouth was beaten off with about 60 killed and 116 captured, but a battery dragged to Lighthouse Point silenced it. With his walls breached and no help in sight, Duchambon surrendered on 28 June 1745, after 47 days."
+      - "About 100 attackers were killed or wounded in the siege, and the French lost about 130; the garrison and some 1,400 people in all were shipped to France. Far more of the New Englanders who held the fortress through the following winter died of disease, about 900 by one count. The news set off celebrations across New England, and Pepperrell was made a baronet."
+    facts:
+      - [Siege of Louisbourg, "11 May – 28 June 1745"]
+      - [New England force, "about 4,200 volunteers, with Warren’s squadron"]
+      - [Captured and shipped to France, "about 1,400"]
+    markers:
+      - kind: taken
+        side: brit
+        name: Louisbourg
+        date: 28 June 1745
+        text: Duchambon surrendered the fortress after a siege of 47 days.
+        lonlat: [-59.985, 45.894]
+        lp: b
+      - kind: event
+        side: brit
+        name: Gabarus Bay
+        date: 11 May 1745
+        text: The New England army landed at Freshwater Cove here.
+        lonlat: [-60.04, 45.855]
+        lp: l
+      - kind: event
+        side: brit
+        name: Lighthouse Point
+        date: June 1745
+        text: The battery built here silenced the Island Battery at the harbour mouth.
+        lonlat: [-59.955, 45.915]
+        lp: r
+    arrows:
+      - side: brit
+        label: Pepperrell
+        phase: 1
+        via: [[-60.30, 45.70], [-60.12, 45.80], [-60.04, 45.85]]
+      - side: brit
+        phase: 2
+        via: [[-60.03, 45.86], [-60.01, 45.88], [-59.995, 45.89]]
+  - title: D’Anville’s fleet, the frontier and Grand-Pré
+    date: 1745–1748
+    when: "1746-09"
+    borders: "1747-02-11"
+    countries: [ca, us, fr, gb]
+    body:
+      - "The war of raids went on along the frontier. On 28 November 1745 Paul Marin led French troops and Native warriors from Fort St. Frédéric at Crown Point against Saratoga on the Hudson, killing about 30 people and carrying off some 60 to 100 as prisoners; in August 1746 a large French and Native force under François-Pierre de Rigaud de Vaudreuil forced the surrender of Fort Massachusetts in the Hoosac valley; and in April 1747 the post of Number 4 on the Connecticut River held out against a three-day siege. William Johnson persuaded some Mohawk to raid towards Canada, but the Haudenosaunee as a whole kept out of the war."
+      - "In 1746 France sent the largest fleet it had yet sent to America, under the Duc d’Anville, to retake Louisbourg and Annapolis Royal. Storms scattered it on a crossing of three months, and typhus and scurvy killed thousands of its sailors and soldiers. D’Anville died at Chebucto, where Halifax now stands, on 27 September 1746, and the fleet sailed home without attacking. The sickness spread to the Mi’kmaq, many of whom died."
+      - "In the winter of 1746–1747 Massachusetts sent about 500 men under Colonel Arthur Noble to hold Grand-Pré on the Minas Basin. Several hundred Canadians, Mi’kmaq and Wolastoqiyik under Nicolas-Antoine Coulon de Villiers marched three weeks through the snow from Beaubassin and, guided by Acadians, fell on the houses where the New Englanders were billeted in a snowstorm before dawn on 11 February 1747 (31 January, Old Style). Noble and about 70 of his men were killed and many captured before the rest surrendered. The Treaty of Aix-la-Chapelle of 18 October 1748 handed Louisbourg back to France in exchange for Madras in India, and Britain founded Halifax in 1749 as a counterweight."
+    facts:
+      - [Raid on Saratoga, "28 November 1745"]
+      - [D’Anville’s death at Chebucto, "27 September 1746"]
+      - [Battle of Grand-Pré, "11 February 1747"]
+      - [Treaty of Aix-la-Chapelle, "18 October 1748"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Saratoga
+        date: 28 November 1745
+        text: Marin’s raid killed about 30 people and carried off some 60 to 100 prisoners.
+        lonlat: [-73.58, 43.10]
+        lp: l
+      - kind: taken
+        side: fr
+        name: Fort Massachusetts
+        date: August 1746
+        text: The fort in the Hoosac valley surrendered to Rigaud de Vaudreuil’s force.
+        lonlat: [-73.135, 42.70]
+        lp: b
+      - kind: held
+        side: brit
+        name: Number 4
+        date: April 1747
+        text: The post on the Connecticut River held out against a three-day siege.
+        lonlat: [-72.42, 43.24]
+      - kind: event
+        side: fr
+        name: Chebucto
+        date: September 1746
+        text: D’Anville’s storm-battered and fever-stricken fleet gathered here; the duke died on 27 September.
+        lonlat: [-63.57, 44.65]
+      - kind: battle
+        side: fr
+        name: Grand-Pré
+        date: 11 February 1747
+        text: Coulon de Villiers’s Canadians and Mi’kmaq surprised Noble’s New Englanders in their billets.
+        lonlat: [-64.307, 45.101]
+        lp: l
+    arrows:
+      - side: fr
+        label: Marin
+        phase: 1
+        via: [[-73.43, 44.00], [-73.45, 43.55], [-73.57, 43.13]]
+      - side: fr
+        label: D’Anville
+        phase: 2
+        via: [[-57.50, 42.80], [-61.00, 43.80], [-63.50, 44.60]]
+      - side: fr
+        label: Coulon de Villiers
+        phase: 3
+        via: [[-64.25, 45.85], [-63.50, 45.55], [-63.90, 45.15], [-64.27, 45.10]]

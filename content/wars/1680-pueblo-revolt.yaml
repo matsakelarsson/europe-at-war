@@ -1,0 +1,408 @@
+id: pueblo-revolt
+name: Pueblo Revolt
+start: "1680-08-10"
+end: "1696-12"
+tier: A
+summary: "The rising of the Pueblo peoples of the upper Rio Grande against Spanish rule in the province of Santa Fe de Nuevo México, and the Spanish reconquest that followed. After eighty years of forced labour and tribute under the encomienda, the suppression of Pueblo religion by Franciscan missionaries, drought, famine and Apache raids, leaders of some two dozen pueblos speaking six languages, among them Popé (Po’pay) of Ohkay Owingeh, coordinated a revolt with runners carrying knotted cords. On 10 August 1680 they rose together and killed about 400 colonists, among them 21 of the province’s 33 Franciscans, besieged Governor Antonio de Otermín in Santa Fe and forced some 2,000 survivors to retreat to El Paso del Norte. For twelve years the Pueblos governed themselves, though drought, raids and quarrels divided them. Diego de Vargas returned in 1692 and won the submission of most pueblos without a battle; when he brought colonists back in 1693 he retook Santa Fe by force, executed seventy defenders and gave their families to colonists as servants. A second revolt in 1696 was put down by the end of the year, but the Spanish did not restore the encomienda, granted land to each pueblo and largely left Pueblo religion alone. The Hopi stayed independent."
+countries: [us, mx]
+sides:
+  - id: pb
+    name: Pueblo peoples (Popé, Luis Tupatú, Alonso Catiti and others)
+    polities: [pueblo-peoples]
+    ink: brown
+    moves: Pueblo moves
+    success: Pueblo success
+  - id: sp
+    name: Spanish New Mexico
+    polities: [new-spain, spain]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+  - id: pa
+    name: Pueblo allies of the Spanish
+    polities: [pueblo-peoples]
+    ink: olive
+    moves: Allied Pueblo moves
+    success: Allied Pueblo success
+notes:
+  - Spain used the Gregorian calendar; the dates are those of the Spanish records.
+  - The revolt is known mainly from Spanish sources, above all the testimonies Otermín took from Pueblo prisoners in 1680–1681 and Vargas’s journals; Pueblo memory of it is kept in oral tradition, which the pueblos share only in part. The number of Pueblo dead is not known; Spanish figures for battles, such as those of Zia in 1689 and the Jemez mesa in 1694, are those of the Spanish reports.
+  - The pueblos were self-governing towns of different languages (Tiwa, Tewa, Towa, Keres, Zuni, Hopi, Piro and Tano). Most joined the revolt; the southern Tiwa of Isleta and the Piro did not, and from 1692 Zia, Santa Ana, San Felipe and Pecos fought beside the Spanish. Some Apache and Navajo may have joined in 1680. Popé’s exact role, and how far he led rather than shared leadership, is debated.
+  - Native nations north of Mexico are not drawn on the base map; the lands the Pueblos held after 1680 are shown as areas.
+sources:
+  - title: Pueblo Revolt (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pueblo_Revolt
+  - title: Po’pay (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Po%27pay
+  - title: Diego de Vargas (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Diego_de_Vargas
+  - title: 1599 Acoma massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1599_Acoma_massacre
+  - title: Astialakwa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Astialakwa
+  - title: The Pueblo Revolt (Indian Pueblo Cultural Center)
+    url: https://indianpueblo.org/pueblo-revolt/
+  - title: Palace of the Governors (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Palace_of_the_Governors
+  - title: Po’Pay statue (Architect of the Capitol)
+    url: https://www.aoc.gov/explore-capitol-campus/art/popay
+  - title: Ysleta del Sur Pueblo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ysleta_del_Sur_Pueblo
+steps:
+  - title: Nuevo México under Spanish rule
+    date: 1598–1675
+    when: "1598"
+    borders: "1675-06-01"
+    countries: [us]
+    body:
+      - In 1598 Juan de Oñate led some 130 soldiers, ten Franciscans and several hundred colonists, servants and slaves up the Rio Grande and claimed the land of the Pueblos for Spain; there were then perhaps 40,000 Pueblo people. When Acoma warriors killed Juan de Zaldívar and about a dozen of his men in their mesa-top town in December 1598, Oñate’s soldiers stormed the mesa in January 1599 and killed some 500 men and 300 women and children; survivors were sentenced to twenty years of servitude, and 24 men were sentenced to have a foot cut off. Santa Fe became the capital about 1610.
+      - The colonists, never more than a few thousand, lived on Pueblo labour and tribute in corn, cloth and hides under the encomienda and on forced labour (repartimiento). Franciscan missionaries built churches in the pueblos and fought the kachina ceremonies and the kivas where Pueblo religion was practised; in the 1660s the friars had masks and prayer sticks seized and burned. Governors and friars quarrelled bitterly over who should profit from the Pueblos. Epidemics, drought and famine in the 1660s and 1670s, and raids by Apache and Navajo who were themselves hungry, cut the Pueblo population to about 17,000.
+      - In 1675 Governor Juan Francisco Treviño arrested 47 Pueblo religious leaders for sorcery. Three were hanged and one hanged himself, and the rest were whipped and jailed in Santa Fe until armed Tewa men came to the governor’s palace and forced their release. Among them was Popé (Po’pay), a religious leader from Ohkay Owingeh (San Juan).
+    facts:
+      - [Oñate’s colony, "1598"]
+      - [Acoma, "January 1599, some 800 Acoma killed"]
+      - [Pueblo population, "about 40,000 in 1598, about 17,000 in 1680 (estimates)"]
+      - [Arrest of 47 religious leaders, "1675"]
+    markers:
+      - kind: capital
+        side: sp
+        name: Santa Fe
+        date: about 1610
+        text: Capital of the province of Santa Fe de Nuevo México, with the governor’s palace (casas reales).
+        lonlat: [-105.938, 35.688]
+      - kind: battle
+        side: sp
+        name: Acoma
+        date: 22–24 January 1599
+        text: Oñate’s soldiers stormed the mesa-top pueblo; some 800 people were killed, and survivors were sentenced to servitude and mutilation.
+        lonlat: [-107.582, 34.896]
+      - kind: event
+        side: pb
+        name: Ohkay Owingeh (San Juan)
+        date: "1598"
+        text: The Tewa pueblo where Oñate first settled his colony, and Popé’s home town.
+        lonlat: [-106.070, 36.054]
+    areas:
+      - style: outline
+        side: pb
+        label: Pueblos of the Rio Grande
+        polygon: [[-106.95, 34.80], [-106.95, 35.80], [-106.30, 36.55], [-105.40, 36.55], [-105.55, 35.45], [-106.20, 34.80]]
+  - title: Knotted cords and the rising of 10 August 1680
+    date: August 1680
+    when: "1680-08"
+    borders: "1680-08-10"
+    countries: [us]
+    body:
+      - After his release Popé went to Taos and spent five years, with leaders such as Luis Tupatú of Picurís, Alonso Catiti of Santo Domingo and Domingo Naranjo of Santa Clara, preparing a rising of the pueblos of the Rio Grande, Pecos, the Jemez, Acoma, Zuni and the Hopi mesas, some two dozen towns speaking six languages and spread over some 600 km. Popé promised that when the Spanish were gone the old gods would bring health and rain. Runners carried knotted cords to each pueblo; one knot was to be untied each day, and on the day the last was untied all were to rise.
+      - The southern Tiwa and the Piro, who were closer to the Spanish, did not join, and on 9 August the governor, Antonio de Otermín, learned of the plan and seized two runners from Tesuque, Nicolás Catua and Pedro Omtua. The leaders moved the rising forward. On 10 August the Pueblos rose across the province, killed colonists on their farms and the friars in the missions, took the colonists’ horses and cut the roads. About 400 colonists were killed, men, women and children, among them 21 of the 33 Franciscans; the Hopi killed the friars in their towns on the day first planned. In the south the lieutenant governor, Alonso García, gathered the colonists of the Rio Abajo at Isleta and, believing everyone in the north dead, led them south on 14–15 August.
+    facts:
+      - [Rising, "10 August 1680"]
+      - [Colonists killed, "about 400, with 21 of 33 Franciscans"]
+      - [Pueblo fighters, "2,000 or more; the Spanish could arm about 170 men"]
+    markers:
+      - kind: event
+        side: pb
+        name: Taos
+        date: 1675–1680
+        text: Popé planned the revolt here, far from Santa Fe, with the leaders of the northern pueblos.
+        lonlat: [-105.546, 36.439]
+      - kind: battle
+        side: pb
+        name: Pecos
+        date: 10 August 1680
+        text: The great pueblo east of the Rio Grande, which joined the rising; its friar was among those killed.
+        lonlat: [-105.684, 35.550]
+      - kind: battle
+        side: pb
+        name: Jemez
+        date: 10 August 1680
+        text: The Towa pueblos of the Jemez valley rose with the others and killed their friar at Walatowa.
+        lonlat: [-106.731, 35.609]
+        lp: l
+      - kind: battle
+        side: pb
+        name: Zuni
+        date: 10 August 1680
+        text: The Zuni killed their friar and withdrew to the mesa of Dowa Yalanne.
+        lonlat: [-108.850, 35.070]
+      - kind: battle
+        side: pb
+        name: Hopi mesas (Awatovi, Oraibi)
+        date: August 1680
+        text: The Hopi destroyed the missions at Awatovi, Shungopavi and Oraibi and killed their friars.
+        lonlat: [-110.277, 35.719]
+      - kind: held
+        side: pa
+        name: Isleta
+        date: August 1680
+        text: The southern Tiwa pueblo, which did not join the revolt; the colonists of the Rio Abajo gathered here and left for the south on 14–15 August.
+        lonlat: [-106.692, 34.909]
+      - kind: capital
+        side: sp
+        name: Santa Fe
+        date: 9 August 1680
+        text: Otermín learned of the plan on 9 August and had two runners from Tesuque seized.
+        lonlat: [-105.938, 35.688]
+    arrows:
+      - side: pb
+        label: Runners with knotted cords
+        phase: 1
+        via: [[-105.55, 36.43], [-105.95, 36.05], [-105.94, 35.76], [-105.70, 35.56]]
+      - side: sp
+        label: Alonso García
+        phase: 2
+        via: [[-106.69, 34.90], [-106.85, 34.40], [-106.89, 34.06]]
+    areas:
+      - style: contested
+        side: pb
+        label: Pueblos that rose on 10 August 1680
+        polygon: [[-106.95, 35.00], [-106.95, 35.80], [-106.30, 36.55], [-105.40, 36.55], [-105.55, 35.45], [-106.30, 35.00]]
+  - title: The siege of Santa Fe and the retreat to El Paso
+    date: 13 August – October 1680
+    when: "1680-08-13"
+    borders: "1680-08-21"
+    countries: [us, mx]
+    body:
+      - About a thousand colonists and their servants crowded into the governor’s palace and its walled compound in Santa Fe. From 13 August Tano, Tewa, Taos, Picurís and Keres warriors, some 2,500 by Spanish estimate, gathered around the town, burned the outlying houses and the church and cut the water channel. Otermín’s men fought sorties, and on 20 August a desperate charge drove the besiegers off with heavy losses; the Spanish claimed some 300 Pueblo dead and took 47 prisoners, whom they questioned and executed.
+      - On 21 August Otermín led the survivors out of Santa Fe and south down the Rio Grande. Pueblo warriors watched the column from the hills but let it go. At Isleta they found García’s people gone; the two groups met in early September near Socorro, 1,946 people in all, about 500 of them Native servants and slaves, and with them the Piro and many southern Tiwa. By October they had reached El Paso del Norte, the mission of Guadalupe on the Rio Grande, where the Spanish governed New Mexico in exile for twelve years. The Piro and Tiwa settled nearby at Senecú, Socorro and Ysleta del Sur.
+    facts:
+      - [Siege of Santa Fe, "13–21 August 1680"]
+      - [Pueblo prisoners executed, "47"]
+      - [Survivors who reached El Paso, "about 1,946, about 500 of them Native servants and slaves"]
+    markers:
+      - kind: siege
+        side: pb
+        name: Santa Fe
+        date: 13–21 August 1680
+        text: Some 2,500 Pueblo warriors besieged the governor’s palace and cut its water; after a sortie on 20 August Otermín abandoned the town.
+        lonlat: [-105.938, 35.688]
+      - kind: event
+        side: sp
+        name: Socorro
+        date: early September 1680
+        text: Otermín’s and García’s columns met near here; the Piro pueblos went south with them.
+        lonlat: [-106.890, 34.060]
+      - kind: event
+        side: sp
+        name: El Paso del Norte
+        date: October 1680
+        text: The mission of Guadalupe (Ciudad Juárez), seat of the Spanish government of New Mexico in exile until 1692.
+        lonlat: [-106.485, 31.740]
+        lp: l
+    arrows:
+      - side: sp
+        label: Otermín’s retreat
+        phase: 1
+        via: [[-105.94, 35.68], [-106.40, 35.40], [-106.69, 34.90], [-106.89, 34.05], [-107.20, 33.20], [-106.75, 32.30], [-106.49, 31.76]]
+    areas:
+      - style: occupied
+        side: pb
+        label: Held by the Pueblos from August 1680
+        polygon: [[-106.95, 34.80], [-106.95, 35.80], [-106.30, 36.55], [-105.40, 36.55], [-105.55, 35.45], [-106.20, 34.80]]
+  - title: Twelve years of Pueblo independence
+    date: 1680–1692
+    when: "1681"
+    borders: "1689-09-01"
+    countries: [us, mx]
+    body:
+      - Popé, Tupatú and Catiti went from pueblo to pueblo calling for a return to the ways of their ancestors. Churches were burned and Christian images destroyed; people washed off their baptism in the rivers, took back their own names and set aside Christian marriages, and the kivas and dances returned. Spanish sources say Popé also ordered the destruction of Spanish crops and livestock; Pueblo tradition remembers his rule as harsh. The pueblos remained self-governing, and their unity did not last. Drought continued, and Apache, Navajo and Ute raids grew worse. Popé lost his authority within a few years, Tupatú led for a time, and Popé probably died about 1688.
+      - In November 1681 Otermín marched north again with 146 Spaniards and about as many Native allies. Isleta surrendered after a short fight, but the northern pueblos only pretended to negotiate while gathering warriors, and in early 1682 Otermín turned back, burning several Tiwa pueblos and taking 385 people from Isleta south with him, who founded Ysleta del Sur. In August 1689 Governor Domingo Jironza Petriz de Cruzate attacked Zia, which resisted fiercely; Spanish reports claimed some 600 dead and 70 captives.
+      - Some Pueblo leaders began to seek terms. About 1683 Tupatú sent Juan Punsilli of Picurís to El Paso to offer peace if the Spanish came back without killing or burning, and Pueblo historians hold that several pueblos later invited the Spanish to return.
+    facts:
+      - [Otermín’s return, "November 1681 – February 1682, failed"]
+      - [People of Isleta taken south, "385"]
+      - [Zia attacked, "August 1689"]
+    markers:
+      - kind: taken
+        side: sp
+        name: Isleta
+        date: December 1681
+        text: Surrendered to Otermín; when he withdrew he took 385 of its people south to El Paso.
+        lonlat: [-106.692, 34.909]
+      - kind: battle
+        side: sp
+        name: Zia
+        date: August 1689
+        text: Attacked by Governor Jironza’s army; Spanish reports claimed some 600 dead and 70 captives.
+        lonlat: [-106.723, 35.504]
+      - kind: event
+        side: pa
+        name: Ysleta del Sur
+        date: "1682"
+        text: Founded by the Tiwa people from Isleta near El Paso; it is today a federally recognised pueblo in Texas.
+        lonlat: [-106.326, 31.686]
+        lp: r
+      - kind: event
+        side: pb
+        name: Santa Fe
+        date: 1680–1692
+        text: Tano and Tewa people lived in the old governor’s palace, which they made into a pueblo.
+        lonlat: [-105.938, 35.688]
+    arrows:
+      - side: sp
+        label: Otermín, 1681
+        phase: 1
+        via: [[-106.49, 31.76], [-106.75, 32.30], [-107.20, 33.20], [-106.89, 34.05], [-106.69, 34.90]]
+      - side: sp
+        label: Jironza, 1689
+        phase: 2
+        via: [[-106.49, 31.76], [-106.80, 32.40], [-107.10, 33.40], [-106.80, 34.50], [-106.72, 35.49]]
+    areas:
+      - style: occupied
+        side: pb
+        label: Held by the Pueblos, 1680–1692
+        polygon: [[-106.95, 34.80], [-106.95, 35.80], [-106.30, 36.55], [-105.40, 36.55], [-105.55, 35.45], [-106.20, 34.80]]
+  - title: Vargas returns, 1692
+    date: August – December 1692
+    when: "1692-08"
+    borders: "1692-09-14"
+    countries: [us, mx]
+    body:
+      - Spain wanted New Mexico back as a buffer against the French, who had reached the Mississippi, and against the Apache. The new governor, Diego de Vargas, left El Paso in August 1692 with about sixty soldiers, a hundred Native auxiliaries and a few cannon, guided by Bartolomé de Ojeda, a war captain of Zia. On 13 September he surrounded Santa Fe, where about a thousand Tano and Tewa people lived in the old palace, and promised pardon to all who would swear allegiance to the king and return to the church. After a day of tense talks they agreed, and on 14 September Vargas proclaimed the province repossessed; the Fiestas de Santa Fe still celebrate it.
+      - Over the next three months Vargas rode from pueblo to pueblo, to Taos, Pecos, the Keres and Jemez towns, Acoma, Zuni and the Hopi, and accepted their submission, and the friars baptised more than two thousand children born since 1680. He wrote that he had won back the province without bloodshed. But many pueblos had only bowed to him for the moment, and he went back to El Paso to gather colonists.
+    facts:
+      - [Vargas’s force, "about 60 soldiers and 100 Native auxiliaries"]
+      - [Santa Fe repossessed, "14 September 1692"]
+    markers:
+      - kind: treaty
+        side: sp
+        name: Santa Fe
+        date: 13–14 September 1692
+        text: The Tano and Tewa people in the palace accepted Vargas’s offer of pardon after a day of talks.
+        lonlat: [-105.938, 35.688]
+      - kind: event
+        side: pa
+        name: Zia
+        date: "1692"
+        text: Home of Bartolomé de Ojeda, the Zia war captain who guided Vargas and became his ally.
+        lonlat: [-106.723, 35.504]
+        lp: l
+      - kind: event
+        side: sp
+        name: Zuni (Dowa Yalanne)
+        date: November 1692
+        text: Vargas received the submission of the Zuni on their mesa-top refuge.
+        lonlat: [-108.800, 35.040]
+      - kind: event
+        side: pb
+        name: Hopi mesas
+        date: November 1692
+        text: The Hopi received Vargas but never accepted Spanish rule again.
+        lonlat: [-110.277, 35.719]
+    arrows:
+      - side: sp
+        label: Vargas
+        phase: 1
+        via: [[-106.49, 31.76], [-106.75, 32.30], [-107.20, 33.20], [-106.89, 34.05], [-106.40, 35.30], [-105.94, 35.68]]
+      - side: sp
+        phase: 2
+        via: [[-105.94, 35.70], [-106.70, 35.50], [-107.58, 34.90], [-108.80, 35.05], [-110.25, 35.72]]
+  - title: The battle for Santa Fe and the campaigns of 1694
+    date: December 1693 – September 1694
+    when: "1693-12"
+    borders: "1694-07-24"
+    countries: [us]
+    body:
+      - Vargas came back in late 1693 with about 800 people, among them some seventy families of colonists, a hundred soldiers and Franciscan friars. The Tano and Tewa people in Santa Fe would not leave the town, and colonists camped outside in the snow died of cold. On 29 December Vargas, with Pecos warriors as allies, stormed the walls; on 30 December the town surrendered. Seventy defenders were executed, and about four hundred women and children were handed to the colonists as servants for ten years.
+      - In 1694 Vargas and his Pueblo allies, from Pecos and the Keres towns of Zia, Santa Ana and San Felipe, fought the pueblos that held out. Tewa people from many towns took refuge on Black Mesa (Tunyo) near San Ildefonso; they held out against a siege in March and came to terms during a second in September. On 24 July Vargas and his Keres allies stormed Astialakwa, the Jemez refuge on a mesa above the Jemez River; 84 Jemez were killed, some leaping from the cliffs rather than be taken, and over 360 women and children were captured. Many Jemez fled to the Navajo.
+    facts:
+      - [Santa Fe stormed, "29–30 December 1693"]
+      - [Defenders executed, "70; about 400 women and children given as servants"]
+      - [Astialakwa (Jemez) stormed, "24 July 1694"]
+    markers:
+      - kind: battle
+        side: sp
+        name: Santa Fe
+        date: 29–30 December 1693
+        text: Stormed by Vargas and Pecos allies; seventy defenders were executed and their families given to colonists as servants.
+        lonlat: [-105.938, 35.688]
+      - kind: siege
+        side: pb
+        name: Black Mesa (San Ildefonso)
+        date: January – September 1694
+        text: Tewa refugees held this mesa against a Spanish siege in March and came to terms in September.
+        lonlat: [-106.140, 35.910]
+        lp: l
+      - kind: battle
+        side: sp
+        name: Astialakwa (Jemez)
+        date: 24 July 1694
+        text: Vargas and his Keres allies stormed the mesa-top refuge; 84 Jemez died and over 360 were captured.
+        lonlat: [-106.741, 35.693]
+        lp: l
+      - kind: held
+        side: pa
+        name: Pecos
+        date: 1693–1694
+        text: Its people, under Juan de Ye, fought beside the Spanish.
+        lonlat: [-105.684, 35.550]
+    arrows:
+      - side: sp
+        label: Vargas
+        phase: 1
+        via: [[-106.69, 34.90], [-106.40, 35.40], [-105.94, 35.66]]
+      - side: pa
+        phase: 1
+        via: [[-105.68, 35.55], [-105.80, 35.62], [-105.92, 35.68]]
+      - side: sp
+        phase: 2
+        via: [[-105.94, 35.70], [-106.40, 35.55], [-106.72, 35.51], [-106.74, 35.68]]
+    areas:
+      - style: contested
+        side: pb
+        label: Pueblos still resisting, 1694
+        polygon: [[-106.85, 35.55], [-106.85, 35.85], [-106.30, 36.50], [-105.45, 36.50], [-105.80, 35.85], [-106.20, 35.60]]
+  - title: The revolt of 1696 and its aftermath
+    date: June 1696 – 1700
+    when: "1696-06"
+    borders: "1696-12-01"
+    countries: [us]
+    body:
+      - On 4 June 1696 people of fourteen pueblos, among them Taos, Picurís, the Tewa towns, Jemez, Cochití and Santo Domingo, rose again and killed five friars and thirty-four colonists. They were short of food and divided, and Pecos and the Keres towns of Zia, Santa Ana and San Felipe stayed with the Spanish. Vargas campaigned through the summer and autumn, destroying fields and stores and receiving the surrender of one pueblo after another; by the end of 1696 the revolt was over.
+      - Many Pueblo people left the Rio Grande rather than submit. Tewa families went to the Hopi, where their descendants still live at Hano; Jemez and others joined the Navajo; and the people of Picurís went to the Plains with Jicarilla Apache allies at El Cuartelejo in what is now Kansas, returning only in 1706. In 1700 other Hopi destroyed Awatovi, the one Hopi town that had taken back the friars, and the Hopi remained independent.
+      - The reconquest did not bring back the old order. The encomienda was not restored, each pueblo received a land grant, a protector of the Indians represented them in Spanish courts, and the friars no longer tried to stamp out kachina ceremonies. In the 1700s Pueblo and Spanish militias fought side by side against Comanche, Apache and Navajo raiders. The revolt is remembered as one of the most successful Native risings against colonial rule in North America; in 2005 a statue of Po’pay was placed in the United States Capitol.
+    facts:
+      - [Second revolt, "4 June 1696, fourteen pueblos"]
+      - [Killed, "5 friars and 34 colonists"]
+      - [Awatovi destroyed, "1700"]
+    markers:
+      - kind: battle
+        side: pb
+        name: Taos
+        date: June 1696
+        text: The northernmost pueblo, one of fourteen that rose in 1696.
+        lonlat: [-105.546, 36.439]
+      - kind: taken
+        side: sp
+        name: Picurís
+        date: "1696"
+        text: Its people left with Jicarilla Apache allies for the Plains rather than submit.
+        lonlat: [-105.730, 36.200]
+        lp: l
+      - kind: event
+        side: pb
+        name: El Cuartelejo
+        date: 1696–1706
+        text: The Plains settlement in western Kansas where the people of Picurís lived among the Jicarilla Apache until 1706.
+        lonlat: [-100.914, 38.678]
+      - kind: event
+        side: pb
+        name: Awatovi
+        date: "1700"
+        text: The Hopi town that had accepted the friars again, destroyed by other Hopi.
+        lonlat: [-110.277, 35.719]
+      - kind: capital
+        side: sp
+        name: Santa Fe
+        date: "1696"
+        text: Capital of Spanish New Mexico again from 1693.
+        lonlat: [-105.938, 35.688]
+    arrows:
+      - side: pb
+        label: Picurís to the Plains
+        phase: 1
+        via: [[-105.73, 36.20], [-104.60, 37.10], [-103.00, 38.00], [-100.95, 38.67]]
+      - side: sp
+        label: Vargas
+        phase: 1
+        via: [[-105.94, 35.70], [-106.05, 36.00], [-105.75, 36.25], [-105.56, 36.43]]

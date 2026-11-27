@@ -16,8 +16,8 @@ whose 67 steps are included here as the Sweden view (`#/country/se`).
 - **A globe.** The map is a globe you can turn and zoom (`site/globe.js`).
   Borders cover the whole world: hand-curated for Europe, the Near East, Iran,
   Arabia, Central Asia, South Asia, China, Mongolia, the Kazakh steppe,
-  Siberia, Korea, Japan, Southeast Asia and Africa, drafted from
-  historical-basemaps elsewhere. Wars and capitals cover the same regions so far;
+  Siberia, Korea, Japan, Southeast Asia, Africa, North America and the
+  Caribbean, drafted from historical-basemaps elsewhere. Wars and capitals cover the same regions so far;
   [ROADMAP.md](ROADMAP.md) has the plan for the rest of the world.
 - **Atoms.** The map is built from all of Natural Earth's admin-1 regions
   (provinces, states, counties), cut further where history needs finer lines

@@ -1,0 +1,189 @@
+id: colorado-war
+name: Colorado War
+start: "1864-04"
+end: "1865-10-14"
+tier: B
+summary: "The war of 1864–1865 on the central plains between the Southern Cheyenne, the Arapaho and their Lakota allies and the United States, Colorado’s volunteers and settlers, remembered above all for the Sand Creek massacre. The Pikes Peak gold rush of 1858–1859 brought tens of thousands of migrants onto the lands that the Treaty of Fort Laramie (1851) had recognised as Cheyenne and Arapaho, and by the Treaty of Fort Wise (1861) a few chiefs gave up most of it for a small reserve on the Arkansas, which many Cheyenne, above all the Dog Soldiers, rejected. In the spring of 1864 Colorado troops attacked Cheyenne camps, and that summer Cheyenne, Arapaho, Lakota, Kiowa and Comanche raids closed the roads to Denver. In September, after the Camp Weld council, the peace chiefs Black Kettle and Left Hand camped on Sand Creek near Fort Lyon, believing they were under the army’s protection. On 29 November 1864 Colonel John Chivington’s Colorado volunteers attacked the camp and killed between about 150 and 230 people by most estimates, most of them women, children and old men (the estimates range from about 70 to more than 600), and mutilated the dead. Congress and the army condemned the attack. The Cheyenne, Arapaho and Lakota answered by sacking Julesburg and raiding the Platte road in early 1865 before moving north to the Powder River, where General Patrick Connor’s expedition failed to defeat them. In October 1865 the southern chiefs signed the Treaty of the Little Arkansas, which promised reparations for Sand Creek that were never paid."
+countries: [us]
+sides:
+  - id: nat
+    name: Cheyenne, Arapaho and Lakota (Black Kettle, Left Hand, the Dog Soldiers, Spotted Tail)
+    polities: [cheyenne, arapaho, lakota]
+    ink: red
+    moves: Cheyenne, Arapaho and Lakota moves
+    success: Cheyenne, Arapaho and Lakota success
+  - id: us
+    name: United States (Colorado volunteers and US Army)
+    polities: [united-states]
+    ink: blue
+    moves: US moves
+    success: US success
+notes:
+  - "The number killed at Sand Creek has been disputed since 1864. Chivington claimed 500 to 600 warriors; Cheyenne and Arapaho survivors, the interpreter John Smith and army witnesses described a camp of families in which most of the dead were women, children and old men; most modern sources give about 150 to 230 dead, the National Park Service about 230. The site is now the Sand Creek Massacre National Historic Site."
+  - "In the war of 1865 the Cheyenne and Arapaho were joined by Brulé and Oglala Lakota, and the Kiowa and Comanche raided along the Arkansas; the fighting on the Powder River in 1865 led into Red Cloud’s War."
+sources:
+  - title: Colorado War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Colorado_War
+  - title: Sand Creek massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sand_Creek_massacre
+  - title: Sand Creek Massacre National Historic Site, history and culture (National Park Service)
+    url: https://www.nps.gov/sand/learn/historyculture/index.htm
+  - title: Battle of Julesburg (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Julesburg
+  - title: Powder River Expedition (1865) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Powder_River_Expedition_(1865)
+  - title: Treaty of the Little Arkansas (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Little_Arkansas_Treaty
+steps:
+  - title: Gold, a lost treaty and the summer of 1864
+    date: 1858 – September 1864
+    when: "1864-06"
+    borders: "1864-09-28"
+    countries: [us]
+    body:
+      - "By the Treaty of Fort Laramie of 1851 the United States recognised the lands between the North Platte and the Arkansas, from the Rocky Mountains into western Kansas, as Cheyenne and Arapaho. Gold was found near today’s Denver in 1858, and in the Pikes Peak gold rush tens of thousands of people crossed and settled those lands. At Fort Wise in February 1861 six Southern Cheyenne chiefs, among them Black Kettle, White Antelope and Lean Bear, and four Arapaho chiefs, among them Little Raven, ceded more than nine-tenths of it for a reserve between the Arkansas and Sand Creek. The Dog Soldiers and many other Cheyenne said the chiefs had no authority to sign and went on hunting the buffalo country of eastern Colorado and western Kansas."
+      - "In April and May 1864 Colorado troops sent after stolen cattle attacked several Cheyenne camps; in May soldiers in Kansas shot Lean Bear, who had met President Lincoln the year before, as he rode towards them wearing his peace medal. Cheyenne, Arapaho and Lakota war parties struck back along the Platte and Smoky Hill roads, and on 11 June the Hungate family were killed on their ranch south-east of Denver and their bodies displayed in the town. Raids closed the roads, and Denver ran short of food. Governor John Evans told friendly Indians to report to the forts, and in August authorised citizens to kill hostile Indians and raised the 3rd Colorado Cavalry, volunteers enlisted for a hundred days."
+      - "In late summer Black Kettle and other peace chiefs sent word that they wanted peace and handed over captives to Major Edward Wynkoop, the commander at Fort Lyon. At the Camp Weld council near Denver on 28 September Evans and Colonel John Chivington told them to make their peace with the army; Black Kettle’s Cheyenne and Left Hand’s Arapaho then camped on Sand Creek, about 60 km from Fort Lyon, believing themselves under its protection."
+    facts:
+      - [Treaty of Fort Wise, "18 February 1861"]
+      - [Hungate killings, "11 June 1864"]
+      - [Camp Weld council, "28 September 1864"]
+    markers:
+      - kind: capital
+        side: us
+        name: Denver
+        date: "1864"
+        text: Capital of Colorado Territory, founded in the gold rush of 1858–1859 on Arapaho and Cheyenne land.
+        lonlat: [-104.990, 39.740]
+        lp: l
+      - kind: toll
+        side: nat
+        name: Hungate ranch
+        date: 11 June 1864
+        text: Nathan Hungate, his wife and two daughters were killed here, probably by Arapaho or Cheyenne men, and their bodies were shown in Denver.
+        lonlat: [-104.526, 39.563]
+        lp: b
+      - kind: treaty
+        name: Camp Weld
+        date: 28 September 1864
+        text: Black Kettle, White Antelope and other leaders met Governor Evans and Colonel Chivington here; they left believing they could make peace at Fort Lyon.
+        lonlat: [-105.013, 39.729]
+        lp: t
+      - kind: event
+        side: us
+        name: Fort Lyon
+        date: September – November 1864
+        text: Major Wynkoop received the peace chiefs at the fort, then beside Bent’s New Fort near today’s Lamar (it moved upstream to Las Animas in 1867).
+        lonlat: [-102.775, 38.09]
+        lp: b
+    areas:
+      - style: lost
+        side: nat
+        label: Cheyenne and Arapaho lands recognised by the Treaty of Fort Laramie, 1851 (approximate)
+        polygon: [[-106.5, 42.8], [-105.0, 42.25], [-104.0, 41.95], [-102.5, 41.6], [-100.76, 41.13], [-100.4, 37.8], [-102.0, 38.05], [-103.6, 38.1], [-104.6, 38.25], [-105.4, 38.4], [-106.3, 39.3], [-106.0, 40.0], [-106.3, 40.6], [-106.6, 41.5]]
+      - style: outline
+        side: nat
+        label: Reserve of the Treaty of Fort Wise, 1861 (approximate)
+        polygon: [[-104.0, 38.27], [-102.62, 38.08], [-102.5, 38.55], [-103.2, 38.95], [-103.8, 38.75]]
+  - title: Sand Creek
+    date: 29 November 1864
+    when: "1864-11-29"
+    borders: "1864-11-29"
+    countries: [us]
+    body:
+      - "Chivington, a Methodist minister who had won fame against the Confederates at Glorieta Pass and hoped to run for Congress, marched south with the 3rd Colorado Cavalry, whose hundred days were nearly up, and companies of the 1st. At Fort Lyon, where Wynkoop had been replaced by Major Scott Anthony, more troops joined him, and several officers protested in vain that the camp on Sand Creek had been promised safety. With about 675 men and four howitzers he reached the camp at dawn on 29 November."
+      - "There were perhaps 750 people in the camp, Black Kettle’s and other Cheyenne bands and a few Arapaho lodges, and many of the young men were away hunting. Black Kettle raised an American flag and a white flag over his lodge. The soldiers attacked from several sides, firing into the lodges and pursuing people up the dry creek bed, where many dug pits in the sand to shelter. White Antelope was killed standing in the creek bed, and Left Hand was mortally wounded. Captain Silas Soule and Lieutenant Joseph Cramer refused to order their companies to fire. Most of the dead were women, children and old men; most sources estimate between about 150 and 230 killed, and the soldiers mutilated the bodies and took body parts as trophies, which were shown in Denver."
+      - "Hailed in Denver as a victory, the attack was soon exposed by Soule’s and Cramer’s letters and by survivors and witnesses. Two military inquiries and Congress’s Joint Committee on the Conduct of the War condemned Chivington, who had left the army and was never tried; Soule, who testified against him, was shot dead in Denver in April 1865. Evans was forced to resign as governor. In 2014 Colorado’s governor formally apologised to the descendants of the victims."
+    facts:
+      - [Chivington’s force, "about 675 men, with four howitzers"]
+      - [Killed, "about 150 to 230 by most estimates (the range is about 70 to more than 600), most of them women, children and old men"]
+      - [Soldiers killed, "about 24"]
+    markers:
+      - kind: toll
+        side: us
+        name: Sand Creek
+        date: 29 November 1864
+        text: Chivington’s volunteers attacked the camp of Black Kettle and Left Hand at dawn and killed some 150 to 230 people, most of them women, children and old men.
+        lonlat: [-102.511, 38.549]
+      - kind: event
+        side: us
+        name: Fort Lyon
+        date: 28 November 1864
+        text: Chivington’s column joined Major Anthony’s troops here and marched through the night to Sand Creek.
+        lonlat: [-102.775, 38.09]
+        lp: b
+      - kind: event
+        side: us
+        name: Denver
+        date: December 1864
+        text: The returning soldiers were welcomed as victors and displayed trophies from the dead.
+        lonlat: [-104.990, 39.740]
+        lp: l
+    arrows:
+      - side: us
+        label: Chivington
+        phase: 1
+        via: [[-104.99, 39.70], [-104.60, 38.95], [-103.95, 38.30], [-102.80, 38.09]]
+      - side: us
+        phase: 2
+        via: [[-102.77, 38.10], [-102.65, 38.33], [-102.53, 38.53]]
+      - side: nat
+        label: Survivors
+        phase: 3
+        via: [[-102.48, 38.58], [-101.90, 38.85], [-101.20, 39.05]]
+  - title: Julesburg, the Platte road and the Powder River
+    date: January – October 1865
+    when: "1865-01-07"
+    borders: "1865-02-02"
+    countries: [us]
+    body:
+      - "The survivors reached the Cheyenne Dog Soldiers and their Lakota allies on the Smoky Hill River, and the camps sent the war pipe to the Brulé and Oglala Lakota and the Arapaho. In January 1865 about 1,000 warriors attacked Julesburg on the South Platte and the nearby Camp Rankin, killing some 18 soldiers and civilians on 7 January; through January they burned ranches and stage stations along the road, cut the telegraph to Denver, and on 2 February returned and plundered and burned Julesburg. Moving north with their families, they fought off troops at Mud Springs and Rush Creek in February and joined the Northern Cheyenne, Northern Arapaho and Lakota in the Powder River country."
+      - "In July the allied warriors attacked the post at Platte Bridge on the North Platte, killing Lieutenant Caspar Collins and his detachment and a supply train at Red Buttes. General Patrick Connor’s Powder River Expedition marched against them in August and on 29 August destroyed the Arapaho camp of Black Bear on the Tongue River, killing men, women and children, but his other columns ran out of food and lost their horses, and the expedition achieved nothing more. Army and government efforts to open a road through the Powder River country led into Red Cloud’s War the next year."
+      - "On the southern plains a peace commission met Black Kettle, Little Raven and the Kiowa and Comanche at the mouth of the Little Arkansas in October 1865. The treaty signed there promised the Cheyenne and Arapaho a reservation south of the Arkansas and land and money for the survivors of Sand Creek, but it was never carried out; the Medicine Lodge treaty of 1867 replaced it, and Black Kettle was killed when George Armstrong Custer’s cavalry attacked his camp on the Washita in November 1868."
+    facts:
+      - [Attack on Julesburg, "7 January 1865"]
+      - [Julesburg burned, "2 February 1865"]
+      - [Battle of the Tongue River, "29 August 1865"]
+      - [Treaty of the Little Arkansas, "14 October 1865"]
+    markers:
+      - kind: taken
+        side: nat
+        name: Julesburg
+        date: 7 January and 2 February 1865
+        text: Cheyenne, Arapaho and Lakota warriors attacked the stage station and Camp Rankin in January and plundered and burned the town in February.
+        lonlat: [-102.257, 40.977]
+      - kind: battle
+        name: Mud Springs and Rush Creek
+        date: 4–9 February 1865
+        text: Troops caught up with the warriors moving north at the Mud Springs telegraph station and on Rush Creek, but could not stop them.
+        lonlat: [-103.017, 41.484]
+        lp: l
+      - kind: battle
+        side: nat
+        name: Platte Bridge
+        date: 26 July 1865
+        text: Lakota, Cheyenne and Arapaho warriors killed Lieutenant Caspar Collins and his men near the bridge post, today’s Casper, and destroyed a supply train at Red Buttes.
+        lonlat: [-106.371, 42.837]
+      - kind: toll
+        side: us
+        name: Tongue River
+        date: 29 August 1865
+        text: Connor’s troops destroyed Black Bear’s Arapaho village, killing men, women and children.
+        lonlat: [-107.163, 44.906]
+      - kind: treaty
+        name: Little Arkansas
+        date: 14 October 1865
+        text: Black Kettle, Little Raven and Kiowa and Comanche leaders signed treaties here, near today’s Wichita.
+        lonlat: [-97.34, 37.70]
+        lp: b
+    arrows:
+      - side: nat
+        phase: 1
+        via: [[-101.30, 39.40], [-101.90, 40.30], [-102.25, 40.95], [-102.90, 41.45]]
+      - side: nat
+        phase: 2
+        via: [[-103.00, 41.55], [-104.20, 42.80], [-105.40, 43.90], [-106.30, 44.50]]
+      - side: us
+        label: Connor
+        phase: 3
+        via: [[-104.54, 42.21], [-105.40, 43.20], [-106.20, 43.85], [-107.10, 44.85]]

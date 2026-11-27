@@ -1,0 +1,132 @@
+id: first-carib-war
+name: First Carib War
+start: "1769"
+end: "1773-02-17"
+tier: B
+summary: "The war in which the Garifuna (the “Black Caribs”) and Kalinago of Saint Vincent defended their lands against British settlement. When France ceded Saint Vincent to Britain in 1763, most of the island, above all the fertile windward side, was held by the Garifuna, a people of Kalinago and African descent, and the British commissioners set out to survey it and sell it to planters. In 1769 the Garifuna under their chiefs, among them Joseph Chatoyer, stopped a road-building party escorted by the 32nd Regiment and held it hostage, and they obtained arms from French Martinique. In 1772 the British government sent regiments from North America and the other islands, and Major-General William Dalrymple advanced north from Kingstown and landed troops at Grand Sable; but the Garifuna, some 1,500 to 3,000 fighters, ambushed the columns in the forested mountains, and fever killed many soldiers. With the war unpopular in Parliament, Dalrymple and the Garifuna chiefs signed a treaty on 17 February 1773: the Garifuna acknowledged the British king and kept the northern third of the island, from the Wallilabou River in the west to the Byera River in the east. It was the first treaty Britain had signed with a non-European people in the Caribbean since the Jamaican Maroon treaties of 1739."
+countries: [vc, gb]
+sides:
+  - id: gb
+    name: Great Britain (the government of Saint Vincent and the regiments sent by the North ministry)
+    polities: [united-kingdom, british-west-indies]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: gar
+    name: Garifuna and Kalinago of Saint Vincent (Joseph Chatoyer and other chiefs)
+    polities: [garifuna, kalinago]
+    ink: teal
+    moves: Garifuna moves
+    success: Garifuna success
+notes:
+  - "The British called the Garifuna “Black Caribs” and the Kalinago “Yellow” or “Red Caribs”; the main contemporary account, Sir William Young’s Account of the Black Charaibs (1795), was written by the son of the commissioner who sold their land and served to justify their later deportation."
+  - "The Garifuna trace their origin to Kalinago and to Africans who reached Saint Vincent from shipwrecked slave ships and by escaping from other islands from the seventeenth century onwards."
+sources:
+  - title: First Carib War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Carib_War
+  - title: Joseph Chatoyer (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Joseph_Chatoyer
+  - title: Garifuna (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Garifuna
+  - title: St Vincent 1773, a part of the east coast of St Vincent and inland (Royal Collection Trust, military maps)
+    url: https://militarymaps.rct.uk/miscellaneous/st-vincent-1773-a-part-of-the-east-coast-of-s-t-vincent-and-inland
+steps:
+  - title: Surveyors and hostages
+    date: "1763–1771"
+    when: "1769"
+    borders: "1769"
+    countries: [vc, gb]
+    body:
+      - "By the Treaty of Paris of 1763 France gave up its claims to Saint Vincent, which had been declared a neutral island in 1748 and where French colonists grew coffee and cocoa on the leeward coast alongside the Garifuna and Kalinago. The British government appointed commissioners, led by Sir William Young, to survey the island and sell its land to British planters to grow sugar. Most of the best land lay on the windward side, which the Garifuna held and farmed, and they refused to sell it or to move to a reserve."
+      - "In 1769 the commissioners sent surveyors with an escort of the 32nd Regiment to cut a road into the Garifuna lands. Garifuna warriors stopped them and held them hostage before letting them go. The chiefs, among them Joseph Chatoyer, turned to the French governor of Martinique, who supplied them with arms, and the Garifuna refused British demands to give up their land and their French contacts. Planters and officials in Kingstown pressed London for troops; three regiments were sent to the Windward Islands in 1770, and in 1771 a letter was intercepted that confirmed the Garifuna’s ties with Martinique."
+    facts:
+      - [Saint Vincent ceded to Britain, "10 February 1763"]
+      - [Survey party taken hostage, "1769"]
+    markers:
+      - kind: capital
+        side: gb
+        name: Kingstown
+        date: "1769"
+        text: Capital of the British colony on the leeward coast.
+        lonlat: [-61.227, 13.155]
+        lp: b
+      - kind: event
+        side: gar
+        name: Windward coast
+        date: "1769"
+        text: Garifuna warriors stopped the road-building party escorted by the 32nd Regiment and held it hostage (location approximate).
+        lonlat: [-61.130, 13.230]
+        lp: r
+      - kind: event
+        name: Martinique
+        date: "1769–1772"
+        text: The French governor supplied the Garifuna with arms.
+        lonlat: [-61.020, 14.640]
+        lp: r
+    arrows:
+      - side: gb
+        label: Surveyors and the 32nd
+        phase: 1
+        via: [[-61.22, 13.16], [-61.17, 13.17], [-61.14, 13.20], [-61.13, 13.22]]
+      - side: gar
+        label: French arms
+        phase: 2
+        via: [[-61.05, 14.55], [-61.00, 14.10], [-61.05, 13.60], [-61.11, 13.30]]
+    areas:
+      - style: outline
+        side: gar
+        label: Garifuna and Kalinago lands, 1769 (approximate)
+        polygon: [[-61.275, 13.270], [-61.200, 13.215], [-61.150, 13.180], [-61.120, 13.200], [-61.115, 13.300], [-61.150, 13.360], [-61.200, 13.385], [-61.240, 13.370], [-61.270, 13.320]]
+  - title: Dalrymple’s campaign and the treaty of 1773
+    date: "September 1772 – February 1773"
+    when: "1772-10"
+    borders: "1773-02-17"
+    countries: [vc, gb]
+    body:
+      - "In 1772 the North ministry, urged on by Governor William Leyborne, decided to crush the Garifuna before France could intervene. Companies of the 31st, 32nd, 68th and 70th Regiments were brought from the neighbouring islands and the 6th and 14th Regiments from Massachusetts, and a naval squadron watched the channel to Martinique. In September Major-General William Dalrymple advanced north from Kingstown along the windward coast while other troops landed at Grand Sable, now Georgetown, aiming to take the mountains in the centre of the island."
+      - "The campaign bogged down in the rainy season. The Garifuna, perhaps 1,500 to 3,000 fighters, fell back into the forested ridges, ambushed columns and raided plantations; in January 1773 a party of the 31st Regiment under Ralph Walsh was ambushed and killed. Fever and dysentery killed far more soldiers than the fighting: half of the 14th Regiment died before it saw action, and the troops depended on food shipped from North America. In London, members of Parliament such as Thomas Townshend and Isaac Barré attacked the war as an unjust attack on a people defending their own land."
+      - "On 17 February 1773 Dalrymple and the chiefs of Grand Sable, Masiraca, Rabacca and the other Garifuna districts signed a peace treaty. The Garifuna acknowledged King George III as their sovereign, promised to return runaways and to help against his enemies, and gave up their lands in the south and centre; in return they kept the northern third of the island, from the Wallilabou River on the west coast to the Byera River on the east, as their own. Many planters and officials never accepted the line, and Chatoyer and his people would side with the French when they took the island in 1779."
+    facts:
+      - [Dalrymple’s campaign begins, "September 1772"]
+      - [Garifuna fighters, "about 1,500–3,000"]
+      - [Treaty signed, "17 February 1773"]
+    markers:
+      - kind: capital
+        side: gb
+        name: Kingstown
+        date: "1772"
+        text: Dalrymple’s base.
+        lonlat: [-61.227, 13.155]
+        lp: b
+      - kind: battle
+        side: gar
+        name: Grand Sable (Georgetown)
+        date: "1772–1773"
+        text: British troops landed in this Garifuna district on the windward coast and fought in the hills inland.
+        lonlat: [-61.120, 13.280]
+        lp: r
+      - kind: treaty
+        side: gar
+        name: Wallilabou River
+        date: "17 February 1773"
+        text: The treaty line ran from the mouth of this river across the island to the Byera River on the windward coast.
+        lonlat: [-61.272, 13.248]
+        lp: l
+    arrows:
+      - side: gb
+        label: Dalrymple
+        phase: 1
+        via: [[-61.21, 13.16], [-61.15, 13.18], [-61.13, 13.23], [-61.15, 13.25]]
+      - side: gb
+        label: Landing at Grand Sable
+        phase: 1
+        via: [[-61.05, 13.20], [-61.08, 13.25], [-61.11, 13.28]]
+      - side: gar
+        label: Garifuna ambushes
+        phase: 2
+        via: [[-61.18, 13.30], [-61.17, 13.26], [-61.16, 13.23]]
+    areas:
+      - style: pledged
+        side: gar
+        label: Left to the Garifuna by the treaty of 1773 (approximate)
+        polygon: [[-61.275, 13.250], [-61.130, 13.250], [-61.115, 13.300], [-61.150, 13.360], [-61.200, 13.385], [-61.240, 13.370], [-61.270, 13.320]]

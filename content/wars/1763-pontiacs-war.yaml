@@ -1,0 +1,241 @@
+id: pontiacs-war
+name: Pontiac’s War
+start: "1763-05-07"
+end: "1766-07-25"
+tier: B
+summary: "A war in which a loose confederacy of the Native nations of the Great Lakes, the Ohio country and the Illinois country rose against British rule after the fall of New France. Britain had taken over the French posts, and its commander, Jeffery Amherst, cut back the gifts and the gunpowder that the alliance with France had provided, while British traders and settlers pressed west and the Lenape prophet Neolin called for a return to the old ways and the expulsion of the British. In May 1763 the Odawa leader Pontiac besieged Detroit, and within weeks Wendat, Potawatomi, Miami, Wea, Ojibwe and Seneca warriors had taken eight British forts, while Lenape and Shawnee war parties drove thousands of settlers from the frontier of Pennsylvania, Maryland and Virginia. Detroit, Fort Pitt and Niagara held. Henry Bouquet won at Bushy Run in August 1763, but the Seneca destroyed a convoy at Devil’s Hole, Pontiac’s men beat a sortie from Detroit at Bloody Run, and at Fort Pitt the British gave Lenape envoys blankets from their smallpox hospital. The Royal Proclamation of October 1763 reserved the land west of the Appalachians for the Native nations. Peace came by stages: Johnson’s congress at Niagara in 1764, Bouquet’s expedition to the Muskingum, which brought the return of over 200 captives, the British occupation of the Illinois country in 1765 and Pontiac’s treaty at Oswego in 1766. Apart from the Niagara portage, given up by the Seneca, no land was ceded, and Britain restored the gifts it had stopped."
+countries: [us, ca]
+sides:
+  - id: pon
+    name: Pontiac’s confederacy (Odawa, Ojibwe, Potawatomi, Wendat, Seneca and Mingo, Lenape, Shawnee, Miami, Wea, Kickapoo and others)
+    polities: [odawa, shawnee, lenape, mingo]
+    ink: teal
+    moves: Native moves
+    success: Native success
+  - id: brit
+    name: Great Britain (the British army and colonial militias)
+    polities: [united-kingdom, british-america, province-of-quebec]
+    ink: red
+    moves: British moves
+    success: British success
+notes:
+  - Also called Pontiac’s Rebellion or Pontiac’s Uprising. Historians now stress that Pontiac led only the war around Detroit; the war had many leaders, among them the Seneca Guyasuta, who had sent war belts in 1761, the Lenape Shingas and the Shawnee Charlot Kaské.
+  - Whether the smallpox blankets given at Fort Pitt spread the epidemic that struck the Ohio nations in 1763–1764 is debated; smallpox was already present in the region, and historians are divided on the blankets’ effect.
+  - Casualties are uncertain. About 400 British soldiers were killed in action and perhaps 50 more after capture. Some historians put the settlers killed at about 450; George Croghan’s contemporary estimate of 2,000 killed or captured is often repeated, but the historian Gregory Dowd rejects it as unreliable. Some 4,000 settlers were driven from their homes. At least 200 Native warriors were killed; other Native losses, from war and disease, are unknown.
+sources:
+  - title: Pontiac’s War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pontiac%27s_War
+  - title: Pontiac (Dictionary of Canadian Biography)
+    url: http://www.biographi.ca/en/bio/pontiac_3E.html
+  - title: Battle of Bushy Run (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Bushy_Run
+  - title: Paxton Boys (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Paxton_Boys
+  - title: Royal Proclamation, 1763 (The Canadian Encyclopedia)
+    url: https://www.thecanadianencyclopedia.ca/en/article/royal-proclamation-of-1763
+  - title: Treaty of Fort Niagara (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Fort_Niagara
+  - title: Fort Michilimackinac (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fort_Michilimackinac
+steps:
+  - title: The forts fall
+    date: April – June 1763
+    when: "1763-05-09"
+    borders: "1763-06-20"
+    countries: [us, ca]
+    body:
+      - "When the French surrendered Canada in 1760, British troops took over their posts on the Great Lakes and the Ohio. In the French alliance, gifts of goods, guns and powder had been the duty of a “father” to his allies; Amherst saw them as bribes and cut them back, restricting the sale of gunpowder at the same time. Traders cheated, settlers moved onto the lands of the upper Ohio, and the Seneca leaders Guyasuta and Tahaiadoris had already sent war belts to the western nations in 1761. The Lenape prophet Neolin taught that the Master of Life wanted the Native peoples to give up European goods and drive the British out. In 1763 came news that France had ceded their country to Britain without consulting them."
+      - "On 27 April 1763 Pontiac, an Odawa war leader, spoke at a council on the Ecorse River near Detroit. On 7 May he entered the fort with about 300 armed men to seize it, but its commander, Major Henry Gladwin, had been warned, and two days later Pontiac’s Odawa, with Potawatomi, Wendat and Ojibwe, laid siege to it. Within six weeks the war spread: the Wendat took Fort Sandusky on 16 May, the Potawatomi Fort St. Joseph on 25 May and the Miami Fort Miami on 27 May; Wea, Kickapoo and Mascouten took Ouiatenon on 1 June without bloodshed; on 4 June, the king’s birthday, Ojibwe playing a ball game outside Michilimackinac chased the ball through the gate and took the fort; and in mid-June the Seneca and their allies took Venango, Le Boeuf and Presque Isle. Lenape and Shawnee war parties raided the frontier of Pennsylvania, Maryland and Virginia, killing or capturing hundreds of settlers and driving thousands east."
+    facts:
+      - [Council on the Ecorse River, "27 April 1763"]
+      - [Siege of Detroit, "9 May – 31 October 1763"]
+      - [British forts taken, "eight, between 16 May and 20 June 1763"]
+    markers:
+      - kind: siege
+        side: pon
+        name: Detroit
+        date: May – October 1763
+        text: Pontiac’s attempt to seize the fort failed on 7 May; his warriors besieged it until the end of October.
+        lonlat: [-83.045, 42.33]
+        lp: b
+      - kind: taken
+        side: pon
+        name: Fort Sandusky
+        date: 16 May 1763
+        text: Taken and burned by the Wendat.
+        lonlat: [-82.73, 41.45]
+        lp: b
+      - kind: taken
+        side: pon
+        name: Fort St. Joseph
+        date: 25 May 1763
+        text: Taken by the Potawatomi.
+        lonlat: [-86.26, 41.81]
+        lp: l
+      - kind: taken
+        side: pon
+        name: Fort Miami
+        date: 27 May 1763
+        text: The Miami lured its commander out and the garrison surrendered.
+        lonlat: [-85.14, 41.08]
+      - kind: taken
+        side: pon
+        name: Ouiatenon
+        date: 1 June 1763
+        text: The Wea, Kickapoo and Mascouten took the garrison captive without bloodshed.
+        lonlat: [-86.97, 40.40]
+        lp: l
+      - kind: taken
+        side: pon
+        name: Michilimackinac
+        date: 4 June 1763
+        text: Ojibwe players followed their ball through the gate during a game of lacrosse and took the fort.
+        lonlat: [-84.73, 45.787]
+      - kind: taken
+        side: pon
+        name: Venango
+        date: about 16 June 1763
+        text: Taken by the Seneca; the whole garrison was killed.
+        lonlat: [-79.83, 41.40]
+        lp: l
+      - kind: taken
+        side: pon
+        name: Le Boeuf
+        date: 18 June 1763
+        text: Burned by the Seneca; most of the garrison escaped to Fort Pitt.
+        lonlat: [-80.00, 41.93]
+        lp: l
+      - kind: taken
+        side: pon
+        name: Presque Isle
+        date: about 20 June 1763
+        text: Odawa, Ojibwe, Wendat and Seneca warriors forced the surrender of the fort after a siege of about two days.
+        lonlat: [-80.08, 42.13]
+      - kind: held
+        side: brit
+        name: Fort Pitt
+        date: June 1763
+        text: The main British fort on the Ohio, besieged from 22 June.
+        lonlat: [-80.01, 40.44]
+      - kind: held
+        side: brit
+        name: Fort Niagara
+        date: "1763"
+        text: Held throughout the war; it guarded the portage between Lakes Ontario and Erie.
+        lonlat: [-79.063, 43.262]
+    arrows:
+      - side: pon
+        label: Lenape and Shawnee raids
+        via: [[-81.60, 40.30], [-80.20, 40.05], [-78.40, 40.00]]
+  - title: Bloody Run, Bushy Run and Devil’s Hole
+    date: June – December 1763
+    when: "1763-07-31"
+    borders: "1763-08-06"
+    countries: [us, ca]
+    body:
+      - "At besieged Fort Pitt, on 24 June, the commander Simeon Ecuyer gave two Lenape envoys two blankets and a handkerchief from the smallpox hospital, as the trader William Trent recorded, hoping they would carry the disease to their people. In July Amherst and Colonel Henry Bouquet discussed the same idea in their letters. Smallpox did break out among the Ohio nations in 1763–1764, but it was already in the region, and historians disagree on whether the blankets played a part."
+      - "At Detroit Captain James Dalyell led about 250 men out of the fort on the night of 31 July to surprise Pontiac’s camp; they were ambushed at Parent’s Creek, renamed Bloody Run, and Dalyell and some 20 others were killed. Bouquet, marching to relieve Fort Pitt with about 500 Highlanders and Royal Americans, was attacked by Lenape, Shawnee, Mingo and Wendat warriors at Bushy Run on 5 August; the next day he drew them into the open with a feigned retreat and routed them, losing about 50 killed, and he reached Fort Pitt a few days later. On 14 September some 300 Seneca, with Odawa and Ojibwe, ambushed a supply train and the troops sent to save it at Devil’s Hole on the Niagara portage, killing more than 70 soldiers and teamsters (about 100 by some counts), the deadliest fight of the war for British soldiers."
+      - "On 7 October 1763 King George III issued the Royal Proclamation, which forbade settlement and private land purchases west of the Appalachian watershed and reserved that land for the Native nations. At the end of October, after the French commander in the Illinois country told him no help would come, Pontiac lifted the siege of Detroit. In December the Paxton Boys, frontiersmen from Lancaster County, killed six Conestoga (Susquehannock) at their town on 14 December and the other fourteen, held for their protection in the Lancaster workhouse, on 27 December; in February 1764 hundreds of them marched on Philadelphia before Benjamin Franklin and others talked them into going home."
+    facts:
+      - [Blankets given at Fort Pitt, "24 June 1763"]
+      - [Battle of Bloody Run, "31 July 1763"]
+      - [Battle of Bushy Run, "5–6 August 1763"]
+      - [Devil’s Hole, "14 September 1763"]
+      - [Royal Proclamation, "7 October 1763"]
+    markers:
+      - kind: battle
+        side: pon
+        name: Bloody Run (Detroit)
+        date: 31 July 1763
+        text: Pontiac’s warriors ambushed Dalyell’s night sortie from the fort; the siege of Detroit was lifted at the end of October.
+        lonlat: [-83.00, 42.35]
+      - kind: held
+        side: brit
+        name: Fort Pitt
+        date: June – August 1763
+        text: Besieged until Bouquet’s relief; Ecuyer gave Lenape envoys blankets from the smallpox hospital here.
+        lonlat: [-80.01, 40.44]
+        lp: l
+      - kind: battle
+        side: brit
+        name: Bushy Run
+        date: 5–6 August 1763
+        text: Bouquet defeated the Lenape, Shawnee, Mingo and Wendat with a feigned retreat.
+        lonlat: [-79.627, 40.356]
+      - kind: battle
+        side: pon
+        name: Devil’s Hole
+        date: 14 September 1763
+        text: Seneca warriors destroyed a supply train and its rescuers on the Niagara portage.
+        lonlat: [-79.045, 43.13]
+      - kind: event
+        side: none
+        name: Conestoga and Lancaster
+        date: December 1763
+        text: The Paxton Boys killed the last twenty Conestoga, six at their town and fourteen in the Lancaster workhouse.
+        lonlat: [-76.35, 40.00]
+    arrows:
+      - side: brit
+        label: Bouquet
+        phase: 1
+        via: [[-77.19, 40.20], [-78.50, 40.02], [-79.24, 40.24], [-79.63, 40.36], [-79.98, 40.44]]
+      - side: none
+        label: Paxton Boys
+        phase: 2
+        via: [[-76.80, 40.30], [-76.60, 40.15], [-76.38, 40.00]]
+  - title: The road to peace
+    date: 1764–1766
+    when: "1764-07"
+    borders: "1765-10-10"
+    countries: [us, ca]
+    body:
+      - "In July and August 1764 Sir William Johnson, Britain’s superintendent of Indian affairs in the North, held a congress at Fort Niagara with about 2,000 people from some two dozen nations, most of them Haudenosaunee and peoples of the upper Great Lakes. The Seneca ceded the Niagara portage, and the Covenant Chain of alliance was renewed; many First Nations in Canada regard the Treaty of Niagara, recorded in wampum, as their acceptance of the Royal Proclamation on their own terms. Colonel John Bradstreet led 1,200 men along Lake Erie to Detroit and made treaties that General Thomas Gage refused to accept. In October Bouquet marched 1,150 men from Fort Pitt to the Muskingum; there, under the threat of his army, Guyasuta and the Lenape, Shawnee and Mingo leaders handed over more than 200 captives, many of them adopted into Native families who had to be forced to leave."
+      - "The Illinois country, where the Shawnee war leader Charlot Kaské and others urged war on, was opened by diplomacy: after George Croghan’s mission, British troops took over Fort de Chartres from the French in October 1765. On 25 July 1766 Pontiac made peace with Johnson at Fort Ontario in Oswego. No land was ceded and no hostages given, and Britain restored the gifts and trade that Amherst had cut off. Pontiac was killed by a Peoria man at Cahokia in 1769."
+    facts:
+      - [Congress at Niagara, "July – August 1764"]
+      - [Captives returned to Bouquet, "more than 200"]
+      - [British take over Fort de Chartres, "October 1765"]
+      - [Pontiac’s treaty at Oswego, "25 July 1766"]
+    markers:
+      - kind: treaty
+        side: brit
+        name: Fort Niagara
+        date: July – August 1764
+        text: Johnson’s congress with some two dozen nations renewed the Covenant Chain.
+        lonlat: [-79.063, 43.262]
+      - kind: treaty
+        side: brit
+        name: Muskingum
+        date: October – November 1764
+        text: Lenape, Shawnee and Mingo leaders handed over more than 200 captives to Bouquet near today’s Coshocton.
+        lonlat: [-81.86, 40.27]
+      - kind: event
+        side: brit
+        name: Fort de Chartres
+        date: October 1765
+        text: The French handed the fort and the Illinois country to British troops.
+        lonlat: [-90.157, 38.086]
+      - kind: treaty
+        side: none
+        name: Fort Ontario (Oswego)
+        date: 25 July 1766
+        text: Pontiac made peace with Johnson here.
+        lonlat: [-76.51, 43.46]
+      - kind: event
+        side: none
+        name: Cahokia
+        date: "1769"
+        text: Pontiac was killed here by a Peoria man.
+        lonlat: [-90.19, 38.57]
+    arrows:
+      - side: brit
+        label: Bouquet
+        phase: 1
+        via: [[-80.02, 40.44], [-80.80, 40.50], [-81.50, 40.35], [-81.84, 40.28]]
+      - side: brit
+        label: Bradstreet
+        phase: 1
+        via: [[-79.00, 43.07], [-79.90, 42.50], [-81.50, 42.00], [-83.00, 42.30]]
+      - side: brit
+        phase: 2
+        via: [[-80.05, 40.45], [-82.60, 38.60], [-85.70, 38.20], [-88.50, 37.10], [-90.10, 38.05]]

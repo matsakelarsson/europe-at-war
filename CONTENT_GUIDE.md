@@ -642,6 +642,52 @@ they ever border, keeping curated colours.
   is Dagbon), `GH-CP~fante`, `NG-OY~ibadan` (south of 7.62° N),
   `NG-OG~ijebu` and `BJ-AQ~whydah`. Neukamerun (1911–1920) is
   approximated by `CF-SE`, `CF-HS`, `CG-13` and `GA-9`.
+- **North America and the Caribbean** (`north-america.yaml`; Hawaii is
+  left to wave 16). Mesoamerican states are on the map: `maya-city-states`,
+  `chichen-itza` (about 900–1220), `mayapan` (to 1441), `maya-provinces`,
+  `toltec-state` (Tula, about 950–1150), `zapotec-kingdoms`,
+  `mixtec-kingdoms`, `tepanec` (about 1370–1428), `aztec-empire`
+  (1428–1521), `tarascan-state` and `tlaxcala`. The Native nations north of
+  Mexico are not (the atoms are too coarse for them); they appear in the
+  wars as areas. European colonies are drawn from their first lasting
+  settlement over the province they settled; other land passes at the
+  treaty or formal claim (Saint-Lusson 1671, La Salle 1682, Fontainebleau
+  1762, Paris 1763 and 1783, San Ildefonso 1800, the Louisiana Purchase,
+  the 1818 convention, Adams–Onís 1821, Oregon 1846, Guadalupe Hidalgo 1848,
+  Gadsden 1853). Lands outside any claim, such as the Oregon Country of
+  joint occupation (1818–1846), are `none`. Colonies: `new-spain` (with
+  Spanish Florida and Louisiana 1762–1800), `new-france` (Canada, Acadia,
+  the Great Lakes and Louisiana), `british-america` (the Thirteen Colonies,
+  the Floridas 1763–1783 and the Indian reserve), `new-netherland`,
+  `new-sweden`, `nova-scotia`, `new-brunswick`, `prince-edward-island`,
+  `newfoundland`, `province-of-quebec`, `upper-canada`, `lower-canada`,
+  `province-of-canada`, `ruperts-land`, `north-western-territory`,
+  `vancouver-island`, `british-columbia` and `russian-america`. Rebel
+  governments are war areas, not states; the Republic of Texas
+  (1836–1845) is shown. Occupations are war areas too, except the American
+  military government of Cuba (1899–1902). In the Caribbean, islands are
+  shown under their owner's colonial polity (`spanish-west-indies`,
+  `british-west-indies` — from 1983 the British Dependent, from 2002
+  Overseas, Territories — `french-west-indies` until 1946,
+  `netherlands-antilles` from 1845) and then as independent states;
+  `dominican-republic` is Spanish Santo Domingo under its names, `cuba`
+  the Captaincy General, `puerto-rico` the Spanish captaincy. Hispaniola:
+  `saint-domingue` (Tortuga 1665, the west 1697, the whole island
+  1795–1809), `haiti` (1804), `kingdom-of-haiti` (the north 1807–1820),
+  Haitian rule of the east 1822–1844. Danish islands use `denmark-norway`
+  and `denmark`, St Barthélemy `sweden` (1784–1878), Tobago `courland`
+  (1654–1659), the islands of the Order of Saint John `malta`
+  (1651–1665), and Bermuda `england` and `united-kingdom`. Splits
+  (`99f-north-america.geojson`): `US-PA~delaware` (the Delaware valley,
+  New Sweden and New Netherland), `US-MN~east` (the 1783 line),
+  `US-MN~red` and `US-ND~red` (Rupert's Land until 1818), `US-MT~west`,
+  `US-WY~west` (the Oregon Country), `US-WY~southwest`, `US-CO~west`,
+  `US-CO~south`, `US-KS~southwest`, `US-OK~panhandle` (Spanish and Mexican
+  under the 1819 line), `US-TX~nueces`, `US-NM~gadsden`, `US-AZ~gadsden`,
+  `US-LA~florida` (the Florida Parishes), `US-MS~gulf`, `US-AL~gulf` (West
+  Florida), `CA-QC~south` (the St Lawrence valley; the rest of Quebec is
+  Rupert's Land), `CA-ON~south` (Upper Canada), `CA-NL~labrador`,
+  `CA-NS~capebreton`, `CA-BC~island` and `MX-OAX~mixteca`.
 - **Checking borders.** After a build, `node tools/owners-at.mjs <date>
   [polities…] [--atoms <regex>]` lists who owns what on a date, and
   `node tools/owner-history.mjs <regex> [from] [to]` lists every change to the

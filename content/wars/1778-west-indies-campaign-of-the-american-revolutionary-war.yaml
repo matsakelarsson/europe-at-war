@@ -1,0 +1,284 @@
+id: west-indies-campaign-of-the-american-revolutionary-war
+name: West Indies campaign of the American Revolutionary War
+start: "1778-09-07"
+end: "1783-04"
+tier: B
+summary: "The war for the sugar islands fought by Britain against France, Spain and the Dutch Republic after France allied itself with the United States in 1778. The French governor of Martinique, the Marquis de Bouillé, opened it by taking Dominica in September 1778; a British force answered by seizing Saint Lucia in December, beating off Admiral d’Estaing’s attempts to retake it. In 1779 the French took Saint Vincent, with the help of the Garifuna of Joseph Chatoyer, and Grenada, and d’Estaing mauled Admiral John Byron’s fleet off Grenada. When Britain went to war with the Dutch, Admiral George Rodney took Sint Eustatius, the free port that had supplied the American rebels, in February 1781 and plundered it; the French took Tobago that summer and retook Sint Eustatius in November, after Admiral de Grasse’s fleet had sailed north to seal the British defeat at Yorktown. In early 1782 de Grasse and Bouillé took St Kitts, Nevis and Montserrat, and France and Spain prepared to invade Jamaica, but on 12 April 1782 Rodney defeated and captured de Grasse at the Battle of the Saintes, and the invasion was abandoned. A Spanish force from Havana took Nassau in the Bahamas in May 1782; Loyalists retook it in April 1783. In the Peace of Versailles of 1783 France kept Tobago and the other islands were returned."
+countries: [dm, lc, vc, gd, nl, tt, kn, ms, fr, bs, gb, es, us]
+sides:
+  - id: gb
+    name: Great Britain
+    polities: [united-kingdom, british-west-indies]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: fr
+    name: France (the Marquis de Bouillé, Admirals d’Estaing and de Grasse)
+    polities: [france, french-west-indies]
+    ink: blue
+    moves: French moves
+    success: French success
+  - id: es
+    name: Spain (from 1779)
+    polities: [spain, cuba]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+  - id: nl
+    name: Dutch Republic (from December 1780)
+    polities: [dutch-republic, netherlands-antilles]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+  - id: gar
+    name: Garifuna of Saint Vincent (Joseph Chatoyer), allied with France in 1779
+    polities: [garifuna]
+    ink: teal
+    moves: Garifuna moves
+    success: Garifuna success
+  - id: us
+    name: United States (supplied through Sint Eustatius and the French islands)
+    polities: [united-states]
+    ink: navy
+notes:
+  - "The islands taken during the war are shown as occupied areas in the steps; the base map changes hands only with the peace of 1783."
+  - "The Spanish campaigns of Bernardo de Gálvez on the Gulf coast (Baton Rouge, Mobile and Pensacola) and in Central America belong to other stories; the war at sea and on land in North America is told in the American Revolutionary War."
+  - "On 16 November 1776 the fort of Sint Eustatius returned the salute of the American warship Andrew Doria, the first salute by a foreign power to the flag of the United States."
+sources:
+  - title: Anglo-French War (1778–1783) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Anglo-French_War_(1778%E2%80%931783)
+  - title: Capture of Saint Lucia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Capture_of_St._Lucia
+  - title: Capture of Saint Vincent (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Capture_of_Saint_Vincent
+  - title: Capture of Sint Eustatius (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Capture_of_Sint_Eustatius
+  - title: Siege of Brimstone Hill (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Brimstone_Hill
+  - title: Battle of the Saintes (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Saintes
+  - title: Brimstone Hill Fortress National Park (UNESCO World Heritage Centre)
+    url: https://whc.unesco.org/en/list/910/
+steps:
+  - title: Dominica, Saint Lucia, Saint Vincent and Grenada
+    date: "September 1778 – July 1779"
+    when: "1779"
+    borders: "1779-07-06"
+    countries: [dm, lc, vc, gd, fr, gb]
+    body:
+      - "France signed its alliance with the United States in February 1778, and news that the two kingdoms were at war reached the Caribbean in August. Bouillé, governor of Martinique, struck first: on 7 September 1778 some 1,800 French soldiers and 1,000 volunteers landed on Dominica, the island between Martinique and Guadeloupe, took the heights above Roseau, and Lieutenant Governor William Stuart surrendered the same day. In December a British force of about 5,000 men from New York under General James Grant, escorted by Admiral Samuel Barrington, landed on Saint Lucia at the Grand Cul de Sac on 13 December and took the Vigie peninsula. D’Estaing arrived from America with twelve ships of the line and 9,000 troops, but Barrington’s squadron beat off his attack in the bay on 15 December, and his assault on the Vigie on 18 December was repulsed with heavy losses. He sailed away on 29 December, and the French garrison surrendered."
+      - "In June 1779 a small French force under Charles-Marie de Trolong du Rumain landed on Saint Vincent, where Joseph Chatoyer and the Garifuna, who had not forgotten the war of 1772–1773, joined it; Governor Valentine Morris surrendered on 18 June. D’Estaing then landed on Grenada, stormed the Hospital Hill above St George’s on the night of 3–4 July, and Governor Lord Macartney, refusing d’Estaing’s terms, surrendered unconditionally. On 6 July Byron’s fleet, arriving too late, attacked d’Estaing’s larger fleet off Grenada in disorder and was badly damaged; d’Estaing did not follow up his success."
+    facts:
+      - [Dominica taken, "7 September 1778"]
+      - [Saint Lucia taken by Britain, "December 1778"]
+      - [Saint Vincent surrenders, "18 June 1779"]
+      - [Battle of Grenada, "6 July 1779"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Roseau
+        date: "7 September 1778"
+        text: Bouillé’s troops took the heights above the capital, and Lieutenant Governor Stuart surrendered.
+        lonlat: [-61.390, 15.300]
+        lp: l
+      - kind: battle
+        side: gb
+        name: La Vigie (Saint Lucia)
+        date: "15–18 December 1778"
+        text: Barrington’s squadron and Grant’s troops beat off d’Estaing’s naval attack and his assault on the Vigie; the French garrison surrendered when his fleet left.
+        lonlat: [-60.995, 14.020]
+        lp: r
+      - kind: taken
+        side: fr
+        name: Kingstown (Saint Vincent)
+        date: "16–18 June 1779"
+        text: Taken by du Rumain’s small force with Chatoyer’s Garifuna; Governor Valentine Morris surrendered.
+        lonlat: [-61.227, 13.155]
+        lp: r
+      - kind: taken
+        side: fr
+        name: St George’s (Grenada)
+        date: "4 July 1779"
+        text: D’Estaing’s troops stormed the Hospital Hill above the town, and Governor Macartney surrendered.
+        lonlat: [-61.750, 12.050]
+        lp: r
+      - kind: naval
+        side: fr
+        name: Battle of Grenada
+        date: "6 July 1779"
+        text: Byron’s fleet attacked d’Estaing’s larger fleet in disorder and was badly damaged.
+        lonlat: [-61.950, 12.150]
+        lp: l
+    arrows:
+      - side: fr
+        label: Bouillé, 1778
+        phase: 1
+        via: [[-61.07, 14.63], [-61.25, 14.95], [-61.38, 15.25]]
+      - side: gb
+        label: Grant and Barrington
+        phase: 2
+        via: [[-59.62, 13.12], [-60.30, 13.70], [-60.75, 13.95], [-61.00, 14.00]]
+      - side: fr
+        label: d’Estaing
+        phase: 2
+        via: [[-61.07, 14.57], [-61.10, 14.30], [-61.02, 14.04]]
+      - side: fr
+        label: du Rumain, 1779
+        phase: 3
+        via: [[-61.05, 14.55], [-61.25, 14.00], [-61.30, 13.50], [-61.24, 13.17]]
+      - side: fr
+        label: d’Estaing
+        phase: 4
+        via: [[-61.10, 14.55], [-61.50, 13.70], [-61.85, 12.60], [-61.77, 12.08]]
+    areas:
+      - style: occupied
+        side: fr
+        label: Taken by France, 1778–1779
+        atoms: [DM-02, DM-03, DM-04, DM-05, DM-06, DM-07, DM-08, DM-09, DM-10, DM-11, VC-01, VC-02, VC-03, VC-04, VC-05, VC-06, GD-01, GD-02, GD-03, GD-04, GD-05, GD-06, GD-10]
+      - style: occupied
+        side: gb
+        label: Saint Lucia, taken by Britain in December 1778
+        atoms: [LC-01, LC-02, LC-03, LC-04, LC-05, LC-06, LC-07, LC-08, LC-09, LC-10, LC-11]
+  - title: Sint Eustatius and Tobago
+    date: "February – November 1781"
+    when: "1781"
+    borders: "1781-06-02"
+    countries: [nl, tt, fr, gb, us]
+    body:
+      - "Sint Eustatius, a tiny Dutch free port, had grown rich by selling arms, powder and goods to the American rebels and the French. When Britain declared war on the Dutch Republic in December 1780, Rodney sailed from Saint Lucia with General John Vaughan and some 3,000 troops; on 3 February 1781 the Dutch governor, Johannes de Graaff, who had not been told of the war, surrendered after a token shot. Rodney seized some 130 merchant ships and goods worth an estimated £3 million, and deported many of the island’s merchants, treating its Jewish community with particular harshness. He spent months selling the booty, and his conduct was attacked in Parliament."
+      - "A French fleet under the Comte de Grasse reached Martinique in April 1781 and fought Admiral Samuel Hood off Fort-Royal on 29 April. After a failed raid on Saint Lucia in May, French troops landed on Tobago on 24 May; Governor George Ferguson withdrew to the hills and capitulated on 2 June, before Rodney could relieve the island. De Grasse then sailed north with most of his fleet, and in September 1781 his victory off the Chesapeake trapped Cornwallis’s army at Yorktown. On 26 November Bouillé surprised the British garrison of Sint Eustatius and returned the island to the Dutch."
+    facts:
+      - [Sint Eustatius taken by Britain, "3 February 1781"]
+      - [Battle of Fort Royal, "29 April 1781"]
+      - [Tobago capitulates, "2 June 1781"]
+      - [Sint Eustatius retaken by France, "26 November 1781"]
+    markers:
+      - kind: taken
+        side: gb
+        name: Oranjestad (Sint Eustatius)
+        date: "3 February 1781"
+        text: Rodney and Vaughan took the Dutch free port and its shipping, and plundered it; Bouillé retook it on 26 November 1781.
+        lonlat: [-62.980, 17.480]
+        lp: r
+      - kind: naval
+        side: fr
+        name: Battle of Fort Royal
+        date: "29 April 1781"
+        text: De Grasse’s fleet, arriving from France, fought Hood’s squadron off Martinique and got its convoy into port.
+        lonlat: [-61.150, 14.500]
+        lp: l
+      - kind: taken
+        side: fr
+        name: Scarborough (Tobago)
+        date: "24 May – 2 June 1781"
+        text: French troops landed near the town and took its forts; Governor Ferguson capitulated in the hills.
+        lonlat: [-60.740, 11.180]
+        lp: r
+      - kind: held
+        side: gb
+        name: Gros Islet (Saint Lucia)
+        date: "1781"
+        text: Rodney’s fleet base; a French raid on the island in May 1781 failed.
+        lonlat: [-60.950, 14.080]
+        lp: r
+    arrows:
+      - side: gb
+        label: Rodney and Vaughan
+        phase: 1
+        via: [[-60.96, 14.10], [-61.50, 15.20], [-62.30, 16.60], [-62.94, 17.45]]
+      - side: fr
+        label: De Grasse
+        phase: 2
+        via: [[-60.20, 14.30], [-60.70, 14.45], [-61.05, 14.55]]
+      - side: fr
+        phase: 3
+        via: [[-61.05, 14.50], [-60.95, 13.50], [-60.80, 12.20], [-60.74, 11.24]]
+    areas:
+      - style: occupied
+        side: gb
+        label: Sint Eustatius, held by Britain, February–November 1781
+        atoms: [NL-BQ3]
+      - style: occupied
+        side: fr
+        label: Taken by France, 1778–1781
+        atoms: [DM-02, DM-03, DM-04, DM-05, DM-06, DM-07, DM-08, DM-09, DM-10, DM-11, VC-01, VC-02, VC-03, VC-04, VC-05, VC-06, GD-01, GD-02, GD-03, GD-04, GD-05, GD-06, GD-10, TT-ETO, TT-WTO]
+      - style: occupied
+        side: gb
+        label: Saint Lucia, held by Britain since 1778
+        atoms: [LC-01, LC-02, LC-03, LC-04, LC-05, LC-06, LC-07, LC-08, LC-09, LC-10, LC-11]
+  - title: Brimstone Hill and the Saintes
+    date: "January 1782 – April 1783"
+    when: "1782"
+    borders: "1782-04-12"
+    countries: [kn, ms, dm, fr, bs, gb, es]
+    body:
+      - "De Grasse returned to the Caribbean in late 1781, and with Bouillé’s troops he landed on St Kitts in January 1782. The British garrison and militia withdrew into the fortress of Brimstone Hill, which the French besieged from 19 January. Admiral Hood, outnumbered, lured de Grasse out of the anchorage off Basseterre on 25 January, slipped in behind him and beat off his attacks over the next two days, but he could not relieve the fortress, which surrendered on 13 February. Nevis and Montserrat fell the same month, and Hood slipped away by night."
+      - "France and Spain now planned to join their fleets and land some 15,000 troops on Jamaica, Britain’s richest island. De Grasse sailed from Martinique on 8 April 1782 with 35 ships of the line and a large convoy to meet the Spanish at Saint-Domingue. Rodney, back from England with reinforcements, followed from Saint Lucia with 36. After skirmishes on 9 April, the fleets met off the Saintes, the islets between Dominica and Guadeloupe, on 12 April. A shift in the wind opened gaps in the French line, British ships broke through, and by evening four French ships of the line, de Grasse’s flagship Ville de Paris among them, had been taken and another destroyed; de Grasse himself was captured. The invasion of Jamaica was abandoned."
+      - "In the Bahamas, a Spanish force of about 2,500 men from Havana under Juan Manuel Cagigal took Nassau in May 1782, and its governor surrendered the islands. In April 1783, after the war had ended, the Loyalist Andrew Deveaux led a small force from Florida that retook Nassau. In the Peace of Versailles of 3 September 1783 France kept Tobago and returned Dominica, Grenada, Saint Vincent, St Kitts, Nevis and Montserrat, and Britain returned Saint Lucia; Spain returned the Bahamas and kept Florida."
+    facts:
+      - [Siege of Brimstone Hill, "19 January – 13 February 1782"]
+      - [Battle of the Saintes, "12 April 1782"]
+      - [Spanish capture of Nassau, "May 1782"]
+      - [Peace of Versailles, "3 September 1783"]
+    markers:
+      - kind: siege
+        side: fr
+        name: Brimstone Hill
+        date: "19 January – 13 February 1782"
+        text: The British garrison held this hilltop fortress for almost four weeks before surrendering; it is now a UNESCO World Heritage Site.
+        lonlat: [-62.837, 17.347]
+        lp: l
+      - kind: naval
+        side: gb
+        name: Frigate Bay (Basseterre roads)
+        date: "25–26 January 1782"
+        text: Hood took the anchorage from de Grasse and beat off his attacks, but could not save the island.
+        lonlat: [-62.690, 17.270]
+        lp: r
+      - kind: taken
+        side: fr
+        name: Montserrat
+        date: "February 1782"
+        text: Surrendered to the French after the fall of St Kitts.
+        lonlat: [-62.210, 16.710]
+        lp: r
+      - kind: naval
+        side: gb
+        name: Battle of the Saintes
+        date: "12 April 1782"
+        text: Rodney broke the French line, captured de Grasse and four ships of the line, and ended the Franco-Spanish plan to invade Jamaica.
+        lonlat: [-61.600, 15.780]
+        lp: l
+      - kind: held
+        side: fr
+        name: Fort-Royal
+        date: "8 April 1782"
+        text: De Grasse sailed from here for Saint-Domingue and the invasion of Jamaica.
+        lonlat: [-61.070, 14.600]
+        lp: r
+    arrows:
+      - side: fr
+        label: De Grasse and Bouillé
+        phase: 1
+        via: [[-61.10, 14.65], [-61.70, 15.70], [-62.40, 16.80], [-62.80, 17.30]]
+      - side: gb
+        label: Hood
+        phase: 2
+        via: [[-62.20, 16.75], [-62.45, 17.05], [-62.69, 17.25]]
+      - side: fr
+        label: De Grasse, 1782
+        phase: 3
+        via: [[-61.10, 14.62], [-61.35, 15.10], [-61.55, 15.70]]
+      - side: gb
+        label: Rodney
+        phase: 3
+        via: [[-60.95, 14.10], [-61.15, 14.90], [-61.55, 15.65]]
+    areas:
+      - style: occupied
+        side: fr
+        label: Taken by France, 1778–1782
+        atoms: [KN-01, KN-02, KN-03, KN-04, KN-05, KN-06, KN-07, KN-08, KN-09, KN-10, KN-11, KN-12, KN-13, KN-14, MS-A, MS-G, MS-P, DM-02, DM-03, DM-04, DM-05, DM-06, DM-07, DM-08, DM-09, DM-10, DM-11, VC-01, VC-02, VC-03, VC-04, VC-05, VC-06, GD-01, GD-02, GD-03, GD-04, GD-05, GD-06, GD-10, TT-ETO, TT-WTO]
+      - style: occupied
+        side: gb
+        label: Saint Lucia, held by Britain since 1778
+        atoms: [LC-01, LC-02, LC-03, LC-04, LC-05, LC-06, LC-07, LC-08, LC-09, LC-10, LC-11]

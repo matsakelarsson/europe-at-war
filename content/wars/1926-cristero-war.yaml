@@ -1,0 +1,178 @@
+id: cristero-war
+name: Cristero War
+start: "1926-08-01"
+end: "1929-06-21"
+tier: B
+summary: "A Catholic rising against the anticlerical laws of the Mexican revolutionary state, fought mainly in the west-central states of Jalisco, Michoacán, Guanajuato, Colima, Zacatecas and Aguascalientes. The 1917 constitution barred the Church from owning property and from running schools, banned religious orders and public worship outside churches and let the states limit the number of priests. President Plutarco Elías Calles enforced these articles strictly, and when the Calles Law of June 1926 set penalties for breaking them, the bishops suspended public worship from 31 July 1926. Armed risings began in August and spread after a call to arms on 1 January 1927. The rebels, mostly rancheros and peasants, called themselves Cristeros after their cry “¡Viva Cristo Rey!” (Long live Christ the King); by 1929 they had perhaps 50,000 men under arms, supplied with ammunition by the women of the Brigades of Saint Joan of Arc, and held much of the countryside of Jalisco. The federal army, with agrarista militias and arms from the United States, held the towns. Both sides killed prisoners and civilians. After the assassination of President-elect Álvaro Obregón by a Catholic militant in 1928, the US ambassador Dwight Morrow brokered the arreglos (arrangements) of 21 June 1929 between the bishops and President Emilio Portes Gil, which allowed worship to resume without repealing the laws. The Cristeros, who had not been consulted, laid down their arms. About 90,000 combatants died, and many civilians; hundreds of Cristero leaders were killed after the amnesty, and a second, smaller rising followed in the 1930s."
+countries: [mx]
+sides:
+  - id: gov
+    name: Mexican government (Calles, then Portes Gil), the federal army and the agrarista militias
+    polities: [mexico]
+    ink: slate
+    moves: Government moves
+    success: Government success
+  - id: cri
+    name: Cristeros (the National Guard of the National League for the Defence of Religious Liberty)
+    polities: [cristeros]
+    ink: purple
+    moves: Cristero moves
+    success: Cristero success
+notes:
+  - "Figures are uncertain. The count most often quoted gives about 90,000 combatant dead, 56,882 on the federal side and some 30,000 Cristeros (other estimates of Cristero dead reach 50,000), besides many civilians, most of them in Jalisco; some estimates put all deaths, civilians included, as high as 250,000. The historian Jean Meyer, whose interviews with surviving Cristeros in the 1960s are a main source, estimated that the Cristeros had about 50,000 men in arms by 1929."
+  - "The bishops never formally backed the rising, and most of them condemned armed rebellion, though a few, such as Archbishop Francisco Orozco y Jiménez of Guadalajara, stayed hidden among the rebels. Many Cristeros also fought for land and against the agrarian reform as it was carried out by the government’s local allies, and many Catholics, and many peasants who received land, fought against them."
+  - "The Catholic Church has beatified or canonised dozens of priests and laymen killed during the war, among them the Jesuit Miguel Pro and the fourteen-year-old José Sánchez del Río. The government side remembered the teachers and agraristas killed by Cristeros."
+sources:
+  - title: Cristero War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cristero_War
+  - title: Cristero uprisings (Britannica)
+    url: https://www.britannica.com/topic/Cristero-uprisings
+  - title: Enrique Gorostieta Velarde (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Enrique_Gorostieta_Velarde
+  - title: Miguel Pro (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Miguel_Pro
+  - title: Dwight Morrow (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dwight_Morrow
+  - title: Anacleto González Flores (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Anacleto_Gonz%C3%A1lez_Flores
+steps:
+  - title: The Calles Law and the first risings
+    date: June 1926 – January 1927
+    when: "1926-08-03"
+    borders: "1926-08-03"
+    countries: [mx]
+    body:
+      - "The constitution of 1917 had written the revolution’s distrust of the Church into law: Church property belonged to the nation, primary education was to be secular, religious orders and worship outside churches were banned, priests could not vote or criticise the government, and the states could limit their number. Carranza and Obregón had enforced these articles unevenly. Calles, president from December 1924, set out to apply them in full. In 1925 his government backed a schismatic Mexican Catholic Church, and Catholics founded the National League for the Defence of Religious Liberty. In June 1926 Calles signed a law, known as the Calles Law, that set fines and prison terms for priests who wore clerical dress in public or criticised the government and required every priest to register with the civil authorities."
+      - "In protest the bishops, with the consent of Pope Pius XI, suspended all public worship from 31 July 1926, the day the law came into force, and the League organised an economic boycott. For the first time since the Spanish conquest no priest said Mass in public anywhere in Mexico. Fighting broke out at once. On 3 August some 400 armed Catholics barricaded themselves in the Sanctuary of Guadalupe in Guadalajara and surrendered when their ammunition ran out; about 18 people were killed. The next day soldiers stormed the parish church of Sahuayo, Michoacán, and the priest and his vicar were killed. In mid-August the army shot Father Luis Bátiz Sainz and three young Catholic activists at Chalchihuites, Zacatecas, and the rancher Pedro Quintanar rose in revolt; in the autumn there were risings in Guanajuato, Durango and Jalisco. On 1 January 1927 the League’s young leader René Capistrán Garza issued a manifesto, “To the Nation”, calling for a general rising."
+    facts:
+      - [Calles Law in force, "31 July 1926"]
+      - [Public worship suspended, "31 July 1926 – June 1929"]
+      - [Siege of the Sanctuary of Guadalupe, Guadalajara, "3 August 1926"]
+      - [Call to arms, "1 January 1927"]
+    markers:
+      - kind: capital
+        side: gov
+        name: Mexico City
+        date: "1926"
+        text: Seat of President Plutarco Elías Calles, who enforced the anticlerical articles of the constitution. The bishops’ committee directing the Church’s response also sat here.
+        lonlat: [-99.133, 19.433]
+      - kind: siege
+        side: gov
+        name: Guadalajara
+        date: 3 August 1926
+        text: Armed Catholics held the Sanctuary of Guadalupe against federal troops until their ammunition ran out. Guadalajara, the seat of the Catholic social movement led by Anacleto González Flores, was the centre of the resistance.
+        lonlat: [-103.347, 20.677]
+        lp: l
+      - kind: battle
+        side: gov
+        name: Sahuayo
+        date: 4 August 1926
+        text: Some 240 soldiers stormed the parish church, where townspeople had gathered; the parish priest and his vicar were killed.
+        lonlat: [-102.716, 20.059]
+        lp: b
+      - kind: toll
+        side: gov
+        name: Chalchihuites
+        date: August 1926
+        text: Soldiers shot Father Luis Bátiz Sainz and three members of the Catholic youth association. The rancher Pedro Quintanar rose in arms, and his men later held much of northern Jalisco.
+        lonlat: [-103.881, 23.475]
+      - kind: event
+        side: cri
+        name: Pénjamo
+        date: 28 September 1926
+        text: The mayor, Luis Navarro Origel, led a rising here; beaten in the open country, his men took to the mountains as guerrillas.
+        lonlat: [-101.722, 20.431]
+    areas:
+      - style: contested
+        side: cri
+        label: States where the Cristero risings were strongest
+        atoms: [MX-JAL, MX-MIC, MX-GUA, MX-COL, MX-ZAC, MX-AGU]
+  - title: War in Los Altos
+    date: 1927–1928
+    when: "1927-04-19"
+    borders: "1927-12-31"
+    countries: [mx]
+    body:
+      - "In January 1927 bands of rancheros in Los Altos, the high plateau north-east of Guadalajara, began to seize villages, armed with old rifles, machetes and whatever they could take from the army. Their leaders were local men, among them the ranch hand Victoriano Ramírez, called “El Catorce”, the pharmacist Jesús Degollado and two priests, Aristeo Pedroza and José Reyes Vega. On 23 February 1927 they defeated federal troops at San Francisco del Rincón, and on 15 March at San Julián. The government answered with force. Anacleto González Flores, leader of the Catholic civic movement in Jalisco, was arrested, tortured and shot on 1 April. On 19 April Reyes Vega’s men attacked a train carrying money for the Bank of Mexico near La Barca; the escort was killed and the cars were set on fire, and many passengers died. In the spring the army ordered the people of Los Altos into the towns and treated those who stayed as rebels, a reconcentration that drove thousands more to join the Cristeros."
+      - "From the summer of 1927 the rising grew. The League hired Enrique Gorostieta, a former federal general of Huerta’s time and a liberal rather than a devout Catholic, who organised the scattered bands into a disciplined force, and in Zapopan women founded the Feminine Brigades of Saint Joan of Arc, which grew to some 25,000 members who smuggled ammunition, carried messages and nursed the wounded. The federal army, about 80,000 strong, held the towns and railways, and agrarista militias of peasants who had received land fought for the government. Both sides killed prisoners: soldiers hanged suspected Cristeros from telegraph poles and shot priests, and Cristeros killed agraristas and rural schoolteachers. In Mexico City the Jesuit Miguel Pro was shot without trial on 23 November 1927 after a bomb attack on Obregón. On 17 July 1928 Obregón, just re-elected president, was shot dead at a banquet in San Ángel by José de León Toral, a young Catholic militant."
+    facts:
+      - [Cristero victory at San Julián, "15 March 1927"]
+      - [Death of Anacleto González Flores, "1 April 1927"]
+      - [Execution of Miguel Pro, "23 November 1927"]
+      - [Assassination of Obregón, "17 July 1928"]
+    markers:
+      - kind: battle
+        side: cri
+        name: San Francisco del Rincón
+        date: 23 February 1927
+        text: The first Cristero victory over federal troops.
+        lonlat: [-101.858, 21.018]
+      - kind: battle
+        side: cri
+        name: San Julián
+        date: 15 March 1927
+        text: Cristeros under Victoriano Ramírez defeated a federal force in Los Altos.
+        lonlat: [-102.181, 21.011]
+      - kind: toll
+        side: cri
+        name: La Barca
+        date: 19 April 1927
+        text: Cristeros under the priest José Reyes Vega attacked a train carrying money for the Bank of Mexico; the escort was killed and many passengers died when the cars were set on fire. Vega’s brother was killed in the fighting.
+        lonlat: [-102.546, 20.291]
+        lp: b
+      - kind: toll
+        side: gov
+        name: Guadalajara
+        date: 1 April 1927
+        text: Anacleto González Flores and three companions were tortured and shot after their arrest.
+        lonlat: [-103.347, 20.677]
+        lp: l
+      - kind: event
+        name: Mexico City
+        date: 1927–1928
+        text: Miguel Pro was executed here on 23 November 1927, and Obregón was assassinated at the La Bombilla restaurant in San Ángel on 17 July 1928.
+        lonlat: [-99.133, 19.433]
+    areas:
+      - style: contested
+        side: cri
+        label: Los Altos de Jalisco, the Cristero heartland (approximate)
+        polygon: [[-103.10, 21.15], [-102.40, 21.75], [-101.80, 21.35], [-101.85, 20.85], [-102.30, 20.45], [-102.95, 20.60]]
+  - title: Tepatitlán and the arreglos
+    date: 1929
+    when: "1929-06-21"
+    borders: "1929-06-21"
+    countries: [mx]
+    body:
+      - "By 1929 the Cristeros held most of the countryside of Jalisco and parts of Michoacán, Colima, Guanajuato, Zacatecas and Nayarit, and Gorostieta set up a civil administration in the areas they controlled. In March part of the army rose against the government under General José Gonzalo Escobar, and federal troops were withdrawn from the west to crush the rebellion, but the Cristeros could not take a large city. On 19 April they took Tepatitlán in Los Altos after a hard fight, in which Reyes Vega was killed. On 2 June Gorostieta was killed by federal troops at the hacienda of El Valle near Atotonilco el Alto."
+      - "Peace came from above. The US ambassador Dwight Morrow, who wanted stability on the border and a settlement of American oil claims, had met Calles over breakfast since late 1927, and with the American priest John J. Burke he brought together the interim president Emilio Portes Gil and Archbishop Leopoldo Ruiz y Flores and Bishop Pascual Díaz. In the arreglos of 21 June 1929 the government promised not to use the laws against the Church as an institution: priests named by their bishops would register, religious teaching would be allowed inside churches, and the Church could use its buildings. The laws stayed on the books. Church bells rang again at the end of June. The Cristeros had not been consulted and many felt betrayed, but the bishops ordered them to lay down their arms, and most did so under an amnesty."
+      - "The war had cost some 90,000 combatant lives and many civilian ones. After the amnesty hundreds of Cristero leaders were hunted down and killed, and many families emigrated to the United States. When the government pressed socialist education in the 1930s a second, smaller rising, la Segunda, broke out, during which rural teachers were killed; it faded after President Lázaro Cárdenas stopped enforcing the anticlerical laws in the late 1930s."
+    facts:
+      - [Cristeros take Tepatitlán, "19 April 1929"]
+      - [Death of Gorostieta, "2 June 1929"]
+      - [Arreglos, "21 June 1929"]
+      - [Dead, "about 90,000 combatants, besides civilians"]
+    markers:
+      - kind: taken
+        side: cri
+        name: Tepatitlán
+        date: 19 April 1929
+        text: Taken by the Cristeros after a hard fight; the priest-commander José Reyes Vega was killed.
+        lonlat: [-102.759, 20.815]
+        lp: l
+      - kind: event
+        side: gov
+        name: Atotonilco el Alto
+        date: 2 June 1929
+        text: Enrique Gorostieta, commander of the Cristero army, was killed by federal troops at the nearby hacienda of El Valle.
+        lonlat: [-102.508, 20.551]
+        lp: b
+      - kind: treaty
+        name: Mexico City
+        date: 21 June 1929
+        text: The arreglos between President Portes Gil and the bishops, drafted in Ambassador Morrow’s office, ended the suspension of worship.
+        lonlat: [-99.133, 19.433]
+    areas:
+      - style: contested
+        side: cri
+        label: Areas largely held by the Cristeros, spring 1929 (approximate)
+        polygon: [[-104.50, 21.90], [-103.30, 22.60], [-102.40, 21.95], [-101.70, 21.20], [-101.90, 20.40], [-102.60, 19.60], [-103.60, 19.10], [-104.30, 19.40], [-104.40, 20.40], [-104.80, 21.20]]

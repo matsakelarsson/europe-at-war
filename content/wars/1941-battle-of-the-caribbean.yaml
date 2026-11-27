@@ -1,0 +1,231 @@
+id: battle-of-the-caribbean
+name: Battle of the Caribbean
+start: "1941-12-11"
+end: "1945-05-08"
+tier: B
+summary: "The German and Italian submarine campaign against Allied shipping in the Caribbean Sea and the Gulf of Mexico during the Second World War, part of the Battle of the Atlantic. The region mattered because of the oil of Venezuela, refined on the Dutch islands of Aruba and Curaçao and in Trinidad, the bauxite of the Guianas, needed for aircraft aluminium, and the Panama Canal. After Germany declared war on the United States on 11 December 1941, U-boats opened Operation Neuland on 16 February 1942, torpedoing tankers in the harbours of Aruba and Curaçao and in Trinidad’s Gulf of Paria. Ships sailing alone along lit coasts were easy targets, and in 1942 the Caribbean and the Gulf of Mexico saw some of the heaviest losses of the whole Atlantic war. The sinking of two Mexican tankers in May 1942 brought Mexico into the war. Losses fell sharply once the United States and Britain organised interlocking convoys from mid-1942 and covered them with aircraft from new bases leased in the British islands; by 1943 few U-boats came to the region, and several were sunk there, one of them by a Cuban submarine chaser. In all about 400 ships were sunk in the wider Caribbean, including 56 in the Gulf of Mexico. French Martinique and Guadeloupe, held for the Vichy government by Admiral Georges Robert under a US watch, went over to the Free French in July 1943."
+countries: [aw, cw, tt, lc, mx, us, cu, ht, fr, ve, pr]
+sides:
+  - id: axis
+    name: Germany and Italy (U-boats and Italian submarines)
+    polities: [germany, italy]
+    ink: slate
+    moves: U-boat moves
+    success: Axis success
+  - id: allies
+    name: United States, Britain, the Netherlands, Mexico, Cuba and other Allies
+    polities: [united-states, united-kingdom, netherlands, mexico, cuba, canada]
+    ink: navy
+    moves: Allied moves
+    success: Allied success
+notes:
+  - "The story starts on the day Germany declared war on the United States, which opened the western Atlantic to U-boat attack; the first attacks in the Caribbean came in February 1942. The Second World War, including the wider Battle of the Atlantic, has its own story."
+  - "Counts of the ships lost depend on where the region is said to end. The figure of about 400 ships includes the Bahamas and the approaches to the Caribbean; within the Gulf of Mexico, 17 U-boats sank 56 merchant ships and damaged 14 others between May 1942 and spring 1943, and only one U-boat, U-166, was lost there."
+  - "Mexico also sent a fighter squadron, Escuadrón 201, to the Philippines in 1945, and about 300,000 Mexican braceros worked on US farms and railways under the agreement of 1942."
+sources:
+  - title: Battle of the Caribbean (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Caribbean
+  - title: Operation Neuland (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Neuland
+  - title: Mexico in World War II (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mexico_in_World_War_II
+  - title: "Robert A. Church and Daniel J. Warren, Unraveling the Mystery: The Discovery of the U-166 (uboat.net)"
+    url: https://uboat.net/articles/42.html
+  - title: World War II shipwrecks in the Gulf of Mexico (US Bureau of Safety and Environmental Enforcement)
+    url: https://bsee.gov/site-page/world-war-ii-shipwrecks
+  - title: Georges Robert (admiral) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Georges_Robert_(admiral)
+steps:
+  - title: Operation Neuland
+    date: February–April 1942
+    when: "1942-02-16"
+    borders: "1942-02-16"
+    countries: [aw, cw, tt, lc, ve, pr]
+    view: { center: [-65.5, 13.3], size: [1500, 1150] }
+    body:
+      - "Before the war the US Navy had patrolled the Caribbean as a neutrality zone, Britain had stationed troops on Trinidad and, after Germany overran the Netherlands in May 1940, on Aruba and Curaçao, and in the Destroyers for Bases deal of September 1940 the United States leased sites for air and naval bases in the British islands. But anti-submarine forces were thin when the first five long-range U-boats arrived. In the night of 16 February 1942 U-156 entered the harbour of San Nicolaas on Aruba, beside the Lago refinery, and torpedoed three tankers; when its crew tried to shell the refinery, the gun burst because the muzzle plug had been left in. U-67 fired six torpedoes at tankers off Willemstad on Curaçao, but four failed to explode, and U-502 sank three of the small lake tankers that carried crude oil from Lake Maracaibo. On 18 February U-161 slipped into the Gulf of Paria, Trinidad’s guarded anchorage, and torpedoed two ships; on 10 March it did the same in the harbour of Castries on Saint Lucia."
+      - "The U-boats then hunted along the shipping lanes, joined by five Italian submarines on the Atlantic side of the Lesser Antilles, while U-126 sank ships in the Windward Passage within sight of the US base at Guantánamo. Many of the lake-tanker crews, among them Chinese seamen, refused to sail without escorts, and refinery output fell for a time. On 3 March a U-boat shelled Mona Island off Puerto Rico, and on 19 April U-130 shelled the oil tanks at Bullenbaai on Curaçao until Dutch shore guns drove it off. US troops had taken over the defence of Aruba and Curaçao from the British on 11 February."
+    facts:
+      - [Start of Operation Neuland, "16 February 1942"]
+      - [U-boats in the first wave, "five German, with five Italian submarines"]
+    markers:
+      - kind: naval
+        side: axis
+        name: Gulf of Venezuela
+        date: 16 February 1942
+        text: U-502 sank three shallow-draught tankers carrying crude oil from Lake Maracaibo to the refineries.
+        lonlat: [-70.900, 12.000]
+        lp: l
+      - kind: naval
+        side: axis
+        name: San Nicolaas (Aruba)
+        date: 16 February 1942
+        text: U-156 torpedoed three tankers at the Lago refinery; its attempt to shell the refinery failed when the gun burst.
+        lonlat: [-69.917, 12.433]
+        lp: t
+      - kind: naval
+        side: axis
+        name: Willemstad (Curaçao)
+        date: 16 February and 19 April 1942
+        text: U-67 attacked tankers off the harbour, but four of its six torpedoes failed to explode; in April U-130 shelled the oil tanks at Bullenbaai until Dutch shore guns drove it off.
+        lonlat: [-68.933, 12.117]
+        lp: b
+      - kind: naval
+        side: axis
+        name: Gulf of Paria (Trinidad)
+        date: 18 February 1942
+        text: U-161 entered the guarded anchorage submerged by day and torpedoed two ships at night before slipping out.
+        lonlat: [-61.600, 10.600]
+        lp: b
+      - kind: naval
+        side: axis
+        name: Castries (Saint Lucia)
+        date: 10 March 1942
+        text: U-161 torpedoed the Canadian liner Lady Nelson and the freighter Umtata in the harbour.
+        lonlat: [-60.989, 14.011]
+      - kind: event
+        side: axis
+        name: Mona Island
+        date: 3 March 1942
+        text: Shelled by a U-boat, without damage or casualties.
+        lonlat: [-67.900, 18.080]
+    arrows:
+      - side: axis
+        label: U-156, U-67 and U-502
+        phase: 1
+        via: [[-57.5, 17.0], [-61.45, 15.75], [-66.0, 13.6], [-69.7, 12.55]]
+      - side: axis
+        label: U-161 into the Gulf of Paria
+        phase: 1
+        via: [[-57.5, 12.4], [-60.85, 11.0], [-61.75, 10.83], [-61.65, 10.6]]
+      - side: axis
+        label: U-161 to Castries
+        phase: 2
+        via: [[-61.9, 10.85], [-61.8, 12.4], [-61.1, 13.9]]
+  - title: Tankers in the Gulf of Mexico
+    date: May 1942 – May 1943
+    when: "1942-05-22"
+    borders: "1942-05-22"
+    countries: [mx, us, cu]
+    view: { center: [-88.5, 24.2], size: [2300, 1400] }
+    body:
+      - "In May 1942 U-boats entered the Gulf of Mexico through the Florida Strait and the Yucatán Channel. Tankers carrying oil from Texas and Louisiana to the east coast sailed alone, often silhouetted against the lights of the coast, and in May and June 1942 dozens of ships were sunk in the Gulf. Mexico, which had seized German and Italian ships in its ports in 1941 and was selling its oil to the United States, protested when U-564 sank the Mexican tanker Potrero del Llano off Florida in the night of 13–14 May; on 21 May U-106 sank a second tanker, the Faja de Oro, off Key West. On 22 May President Manuel Ávila Camacho asked Congress for authority to declare war, and Mexico entered a state of war with Germany, Italy and Japan from that day. More Mexican tankers were sunk later in the year, the Amatlán off the coast of Tamaulipas in September."
+      - "Losses fell once the US Navy began running convoys in the Gulf in the summer of 1942 and patrol aircraft and blimps flew over the shipping lanes. On 13 June the Coast Guard cutter Thetis sank U-157 off Key West. On 30 July U-166 torpedoed the passenger freighter Robert E. Lee south of the Mississippi delta, and the escort PC-566 sank the U-boat with depth charges; the wreck, the only U-boat lost in the Gulf, was found in 2001. On 15 May 1943 the Cuban submarine chaser CS-13, guided by a US aircraft, sank U-176 off the north coast of Cuba with all hands."
+    facts:
+      - [Potrero del Llano sunk, "13–14 May 1942"]
+      - [Faja de Oro sunk, "21 May 1942"]
+      - [Mexico at war from, "22 May 1942"]
+      - [Ships sunk in the Gulf of Mexico, "56 (1942–1943)"]
+    markers:
+      - kind: naval
+        side: axis
+        name: Potrero del Llano
+        date: 13–14 May 1942
+        text: The Mexican tanker was torpedoed by U-564 off the Florida coast.
+        lonlat: [-80.100, 25.583]
+      - kind: naval
+        side: axis
+        name: Faja de Oro
+        date: 21 May 1942
+        text: A second Mexican tanker, sunk by U-106 west of Key West. The next day Mexico moved to declare war.
+        lonlat: [-84.400, 23.500]
+        lp: b
+      - kind: event
+        side: allies
+        name: Mexico City
+        date: 22 May 1942
+        text: President Manuel Ávila Camacho asked Congress for authority to declare war; Mexico entered a state of war with the Axis from this day.
+        lonlat: [-99.133, 19.433]
+      - kind: naval
+        side: axis
+        name: Amatlán
+        date: 4 September 1942
+        text: The Mexican tanker was sunk by U-171 off the coast of Tamaulipas.
+        lonlat: [-97.500, 23.450]
+        lp: l
+      - kind: naval
+        side: allies
+        name: U-157 sunk
+        date: 13 June 1942
+        text: Sunk with all hands by the US Coast Guard cutter Thetis.
+        lonlat: [-82.050, 24.220]
+        lp: t
+      - kind: naval
+        side: allies
+        name: Robert E. Lee and U-166
+        date: 30 July 1942
+        text: U-166 sank the passenger freighter Robert E. Lee and was then sunk by the escort PC-566; 25 people died on the Robert E. Lee and all 52 aboard the U-boat.
+        lonlat: [-88.700, 28.683]
+        lp: l
+      - kind: naval
+        side: allies
+        name: U-176 sunk
+        date: 15 May 1943
+        text: The Cuban submarine chaser CS-13 sank U-176 with depth charges while escorting two freighters to Havana.
+        lonlat: [-80.300, 23.350]
+        lp: b
+    arrows:
+      - side: axis
+        label: U-boats enter the Gulf
+        phase: 1
+        via: [[-79.3, 24.0], [-83.0, 24.0], [-86.8, 25.6], [-88.6, 28.4]]
+      - side: axis
+        label: Through the Yucatán Channel
+        phase: 1
+        via: [[-82.5, 19.5], [-85.6, 21.6], [-90.0, 24.5], [-96.5, 23.5]]
+  - title: Convoys and Martinique
+    date: 1942–1945
+    when: "1943-07-14"
+    borders: "1943-07-14"
+    countries: [cu, ht, tt, fr, cw]
+    view: { center: [-69.0, 16.4], size: [2100, 1450] }
+    body:
+      - "From the summer of 1942 the US Navy and the Royal Navy linked their convoys into one interlocking system, with main routes from Key West to Guantánamo Bay and from Guantánamo to Trinidad, and feeder convoys to the oil ports and Panama. Escorts and aircraft, among them Canadian corvettes and US blimps, sank or drove off the U-boats. On 28 August 1942 the Canadian corvette Oakville rammed U-94 off Haiti and a boarding party captured its crew; in November U-163 torpedoed the US gunboat Erie off Curaçao. Losses dropped sharply in 1943, and after that only a few U-boats came south."
+      - "The French West Indies stayed outside the war under Admiral Georges Robert, the Vichy government’s high commissioner, who kept the aircraft carrier Béarn, two cruisers and a large part of the Bank of France’s gold reserve at Martinique. Under agreements with Washington the ships were immobilised and US ships watched the islands. In Martinique and Guadeloupe Robert’s rule, remembered as “an tan Robè” (in Robert’s time), brought shortages and repression, and thousands of young people left in small boats for Dominica and Saint Lucia to join the Free French, a movement called the dissidence. French Guiana rallied to the Free French in March 1943; after demonstrations in Fort-de-France and a mutiny of the garrison at Balata on 29 June 1943, Robert gave up power, and on 14 July 1943 Henri Hoppenot arrived to take over the islands for the French Committee of National Liberation."
+    facts:
+      - [U-94 captured, "28 August 1942"]
+      - [Martinique and Guadeloupe join the Free French, "July 1943"]
+    markers:
+      - kind: held
+        side: allies
+        name: Guantánamo Bay
+        date: 1942–1945
+        text: The US naval base was the hub of the Caribbean convoy system.
+        lonlat: [-75.160, 19.918]
+        lp: t
+      - kind: held
+        side: allies
+        name: Trinidad
+        date: 1942–1945
+        text: British and US air and naval bases; the convoys to and from the oil ports and the bauxite coast of the Guianas gathered here.
+        lonlat: [-61.517, 10.667]
+        lp: b
+      - kind: naval
+        side: allies
+        name: U-94 captured
+        date: 28 August 1942
+        text: Bombed by a US Catalina and rammed twice by the Canadian corvette Oakville; a boarding party took the crew prisoner before the U-boat sank.
+        lonlat: [-74.500, 17.670]
+        lp: b
+      - kind: naval
+        side: axis
+        name: USS Erie
+        date: 12 November 1942
+        text: The gunboat was torpedoed by U-163 off Curaçao while escorting a convoy, and later capsized in Willemstad harbour.
+        lonlat: [-68.950, 12.000]
+        lp: b
+      - kind: event
+        side: allies
+        name: Fort-de-France
+        date: 14 July 1943
+        text: After demonstrations and a mutiny of the garrison, Admiral Robert handed over Martinique and Guadeloupe to Henri Hoppenot, envoy of the French Committee of National Liberation.
+        lonlat: [-61.067, 14.600]
+    arrows:
+      - side: allies
+        label: Convoys from Key West to Guantánamo
+        phase: 1
+        via: [[-81.8, 24.4], [-78.8, 22.9], [-75.3, 21.35], [-73.95, 20.15], [-75.15, 19.85]]
+      - side: allies
+        label: Convoys from Guantánamo to Trinidad
+        phase: 1
+        via: [[-75.1, 19.8], [-74.9, 18.0], [-71.0, 16.6], [-65.5, 13.2], [-61.8, 10.8]]

@@ -1,0 +1,181 @@
+id: chichimeca-war
+name: Chichimeca War
+start: "1550"
+end: "1590"
+tier: B
+summary: "Forty years of war between New Spain and the peoples the Spaniards called Chichimecs, the Guachichiles, Zacatecos, Guamares and Pames of the dry plateau north of the old Aztec lands, set off by the silver strike at Zacatecas in 1546 and the roads, mining towns and slave raids that followed. From 1550 Chichimec raiders attacked wagon trains, ranches and towns along the silver road; by 1561 they had killed more than 4,000 Spaniards and allies. Neither a line of presidios nor the “war of fire and blood” declared in 1567 stopped them, and the raids were at their worst in 1575–1585. From 1586 the viceroys bought peace instead, with food, clothing, tools and land, missions and settlements of Tlaxcalan families; in 1590 the roads to Zacatecas were declared safe for the first time in forty years."
+countries: [mx]
+sides:
+  - id: ns
+    name: New Spain, with Otomí, Purépecha, Caxcan and Tlaxcalan allies
+    polities: [new-spain]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+  - id: ch
+    name: Chichimeca peoples (Guachichiles, Zacatecos, Guamares and Pames)
+    polities: [chichimecs]
+    ink: orange
+    moves: Chichimec moves
+    success: Chichimec success
+notes:
+  - "Chichimec was a Nahuatl name, taken over by the Spaniards, for the hunting, gathering and partly farming peoples of the north; it covers many peoples who never formed one state. Almost everything known about the war comes from Spanish letters, reports and chronicles, gathered above all by the historian Philip Wayne Powell, and Spanish accounts of Chichimec cruelty were also used to justify their enslavement."
+  - "The war is often dated 1550–1600, since the purchase of peace went on for years after 1590 and fighting continued in places; San Luis Potosí was founded after the surrender of the Guachichiles in 1592."
+sources:
+  - title: Chichimeca War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Chichimeca_War
+  - title: Miguel Caldera (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Miguel_Caldera
+  - title: Guachichil (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Guachichil
+  - title: Mixtón War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mixt%C3%B3n_War
+steps:
+  - title: Silver and the road
+    date: "1546–1561"
+    when: "1553"
+    borders: "1553-06-01"
+    countries: [mx]
+    body:
+      - The dry basin north of the old Aztec and Purépecha lands, from Querétaro and Guadalajara to Saltillo and Durango, was home to peoples who lived mainly by hunting and gathering, some of whom also grew maize. The Spaniards counted four main nations among them, the Guachichiles around what became San Luis Potosí, the most numerous and most feared, the Zacatecos, who had fought in the Mixtón War, the Guamares of Guanajuato and the Pames north of Querétaro; together they may have numbered 30,000 to 60,000. Their archers, with short bows and obsidian-tipped arrows, were feared even by men in armour.
+      - On 8 September 1546 local people showed the Spaniard Juan de Tolosa silver ore near the hill of La Bufa, where the city of Zacatecas grew up. Thousands of Spaniards rushed north, mining towns such as Sombrerete and Fresnillo followed, soldiers raided for slaves to work the mines, and new roads were built across Chichimec lands from Querétaro and Jalisco to carry goods and silver.
+      - Late in 1550 Zacatecos attacked Purépecha supply trains on the road and then Spanish settlements just south of Zacatecas. In 1551 Guachichiles and Guamares killed fifteen Spanish soldiers at San Miguel, which was abandoned, and raids around Tlaltenango killed 120 Spaniards in a few months. In 1553 and 1554 whole wagon trains on the road to Zacatecas were destroyed, with goods worth 32,000 and 40,000 pesos, when a soldier earned 300 pesos a year. By the end of 1561 more than 4,000 Spaniards and their Indigenous allies had been killed, and prices in Zacatecas had doubled or tripled.
+    facts:
+      - [Silver found at Zacatecas, "8 September 1546"]
+      - [First attacks, "late 1550"]
+      - [Killed by 1561, "more than 4,000 Spaniards and allies"]
+    markers:
+      - kind: event
+        side: ns
+        name: Zacatecas
+        date: "8 September 1546"
+        text: Silver ore was shown to Juan de Tolosa here, and the mining town grew into the richest in New Spain.
+        lonlat: [-102.574, 22.774]
+        lp: r
+      - kind: taken
+        side: ch
+        name: San Miguel
+        date: "1551"
+        text: Guachichiles and Guamares killed fifteen Spanish soldiers at the outpost, which was abandoned.
+        lonlat: [-100.744, 20.914]
+        lp: r
+      - kind: toll
+        side: ch
+        name: Tlaltenango
+        date: "1550–1551"
+        text: Raids in the valley killed 120 Spaniards within a few months.
+        lonlat: [-103.300, 21.783]
+        lp: l
+      - kind: event
+        side: ns
+        name: Querétaro
+        date: "1550s"
+        text: The road to the mines of Zacatecas ran north from here across Chichimec lands.
+        lonlat: [-100.393, 20.588]
+        lp: b
+    arrows:
+      - side: ns
+        label: Silver road
+        via: [[-100.39, 20.59], [-100.74, 20.92], [-101.22, 21.48], [-101.95, 22.10], [-102.55, 22.75]]
+  - title: Fire and blood
+    date: "1562–1585"
+    when: "1575"
+    borders: "1575-06-01"
+    countries: [mx]
+    body:
+      - The Spaniards built presidios to guard the road, the first at San Miguel and San Felipe in 1562 and Nombre de Dios in 1563, about a dozen in all, garrisoned by Spanish and Indigenous soldiers, and settled new towns that grew into Celaya, León and Aguascalientes. In 1567, after offers and threats had both failed, the government declared a “war of fire and blood” that promised the Chichimecs death, enslavement or mutilation.
+      - The raids only spread. By 1571 most of the Chichimec nations were raiding towns and roads, in the 1570s the Pames attacked near Querétaro, and from 1575 to 1585 the attacks grew stronger still; in 1581 the viceroy wrote to Philip II that many mines in Zacatecas had closed. The Chichimecs learned to ride and fight on horseback, perhaps the first time the Spaniards in North America met mounted Native warriors. Many presidios held only three Spaniards, and soldiers added to their pay by taking slaves, which fed the war. Otomí, Purépecha and Caxcan allies did much of the fighting for the Spaniards and were rewarded with land and the right to ride horses and carry swords.
+      - In 1574 the Dominicans declared the war unjust and caused by Spanish aggression, and more and more churchmen and officials came to blame the enslavement of the Chichimecs for it.
+    facts:
+      - [First presidios, "1562–1563"]
+      - [War of fire and blood declared, "1567"]
+      - [Height of the raids, "1575–1585"]
+    markers:
+      - kind: held
+        side: ns
+        name: San Felipe
+        date: "1562"
+        text: One of the first presidios on the road to Zacatecas.
+        lonlat: [-101.216, 21.478]
+        lp: r
+      - kind: held
+        side: ns
+        name: San Miguel
+        date: "1562"
+        text: Resettled with a presidio to guard the road.
+        lonlat: [-100.744, 20.914]
+        lp: r
+      - kind: held
+        side: ns
+        name: Nombre de Dios
+        date: "1563"
+        text: A presidio on the road north-west of Zacatecas.
+        lonlat: [-104.233, 23.850]
+        lp: r
+      - kind: event
+        side: ch
+        name: Querétaro
+        date: "1570s"
+        text: Pame raiders attacked the country around the town.
+        lonlat: [-100.393, 20.588]
+        lp: b
+      - kind: event
+        side: ch
+        name: Zacatecas
+        date: "1581"
+        text: The viceroy reported that many of its mines had closed because of the raids.
+        lonlat: [-102.574, 22.774]
+        lp: r
+      - kind: event
+        side: ns
+        name: Aguascalientes
+        date: "1575"
+        text: Founded as a way station on the silver road.
+        lonlat: [-102.296, 21.876]
+        lp: l
+  - title: Peace by purchase
+    date: "1585–1592"
+    when: "1590"
+    borders: "1592-12-01"
+    countries: [mx]
+    body:
+      - The war was emptying the royal treasury. In 1584 the bishop of Guadalajara proposed new towns with priests, soldiers and friendly Indigenous families, and in 1586 the viceroy, Álvaro Manrique de Zúñiga, Marquis of Villamanrique, withdrew many soldiers from the frontier, forbade new campaigns and opened talks with the Chichimec leaders, offering them food, clothing, tools and land. One of the men behind the talks was Captain Miguel Caldera, the son of a Castilian soldier and a Guachichil woman, who had seen the cruelty and failure of the war by force.
+      - From 1590 the Spaniards sent large quantities of goods north to be handed out to the Chichimecs, a policy that went on for decades, and in that year the viceroy declared the roads to Zacatecas safe for the first time in forty years. In 1591 the next viceroy, Luis de Velasco, with Caldera’s help, persuaded 400 Tlaxcalan families to found eight settlements among the Chichimecs, among them Colotlán and Mexquitic, in return for land, freedom from tribute, the right to bear arms and two years’ provisions; Franciscan missionaries followed.
+      - On 3 November 1592 San Luis Potosí was founded near the new mines of Cerro de San Pedro, at a place where the Franciscan Diego de la Magdalena and Caldera had gathered Guachichil families who had made peace. Most Chichimecs gradually settled in towns and became Christian, and the purchase of peace became the pattern of Spanish policy on the northern frontier for nearly three centuries. The Pame and the Chichimeca Jonaz of Guanajuato still speak their languages today.
+    facts:
+      - [Peace policy of Villamanrique, "1586"]
+      - [Roads to Zacatecas declared safe, "1590"]
+      - [Tlaxcalan colonies founded, "1591"]
+    markers:
+      - kind: treaty
+        side: ns
+        name: San Luis Potosí
+        date: "November 1592"
+        text: Founded on 3 November 1592 near the new mines, where Fray Diego de la Magdalena and Miguel Caldera had settled Guachichil families who had made peace.
+        lonlat: [-100.975, 22.150]
+        lp: r
+      - kind: event
+        side: ns
+        name: Mexquitic
+        date: "1591"
+        text: One of the eight settlements of Tlaxcalan families founded among the Chichimecs.
+        lonlat: [-101.113, 22.267]
+        lp: l
+      - kind: event
+        side: ns
+        name: Colotlán
+        date: "1591"
+        text: A Tlaxcalan frontier settlement founded with Caldera’s help.
+        lonlat: [-103.265, 22.117]
+        lp: l
+      - kind: event
+        side: ns
+        name: Zacatecas
+        date: "1590"
+        text: The viceroy declared the roads to Zacatecas safe for the first time in forty years.
+        lonlat: [-102.574, 22.774]
+        lp: r
+    arrows:
+      - side: ns
+        label: 400 Tlaxcalan families
+        via: [[-98.24, 19.31], [-99.40, 19.90], [-100.39, 20.59], [-100.90, 21.50], [-101.10, 22.22]]

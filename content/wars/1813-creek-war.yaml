@@ -1,0 +1,230 @@
+id: creek-war
+name: Creek War
+start: "1813-07-22"
+end: "1814-08-09"
+tier: B
+summary: "A civil war within the Muscogee (Creek) Confederacy that became a war with the United States, in present-day Alabama and Georgia. The Red Sticks, a movement strongest in the Upper Creek towns and inspired in part by Tecumseh’s visit in 1811 and by Muscogee prophets, rejected the American ways and land cessions that the Creek National Council and the United States agent Benjamin Hawkins promoted. After the council executed Red Stick warriors who had killed settlers, fighting broke out among the Creeks in 1813. Mississippi militia attacked a Red Stick party returning with Spanish arms at Burnt Corn Creek in July, and on 30 August 1813 the Red Sticks took Fort Mims, killing some 250 to 500 militiamen, settlers, Creeks of the council side and enslaved people. Armies from Tennessee, Georgia and Mississippi Territory invaded the Creek country, with Cherokee, Choctaw and allied Creek warriors; Andrew Jackson’s Tennessee army destroyed Red Stick towns and on 27 March 1814 broke the Red Sticks at Horseshoe Bend, where more than 800 of them died. By the Treaty of Fort Jackson of 9 August 1814 Jackson made the Creek Nation, including his own Creek allies, cede some 21 to 23 million acres, about half of present-day Alabama and part of southern Georgia. Many Red Sticks fled to Spanish Florida and joined the Seminole."
+countries: [us]
+sides:
+  - id: rs
+    name: Red Sticks (Upper Creek towns opposed to the Creek National Council)
+    polities: [red-sticks]
+    ink: brown
+    moves: Red Stick moves
+    success: Red Stick success
+  - id: cnc
+    name: Creek National Council and allied Creeks (Big Warrior, William McIntosh and the Lower Towns)
+    polities: [muscogee]
+    ink: green
+    moves: Allied Creek moves
+    success: Allied Creek success
+  - id: us
+    name: United States (Tennessee, Georgia and Mississippi Territory militia and US regulars), with Cherokee and Choctaw allies
+    polities: [united-states, cherokee, choctaw]
+    ink: blue
+    moves: American and allied moves
+    success: American success
+notes:
+  - The war was part of the War of 1812 in the eyes of the Americans and the British, who armed Red Stick refugees in Florida in 1814, but for the Muscogee it began as a war among themselves over their future. The name Red Sticks comes from the red war clubs that symbolised war.
+  - "Numbers are estimates: about 1,600 Red Sticks are thought to have been killed in the war, and many Creek towns were destroyed or abandoned; losses of the Americans and their Native allies are put at about 600 killed. Hunger and refugee flight killed many more Creek people."
+  - The killing of the people at Fort Mims, many of them civilians, is usually called the Fort Mims massacre in American histories; the attacks of the American armies on Tallushatchee, Hillabee and Horseshoe Bend also killed women and children.
+sources:
+  - title: Creek War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Creek_War
+  - title: Red Sticks (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Red_Sticks
+  - title: Battle of Burnt Corn (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Burnt_Corn
+  - title: Fort Mims massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fort_Mims_massacre
+  - title: Battle of Tallushatchee (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tallushatchee
+  - title: Battle of Talladega (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Talladega
+  - title: Hillabee Massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hillabee_Massacre
+  - title: Battle of Holy Ground (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Holy_Ground
+  - title: Battle of Horseshoe Bend (1814) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Horseshoe_Bend_(1814)
+  - title: Horseshoe Bend National Military Park (National Park Service)
+    url: https://www.nps.gov/hobe/index.htm
+  - title: Treaty of Fort Jackson (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Fort_Jackson
+steps:
+  - title: Civil war among the Muscogee and Fort Mims
+    date: 1811 – August 1813
+    when: "1813-08-30"
+    borders: "1813-08-30"
+    countries: [us, es]
+    body:
+      - "The Muscogee Confederacy was a union of the Upper Towns on the Coosa and Tallapoosa rivers and the Lower Towns on the Chattahoochee. Under the United States agent Benjamin Hawkins, the Creek National Council had taken up the American “plan of civilisation”, with ranching, cotton and, among some wealthy families, the ownership of enslaved Black people; it had ceded land and allowed a Federal Road to be cut through the nation, and it punished Creeks who attacked settlers. Many Creeks resented all of this. Tecumseh’s speech at Tukabatchee in 1811 and the teaching of Muscogee prophets such as Josiah Francis (Hillis Hadjo) gave the resistance a religious force, and its followers took up the red war club as their sign."
+      - "In early 1813 a war party under Little Warrior, returning from the north, killed settler families near the Ohio. At Hawkins’s demand the council had Little Warrior and other warriors executed, and the Red Sticks rose against the council: in July 1813 they killed some of its leaders and besieged Tukabatchee, the council’s town, until allied Creeks relieved it. Peter McQueen led a party to Spanish Pensacola, whose governor gave them powder and lead. On 27 July Mississippi Territory militia attacked his pack train on its way home at Burnt Corn Creek; the Red Sticks counter-attacked and drove the militia off."
+      - "Settlers, Creeks of mixed ancestry who sided with the council, and their enslaved workers crowded into stockades north of Mobile. On 30 August 1813 some 750 to 1,000 Red Sticks under Peter McQueen and William Weatherford (Red Eagle) rushed the open gate of Fort Mims, the stockade around Samuel Mims’s house near the Alabama River, held by Mississippi militia under Major Daniel Beasley. In a battle that lasted most of the day they took the fort and killed most of the more than 500 people inside, women and children among them; estimates of the dead range from about 250, the number of bodies counted, to 500. They spared many of the enslaved people and took them away as captives, and lost some 50 to 100 of their own. The news brought the United States into the war."
+    facts:
+      - [Siege of Tukabatchee, "July 1813"]
+      - [Battle of Burnt Corn, "27 July 1813"]
+      - [Fall of Fort Mims, "30 August 1813"]
+      - [Killed at Fort Mims, "estimates from about 250 to 500"]
+    markers:
+      - kind: held
+        side: cnc
+        name: Tukabatchee
+        date: July 1813
+        text: The council town on the Tallapoosa, besieged by the Red Sticks and relieved by allied Creeks.
+        lonlat: [-85.880, 32.477]
+      - kind: battle
+        side: rs
+        name: Burnt Corn Creek
+        date: 27 July 1813
+        text: Militia attacked Peter McQueen’s pack train; the Red Sticks drove them off (location approximate).
+        lonlat: [-87.158, 31.253]
+        lp: l
+      - kind: battle
+        side: rs
+        name: Fort Mims
+        date: 30 August 1813
+        text: The Red Sticks stormed the stockade and killed most of the people inside.
+        lonlat: [-87.838, 31.181]
+        lp: b
+      - kind: event
+        name: Pensacola
+        date: July 1813
+        text: The Spanish governor supplied McQueen’s party with powder and lead.
+        lonlat: [-87.217, 30.413]
+    arrows:
+      - side: rs
+        label: McQueen
+        phase: 1
+        via: [[-86.000, 32.400], [-86.700, 31.700], [-87.217, 30.450]]
+      - side: rs
+        phase: 2
+        via: [[-87.150, 30.500], [-87.200, 31.000], [-87.165, 31.245]]
+      - side: rs
+        label: Weatherford and McQueen
+        phase: 3
+        via: [[-87.000, 32.100], [-87.500, 31.700], [-87.820, 31.220]]
+    areas:
+      - style: outline
+        side: cnc
+        label: Muscogee (Creek) Nation, 1813 (approximate)
+        polygon: [[-84.200, 34.000], [-85.400, 34.400], [-86.600, 34.100], [-87.400, 33.000], [-87.800, 31.900], [-87.600, 31.200], [-86.000, 31.000], [-84.900, 31.000], [-84.400, 31.500], [-83.900, 32.600]]
+  - title: Jackson’s campaign and Horseshoe Bend
+    date: October 1813 – March 1814
+    when: "1814-03-27"
+    borders: "1814-03-27"
+    countries: [us]
+    body:
+      - "Andrew Jackson marched south from Tennessee in October 1813 with some 2,500 men and built Fort Strother on the Coosa. On 3 November John Coffee’s cavalry surrounded Tallushatchee and killed 186 Red Stick men by Coffee’s count, and women and children died with them. On 9 November Jackson relieved the allied Creek town of Talladega, besieged by Red Sticks, and reported some 300 of them killed. On 18 November East Tennessee troops under James White, who did not know that the Hillabee towns had just asked Jackson for peace, attacked Hillabee, killing some 60 to 70 people and taking about 250 prisoners, most of them women and children; Gideon Morgan’s Cherokee regiment, marching with White, did much of the killing. The attack is known as the Hillabee massacre; the Hillabees fought on with the Red Sticks after that. Georgia militia under John Floyd and allied Creeks burned Autossee on 29 November, and Mississippi troops under Ferdinand Claiborne, with Choctaw warriors under Pushmataha, burned the Red Stick holy town of Econochaca, the Holy Ground, on 23 December."
+      - "Jackson’s army almost dissolved over the winter as enlistments ran out, and his raids at Emuckfaw and Enotachopco in January 1814 and Floyd’s battle at Calebee Creek were indecisive. Reinforced with new militia and the 39th US Infantry, Jackson marched on Tohopeka, the fortified Red Stick town in the Horseshoe Bend of the Tallapoosa, with about 2,700 soldiers and some 600 Cherokee and allied Creek warriors. On 27 March 1814 Coffee’s mounted men and the Native allies surrounded the bend across the river; Cherokee warriors swam the Tallapoosa, took the Red Sticks’ canoes and attacked from behind while Jackson’s infantry stormed the log breastwork. About 1,000 Red Sticks under Menawa defended the town, and more than 800 of them were killed, 557 bodies counted on the ground and many more shot in the river; Jackson’s army and its allies lost about 50 killed. Menawa, badly wounded, escaped."
+    facts:
+      - [Battle of Tallushatchee, "3 November 1813"]
+      - [Attack on Hillabee, "18 November 1813"]
+      - [Holy Ground burned, "23 December 1813"]
+      - [Battle of Horseshoe Bend, "27 March 1814"]
+      - [Red Sticks killed at Horseshoe Bend, "more than 800"]
+    markers:
+      - kind: event
+        side: us
+        name: Fort Strother
+        date: November 1813 – March 1814
+        text: Jackson’s base on the Coosa.
+        lonlat: [-86.048, 33.764]
+        lp: l
+      - kind: battle
+        side: us
+        name: Tallushatchee
+        date: 3 November 1813
+        text: Coffee’s cavalry destroyed the town, killing its men and many women and children.
+        lonlat: [-85.907, 33.812]
+      - kind: battle
+        side: us
+        name: Talladega
+        date: 9 November 1813
+        text: Jackson relieved the besieged allied Creek town.
+        lonlat: [-86.169, 33.451]
+        lp: l
+      - kind: toll
+        side: us
+        name: Hillabee
+        date: 18 November 1813
+        text: Tennessee troops and their Cherokee allies attacked the town after it had asked for peace, killing some 60 to 70 people and taking about 250 prisoners (location approximate).
+        lonlat: [-85.891, 33.080]
+      - kind: taken
+        side: us
+        name: Autossee
+        date: 29 November 1813
+        text: Burned by Georgia militia and allied Creeks under John Floyd.
+        lonlat: [-85.943, 32.440]
+      - kind: taken
+        side: us
+        name: Holy Ground (Econochaca)
+        date: 23 December 1813
+        text: The Red Stick holy town on the Alabama River, burned by Claiborne’s Mississippians and Pushmataha’s Choctaw.
+        lonlat: [-86.692, 32.353]
+        lp: b
+      - kind: battle
+        side: us
+        name: Horseshoe Bend
+        date: 27 March 1814
+        text: Jackson’s army and its Cherokee and Creek allies stormed Tohopeka; more than 800 Red Sticks were killed.
+        lonlat: [-85.735, 32.982]
+        lp: b
+    arrows:
+      - side: us
+        label: Jackson
+        phase: 1
+        via: [[-86.570, 35.150], [-86.550, 34.600], [-86.300, 34.300], [-86.060, 33.790]]
+      - side: us
+        label: Floyd
+        phase: 2
+        via: [[-85.000, 32.330], [-85.500, 32.380], [-85.930, 32.440]]
+      - side: us
+        label: Claiborne
+        phase: 2
+        via: [[-87.550, 31.550], [-87.100, 31.950], [-86.705, 32.340]]
+      - side: us
+        phase: 3
+        via: [[-86.050, 33.750], [-86.250, 33.350], [-86.300, 33.080], [-85.950, 33.000], [-85.760, 32.985]]
+  - title: The Treaty of Fort Jackson
+    date: April – August 1814
+    when: "1814-08-09"
+    borders: "1814-08-09"
+    countries: [us, es]
+    link: { href: "#/war/first-seminole-war", text: First Seminole War }
+    body:
+      - "After Horseshoe Bend the Red Stick resistance collapsed. Jackson built Fort Jackson on the site of the old French Fort Toulouse, where the Coosa and Tallapoosa meet, and in April William Weatherford walked into his camp and surrendered; Jackson let him go. Many Red Sticks, among them Peter McQueen and Josiah Francis, fled with their families to Spanish Florida and joined the Seminole, and in 1814 British officers armed them at Pensacola and on the Apalachicola."
+      - "On 9 August 1814 Jackson dictated the Treaty of Fort Jackson, not to the defeated Red Sticks, most of whom were gone, but to the chiefs of the Creek National Council, his own allies. The Creek Nation had to cede about 21 to 23 million acres, roughly half of present-day Alabama and a large part of southern Georgia, including the lands of Creeks who had fought for the United States; Big Warrior and others protested in vain, and the Cherokee also lost land they claimed. The Treaty of Ghent’s promise to restore the Native nations’ lands of 1811 was never applied to the cession. Settlers and cotton planters with enslaved workers poured into the new lands, Alabama became a state in 1819, and Jackson’s fame carried him to the presidency. The Red Sticks in Florida fought on in the Seminole wars, and the remaining Creeks were forced west to Indian Territory in the 1830s."
+    facts:
+      - [Treaty of Fort Jackson, "9 August 1814"]
+      - [Land ceded, "about 21–23 million acres"]
+    markers:
+      - kind: treaty
+        side: us
+        name: Fort Jackson
+        date: 9 August 1814
+        text: Weatherford surrendered here in April, and the cession was dictated to the Creek chiefs here in August.
+        lonlat: [-86.252, 32.508]
+      - kind: event
+        side: rs
+        name: Pensacola
+        date: 1814
+        text: Red Stick refugees gathered here and were armed by British officers.
+        lonlat: [-87.217, 30.413]
+      - kind: event
+        side: rs
+        name: Prospect Bluff
+        date: 1814–1815
+        text: A British post on the Apalachicola where Red Sticks and people who had escaped slavery were armed.
+        lonlat: [-84.990, 29.950]
+    arrows:
+      - side: rs
+        label: Red Stick refugees
+        via: [[-86.000, 32.700], [-86.400, 31.600], [-87.000, 30.700]]
+      - side: rs
+        via: [[-85.600, 32.500], [-85.200, 31.300], [-85.000, 30.100]]
+    areas:
+      - style: lost
+        side: cnc
+        label: Land ceded by the Treaty of Fort Jackson (approximate)
+        polygon: [[-86.250, 32.510], [-86.900, 33.500], [-87.700, 33.600], [-88.300, 32.800], [-88.300, 31.500], [-87.600, 31.000], [-85.000, 31.000], [-82.200, 30.600], [-82.000, 31.300], [-82.400, 31.900], [-83.800, 31.700], [-85.050, 31.650]]

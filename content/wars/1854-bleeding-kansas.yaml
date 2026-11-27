@@ -1,0 +1,234 @@
+id: bleeding-kansas
+name: Bleeding Kansas
+start: "1854-05-30"
+end: "1861-01-29"
+tier: B
+summary: "The armed struggle over whether Kansas Territory would enter the Union as a slave state or a free state. The Kansas–Nebraska Act of 1854 repealed the Missouri Compromise line and left the question to the territory’s settlers (“popular sovereignty”), and both sides rushed in. Thousands of Missourians crossed the border to vote in the territorial elections of 1854 and 1855, and the proslavery legislature they elected adopted Missouri’s slave code; antislavery settlers, many sent by the New England Emigrant Aid Company, set up a rival Free-State government at Topeka. Rival governments, constitutions and militias led to raids, ambushes and killings, above all in 1856: the sack of Lawrence, John Brown’s killing of five proslavery men at Pottawatomie Creek, and the fights at Black Jack and Osawatomie. Federal troops and a new governor restored a fragile peace in late 1856, Kansans rejected the proslavery Lecompton Constitution in 1858, and Kansas was admitted as a free state on 29 January 1861. About 56 people were killed in political violence, and the struggle split the Democratic Party and helped bring on the Civil War."
+countries: [us]
+sides:
+  - id: fs
+    name: Free-State forces and antislavery settlers
+    polities: [free-state-forces]
+    ink: green
+    moves: Free-State moves
+    success: Free-State success
+  - id: ps
+    name: Proslavery forces from Kansas and Missouri (the “Border Ruffians”)
+    polities: [proslavery-forces]
+    ink: red
+    moves: Proslavery moves
+    success: Proslavery success
+  - id: us
+    name: United States (territorial governors and federal troops)
+    polities: [united-states]
+    ink: navy
+    moves: Federal moves
+    success: Federal success
+notes:
+  - "“Border Ruffians” was the Free-State name for the proslavery Missourians, which many of them adopted with pride; Free-State fighters were called “Jayhawkers” by their enemies. The territorial legislature elected in 1855 was called the “Bogus Legislature” by its opponents."
+  - "The count of about 56 political killings between 1854 and 1861 comes from Dale Watts’s study of 1995, used by the Kansas Historical Society; contemporary claims, and some later writers, put the number near 200."
+  - Most Free-Staters wanted Kansas for free white farmers rather than an end to slavery everywhere. The Topeka movement voted to bar free Black people from the state, while abolitionists such as John Brown and James Montgomery fought slavery itself.
+sources:
+  - title: Bleeding Kansas (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bleeding_Kansas
+  - title: Bleeding Kansas (Kansas Historical Society, Kansapedia)
+    url: https://www.kansashistory.gov/kansapedia/bleeding-kansas/15145
+  - title: Bleeding Kansas (Britannica)
+    url: https://www.britannica.com/event/Bleeding-Kansas-United-States-history
+  - title: Bleeding Kansas (National Park Service, Fort Scott)
+    url: https://www.nps.gov/fosc/learn/historyculture/bleeding.htm
+  - title: Kansas–Nebraska Act (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kansas%E2%80%93Nebraska_Act
+  - title: Topeka Constitution (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Topeka_Constitution
+  - title: Lecompton Constitution (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Lecompton_Constitution
+  - title: Pottawatomie massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pottawatomie_massacre
+  - title: Marais des Cygnes Massacre Site (Kansas Historical Society)
+    url: https://www.kansashistory.gov/kansapedia/marais-des-cygnes-massacre-site/11870
+steps:
+  - title: Popular sovereignty and two governments
+    date: May 1854 – December 1855
+    when: "1854-05-30"
+    borders: "1855-03-30"
+    countries: [us]
+    body:
+      - "The Kansas–Nebraska Act, written by Senator Stephen A. Douglas and signed by President Franklin Pierce on 30 May 1854, opened Kansas and Nebraska territories to settlement and repealed the Missouri Compromise of 1820, which had banned slavery north of 36°30′. Whether Kansas allowed slavery would now be decided by its settlers. The land was not empty: it had been set aside in the 1820s and 1830s for the Shawnee, Lenape (Delaware), Potawatomi, Kickapoo and other nations removed from the East, and the Kaw (Kansa) and Osage lived there too. Treaties of 1854 and after took most of their reserves for the newcomers."
+      - The territory became a contest between North and South. In the North the New England Emigrant Aid Company sent settlers who founded Lawrence in 1854 and Topeka soon after; across the border, Missourians urged on by Senator David Rice Atchison founded proslavery towns such as Atchison and Leavenworth and vowed that Kansas would be a slave state. Slaveholders in western Missouri, along the Missouri River, feared being surrounded by free states on three sides.
+      - "On 30 March 1855, when a territorial legislature was elected, several thousand armed Missourians crossed the border to vote; a congressional committee later found that most of the ballots were cast illegally and that the actual settlers would have elected a Free-State legislature. Governor Andrew Reeder let most of the results stand. The new legislature met at Pawnee and then at the Shawnee Mission, expelled its few Free-State members, adopted Missouri’s slave code and made it a crime even to deny the right to hold slaves. The Free-Staters called it the “Bogus Legislature” and set up a government of their own: a convention at Topeka wrote a constitution banning slavery, approved on 15 December 1855, and in a separate vote Free-Staters also chose to bar free Black people from the state."
+      - In November 1855 a proslavery settler killed a Free-Stater, Charles Dow, near Lawrence. When Free-Staters freed a man arrested by the proslavery sheriff Samuel Jones, between about 700 and 1,500 men, most of them Missourians, gathered on the Wakarusa River to attack Lawrence, which fortified itself. In this “Wakarusa War” one Free-Stater, Thomas Barber, was killed before Governor Wilson Shannon arranged a truce in December.
+    facts:
+      - [Kansas–Nebraska Act, "30 May 1854"]
+      - [Territorial legislature elected, "30 March 1855"]
+      - [Topeka Constitution approved, "15 December 1855, 1,731 to 46"]
+    markers:
+      - kind: event
+        side: fs
+        name: Lawrence
+        date: "1854"
+        text: Founded by settlers of the New England Emigrant Aid Company, the centre of the Free-State movement. Besieged in the Wakarusa War of November–December 1855.
+        lonlat: [-95.235, 38.972]
+        lp: b
+      - kind: capital
+        side: ps
+        name: Lecompton
+        date: "1855"
+        text: Proslavery town and territorial capital from 1855, seat of the territorial government and later of the Lecompton constitutional convention.
+        lonlat: [-95.394, 39.043]
+        lp: t
+      - kind: capital
+        side: fs
+        name: Topeka
+        date: 1855–1856
+        text: The Free-State convention met here in October–November 1855 and wrote the Topeka Constitution; Charles Robinson was elected governor under it in January 1856.
+        lonlat: [-95.678, 39.048]
+        lp: l
+      - kind: event
+        side: ps
+        name: Shawnee Mission
+        date: July – August 1855
+        text: The territorial legislature moved here, near the Missouri line, from Pawnee, and adopted Missouri’s slave code.
+        lonlat: [-94.630, 39.025]
+      - kind: event
+        side: ps
+        name: Leavenworth
+        date: "1854"
+        text: Founded by proslavery Missourians beside Fort Leavenworth, the army post on the Missouri River.
+        lonlat: [-94.922, 39.311]
+      - kind: event
+        side: ps
+        name: Atchison
+        date: "1854"
+        text: Proslavery town named after Senator David Rice Atchison, home of the newspaper Squatter Sovereign.
+        lonlat: [-95.122, 39.563]
+    arrows:
+      - side: ps
+        label: Missouri voters, March 1855
+        via: [[-94.420, 39.090], [-94.700, 39.000], [-95.000, 38.970], [-95.200, 38.970]]
+      - side: ps
+        via: [[-94.780, 39.360], [-94.900, 39.330]]
+  - title: The sack of Lawrence and Pottawatomie
+    date: May – September 1856
+    when: "1856-05-21"
+    borders: "1856-05-21"
+    countries: [us]
+    body:
+      - In the spring of 1856 a grand jury at Lecompton indicted the Free-State leaders for treason and named the Lawrence newspapers and the fortified Free State Hotel as nuisances. On 21 May Sheriff Jones entered Lawrence with several hundred proslavery men, many of them Missourians; they wrecked the presses of the Herald of Freedom and the Kansas Free State, shelled and burned the hotel and burned Charles Robinson’s house. The only death was a proslavery man killed by falling masonry. In Washington the next day, Representative Preston Brooks of South Carolina beat Senator Charles Sumner unconscious with a cane at his desk in the Senate for a speech on “The Crime Against Kansas”.
+      - On the night of 24–25 May the abolitionist John Brown, four of his sons and three other men took five proslavery settlers, James Doyle and two of his sons, Allen Wilkinson and William Sherman, from their cabins on Pottawatomie Creek and killed them with broadswords. The killings set off a summer of guerrilla war. At Black Jack on 2 June Brown’s company captured the Missouri militia leader Henry Clay Pate and his men; Free-State bands attacked the proslavery strongholds of Franklin, Fort Saunders and Fort Titus in August, and James H. Lane brought a Free-State “Army of the North” overland through Iowa and Nebraska because Missourians had closed the Missouri River to Northern emigrants.
+      - On 30 August about 250–400 proslavery men under John W. Reid attacked Osawatomie. They killed Brown’s son Frederick on the road, drove off Brown’s small force after a fight at the river and burned the town. On 4 July federal troops under Colonel Edwin V. Sumner had already dispersed the Free-State legislature at Topeka on the orders of the acting governor. The new governor, John W. Geary, arrived in September, used federal troops against armed bands of both sides and sent the Missourians home; by the end of 1856 the worst of the fighting was over.
+    facts:
+      - [Sack of Lawrence, "21 May 1856"]
+      - [Pottawatomie killings, "24–25 May 1856, five men killed"]
+      - [Black Jack, "2 June 1856, Free-State victory"]
+      - [Osawatomie, "30 August 1856, proslavery victory"]
+    markers:
+      - kind: taken
+        side: ps
+        name: Lawrence
+        date: 21 May 1856
+        text: Sheriff Samuel Jones’s posse destroyed the two Free-State newspapers and the Free State Hotel and plundered the town.
+        lonlat: [-95.235, 38.972]
+      - kind: toll
+        side: fs
+        name: Pottawatomie Creek
+        date: 24–25 May 1856
+        text: John Brown’s party killed five proslavery settlers, James, William and Drury Doyle, Allen Wilkinson and William Sherman.
+        lonlat: [-95.109, 38.437]
+        lp: l
+      - kind: battle
+        side: fs
+        name: Black Jack
+        date: 2 June 1856
+        text: Brown and about thirty Free-State men forced Henry Clay Pate’s Missourians to surrender. It is sometimes called the first battle of the Civil War.
+        lonlat: [-95.130, 38.770]
+        lp: l
+      - kind: taken
+        side: ps
+        name: Osawatomie
+        date: 30 August 1856
+        text: John W. Reid’s proslavery force drove off John Brown’s defenders, killed Frederick Brown and burned the town.
+        lonlat: [-94.950, 38.497]
+      - kind: event
+        side: us
+        name: Topeka
+        date: 4 July 1856
+        text: Federal dragoons under Colonel Edwin V. Sumner dispersed the Free-State legislature.
+        lonlat: [-95.678, 39.048]
+        lp: l
+      - kind: event
+        side: us
+        name: Lecompton
+        date: September 1856
+        text: Governor John W. Geary took office here and used federal troops to disarm the bands of both sides.
+        lonlat: [-95.394, 39.043]
+        lp: t
+    arrows:
+      - side: ps
+        label: Jones’s posse
+        via: [[-95.394, 39.043], [-95.320, 39.010], [-95.250, 38.985]]
+      - side: ps
+        label: Reid
+        via: [[-94.420, 38.700], [-94.650, 38.600], [-94.930, 38.510]]
+      - side: fs
+        label: Lane’s Army of the North
+        via: [[-95.860, 40.680], [-95.780, 40.000], [-95.740, 39.470], [-95.690, 39.080]]
+  - title: Lecompton, Marais des Cygnes and statehood
+    date: 1857 – January 1861
+    when: "1857-11-07"
+    borders: "1861-01-29"
+    countries: [us]
+    body:
+      - "In 1857 a proslavery convention at Lecompton, elected after a Free-State boycott, wrote a constitution that protected slavery. It was put to the voters on 21 December 1857 in a form that allowed them to reject only further imports of enslaved people, not slavery already in Kansas, and Free-Staters stayed away. By then they had won the territorial legislature in October 1857, after Governor Robert J. Walker threw out thousands of fraudulent proslavery votes, and the new legislature called its own vote on 4 January 1858, in which the constitution was rejected by about 10,000 votes to fewer than 200. President James Buchanan still asked Congress to admit Kansas under it. Douglas broke with the president, the Democratic Party split, and Kansans rejected the constitution once more on 2 August 1858, by 11,812 to 1,926."
+      - Violence went on along the Missouri border. On 19 May 1858 Charles Hamilton and about thirty proslavery men seized eleven Free-State men near Trading Post, lined them up in a ravine on the Marais des Cygnes and shot them; five were killed and five wounded. In south-eastern Kansas James Montgomery’s Free-State “Jayhawkers” drove out proslavery settlers and raided around Fort Scott. In December 1858 John Brown led a raid into Missouri that freed eleven enslaved people and killed a slaveholder, David Cruise, and then took the freed people more than 1,600 km to Detroit and across to Canada.
+      - In July 1859 a convention at Wyandotte wrote a constitution that banned slavery, and voters approved it in October by 10,421 to 5,530. The Senate, where Southern members could block it, did not act until senators from the seceding states had left. Kansas was admitted as a free state on 29 January 1861, with its western boundary drawn at about 102° W; the land beyond, to the Rockies, became Colorado Territory a month later. Ten weeks after Kansas’s admission the Civil War began, and the border war between Kansas and Missouri merged into it.
+    facts:
+      - [Lecompton Constitution rejected, "4 January 1858 and 2 August 1858"]
+      - [Marais des Cygnes, "19 May 1858, five killed and five wounded"]
+      - [Wyandotte Constitution approved, "4 October 1859"]
+      - [Kansas admitted as a free state, "29 January 1861"]
+    markers:
+      - kind: event
+        side: ps
+        name: Lecompton
+        date: November 1857
+        text: The proslavery constitutional convention met here. Its constitution was rejected by Kansas voters in January and August 1858.
+        lonlat: [-95.394, 39.043]
+        lp: l
+      - kind: toll
+        side: ps
+        name: Marais des Cygnes
+        date: 19 May 1858
+        text: Charles Hamilton’s band shot eleven Free-State men in a ravine near Trading Post; five died. One survived unhurt by pretending to be dead.
+        lonlat: [-94.620, 38.281]
+      - kind: event
+        side: fs
+        name: Fort Scott
+        date: 1858
+        text: Proslavery town and former army post, the target of raids by James Montgomery’s Free-State men.
+        lonlat: [-94.708, 37.840]
+      - kind: event
+        side: fs
+        name: Wyandotte
+        date: July 1859
+        text: The convention that met here wrote the free-state constitution under which Kansas was admitted.
+        lonlat: [-94.627, 39.114]
+      - kind: capital
+        side: us
+        name: Topeka
+        date: 29 January 1861
+        text: State capital of Kansas from its admission as a free state.
+        lonlat: [-95.678, 39.048]
+        lp: l
+    arrows:
+      - side: ps
+        label: Hamilton
+        via: [[-94.400, 38.350], [-94.520, 38.300], [-94.610, 38.285]]
+      - side: fs
+        label: Brown’s raid into Missouri
+        via: [[-94.800, 38.150], [-94.620, 38.020], [-94.450, 37.950]]
+    areas:
+      - style: outline
+        side: us
+        label: Kansas as admitted, 29 January 1861
+        atoms: [US-KS]

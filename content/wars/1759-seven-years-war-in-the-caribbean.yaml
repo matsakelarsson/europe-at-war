@@ -1,0 +1,252 @@
+id: seven-years-war-in-the-caribbean
+name: Seven Years’ War in the Caribbean
+start: "1759-01"
+end: "1763-02-10"
+tier: B
+summary: "The British conquest of France’s and Spain’s most valuable Caribbean islands during the Seven Years’ War. In January 1759 an expedition under Major-General Peregrine Hopson and Commodore John Moore was beaten off at Martinique and turned on Guadeloupe; after months of fighting in which disease killed far more men than the French, Colonel John Barrington received the island’s capitulation on 1–2 May 1759, days before a French relief squadron arrived. In June 1761 a force from Guadeloupe took Dominica, the “neutral island” long left to the Kalinago. Early in 1762 Major-General Robert Monckton and Rear-Admiral George Rodney captured Martinique, after which Saint Lucia, Grenada and Saint Vincent gave up without a fight. Spain had entered the war in January 1762, and in June a great fleet under Admiral George Pocock landed an army under the Earl of Albemarle near Havana. The fortress of El Morro fell on 30 July after a siege in which its commander Luis Vicente de Velasco was mortally wounded, and Havana surrendered on 13 August 1762 with nine Spanish ships of the line; yellow fever and malaria killed some 4,700 British soldiers and sailors by October. In the Treaty of Paris of 10 February 1763 Britain gave back Guadeloupe, Martinique, Saint Lucia and Havana, taking Florida from Spain in exchange for Havana, and kept Dominica, Saint Vincent, Grenada and Tobago."
+countries: [fr, dm, lc, gd, vc, cu, gb, es]
+sides:
+  - id: gb
+    name: Great Britain, with troops from the British colonies in the Caribbean and North America
+    polities: [united-kingdom, british-west-indies]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: fr
+    name: France (the French Antilles)
+    polities: [france, french-west-indies]
+    ink: blue
+    moves: French moves
+    success: French success
+  - id: es
+    name: Spain (from January 1762)
+    polities: [spain, cuba]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+notes:
+  - "The war in Europe, India and North America is told in the Seven Years’ War; the British conquest of Canada is told in the French and Indian War."
+  - "The islands taken in the war are shown as British-occupied areas in the steps; the base map changes hands only with the Treaty of Paris of 1763."
+  - "Enslaved people made up most of the population of all these islands. Thousands were forced to labour on fortifications on both sides, and at Havana enslaved and free Black militiamen fought in the defence; the Spanish Crown later freed some of the enslaved men who had fought."
+sources:
+  - title: Invasion of Guadeloupe (1759) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Invasion_of_Guadeloupe_(1759)
+  - title: Invasion of Martinique (1759) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Invasion_of_Martinique_(1759)
+  - title: Invasion of Dominica (1761) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Invasion_of_Dominica_(1761)
+  - title: Invasion of Martinique (1762) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Invasion_of_Martinique_(1762)
+  - title: Siege of Havana (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Havana
+  - title: British occupation of Havana (Wikipedia)
+    url: https://en.wikipedia.org/wiki/British_occupation_of_Havana
+  - title: Elena A. Schneider, The Occupation of Havana. War, Trade, and Slavery in the Atlantic World (UNC Press)
+    url: https://uncpress.org/book/9781469672526/the-occupation-of-havana/
+steps:
+  - title: Martinique repulsed, Guadeloupe taken
+    date: "January – May 1759"
+    when: "1759"
+    borders: "1759-05-02"
+    countries: [fr, gb]
+    body:
+      - "William Pitt’s ministry sent some 6,800 soldiers to the West Indies to seize a French sugar island that could be traded at the peace. Hopson and Moore gathered the force at Barbados and in mid-January 1759 landed near Fort-Royal on Martinique, but after a day’s fighting in difficult country Hopson re-embarked his men, judged the defences of Saint-Pierre too strong and sailed for Guadeloupe."
+      - "On 22–23 January the fleet bombarded Basse-Terre, the capital, until it was in ruins, and on the 24th the troops landed. The French and their militia withdrew to the mountains, and while the British stood still fever and dysentery spread: by February a quarter of the army was sick and Hopson himself died on 27 February. Moore’s ships had meanwhile battered Fort Louis on Grande-Terre into surrender on 14 February. Barrington, who succeeded Hopson, moved most of the army there and used the fleet to land raiding parties along the coasts, burning plantations until the planters pressed Governor Nadau du Treil to give in. The island capitulated on 1–2 May 1759, on generous terms that let the planters sell their sugar to Britain; a French squadron under Admiral Maximin de Bompart, which had reached Martinique, arrived off Guadeloupe a few days later and turned back. By the end of the year disease had killed some 800 of the British garrison."
+    facts:
+      - [British expedition, "about 6,800 soldiers"]
+      - [Basse-Terre bombarded, "22–23 January 1759"]
+      - [Capitulation of Guadeloupe, "1–2 May 1759"]
+    markers:
+      - kind: battle
+        side: fr
+        name: Fort-Royal
+        date: "January 1759"
+        text: The British landed near the fort, fought for a day and re-embarked.
+        lonlat: [-61.070, 14.600]
+        lp: r
+      - kind: taken
+        side: gb
+        name: Basse-Terre
+        date: "22–24 January 1759"
+        text: The capital of Guadeloupe, reduced to ruins by bombardment before the troops landed.
+        lonlat: [-61.730, 15.996]
+        lp: l
+      - kind: taken
+        side: gb
+        name: Fort Louis
+        date: "14 February 1759"
+        text: Battered into surrender by Moore’s ships; Barrington’s base for the raids that forced the capitulation.
+        lonlat: [-61.500, 16.225]
+        lp: r
+      - kind: event
+        side: gb
+        name: Carlisle Bay, Barbados
+        date: "January 1759"
+        text: The expedition gathered here.
+        lonlat: [-59.620, 13.090]
+        lp: b
+    arrows:
+      - side: gb
+        label: Hopson and Moore
+        phase: 1
+        via: [[-59.65, 13.15], [-60.40, 14.10], [-61.05, 14.55]]
+      - side: gb
+        phase: 2
+        via: [[-61.15, 14.65], [-61.40, 15.20], [-61.78, 15.95]]
+      - side: gb
+        label: Barrington
+        phase: 3
+        via: [[-61.76, 16.02], [-61.85, 16.30], [-61.65, 16.40], [-61.50, 16.25]]
+    areas:
+      - style: occupied
+        side: gb
+        label: Guadeloupe, occupied by Britain, 1759–1763
+        atoms: [FR-GP]
+  - title: Dominica, Martinique and the Windward Islands
+    date: "June 1761 – March 1762"
+    when: "1762-02"
+    borders: "1762-03-05"
+    countries: [fr, dm, lc, gd, vc, gb]
+    body:
+      - "Dominica and Saint Vincent had been declared neutral by France and Britain in 1748 and left to their Kalinago and Garifuna inhabitants, but French colonists had moved onto both. On 6 June 1761 troops under Lord Rollo, brought from North America and Guadeloupe by Commodore Sir James Douglas, landed at Roseau on Dominica and stormed the French positions above the town; the inhabitants swore allegiance the next day."
+      - "After the fall of Canada more troops were free, and Monckton sailed from Barbados on 5 January 1762 with some 8,000 soldiers in Rodney’s fleet. They landed on Martinique on 16 January at Case Navire, north of Fort-Royal, and fought their way over the steep ridges that guarded the town, storming the Morne Tortenson on 24 January and the Morne Grenier on 27 January, where the French militia were routed. Fort-Royal surrendered on 4 February, and on 12 February Governor Louis-Charles Le Vassor de La Touche capitulated for the whole island at Saint-Pierre. Saint Lucia gave up on 26 February, Grenada on 4 March and Saint Vincent a few days later, leaving France with no colony in the Windward Islands."
+    facts:
+      - [Dominica taken, "6–7 June 1761"]
+      - [British landing on Martinique, "16 January 1762"]
+      - [Martinique capitulates, "12 February 1762"]
+    markers:
+      - kind: taken
+        side: gb
+        name: Roseau
+        date: "6 June 1761"
+        text: Rollo’s troops stormed the French positions above the town.
+        lonlat: [-61.390, 15.300]
+        lp: l
+      - kind: siege
+        side: gb
+        name: Fort-Royal
+        date: "January – February 1762"
+        text: Monckton’s army landed at Case Navire, stormed the Morne Tortenson and Morne Grenier above the town and forced the fort to surrender on 4 February.
+        lonlat: [-61.070, 14.600]
+        lp: r
+      - kind: treaty
+        side: gb
+        name: Saint-Pierre
+        date: "12 February 1762"
+        text: Governor de La Touche capitulated for the whole island.
+        lonlat: [-61.180, 14.740]
+        lp: l
+      - kind: taken
+        side: gb
+        name: Castries (Saint Lucia)
+        date: "26 February 1762"
+        text: Saint Lucia surrendered without resistance.
+        lonlat: [-60.990, 14.010]
+        lp: r
+      - kind: taken
+        side: gb
+        name: Kingstown (Saint Vincent)
+        date: "March 1762"
+        text: Saint Vincent, a neutral island with French colonists, gave up without a fight.
+        lonlat: [-61.227, 13.155]
+        lp: l
+      - kind: taken
+        side: gb
+        name: St George’s (Grenada)
+        date: "4 March 1762"
+        text: Grenada surrendered without a fight.
+        lonlat: [-61.750, 12.050]
+        lp: l
+    arrows:
+      - side: gb
+        label: Rollo and Douglas, 1761
+        phase: 1
+        via: [[-61.55, 15.95], [-61.55, 15.60], [-61.42, 15.32]]
+      - side: gb
+        label: Monckton and Rodney, 1762
+        phase: 2
+        via: [[-59.65, 13.15], [-60.30, 14.00], [-60.95, 14.50], [-61.09, 14.62]]
+      - side: gb
+        phase: 3
+        via: [[-61.05, 14.55], [-61.00, 14.20], [-61.10, 13.60], [-61.60, 12.20]]
+    areas:
+      - style: occupied
+        side: gb
+        label: Guadeloupe, occupied by Britain, 1759–1763
+        atoms: [FR-GP]
+      - style: occupied
+        side: gb
+        label: Martinique, occupied by Britain, 1762–1763
+        atoms: [FR-MQ]
+      - style: occupied
+        side: gb
+        label: Dominica, Saint Lucia, Saint Vincent and Grenada, taken by Britain, 1761–1762
+        atoms: [DM-02, DM-03, DM-04, DM-05, DM-06, DM-07, DM-08, DM-09, DM-10, DM-11, LC-01, LC-02, LC-03, LC-04, LC-05, LC-06, LC-07, LC-08, LC-09, LC-10, LC-11, VC-01, VC-02, VC-03, VC-04, VC-05, VC-06, GD-01, GD-02, GD-03, GD-04, GD-05, GD-06, GD-10]
+  - title: The siege of Havana
+    date: "June – August 1762"
+    when: "1762-07"
+    borders: "1762-08-13"
+    countries: [cu, gb, es]
+    view: {center: [-82.33, 23.13], size: [60, 50]}
+    body:
+      - "Britain declared war on Spain on 4 January 1762 and struck at Havana, the strongest fortress and naval base in Spanish America. Pocock’s fleet, with Albemarle’s army of nearly 13,000 soldiers drawn from Britain and the troops that had taken Martinique, and 600 enslaved men hired from Jamaica as labourers, took the dangerous Old Bahama Channel along Cuba’s north coast and appeared off Havana on 6 June. Captain General Juan de Prado had some 2,400 regulars, a fleet of twelve ships of the line, sailors and militia, among them Black and mulatto battalions; he blocked the harbour with a boom and three scuttled warships and settled on delay, waiting for the rainy season and fever to wear down the besiegers."
+      - "The British landed at Cojímar east of the city on 7 June and saw that the heights of La Cabaña, overlooking the Morro castle, had been left unfortified. They took them and from 22 June bombarded the Morro, while militia under the Guanabacoa alderman Pepe Antonio harassed their camps. The Morro’s commander, the naval officer Luis Vicente de Velasco, repaired the walls each night and held out for six weeks; a naval attack on 1 July was beaten off, and Spanish sorties failed. British sappers, helped by the enslaved labourers from Jamaica, mined under a bastion, and on 30 July the mine was fired and the fort stormed; Velasco was mortally wounded. From the Morro and La Cabaña British guns bombarded Havana on 11 August, and Prado surrendered on 13 August 1762, giving up the city, nine ships of the line and a great treasure."
+      - "The victory cost Britain dearly: 2,764 men were killed, wounded or missing in action, and 4,708 had died of disease by 18 October. During the eleven-month occupation British merchants brought in about 3,200 enslaved Africans, and Havana opened to British trade. In the Treaty of Paris Britain returned Havana in exchange for Florida, and France compensated Spain with western Louisiana; in July 1763 the Count of Ricla, with Alejandro O’Reilly as his second-in-command, took over the city for Spain. Spain rebuilt Havana’s defences, starting with the great fortress of La Cabaña, and armed a Cuban militia."
+    facts:
+      - [British army at Havana, "about 13,000 soldiers"]
+      - [El Morro stormed, "30 July 1762"]
+      - [Havana surrenders, "13 August 1762"]
+      - [British dead of disease, "4,708 by 18 October 1762"]
+    markers:
+      - kind: siege
+        side: gb
+        name: El Morro
+        date: "22 June – 30 July 1762"
+        text: Bombarded from La Cabaña for six weeks and stormed after a mine was fired; its commander Velasco was mortally wounded.
+        lonlat: [-82.356, 23.150]
+        lp: t
+      - kind: taken
+        side: gb
+        name: Havana
+        date: "13 August 1762"
+        text: Captain General Juan de Prado surrendered the city and nine ships of the line after a day’s bombardment; Britain held it until July 1763.
+        lonlat: [-82.366, 23.133]
+        lp: l
+      - kind: event
+        side: gb
+        name: Cojímar
+        date: "7 June 1762"
+        text: The British army landed here, east of Havana.
+        lonlat: [-82.297, 23.165]
+        lp: t
+      - kind: battle
+        side: es
+        name: Guanabacoa
+        date: "June 1762"
+        text: Militia under the town’s alderman José Antonio Gómez (Pepe Antonio) attacked British foraging parties before the town was taken.
+        lonlat: [-82.300, 23.122]
+        lp: b
+      - kind: event
+        side: gb
+        name: La Chorrera
+        date: "June 1762"
+        text: A British detachment landed at this tower west of the city to close the siege.
+        lonlat: [-82.408, 23.142]
+        lp: l
+    arrows:
+      - side: gb
+        label: Pocock’s fleet
+        phase: 1
+        via: [[-82.05, 23.24], [-82.18, 23.21], [-82.29, 23.18]]
+      - side: gb
+        label: Albemarle
+        phase: 2
+        via: [[-82.30, 23.16], [-82.32, 23.155], [-82.345, 23.150]]
+      - side: gb
+        phase: 3
+        via: [[-82.42, 23.16], [-82.41, 23.145], [-82.38, 23.137]]
+    areas:
+      - style: occupied
+        side: gb
+        label: Havana and its surroundings, occupied by Britain, August 1762 – July 1763 (approximate)
+        polygon: [[-82.46, 23.15], [-82.30, 23.18], [-82.20, 23.17], [-82.20, 23.08], [-82.32, 23.04], [-82.46, 23.07]]

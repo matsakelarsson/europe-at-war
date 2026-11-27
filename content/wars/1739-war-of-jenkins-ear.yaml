@@ -1,0 +1,198 @@
+id: war-of-jenkins-ear
+name: War of Jenkins’ Ear
+start: "1739-10"
+end: "1748-10-18"
+tier: B
+summary: "A war between Great Britain and Spain in the Caribbean and on the border between Georgia and Spanish Florida. British merchants resented the Spanish coast guards who searched their ships for contraband, and the opposition to Robert Walpole made a cause of Captain Robert Jenkins, whose ear a Spanish officer had cut off in 1731; Spain and Britain also disputed the land between Georgia, founded in 1733, and Florida. Britain declared war in October 1739. Admiral Edward Vernon took Porto Bello on the Isthmus of Panama in November 1739, but the great expedition against Cartagena de Indias in 1741 was beaten by Blas de Lezo’s defence and by yellow fever, and an attempt on Santiago de Cuba also failed. On the mainland James Oglethorpe of Georgia besieged Saint Augustine in 1740 and was defeated at Fort Mose by Spanish troops and the free Black militia of Francisco Menéndez; in 1742 a Spanish invasion of Georgia was turned back on St. Simons Island at Gully Hole Creek and Bloody Marsh. From 1742 the war merged into the War of the Austrian Succession, and the Treaty of Aix-la-Chapelle in 1748 restored the state before the war."
+countries: [gb, es, us, cu, jm, pa, co]
+sides:
+  - id: brit
+    name: Great Britain, with Georgia, South Carolina and the other colonies, and Muscogee, Chickasaw, Yamacraw and other Native allies
+    polities: [united-kingdom, british-america, british-west-indies, muscogee]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: es
+    name: Spain, with Cuba, Florida and New Granada, and the free Black militia of Fort Mose
+    polities: [spain, cuba, new-spain]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+notes:
+  - The name was given by Thomas Carlyle in 1858; the Spanish call it the Guerra del Asiento. Whether Jenkins really showed his ear, kept in a jar, to the House of Commons in 1738 is uncertain.
+  - British dates were in the Julian calendar (Old Style), eleven days behind the Spanish. Dates of British operations are given in Old Style, as the standard references give them, and marked where it matters; recent works sometimes give the New Style dates (Bloody Marsh, 7 July Old Style, is 18 July New Style). Casualty figures for Cartagena vary widely between British and Spanish sources.
+  - Porto Bello is in today’s Panama and Cartagena in Colombia; the wars of Central and South America are told in their own region.
+sources:
+  - title: War of Jenkins’ Ear (Wikipedia)
+    url: https://en.wikipedia.org/wiki/War_of_Jenkins%27_Ear
+  - title: Battle of Porto Bello (1739) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Porto_Bello_(1739)
+  - title: Battle of Cartagena de Indias (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Cartagena_de_Indias
+  - title: Siege of St. Augustine (1740) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_St._Augustine_(1740)
+  - title: Battle of Bloody Marsh (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Bloody_Marsh
+  - title: The Spanish Attack of 1742 (Fort Frederica National Monument, National Park Service)
+    url: https://home.nps.gov/fofr/learn/historyculture/the-spanish-attack-of-1742.htm
+  - title: Fort Mose (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fort_Mose
+  - title: War of Jenkins’ Ear (New Georgia Encyclopedia)
+    url: https://www.georgiaencyclopedia.org/articles/history-archaeology/war-of-jenkins-ear/
+steps:
+  - title: Porto Bello and Cartagena
+    date: 1739–1741
+    when: "1739-11-21"
+    borders: "1739-11-22"
+    countries: [pa, co, cu, jm, gb, es]
+    body:
+      - "Under the Treaty of Utrecht Britain held the asiento, the right to sell enslaved Africans in Spanish America, and could send one trading ship a year to its fairs, but British merchants smuggled far more, and Spanish coast guards (guardacostas) stopped and searched British ships. In 1731 a coast guard officer cut off an ear of Robert Jenkins, master of the Rebecca, and in 1738 Jenkins told his story to the House of Commons. Merchants and the opposition pressed Walpole’s government for war; the Convention of El Pardo of January 1739, which was to settle the claims, collapsed, and Britain declared war in October."
+      - "Vice-Admiral Edward Vernon sailed from Jamaica with six ships of the line and took Porto Bello on the Isthmus of Panama, the port of the Spanish treasure fairs, on 21–22 November 1739, destroying its forts. The victory made him a hero in Britain; streets were named after it, and Lawrence Washington later named his Virginia estate Mount Vernon after the admiral. In March 1740 Vernon bombarded Cartagena de Indias and took the fort of San Lorenzo at the mouth of the Chagres."
+      - "In 1741 Britain sent its largest overseas expedition yet: about 180 ships and some 27,000 men, soldiers, sailors and a regiment of 3,500 to 4,000 men raised in the North American colonies. They landed at Cartagena in March and took the forts guarding the bay, but the Spanish under Blas de Lezo and the viceroy Sebastián de Eslava, with about 3,000 soldiers, militia and six ships, held the city. A night assault on the fortress of San Felipe de Barajas in April failed, and with yellow fever killing thousands, Vernon withdrew in May. British dead, mostly from disease, are usually put at about 9,000 to 11,500. In July Vernon and General Thomas Wentworth landed at Guantánamo Bay to march on Santiago de Cuba but never got there, and sickness forced them to leave at the end of the year."
+    facts:
+      - [Capture of Porto Bello, "21–22 November 1739 (Old Style)"]
+      - [Siege of Cartagena de Indias, "March – May 1741"]
+      - [British force at Cartagena, "about 180 ships and 27,000 men"]
+    markers:
+      - kind: taken
+        side: brit
+        name: Porto Bello
+        date: 21–22 November 1739
+        text: Vernon took the port of the treasure fairs with six ships of the line and destroyed its forts.
+        lonlat: [-79.655, 9.553]
+        lp: l
+      - kind: held
+        side: es
+        name: Cartagena de Indias
+        date: March – May 1741
+        text: Blas de Lezo and Eslava held the city against the largest British expedition of the war.
+        lonlat: [-75.535, 10.40]
+      - kind: capital
+        side: brit
+        name: Port Royal (Jamaica)
+        date: 1739–1741
+        text: Vernon’s base in the Caribbean.
+        lonlat: [-76.84, 17.94]
+        lp: l
+      - kind: held
+        side: es
+        name: Santiago de Cuba
+        date: July – December 1741
+        text: Vernon and Wentworth landed at Guantánamo Bay to march on the city but never reached it.
+        lonlat: [-75.83, 20.02]
+        lp: t
+      - kind: capital
+        side: es
+        name: Havana
+        date: 1739–1748
+        text: Seat of the Captaincy General of Cuba and base of the Spanish fleet in the Caribbean.
+        lonlat: [-82.36, 23.14]
+    arrows:
+      - side: brit
+        label: Vernon (1739)
+        phase: 1
+        via: [[-76.90, 17.85], [-78.60, 13.80], [-79.62, 9.65]]
+      - side: brit
+        label: Vernon (1741)
+        phase: 2
+        via: [[-76.75, 17.85], [-76.00, 14.00], [-75.60, 10.48]]
+      - side: brit
+        label: Vernon and Wentworth
+        phase: 3
+        via: [[-76.70, 17.98], [-75.60, 19.10], [-75.16, 19.92]]
+  - title: Oglethorpe at Saint Augustine
+    date: January – July 1740
+    when: "1740-06-13"
+    borders: "1740-06-26"
+    countries: [us, es, gb]
+    view:
+      center: [-81.43, 29.95]
+      size: [90, 70]
+    body:
+      - "James Oglethorpe had founded Georgia in 1733 on land Spain claimed as part of Florida, and built Fort Frederica on St. Simons Island. Spanish Florida offered freedom to people who escaped slavery in the British colonies if they became Catholics and served in its militia, and in 1738 Governor Manuel de Montiano settled them at Gracia Real de Santa Teresa de Mose, north of Saint Augustine, the first legally free Black town in what is now the United States, under Captain Francisco Menéndez, himself formerly enslaved. In September 1739 enslaved Africans rose at Stono in South Carolina and marched towards Florida, which deepened Carolina’s fears."
+      - "In January 1740 Oglethorpe took the Spanish posts of Picolata and San Francisco de Pupo on the St. Johns River. In May he advanced on Saint Augustine with about 1,000 regulars and Georgia and South Carolina provincials and, by one count, some 1,200 Native warriors, among them Muscogee, Chickasaw, Yuchi and Yamacraw under Toonahowi, while a Royal Navy squadron blockaded the harbour. Mose’s people withdrew into the town, and from mid-June British guns on Anastasia Island bombarded the Castillo de San Marcos, whose coquina walls absorbed the shot."
+      - "Before dawn on 26 June about 300 Spanish soldiers, Menéndez’s free Black militia and Native allies attacked the Scottish Highlanders and rangers holding the ruins of Mose, killing 68 and capturing 34 for the loss of about ten. Spanish supply boats from Havana slipped through the shallow Matanzas inlet, the naval commander would not risk his ships in the hurricane season, and on 20 July Oglethorpe gave up the siege and withdrew to Georgia, leaving guns behind."
+    facts:
+      - [Siege of Saint Augustine, "13 June – 20 July 1740 (Old Style)"]
+      - [Battle of Fort Mose, "26 June 1740 (Old Style)"]
+      - [British losses at Mose, "68 killed and 34 captured"]
+    markers:
+      - kind: held
+        side: es
+        name: Saint Augustine
+        date: June – July 1740
+        text: The Castillo de San Marcos withstood a bombardment of 27 days.
+        lonlat: [-81.311, 29.898]
+        lp: r
+      - kind: battle
+        side: es
+        name: Fort Mose
+        date: 26 June 1740
+        text: Spanish troops and the free Black militia of Francisco Menéndez retook the fort from the Highlanders.
+        lonlat: [-81.326, 29.928]
+        lp: l
+      - kind: taken
+        side: brit
+        name: Picolata and Pupo
+        date: January 1740
+        text: Oglethorpe took the two Spanish posts on the St. Johns River.
+        lonlat: [-81.59, 29.855]
+        lp: l
+    arrows:
+      - side: brit
+        label: Oglethorpe
+        phase: 1
+        via: [[-81.45, 30.25], [-81.40, 30.08], [-81.34, 29.95]]
+      - side: brit
+        label: Blockade
+        phase: 1
+        via: [[-81.10, 30.15], [-81.14, 29.98], [-81.24, 29.89]]
+      - side: es
+        label: Menéndez
+        phase: 2
+        via: [[-81.315, 29.905], [-81.33, 29.915], [-81.328, 29.925]]
+  - title: The invasion of Georgia
+    date: July 1742 – 1748
+    when: "1742-07-07"
+    borders: "1742-07-07"
+    countries: [us, es, gb, cu]
+    view:
+      center: [-81.40, 31.15]
+      size: [70, 70]
+    body:
+      - "In 1742 Montiano led an invasion of Georgia with Saint Augustine’s garrison, the free Black soldiers of Mose and grenadiers from Havana, some 2,000 men in a fleet of several dozen ships. On 5 July 1742 (Old Style) the fleet ran past the guns of Fort St. Simons and landed on the island; Oglethorpe abandoned the fort and fell back on Frederica."
+      - "On 7 July a Spanish advance party on the road to Frederica ran into Oglethorpe’s rangers, Highlanders and Native allies at Gully Hole Creek, about a mile from the town, and lost 12 killed and 10 captured. Later that day British troops ambushed the Spanish grenadiers at a marsh to the south; some of the regulars broke, but the Highlanders held, and Montiano reported seven killed. The name Bloody Marsh comes from later legend. Misled by false news of British reinforcements that Oglethorpe planted through a released prisoner, and by the sight of ships from Charles Town, Montiano destroyed Fort St. Simons and sailed back to Florida on 15 July."
+      - "Oglethorpe raided to the gates of Saint Augustine again in 1743. By then the conflict had merged into the wider War of the Austrian Succession, and from 1744 France and Britain were also at war; in October 1748 British and Spanish squadrons fought off Havana. The Treaty of Aix-la-Chapelle restored the state before the war, and in 1750 Britain gave up the asiento for £100,000. Georgia’s southern border remained disputed until Britain took Florida in 1763."
+    facts:
+      - [Spanish landing on St. Simons, "5 July 1742 (Old Style)"]
+      - [Gully Hole Creek and Bloody Marsh, "7 July 1742 (Old Style)"]
+      - [Spanish withdrawal, "15 July 1742 (Old Style)"]
+    markers:
+      - kind: held
+        side: brit
+        name: Frederica
+        date: 7 July 1742
+        text: Oglethorpe’s fortified town; the Spanish advance party was routed at Gully Hole Creek, about a mile away.
+        lonlat: [-81.393, 31.224]
+        lp: l
+      - kind: battle
+        side: brit
+        name: Bloody Marsh
+        date: 7 July 1742
+        text: British troops ambushed the Spanish grenadiers here; Montiano reported seven killed (location approximate).
+        lonlat: [-81.37, 31.165]
+      - kind: taken
+        side: es
+        name: Fort St. Simons
+        date: 5 July 1742
+        text: Abandoned by Oglethorpe and occupied by the Spanish, who destroyed it before leaving.
+        lonlat: [-81.395, 31.135]
+        lp: l
+    arrows:
+      - side: es
+        label: Montiano
+        phase: 1
+        via: [[-81.30, 30.75], [-81.30, 31.00], [-81.39, 31.12]]
+      - side: es
+        phase: 2
+        via: [[-81.39, 31.14], [-81.38, 31.18], [-81.39, 31.21]]

@@ -1,0 +1,154 @@
+id: red-river-war
+name: Red River War
+start: "1874-06-27"
+end: "1875-06-02"
+tier: B
+summary: "The United States Army’s campaign of 1874–1875 that forced the last free bands of the Comanche, Kiowa, Southern Cheyenne and Arapaho onto reservations in Indian Territory, ending the wars of the southern plains. The Medicine Lodge treaties of 1867 had assigned the four nations reservations in Indian Territory with rations and hunting rights south of the Arkansas, but the rations fell short and from 1873 commercial hunters slaughtered the last great buffalo herds of the southern plains for their hides. Inspired by the Comanche prophet Isatai, several hundred Comanche, Cheyenne and Kiowa warriors (estimates range from about 250 to 700) led by Quanah Parker attacked the hunters’ post at Adobe Walls in the Texas Panhandle on 27 June 1874 and were driven off by the hunters’ long-range rifles; raids across Texas, Kansas and Colorado followed. Generals Sherman and Sheridan sent five columns from Kansas, Indian Territory, Texas and New Mexico to converge on the headwaters of the Red River and keep the bands moving without rest. Most fights were small, but the army destroyed what the bands could not carry: on 28 September Colonel Ranald Mackenzie’s 4th Cavalry surprised Comanche, Kiowa and Cheyenne camps in Palo Duro Canyon, burned their lodges and winter food and killed most of some 1,400 captured horses. Hungry and on foot, band after band surrendered through the winter and spring, the last, Quanah’s Quahadi Comanche, at Fort Sill on 2 June 1875. About seventy men and women chosen as leaders or wrongdoers were sent without trial to prison at Fort Marion in Florida."
+countries: [us]
+sides:
+  - id: nat
+    name: Comanche, Kiowa, Southern Cheyenne and Arapaho (Quanah Parker, Isatai, Lone Wolf, Satanta, Stone Calf)
+    polities: [comanche, kiowa, cheyenne, arapaho]
+    ink: orange
+    moves: Comanche, Kiowa and Cheyenne moves
+    success: Comanche, Kiowa and Cheyenne success
+  - id: us
+    name: United States (US Army, with Tonkawa, Black Seminole and Delaware scouts)
+    polities: [united-states]
+    ink: blue
+    moves: US moves
+    success: US success
+notes:
+  - "Many Comanche, Kiowa, Cheyenne and Arapaho stayed at the agencies throughout the war and were enrolled as friendly; the war was fought by the bands that left them or had never come in, travelling with their families. The prisoners at Fort Marion were held until 1878; the officer in charge, Richard Henry Pratt, later founded the Carlisle Indian Industrial School on the model of his work with them."
+sources:
+  - title: Red River War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Red_River_War
+  - title: Red River War (Handbook of Texas)
+    url: https://www.tshaonline.org/handbook/entries/red-river-war
+  - title: Second Battle of Adobe Walls (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Battle_of_Adobe_Walls
+  - title: Battle of Palo Duro Canyon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Palo_Duro_Canyon
+  - title: Quanah Parker (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Quanah_Parker
+  - title: Medicine Lodge Treaty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Medicine_Lodge_Treaty
+steps:
+  - title: Buffalo, Adobe Walls and the five columns
+    date: June – August 1874
+    when: "1874-06-27"
+    borders: "1874-08-01"
+    countries: [us]
+    body:
+      - "By the Medicine Lodge treaties of 1867 the Comanche, Kiowa and Plains Apache accepted a reservation between the Washita and the Red River, and the Southern Cheyenne and Arapaho one to the north of it (moved in 1869 to the lands just north of the Washita), in return for rations, schools and the right to hunt south of the Arkansas while the buffalo lasted. Some bands, such as the Quahadi Comanche of the Llano Estacado, never came in. After a new tanning process made buffalo hides valuable in 1870, white hunters killed millions of buffalo, and from 1873 they moved south into the Texas Panhandle, the last great range of the southern herd. Rations at the agencies were short and horse thieves raided the bands’ herds."
+      - "In the spring of 1874 the young Comanche prophet Isatai, who promised his followers protection from bullets, called a sun dance, and the bands agreed on war. On 27 June several hundred Comanche, Cheyenne and Kiowa warriors (estimates range from about 250 to 700) led by Quanah Parker attacked Adobe Walls, a hunters’ trading post in the Panhandle defended by 28 men and one woman. A few defenders were killed in the first rush, but the hunters’ heavy buffalo rifles kept the warriors at a distance, and after several days they withdrew. War parties then struck settlements and travellers in Texas, Kansas and Colorado, and the Kiowa war leader Lone Wolf (Guipago), whose son had been killed by soldiers in Texas, fought Texas Rangers at Lost Valley in July."
+      - "In July the government ordered all who were friendly to enrol at the agencies, and Sheridan sent five columns against the rest: Colonel Nelson Miles south from Fort Dodge in Kansas, Lieutenant Colonel John Davidson west from Fort Sill, Lieutenant Colonel George Buell north-west from Fort Griffin, Mackenzie north from Fort Concho and Major William Price east from Fort Union by way of Fort Bascom in New Mexico. On 22 August fighting broke out at the Wichita Agency at Anadarko when troops tried to disarm Kiowa and Comanche there."
+    facts:
+      - [Second Battle of Adobe Walls, "27 June 1874"]
+      - [Army columns, "five, converging on the Texas Panhandle"]
+    markers:
+      - kind: held
+        side: us
+        name: Adobe Walls
+        date: 27 June 1874
+        text: Twenty-eight buffalo hunters and one woman held the trading post against several hundred warriors (estimates range from 250 to 700) under Quanah Parker and Isatai.
+        lonlat: [-101.162, 35.894]
+      - kind: battle
+        name: Anadarko
+        date: 22–23 August 1874
+        text: Fighting at the Wichita Agency when Davidson’s troops tried to disarm Kiowa and Comanche who had not enrolled.
+        lonlat: [-98.25, 35.07]
+      - kind: event
+        side: us
+        name: Fort Sill
+        date: "1874"
+        text: The army post at the Kiowa and Comanche agency, base of Davidson’s column.
+        lonlat: [-98.390, 34.671]
+        lp: b
+      - kind: treaty
+        name: Medicine Lodge
+        date: October 1867
+        text: The treaties that assigned the four nations their reservations were signed on Medicine Lodge Creek.
+        lonlat: [-98.58, 37.28]
+    arrows:
+      - side: us
+        label: Miles
+        phase: 1
+        via: [[-99.97, 37.73], [-99.58, 36.57], [-100.20, 35.90], [-100.80, 35.20]]
+      - side: us
+        label: Davidson
+        phase: 1
+        via: [[-98.39, 34.67], [-99.20, 34.90], [-100.10, 35.10]]
+      - side: us
+        label: Buell
+        phase: 1
+        via: [[-99.23, 32.93], [-99.70, 33.70], [-100.30, 34.40]]
+      - side: us
+        label: Mackenzie
+        phase: 1
+        via: [[-100.43, 31.45], [-100.90, 32.60], [-101.25, 33.60]]
+      - side: us
+        label: Price
+        phase: 1
+        via: [[-103.70, 35.32], [-102.60, 35.40], [-101.60, 35.50]]
+    areas:
+      - style: outline
+        side: nat
+        label: Kiowa–Comanche and Cheyenne–Arapaho reservations, as in 1874 (approximate)
+        polygons:
+          - [[-98.0, 35.2], [-98.6, 35.25], [-99.3, 35.2], [-99.6, 35.0], [-99.4, 34.4], [-98.8, 34.2], [-98.2, 34.1], [-98.0, 34.4]]
+          - [[-98.0, 35.25], [-99.0, 35.3], [-100.0, 35.35], [-100.0, 36.45], [-99.0, 36.6], [-98.2, 36.0]]
+      - style: contested
+        side: nat
+        label: The Llano Estacado and the Panhandle, range of the free bands (approximate)
+        polygon: [[-103.0, 36.4], [-100.6, 36.4], [-100.3, 34.5], [-101.0, 33.2], [-103.0, 33.0]]
+  - title: Palo Duro Canyon and the surrender
+    date: September 1874 – June 1875
+    when: "1874-09-28"
+    borders: "1874-09-28"
+    countries: [us]
+    body:
+      - "In September Kiowa and Comanche warriors besieged an army supply train under Captain Wyllys Lyman on the upper Washita for five days, and small fights flared across the Panhandle as the columns pressed the bands, which travelled with their families and herds. Mackenzie’s Tonkawa and Black Seminole scouts found a great winter camp of Comanche, Kiowa and Cheyenne in the upper Palo Duro Canyon, and at dawn on 28 September his troopers rode down a narrow trail into it. The people escaped up the canyon with only a few killed, but the soldiers burned hundreds of lodges with the winter’s food and took more than 1,400 horses, most of which Mackenzie had shot in nearby Tule Canyon so that they could not be retaken."
+      - "Through a wet and freezing autumn and winter the columns kept up the pursuit, and band after band, hungry and on foot, came in to Fort Sill or the Cheyenne agency at Darlington. Satanta, who had been paroled in 1873, was sent back to prison in Texas, where he died in 1878; Lone Wolf’s Kiowa surrendered in February 1875 and the Cheyenne of Stone Calf in March, after freeing captive white girls of the German family. Troops pursuing Cheyenne who fled north attacked a camp on Sappa Creek in Kansas on 23 April, killing about 27 people, among them women and children. Quanah’s Quahadi, the last free Comanche band, came in to Fort Sill on 2 June 1875."
+      - "Sherman and Sheridan wanted the leaders tried by military commissions, but the army found no legal basis for it, and instead about seventy Cheyenne, Kiowa, Comanche, Arapaho and Caddo prisoners, some chosen almost at random, were sent to Fort Marion at St. Augustine, Florida. The buffalo were gone from the southern plains within a few years, and the Panhandle was opened to ranchers. Quanah Parker became a leader of the Comanche on the reservation and a negotiator with the government."
+    facts:
+      - [Battle of Palo Duro Canyon, "28 September 1874"]
+      - [Lodges burned at Palo Duro, "several hundred"]
+      - [Horses captured, "more than 1,400, most of them shot"]
+      - [Quanah’s surrender at Fort Sill, "2 June 1875"]
+    markers:
+      - kind: held
+        side: us
+        name: Lyman’s wagon train
+        date: 9–14 September 1874
+        text: Captain Lyman’s supply train held a wagon corral for five days against about 400 Kiowa and Comanche.
+        lonlat: [-100.190, 35.760]
+      - kind: battle
+        side: us
+        name: Palo Duro Canyon
+        date: 28 September 1874
+        text: Mackenzie’s 4th Cavalry surprised the winter camps, burned their lodges and food and captured their horses.
+        lonlat: [-101.606, 34.878]
+        lp: l
+      - kind: event
+        side: us
+        name: Fort Sill
+        date: 2 June 1875
+        text: Quanah Parker’s Quahadi Comanche, the last free band, surrendered here.
+        lonlat: [-98.390, 34.671]
+        lp: b
+      - kind: toll
+        side: us
+        name: Sappa Creek
+        date: 23 April 1875
+        text: Cavalry attacked a Cheyenne camp, killing about 27 people, among them women and children (marker approximate).
+        lonlat: [-100.95, 39.80]
+    arrows:
+      - side: us
+        label: Mackenzie
+        phase: 1
+        via: [[-101.25, 33.65], [-101.45, 34.25], [-101.62, 34.86]]
+      - side: nat
+        label: Quanah
+        phase: 2
+        via: [[-102.00, 34.50], [-100.60, 34.60], [-99.30, 34.65], [-98.42, 34.67]]

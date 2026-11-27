@@ -1,0 +1,453 @@
+id: french-intervention-in-mexico
+name: French intervention in Mexico
+start: "1861-12-08"
+end: "1867-06-21"
+tier: A
+summary: "The invasion of Mexico by Napoleon III’s France and the war between the Mexican Republic of Benito Juárez and the empire France set up under Maximilian of Habsburg. When Juárez’s government, bankrupt after the Reform War, suspended payments on its foreign debts in July 1861, Spain, Britain and France sent troops to Veracruz. Spain and Britain withdrew in April 1862 when it became clear that Napoleon meant to overthrow the republic. On 5 May 1862 Ignacio Zaragoza’s army beat the French at Puebla, the victory remembered as Cinco de Mayo, but a much larger French army took Puebla after a siege in 1863 and entered Mexico City. Mexican conservatives offered the throne to Maximilian, who arrived in 1864. Juárez’s government retreated to the far north and fought on with guerrilla and regular forces. After the American Civil War the United States pressed France to leave, and Napoleon, facing Prussia in Europe, withdrew his army in 1866–1867. The republicans besieged Maximilian at Querétaro, which fell on 15 May 1867; he was shot with his generals Miguel Miramón and Tomás Mejía on 19 June, and Mexico City surrendered two days later."
+countries: [mx, fr]
+sides:
+  - id: rep
+    name: Mexican Republic (Juárez’s government and the republican armies)
+    polities: [mexico, mexican-liberals]
+    ink: green
+    moves: Republican moves
+    success: Republican success
+  - id: fr
+    name: French Empire (with Austrian and Belgian volunteers and an Egyptian battalion)
+    polities: [france]
+    ink: navy
+    moves: French moves
+    success: French success
+  - id: imp
+    name: Mexican Empire (Maximilian) and the Conservatives
+    polities: [mexican-imperialists, mexican-conservatives]
+    ink: purple
+    moves: Imperial moves
+    success: Imperial success
+  - id: all
+    name: Spain and Britain (1861–1862)
+    polities: [spain, united-kingdom]
+    ink: gold
+    moves: Spanish and British moves
+    success: Spanish and British success
+notes:
+  - "Mexico was ruled by two governments from 1863 to 1867: Juárez’s republic, recognised by the United States, and Maximilian’s empire, recognised by most of Europe. The base map names the country the Mexican Empire for those years; the areas in the steps show roughly who held what, though much of the countryside was contested throughout."
+  - "Casualty figures are uncertain. One modern count (Clodfelter) gives about 32,000 republican soldiers killed, including some 11,000 executed, and about 14,000 dead on the side of France and the empire, many of disease."
+  - Cinco de Mayo, the anniversary of the battle of Puebla, is an official holiday in the state of Puebla and a civic day elsewhere in Mexico, when public schools close, and it is widely celebrated by Mexican Americans in the United States.
+sources:
+  - title: Second French intervention in Mexico (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_French_intervention_in_Mexico
+  - title: Second Mexican Empire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Mexican_Empire
+  - title: Battle of Puebla (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Puebla
+  - title: Siege of Puebla (1863) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Puebla_(1863)
+  - title: Battle of Camarón (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Camar%C3%B3n
+  - title: Siege of Querétaro (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Quer%C3%A9taro
+  - title: Maximilian I of Mexico (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Maximilian_I_of_Mexico
+  - title: Benito Juárez (Britannica)
+    url: https://www.britannica.com/biography/Benito-Juarez
+  - title: Maximilian, emperor of Mexico (Britannica)
+    url: https://www.britannica.com/biography/Maximilian-archduke-of-Austria-and-emperor-of-Mexico
+  - title: French Intervention in Mexico and the American Civil War, 1862–1867 (US Office of the Historian)
+    url: https://history.state.gov/milestones/1861-1865/french-intervention
+  - title: Batalla de Puebla, 5 de mayo de 1862 (Secretaría de la Defensa Nacional)
+    url: https://www.gob.mx/defensa/documentos/5-de-mayo-de-1862-batalla-de-puebla
+  - title: "Mexico: La Reforma (Britannica)"
+    url: https://www.britannica.com/place/Mexico/La-Reforma
+steps:
+  - title: Debts and the allied landing
+    date: July 1861 – April 1862
+    when: "1861-12-08"
+    borders: "1862-01-08"
+    countries: [mx, fr, es, gb]
+    body:
+      - "The Reform War had left Juárez’s government without money, and on 17 July 1861 Congress suspended payments on the foreign debt for two years. On 31 October Britain, France and Spain signed the Convention of London to force Mexico to pay. Some 6,000 Spanish troops sent from Cuba under General Manuel Gasset occupied Veracruz in mid-December, and British marines, a French force and the Spanish commander-in-chief, General Juan Prim, followed in January 1862. Napoleon III had larger aims: urged on by Mexican conservative exiles, he hoped to set up a friendly monarchy that would open Mexico to French trade and check the United States, then caught up in its civil war."
+      - "On 19 February 1862, at La Soledad, the allies agreed with Juárez’s foreign minister, Manuel Doblado, to negotiate, and were allowed to move inland from the yellow-fever coast to Orizaba, Córdoba and Tehuacán. When French reinforcements arrived with the conservative general Juan Almonte, who meant to head a new government, the allies quarrelled. In April 1862 Britain and Spain withdrew their troops, and France broke off the talks and began the war alone."
+    facts:
+      - [Debt payments suspended, "17 July 1861"]
+      - [Convention of London, "31 October 1861"]
+      - [Convention of La Soledad, "19 February 1862"]
+      - [Britain and Spain withdraw, "April 1862"]
+    markers:
+      - kind: taken
+        side: all
+        name: Veracruz
+        date: December 1861 – January 1862
+        text: Spanish troops landed here in December, the British and French in January.
+        lonlat: [-96.134, 19.190]
+      - kind: treaty
+        name: La Soledad
+        date: 19 February 1862
+        text: The allies agreed to negotiate with Juárez’s government and to move their troops inland.
+        lonlat: [-96.423, 19.045]
+        lp: b
+      - kind: event
+        side: fr
+        name: Orizaba
+        date: April 1862
+        text: The allies’ talks broke down here; the French made it their base.
+        lonlat: [-97.100, 18.850]
+      - kind: capital
+        side: rep
+        name: Mexico City
+        date: "1861"
+        text: Seat of Juárez’s government, elected president in 1861 after the Reform War.
+        lonlat: [-99.133, 19.432]
+    arrows:
+      - side: all
+        label: Spanish expedition from Cuba
+        phase: 1
+        via: [[-82.36, 23.14], [-87.00, 21.50], [-93.00, 19.80], [-96.10, 19.20]]
+  - title: Cinco de Mayo
+    date: April – June 1862
+    when: "1862-05-05"
+    borders: "1862-05-05"
+    countries: [mx, fr]
+    body:
+      - "General Charles de Lorencez, sure that Mexicans would welcome the French, marched on Mexico City with about 6,000 men. He pushed the Mexicans off the heights of Acultzingo on 28 April and on 5 May attacked Puebla, held by some 3,800 to 5,000 men of the Army of the East (sources differ) under General Ignacio Zaragoza. Lorencez sent his infantry uphill against the forts of Loreto and Guadalupe on the city’s northern edge. Three assaults failed under artillery fire and in a rainstorm, while Mexican cavalry and the brigade of Porfirio Díaz beat back attacks on the flanks; Nahua battalions from Zacapoaxtla and Xochiapulco in the northern highlands fought among the defenders. The French lost about 470 killed and wounded, the Mexicans about 350."
+      - "Lorencez fell back to Orizaba. The victory did not end the war, but it gave the republic a national symbol, and it bought a year: Napoleon had to send a much larger army. Zaragoza died of typhoid in September 1862. A Mexican attempt to drive the French from Orizaba failed when a French company stormed the Cerro del Borrego above the town on the night of 13–14 June."
+    facts:
+      - [Battle of Puebla, "5 May 1862"]
+      - [French force, "about 6,000"]
+      - [Mexican defenders, "about 3,800–5,000"]
+      - [Losses, "French about 470 killed and wounded, Mexican about 350"]
+    markers:
+      - kind: battle
+        side: rep
+        name: Puebla (forts of Loreto and Guadalupe)
+        date: 5 May 1862
+        text: Zaragoza’s army beat off three French assaults on the forts on the city’s northern hill.
+        lonlat: [-98.187, 19.058]
+      - kind: battle
+        side: fr
+        name: Acultzingo
+        date: 28 April 1862
+        text: The French drove a Mexican force off the heights on the road up to the plateau.
+        lonlat: [-97.317, 18.717]
+        lp: b
+      - kind: battle
+        side: fr
+        name: Cerro del Borrego (Orizaba)
+        date: 13–14 June 1862
+        text: A French night attack on the hill above Orizaba routed the Mexican force sent to retake the town.
+        lonlat: [-97.100, 18.850]
+    arrows:
+      - side: fr
+        label: Lorencez
+        phase: 1
+        via: [[-97.100, 18.850], [-97.32, 18.72], [-97.60, 18.85], [-97.95, 19.00], [-98.17, 19.05]]
+      - side: fr
+        phase: 2
+        via: [[-98.15, 19.03], [-97.80, 18.90], [-97.40, 18.80], [-97.12, 18.86]]
+  - title: The siege of Puebla and the fall of Mexico City
+    date: September 1862 – July 1863
+    when: "1863-03-16"
+    borders: "1863-06-10"
+    countries: [mx, fr]
+    body:
+      - "General Élie-Frédéric Forey arrived in September 1862 with reinforcements that brought the French army to some 30,000 men, and in March 1863 laid siege to Puebla, now fortified and held by about 22,000 men under Jesús González Ortega. The siege lasted two months of block-by-block fighting. On 30 April, at Camarón on the road from Veracruz, 65 men of the French Foreign Legion under Captain Jean Danjou, escorting a convoy, held out for a day in a farmhouse against some 2,000 to 3,300 Mexican troops until almost all were dead or wounded; the Legion still commemorates the fight. On 8 May General Achille Bazaine routed a Mexican relief army under Ignacio Comonfort at San Lorenzo."
+      - "Out of food and ammunition, González Ortega destroyed his guns and surrendered Puebla on 17 May 1863 with about 12,000 men. The captured officers refused to give their word not to fight again, and many, among them Porfirio Díaz and González Ortega, escaped. Juárez left Mexico City on 31 May with his government for San Luis Potosí, and on 10 June Forey made a ceremonial entry into the capital. An Assembly of Notables chosen by the French voted on 10 July to make Mexico a monarchy and to offer the crown to Archduke Maximilian of Austria, brother of Emperor Franz Joseph."
+    facts:
+      - [Siege of Puebla, "16 March – 17 May 1863"]
+      - [Battle of Camarón, "30 April 1863"]
+      - [Juárez leaves Mexico City, "31 May 1863"]
+      - [Forey enters Mexico City, "10 June 1863"]
+    markers:
+      - kind: siege
+        side: fr
+        name: Puebla
+        date: 16 March – 17 May 1863
+        text: González Ortega surrendered the city after a two-month siege.
+        lonlat: [-98.198, 19.043]
+      - kind: battle
+        side: rep
+        name: Camarón
+        date: 30 April 1863
+        text: A Mexican force overwhelmed a company of the Foreign Legion after a day-long fight.
+        lonlat: [-96.617, 19.017]
+      - kind: battle
+        side: fr
+        name: San Lorenzo
+        date: 8 May 1863
+        text: Bazaine routed Comonfort’s army, which was trying to bring supplies into Puebla (marker approximate).
+        lonlat: [-98.25, 19.15]
+        lp: t
+      - kind: taken
+        side: fr
+        name: Mexico City
+        date: 7–10 June 1863
+        text: Entered by the French after Juárez and his government had left.
+        lonlat: [-99.133, 19.432]
+      - kind: capital
+        side: rep
+        name: San Luis Potosí
+        date: June – December 1863
+        text: Juárez’s government moved here from the capital.
+        lonlat: [-100.976, 22.152]
+    arrows:
+      - side: fr
+        label: Forey
+        phase: 1
+        via: [[-97.100, 18.850], [-97.60, 18.85], [-98.00, 18.98], [-98.19, 19.03]]
+      - side: fr
+        phase: 2
+        via: [[-98.20, 19.06], [-98.60, 19.25], [-98.95, 19.40], [-99.12, 19.43]]
+      - side: rep
+        label: Juárez
+        phase: 2
+        via: [[-99.133, 19.432], [-99.90, 20.20], [-100.39, 20.59], [-100.80, 21.40], [-100.97, 22.12]]
+  - title: Maximilian and the empire
+    date: October 1863 – December 1864
+    when: "1864-06-12"
+    borders: "1864-12-31"
+    countries: [mx, fr]
+    body:
+      - "Bazaine, who replaced Forey in command, led the French and Mexican imperial troops out from the capital at the end of 1863 and took the cities of the interior one after another: Querétaro, Morelia, Guanajuato, San Luis Potosí, Guadalajara. Juárez’s government moved north to Saltillo and Monterrey, and in the autumn of 1864 to Chihuahua. Republican armies were beaten in open battle, but generals and guerrilla leaders held out in the mountains of Guerrero, Michoacán and the Huasteca and across the north."
+      - "Maximilian accepted the crown at his castle of Miramare near Trieste on 10 April 1864, after a doubtful plebiscite organised by the French. By the Convention of Miramare the empire would pay the costs of the French army, which was to stay for some years. He and his wife Charlotte (Carlota) landed at Veracruz on 28 May and entered Mexico City on 12 June. To the anger of the conservatives and the Church, the new emperor, a liberal at heart, kept the Reform laws and the sale of church property. Volunteer corps came from Austria, about 6,000 men, and from Belgium, Carlota’s homeland, about 1,500, and Egypt’s ruler lent a battalion of Sudanese soldiers for service in the lowlands of Veracruz."
+    facts:
+      - [Maximilian accepts the crown, "10 April 1864, Miramare"]
+      - [Maximilian enters Mexico City, "12 June 1864"]
+      - [Austrian and Belgian volunteers, "about 6,000 and 1,500"]
+    markers:
+      - kind: capital
+        side: imp
+        name: Mexico City
+        date: 12 June 1864
+        text: Maximilian and Carlota entered their capital.
+        lonlat: [-99.133, 19.432]
+      - kind: event
+        side: imp
+        name: Veracruz
+        date: 28 May 1864
+        text: Maximilian and Carlota landed here aboard the Austrian frigate Novara.
+        lonlat: [-96.134, 19.190]
+      - kind: taken
+        side: fr
+        name: Guadalajara
+        date: January 1864
+        text: Occupied by Bazaine’s army.
+        lonlat: [-103.347, 20.677]
+      - kind: taken
+        side: fr
+        name: San Luis Potosí
+        date: December 1863
+        text: Taken after Juárez’s government had left for the north.
+        lonlat: [-100.976, 22.152]
+        lp: l
+      - kind: capital
+        side: rep
+        name: Monterrey
+        date: April – August 1864
+        text: Seat of Juárez’s government for a few months before the retreat to Chihuahua.
+        lonlat: [-100.318, 25.684]
+      - kind: capital
+        side: rep
+        name: Chihuahua
+        date: October 1864 – August 1865
+        text: Juárez’s capital in the far north.
+        lonlat: [-106.077, 28.637]
+    arrows:
+      - side: fr
+        label: Bazaine
+        phase: 1
+        via: [[-99.133, 19.432], [-100.39, 20.59], [-101.26, 21.02], [-102.30, 21.00], [-103.30, 20.68]]
+      - side: fr
+        phase: 1
+        via: [[-100.39, 20.59], [-100.80, 21.40], [-100.97, 22.12]]
+      - side: rep
+        label: Juárez
+        phase: 2
+        via: [[-100.976, 22.152], [-101.00, 24.00], [-100.99, 25.42], [-100.32, 25.68]]
+      - side: rep
+        phase: 3
+        via: [[-100.99, 25.42], [-102.30, 26.10], [-104.40, 27.30], [-106.05, 28.62]]
+    areas:
+      - style: occupied
+        side: fr
+        label: Held by French and imperial troops, end of 1864 (approximate; much of the countryside was contested)
+        polygon: [[-96.00, 19.30], [-97.40, 21.50], [-97.90, 23.50], [-99.30, 25.90], [-100.60, 26.00], [-101.60, 25.30], [-102.60, 23.50], [-103.80, 22.00], [-105.30, 21.50], [-105.00, 20.30], [-103.50, 19.50], [-102.00, 19.60], [-100.50, 19.00], [-99.00, 18.60], [-97.50, 18.20], [-96.80, 18.60]]
+  - title: Oaxaca, the Black Decree and Paso del Norte
+    date: 1865
+    when: "1865-10-03"
+    borders: "1865-10-03"
+    countries: [mx, fr]
+    body:
+      - "In early 1865 Bazaine besieged Oaxaca, the last large city held by the republic in the south, and on 9 February Porfirio Díaz surrendered it; he escaped from prison in Puebla in September and raised a new army. In Michoacán the war swung back and forth: on 11 April republican troops under Nicolás de Régules defeated a garrison of the Belgian Legion at Tacámbaro and captured some 240 of its men. French columns pushed into Sinaloa and Sonora and up to Chihuahua, and in August Juárez retreated to Paso del Norte (now Ciudad Juárez) on the US border. In November, his presidential term having run out, he extended it by decree for the duration of the war, which split the republicans."
+      - "Believing that Juárez had left the country, Maximilian signed on 3 October 1865 the decree later called the Black Decree: members of armed bands, which in practice meant republican soldiers, were to be tried by court martial and shot within 24 hours. Under it the republican generals José María Arteaga and Carlos Salazar, captured in Michoacán, were shot at Uruapan on 21 October, and many other prisoners were executed. The decree hardened the war and turned many moderates against the empire."
+    facts:
+      - [Oaxaca surrenders, "9 February 1865"]
+      - [Battle of Tacámbaro, "11 April 1865"]
+      - [Black Decree, "3 October 1865"]
+      - [Arteaga and Salazar shot, "21 October 1865, Uruapan"]
+    markers:
+      - kind: siege
+        side: fr
+        name: Oaxaca
+        date: January – 9 February 1865
+        text: Bazaine’s army besieged the city; Porfirio Díaz surrendered it.
+        lonlat: [-96.725, 17.061]
+      - kind: battle
+        side: rep
+        name: Tacámbaro
+        date: 11 April 1865
+        text: Régules’s republicans defeated a garrison of the Belgian Legion and took some 240 prisoners.
+        lonlat: [-101.457, 19.236]
+      - kind: event
+        side: imp
+        name: Uruapan
+        date: 21 October 1865
+        text: The republican generals Arteaga and Salazar were shot here under the Black Decree.
+        lonlat: [-102.063, 19.421]
+        lp: l
+      - kind: capital
+        side: rep
+        name: Paso del Norte
+        date: August 1865 – June 1866
+        text: Juárez’s seat on the US border, now Ciudad Juárez.
+        lonlat: [-106.485, 31.745]
+      - kind: capital
+        side: imp
+        name: Mexico City
+        date: "1865"
+        text: Maximilian signed the Black Decree here on 3 October 1865.
+        lonlat: [-99.133, 19.432]
+    arrows:
+      - side: rep
+        label: Juárez
+        phase: 1
+        via: [[-106.077, 28.637], [-106.30, 29.80], [-106.45, 31.00], [-106.48, 31.72]]
+      - side: fr
+        phase: 1
+        via: [[-98.198, 19.043], [-97.40, 18.40], [-96.90, 17.60], [-96.74, 17.10]]
+  - title: The French withdrawal and the republican offensive
+    date: 1866 – March 1867
+    when: "1866-06-16"
+    borders: "1867-02-05"
+    countries: [mx, fr, us]
+    body:
+      - "The end of the American Civil War in April 1865 changed the balance. The United States had never recognised Maximilian; General Ulysses S. Grant sent Philip Sheridan with some 50,000 troops to the Rio Grande, where arms found their way across to the republicans, and Secretary of State William Seward pressed Paris to leave. The war was costly and unpopular in France, the empire could not pay its debts, and Prussia was rising in Europe. In January 1866 Napoleon III announced that his army would be withdrawn. Carlota went to Europe in July 1866 to plead with Napoleon and the Pope for help, failed, and suffered a mental breakdown from which she never recovered."
+      - "The republicans went on the offensive as the French pulled back. In the north Mariano Escobedo captured a large imperial convoy at Santa Gertrudis on 16 June 1866, and Tomás Mejía gave up Matamoros; Monterrey, Saltillo and Chihuahua were soon in republican hands, and Juárez moved south again. In the south Porfirio Díaz beat imperial forces at Miahuatlán on 3 October and an Austrian column at La Carbonera on 18 October, and took Oaxaca. Guadalajara fell in December. The last French troops left Mexico City on 5 February 1867 and sailed from Veracruz in March."
+    facts:
+      - [Napoleon announces withdrawal, "January 1866"]
+      - [Battle of Santa Gertrudis, "16 June 1866"]
+      - [Battle of Miahuatlán, "3 October 1866"]
+      - [French leave Mexico City, "5 February 1867"]
+    markers:
+      - kind: battle
+        side: rep
+        name: Santa Gertrudis
+        date: 16 June 1866
+        text: Escobedo’s republicans captured an imperial convoy bound for Matamoros (marker approximate).
+        lonlat: [-98.95, 26.25]
+      - kind: taken
+        side: rep
+        name: Matamoros
+        date: 23 June 1866
+        text: Evacuated by Tomás Mejía after Santa Gertrudis.
+        lonlat: [-97.504, 25.880]
+        lp: b
+      - kind: event
+        name: Brownsville
+        date: "1865"
+        text: Sheridan’s troops gathered along the Rio Grande opposite Matamoros.
+        lonlat: [-97.497, 25.920]
+        lp: r
+      - kind: battle
+        side: rep
+        name: Miahuatlán
+        date: 3 October 1866
+        text: Díaz defeated an imperial force in the mountains south of Oaxaca.
+        lonlat: [-96.583, 16.317]
+      - kind: battle
+        side: rep
+        name: La Carbonera
+        date: 18 October 1866
+        text: Díaz beat an Austrian and imperial column marching to relieve Oaxaca (marker approximate).
+        lonlat: [-96.88, 17.27]
+        lp: l
+      - kind: event
+        side: fr
+        name: Veracruz
+        date: March 1867
+        text: The last French troops sailed for France from here.
+        lonlat: [-96.134, 19.190]
+      - kind: taken
+        side: rep
+        name: Guadalajara
+        date: December 1866
+        text: Taken by the republicans as the French withdrew.
+        lonlat: [-103.347, 20.677]
+    arrows:
+      - side: fr
+        phase: 1
+        via: [[-99.133, 19.432], [-98.20, 19.05], [-97.10, 18.85], [-96.20, 19.15]]
+      - side: rep
+        label: Escobedo
+        phase: 1
+        via: [[-99.70, 27.40], [-99.20, 26.60], [-98.95, 26.28]]
+      - side: rep
+        label: Díaz
+        phase: 1
+        via: [[-96.583, 16.317], [-96.70, 16.70], [-96.73, 17.03]]
+    areas:
+      - style: occupied
+        side: imp
+        label: Held by the empire, early 1867 (approximate)
+        polygon: [[-96.10, 19.20], [-97.30, 19.70], [-98.50, 20.20], [-99.80, 21.00], [-100.70, 20.90], [-100.70, 20.30], [-99.70, 19.40], [-98.60, 18.80], [-97.20, 18.70]]
+  - title: Querétaro
+    date: February – July 1867
+    when: "1867-05-15"
+    borders: "1867-06-21"
+    countries: [mx]
+    body:
+      - "Maximilian refused to leave with the French. In February 1867 he went to Querétaro with about 9,000 men under Miguel Miramón, Tomás Mejía and Leonardo Márquez, hoping to fight a decisive battle. Escobedo had just beaten Miramón at San Jacinto near Zacatecas on 1 February and shot many of his prisoners. From 6 March the republican armies of Escobedo and Ramón Corona, eventually some 30,000 to 40,000 men, besieged the city. Márquez slipped out to bring help from Mexico City but did not return; on 2 April Porfirio Díaz stormed Puebla, and he then beat Márquez and besieged the capital."
+      - "On the night of 14–15 May 1867 an imperial colonel, Miguel López, let republican troops into the convent of La Cruz, and Querétaro fell. Maximilian, Miramón and Mejía were tried by a court martial under Juárez’s law against those who made war on the republic and sentenced to death. Despite appeals from European monarchs, the United States and figures such as Victor Hugo and Giuseppe Garibaldi, Juárez refused clemency, and on 19 June the three were shot on the Cerro de las Campanas outside the city. Mexico City surrendered to Díaz on 21 June, and Juárez returned to the capital on 15 July. The restored republic had defeated the last attempt of a European power to rule in the Americas, and the conservatives who had backed the empire never recovered."
+    facts:
+      - [Battle of San Jacinto, "1 February 1867"]
+      - [Siege of Querétaro, "6 March – 15 May 1867"]
+      - [Puebla stormed by Díaz, "2 April 1867"]
+      - [Maximilian, Miramón and Mejía shot, "19 June 1867"]
+      - [Mexico City surrenders, "21 June 1867"]
+    markers:
+      - kind: siege
+        side: rep
+        name: Querétaro (Cerro de las Campanas)
+        date: 6 March – 19 June 1867
+        text: The city fell on 15 May; Maximilian, Miramón and Mejía were shot on the hill of Las Campanas on 19 June.
+        lonlat: [-100.405, 20.592]
+      - kind: battle
+        side: rep
+        name: San Jacinto
+        date: 1 February 1867
+        text: Escobedo defeated Miramón near Zacatecas (marker approximate).
+        lonlat: [-102.35, 22.55]
+      - kind: taken
+        side: rep
+        name: Puebla
+        date: 2 April 1867
+        text: Stormed by Porfirio Díaz’s army.
+        lonlat: [-98.198, 19.043]
+      - kind: taken
+        side: rep
+        name: Mexico City
+        date: 21 June 1867
+        text: Surrendered to Díaz; Juárez returned on 15 July.
+        lonlat: [-99.133, 19.432]
+    arrows:
+      - side: imp
+        label: Maximilian
+        phase: 1
+        via: [[-99.133, 19.432], [-99.50, 19.95], [-100.00, 20.40], [-100.37, 20.58]]
+      - side: rep
+        label: Escobedo
+        phase: 1
+        via: [[-102.35, 22.55], [-101.60, 21.80], [-100.90, 21.10], [-100.42, 20.62]]
+      - side: rep
+        label: Díaz
+        phase: 2
+        via: [[-98.198, 19.043], [-98.60, 19.25], [-98.95, 19.40], [-99.10, 19.43]]

@@ -1,0 +1,139 @@
+id: tuscarora-war
+name: Tuscarora War
+start: "1711-09-22"
+end: "1715-02-11"
+tier: B
+summary: "A war in North Carolina between the colony and the southern Tuscarora and their allies. The Tuscarora, an Iroquoian-speaking people of the coastal plain, had lost land to colonists, most recently to the Swiss and German settlers of New Bern, and many of their people had been kidnapped and sold as slaves. In September 1711 the southern Tuscarora under Hancock, with the Coree, Pamlico, Neuse, Bear River, Machapunga and other peoples, executed the surveyor John Lawson and attacked the farms along the Neuse, Trent and Pamlico rivers, killing well over a hundred colonists, while the northern Tuscarora under Tom Blount stayed out of the war. South Carolina sent two armies made up mostly of Native allies: John Barnwell’s in 1712, mainly Yamasee, and James Moore Jr.’s in 1712–1713, with many Cherokee and Catawba. In March 1713 Moore stormed the Tuscarora fort of Neoheroka, where about 950 people were killed or captured and sold into slavery. Most of the southern Tuscarora moved north and were accepted into the Haudenosaunee Confederacy as its sixth nation in about 1722; those who stayed received a reservation on the Roanoke River."
+countries: [us]
+sides:
+  - id: tus
+    name: Southern Tuscarora and their allies (Coree, Pamlico, Neuse, Bear River, Machapunga, Mattamuskeet)
+    polities: [tuscarora]
+    ink: brown
+    moves: Tuscarora moves
+    success: Tuscarora success
+  - id: car
+    name: North and South Carolina, with Yamasee, Catawba, Cherokee and other Native allies (and from 1712 Tom Blount’s northern Tuscarora)
+    polities: [british-america, yamasee, catawba, cherokee]
+    ink: red
+    moves: Carolina and allied moves
+    success: Carolina and allied success
+notes:
+  - English dates are in the Julian calendar (Old Style) used in the British colonies until 1752, as the standard references give them; the Gregorian (New Style) date was eleven days later, so the attacks of 22 September 1711 began on 3 October New Style.
+  - The numbers of colonists killed in 1711 and of Tuscarora killed and enslaved at Neoheroka come from colonial reports, above all those of Christoph von Graffenried and James Moore Jr., and are approximate. The Tuscarora’s own view of the war survives mainly in their oral history and in what colonial officials recorded of their complaints.
+  - Fort Neoheroka is also spelled Nooherooka; its site near Snow Hill is on the National Register of Historic Places, and Tuscarora from New York and North Carolina marked its 300th anniversary there in 2013.
+sources:
+  - title: Tuscarora War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tuscarora_War
+  - title: Fort Neoheroka (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fort_Neoheroka
+  - title: John Barnwell (colonist) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/John_Barnwell_(colonist)
+  - title: John Lawson (explorer) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/John_Lawson_(explorer)
+  - title: Tuscarora (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tuscarora_people
+steps:
+  - title: The rising of September 1711
+    date: September 1711
+    when: "1711-09-22"
+    borders: "1711-09-22"
+    countries: [us]
+    body:
+      - "The Tuscarora lived in towns along the rivers of the North Carolina coastal plain, the northern towns on the Roanoke under Tom Blount and the southern ones around Catechna on Contentnea Creek under the leader the English called Hancock. For years they had complained of colonists taking their land, of traders who cheated them and of raiders who seized their people to sell as slaves in Virginia, South Carolina and the Caribbean. In 1710 some Tuscarora asked to move north to Pennsylvania, which would only accept them with a certificate of good conduct from North Carolina. The same year Christoph von Graffenried founded New Bern with Swiss and German Palatine settlers on land at the meeting of the Neuse and Trent rivers, and the colony, divided by the armed quarrel known as Cary’s Rebellion, was weak."
+      - "In September 1711 Hancock’s men seized the colony’s surveyor-general John Lawson, who had laid out New Bern, and Graffenried as they travelled up the Neuse. A council at Catechna sentenced Lawson to death and spared Graffenried. From 22 September the southern Tuscarora and their allies, the Coree, Pamlico, Neuse, Bear River, Machapunga and Mattamuskeet, attacked the farms along the Neuse, Trent and Pamlico rivers and around Bath. Graffenried put the number killed in the first attacks at more than 130, and many more were taken captive; the survivors gathered in fortified houses. North Carolina appealed to Virginia and South Carolina for help. Tom Blount’s northern Tuscarora did not join the war, and Virginia’s governor Alexander Spotswood kept them neutral with talks and threats."
+    facts:
+      - [Attacks begin, "22 September 1711 (Old Style)"]
+      - [Colonists killed, "more than 130 in the first attacks (Graffenried)"]
+      - [Leaders, "Hancock (southern Tuscarora), Tom Blount (northern Tuscarora)"]
+    markers:
+      - kind: capital
+        side: tus
+        name: Catechna
+        date: September 1711
+        text: Hancock’s town on Contentnea Creek, where Lawson was tried and executed (location approximate).
+        lonlat: [-77.44, 35.37]
+        lp: l
+      - kind: battle
+        side: tus
+        name: New Bern
+        date: 22 September 1711
+        text: The Swiss and Palatine settlement founded in 1710; its outlying farms were among the first attacked.
+        lonlat: [-77.044, 35.108]
+      - kind: battle
+        side: tus
+        name: Bath
+        date: September 1711
+        text: The colony’s oldest town; the farms around it and along the Pamlico were raided.
+        lonlat: [-76.811, 35.477]
+      - kind: event
+        side: none
+        name: Tom Blount’s towns
+        date: 1711
+        text: The northern Tuscarora on the Roanoke stayed out of the war (location approximate).
+        lonlat: [-77.05, 36.05]
+    arrows:
+      - side: tus
+        phase: 1
+        via: [[-77.44, 35.33], [-77.25, 35.18], [-77.08, 35.12]]
+      - side: tus
+        phase: 1
+        via: [[-77.40, 35.42], [-77.10, 35.48], [-76.85, 35.48]]
+    areas:
+      - style: occupied
+        side: tus
+        label: Southern Tuscarora and allied towns (approximate)
+        polygon: [[-77.85, 35.65], [-77.25, 35.70], [-77.05, 35.45], [-77.30, 35.25], [-77.80, 35.30]]
+  - title: Barnwell, Moore and Neoheroka
+    date: 1712–1715
+    when: "1712-01"
+    borders: "1713-03-20"
+    countries: [us]
+    body:
+      - "South Carolina sent Colonel John Barnwell north with about 30 colonists and some 500 Native warriors, most of them Yamasee, with Catawba and smaller Piedmont peoples; about 50 North Carolina militiamen joined them. In January 1712 they stormed the Tuscarora fort of Narhantes, after which many of the Native warriors went home with their captives. Barnwell then besieged Hancock’s fort at Catechna and in April agreed a truce under which the Tuscarora freed their prisoners. Soon after, some of Barnwell’s men seized Tuscarora people to sell as slaves, and the war began again."
+      - "A second South Carolina force under Colonel James Moore Jr., son of the former governor, arrived in December 1712 with 33 colonists and nearly 1,000 Native warriors, among them Cherokee, Yamasee, Catawba and Apalachee. By then Tom Blount had sided with North Carolina in return for recognition as leader of all the Tuscarora, and his men captured Hancock, who was executed. In March 1713 Moore besieged Neoheroka, the largest Tuscarora fort, near today’s Snow Hill. After about three weeks his men set the fort on fire and stormed it, and it fell on 22 March. Hundreds of men, women and children died in the fire, some 170 were killed outside it, and about 400 were taken to South Carolina and sold into slavery, about 950 people in all."
+      - "Most of the southern Tuscarora left North Carolina for the north, where the Oneida took them in, and in about 1722 the Haudenosaunee accepted them as the sixth nation of their confederacy. The Coree, Machapunga and others fought on in the swamps until a peace of 11 February 1715. In 1717–1718 the Tuscarora who stayed were given a reservation at Indian Woods on the Roanoke; the last of them moved to New York in 1802. The war opened the interior of North Carolina to colonists, and the Yamasee and Catawba who had fought in it rose against South Carolina in 1715."
+    facts:
+      - [Barnwell’s expedition, "January – April 1712"]
+      - [Siege of Neoheroka, "about 1–22 March 1713"]
+      - [Killed or captured at Neoheroka, "about 950"]
+      - [Sixth nation of the Haudenosaunee, "about 1722"]
+    markers:
+      - kind: taken
+        side: car
+        name: Neoheroka (Nooherooka)
+        date: March 1713
+        text: Moore’s army burned and stormed the fort; about 950 Tuscarora were killed or captured and enslaved.
+        lonlat: [-77.730, 35.479]
+        lp: l
+      - kind: held
+        side: tus
+        name: Catechna
+        date: March – April 1712
+        text: Hancock’s fort held against Barnwell until the truce of April 1712 (location approximate).
+        lonlat: [-77.44, 35.37]
+      - kind: capital
+        side: car
+        name: Charles Town
+        date: 1712–1713
+        text: Both expeditions came from South Carolina; the captives of Neoheroka were sold here.
+        lonlat: [-79.93, 32.78]
+      - kind: event
+        side: car
+        name: Indian Woods
+        date: 1717–1718
+        text: Reservation for the Tuscarora who stayed in North Carolina (location approximate).
+        lonlat: [-77.05, 36.05]
+    arrows:
+      - side: car
+        label: Barnwell
+        phase: 1
+        via: [[-79.95, 32.85], [-78.95, 33.9], [-78.1, 34.75], [-77.5, 35.3]]
+      - side: car
+        label: Moore
+        phase: 2
+        via: [[-80.2, 33.2], [-79.2, 34.3], [-78.2, 35.2], [-77.75, 35.45]]
+      - side: tus
+        label: To the Haudenosaunee
+        phase: 3
+        via: [[-77.6, 35.6], [-77.3, 36.6], [-77.0, 37.6]]

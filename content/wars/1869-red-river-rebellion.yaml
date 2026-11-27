@@ -1,0 +1,185 @@
+id: red-river-rebellion
+name: Red River Rebellion
+start: "1869-10-11"
+end: "1870-08-24"
+tier: B
+summary: "The resistance of the Métis of the Red River Settlement, in what is now Manitoba, to the transfer of Rupert’s Land from the Hudson’s Bay Company to Canada in 1869–1870, also called the Red River Resistance. The Canadian government agreed to buy the company’s territory without consulting its people, of whom some 10,000 of about 12,000 at Red River were Métis, and sent surveyors and a lieutenant governor, William McDougall, before the transfer took effect. In October 1869 the Métis, led by Louis Riel, stopped the survey, formed a National Committee, turned McDougall back at the border and seized Upper Fort Garry. In December they declared a provisional government, which a convention of French- and English-speaking delegates endorsed in February 1870. The government imprisoned members of the pro-Canadian party and on 4 March 1870 executed one of them, Thomas Scott, which caused fury in Ontario. Delegates sent to Ottawa negotiated the Manitoba Act, by which Manitoba joined Canada as a province on 15 July 1870 with guarantees for land, the French language and Catholic schools. A military expedition under Colonel Garnet Wolseley reached Fort Garry on 24 August 1870; Riel had fled to the United States, and he was never granted the amnesty the delegates believed they had been promised."
+countries: [ca]
+sides:
+  - id: met
+    name: Métis National Committee and provisional government (Louis Riel)
+    polities: [metis]
+    ink: blue
+    moves: Métis moves
+    success: Métis success
+  - id: can
+    name: Canada (the Canadian government, the Canadian Party at Red River and the Red River Expeditionary Force)
+    polities: [canada, united-kingdom]
+    ink: red
+    moves: Canadian and British moves
+    success: Canadian and British success
+notes:
+  - "Historians and Métis organisations often call the events the Red River Resistance: the Métis were resisting a transfer of authority made without their consent, before Canada governed the territory, rather than rebelling against an established government. The Hudson’s Bay Company still governed the settlement, through the Council of Assiniboia, until 15 July 1870."
+  - "The Métis are a people of mixed First Nations and European, mostly French and Scottish, descent who developed their own language (Michif), culture and economy, based on the buffalo hunt, freighting and river-lot farming. At Red River the French-speaking Catholic Métis and the English-speaking Protestant “country-born” lived side by side."
+sources:
+  - title: Red River Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Red_River_Rebellion
+  - title: Red River Resistance (The Canadian Encyclopedia)
+    url: https://www.thecanadianencyclopedia.ca/en/article/red-river-rebellion
+  - title: RIEL, LOUIS (1844–1885) (Dictionary of Canadian Biography)
+    url: https://www.biographi.ca/en/bio/riel_louis_1844_85_11E.html
+  - title: Wolseley expedition (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Wolseley_expedition
+  - title: Manitoba Act, 1870 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Manitoba_Act,_1870
+  - title: Riel House and the Red River Resistance (Parks Canada)
+    url: https://parks.canada.ca/lhn-nhs/mb/riel
+steps:
+  - title: The transfer and the National Committee
+    date: October – December 1869
+    when: "1869-11-02"
+    borders: "1869-12-08"
+    countries: [ca]
+    body:
+      - In 1869 the Hudson’s Bay Company agreed to sell Rupert’s Land, the vast territory draining to Hudson Bay, to the new Dominion of Canada for £300,000, the transfer to take effect on 1 December. Nobody asked the people who lived there. The Red River Settlement, at the meeting of the Red and Assiniboine rivers, had about 12,000 inhabitants, some 10,000 of them Métis, French- and English-speaking, who held long river lots by custom rather than by title. Before the transfer Canada sent survey parties, which began to lay out square townships across the river lots, and named a lieutenant governor, William McDougall, an Ontario politician and ardent expansionist whom the French-speaking Métis distrusted. A small Canadian Party led by John Christian Schultz openly looked forward to taking the land.
+      - On 11 October 1869 a group of Métis led by Louis Riel, a 24-year-old who had been educated in Montreal, stood on a surveyor’s chain on the farm of André Nault and told the surveyors to stop. On 16 October the Métis formed a National Committee, with John Bruce as president and Riel as secretary, and in late October built a barricade across the road at St. Norbert and warned McDougall not to enter. When he arrived at the border he was turned back on 2 November by armed Métis under Ambroise-Dydime Lépine and waited at Pembina, in Dakota Territory. The same day Riel and some 400 men occupied Upper Fort Garry, the company’s headquarters, without a shot.
+      - Canada refused to complete the purchase while the territory was in turmoil, but on 1 December McDougall, unaware of this, crossed the border to proclaim the transfer and his own authority, then retreated to Ontario; his surveyor, Colonel John Stoughton Dennis, tried in vain to raise an armed force against the Métis. Riel issued a list of rights, and on 7 December the Métis surrounded Schultz’s house in the village of Winnipeg, where his supporters had gathered, and imprisoned some 45 of them in the fort. On 8 December the National Committee proclaimed a provisional government.
+    facts:
+      - [Survey stopped, "11 October 1869"]
+      - [Upper Fort Garry occupied, "2 November 1869"]
+      - [Provisional government proclaimed, "8 December 1869"]
+    markers:
+      - kind: taken
+        side: met
+        name: Upper Fort Garry
+        date: 2 November 1869
+        text: Riel and some 400 Métis occupied the Hudson’s Bay Company’s headquarters; in December Schultz’s party, besieged in the nearby village of Winnipeg, was imprisoned here.
+        lonlat: [-97.131, 49.887]
+        lp: t
+      - kind: held
+        side: met
+        name: St. Norbert
+        date: October 1869
+        text: The Métis barricaded the road from the border here, at La Rivière Sale.
+        lonlat: [-97.15, 49.77]
+        lp: l
+      - kind: event
+        side: met
+        name: Pembina
+        date: 2 November 1869
+        text: McDougall, turned back at the border by Lépine’s men, waited here in Dakota Territory.
+        lonlat: [-97.24, 48.966]
+      - kind: event
+        side: can
+        name: Lower Fort Garry
+        date: December 1869
+        text: Colonel John Stoughton Dennis, McDougall’s surveyor, tried to raise an armed force against the Métis at this stone fort down the Red River.
+        lonlat: [-96.93, 50.115]
+    arrows:
+      - side: can
+        label: McDougall
+        phase: 1
+        via: [[-97.30, 48.60], [-97.25, 48.85], [-97.23, 48.99]]
+      - side: met
+        label: Riel
+        phase: 2
+        via: [[-97.15, 49.78], [-97.14, 49.83], [-97.135, 49.88]]
+    areas:
+      - style: occupied
+        side: met
+        label: The Red River Settlement, held by the Métis from November 1869 (approximate)
+        polygon: [[-97.30, 49.55], [-97.05, 49.55], [-96.85, 50.20], [-97.00, 50.25], [-97.20, 49.95], [-97.80, 49.98], [-98.35, 50.00], [-98.35, 49.92], [-97.70, 49.85], [-97.25, 49.85]]
+  - title: The provisional government, Thomas Scott and the Manitoba Act
+    date: December 1869 – July 1870
+    when: "1870-03-04"
+    borders: "1870-07-15"
+    countries: [ca]
+    body:
+      - On 27 December 1869 Riel became president of the provisional government. The same day Donald A. Smith, a senior company officer, arrived as Canada’s special commissioner and appealed over Riel’s head to mass meetings in the fort’s courtyard on 19 and 20 January 1870. They agreed to elect a convention of forty delegates, twenty from the English-speaking and twenty from the French-speaking parishes, which in February adopted a list of rights, endorsed the provisional government with Riel as president and chose delegates to negotiate with Ottawa.
+      - Some of the prisoners had escaped in January, among them Schultz and Thomas Scott, an Ontario labourer and Orangeman. In February Major Charles Boulton led about 50 men from Portage la Prairie to free the remaining prisoners; they were captured near Fort Garry on 17 February. Boulton was condemned to death and reprieved, but Scott, who had abused his guards, was tried by a Métis court martial for insubordination and shot by firing squad on 4 March 1870. In Ontario, where Schultz and his followers toured to denounce the “murder”, the execution made Riel an outlaw in the eyes of many English Canadians.
+      - The delegates, the priest Joseph-Noël Ritchot, John Black and Alfred H. Scott, reached Ottawa in April, where Ritchot and Scott were briefly arrested for complicity in Thomas Scott’s death; they then negotiated with Prime Minister John A. Macdonald and George-Étienne Cartier. The Manitoba Act, passed on 12 May 1870, created a small province around the settlement, with an elected legislature, French and English as official languages, publicly funded Catholic and Protestant schools and 1.4 million acres reserved for the children of Métis families. Manitoba joined Canada on 15 July 1870, when the transfer of Rupert’s Land took effect. The delegates believed they had been promised an amnesty for all acts of the provisional government, but no amnesty was proclaimed.
+    facts:
+      - [Riel elected president, "27 December 1869"]
+      - [Convention of Forty, "January – February 1870"]
+      - [Thomas Scott executed, "4 March 1870"]
+      - [Manitoba Act, "12 May 1870"]
+      - [Manitoba joins Canada, "15 July 1870"]
+    markers:
+      - kind: capital
+        side: met
+        name: Upper Fort Garry
+        date: 1869–1870
+        text: Seat of the provisional government, where the Convention of Forty met and Thomas Scott was executed.
+        lonlat: [-97.131, 49.887]
+      - kind: event
+        side: met
+        name: Portage la Prairie
+        date: February 1870
+        text: Boulton’s party set out from here to free the prisoners at Fort Garry and was captured.
+        lonlat: [-98.29, 49.97]
+    arrows:
+      - side: can
+        label: Boulton
+        phase: 1
+        via: [[-98.28, 49.97], [-97.80, 49.96], [-97.40, 49.92], [-97.15, 49.89]]
+    areas:
+      - style: outline
+        side: met
+        label: The province of Manitoba created by the Manitoba Act, 1870
+        polygon: [[-99.00, 49.00], [-96.00, 49.00], [-96.00, 50.50], [-99.00, 50.50]]
+  - title: The Wolseley expedition
+    date: May – September 1870
+    when: "1870-08-24"
+    borders: "1870-08-24"
+    countries: [ca, us]
+    body:
+      - To assert Canadian authority, and to satisfy Ontario, the government sent a military expedition under Colonel Garnet Wolseley, with about 400 British regulars of the 60th Rifles, the Royal Artillery and the Royal Engineers, and some 700 Canadian militia in the 1st (Ontario) and 2nd (Quebec) Rifles, carried by about 400 Native and other voyageurs and boatmen. It went by train from Toronto to Collingwood and by steamer across Lakes Huron and Superior, where the United States refused to let the steamer Chicora through its canal at Sault Ste. Marie with military stores, so that they were carried around on the Canadian side. From Prince Arthur’s Landing, the later Thunder Bay, which Wolseley named on 25 May, the force struggled along the unfinished Dawson Road and through some fifty portages to the Lake of the Woods and down the Winnipeg River, a journey of about three months.
+      - The troops reached Upper Fort Garry in pouring rain on 24 August 1870, expecting a fight, and found the fort empty; Riel had fled across the river to St. Boniface and then to the United States. The British regulars soon returned east, and the Ontario militiamen who stayed as a garrison harassed and assaulted Métis whom they blamed for Scott’s death; in September 1870 Elzéar Goulet, a member of Scott’s court martial, was chased into the Red River by a crowd that included soldiers and drowned. No one was charged.
+      - Riel was elected to the House of Commons three times from 1873 but could not take his seat; Ontario offered a reward for his arrest. In 1875 he was granted an amnesty on condition of five years’ banishment, and Lépine’s death sentence for Scott’s execution was commuted. Delays and fraud in distributing the promised land, and the pressure of newcomers, drove many Métis from Manitoba west to the Saskatchewan valley, where they rose again under Riel in 1885.
+    facts:
+      - [Expedition, "about 1,100 soldiers and 400 voyageurs"]
+      - [Prince Arthur’s Landing named, "25 May 1870"]
+      - [Arrival at Fort Garry, "24 August 1870"]
+    markers:
+      - kind: event
+        side: can
+        name: Prince Arthur’s Landing
+        date: 25 May 1870
+        text: The expedition landed here, at the later Thunder Bay, and began the march along the Dawson Road.
+        lonlat: [-89.25, 48.38]
+      - kind: event
+        side: can
+        name: Fort Frances
+        date: 4 August 1870
+        text: The brigades of boats reached the Hudson’s Bay Company post on the Rainy River here.
+        lonlat: [-93.40, 48.61]
+        lp: b
+      - kind: event
+        side: can
+        name: Fort Alexander
+        date: August 1870
+        text: The post at the mouth of the Winnipeg River, from which the boats crossed the south end of Lake Winnipeg to the Red River.
+        lonlat: [-96.33, 50.62]
+      - kind: taken
+        side: can
+        name: Upper Fort Garry
+        date: 24 August 1870
+        text: Wolseley’s troops entered the empty fort; Riel had fled.
+        lonlat: [-97.131, 49.887]
+        lp: b
+      - kind: event
+        name: Sault Ste. Marie
+        date: May 1870
+        text: The United States refused to let the expedition’s military stores through its canal; they were carried around on the Canadian side.
+        lonlat: [-84.35, 46.50]
+    arrows:
+      - side: can
+        label: Wolseley
+        phase: 1
+        via: [[-80.22, 44.50], [-82.50, 45.60], [-84.35, 46.50], [-87.00, 47.60], [-89.25, 48.38]]
+      - side: can
+        phase: 2
+        via: [[-89.25, 48.40], [-91.50, 48.40], [-93.40, 48.61], [-94.80, 49.70], [-96.33, 50.60]]
+      - side: can
+        phase: 3
+        via: [[-96.40, 50.62], [-96.80, 50.40], [-96.93, 50.12], [-97.13, 49.89]]

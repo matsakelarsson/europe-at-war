@@ -1,0 +1,164 @@
+id: natchez-war
+name: Natchez War
+start: "1729-11-28"
+end: "1731-10"
+tier: B
+summary: "The rising of the Natchez against French Louisiana and the French war that followed. The Natchez, whose towns lay along St. Catherine Creek near the Mississippi, were among the last peoples of the river ruled by a hereditary chief, the Great Sun. French tobacco plantations worked by enslaved Africans had spread over their land, and in 1729 the commandant of Fort Rosalie demanded the village of White Apple, with its temple and ancestral graves, for his own plantation. On 28 November 1729 the Natchez rose, killing about 230 French men, women and children at the fort and the plantations and taking the other women and children and most of the enslaved Africans captive; the Yazoo destroyed the French post on their river. The governor, Étienne Périer, struck back with Choctaw allies, who attacked the Natchez in January 1730, and a French siege of the Natchez forts; the Natchez escaped across the Mississippi. In January 1731 Périer besieged their new fort near Sicily Island, and about 500 Natchez who surrendered, among them the Great Sun, were shipped to Saint-Domingue and sold as slaves. The others found refuge among the Chickasaw, the Muscogee and the Cherokee, and the war led on to the French wars against the Chickasaw."
+countries: [us]
+sides:
+  - id: nat
+    name: Natchez, with the Yazoo and Koroa
+    polities: [natchez]
+    ink: brown
+    moves: Natchez moves
+    success: Natchez success
+  - id: fr
+    name: French Louisiana, with the Choctaw, Tunica and other allies
+    polities: [new-france, choctaw]
+    ink: blue
+    moves: French and Choctaw moves
+    success: French and Choctaw success
+notes:
+  - Louisiana was then governed by the Company of the Indies, which held the colony’s trade monopoly; it gave Louisiana back to the crown after the war.
+  - Most of what is known comes from French officials, soldiers and missionaries, among them Antoine-Simon Le Page du Pratz, who had lived among the Natchez. Numbers, especially of Natchez losses, are approximate. Enslaved Africans fought on both sides; the French feared above all an alliance between them and the Native nations.
+  - The Natchez are also known for the earlier clashes of 1716, 1722 and 1723, sometimes counted as the first, second and third Natchez wars; this entry covers the war of 1729–1731.
+sources:
+  - title: Natchez revolt (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Natchez_revolt
+  - title: Natchez people (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Natchez_people
+  - title: Fort Rosalie (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fort_Rosalie
+  - title: Grand Village of the Natchez (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Grand_Village_of_the_Natchez
+  - title: Places, including Fort Rosalie (Natchez National Historical Park, National Park Service)
+    url: https://www.nps.gov/natc/learn/historyculture/places.htm
+steps:
+  - title: Fort Rosalie, 28 November 1729
+    date: November – December 1729
+    when: "1729-11-28"
+    borders: "1729-11-28"
+    countries: [us]
+    body:
+      - "The French had built Fort Rosalie on the bluff above the Mississippi in 1716, after a first clash with the Natchez, and the Company of the Indies granted tobacco concessions around it, worked by enslaved Africans. Disputes over cattle, debts and killings had led to fighting in 1722 and 1723, when Governor Bienville burned Natchez villages. The Great Sun and his brother Tattooed Serpent, the war chief, had kept the peace with the French, but Tattooed Serpent died in 1725 and the Great Sun in 1728. In 1729 the commandant of the fort, the Sieur de Chépart, demanded the land of the village of White Apple, where the Natchez had their temple and the graves of their ancestors, for his own plantation."
+      - "On the morning of 28 November 1729 Natchez men came to the fort and the plantations as if to trade, and at a signal attacked. They killed almost all the Frenchmen at the post, about 20 escaped, and Chépart was among the dead. A year later the dead were counted as 138 men, 35 women and 56 children, about 230 in all. Most of the women and children and the enslaved Africans were taken captive, and some of the enslaved joined the Natchez. In December the Yazoo and Koroa, to the north, killed the Jesuit missionary and the garrison of Fort St. Pierre on the Yazoo River."
+      - "The news caused panic in New Orleans, the capital of a colony that depended on the labour of thousands of enslaved Africans. Governor Étienne Périer sent armed enslaved men with French soldiers to destroy the village of the Chaouacha, a small nation below the city that had no part in the rising, to set Africans and Native peoples against each other, and called on the Choctaw for help."
+    facts:
+      - [Attack on Fort Rosalie, "28 November 1729"]
+      - [French killed, "about 230 (138 men, 35 women, 56 children)"]
+      - [Fort St. Pierre destroyed, "December 1729"]
+    markers:
+      - kind: taken
+        side: nat
+        name: Fort Rosalie
+        date: 28 November 1729
+        text: The Natchez killed the garrison and the colonists of the fort and the plantations around it (today’s Natchez).
+        lonlat: [-91.406, 31.557]
+        lp: l
+      - kind: taken
+        side: nat
+        name: Fort St. Pierre
+        date: December 1729
+        text: The Yazoo and Koroa killed the garrison and the Jesuit missionary of the post on the Yazoo River (location approximate).
+        lonlat: [-90.80, 32.47]
+      - kind: capital
+        side: fr
+        name: New Orleans
+        date: "1729"
+        text: Capital of Louisiana and seat of Governor Périer.
+        lonlat: [-90.065, 29.958]
+    arrows:
+      - side: nat
+        phase: 1
+        via: [[-91.36, 31.52], [-91.38, 31.54], [-91.40, 31.555]]
+    areas:
+      - style: occupied
+        side: nat
+        label: Natchez villages on St. Catherine Creek (approximate)
+        polygon: [[-91.45, 31.62], [-91.30, 31.62], [-91.25, 31.48], [-91.38, 31.44], [-91.46, 31.50]]
+  - title: The siege of the Natchez forts
+    date: January – February 1730
+    when: "1730-01-27"
+    borders: "1730-02-15"
+    countries: [us]
+    body:
+      - "The Choctaw, who saw a chance to win captives, goods and French favour, struck first. On 27 January 1730 several hundred Choctaw warriors, with the French officer Jean-Paul Le Sueur, attacked the Natchez villages, killed about 100 Natchez and freed many of the French women and children and enslaved Africans held there."
+      - "French troops, militia and Tunica warriors under Henri de Louboëy arrived from New Orleans in February and besieged the two forts the Natchez had built near their Grand Village, which the French called Fort de la Valeur and Fort de la Farine. Enslaved Africans fought on both sides, some helping to defend the forts. After several weeks the Natchez agreed to give up their remaining captives if the French drew back their guns, and in the night at the end of February they slipped out of the forts and crossed the Mississippi. The French rebuilt Fort Rosalie, and the Choctaw demanded payment for the captives they had freed."
+    facts:
+      - [Choctaw attack, "27 January 1730"]
+      - [Natchez killed by the Choctaw, "about 100"]
+      - [Natchez escape, "end of February 1730"]
+    markers:
+      - kind: siege
+        side: fr
+        name: Natchez forts
+        date: January – February 1730
+        text: The forts near the Grand Village, besieged by the Choctaw and then by Louboëy’s troops until the Natchez escaped (location approximate).
+        lonlat: [-91.383, 31.543]
+      - kind: event
+        side: fr
+        name: Choctaw towns
+        date: "1730"
+        text: The Choctaw, the largest nation allied with the French, sent several hundred warriors (location approximate).
+        lonlat: [-89.10, 32.75]
+    arrows:
+      - side: fr
+        label: Choctaw
+        phase: 1
+        via: [[-89.20, 32.60], [-90.30, 31.85], [-91.33, 31.55]]
+      - side: fr
+        label: Louboëy
+        phase: 2
+        via: [[-90.07, 29.97], [-91.20, 30.45], [-91.62, 31.00], [-91.42, 31.50]]
+      - side: nat
+        label: Natchez escape
+        phase: 3
+        via: [[-91.40, 31.56], [-91.58, 31.66], [-91.68, 31.82]]
+  - title: Sicily Island and the dispersal of the Natchez
+    date: 1731
+    when: "1731-01-21"
+    borders: "1731-01-25"
+    countries: [us, ht]
+    body:
+      - "With reinforcements from France, Périer led an army up the Mississippi and the Red and Black rivers to the new Natchez fort near today’s Sicily Island, and besieged it from 21 January 1731. On 25 January some 45 men and 450 women and children surrendered, among them the Great Sun; the rest escaped in the night. Périer shipped the prisoners to Saint-Domingue, where they were sold as slaves."
+      - "The Natchez who escaped fought on. In October 1731 they attacked the French post of Natchitoches on the Red River, where Louis Juchereau de St. Denis drove them off with heavy losses. Most of the survivors found refuge among the Chickasaw, and later among the Muscogee and the Cherokee, where they lived as Natchez towns for generations; their descendants live today among the Muscogee (Creek) and Cherokee nations. The Company of the Indies, ruined by the war, gave Louisiana back to the crown, and the Chickasaw refusal to hand over the refugees led to the French wars against them in 1736 and 1739–1740."
+    facts:
+      - [Siege of the Sicily Island fort, "21–25 January 1731"]
+      - [Natchez sent to Saint-Domingue as slaves, "about 500"]
+      - [Attack on Natchitoches, "October 1731"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Natchez fort near Sicily Island
+        date: 25 January 1731
+        text: About 500 Natchez surrendered and were sold into slavery in Saint-Domingue (location approximate).
+        lonlat: [-91.66, 31.85]
+      - kind: held
+        side: fr
+        name: Natchitoches
+        date: October 1731
+        text: St. Denis beat off the Natchez attack on the post of St. Jean-Baptiste.
+        lonlat: [-93.086, 31.761]
+      - kind: event
+        side: nat
+        name: Chickasaw towns
+        date: 1731–1736
+        text: Most of the surviving Natchez found refuge here (location approximate).
+        lonlat: [-88.73, 34.27]
+      - kind: event
+        side: fr
+        name: New Orleans
+        date: "1731"
+        text: The captives were shipped from here to Saint-Domingue.
+        lonlat: [-90.065, 29.958]
+    arrows:
+      - side: fr
+        label: Périer
+        phase: 1
+        via: [[-90.07, 29.97], [-91.20, 30.50], [-91.70, 31.05], [-91.80, 31.50], [-91.69, 31.82]]
+      - side: nat
+        phase: 2
+        via: [[-91.72, 31.84], [-92.50, 31.80], [-93.03, 31.77]]
+      - side: nat
+        phase: 2
+        via: [[-91.60, 31.95], [-90.20, 33.10], [-88.80, 34.20]]

@@ -1,0 +1,170 @@
+id: tackys-revolt
+name: Tacky’s Revolt
+start: "1760-04-07"
+end: "1761"
+tier: B
+summary: "The war of liberation fought by enslaved Coromantee (Akan) people in Jamaica in 1760–1761, the largest rising in the British Caribbean in the eighteenth century. Its leaders had been soldiers and nobles on the Gold Coast, and they planned to overthrow British rule and make the island a free African state. On Easter Monday, 7 April 1760, Tacky, a Fante royal enslaved in St Mary, led a rising on the estates near Port Maria; his men seized arms from Fort Haldane, but the militia and Maroons from the eastern Maroon towns, bound by the treaties of 1739, hunted them down, and Tacky was shot dead within days. On 25 May a larger, better-planned rising broke out in Westmoreland under Apongo, called Wager by the British, said to have been a prince and war leader on the Gold Coast; his fighters fortified a camp in the hills and beat off the militia before regular troops, sailors and Leeward Maroons stormed it in early June. Apongo was captured in July and executed, but bands under his lieutenant Simon fought on from the Cockpit Country into 1761, and plots were uncovered across the island, including in Kingston, where Coromantee people had crowned a ‘Queen’, Cubah. Over 60 whites and a similar number of free people of colour were killed; some 400 rebels died in battle or by execution by the usual count (the militia claimed more), and more than 500 were transported and sold abroad. The historian Trevor Burnard judged that in its shock to the British Empire only the American Revolution surpassed it in that century."
+countries: [jm, gb]
+sides:
+  - id: reb
+    name: Coromantee rebels (Tacky in St Mary; Apongo and Simon in Westmoreland)
+    polities: [tackys-rebels]
+    ink: magenta
+    moves: Rebel moves
+    success: Rebel success
+  - id: gb
+    name: Great Britain (the Jamaica militia, the 74th Regiment and the Royal Navy)
+    polities: [united-kingdom, british-west-indies]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: mar
+    name: Jamaican Maroons, bound by the treaties of 1739 to help suppress risings
+    polities: [jamaican-maroons]
+    ink: green
+    moves: Maroon moves
+    success: Maroon success
+notes:
+  - "The rising is known mainly from colonial sources: the planter-historian Edward Long, the diary of the Westmoreland overseer Thomas Thistlewood, the records of the Assembly and of courts martial. Their numbers, especially the militia’s claim to have killed some 700 rebels in the west, cannot be checked. Vincent Brown’s study (2020) and his interactive map reconstruct the war as a planned, island-wide military campaign rather than a series of local revolts."
+  - "Jamaica was still the main British base in the Caribbean in the Seven Years’ War, which the British were then fighting; the rebels in the west timed their rising for the departure of a naval escort from Bluefields Bay."
+sources:
+  - title: Tacky’s Revolt (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tacky%27s_Revolt
+  - title: Vincent Brown and Axis Maps, Slave Revolt in Jamaica, 1760–1761. A Cartographic Narrative
+    url: https://revolt.axismaps.com/map/
+  - title: Slave Revolt in Jamaica (Harvard Arts and Humanities Research Computing)
+    url: https://digitalhumanities.fas.harvard.edu/projects/slave-revolt-in-jamaica
+  - title: Vincent Brown writes war and empire into the history of slavery (Harvard Magazine, February 2020)
+    url: https://www.harvardmagazine.com/2020/02/feature-history-from-below
+  - title: Jamaican Maroons (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jamaican_Maroons
+steps:
+  - title: Tacky’s rising in St Mary
+    date: "April 1760"
+    when: "1760-04"
+    borders: "1760-04-14"
+    countries: [jm, gb]
+    body:
+      - "Jamaica in 1760 held some 170,000 enslaved people and only about 12,000 whites. Many of the enslaved had been brought from the Gold Coast, where wars between Akan states had made captives of soldiers and nobles; the British called them Coromantees after the slave fort of Kormantse. Tacky, who had been a chief in the Fante state of Eguafo before he was captured in war and sold, worked as a driver on the Frontier estate in St Mary. He and other leaders, among them Quaw Badu, Sang and Sobadou, spent months planning a rising across the island."
+      - "Before dawn on Easter Monday, 7 April 1760, Tacky’s followers took the Frontier and Trinity estates and killed several overseers, then broke into the storehouse of Fort Haldane, which guarded Port Maria, killed the storekeeper and carried off about four barrels of powder and forty muskets. Joined by hundreds of people from the Heywood Hall and Esher estates, they gathered at Ballard’s Valley, where Obeah men gave them a powder to protect them from bullets. But a man from Esher slipped away to raise the alarm. Lieutenant Governor Sir Henry Moore sent soldiers of the 74th Regiment and mounted militia from Spanish Town, and the Maroons of Scott’s Hall, Charles Town and Moore Town were called out under their treaty duty. When the militia captured and killed an Obeah man, many rebels lost heart and went back to the estates."
+      - "Tacky fought on in the hills with a small band. Within days the Maroons caught up with him, and Davy, a Maroon marksman, shot him dead; his head was displayed in Spanish Town. His remaining followers took their own lives in a cave rather than surrender. Captured rebels were burned alive or hung in iron cages to starve, and the plots that had been meant to rise with Tacky across the island came to light."
+    facts:
+      - [Rising begins, "7 April 1760 (Easter Monday)"]
+      - [Arms seized at Fort Haldane, "about 4 barrels of powder, 40 muskets"]
+      - [Death of Tacky, "mid-April 1760"]
+    markers:
+      - kind: taken
+        side: reb
+        name: Port Maria (Fort Haldane)
+        date: "7 April 1760"
+        text: Tacky’s men broke into the fort’s storehouse and seized powder and muskets after taking the nearby Frontier and Trinity estates.
+        lonlat: [-76.890, 18.370]
+        lp: r
+      - kind: event
+        side: reb
+        name: Ballard’s Valley
+        date: "7 April 1760"
+        text: The rebels gathered here after taking the Heywood Hall and Esher estates (location approximate).
+        lonlat: [-76.980, 18.300]
+        lp: l
+      - kind: held
+        side: mar
+        name: Scott’s Hall
+        date: "April 1760"
+        text: Maroon town whose men, with those of Charles Town and Moore Town, hunted Tacky’s band; the Maroon Davy shot Tacky.
+        lonlat: [-76.820, 18.220]
+        lp: b
+      - kind: capital
+        side: gb
+        name: Spanish Town
+        date: "9 April 1760"
+        text: Lieutenant Governor Moore sent soldiers and mounted militia from the capital to St Mary.
+        lonlat: [-76.955, 17.990]
+        lp: b
+    arrows:
+      - side: reb
+        label: Tacky
+        phase: 1
+        via: [[-76.90, 18.36], [-76.94, 18.33], [-76.98, 18.30]]
+      - side: gb
+        label: Militia and the 74th
+        phase: 2
+        via: [[-76.95, 18.01], [-76.98, 18.12], [-76.98, 18.22], [-76.97, 18.29]]
+      - side: mar
+        label: Maroons
+        phase: 2
+        via: [[-76.82, 18.23], [-76.88, 18.27], [-76.95, 18.30]]
+  - title: Apongo, Simon and the war in the west
+    date: "May 1760 – 1761"
+    when: "1760-06"
+    borders: "1760-06-02"
+    countries: [jm, gb]
+    body:
+      - "The main blow fell in the west. On 25 May 1760, timed for the departure of a naval escort from Bluefields Bay, Coromantee people on the Masemure estate in Westmoreland rose under Apongo, whom the British called Wager, said to have been a prince and war leader on the Gold Coast; his lieutenant Simon fired the first shot, killing the estate’s manager. The rising spread over the neighbouring estates, and the rebels fortified a camp in the hills with a barricade and well-stocked magazines, while white and Black refugees fled to Savanna-la-Mar. On 29 May the Westmoreland militia attacked the barricade and was driven off."
+      - "Martial law was declared again. On 1–2 June militia from three parishes, a company of the 74th Regiment, sailors and the Leeward Maroons of Accompong stormed the barricade in a two-hour fight; many rebels, women and children among them, were killed or driven over a precipice. Smaller bands fought on, and new risings broke out in St James and Hanover on 7 June; Maroons from Trelawny Town and Accompong and militia patrols hunted them through June. The militia claimed some 700 rebels killed in the west, and many took their own lives. Apongo was captured on 3 July and sentenced to hang in chains for three days and then be burned to death."
+      - "Simon led the survivors, some fifty armed men and women, to High Windward in the Cockpit Country, from where they raided estates in St Elizabeth, and in January 1761 to Mile Gully; he was reported killed in a skirmish, but his band fought on, and Governor Moore declared the western rising over only late in 1761. In Kingston the authorities found that Coromantee people had crowned Cubah as their queen; she was sentenced to transportation, escaped back to the island and was executed. The Assembly passed harsh new laws against Obeah and the movement of the enslaved, and rebels inspired by Tacky and Apongo rose again in St Mary in 1765 and in Westmoreland in 1766."
+    facts:
+      - [Western rising begins, "25 May 1760"]
+      - [Rebel barricade stormed, "1–2 June 1760"]
+      - [Apongo captured, "3 July 1760"]
+      - [Rebels transported and sold abroad, "more than 500"]
+    markers:
+      - kind: event
+        side: reb
+        name: Masemure
+        date: "25 May 1760"
+        text: The western rising began on this Westmoreland estate under Apongo; Simon fired the first shot (location approximate).
+        lonlat: [-78.020, 18.270]
+        lp: t
+      - kind: battle
+        side: gb
+        name: The rebels’ barricade
+        date: "29 May – 2 June 1760"
+        text: The rebels repulsed the militia on 29 May; regulars, sailors, militia and Maroons stormed the camp on 1–2 June (location approximate).
+        lonlat: [-77.950, 18.320]
+        lp: r
+      - kind: held
+        side: gb
+        name: Savanna-la-Mar
+        date: "May 1760"
+        text: The parish town of Westmoreland, where refugees gathered and the 74th Regiment was quartered.
+        lonlat: [-78.133, 18.219]
+        lp: b
+      - kind: event
+        name: Bluefields Bay
+        date: "May 1760"
+        text: The western rebels timed their rising for the departure of the naval escort from this anchorage.
+        lonlat: [-78.030, 18.160]
+        lp: b
+      - kind: held
+        side: reb
+        name: High Windward
+        date: "1760"
+        text: Simon’s band held out here in the Cockpit Country and raided estates in St Elizabeth (location approximate).
+        lonlat: [-77.650, 18.270]
+        lp: t
+      - kind: event
+        side: reb
+        name: Kingston
+        date: "1760"
+        text: Coromantee people here had crowned Cubah as their queen; she was later executed.
+        lonlat: [-76.790, 17.970]
+        lp: b
+    arrows:
+      - side: reb
+        label: Apongo
+        phase: 1
+        via: [[-78.02, 18.27], [-77.99, 18.30], [-77.95, 18.32]]
+      - side: gb
+        label: Militia, the 74th and Maroons
+        phase: 2
+        via: [[-78.13, 18.23], [-78.06, 18.27], [-77.98, 18.31]]
+      - side: reb
+        label: Simon
+        phase: 3
+        via: [[-77.94, 18.33], [-77.80, 18.30], [-77.65, 18.27], [-77.40, 18.14]]
+    areas:
+      - style: contested
+        side: reb
+        label: Western rising, May–June 1760 (approximate)
+        polygon: [[-78.25, 18.30], [-78.05, 18.42], [-77.80, 18.40], [-77.80, 18.22], [-78.00, 18.17], [-78.25, 18.22]]

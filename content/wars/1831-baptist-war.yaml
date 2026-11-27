@@ -1,0 +1,128 @@
+id: baptist-war
+name: Baptist War
+start: "1831-12-27"
+end: "1832-01"
+tier: B
+summary: "The largest rising of enslaved people in the British Caribbean, also called the Christmas Rebellion and the Great Jamaican Slave Revolt of 1831–1832. It was planned by Samuel Sharpe, an enslaved man of Montego Bay who was a deacon of the Baptist chapel of the missionary Thomas Burchell and a leader among the Black Baptists of western Jamaica. As the campaign against slavery grew in Britain, many enslaved Jamaicans believed that the king had granted freedom and that the planters were withholding it. Sharpe and his companions swore people on the estates to refuse to work after the Christmas holidays of 1831 unless they were paid wages. The strike turned into an armed rising when the trash house of Kensington estate in the hills of Saint James was set alight on 27 December. Up to 60,000 of the island’s roughly 300,000 enslaved people took part across Saint James, Hanover, Westmoreland, Trelawny and Saint Elizabeth; estates were burned, and a rebel Black Regiment drove back a militia force. The governor, Lord Belmore, declared martial law, and British troops under Sir Willoughby Cotton, with the militia and Maroons, broke the rising in the first weeks of January 1832. Fourteen white people were killed. More than 200 rebels died in the fighting, and between 310 and 340 were executed after trials by courts martial and slave courts; Sharpe was hanged at Montego Bay on 23 May 1832. Planters blamed the missionaries and destroyed Baptist and Methodist chapels. The Assembly put the damage at £1,154,589. The rising and the reprisals, reported in Britain by the missionaries, helped persuade Parliament to pass the Slavery Abolition Act of 1833."
+countries: [jm, gb]
+sides:
+  - id: reb
+    name: Enslaved rebels (Samuel Sharpe and the Black Regiment)
+    polities: [baptist-war-rebels]
+    ink: orange
+    moves: Rebel moves
+    success: Rebel success
+  - id: brit
+    name: Colony of Jamaica (British troops, militia and Maroons)
+    polities: [british-west-indies, united-kingdom]
+    ink: red
+    moves: Colonial moves
+    success: Colonial success
+notes:
+  - The name Baptist War was given by the planters, who blamed the Baptist missionaries; the missionaries denied any part in the plan, and historians see it as the work of enslaved leaders, many of them members of the Baptist congregations. Accounts of the number of rebels, of the dead and of the executed differ; the figures here are those most often given.
+sources:
+  - title: Baptist War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Baptist_War
+  - title: Samuel Sharpe (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Samuel_Sharpe
+  - title: This month in history, Samuel Sharpe and the Christmas Rebellion (The Gazette)
+    url: https://www.thegazette.co.uk/all-notices/content/103864
+  - title: Samuel Sharpe (ca. 1780–1832) (BlackPast)
+    url: https://www.blackpast.org/global-african-history/sharpe-samuel-ca-1780-1832/
+  - title: Attack and capture of the rebels’ positions near Montego Bay by boats from HMS Blanche, 1831 (Royal Museums Greenwich)
+    url: https://www.rmg.co.uk/collections/objects/rmgc-object-241921
+steps:
+  - title: The Christmas strike becomes a rising
+    date: December 1831 – January 1832
+    when: "1831-12-27"
+    borders: "1831-12-28"
+    countries: [jm, gb]
+    body:
+      - In 1831 Jamaica had about 300,000 enslaved people, far outnumbering its white and free coloured inhabitants. Black Baptist congregations had spread across the western parishes, led by enslaved deacons and “daddies” such as Samuel Sharpe, who could read and followed the news of the British campaign against slavery. Rumours went round that the king had already freed the enslaved and that the planters were hiding it. Over the autumn Sharpe and his companions met on the estates and had people swear on the Bible not to return to work after the Christmas holidays unless they were paid. Sharpe hoped for a peaceful strike, but others prepared to fight.
+      - On the night of 27 December 1831 the trash house of Kensington estate, high in the hills of Saint James, was set alight, and fires spread from estate to estate across the western parishes. A rebel force with firearms, called the Black Regiment and led by an enslaved man named Johnson, drove back the militia of Colonel William Grignon, which retreated towards Montego Bay. Up to 60,000 people took part, burning great houses, works and cane, though in the first days the rebels killed few white people. On the coast, boats from the frigate HMS Blanche attacked rebel positions near Montego Bay.
+    facts:
+      - [Kensington estate fire, "27 December 1831"]
+      - [Enslaved people who took part, "up to 60,000"]
+      - [Parishes, "Saint James, Hanover, Westmoreland, Trelawny, Saint Elizabeth"]
+    markers:
+      - kind: event
+        side: reb
+        name: Kensington estate
+        date: 27 December 1831
+        text: The burning of the estate’s trash house, high in the hills, was the signal for the rising.
+        lonlat: [-77.830, 18.370]
+        lp: r
+      - kind: held
+        side: brit
+        name: Montego Bay
+        date: December 1831 – January 1832
+        text: The main town of the west, where the militia gathered and the troops landed.
+        lonlat: [-77.922, 18.472]
+        lp: l
+      - kind: event
+        side: reb
+        name: Savanna-la-Mar
+        date: December 1831
+        text: The rising spread south into Westmoreland (marker shows the parish town).
+        lonlat: [-78.133, 18.219]
+        lp: l
+      - kind: event
+        side: reb
+        name: Lucea
+        date: December 1831
+        text: Estates across Hanover were burned (marker shows the parish town).
+        lonlat: [-78.173, 18.447]
+        lp: l
+    arrows:
+      - side: reb
+        phase: 1
+        via: [[-77.83, 18.37], [-77.93, 18.36], [-78.05, 18.40], [-78.14, 18.43]]
+      - side: reb
+        phase: 1
+        via: [[-77.83, 18.36], [-77.92, 18.31], [-78.02, 18.26], [-78.11, 18.23]]
+    areas:
+      - style: contested
+        side: reb
+        label: Parishes of the rising (today’s parish borders)
+        atoms: [JM-07, JM-08, JM-09, JM-10, JM-11]
+  - title: Martial law, the gallows and abolition
+    date: January 1832 – August 1834
+    when: "1832-01"
+    borders: "1832-01-15"
+    countries: [jm, gb]
+    body:
+      - The governor, the Earl of Belmore, declared martial law at the end of December. Major-General Sir Willoughby Cotton landed at Montego Bay with regular troops in the first days of January 1832 and, with the militia and Maroon companies, drove the rebels from the estates and into the hills, offering pardon to those who returned to work. Within about two weeks the rising was over. Fourteen white people had been killed; more than 200 rebels were killed by troops and militia, many of them shot out of hand.
+      - The trials that followed, by courts martial and by the slave courts of the parishes, sent between 310 and 340 people to the gallows, many of them hanged in the square at Montego Bay, and hundreds more were flogged. Samuel Sharpe was tried in April and hanged at Montego Bay on 23 May 1832. The missionary Henry Bleby, who visited him in prison, recorded him saying that he would rather die on the gallows than live in slavery.
+      - Planters blamed the missionaries. Militiamen of the Colonial Church Union destroyed Baptist and Methodist chapels across the west, and William Knibb and Thomas Burchell were arrested and later went to Britain, where they told of the reprisals at public meetings. Two parliamentary committees examined the state of the colony, and in August 1833 Parliament passed the Slavery Abolition Act. Slavery ended in the British colonies on 1 August 1834, followed by an apprenticeship that bound the formerly enslaved to their old estates until 1838. Independent Jamaica named Sharpe a National Hero, and the square where he was hanged is now Sam Sharpe Square.
+    facts:
+      - [Rising suppressed, "first half of January 1832"]
+      - [Executed, "310 to 340"]
+      - [Samuel Sharpe hanged, "23 May 1832, Montego Bay"]
+      - [Slavery Abolition Act, "28 August 1833, in force 1 August 1834"]
+    markers:
+      - kind: event
+        side: brit
+        name: Montego Bay
+        date: January – May 1832
+        text: Cotton’s troops landed here. Many of the condemned, and on 23 May 1832 Samuel Sharpe, were hanged in the town square, now Sam Sharpe Square.
+        lonlat: [-77.922, 18.472]
+        lp: l
+      - kind: capital
+        side: brit
+        name: Spanish Town
+        date: "1832"
+        text: The colonial capital, seat of the governor and the Assembly.
+        lonlat: [-76.954, 17.996]
+        lp: b
+      - kind: event
+        side: brit
+        name: Falmouth
+        date: "1832"
+        text: The port of Trelawny, where William Knibb’s Baptist chapel was among those destroyed by the Colonial Church Union.
+        lonlat: [-77.657, 18.493]
+        lp: t
+    arrows:
+      - side: brit
+        label: Cotton
+        phase: 1
+        via: [[-77.91, 18.46], [-77.87, 18.41], [-77.83, 18.37]]

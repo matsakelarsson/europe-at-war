@@ -1,0 +1,182 @@
+id: cuban-missile-crisis
+name: Cuban Missile Crisis
+start: "1962-10-16"
+end: "1962-11-20"
+tier: B
+summary: "The confrontation of October 1962 between the United States and the Soviet Union over Soviet nuclear missiles secretly installed in Cuba, the closest the Cold War came to nuclear war. In the spring of 1962 Nikita Khrushchev decided, with Fidel Castro’s agreement, to send ballistic missiles with nuclear warheads and some 43,000 Soviet troops to Cuba (Operation Anadyr), to deter another American invasion after the Bay of Pigs and to offset the American lead in long-range missiles and the US Jupiter missiles in Turkey. An American U-2 photographed missile sites on 14 October. After a week of secret deliberation, President Kennedy announced on 22 October a naval “quarantine” of Cuba and demanded the missiles’ removal; American forces went on alert, the Strategic Air Command at DEFCON 2 for the only time in its history, and an invasion force gathered in the south-eastern United States. Soviet ships carrying weapons turned back from the quarantine on 24 October, but work on the missile sites went on, and on 27 October a Soviet anti-aircraft missile shot down a U-2 over eastern Cuba, killing its pilot, Major Rudolf Anderson. On 28 October Khrushchev announced that the missiles would be dismantled and taken home, in return for a public American pledge not to invade Cuba and a secret promise to remove the Jupiter missiles from Turkey, which were withdrawn, with those in Italy, in 1963. Castro, who had not been consulted, refused UN inspection; after the Soviet Union agreed to take back its IL-28 bombers as well, the United States lifted the quarantine on 20 November. The crisis led to the Moscow–Washington hotline and the Partial Test Ban Treaty of 1963."
+countries: [cu, us, ru, tr, it]
+sides:
+  - id: us
+    name: United States
+    polities: [united-states]
+    ink: blue
+    moves: American moves
+    success: American success
+  - id: su
+    name: Soviet Union
+    polities: [ussr]
+    ink: red
+    moves: Soviet moves
+    success: Soviet success
+  - id: cu
+    name: Cuba
+    polities: [cuba]
+    ink: orange
+    moves: Cuban moves
+    success: Cuban success
+notes:
+  - "The size of the Soviet force and the number of nuclear weapons in Cuba were not known in Washington at the time: the CIA estimated about 10,000 Soviet troops, and the tactical nuclear weapons only became known in the 1990s, from Soviet participants and archives. The secret part of the settlement, the removal of the Jupiter missiles from Turkey, was kept from the public by the Kennedy administration and confirmed by its participants only years later."
+sources:
+  - title: Cuban Missile Crisis (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cuban_Missile_Crisis
+  - title: The Cuban Missile Crisis, October 1962 (Office of the Historian, US Department of State)
+    url: https://history.state.gov/milestones/1961-1968/cuban-missile-crisis
+  - title: Cuban Missile Crisis (John F. Kennedy Presidential Library and Museum)
+    url: https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/cuban-missile-crisis
+  - title: Operation Anadyr (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Anadyr
+  - title: Vasily Arkhipov (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Vasily_Arkhipov
+  - title: PGM-19 Jupiter (Wikipedia)
+    url: https://en.wikipedia.org/wiki/PGM-19_Jupiter
+steps:
+  - title: Operation Anadyr
+    date: May – 16 October 1962
+    when: "1962-09-08"
+    borders: "1962-10-14"
+    countries: [cu, us, ru]
+    body:
+      - "After the Bay of Pigs the Cuban government expected another American invasion, and the CIA’s sabotage campaign, Operation Mongoose, and large US military exercises in the Caribbean seemed to confirm it. In May 1962 Khrushchev proposed to station Soviet nuclear missiles in Cuba, which he said would protect the revolution and would give the Americans a taste of what it was like to live with enemy missiles next door, as the Soviet Union did with the American Jupiters in Turkey and Italy. Castro agreed, and the operation, code-named Anadyr, was approved in July. It was to be kept secret until the missiles were ready."
+      - "From July more than 80 Soviet ships carried some 43,000 troops to Cuba, hidden below decks. The first R-12 medium-range missiles, able to reach Washington and most of the eastern United States, arrived on the night of 8 September, followed by their nuclear warheads; the longer-range R-14s were still at sea when the crisis broke and never arrived. The ships also brought IL-28 bombers, MiG-21 fighters, SA-2 anti-aircraft missiles, coastal cruise missiles and, unknown to the Americans until decades later, about a hundred tactical nuclear weapons for use against an invasion. In public and in private the Soviet government told Kennedy that it was sending only defensive weapons."
+      - "On 14 October an American U-2 flown by Major Richard Heyser photographed launch sites under construction near San Cristóbal in western Cuba. Analysts identified the missiles the next day, and on the morning of 16 October President Kennedy was shown the photographs. He gathered a group of advisers, later called the Executive Committee (ExComm), which met in secret for a week, weighing air strikes, an invasion and a blockade."
+    facts:
+      - [Operation Anadyr approved, "July 1962"]
+      - [Soviet troops in Cuba, "about 43,000"]
+      - [First R-12 missiles arrive, "8 September 1962"]
+      - [U-2 photographs the San Cristóbal sites, "14 October 1962"]
+    markers:
+      - kind: event
+        side: su
+        name: San Cristóbal
+        date: 14 October 1962
+        text: Four sites for R-12 medium-range missiles in western Cuba, the first photographed by a U-2.
+        lonlat: [-83.05, 22.71]
+        lp: b
+      - kind: event
+        side: su
+        name: Guanajay
+        date: October 1962
+        text: Two sites under construction for R-14 intermediate-range missiles, which never arrived.
+        lonlat: [-82.69, 22.92]
+        lp: t
+      - kind: event
+        side: su
+        name: Sagua la Grande
+        date: October 1962
+        text: Two sites for R-12 medium-range missiles in central Cuba.
+        lonlat: [-80.08, 22.81]
+        lp: t
+      - kind: event
+        side: su
+        name: Remedios
+        date: October 1962
+        text: Two sites under construction for R-14 intermediate-range missiles.
+        lonlat: [-79.54, 22.49]
+        lp: b
+      - kind: capital
+        side: cu
+        name: Havana
+        date: "1962"
+        text: Fidel Castro’s government agreed to the deployment in 1962; a Soviet–Cuban treaty was drafted but never signed.
+        lonlat: [-82.37, 23.13]
+        lp: r
+    arrows:
+      - side: su
+        label: Soviet ships from the Black Sea and the Baltic
+        via: [[-64.00, 27.50], [-74.60, 22.85], [-75.40, 21.75], [-78.20, 22.70], [-81.20, 23.45], [-82.75, 23.06]]
+  - title: The quarantine
+    date: 22–27 October 1962
+    when: "1962-10-22"
+    borders: "1962-10-22"
+    countries: [cu, us, ru]
+    body:
+      - "On the evening of 22 October Kennedy told the American people about the missiles on television, announced a naval “quarantine” of all offensive weapons bound for Cuba, a word chosen because a blockade was an act of war, and warned that any missile launched from Cuba would be met with a full retaliatory response against the Soviet Union. The Organization of American States endorsed the quarantine the next day. It came into force at 10 a.m. on 24 October; the Strategic Air Command went to DEFCON 2, with nuclear bombers in the air around the clock, and more than 100,000 troops gathered in Florida and Georgia for an invasion. In Cuba Castro put the armed forces and the militias, several hundred thousand people, on alert."
+      - "On 24 October the Soviet ships carrying weapons stopped or turned back before reaching the line of American warships; a tanker was allowed through, and on 26 October a freighter, the Marucla, was boarded and found to carry no weapons. At the United Nations the American ambassador, Adlai Stevenson, showed the reconnaissance photographs. But work on the missile sites went on. On 26 October a letter from Khrushchev offered to remove the missiles in return for a pledge not to invade Cuba; on 27 October a second message, broadcast on Radio Moscow, also demanded the removal of the Jupiters from Turkey."
+      - "Saturday 27 October was the most dangerous day. A Soviet SA-2 battery shot down a U-2 over Banes in eastern Cuba, killing Major Rudolf Anderson; Cuban anti-aircraft guns fired on low-flying American reconnaissance jets, and Castro wrote to Khrushchev urging him not to hesitate to use nuclear weapons if the Americans invaded. Near the quarantine line American destroyers dropped practice depth charges to force the Soviet submarine B-59 to surface; its commander, believing war might have begun, wanted to arm its nuclear torpedo, and the brigade chief of staff on board, Vasily Arkhipov, is credited with talking him out of it. That evening Robert Kennedy told the Soviet ambassador, Anatoly Dobrynin, that the Jupiters would be removed from Turkey if this was never made public."
+    facts:
+      - [Kennedy’s address, "22 October 1962"]
+      - [Quarantine in force, "from 10 a.m., 24 October 1962"]
+      - [U-2 shot down over Banes, "27 October 1962"]
+    markers:
+      - kind: capital
+        side: us
+        name: Washington
+        date: 16–28 October 1962
+        text: The ExComm met here in secret from 16 October; Kennedy announced the quarantine in a television address on 22 October.
+        lonlat: [-77.04, 38.90]
+      - kind: air
+        side: su
+        name: Banes
+        date: 27 October 1962
+        text: A Soviet SA-2 missile shot down a U-2 flown by Major Rudolf Anderson, the only person killed by enemy fire in the crisis.
+        lonlat: [-75.71, 20.96]
+      - kind: held
+        side: us
+        name: Guantánamo Bay
+        date: October 1962
+        text: The American naval base was reinforced with Marines and the families of its servicemen were evacuated on 22 October.
+        lonlat: [-75.15, 19.90]
+        lp: b
+      - kind: event
+        side: su
+        name: San Cristóbal
+        date: 22–27 October 1962
+        text: Work on the missile sites went on during the quarantine; by 27 October most of the R-12 launchers were thought to be ready.
+        lonlat: [-83.05, 22.71]
+        lp: b
+      - kind: capital
+        side: cu
+        name: Havana
+        date: October 1962
+        text: Castro mobilised the armed forces and militias and ordered anti-aircraft fire on low-flying American aircraft from 27 October.
+        lonlat: [-82.37, 23.13]
+    arrows:
+      - side: su
+        label: Soviet ships stop or turn back, 24 October
+        via: [[-66.00, 26.50], [-63.50, 28.30], [-60.00, 30.00]]
+  - title: Dismantling the missiles
+    date: 28 October – 20 November 1962
+    when: "1962-10-28"
+    borders: "1962-11-20"
+    countries: [cu, us, ru, tr, it]
+    body:
+      - "On the morning of 28 October Radio Moscow broadcast Khrushchev’s reply: the Soviet Union would dismantle the weapons and take them home, under UN verification, and Kennedy publicly welcomed it, pledging not to invade Cuba. The secret promise on the Jupiters was not part of the public settlement. Castro learned of the decision from the radio and was furious. He set out five conditions of his own, among them an end to the embargo and to American raids and overflights and the return of Guantánamo Bay, and refused any inspection on Cuban soil, even when the UN Secretary-General, U Thant, came to Havana on 30–31 October."
+      - "The Soviet deputy premier Anastas Mikoyan spent three weeks in Havana trying to win Castro over. The launch sites were bulldozed, and in early November the missiles were loaded onto ships at Mariel and other ports; American aircraft and warships counted them at sea from the air and alongside. Kennedy then insisted that the IL-28 bombers also go. When Khrushchev agreed, Kennedy lifted the quarantine on 20 November. The tactical nuclear weapons, which the Americans did not know about, were shipped home by December. The Jupiter missiles were removed from Turkey and Italy by April 1963, in June 1963 the two governments agreed on a direct teletype link between Washington and Moscow, the hotline, and in August they signed the Partial Test Ban Treaty with Britain."
+    facts:
+      - [Khrushchev’s announcement, "28 October 1962"]
+      - [Quarantine lifted, "20 November 1962"]
+      - [Jupiter missiles removed from Turkey and Italy, "by April 1963"]
+    markers:
+      - kind: treaty
+        side: us
+        name: Washington
+        date: 28 October 1962
+        text: Kennedy welcomed Khrushchev’s announcement and pledged that the United States would not invade Cuba.
+        lonlat: [-77.04, 38.90]
+      - kind: event
+        side: su
+        name: Mariel
+        date: November 1962
+        text: The dismantled missiles were loaded onto Soviet ships here and at other ports; American aircraft photographed them on deck.
+        lonlat: [-82.75, 23.01]
+        lp: l
+      - kind: capital
+        side: cu
+        name: Havana
+        date: 30 October – November 1962
+        text: Castro refused UN inspection during U Thant’s visit; Anastas Mikoyan spent three weeks here persuading him to accept the settlement.
+        lonlat: [-82.37, 23.13]
+    arrows:
+      - side: su
+        label: Missiles shipped back to the Soviet Union
+        via: [[-82.75, 23.06], [-81.20, 23.45], [-78.20, 22.70], [-75.40, 21.75], [-74.60, 22.85], [-64.00, 27.50]]

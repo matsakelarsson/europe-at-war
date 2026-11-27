@@ -1,0 +1,154 @@
+id: bay-of-pigs-invasion
+name: Bay of Pigs Invasion
+start: "1961-04-15"
+end: "1961-04-20"
+tier: B
+summary: "The failed invasion of Cuba by Brigade 2506, about 1,400 Cuban exiles recruited, trained and armed by the CIA, in April 1961. President Eisenhower approved a plan to overthrow Fidel Castro in March 1960, as Castro’s government nationalised American property and drew close to the Soviet Union, and the brigade trained in Guatemala. President Kennedy, in office since January 1961, approved a revised plan that moved the landing to the remote Bay of Pigs in the Zapata swamp on Cuba’s south coast and kept the American role hidden. On 15 April 1961 exile pilots in B-26 bombers painted in Cuban markings struck three Cuban airfields but left part of Castro’s small air force intact, and the cover story fell apart within hours; Kennedy cancelled a second strike. The brigade landed at Playa Larga and Playa Girón before dawn on 17 April. Cuban aircraft sank two of its supply ships, and Cuban troops and militias, led by Castro himself, attacked down the causeways through the swamp. Short of ammunition and without the American air cover they had expected, the invaders were defeated by the evening of 19 April: 114 were killed and 1,202 captured, while Cuba gave its own losses as 176 dead, with many more militiamen killed or wounded by other estimates. The victory strengthened Castro, who had declared the revolution socialist on 16 April, and pushed Cuba closer to the Soviet Union; the prisoners were ransomed in December 1962 for $53 million in food and medicine, and the United States turned to covert sabotage against Cuba in Operation Mongoose."
+countries: [cu, us]
+sides:
+  - id: bde
+    name: Brigade 2506 and the United States (CIA)
+    polities: [brigade-2506, united-states]
+    ink: blue
+    moves: Brigade 2506 moves
+    success: Brigade 2506 success
+  - id: cu
+    name: Cuba (the Revolutionary Armed Forces and the National Revolutionary Militias)
+    polities: [cuba]
+    ink: red
+    moves: Cuban government moves
+    success: Cuban government success
+notes:
+  - "Casualty figures for the Cuban side are uncertain. The Cuban government gave 176 dead among its armed forces; estimates of militia losses, killed and wounded, run to about 2,000. Four American pilots of the Alabama Air National Guard, flying for the CIA, were killed on 19 April. In Cuba the security services detained tens of thousands of suspected opponents during the invasion."
+  - The brigade took its number from the serial number of Carlos Rodríguez Santana, a recruit who died in a training accident in Guatemala. The training camps in Guatemala and the departure port of Puerto Cabezas in Nicaragua belong to the Central American story, covered in a later wave.
+sources:
+  - title: Bay of Pigs Invasion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bay_of_Pigs_Invasion
+  - title: The Bay of Pigs Invasion and its Aftermath, April 1961–October 1962 (Office of the Historian, US Department of State)
+    url: https://history.state.gov/milestones/1961-1968/bay-of-pigs
+  - title: The Bay of Pigs (John F. Kennedy Presidential Library and Museum)
+    url: https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/the-bay-of-pigs
+  - title: Brigade 2506 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Brigade_2506
+  - title: Operation Mongoose (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Mongoose
+steps:
+  - title: The exile brigade and the air strikes
+    date: March 1960 – 16 April 1961
+    when: "1961-04-15"
+    borders: "1961-04-15"
+    countries: [cu, us]
+    body:
+      - "In March 1960 President Eisenhower approved a CIA plan to train Cuban exiles for guerrilla war against Fidel Castro, whose government was seizing American-owned land and businesses and buying Soviet oil and arms. As the exile force grew, the plan became an invasion. The brigade, drawn from Cubans of many backgrounds, among them former officers of Batista’s army and men who had fought against Batista, trained at camps in the Guatemalan highlands, and the CIA gathered exile politicians in the Cuban Revolutionary Council in Miami, which was to form a provisional government. The plan counted on the landing setting off a rising inside Cuba and on the anti-Castro guerrillas of the Escambray Mountains."
+      - "Kennedy inherited the plan. Wanting to hide the American hand, he rejected a landing at the town of Trinidad, near the Escambray, and in March 1961 approved one at the Bay of Pigs (Bahía de Cochinos), a remote inlet in the Zapata swamp with an airstrip at Playa Girón and only three causeways leading in. The brigade, five infantry battalions, a paratroop battalion and a heavy-weapons battalion with a few tanks, about 1,400 men under José Pérez San Román, sailed from Puerto Cabezas in Nicaragua on chartered freighters escorted at a distance by the US Navy."
+      - "At dawn on 15 April eight B-26 bombers flown by exile pilots and painted in the markings of Cuba’s air force struck the airfields at San Antonio de los Baños, Ciudad Libertad in Havana and Santiago de Cuba. They destroyed several aircraft, but Castro kept a handful of Sea Fury fighters, T-33 jets and B-26s flying. One pilot landed in Miami and claimed to be a defector, a story that unravelled at the United Nations. At the funeral of those killed in the raids, on 16 April, Castro declared for the first time that the revolution was socialist. That evening Kennedy cancelled the second air strike planned for the morning of the landing."
+    facts:
+      - [Plan approved by Eisenhower, "17 March 1960"]
+      - [Brigade 2506, "about 1,400 men"]
+      - [Air strikes on Cuban airfields, "15 April 1961"]
+      - [Castro declares the revolution socialist, "16 April 1961"]
+    markers:
+      - kind: air
+        side: bde
+        name: Ciudad Libertad (Havana)
+        date: 15 April 1961
+        text: Exile B-26s bombed the airfield in Havana; seven people were killed in the raids, by Cuban counts.
+        lonlat: [-82.44, 23.09]
+        lp: t
+      - kind: air
+        side: bde
+        name: San Antonio de los Baños
+        date: 15 April 1961
+        text: The main base of Cuba’s air force; several aircraft were destroyed on the ground, but not all.
+        lonlat: [-82.50, 22.88]
+        lp: l
+      - kind: air
+        side: bde
+        name: Santiago de Cuba
+        date: 15 April 1961
+        text: The airfield of Antonio Maceo was struck by the third pair of bombers.
+        lonlat: [-75.84, 19.97]
+      - kind: event
+        side: bde
+        name: Bay of Pigs
+        date: 17 April 1961
+        text: The remote landing site chosen in March 1961, with an airstrip at Playa Girón and only three causeways through the Zapata swamp.
+        lonlat: [-81.13, 22.12]
+        lp: b
+    arrows:
+      - side: bde
+        label: The brigade’s ships from Puerto Cabezas
+        via: [[-83.39, 14.03], [-82.70, 15.20], [-82.00, 18.80], [-81.12, 21.98]]
+  - title: Playa Girón
+    date: 17–19 April 1961
+    when: "1961-04-17"
+    borders: "1961-04-17"
+    countries: [cu, us]
+    view:
+      center: [-81.10, 22.28]
+      size: [120, 110]
+    body:
+      - "The brigade began landing after midnight on 17 April at Playa Larga, at the head of the bay, and at Playa Girón, 35 km to the south-east. Coral reefs the planners had taken for seaweed ripped the landing craft, and local militiamen raised the alarm by radio. Paratroopers dropped at dawn to hold the causeways at Palpite and San Blas. Cuban aircraft attacked the ships offshore and sank the Houston, carrying a battalion and supplies, and the Río Escondido, with most of the brigade’s ammunition and fuel; the other freighters fled out to sea. The brigade’s slow B-26s, flying from Nicaragua without fighter escort, were shot down one after another."
+      - "Castro took command from the Australia sugar mill north of the swamp. Militia battalions, among them the cadets of the militia officers’ school at Matanzas, and regular troops under José Ramón Fernández attacked down the causeway to Playa Larga on 17 April, taking heavy losses from the brigade’s tanks and mortars, and were reinforced with tanks and artillery overnight. On 18 April the brigade abandoned Playa Larga and fell back on Girón, while other Cuban columns pushed in from Covadonga and Yaguaramas to the east."
+      - "Kennedy allowed only one hour of unmarked jet cover from the carrier Essex on the morning of 19 April, and through a mix-up over time zones it missed the brigade’s last bombers, four of whose American crewmen were killed. That afternoon, out of ammunition and with Cuban forces closing in, the brigade broke up at Girón; San Román ordered his men into the swamps, where most were rounded up over the following days. In all 114 men of the brigade were killed and 1,202 captured. They were tried in 1962 and, after long negotiations, released in December 1962 in exchange for $53 million in food and medicine. Kennedy took public responsibility for the failure."
+    facts:
+      - [Landings, "night of 16–17 April 1961"]
+      - [Brigade losses, "114 killed, 1,202 captured"]
+      - [Cuban losses, "176 soldiers killed (official figure), with many more militiamen killed or wounded"]
+      - [Prisoners released, "23–24 December 1962"]
+    markers:
+      - kind: battle
+        side: cu
+        name: Playa Larga
+        date: 17–18 April 1961
+        text: Taken by the brigade’s 2nd Battalion; abandoned on 18 April after the militia and army attacked down the causeway from the north.
+        lonlat: [-81.20, 22.28]
+        lp: l
+      - kind: battle
+        side: cu
+        name: Playa Girón
+        date: 17–19 April 1961
+        text: The brigade’s main beachhead and airstrip. It collapsed on the afternoon of 19 April as Cuban columns closed in from the west and north-east.
+        lonlat: [-81.03, 22.07]
+      - kind: naval
+        side: cu
+        name: Houston
+        date: 17 April 1961
+        text: The freighter carrying the 5th Battalion was hit by Cuban aircraft and beached on the west shore of the bay.
+        lonlat: [-81.18, 22.20]
+        lp: l
+      - kind: naval
+        side: cu
+        name: Río Escondido
+        date: 17 April 1961
+        text: Sunk off Girón with most of the brigade’s reserve ammunition and fuel.
+        lonlat: [-81.06, 22.02]
+        lp: b
+      - kind: capital
+        side: cu
+        name: Australia sugar mill
+        date: 17–19 April 1961
+        text: Castro’s command post, at the northern end of the causeway to Playa Larga near Jagüey Grande.
+        lonlat: [-81.13, 22.51]
+    arrows:
+      - side: bde
+        phase: 1
+        via: [[-81.11, 21.98], [-81.16, 22.10], [-81.19, 22.25]]
+      - side: bde
+        phase: 1
+        via: [[-81.02, 21.96], [-81.03, 22.06]]
+      - side: cu
+        label: Castro’s forces
+        phase: 2
+        via: [[-81.13, 22.49], [-81.16, 22.40], [-81.19, 22.30]]
+      - side: cu
+        phase: 3
+        via: [[-81.19, 22.27], [-81.13, 22.17], [-81.05, 22.08]]
+      - side: cu
+        phase: 3
+        via: [[-80.88, 22.33], [-80.95, 22.18], [-81.01, 22.08]]
+    areas:
+      - style: occupied
+        side: bde
+        label: Brigade 2506 beachhead, 17–18 April (approximate)
+        polygon: [[-81.22, 22.30], [-81.17, 22.31], [-81.12, 22.20], [-80.96, 22.20], [-80.94, 22.08], [-81.02, 22.04], [-81.12, 22.14], [-81.21, 22.25]]

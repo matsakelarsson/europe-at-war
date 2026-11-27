@@ -1,0 +1,189 @@
+id: anglo-cherokee-war
+name: Anglo-Cherokee War
+start: "1758-05"
+end: "1761-12"
+tier: B
+summary: "A war between the Cherokee and the British colonies of South Carolina, Virginia and North Carolina, backed by British regular troops, during the French and Indian War. The Cherokee had been Britain’s allies, and hundreds of their warriors served against the French in 1758, but Virginia frontiersmen killed some 30 to 40 of them on their way home, and their kin took revenge on the frontier as Cherokee law required. Governor William Henry Lyttelton of South Carolina seized Cherokee peace envoys as hostages in 1759; in February 1760 Oconostota besieged Fort Prince George, and after its commander was killed the garrison put the hostages to death. In 1760 the Cherokee raided the Carolina backcountry, turned back a British army under Archibald Montgomery at Echoe, and starved Fort Loudoun into surrender, killing many of its garrison as they marched away. In 1761 a larger army under James Grant fought its way into the Middle towns and burned some fifteen to eighteen towns and their crops, leaving thousands of Cherokee facing famine. Attakullakulla led the Cherokee to peace in treaties with Virginia and South Carolina at the end of 1761."
+countries: [us]
+sides:
+  - id: che
+    name: Cherokee (Oconostota, Standing Turkey, Ostenaco and other leaders)
+    polities: [cherokee]
+    ink: red
+    moves: Cherokee moves
+    success: Cherokee success
+  - id: brit
+    name: South Carolina, Virginia and North Carolina, with British regulars and Catawba, Chickasaw, Mohawk and Stockbridge allies
+    polities: [british-america, united-kingdom, catawba, chickasaw]
+    ink: navy
+    moves: British and colonial moves
+    success: British and colonial success
+notes:
+  - Also called the Cherokee War or the Cherokee Uprising. The Cherokee lived in four groups of towns, the Lower towns in today’s north-western South Carolina, the Middle and Valley towns in western North Carolina and the Overhill towns in eastern Tennessee, each with its own leaders; the Overhill leader Attakullakulla (Little Carpenter) worked for peace with Britain throughout.
+  - Most accounts come from British officers and colonial officials. Numbers are uncertain, among them the number of hostages killed at Fort Prince George, which ranges from 14 to 23 in different sources.
+sources:
+  - title: Anglo-Cherokee War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Anglo-Cherokee_War
+  - title: Cherokee War (1759–1761) (South Carolina Encyclopedia)
+    url: https://www.scencyclopedia.org/sce/entries/cherokee-war-1759-1761/
+  - title: Fort Loudoun (Tennessee Encyclopedia)
+    url: https://tennesseeencyclopedia.net/entries/fort-loudoun/
+  - title: Siege of Fort Loudoun (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Fort_Loudoun
+  - title: Battle of Echoee (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Echoee
+  - title: Attakullakulla (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Attakullakulla
+steps:
+  - title: Allies turned enemies
+    date: 1758–1759
+    when: "1758-05"
+    borders: "1759-12-26"
+    countries: [us]
+    body:
+      - "The Cherokee were Britain’s most important allies in the South. Britain built Fort Prince George by the Lower town of Keowee in 1753 and Fort Loudoun among the Overhill towns in 1756–1757, partly to keep the French and their allies out, and several hundred Cherokee warriors joined General John Forbes’s campaign against Fort Duquesne in 1758. On their way home through the Virginia backcountry some of them took horses they believed they were owed, and Virginia frontiersmen killed and scalped some 30 to 40 Cherokee. Under Cherokee law the kin of the dead had to take revenge, and war parties killed settlers on the frontiers of North and South Carolina; French agents from Fort Toulouse encouraged them."
+      - "In the autumn of 1759 Oconostota, the great warrior of Chota, led a delegation to Charles Town to make peace. Governor William Henry Lyttelton refused to treat, held the envoys and marched with well over 1,000 militia (1,100 to 1,700 by different counts) to Fort Prince George, where late in December he forced a treaty on the Cherokee leaders who came there: they were to hand over the men who had killed settlers, and about two dozen of the envoys were kept in the fort as hostages until they did. Smallpox broke out in Lyttelton’s camp, and he hurried home, claiming a victory."
+    facts:
+      - [Cherokee killed in Virginia, "30–40 (1758)"]
+      - [Lyttelton’s treaty at Fort Prince George, "late December 1759 (22 or 26 December in different accounts)"]
+    markers:
+      - kind: event
+        side: brit
+        name: Fort Prince George
+        date: December 1759
+        text: British fort by the Lower town of Keowee, where Lyttelton forced his treaty and held the hostages (the site is now under Lake Keowee).
+        lonlat: [-82.894, 34.858]
+        lp: l
+      - kind: held
+        side: brit
+        name: Fort Loudoun
+        date: 1756–1760
+        text: British fort among the Overhill towns on the Little Tennessee River.
+        lonlat: [-84.205, 35.596]
+        lp: l
+      - kind: capital
+        side: che
+        name: Chota
+        date: "1759"
+        text: The leading Overhill town, home of Oconostota and Attakullakulla.
+        lonlat: [-84.13, 35.54]
+        lp: r
+      - kind: capital
+        side: brit
+        name: Charles Town
+        date: "1759"
+        text: Capital of South Carolina, where Lyttelton refused to treat with Oconostota’s delegation.
+        lonlat: [-79.93, 32.78]
+    arrows:
+      - side: brit
+        label: Lyttelton
+        phase: 1
+        via: [[-80.00, 32.88], [-81.05, 33.95], [-82.10, 34.30], [-82.88, 34.84]]
+    areas:
+      - style: outline
+        side: che
+        label: Cherokee towns (approximate)
+        polygon: [[-84.55, 35.80], [-83.30, 35.70], [-82.60, 34.95], [-83.15, 34.40], [-84.30, 34.95]]
+  - title: Fort Prince George, Echoe and Fort Loudoun
+    date: 1760
+    when: "1760-02-16"
+    borders: "1760-08-10"
+    countries: [us]
+    body:
+      - "In February 1760 Cherokee war parties fell on the Carolina backcountry; at Long Canes on 1 February they killed some 23 settlers fleeing towards Augusta. Oconostota besieged Fort Prince George, and on 16 February he lured its commander, Lieutenant Richard Coytmore, out to a parley, where Coytmore was shot. The garrison killed the hostages in the fort, between 14 and 23 men by different accounts, and the war spread along the whole frontier. In March the Overhill Cherokee began to besiege Fort Loudoun."
+      - "General Jeffery Amherst sent Colonel Archibald Montgomery south with some 1,200 to 1,600 Highland and Royal Scots regulars, joined by provincials and Catawba scouts. In June they burned the Lower towns, Keowee among them, killing and capturing their people, then marched into the mountains towards the Middle towns. On 27 June the Cherokee ambushed them at the pass near Echoe and killed or wounded nearly 100; Montgomery turned back and sailed for New York."
+      - "Fort Loudoun, with no hope of relief, surrendered on 7–8 August to Oconostota and Standing Turkey on terms that let the garrison march to the settlements. On 10 August some 700 Cherokee attacked the column near Cane Creek, killing the commander Paul Demeré, two other officers, 23 soldiers and three women, and took most of the rest captive. Attakullakulla ransomed the trader and officer John Stuart, later Britain’s superintendent of Indian affairs in the South."
+    facts:
+      - [Killing of the hostages at Fort Prince George, "16 February 1760"]
+      - [Battle of Echoe, "27 June 1760"]
+      - [Surrender of Fort Loudoun, "7–8 August 1760"]
+      - [Attack at Cane Creek, "10 August 1760"]
+    markers:
+      - kind: held
+        side: brit
+        name: Fort Prince George
+        date: February 1760
+        text: Oconostota besieged the fort; Coytmore was shot at a parley and the garrison killed the hostages.
+        lonlat: [-82.894, 34.858]
+        lp: l
+      - kind: battle
+        side: che
+        name: Long Canes
+        date: 1 February 1760
+        text: Cherokee warriors killed some 23 settlers fleeing towards Augusta (location approximate).
+        lonlat: [-82.29, 33.98]
+      - kind: battle
+        side: che
+        name: Echoe
+        date: 27 June 1760
+        text: The Cherokee ambushed Montgomery’s army at the pass and forced it to turn back (location approximate).
+        lonlat: [-83.39, 35.07]
+      - kind: taken
+        side: che
+        name: Fort Loudoun
+        date: 7–8 August 1760
+        text: The starving garrison surrendered after a siege of five months.
+        lonlat: [-84.205, 35.596]
+        lp: t
+      - kind: battle
+        side: che
+        name: Cane Creek
+        date: 10 August 1760
+        text: Cherokee warriors attacked the garrison of Fort Loudoun on its march (location approximate).
+        lonlat: [-84.29, 35.38]
+        lp: l
+    arrows:
+      - side: brit
+        label: Montgomery
+        phase: 1
+        via: [[-80.05, 32.90], [-81.70, 33.90], [-82.88, 34.85], [-83.35, 35.05]]
+      - side: brit
+        label: Fort Loudoun garrison
+        phase: 2
+        via: [[-84.20, 35.585], [-84.24, 35.48], [-84.28, 35.39]]
+  - title: Grant’s campaign and the peace
+    date: 1761
+    when: "1761-06-10"
+    borders: "1761-06-10"
+    countries: [us]
+    body:
+      - "In 1761 Lieutenant Colonel James Grant led some 2,400 to 2,800 men, British regulars, South Carolina provincials, among them the young Francis Marion, and Catawba, Chickasaw, Mohawk and Stockbridge warriors, from Fort Prince George into the mountains. On 10 June the Cherokee attacked his column near Echoe, where they had stopped Montgomery, but Grant fought his way through. Over the next month his army burned some fifteen Middle towns (eighteen by some counts), their fields and food stores, and drove about 5,000 people into the mountains, where many faced famine; smallpox had already killed many Cherokee in 1759–1760."
+      - "Attakullakulla, who had kept faith with the British, led the Cherokee to peace. A Virginia army under Adam Stephen had advanced to the Long Island of the Holston, where Overhill leaders made peace with Virginia in November 1761, and in December a treaty with South Carolina was signed at Charles Town, setting a boundary that took Cherokee hunting lands. The Virginia officer Henry Timberlake went to the Overhill towns and in 1762 took Ostenaco and two other leaders to London to meet George III."
+    facts:
+      - [Grant’s army, "about 2,400 to 2,800 men"]
+      - [Battle near Echoe, "10 June 1761"]
+      - [Treaty of Long Island of the Holston, "November 1761"]
+      - [Treaty of Charles Town, "December 1761"]
+    markers:
+      - kind: battle
+        side: brit
+        name: Echoe
+        date: 10 June 1761
+        text: Grant’s column fought off the Cherokee attack and marched on into the Middle towns (location approximate).
+        lonlat: [-83.39, 35.07]
+      - kind: treaty
+        side: brit
+        name: Long Island of the Holston
+        date: November 1761
+        text: Overhill Cherokee leaders made peace with Virginia here (today’s Kingsport).
+        lonlat: [-82.55, 36.55]
+      - kind: treaty
+        side: brit
+        name: Charles Town
+        date: December 1761
+        text: South Carolina’s peace treaty with the Cherokee was signed here.
+        lonlat: [-79.93, 32.78]
+    arrows:
+      - side: brit
+        label: Grant
+        phase: 1
+        via: [[-82.89, 34.86], [-83.30, 35.00], [-83.39, 35.07], [-83.42, 35.32]]
+      - side: brit
+        label: Stephen
+        phase: 2
+        via: [[-80.94, 36.94], [-81.80, 36.75], [-82.52, 36.56]]
+    areas:
+      - style: lost
+        side: che
+        label: Middle towns burned by Grant (approximate)
+        polygon: [[-83.60, 35.50], [-83.15, 35.48], [-83.20, 35.03], [-83.50, 34.98], [-83.62, 35.20]]

@@ -1,0 +1,187 @@
+id: navajo-wars
+name: Navajo Wars and the Long Walk
+start: "1863-07"
+end: "1868-06-01"
+tier: B
+summary: "The United States’ war of 1863–1864 against the Navajo (Diné) and their forced removal to Bosque Redondo, which ended with the treaty of 1868. Raids and counter-raids for livestock and captives between the Navajo, the New Mexicans, the Pueblos and the Ute had gone on for generations under Spanish and Mexican rule, and continued after the American conquest of New Mexico in 1846, with the killing of the Navajo leader Narbona during talks in 1849, a Navajo attack on Fort Defiance in 1860 and the killing of Navajo women and children at Fort Fauntleroy in 1861. In 1863 General James Carleton ordered the Navajo to surrender for removal to Bosque Redondo on the Pecos River, where he had already confined the Mescalero Apache. Colonel Christopher “Kit” Carson’s New Mexico volunteers and Ute scouts destroyed crops, orchards, homes and herds across the Navajo country, entering Canyon de Chelly in January 1864, while Ute and New Mexican raiders carried off Navajo women and children. Starving, some 8,000 to 9,000 people surrendered and were marched about 500 km east in more than fifty groups between 1864 and 1866, the Long Walk, on which at least 200 died. At Bosque Redondo (Hwéeldi), with brackish water, failed harvests, disease and raids, deaths during the march and the captivity are estimated at about 3,000, and up to 3,500 by some counts. Others held out in the canyons and mountains of the west, among them Manuelito, who surrendered in 1866. By the Treaty of Bosque Redondo of 1 June 1868, negotiated by Barboncito, the Navajo were allowed to return to part of their homeland, the beginning of today’s Navajo Nation."
+countries: [us]
+sides:
+  - id: nav
+    name: Navajo (Diné) (Manuelito, Barboncito, Ganado Mucho)
+    polities: [navajo]
+    ink: teal
+    moves: Navajo moves
+    success: Navajo success
+  - id: us
+    name: United States (New Mexico volunteers and US Army)
+    polities: [united-states]
+    ink: blue
+    moves: US moves
+    success: US success
+  - id: ute
+    name: Ute (allied with the United States)
+    polities: [ute]
+    ink: green
+notes:
+  - "The Navajo call Bosque Redondo Hwéeldi, the place of suffering, and their oral tradition of the Long Walk is central to Navajo history; army reports and the record of the treaty council of 1868 give the American side."
+  - "The Navajo wars with Spain, Mexico and the United States go back to the seventeenth century; this entry tells the American war from 1846, and above all the campaign of 1863–1864 and the captivity that followed."
+sources:
+  - title: Long Walk of the Navajo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Long_Walk_of_the_Navajo
+  - title: Navajo Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Navajo_Wars
+  - title: Bosque Redondo Memorial at Fort Sumner Historic Site (New Mexico Historic Sites)
+    url: https://www.nmhistoricsites.dca.nm.gov/bosque-redondo/
+  - title: Treaty of Bosque Redondo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Bosque_Redondo
+  - title: Canyon de Chelly National Monument, history (National Park Service)
+    url: https://www.nps.gov/cach/learn/historyculture/index.htm
+  - title: Manuelito (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Manuelito
+steps:
+  - title: Raids, forts and Carleton’s ultimatum
+    date: 1846 – July 1863
+    when: "1863-06"
+    borders: "1863-07-20"
+    countries: [us]
+    body:
+      - "The Navajo, who call themselves Diné, lived by farming and herding sheep and horses in the high country between the four mountains sacred to them, Blanca Peak, Mount Taylor, the San Francisco Peaks and Hesperus Mountain. For generations Navajo raided the New Mexican settlements and the Pueblos for livestock, and New Mexicans, Pueblos and Ute raided the Navajo for herds and for women and children, who were sold as servants; by the 1860s thousands of Navajo were held as captives in New Mexican households."
+      - "After the United States took New Mexico in 1846, treaties came and went. In 1849 soldiers killed the respected leader Narbona during a parley; in 1851 the army built Fort Defiance in the heart of the Navajo country, and quarrels over its grazing lands led Manuelito and Barboncito to attack it with about 1,000 men on 30 April 1860. In September 1861, after a disputed horse race at Fort Fauntleroy, New Mexican volunteer troops fired on the Navajo gathered there, killing about 12 to 15 people, among them women and children."
+      - "In September 1862 General James Carleton, who had brought the California Column to New Mexico during the Civil War, took command. He had Kit Carson round up the Mescalero Apache and confine them at Bosque Redondo, a grove on the Pecos River by the new Fort Sumner, and then demanded that the Navajo surrender by 20 July 1863 for removal there; those who did not would be treated as enemies. Few came in."
+    facts:
+      - [Navajo attack on Fort Defiance, "30 April 1860"]
+      - [Killings at Fort Fauntleroy, "22 September 1861"]
+      - [Carleton’s deadline, "20 July 1863"]
+    markers:
+      - kind: battle
+        side: us
+        name: Fort Defiance
+        date: 30 April 1860
+        text: Manuelito and Barboncito attacked the fort with about 1,000 men and nearly took it.
+        lonlat: [-109.069, 35.748]
+      - kind: toll
+        side: us
+        name: Fort Fauntleroy
+        date: 22 September 1861
+        text: Troops fired on the Navajo gathered at the fort after a disputed horse race, killing about 12 to 15 people. The fort, at Bear Spring, later became Fort Wingate.
+        lonlat: [-108.541, 35.468]
+        lp: b
+      - kind: capital
+        side: us
+        name: Santa Fe
+        date: "1863"
+        text: Capital of New Mexico Territory and Carleton’s headquarters.
+        lonlat: [-105.939, 35.688]
+      - kind: event
+        side: us
+        name: Fort Sumner (Bosque Redondo)
+        date: 1862–1863
+        text: Carleton founded the fort and the reservation here, first for the Mescalero Apache.
+        lonlat: [-104.195, 34.402]
+    areas:
+      - style: outline
+        side: nav
+        label: The Navajo country in the 1860s (approximate)
+        polygon: [[-111.5, 35.5], [-111.0, 36.6], [-109.8, 37.2], [-108.4, 37.2], [-107.2, 36.6], [-107.0, 35.7], [-107.6, 35.2], [-108.8, 34.9], [-110.3, 35.0]]
+  - title: Carson’s campaign and Canyon de Chelly
+    date: July 1863 – March 1864
+    when: "1864-01"
+    borders: "1864-01-14"
+    countries: [us]
+    body:
+      - "Carson marched into the Navajo country in July 1863 with about 700 men of the 1st New Mexico Cavalry and Ute scouts, and made Fort Defiance, renamed Fort Canby, his base. Instead of seeking battles he set out to starve the Navajo into surrender, destroying fields of corn, wheat and beans, burning hogans and seizing or killing sheep and horses through the summer and autumn. The army paid a bounty for captured livestock, and Ute and New Mexican parties raided Navajo camps for captives to sell."
+      - "In January 1864 Carson led a winter expedition into Canyon de Chelly, the Navajo stronghold, while a detachment under Captain Albert Pfeiffer passed through it from the east. They killed 23 people, took prisoners and destroyed food stores; in the summer troops cut down thousands of the canyon’s peach trees. The campaign broke Navajo resistance: from early 1864, hungry and cold, thousands came in to Fort Canby and Fort Wingate. Others fled west to Navajo Mountain, the Grand Canyon and the Apache country, or north towards the San Juan."
+    facts:
+      - [Carson’s force, "about 700 New Mexico volunteers, with Ute scouts"]
+      - [Canyon de Chelly expedition, "6–14 January 1864"]
+    markers:
+      - kind: capital
+        side: us
+        name: Fort Canby (Fort Defiance)
+        date: 1863–1864
+        text: Carson’s base for the campaign, where thousands of Navajo surrendered in 1864.
+        lonlat: [-109.069, 35.748]
+        lp: b
+      - kind: battle
+        side: us
+        name: Canyon de Chelly
+        date: 6–14 January 1864
+        text: Carson’s and Pfeiffer’s troops went through the Navajo stronghold in winter, killing 23 people and destroying stores.
+        lonlat: [-109.509, 36.155]
+      - kind: event
+        side: us
+        name: Fort Wingate
+        date: "1864"
+        text: The fort near Mount Taylor, another gathering point for the Navajo who surrendered.
+        lonlat: [-107.88, 35.10]
+        lp: b
+      - kind: event
+        side: nav
+        name: Navajo Mountain
+        date: 1863–1868
+        text: Some Navajo bands held out in the canyons and mountains of the north-west and were never taken.
+        lonlat: [-110.868, 37.034]
+    arrows:
+      - side: us
+        label: Carson
+        phase: 1
+        via: [[-106.73, 34.80], [-107.60, 35.10], [-108.55, 35.47], [-109.07, 35.75]]
+      - side: us
+        label: Carson, January 1864
+        phase: 2
+        via: [[-109.07, 35.75], [-109.35, 35.95], [-109.55, 36.15]]
+      - side: nav
+        phase: 2
+        via: [[-109.50, 36.20], [-110.10, 36.60], [-110.80, 37.00]]
+    areas:
+      - style: outline
+        side: nav
+        label: The Navajo country in the 1860s (approximate)
+        polygon: [[-111.5, 35.5], [-111.0, 36.6], [-109.8, 37.2], [-108.4, 37.2], [-107.2, 36.6], [-107.0, 35.7], [-107.6, 35.2], [-108.8, 34.9], [-110.3, 35.0]]
+  - title: The Long Walk and Hwéeldi
+    date: 1864–1868
+    when: "1864-08"
+    borders: "1865-03-01"
+    countries: [us]
+    body:
+      - "From the spring of 1864 to the end of 1866 the army marched the Navajo who surrendered to Bosque Redondo in more than fifty groups by several routes, about 500 km by way of the Rio Grande near Albuquerque. Most walked; many were weak with hunger and poorly clothed, and those who could not keep up were left behind or shot. At least 200 people died on the walk, and Navajo accounts tell of many more. By the spring of 1865 9,022 Navajo were held at Bosque Redondo, with some 400 to 500 Mescalero Apache, on a reservation planned for 5,000."
+      - "The water was brackish and firewood scarce, insects, floods and drought destroyed the crops year after year, and dysentery and other diseases spread. Comanche raiders attacked the camp. The Mescalero escaped in November 1865; Manuelito, who had held out in the west, surrendered in September 1866. Deaths during the march and the four years of captivity are estimated at about 3,000, and up to 3,500 by some counts. The army found the reservation ruinously expensive, and a government commission condemned it."
+      - "In May 1868 General William T. Sherman and Samuel Tappan came to Fort Sumner for the Peace Commission. Barboncito, speaking for the Navajo, refused removal to Indian Territory and asked to go home. By the treaty signed on 1 June 1868 the Navajo received a reservation on part of their old country, with sheep, goats and seed, and on 18 June they began the walk back, in a column said to be 16 km long. The reservation has since been enlarged many times and is today the Navajo Nation, the largest Native American reservation in the United States."
+    facts:
+      - [Forced marches, "more than 50, 1864–1866"]
+      - [Held at Bosque Redondo, "9,022 Navajo in spring 1865"]
+      - [Deaths in the march and the captivity, "about 3,000 to 3,500 (estimates)"]
+      - [Treaty of Bosque Redondo, "1 June 1868"]
+    markers:
+      - kind: event
+        side: us
+        name: Fort Sumner and Bosque Redondo (Hwéeldi)
+        date: 1864–1868
+        text: Some 9,000 Navajo and about 500 Mescalero Apache were held here. The treaty that let the Navajo go home was signed here on 1 June 1868.
+        lonlat: [-104.195, 34.402]
+      - kind: event
+        name: Albuquerque
+        date: 1864–1866
+        text: Most of the marches crossed the Rio Grande near here, at Los Pinos or Albuquerque.
+        lonlat: [-106.652, 35.084]
+      - kind: event
+        side: us
+        name: Fort Canby (Fort Defiance)
+        date: 1864–1866
+        text: Most marches began here or at Fort Wingate.
+        lonlat: [-109.069, 35.748]
+        lp: b
+    arrows:
+      - side: us
+        label: The Long Walk
+        phase: 1
+        via: [[-109.07, 35.75], [-107.88, 35.10], [-106.65, 35.00], [-105.50, 34.85], [-104.25, 34.42]]
+      - side: nav
+        label: Return, June 1868
+        phase: 2
+        via: [[-104.20, 34.50], [-105.50, 35.10], [-106.80, 35.20], [-108.50, 35.55]]
+    areas:
+      - style: outline
+        side: nav
+        label: Navajo reservation under the treaty of 1868
+        polygon: [[-109.5, 37.0], [-108.54, 37.0], [-108.54, 35.75], [-109.5, 35.75]]

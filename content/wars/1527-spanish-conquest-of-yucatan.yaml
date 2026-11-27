@@ -1,0 +1,408 @@
+id: spanish-conquest-of-yucatan
+name: Spanish conquest of Yucatán
+start: "1527"
+end: "1547"
+tier: A
+summary: "The twenty-year struggle of Francisco de Montejo, his son and his nephew to conquer the Maya provinces of the Yucatán Peninsula. Northern Yucatán had no single ruler to overthrow, only sixteen or more rival provinces, and two attempts, from the east coast in 1527–1528 and from Campeche in 1531–1535, ended in retreat. In 1540–1542 Montejo the Younger returned with a larger force, founded Campeche and Mérida and, with the help of the Xiu of Maní, brought the western provinces under Spanish rule; the eastern provinces were subdued in 1542–1545 and rose together in the Great Maya Revolt of November 1546, which was put down early in 1547. Many Maya fled south to the Petén, where the Itza held out until 1697."
+countries: [mx]
+sides:
+  - id: es
+    name: Spaniards under the Montejos, with Nahua auxiliaries
+    polities: [spain, new-spain]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+  - id: xiu
+    name: Maya allies of the Spaniards (the Xiu of Maní and others)
+    polities: [xiu]
+    ink: orange
+    moves: Xiu moves
+    success: Xiu success
+  - id: my
+    name: Maya provinces of Yucatán (Cupul, Cochuah, Sotuta, Chetumal, Ekab and others)
+    polities: [maya-provinces]
+    ink: green
+    moves: Maya moves
+    success: Maya success
+notes:
+  - "The conquest is known mainly from Spanish sources, above all the reports and lawsuits of the Montejos and their men, the histories of Gonzalo Fernández de Oviedo and Diego López de Cogolludo, and the account of Bishop Diego de Landa, who wrote about 1566. Maya sources include the books of Chilam Balam and the records of noble families such as the Xiu. Places named in the Spanish accounts, such as Conil, Chauaca and Belma, cannot all be located today."
+  - "Francisco de Montejo the Elder (about 1479–1553) held the royal grant; his son Francisco de Montejo the Younger (1508–1565) and his nephew, also called Francisco de Montejo, led the final campaigns."
+sources:
+  - title: Spanish conquest of Yucatán (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Spanish_conquest_of_Yucat%C3%A1n
+  - title: Francisco de Montejo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Francisco_de_Montejo
+  - title: Francisco de Montejo the Younger (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Francisco_de_Montejo_the_Younger
+  - title: Gonzalo Guerrero (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Gonzalo_Guerrero
+  - title: Nachi Cocom (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Nachi_Cocom
+  - title: Tutul-Xiu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tutul-Xiu
+  - title: Valladolid, Yucatán (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Valladolid,_Yucat%C3%A1n
+  - title: Bacalar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bacalar
+  - title: Mérida, Yucatán (Wikipedia)
+    url: https://en.wikipedia.org/wiki/M%C3%A9rida,_Yucat%C3%A1n
+steps:
+  - title: First contacts
+    date: "1511–1519"
+    when: "1517"
+    borders: "1517-03-01"
+    countries: [mx]
+    body:
+      - After the fall of Mayapan in the 1440s, northern Yucatán was divided among sixteen to twenty-four Maya provinces, each with its own lords, often at war with one another. Two of the strongest were Maní, ruled by the Xiu, and Sotuta, ruled by the Cocom, and they were bitter enemies. There was no capital whose fall would bring down the rest, and the conquest took twenty years.
+      - The first Spaniards to stay in Yucatán were the survivors of a shipwreck in 1511. Their captain and several others were sacrificed; Gerónimo de Aguilar and Gonzalo Guerrero escaped and lived as slaves of Maya lords, and Guerrero later married and rose to high rank in Chetumal. In 1517 Francisco Hernández de Córdoba sailed from Cuba with about 100 men to explore and take slaves. The Maya ambushed his men near Cape Catoche, warned them off at Campeche, and at Champotón attacked them at dawn; the Spaniards lost more than fifty men in an hour’s fighting and called the place the Coast of the Disastrous Battle. Hernández died of his wounds in Cuba.
+      - Juan de Grijalva followed the same coast in 1518 with four ships and 240 men and brought back news of the Aztec Empire, and Hernán Cortés stopped at Cozumel in 1519, where Aguilar joined him while Guerrero stayed with the Maya. Cortés sent one of his captains, Francisco de Montejo, a veteran of the Grijalva voyage, to Spain with treasure for the king. Montejo stayed seven years and on 8 December 1526 received the right to conquer and settle Yucatán, with the hereditary title of adelantado.
+    facts:
+      - [Shipwreck of Aguilar and Guerrero, "1511"]
+      - [Hernández de Córdoba defeated at Champotón, "1517"]
+      - [Montejo’s royal grant, "8 December 1526"]
+    markers:
+      - kind: battle
+        side: my
+        name: Cape Catoche
+        date: "1517"
+        text: Hernández de Córdoba’s men were ambushed by Maya warriors on their way to a town inland.
+        lonlat: [-87.103, 21.606]
+        lp: t
+      - kind: event
+        side: my
+        name: Campeche
+        date: "23 February 1517"
+        text: The Maya let the Spaniards take water and then warned them to leave.
+        lonlat: [-90.531, 19.850]
+        lp: l
+      - kind: battle
+        side: my
+        name: Champotón
+        date: "1517"
+        text: The Maya surrounded Hernández de Córdoba’s shore party at dawn; more than fifty Spaniards were killed and nearly all the rest wounded.
+        lonlat: [-90.720, 19.350]
+        lp: l
+      - kind: event
+        side: es
+        name: Cozumel
+        date: "1518–1519"
+        text: Grijalva and Cortés landed here; Aguilar joined Cortés in 1519.
+        lonlat: [-86.949, 20.510]
+        lp: r
+    arrows:
+      - side: es
+        label: Hernández de Córdoba, 1517
+        via: [[-84.95, 21.85], [-86.95, 21.70], [-89.50, 21.35], [-90.45, 20.30], [-90.75, 19.45]]
+  - title: Montejo’s first entrada
+    date: "1527–1528"
+    when: "1528"
+    borders: "1528-01-01"
+    countries: [mx, bz]
+    body:
+      - Montejo left Spain in 1527 with 400 men in four ships, collected more horses at Santo Domingo and reached Cozumel in the second half of September, where its lord, Aj Naum Pat, received him in peace. He landed near Xelha in the province of Ekab and founded the first Spanish town on the peninsula, Salamanca de Xelha, leaving forty men there under Alonso d’Ávila and twenty more at Pole. Food soon ran out, the Spaniards seized what they could from the Maya villages, and many villagers fled into the forest; Montejo burned his ships so that his discontented men could not leave.
+      - With 125 men Montejo marched north through towns that no longer exist, made the lords of Belma swear loyalty to the Spanish crown and stayed two months at Conil, a town of some 5,000 houses. In the spring of 1528 he went on to Chauaca, whose people abandoned it by night and attacked the Spaniards in the morning, and then to Aké, north of Tizimín, where in a major battle the Spaniards killed more than 1,200 Maya and the neighbouring lords surrendered. But when Montejo returned to Xelha he had only 60 of his men left; only 12 of the 40 at Xelha were alive, and the garrison at Pole had been wiped out.
+      - Sailing south on the supply ship, Montejo reached Chaktumal, the capital of Chetumal province, where Gonzalo Guerrero refused his invitation to rejoin the Spaniards, and the Maya misled him about Ávila’s whereabouts. Ávila moved the colony to Xamanha, today’s Playa del Carmen. Late in 1528 Montejo left for New Spain to raise more men.
+    facts:
+      - [Montejo lands, "September 1527"]
+      - [Battle of Aké, "spring 1528"]
+      - [Maya killed at Aké, "more than 1,200"]
+    markers:
+      - kind: event
+        side: es
+        name: Cozumel
+        date: "September 1527"
+        text: Its lord, Aj Naum Pat, received Montejo in peace and later sent him food.
+        lonlat: [-86.949, 20.510]
+        lp: r
+      - kind: event
+        side: es
+        name: Xelha
+        date: "1527–1528"
+        text: Salamanca de Xelha, the first Spanish town on the peninsula. Only 12 of its 40 men survived; Ávila later moved the colony north to Xamanha.
+        lonlat: [-87.367, 20.320]
+        lp: l
+      - kind: taken
+        side: my
+        name: Pole
+        date: "1527–1528"
+        text: The Maya wiped out the Spanish garrison of twenty men left here.
+        lonlat: [-87.119, 20.578]
+        lp: r
+      - kind: battle
+        side: es
+        name: Aké
+        date: "spring 1528"
+        text: The Spaniards killed more than 1,200 Maya in a major battle north of Tizimín, and the neighbouring lords surrendered. The site of Aké is approximate.
+        lonlat: [-88.165, 21.287]
+        lp: t
+      - kind: event
+        side: my
+        name: Chaktumal
+        date: "1528"
+        text: The capital of Chetumal province. Gonzalo Guerrero, who lived here, refused to rejoin the Spaniards.
+        lonlat: [-88.395, 18.402]
+        lp: r
+    arrows:
+      - side: es
+        label: Montejo
+        phase: 1
+        via: [[-87.37, 20.35], [-87.10, 20.75], [-87.35, 21.38], [-87.95, 21.25], [-88.15, 21.28]]
+      - side: es
+        label: By sea
+        phase: 2
+        via: [[-87.30, 20.30], [-87.40, 19.60], [-87.70, 18.80], [-88.30, 18.45]]
+  - title: Tabasco, Campeche and Chetumal
+    date: "1529–1533"
+    when: "1531"
+    borders: "1531-06-01"
+    countries: [mx, bz]
+    body:
+      - Montejo now tried from the west. Appointed alcalde mayor of Tabasco in 1529, he subdued the province with his son, Francisco de Montejo the Younger, who founded Salamanca de Xicalango as a base. In 1530 Alonso d’Ávila set up Salamanca de Acalan in the Chontal Maya land south-east of the Laguna de Términos, found no gold, abandoned it and crossed the forests of the Kejache to Champotón, where the Montejos joined him.
+      - In 1531 Montejo moved his base to Campeche. The Maya gathered a large force under Aj Canul, lord of the province to the north, and attacked the town; the Spaniards drove them off, Montejo was nearly killed, and Aj Canul surrendered. Ávila was sent overland to the east. At Maní the Xiu received him well, and he went on to Chetumal, where he founded a Spanish town, Villa Real. The Maya of Chetumal, perhaps with Gonzalo Guerrero’s help, fought the settlement so fiercely that Ávila and his men abandoned it and escaped by canoe to Honduras.
+    facts:
+      - [Montejo’s base moves to Campeche, "1531"]
+      - [Villa Real at Chetumal, "1531–1533"]
+    markers:
+      - kind: event
+        side: es
+        name: Champotón
+        date: "1530–1531"
+        text: Ávila arrived here from Acalan at the end of 1530, and the Montejos joined him.
+        lonlat: [-90.720, 19.350]
+        lp: l
+      - kind: battle
+        side: es
+        name: Campeche
+        date: "1531"
+        text: The Spaniards beat off a large Maya attack under Aj Canul, in which Montejo was nearly killed; Aj Canul surrendered.
+        lonlat: [-90.531, 19.850]
+        lp: l
+      - kind: event
+        side: xiu
+        name: Maní
+        date: "1531"
+        text: The Xiu capital, where the Spaniards were received as friends.
+        lonlat: [-89.400, 20.383]
+        lp: b
+      - kind: held
+        side: my
+        name: Chaktumal
+        date: "1531–1533"
+        text: Ávila founded Villa Real here, but the Maya of Chetumal resisted so fiercely that the Spaniards abandoned it and fled by canoe to Honduras.
+        lonlat: [-88.395, 18.402]
+        lp: r
+    arrows:
+      - side: es
+        label: Ávila
+        via: [[-90.50, 19.86], [-89.40, 20.38], [-88.40, 20.60], [-88.30, 19.50], [-88.38, 18.48]]
+  - title: Ciudad Real and the withdrawal
+    date: "1532–1540"
+    when: "1533"
+    borders: "1533-06-01"
+    countries: [mx]
+    body:
+      - Montejo the Younger was sent north into the Cupul province, whose lord Naabon Cupul reluctantly let him found a Spanish town, Ciudad Real, among the ruins of Chichen Itza. Montejo divided the province among his soldiers, giving each two to three thousand Maya in encomienda. After six months Naabon Cupul was killed trying to kill Montejo, and in mid-1533 the Cupul besieged the garrison. Montejo slipped away by night and fled west to the Chel, Pech and Xiu provinces, which stayed loyal; Namux Chel received him at Dzilam, and in the spring of 1534 he rejoined his father near Tʼho, where Mérida stands today. His father had meanwhile visited the Xiu ruler at Maní, and the friendship of the Xiu would be the Spaniards’ greatest asset.
+      - News of Francisco Pizarro’s plunder in Peru drew Montejo’s men away, and in seven years they had found very little gold in Yucatán. At the end of 1534 or early in 1535 the Montejos withdrew from Campeche to Veracruz, and the elder Montejo became caught up in a dispute with Pedro de Alvarado over the government of Honduras. In 1535 the Franciscan friar Jacobo de Testera began a peaceful mission at Champotón, until soldiers sent by Montejo the Younger arrived and he left; Champotón stayed the only Spanish outpost on the peninsula. Gonzalo Guerrero was killed in 1536 fighting the Spaniards in Honduras.
+      - In 1536, while the Spaniards were away, Nachi Cocom, lord of Sotuta, had the members of a Xiu embassy killed at Otzmal in his province, renewing the old feud between the Cocom and the Xiu.
+    facts:
+      - [Ciudad Real besieged, "mid-1533"]
+      - [Spaniards leave Yucatán, "end of 1534 or early 1535"]
+      - [Xiu envoys killed at Otzmal, "1536"]
+    markers:
+      - kind: siege
+        side: my
+        name: Chichen Itza
+        date: "mid-1533"
+        text: The Spanish town of Ciudad Real, besieged by the Cupul after the death of their lord Naabon Cupul. Montejo the Younger escaped by night.
+        lonlat: [-88.569, 20.683]
+        lp: b
+      - kind: event
+        side: xiu
+        name: Dzilam
+        date: "1533–1534"
+        text: Namux Chel, lord of the Chel province, received Montejo the Younger here in friendship.
+        lonlat: [-88.929, 21.280]
+        lp: t
+      - kind: event
+        side: xiu
+        name: Maní
+        date: "1533–1534"
+        text: The elder Montejo visited the Xiu ruler here; the Xiu stayed friends of the Spaniards throughout the conquest.
+        lonlat: [-89.400, 20.383]
+        lp: b
+      - kind: toll
+        side: my
+        name: Sotuta
+        date: "1536"
+        text: The capital of Nachi Cocom, who had the members of a Xiu embassy killed at Otzmal in his province.
+        lonlat: [-89.008, 20.597]
+        lp: r
+      - kind: held
+        side: es
+        name: Champotón
+        date: "1535–1540"
+        text: The only Spanish outpost left on the peninsula, where the friar Jacobo de Testera tried a peaceful mission in 1535.
+        lonlat: [-90.720, 19.350]
+        lp: l
+    arrows:
+      - side: es
+        label: Montejo the Younger
+        via: [[-88.57, 20.69], [-88.93, 21.25], [-89.30, 21.10], [-89.60, 20.98]]
+  - title: Campeche and Mérida
+    date: "1540–1542"
+    when: "1542-01-06"
+    borders: "1542-02-01"
+    countries: [mx]
+    body:
+      - In 1540 the elder Montejo, now in his late sixties, handed his rights over to his son. Early in 1541 Montejo the Younger joined his cousin at Champotón and moved on to Campeche with 300 to 400 Spanish soldiers and Nahua auxiliaries from central Mexico, and there set up the first permanent Spanish town council on the peninsula. He summoned the Maya lords to submit; many did, among them the Xiu, but the Canul refused, and his cousin marched against them.
+      - Near Tʼho, the old Maya city in the province of Chakan, the cousin founded the town of Mérida on 6 January 1542. On 23 January Tutul Xiu, lord of Maní and ruler of the most powerful province in the north, came to the camp in peace with food, attended a mass, and was baptised Melchor. His submission led the lords of the western provinces to accept Spanish rule.
+      - The eastern provinces did not. Nachi Cocom of Sotuta led the resistance and, according to some accounts, attacked Mérida with a large Maya army on 10–11 June 1542, but was defeated among the ruins of Tʼho; he later submitted and was baptised Juan Cocom.
+    facts:
+      - [Campeche town council, "1541"]
+      - [Mérida founded, "6 January 1542"]
+      - [Tutul Xiu submits, "23 January 1542"]
+    markers:
+      - kind: capital
+        side: es
+        name: Campeche
+        date: "1541"
+        text: The first permanent Spanish town council on the peninsula.
+        lonlat: [-90.531, 19.850]
+        lp: l
+      - kind: capital
+        side: es
+        name: Mérida
+        date: "6 January 1542"
+        text: Founded on the site of the Maya city of Tʼho. According to some accounts Nachi Cocom’s army was defeated here on 10–11 June 1542.
+        lonlat: [-89.624, 20.967]
+        lp: t
+      - kind: event
+        side: xiu
+        name: Maní
+        date: "January 1542"
+        text: Its lord Tutul Xiu came to Mérida in peace on 23 January 1542 and was baptised Melchor.
+        lonlat: [-89.400, 20.383]
+        lp: b
+      - kind: held
+        side: my
+        name: Sotuta
+        date: "1542"
+        text: Nachi Cocom’s province, the centre of the resistance in the west.
+        lonlat: [-89.008, 20.597]
+        lp: r
+    arrows:
+      - side: es
+        label: Montejo the Nephew
+        phase: 1
+        via: [[-90.50, 19.88], [-90.05, 20.37], [-89.85, 20.75], [-89.64, 20.95]]
+      - side: xiu
+        label: Tutul Xiu
+        phase: 2
+        via: [[-89.40, 20.40], [-89.50, 20.70], [-89.61, 20.94]]
+      - side: my
+        label: Nachi Cocom
+        phase: 3
+        via: [[-89.01, 20.61], [-89.30, 20.85], [-89.59, 20.96]]
+  - title: The eastern provinces
+    date: "1542–1545"
+    when: "1543"
+    borders: "1543-06-01"
+    countries: [mx]
+    body:
+      - Montejo the Younger sent his cousin east. At Chauaca most of the eastern lords received him in peace; the Cochuah resisted fiercely but were defeated, and a rising of the Cupul was put down. The Spaniards reached the east coast at Pole, where nine of them drowned trying to cross to Cozumel in a storm and another was killed by the Maya. Rumours of the disaster grew as they spread, and the Cupul and Cochuah rose again.
+      - On 27 May 1543 the cousin founded Valladolid by a lagoon in the north of Cupul; on 24 March 1545 the town was moved south to the Maya town of Zací, whose buildings were pulled down to provide stone for the Spanish town. In the south-east the Pachecos’ campaign of 1543–1544 took Bacalar in Uaymil, the first place in the region the Spaniards were able to hold, and Gaspar Pacheco founded the town of Salamanca de Bacalar there in 1545. Still, Spanish control of the east was weak, and Chetumal, Cochuah, Cupul, Sotuta and the Tazes remained largely independent.
+    facts:
+      - [Valladolid founded, "27 May 1543"]
+      - [Valladolid moved to Zací, "24 March 1545"]
+      - [Salamanca de Bacalar founded, "1545"]
+    markers:
+      - kind: event
+        side: es
+        name: Valladolid
+        date: "1543–1545"
+        text: Founded in 1543 by a lagoon in the north and moved here, to the Maya town of Zací, in 1545.
+        lonlat: [-88.202, 20.689]
+        lp: t
+      - kind: battle
+        side: es
+        name: Tihosuco
+        date: "1542"
+        text: The capital of Cochuah, whose people fiercely resisted the Spaniards before they were defeated; where they fought is not known, and the marker is placed at the capital.
+        lonlat: [-88.374, 20.196]
+        lp: l
+      - kind: event
+        side: my
+        name: Pole
+        date: "1543"
+        text: Nine Spaniards drowned here trying to cross to Cozumel in a storm, and the Cupul and Cochuah rose again.
+        lonlat: [-87.119, 20.578]
+        lp: r
+      - kind: taken
+        side: es
+        name: Bacalar
+        date: "1543–1545"
+        text: Taken in the Pachecos’ campaign; Gaspar Pacheco founded Salamanca de Bacalar here in 1545.
+        lonlat: [-88.395, 18.677]
+        lp: r
+    arrows:
+      - side: es
+        label: Montejo the Nephew
+        via: [[-89.60, 20.97], [-88.90, 20.90], [-88.20, 20.75], [-87.60, 20.62], [-87.15, 20.58]]
+  - title: The Great Maya Revolt
+    date: "1546–1547"
+    when: "1546-11-08"
+    borders: "1546-11-08"
+    countries: [mx]
+    body:
+      - On 8 November 1546 the eastern provinces rose together. Cupul, Cochuah, Sotuta, the Tazes, Uaymil, Chetumal and Chikinchel joined in a concerted attempt to drive the Spaniards from the peninsula. Eighteen Spaniards caught in the eastern towns were killed as sacrifices, and a contemporary account tells of more than 400 Maya allies of the Spaniards killed, along with the Spaniards’ livestock.
+      - Mérida and Campeche had been warned in time. The elder Montejo came to Mérida from Chiapas in December 1546 with reinforcements raised at Champotón and Campeche, and early in 1547, after four months of revolt, the rebels were defeated in a single battle in which twenty Spaniards and several hundred of their Maya allies were killed. It was the end of the conquest of northern Yucatán.
+      - Many Maya of the east and south fled to the Petén, in the far south of the peninsula, where the Itza kingdom of Nojpetén stayed independent until 1697. The elder Montejo took office as governor of Yucatán in 1546, was recalled to Spain in 1550 after complaints against him, and died there in 1553. Epidemics did the greatest harm; modern estimates of the fall in the Maya population after contact range from 75 to 90 per cent, and Conil, with some 5,000 houses in 1528, had only 80 tributaries in 1549.
+    facts:
+      - [Revolt begins, "8 November 1546"]
+      - [Killed in the first days, "18 Spaniards and over 400 Maya allies"]
+      - [Revolt defeated, "early 1547"]
+    markers:
+      - kind: event
+        side: my
+        name: Valladolid
+        date: "November 1546"
+        text: The town stood in the Cupul province, one of the leaders of the revolt.
+        lonlat: [-88.202, 20.689]
+        lp: t
+      - kind: held
+        side: es
+        name: Mérida
+        date: "1546–1547"
+        text: Warned in time, the town held; the elder Montejo arrived here with reinforcements in December 1546.
+        lonlat: [-89.624, 20.967]
+        lp: t
+      - kind: held
+        side: es
+        name: Campeche
+        date: "1546–1547"
+        text: Montejo the Younger and his cousin were here when the revolt broke out.
+        lonlat: [-90.531, 19.850]
+        lp: l
+      - kind: event
+        side: my
+        name: Sotuta
+        date: "November 1546"
+        text: The Cocom province of Sotuta joined the revolt.
+        lonlat: [-89.008, 20.597]
+        lp: b
+      - kind: event
+        side: my
+        name: Bacalar
+        date: "November 1546"
+        text: The provinces of Uaymil and Chetumal in the south-east joined the revolt.
+        lonlat: [-88.395, 18.677]
+        lp: r
+    arrows:
+      - side: es
+        label: Montejo
+        via: [[-89.60, 20.97], [-89.20, 20.85], [-88.70, 20.75], [-88.25, 20.70]]
+    areas:
+      - style: contested
+        side: my
+        label: Provinces in revolt (approximate)
+        polygon: [[-89.15, 21.40], [-88.20, 21.50], [-87.50, 21.30], [-87.30, 20.70], [-87.50, 19.80], [-87.80, 18.55], [-88.60, 18.50], [-88.90, 19.60], [-89.20, 20.40]]

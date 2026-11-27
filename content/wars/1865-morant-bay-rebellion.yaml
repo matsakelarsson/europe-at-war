@@ -1,0 +1,145 @@
+id: morant-bay-rebellion
+name: Morant Bay rebellion
+start: "1865-10-11"
+end: "1865-11-13"
+tier: B
+summary: "The rising of 11 October 1865 in the parish of Saint Thomas-in-the-East, Jamaica, and its suppression. Thirty years after the end of slavery, most Black Jamaicans were small farmers and labourers with little land, low wages and no vote: in 1864 fewer than 2,000 Black men could vote, out of a population of more than 436,000. Floods, drought and epidemics had deepened their poverty, and the governor, Edward John Eyre, answered their petitions with a message from the Queen telling them to work harder. Paul Bogle, a Black Baptist deacon of Stony Gut, and his followers, allies of the mixed-race assemblyman George William Gordon, marched on the courthouse at Morant Bay on 11 October after warrants were issued for their arrest. The volunteer militia fired on them, and in the fighting that followed the crowd burned the courthouse and killed 18 officials and militiamen, among them the custos, Baron von Ketelhodt, while seven of the marchers died. For two days the rebels held much of the parish. Eyre declared martial law, and soldiers, sailors and Maroons from Moore Town put down the rising with extreme violence: 439 people were killed, 354 of them after courts martial, more than 600 were flogged and about 1,000 homes were burned. Gordon, arrested in Kingston where martial law did not apply, was tried by court martial at Morant Bay and hanged on 23 October, and Bogle the next day. A royal commission found the punishments excessive, Eyre was recalled amid a fierce debate in Britain, and in 1866 the Jamaican Assembly gave up its powers and the island became a Crown colony ruled from London. Jamaica made Bogle and Gordon National Heroes in 1969."
+countries: [jm, gb]
+sides:
+  - id: reb
+    name: Morant Bay rebels (Paul Bogle)
+    polities: [morant-bay-rebels]
+    ink: olive
+    moves: Rebel moves
+    success: Rebel success
+  - id: brit
+    name: Colony of Jamaica (British troops, sailors, militia and Moore Town Maroons)
+    polities: [british-west-indies, united-kingdom, jamaican-maroons]
+    ink: red
+    moves: Government moves
+    success: Government success
+notes:
+  - The figure of 439 killed is the count of the royal commission of 1866, which broke it down into 354 executed by court martial, 50 shot or hanged without trial, 25 shot by the Maroons and 10 killed otherwise. Other counts, to the end of martial law on 13 November, are higher, at 469 or more than 600.
+  - In Britain the Jamaica Committee, with John Stuart Mill, Charles Darwin and Thomas Huxley, tried to have Eyre prosecuted for murder, while the Eyre Defence Committee, with Thomas Carlyle, John Ruskin, Charles Dickens and Alfred Tennyson, defended him. Grand juries refused to indict him, and the courts found for him in a civil suit, Phillips v Eyre.
+sources:
+  - title: Morant Bay rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Morant_Bay_rebellion
+  - title: Paul Bogle (Jamaica Information Service)
+    url: https://jis.gov.jm/information/heroes/paul-bogle/
+  - title: The Morant Bay Rebellion, October 1865 (The National Archives blog, UK)
+    url: https://blog.nationalarchives.gov.uk/the-morant-bay-rebellion-october-1865
+  - title: Paul Bogle (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Paul_Bogle
+  - title: George William Gordon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/George_William_Gordon
+  - title: Report of the Royal Jamaica Commission, debate of 31 July 1866 (Hansard)
+    url: https://api.parliament.uk/historic-hansard/commons/1866/jul/31/resolution
+steps:
+  - title: The march on Morant Bay
+    date: 7–13 October 1865
+    when: "1865-10-11"
+    borders: "1865-10-11"
+    countries: [jm, gb]
+    view:
+      center: [-76.40, 17.93]
+      size: [60, 50]
+    body:
+      - After the end of slavery in 1834 and of apprenticeship in 1838, many freed Jamaicans left the estates for small plots in the hills, but good land was scarce, wages on the estates were low and often unpaid, and a property qualification kept almost all Black men from voting for the Assembly. Floods in 1864, drought, cholera and smallpox made matters worse. In 1865 a letter from the Baptist missionary Edward Underhill to the Colonial Office describing the distress led to public meetings across the island; the government’s answer, a message in the Queen’s name advising the people to work for wages, angered many. Paul Bogle, a farmer and Black Baptist deacon at Stony Gut in the hills above Morant Bay, led a delegation that walked to Spanish Town in August to see the governor, Edward John Eyre, who refused to receive it. Bogle was a political ally of George William Gordon, a mixed-race landowner and member of the Assembly who was Eyre’s fiercest critic.
+      - On 7 October 1865 a crowd from Stony Gut disrupted the trial at Morant Bay of a man charged with trespassing on an abandoned estate, and warrants were issued for Bogle and others. On 10 October the police sent to arrest Bogle were overpowered at Stony Gut. The next day, 11 October, Bogle led several hundred men and women, some armed, to the courthouse where the parish vestry was meeting. The volunteer militia fired into the crowd, killing seven; the crowd set fire to the courthouse and nearby buildings and killed 18 officials and militiamen as they fled, among them the custos of the parish, Baron Maximilian von Ketelhodt.
+      - For the next two days bands of rebels moved through the parish of Saint Thomas-in-the-East, attacking estates and killing a few more white men, while many planters fled to the coast. Bogle called on the people to join him, but the rising did not spread beyond the parish.
+    facts:
+      - [Trial disrupted at Morant Bay, "7 October 1865"]
+      - [March on the courthouse, "11 October 1865"]
+      - [Killed at the courthouse, "18 officials and militiamen, 7 marchers"]
+    markers:
+      - kind: event
+        side: reb
+        name: Stony Gut
+        date: 10 October 1865
+        text: Bogle’s village and chapel in the hills, where the police sent to arrest him were overpowered and from where the march set out.
+        lonlat: [-76.435, 17.934]
+        lp: t
+      - kind: battle
+        side: reb
+        name: Morant Bay courthouse
+        date: 11 October 1865
+        text: The militia fired on Bogle’s marchers; the crowd burned the courthouse and killed 18 officials and militiamen, among them Baron von Ketelhodt.
+        lonlat: [-76.412, 17.882]
+        lp: b
+      - kind: event
+        side: reb
+        name: Bath
+        date: 12–13 October 1865
+        text: Rebel bands moved through the estates of the eastern part of the parish in the two days after the march.
+        lonlat: [-76.350, 17.947]
+        lp: r
+    arrows:
+      - side: reb
+        label: Bogle
+        phase: 1
+        via: [[-76.435, 17.930], [-76.426, 17.905], [-76.414, 17.887]]
+      - side: reb
+        phase: 2
+        via: [[-76.405, 17.890], [-76.380, 17.915], [-76.355, 17.942]]
+    areas:
+      - style: contested
+        side: reb
+        label: Where the rebels held sway, 11–13 October 1865 (approximate)
+        polygon: [[-76.48, 17.87], [-76.48, 17.97], [-76.40, 18.01], [-76.28, 18.01], [-76.20, 17.96], [-76.22, 17.88], [-76.32, 17.87]]
+  - title: Martial law and the Crown colony
+    date: October 1865 – 1866
+    when: "1865-10-23"
+    borders: "1865-10-23"
+    countries: [jm, gb]
+    body:
+      - On 13 October Eyre declared martial law in the county of Surrey, the east of the island, except the city of Kingston. Troops under Brigadier-General Alexander Nelson, among them soldiers of the West India Regiment, were landed from warships at Morant Bay and elsewhere on the coast, and the Maroons of Moore Town under their colonel, Alexander Fyfe, came down from the Blue Mountains. In the thirty days of martial law soldiers, sailors and Maroons hunted the rebels and many who had nothing to do with the rising; the royal commission later counted 439 killed, 354 of them after hasty courts martial, more than 600 men and women flogged and about 1,000 homes burned.
+      - Eyre held Gordon responsible. Gordon gave himself up in Kingston, where martial law did not apply, and was taken by sea to Morant Bay, tried by a court martial and hanged there on 23 October 1865, though he had taken no part in the rising. Bogle was captured by Maroons and hanged at the courthouse the next day.
+      - In Britain the news divided opinion between those who saw Eyre as the saviour of the colony and those who accused him of murder. A royal commission under Sir Henry Storks, which sat in Jamaica in early 1866, found that martial law had been kept in force too long and that the punishments were excessive, the floggings barbarous and the burning of homes wanton. Eyre was recalled and never held office again. The Jamaican Assembly, dominated by planters fearful of Black voters, voted to abolish itself, and from 1866 Jamaica was a Crown colony ruled by a governor appointed from London.
+    facts:
+      - [Martial law, "13 October – 13 November 1865"]
+      - [Killed in the suppression, "439 (royal commission)"]
+      - [George William Gordon hanged, "23 October 1865"]
+      - [Paul Bogle hanged, "24 October 1865"]
+    markers:
+      - kind: event
+        side: brit
+        name: Morant Bay
+        date: 23–24 October 1865
+        text: Gordon, after a court martial, and Bogle, captured by the Maroons, were hanged here.
+        lonlat: [-76.412, 17.882]
+        lp: b
+      - kind: event
+        side: brit
+        name: Moore Town
+        date: October 1865
+        text: The Windward Maroon town whose men, under Colonel Alexander Fyfe, joined the hunt for the rebels and captured Bogle.
+        lonlat: [-76.428, 18.077]
+        lp: r
+      - kind: event
+        side: brit
+        name: Kingston
+        date: October 1865
+        text: Outside the area of martial law; Gordon gave himself up here and was taken by sea to Morant Bay.
+        lonlat: [-76.793, 17.971]
+        lp: b
+      - kind: capital
+        side: brit
+        name: Spanish Town
+        date: "1865"
+        text: The colonial capital, seat of Governor Eyre and of the Assembly that voted to abolish itself.
+        lonlat: [-76.954, 17.996]
+        lp: l
+    arrows:
+      - side: brit
+        label: Troops by sea
+        phase: 1
+        via: [[-76.79, 17.95], [-76.65, 17.88], [-76.50, 17.86], [-76.42, 17.875]]
+      - side: brit
+        label: Maroons
+        phase: 1
+        via: [[-76.428, 18.070], [-76.400, 18.000], [-76.370, 17.955]]
+    areas:
+      - style: occupied
+        side: brit
+        label: Under martial law, 13 October – 13 November 1865 (the county of Surrey without Kingston)
+        atoms: [JM-02, JM-03, JM-04]

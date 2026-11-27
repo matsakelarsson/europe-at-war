@@ -1,0 +1,698 @@
+id: mexican-revolution
+name: Mexican Revolution
+start: "1910-11-20"
+end: "1920-12-01"
+tier: A
+summary: "A decade of risings and civil wars that ended the long rule of Porfirio Díaz, destroyed the old federal army and produced the constitution of 1917 and the state that ruled Mexico for most of the 20th century. Francisco I. Madero’s call to arms in November 1910 brought down Díaz in May 1911, but Madero kept the federal army and faced risings by Emiliano Zapata, who demanded the return of village lands in Morelos, and by Pascual Orozco in Chihuahua. In February 1913 General Victoriano Huerta overthrew Madero, who was murdered. Northern governors and revolutionaries rose under Venustiano Carranza as the Constitutionalists, with Francisco “Pancho” Villa and Álvaro Obregón as their best generals, while Zapata fought on in the south; with US pressure, including the occupation of Veracruz, they drove Huerta out in July 1914. The winners then split. Villa and Zapata, joined in the Convention of Aguascalientes, took Mexico City in December 1914, but Obregón crushed Villa’s army at Celaya and León in 1915, and the United States recognised Carranza. Villa’s raid on Columbus, New Mexico, in 1916 brought a US punitive expedition into Chihuahua. Carranza’s constitution of 1917 promised land reform, labour rights and national ownership of the subsoil, but fighting went on; Zapata was killed in 1919, and in 1920 the Sonoran generals rose under the Plan of Agua Prieta and Carranza was killed while fleeing. Obregón became president in December 1920. Between one million and 1.5 million people died, most of them civilians, of violence, hunger and disease."
+countries: [mx, us]
+sides:
+  - id: fed
+    name: The government in Mexico City and the Federal Army (Díaz, Madero, then Huerta)
+    polities: [mexico]
+    ink: slate
+    moves: Government moves
+    success: Government success
+  - id: mad
+    name: Maderistas
+    polities: [maderistas]
+    ink: teal
+    moves: Maderista moves
+    success: Maderista success
+  - id: oroz
+    name: Orozquistas (the Colorados)
+    polities: [orozquistas]
+    ink: orange
+    moves: Orozquista moves
+    success: Orozquista success
+  - id: con
+    name: Constitutionalists (Carranza, Obregón, Pablo González)
+    polities: [constitutionalists]
+    ink: red
+    moves: Constitutionalist moves
+    success: Constitutionalist success
+  - id: vil
+    name: Villistas (the Division of the North)
+    polities: [villistas]
+    ink: blue
+    moves: Villista moves
+    success: Villista success
+  - id: zap
+    name: Zapatistas (the Liberation Army of the South)
+    polities: [zapatistas]
+    ink: green
+    moves: Zapatista moves
+    success: Zapatista success
+  - id: us
+    name: United States
+    polities: [united-states]
+    ink: navy
+    moves: US moves
+    success: US success
+  - id: agua
+    name: Rebels of the Plan of Agua Prieta (Obregón, Calles, de la Huerta)
+    polities: [aguaprietistas]
+    ink: purple
+    moves: Agua Prieta moves
+    success: Agua Prieta success
+notes:
+  - "The number of deaths is uncertain, because the censuses of 1910 and 1921 are imperfect and many people emigrated. Most estimates of the deaths of 1910–1920 lie between about one million and 1.5 million, most of them civilians who died of hunger and disease, including the influenza of 1918, as well as violence. The demographer Robert McCaa estimated nearly 1.5 million excess deaths and a total population loss of about 2.1 million, counting births that did not take place and emigration. Some 200,000 people fled to the United States."
+  - "When the revolution ended is debated; some historians carry it to 1940. This story ends with Obregón taking office in December 1920. The fighting on the US border, the US occupation of Veracruz in 1914, the de la Huerta rebellion of 1923–1924 and the Cristero War have their own stories."
+  - "All sides killed prisoners at times, and the federal army forcibly conscripted men through the leva. The northern armies were followed by thousands of women, the soldaderas, who cooked, nursed and sometimes fought. Chinese immigrants in the north were attacked by several factions, worst at Torreón in May 1911."
+sources:
+  - title: Mexican Revolution (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mexican_Revolution
+  - title: Mexican Revolution (Britannica)
+    url: https://www.britannica.com/event/Mexican-Revolution
+  - title: The Mexican Revolution and the United States in the Collections of the Library of Congress
+    url: https://www.loc.gov/exhibits/mexican-revolution-and-the-united-states/
+  - title: "Robert McCaa, Missing Millions: The Human Cost of the Mexican Revolution (University of Minnesota Population Center)"
+    url: https://users.pop.umn.edu/~rmccaa/missmill/mxrev.htm
+  - title: Ten Tragic Days (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ten_Tragic_Days
+  - title: Plan of Ayala (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Plan_of_Ayala
+  - title: Battle of Zacatecas (1914) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Zacatecas_(1914)
+  - title: Convention of Aguascalientes (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Convention_of_Aguascalientes
+  - title: Battle of Celaya (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Celaya
+  - title: Plan of Agua Prieta (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Plan_of_Agua_Prieta
+  - title: Torreón massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Torre%C3%B3n_massacre
+steps:
+  - title: Madero’s call to arms
+    date: November 1910 – May 1911
+    when: "1911-05-10"
+    borders: "1911-05-25"
+    countries: [mx]
+    side_names: { fed: Díaz’s government and the Federal Army }
+    body:
+      - "Porfirio Díaz had ruled Mexico since 1876, apart from a pause in 1880–1884. His regime built railways and drew in foreign investment in mines and oil, but land was concentrated in great haciendas, many villages lost their common lands, and strikes such as those at Cananea in 1906 and Río Blanco in 1907 were put down by force. In 1910 the 80-year-old Díaz had himself re-elected after jailing his challenger, Francisco I. Madero, a wealthy landowner from Coahuila who campaigned for “effective suffrage, no re-election”. Madero escaped to Texas and in the Plan of San Luis Potosí called for a rising on 20 November 1910."
+      - "In Puebla the police discovered the plot early; Aquiles Serdán and his family and followers fought them from his house on 18 November, and he was found and killed there the next morning. The rising took hold in the mountains of western Chihuahua, where Pascual Orozco and Pancho Villa led bands of rancheros, muleteers and miners against federal troops who seldom left the railways. Risings spread to Sonora, Coahuila, Durango and Baja California, where the anarchist followers of Ricardo Flores Magón took Mexicali and Tijuana. In Morelos, south of the capital, villagers led by Emiliano Zapata rose to recover lands taken by the sugar haciendas."
+      - "Against Madero’s wishes, Orozco and Villa attacked Ciudad Juárez, across the river from El Paso, and took it on 10 May 1911; on 19 May Zapata’s men took Cuautla after six days of fighting. At Torreón, entered by Maderista troops on 15 May, soldiers and townspeople killed some 300 Chinese residents. Díaz’s government signed the Treaty of Ciudad Juárez on 21 May. Díaz resigned on 25 May and sailed for exile in France, leaving an interim president, Francisco León de la Barra, and the federal army intact."
+    facts:
+      - [Rising called for, "20 November 1910"]
+      - [Ciudad Juárez taken, "10 May 1911"]
+      - [Treaty of Ciudad Juárez, "21 May 1911"]
+      - [Díaz resigns, "25 May 1911"]
+    markers:
+      - kind: capital
+        side: fed
+        name: Mexico City
+        date: 25 May 1911
+        text: Díaz resigned after 35 years in power and left for exile in Paris.
+        lonlat: [-99.133, 19.433]
+        lp: l
+      - kind: toll
+        side: fed
+        name: Puebla
+        date: 18 November 1910
+        text: Police attacked the house of Aquiles Serdán, who had prepared a rising for 20 November; several of his followers were killed, and Serdán, found in hiding, was shot the next morning.
+        lonlat: [-98.183, 19.033]
+      - kind: taken
+        side: mad
+        name: Ciudad Juárez
+        date: 8–10 May 1911
+        text: Orozco and Villa took the border town after two days of fighting; the peace treaty that ended Díaz’s rule was signed here on 21 May.
+        lonlat: [-106.485, 31.745]
+      - kind: toll
+        side: mad
+        name: Torreón
+        date: 13–15 May 1911
+        text: As the Maderistas took the city, soldiers and townspeople killed some 300 Chinese residents and looted their shops.
+        lonlat: [-103.408, 25.542]
+      - kind: taken
+        side: mad
+        name: Cuautla
+        date: 19 May 1911
+        text: Zapata’s peasant army took the town from a federal regiment after six days of fighting.
+        lonlat: [-98.950, 18.817]
+        lp: b
+      - kind: taken
+        name: Mexicali and Tijuana
+        date: January–May 1911
+        text: Taken by the anarchist Magonistas, with many foreign volunteers; federal troops drove them out in June.
+        lonlat: [-115.468, 32.627]
+    arrows:
+      - side: mad
+        label: Orozco and Villa
+        phase: 1
+        via: [[-107.20, 29.20], [-106.75, 30.40], [-106.50, 31.65]]
+    areas:
+      - style: contested
+        side: mad
+        label: Main centres of the revolt, spring 1911
+        atoms: [MX-CHH, MX-MOR]
+  - title: Madero’s presidency, Zapata and Orozco
+    date: June 1911 – October 1912
+    when: "1912-05-23"
+    borders: "1912-05-23"
+    countries: [mx]
+    side_names: { fed: Madero’s government and the Federal Army }
+    body:
+      - "Madero ordered the revolutionary forces to disband and kept the federal army. In Morelos, where the planters demanded order, the interim government sent General Victoriano Huerta against the Zapatistas, who refused to give up their arms before the land question was settled. Madero, elected president by a wide margin, took office on 6 November 1911 and asked for patience on land reform. On 28 November Zapata and his chiefs proclaimed the Plan of Ayala, which declared Madero a traitor to the revolution, demanded the return of stolen lands to the villages and the expropriation of a third of the haciendas’ land. Federal commanders, above all General Juvencio Robles in 1912, burned villages and moved their people, which drove more peasants to Zapata."
+      - "In the north Orozco, passed over for the governorship of Chihuahua and backed by the state’s great landowners, rose in March 1912 with a plan promising land and labour reforms. His Colorados routed a federal army at Rellano on 23–24 March, and its commander, the war minister José González Salas, shot himself. Huerta took command, with Villa leading state irregulars on the government side until Huerta had him arrested and nearly shot, and beat Orozco at Rellano on 22–23 May and at Bachimba on 3 July; the Colorados broke up into guerrilla bands. In October Félix Díaz, the old dictator’s nephew, rose in Veracruz and was captured within a week."
+    facts:
+      - [Madero takes office, "6 November 1911"]
+      - [Plan of Ayala, "28 November 1911"]
+      - [Orozco’s rising, "March 1912"]
+      - [Second battle of Rellano, "22–23 May 1912"]
+    markers:
+      - kind: event
+        side: zap
+        name: Ayoxuxtla
+        date: 28 November 1911
+        text: Zapata and his chiefs signed the Plan of Ayala in this mountain village in Puebla, breaking with Madero.
+        lonlat: [-98.762, 18.272]
+        lp: b
+      - kind: held
+        side: oroz
+        name: Chihuahua
+        date: March – July 1912
+        text: Orozco’s headquarters until Huerta’s army retook the city in July.
+        lonlat: [-106.077, 28.637]
+      - kind: battle
+        side: fed
+        name: Rellano
+        date: March and May 1912
+        text: Orozco routed a federal army here in March; on 22–23 May Huerta defeated him on the same ground. The railway station’s position is approximate.
+        lonlat: [-104.497, 26.836]
+      - kind: battle
+        side: fed
+        name: Bachimba
+        date: 3 July 1912
+        text: Huerta’s last victory over Orozco’s main force, opening the way to Chihuahua City.
+        lonlat: [-105.637, 28.419]
+        lp: l
+      - kind: event
+        side: fed
+        name: Veracruz
+        date: October 1912
+        text: Félix Díaz’s rising in the port collapsed within a week, and he was imprisoned.
+        lonlat: [-96.134, 19.198]
+    arrows:
+      - side: fed
+        label: Huerta’s federal army
+        phase: 1
+        via: [[-103.40, 25.60], [-104.50, 26.85], [-105.60, 28.40], [-106.05, 28.60]]
+    areas:
+      - style: contested
+        side: zap
+        label: Zapatista rising in Morelos
+        atoms: [MX-MOR]
+      - style: contested
+        side: oroz
+        label: Orozco’s rising, spring 1912
+        atoms: [MX-CHH]
+  - title: The Ten Tragic Days
+    date: 9–22 February 1913
+    when: "1913-02-18"
+    borders: "1913-02-22"
+    countries: [mx]
+    view: { center: [-99.14, 19.38], size: [55, 50] }
+    side_names: { fed: "The coup: Félix Díaz, Bernardo Reyes and, from 18 February, Huerta", mad: Madero’s government and loyal troops }
+    body:
+      - "On 9 February 1913 army officers freed Generals Bernardo Reyes and Félix Díaz from prison in Mexico City and led cadets from the military school at Tlalpan and other troops against the National Palace. Loyal troops under General Lauro Villar held it; Reyes was killed in front of the palace, and Díaz withdrew into the Ciudadela, the arsenal a short distance to the south-west. Villar was wounded, and Madero gave command of the defence to Huerta."
+      - "For ten days the two sides shelled each other across the city centre, killing hundreds of civilians, many of whose bodies were burned in the streets, while Huerta, in secret contact with the rebels, made no serious attempt to take the arsenal. The US ambassador Henry Lane Wilson, who had long worked against Madero, urged other diplomats to press him to resign. On 18 February Huerta’s men arrested Madero and Vice-President José María Pino Suárez, and that night Huerta and Díaz signed the Pact of the Embassy at the US embassy, agreeing that Huerta would become provisional president; Madero’s brother Gustavo was taken to the Ciudadela and killed. Madero and Pino Suárez resigned on the promise of safe exile, but on the night of 22 February they were shot while being moved to the Lecumberri penitentiary; the government claimed they had been killed in an attempt to free them."
+    facts:
+      - [Rising in the capital, "9 February 1913"]
+      - [Pact of the Embassy, "18 February 1913"]
+      - [Madero and Pino Suárez killed, "22 February 1913"]
+    markers:
+      - kind: battle
+        side: mad
+        name: National Palace
+        date: 9 February 1913
+        text: Loyal troops beat off the attack; General Bernardo Reyes was killed in the square in front of the palace.
+        lonlat: [-99.131, 19.433]
+        lp: t
+      - kind: siege
+        side: fed
+        name: Ciudadela
+        date: 9–18 February 1913
+        text: Félix Díaz held the arsenal through ten days of shelling that devastated the surrounding streets; on 18 February he and Huerta agreed to share power.
+        lonlat: [-99.149, 19.430]
+        lp: l
+      - kind: toll
+        side: fed
+        name: Lecumberri penitentiary
+        date: 22 February 1913
+        text: Madero and Pino Suárez were shot beside the prison walls on the night they were moved there.
+        lonlat: [-99.115, 19.437]
+        lp: r
+      - kind: event
+        side: fed
+        name: Tlalpan
+        date: 9 February 1913
+        text: Cadets of the military school set out from here for the centre of the city at the start of the coup.
+        lonlat: [-99.170, 19.290]
+        lp: b
+    arrows:
+      - side: fed
+        label: Cadets march on the palace
+        phase: 1
+        via: [[-99.17, 19.30], [-99.16, 19.37], [-99.136, 19.428]]
+  - title: The Constitutionalist rising
+    date: March 1913 – March 1914
+    when: "1913-11-25"
+    borders: "1913-11-25"
+    countries: [mx, us]
+    side_names: { fed: Huerta’s government and the Federal Army, vil: Villa’s Division of the North (part of the Constitutionalist Army) }
+    body:
+      - "Most state governors accepted Huerta, but Venustiano Carranza, governor of Coahuila and a senator under Díaz, refused, and on 26 March 1913 issued the Plan of Guadalupe, naming himself First Chief of a Constitutionalist Army to restore constitutional rule. In Sonora the state government and officers such as Álvaro Obregón, a rancher who had fought Orozco in 1912, joined him. Villa, who had escaped from prison to Texas, crossed back into Chihuahua with eight men and raised a large force after Huerta’s men murdered Governor Abraham González. Zapata, who had refused Huerta’s offers, fought on separately under the Plan of Ayala, while Orozco joined Huerta. President Woodrow Wilson refused to recognise Huerta, and in February 1914 the United States lifted its embargo on arms for the northern rebels."
+      - "Huerta expanded the army by forced conscription, the leva, to a nominal 250,000 men, dissolved Congress in October 1913 and ruled by force; Senator Belisario Domínguez, who had denounced him, was murdered. Villa’s Division of the North, built from cowboys, miners and railwaymen and moving on captured trains, took Torreón on 1 October, slipped into Ciudad Juárez on a captured coal train on 15 November and routed a federal army at Tierra Blanca on 23–25 November, where its prisoners were shot. Chihuahua City fell in December, and in January 1914 the last federal troops in the state fled across the border at Ojinaga into internment in the United States. Obregón meanwhile cleared Sonora and took Culiacán in Sinaloa in November."
+    facts:
+      - [Plan of Guadalupe, "26 March 1913"]
+      - [Villa takes Ciudad Juárez, "15 November 1913"]
+      - [Battle of Tierra Blanca, "23–25 November 1913"]
+      - [Ojinaga taken, "January 1914"]
+    markers:
+      - kind: capital
+        side: fed
+        name: Mexico City
+        date: 1913–1914
+        text: Huerta dissolved Congress in October 1913 and arrested its members; Senator Belisario Domínguez was murdered after denouncing him.
+        lonlat: [-99.133, 19.433]
+      - kind: event
+        side: con
+        name: Saltillo
+        date: 26 March 1913
+        text: Carranza, governor of Coahuila, refused to recognise Huerta and issued the Plan of Guadalupe at a hacienda in the state.
+        lonlat: [-100.992, 25.423]
+      - kind: taken
+        side: vil
+        name: Torreón
+        date: 1 October 1913
+        text: Villa’s first capture of the railway hub of the north, which he soon left again.
+        lonlat: [-103.408, 25.542]
+      - kind: taken
+        side: vil
+        name: Ciudad Juárez
+        date: 15 November 1913
+        text: Villa took the town by surprise, sending his men in on a captured coal train.
+        lonlat: [-106.485, 31.745]
+        lp: r
+      - kind: battle
+        side: vil
+        name: Tierra Blanca
+        date: 23–25 November 1913
+        text: Villa routed a federal army sent from Chihuahua to retake Juárez; about 1,000 federal soldiers were killed, and the prisoners were shot.
+        lonlat: [-106.450, 31.450]
+        lp: l
+      - kind: taken
+        side: vil
+        name: Chihuahua
+        date: December 1913
+        text: The federal army abandoned the state capital, and Villa became governor.
+        lonlat: [-106.077, 28.637]
+        lp: l
+      - kind: battle
+        side: vil
+        name: Ojinaga
+        date: January 1914
+        text: The last federal force in Chihuahua fled across the Rio Grande; more than 3,000 soldiers and many soldaderas were interned in Texas.
+        lonlat: [-104.416, 29.564]
+      - kind: taken
+        side: con
+        name: Culiacán
+        date: 14 November 1913
+        text: Taken by Obregón on his advance down the Pacific coast.
+        lonlat: [-107.394, 24.807]
+    arrows:
+      - side: vil
+        label: Villa’s train to Ciudad Juárez
+        phase: 1
+        via: [[-106.08, 28.70], [-106.35, 29.90], [-106.52, 31.00], [-106.48, 31.68]]
+      - side: con
+        label: Obregón
+        phase: 1
+        via: [[-110.95, 29.05], [-110.10, 27.60], [-108.90, 25.90], [-107.45, 24.85]]
+    areas:
+      - style: contested
+        side: con
+        label: States largely held by the Constitutionalists, end of 1913 (approximate)
+        atoms: [MX-SON, MX-CHH, MX-COA, MX-DUR]
+      - style: contested
+        side: zap
+        label: Zapatista territory
+        atoms: [MX-MOR]
+  - title: Torreón, Zacatecas and the fall of Huerta
+    date: March – August 1914
+    when: "1914-06-23"
+    borders: "1914-08-20"
+    countries: [mx]
+    side_names: { fed: Huerta’s government and the Federal Army, vil: Villa’s Division of the North (part of the Constitutionalist Army) }
+    link: { href: "#/war/united-states-occupation-of-veracruz", text: The US occupation of Veracruz }
+    body:
+      - "In spring 1914 the Constitutionalists advanced south along the railways. Villa took Torreón again in early April after almost two weeks of fighting and beat the federal survivors at San Pedro de las Colonias; Pablo González took Monterrey in April and the oil port of Tampico in May; Obregón moved down the Pacific coast. In the south the Zapatistas took Chilpancingo in March and much of Guerrero and Morelos, and federal garrisons went over to them. On 21 April US forces seized Veracruz to stop arms reaching Huerta, an act that Carranza too condemned."
+      - "Carranza, wary of Villa’s power, tried to keep him away from Zacatecas, the railway junction on the road to the capital; Villa offered to resign, his generals refused to accept it, and on 23 June the Division of the North stormed the city. Of perhaps 12,000 defenders an estimated 6,000–7,000 were killed, many of them after they surrendered. Carranza then held back Villa’s coal supplies, and it was Obregón, after destroying a federal army at Orendáin near Guadalajara in early July, who reached the capital. Huerta resigned on 15 July and left from Puerto México for exile. By the Treaties of Teoloyucan of 13 August the federal army was disbanded; Obregón entered Mexico City on 15 August and Carranza on 20 August."
+    facts:
+      - [Torreón taken by Villa, "early April 1914"]
+      - [Battle of Zacatecas, "23 June 1914"]
+      - [Huerta resigns, "15 July 1914"]
+      - [Treaties of Teoloyucan, "13 August 1914"]
+    markers:
+      - kind: taken
+        side: vil
+        name: Torreón
+        date: March–April 1914
+        text: Villa took the city after nearly two weeks of fighting for the surrounding hills.
+        lonlat: [-103.408, 25.542]
+        lp: l
+      - kind: battle
+        side: vil
+        name: San Pedro de las Colonias
+        date: April 1914
+        text: The federal survivors of Torreón, reinforced, were defeated here.
+        lonlat: [-102.983, 25.759]
+      - kind: battle
+        side: vil
+        name: Zacatecas
+        date: 23 June 1914
+        text: The bloodiest battle of the revolution; an estimated 6,000–7,000 of the defenders were killed, and many prisoners were shot.
+        lonlat: [-102.574, 22.774]
+      - kind: taken
+        side: con
+        name: Monterrey
+        date: 24 April 1914
+        text: Taken by Pablo González’s Army of the Northeast.
+        lonlat: [-100.318, 25.684]
+      - kind: taken
+        side: con
+        name: Tampico
+        date: 13 May 1914
+        text: Pablo González took the oil port, while foreign warships watched offshore.
+        lonlat: [-97.869, 22.255]
+      - kind: taken
+        side: con
+        name: Guadalajara
+        date: 8 July 1914
+        text: Obregón entered the city after destroying a federal army at Orendáin.
+        lonlat: [-103.347, 20.677]
+        lp: l
+      - kind: event
+        side: us
+        name: Veracruz
+        date: 21 April 1914
+        text: US sailors and marines seized the port, which they held until November.
+        lonlat: [-96.134, 19.198]
+      - kind: taken
+        side: zap
+        name: Chilpancingo
+        date: March 1914
+        text: The Zapatistas took the capital of Guerrero and then much of the state.
+        lonlat: [-99.500, 17.550]
+      - kind: treaty
+        side: con
+        name: Teoloyucan
+        date: 13 August 1914
+        text: The federal army surrendered to Obregón and was disbanded.
+        lonlat: [-99.181, 19.744]
+        lp: t
+      - kind: taken
+        side: con
+        name: Mexico City
+        date: 15–20 August 1914
+        text: Obregón entered the capital on 15 August and Carranza on 20 August.
+        lonlat: [-99.133, 19.433]
+        lp: b
+    arrows:
+      - side: vil
+        label: Villa
+        phase: 1
+        via: [[-103.40, 25.48], [-103.15, 24.30], [-102.62, 22.85]]
+      - side: con
+        label: Pablo González
+        phase: 1
+        via: [[-100.30, 25.62], [-98.90, 24.20], [-97.92, 22.32]]
+      - side: zap
+        label: Zapatistas
+        phase: 1
+        via: [[-99.50, 17.62], [-99.40, 18.30], [-99.25, 18.85]]
+      - side: con
+        label: Obregón
+        phase: 2
+        via: [[-103.30, 20.70], [-101.30, 20.40], [-99.25, 19.70]]
+  - title: Aguascalientes and the split
+    date: October – December 1914
+    when: "1914-12-06"
+    borders: "1914-12-06"
+    countries: [mx]
+    side_names: { vil: "Villistas, the army of the Convention", zap: "Zapatistas, allied with the Convention", con: Constitutionalists (Carranza and Obregón) }
+    body:
+      - "The victors soon fell out. Villa’s generals and those of Pablo González had demanded more radical reforms in the Pact of Torreón in July, and Carranza’s attempt to control the revolution angered both Villa and Zapata. A convention of revolutionary generals, opened in Mexico City in October, moved to neutral Aguascalientes; joined by Zapatista delegates, it adopted the principles of the Plan of Ayala, voted to remove both Carranza as First Chief and Villa as commander of his division, and chose General Eulalio Gutiérrez as provisional president. Carranza rejected the convention’s authority, and Obregón, after trying to mediate, sided with him."
+      - "Carranza withdrew his government to Veracruz, which the United States evacuated on 23 November, leaving large stocks of arms behind. Villa’s army, now the army of the Convention, marched south, and on 4 December Villa and Zapata met at Xochimilco and agreed to fight Carranza together; on 6 December their armies paraded through Mexico City, and Villa sat in the presidential chair for a famous photograph. In the following weeks Villista and Zapatista officers killed or kidnapped a number of opponents in the capital. The alliance went no further. Zapata went back to Morelos, where his chiefs divided hacienda land among the villages, and Villa turned his army north and west."
+    facts:
+      - [Convention moves to Aguascalientes, "10 October 1914"]
+      - [Villa and Zapata meet at Xochimilco, "4 December 1914"]
+      - [Convention armies enter Mexico City, "6 December 1914"]
+    markers:
+      - kind: event
+        name: Aguascalientes
+        date: October – November 1914
+        text: The convention of revolutionary generals declared itself sovereign, removed Carranza and named Eulalio Gutiérrez provisional president.
+        lonlat: [-102.296, 21.876]
+      - kind: capital
+        side: con
+        name: Veracruz
+        date: from November 1914
+        text: Carranza’s government sat here after US forces left the port on 23 November.
+        lonlat: [-96.134, 19.198]
+      - kind: taken
+        side: vil
+        name: Mexico City
+        date: 4–6 December 1914
+        text: Villa and Zapata met at Xochimilco on 4 December and led their armies into the capital two days later.
+        lonlat: [-99.133, 19.433]
+        lp: l
+    arrows:
+      - side: con
+        label: Carranza to Veracruz
+        phase: 1
+        via: [[-99.10, 19.40], [-98.20, 19.00], [-97.10, 19.10], [-96.20, 19.18]]
+      - side: vil
+        label: Villa
+        phase: 2
+        via: [[-102.30, 21.80], [-101.00, 20.90], [-99.90, 20.10], [-99.20, 19.50]]
+      - side: zap
+        label: Zapata
+        phase: 2
+        via: [[-99.23, 18.88], [-99.16, 19.15], [-99.13, 19.38]]
+    areas:
+      - style: occupied
+        side: vil
+        label: Held mainly by Villa’s forces, December 1914 (approximate)
+        atoms: [MX-CHH, MX-DUR, MX-ZAC, MX-AGU]
+      - style: occupied
+        side: zap
+        label: Held by the Zapatistas
+        atoms: [MX-MOR]
+      - style: occupied
+        side: con
+        label: Carranza’s base
+        atoms: [MX-VER]
+  - title: Celaya and León
+    date: January – July 1915
+    when: "1915-04-15"
+    borders: "1915-07-10"
+    countries: [mx]
+    view: { center: [-101.4, 21.1], size: [300, 240] }
+    side_names: { vil: "Villistas, the army of the Convention", con: Constitutionalists (Carranza and Obregón) }
+    body:
+      - "In January 1915 Obregón retook Mexico City, which he held for some weeks, and won over the anarcho-syndicalist Casa del Obrero Mundial, whose Red Battalions of workers fought for Carranza. Carranza’s decree of 6 January promised the return of village lands, and his generals controlled the oil of the Gulf coast and the henequen of Yucatán, whose exports paid for arms from the United States. Villa, whose army was larger, divided it among several fronts and failed to take the oil town of El Ébano."
+      - "In April Obregón waited for Villa at Celaya in the Bajío with some 11,000 to 15,000 men behind trenches, barbed wire and machine guns, as on the Western Front in Europe. On 6–7 April and again on 13–15 April Villa’s cavalry charged the lines and was cut down; after the second battle the Villistas fled, leaving thousands of dead and prisoners, and Obregón had the captured officers shot. He followed them north, and after more than a month of fighting around León, in which he lost his right arm to a shell on 3 June, broke Villa’s army at Trinidad on 5 June. He took Aguascalientes on 10 July. Villa lost as many as 50,000 men in the battles of the Bajío, killed, captured or deserted, and never again threatened the capital."
+    facts:
+      - [Battles of Celaya, "6–7 and 13–15 April 1915"]
+      - [Battle of Trinidad, near León, "5 June 1915"]
+      - [Aguascalientes taken, "10 July 1915"]
+    markers:
+      - kind: battle
+        side: con
+        name: Celaya
+        date: 6–7 and 13–15 April 1915
+        text: Villa’s cavalry charges broke against Obregón’s trenches, barbed wire and machine guns; the second battle ended in a Villista rout.
+        lonlat: [-100.812, 20.522]
+      - kind: battle
+        side: con
+        name: Trinidad and León
+        date: April – June 1915
+        text: Weeks of fighting ended with Villa’s defeat on 5 June; two days earlier Obregón had lost his right arm to a shell.
+        lonlat: [-101.683, 21.117]
+        lp: l
+      - kind: taken
+        side: con
+        name: Aguascalientes
+        date: 10 July 1915
+        text: Obregón took the city, and Villa’s army retreated north along the railway.
+        lonlat: [-102.296, 21.876]
+    arrows:
+      - side: vil
+        label: Villista attacks on Celaya
+        phase: 1
+        via: [[-101.35, 20.68], [-101.05, 20.60], [-100.86, 20.53]]
+      - side: con
+        label: Obregón’s pursuit
+        phase: 2
+        via: [[-100.86, 20.56], [-101.20, 20.80], [-101.60, 21.05], [-101.95, 21.40], [-102.25, 21.83]]
+  - title: Agua Prieta, Columbus and the Punitive Expedition
+    date: August 1915 – February 1917
+    when: "1916-03-09"
+    borders: "1916-03-15"
+    countries: [mx, us]
+    side_names: { vil: Villistas, con: Constitutionalists (Carranza’s government) }
+    link: { href: "#/war/border-war", text: The Border War }
+    body:
+      - "In August 1915 the Constitutionalists retook Mexico City for good, and in October the United States recognised Carranza’s government and stopped arms from reaching his enemies. Villa led what remained of his army over the mountains into Sonora. At Agua Prieta on 1–3 November his attacks failed against trenches lit by searchlights at night and held by troops whom the United States had allowed to travel there by rail through its territory; at Hermosillo on 22 November he was beaten again. Most of his men accepted an amnesty, and Villa returned to Chihuahua with a few hundred."
+      - "Convinced that Carranza had made a secret bargain with Washington, Villa turned on Americans. His men killed 17 or 18 American mining employees taken from a train at Santa Isabel on 10 January 1916, and on 9 March some 500 Villistas raided Columbus, New Mexico. President Wilson sent General John J. Pershing with about 5,000 men, later about 10,000, into Chihuahua; they scattered the Villistas but never found Villa, clashed with Carranza’s troops at Parral and Carrizal, and withdrew in February 1917. Villa rebuilt his forces in the Chihuahua mountains, raided Chihuahua City in September 1916 and took Torreón in December."
+    facts:
+      - [Battle of Agua Prieta, "1–3 November 1915"]
+      - [US recognition of Carranza, "October 1915"]
+      - [Raid on Columbus, "9 March 1916"]
+      - [Punitive Expedition, "March 1916 – February 1917"]
+    markers:
+      - kind: battle
+        side: con
+        name: Agua Prieta
+        date: 1–3 November 1915
+        text: Villa’s attacks failed against the trenches and searchlights of Plutarco Elías Calles’s garrison, reinforced through US territory.
+        lonlat: [-109.549, 31.326]
+        lp: l
+      - kind: battle
+        side: con
+        name: Hermosillo
+        date: 22 November 1915
+        text: Villa’s last large attack in Sonora was beaten off.
+        lonlat: [-110.954, 29.099]
+      - kind: toll
+        side: vil
+        name: Santa Isabel
+        date: 10 January 1916
+        text: Villistas stopped a train and killed 17 or 18 American employees of a mining company.
+        lonlat: [-106.368, 28.342]
+      - kind: battle
+        side: us
+        name: Columbus
+        date: 9 March 1916
+        text: Some 500 Villistas raided the town and the army camp before dawn and were driven off with heavy losses; 18 Americans were killed.
+        lonlat: [-107.642, 31.831]
+        lp: r
+      - kind: event
+        name: Parral
+        date: 12 April 1916
+        text: Townspeople and Carrancista soldiers drove off a US cavalry column at the expedition’s farthest point south.
+        lonlat: [-105.667, 26.928]
+    arrows:
+      - side: vil
+        label: Villa into Sonora
+        phase: 1
+        via: [[-107.90, 29.90], [-108.70, 30.60], [-109.45, 31.25]]
+      - side: vil
+        label: Raid on Columbus
+        phase: 2
+        via: [[-107.70, 30.60], [-107.78, 31.30], [-107.66, 31.80]]
+      - side: us
+        label: Pershing’s expedition
+        phase: 3
+        via: [[-107.64, 31.78], [-107.55, 30.50], [-106.90, 29.00], [-105.75, 26.98]]
+    areas:
+      - style: occupied
+        side: us
+        label: Area of the Punitive Expedition, 1916 (approximate)
+        polygon: [[-108.40, 31.33], [-107.10, 31.78], [-106.60, 30.40], [-106.30, 28.60], [-105.30, 26.85], [-105.90, 26.70], [-107.00, 28.10], [-108.20, 29.40], [-108.60, 30.50]]
+  - title: The constitution and the death of Zapata
+    date: 1916 – 1919
+    when: "1919-04-10"
+    borders: "1919-04-10"
+    countries: [mx]
+    side_names: { con: Carranza’s government, vil: Villistas, zap: Zapatistas }
+    body:
+      - "Carranza called a constitutional congress at Querétaro, from which Villistas and Zapatistas were excluded. The delegates, many of them young officers, went far beyond his moderate draft. The constitution promulgated on 5 February 1917 gave the nation ownership of land, water and minerals and the power to expropriate them (Article 27), set the eight-hour day and the right to strike (Article 123), made primary education secular (Article 3) and restricted the Church. Carranza was elected president in March 1917, but he returned confiscated estates to their owners, carried out little land reform and broke strikes. Mexico stayed neutral in the World War, and Carranza did not take up Germany’s offer of an alliance in the Zimmermann telegram of January 1917."
+      - "Fighting went on in many regions: the Villistas in Chihuahua, the followers of Félix Díaz in Veracruz and Oaxaca, landowners’ militias in Chiapas and Oaxaca, and the Zapatistas in Morelos, where General Pablo González’s troops burned villages, deported their people and shot prisoners from 1916; the influenza of 1918 and hunger killed many more. On 10 April 1919 Colonel Jesús Guajardo, pretending to change sides, lured Zapata to the hacienda of Chinameca, where his soldiers shot him dead. Felipe Ángeles, the former federal general who had returned from exile to join Villa, was captured, court-martialled and shot in Chihuahua in November 1919."
+    facts:
+      - [Constitution promulgated, "5 February 1917"]
+      - [Carranza elected president, "March 1917"]
+      - [Zapata killed, "10 April 1919"]
+    markers:
+      - kind: event
+        side: con
+        name: Querétaro
+        date: 5 February 1917
+        text: The constitutional congress adopted the constitution that is still, much amended, in force.
+        lonlat: [-100.393, 20.587]
+      - kind: capital
+        side: con
+        name: Mexico City
+        date: 1917–1920
+        text: Seat of Carranza’s government; he took office as constitutional president on 1 May 1917.
+        lonlat: [-99.133, 19.433]
+        lp: l
+      - kind: toll
+        side: con
+        name: Chinameca
+        date: 10 April 1919
+        text: Zapata was shot dead by government soldiers who had lured him to a meeting at the hacienda.
+        lonlat: [-98.993, 18.622]
+        lp: b
+      - kind: toll
+        side: con
+        name: Chihuahua
+        date: 26 November 1919
+        text: Felipe Ángeles, Villa’s former artillery commander, was court-martialled and shot.
+        lonlat: [-106.077, 28.637]
+    areas:
+      - style: contested
+        side: zap
+        label: Zapatista resistance
+        atoms: [MX-MOR]
+      - style: contested
+        side: vil
+        label: Villista guerrillas
+        atoms: [MX-CHH]
+  - title: Agua Prieta and the end of the fighting
+    date: April – December 1920
+    when: "1920-05-21"
+    borders: "1920-12-01"
+    countries: [mx]
+    side_names: { con: Carranza’s government, agua: "Rebels of the Plan of Agua Prieta (Obregón, Calles, de la Huerta)" }
+    link: { href: "#/war/de-la-huerta-rebellion", text: The de la Huerta rebellion }
+    body:
+      - "As the 1920 election approached, Carranza chose a little-known civilian, Ignacio Bonillas, his ambassador in Washington, to succeed him, against Obregón, the most popular general. When Carranza sent troops into Sonora and had Obregón charged with conspiracy, Obregón escaped from Mexico City disguised as a railwayman, and on 23 April the Sonoran leaders, among them Governor Adolfo de la Huerta and Plutarco Elías Calles, issued the Plan of Agua Prieta. Most of the army, and Zapatista and other rebels, went over to them within weeks."
+      - "On 7 May Carranza left Mexico City with his government and treasury in a long train bound for Veracruz. Attacked along the way and halted by torn-up track at Aljibes, the party went on horseback into the Sierra Norte de Puebla. In the early hours of 21 May men of a local chief, Rodolfo Herrero, who had joined Carranza’s escort, shot him dead in a hut at Tlaxcalantongo. Congress named de la Huerta interim president. He negotiated the surrender of Villa, who laid down his arms at Sabinas, Coahuila, on 28 July in exchange for the hacienda of Canutillo, and of Félix Díaz and other rebels. Obregón, elected in September, took office on 1 December 1920. Villa was assassinated in 1923, and the Sonoran leaders faced a revolt led by de la Huerta in 1923–1924."
+    facts:
+      - [Plan of Agua Prieta, "23 April 1920"]
+      - [Carranza killed, "21 May 1920"]
+      - [Villa’s surrender, "28 July 1920"]
+      - [Obregón takes office, "1 December 1920"]
+    markers:
+      - kind: event
+        side: agua
+        name: Agua Prieta
+        date: 23 April 1920
+        text: The Sonoran leaders proclaimed their plan here, refusing to recognise Carranza.
+        lonlat: [-109.549, 31.326]
+      - kind: taken
+        side: agua
+        name: Mexico City
+        date: May 1920
+        text: Carranza abandoned the capital on 7 May; Obregón entered it two days later.
+        lonlat: [-99.133, 19.433]
+        lp: l
+      - kind: toll
+        side: agua
+        name: Tlaxcalantongo
+        date: 21 May 1920
+        text: Carranza was shot dead in his sleep by men of Rodolfo Herrero, a local chief who had joined his escort.
+        lonlat: [-97.873, 20.315]
+        lp: r
+      - kind: treaty
+        name: Sabinas
+        date: 28 July 1920
+        text: Villa laid down his arms in exchange for the hacienda of Canutillo in Durango and pay for his escort.
+        lonlat: [-101.073, 27.942]
+    arrows:
+      - side: con
+        label: Carranza’s flight
+        phase: 1
+        via: [[-99.10, 19.43], [-98.30, 19.20], [-97.55, 19.10], [-97.65, 19.70], [-97.87, 20.28]]

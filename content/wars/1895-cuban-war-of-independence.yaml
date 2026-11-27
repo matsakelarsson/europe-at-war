@@ -1,0 +1,460 @@
+id: cuban-war-of-independence
+name: Cuban War of Independence
+start: "1895-02-24"
+end: "1898-08-12"
+tier: A
+summary: "The last and decisive Cuban war against Spanish rule, which José Martí called “the necessary war”. Martí united the exiles of Florida and New York in the Cuban Revolutionary Party in 1892 and, with the veterans Máximo Gómez and Antonio Maceo, launched the rising of 24 February 1895, the Cry of Baire. Martí was killed at Dos Ríos in May, but the insurgents of the Liberation Army defeated Martínez Campos at Peralejo, set up a government at Jimaguayú and, in the invasion of 1895–1896, carried the war from the east to the western tip of the island, burning the sugar crop as they went. Spain sent some 200,000 soldiers, the largest army it had ever sent to the Americas, and General Valeriano Weyler forced the rural population of the west and centre into fortified towns; in this reconcentration about 155,000 to 170,000 civilians died of hunger and disease, by the most careful modern estimate, and some estimates are far higher. Maceo was killed in December 1896, but the insurgents held the countryside, Calixto García took Las Tunas and Guisa in 1897, and Spain, after Weyler’s recall, offered autonomy in 1898, which the insurgents rejected. The explosion of the USS Maine in Havana in February 1898 and American public anger at the reconcentration led to the Spanish–American War; Spain gave up Cuba in the armistice of 12 August 1898 and the Treaty of Paris, which handed the island to American military rule until the Republic of Cuba was founded in 1902, bound by the Platt Amendment."
+countries: [cu, es, us]
+sides:
+  - id: cub
+    name: Republic of Cuba in Arms (Cuban Liberation Army)
+    polities: [cuban-liberation-army]
+    ink: red
+    moves: Cuban moves
+    success: Cuban success
+  - id: es
+    name: Spain (Captaincy General of Cuba, the Spanish army and the Volunteers)
+    polities: [spain, cuba]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+  - id: us
+    name: United States
+    polities: [united-states]
+    ink: navy
+    moves: American moves
+    success: American success
+notes:
+  - The insurgents called themselves mambises. Many of the Liberation Army’s soldiers and officers, among them Antonio and José Maceo, Guillermo Moncada, Quintín Banderas and Jesús Rabí, were Afro-Cubans, and Spanish propaganda again called the war a race war; Martí’s idea of a Cuba “with all and for the good of all” answered it.
+  - Death tolls are estimates. Spanish figures count some 9,400 soldiers killed in action and 53,300 dead of disease; the Liberation Army counted 5,480 killed and 3,437 dead of disease. For civilian deaths in the reconcentration, the historian John Lawrence Tone estimates 155,000 to 170,000, nearly a tenth of the population; older Cuban and American estimates run to 300,000 or more.
+  - The base map shows Cuba as Spanish until the end of Spanish rule on 1 January 1899; the land held by the insurgents is drawn in the steps. The American part of the war is told in the Spanish–American War.
+sources:
+  - title: Cuban War of Independence (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cuban_War_of_Independence
+  - title: Guerra de Independencia cubana (Wikipedia, Spanish)
+    url: https://es.wikipedia.org/wiki/Guerra_de_Independencia_cubana
+  - title: José Martí (Britannica)
+    url: https://www.britannica.com/biography/Jose-Marti
+  - title: Antonio Maceo (Britannica)
+    url: https://www.britannica.com/biography/Antonio-Maceo
+  - title: Invasion from East to West in Cuba (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Invasion_from_East_to_West_in_Cuba
+  - title: Reconcentration policy (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Reconcentration_policy
+  - title: Valeriano Weyler (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Valeriano_Weyler
+  - title: Battle of Peralejo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Peralejo
+  - title: Platt Amendment (1903) (National Archives, Milestone Documents)
+    url: https://www.archives.gov/milestone-documents/platt-amendment
+  - title: The Spanish–American War, 1898 (Office of the Historian)
+    url: https://history.state.gov/milestones/1866-1898/spanish-american-war
+steps:
+  - title: Martí’s party and the Cry of Baire
+    date: 1892 – February 1895
+    when: "1895-02-24"
+    borders: "1895-02-24"
+    countries: [cu, es, us]
+    body:
+      - The Pact of Zanjón and the failure of the Little War left Cuba Spanish, and the reforms Spain had promised changed little. Sugar now depended on the American market, and when the United States raised its tariff on Cuban sugar in 1894 the island’s economy slumped. Among the Cuban exiles in the United States, the poet and journalist José Martí spent a decade uniting veterans and young radicals, rich émigrés and the cigar workers of Key West, Tampa and New York, whose clubs and contributions paid for the war. On 10 April 1892 he founded the Cuban Revolutionary Party, with himself as its delegate, and won over the old commanders Máximo Gómez, in the Dominican Republic, and Antonio Maceo, in Costa Rica.
+      - In January 1895 American authorities seized at Fernandina, Florida, three ships Martí had chartered to carry men and arms to Cuba, but he ordered the rising anyway. On 24 February 1895 insurgents rose at Baire, Bayate, Guantánamo and other places in Oriente; the rising in the west, at Ibarra in Matanzas, failed, and its leader Juan Gualberto Gómez was captured. Spain sent back Arsenio Martínez Campos, the peacemaker of 1878, as captain general.
+    facts:
+      - [Cuban Revolutionary Party founded, "10 April 1892"]
+      - [Fernandina expedition seized, "January 1895"]
+      - [Cry of Baire, "24 February 1895"]
+    markers:
+      - kind: event
+        side: cub
+        name: Baire
+        date: 24 February 1895
+        text: One of the villages of Oriente where the war began; the rising is remembered as the Cry of Baire.
+        lonlat: [-76.338, 20.310]
+      - kind: battle
+        side: es
+        name: Ibarra
+        date: 24 February 1895
+        text: The rising in Matanzas failed here, and Juan Gualberto Gómez was taken prisoner.
+        lonlat: [-81.493, 22.965]
+        lp: b
+      - kind: event
+        side: cub
+        name: Key West
+        date: 1892–1895
+        text: The cigar workers of Key West, like those of Tampa and New York, formed clubs of the Cuban Revolutionary Party and paid for the war.
+        lonlat: [-81.802, 24.555]
+        lp: l
+      - kind: event
+        side: cub
+        name: Tampa (Ybor City)
+        date: 1892–1895
+        text: Martí spoke often to the Cuban cigar workers of Ybor City, a base of the party.
+        lonlat: [-82.441, 27.960]
+        lp: l
+      - kind: event
+        name: Fernandina
+        date: January 1895
+        text: American authorities seized the ships of Martí’s expedition here.
+        lonlat: [-81.463, 30.671]
+        lp: l
+    areas:
+      - style: contested
+        side: cub
+        label: Where the rising took hold, February – March 1895 (today’s provinces)
+        atoms: [CU-12, CU-13, CU-14]
+  - title: The leaders land and Martí falls
+    date: April – July 1895
+    when: "1895-05-19"
+    borders: "1895-05-19"
+    countries: [cu, es]
+    body:
+      - On 1 April 1895 Antonio Maceo, his brother José and Flor Crombet landed at Duaba near Baracoa with a small group of veterans; Crombet was killed within days, but the Maceos fought their way into the mountains and raised the east. On 11 April Martí and Gómez landed with four companions at Playitas de Cajobabo on the south coast of Guantánamo. At La Mejorana on 5 May the three leaders met and disagreed over how far the war should be run by a civilian government, as Martí wanted, or by its generals.
+      - On 19 May 1895 Martí, who had been made a major general but had no military experience, rode into a Spanish column at Dos Ríos, on the Cauto, and was killed. His death made him the martyr of Cuban independence. On 13 July Maceo ambushed a column under Martínez Campos himself at Peralejo near Bayamo; Brigadier Fidel Alonso de Santocildes was killed, and the captain general reached Bayamo only with heavy losses. By the summer the insurgents held most of the countryside of Oriente and Camagüey.
+    facts:
+      - [Maceo lands at Duaba, "1 April 1895"]
+      - [Martí and Gómez land at Playitas, "11 April 1895"]
+      - [Death of Martí at Dos Ríos, "19 May 1895"]
+      - [Battle of Peralejo, "13 July 1895, Cuban victory"]
+    markers:
+      - kind: event
+        side: cub
+        name: Duaba
+        date: 1 April 1895
+        text: Antonio and José Maceo and Flor Crombet landed on this beach near Baracoa.
+        lonlat: [-74.535, 20.372]
+        lp: t
+      - kind: event
+        side: cub
+        name: Playitas de Cajobabo
+        date: 11 April 1895
+        text: Martí, Gómez and four companions landed here from a small boat at night.
+        lonlat: [-74.496, 20.074]
+        lp: b
+      - kind: event
+        side: cub
+        name: La Mejorana
+        date: 5 May 1895
+        text: Martí, Gómez and Maceo met here and argued over who should direct the war.
+        lonlat: [-75.766, 20.217]
+        lp: b
+      - kind: battle
+        side: es
+        name: Dos Ríos
+        date: 19 May 1895
+        text: José Martí was killed here in a clash with a Spanish column.
+        lonlat: [-76.274, 20.474]
+        lp: t
+      - kind: battle
+        side: cub
+        name: Peralejo
+        date: 13 July 1895
+        text: Maceo ambushed Martínez Campos’s column; Brigadier Santocildes was killed.
+        lonlat: [-76.733, 20.287]
+        lp: b
+    arrows:
+      - side: cub
+        label: Martí and Gómez
+        phase: 1
+        via: [[-74.50, 20.09], [-74.95, 20.25], [-75.50, 20.30], [-75.95, 20.40], [-76.26, 20.47]]
+      - side: cub
+        label: Maceo
+        phase: 1
+        via: [[-74.54, 20.37], [-74.95, 20.45], [-75.40, 20.40], [-75.75, 20.25]]
+      - side: es
+        label: Martínez Campos
+        phase: 2
+        via: [[-77.10, 20.33], [-76.95, 20.30], [-76.78, 20.29], [-76.66, 20.36]]
+  - title: Jimaguayú and the invasion of the west
+    date: September 1895 – January 1896
+    when: "1895-10-22"
+    borders: "1896-01-22"
+    countries: [cu, es]
+    body:
+      - In September 1895 delegates of the insurgent army met at Jimaguayú in Camagüey and adopted a constitution. Salvador Cisneros Betancourt became president, with Bartolomé Masó as vice-president, Gómez as general-in-chief and Maceo as his deputy. Gómez ordered the sugar harvest stopped and the cane burned, to ruin the colony’s finances and force the workers of the estates into his ranks.
+      - On 22 October 1895 Maceo set out from Los Mangos de Baraguá with some 1,400 men to carry the war to the west. He joined Gómez in Camagüey at the end of November, and together, with some 4,000 men, mostly cavalry, they crossed the trocha into Las Villas. On 15 December they destroyed a Spanish force at Mal Tiempo, near Cruces, and on 23 December, at Coliseo in Matanzas, they slipped past Martínez Campos himself. Burning cane fields as they marched, they reached the province of Havana at New Year, where Gómez stayed to keep the Spanish busy while Maceo rode on into Pinar del Río. On 22 January 1896, after 92 days, he entered Mantua, near the western tip of the island. The war now covered all of Cuba.
+    facts:
+      - [Assembly of Jimaguayú, "September 1895"]
+      - [Invasion begins, "22 October 1895, Mangos de Baraguá"]
+      - [Battle of Mal Tiempo, "15 December 1895"]
+      - [Maceo reaches Mantua, "22 January 1896"]
+    markers:
+      - kind: capital
+        side: cub
+        name: Jimaguayú
+        date: September 1895
+        text: The assembly that gave the Republic of Cuba in Arms its constitution and government met here.
+        lonlat: [-77.830, 21.240]
+        lp: b
+      - kind: event
+        side: cub
+        name: Los Mangos de Baraguá
+        date: 22 October 1895
+        text: Maceo’s invading column set out from here, where he had rejected the Pact of Zanjón in 1878.
+        lonlat: [-75.970, 20.463]
+      - kind: battle
+        side: cub
+        name: Mal Tiempo
+        date: 15 December 1895
+        text: Gómez and Maceo destroyed a Spanish force here, near Cruces.
+        lonlat: [-80.268, 22.318]
+        lp: b
+      - kind: battle
+        side: cub
+        name: Coliseo
+        date: 23 December 1895
+        text: The invaders slipped past the army of Martínez Campos and burned the cane fields of Matanzas.
+        lonlat: [-81.302, 22.909]
+        lp: t
+      - kind: taken
+        side: cub
+        name: Mantua
+        date: 22 January 1896
+        text: Maceo entered this town near the western tip of Cuba, the end of the invasion.
+        lonlat: [-84.282, 22.291]
+        lp: b
+      - kind: capital
+        side: es
+        name: Havana
+        date: January 1896
+        text: The colonial capital, which the invaders bypassed.
+        lonlat: [-82.359, 23.136]
+        lp: t
+    arrows:
+      - side: cub
+        label: Maceo
+        phase: 1
+        via: [[-75.97, 20.46], [-76.90, 20.95], [-77.80, 21.30], [-78.70, 21.75]]
+      - side: cub
+        label: Gómez and Maceo
+        phase: 2
+        via: [[-78.70, 21.75], [-79.50, 22.10], [-80.27, 22.32], [-81.30, 22.88]]
+      - side: cub
+        label: Maceo
+        phase: 3
+        via: [[-81.30, 22.88], [-82.20, 22.78], [-83.20, 22.55], [-84.25, 22.30]]
+  - title: Weyler and the reconcentration
+    date: February 1896 – 1897
+    when: "1896-10-21"
+    borders: "1896-10-21"
+    countries: [cu, es, us]
+    body:
+      - Martínez Campos would not wage the war of terror he believed was needed to win and asked to be replaced. His successor, General Valeriano Weyler, arrived in Havana on 10 February 1896. Spain poured in troops, about 200,000 men by the end of the war, against insurgent forces that rarely numbered more than a few tens of thousands. Weyler built a new trocha from Mariel to Majana to pen Maceo into Pinar del Río, strengthened the Júcaro–Morón line, and sent his columns through the west province by province.
+      - On 21 October 1896 he ordered the people of the countryside of Pinar del Río to move within eight days into towns held by Spanish troops; anyone found outside afterwards would be treated as an enemy, and crops and livestock left behind were destroyed. The order was extended to Havana and Matanzas and in 1897 to Las Villas and other provinces. Crowded into the towns without food, shelter or medicine, the reconcentrados died in huge numbers of hunger, dysentery, yellow fever and smallpox. The historian John Lawrence Tone estimates 155,000 to 170,000 deaths, nearly a tenth of Cuba’s people; older Cuban estimates are much higher. American newspapers called Weyler “the Butcher”, and the suffering they reported turned American opinion against Spain.
+    facts:
+      - [Weyler arrives, "10 February 1896"]
+      - [Reconcentration ordered in Pinar del Río, "21 October 1896"]
+      - [Civilian deaths, "about 155,000–170,000 (Tone); other estimates higher"]
+    markers:
+      - kind: capital
+        side: es
+        name: Havana
+        date: "1896"
+        text: Weyler arrived here on 10 February 1896 and directed the war from the palace of the captains general.
+        lonlat: [-82.359, 23.136]
+        lp: t
+      - kind: held
+        side: es
+        name: Mariel
+        date: "1896"
+        text: The northern end of Weyler’s trocha from Mariel to Majana.
+        lonlat: [-82.754, 22.989]
+        lp: l
+      - kind: held
+        side: es
+        name: Majana
+        date: "1896"
+        text: The southern end of the trocha.
+        lonlat: [-82.774, 22.696]
+        lp: l
+      - kind: event
+        side: cub
+        name: Cacarajícara
+        date: 30 April 1896
+        text: One of Maceo’s fights against Weyler’s columns in the mountains of Pinar del Río.
+        lonlat: [-83.257, 22.826]
+        lp: b
+    arrows:
+      - side: es
+        label: Weyler’s columns
+        phase: 1
+        via: [[-82.36, 23.10], [-82.90, 22.85], [-83.40, 22.62], [-83.75, 22.45]]
+    areas:
+      - style: front
+        side: es
+        label: The trocha from Mariel to Majana
+        line: [[-82.754, 22.989], [-82.765, 22.85], [-82.774, 22.696]]
+      - style: occupied
+        side: es
+        label: Provinces under Weyler’s reconcentration orders, October 1896 – 1897 (today’s provinces)
+        atoms: [CU-01, CU-15, CU-03, CU-16, CU-04, CU-05, CU-06, CU-07]
+  - title: The death of Maceo
+    date: December 1896
+    when: "1896-12-07"
+    borders: "1896-12-07"
+    countries: [cu, es]
+    body:
+      - Through 1896 Maceo fought Weyler’s columns in the mountains and valleys of Pinar del Río, cut off from the rest of the island by the trocha. In December he set out to rejoin Gómez in the centre. On the night of 4 December he and a small party crossed the bay of Mariel by boat, around the northern end of the trocha, and marched east into the province of Havana.
+      - On 7 December 1896, at San Pedro near Punta Brava, south-west of Havana, his small force ran into a Spanish column. Maceo, wounded more than twenty times in his wars, was shot and killed, and Francisco Gómez Toro, the son of Máximo Gómez, who was serving as his aide, died at his side. His men carried off the bodies and buried them in secret. The loss of the “Bronze Titan”, the most admired of the insurgent generals, was a heavy blow, but the Liberation Army fought on.
+    facts:
+      - [Maceo crosses the bay of Mariel, "4 December 1896"]
+      - [Death of Antonio Maceo, "7 December 1896, San Pedro"]
+    markers:
+      - kind: battle
+        side: es
+        name: San Pedro (Punta Brava)
+        date: 7 December 1896
+        text: Antonio Maceo and Francisco Gómez Toro were killed here in a clash with a Spanish column.
+        lonlat: [-82.477, 22.966]
+        lp: b
+      - kind: held
+        side: es
+        name: Mariel
+        date: December 1896
+        text: Maceo crossed the bay by boat at night, around the northern end of the trocha.
+        lonlat: [-82.754, 22.989]
+        lp: t
+      - kind: capital
+        side: es
+        name: Havana
+        date: "1896"
+        text: The colonial capital, about 20 km from where Maceo was killed.
+        lonlat: [-82.359, 23.136]
+        lp: t
+    arrows:
+      - side: cub
+        label: Maceo
+        phase: 1
+        via: [[-82.80, 22.95], [-82.75, 23.01], [-82.65, 23.00], [-82.50, 22.97]]
+    areas:
+      - style: front
+        side: es
+        label: The trocha from Mariel to Majana
+        line: [[-82.754, 22.989], [-82.765, 22.85], [-82.774, 22.696]]
+  - title: Las Tunas, Guisa and autonomy
+    date: 1897 – January 1898
+    when: "1897-08-30"
+    borders: "1897-08-30"
+    countries: [cu, es]
+    body:
+      - In 1897 Gómez, in the campaign of La Reforma in eastern Las Villas, drew Weyler’s columns after him and wore them out in marches and skirmishes, while in Oriente Calixto García, who had returned in 1896, attacked the Spanish garrison towns. With artillery, including a dynamite gun landed by an expedition, he forced the surrender of Victoria de las Tunas on 30 August 1897 and took Guisa, near Bayamo, at the end of November. In October an assembly at La Yaya adopted a new constitution and chose Bartolomé Masó as president.
+      - In Spain the prime minister, Antonio Cánovas del Castillo, who had backed Weyler, was assassinated by an Italian anarchist on 8 August 1897. The new liberal government of Práxedes Mateo Sagasta recalled Weyler in October, sent General Ramón Blanco to replace him and eased the reconcentration, and in November decreed autonomy for Cuba and Puerto Rico. An autonomous Cuban government took office on 1 January 1898, but the insurgents would accept nothing less than independence, and in Havana officers and supporters of Spanish rule rioted against autonomy in January.
+    facts:
+      - [Victoria de las Tunas surrenders, "30 August 1897"]
+      - [Assembly of La Yaya, "October 1897"]
+      - [Weyler recalled, "October 1897"]
+      - [Autonomous government, "1 January 1898"]
+    markers:
+      - kind: taken
+        side: cub
+        name: Victoria de las Tunas
+        date: 30 August 1897
+        text: Calixto García forced the surrender of the Spanish garrison after a siege with artillery.
+        lonlat: [-76.954, 20.957]
+      - kind: taken
+        side: cub
+        name: Guisa
+        date: November 1897
+        text: Taken by Calixto García’s forces.
+        lonlat: [-76.539, 20.256]
+        lp: b
+      - kind: capital
+        side: cub
+        name: La Yaya
+        date: October 1897
+        text: The assembly that adopted a new constitution and chose Masó as president met here.
+        lonlat: [-77.582, 21.153]
+        lp: b
+      - kind: capital
+        side: es
+        name: Havana
+        date: January 1898
+        text: Seat of the autonomous government from 1 January 1898; opponents of autonomy rioted here in January.
+        lonlat: [-82.359, 23.136]
+        lp: b
+    arrows:
+      - side: cub
+        label: Calixto García
+        phase: 1
+        via: [[-76.40, 20.55], [-76.65, 20.75], [-76.90, 20.93]]
+      - side: cub
+        phase: 2
+        via: [[-76.90, 20.90], [-76.70, 20.60], [-76.56, 20.28]]
+    areas:
+      - style: contested
+        side: cub
+        label: Gómez’s campaign of La Reforma, 1897 (approximate, Sancti Spíritus province today)
+        atoms: [CU-07]
+      - style: contested
+        side: cub
+        label: Countryside held by the Liberation Army in Oriente and Camagüey, 1897 (approximate, today’s provinces)
+        atoms: [CU-08, CU-09, CU-10, CU-11, CU-12, CU-13, CU-14]
+  - title: The Maine and the American intervention
+    date: February – August 1898
+    when: "1898-07-17"
+    borders: "1898-07-17"
+    countries: [cu, es, us]
+    body:
+      - On 15 February 1898 the American battleship Maine, sent to Havana after the January riots, exploded in the harbour, killing 260 of her crew at once and six more later. Spain suspended the reconcentration and offered an armistice, which the insurgents refused. In April the United States Congress demanded Spain’s withdrawal from Cuba and, in the Teller Amendment, disclaimed any intention to annex the island, and the war between the United States and Spain began.
+      - The Liberation Army helped the American landings. Calixto García’s troops secured the beaches at Daiquirí and Siboney for General William Shafter’s Fifth Army Corps in June, scouted and fought around Santiago de Cuba and harassed a Spanish relief column marching from Manzanillo, which nonetheless reached the city, while Gómez kept tens of thousands of Spanish troops tied down in Las Villas. But when Santiago surrendered on 17 July the Americans kept the Cuban forces out of the city and left the Spanish officials in charge, and García resigned his command in protest. On 12 August Spain and the United States signed an armistice in Washington; the Cubans were not consulted.
+    facts:
+      - [USS Maine explodes, "15 February 1898"]
+      - [Teller Amendment, "19–20 April 1898"]
+      - [Surrender of Santiago, "17 July 1898"]
+      - [Armistice, "12 August 1898"]
+    markers:
+      - kind: event
+        name: USS Maine
+        date: 15 February 1898
+        text: The American battleship exploded in Havana harbour, killing 266 of her crew; the cause is still disputed.
+        lonlat: [-82.345, 23.135]
+        lp: b
+      - kind: event
+        side: cub
+        name: Daiquirí
+        date: 22 June 1898
+        text: Cuban troops secured the beach for the American landing.
+        lonlat: [-75.627, 19.947]
+        lp: b
+      - kind: taken
+        side: us
+        name: Santiago de Cuba
+        date: 17 July 1898
+        text: Surrendered to the Americans, who kept Calixto García’s army out of the city.
+        lonlat: [-75.820, 20.020]
+        lp: l
+    arrows:
+      - side: cub
+        label: Calixto García
+        phase: 1
+        via: [[-76.00, 20.25], [-75.90, 20.12], [-75.80, 20.05]]
+      - side: us
+        label: Shafter
+        phase: 1
+        via: [[-75.63, 19.95], [-75.71, 19.97], [-75.78, 20.02]]
+  - title: The occupation and the Platt Amendment
+    date: August 1898 – May 1902
+    when: "1899-01-01"
+    borders: "1899-01-01"
+    countries: [cu, es, us]
+    body:
+      - "The Treaty of Paris, signed on 10 December 1898 without any Cuban representative, ended Spanish sovereignty over Cuba. On 1 January 1899 the last Spanish captain general handed the island over to the American military governor, General John R. Brooke, followed in December by General Leonard Wood. The Liberation Army, which listed some 50,000 soldiers at the end of the war, was disbanded in 1899, its men paid off with $75 each from $3 million the United States provided, and the Assembly of Representatives that claimed to speak for the republic dissolved itself. Máximo Gómez refused to stand for president and died in Havana in 1905."
+      - "A Cuban constitutional convention met in 1900. In 1901 the United States Congress passed the Platt Amendment, which gave the United States the right to intervene in Cuba, limited the Cuban government’s power to make treaties and borrow, and required a naval base, which became Guantánamo Bay. Told that American troops would not leave otherwise, the convention added it to the constitution by a narrow vote. The Republic of Cuba was proclaimed on 20 May 1902 with Tomás Estrada Palma as president, and the Platt Amendment shaped Cuban politics until it was abrogated in 1934."
+    facts:
+      - [Treaty of Paris, "10 December 1898"]
+      - [American military government, "1 January 1899 – 20 May 1902"]
+      - [Platt Amendment, "1901"]
+      - [Republic of Cuba proclaimed, "20 May 1902"]
+    markers:
+      - kind: capital
+        side: us
+        name: Havana
+        date: 1 January 1899
+        text: Spain handed Cuba over to the American military government here.
+        lonlat: [-82.359, 23.136]
+        lp: b
+      - kind: event
+        side: us
+        name: Guantánamo Bay
+        date: "1903"
+        text: The naval base leased to the United States under the Platt Amendment.
+        lonlat: [-75.150, 19.910]
+        lp: b

@@ -1,0 +1,548 @@
+id: apache-wars
+name: Apache Wars
+start: "1849"
+end: "1886-09-04"
+tier: A
+summary: "The wars of 1849–1886 between the Apache peoples, with their Yavapai neighbours, and the United States and Mexico in the deserts and mountains of Arizona, New Mexico, west Texas, Sonora and Chihuahua. The Apache, the Chiricahua, Western Apache, Mescalero, Jicarilla and others, lived in small independent bands and had raided Spanish and Mexican settlements for more than a century, while Sonora and Chihuahua paid bounties for Apache scalps. When the United States took the region from Mexico in 1848 and 1854, miners, ranchers and soldiers moved into Apache country. The Bascom affair of 1861 turned the Chokonen leader Cochise against the Americans, and the killing of Mangas Coloradas under a flag of truce in 1863 deepened the war. After the Camp Grant massacre of 1871 the government made peace with Cochise and set up reservations, while General George Crook’s columns, guided by Apache scouts, forced the Yavapai and Tonto Apache onto them. The concentration of the bands at San Carlos from 1875 led to the breakouts of Victorio in 1879, who was killed by Mexican troops at Tres Castillos in 1880, and of Juh, Naiche and Geronimo in 1881 and 1885. Geronimo’s surrender at Skeleton Canyon on 4 September 1886 ended the wars; the whole Chiricahua people, including the scouts who had served the army, were sent as prisoners of war to Florida, Alabama and Oklahoma and held until 1913."
+countries: [us, mx]
+sides:
+  - id: apa
+    name: Apache (Mangas Coloradas, Cochise, Victorio, Nana, Juh, Naiche, Geronimo and other leaders)
+    polities: [apache]
+    ink: brown
+    moves: Apache moves
+    success: Apache success
+  - id: yav
+    name: Yavapai
+    polities: [yavapai]
+    ink: orange
+    moves: Yavapai moves
+    success: Yavapai success
+  - id: us
+    name: United States (US Army with Apache and other Native scouts, Arizona and New Mexico volunteers and settlers)
+    polities: [united-states]
+    ink: blue
+    moves: US moves
+    success: US success
+  - id: mx
+    name: Mexico (federal troops and the forces of Sonora and Chihuahua)
+    polities: [mexico]
+    ink: green
+    moves: Mexican moves
+    success: Mexican success
+notes:
+  - "The Apache were never one nation at war. Each band made war or peace for itself, many Western Apache served the army as scouts against the Chiricahua and Yavapai, and the Tohono O’odham, old enemies of the Apache, took part in the Camp Grant massacre. The Yavapai, who speak a Yuman language, were often called Apache Mohave or Apache Yuma by the Americans."
+  - "Small fights between settlers, troops and Apache who stayed out in the Sierra Madre went on in Mexico and along the border into the 1920s."
+sources:
+  - title: Apache Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Apache_Wars
+  - title: Fort Bowie National Historic Site (National Park Service)
+    url: https://www.nps.gov/fobo/index.htm
+  - title: Jicarilla War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jicarilla_War
+  - title: Bascom affair (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bascom_affair
+  - title: Mangas Coloradas (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mangas_Coloradas
+  - title: Cochise (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cochise
+  - title: Camp Grant massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Camp_Grant_massacre
+  - title: Skeleton Cave massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Skeleton_Cave_massacre
+  - title: Victorio (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Victorio
+  - title: Battle of Cibecue Creek (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Cibecue_Creek
+  - title: Geronimo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Geronimo
+steps:
+  - title: The new border
+    date: 1849–1855
+    when: "1851-03-05"
+    borders: "1851-03-05"
+    countries: [us, mx]
+    body:
+      - "The Apache peoples, the Chiricahua (Chokonen, Bedonkohe, Chihenne and Nednhi), the Western Apache, the Mescalero, the Jicarilla and the Lipan, lived in small independent local groups across the mountains and deserts of what became Arizona, New Mexico, west Texas, Sonora and Chihuahua, and had raided Spanish and then Mexican settlements for livestock and captives for more than a century. When independent Mexico stopped the rations of the late Spanish peace, the raids grew, and from 1835 Sonora and later Chihuahua paid bounties for Apache scalps. In 1837 the Coppermine leader Juan José Compá was killed for bounty at Santa Rita del Cobre, and Mangas Coloradas became the leading war chief of the Chihenne."
+      - "The United States occupied New Mexico in 1846 and by the treaty of Guadalupe Hidalgo in 1848 undertook to stop raids from its new territory into Mexico. Mangas Coloradas made peace with the Americans as enemies of Mexico, but miners reopened the copper mines at Santa Rita, and the Apache lost game, water and land. On 5 March 1851 Sonoran troops under Colonel José María Carrasco attacked an Apache camp outside Janos in Chihuahua while the men were trading in the town, killing among others the mother, wife and three children of a young Bedonkohe man, Goyaałé, later known as Geronimo."
+      - "In the north, Jicarilla and Ute raiders attacked travellers on the Santa Fe Trail, killing the party of James White in 1849 and ten mail carriers near Wagon Mound in 1850. On 30 March 1854 Jicarilla warriors defeated a company of the 1st Dragoons at Cieneguilla, killing 22 of some 60 men, before a larger expedition guided by Kit Carson ran them down in the mountains. The Gadsden Purchase, in force from June 1854, moved the border south to its present line, through the middle of the Chiricahua homeland, and freed the United States from its promise to stop raids into Mexico."
+    facts:
+      - [Mexican scalp bounties, "from 1835 (Sonora) and 1837 (Chihuahua)"]
+      - [Janos, "5 March 1851"]
+      - [Battle of Cieneguilla, "30 March 1854, Jicarilla victory"]
+      - [Gadsden Purchase, "in force 30 June 1854"]
+    markers:
+      - kind: toll
+        side: mx
+        name: Janos
+        date: 5 March 1851
+        text: Sonoran troops attacked an Apache camp outside the town, killing Geronimo’s mother, wife and children among others.
+        lonlat: [-108.190, 30.888]
+      - kind: event
+        name: Santa Rita del Cobre
+        date: 1837–1851
+        text: Copper mines in Chihenne country, where the leader Juan José Compá was killed for bounty in 1837 and miners returned under American rule.
+        lonlat: [-108.061, 32.804]
+      - kind: battle
+        side: apa
+        name: Cieneguilla
+        date: 30 March 1854
+        text: Jicarilla warriors defeated a company of US dragoons, killing 22 of some 60.
+        lonlat: [-105.787, 36.270]
+      - kind: toll
+        side: apa
+        name: Wagon Mound
+        date: May 1850
+        text: Jicarilla and Ute raiders killed ten mail carriers on the Santa Fe Trail.
+        lonlat: [-104.707, 36.007]
+    arrows:
+      - side: mx
+        label: Carrasco
+        phase: 1
+        via: [[-109.56, 30.90], [-108.90, 30.95], [-108.22, 30.89]]
+      - side: us
+        label: Dragoons and Carson
+        phase: 2
+        via: [[-105.58, 36.39], [-105.85, 36.55], [-106.05, 36.32]]
+    areas:
+      - style: contested
+        side: apa
+        label: Apachería, homeland of the Apache peoples (approximate)
+        polygon: [[-113.0, 34.8], [-110.5, 35.3], [-107.5, 35.0], [-105.0, 36.8], [-103.5, 36.5], [-103.0, 33.5], [-101.5, 31.0], [-103.5, 29.0], [-106.0, 28.5], [-108.5, 29.0], [-110.5, 29.5], [-111.5, 31.0], [-112.5, 33.0]]
+      - style: outline
+        side: us
+        label: Gadsden Purchase, 1853–1854 (approximate)
+        polygon: [[-114.81, 32.49], [-114.6, 32.73], [-113.5, 32.95], [-112.3, 33.05], [-111.0, 33.05], [-110.4, 32.95], [-109.6, 32.9], [-108.6, 32.95], [-108.2, 32.9], [-108.2, 32.35], [-106.6, 32.35], [-106.5, 31.78], [-108.21, 31.78], [-108.21, 31.33], [-111.07, 31.33]]
+  - title: Cochise’s war
+    date: 1861–1863
+    when: "1862-07-15"
+    borders: "1862-07-15"
+    countries: [us, mx]
+    body:
+      - "In January 1861 raiders, later found to be Western Apache, carried off the stepson of the rancher John Ward from Sonoita Creek. Lieutenant George Bascom, sent with 54 men, invited the Chokonen leader Cochise, who had kept the peace with the Americans, to a parley at Apache Pass and tried to hold him and his family as hostages. Cochise cut his way out of the tent and took hostages of his own on the stage road; when no exchange was made, Cochise killed his American captives, and on 19 February the soldiers hanged his brother, two nephews and three other Apache men. The boy grew up among the Apache and later served the army as the scout Mickey Free."
+      - "Within months the Civil War drew the regular troops away, and Cochise and his father-in-law Mangas Coloradas attacked mail stations, ranches and travellers across southern Arizona and New Mexico, while Confederate Texans occupied the Mesilla valley and declared a Confederate Territory of Arizona; on 27 September 1861 Apache warriors attacked the mining camp of Pinos Altos, defended by Confederate volunteers. In 1862 the Union’s California Column under Colonel James Carleton marched east from Tucson. On 15–16 July Cochise and Mangas Coloradas, with several hundred warriors, ambushed its advance guard at the spring in Apache Pass and were driven off by its mountain howitzers; the army then built Fort Bowie to hold the pass."
+      - "Carleton, now commanding in New Mexico, ordered his officers to kill Apache men wherever they were found. In January 1863 Mangas Coloradas, then about seventy, came under a flag of truce to talk peace with a party of prospectors and was handed over to General Joseph West’s soldiers at Fort McLane. West made clear that he wanted him dead, and that night, 18 January, the guards shot him, reporting that he had tried to escape. His death bound the Chiricahua to a decade of war."
+    facts:
+      - [Bascom affair, "4–19 February 1861"]
+      - [Battle of Apache Pass, "15–16 July 1862"]
+      - [Death of Mangas Coloradas, "18 January 1863"]
+    markers:
+      - kind: event
+        side: us
+        name: Bascom affair
+        date: February 1861
+        text: Lieutenant Bascom tried to seize Cochise at a parley near the Apache Pass stage station; both sides killed their hostages.
+        lonlat: [-109.436, 32.146]
+        lp: b
+      - kind: battle
+        side: us
+        name: Apache Pass
+        date: 15–16 July 1862
+        text: Cochise and Mangas Coloradas ambushed the California Column at the spring and were driven off by its howitzers.
+        lonlat: [-109.453, 32.157]
+        lp: t
+      - kind: battle
+        name: Pinos Altos
+        date: 27 September 1861
+        text: Apache warriors attacked the mining camp, held by miners and Confederate volunteers.
+        lonlat: [-108.220, 32.867]
+        lp: t
+      - kind: toll
+        side: us
+        name: Fort McLane
+        date: 18 January 1863
+        text: Mangas Coloradas, seized under a flag of truce, was killed here by his guards.
+        lonlat: [-108.128, 32.646]
+        lp: b
+      - kind: event
+        side: us
+        name: Tucson
+        date: "1862"
+        text: The California Column marched east from here towards the Rio Grande.
+        lonlat: [-110.971, 32.222]
+      - kind: event
+        name: Mesilla
+        date: 1861–1862
+        text: Capital of the Confederate Territory of Arizona.
+        lonlat: [-106.815, 32.259]
+    arrows:
+      - side: us
+        label: California Column
+        phase: 1
+        via: [[-110.97, 32.22], [-110.05, 32.05], [-109.45, 32.16], [-108.60, 32.30], [-106.82, 32.26]]
+      - side: apa
+        label: Cochise
+        phase: 1
+        via: [[-109.45, 32.16], [-109.40, 31.60], [-109.50, 31.00]]
+    areas:
+      - style: contested
+        side: apa
+        label: Chiricahua and Chihenne country (approximate)
+        polygon: [[-110.5, 32.6], [-109.0, 33.4], [-107.6, 33.6], [-107.2, 32.8], [-107.8, 31.8], [-108.5, 31.0], [-109.5, 30.8], [-110.4, 31.4]]
+  - title: Bosque Redondo and the war in central Arizona
+    date: 1862–1870
+    when: "1863-03-01"
+    borders: "1863-03-01"
+    countries: [us]
+    body:
+      - "Carleton turned next on the Mescalero of the Sacramento and Sierra Blanca mountains. In the autumn of 1862 he sent Kit Carson and other officers against them with orders to kill the men and take the women and children, and after two of their leaders were shot while coming to talk, some 400 to 500 Mescalero surrendered and were taken in 1863 to Bosque Redondo on the Pecos, by Fort Sumner, where the Navajo were soon confined beside them. Crops failed, rations were short and the Navajo were old enemies; on the night of 3 November 1865 the Mescalero slipped away and went back to their mountains."
+      - "Gold strikes around Prescott in 1863 brought miners into the country of the Yavapai and the Tonto and Pinal Apache in central Arizona. Volunteer parties raided their camps, and in January 1864 King Woolsey’s party killed some two dozen Apache and Yavapai at a parley at the place since called Bloody Tanks. Raids and reprisals went on for years, with Yavapai and Apache alike hunted as Apache."
+      - "After the Civil War the regular army came back and built posts such as Camp Verde and Camp McDowell. The White Mountain Apache, by contrast, welcomed the founding of Camp Apache in their country in 1870 and gave the army many of its scouts, while the Aravaipa and Pinal bands began to come in to Camp Grant on the San Pedro."
+    facts:
+      - [Mescalero at Bosque Redondo, "1863 – November 1865"]
+      - [Bloody Tanks, "24 January 1864"]
+    markers:
+      - kind: event
+        side: us
+        name: Bosque Redondo (Fort Sumner)
+        date: 1863–1865
+        text: Some 400 to 500 Mescalero were confined here with the Navajo until they escaped in November 1865.
+        lonlat: [-104.195, 34.402]
+      - kind: event
+        side: us
+        name: Fort Stanton
+        date: "1862"
+        text: Carson’s base against the Mescalero.
+        lonlat: [-105.52, 33.49]
+      - kind: event
+        side: us
+        name: Prescott
+        date: "1863"
+        text: Gold strikes here brought miners into Yavapai country; the town became the territorial capital in 1864.
+        lonlat: [-112.447, 34.585]
+      - kind: toll
+        side: us
+        name: Bloody Tanks
+        date: 24 January 1864
+        text: King Woolsey’s volunteers killed some two dozen Apache and Yavapai at a parley (marker approximate).
+        lonlat: [-110.87, 33.40]
+      - kind: event
+        side: us
+        name: Camp Apache
+        date: "1870"
+        text: Founded in White Mountain Apache country; many army scouts came from here.
+        lonlat: [-109.989, 33.790]
+    arrows:
+      - side: us
+        label: Mescalero removed
+        phase: 1
+        via: [[-105.52, 33.49], [-105.00, 33.90], [-104.22, 34.38]]
+      - side: apa
+        label: Mescalero escape, 1865
+        phase: 2
+        via: [[-104.20, 34.42], [-104.90, 33.70], [-105.70, 33.20]]
+    areas:
+      - style: occupied
+        side: us
+        label: Bosque Redondo reservation (approximate)
+        polygon: [[-104.5, 34.25], [-103.9, 34.25], [-103.9, 34.6], [-104.5, 34.6]]
+      - style: contested
+        side: yav
+        label: Yavapai and Tonto Apache country (approximate)
+        polygon: [[-113.5, 34.0], [-112.8, 35.0], [-111.5, 35.0], [-110.8, 34.4], [-110.8, 33.5], [-111.8, 33.3], [-113.0, 33.4]]
+  - title: Camp Grant and the peace with Cochise
+    date: 1871–1872
+    when: "1871-04-30"
+    borders: "1871-04-30"
+    countries: [us]
+    body:
+      - "Early in 1871 some 500 Aravaipa and Pinal Apache under Eskiminzin came in to Camp Grant, where Lieutenant Royal Whitman gave them rations and let them camp on Aravaipa Creek, cutting hay and harvesting barley for wages. In Tucson, William Oury and Jesús María Elías blamed every raid in southern Arizona on them. At dawn on 30 April six Americans, 48 Mexican Americans and 92 Tohono O’odham fell on the camp while most of the men were away hunting. They killed 144 people, all but eight of them women and children, and carried off 29 children, most of whom were sold into slavery in Mexico."
+      - "The killings shocked the East. President Grant threatened Arizona with martial law if the attackers were not tried; in December 1871 a Tucson jury acquitted them all after 19 minutes. Under Grant’s Peace Policy, Vincent Colyer and then General Oliver Otis Howard came to make peace and set up reservations, among them San Carlos and the White Mountain reservation around Camp Apache, while the new commander, Lieutenant Colonel George Crook, prepared to make war on those who would not settle on them."
+      - "Howard went in search of Cochise. Guided by Thomas Jeffords, a former mail-line superintendent whom Cochise trusted, and two Apache, he reached Cochise’s camp in the Dragoon Mountains and in October 1872 agreed to give the Chokonen a reservation in their own country in south-eastern Arizona, with Jeffords as agent. Cochise kept the peace until his death in June 1874, though young men from the reservation still raided into Sonora."
+    facts:
+      - [Camp Grant massacre, "30 April 1871"]
+      - [Killed, "144 Aravaipa and Pinal Apache, all but eight women and children"]
+      - [Howard’s peace with Cochise, "October 1872"]
+    markers:
+      - kind: toll
+        side: us
+        name: Camp Grant
+        date: 30 April 1871
+        text: Tucson vigilantes and Tohono O’odham killed 144 Aravaipa and Pinal Apache camped on Aravaipa Creek under the army’s protection.
+        lonlat: [-110.705, 32.848]
+      - kind: event
+        side: us
+        name: Tucson
+        date: April 1871
+        text: The attackers set out from here; a Tucson jury acquitted them in December.
+        lonlat: [-110.971, 32.222]
+      - kind: treaty
+        name: Cochise’s Stronghold
+        date: October 1872
+        text: Howard met Cochise in his camp in the Dragoon Mountains and agreed peace and a Chiricahua reservation in south-eastern Arizona.
+        lonlat: [-109.98, 31.92]
+      - kind: event
+        side: us
+        name: San Carlos
+        date: "1872"
+        text: Agency of the San Carlos reservation on the Gila, set up under the Peace Policy.
+        lonlat: [-110.452, 33.351]
+    arrows:
+      - side: us
+        label: Tucson party
+        phase: 1
+        via: [[-110.97, 32.25], [-110.80, 32.45], [-110.72, 32.70], [-110.71, 32.84]]
+      - side: us
+        label: Howard and Jeffords
+        phase: 2
+        via: [[-109.44, 32.15], [-109.75, 32.05], [-109.97, 31.93]]
+    areas:
+      - style: outline
+        side: apa
+        label: Chiricahua reservation, 1872–1876 (approximate)
+        polygon: [[-110.1, 32.2], [-109.05, 32.2], [-109.05, 31.33], [-110.1, 31.33]]
+      - style: outline
+        side: apa
+        label: San Carlos and White Mountain reservations (approximate)
+        polygon: [[-111.0, 33.2], [-110.0, 33.0], [-109.05, 33.2], [-109.05, 34.3], [-110.3, 34.3], [-111.0, 33.8]]
+  - title: Crook’s Tonto Basin campaign
+    date: 1872–1875
+    when: "1872-12-28"
+    borders: "1872-12-28"
+    countries: [us]
+    body:
+      - "In November 1872 Crook sent columns of cavalry, guided by Apache scouts from the White Mountain and other bands, into the Tonto Basin and the canyons below the Mogollon Rim against the Yavapai and Tonto Apache who had not come in to the reservations. Moving in small detachments through the winter, they attacked camp after camp and gave the people no rest. On 28 December 1872 troops under Captain William Brown trapped a band of Kewevkapaya Yavapai in a cave high in the Salt River Canyon; the soldiers fired into its roof, and about 76 people, among them women and children, were killed."
+      - "On 27 March 1873 Captain George Randall’s men climbed Turret Peak by night and surprised a camp of Yavapai and Apache who had thought themselves safe there. In April the Yavapai leader Chalipun and other leaders surrendered to Crook at Camp Verde, and their people began to dig irrigation ditches and farm on a reservation along the Verde River."
+      - "Under pressure from Tucson contractors and in line with the government’s policy of concentrating the Apache, the Rio Verde reservation was closed, and on 27 February 1875 about 1,500 Yavapai and Dilzhe’e (Tonto) Apache were marched in winter some 290 km over the mountains to San Carlos; many died on the way. The Yavapai remember the day as Exodus Day. Only after 1900 were some allowed to return to the Verde valley."
+    facts:
+      - [Skeleton Cave, "28 December 1872, about 76 Yavapai killed"]
+      - [Battle of Turret Peak, "27 March 1873"]
+      - [Removal to San Carlos (Exodus Day), "27 February 1875"]
+    markers:
+      - kind: toll
+        side: us
+        name: Skeleton Cave
+        date: 28 December 1872
+        text: Troops trapped a Yavapai band in a cave in the Salt River Canyon, killing about 76 people.
+        lonlat: [-111.366, 33.583]
+      - kind: battle
+        side: us
+        name: Turret Peak
+        date: 27 March 1873
+        text: Soldiers climbed the peak by night and surprised a Yavapai and Apache camp.
+        lonlat: [-111.865, 34.248]
+      - kind: event
+        side: us
+        name: Camp Verde
+        date: April 1873 – February 1875
+        text: Chalipun and other Yavapai leaders surrendered here; the reservation on the Verde was closed in 1875.
+        lonlat: [-111.856, 34.569]
+      - kind: event
+        side: us
+        name: San Carlos
+        date: March 1875
+        text: The Yavapai and Tonto Apache marched from the Verde arrived here.
+        lonlat: [-110.452, 33.351]
+    arrows:
+      - side: us
+        label: Crook’s columns
+        phase: 1
+        via: [[-111.86, 34.57], [-111.55, 34.20], [-111.30, 33.80]]
+      - side: us
+        phase: 1
+        via: [[-109.99, 33.79], [-110.50, 33.85], [-111.00, 33.80]]
+      - side: us
+        phase: 1
+        via: [[-111.68, 33.63], [-111.50, 33.62], [-111.38, 33.59]]
+      - side: us
+        label: Exodus, 1875
+        phase: 2
+        via: [[-111.86, 34.57], [-111.50, 34.30], [-111.10, 33.90], [-110.80, 33.55], [-110.47, 33.36]]
+    areas:
+      - style: contested
+        side: yav
+        label: Tonto Basin and the Mogollon Rim country (approximate)
+        polygon: [[-112.0, 34.6], [-111.0, 34.6], [-110.6, 34.2], [-110.8, 33.6], [-111.5, 33.5], [-112.0, 33.9]]
+      - style: lost
+        side: yav
+        label: Rio Verde reservation, 1871–1875 (approximate)
+        polygon: [[-112.05, 34.85], [-111.75, 34.85], [-111.65, 34.45], [-111.95, 34.45]]
+  - title: San Carlos and Victorio’s war
+    date: 1876–1881
+    when: "1880-10-14"
+    borders: "1880-10-14"
+    countries: [us, mx]
+    body:
+      - "After Cochise’s death the Chiricahua reservation was closed, and in June 1876 its people were ordered to San Carlos, a hot, malarial flat on the Gila; Juh, Geronimo and others fled to Mexico instead. In April 1877 the San Carlos agent John Clum arrested Geronimo at Ojo Caliente, the Chihenne agency in New Mexico, and moved the Chihenne under Victorio and Loco to San Carlos as well. Victorio broke away more than once, asking to live at Ojo Caliente or with the Mescalero."
+      - "In late August 1879, fearing arrest, Victorio left for good with some 80 warriors and their families, joined by Mescalero and Chiricahua, and on 4 September they killed the soldiers guarding the 9th Cavalry’s horse herd at Ojo Caliente. For more than a year his band raided across New Mexico, west Texas and Chihuahua and fought some two dozen engagements with the Buffalo Soldiers of the 9th and 10th Cavalry, Apache scouts and Mexican troops, among them Hembrillo Canyon in the San Andres Mountains in April 1880. In the summer Colonel Benjamin Grierson’s 10th Cavalry held the waterholes of west Texas and turned the band back into Mexico. Settlers, herders and travellers on both sides of the border were killed in the raids."
+      - "In October 1880, short of ammunition, the band camped at Tres Castillos, three rocky hills in the desert of northern Chihuahua, while Nana and others were away. On 14–15 October Mexican troops and militia under Colonel Joaquín Terrazas surrounded it and killed Victorio and most of his people; Mexican reports gave 78 killed and 68 women and children captured, and Apache tradition holds that Victorio took his own life. In the summer of 1881 the old leader Nana, with fewer than 40 warriors, rode some 1,600 km through New Mexico, fighting several engagements and eluding more than a thousand soldiers."
+    facts:
+      - [Victorio leaves San Carlos, "August 1879"]
+      - [Battle of Hembrillo Canyon, "April 1880"]
+      - [Battle of Tres Castillos, "14–15 October 1880"]
+      - [Nana’s raid, "July–August 1881"]
+    markers:
+      - kind: battle
+        side: apa
+        name: Ojo Caliente
+        date: 4 September 1879
+        text: Victorio’s warriors killed the guards of the 9th Cavalry’s horse herd at the old Chihenne agency.
+        lonlat: [-107.60, 33.57]
+      - kind: battle
+        name: Hembrillo Canyon
+        date: April 1880
+        text: Buffalo Soldiers of the 9th Cavalry and Apache scouts fought Victorio’s band in the San Andres Mountains.
+        lonlat: [-106.645, 32.924]
+      - kind: toll
+        side: mx
+        name: Tres Castillos
+        date: 14–15 October 1880
+        text: Mexican troops under Terrazas surrounded the band and killed Victorio and most of his people.
+        lonlat: [-105.783, 29.967]
+      - kind: event
+        side: us
+        name: San Carlos
+        date: 1876–1877
+        text: The Chiricahua and Chihenne were moved here from their own reservations.
+        lonlat: [-110.452, 33.351]
+      - kind: event
+        name: Mescalero agency
+        date: 1879–1880
+        text: Many Mescalero joined Victorio; the army disarmed those who stayed in April 1880.
+        lonlat: [-105.789, 33.136]
+    arrows:
+      - side: apa
+        label: Victorio
+        phase: 1
+        via: [[-107.60, 33.57], [-107.70, 33.10], [-106.90, 32.90], [-105.82, 33.15]]
+      - side: apa
+        label: Victorio
+        phase: 2
+        via: [[-105.80, 33.10], [-105.30, 31.80], [-105.20, 30.80], [-105.76, 29.99]]
+      - side: mx
+        label: Terrazas
+        phase: 2
+        via: [[-106.07, 28.64], [-106.00, 29.30], [-105.80, 29.94]]
+      - side: apa
+        label: Nana
+        phase: 3
+        via: [[-106.20, 30.80], [-106.90, 31.90], [-107.30, 32.80], [-107.60, 33.50], [-107.00, 34.20]]
+    areas:
+      - style: contested
+        side: apa
+        label: Range of Victorio’s band, 1879–1880 (approximate)
+        polygon: [[-108.5, 34.0], [-105.5, 33.7], [-104.0, 31.0], [-104.5, 29.5], [-106.5, 29.5], [-107.5, 31.0], [-108.6, 32.5]]
+      - style: outline
+        side: apa
+        label: San Carlos and White Mountain reservations (approximate)
+        polygon: [[-111.0, 33.2], [-110.0, 33.0], [-109.05, 33.2], [-109.05, 34.3], [-110.3, 34.3], [-111.0, 33.8]]
+  - title: Cibecue and the Sierra Madre
+    date: 1881–1884
+    when: "1883-05-15"
+    borders: "1883-05-15"
+    countries: [us, mx]
+    body:
+      - "In 1881 the Cibecue Apache medicine man Nock-ay-det-klinne drew many followers on the Fort Apache reservation with a dance that, he taught, would bring back dead leaders. On 30 August Colonel Eugene Carr arrested him at Cibecue Creek; his followers attacked as the column made camp, most of the 23 Apache scouts with the troops turned on the soldiers, and the prophet was killed by his guards. Several soldiers died, and the next day Apache warriors attacked Fort Apache itself. Three of the scouts were later hanged for mutiny."
+      - "Troops poured into the reservations, and at the end of September 1881 Juh, Naiche, Geronimo and other Chiricahua leaders, fearing arrest, fled with their people to the Sierra Madre in Mexico. In April 1882 they came back, forced Loco’s Chihenne at San Carlos to go with them and fought their way south; US cavalry followed them across the border, and on 30 April Mexican infantry under Colonel Lorenzo García ambushed the column at Alisos Creek in Chihuahua, killing many, most of them women and children. In July 1882 the followers of the White Mountain leader Na-tio-tish were defeated at Big Dry Wash below the Mogollon Rim, the last large battle fought in Arizona."
+      - "Crook came back to Arizona in September 1882, tried to end the corruption at San Carlos and enlisted hundreds of Apache scouts, and in July 1882 the United States and Mexico had agreed that troops of either country might cross the border in pursuit of raiders. In May 1883, guided by Tzoe (Peaches), a White Mountain man who had lived with the Chiricahua, Crook led some 50 soldiers and 193 Apache scouts into the Sierra Madre. The scouts surprised a Chiricahua camp on 15 May, and the leaders, shaken to be found in their stronghold, agreed to return. More than 300 people came back with Crook in June, and Geronimo and the others followed by March 1884."
+    facts:
+      - [Battle of Cibecue Creek, "30 August 1881"]
+      - [Battle of Big Dry Wash, "17 July 1882"]
+      - [Crook’s Sierra Madre expedition, "May–June 1883, with 193 Apache scouts"]
+    markers:
+      - kind: battle
+        name: Cibecue Creek
+        date: 30 August 1881
+        text: Most of the army’s Apache scouts mutinied when troops arrested the medicine man Nock-ay-det-klinne, who was killed.
+        lonlat: [-110.497, 34.031]
+      - kind: held
+        side: us
+        name: Fort Apache
+        date: 1 September 1881
+        text: Apache warriors attacked the post the day after Cibecue.
+        lonlat: [-109.989, 33.790]
+      - kind: battle
+        side: us
+        name: Big Dry Wash
+        date: 17 July 1882
+        text: Cavalry defeated the White Mountain followers of Na-tio-tish below the Mogollon Rim (marker approximate).
+        lonlat: [-111.10, 34.52]
+      - kind: event
+        side: apa
+        name: San Carlos
+        date: 19 April 1882
+        text: Chiricahua warriors returned from Mexico and forced Loco’s band to leave with them.
+        lonlat: [-110.452, 33.351]
+      - kind: event
+        side: us
+        name: Chiricahua camps in the Sierra Madre
+        date: 15 May 1883
+        text: Crook’s Apache scouts surprised the Chiricahua in their mountain stronghold (marker approximate).
+        lonlat: [-108.70, 30.10]
+    arrows:
+      - side: apa
+        label: Chiricahua breakout, 1881
+        phase: 1
+        via: [[-110.00, 33.60], [-109.60, 32.80], [-109.20, 31.80], [-108.90, 30.90], [-108.72, 30.20]]
+      - side: apa
+        label: Loco’s band, 1882
+        phase: 2
+        via: [[-110.45, 33.35], [-109.70, 32.70], [-109.10, 31.70], [-108.80, 30.80]]
+      - side: us
+        label: Crook, 1883
+        phase: 3
+        via: [[-109.27, 31.33], [-109.25, 30.90], [-108.95, 30.50], [-108.72, 30.13]]
+    areas:
+      - style: contested
+        side: apa
+        label: Chiricahua strongholds in the Sierra Madre (approximate)
+        polygon: [[-109.3, 30.9], [-108.3, 30.9], [-108.0, 29.8], [-108.5, 29.3], [-109.2, 29.6]]
+  - title: Geronimo’s last campaign and exile
+    date: 1885–1913
+    when: "1886-09-04"
+    borders: "1886-09-04"
+    countries: [us, mx]
+    body:
+      - "On 17 May 1885, after a quarrel over Crook’s ban on brewing tiswin beer, Geronimo, Naiche, Mangas, Chihuahua and the aged Nana left their camp on Turkey Creek near Fort Apache with about 135 people, some 40 of them fighting men, and fled to Mexico. Crook sent columns of Apache scouts after them into the Sierra Madre while troops guarded the waterholes along the border, and late in the year Josanie (Ulzana) led a small party on a long raid back through Arizona and New Mexico. In January 1886 Captain Emmet Crawford’s scouts attacked Geronimo’s camp in Sonora, but Mexican irregulars mistook the scouts for hostile Apache and killed Crawford."
+      - "On 25–27 March 1886 Crook met the leaders at Cañón de los Embudos, just south of the border, where they agreed to surrender and go into exile in the East for two years. On the way north Geronimo and Naiche slipped away again with a few dozen followers; Chihuahua, Nana and the rest were sent to Fort Marion in Florida. Washington rejected Crook’s terms and he resigned, and in April General Nelson Miles replaced him, relying on regular troops, heliograph stations and a column under Captain Henry Lawton that pursued the band for months through Sonora."
+      - "In August Lieutenant Charles Gatewood, with the Chiricahua scouts Martine and Kayitah, found Geronimo in the mountains of Sonora and told him that his people had already been sent east. On 4 September 1886 Geronimo and Naiche surrendered to Miles at Skeleton Canyon in Arizona. They and their last followers, but also the Chiricahua who had stayed at peace at Fort Apache and the scouts who had served the army, some 500 people in all, were sent as prisoners of war to Florida, from 1887 to Mount Vernon Barracks in Alabama and in 1894 to Fort Sill in Indian Territory; many died of disease, and their children were sent to the Carlisle school. Geronimo died a prisoner at Fort Sill in 1909. In 1913 the survivors were freed; most moved to the Mescalero reservation in New Mexico and the rest stayed in Oklahoma."
+    facts:
+      - [Breakout from Turkey Creek, "17 May 1885"]
+      - [Meeting at Cañón de los Embudos, "25–27 March 1886"]
+      - [Surrender at Skeleton Canyon, "4 September 1886"]
+      - [Chiricahua held as prisoners of war, "1886–1913"]
+    markers:
+      - kind: event
+        side: apa
+        name: Turkey Creek
+        date: 17 May 1885
+        text: Geronimo, Naiche and other leaders left the reservation here for Mexico (marker approximate).
+        lonlat: [-109.75, 33.86]
+      - kind: treaty
+        name: Cañón de los Embudos
+        date: 25–27 March 1886
+        text: The Chiricahua leaders agreed to surrender to Crook; Geronimo and Naiche fled again on the way north.
+        lonlat: [-109.22, 31.15]
+      - kind: treaty
+        side: us
+        name: Skeleton Canyon
+        date: 4 September 1886
+        text: Geronimo and Naiche surrendered to General Miles.
+        lonlat: [-109.036, 31.590]
+      - kind: event
+        side: us
+        name: Bowie Station
+        date: September 1886
+        text: Geronimo and his followers were put on a train here for Texas and Florida.
+        lonlat: [-109.495, 32.326]
+    arrows:
+      - side: apa
+        label: Geronimo and Naiche
+        phase: 1
+        via: [[-109.75, 33.86], [-109.30, 33.10], [-108.95, 32.00], [-108.90, 31.10], [-108.75, 30.30]]
+      - side: us
+        label: Lawton
+        phase: 2
+        via: [[-110.35, 31.55], [-110.10, 30.80], [-109.70, 30.20], [-109.30, 30.50]]
+      - side: apa
+        phase: 3
+        via: [[-109.30, 30.50], [-109.10, 31.10], [-109.04, 31.57]]
+      - side: us
+        label: Deportation
+        phase: 4
+        via: [[-109.04, 31.60], [-109.30, 32.00], [-109.49, 32.32]]
+    areas:
+      - style: lost
+        side: apa
+        label: Chiricahua homeland, from which the whole people was deported (approximate)
+        polygon: [[-110.5, 32.6], [-109.0, 33.4], [-107.6, 33.6], [-107.2, 32.8], [-107.8, 31.8], [-108.5, 31.0], [-109.5, 30.8], [-110.4, 31.4]]

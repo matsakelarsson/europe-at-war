@@ -124,7 +124,7 @@ async function buildBorders(pol, topo) {
         // "none" means: no state (plain land), as for tribal lands.
         const pi = p === '-' ? 'kf' : p === 'none' ? -1 : polIdx(p, where);
         // As in keyframes: an atom listed itself beats one reached through its parent.
-        for (const id of ids) for (const i of expand(id, where)) if (!set.has(i) || order[i] === id) set.set(i, pi);
+        for (const id of ids) for (const i of expand(id, where)) if (!set.has(i) || order[i] === id || `${order[i]}!` === id) set.set(i, pi);
       }
       entries.push({ key: dateKey(ev.date), date: String(ev.date), src: ev.note || f, kind: 'event', war: ev.war, set });
     }

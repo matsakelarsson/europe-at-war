@@ -1,0 +1,213 @@
+id: yaqui-wars
+name: Yaqui Wars
+start: "1825"
+end: "1927"
+tier: B
+summary: "The century of wars between the Yaqui (Yoeme) people of southern Sonora and the Mexican state over the lands of the eight Yaqui towns on the lower Yaqui River. The Yaqui had defeated Spanish expeditions in 1533 and 1609–1610 before accepting Jesuit missionaries on their own terms in 1617, and had risen in 1740. After independence Mexico’s attempts to tax the Yaqui, divide their land and open it to settlers led to the revolt of Juan Banderas (1825–1833), who tried to unite the Native peoples of Sonora, and to recurring wars. From 1875 the Yaqui leader Cajeme governed the valley as a self-ruling nation until the federal army broke it in 1886–1887. Tetabiate’s guerrillas fought on in the Bacatete mountains; after the massacre at Mazocoba in 1900, Porfirio Díaz’s government deported thousands of Yaqui to the henequen plantations of Yucatán and other parts of the south, where many died. Yaqui soldiers fought in the Mexican Revolution, and the last Yaqui rising was put down in 1926–1927 with aircraft. In 1937 President Lázaro Cárdenas recognised a reduced Yaqui territory, and in 2021 the Mexican government apologised to the Yaqui people."
+countries: [mx]
+sides:
+  - id: yaqui
+    name: Yaqui (Yoeme), with Mayo, Opata and Pima allies in 1825–1833
+    polities: [yaqui]
+    ink: brown
+    moves: Yaqui moves
+    success: Yaqui success
+  - id: mx
+    name: New Spain, then Mexico (the state of Sonora and the federal army)
+    polities: [new-spain, mexico]
+    ink: red
+    moves: Mexican moves
+    success: Mexican success
+notes:
+  - "The numbers killed and deported are uncertain. The anthropologist Raquel Padilla counted more than 6,000 people deported in official reports of the Porfiriato; other estimates run to 15,000 or more. Mexico’s National Human Rights Commission describes the repression as aimed at eliminating Yaqui culture in whole or in part."
+  - Much of the early history comes from Spanish and Jesuit accounts, such as Andrés Pérez de Ribas’s; Yaqui oral tradition tells it differently, with the Yaqui choosing peace and the missionaries.
+sources:
+  - title: Yaqui Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yaqui_Wars
+  - title: Yaqui (Britannica)
+    url: https://www.britannica.com/topic/Yaqui
+  - title: Batalla de Mazacoba, derrota de los yaquis que marca el inicio de su exportación a las haciendas henequeneras (Comisión Nacional de los Derechos Humanos)
+    url: https://www.cndh.org.mx/sites/default/files/documentos/2024-12/FRN_ENE_18-1.pdf
+  - title: Cajemé (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cajem%C3%A9
+  - title: Battle of Mazocoba (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Mazocoba
+  - title: Yaqui in exile, the history of Mexico’s San Marcos train station (MexConnect)
+    url: https://www.mexconnect.com/?p=7741
+  - title: Yaqui (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yaqui
+steps:
+  - title: From Guzmán to Banderas
+    date: 1533–1833
+    when: "1825"
+    borders: "1832-12-01"
+    countries: [mx]
+    body:
+      - "The Yaqui farmed the floodplain of the lower Yaqui River in some 80 rancherías, with perhaps 30,000 people, when Diego de Guzmán’s slave-raiding expedition reached the river in 1533 and was turned back in battle. In 1609–1610 they defeated the Spanish captain Diego Martínez de Hurdaide three times, and then made peace and asked for Jesuit missionaries, who arrived in 1617 and gathered the Yaqui into eight towns: Cócorit, Bácum, Tórim, Vícam, Pótam, Ráhum, Huírivis and Belem. The towns governed themselves under the missions for more than a century. In 1740, with Spanish settlers and miners pressing on their land, the Yaqui and their Mayo neighbours rose and drove out many settlers before the revolt was put down, with heavy Yaqui losses."
+      - "Independent Mexico made the Yaqui citizens, which meant taxes and the division of their common land. In 1825 Juan Ignacio Jusacamea, known as Juan Banderas, raised the Yaqui, saying that the Virgin of Guadalupe had called him to restore the kingdom of Moctezuma, and drew in Mayo, Opata and Pima fighters in a bid to unite the Native peoples of Sonora. He held off state troops for years, until he was defeated at Soyopa in December 1832 and shot in January 1833 with the Opata leader Dolores Gutiérrez."
+    facts:
+      - [Guzmán’s expedition turned back, "1533"]
+      - [Jesuit missions, "from 1617"]
+      - [Revolt of Juan Banderas, "1825–1833"]
+    markers:
+      - kind: battle
+        side: yaqui
+        name: Yaqui River
+        date: 1533 and 1609–1610
+        text: The Yaqui turned back Guzmán’s expedition in 1533 and defeated Hurdaide’s Spanish and allied forces three times in 1609–1610 (marker approximate).
+        lonlat: [-110.29, 27.70]
+        lp: t
+      - kind: event
+        side: yaqui
+        name: Pótam
+        date: from 1617
+        text: One of the eight Yaqui towns founded by the Jesuit missions.
+        lonlat: [-110.416, 27.626]
+        lp: l
+      - kind: event
+        side: yaqui
+        name: Cócorit
+        date: from 1617
+        text: The easternmost of the eight Yaqui towns.
+        lonlat: [-109.967, 27.583]
+      - kind: battle
+        side: mx
+        name: Soyopa
+        date: December 1832
+        text: State forces defeated Banderas, who was captured and shot in January 1833.
+        lonlat: [-109.633, 28.767]
+      - kind: capital
+        side: mx
+        name: Hermosillo
+        date: 1820s–1830s
+        text: The largest town of Sonora; Banderas’s forces fought near it in 1827.
+        lonlat: [-110.954, 29.099]
+    arrows:
+      - side: mx
+        label: Hurdaide, 1609–1610
+        phase: 1
+        via: [[-108.22, 25.82], [-108.80, 26.60], [-109.50, 27.20], [-110.10, 27.50]]
+    areas:
+      - style: outline
+        side: yaqui
+        label: The eight Yaqui towns on the lower Yaqui River (approximate)
+        polygon: [[-110.60, 27.75], [-110.30, 27.85], [-109.95, 27.75], [-109.85, 27.52], [-110.10, 27.40], [-110.50, 27.48]]
+  - title: Cajeme’s Yaqui nation
+    date: 1868–1887
+    when: "1886-05-12"
+    borders: "1886-05-12"
+    countries: [mx]
+    body:
+      - "In the civil wars of Sonora the Yaqui often sided with Governor Ignacio Pesqueira’s conservative rivals. In February 1868 Sonoran troops held several hundred Yaqui prisoners in the church of Bácum, and when some tried to escape they fired on it with artillery and it caught fire; about 120 died. In 1874 Pesqueira made José María Leyva, called Cajeme, a Yaqui who had served in the Mexican army, alcalde mayor of the Yaqui and Mayo valleys, hoping he would bring them under control. Instead Cajeme organised the eight towns as a self-governing nation, with councils, a treasury fed by tolls on river traffic and a trained militia, and from 1875 refused to let state officials, tax collectors or surveyors into the valley."
+      - "When the Díaz government decided to open the fertile valley to irrigation, railways and colonists, it sent federal troops. In 1885–1886 several thousand soldiers fought their way to Cajeme’s fortified positions at El Añil and Buatachive in the foothills; the last strongholds fell in May 1886, with about 200 Yaqui dead and some 2,000, mostly the old, children and the sick, captured. Cajeme escaped but was betrayed in April 1887 and shot on 23 April near Cócorit, after the army had paraded him through the towns."
+    facts:
+      - [Bácum church massacre, "February 1868"]
+      - [Cajeme’s self-governing Yaqui nation, "1875–1886"]
+      - [Last Yaqui strongholds taken, "May 1886"]
+      - [Cajeme shot, "23 April 1887"]
+    markers:
+      - kind: event
+        side: mx
+        name: Bácum
+        date: February 1868
+        text: About 120 Yaqui prisoners died when troops fired on the church where they were held and it burned (marker approximate).
+        lonlat: [-110.08, 27.55]
+        lp: b
+      - kind: taken
+        side: mx
+        name: El Añil
+        date: "1886"
+        text: Cajeme’s main fortified position near Vícam, stormed by federal troops (marker approximate).
+        lonlat: [-110.25, 27.75]
+        lp: l
+      - kind: battle
+        side: mx
+        name: Buatachive
+        date: 12 May 1886
+        text: The last Yaqui stronghold in the foothills of the Bacatete (marker approximate).
+        lonlat: [-110.10, 27.95]
+      - kind: event
+        side: mx
+        name: Tres Cruces de Chumampaco
+        date: 23 April 1887
+        text: Cajeme was shot here, near Cócorit (marker approximate).
+        lonlat: [-109.967, 27.583]
+        lp: b
+      - kind: event
+        side: mx
+        name: Guaymas
+        date: 1880s
+        text: The port from which the federal campaigns were supplied.
+        lonlat: [-110.899, 27.918]
+    arrows:
+      - side: mx
+        phase: 1
+        via: [[-110.899, 27.918], [-110.65, 27.80], [-110.40, 27.75], [-110.26, 27.75]]
+      - side: mx
+        phase: 2
+        via: [[-110.25, 27.77], [-110.18, 27.85], [-110.11, 27.94]]
+    areas:
+      - style: occupied
+        side: yaqui
+        label: Governed by Cajeme’s Yaqui councils, 1875–1886 (approximate)
+        polygon: [[-110.70, 27.75], [-110.35, 28.10], [-109.95, 28.05], [-109.75, 27.60], [-110.05, 27.35], [-110.55, 27.45]]
+  - title: Mazocoba, the deportations and the last war
+    date: 1887–1927
+    when: "1900-01-18"
+    borders: "1900-01-18"
+    countries: [mx]
+    body:
+      - "Juan Maldonado, called Tetabiate, led the Yaqui who would not submit in a guerrilla war from the Bacatete mountains. A peace signed at Ortiz in May 1897 broke down in 1899. On 18 January 1900 General Lorenzo Torres’s troops trapped Yaqui families who had gathered on the mountain of Mazocoba; some 400 Yaqui were killed and hundreds, mostly women and children, captured (accounts range from 300 to about 1,000). By most accounts Tetabiate was killed by one of his own men in 1901; Mexico’s National Human Rights Commission says he died at Mazocoba."
+      - "Díaz’s government and the Sonoran governors Rafael Izábal and Luis Torres then turned to deportation. From about 1902 to 1908 soldiers rounded up Yaqui men, women and children, including many who worked peacefully on haciendas, and sent them south by ship and railway to the henequen plantations of Yucatán and to Oaxaca and Veracruz, where they were sold to planters, by one officer’s account at 65 pesos a head. Families were split up and many died of disease and overwork; Yaqui fled to Arizona, where communities remain. Many Yaqui fought in the Revolution, which promised to return their land, and some deportees made their way home. When the promises were not kept the Yaqui rose again in 1926, stopping a train carrying former president Álvaro Obregón near Vícam; the army, with bombing aircraft, ended the rising in 1927."
+    facts:
+      - [Peace of Ortiz, "May 1897"]
+      - [Massacre at Mazocoba, "18 January 1900"]
+      - [Deportations, "about 1902–1908"]
+      - [Last Yaqui rising, "1926–1927"]
+    markers:
+      - kind: battle
+        side: mx
+        name: Mazocoba
+        date: 18 January 1900
+        text: Federal troops trapped Yaqui families in the Bacatete mountains; some 400 were killed (marker approximate).
+        lonlat: [-110.15, 28.05]
+      - kind: treaty
+        name: Ortiz
+        date: 15 May 1897
+        text: Tetabiate and the government made a peace here, which broke down in 1899 (marker approximate).
+        lonlat: [-110.73, 28.27]
+        lp: l
+      - kind: event
+        side: mx
+        name: Guaymas
+        date: 1902–1908
+        text: Deportees were shipped from here down the coast on the first stage of their journey south.
+        lonlat: [-110.899, 27.918]
+        lp: b
+      - kind: event
+        side: mx
+        name: Henequen plantations of Yucatán
+        date: 1902–1911
+        text: Most deported Yaqui were sold to the henequen estates around Mérida (marker approximate).
+        lonlat: [-89.62, 20.97]
+      - kind: event
+        side: mx
+        name: Valle Nacional
+        date: 1900s
+        text: The tobacco plantations of this Oaxaca valley also received deportees.
+        lonlat: [-96.300, 17.767]
+      - kind: event
+        side: yaqui
+        name: Vícam
+        date: September 1926
+        text: Yaqui fighters stopped the train of former president Obregón near here, starting the last rising.
+        lonlat: [-110.290, 27.642]
+        lp: l
+    arrows:
+      - side: mx
+        label: Deportations
+        phase: 1
+        via: [[-110.899, 27.918], [-105.30, 21.50], [-103.35, 20.68], [-99.13, 19.43], [-96.13, 19.19]]
+      - side: mx
+        phase: 2
+        via: [[-96.13, 19.19], [-93.00, 20.20], [-89.67, 21.28]]

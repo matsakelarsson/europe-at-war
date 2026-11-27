@@ -1,0 +1,135 @@
+id: tecumsehs-war
+name: Tecumseh’s War
+start: "1811"
+end: "1813-10-05"
+tier: B
+summary: "The struggle of the confederacy led by the Shawnee brothers Tecumseh and Tenskwatawa against the expansion of the United States in the Northwest. After the Treaty of Greenville, William Henry Harrison, governor of Indiana Territory, bought millions of acres from individual nations by treaty. Tenskwatawa, known as the Prophet, led a religious revival that drew followers from many nations to Prophetstown on the Wabash, and Tecumseh turned it into a political and military alliance, holding that the land belonged to all the nations in common and that none could sell it alone. He rejected the Treaty of Fort Wayne of 1809 to Harrison’s face at Vincennes in 1810 and travelled south in 1811 to win over the Muscogee and others. While he was away Harrison marched on Prophetstown with about 1,000 men; on 7 November 1811 warriors attacked his camp at Tippecanoe and were beaten off, and Harrison burned the town. Raids on the frontier followed, and when the War of 1812 began Tecumseh joined the British; his war merged into the larger one, and he was killed at the Battle of the Thames on 5 October 1813."
+countries: [us]
+sides:
+  - id: wc
+    name: Tecumseh’s confederacy (Shawnee, Kickapoo, Potawatomi, Ho-Chunk, Wyandot, Odawa, Ojibwe and others)
+    polities: [western-confederacy]
+    ink: orange
+    moves: Confederacy moves
+    success: Confederacy success
+  - id: us
+    name: United States (Indiana Territory, the US Army and Indiana and Kentucky militia)
+    polities: [united-states]
+    ink: blue
+    moves: American moves
+    success: American success
+notes:
+  - Historians differ on how far Tecumseh and Tenskwatawa led one movement; American accounts of the time gave the Prophet more weight in its early years, and later histories often make Tecumseh the leader. Many leaders of the nations, such as Little Turtle of the Miami and Black Hoof of the Shawnee, opposed the brothers and kept to their treaties with the United States.
+  - The war from June 1812 is told in the War of 1812.
+sources:
+  - title: Tecumseh’s War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tecumseh%27s_War
+  - title: Tecumseh (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tecumseh
+  - title: Tecumseh (Dictionary of Canadian Biography)
+    url: https://www.biographi.ca/en/bio/tecumseh_5E.html
+  - title: Tenskwatawa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tenskwatawa
+  - title: Treaty of Fort Wayne (1809) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Fort_Wayne_(1809)
+  - title: Battle of Tippecanoe (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tippecanoe
+steps:
+  - title: Prophetstown and the Treaty of Fort Wayne
+    date: 1805–1811
+    when: "1811-07"
+    borders: "1810-08-12"
+    countries: [us]
+    body:
+      - "In 1805 Lalawethika, a younger brother of the Shawnee war leader Tecumseh, had visions and took the name Tenskwatawa, the Open Door. Known to Americans as the Prophet, he preached that the nations should give up alcohol, American goods and ways and quarrels among themselves, and return to the ways given them by the Creator. Followers from many nations came to his village at Greenville, Ohio, and in 1808 the brothers moved to Prophetstown, where the Tippecanoe joins the Wabash. Tecumseh made the movement into a confederacy: the land, he said, belonged to all the nations in common, and no single nation or chief could sell any of it."
+      - "Harrison, governor of Indiana Territory, had meanwhile bought millions of acres in a series of treaties with leaders of single nations. By the Treaty of Fort Wayne of 30 September 1809 Lenape, Potawatomi, Miami and Eel River leaders sold about 2.5 to 3 million acres along the Wabash. At Grouseland, Harrison’s house in Vincennes, Tecumseh told him in August 1810 that the sale was void and warned the chiefs who had signed it; the meeting nearly ended in a fight. After a second meeting in July 1811 Tecumseh travelled south to the Chickasaw, Choctaw and Muscogee. He spoke to the Muscogee council at Tukabatchee that autumn, inspiring the movement that became the Red Sticks, but the Choctaw under Pushmataha refused to join him."
+    facts:
+      - [Prophetstown founded, "1808"]
+      - [Treaty of Fort Wayne, "30 September 1809"]
+      - [Tecumseh and Harrison at Vincennes, "August 1810 and July 1811"]
+    markers:
+      - kind: capital
+        side: wc
+        name: Prophetstown
+        date: 1808–1811
+        text: The brothers’ town where the Tippecanoe joins the Wabash, home to people of many nations.
+        lonlat: [-86.830, 40.490]
+      - kind: event
+        side: wc
+        name: Greenville
+        date: 1805–1808
+        text: Tenskwatawa’s first village, near the site where the treaty of 1795 had been signed.
+        lonlat: [-84.630, 40.100]
+      - kind: treaty
+        side: us
+        name: Fort Wayne
+        date: 30 September 1809
+        text: Harrison bought some 2.5 to 3 million acres from Lenape, Potawatomi, Miami and Eel River leaders.
+        lonlat: [-85.130, 41.080]
+      - kind: event
+        name: Vincennes (Grouseland)
+        date: August 1810
+        text: Tecumseh told Harrison that the Fort Wayne sale was void.
+        lonlat: [-87.530, 38.680]
+      - kind: event
+        side: wc
+        name: Tukabatchee
+        date: autumn 1811
+        text: Tecumseh spoke to the Muscogee council here on his journey south.
+        lonlat: [-85.880, 32.477]
+    arrows:
+      - side: wc
+        label: Tecumseh’s journey south
+        via: [[-86.830, 40.490], [-87.500, 38.500], [-88.500, 35.500], [-87.500, 33.500], [-85.900, 32.490]]
+    areas:
+      - style: lost
+        side: wc
+        label: Main tract sold at Fort Wayne, 1809 (approximate)
+        polygon: [[-87.530, 39.800], [-87.200, 39.900], [-86.200, 39.300], [-85.900, 38.900], [-86.300, 38.500], [-86.900, 38.700], [-87.400, 39.100]]
+  - title: Tippecanoe
+    date: September 1811 – October 1813
+    when: "1811-11-07"
+    borders: "1811-11-07"
+    countries: [us]
+    link: { href: "#/war/war-of-1812", text: War of 1812 }
+    body:
+      - "While Tecumseh was in the south, Harrison marched up the Wabash from Vincennes on 26 September 1811 with about 1,000 men: regulars of the 4th Infantry, Indiana militia and Kentucky volunteers. He built Fort Harrison near present-day Terre Haute and on 6 November camped within sight of Prophetstown. Before dawn on 7 November several hundred warriors, Kickapoo, Shawnee, Potawatomi, Ho-Chunk, Wyandot and others, attacked the camp; Tenskwatawa is said to have told them that his power would protect them. After two hours of fighting they were driven off. Harrison lost 62 killed and 126 wounded; the warriors left 36 known dead, and estimates of their losses run to some 50 to 65 killed. The next day his men burned the abandoned town and its stores of food."
+      - "The battle hurt Tenskwatawa’s standing, but it did not end the confederacy. Tecumseh came back early in 1812 to find Prophetstown in ashes and rebuilt his alliance, and war parties raided the settlements in Indiana and Illinois that spring; Americans blamed the British, who had supplied the nations from Amherstburg. When the United States declared war on Britain in June 1812, Tecumseh joined the British, and his warriors helped take Detroit in August. His war became part of the War of 1812, and it ended with his death at the Battle of the Thames on 5 October 1813. Harrison won the presidency in 1840 with the slogan “Tippecanoe and Tyler too”."
+    facts:
+      - [Battle of Tippecanoe, "7 November 1811"]
+      - [American losses, "62 killed, 126 wounded"]
+      - [Warriors’ losses, "36 known dead; estimates up to 50–65 killed"]
+      - [Death of Tecumseh, "5 October 1813"]
+    markers:
+      - kind: battle
+        side: us
+        name: Tippecanoe
+        date: 7 November 1811
+        text: Warriors attacked Harrison’s camp before dawn and were beaten off; Harrison then burned Prophetstown, about 3 km away.
+        lonlat: [-86.844, 40.507]
+      - kind: event
+        side: us
+        name: Fort Harrison
+        date: October 1811
+        text: Built on Harrison’s march up the Wabash.
+        lonlat: [-87.410, 39.500]
+      - kind: event
+        side: us
+        name: Vincennes
+        date: 26 September 1811
+        text: Harrison’s army set out from the territorial capital.
+        lonlat: [-87.530, 38.680]
+      - kind: event
+        side: wc
+        name: Amherstburg
+        date: 1812
+        text: The British post on the Detroit River where Tecumseh and his warriors joined the British in 1812.
+        lonlat: [-83.110, 42.104]
+    arrows:
+      - side: us
+        label: Harrison
+        phase: 1
+        via: [[-87.530, 38.680], [-87.450, 39.200], [-87.410, 39.500], [-87.250, 40.000], [-86.880, 40.490]]
+      - side: wc
+        phase: 2
+        via: [[-86.700, 40.900], [-85.800, 41.700], [-84.500, 42.000], [-83.200, 42.100]]

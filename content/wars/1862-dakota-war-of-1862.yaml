@@ -1,0 +1,221 @@
+id: dakota-war-of-1862
+name: Dakota War of 1862
+start: "1862-08-17"
+end: "1864-08"
+tier: B
+summary: "The war between the eastern Dakota (Santee Sioux) and the United States in the Minnesota River valley in August and September 1862, and its aftermath. Treaties in 1851 and 1858 had left the four eastern Dakota bands a narrow strip along the Minnesota River, and traders’ claims swallowed much of the payments promised for their land. After a crop failure and a hard winter, the 1862 payment was late, and agents and traders refused food on credit. On 17 August four young Dakota men killed five settlers at Acton; that night the Mdewakanton soldiers’ lodge persuaded Taoyateduta (Little Crow) to lead a war to drive the settlers from the valley. Dakota fighters attacked the Lower Sioux Agency on 18 August and killed hundreds of settlers in the following days, but failed to take Fort Ridgely and New Ulm. Colonel Henry Hastings Sibley’s volunteers defeated them at Wood Lake on 23 September, and on 26 September Dakota who had opposed the war handed over 269 captives at Camp Release. Counts of the settlers killed range from 358 to more than 600, besides 77 soldiers and 36 militiamen and armed civilians; Dakota losses are not known. A military commission sentenced 303 Dakota men to death; President Lincoln approved 39 sentences, and 38 men were hanged at Mankato on 26 December 1862, the largest mass execution in the history of the United States. About 1,600 Dakota non-combatants were held in a camp below Fort Snelling, where between about 100 and 300 died; in 1863 Congress annulled the treaties and the Dakota were expelled from Minnesota to Crow Creek on the Missouri. Expeditions under Sibley and Alfred Sully in 1863 and 1864 carried the war into Dakota Territory against the Dakota, Yanktonai and Lakota."
+countries: [us]
+sides:
+  - id: dak
+    name: Dakota (Taoyateduta (Little Crow) and the Mdewakanton and Wahpekute soldiers’ lodge)
+    polities: [dakota]
+    ink: brown
+    moves: Dakota moves
+    success: Dakota success
+  - id: us
+    name: United States (Minnesota volunteers and militia, US Army)
+    polities: [united-states]
+    ink: blue
+    moves: US moves
+    success: US success
+  - id: lak
+    name: Lakota and Yanktonai (1863–1864)
+    polities: [lakota]
+    ink: olive
+    moves: Lakota moves
+    success: Lakota success
+notes:
+  - "Many Dakota, especially among the Sisseton and Wahpeton of the upper agency, opposed the war; some sheltered settlers or led them to safety, and the peace party freed the captives at Camp Release. They were punished with the rest: of the eastern Dakota only 208 Mdewakanton who had helped settlers were allowed to stay in Minnesota."
+  - "The war is also called the U.S.–Dakota War, the Sioux Uprising and Little Crow’s War. Until the 1890s most published accounts were written by settlers; the testimony of Dakota participants, among them Taoyateduta’s son Wowinape and Big Eagle (Wamditanka), was gathered later."
+sources:
+  - title: Dakota War of 1862 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dakota_War_of_1862
+  - title: US–Dakota War of 1862 (MNopedia, Minnesota Historical Society)
+    url: https://www.mnopedia.org/event/us-dakota-war-1862
+  - title: Battle of Wood Lake (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Wood_Lake
+  - title: Battle of Birch Coulee (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Birch_Coulee
+  - title: Little Crow (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Little_Crow
+  - title: Battle of Whitestone Hill (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Whitestone_Hill
+  - title: Battle of Killdeer Mountain (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Killdeer_Mountain
+steps:
+  - title: Hunger and the attack on the agencies
+    date: 17–25 August 1862
+    when: "1862-08-18"
+    borders: "1862-08-18"
+    countries: [us]
+    body:
+      - "By the treaties of Traverse des Sioux and Mendota in 1851 the four eastern Dakota bands, the Mdewakanton and Wahpekute of the lower agency and the Wahpeton and Sisseton of the upper agency, gave up most of their land in Minnesota for a reservation along the Minnesota River and yearly payments, and in 1858 they lost the half of the strip north of the river. Traders took much of the money for debts they claimed, and agents pressed the Dakota to give up hunting for farming. In 1861 the crops failed and a hard winter followed. In the summer of 1862 the payment, delayed while Congress, at war with the Confederacy, debated paying it in paper money, had still not come. Asked to sell food on credit, the trader Andrew Myrick is reported to have said that if the Dakota were hungry they could eat grass."
+      - "On 17 August four young Dakota men of the Rice Creek village, on a hunting trip, quarrelled and killed five settlers at Acton. That night the soldiers’ lodge urged war while the settlers’ men were away fighting in the Civil War, and Taoyateduta (Little Crow), who had long counselled peace, agreed to lead it. On the morning of 18 August Dakota fighters attacked the Lower Sioux Agency, killing Myrick and other traders and employees, and ambushed a company of soldiers under Captain John Marsh at the Redwood Ferry, killing 24. Over the following days Dakota parties killed hundreds of settlers across the valley and took captive many women and children."
+      - "The Dakota attacked the town of New Ulm on 19 and 23 August and Fort Ridgely on 20 and 22 August. Artillery held the fort; at New Ulm the townspeople and volunteers under Charles Flandrau held the centre while much of the town burned, and on 25 August they evacuated it. Thousands of settlers fled the region. Many Sisseton and Wahpeton leaders refused to join the war, and some Dakota, among them John Other Day, led settlers to safety."
+    facts:
+      - [Killings at Acton, "17 August 1862"]
+      - [Attack on the Lower Sioux Agency, "18 August 1862"]
+      - [Attacks on New Ulm and Fort Ridgely, "19–23 August 1862"]
+    markers:
+      - kind: event
+        side: dak
+        name: Acton
+        date: 17 August 1862
+        text: Four young Dakota men killed five settlers here, and the soldiers’ lodge decided on war the same night.
+        lonlat: [-94.683, 45.133]
+      - kind: taken
+        side: dak
+        name: Lower Sioux Agency
+        date: 18 August 1862
+        text: The Dakota attacked the agency at dawn, killing the trader Andrew Myrick and others, and ambushed Captain Marsh’s company at the Redwood Ferry nearby, killing 24 soldiers.
+        lonlat: [-94.958, 44.526]
+        lp: l
+      - kind: held
+        side: us
+        name: Fort Ridgely
+        date: 20 and 22 August 1862
+        text: The fort’s small garrison and refugees beat off two Dakota attacks with artillery.
+        lonlat: [-94.732, 44.451]
+        lp: b
+      - kind: held
+        side: us
+        name: New Ulm
+        date: 19 and 23 August 1862
+        text: Defended by townspeople and volunteers under Charles Flandrau; much of the town burned, and it was evacuated on 25 August.
+        lonlat: [-94.469, 44.312]
+      - kind: event
+        name: Upper Sioux Agency
+        date: August 1862
+        text: Agency of the Sisseton and Wahpeton, many of whose leaders opposed the war. John Other Day led the agency’s white residents to safety from here.
+        lonlat: [-95.457, 44.735]
+    arrows:
+      - side: dak
+        phase: 1
+        via: [[-94.958, 44.526], [-94.75, 44.40], [-94.50, 44.32]]
+      - side: dak
+        phase: 1
+        via: [[-94.958, 44.526], [-94.85, 44.48], [-94.75, 44.455]]
+    areas:
+      - style: outline
+        side: dak
+        label: Dakota reservation along the Minnesota River, 1858 (approximate)
+        polygon: [[-96.45, 45.30], [-95.85, 44.98], [-95.30, 44.70], [-94.80, 44.48], [-94.62, 44.40], [-94.75, 44.30], [-95.15, 44.52], [-95.60, 44.80], [-96.15, 45.05], [-96.55, 45.20]]
+  - title: Wood Lake, Camp Release and Mankato
+    date: September – December 1862
+    when: "1862-09-23"
+    borders: "1862-09-23"
+    countries: [us]
+    body:
+      - "Governor Alexander Ramsey gave command to Henry Hastings Sibley, a former fur trader. On 2 September Dakota fighters surrounded a burial party at Birch Coulee and kept it pinned down for more than a day, killing 13 soldiers, and on 3–4 September they attacked Hutchinson and Forest City. On 9 September Ramsey told the legislature that the Dakota “must be exterminated or driven forever beyond the borders of the State.” Sibley advanced up the valley with about 1,600 men and on 23 September defeated the Dakota at Wood Lake."
+      - "On 26 September Dakota who had opposed the war handed over 269 captives, white and of mixed descent, at a camp Sibley named Camp Release, and many other Dakota surrendered there. Taoyateduta and some 150 to 250 followers fled west onto the plains. The war had killed 77 soldiers and 36 militiamen and armed civilians; counts of the settlers killed range from 358 to more than 600, and some older accounts give higher figures. How many Dakota died is not known; about 150 men were killed in battle."
+      - "A military commission of Minnesota officers tried several hundred Dakota men in less than six weeks, some cases in a few minutes, and sentenced 303 to death. President Abraham Lincoln reviewed the trial records and approved 39 sentences; one man was reprieved, and 38 were hanged together at Mankato on 26 December 1862. In November about 1,600 non-combatants, mostly women, children and old people, were marched to Fort Snelling, attacked by a mob at Henderson on the way, and held through the winter in a fenced camp below the fort, where measles and other diseases killed an estimated 102 to 300 of them."
+    facts:
+      - [Battle of Birch Coulee, "2–3 September 1862, Dakota success"]
+      - [Battle of Wood Lake, "23 September 1862, US victory"]
+      - [Captives released at Camp Release, "269"]
+      - [Executed at Mankato, "38, on 26 December 1862"]
+    markers:
+      - kind: battle
+        side: dak
+        name: Birch Coulee
+        date: 2–3 September 1862
+        text: Dakota fighters besieged a burial party of about 150 men for more than a day until Sibley relieved it; 13 soldiers were killed.
+        lonlat: [-94.975, 44.576]
+        lp: t
+      - kind: battle
+        side: us
+        name: Wood Lake
+        date: 23 September 1862
+        text: Sibley’s army defeated the Dakota here, ending the war in Minnesota.
+        lonlat: [-95.436, 44.701]
+        lp: b
+      - kind: event
+        side: us
+        name: Camp Release
+        date: 26 September 1862
+        text: Dakota of the peace party handed over 269 captives here, and many Dakota surrendered.
+        lonlat: [-95.747, 44.936]
+      - kind: event
+        side: us
+        name: Mankato
+        date: 26 December 1862
+        text: Thirty-eight Dakota men were hanged here, the largest mass execution in US history.
+        lonlat: [-94.014, 44.165]
+      - kind: event
+        side: us
+        name: Fort Snelling
+        date: November 1862 – May 1863
+        text: About 1,600 Dakota non-combatants were held in a camp below the fort, where an estimated 102 to 300 died.
+        lonlat: [-93.181, 44.893]
+    arrows:
+      - side: us
+        label: Sibley
+        phase: 1
+        via: [[-94.732, 44.451], [-95.00, 44.56], [-95.25, 44.65], [-95.42, 44.70]]
+      - side: dak
+        label: Taoyateduta
+        phase: 2
+        via: [[-95.75, 44.94], [-96.30, 45.30], [-97.10, 45.85]]
+      - side: us
+        label: Non-combatants to Fort Snelling
+        phase: 2
+        via: [[-94.96, 44.53], [-94.47, 44.31], [-93.91, 44.53], [-93.18, 44.89]]
+  - title: Exile and the expeditions onto the plains
+    date: 1863–1864
+    when: "1863-07"
+    borders: "1863-09-03"
+    countries: [us]
+    body:
+      - "In 1863 Congress abolished the Dakota and Ho-Chunk reservations in Minnesota and declared the Dakota treaties void, and the state offered a bounty for the scalps of Dakota men found within its borders. In May about 1,300 surviving Dakota from the Fort Snelling camp were crowded onto steamboats and taken to Crow Creek on the Missouri, a drought-stricken site where more than 200 died within six months, many of them children; the convicted men were held at Davenport, Iowa, until 1866, by which time a third of them had died. On 3 July 1863 Taoyateduta, who had returned to Minnesota, was shot by a settler near Hutchinson while picking berries with his son."
+      - "Sibley led an expedition into Dakota Territory in the summer of 1863 and fought the Dakota and their Lakota allies at Big Mound, Dead Buffalo Lake and Stony Lake in late July. On 3 September Alfred Sully’s cavalry attacked a large camp of Yanktonai, Dakota and Lakota at Whitestone Hill, killing by various estimates between about 150 and 300 people, many of them women and children, and destroying their food for the winter. In 1864 Sully defeated a gathering of Lakota, Yanktonai and Dakota at Killdeer Mountain on 28 July and fought his way through the Badlands of the Little Missouri in August."
+      - "The expeditions carried the war from the Dakota to the Lakota and led into the wars of the northern plains that followed. In 1866 the Dakota prisoners and the Crow Creek exiles were moved to the Santee Reservation in Nebraska; other Dakota went to reservations in Dakota Territory or to Canada, and a few families slowly returned to Minnesota. In 2012 the governor of Minnesota formally repudiated Ramsey’s call for extermination."
+    facts:
+      - [Removed to Crow Creek, "about 1,300 people, May 1863"]
+      - [Battle of Whitestone Hill, "3 September 1863"]
+      - [Battle of Killdeer Mountain, "28 July 1864"]
+    markers:
+      - kind: event
+        side: us
+        name: Crow Creek
+        date: May 1863
+        text: About 1,300 Dakota were brought here by steamboat; more than 200 died in the first six months.
+        lonlat: [-99.474, 44.129]
+        lp: b
+      - kind: battle
+        side: us
+        name: Big Mound
+        date: 24 July 1863
+        text: The first of three fights between Sibley’s expedition and the Dakota and Lakota in July 1863, followed by Dead Buffalo Lake and Stony Lake.
+        lonlat: [-99.629, 47.024]
+      - kind: toll
+        side: us
+        name: Whitestone Hill
+        date: 3 September 1863
+        text: Sully’s cavalry attacked a camp of Yanktonai, Dakota and Lakota families, killing by various estimates between about 150 and 300 people and burning their winter food.
+        lonlat: [-98.856, 46.170]
+      - kind: battle
+        side: us
+        name: Killdeer Mountain
+        date: 28 July 1864
+        text: Sully’s army drove a large gathering of Lakota, Yanktonai and Dakota from their camp below the mountain.
+        lonlat: [-102.918, 47.425]
+        lp: l
+      - kind: event
+        side: dak
+        name: Hutchinson
+        date: 3 July 1863
+        text: Taoyateduta was shot by a settler near here; the state paid a bounty for his scalp.
+        lonlat: [-94.37, 44.89]
+    arrows:
+      - side: us
+        label: Sibley, 1863
+        phase: 1
+        via: [[-95.10, 44.55], [-96.50, 45.60], [-98.20, 46.60], [-99.60, 47.00]]
+      - side: us
+        label: Sully, 1863
+        phase: 1
+        via: [[-99.80, 44.40], [-100.20, 45.20], [-99.60, 45.90], [-98.90, 46.15]]
+      - side: us
+        label: Sully, 1864
+        phase: 2
+        via: [[-100.35, 44.55], [-100.60, 45.60], [-101.70, 46.80], [-102.85, 47.40]]

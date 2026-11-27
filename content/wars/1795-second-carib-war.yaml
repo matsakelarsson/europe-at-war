@@ -1,0 +1,193 @@
+id: second-carib-war
+name: Second Carib War
+start: "1795-03-09"
+end: "1797-04-12"
+tier: B
+summary: "The last war of the Garifuna (the “Black Caribs”) for their land on Saint Vincent, fought in alliance with Revolutionary France, which ended in the deportation of almost the whole people. British planters had pressed ever further into the lands left to the Garifuna in 1773, and in March 1795, with the encouragement of Victor Hugues, the Republican commissioner on Guadeloupe, the Garifuna rose under Joseph Chatoyer and his brother Duvallé, joined by many of the island’s French inhabitants. They burned estates on both coasts and advanced on Kingstown, but on the night of 14 March 1795 Chatoyer was killed in a British attack on his camp on Dorsetshire Hill. The Garifuna and the French, reinforced from Guadeloupe, still held most of the island for more than a year, until General Sir Ralph Abercromby landed with a large army, stormed the Vigie and received the French surrender on 11 June 1796. The Garifuna fought on until October 1796. The British then shipped 4,195 Garifuna (by some counts about 5,000) to the small, dry island of Baliceaux, where about half of them died of disease and hunger; in 1797 the 2,248 survivors were carried to the island of Roatán off the coast of Central America, where they landed on 12 April 1797. A few hundred Kalinago and Garifuna remained on Saint Vincent, and in 1804 the colony took their remaining land. Historians such as Hilary Beckles describe the deportation as ethnic cleansing and genocide; Chatoyer is the national hero of Saint Vincent and the Grenadines."
+countries: [vc, gb, fr]
+sides:
+  - id: gb
+    name: Great Britain (the colony of Saint Vincent and the army of Sir Ralph Abercromby)
+    polities: [united-kingdom, british-west-indies]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: gar
+    name: Garifuna and Kalinago of Saint Vincent (Joseph Chatoyer, Duvallé)
+    polities: [garifuna, kalinago]
+    ink: teal
+    moves: Garifuna moves
+    success: Garifuna success
+  - id: fr
+    name: French Republic (Victor Hugues on Guadeloupe) and the French inhabitants of Saint Vincent
+    polities: [france, french-west-indies]
+    ink: blue
+    moves: French moves
+    success: French success
+notes:
+  - "The British side of the story was told by Sir William Young, the colony’s largest landowner, whose Account of the Black Charaibs (1795) was written to justify the deportation; Garifuna memory of the war and the exile is kept in oral tradition, songs and the annual pilgrimage to Baliceaux on National Heroes’ Day, 14 March."
+  - "Accounts differ on how Chatoyer died: by most he was killed by Major Alexander Leith in the night attack on Dorsetshire Hill, by others in a duel or by a shot in the fighting."
+  - The Garifuna’s life in Central America after 1797, on Roatán and along the coasts of Honduras, Guatemala, Belize and Nicaragua, belongs to the history of Central America.
+sources:
+  - title: Second Carib War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Carib_War
+  - title: Joseph Chatoyer (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Joseph_Chatoyer
+  - title: Baliceaux (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Baliceaux
+  - title: Portchester Castle (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Portchester_Castle
+  - title: Garifuna (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Garifuna
+  - title: The exile of the Garinagu (West India Committee, PDF)
+    url: https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2024/03/The-exile-of-the-Garinagu.pdf
+steps:
+  - title: The rising and the death of Chatoyer
+    date: "March 1795"
+    when: "1795-03"
+    borders: "1795-03-14"
+    countries: [vc, gb, fr]
+    body:
+      - "After the treaty of 1773, and again after the island returned to Britain in 1783, planters pushed into the lands promised to the Garifuna, and officials talked openly of removing them. The French Revolution gave them an ally: from 1794 Victor Hugues, the Republican commissioner who had driven the British out of Guadeloupe and abolished slavery there, sent agents, arms and proclamations to the British islands, and in March 1795 risings broke out on Grenada and Saint Vincent almost together."
+      - "On 9–10 March 1795 the Garifuna rose on the windward side under Duvallé and in the north-west under Chatoyer, burning estates and killing planters, and were joined by many French inhabitants. On 12 March Chatoyer issued a proclamation calling on the French of the island to join them and threatening those who sided with the British. The two forces converged on Dorsetshire Hill, which overlooks Kingstown, and the colonists braced for an attack on the town. On the night of 14 March a party of soldiers, militia and armed sailors climbed the hill and surprised the camp; Chatoyer was killed, by most accounts by Major Alexander Leith. The attack on Kingstown did not come, but the Garifuna and their French allies held almost the whole island outside the town."
+    facts:
+      - [Rising begins, "9–10 March 1795"]
+      - [Chatoyer’s proclamation, "12 March 1795"]
+      - [Chatoyer killed on Dorsetshire Hill, "night of 14 March 1795"]
+    markers:
+      - kind: capital
+        side: gb
+        name: Kingstown
+        date: "March 1795"
+        text: The capital, held by the British throughout the war.
+        lonlat: [-61.227, 13.155]
+        lp: l
+      - kind: battle
+        side: gb
+        name: Dorsetshire Hill
+        date: "14 March 1795"
+        text: Chatoyer and Duvallé’s forces camped on this hill above Kingstown; a British night attack killed Chatoyer. A monument to him stands here.
+        lonlat: [-61.212, 13.168]
+        lp: r
+      - kind: event
+        side: gar
+        name: Chateaubelair
+        date: "March 1795"
+        text: Chatoyer was joined here by his French supporters before marching south.
+        lonlat: [-61.245, 13.290]
+        lp: l
+      - kind: event
+        side: gar
+        name: Grand Sable
+        date: "March 1795"
+        text: The heart of the Garifuna lands on the windward coast, where Duvallé’s rising began.
+        lonlat: [-61.120, 13.280]
+        lp: r
+    arrows:
+      - side: gar
+        label: Chatoyer
+        phase: 1
+        via: [[-61.245, 13.285], [-61.258, 13.230], [-61.240, 13.190], [-61.216, 13.170]]
+      - side: gar
+        label: Duvallé
+        phase: 1
+        via: [[-61.120, 13.275], [-61.140, 13.220], [-61.175, 13.180], [-61.208, 13.168]]
+      - side: gb
+        phase: 2
+        via: [[-61.226, 13.157], [-61.220, 13.162], [-61.214, 13.167]]
+    areas:
+      - style: occupied
+        side: gar
+        label: Held by the Garifuna and the French, 1795–1796 (approximate)
+        polygon: [[-61.275, 13.330], [-61.240, 13.375], [-61.200, 13.385], [-61.150, 13.360], [-61.115, 13.300], [-61.120, 13.200], [-61.160, 13.150], [-61.195, 13.150], [-61.215, 13.180], [-61.250, 13.190], [-61.270, 13.240]]
+  - title: French reinforcements and Abercromby’s campaign
+    date: "1795 – October 1796"
+    when: "1796-06"
+    borders: "1796-06-11"
+    countries: [vc, lc, gb, fr]
+    body:
+      - "For more than a year the British held little more than Kingstown and a few posts, while the Garifuna and the French, reinforced by Republican troops from Guadeloupe and Saint Lucia, many of them formerly enslaved men freed by the Republic, fortified camps on the heights, among them the Vigie east of the town. British attempts to push into the interior failed, with heavy losses to fever as well as to the enemy. Saint Lucia and Grenada were also in revolt."
+      - "In 1796 Britain sent a large army to the Caribbean under General Sir Ralph Abercromby. After retaking Saint Lucia in May, he landed on Saint Vincent in June and on 10 June attacked the Vigie; the French surrendered the next day. Some 2,500 French prisoners, most of them Black and mulatto soldiers, were shipped to Britain and held at Portchester Castle; a plaque honouring them was unveiled there in October 2026. The Garifuna would not surrender, and British troops spent the summer burning their villages and provision grounds on the windward side, until hunger forced most of them to give themselves up by October 1796."
+    facts:
+      - [French surrender at the Vigie, "11 June 1796"]
+      - [French prisoners shipped to Britain, "about 2,800"]
+      - [Last Garifuna surrender, "October 1796"]
+    markers:
+      - kind: capital
+        side: gb
+        name: Kingstown
+        date: "1795–1796"
+        text: Saved more than once by the arrival of British reinforcements.
+        lonlat: [-61.227, 13.155]
+        lp: l
+      - kind: battle
+        side: gb
+        name: The Vigie
+        date: "10–11 June 1796"
+        text: Abercromby’s troops stormed the French and Garifuna works on this ridge east of Kingstown; the French surrendered the next day.
+        lonlat: [-61.180, 13.172]
+        lp: r
+      - kind: held
+        side: gar
+        name: Windward Garifuna villages
+        date: "June – October 1796"
+        text: The Garifuna held out here after the French surrender until hunger forced them to give up (location approximate).
+        lonlat: [-61.135, 13.255]
+        lp: r
+    arrows:
+      - side: gb
+        label: Abercromby
+        phase: 1
+        via: [[-61.30, 13.12], [-61.24, 13.145], [-61.20, 13.165], [-61.183, 13.171]]
+      - side: gb
+        label: British columns
+        phase: 2
+        via: [[-61.180, 13.175], [-61.150, 13.200], [-61.135, 13.250]]
+    areas:
+      - style: contested
+        side: gar
+        label: Held by the Garifuna after the French surrender, June–October 1796 (approximate)
+        polygon: [[-61.275, 13.330], [-61.240, 13.375], [-61.200, 13.385], [-61.150, 13.360], [-61.115, 13.300], [-61.125, 13.230], [-61.180, 13.230], [-61.260, 13.260]]
+  - title: Baliceaux and the deportation
+    date: "1796 – April 1797"
+    when: "1797"
+    borders: "1797-04-12"
+    countries: [vc, gb]
+    body:
+      - "The colonial authorities decided to remove the Garifuna from Saint Vincent altogether, separating those they classed as “Black Caribs” from the smaller number of “Yellow” Kalinago, who were allowed to stay. From the second half of 1796 the prisoners, 4,195 people by the British count, were taken to Baliceaux, a small, almost waterless island in the Grenadines south of Saint Vincent. Crowded in the open and short of food and water, they were struck by an epidemic; Garifuna tradition holds that the flour they were given had been poisoned. About half of them died there."
+      - "In March 1797 the 2,248 survivors were put aboard a convoy that sailed for Roatán, an island in the Bay of Honduras, where they landed on 12 April 1797. From there most of them soon crossed to the mainland, and their descendants live along the Caribbean coast of Honduras, Guatemala, Belize and Nicaragua and in the United States. On Saint Vincent, an act of 1804 took the remaining Carib lands for sale to planters, leaving the small Kalinago and Garifuna community at Sandy Bay and Morne Ronde in the north. Saint Vincent and the Grenadines made Chatoyer its first National Hero in 2002, and in 2025 the government acquired Baliceaux as a place of memory."
+    facts:
+      - [Deported to Baliceaux, "4,195 (some counts about 5,000)"]
+      - [Survivors carried to Roatán, "2,248"]
+      - [Landing on Roatán, "12 April 1797"]
+    markers:
+      - kind: toll
+        side: gb
+        name: Baliceaux
+        date: "1796–1797"
+        text: About half of the 4,195 Garifuna deported here died of disease and hunger; the island is a site of pilgrimage every March.
+        lonlat: [-61.146, 12.950]
+        lp: r
+      - kind: capital
+        side: gb
+        name: Kingstown
+        date: "1796"
+        text: Seat of the colonial government that ordered the deportation.
+        lonlat: [-61.227, 13.155]
+        lp: l
+      - kind: event
+        side: gar
+        name: Sandy Bay
+        date: "1797"
+        text: Where the Kalinago and the few Garifuna allowed to remain were later confined; it is still the main Garifuna and Kalinago community on the island.
+        lonlat: [-61.135, 13.355]
+        lp: r
+    arrows:
+      - side: gb
+        label: Garifuna deported to Baliceaux
+        via: [[-61.125, 13.260], [-61.100, 13.150], [-61.120, 13.030], [-61.142, 12.960]]
+    areas:
+      - style: lost
+        side: gar
+        label: Garifuna lands taken by the colony (approximate)
+        polygon: [[-61.275, 13.330], [-61.240, 13.375], [-61.200, 13.385], [-61.150, 13.360], [-61.115, 13.300], [-61.120, 13.200], [-61.160, 13.150], [-61.195, 13.150], [-61.215, 13.180], [-61.250, 13.190], [-61.270, 13.240]]

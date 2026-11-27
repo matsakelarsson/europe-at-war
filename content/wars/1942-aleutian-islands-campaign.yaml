@@ -1,0 +1,209 @@
+id: aleutian-islands-campaign
+name: Aleutian Islands campaign
+start: "1942-06-03"
+end: "1943-08-15"
+tier: B
+summary: "The fight for the western Aleutian Islands of Alaska, then a US territory, during the Second World War. In June 1942, as part of the operation against Midway, Japanese carrier aircraft bombed the US base at Dutch Harbor on 3 and 4 June, and Japanese troops landed unopposed on Kiska on 6 June and on Attu on 7 June, the only US soil in the Americas occupied by a foreign enemy during the war. The Attu villagers were taken to Japan as prisoners, and the US government removed nearly 900 Unangax̂ (Aleut) people from their island villages to camps in southeast Alaska, where many died. Through the following year US and Canadian aircraft bombed the islands from bases built westward along the chain, at Adak and Amchitka, and US ships and submarines cut the Japanese supply lines; after the naval Battle of the Komandorski Islands on 26 March 1943 Japan supplied the garrisons only by submarine. In May 1943 the US 7th Infantry Division retook Attu in nearly three weeks of fighting in fog, snow and mud, ending in a mass charge by the last Japanese troops on 29 May; nearly the whole garrison of about 2,600 died. In late July Japanese ships evacuated the 5,000-man garrison of Kiska under cover of fog, unseen, and when 34,000 US and Canadian troops landed there on 15 August they found the island empty. From Attu and Shemya US aircraft raided Japan’s Kuril Islands until the end of the war."
+countries: [us, ru, jp]
+sides:
+  - id: us
+    name: United States and Canada
+    polities: [united-states, canada]
+    ink: navy
+    moves: US and Canadian moves
+    success: US and Canadian success
+  - id: jp
+    name: Japan
+    polities: [japan]
+    ink: red
+    moves: Japanese moves
+    success: Japanese success
+notes:
+  - "Losses on Attu: US forces counted 549 killed and 1,148 wounded in battle and about 1,200 serious cold injuries; burial teams counted 2,351 Japanese dead, and only 28 Japanese were taken prisoner. At Kiska, US and Canadian troops shooting at each other in the fog killed 28 Americans and 4 Canadians, and 71 men died when the destroyer USS Abner Read struck a mine; with booby traps, accidents, disease and frostbite, the unopposed landing cost more than 300 casualties."
+  - "Of the 42 Attuans held in Hokkaido, about 40 per cent died, mainly of hunger and disease. In the US camps in southeast Alaska, about one in ten of the interned Unangax̂ died. The Attuans were not allowed to return to their island after the war. In 1988 the US Congress apologised and paid compensation to the survivors of the removal."
+sources:
+  - title: Aleutian Islands campaign (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Aleutian_Islands_campaign
+  - title: Battle of Attu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Attu
+  - title: Battle of the Komandorski Islands (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_the_Komandorski_Islands
+  - title: Operation Cottage (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Cottage
+  - title: Aleutian Islands World War II National Historic Area (US National Park Service)
+    url: https://www.nps.gov/aleu/index.htm
+  - title: History and culture of the Aleutian Islands in the war (US National Park Service)
+    url: https://www.nps.gov/aleu/learn/historyculture/index.htm
+steps:
+  - title: Dutch Harbor, Kiska and Attu
+    date: 3–7 June 1942
+    when: "1942-06-07"
+    borders: "1942-06-07"
+    countries: [us]
+    view: { center: [-177.0, 52.6], size: [1900, 950] }
+    body:
+      - "Japan’s plan to take Midway included a northern force under Vice Admiral Boshirō Hosogaya, with the light carriers Ryūjō and Jun’yō, to strike the Aleutians and seize islands at the western end of the chain. The aim was to guard the northern flank of Japan’s defensive perimeter and to keep the United States from using the islands as a route to Japan. The Americans had broken enough of the Japanese naval code to expect the attack, and had built air bases at Cold Bay and on Umnak, but fog hid the Japanese ships. On 3 June 1942 carrier aircraft bombed the naval base at Dutch Harbor on Unalaska, and they returned the next day to set oil tanks, a hospital and a barracks ship on fire. Bad weather and the American fighters from Umnak led the Japanese to cancel a planned landing on Adak."
+      - "On 6 June about 500 Japanese naval troops landed on Kiska and captured the ten-man US Navy weather station; on 7 June an army battalion landed on Attu, the westernmost island, and took the village at Chichagof Harbor. Its 42 Unangax̂ (Aleut) inhabitants and the teacher Etta Jones were taken prisoner; her husband, the radio operator Charles Foster Jones, died the next day; the villagers said he was killed by the soldiers, while Japanese accounts spoke of suicide. In September the Attuans were shipped to Otaru in Hokkaido. The US government removed 881 Unangax̂ from Atka, the Pribilof Islands and other villages east of the Japanese-held islands; on 12 June Navy crews burned the village of Atka so that it could not be used by the enemy. The evacuees, US citizens, were held for up to three years in abandoned canneries, an old mine camp and a work camp in southeast Alaska, while their white neighbours were allowed to stay."
+    facts:
+      - [Air raids on Dutch Harbor, "3–4 June 1942"]
+      - [Japanese landings, "Kiska 6 June, Attu 7 June 1942"]
+      - [Unangax̂ removed to southeast Alaska, "881"]
+    markers:
+      - kind: air
+        side: jp
+        name: Dutch Harbor
+        date: 3–4 June 1942
+        text: Carrier aircraft from the Ryūjō and Jun’yō bombed the naval base twice, setting oil tanks and a barracks ship on fire.
+        lonlat: [-166.540, 53.895]
+      - kind: taken
+        side: jp
+        name: Kiska
+        date: 6 June 1942
+        text: About 500 Japanese naval troops landed and captured the US Navy weather station; the garrison grew to more than 5,000.
+        lonlat: [177.460, 51.964]
+      - kind: taken
+        side: jp
+        name: Attu
+        date: 7 June 1942
+        text: Landed unopposed and took the Unangax̂ village at Chichagof Harbor; the villagers and their teacher were later shipped to Hokkaido as prisoners.
+        lonlat: [173.245, 52.930]
+        lp: t
+      - kind: event
+        side: us
+        name: Atka
+        date: 12 June 1942
+        text: After the Unangax̂ villagers were evacuated, US Navy crews burned the village so that it could not be used by the Japanese.
+        lonlat: [-174.213, 52.199]
+        lp: b
+    arrows:
+      - side: jp
+        label: Carrier strike on Dutch Harbor
+        phase: 1
+        via: [[178.0, 47.5], [-172.5, 50.5], [-167.8, 53.0]]
+      - side: jp
+        label: Landing force for Kiska
+        phase: 2
+        via: [[170.0, 48.5], [175.0, 50.4], [177.3, 51.75]]
+      - side: jp
+        label: Landing force for Attu
+        phase: 2
+        via: [[166.5, 50.0], [170.5, 51.9], [173.1, 52.8]]
+    areas:
+      - style: occupied
+        side: jp
+        label: Occupied by Japan
+        polygons:
+          - [[172.40, 52.98], [172.90, 53.03], [173.95, 52.92], [173.90, 52.76], [173.10, 52.70], [172.40, 52.80]]
+          - [[177.15, 52.05], [177.55, 52.15], [177.70, 52.00], [177.60, 51.78], [177.30, 51.76], [177.15, 51.90]]
+  - title: Bombers, blockade and the Komandorski Islands
+    date: June 1942 – March 1943
+    when: "1943-03-26"
+    borders: "1943-03-26"
+    countries: [us, ru]
+    view: { center: [175.5, 52.5], size: [2300, 1000] }
+    body:
+      - "Fog, rain and the williwaw winds of the Aleutians made flying dangerous and grounded aircraft for days at a time; more planes were lost to the weather than to the enemy. The US Eleventh Air Force and Royal Canadian Air Force squadrons bombed Kiska whenever the weather allowed, at first from Umnak, some 1,000 km away, and US submarines attacked the ships supplying the garrisons; on 5 July 1942 the submarine Growler sank a destroyer off Kiska. To bring their bombers closer, the Americans built airfields westward along the chain, landing on Adak on 30 August 1942 and on Amchitka, about 130 km from Kiska, in January 1943. In July 1942 they also salvaged a nearly intact Zero fighter that had crashed on Akutan, and test-flying it helped American pilots learn how to fight it."
+      - "To cut Japanese supplies completely, a small US force of cruisers and destroyers under Rear Admiral Charles McMorris patrolled west of Attu. On 26 March 1943, near the Soviet Komandorski Islands, it met a Japanese convoy escorted by Hosogaya’s much stronger force of four cruisers and four destroyers. In a gunnery duel of more than three hours, with no aircraft on either side, the US heavy cruiser Salt Lake City was crippled, but Hosogaya, fearing an air attack, turned back without pressing his advantage. Japan never again tried to supply the islands by surface ship."
+    facts:
+      - [US landing on Adak, "30 August 1942"]
+      - [US landing on Amchitka, "January 1943"]
+      - [Battle of the Komandorski Islands, "26 March 1943"]
+    markers:
+      - kind: held
+        side: us
+        name: Adak
+        date: 30 August 1942
+        text: US troops landed unopposed and built an airfield in less than two weeks, bringing bombers within 400 km of Kiska.
+        lonlat: [-176.640, 51.880]
+      - kind: held
+        side: us
+        name: Amchitka
+        date: January 1943
+        text: The closest US base to Kiska, about 130 km away; fighters flew from its airstrip from February 1943.
+        lonlat: [179.250, 51.450]
+        lp: b
+      - kind: air
+        side: us
+        name: Kiska
+        date: June 1942 – August 1943
+        text: Bombed by US and Canadian aircraft whenever the weather allowed; several Japanese ships were sunk in the harbour.
+        lonlat: [177.460, 51.964]
+        lp: l
+      - kind: naval
+        side: us
+        name: Battle of the Komandorski Islands
+        date: 26 March 1943
+        text: A US force of two cruisers and four destroyers turned back a Japanese supply convoy and its stronger escort; after this Japan supplied Attu and Kiska only by submarine.
+        lonlat: [168.213, 53.099]
+        lp: t
+    arrows:
+      - side: us
+        label: US landing on Adak
+        phase: 1
+        via: [[-168.0, 53.2], [-172.5, 52.3], [-176.5, 51.9]]
+      - side: us
+        label: US landing on Amchitka
+        phase: 2
+        via: [[-176.6, 51.8], [-178.8, 51.5], [179.2, 51.45]]
+      - side: jp
+        label: Supply convoy, turned back
+        phase: 3
+        via: [[161.5, 51.4], [165.0, 52.6], [168.0, 53.1]]
+    areas:
+      - style: occupied
+        side: jp
+        label: Occupied by Japan
+        polygons:
+          - [[172.40, 52.98], [172.90, 53.03], [173.95, 52.92], [173.90, 52.76], [173.10, 52.70], [172.40, 52.80]]
+          - [[177.15, 52.05], [177.55, 52.15], [177.70, 52.00], [177.60, 51.78], [177.30, 51.76], [177.15, 51.90]]
+  - title: Attu retaken, Kiska abandoned
+    date: May–August 1943
+    when: "1943-05-29"
+    borders: "1943-08-15"
+    countries: [us]
+    view: { center: [175.4, 52.4], size: [640, 360] }
+    body:
+      - "On 11 May 1943 the US 7th Infantry Division, trained for the desert, landed on Attu at Holtz Bay in the north and Massacre Bay in the south. Colonel Yasuyo Yamasaki had pulled his 2,600 men back from the beaches to the ridges between them, and the Americans had to fight uphill through fog, snow and mud, without proper cold-weather boots and clothing. Frostbite and trench foot caused almost as many casualties as Japanese fire. By late May the garrison was trapped around Chichagof Harbor. Before dawn on 29 May Yamasaki led his remaining men in a charge that broke through the American lines to the rear-area camps at Engineer Hill, where it was stopped in hand-to-hand fighting; many of the survivors then killed themselves with grenades. Burial teams counted 2,351 Japanese dead; 28 were taken prisoner. Small groups held out in the hills into the summer."
+      - "Kiska, with more than 5,000 men, was now cut off. On the foggy night of 28–29 July a Japanese force under Rear Admiral Masatomi Kimura slipped through the US blockade while the American ships were refuelling, embarked the whole garrison in less than an hour and took it to the Kuril Islands. Unaware, US aircraft and ships went on bombing the island for two weeks. On 15 August 34,426 US and Canadian troops, among them about 5,300 Canadians and the Canadian-American First Special Service Force, landed on Kiska and found it empty; more than 300 were killed or wounded by friendly fire, mines and booby traps. US aircraft based on Attu and Shemya raided the Japanese bases at Paramushir in the Kurils until 1945. The interned Unangax̂ were allowed home only in 1944 and 1945, to find their houses looted and churches damaged."
+    facts:
+      - [US landings on Attu, "11 May 1943"]
+      - [Japanese final charge, "29 May 1943"]
+      - [Japanese evacuation of Kiska, "28–29 July 1943"]
+      - [US and Canadian landing on Kiska, "15 August 1943"]
+    markers:
+      - kind: battle
+        side: us
+        name: Engineer Hill
+        date: 29 May 1943
+        text: The US landings at Holtz Bay and Massacre Bay on 11 May led to three weeks of fighting; on 29 May the last Japanese charge broke through to the American rear and was stopped here, and nearly all the attackers died, many by their own hand.
+        lonlat: [173.200, 52.885]
+        lp: r
+      - kind: taken
+        side: us
+        name: Kiska
+        date: 15 August 1943
+        text: The Japanese garrison had left unseen on 28–29 July; US and Canadian troops landed on an empty island and still suffered more than 300 casualties from friendly fire, mines and booby traps.
+        lonlat: [177.460, 51.964]
+        lp: t
+    arrows:
+      - side: us
+        label: US landings on Attu
+        phase: 1
+        via: [[175.6, 52.0], [174.4, 52.45], [173.35, 52.8]]
+      - side: jp
+        label: Kiska evacuated
+        phase: 2
+        via: [[177.5, 51.95], [176.0, 51.3], [173.0, 50.8]]
+      - side: us
+        label: US and Canadian landing on Kiska
+        phase: 3
+        via: [[179.7, 51.15], [178.6, 51.5], [177.65, 51.9]]
+    areas:
+      - style: contested
+        side: us
+        label: Fighting on Attu, May 1943
+        polygon: [[172.40, 52.98], [172.90, 53.03], [173.95, 52.92], [173.90, 52.76], [173.10, 52.70], [172.40, 52.80]]
+      - style: occupied
+        side: jp
+        label: Held by Japan until July 1943
+        polygon: [[177.15, 52.05], [177.55, 52.15], [177.70, 52.00], [177.60, 51.78], [177.30, 51.76], [177.15, 51.90]]

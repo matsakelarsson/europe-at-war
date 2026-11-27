@@ -1,0 +1,169 @@
+id: dominican-restoration-war
+name: Dominican Restoration War
+start: "1863-08-16"
+end: "1865-07-11"
+tier: B
+summary: "The war in which Dominicans ended Spain’s rule over their country, which President Pedro Santana had handed back to Spain in 1861. Spanish officials, taxes, requisitions and a tobacco monopoly, church demands and rumours that slavery would return turned much of the population against the annexation. On 16 August 1863 Santiago Rodríguez and a band of exiles from Haiti raised the Dominican flag on the hill of Capotillo, near Dajabón; the Cibao rose, the Spanish garrison was driven out of Santiago, and on 14 September a provisional government there proclaimed the republic restored. Spain sent tens of thousands of soldiers from Cuba, Puerto Rico and Spain, who held the capital and the ports and retook the south-west, but they could not reconquer the Cibao, guerrillas cut their roads, and yellow fever and other diseases killed far more of them than the fighting did. With the war unpopular in Spain and the Union winning the American Civil War, Queen Isabella II annulled the annexation on 3 March 1865, and the last Spanish troops left in July. Spain had lost more than 10,000 men, most of them to disease."
+countries: [do, es, ht]
+sides:
+  - id: res
+    name: Dominican restorationists (the provisional government of Santiago; Santiago Rodríguez, José Antonio Salcedo, Gaspar Polanco, Gregorio Luperón, José María Cabral)
+    polities: [dominican-restorationists]
+    ink: blue
+    moves: Restorationist moves
+    success: Restorationist success
+  - id: es
+    name: Spain and the Dominican annexationists (Pedro Santana’s reserves)
+    polities: [spain, dominican-republic]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+notes:
+  - "From 1861 to 1865 the base map shows the country as the Spanish Captaincy General of Santo Domingo; the restorationist government is drawn as an area. Many Dominicans served on the Spanish side, in Santana’s reserves and other units, and some, such as the young Máximo Gómez, left with the Spanish army in 1865."
+  - "Haiti, whose president Fabre Geffrard was alarmed by Spain’s claims to border lands and by its presence on the island, let the rebels use Haitian territory and sold them arms, while officially neutral."
+  - The casualty figures come mainly from Spanish reports and contemporary newspapers; Dominican losses are not known.
+sources:
+  - title: Dominican Restoration War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dominican_Restoration_War
+  - title: History of the Dominican Republic (Encyclopaedia Britannica)
+    url: https://www.britannica.com/topic/history-of-Dominican-Republic
+  - title: Pedro Santana (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pedro_Santana
+  - title: Francisco del Rosario Sánchez (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Francisco_del_Rosario_S%C3%A1nchez
+  - title: Gregorio Luperón (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Gregorio_Luper%C3%B3n
+steps:
+  - title: Annexation and the Grito de Capotillo
+    date: 1861 – September 1863
+    when: "1863-08-16"
+    borders: "1863-09-14"
+    countries: [do, es, ht]
+    body:
+      - On 18 March 1861 President Pedro Santana proclaimed the return of the Dominican Republic to Spain, which hoped to regain influence in the Americas while the United States slid into civil war, and Santana became captain general. A rising at Moca was crushed in May, and Francisco del Rosario Sánchez, one of the founders of the republic, who crossed from Haiti with a band of exiles, was captured and shot at El Cercado on 4 July 1861. Spanish rule soon alienated many Dominicans. Officials from Spain and Cuba took the posts, the army requisitioned animals without pay, the new archbishop pressed couples to marry in church, new tariffs and a tobacco monopoly hurt the merchants and farmers of the Cibao, and rumours spread that slavery, still legal in Spanish Cuba and Puerto Rico, would return. Santana himself resigned in 1862.
+      - On 16 August 1863 a band led by Santiago Rodríguez crossed from Haiti and raised the Dominican flag on the hill of Capotillo, near Dajabón, the Grito de Capotillo. Town after town in the Cibao rose. In early September some 6,000 insurgents besieged the Spanish garrison of about 800 men in Fort San Luis at Santiago, much of the town burned, and on 13 September the garrison and its reinforcements broke out and retreated to Puerto Plata, harried all the way. On 14 September the rebels set up a provisional government in Santiago, with José Antonio Salcedo as president, and declared the republic restored.
+    facts:
+      - [Annexation to Spain, "18 March 1861"]
+      - [Grito de Capotillo, "16 August 1863"]
+      - [Provisional government in Santiago, "14 September 1863"]
+    markers:
+      - kind: event
+        side: es
+        name: El Cercado
+        date: 4 July 1861
+        text: Francisco del Rosario Sánchez and his companions were shot here after their failed invasion from Haiti.
+        lonlat: [-71.52, 18.72]
+      - kind: event
+        side: res
+        name: Capotillo
+        date: 16 August 1863
+        text: Santiago Rodríguez’s band raised the Dominican flag on the hill, beginning the war (marker approximate).
+        lonlat: [-71.63, 19.41]
+      - kind: taken
+        side: res
+        name: Santiago
+        date: September 1863
+        text: The insurgents besieged the Spanish in Fort San Luis; the garrison broke out on 13 September, and the provisional government was set up here the next day.
+        lonlat: [-70.697, 19.451]
+        lp: b
+      - kind: held
+        side: es
+        name: Puerto Plata
+        date: October 1863
+        text: The Spanish held the fort, while the town was sacked and fought over.
+        lonlat: [-70.688, 19.793]
+      - kind: capital
+        side: es
+        name: Santo Domingo
+        date: 1861–1865
+        text: Seat of the Spanish captain general.
+        lonlat: [-69.893, 18.473]
+    arrows:
+      - side: res
+        label: Santiago Rodríguez
+        via: [[-71.63, 19.41], [-71.30, 19.50], [-70.95, 19.50], [-70.72, 19.455]]
+      - side: es
+        label: Spanish retreat
+        via: [[-70.70, 19.47], [-70.66, 19.62], [-70.69, 19.78]]
+    areas:
+      - style: occupied
+        side: res
+        label: Held by the restorationists, autumn 1863 (approximate)
+        atoms: [DO-05, DO-06, DO-09, DO-13, DO-14, DO-15, DO-19, DO-24, DO-25, DO-26, DO-27, DO-28]
+  - title: Guerrilla war and yellow fever
+    date: October 1863 – 1864
+    when: "1864-03"
+    borders: "1864-06-01"
+    countries: [do, es]
+    body:
+      - Spain sent reinforcements from Cuba, Puerto Rico and Spain; by the end of the war it had committed some 30,000 to 50,000 soldiers (estimates differ), with about 12,000 Dominican auxiliaries, against perhaps 15,000 restorationists. Spanish troops retook Azua and the towns of the south-west in December 1863, but the rebellion spread to the south and east, guerrillas held San Cristóbal and cut the road from the capital, and Santana, commanding the Dominican reserves, failed to force his way into the Cibao. In March 1864 the captain general, José de la Gándara, relieved him for disobeying orders; Santana died in June before he could be court-martialled. In May 1864 La Gándara took Monte Cristi from the sea, but the Spanish advance inland towards Santiago was halted.
+      - Yellow fever, malaria and dysentery killed far more Spanish soldiers than the fighting; by March 1864 Spain counted about 1,000 killed in action and 9,000 dead of disease. The restorationists bought arms by trading tobacco in the Turks Islands and in Haiti, and fought as guerrillas under leaders such as Gregorio Luperón, Gaspar Polanco, Pedro Antonio Pimentel and Benito Monción; in the south José María Cabral beat the Spanish at Neiba on 4 December 1864. In the rebel camp Polanco overthrew Salcedo in October 1864, accusing him of military failures and of wanting to bring back the former president Buenaventura Báez, and had him shot.
+    facts:
+      - [Spanish troops committed, "about 30,000–50,000, with some 12,000 Dominican auxiliaries"]
+      - [Spanish dead by March 1864, "about 1,000 in action and 9,000 of disease"]
+      - [Battle of Neiba, "4 December 1864"]
+    markers:
+      - kind: taken
+        side: es
+        name: Azua
+        date: December 1863
+        text: Retaken by the Spanish after two months of fighting.
+        lonlat: [-70.735, 18.453]
+      - kind: held
+        side: res
+        name: San Cristóbal
+        date: December 1863
+        text: Guerrillas held the town and cut the road from Santo Domingo to the south-west.
+        lonlat: [-70.105, 18.416]
+      - kind: taken
+        side: es
+        name: Monte Cristi
+        date: May 1864
+        text: La Gándara took the fortified port from the sea.
+        lonlat: [-71.645, 19.850]
+      - kind: battle
+        side: res
+        name: Neiba
+        date: 4 December 1864
+        text: José María Cabral defeated the Spanish in the first restorationist victory in a pitched battle.
+        lonlat: [-71.42, 18.48]
+      - kind: held
+        side: es
+        name: Puerto Plata
+        date: "1864"
+        text: The Spanish beat off restorationist attacks on the fort.
+        lonlat: [-70.688, 19.793]
+    arrows:
+      - side: es
+        label: La Gándara
+        via: [[-71.645, 19.84], [-71.45, 19.70], [-71.30, 19.64]]
+    areas:
+      - style: occupied
+        side: res
+        label: Held by the restorationists, mid-1864 (approximate)
+        atoms: [DO-05, DO-06, DO-09, DO-13, DO-14, DO-19, DO-24, DO-25, DO-26, DO-27, DO-28]
+  - title: Spain withdraws
+    date: January – July 1865
+    when: "1865-07-11"
+    borders: "1865-07-11"
+    countries: [do, es]
+    body:
+      - In January 1865 a junta under Benigno Filomeno de Rojas, with Gregorio Luperón as vice-president, replaced Polanco, and in March Pedro Antonio Pimentel became president under a new constitution. In Spain the war had become costly and unpopular, and with the Union winning the American Civil War the Cortes feared a quarrel with the United States. On 3 March 1865 Queen Isabella II signed the annulment of the annexation, and the last Spanish troops left in July, taking with them many of the Dominicans who had served Spain.
+      - Spain had spent more than 33 million pesos and lost over 10,000 men, most of them to disease. The war is remembered in the Dominican Republic as the Restoration of the republic; 16 August is a national holiday and the day on which presidents take office. It also showed Cubans and Puerto Ricans that Spain could be beaten, and the Cuban Ten Years’ War began in 1868, with veterans of the Dominican war, among them Máximo Gómez, who had fought for Spain, as its commanders.
+    facts:
+      - [Annexation annulled, "3 March 1865"]
+      - [Last Spanish troops leave, "July 1865"]
+      - [Spanish losses, "more than 10,000 dead, mostly of disease"]
+    markers:
+      - kind: event
+        side: res
+        name: Santo Domingo
+        date: July 1865
+        text: The last Spanish troops embarked here.
+        lonlat: [-69.893, 18.473]
+      - kind: capital
+        side: res
+        name: Santiago
+        date: 1863–1865
+        text: Seat of the restorationist government.
+        lonlat: [-70.697, 19.451]

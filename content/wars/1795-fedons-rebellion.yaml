@@ -1,0 +1,146 @@
+id: fedons-rebellion
+name: Fédon’s Rebellion
+start: "1795-03-02"
+end: "1796-06-19"
+tier: B
+summary: "The rising of 1795–1796 against British rule in Grenada, led by Julien Fédon, a planter of mixed African and French descent who owned the Belvidere estate in the mountains of the interior. Grenada had been French until 1763 and again in 1779–1783, and its French-speaking Catholic and free coloured inhabitants suffered under British laws that excluded them from office and restricted their rights. Encouraged and armed by Victor Hugues, the commissioner of the French Republic in Guadeloupe, which had abolished slavery in 1794, Fédon and his followers attacked Grenville and Gouyave on the night of 2 March 1795 and captured the lieutenant governor, Ninian Home. Thousands of enslaved people joined them; the historian Kit Candlin estimates about 12,500, half of the enslaved population. After a failed British attack on his fortified camp on 8 April, Fédon had most of his hostages killed, among them Home. For more than a year the insurgents held almost all the island except St George’s, beating off attacks on Belvidere and taking the British posts on the east coast in early 1796. British reinforcements under Brigadier-General Oliver Nicolls began to turn the war in March 1796, and when Sir Ralph Abercromby’s expedition arrived in June, British troops stormed Fédon’s camp on 19 June 1796. Fédon was never found. Dozens of leaders were executed after summary trials, and hundreds more were condemned; about 7,000 enslaved people, a quarter of the island’s enslaved population, died in the revolt, and damage was put at £2.5 million."
+countries: [gd, gb, fr]
+sides:
+  - id: fed
+    name: Fédon’s insurgents, with the French Republic in Guadeloupe
+    polities: [fedon-insurgents, france]
+    ink: purple
+    moves: Insurgent moves
+    success: Insurgent success
+  - id: brit
+    name: British Grenada (British troops, militia and Black rangers)
+    polities: [british-west-indies, united-kingdom]
+    ink: red
+    moves: British moves
+    success: British success
+notes:
+  - Fédon held a commission as a general of the French Republic, and the insurgents fought under the French tricolour, but most of them were Grenadians, free people of colour and enslaved and formerly enslaved people. Historians differ on whether Fédon aimed at a French Grenada, at a republic ruled by its free coloured people or at general emancipation.
+  - The number of hostages killed on 8 April 1795 is given as 44 of 47 in the modern account summarised by Wikipedia, and as about 48 to 51 in older ones. Figures for the dead of the whole revolt are estimates.
+sources:
+  - title: Fédon’s rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/F%C3%A9don%27s_rebellion
+  - title: Julien Fédon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Julien_F%C3%A9don
+  - title: "‘Excessive severity’: Treason and the Grenadian Rebellion of 1795 (The National Archives blog, UK)"
+    url: https://blog.nationalarchives.gov.uk/excessive-severity-treason-and-the-grenadian-rebellion-of-1795
+  - title: The Fédons of Grenada, 1763–1814 (Curtis Jacobs, University of the West Indies)
+    url: https://global.uwi.edu/sites/default/files/bnccde/grenada/conference/papers/Jacobsc.html
+  - title: Ninian Home (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ninian_Home
+steps:
+  - title: The rising of 2 March 1795
+    date: March – April 1795
+    when: "1795-03-02"
+    borders: "1795-03-03"
+    countries: [gd, gb, fr]
+    view:
+      center: [-61.69, 12.12]
+      size: [60, 60]
+    body:
+      - "After the British took Grenada from France in 1763, and again after it was returned to Britain in 1783, the island’s French Catholic planters and its many free people of colour lost much of their land and their rights to British settlers and laws. The French Revolution and the abolition of slavery by the National Convention in 1794 gave them a new ally: Victor Hugues, who retook Guadeloupe from the British in 1794, sent arms, officers and commissions to rebels in Grenada, Saint Vincent and Saint Lucia. In Grenada he named Julien Fédon commander of the insurgents."
+      - On the night of 2 March 1795 Fédon’s men struck two towns at once. At Grenville (La Baye) on the east coast they killed about 20 British inhabitants in the market place; at Gouyave (Charlotte Town) on the west coast no one died. The lieutenant governor, Ninian Home, was captured with others on his way back to St George’s, and within days some forty prisoners were held at Belvidere. Enslaved people left the estates in large numbers to join the insurgents, who promised them freedom, and the British held little outside St George’s.
+      - Fédon fortified Belvidere, high on a steep mountain in the centre of the island, in a series of redoubts called Camp Liberté. The British failed to take it in March, and on 8 April another attack, in which a free coloured militia under Louis La Grenade fought on the British side, was beaten off; Fédon’s brother was killed. That day Fédon had his hostages killed, 44 of 47 according to one count, Home among them.
+    facts:
+      - [Rising begins, "night of 2 March 1795"]
+      - [Hostages killed at Belvidere, "8 April 1795"]
+      - [Enslaved people who joined, "about 12,500 (Candlin’s estimate)"]
+    markers:
+      - kind: taken
+        side: fed
+        name: Grenville (La Baye)
+        date: 2–3 March 1795
+        text: Taken by the insurgents in a night attack in which about 20 British inhabitants were killed.
+        lonlat: [-61.623, 12.123]
+        lp: r
+      - kind: taken
+        side: fed
+        name: Gouyave (Charlotte Town)
+        date: 2–3 March 1795
+        text: Taken at the same time as Grenville, without bloodshed.
+        lonlat: [-61.730, 12.167]
+        lp: l
+      - kind: held
+        side: fed
+        name: Belvidere (Camp Liberté)
+        date: March 1795 – June 1796
+        text: Fédon’s fortified camp on his estate, where the hostages were held and, on 8 April 1795, most of them were killed.
+        lonlat: [-61.690, 12.131]
+        lp: t
+      - kind: held
+        side: brit
+        name: St George’s
+        date: 1795–1796
+        text: The capital, held by the British throughout the rising.
+        lonlat: [-61.752, 12.054]
+        lp: b
+    arrows:
+      - side: fed
+        phase: 1
+        via: [[-61.69, 12.13], [-61.66, 12.13], [-61.63, 12.124]]
+      - side: fed
+        phase: 1
+        via: [[-61.69, 12.135], [-61.71, 12.15], [-61.726, 12.164]]
+    areas:
+      - style: occupied
+        side: fed
+        label: Held by the insurgents for most of 1795 (approximate)
+        atoms: [GD-01, GD-04, GD-05, GD-06]
+  - title: Camp Liberté falls
+    date: January – June 1796
+    when: "1796-06-19"
+    borders: "1796-06-19"
+    countries: [gd, gb, fr]
+    view:
+      center: [-61.69, 12.12]
+      size: [60, 60]
+    body:
+      - Through 1795 yellow fever killed British soldiers faster than reinforcements arrived, and a night attack on Belvidere in May failed. Early in 1796 the insurgents, with officers and men sent from Guadeloupe, besieged Grenville and took the British posts on the east coast; in late February the garrison of Pilot Hill, cut off from water and supplies, slipped away past their lines. In March Brigadier-General Oliver Nicolls, with fresh regiments, attacked around Grenville and Marquis and drove the insurgents back into the mountains around Grand Étang and Belvidere, and in May he retook Pilot Hill and Post Royal.
+      - In June Sir Ralph Abercromby’s expedition gave the British a great superiority in numbers. About 200 French republican soldiers surrendered at Gouyave on 10 June, and Abercromby refused Fédon’s offer to give up if he and his officers could go to Guadeloupe. On the night of 18–19 June British troops climbed the mountain and stormed the redoubts of Camp Liberté, and the insurgent army broke up; Fédon’s wife, Marie Rose, was probably killed. Fédon was last seen on 27 June. A reward for his capture was never claimed, and his fate is unknown.
+      - The colonial government condemned some 400 people by an act of attainder. Dozens of leaders and free men of colour were hanged after summary trials, many enslaved rebels were executed without trial, and about 500 were sold off the island. About 7,000 enslaved people died in the revolt, and Candlin estimates that some 1,000 whites and free people of colour died. Fédon’s estates were confiscated, and the French-speaking planter class lost what was left of its influence.
+    facts:
+      - [Camp Liberté stormed, "19 June 1796"]
+      - [Condemned by attainder, "about 400"]
+      - [Enslaved people who died in the revolt, "about 7,000"]
+    markers:
+      - kind: battle
+        side: brit
+        name: Belvidere (Camp Liberté)
+        date: 19 June 1796
+        text: British troops climbed the mountain at night and stormed Fédon’s redoubts; the insurgent army broke up.
+        lonlat: [-61.690, 12.131]
+        lp: t
+      - kind: taken
+        side: brit
+        name: Gouyave
+        date: 10 June 1796
+        text: About 200 French republican soldiers surrendered here.
+        lonlat: [-61.730, 12.167]
+        lp: l
+      - kind: battle
+        side: brit
+        name: Marquis
+        date: March 1796
+        text: Nicolls drove the insurgents from the east coast around Grenville and Marquis back into the mountains.
+        lonlat: [-61.622, 12.098]
+        lp: r
+      - kind: held
+        side: brit
+        name: St George’s
+        date: "1796"
+        text: The British capital and base.
+        lonlat: [-61.752, 12.054]
+        lp: b
+    arrows:
+      - side: brit
+        label: Nicolls
+        phase: 1
+        via: [[-61.62, 12.09], [-61.65, 12.11], [-61.68, 12.125]]
+      - side: brit
+        label: Abercromby
+        phase: 2
+        via: [[-61.74, 12.06], [-61.72, 12.09], [-61.695, 12.125]]

@@ -1,0 +1,378 @@
+id: sinhalese-portuguese-war
+name: Sinhalese–Portuguese War
+start: "1527"
+end: "1658"
+tier: A
+summary: "More than a century of wars between the Portuguese and the Sinhalese kingdoms of Sri Lanka. The Portuguese, who had a fort at Colombo from 1518, came in as protectors of the kingdom of Kotte against Mayadunne of Sitawaka, one of the three kingdoms into which Kotte split in 1521. Sitawaka besieged Kotte, defeated the Portuguese at Mulleriyawa in 1559 and forced them to abandon Kotte in 1565; under Rajasinghe I it conquered Kandy and in 1587–88 besieged Colombo for eight months. After Rajasinghe’s death in 1593 Sitawaka collapsed, and in 1597 the Portuguese crown inherited Kotte and ruled the lowlands. The hill kingdom of Kandy resisted every Portuguese invasion, destroying their armies at Danture in 1594, Randeniwela in 1630 and Gannoruwa in 1638. In 1638 Kandy allied with the Dutch, who by 1658 had taken every Portuguese fort on the island."
+countries: [lk, pt]
+sides:
+  - id: pt
+    name: Portugal and Kotte
+    polities: [portugal, sinhala]
+    ink: blue
+    moves: Portuguese and allied moves
+    success: Portuguese success
+  - id: sit
+    name: Kingdom of Sitawaka
+    polities: [sitawaka]
+    ink: orange
+    moves: Sitawaka moves
+    success: Sitawaka success
+  - id: kan
+    name: Kingdom of Kandy
+    polities: [kandy]
+    ink: red
+    moves: Kandyan moves
+    success: Kandyan success
+notes:
+  - Most Portuguese armies in Sri Lanka were largely made up of lascarins, Sinhalese and other local soldiers serving the Portuguese, whose loyalty often decided battles. Kotte, under the Christian king Dharmapala from 1551, fought on the Portuguese side.
+  - The main sources are Portuguese chroniclers (Diogo do Couto, Fernão de Queiroz, João Ribeiro) and the Sinhalese chronicles (the Rajavaliya, the Culavamsa and war poems). They differ widely on numbers and sometimes on dates; the Battle of Mulleriyawa, for instance, is dated 1559 or 1562.
+  - Dates before 1582 are in the Julian calendar. The last phase of the war, from 1638, is told in the Dutch–Portuguese War in Ceylon.
+sources:
+  - title: Sinhalese–Portuguese conflicts (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sinhalese%E2%80%93Portuguese_conflicts
+  - title: Mayadunne of Sitawaka (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mayadunne_of_Sitawaka
+  - title: Battle of Mulleriyawa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Mulleriyawa
+  - title: Rajasinha I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rajasinha_I
+  - title: Campaign of Danture (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Campaign_of_Danture
+  - title: Battle of Randeniwela (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Randeniwela
+  - title: Battle of Gannoruwa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Gannoruwa
+  - title: The Portuguese in Sri Lanka, 1505–1658 (Britannica)
+    url: https://www.britannica.com/place/Sri-Lanka/The-Portuguese-in-Sri-Lanka-1505-1658
+  - title: Kandy and its struggle with European powers (Britannica)
+    url: https://www.britannica.com/place/Sri-Lanka/Kandy-and-its-struggle-with-European-powers
+steps:
+  - title: Kotte divided
+    date: 1521–1551
+    when: "1527"
+    borders: "1527"
+    countries: [lk, pt]
+    body:
+      - "Portuguese ships first reached Sri Lanka in 1505 or 1506, and in 1518 the king of Kotte, the main Sinhalese kingdom, allowed them to build a fort at Colombo, the island’s chief port for cinnamon. In 1521 three sons of King Vijayabahu VII killed their father and divided the kingdom in an event remembered as the Vijayaba Kollaya. Bhuvanekabahu VII kept Kotte, Mayadunne took Sitawaka in the hills to the east, and their brother took Raigama in the south."
+      - "Mayadunne wanted all of Kotte. From 1527, allied with the Zamorin of Calicut, whose fleets fought the Portuguese along the coasts of India, he attacked his brother again and again. Bhuvanekabahu turned to the Portuguese, and troops sent from Goa and Cochin helped him drive back the Sitawaka armies in 1527–28 and four more times between 1537 and 1543. In 1538 Mayadunne annexed Raigama, but the next year, after the Portuguese destroyed a Calicut fleet at Vedalai on the Indian coast, he gave up the alliance with Calicut."
+      - "In 1543 Bhuvanekabahu had a golden statue of his grandson Dharmapala crowned in Lisbon, to secure Portuguese backing for the boy as his heir. Portuguese help came at a price: missionaries, demands for cinnamon, and Portuguese captains who acted on their own account. In 1550 a viceroy, Afonso de Noronha, came with several hundred soldiers and sacked Sitawaka, and in 1551 Bhuvanekabahu was shot dead by a Portuguese soldier, by accident according to the Portuguese."
+    facts:
+      - [Portuguese fort at Colombo, "1518"]
+      - [Partition of Kotte, "1521"]
+      - [Death of Bhuvanekabahu VII, "1551"]
+    markers:
+      - kind: capital
+        side: pt
+        name: Kotte
+        date: 1521–1565
+        text: Capital of the kingdom of Kotte under Bhuvanekabahu VII and then Dharmapala.
+        lonlat: [79.9, 6.89]
+        lp: b
+      - kind: event
+        side: pt
+        name: Colombo
+        date: from 1518
+        text: The Portuguese fort and trading post, the base of their power in the island.
+        lonlat: [79.845, 6.934]
+        lp: l
+      - kind: capital
+        side: sit
+        name: Sitawaka
+        date: 1521–1594
+        text: Mayadunne’s capital, at today’s Avissawella. The Portuguese sacked it in 1550.
+        lonlat: [80.21, 6.95]
+    arrows:
+      - side: sit
+        label: Mayadunne
+        via: [[80.21, 6.95], [80.05, 6.93], [79.93, 6.9]]
+  - title: Mulleriyawa, and the end of Kotte
+    date: 1551–1565
+    when: "1557-11"
+    borders: "1559"
+    countries: [lk, pt]
+    body:
+      - "Dharmapala, still a boy, ruled Kotte under Portuguese protection, and in 1557 he was baptised as Dom João. Many Buddhist monks and nobles turned to Mayadunne, who now posed as the defender of Sinhalese Buddhism. In November 1557, according to the Portuguese, some 50,000 Sitawaka troops laid siege to Kotte. It held out for a year until Portuguese reinforcements arrived and the besiegers withdrew."
+      - "In 1559 Mayadunne’s son Tikiri Bandara, later King Rajasinghe I, caught a Portuguese army in the marshes of the Kelani valley at Mulleriyawa, a few kilometres from Kotte. According to the Sinhalese chronicle Rajavaliya, 1,600 Portuguese and lascarins were killed. It was the worst defeat Portuguese arms had yet suffered in Asia."
+      - "Sitawaka pressed on. In 1564 its armies besieged Kotte and Colombo, and in 1565 the Portuguese abandoned Kotte, the old capital, and moved Dharmapala and his court into Colombo. Sitawaka now held most of the old kingdom’s lands, while the Portuguese held Colombo and a few coastal points, supplied by sea."
+    facts:
+      - [Siege of Kotte, "November 1557 – November 1558"]
+      - [Battle of Mulleriyawa, "1559 (some sources 1562), Sitawaka victory"]
+      - [Kotte abandoned, "1565"]
+    markers:
+      - kind: siege
+        side: pt
+        name: Kotte
+        date: 1557–1558
+        text: Besieged for a year by the Sitawaka army, then relieved. It was abandoned in 1565.
+        lonlat: [79.9, 6.89]
+        lp: b
+      - kind: battle
+        side: sit
+        name: Mulleriyawa
+        date: 1559
+        text: Tikiri Bandara trapped the Portuguese column in the marshes and destroyed it.
+        lonlat: [79.94, 6.93]
+      - kind: held
+        side: pt
+        name: Colombo
+        date: 1565
+        text: Dharmapala and his court moved into the Portuguese fort when Kotte was given up.
+        lonlat: [79.845, 6.934]
+        lp: l
+      - kind: capital
+        side: sit
+        name: Sitawaka
+        date: 1559
+        text: Mayadunne’s capital.
+        lonlat: [80.21, 6.95]
+    arrows:
+      - side: sit
+        label: Tikiri Bandara
+        via: [[80.21, 6.95], [80.07, 6.95], [79.96, 6.93]]
+  - title: Rajasinghe I and the siege of Colombo
+    date: 1581–1588
+    when: "1582"
+    borders: "1587-06-04"
+    countries: [lk, pt]
+    body:
+      - "Mayadunne died in 1581 and Tikiri Bandara succeeded him as Rajasinghe I. In 1580 Dharmapala, who had no heir, had left his kingdom by deed to the king of Portugal, a claim Sitawaka did not accept. In 1582 Rajasinghe conquered the hill kingdom of Kandy; its king fled to the Portuguese at Trincomalee with his young daughter Kusumasana Devi, who was raised as a Christian under the name Dona Catarina."
+      - "On 4 June 1587 Rajasinghe laid siege to Colombo with, according to the Portuguese, some 50,000 men, thousands of pack animals, cannon and a fleet of light galleys to blockade the harbour. The garrison under João Correia de Brito had about 300 Portuguese soldiers and 700 lascarins, with tens of thousands of townspeople and refugees inside the walls. A great assault on 3 August was beaten back with heavy losses, and through the monsoon ships from Goa and Malacca brought in more men and food."
+      - "In February 1588 a fleet of 18 galleys arrived with some 2,000 more Portuguese soldiers, and Rajasinghe lifted the siege. Portuguese accounts put his losses over the eight months at about 5,000 men. In the years that followed, Kandyan nobles rose against his rule, and Buddhist chronicles condemn him for turning to Shaivism and persecuting monks."
+    facts:
+      - [Kandy conquered by Sitawaka, "1582"]
+      - [Siege of Colombo, "4 June 1587 – February 1588"]
+      - [Garrison, "about 300 Portuguese and 700 lascarins"]
+    markers:
+      - kind: siege
+        side: pt
+        name: Colombo
+        date: June 1587 – February 1588
+        text: The Portuguese held the fort for eight months against Rajasinghe’s army until relief fleets arrived.
+        lonlat: [79.845, 6.934]
+        lp: l
+      - kind: capital
+        side: sit
+        name: Sitawaka
+        date: 1587
+        text: Rajasinghe I’s capital, from which he ruled most of the island’s south-west and, for a decade, Kandy.
+        lonlat: [80.21, 6.95]
+      - kind: taken
+        side: sit
+        name: Kandy
+        date: 1582
+        text: Conquered by Rajasinghe I. Its king, Karaliyadde Bandara, fled to the Portuguese.
+        lonlat: [80.635, 7.293]
+      - kind: event
+        side: pt
+        name: Trincomalee
+        date: 1582
+        text: Karaliyadde Bandara and his daughter, the future Dona Catarina, took refuge with the Portuguese here.
+        lonlat: [81.235, 8.58]
+    arrows:
+      - side: sit
+        label: Rajasinghe I
+        phase: 1
+        via: [[80.21, 6.95], [80.35, 7.15], [80.6, 7.27]]
+      - side: sit
+        phase: 2
+        via: [[80.21, 6.95], [80.05, 6.94], [79.88, 6.935]]
+      - side: pt
+        label: Relief fleets
+        phase: 2
+        via: [[79.55, 7.4], [79.72, 7.1], [79.83, 6.96]]
+  - title: Kandy rises, Sitawaka falls
+    date: 1588–1593
+    when: "1592"
+    borders: "1593-06"
+    countries: [lk, pt]
+    body:
+      - "Kandy rose against Sitawaka in 1588. In 1592 the Portuguese placed a Kandyan prince they had brought up, Yamasinghe Bandara, baptised Dom Filipe, on the throne of Kandy, but he soon died, it was rumoured by poison. The throne was then taken by Konappu Bandara, a Kandyan noble who had served the Portuguese as a soldier under the name Dom João of Austria. He returned to Buddhism and ruled as Vimaladharmasuriya I."
+      - "Rajasinghe I marched to recover Kandy but failed. Wounded in the foot by a bamboo splinter at Pethangoda, he died in March 1593 (some sources say 1592), probably of an infected wound. Sitawaka fell into a struggle over the succession, and its nobles began to go over to the Portuguese. A Portuguese force of about 950 Portuguese and 6,000 Sinhalese under Pedro Homem Pereira won a series of battles and sacked Sitawaka."
+    facts:
+      - [Vimaladharmasuriya I seizes Kandy, "1592"]
+      - [Death of Rajasinghe I, "March 1593"]
+    markers:
+      - kind: capital
+        side: kan
+        name: Kandy
+        date: from 1592
+        text: Capital of Vimaladharmasuriya I, who made the hill kingdom independent of both Sitawaka and the Portuguese.
+        lonlat: [80.635, 7.293]
+      - kind: taken
+        side: pt
+        name: Sitawaka
+        date: 1593
+        text: Sacked by Pedro Homem Pereira after Rajasinghe’s death. The kingdom did not survive.
+        lonlat: [80.21, 6.95]
+    arrows:
+      - side: sit
+        label: Rajasinghe I
+        via: [[80.21, 6.95], [80.33, 7.08], [80.5, 7.22]]
+      - side: pt
+        label: Pedro Homem Pereira
+        via: [[79.86, 6.94], [80.02, 6.95], [80.18, 6.95]]
+  - title: Danture
+    date: July – October 1594
+    when: "1594-07-05"
+    borders: "1594-07-05"
+    countries: [lk, pt]
+    body:
+      - "In 1594 the Portuguese set out to make Dona Catarina, the heir of the old Kandyan line, queen of Kandy under their protection. The captain-general Pedro Lopes de Sousa led some 20,000 men, about 1,000 of them Portuguese and most of the rest lascarins under the Sinhalese commander Jayavira Bandara, with Badaga mercenaries from south India and 47 elephants. On 5 July they forced the Balana pass, the gateway to the hill country, and entered Kandy, where Catarina was crowned."
+      - "Vimaladharmasuriya withdrew into the hills and wore the invaders down with raids. When Portuguese captains, suspecting him of treachery, killed Jayavira, the lascarins began to desert, and a column of about 3,000 sent into Uva was destroyed. In October the Portuguese began to retreat towards Colombo. At Danture, a few kilometres west of Kandy, the Kandyan army, swollen by deserters to perhaps 10,000 to 20,000, fell on the remnant on 8 October. The next day Lopes de Sousa surrendered with 93 Portuguese and died of his wounds; only a handful of men reached Colombo."
+      - "Vimaladharmasuriya married Dona Catarina, which gave his rule the legitimacy of the old royal line, and Kandy remained independent until 1815."
+    facts:
+      - [Balana pass forced, "5 July 1594"]
+      - [Battle of Danture, "8 October 1594, Kandyan victory"]
+      - [Portuguese surrender, "9 October 1594"]
+    markers:
+      - kind: battle
+        side: kan
+        name: Danture
+        date: 8 October 1594
+        text: The retreating Portuguese army was surrounded and destroyed. Pedro Lopes de Sousa surrendered and died of his wounds.
+        lonlat: [80.55, 7.27]
+        lp: b
+      - kind: battle
+        side: pt
+        name: Balana
+        date: 5 July 1594
+        text: The Portuguese stormed the pass with heavy losses and marched on into Kandy.
+        lonlat: [80.49, 7.26]
+        lp: l
+      - kind: taken
+        side: pt
+        name: Kandy
+        date: July 1594
+        text: Occupied by the Portuguese, who crowned Dona Catarina here. They left in October.
+        lonlat: [80.635, 7.293]
+      - kind: event
+        side: pt
+        name: Colombo
+        date: 1594
+        text: The Portuguese base. Only a few survivors of the army made it back.
+        lonlat: [79.845, 6.934]
+    arrows:
+      - side: pt
+        label: Pedro Lopes de Sousa
+        phase: 1
+        via: [[79.86, 6.94], [80.1, 7.0], [80.35, 7.15], [80.49, 7.26], [80.62, 7.29]]
+      - side: kan
+        label: Vimaladharmasuriya I
+        phase: 2
+        via: [[80.8, 7.45], [80.68, 7.33], [80.57, 7.28]]
+  - title: Kotte inherited, Kandy defiant
+    date: 1597–1621
+    when: "1597-05"
+    borders: "1597-06"
+    countries: [lk, pt]
+    body:
+      - "Dharmapala died in Colombo in May 1597, and under his will the king of Portugal, Philip I (Philip II of Spain), became king of Kotte. According to Portuguese accounts, the chiefs of the lowlands met at Malwana and accepted the new king on condition that their laws and customs were kept. For the next sixty years the Portuguese ruled the coastal lowlands, collecting cinnamon, land revenue and taxes through the old Sinhalese officials. The captain-general Jerónimo de Azevedo (1594–1612) put down risings in the lowlands with great harshness."
+      - "Azevedo also invaded Kandy, but Vimaladharmasuriya defeated him at Balana in 1602, and in 1603 a Portuguese advance on Kandy collapsed when the lascarins rose behind it. Kandy began to look for other European allies. In 1602 the Dutch captain Joris van Spilbergen landed at Batticaloa and visited the king. Vimaladharmasuriya died in 1604, and his cousin Senarat, who married Dona Catarina, carried on the war of raids until a peace in 1617 under which he paid the Portuguese a small tribute. In the 1620s the Portuguese built forts at Trincomalee and Batticaloa, Kandy’s outlets to the sea, to keep foreign help away."
+    facts:
+      - [Death of Dharmapala, "May 1597"]
+      - [Battle of Balana, "1602, Kandyan victory"]
+      - [Peace with Senarat, "1617"]
+    markers:
+      - kind: event
+        side: pt
+        name: Malwana
+        date: 1597
+        text: Where, according to Portuguese accounts, the lowland chiefs accepted the king of Portugal as their ruler.
+        lonlat: [80.02, 6.955]
+      - kind: battle
+        side: kan
+        name: Balana
+        date: 1602
+        text: Azevedo’s invasion was beaten back at the pass on the road to Kandy.
+        lonlat: [80.49, 7.26]
+        lp: l
+      - kind: capital
+        side: kan
+        name: Kandy
+        date: 1597–1621
+        text: Capital of Vimaladharmasuriya I and then of Senarat.
+        lonlat: [80.635, 7.293]
+      - kind: event
+        side: kan
+        name: Batticaloa
+        date: 1602
+        text: Joris van Spilbergen, the first Dutch envoy to Kandy, landed here.
+        lonlat: [81.7, 7.714]
+    arrows:
+      - side: pt
+        label: Azevedo
+        via: [[79.86, 6.94], [80.1, 7.0], [80.35, 7.15], [80.47, 7.25]]
+  - title: Randeniwela
+    date: 1630–1634
+    when: "1630-08-25"
+    borders: "1630-08-25"
+    countries: [lk, pt]
+    body:
+      - "The captain-general Constantino de Sá de Noronha set out to finish Kandy. In August 1630 he invaded the eastern province of Uva with about 1,500 Portuguese and many lascarins, and burned Badulla. As his army withdrew, it was caught at Randeniwela near Wellawaya on 25 August 1630 by the Kandyan army under King Senarat’s son, Prince Maha Astana. The lascarins went over to the Kandyans, and heavy rain soaked the Portuguese powder and the slow matches of their muskets. The army was destroyed, and Sá de Noronha died with most of his men."
+      - "The Kandyans swept into the lowlands and besieged Colombo for more than a year, until reinforcements from Goa saved it. In 1634 Kandy and the Portuguese made peace, but neither side kept it for long. Senarat died in 1635, and Maha Astana became king as Rajasinghe II."
+    facts:
+      - [Battle of Randeniwela, "25 August 1630, Kandyan victory"]
+      - [Constantino de Sá de Noronha, "killed"]
+      - [Peace, "1634"]
+    markers:
+      - kind: battle
+        side: kan
+        name: Randeniwela
+        date: 25 August 1630
+        text: The lascarins changed sides in the middle of the battle and the Portuguese army was wiped out.
+        lonlat: [81.07, 6.78]
+      - kind: taken
+        side: pt
+        name: Badulla
+        date: August 1630
+        text: The chief town of Uva, burned by Sá de Noronha shortly before the battle.
+        lonlat: [81.055, 6.989]
+      - kind: siege
+        side: pt
+        name: Colombo
+        date: 1630–1632
+        text: Besieged by the Kandyans after Randeniwela. The fort held out.
+        lonlat: [79.845, 6.934]
+    arrows:
+      - side: pt
+        label: Sá de Noronha
+        phase: 1
+        via: [[79.86, 6.94], [80.4, 6.68], [80.8, 6.85], [81.03, 6.97]]
+      - side: pt
+        phase: 2
+        via: [[81.05, 6.97], [81.06, 6.88], [81.07, 6.81]]
+      - side: kan
+        label: Maha Astana
+        phase: 3
+        via: [[81.0, 6.8], [80.5, 6.85], [80.1, 6.92], [79.88, 6.94]]
+  - title: Gannoruwa
+    date: March 1638
+    when: "1638-03-28"
+    borders: "1638-03-28"
+    countries: [lk, pt]
+    body:
+      - "Rajasinghe II opened talks with the Dutch, who were at war with Spain and Portugal and had been attacking Portuguese ships off the island. To strike before the Dutch could come, the captain-general Diogo de Melo de Castro marched on Kandy in March 1638 with about 900 Portuguese and several thousand lascarins. He found the city abandoned and burned it."
+      - "On the way back the army was surrounded on the hill of Gannoruwa, above the Mahaweli river near Peradeniya. On 28 March 1638 the Kandyans attacked; the lascarins deserted, and the Portuguese were killed almost to a man, by one account only 33 surviving. Melo de Castro was among the dead. It was the last great battle between the Portuguese and a Sinhalese king. Two months later a Dutch fleet took Batticaloa, and Rajasinghe signed a treaty with the Dutch East India Company to drive the Portuguese from the island."
+    facts:
+      - [Battle of Gannoruwa, "28 March 1638, Kandyan victory"]
+      - [Portuguese losses, "almost the whole army; about 33 Portuguese survived by one account"]
+    link: { href: "#/war/dutch-portuguese-war-in-ceylon", text: The Dutch–Portuguese War in Ceylon }
+    markers:
+      - kind: battle
+        side: kan
+        name: Gannoruwa
+        date: 28 March 1638
+        text: The Portuguese army was cut off on its way back from Kandy and destroyed.
+        lonlat: [80.597, 7.283]
+        lp: l
+      - kind: taken
+        side: pt
+        name: Kandy
+        date: March 1638
+        text: Found empty and burned by the Portuguese.
+        lonlat: [80.635, 7.293]
+    arrows:
+      - side: pt
+        label: Melo de Castro
+        via: [[79.86, 6.94], [80.2, 7.1], [80.49, 7.26], [80.62, 7.29]]

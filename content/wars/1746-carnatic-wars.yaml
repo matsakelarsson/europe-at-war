@@ -1,0 +1,407 @@
+id: carnatic-wars
+name: Carnatic Wars
+start: "1746-07"
+end: "1763-02-10"
+tier: A
+summary: "Three wars between the British and French East India Companies and their Indian allies for influence in the Carnatic, the coastal plain of south-eastern India, and the Deccan. In the first (1746–1748), an offshoot of the War of the Austrian Succession, the French took Madras and beat the Nawab of Arcot’s army at the Adyar, but gave Madras back at the peace. In the second (1749–1754) the companies backed rival claimants to the thrones of Arcot and Hyderabad: the French governor Dupleix made his candidates nawab and Nizam, but Robert Clive’s seizure and defence of Arcot in 1751 and the French surrender at Srirangam in 1752 turned the tide, and the British candidate, Muhammad Ali, kept Arcot. In the third (1757–1763), part of the Seven Years’ War, the comte de Lally took Fort St David and besieged Madras, but Eyre Coote defeated him at Wandiwash in 1760 and took Pondicherry in 1761. The French kept their trading posts but never again challenged British power in India."
+countries: [in]
+sides:
+  - id: eic
+    name: British East India Company
+    polities: [british-india]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: fr
+    name: French East India Company and its allies
+    polities: [french-india]
+    ink: navy
+    moves: French and allied moves
+    success: French success
+  - id: car
+    name: Nawabs of Arcot (Anwaruddin and Muhammad Ali)
+    polities: [carnatic]
+    ink: purple
+    moves: Nawab’s moves
+    success: Success for the Nawab
+notes:
+  - British dates before September 1752 are often given in the Old Style (Julian) calendar, eleven days behind the Gregorian; the French used the Gregorian. Madras fell on 21 September 1746 by the French and modern reckoning, 10 September in contemporary English letters.
+  - The armies were small by Indian standards, a few hundred to a few thousand European soldiers with larger numbers of sepoys, Indian soldiers trained and armed in the European way. The Indian rulers who fought with or against them, the Nawabs of Arcot, the Nizams, Mysore, Thanjavur and the Marathas, pursued their own aims and changed sides more than once.
+  - The fighting in Bengal in 1756–1757, including the British capture of the French settlement of Chandernagore, is told in the story of the British conquest of Bengal; the Seven Years’ War has its own story for the war in Europe and elsewhere.
+sources:
+  - title: Carnatic Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Carnatic_Wars
+  - title: First Carnatic War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Carnatic_War
+  - title: Second Carnatic War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Carnatic_War
+  - title: Third Carnatic War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Third_Carnatic_War
+  - title: Battle of Adyar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Adyar
+  - title: Siege of Arcot (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Arcot
+  - title: Siege of Trichinopoly (1751–1752) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Trichinopoly_(1751%E2%80%931752)
+  - title: Siege of Madras (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Madras
+  - title: Siege of Masulipatam (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Masulipatam
+  - title: Battle of Wandiwash (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Wandiwash
+  - title: Siege of Pondicherry (1760) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Pondicherry_(1760)
+  - title: Carnatic Wars (Britannica)
+    url: https://www.britannica.com/event/Carnatic-Wars
+steps:
+  - title: Madras falls
+    date: July – October 1746
+    when: "1746-09-21"
+    borders: "1746-09-21"
+    countries: [in]
+    body:
+      - Britain and France had been at war in Europe since 1744, and the news reached their trading companies in India, whose main settlements on the Coromandel Coast, British Madras and French Pondicherry, lay only 150 km apart. The French governor-general, Joseph-François Dupleix, had asked the Nawab of Arcot, Anwaruddin Khan, to keep the peace on the coast, but a British squadron seized French ships in 1745. In 1746 a French fleet from Mauritius under Bertrand-François Mahé de La Bourdonnais fought an indecisive action with the British squadron off Negapatam in July and drove it off the coast.
+      - In September La Bourdonnais landed troops south of Madras and bombarded Fort St George. The town, with a weak garrison of a few hundred Europeans, capitulated on 21 September 1746 almost without loss. La Bourdonnais agreed to give it back for a ransom, but Dupleix refused to honour the agreement, and after a cyclone wrecked part of his fleet in October La Bourdonnais sailed away. Among the Company clerks who were taken prisoner and escaped to the British post of Fort St David, south of Pondicherry, was the 21-year-old Robert Clive.
+    facts:
+      - [Naval action off Negapatam, "6 July 1746, indecisive"]
+      - [Madras capitulates to the French, "21 September 1746"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Madras
+        date: 21 September 1746
+        text: Fort St George and the British town surrendered after a few days of bombardment.
+        lonlat: [80.287, 13.080]
+      - kind: capital
+        side: fr
+        name: Pondicherry
+        date: 1746
+        text: Capital of French India and seat of Dupleix, governor-general since 1742.
+        lonlat: [79.833, 11.934]
+        lp: l
+      - kind: held
+        side: eic
+        name: Fort St David
+        date: 1746–1748
+        text: The British fort near Cuddalore, which became their headquarters on the coast while Madras was in French hands.
+        lonlat: [79.778, 11.746]
+        lp: l
+      - kind: naval
+        name: Negapatam
+        date: 6 July 1746
+        text: La Bourdonnais’s fleet and the British squadron under Edward Peyton fought an indecisive action off the Dutch town.
+        lonlat: [79.950, 10.766]
+    arrows:
+      - side: fr
+        label: La Bourdonnais
+        via: [[80.300, 11.900], [80.420, 12.500], [80.330, 13.000]]
+  - title: Adyar and Pondicherry
+    date: October 1746 – August 1749
+    when: "1746-10-24"
+    borders: "1748-10"
+    countries: [in]
+    body:
+      - The Nawab, angry that the French had not handed Madras over to him as promised, sent his son Mahfuz Khan with about 10,000 men to take it. On 24 October 1746, at the Adyar river south of the town, a French force of some 350 Europeans and 700 sepoys under the Swiss engineer Louis Paradis attacked across the river and broke the Nawab’s army with musket volleys and the bayonet. The battle showed how small disciplined European-style forces could beat far larger Indian armies, and it changed the way both companies saw their position in India.
+      - The French tried several times to take Fort St David in 1746–1748, but failed. In August 1748 a British fleet and army under Admiral Edward Boscawen besieged Pondicherry from the land and sea, but the siege was badly managed, and in October the monsoon forced him to raise it. The Treaty of Aix-la-Chapelle restored Madras to Britain in exchange for Louisbourg in North America, and the French handed it back in August 1749.
+    facts:
+      - [Battle of Adyar, "24 October 1746, French victory"]
+      - [Nawab’s army, "about 10,000"]
+      - [French force, "about 350 Europeans and 700 sepoys"]
+      - [Siege of Pondicherry, "August – October 1748, abandoned"]
+    markers:
+      - kind: battle
+        side: fr
+        name: Adyar
+        date: 24 October 1746
+        text: Paradis’s small force crossed the river and routed Mahfuz Khan’s army.
+        lonlat: [80.270, 13.015]
+      - kind: held
+        side: fr
+        name: Madras
+        date: 1746–1749
+        text: Held by the French until it was returned under the peace treaty.
+        lonlat: [80.287, 13.080]
+        lp: l
+      - kind: held
+        side: eic
+        name: Fort St David
+        date: 1746–1748
+        text: The French attacks on the fort failed.
+        lonlat: [79.778, 11.746]
+        lp: l
+      - kind: siege
+        side: fr
+        name: Pondicherry
+        date: August – October 1748
+        text: Boscawen’s siege failed; his trenches were too far from the walls and the monsoon ended the campaign.
+        lonlat: [79.833, 11.934]
+        lp: l
+      - kind: capital
+        side: car
+        name: Arcot
+        date: 1746
+        text: Capital of Anwaruddin Khan, Nawab of the Carnatic under the Nizam.
+        lonlat: [79.320, 12.908]
+    arrows:
+      - side: car
+        label: Mahfuz Khan
+        phase: 1
+        via: [[79.320, 12.908], [79.700, 12.900], [80.100, 12.950], [80.250, 13.010]]
+      - side: eic
+        label: Boscawen
+        phase: 2
+        via: [[79.778, 11.746], [79.800, 11.840], [79.820, 11.910]]
+  - title: Ambur and the rival nawabs
+    date: 1749–1751
+    when: "1749-08-03"
+    borders: "1749-08-03"
+    countries: [in]
+    body:
+      - The death of the old Nizam, Asaf Jah I, in 1748 left a disputed succession in Hyderabad, between his son Nasir Jang and his grandson Muzaffar Jang. Dupleix backed Muzaffar Jang and, in the Carnatic, Chanda Sahib, a rival of Anwaruddin who had just been released from Maratha captivity. On 3 August 1749 their armies, with some 400 French soldiers, defeated and killed Anwaruddin at Ambur. Chanda Sahib became nawab at Arcot, and Anwaruddin’s son Muhammad Ali fled to the fortress of Trichinopoly, where the British supported him.
+      - Nasir Jang came south with a huge army and drove the French back, but in December 1750 he was killed by Pathan nobles in his own camp who had been in touch with Dupleix. Muzaffar Jang became Nizam and was himself killed in February 1751; the French commander Charles de Bussy then made his uncle Salabat Jang Nizam and stayed at his court with a French corps, while French troops took the fortress of Gingee. For a time Dupleix, honoured with a Mughal title, was the most powerful European in India.
+    facts:
+      - [Battle of Ambur, "3 August 1749, victory for Chanda Sahib and the French"]
+      - [Death of Nasir Jang, "December 1750"]
+      - [Gingee taken by the French, "September 1750"]
+    markers:
+      - kind: battle
+        side: fr
+        name: Ambur
+        date: 3 August 1749
+        text: The old Nawab, Anwaruddin Khan, was killed in the battle against Chanda Sahib, Muzaffar Jang and their French allies.
+        lonlat: [78.716, 12.791]
+      - kind: held
+        side: car
+        name: Trichinopoly
+        date: from 1749
+        text: Muhammad Ali’s refuge and stronghold, defended with British help.
+        lonlat: [78.697, 10.828]
+      - kind: taken
+        side: fr
+        name: Gingee
+        date: September 1750
+        text: The great fortress was stormed by Bussy’s troops.
+        lonlat: [79.400, 12.253]
+      - kind: event
+        side: fr
+        name: Arcot
+        date: 1749
+        text: Chanda Sahib made the city his capital as Nawab.
+        lonlat: [79.320, 12.908]
+    arrows:
+      - side: fr
+        label: Chanda Sahib and Muzaffar Jang
+        phase: 1
+        via: [[78.000, 13.600], [78.400, 13.100], [78.680, 12.820]]
+      - side: car
+        label: Muhammad Ali
+        phase: 2
+        via: [[78.750, 12.700], [78.900, 11.900], [78.720, 10.880]]
+  - title: Arcot
+    date: August 1751 – February 1752
+    when: "1751-09-23"
+    borders: "1751-11-14"
+    countries: [in]
+    body:
+      - By 1751 Chanda Sahib and the French were besieging Muhammad Ali in Trichinopoly. To draw them off, the British at Madras sent Robert Clive, now a captain, with about 200 European soldiers, 300 sepoys and three small guns to seize Chanda Sahib’s capital, Arcot. Clive marched through monsoon storms, and the garrison fled as he arrived at the end of August. Chanda Sahib sent his son Raza Sahib with several thousand troops and a French contingent, who entered the town on 23 September and laid siege to the fort.
+      - For fifty days Clive held the crumbling walls with a dwindling garrison, at the end some 120 Europeans and 200 sepoys. A Maratha force under Morari Rao, hired by Muhammad Ali, gathered nearby. On 14 November Raza Sahib launched a general assault with elephants against the gates; it was beaten off, and the besiegers withdrew. Clive followed up with victories at Arni in December and at Kaveripak in February 1752. The defence of Arcot made his name and gave the British cause new heart.
+    facts:
+      - [Siege of Arcot, "23 September – 14 November 1751"]
+      - [Clive’s force, "about 200 Europeans and 300 sepoys"]
+      - [Battle of Arni, "December 1751, British victory"]
+      - [Battle of Kaveripak, "February 1752, British victory"]
+    markers:
+      - kind: siege
+        side: eic
+        name: Arcot
+        date: 23 September – 14 November 1751
+        text: Clive’s small garrison held the fort against Raza Sahib’s army for fifty days.
+        lonlat: [79.320, 12.908]
+      - kind: battle
+        side: eic
+        name: Arni
+        date: December 1751
+        text: Clive defeated Raza Sahib’s army as it moved to join the French.
+        lonlat: [79.290, 12.670]
+        lp: l
+      - kind: battle
+        side: eic
+        name: Kaveripak
+        date: February 1752
+        text: A night battle in which Clive outflanked a French and Indian force.
+        lonlat: [79.462, 12.905]
+        lp: t
+      - kind: capital
+        side: eic
+        name: Madras
+        date: 1751
+        text: The British base, from which Clive’s small force set out on 26 August.
+        lonlat: [80.287, 13.080]
+    arrows:
+      - side: eic
+        label: Clive
+        phase: 1
+        via: [[80.287, 13.080], [79.950, 12.950], [79.700, 12.840], [79.360, 12.900]]
+      - side: fr
+        label: Raza Sahib
+        phase: 2
+        via: [[79.800, 12.000], [79.500, 12.400], [79.330, 12.860]]
+  - title: Trichinopoly and Srirangam
+    date: 1752–1754
+    when: "1752-06"
+    borders: "1752-06"
+    countries: [in]
+    body:
+      - In April 1752 Major Stringer Lawrence and Clive brought a relief force to Trichinopoly, and the French under Jacques Law fell back to the island of Srirangam in the Kaveri. Clive cut off their retreat, and in June Law surrendered with some 800 Europeans and 2,000 sepoys. Chanda Sahib gave himself up to the commander of the Thanjavur troops, who were allied to the British, in the hope of escaping; he was beheaded in the Thanjavur camp.
+      - The war did not end there. The regent of Mysore and the Maratha chief Morari Rao, promised Trichinopoly as the price of their help, changed sides when Muhammad Ali refused to hand it over, and with the French they besieged the city again until 1754. In Paris the French company’s directors, alarmed at the cost of Dupleix’s wars, recalled him in 1754. His successor, Charles Godeheu, signed a treaty with the British at the end of 1754 by which both companies promised not to interfere in the quarrels of Indian princes; in effect it left Muhammad Ali as Nawab of Arcot.
+    facts:
+      - [Surrender of Law at Srirangam, "June 1752"]
+      - [Death of Chanda Sahib, "June 1752"]
+      - [Dupleix recalled, "1754"]
+    markers:
+      - kind: taken
+        side: eic
+        name: Srirangam
+        date: June 1752
+        text: The French army under Law, cut off on the river island, surrendered to Lawrence and Clive.
+        lonlat: [78.693, 10.857]
+        lp: l
+      - kind: held
+        side: car
+        name: Trichinopoly
+        date: 1751–1754
+        text: Muhammad Ali’s fortress, besieged twice and never taken.
+        lonlat: [78.697, 10.828]
+        lp: b
+      - kind: event
+        name: Thanjavur
+        date: June 1752
+        text: Chanda Sahib was put to death in the camp of the Thanjavur army.
+        lonlat: [79.131, 10.787]
+    arrows:
+      - side: eic
+        label: Lawrence and Clive
+        via: [[79.778, 11.746], [79.400, 11.300], [79.000, 10.950], [78.730, 10.840]]
+  - title: Lally
+    date: April 1758 – April 1759
+    when: "1758-12-14"
+    borders: "1758-12-14"
+    countries: [in]
+    body:
+      - War broke out again in Europe in 1756, and in 1757 Clive, now in Bengal, took the French settlement of Chandernagore. France sent out the comte de Lally, an Irish Jacobite general, with a large force. He reached Pondicherry in April 1758 and took Fort St David on 2 June, razing it, but an attack on Thanjavur to raise money failed. He recalled Bussy and his troops from Hyderabad, and on 14 December laid siege to Madras with some 4,000 Europeans and 3,400 sepoys. The garrison under Colonel William Draper held out for two months, and when a British fleet arrived on 16 February 1759, Lally gave up the siege.
+      - Meanwhile Clive sent a force from Bengal under Colonel Francis Forde to the Northern Circars, the coastal districts that the Nizam had granted to the French. Forde defeated the French at Condore in December 1758 and on 7 April 1759 stormed Masulipatam, after which Salabat Jang ceded the town and its district to the British. At sea, the squadrons of Admiral George Pocock and the comte d’Aché fought three indecisive battles off the coast in 1758 and 1759, after which the French fleet left Indian waters for good.
+    facts:
+      - [Fort St David taken by Lally, "2 June 1758"]
+      - [Siege of Madras, "14 December 1758 – 16 February 1759"]
+      - [Masulipatam stormed by Forde, "7 April 1759"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Fort St David
+        date: 2 June 1758
+        text: Taken by Lally soon after his arrival, and its fortifications demolished.
+        lonlat: [79.778, 11.746]
+        lp: l
+      - kind: siege
+        side: eic
+        name: Madras
+        date: 14 December 1758 – 16 February 1759
+        text: Lally took the Black Town but could not breach Fort St George, and withdrew when British ships arrived.
+        lonlat: [80.287, 13.080]
+      - kind: taken
+        side: eic
+        name: Masulipatam
+        date: 7 April 1759
+        text: Forde’s troops from Bengal stormed the French-held port by night.
+        lonlat: [81.135, 16.175]
+      - kind: event
+        side: fr
+        name: Thanjavur
+        date: August 1758
+        text: Lally besieged the city to extort money owed to the French, and had to withdraw.
+        lonlat: [79.131, 10.787]
+    arrows:
+      - side: fr
+        label: Lally
+        phase: 1
+        via: [[79.833, 11.934], [79.700, 12.500], [80.000, 12.800], [80.260, 13.060]]
+      - side: eic
+        label: Forde
+        phase: 1
+        via: [[83.300, 17.690], [82.300, 17.000], [81.600, 16.500], [81.170, 16.190]]
+    areas:
+      - style: gained
+        side: eic
+        label: Masulipatam and its district, ceded to the British in 1759 (approximate)
+        polygon: [[80.700, 16.500], [81.400, 16.600], [81.350, 15.900], [80.800, 15.800]]
+  - title: Wandiwash
+    date: 22 January 1760
+    when: "1760-01-22"
+    borders: "1760-01-22"
+    countries: [in]
+    body:
+      - In late 1759 Colonel Eyre Coote arrived with reinforcements and took the fort of Wandiwash, between Madras and Pondicherry. Lally marched to retake it, and on 22 January 1760 the two armies met outside the town. Coote had about 1,900 European infantry, 2,100 sepoys and 26 guns; Lally had about 2,250 European infantry, 1,300 sepoys, 300 European cavalry and a contingent of Maratha horsemen, who took little part in the fighting.
+      - The French cavalry charge was broken by British artillery, and a shot exploded a French ammunition cart, throwing their left into disorder. The British infantry then rolled up the French line. The French lost some 600 to 800 killed, wounded and captured, among them Bussy, who was taken prisoner; the British lost under 200. It was the decisive battle of the war in south India. Coote went on to take the remaining French forts one by one.
+    facts:
+      - [Battle of Wandiwash, "22 January 1760, British victory"]
+      - [British force, "about 1,900 European infantry, 2,100 sepoys, 26 guns"]
+      - [French force, "about 2,250 European infantry, 1,300 sepoys, 300 European cavalry"]
+      - [Losses, "British about 190; French 600–800"]
+    markers:
+      - kind: battle
+        side: eic
+        name: Wandiwash
+        date: 22 January 1760
+        text: Coote’s victory over Lally; Bussy was among the prisoners.
+        lonlat: [79.605, 12.500]
+      - kind: capital
+        side: fr
+        name: Pondicherry
+        date: 1760
+        text: The French capital, to which Lally retreated after the battle.
+        lonlat: [79.833, 11.934]
+        lp: l
+    arrows:
+      - side: fr
+        label: Lally
+        phase: 1
+        via: [[79.833, 11.934], [79.500, 12.200], [79.580, 12.460]]
+      - side: fr
+        phase: 2
+        via: [[79.580, 12.460], [79.700, 12.200], [79.820, 11.980]]
+  - title: Pondicherry
+    date: September 1760 – February 1763
+    when: "1761-01-15"
+    borders: "1761-01-16"
+    countries: [in]
+    body:
+      - From September 1760 Coote’s army blockaded Pondicherry by land while a British squadron closed it by sea. A storm on the night of 1 January 1761 wrecked several of the blockading ships, but the British soon restored the blockade. With his garrison and the townspeople starving, Lally surrendered on 15 January 1761. The British razed the walls and public buildings of the city. The French posts at Mahé on the Malabar coast and the fortress of Gingee fell soon after.
+      - Lally was taken to England as a prisoner, returned to France to answer charges of treason and was beheaded in Paris in 1766; his son later had the verdict annulled. The Treaty of Paris of 10 February 1763 gave Pondicherry and the other French posts back to France, but forbade fortifications and troops in Bengal. Muhammad Ali remained Nawab of Arcot, deeply in debt to the Company, whose power in the south now rested on its army and on its alliance with him.
+    facts:
+      - [Siege of Pondicherry, "September 1760 – 15 January 1761"]
+      - [Lally executed in Paris, "9 May 1766"]
+      - [Treaty of Paris, "10 February 1763"]
+    markers:
+      - kind: siege
+        side: eic
+        name: Pondicherry
+        date: September 1760 – 15 January 1761
+        text: Starved into surrender by Coote’s blockade. The British destroyed its fortifications.
+        lonlat: [79.833, 11.934]
+        lp: l
+      - kind: taken
+        side: eic
+        name: Gingee
+        date: 1761
+        text: The last French fortress inland, taken by the British.
+        lonlat: [79.400, 12.253]
+      - kind: taken
+        side: eic
+        name: Mahé
+        date: February 1761
+        text: The French trading post on the Malabar coast, taken by a force from Bombay.
+        lonlat: [75.534, 11.701]
+    arrows:
+      - side: eic
+        label: Coote
+        via: [[79.605, 12.500], [79.700, 12.200], [79.800, 11.990]]

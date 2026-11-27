@@ -1,0 +1,209 @@
+id: third-anglo-maratha-war
+name: Third Anglo-Maratha War
+start: "1817-11-05"
+end: "1819-04-09"
+tier: B
+summary: "The last war between the British East India Company and the Maratha powers, also called the Pindari War. In 1817 the Governor-General, Lord Hastings, gathered some 120,000 men to destroy the Pindaris, the mounted raiders of central India, and forced Scindia and Amir Khan to join him. The Peshwa Baji Rao II, the Bhonsle ruler of Nagpur and Holkar’s army rose against the Company and were beaten at Khadki, Sitabuldi and Mahidpur, and a small Company force held off the Peshwa’s army at Koregaon. Baji Rao surrendered in June 1818 and was pensioned off to Bithur; his lands were annexed, the Raja of Satara was given a small state, Nagpur and Holkar lost territory, and the Pindari bands were broken up. Asirgarh, the last fortress to hold out, fell in April 1819. The Company was now the paramount power in India south of the Sutlej."
+countries: [in]
+sides:
+  - id: eic
+    name: East India Company
+    polities: [british-india]
+    ink: red
+    moves: Company and allied moves
+    success: Company success
+  - id: mar
+    name: The Peshwa, the Bhonsle of Nagpur and Holkar
+    polities: [marathas, nagpur-kingdom, indore-state]
+    ink: orange
+    moves: Maratha moves
+    success: Maratha success
+  - id: pin
+    name: Pindaris
+    polities: [pindaris]
+    ink: brown
+    moves: Pindari moves
+    success: Pindari success
+notes:
+  - The Company’s armies were mostly Indian sepoys under British officers, with some British Army regiments.
+  - The Pindaris were bands of irregular horsemen who had served the Maratha armies for plunder instead of pay. By 1817 their chiefs Chitu, Karim Khan and Wasil Muhammad led some 20,000–30,000 riders who raided far into Company territory.
+  - Most of the soldiers who held Koregaon in 1818 were Mahars, and the victory obelisk there has become a place of Dalit commemoration every 1 January. The anniversary in 2018 was followed by clashes in Maharashtra.
+sources:
+  - title: Third Anglo-Maratha War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Third_Anglo-Maratha_War
+  - title: Maratha Wars (Britannica)
+    url: https://www.britannica.com/event/Maratha-Wars
+  - title: Pindari (Britannica)
+    url: https://www.britannica.com/topic/Pindari
+  - title: Pindaris (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pindaris
+  - title: Battle of Khadki (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Khadki
+  - title: Battle of Koregaon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Koregaon
+  - title: Battle of Sitabuldi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sitabuldi
+  - title: Battle of Mahidpur (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Mahidpur
+  - title: Baji Rao II (Britannica)
+    url: https://www.britannica.com/biography/Baji-Rao-II
+steps:
+  - title: The Pindari campaign and the rising at Pune
+    date: October – November 1817
+    when: "1817-11-05"
+    borders: "1817-11-17"
+    countries: [in]
+    body:
+      - After years of Pindari raids into Company territory, the Governor-General, Lord Hastings, received leave from London to destroy them in 1817. He gathered about 120,000 men in two armies, the Grand Army from Bengal under his own command and the Army of the Deccan under Sir Thomas Hislop, to close on the Pindari country in Malwa and the Narmada valley from north and south. Hastings marched to the edge of Scindia’s lands, and on 5 November Scindia signed the Treaty of Gwalior, promising help against the Pindaris and handing over forts as surety. The Pathan commander Amir Khan disbanded his army in return for recognition as Nawab of Tonk.
+      - The Peshwa, Baji Rao II, had been forced by the Treaty of Poona in June 1817 to give up lands and his rights over the other Maratha chiefs, and he had been building up his army. On 5 November 1817, the day Scindia signed, his army of perhaps 20,000 horse and 8,000 foot attacked the Company’s small force at Khadki (Kirkee), outside Pune, after the British Resident, Mountstuart Elphinstone, had withdrawn there from the burning Residency. The attack was beaten off. Company reinforcements under General Lionel Smith arrived, and on 17 November Pune was occupied; Baji Rao fled south with his army.
+    facts:
+      - [Company forces, "about 120,000 men"]
+      - [Treaty of Gwalior, "5 November 1817"]
+      - [Battle of Khadki, "5 November 1817, Company victory"]
+      - [Pune occupied, "17 November 1817"]
+    markers:
+      - kind: treaty
+        side: eic
+        name: Treaty of Gwalior
+        date: 5 November 1817
+        text: Scindia, with the Grand Army at his border, agreed to act against the Pindaris and let Company troops hold two of his forts.
+        lonlat: [78.169, 26.230]
+      - kind: event
+        side: eic
+        name: Tonk
+        date: November 1817
+        text: Amir Khan, the most powerful of the freebooting commanders, gave up his army and guns and became Nawab of Tonk under Company protection.
+        lonlat: [75.790, 26.170]
+      - kind: event
+        side: pin
+        name: Nemawar
+        date: 1817
+        text: The Pindari bands wintered in the Narmada valley around Nemawar and in western Malwa, and rode out after the monsoon to raid.
+        lonlat: [77.020, 22.490]
+      - kind: battle
+        side: eic
+        name: Battle of Khadki
+        date: 5 November 1817
+        text: About 3,000 Company troops beat off the Peshwa’s much larger army. Losses were 86 on the Company side and about 500 on the Peshwa’s.
+        lonlat: [73.840, 18.565]
+        lp: t
+      - kind: taken
+        side: eic
+        name: Pune
+        date: 17 November 1817
+        text: Occupied by General Smith after a fight at Yerwada. The British flag was raised over the Peshwa’s palace, the Shaniwar Wada.
+        lonlat: [73.856, 18.520]
+        lp: b
+    arrows:
+      - side: eic
+        label: Grand Army
+        phase: 1
+        via: [[80.330, 26.450], [79.735, 26.120], [78.750, 25.950]]
+      - side: eic
+        label: Army of the Deccan
+        phase: 1
+        via: [[75.880, 19.840], [76.230, 21.310], [77.050, 22.350]]
+      - side: mar
+        label: Baji Rao II
+        phase: 2
+        via: [[73.880, 18.500], [74.000, 18.250], [74.020, 17.750]]
+  - title: Sitabuldi, Mahidpur and Koregaon
+    date: November 1817 – January 1818
+    when: "1817-11-26"
+    borders: "1818-01-06"
+    countries: [in]
+    body:
+      - At Nagpur the Bhonsle ruler, Mudhoji II, known as Appa Saheb, accepted a title from the Peshwa and attacked the Company’s Residency on 26 November 1817. About 1,500 sepoys under Lieutenant-Colonel Hopetoun Scott held the twin hills of Sitabuldi for two days against some 18,000 men, among them Arab mercenaries, and a cavalry charge broke the attack. Reinforcements beat Appa Saheb’s army outside Nagpur on 16 December. Holkar’s army, whose commanders murdered the regent Tulsi Bai to keep the boy Malhar Rao Holkar from making peace, met Hislop and Sir John Malcolm at Mahidpur on the Shipra river on 21 December. It was defeated with about 3,000 killed and wounded against some 800 Company losses, and on 6 January 1818 Holkar’s government signed the Treaty of Mandsaur, ceding land and accepting a subsidiary alliance.
+      - Meanwhile Baji Rao had doubled back towards Pune. On 1 January 1818 a Company detachment under Captain Francis Staunton, about 500 sepoys of the 2nd Battalion of the 1st Bombay Native Infantry, some 250 irregular horse and two guns, ran into the Peshwa’s army at the village of Koregaon on the Bhima river. Staunton’s men held the village all day against repeated attacks by Arab, Gosain and Maratha infantry, without food or water, losing about a third of their number, and the Peshwa’s army moved off that night as Smith approached.
+    facts:
+      - [Battle of Sitabuldi, "26–27 November 1817, Company victory"]
+      - [Battle of Mahidpur, "21 December 1817, Company victory"]
+      - [Battle of Koregaon, "1 January 1818"]
+      - [Treaty of Mandsaur, "6 January 1818"]
+    markers:
+      - kind: battle
+        side: eic
+        name: Sitabuldi
+        date: 26–27 November 1817
+        text: The Residency guard held the two hills beside the Residency against Appa Saheb’s army. The fortress built on them later took their name.
+        lonlat: [79.081, 21.148]
+      - kind: battle
+        side: eic
+        name: Battle of Mahidpur
+        date: 21 December 1817
+        text: Holkar’s army, with strong artillery, was driven from its position across the Shipra after hard fighting.
+        lonlat: [75.652, 23.486]
+      - kind: treaty
+        name: Treaty of Mandsaur
+        date: 6 January 1818
+        text: Holkar ceded his lands south of the Satpura hills and his claims on the Rajput states, and accepted a British Resident.
+        lonlat: [75.070, 24.070]
+      - kind: battle
+        side: eic
+        name: Koregaon
+        date: 1 January 1818
+        text: Staunton’s detachment held the walled village through a day of fighting. The Peshwa’s army withdrew rather than face Smith’s approaching division.
+        lonlat: [74.059, 18.645]
+    arrows:
+      - side: eic
+        label: Hislop and Malcolm
+        via: [[76.600, 22.600], [76.000, 23.100], [75.700, 23.450]]
+      - side: eic
+        label: Staunton
+        via: [[74.380, 18.830], [74.200, 18.720], [74.070, 18.650]]
+  - title: The end of the Peshwa
+    date: February 1818 – April 1819
+    when: "1818-02-19"
+    borders: "1818-06-03"
+    countries: [in]
+    body:
+      - Smith took Satara in February 1818 and proclaimed that the Peshwa’s government was at an end. On 19 February his cavalry caught Baji Rao’s army at Ashti, north of Pandharpur. The Peshwa’s commander, Bapu Gokhale, was killed covering his master’s escape, and Pratap Singh, the Raja of Satara and descendant of Shivaji, who had been kept by the Peshwa, fell into British hands. Baji Rao fled north through Khandesh, while the Pindari bands, hunted by Company columns, broke up; Karim Khan surrendered and was given land near Gorakhpur, and Chitu fled into the jungle near Asirgarh, where he was killed by a tiger.
+      - On 3 June 1818 Baji Rao surrendered to Malcolm at Dhulkot, near Asirgarh. He gave up all claims to rule and was sent to live at Bithur, near Kanpur, on a pension of 8 lakh rupees a year. His lands were annexed to the Bombay Presidency, except a small state around Satara given to Pratap Singh. Appa Saheb was deposed and escaped, and Nagpur lost its lands in and north of the Narmada valley, which became part of the Saugor and Nerbudda Territories. The fortress of Asirgarh, held for Appa Saheb by Scindia’s commander, was the last to fall, on 9 April 1819.
+    facts:
+      - [Battle of Ashti, "19 February 1818, Company victory"]
+      - [Peshwa surrenders, "3 June 1818"]
+      - [Asirgarh falls, "9 April 1819"]
+      - [Baji Rao’s pension, "8 lakh rupees a year"]
+    markers:
+      - kind: taken
+        side: eic
+        name: Satara
+        date: February 1818
+        text: Smith occupied the town of the Maratha kings. A small state was later recreated here for the Raja of Satara.
+        lonlat: [74.000, 17.680]
+      - kind: battle
+        side: eic
+        name: Ashti
+        date: 19 February 1818
+        text: Bapu Gokhale was killed in a cavalry action, and the Raja of Satara and his family were taken from the Peshwa’s camp.
+        lonlat: [75.410, 17.840]
+      - kind: siege
+        side: eic
+        name: Asirgarh
+        date: March – April 1819
+        text: The Peshwa surrendered near here in June 1818. The fortress held out for Appa Saheb until April 1819, the last resistance of the war.
+        lonlat: [76.290, 21.470]
+    arrows:
+      - side: eic
+        label: Smith
+        phase: 1
+        via: [[73.870, 18.500], [73.950, 18.100], [74.000, 17.700]]
+      - side: mar
+        label: Baji Rao II
+        phase: 1
+        via: [[74.100, 18.600], [74.700, 18.100], [75.380, 17.850]]
+      - side: eic
+        phase: 2
+        via: [[74.030, 17.700], [74.700, 17.750], [75.380, 17.830]]
+      - side: mar
+        phase: 3
+        via: [[75.420, 17.880], [75.300, 19.400], [75.800, 20.600], [76.250, 21.420]]
+    areas:
+      - style: gained
+        side: eic
+        label: The Peshwa’s lands, annexed by the Company (Satara left to its raja)
+        atoms: [IN-MH, IN-MH~konkan, IN-MH~khandesh]
+      - style: gained
+        side: eic
+        label: Ceded by Nagpur, the Saugor and Nerbudda Territories
+        atoms: [IN-MP]

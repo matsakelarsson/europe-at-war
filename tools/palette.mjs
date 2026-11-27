@@ -1,7 +1,7 @@
 // Recolour polities so that each stands apart from every polity it ever
 // borders, keeping all other colours fixed. Run after a build (reads dist/).
 //
-//   node tools/palette.mjs <polity id | file.yaml | --auto> …  [--dry]
+//   node tools/palette.mjs <polity id | file.yaml | --auto> …  [--region <atom regex>] [--dry]
 //
 // A file means every polity defined in it (content/polities/<file>.yaml);
 // --auto means every automatic polity (content/polities.auto.yaml). Colours
@@ -9,6 +9,11 @@
 // keep a distance of at least 11 (CIEDE2000) from the sea. Neighbours are
 // weighted by how many border states they share, so long neighbours count
 // most. Colours are written back into the YAML files in place.
+//
+// --region also keeps apart polities that are on the map at the same time
+// inside the region (atoms whose id matches the regex), even if they never
+// touch: they appear side by side in war legends. These pairs count for a
+// twentieth of a shared border state each, and real neighbours come first.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import YAML from 'yaml';
@@ -18,6 +23,8 @@ import { oklchToHex } from '../site/colors.js';
 
 const args = process.argv.slice(2);
 const dry = args.includes('--dry');
+const ri = args.indexOf('--region');
+const region = ri >= 0 ? new RegExp(args.splice(ri, 2)[1]) : null;
 const SEA = '#d2dfe7';
 
 // ---- CIELAB and CIEDE2000
@@ -81,6 +88,8 @@ for (const list of arcAtoms.values()) if (list.length === 2) pairs.push(list);
 const P = B.polities, idx = new Map(P.map((p, i) => [p.id, i]));
 const weight = new Map(); // "i,j" -> number of states in which they touch
 const own = new Int16Array(B.atoms.length).fill(-1);
+const co = new Map(); // "i,j" -> number of states in which both are in the region without touching
+const inRegion = region ? B.atoms.map((a) => region.test(typeof a === 'string' ? a : a.id)) : null;
 for (const t of B.timeline) {
   for (let j = 0; j < t.c.length; j += 2) own[t.c[j]] = t.c[j + 1];
   const seen = new Set();
@@ -90,9 +99,22 @@ for (const t of B.timeline) {
     const key = p < q ? `${p},${q}` : `${q},${p}`;
     if (!seen.has(key)) { seen.add(key); weight.set(key, (weight.get(key) || 0) + 1); }
   }
+  if (region) {
+    const present = [...new Set([...own].filter((p, a) => p >= 0 && inRegion[a]))];
+    for (let x = 0; x < present.length; x++) for (let y = x + 1; y < present.length; y++) {
+      const [p, q] = present[x] < present[y] ? [present[x], present[y]] : [present[y], present[x]];
+      const key = `${p},${q}`;
+      if (!seen.has(key)) co.set(key, (co.get(key) || 0) + 1);
+    }
+  }
 }
 const nb = P.map(() => []);
-for (const [key, w] of weight) { const [p, q] = key.split(',').map(Number); nb[p].push([q, w]); nb[q].push([p, w]); }
+for (const [key, w] of weight) { const [p, q] = key.split(',').map(Number); nb[p].push([q, w, true]); nb[q].push([p, w, true]); }
+for (const [key, n] of co) {
+  if (weight.has(key)) continue;
+  const [p, q] = key.split(',').map(Number);
+  nb[p].push([q, n / 20, false]); nb[q].push([p, n / 20, false]);
+}
 
 // ---- Candidates: OKLCH grid, kept to the established CIELAB range.
 const seaLab = lab(SEA);
@@ -109,10 +131,12 @@ const order = [...targets].map((id) => idx.get(id)).filter((i) => i !== undefine
 // Score: the worst neighbour distance counts most, then the weighted average.
 const score = (i, l, placed) => {
   let worst = Infinity, sum = 0, tw = 0;
-  for (const [j, w] of nb[i]) {
+  for (const [j, w, border] of nb[i]) {
     if (!fixed(j) && !placed.has(j)) continue;
     const d = de2000(l, labs[j]);
-    worst = Math.min(worst, d + Math.log10(1 + 1 / w) * 4); // short contacts matter less
+    // Short contacts matter less; polities that only share the region matter
+    // once every real neighbour is at least 6 apart.
+    worst = Math.min(worst, border ? d + Math.log10(1 + 1 / w) * 4 : d + 6);
     sum += Math.min(d, 30) * w; tw += w;
   }
   return (worst === Infinity ? 100 : worst) * 10 + (tw ? sum / tw : 0);
@@ -126,9 +150,9 @@ for (let pass = 0; pass < 3; pass++) {
     color[i] = best.hex; labs[i] = best.lab; placed.add(i);
   }
 }
-let low = 0;
-for (const i of order) for (const [j] of nb[i]) if (de2000(labs[i], labs[j]) < 6) low++;
-console.log(`recoloured ${order.length} polities; ${low} neighbour pairs still under ΔE 6`);
+let low = 0, lowRegion = 0;
+for (const i of order) for (const [j, , border] of nb[i]) { const d = de2000(labs[i], labs[j]); if (border ? d < 6 : d < 3) border ? low++ : lowRegion++; }
+console.log(`recoloured ${order.length} polities; ${low} neighbour pairs still under ΔE 6` + (region ? `, ${lowRegion} pairs in the region under ΔE 3` : ''));
 
 // ---- Write back
 if (dry) process.exit(0);

@@ -1,0 +1,169 @@
+id: sino-sikh-war
+name: Dogra–Tibetan War
+start: "1841-05"
+end: "1842-09-17"
+tier: B
+summary: "A war between the Dogra state of Jammu, a vassal of the Sikh Empire, and Tibet, then under the protection of Qing China; it is also called the Sino-Sikh War. Having conquered Ladakh and Baltistan, Gulab Singh’s general Zorawar Singh invaded western Tibet in May 1841 with about 4,000–6,000 men, took Rudok, Gartok and Taklakot, and reached the sacred lake of Manasarovar. In the winter a Tibetan army cut him off, and in December 1841 he was killed and his army destroyed near Taklakot. The Tibetans advanced into Ladakh and besieged Leh, but were driven back by Dogra reinforcements and beaten at Chushul in August 1842. The Treaty of Chushul, agreed in September 1842, restored the old frontier and trade between Ladakh and Tibet."
+countries: [in, cn]
+sides:
+  - id: dogra
+    name: Dogra Jammu (under the Sikh Empire)
+    polities: [jammu-kashmir, sikh-empire]
+    ink: blue
+    moves: Dogra moves
+    success: Dogra success
+  - id: tib
+    name: Tibet (under Qing protection)
+    polities: [tibet, china]
+    ink: slate
+    moves: Tibetan moves
+    success: Tibetan success
+notes:
+  - Gulab Singh, Raja of Jammu since 1822, was a vassal of the Sikh Empire, and Ladakh was recognised in the peace as part of the Sikh Empire’s lands. Qing China, which protected Tibet and kept two ambans (imperial residents) in Lhasa, was fighting the First Opium War at the time; the fighting was done by Tibetan troops.
+  - Numbers on both sides are uncertain. Tibetan reports put Zorawar Singh’s army at 6,000, Dogra sources at about 4,000, including Ladakhi and Balti troops.
+sources:
+  - title: Dogra–Tibetan war (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dogra%E2%80%93Tibetan_war
+  - title: Zorawar Singh Kahluria (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Zorawar_Singh_Kahluria
+  - title: Treaty of Chushul (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Chushul
+  - title: Gulab Singh (Britannica)
+    url: https://www.britannica.com/biography/Gulab-Singh
+steps:
+  - title: Into western Tibet
+    date: May – November 1841
+    when: "1841-05"
+    borders: "1841-09"
+    countries: [in, cn]
+    body:
+      - From 1834 Zorawar Singh, general of Gulab Singh of Jammu, conquered the Buddhist kingdom of Ladakh in a series of campaigns, and in 1840 he took Baltistan. Ladakh had long controlled the trade in pashmina wool from western Tibet to the shawl weavers of Kashmir, and the conquest disturbed that trade. In May 1841 Zorawar Singh marched from Leh into Tibet’s western province, Ngari, with an army of Dogras, Ladakhis and Baltis, perhaps 4,000–6,000 men in all.
+      - The army advanced in three columns, by Rupshu and Hanle, along the Indus towards Tashigang, and along the Pangong lake towards Rudok; the monasteries at Hanle and Tashigang were plundered. Zorawar Singh took Rudok and then Gartok, the trading centre of the province, and by September had reached Taklakot, near the borders of Nepal and British Kumaon, where he built a fort. The Tibetan officials and their small forces fell back. The British, worried about their own trade and about Nepal, asked the Sikh government in Lahore to recall him.
+    facts:
+      - [Invasion begins, "May 1841"]
+      - [Dogra army, "about 4,000–6,000 men"]
+      - [Taken, "Rudok, Tashigang, Gartok, Taklakot"]
+    markers:
+      - kind: capital
+        side: dogra
+        name: Leh
+        date: 1841
+        text: Capital of Ladakh, conquered by Zorawar Singh in 1834–1840. The invasion set out from here.
+        lonlat: [77.585, 34.165]
+      - kind: taken
+        side: dogra
+        name: Rudok
+        date: 1841
+        text: The fortress town at the eastern end of the Pangong lake, taken by Zorawar Singh’s own column.
+        lonlat: [79.643, 33.416]
+      - kind: taken
+        side: dogra
+        name: Tashigang
+        date: 1841
+        text: A fortified monastery on the Indus near the Ladakh border, plundered by one of the Dogra columns.
+        lonlat: [79.676, 32.510]
+        lp: l
+      - kind: taken
+        side: dogra
+        name: Gartok
+        date: 1841
+        text: The summer trading camp and seat of the Tibetan governors of western Tibet.
+        lonlat: [80.337, 31.728]
+      - kind: taken
+        side: dogra
+        name: Taklakot
+        date: September 1841
+        text: The Purang district centre near the Nepalese border, where the Dogras built a fort.
+        lonlat: [81.177, 30.295]
+        lp: l
+    arrows:
+      - side: dogra
+        label: Zorawar Singh
+        phase: 1
+        via: [[77.600, 34.150], [78.300, 34.000], [79.000, 33.700], [79.600, 33.430]]
+      - side: dogra
+        phase: 1
+        via: [[77.800, 33.900], [78.950, 32.780], [79.650, 32.520]]
+      - side: dogra
+        phase: 2
+        via: [[79.650, 33.380], [80.000, 32.600], [80.300, 31.780]]
+      - side: dogra
+        phase: 3
+        via: [[80.350, 31.700], [80.800, 31.000], [81.150, 30.330]]
+    areas:
+      - style: occupied
+        side: dogra
+        label: Western Tibet, occupied by Zorawar Singh, 1841
+        polygon: [[78.90, 33.70], [79.90, 33.70], [80.40, 32.60], [81.00, 31.60], [81.70, 30.60], [81.40, 30.10], [80.90, 30.20], [80.00, 31.00], [79.30, 32.00], [78.80, 32.70]]
+  - title: Do-yo, Leh and Chushul
+    date: November 1841 – September 1842
+    when: "1841-12-14"
+    borders: "1842-09-17"
+    countries: [in, cn]
+    body:
+      - The Tibetan government sent an army under the minister (kalon) Pelhün, reinforced in November by several thousand more men; the Chinese amban in Lhasa reported the invasion to the emperor, but the Qing, at war with Britain, sent no army of their own. Zorawar Singh, with perhaps 3,000 men, chose to stay through the winter on the high Tibetan plateau. The Tibetans retook Taklakot on 9 November and cut his communications. On 14 December 1841 (the date in the Tibetan report; some accounts give 12 December), at Do-yo just north of Taklakot, his army was attacked in the snow. He was wounded and killed, and his army broke up. About 300 of his men were killed in the fighting and about 700 taken prisoner; many more died of cold on the flight back to Ladakh. Mehta Basti Ram, holding the Dogra fort near Taklakot, escaped over the Himalaya with about 240 men to the British at Almora.
+      - The Tibetans followed into Ladakh in the spring of 1842 and besieged Leh, as Ladakhi nobles rose against Dogra rule. Gulab Singh sent fresh troops under Dewan Hari Chand and Wazir Ratnu, who relieved Leh and drove the Tibetans back to their camp at Drangtse, which they flooded by damming the stream. In August 1842 the Dogras defeated the Tibetans at Chushul and killed their commander. By an exchange of notes at Leh on 17 September 1842, known as the Treaty of Chushul, both sides agreed to keep to the “old, established frontiers”. Ladakh stayed with Gulab Singh and the Sikh Empire, Tibet kept western Tibet, and the old trade and the Ladakhi tribute missions to Lhasa were to continue.
+    facts:
+      - [Battle of Do-yo, "14 December 1841, Tibetan victory; Zorawar Singh killed"]
+      - [Battle of Chushul, "August 1842, Dogra victory"]
+      - [Treaty of Chushul, "17 September 1842"]
+    markers:
+      - kind: battle
+        side: tib
+        name: Do-yo
+        date: 14 December 1841
+        text: Zorawar Singh was killed here, just north of Taklakot, and his army destroyed in the winter fighting.
+        lonlat: [81.200, 30.340]
+      - kind: event
+        side: dogra
+        name: Almora
+        date: winter 1841–1842
+        text: Mehta Basti Ram and about 240 survivors reached this British post in Kumaon over the Himalayan passes.
+        lonlat: [79.659, 29.597]
+        lp: l
+      - kind: siege
+        side: dogra
+        name: Leh
+        date: spring 1842
+        text: Besieged by the Tibetans and Ladakhi rebels until relieved by Dogra reinforcements from Jammu.
+        lonlat: [77.585, 34.165]
+        lp: l
+      - kind: event
+        side: dogra
+        name: Drangtse
+        date: summer 1842
+        text: The Dogras flooded the Tibetan camp by damming the stream, forcing a retreat.
+        lonlat: [78.180, 34.030]
+      - kind: battle
+        side: dogra
+        name: Chushul
+        date: August 1842
+        text: The Tibetan army was defeated and its commander killed.
+        lonlat: [78.660, 33.590]
+      - kind: treaty
+        name: Treaty of Chushul
+        date: 17 September 1842
+        text: Agreed at Leh by an exchange of notes. It restored the old frontier between Ladakh and Tibet.
+        lonlat: [77.600, 34.140]
+        lp: b
+    arrows:
+      - side: tib
+        label: Tibetan army
+        phase: 1
+        via: [[81.700, 30.600], [81.400, 30.450], [81.220, 30.360]]
+      - side: dogra
+        label: Basti Ram
+        phase: 2
+        via: [[81.150, 30.280], [80.600, 30.150], [80.100, 29.900], [79.700, 29.620]]
+      - side: tib
+        phase: 2
+        via: [[79.600, 33.430], [79.000, 33.700], [78.300, 34.000], [77.700, 34.150]]
+      - side: dogra
+        label: Hari Chand
+        phase: 3
+        via: [[77.600, 34.180], [78.000, 34.100], [78.200, 34.000], [78.650, 33.620]]
+    areas:
+      - style: contested
+        side: tib
+        label: Tibetan advance into Ladakh, 1842
+        polygon: [[77.40, 34.30], [78.40, 34.40], [79.40, 33.90], [79.00, 33.00], [78.30, 32.90], [77.60, 33.60]]

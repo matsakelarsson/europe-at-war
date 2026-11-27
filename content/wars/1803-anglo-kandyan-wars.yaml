@@ -1,0 +1,209 @@
+id: anglo-kandyan-wars
+name: Anglo-Kandyan Wars
+start: "1803-01"
+end: "1818-11-26"
+tier: B
+summary: "The wars in which Britain conquered the Kingdom of Kandy, the last independent kingdom of Sri Lanka, in the island’s central highlands. A British invasion in 1803 took the abandoned capital but ended in disaster when the garrison left behind surrendered and was killed. In 1815, after King Sri Vikrama Rajasinha had turned his chief nobles against him, a second invasion met almost no resistance; the king was captured and exiled, and by the Kandyan Convention the chiefs gave the kingdom to the British Crown. Within two years many of the same chiefs led the Uva rebellion of 1817–1818, which was crushed with great destruction and loss of life, after which the British ruled the highlands directly."
+countries: [lk]
+sides:
+  - id: gb
+    name: British Ceylon
+    polities: [british-ceylon]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: kandy
+    name: Kingdom of Kandy
+    polities: [kandy]
+    ink: gold
+    moves: Kandyan moves
+    success: Kandyan success
+notes:
+  - Ceylon’s coastal provinces, taken from the Dutch in 1795–1796, became a British Crown colony in 1802. Its troops included British regiments, Malay, Indian and African soldiers of the Ceylon regiments, and sepoys sent from Madras.
+  - The kings of Kandy from 1739 were of the Nayak dynasty, of South Indian origin, but ruled as Sinhalese Buddhist kings. The last king is called Sri Vikrama Rajasinha.
+  - In 2017 the government of Sri Lanka revoked the 1818 gazette notice that had declared the leaders of the Uva rebellion traitors, and named them national heroes.
+sources:
+  - title: Kandyan Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kandyan_Wars
+  - title: Uva Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Uva_Rebellion
+  - title: Kandyan Convention (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kandyan_Convention
+  - title: Sri Vikrama Rajasinha (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sri_Vikrama_Rajasinha
+  - title: Kandy, historical kingdom (Britannica)
+    url: https://www.britannica.com/place/Kandy-historical-kingdom-Sri-Lanka
+  - title: Kandyan Convention (Britannica)
+    url: https://www.britannica.com/event/Kandyan-Convention
+steps:
+  - title: The war of 1803
+    date: 1803–1805
+    when: "1803-02-21"
+    borders: "1803-02-21"
+    countries: [lk]
+    body:
+      - When Britain took the Dutch coastal provinces of Ceylon in 1795–1796, the Kingdom of Kandy still held the hill country and much of the interior. Its young king, Sri Vikrama Rajasinha, had been placed on the throne in 1798 by the first minister (adigar), Pilima Talawe, who then intrigued with the British governor, Frederick North, to replace him. After Kandyan officials seized goods from traders from the British provinces, North declared war. Two columns, from Colombo under General Hay Macdowall and from Trincomalee under Colonel Barbut, reached Kandy on 21 February 1803 and found it abandoned and partly burnt. They crowned a rival claimant, Muttusamy, as king.
+      - The Kandyans would not fight a pitched battle. Malaria and dysentery swept through the garrison, and most of the troops were withdrawn, leaving Major Adam Davie in Kandy with a few hundred men, many of them sick. In June the Kandyans attacked. On 24 June Davie surrendered in return for a safe passage to Trincomalee, but the Mahaweli river was in flood; Muttusamy was taken by the Kandyans and put to death, and most of the soldiers were killed at the river, while the sick left behind in Kandy were also killed. Davie was held prisoner and died in captivity years later. Accounts of the killings come mainly from a few survivors, and some recent historians question how they happened.
+      - The Kandyans then raided the British provinces, but in September 1803 the king’s army was beaten at Hanwella, about 30 km from Colombo. In 1804 a small force under Captain Arthur Johnston marched from Batticaloa to Kandy and fought its way out to Trincomalee. Raids went on into 1805; no treaty was signed, and the new governor, Thomas Maitland, kept the peace for the next ten years.
+    facts:
+      - [British enter Kandy, "21 February 1803"]
+      - [Davie’s surrender, "24 June 1803"]
+      - [Battle of Hanwella, "September 1803, British victory"]
+    markers:
+      - kind: capital
+        side: gb
+        name: Colombo
+        date: 1803
+        text: Seat of the British governor of Ceylon.
+        lonlat: [79.850, 6.930]
+        lp: l
+      - kind: taken
+        side: gb
+        name: Kandy
+        date: 21 February 1803
+        text: The royal city of Senkadagala, found abandoned by the British columns. Muttusamy was crowned here.
+        lonlat: [80.636, 7.294]
+        lp: l
+      - kind: event
+        side: kandy
+        name: Mahaweli river
+        date: 24–25 June 1803
+        text: Davie’s column, unable to cross the flooded river, gave up Muttusamy and was destroyed.
+        lonlat: [80.645, 7.320]
+      - kind: battle
+        side: gb
+        name: Hanwella
+        date: September 1803
+        text: A fort on the Kelani river, where British artillery broke the Kandyan advance on Colombo.
+        lonlat: [80.083, 6.903]
+        lp: b
+      - kind: held
+        side: gb
+        name: Trincomalee
+        date: 1803
+        text: The great harbour on the east coast, starting point of Barbut’s column.
+        lonlat: [81.233, 8.571]
+    arrows:
+      - side: gb
+        label: Macdowall
+        phase: 1
+        via: [[79.870, 6.930], [80.210, 6.950], [80.400, 7.150], [80.600, 7.280]]
+      - side: gb
+        label: Barbut
+        phase: 1
+        via: [[81.200, 8.550], [80.980, 8.330], [80.700, 7.800], [80.640, 7.330]]
+      - side: kandy
+        phase: 2
+        via: [[80.560, 7.250], [80.300, 7.050], [80.100, 6.920]]
+    areas:
+      - style: occupied
+        side: gb
+        label: Held by the British, February–June 1803
+        atoms: [LK-21]
+  - title: The fall of Kandy
+    date: 1814–1815
+    when: "1815-02-14"
+    borders: "1815-03-02"
+    countries: [lk]
+    body:
+      - Sri Vikrama Rajasinha came to distrust his chiefs, and they him. In 1814 the first adigar, Ehelepola, was accused of plotting, rose in revolt in Sabaragamuwa, failed and fled to the British. The king had Ehelepola’s wife and children put to death in Kandy, and executed other chiefs and monks; much of the nobility turned against him. In late 1814 a group of traders from the British provinces were mutilated as spies, and in January 1815 Kandyan troops crossed the border near Sitawaka. The governor, Sir Robert Brownrigg, advised by his interpreter John D’Oyly, who had built up contacts among the discontented chiefs, ordered an invasion.
+      - Several columns entered the kingdom in January and February 1815, with Ehelepola accompanying the British, and met almost no resistance as the chiefs went over to them. Brownrigg entered Kandy on 14 February. The king had fled east into Dumbara, where on 18 February he and two of his queens were found in a village house by Kandyan chiefs’ men and handed over. He was exiled to Vellore in South India, where he died in 1832.
+      - On 2 March 1815 the Kandyan chiefs and the governor signed the Kandyan Convention in the audience hall at Kandy. It deposed the king, gave sovereignty over the kingdom to the British Crown, and promised to protect Buddhism and to keep the chiefs’ powers and the Kandyan laws and customs. For the first time, the whole island came under a single foreign power.
+    facts:
+      - [British enter Kandy, "14 February 1815"]
+      - [King captured, "18 February 1815"]
+      - [Kandyan Convention, "2 March 1815"]
+    markers:
+      - kind: event
+        side: kandy
+        name: Sitawaka
+        date: January 1815
+        text: Kandyan troops crossed into British territory here, giving Brownrigg his reason for war.
+        lonlat: [80.210, 6.950]
+        lp: b
+      - kind: taken
+        side: gb
+        name: Kandy
+        date: 14 February 1815
+        text: Entered by Brownrigg without a fight.
+        lonlat: [80.636, 7.294]
+        lp: l
+      - kind: event
+        side: gb
+        name: Dumbara
+        date: 18 February 1815
+        text: The fleeing king was captured in a village house in this valley east of Kandy.
+        lonlat: [80.790, 7.280]
+      - kind: treaty
+        name: Kandyan Convention
+        date: 2 March 1815
+        text: Signed in the audience hall of the palace at Kandy by the governor and the Kandyan chiefs.
+        lonlat: [80.641, 7.294]
+        lp: b
+    arrows:
+      - side: gb
+        label: Colombo column
+        phase: 1
+        via: [[79.870, 6.930], [80.210, 6.950], [80.400, 7.150], [80.600, 7.280]]
+      - side: gb
+        label: Trincomalee column
+        phase: 1
+        via: [[81.200, 8.550], [80.980, 8.330], [80.700, 7.800], [80.640, 7.330]]
+      - side: gb
+        phase: 2
+        via: [[80.660, 7.300], [80.730, 7.290], [80.780, 7.280]]
+    areas:
+      - style: gained
+        side: gb
+        label: The Kandyan kingdom, ceded to the British Crown in 1815
+        atoms: [LK-21, LK-22, LK-23, LK-61, LK-71, LK-72, LK-81, LK-82, LK-91, LK-92]
+  - title: The Uva rebellion
+    date: 1817–1818
+    when: "1817-10-16"
+    borders: "1818-11-26"
+    countries: [lk]
+    side_names: { kandy: Kandyan rebels }
+    body:
+      - The chiefs soon found that British agents, not they, held power, and that the new rulers paid little heed to the customs they had promised to respect. In 1817 a pretender, Wilbawe, who claimed to be Doraisamy, a kinsman of the exiled king, appeared in Wellassa in the east. On 16 October the Assistant Resident at Badulla, Major Sylvester Wilson, went to investigate and was killed near Bibile. Keppetipola, the chief sent to put down the rising, went over to it and became its leader, and in 1818 it spread to most of the Kandyan provinces. Many of the chiefs who had signed the Convention joined it; Ehelepola was suspected and later exiled to Mauritius.
+      - Brownrigg, reinforced from India, answered with martial law and a scorched-earth campaign in Uva and Wellassa. Villages, granaries and paddy fields were burnt, cattle killed and irrigation works destroyed, and famine and disease followed. By October 1818 the rebel leaders were being captured; Keppetipola and Madugalle were beheaded in Kandy on 26 November, while Wilbawe escaped. More than 10,000 Kandyans are thought to have died; the British lost about 1,000 men, mostly to disease. A proclamation of November 1818 took away much of what the Convention had guaranteed and placed the Kandyan provinces under direct British rule, and Uva took decades to recover.
+    facts:
+      - [Wilson killed near Bibile, "16 October 1817"]
+      - [Keppetipola and Madugalle executed, "26 November 1818"]
+      - [Deaths, "more than 10,000 Kandyans; about 1,000 British troops, mostly from disease"]
+    markers:
+      - kind: event
+        side: kandy
+        name: Bibile
+        date: 16 October 1817
+        text: Major Wilson was killed at a stream near here, the first act of the rebellion.
+        lonlat: [81.220, 7.163]
+      - kind: held
+        side: gb
+        name: Badulla
+        date: 1817–1818
+        text: The British post in Uva, cut off for a time by the rebels.
+        lonlat: [81.056, 6.989]
+        lp: l
+      - kind: event
+        side: gb
+        name: Kandy
+        date: 26 November 1818
+        text: Brownrigg’s headquarters during the rebellion, where Keppetipola and Madugalle were executed.
+        lonlat: [80.636, 7.294]
+        lp: l
+    arrows:
+      - side: gb
+        phase: 1
+        via: [[80.660, 7.280], [80.850, 7.150], [81.050, 7.000]]
+      - side: gb
+        phase: 1
+        via: [[81.070, 7.000], [81.150, 7.080], [81.210, 7.160]]
+    areas:
+      - style: contested
+        side: kandy
+        label: Uva and Wellassa, the centre of the rebellion
+        atoms: [LK-81, LK-82]
+      - style: contested
+        side: kandy
+        label: Rebellion spread, 1818
+        atoms: [LK-21, LK-22, LK-23, LK-61, LK-71, LK-72, LK-91, LK-92]

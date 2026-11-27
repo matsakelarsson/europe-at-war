@@ -1,0 +1,329 @@
+id: british-conquest-of-bengal
+name: British conquest of Bengal
+start: "1756-06"
+end: "1765-08-16"
+tier: A
+summary: "The wars in which the British East India Company became the real ruler of Bengal, Bihar and Orissa, the richest province of Mughal India. In 1756 the young Nawab Siraj-ud-Daulah took the Company’s town of Calcutta; a force from Madras under Robert Clive retook it, seized the French settlement of Chandernagore and, in league with the Nawab’s own commander Mir Jafar, defeated Siraj at Plassey on 23 June 1757. The Company made and unmade nawabs, replacing Mir Jafar with Mir Qasim in 1760, and when Mir Qasim tried to rule on his own terms it fought and beat him in 1763. At Buxar in October 1764 it defeated Mir Qasim, the Nawab of Awadh and the Mughal emperor Shah Alam II together, and by the settlement of Allahabad in August 1765 the emperor granted the Company the diwani, the right to collect the revenue of the three provinces."
+countries: [in, bd]
+sides:
+  - id: eic
+    name: British East India Company
+    polities: [british-india]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: ben
+    name: Nawabs of Bengal (Siraj-ud-Daulah, Mir Qasim)
+    polities: [bengal-nawabs]
+    ink: teal
+    moves: Nawab’s moves
+    success: Success for the Nawab
+  - id: fr
+    name: French East India Company
+    polities: [french-india]
+    ink: navy
+    moves: French moves
+    success: French success
+  - id: awa
+    name: Awadh and the Mughal emperor
+    polities: [awadh, mughals]
+    ink: purple
+    moves: Moves of Awadh and the emperor
+    success: Success for Awadh and the emperor
+notes:
+  - The number who died in the Black Hole of Calcutta is disputed. The only detailed account, by the survivor John Zephaniah Holwell, says that 123 of 146 prisoners died; later historians, who doubt Holwell’s figures, give lower numbers, such as Stanley Wolpert’s 64 imprisoned and 21 surviving. The story was used for generations in Britain to justify the conquest.
+  - The Company’s victory owed much to divisions at the Nawab’s court and to the bankers of Murshidabad, the Jagat Seths, who backed the conspiracy against Siraj-ud-Daulah. Mir Jafar and Mir Qasim paid the Company and its servants huge sums, and Company servants traded privately free of the duties paid by Indian merchants; both were central to the quarrel of 1763.
+  - The Carnatic Wars in the south, the other half of the Anglo-French struggle in India, are told separately.
+sources:
+  - title: Siege of Calcutta (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Calcutta
+  - title: Black Hole of Calcutta (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Black_Hole_of_Calcutta
+  - title: Battle of Plassey (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Plassey
+  - title: Battle of Chinsurah (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Chinsurah
+  - title: Battle of Katwa (1763) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Katwa_(1763)
+  - title: Patna massacre of 1763 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Patna_massacre_of_1763
+  - title: Battle of Buxar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Buxar
+  - title: Treaty of Allahabad (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Allahabad
+  - title: Mir Qasim (Banglapedia)
+    url: https://en.banglapedia.org/index.php/Mir_Qasim
+  - title: Mir Jafar Ali Khan (Banglapedia)
+    url: https://en.banglapedia.org/index.php/Mir_Jafar_Ali_Khan
+  - title: Battle of Plassey (Britannica)
+    url: https://www.britannica.com/event/Battle-of-Plassey
+  - title: Battle of Buxar (Britannica)
+    url: https://www.britannica.com/event/Battle-of-Buxar
+steps:
+  - title: The fall of Calcutta
+    date: April – June 1756
+    when: "1756-06-20"
+    borders: "1756-06-20"
+    countries: [in]
+    body:
+      - Alivardi Khan died in April 1756 and was succeeded by his young grandson Siraj-ud-Daulah. The new Nawab was angry that the British at Calcutta were strengthening Fort William against the French without his leave, sheltering a fugitive official of his court and abusing their trading privileges. In June his troops seized the British factory at Kasimbazar, near his capital, and his army marched on Calcutta. Many of the British, including the governor, Roger Drake, escaped downriver by ship, and the fort fell on 20 June 1756.
+      - That night the remaining prisoners were shut into the fort’s small punishment cell, the Black Hole. According to the survivor John Zephaniah Holwell, 123 of 146 died of heat and suffocation; modern estimates are much lower, but many died. The Nawab renamed the town Alinagar and left a garrison. The surviving British gathered at Fulta, down the Hooghly, and sent word to Madras.
+    facts:
+      - [Kasimbazar factory seized, "early June 1756"]
+      - [Calcutta taken by the Nawab, "20 June 1756"]
+      - [Black Hole deaths, "123 of 146 according to Holwell; modern estimates lower"]
+    markers:
+      - kind: taken
+        side: ben
+        name: Calcutta
+        date: 20 June 1756
+        text: Fort William fell after a four-day siege; the prisoners were shut into the Black Hole that night.
+        lonlat: [88.348, 22.573]
+      - kind: taken
+        side: ben
+        name: Kasimbazar
+        date: early June 1756
+        text: The British factory near Murshidabad, seized at the start of the quarrel.
+        lonlat: [88.281, 24.118]
+        lp: r
+      - kind: capital
+        side: ben
+        name: Murshidabad
+        date: 1756
+        text: Capital of the Nawabs of Bengal.
+        lonlat: [88.272, 24.175]
+        lp: l
+      - kind: event
+        side: eic
+        name: Fulta
+        date: June – December 1756
+        text: The British refugees waited here on their ships for help from Madras.
+        lonlat: [88.130, 22.300]
+        lp: l
+    arrows:
+      - side: ben
+        label: Siraj-ud-Daulah
+        via: [[88.272, 24.175], [88.250, 23.800], [88.380, 22.900], [88.360, 22.620]]
+  - title: Clive and Watson
+    date: December 1756 – March 1757
+    when: "1757-02-05"
+    borders: "1757-03-23"
+    countries: [in]
+    body:
+      - The Madras council sent a fleet under Admiral Charles Watson with several hundred European soldiers and a larger number of sepoys under Robert Clive. They entered the Hooghly in December, took the fort of Budge Budge and retook Calcutta on 2 January 1757 almost without resistance, then sacked the Nawab’s town of Hooghly. When Siraj-ud-Daulah came south with his army, Clive attacked his camp outside Calcutta at dawn on 5 February in thick fog. The attack was a confused affair with heavy losses, but it shook the Nawab, who on 9 February signed the treaty of Alinagar, restoring the Company’s privileges and allowing it to fortify Calcutta.
+      - Britain and France were again at war, and Clive and Watson turned on the French settlement of Chandernagore, a few miles up the river. Watson’s ships sailed up and bombarded Fort d’Orléans, and the French surrendered on 23 March 1757. The French factor at Kasimbazar, Jean Law, retreated up the Ganges with his men.
+    facts:
+      - [Calcutta retaken, "2 January 1757"]
+      - [Clive’s attack on the Nawab’s camp, "5 February 1757"]
+      - [Treaty of Alinagar, "9 February 1757"]
+      - [Chandernagore surrenders, "23 March 1757"]
+    markers:
+      - kind: taken
+        side: eic
+        name: Calcutta
+        date: 2 January 1757
+        text: Retaken by Clive and Watson after six months in the Nawab’s hands.
+        lonlat: [88.348, 22.573]
+      - kind: taken
+        side: eic
+        name: Budge Budge
+        date: December 1756
+        text: The Nawab’s fort below Calcutta, taken on the way up the river.
+        lonlat: [88.174, 22.474]
+        lp: l
+      - kind: taken
+        side: eic
+        name: Chandernagore
+        date: 23 March 1757
+        text: The French settlement surrendered after a bombardment from Watson’s ships.
+        lonlat: [88.370, 22.864]
+        lp: l
+      - kind: treaty
+        name: Alinagar
+        date: 9 February 1757
+        text: The Nawab restored the Company’s privileges after Clive’s attack on his camp.
+        lonlat: [88.400, 22.650]
+        lp: r
+    arrows:
+      - side: eic
+        label: Clive and Watson
+        phase: 1
+        via: [[88.050, 21.950], [88.130, 22.300], [88.174, 22.474], [88.348, 22.573]]
+      - side: eic
+        phase: 2
+        via: [[88.348, 22.573], [88.360, 22.750], [88.370, 22.850]]
+  - title: Plassey
+    date: April – July 1757
+    when: "1757-06-23"
+    borders: "1757-07-02"
+    countries: [in]
+    body:
+      - Siraj-ud-Daulah was now distrusted by much of his court. Clive and the Calcutta council secretly agreed with Mir Jafar, the Nawab’s paymaster and commander, and with the bankers Jagat Seth, Rai Durlabh and the merchant Omichund, to make Mir Jafar Nawab in return for large payments. On 13 June Clive marched north with about 3,000 men, some 750 to 800 of them British and the rest sepoys, with eight field guns. On 23 June 1757 he met the Nawab’s army, about 50,000 strong with a small French artillery detachment, in a mango grove near the village of Plassey on the Bhagirathi.
+      - The battle was mostly an artillery duel. A heavy rain soaked the Nawab’s powder while the British kept theirs covered, and his loyal general Mir Madan was mortally wounded in a cavalry charge. Mir Jafar’s divisions stood aside, Siraj fled to Murshidabad, and by late afternoon the British had taken his camp. The British lost about 22 killed and 50 wounded; the Nawab’s army lost about 500. Mir Jafar was proclaimed Nawab. Siraj was caught near Rajmahal and killed on 2 July on the orders of Mir Jafar’s son Miran.
+    facts:
+      - [Battle of Plassey, "23 June 1757, British victory"]
+      - [British force, "about 3,000, with 750–800 Europeans and 2,100 sepoys"]
+      - [Nawab’s army, "about 50,000"]
+      - [Losses, "British 22 killed, 50 wounded; Nawab about 500"]
+    markers:
+      - kind: battle
+        side: eic
+        name: Plassey
+        date: 23 June 1757
+        text: Clive defeated Siraj-ud-Daulah while Mir Jafar’s troops stood aside.
+        lonlat: [88.257, 23.797]
+      - kind: event
+        side: eic
+        name: Murshidabad
+        date: 29 June 1757
+        text: Clive brought Mir Jafar into the capital and seated him as Nawab.
+        lonlat: [88.272, 24.175]
+      - kind: event
+        name: Rajmahal
+        date: July 1757
+        text: Siraj was caught near here as he fled up the Ganges, and was taken back to Murshidabad and killed.
+        lonlat: [87.830, 25.053]
+      - kind: event
+        side: eic
+        name: Katwa
+        date: 19 June 1757
+        text: Clive’s army took the fort here on its way north and crossed the river on 22 June.
+        lonlat: [88.129, 23.644]
+        lp: l
+    arrows:
+      - side: eic
+        label: Clive
+        phase: 1
+        via: [[88.370, 22.864], [88.250, 23.300], [88.129, 23.644], [88.250, 23.790]]
+      - side: ben
+        label: Siraj flees
+        phase: 2
+        via: [[88.257, 23.797], [88.272, 24.175], [87.950, 24.700], [87.830, 25.053]]
+  - title: Chinsurah and Mir Qasim
+    date: 1758–1760
+    when: "1759-11-25"
+    borders: "1760-10-20"
+    countries: [in, bd]
+    body:
+      - Mir Jafar depended on the Company and paid it and its officers huge sums; the Company also received the zamindari of the 24 Parganas south of Calcutta. In 1759 the Mughal crown prince, later Shah Alam II, invaded Bihar and besieged Patna, and a relief force under Clive drove him off. The Dutch East India Company, invited in secret by Mir Jafar, sent troops from Batavia to its settlement of Chinsurah, but in November 1759 the British under Colonel Francis Forde defeated them at Chinsurah and Biderra, and the Dutch had to pay compensation.
+      - Clive went home in 1760. With Mir Jafar unable to pay the money he owed, the Calcutta council replaced him on 20 October 1760 with his son-in-law Mir Qasim, who had agreed to cede the districts of Burdwan, Midnapore and Chittagong to the Company to pay for its army.
+    facts:
+      - [Battle of Chinsurah, "25 November 1759, British victory over the Dutch"]
+      - [Mir Qasim made Nawab, "20 October 1760"]
+      - [Burdwan, Midnapore and Chittagong ceded, "1760"]
+    markers:
+      - kind: battle
+        side: eic
+        name: Chinsurah
+        date: 25 November 1759
+        text: Forde defeated the Dutch troops sent from Batavia.
+        lonlat: [88.392, 22.899]
+        lp: r
+      - kind: siege
+        side: eic
+        name: Patna
+        date: 1759
+        text: Besieged by the Mughal crown prince and relieved by a force under Clive.
+        lonlat: [85.124, 25.609]
+      - kind: event
+        side: eic
+        name: Murshidabad
+        date: 20 October 1760
+        text: Mir Jafar was deposed and Mir Qasim made Nawab by the Company.
+        lonlat: [88.272, 24.175]
+    areas:
+      - style: gained
+        side: eic
+        label: Chittagong, ceded to the Company in 1760
+        atoms: [BD-B~chittagong]
+      - style: gained
+        side: eic
+        label: Burdwan and Midnapore, ceded in 1760 (approximate)
+        polygon: [[87.200, 23.700], [88.150, 23.550], [88.050, 22.800], [87.900, 22.000], [87.300, 21.700], [86.800, 22.200], [87.000, 23.200]]
+  - title: The war with Mir Qasim
+    date: June – November 1763
+    when: "1763-10-06"
+    borders: "1763-11"
+    countries: [in]
+    body:
+      - Mir Qasim moved his capital to Munger in Bihar, reformed the revenue and trained an army on European lines. The quarrel came over trade. Company servants used the Company’s free passes, the dastaks, to trade privately inside Bengal without paying duties, and sold them to Indian merchants; when Mir Qasim abolished internal duties for everyone, the Calcutta council protested. On 25 June 1763 the Company’s agent at Patna, William Ellis, tried to seize the city; he was driven out and captured with his men.
+      - The council declared war on 7 July, restored Mir Jafar as Nawab, and sent Major Thomas Adams up the Ganges. His small army beat Mir Qasim’s troops at Katwa on 19 July, at Gheria in August and at the fortified pass of Udhua Nala in September, and took Munger in October. On 6 October 1763, at Patna, Mir Qasim had his British prisoners killed, 45 in all, with some 200 sepoys who had refused to join him. Patna was stormed in November and Mir Qasim fled to Awadh.
+    facts:
+      - [Ellis’s attack on Patna, "25 June 1763"]
+      - [Battle of Katwa, "19 July 1763, British victory"]
+      - [Udhua Nala, "September 1763, British victory"]
+      - [Patna massacre, "6 October 1763; 45 British prisoners and about 200 sepoys killed"]
+    markers:
+      - kind: toll
+        side: ben
+        name: Patna
+        date: 6 October 1763
+        text: Mir Qasim’s British prisoners were killed here; the city was stormed by the British in November.
+        lonlat: [85.124, 25.609]
+      - kind: capital
+        side: ben
+        name: Munger
+        date: 1763
+        text: Mir Qasim’s new capital and arsenal, taken by Adams in October.
+        lonlat: [86.470, 25.377]
+      - kind: battle
+        side: eic
+        name: Udhua Nala
+        date: September 1763
+        text: Mir Qasim’s fortified lines between the Ganges and the hills were stormed.
+        lonlat: [87.851, 24.972]
+      - kind: battle
+        side: eic
+        name: Katwa
+        date: 19 July 1763
+        text: The first battle of the war, won by Major Adams.
+        lonlat: [88.129, 23.644]
+    arrows:
+      - side: eic
+        label: Adams
+        via: [[88.129, 23.644], [88.272, 24.175], [87.851, 24.972], [86.470, 25.377], [85.200, 25.600]]
+  - title: Buxar and Allahabad
+    date: 1764 – August 1765
+    when: "1764-10-23"
+    borders: "1765-08-12"
+    countries: [in, bd]
+    body:
+      - Mir Qasim found allies in Shuja-ud-Daula, the Nawab of Awadh, and in the emperor Shah Alam II, who was living in Awadh. Their armies advanced into Bihar in 1764, and on 22–23 October Major Hector Munro, with about 7,000 men, mostly sepoys, met some 40,000 at Buxar on the Ganges. After several hours of hard fighting the allied army broke. Wikipedia gives the British losses as about 850 killed, wounded and missing, and those of the allies as some 2,000 killed and 4,000 wounded.
+      - Shah Alam came over to the British camp. Shuja fought on, but was beaten again at Kora in May 1765. Clive returned to India as governor and, at Allahabad in August 1765, settled the peace. The emperor granted the Company the diwani of Bengal, Bihar and Orissa in return for 26 lakh rupees a year and the districts of Kora and Allahabad, and Shuja got Awadh back on payment of 50 lakh rupees. The Nawab of Bengal kept his title, but from now on the Company collected the revenue and commanded the army.
+    facts:
+      - [Battle of Buxar, "22–23 October 1764, British victory"]
+      - [Armies, "British about 7,000; allies about 40,000"]
+      - [Diwani granted, "12 August 1765"]
+      - [Treaty with Shuja-ud-Daula, "16 August 1765"]
+    markers:
+      - kind: battle
+        side: eic
+        name: Buxar
+        date: 22–23 October 1764
+        text: Munro defeated the armies of Mir Qasim, Shuja-ud-Daula and Shah Alam II.
+        lonlat: [83.983, 25.568]
+      - kind: battle
+        side: eic
+        name: Kora
+        date: May 1765
+        text: Shuja-ud-Daula’s last stand before he came to terms.
+        lonlat: [80.365, 26.101]
+      - kind: treaty
+        name: Allahabad
+        date: August 1765
+        text: Shah Alam II granted the Company the diwani of Bengal, Bihar and Orissa.
+        lonlat: [81.875, 25.432]
+    arrows:
+      - side: awa
+        label: Shuja-ud-Daula and Shah Alam
+        phase: 1
+        via: [[82.000, 26.200], [82.900, 25.800], [83.900, 25.600]]
+      - side: eic
+        label: Munro
+        phase: 1
+        via: [[85.124, 25.609], [84.500, 25.550], [84.050, 25.560]]
+    areas:
+      - style: gained
+        side: eic
+        label: Bengal and Bihar, under Company rule from 1765
+        atoms: [IN-WB!, BD-E, BD-F, BD-C, BD-A, BD-D, BD-G, BD-B!, IN-BR, IN-JH]

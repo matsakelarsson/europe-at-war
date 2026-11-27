@@ -1,0 +1,328 @@
+id: mughal-conquest-of-hindustan
+name: Babur’s conquest of Hindustan
+start: "1526"
+end: "1530-12-26"
+tier: A
+summary: "The campaigns in which Babur, the Timurid ruler of Kabul, conquered the heart of northern India and founded the Mughal Empire. Invited by rebels against the Delhi sultan Ibrahim Lodi, he crossed the Indus in December 1525 with about 12,000 men and, with field guns and a line of carts lashed together, destroyed Ibrahim’s much larger army at Panipat on 21 April 1526. He went on to defeat the Rajput confederacy of Rana Sanga of Mewar at Khanwa in 1527, stormed the fortress of Chanderi in 1528 and broke the Afghan chiefs of the east and the army of Bengal on the Ghaghra in 1529. When he died at Agra in December 1530, his son Humayun inherited a new and unsettled realm that reached from Kabul and Kandahar to the borders of Bihar."
+countries: [in, pk, af]
+sides:
+  - id: mug
+    name: Babur (Mughals)
+    polities: [mughals]
+    ink: green
+    moves: Mughal moves
+    success: Mughal success
+  - id: lod
+    name: Delhi Sultanate (Lodi dynasty)
+    polities: [delhi-sultanate]
+    ink: purple
+    moves: Lodi moves
+    success: Lodi success
+  - id: raj
+    name: Rana Sanga and the Rajput confederacy
+    polities: [mewar]
+    ink: red
+    moves: Rajput moves
+    success: Rajput success
+  - id: afg
+    name: Afghan chiefs of the east and Bengal
+    polities: [eastern-afghans, bengal-sultanate]
+    ink: brown
+    moves: Afghan and Bengali moves
+    success: Afghan or Bengali success
+notes:
+  - Dates are in the Julian calendar, as the sources give them; the Gregorian calendar was introduced only in 1582.
+  - Babur’s own memoir, the Baburnama, is the main source for these campaigns. Its figures for his enemies’ armies (100,000 men at Panipat, 200,000 at Khanwa) are generally thought to be much exaggerated, and modern estimates vary widely.
+  - "“Mughal” is the name later given to the dynasty, from the Persian word for Mongol. Babur called himself a Timurid and his people Turks."
+sources:
+  - title: Babur (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Babur
+  - title: First Battle of Panipat (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Battle_of_Panipat
+  - title: Battle of Khanwa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Khanwa
+  - title: Battle of Ghaghra (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ghaghra
+  - title: Rana Sanga (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rana_Sanga
+  - title: Medini Rai (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Medini_Rai
+  - title: Baburnama (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Baburnama
+  - title: Babur (Britannica)
+    url: https://www.britannica.com/biography/Babur
+  - title: Battles of Panipat (Britannica)
+    url: https://www.britannica.com/event/Battles-of-Panipat
+steps:
+  - title: Kabul and the Punjab
+    date: 1519–1525
+    when: "1525-11"
+    borders: "1525-12-16"
+    countries: [af, pk]
+    body:
+      - "Zahir al-Din Muhammad Babur was a Timurid prince, descended from Timur on his father’s side and from Genghis Khan on his mother’s. Driven out of his home in the Fergana valley, and twice out of Samarkand, by the Uzbeks of Muhammad Shaybani, he took Kabul in 1504 and made it his kingdom. After a last attempt on Samarkand failed in 1512, he turned east, claiming the Punjab as land once conquered by Timur."
+      - "In January 1519 he stormed the fortress of Bajaur and had its garrison put to death; the town of Bhera on the Jhelum then submitted to him. More raids followed. In 1524 Daulat Khan Lodi, the governor of Lahore, and Alam Khan, an uncle of the Delhi sultan Ibrahim Lodi, asked Babur for help against the sultan. Babur defeated a Lodi army near Lahore, took the city and went on to Dipalpur, but he quarrelled with Daulat Khan, who wanted the Punjab for himself, and went back to Kabul."
+      - "In November 1525 Babur set out again, joined by his son Humayun with troops from Badakhshan. He crossed the Indus in mid-December with, by his own count, about 12,000 fighting men, forced Daulat Khan to give up his hill fort, and marched south-east towards Delhi. In February 1526 Humayun scattered a Lodi force near Hisar."
+    facts:
+      - [Kabul taken by Babur, "1504"]
+      - [Storming of Bajaur, "January 1519"]
+      - [Lahore taken, "1524"]
+      - [Indus crossed, "December 1525"]
+    markers:
+      - kind: capital
+        side: mug
+        name: Kabul
+        date: from 1504
+        text: Babur’s capital after he lost his Central Asian homeland. He took Kandahar from the Arghun dynasty in 1522.
+        lonlat: [69.17, 34.53]
+      - kind: taken
+        side: mug
+        name: Bajaur
+        date: January 1519
+        text: Stormed in Babur’s first move towards India. He had the defenders killed as a warning to others.
+        lonlat: [71.52, 34.73]
+      - kind: taken
+        side: mug
+        name: Lahore
+        date: 1524
+        text: Taken after Babur defeated a Lodi army outside the city. He handed it to his own officers rather than to Daulat Khan.
+        lonlat: [74.33, 31.58]
+      - kind: taken
+        side: mug
+        name: Dipalpur
+        date: 1524
+        text: Sacked by Babur, who gave it to Alam Khan before returning to Kabul.
+        lonlat: [73.65, 30.67]
+        lp: l
+      - kind: event
+        side: mug
+        name: Crossing of the Indus
+        date: December 1525
+        text: Babur crossed with about 12,000 men for his fifth and last expedition into India.
+        lonlat: [72.25, 33.88]
+        lp: b
+    arrows:
+      - side: mug
+        label: Babur
+        phase: 1
+        via: [[69.17, 34.53], [70.45, 34.43], [71.57, 34.01], [72.25, 33.88]]
+      - side: mug
+        phase: 2
+        via: [[72.25, 33.88], [73.07, 33.6], [73.72, 32.94], [74.3, 31.65]]
+  - title: Panipat
+    date: 21 April 1526
+    when: "1526-04-21"
+    borders: "1526-04-20"
+    countries: [in]
+    body:
+      - "Ibrahim Lodi, sultan of Delhi since 1517, had fallen out with many of his Afghan nobles, but he could still raise a far bigger army than Babur’s. He marched north from Agra, and in April 1526 the two armies met near Panipat, about 90 km north of Delhi. Babur rested one flank on the town, protected the other with ditches and felled trees, and across his front lashed together some 700 carts with ropes of rawhide, leaving gaps through which his horsemen could charge. Behind them stood his matchlockmen and the guns of his gunners Ustad Ali Quli and Mustafa."
+      - "For about a week neither side attacked. Early on 21 April Ibrahim advanced. His columns crowded against Babur’s line, where guns and matchlocks fired into them at close range, while Babur’s mounted archers swept round both flanks and shot into them from the rear, a Central Asian manoeuvre Babur called the tulughma. By midday the sultan’s army had broken. Ibrahim was killed with thousands of his men; Babur was told that 15,000 to 16,000 lay dead around him, and later estimates run higher."
+      - "Babur put Ibrahim’s army at 100,000 men and 1,000 elephants against his own 12,000. Modern historians agree that he was heavily outnumbered but treat his figures as round numbers, and some estimate the sultan’s army at 50,000 or fewer. The battle ended the Lodi dynasty and with it the Delhi Sultanate, which had ruled much of northern India since the early 13th century."
+    facts:
+      - [First Battle of Panipat, "21 April 1526, Mughal victory"]
+      - [Babur’s army, "about 12,000 fighting men (his own figure), with field guns"]
+      - [Ibrahim Lodi, "killed in the battle"]
+    markers:
+      - kind: battle
+        side: mug
+        name: First Battle of Panipat
+        date: 21 April 1526
+        text: Babur’s guns and flanking cavalry destroyed the sultan’s army in half a day. Ibrahim Lodi died on the field.
+        lonlat: [76.98, 29.42]
+      - kind: capital
+        side: lod
+        name: Agra
+        date: 1526
+        text: The Lodi capital since the reign of Ibrahim’s father, Sikandar Lodi, and the base from which Ibrahim marched north.
+        lonlat: [78.02, 27.18]
+      - kind: event
+        side: lod
+        name: Delhi
+        date: April 1526
+        text: The old seat of the sultans of Delhi, which lay on Ibrahim’s line of march.
+        lonlat: [77.23, 28.65]
+        lp: l
+    arrows:
+      - side: mug
+        label: Babur
+        via: [[74.33, 31.58], [75.85, 30.9], [76.38, 30.64], [76.78, 30.38], [76.97, 29.47]]
+      - side: lod
+        label: Ibrahim Lodi
+        via: [[78.02, 27.22], [77.3, 28.6], [77.02, 29.36]]
+  - title: Delhi and Agra
+    date: April 1526 – February 1527
+    when: "1526-04-24"
+    borders: "1526-06"
+    countries: [in]
+    body:
+      - "Babur sent Humayun ahead to secure Agra and its treasury, and rode to Delhi, where on 27 April the Friday prayer was read in his name. At Agra the family of Raja Vikramajit of Gwalior, who had died fighting for Ibrahim, gave Humayun their jewels, among them a great diamond that is often identified with the Koh-i-Noor. Babur reached Agra in early May and gave away much of Ibrahim’s treasure to his officers, to his family in Kabul and to the holy cities of Mecca and Medina."
+      - "The victory gave Babur Delhi and Agra, but not yet Hindustan. Afghan nobles held most of the forts around Agra and the lands to the east, villages emptied as his troops approached, and many of his own officers, worn down by the heat of the Indian summer, wanted to take their plunder home to Kabul. Babur decided to stay, and in a speech recorded in his memoir persuaded most of them to stay with him."
+      - "Over the winter several Afghan chiefs came over to him, the forts of Dholpur, Bayana and Gwalior passed into Mughal hands, and early in 1527 Humayun marched east and took Jaunpur and Ghazipur. He was recalled to Agra when news came that Rana Sanga of Mewar was advancing."
+    facts:
+      - [Friday prayer read for Babur in Delhi, "27 April 1526"]
+      - [Babur reaches Agra, "early May 1526"]
+      - [Jaunpur taken by Humayun, "early 1527"]
+    markers:
+      - kind: taken
+        side: mug
+        name: Delhi
+        date: April 1526
+        text: Babur visited the tombs of earlier sultans and saints and had the Friday prayer read in his name on 27 April.
+        lonlat: [77.23, 28.65]
+      - kind: taken
+        side: mug
+        name: Agra
+        date: May 1526
+        text: Secured by Humayun and made Babur’s capital in India. He laid out gardens along the Yamuna.
+        lonlat: [78.02, 27.18]
+      - kind: taken
+        side: mug
+        name: Gwalior
+        date: late 1526
+        text: The great fortress south of Agra, handed over to Babur’s men by its commander.
+        lonlat: [78.17, 26.23]
+      - kind: taken
+        side: mug
+        name: Jaunpur
+        date: early 1527
+        text: Taken by Humayun from Afghan chiefs who had not accepted Babur.
+        lonlat: [82.69, 25.75]
+    arrows:
+      - side: mug
+        label: Humayun
+        via: [[78.02, 27.18], [79.9, 27.0], [81.4, 26.2], [82.65, 25.78]]
+    areas:
+      - style: gained
+        side: mug
+        label: Held by Babur by early 1527
+        atoms: [IN-DL, IN-HR, IN-UP~doab, IN-PB, IN-CH, PK-PB]
+  - title: Khanwa
+    date: 16 March 1527
+    when: "1527-03-16"
+    borders: "1527-03-16"
+    countries: [in]
+    body:
+      - "Rana Sangram Singh of Mewar, known as Rana Sanga, was the strongest ruler in Rajasthan and had fought the sultans of Delhi, Gujarat and Malwa with success. He seems to have expected Babur to plunder and leave, as Timur had done in 1398. When Babur stayed, Sanga gathered a confederacy of Rajput rulers and chiefs, among them Medini Rai of Chanderi, and was joined by Afghans opposed to Babur, among them Hasan Khan Mewati, the ruler of Mewat, and Mahmud Lodi, a brother of Ibrahim who claimed the throne. In February 1527 a Mughal advance force was badly beaten near Bayana."
+      - "Babur’s men were shaken by the defeat and by an astrologer’s warning. Babur answered with a public act of repentance. He gave up wine, had his gold and silver drinking cups broken up, abolished a tax on Muslims and declared the coming battle a holy war. On 16 March he drew up his army near the village of Khanwa, about 60 km west of Agra, as he had at Panipat, behind chained carts and ditches, with guns and matchlocks in the centre."
+      - "For hours Rajput charges fell on the Mughal line. Babur held his centre with gunfire and sent his flanking parties round the wings, and in the afternoon the confederate army broke. Hasan Khan Mewati was among the dead, and Sanga was carried from the field wounded. Losses were heavy on both sides. Babur had a tower of enemy heads raised and took the title ghazi, warrior of the faith."
+      - "Babur put the Rajput army at 200,000, which historians regard as greatly exaggerated. Sanga planned a new campaign but died at Kalpi in January 1528, reportedly poisoned by nobles who did not want another war. After Khanwa no single power in northern India could challenge Babur in the field, and he took Mewat a few weeks later."
+    facts:
+      - [Battle of Khanwa, "16 March 1527, Mughal victory"]
+      - [Hasan Khan Mewati, "killed in the battle"]
+      - [Rana Sanga, "wounded; died January 1528"]
+    markers:
+      - kind: battle
+        side: mug
+        name: Battle of Khanwa
+        date: 16 March 1527
+        text: Babur’s carts, guns and flanking cavalry beat Rana Sanga’s Rajput and Afghan confederacy after a long day’s fighting.
+        lonlat: [77.543, 27.035]
+        lp: l
+      - kind: battle
+        side: raj
+        name: Bayana
+        date: February 1527
+        text: Rajput troops routed a Mughal force sent out from the fort, which stayed in Mughal hands.
+        lonlat: [77.29, 26.91]
+        lp: b
+      - kind: event
+        side: mug
+        name: Sikri
+        date: February – March 1527
+        text: Babur’s camp before the battle, where he renounced wine. His grandson Akbar later built his capital, Fatehpur Sikri, here.
+        lonlat: [77.66, 27.09]
+      - kind: capital
+        side: raj
+        name: Chittorgarh
+        date: 1527
+        text: The fortress capital of the ranas of Mewar.
+        lonlat: [74.645, 24.887]
+    arrows:
+      - side: raj
+        label: Rana Sanga
+        via: [[74.645, 24.887], [75.6, 25.6], [76.46, 26.02], [77.2, 26.85], [77.5, 27.01]]
+      - side: mug
+        label: Babur
+        via: [[78.02, 27.18], [77.66, 27.09], [77.57, 27.045]]
+  - title: Chanderi and the east
+    date: January – June 1528
+    when: "1528-01"
+    borders: "1528-03"
+    countries: [in]
+    body:
+      - "In the winter of 1527–28 Babur marched against Medini Rai, the Rajput lord of Chanderi, a strong hill fortress on the borders of Malwa. Medini Rai refused Babur’s offer of another fort in exchange. In January 1528 Babur’s men stormed the walls. The women and children inside died in a jauhar, the mass self-immolation of Rajput women facing capture, and the defenders fought to the death, Medini Rai among them according to most accounts. Babur had another tower of heads raised."
+      - "He had meant to go on against Raisen and Mewar, but news came that the Afghan chiefs Biban and Bayazid had pushed his officers back across the Ganges and taken Kannauj. Babur turned north-east, built a bridge of boats over the Ganges at Kannauj under fire from the Afghans on the far bank and crossed in March 1528; the Afghans fell back beyond Awadh. Babur spent the following months securing the lands between the Ganges and the Ghaghra, the old kingdom of Awadh."
+    facts:
+      - [Chanderi stormed, "January 1528"]
+      - [Ganges bridged at Kannauj, "March 1528"]
+    markers:
+      - kind: taken
+        side: mug
+        name: Chanderi
+        date: January 1528
+        text: Stormed after its lord, Medini Rai, refused to give it up. The women of the fortress died in a jauhar.
+        lonlat: [78.13, 24.72]
+      - kind: event
+        side: mug
+        name: Kannauj
+        date: March 1528
+        text: Babur’s engineers bridged the Ganges here while his guns kept the Afghans on the far bank at a distance.
+        lonlat: [79.92, 27.06]
+      - kind: event
+        side: afg
+        name: Awadh
+        date: 1528
+        text: The Afghan chiefs withdrew east through Awadh towards Bihar, where they regrouped under Mahmud Lodi.
+        lonlat: [82.2, 26.8]
+    arrows:
+      - side: mug
+        label: Babur
+        phase: 1
+        via: [[78.02, 27.18], [79.0, 26.75], [79.74, 26.12], [78.9, 25.5], [78.18, 24.78]]
+      - side: mug
+        phase: 2
+        via: [[78.13, 24.72], [79.2, 25.6], [79.75, 26.4], [79.92, 27.0]]
+      - side: mug
+        phase: 3
+        via: [[79.95, 27.06], [80.95, 26.85], [82.1, 26.8]]
+  - title: The Ghaghra
+    date: 1529–1530
+    when: "1529-05-06"
+    borders: "1529-05-06"
+    countries: [in]
+    body:
+      - "Early in 1529 the Afghan chiefs of Bihar proclaimed Mahmud Lodi, who had escaped from Khanwa, as their sultan, and advanced up the Ganges. Babur marched east from Agra and the Afghans fell back before him. The army of Nusrat Shah, sultan of Bengal, who had given the Afghan leaders shelter, stood on the far bank of the Ghaghra where it flows into the Ganges, near today’s Revelganj."
+      - "On 6 May 1529 Babur’s guns under Ustad Ali Quli bombarded the Bengal camp and its boats across the river while Mughal columns crossed the Ghaghra upstream and attacked from the flank. The Bengal army was routed. Many Afghan chiefs, among them Jalal al-Din Lohani, the young ruler of Bihar, submitted to Babur, and Nusrat Shah soon accepted the peace Babur had offered before the battle, keeping his kingdom and promising not to shelter Babur’s enemies. It was Babur’s last battle."
+      - "Babur went back to Agra. In 1530 Humayun fell gravely ill, and Mughal tradition says that Babur walked round his son’s bed and offered his own life in exchange. Humayun recovered, and Babur died at Agra on 26 December 1530, aged 47. He was buried in Agra and later, as he had wished, in a garden at Kabul. His empire reached from Kabul and Kandahar to the borders of Bihar, but the Afghan chiefs of the east, among them Sher Khan Sur, had not given up, and within ten years Humayun had lost it."
+    facts:
+      - [Battle of the Ghaghra, "6 May 1529, Mughal victory"]
+      - [Peace with Bengal, "1529"]
+      - [Death of Babur, "26 December 1530, at Agra"]
+    markers:
+      - kind: battle
+        side: mug
+        name: Battle of the Ghaghra
+        date: 6 May 1529
+        text: Babur’s guns and a flanking crossing routed the army of Bengal and the Afghan chiefs gathered behind the river.
+        lonlat: [84.64, 25.78]
+      - kind: capital
+        side: afg
+        name: Gaur
+        date: 1529
+        text: Capital of the Bengal Sultanate under Nusrat Shah, who made peace with Babur after the battle.
+        lonlat: [88.13, 24.87]
+      - kind: event
+        side: mug
+        name: Agra
+        date: 26 December 1530
+        text: Babur died here. His body was later taken to Kabul and buried in the garden now called Bagh-e Babur.
+        lonlat: [78.02, 27.18]
+    arrows:
+      - side: mug
+        label: Babur
+        via: [[78.02, 27.18], [79.9, 26.45], [81.85, 25.45], [83.0, 25.3], [84.55, 25.74]]
+    areas:
+      - style: gained
+        side: mug
+        label: Babur’s lands in India, 1530
+        atoms: [IN-DL, IN-HR, IN-UP~doab, IN-PB, IN-CH, PK-PB, IN-UP, IN-UP~rohilkhand, IN-UP~benares, IN-MP~gwalior]

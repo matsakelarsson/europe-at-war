@@ -1,0 +1,185 @@
+id: second-anglo-sikh-war
+name: Second Anglo-Sikh War
+start: "1848-04-19"
+end: "1849-03-29"
+tier: B
+summary: "The war that ended the Sikh Empire. It began in April 1848 as a revolt at Multan, where the governor, Diwan Mulraj, had been forced to resign and two British officers sent to take over were killed, and became a general rising when the Sikh army under Sher Singh Attariwala joined it in September. The Company’s army under Lord Gough fought indecisive and costly battles at Ramnagar and Chillianwala, took Multan in January 1849 after a long siege, and won a decisive victory at Gujrat in February. The Sikh army surrendered in March, and on 29 March 1849 the Punjab was annexed to British India."
+countries: [in, pk]
+sides:
+  - id: eic
+    name: East India Company and Bahawalpur
+    polities: [british-india, bahawalpur]
+    ink: red
+    moves: Company and allied moves
+    success: Company success
+  - id: sikh
+    name: Sikh army and Mulraj
+    polities: [sikh-empire]
+    ink: orange
+    moves: Sikh moves
+    success: Sikh success
+  - id: afg
+    name: Afghan allies of the Sikhs
+    polities: [afghanistan]
+    ink: green
+    moves: Afghan moves
+    success: Afghan success
+notes:
+  - The Company’s armies were mostly Indian sepoys of the Bengal and Bombay armies under British officers, with some British Army regiments. At Multan they were joined by Pashtun levies raised by Lieutenant Herbert Edwardes, the troops of the Nawab of Bahawalpur and Sikh regiments that stayed loyal to the Lahore government.
+  - Formally the war was fought against rebels, not against the Sikh state, whose government in Lahore was under a British Resident and whose Maharaja, Duleep Singh, was ten years old. Sikh historians and many others see it as a national war of the Khalsa against British control.
+sources:
+  - title: Second Anglo-Sikh War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Anglo-Sikh_War
+  - title: Siege of Multan (1848–1849) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Multan_(1848%E2%80%931849)
+  - title: Battle of Ramnagar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ramnagar
+  - title: Battle of Chillianwala (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Chillianwala
+  - title: Battle of Gujrat (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Gujrat
+  - title: Second Sikh War (Britannica)
+    url: https://www.britannica.com/event/Second-Sikh-War
+  - title: Mulraj (Britannica)
+    url: https://www.britannica.com/biography/Mulraj
+steps:
+  - title: Multan
+    date: April 1848 – January 1849
+    when: "1848-04-19"
+    borders: "1848-09-14"
+    countries: [pk]
+    body:
+      - After the First Anglo-Sikh War the Punjab was governed in the name of the boy Maharaja Duleep Singh by a council of Sikh chiefs under a British Resident. Diwan Mulraj, the governor of Multan, was pressed for higher revenue and resigned. On 18 April 1848 two British officers, Patrick Vans Agnew and Lieutenant William Anderson, arrived with a Sikh escort to take over the city. The next day, after Mulraj had handed them the keys of the citadel, they were attacked by his soldiers, and on 20 April a crowd killed them both. Mulraj, whether he had planned it or not, put himself at the head of the revolt.
+      - The new Governor-General, Lord Dalhousie, and his commander-in-chief, Lord Gough, decided not to campaign in the hot season. A young political officer, Herbert Edwardes, raised Pashtun levies west of the Indus and, with the army of the Nawab of Bahawalpur, beat Mulraj’s troops at Kineyri on 18 June and at Saddusam on 1 July and shut them up in Multan. A Company force under General William Whish began a siege in August. On 14 September the Sikh army sent to help it, under Raja Sher Singh Attariwala, went over to the rebellion, and Whish had to lift the siege.
+      - Reinforced from Bombay, Whish renewed the siege in late December. On 30 December a mortar shell hit the citadel’s main powder magazine, stored in a mosque, and the explosion killed several hundred defenders. The city was stormed on 2 January 1849, and on 22 January Mulraj surrendered the citadel. He was tried for the murder of the two officers, found guilty as an accessory, and sentenced to death; the sentence was changed to exile for life, and he died in 1851.
+    facts:
+      - [Vans Agnew and Anderson killed, "20 April 1848"]
+      - [Battle of Kineyri, "18 June 1848, Company victory"]
+      - [Sher Singh joins the revolt, "14 September 1848"]
+      - [Mulraj surrenders, "22 January 1849"]
+    markers:
+      - kind: siege
+        side: eic
+        name: Multan
+        date: August 1848 – 22 January 1849
+        text: The revolt began here in April 1848. The city was stormed on 2 January 1849, and the citadel surrendered three weeks later.
+        lonlat: [71.475, 30.198]
+      - kind: capital
+        name: Lahore
+        date: 1848
+        text: Seat of the Lahore Durbar, governed under the British Resident.
+        lonlat: [74.315, 31.588]
+      - kind: event
+        side: sikh
+        name: Haripur
+        date: August 1848
+        text: Chattar Singh Attariwala, Sher Singh’s father and governor of Hazara, rose here after a quarrel with the British officer James Abbott.
+        lonlat: [72.934, 33.994]
+    arrows:
+      - side: eic
+        label: Edwardes
+        phase: 1
+        via: [[70.640, 30.300], [71.050, 30.150], [71.380, 30.180]]
+      - side: eic
+        label: Whish
+        phase: 2
+        via: [[74.300, 31.550], [73.300, 30.800], [72.300, 30.500], [71.550, 30.230]]
+      - side: sikh
+        label: Sher Singh
+        phase: 3
+        via: [[71.500, 30.260], [72.300, 30.900], [73.200, 31.700], [73.700, 32.250]]
+  - title: Ramnagar, Chillianwala and Gujrat
+    date: November 1848 – March 1849
+    when: "1849-01-13"
+    borders: "1849-02-21"
+    countries: [pk]
+    body:
+      - Sher Singh marched north to join his father, Chattar Singh, who had risen in Hazara in August. The Sikh troops at Peshawar joined the rising in October, and the Attariwalas offered Peshawar to Dost Mohammad Khan of Kabul in return for his help; Afghan horsemen took Attock early in 1849. Gough crossed the Ravi in November with about 20,000 men. On 22 November his cavalry attacked the Sikhs on the Chenab at Ramnagar and was beaten back with heavy loss; on 3 December a British force that had crossed upstream fought an indecisive action at Sadullapur, and the Sikhs fell back to the Jhelum.
+      - On 13 January 1849 Gough attacked Sher Singh’s army at Chillianwala late in the afternoon, through thick scrub. Several British regiments were cut up, cavalry fled, and guns and colours were lost; British losses were about 2,400 killed, wounded and missing, Sikh losses perhaps 4,000 or more. Both sides claimed the victory, and the news shocked Britain; Gough was ordered to be replaced, though word did not arrive before the war was over.
+      - With Multan taken, Whish’s troops joined Gough, who now had about 24,000 men and almost 100 guns. On 21 February 1849 at Gujrat he opened with a long artillery bombardment before advancing, and the Sikh army and its Afghan allies broke. Sikh losses were estimated at 3,000–5,000 and 53 guns; the British lost 96 killed and about 700 wounded. Sir Walter Gilbert pursued the beaten army, and on 12 March, near Rawalpindi, Chattar Singh and Sher Singh surrendered with about 20,000 men. The Afghans fell back through the Khyber.
+    facts:
+      - [Battle of Ramnagar, "22 November 1848, Sikh success"]
+      - [Battle of Chillianwala, "13 January 1849, indecisive"]
+      - [Battle of Gujrat, "21 February 1849, Company victory"]
+      - [Sikh army surrenders, "12 March 1849"]
+    markers:
+      - kind: battle
+        side: sikh
+        name: Ramnagar
+        date: 22 November 1848
+        text: A British cavalry charge against the Sikh positions on the Chenab failed with heavy loss. The town is now called Rasulnagar.
+        lonlat: [73.783, 32.328]
+        lp: b
+      - kind: battle
+        name: Battle of Chillianwala
+        date: 13 January 1849
+        text: One of the bloodiest battles the British fought in India. Both armies held their ground and both claimed victory.
+        lonlat: [73.603, 32.661]
+        lp: l
+      - kind: battle
+        side: eic
+        name: Battle of Gujrat
+        date: 21 February 1849
+        text: Gough’s artillery decided the battle. The Sikh army was broken and its camp and most of its guns taken.
+        lonlat: [74.060, 32.550]
+      - kind: taken
+        side: afg
+        name: Attock
+        date: January 1849
+        text: Afghan horsemen sent by Dost Mohammad Khan reached the Indus and the garrison went over.
+        lonlat: [72.241, 33.893]
+        lp: l
+      - kind: event
+        side: eic
+        name: Rawalpindi
+        date: 12 March 1849
+        text: Chattar Singh and Sher Singh surrendered to Gilbert near here, and their soldiers laid down their arms.
+        lonlat: [73.050, 33.600]
+    arrows:
+      - side: eic
+        label: Gough
+        phase: 1
+        via: [[74.300, 31.580], [74.000, 31.950], [73.800, 32.280]]
+      - side: sikh
+        label: Sher Singh
+        phase: 2
+        via: [[73.780, 32.380], [73.650, 32.550], [73.550, 32.700]]
+      - side: eic
+        phase: 3
+        via: [[73.650, 32.620], [73.900, 32.560], [74.030, 32.540]]
+      - side: eic
+        label: Gilbert
+        phase: 4
+        via: [[74.080, 32.600], [73.730, 32.930], [73.300, 33.300], [73.050, 33.560]]
+  - title: The annexation of the Punjab
+    date: March 1849
+    when: "1849-03-29"
+    borders: "1849-03-29"
+    countries: [pk, in]
+    body:
+      - Dalhousie decided to end the Sikh state rather than restore it. On 29 March 1849, at a durbar in the Lahore Fort, the ten-year-old Duleep Singh signed away his kingdom in return for a pension, and the Punjab was proclaimed part of the Company’s territories. The Koh-i-Noor diamond was taken from the Lahore treasury and sent to Queen Victoria. Duleep Singh was placed in British care, converted to Christianity and was taken to England in 1854; his mother, Jind Kaur, who had been exiled in 1848, escaped to Nepal.
+      - The Punjab was governed at first by a board under Henry and John Lawrence. Many disbanded Sikh soldiers were later recruited into the Company’s new Punjab regiments, which fought on the British side in 1857. Peshawar and the frontier districts became British, and Dost Mohammad accepted this in the treaty of 1855. With the Punjab, the Company’s rule reached the Khyber Pass.
+    facts:
+      - [Punjab annexed, "29 March 1849"]
+      - [Last Maharaja, "Duleep Singh (1838–1893)"]
+    markers:
+      - kind: event
+        side: eic
+        name: Lahore
+        date: 29 March 1849
+        text: Duleep Singh signed the terms of annexation at a durbar in the fort.
+        lonlat: [74.315, 31.588]
+      - kind: held
+        side: eic
+        name: Peshawar
+        date: March 1849
+        text: Reoccupied by the British as the Afghans withdrew.
+        lonlat: [71.570, 34.008]
+    areas:
+      - style: gained
+        side: eic
+        label: The Punjab, annexed by the Company in 1849
+        atoms: [PK-PB, PK-PB~multan, PK-IS]
+        polygons:
+          - [[71.30, 34.10], [71.60, 34.30], [72.00, 34.35], [72.35, 34.20], [72.25, 33.90], [71.90, 33.85], [71.40, 33.90]]
+          - [[74.55, 31.10], [74.95, 31.17], [75.30, 31.45], [75.60, 31.60], [75.95, 31.95], [75.60, 32.40], [75.30, 32.30], [74.90, 32.05], [74.55, 31.70]]

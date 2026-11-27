@@ -103,7 +103,23 @@ below are the number of new war entries (tiers A, B and C).
   French visit no longer loads the English text as well. First load: en 1.02 MB
   gzip, fr and sv 1.05 (were 1.05, 1.18 and 1.17). Searching in French or Swedish
   now matches the translated summaries only; war names match in both languages.*
-- [ ] Wave 8: South Asia (~100)
+- [x] Wave 8: South Asia (~100)
+  *Done: 120 wars (30 tier A, 49 B, 41 C; 327 steps), from the Tripartite
+  Struggle (786) to the Afghanistan–Pakistan war and the insurgencies still
+  going on (last updated 27 November 2026). Borders are curated from 800 in
+  `events/south-asia.yaml` (309 events, fact-checked), on 41 new splits for the
+  historical regions of Uttar Pradesh, Madhya Pradesh, Maharashtra, Karnataka,
+  Rajasthan and others (`splits/98-south-asia.geojson`), with 116 new polities,
+  29 war actors, 193 capital tenures and 17 labels. Catalogue text, polity
+  names, border notes, capitals and labels are in French and Swedish, and so
+  are the names of the world's modern countries, which were still in English.
+  `tools/palette.mjs --region` now also keeps apart polities that are shown
+  together in a region (near-identical pairs in South Asia: 559 → 175). Known
+  limits: small princely states (Bharatpur, Khairpur, Tehri, Rampur) fall
+  inside British atoms; Dadra and Nagar Haveli shares an atom with Daman and
+  Diu, so it shows as Portuguese until 1961; Aksai Chin has no atom of its own
+  and is drawn in war steps only. Site 32 MB, first load 1.03 MB gzip (fr and
+  sv 1.07).*
 - [ ] Wave 9: China, Mongolia, Tibet and the steppe east of the Urals (~120)
 - [ ] Wave 10: Korea and Japan (~60)
 - [ ] Wave 11: Southeast Asia (~70)

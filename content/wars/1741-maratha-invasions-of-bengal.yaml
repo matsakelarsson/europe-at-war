@@ -1,0 +1,176 @@
+id: maratha-invasions-of-bengal
+name: Maratha invasions of Bengal
+start: "1741"
+end: "1751-06"
+tier: B
+summary: "The raids of the Maratha armies of Raghuji Bhonsle of Nagpur into the Mughal province of Bengal, Bihar and Orissa, ruled by the Nawab Alivardi Khan. Known in Bengal as the bargis, from the Persian word for a mounted soldier, the Maratha horsemen came almost every year from 1742, led at first by Raghuji’s general Bhaskar Ram Kolhatkar, plundering western Bengal and Bihar and demanding chauth, a quarter of the revenue. Alivardi won many battles, surprised the Maratha camp at Katwa in 1742 and had Bhaskar and his officers killed at a meeting in 1744, but could not stop the raids, which joined forces with a revolt of Alivardi’s own Afghan officers. A Dutch East India Company official estimated that some 400,000 people died. In 1751 Alivardi made peace, giving up the revenue of Orissa and agreeing to pay 12 lakh rupees a year for Bengal."
+countries: [in, bd]
+sides:
+  - id: nag
+    name: Raghuji Bhonsle of Nagpur
+    polities: [nagpur-kingdom]
+    ink: brown
+    moves: Moves of Raghuji’s armies
+    success: Success for Raghuji
+  - id: ben
+    name: Alivardi Khan, Nawab of Bengal
+    polities: [bengal-nawabs]
+    ink: teal
+    moves: Nawab’s moves
+    success: Success for the Nawab
+  - id: pes
+    name: Peshwa Balaji Rao
+    polities: [marathas]
+    ink: orange
+    moves: Peshwa’s moves
+    success: Success for the Peshwa
+notes:
+  - Much of what is remembered of the raids comes from Bengali sources, above all Gangaram’s poem Maharashtra Purana, and from the reports of the European companies; the Maratha side is known from the letters of its commanders. The suffering of Bengal’s villagers, and the flight of weavers and peasants east of the Bhagirathi, are described in all of them. Estimates of the dead vary; the figure of about 400,000 comes from the Dutch official Jan Kersseboom.
+  - The Maratha Ditch, a defensive moat dug by the East India Company around part of Calcutta in 1742, was named after the raids; the Marathas never attacked the town.
+sources:
+  - title: Maratha invasions of Bengal (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Maratha_invasions_of_Bengal
+  - title: First Maratha invasion of Bengal (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Maratha_invasion_of_Bengal
+  - title: Battle of Katwa (1742) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Katwa_(1742)
+  - title: Bhaskar Ram Kolhatkar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bhaskar_Ram_Kolhatkar
+  - title: Alivardi Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Alivardi_Khan
+  - title: Maratha Ditch (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Maratha_Ditch
+  - title: Maratha Raids (Banglapedia)
+    url: https://en.banglapedia.org/index.php/Maratha_Raids
+  - title: Alivardi Khan (Banglapedia)
+    url: https://en.banglapedia.org/index.php/Alivardi_Khan
+steps:
+  - title: The first invasion and Katwa
+    date: April – December 1742
+    when: "1742-09-27"
+    borders: "1742-09-27"
+    countries: [in, bd]
+    body:
+      - Alivardi Khan had made himself Nawab of Bengal in 1740 by defeating and killing his master’s son, Sarfaraz Khan, and some of Sarfaraz’s friends turned to the Marathas. In April 1742 Raghuji Bhonsle, the Maratha ruler of Nagpur, sent his general Bhaskar Ram Kolhatkar with a large cavalry army to collect chauth from Bengal. They took Cuttack in Orissa, came through the hills by Panchet and caught Alivardi near Burdwan; the Nawab fought his way through to Katwa with heavy losses. In May a Maratha detachment guided by the Persian Mir Habib raided Murshidabad, the capital, and plundered the house of the banker Jagat Seth, and through the monsoon the Marathas held Hooghly and the country west of the Bhagirathi.
+      - The raiders spread terror in the villages, burning, looting and killing, and thousands fled across the river. While Bhaskar celebrated the Durga Puja in his camp at Katwa, Alivardi crossed the river at night and fell on it on 27 September 1742. The Marathas fled west and were driven out of Bengal by December.
+    facts:
+      - [Cuttack taken by the Marathas, "April 1742"]
+      - [Raid on Murshidabad, "May 1742"]
+      - [Battle of Katwa, "27 September 1742, victory for the Nawab"]
+    markers:
+      - kind: battle
+        side: ben
+        name: Katwa
+        date: 27 September 1742
+        text: Alivardi’s night attack on the Maratha camp during the Durga Puja drove Bhaskar out of Bengal.
+        lonlat: [88.129, 23.644]
+      - kind: capital
+        side: ben
+        name: Murshidabad
+        date: May 1742
+        text: The Nawab’s capital, raided while his army was away; the Marathas plundered the house of Jagat Seth.
+        lonlat: [88.272, 24.175]
+      - kind: taken
+        side: nag
+        name: Cuttack
+        date: April 1742
+        text: The Barabati fort, seat of the Nawab’s deputy in Orissa, fell to Bhaskar on his way north.
+        lonlat: [85.865, 20.485]
+      - kind: battle
+        side: nag
+        name: Burdwan
+        date: April 1742
+        text: The Marathas surrounded the Nawab’s army here and harried it on its march to Katwa.
+        lonlat: [87.868, 23.250]
+        lp: l
+      - kind: taken
+        side: nag
+        name: Hooghly
+        date: July 1742
+        text: Held by the Marathas through the monsoon, close to the European trading towns.
+        lonlat: [88.390, 22.910]
+        lp: l
+    arrows:
+      - side: nag
+        label: Bhaskar Ram
+        phase: 1
+        via: [[79.088, 21.146], [82.000, 21.000], [85.865, 20.485], [86.900, 22.300], [87.868, 23.250]]
+      - side: ben
+        label: Alivardi
+        phase: 2
+        via: [[88.272, 24.175], [88.250, 23.900], [88.150, 23.680]]
+      - side: nag
+        phase: 3
+        via: [[88.129, 23.644], [87.600, 23.000], [87.327, 22.421], [86.930, 21.490]]
+    areas:
+      - style: contested
+        side: nag
+        label: Raided by the bargis, 1742
+        polygon: [[87.200, 24.000], [88.200, 24.300], [88.400, 22.900], [88.000, 22.300], [87.300, 22.200], [86.900, 23.000]]
+  - title: Two Maratha armies, and Mankara
+    date: 1743–1744
+    when: "1744-03-31"
+    borders: "1744-03-31"
+    countries: [in]
+    body:
+      - In 1743 Raghuji Bhonsle came himself, while the Peshwa, Balaji Rao, his rival among the Marathas, entered Bihar with another army at the emperor’s request to help the Nawab. Alivardi agreed to pay the Peshwa a subsidy and the chauth of Bengal, and Balaji drove Raghuji out. The Peshwa and the Bhonsle then settled their quarrel at Satara and divided their spheres, leaving Bengal and Orissa to Raghuji.
+      - Bhaskar returned in 1744. Unable to beat him in the field, Alivardi offered talks, and at the end of March invited Bhaskar and his commanders to a meeting in a great tent at Mankara, not far from Murshidabad. Men hidden in the tent killed Bhaskar and about twenty of his officers, and the leaderless Maratha army fled back to Nagpur.
+    facts:
+      - [Peshwa’s army in Bengal, "1743"]
+      - [Bhaskar Ram killed at Mankara, "30 or 31 March 1744"]
+    markers:
+      - kind: event
+        side: ben
+        name: Murshidabad
+        date: March 1744
+        text: Bhaskar and his officers were killed at a meeting in a tent at Mankara, near the capital.
+        lonlat: [88.272, 24.175]
+      - kind: event
+        side: pes
+        name: Patna
+        date: 1743
+        text: The Peshwa’s army came down the Ganges through Bihar to help Alivardi against Raghuji.
+        lonlat: [85.137, 25.594]
+    arrows:
+      - side: pes
+        label: Balaji Rao
+        via: [[81.846, 25.435], [83.000, 25.330], [85.137, 25.594], [87.000, 25.000], [88.000, 24.300]]
+      - side: nag
+        label: Raghuji
+        via: [[84.000, 21.800], [86.000, 22.600], [87.400, 23.200]]
+  - title: Afghans, Orissa and the peace
+    date: 1745–1751
+    when: "1748-04"
+    borders: "1751-06"
+    countries: [in, bd]
+    body:
+      - Raghuji returned in 1745, and Alivardi’s Afghan general Mustafa Khan rebelled and joined him. Alivardi beat Raghuji near Katwa in December 1745, but the Marathas came back with Bhaskar’s son and Raghuji’s son Janoji. In January 1748 Afghan rebels seized Patna and killed Alivardi’s nephew, its governor; Alivardi defeated the Afghans and their Maratha allies at Rani Sarai, east of Patna, on 16 April 1748. The Marathas kept their hold on Orissa and raided Bengal every year.
+      - Now over seventy, Alivardi made peace in 1751. Mir Habib was made governor of Orissa in the Nawab’s name, with its revenue going to the Marathas, and the Subarnarekha river became the frontier; the Nawab agreed to pay 12 lakh rupees a year as chauth for Bengal, with 32 lakh in arrears. When Mir Habib was killed in 1752, Orissa passed fully under the Bhonsles of Nagpur, who held it until 1803.
+    facts:
+      - [Battle near Katwa, "December 1745, victory for the Nawab"]
+      - [Battle of Rani Sarai, "16 April 1748, victory for the Nawab"]
+      - [Peace treaty, "May or June 1751; Orissa revenue and 12 lakh rupees a year to the Marathas"]
+    markers:
+      - kind: battle
+        side: ben
+        name: Rani Sarai
+        date: April 1748
+        text: Alivardi defeated the Afghan rebels and their Maratha allies east of Patna.
+        lonlat: [85.554, 25.450]
+      - kind: held
+        side: nag
+        name: Cuttack
+        date: 1749–1751
+        text: The capital of Orissa, held by the Marathas and retaken by them after Alivardi’s campaign of 1749.
+        lonlat: [85.865, 20.485]
+      - kind: treaty
+        name: Subarnarekha
+        date: 1751
+        text: The river became the frontier between Bengal and Maratha Orissa.
+        lonlat: [87.200, 21.750]
+        lp: l
+    areas:
+      - style: gained
+        side: nag
+        label: Orissa, given up to the Marathas in 1751
+        atoms: [IN-OR]

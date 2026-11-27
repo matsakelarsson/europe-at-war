@@ -1,0 +1,108 @@
+id: bhutan-war
+name: Bhutan War
+start: "1864-11-12"
+end: "1865-11-11"
+tier: B
+summary: "A war between British India and Bhutan in 1864–1865, also called the Duar War or the Anglo-Bhutan War. It was fought over the Duars, the fertile strip of foothills and plain below the Bhutanese mountains, after years of disputes over Bhutanese raids into Cooch Behar and Sikkim, the humiliation of a British envoy, Ashley Eden, at Punakha in 1864 and British interest in the land for tea. British columns took the forts along the foothills in the winter of 1864–1865; the Bhutanese retook Dewangiri, which the British then won back. By the Treaty of Sinchula of 11 November 1865 Bhutan gave up the Bengal and Assam Duars and the hills east of the Teesta around Kalimpong, about a fifth of its territory, for an annual payment of 50,000 rupees."
+countries: [bt, in]
+sides:
+  - id: gb
+    name: British India
+    polities: [british-india]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: bt
+    name: Bhutan
+    polities: [bhutan]
+    ink: gold
+    moves: Bhutanese moves
+    success: Bhutanese success
+notes:
+  - Bhutan had no standing army; its forts were held by local levies armed with matchlocks, bows and swords. The British force of four columns was made up of British, Indian and Gurkha troops. Losses were small by the standards of the time, a few dozen killed on the British side and perhaps one or two hundred on the Bhutanese, though many more British troops fell ill in the swamps of the foothills.
+  - British accounts dominate the record. Modern historians give more weight than the British did at the time to the value of the Duars for tea and revenue.
+sources:
+  - title: Duar War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Duar_War
+  - title: Treaty of Sinchula (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Sinchula
+  - title: Dooars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dooars
+  - title: History of Bhutan (Britannica)
+    url: https://www.britannica.com/topic/history-of-Bhutan
+steps:
+  - title: The Duars campaign
+    date: November 1864 – April 1865
+    when: "1864-11-12"
+    borders: "1865-01-01"
+    countries: [bt, in]
+    body:
+      - The Duars, “doors” to the hills, were a strip of forest, grassland and rice fields along the foot of the Bhutanese mountains, which Bhutan had long ruled and taxed. The British had annexed the Assam Duars in 1841, paying Bhutan compensation, and complained of Bhutanese raids into Cooch Behar and Sikkim. In 1863–1864 an envoy, Ashley Eden, travelled to Punakha, where he was insulted and made to sign an agreement returning the Assam Duars. The Viceroy, Sir John Lawrence, repudiated it, and on 12 November 1864 the British annexed the Bengal Duars.
+      - Four columns of British, Indian and Gurkha troops advanced into the foothills that winter and took the Bhutanese forts at Dalimkot, Buxa and Dewangiri with little fighting. The Bhutanese, whose levies were armed with matchlocks and bows, struck back early in 1865, taking Dewangiri and two British howitzers when the garrison abandoned it. The British, reinforced under Brigadier-General Henry Tombs, retook it in the spring. Most of the war’s casualties came from disease.
+    facts:
+      - [British annexation of the Bengal Duars, "12 November 1864"]
+      - [Forts taken, "Dalimkot, Buxa, Dewangiri"]
+      - [Dewangiri lost and retaken, "early 1865"]
+    markers:
+      - kind: capital
+        side: bt
+        name: Punakha
+        date: 1864
+        text: The winter capital of Bhutan, where Ashley Eden’s mission was received with hostility in March 1864.
+        lonlat: [89.861, 27.582]
+      - kind: taken
+        side: gb
+        name: Dalimkot
+        date: winter 1864–1865
+        text: A hill fort above the Teesta plains, taken by the western column.
+        lonlat: [88.720, 27.020]
+      - kind: taken
+        side: gb
+        name: Buxa
+        date: winter 1864–1865
+        text: The fort guarding the main pass into western Bhutan, taken by the central column.
+        lonlat: [89.588, 26.774]
+      - kind: battle
+        side: bt
+        name: Dewangiri
+        date: early 1865
+        text: Taken by the British, abandoned to a Bhutanese attack with the loss of two guns, and retaken under Tombs. Today Deothang.
+        lonlat: [91.468, 26.857]
+    arrows:
+      - side: gb
+        phase: 1
+        via: [[88.720, 26.520], [88.700, 26.800], [88.715, 27.000]]
+      - side: gb
+        phase: 1
+        via: [[89.450, 26.320], [89.520, 26.500], [89.580, 26.750]]
+      - side: gb
+        phase: 1
+        via: [[91.750, 26.180], [91.550, 26.500], [91.470, 26.830]]
+      - side: bt
+        phase: 2
+        via: [[90.450, 27.500], [91.000, 27.200], [91.450, 26.880]]
+  - title: The Treaty of Sinchula
+    date: June – November 1865
+    when: "1865-11-11"
+    borders: "1865-11-11"
+    countries: [bt, in]
+    body:
+      - Lawrence offered peace in June 1865, but Bhutan refused until British troops prepared to advance again. In the autumn the Bhutanese government agreed to negotiate, and on 11 November 1865 its representatives signed the Treaty of Sinchula. Bhutan gave up the eighteen Bengal and Assam Duars, the Ambari Falakata district and the hills on the left bank of the Teesta, which became the Kalimpong subdivision of Darjeeling district. In return the British would pay an annual allowance of up to 50,000 rupees, and both sides promised perpetual peace and friendship.
+      - Bhutan lost about a fifth of its territory and its best farmland, and the Duars were soon cleared for tea gardens worked by labourers brought from Chota Nagpur and Nepal. The treaty remained in force until 1910, when the Treaty of Punakha gave Britain control of Bhutan’s foreign relations in exchange for a larger allowance.
+    facts:
+      - [Treaty of Sinchula, "11 November 1865"]
+      - [Annual allowance, "up to 50,000 rupees"]
+    markers:
+      - kind: treaty
+        name: Sinchula
+        date: 11 November 1865
+        text: The treaty was signed near the Sinchula pass above Buxa.
+        lonlat: [89.560, 26.800]
+        lp: t
+    areas:
+      - style: gained
+        side: gb
+        label: Duars and Kalimpong, ceded to British India (approximate)
+        polygons:
+          - [[88.450, 27.200], [88.850, 27.150], [89.000, 26.880], [89.850, 26.820], [89.850, 26.450], [88.750, 26.550], [88.450, 26.900]]
+          - [[89.850, 26.820], [91.000, 26.800], [92.100, 26.950], [92.100, 26.600], [91.000, 26.450], [89.850, 26.450]]

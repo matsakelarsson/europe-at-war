@@ -1,0 +1,220 @@
+id: sino-nepalese-war
+name: Sino-Nepalese War
+start: "1788"
+end: "1792-10"
+tier: B
+summary: "Two Nepalese invasions of Tibet and a Qing counter-invasion of Nepal. Disputes over the silver coins Nepal minted for Tibet, over trade and salt, and over the refuge Nepal gave to the Tenth Shamarpa led the Gorkha kingdom to send armies over the Himalayan passes in 1788. Tibet bought peace in 1789 with a promise of yearly payments, and when it stopped paying the Nepalese invaded again in 1791 and plundered Tashilhunpo, the monastery of the Panchen Lamas at Shigatse. The Qianlong emperor sent an army under Fuk’anggan, which drove the Nepalese out of Tibet in 1792 and advanced down the Trishuli valley to within about 35 km of Kathmandu. After heavy fighting near Betrawati both sides made peace in October 1792: Nepal returned plunder from Tashilhunpo and sent tribute missions to Beijing every five years until 1908, and the Qing tightened their hold on Tibet."
+countries: [np, cn]
+sides:
+  - id: np
+    name: Kingdom of Nepal (Gorkha)
+    polities: [nepal]
+    ink: purple
+    moves: Nepalese moves
+    success: Nepalese success
+  - id: tib
+    name: Tibet
+    polities: [tibet]
+    ink: slate
+    moves: Tibetan moves
+    success: Tibetan success
+  - id: qing
+    name: Qing China
+    polities: [china]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+notes:
+  - Nepalese, Tibetan and Chinese sources date the events in different calendars and often disagree on numbers and on the exact dates of the battles and the peace; the dates here are approximate.
+  - The Qing court counted the war among the Ten Great Campaigns of the Qianlong emperor. Tibet was then governed by the Dalai Lama’s government under the supervision of two Qing residents (ambans) in Lhasa.
+  - The towns on the passes are given by their Tibetan names, with the Nepalese names in brackets (Nyalam for Kuti, Kyirong for Kerung, Shigatse for Digarcha).
+sources:
+  - title: Sino-Nepalese War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sino-Nepalese_War
+  - title: Fuk’anggan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fuk%27anggan
+  - title: Tashi Lhunpo Monastery (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tashi_Lhunpo_Monastery
+  - title: Ten Great Campaigns (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ten_Great_Campaigns
+  - title: Shamarpa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Shamarpa
+  - title: Golden Urn (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Golden_Urn
+steps:
+  - title: Coins, salt and the first invasion
+    date: 1788–1789
+    when: "1788"
+    borders: "1788-12-01"
+    countries: [np, cn]
+    body:
+      - For two centuries the Malla kings of the Kathmandu valley had minted the silver coins used in Tibet, and Newar merchants dominated the trade between Tibet and India over the passes of Nyalam (Kuti) and Kyirong (Kerung). After the Gorkha conquest of the valley, the new government struck coins of purer silver and asked Tibet to exchange the old, debased Malla coins at a rate Tibet would not accept. Nepal also complained that Tibet sold it adulterated salt. A further quarrel came when the Tenth Shamarpa, Mipham Chödrup Gyatso, a brother of the late Sixth Panchen Lama, fell out with the Tibetan authorities over the Panchen Lama’s wealth, fled to Kathmandu and urged the Gorkhalis to act.
+      - In the summer of 1788 the regent Bahadur Shah sent armies over both passes. They took Nyalam, Kyirong and Dzongka and pushed on towards Shigatse, defeating a Tibetan force at Shelkar (Shikarjong). The Qianlong emperor sent troops from Sichuan, but his officials in Tibet preferred to buy peace. At talks in Kyirong in 1789, Tibetan representatives promised Nepal a yearly payment of 50,001 rupees in return for the Gorkhalis’ withdrawal, while the Qing commanders reported to Beijing that Nepal had submitted. Tibet paid the first year’s sum and then stopped.
+    facts:
+      - [First invasion, "summer 1788"]
+      - [Settlement of Kyirong (Kerung), "1789"]
+      - [Tibetan payment promised, "50,001 rupees a year"]
+    markers:
+      - kind: capital
+        side: np
+        name: Kathmandu
+        date: "1788"
+        text: Capital of the Gorkha kingdom, governed by the regent Bahadur Shah for his nephew Rana Bahadur Shah.
+        lonlat: [85.324, 27.717]
+        lp: b
+      - kind: taken
+        side: np
+        name: Nyalam (Kuti)
+        date: "1788"
+        text: Town on the main trade route from Kathmandu to Tibet, taken by the eastern column.
+        lonlat: [85.980, 28.159]
+      - kind: treaty
+        side: np
+        name: Kyirong (Kerung)
+        date: "1789"
+        text: Taken in 1788. The settlement that ended the first invasion was agreed here.
+        lonlat: [85.328, 28.396]
+        lp: l
+      - kind: taken
+        side: np
+        name: Dzongka
+        date: "1788"
+        text: The fortress north of Kyirong, on the road to the Tibetan plateau.
+        lonlat: [85.297, 28.856]
+        lp: l
+      - kind: battle
+        side: np
+        name: Shelkar
+        date: "1788"
+        text: The Nepalese defeated a Tibetan army near this fortress, which they call Shikarjong. The Tibetans then asked for talks.
+        lonlat: [87.122, 28.663]
+    arrows:
+      - side: np
+        phase: 1
+        via: [[85.324, 27.717], [85.700, 27.800], [85.960, 27.990], [85.980, 28.140]]
+      - side: np
+        phase: 1
+        via: [[85.165, 27.915], [85.300, 28.100], [85.378, 28.278], [85.328, 28.380]]
+      - side: np
+        phase: 2
+        via: [[85.990, 28.170], [86.300, 28.450], [86.630, 28.600], [87.100, 28.660]]
+      - side: np
+        phase: 2
+        via: [[85.328, 28.410], [85.320, 28.650], [85.297, 28.840]]
+  - title: The sack of Tashilhunpo
+    date: August – October 1791
+    when: "1791-08"
+    borders: "1791-10-01"
+    countries: [np, cn]
+    body:
+      - When Tibet stopped paying, talks were held again at the border in 1791. They broke down, and the Nepalese seized Tibetan officials. In August 1791 Nepalese armies under Abhiman Singh Basnyat and Damodar Pande crossed the passes once more. One column marched across the plateau, reached Shigatse in late September and plundered Tashilhunpo, the great monastery of the Panchen Lamas, carrying off its treasures. The young Seventh Panchen Lama had been taken to safety before they arrived.
+      - The plunder of the monastery of a lama the emperor honoured, and Tibet’s appeal for help, brought a quick response from Beijing, where the Qianlong emperor now learned how the 1789 settlement had been reached. He gave command of a new expedition to Fuk’anggan, one of his most trusted generals, with Hailancha as his deputy. The Nepalese, laden with loot and facing the Tibetan winter, fell back to the passes of Nyalam and Kyirong.
+    facts:
+      - [Second invasion, "August 1791"]
+      - [Tashilhunpo plundered, "September–October 1791"]
+    markers:
+      - kind: taken
+        side: np
+        name: Tashilhunpo (Shigatse)
+        date: September – October 1791
+        text: The seat of the Panchen Lamas, plundered by Damodar Pande’s column. Its treasures were carried back to Nepal.
+        lonlat: [88.870, 29.268]
+      - kind: capital
+        side: tib
+        name: Lhasa
+        date: "1791"
+        text: Seat of the Dalai Lama’s government and the Qing ambans, who called on Beijing for help.
+        lonlat: [91.117, 29.654]
+      - kind: held
+        side: np
+        name: Nyalam (Kuti)
+        date: 1791–1792
+        text: Held by Nepalese troops through the winter.
+        lonlat: [85.980, 28.159]
+      - kind: held
+        side: np
+        name: Kyirong (Kerung)
+        date: 1791–1792
+        text: Held by Nepalese troops through the winter.
+        lonlat: [85.328, 28.396]
+        lp: l
+    arrows:
+      - side: np
+        label: Damodar Pande
+        phase: 1
+        via: [[85.990, 28.170], [86.630, 28.580], [87.634, 29.086], [88.800, 29.260]]
+      - side: np
+        phase: 2
+        via: [[88.800, 29.220], [87.600, 29.000], [86.600, 28.540], [86.000, 28.200]]
+  - title: Fuk’anggan’s march on Kathmandu
+    date: January – October 1792
+    when: "1792-06"
+    borders: "1792-10-01"
+    countries: [np, cn]
+    body:
+      - Fuk’anggan’s army, about 10,000 Manchu bannermen and troops from Sichuan and elsewhere, with Tibetan levies, crossed the plateau in the winter of 1791–1792 and reached Lhasa in about sixty days. Some accounts give larger numbers. In the spring it gathered near Shigatse, and in June 1792 it attacked the Nepalese at the passes and drove them out of Kyirong and Nyalam.
+      - Fuk’anggan then crossed into Nepal by the Rasuwa route and fought his way down the Trishuli valley, storming one Nepalese stockade after another. By August his army had reached Dhaibung and the Betrawati river, a short march from the old Gorkha stronghold of Nuwakot and about 35 km from Kathmandu. Nepal was fighting on other fronts at the same time, against Sikkim in the east and Garhwal in the west, and its appeal to the East India Company brought only an offer to mediate; the Company’s envoy, Captain William Kirkpatrick, reached Kathmandu in 1793, after the war was over.
+      - In September Nepalese counter-attacks near Betrawati inflicted heavy losses on the Qing army, which was far from its bases, short of supplies and facing the monsoon. Both sides wanted peace, and a settlement was reached at Betrawati in October 1792. Nepal returned plunder from Tashilhunpo, gave up the 1789 payments and agreed to send a tribute mission to Beijing every five years; the Qing army withdrew without taking Nepalese land. In 1793 an imperial ordinance strengthened the ambans in Lhasa, took the minting of Tibet’s coins out of Nepalese hands and introduced the Golden Urn for choosing high reincarnations. Nepal sent its missions until 1908, and fought Tibet again in 1855–1856.
+    facts:
+      - [Qing army, "about 10,000 men, with Tibetan levies"]
+      - [Nepalese driven from Tibet, "June 1792"]
+      - [Farthest Qing advance, "Betrawati, August–September 1792"]
+      - [Peace of Betrawati, "October 1792"]
+    markers:
+      - kind: taken
+        side: qing
+        name: Kyirong (Kerung)
+        date: June 1792
+        text: Retaken from the Nepalese at the start of the Qing offensive.
+        lonlat: [85.328, 28.396]
+      - kind: taken
+        side: qing
+        name: Nyalam (Kuti)
+        date: June 1792
+        text: Retaken by a second Qing column.
+        lonlat: [85.980, 28.159]
+      - kind: taken
+        side: qing
+        name: Rasuwa
+        date: July 1792
+        text: The border crossing into Nepal, forced by Fuk’anggan’s main army.
+        lonlat: [85.378, 28.278]
+        lp: l
+      - kind: treaty
+        name: Betrawati
+        date: October 1792
+        text: The Qing army was halted on this river after heavy fighting in September. The peace was agreed here.
+        lonlat: [85.186, 27.973]
+      - kind: held
+        side: np
+        name: Nuwakot
+        date: "1792"
+        text: The fortified palace guarding the approach to Kathmandu from the north. The Qing army never reached it.
+        lonlat: [85.165, 27.915]
+        lp: l
+      - kind: capital
+        side: np
+        name: Kathmandu
+        date: "1792"
+        text: Capital of Nepal, about 35 km from the Qing army’s farthest advance.
+        lonlat: [85.324, 27.717]
+        lp: b
+      - kind: event
+        side: qing
+        name: Lhasa
+        date: early 1792
+        text: Fuk’anggan’s army arrived here after crossing the plateau from Xining in winter.
+        lonlat: [91.117, 29.654]
+    arrows:
+      - side: qing
+        label: Fuk’anggan
+        phase: 1
+        via: [[91.117, 29.654], [88.870, 29.268], [87.634, 29.086], [86.200, 28.900], [85.340, 28.430]]
+      - side: qing
+        phase: 2
+        via: [[85.328, 28.396], [85.378, 28.278], [85.300, 28.110], [85.211, 28.002], [85.190, 27.985]]
+    areas:
+      - style: occupied
+        side: qing
+        label: Held by the Qing army, July–October 1792
+        polygon: [[85.25, 28.42], [85.45, 28.36], [85.42, 28.15], [85.27, 27.97], [85.15, 27.96], [85.17, 28.12]]

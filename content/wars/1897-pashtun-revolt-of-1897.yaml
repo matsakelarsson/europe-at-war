@@ -1,0 +1,140 @@
+id: pashtun-revolt-of-1897
+name: Pashtun revolt of 1897
+start: "1897-06-10"
+end: "1898-04-04"
+tier: B
+summary: "A wave of risings by Pashtun tribes along the North-West Frontier of British India in 1897–1898, the largest the British faced there. Resentment of the Durand Line of 1893 and of new British posts in tribal country, preached against by religious leaders, broke out in attacks in the Tochi valley in June, on the British camps at Malakand and the fort of Chakdara in July, on Shabqadar in August, on the Khyber posts held by Afridi levies and on the forts of the Samana range, where 21 Sikh soldiers died defending Saragarhi in September. The British sent several field forces; the largest, about 35,000 strong under Sir William Lockhart, marched into the Afridi and Orakzai valleys of Tirah in October, stormed the Dargai heights and burned villages before withdrawing through the snow in December. The tribes submitted and paid fines in the spring of 1898."
+countries: [pk]
+sides:
+  - id: gb
+    name: British India
+    polities: [british-india]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: pt
+    name: Pashtun tribes (Swatis, Mohmands, Afridis, Orakzais and others)
+    polities: [pashtun-tribes]
+    ink: olive
+    moves: Tribal moves
+    success: Tribal success
+notes:
+  - British writers called the leader of the Malakand rising, Saidullah, the “Mad Mullah” or “Mad Fakir”, and the risings a “fanatical outbreak”. Modern historians stress the tribes’ grievances over the Durand Line, new forts and roads, and British interference in tribal affairs, as well as the calls to holy war by several religious leaders.
+  - The young Winston Churchill served with the Malakand Field Force as an officer and correspondent and wrote his first book about it.
+  - Tribal losses were not counted.
+sources:
+  - title: Siege of Malakand (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Malakand
+  - title: Tirah campaign (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tirah_campaign
+  - title: Battle of Saragarhi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Saragarhi
+  - title: Dargai (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dargai
+  - title: Battle of Dargai Heights (FIBIS)
+    url: https://wiki.fibis.org/w/Battle_of_Dargai_Heights
+  - title: Tirah Expedition (britishempire.co.uk)
+    url: https://www.britishempire.co.uk/forces/armycampaigns/indiancampaigns/tirah.htm
+steps:
+  - title: The frontier rising
+    date: June – September 1897
+    when: "1897-07-26"
+    borders: "1897-08-25"
+    countries: [pk]
+    body:
+      - The Durand Line agreed with the Amir of Afghanistan in 1893 cut through the Pashtun tribal country, and the British followed it with forts, roads and garrisons, among them a camp on the Malakand pass after the Chitral campaign of 1895. In June 1897 tribesmen attacked a British political officer’s escort at Maizar in the Tochi valley. On the night of 26 July thousands of tribesmen from Swat and the surrounding valleys, led by a religious leader, Saidullah, attacked the British camps on the Malakand pass and the small fort of Chakdara on the Swat river. Both held out for a week until a column under Sir Bindon Blood relieved Chakdara on 2 August.
+      - The rising spread. On 7 August the Mohmands, called to arms by the Hadda Mullah, attacked the fort at Shabqadar near Peshawar. Late in August the Afridis, whom the British had paid for sixteen years to keep the Khyber Pass open, rose and took the Khyber posts held by their own tribesmen in the Khyber Rifles, including Landi Kotal. The Orakzais attacked the forts of the Samana range above Kohat, and on 12 September they overran the signal post of Saragarhi between Fort Lockhart and Fort Gulistan, whose 21 Sikh soldiers of the 36th Sikhs fought until all were killed.
+    facts:
+      - [Siege of Malakand, "26 July – 2 August 1897"]
+      - [Khyber posts taken, "23–25 August 1897"]
+      - [Battle of Saragarhi, "12 September 1897"]
+    markers:
+      - kind: siege
+        side: gb
+        name: Malakand
+        date: 26 July – 1 August 1897
+        text: The camps on the pass were attacked night after night by thousands of tribesmen. The garrison held until relieved.
+        lonlat: [71.930, 34.565]
+        lp: l
+      - kind: siege
+        side: gb
+        name: Chakdara
+        date: 26 July – 2 August 1897
+        text: A small fort guarding the bridge over the Swat river, held by about 200 men until Bindon Blood’s column arrived.
+        lonlat: [72.030, 34.660]
+      - kind: battle
+        side: gb
+        name: Shabqadar
+        date: 7–9 August 1897
+        text: A Mohmand attack on the fort north of Peshawar was driven off by a relief force.
+        lonlat: [71.555, 34.215]
+      - kind: taken
+        side: pt
+        name: Landi Kotal
+        date: 25 August 1897
+        text: The largest of the Khyber posts, taken by the Afridis after its tribal garrison was divided.
+        lonlat: [71.145, 34.100]
+        lp: l
+      - kind: taken
+        side: pt
+        name: Saragarhi
+        date: 12 September 1897
+        text: Twenty-one Sikh soldiers under Havildar Ishar Singh held the post for a day against thousands of Orakzais and Afridis. Fort Gulistan held out until relieved.
+        lonlat: [70.888, 33.554]
+        lp: b
+    arrows:
+      - side: gb
+        label: Bindon Blood
+        via: [[71.950, 34.300], [71.930, 34.540], [72.030, 34.645]]
+    areas:
+      - style: contested
+        side: pt
+        label: Areas of the rising, July – September 1897
+        polygons:
+          - [[71.600, 34.900], [72.400, 34.950], [72.400, 34.550], [71.850, 34.450], [71.500, 34.600]]
+          - [[70.800, 34.200], [71.450, 34.250], [71.400, 33.850], [70.700, 33.500], [70.500, 33.750]]
+  - title: The Tirah campaign
+    date: October 1897 – April 1898
+    when: "1897-10-20"
+    borders: "1897-11-01"
+    countries: [pk]
+    body:
+      - The Tirah Field Force, about 35,000 British and Indian troops with some 20,000 followers under Sir William Lockhart, set out from Kohat in October to punish the Afridis and Orakzais in their home valleys of Tirah, which no British army had entered. On 18 October it took the Dargai heights above the Chagru pass, then left them for lack of water, and on 20 October stormed them again at a cost of nearly 200 casualties; the Gordon Highlanders’ charge, led on by a wounded piper, became a famous image in Britain. The force crossed the Sampagha and Arhanga passes at the end of October and occupied the Maidan valley.
+      - For six weeks the brigades burned fortified villages and destroyed crops and stores while the Afridis fought a skilled guerrilla war against foraging parties and convoys. In December Lockhart withdrew down the Bara valley in snow and freezing rain, harried all the way, and reached the Peshawar plain on 14 December. Faced with another expedition in the spring, the Afridis agreed to pay fines and hand over rifles, and the force was broken up on 4 April 1898. The British lost about 1,150 killed and wounded in Tirah. Afterwards the new Viceroy, Lord Curzon, pulled regular troops back from the tribal areas, relied on tribal militias, and in 1901 made the frontier districts a separate North-West Frontier Province.
+    facts:
+      - [Tirah Field Force, "about 35,000 troops and 20,000 followers"]
+      - [Dargai heights stormed, "20 October 1897"]
+      - [Force broken up, "4 April 1898"]
+      - [British casualties in Tirah, "about 1,150 killed and wounded"]
+    markers:
+      - kind: battle
+        side: gb
+        name: Dargai
+        date: 18 and 20 October 1897
+        text: The heights above the Chagru pass, held by Afridis and Orakzais, were taken twice. The second assault cost nearly 200 British and Indian casualties.
+        lonlat: [70.830, 33.600]
+      - kind: event
+        side: gb
+        name: Kohat
+        date: October 1897
+        text: The base from which the Tirah Field Force set out.
+        lonlat: [71.441, 33.587]
+      - kind: event
+        side: gb
+        name: Peshawar
+        date: 14 December 1897
+        text: Lockhart’s columns reached the plain near Peshawar after the march down the Bara valley.
+        lonlat: [71.578, 34.008]
+    arrows:
+      - side: gb
+        label: Lockhart
+        phase: 1
+        via: [[71.441, 33.587], [71.100, 33.560], [70.830, 33.610], [70.800, 33.750], [70.900, 33.850]]
+      - side: gb
+        phase: 2
+        via: [[70.950, 33.870], [71.200, 33.900], [71.450, 33.930], [71.560, 33.990]]
+    areas:
+      - style: occupied
+        side: gb
+        label: Tirah, occupied October – December 1897 (approximate)
+        polygon: [[70.600, 33.700], [70.850, 33.950], [71.200, 33.980], [71.250, 33.850], [70.900, 33.650]]

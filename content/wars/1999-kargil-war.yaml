@@ -1,0 +1,261 @@
+id: kargil-war
+name: Kargil War
+start: "1999-05-03"
+end: "1999-07-26"
+tier: A
+summary: "A war between India and Pakistan in the Kargil district of Ladakh, then part of the Indian state of Jammu and Kashmir, the first fought between two nuclear-armed states. Over the winter of 1998–1999 Pakistani soldiers of the Northern Light Infantry, presented by Pakistan at first as Kashmiri fighters, crossed the Line of Control and occupied heights overlooking the Srinagar–Leh road. After the intrusion was discovered in May 1999, India drove them back in costly mountain assaults supported by air strikes, retaking Tololing, Tiger Hill and most other positions. Under American and international pressure Prime Minister Nawaz Sharif agreed on 4 July to withdraw, and India declared its operation complete on 26 July. India put its dead at 527 and Pakistan at 453; other estimates of Pakistan’s losses are higher. The war contributed to the military coup that overthrew Sharif in October 1999."
+countries: [in, pk]
+sides:
+  - id: in
+    name: India
+    polities: [india]
+    ink: orange
+    moves: Indian moves
+    success: Indian success
+  - id: pk
+    name: Pakistan
+    polities: [pakistan]
+    ink: green
+    moves: Pakistani moves
+    success: Pakistani success
+notes:
+  - "Pakistan at first said that the men on the heights were Kashmiri mujahideen and that its army was not involved. Captured documents, the bodies of soldiers, and later statements by Pakistani leaders, including Pervez Musharraf’s memoir of 2006, showed that the force was made up mainly of Northern Light Infantry battalions, with some special forces and irregulars."
+  - "Casualty figures: India’s official figure is 527 killed and about 1,360 wounded. Pakistan’s official figure is 453 killed; Indian estimates, and some later Pakistani statements, put its losses considerably higher."
+  - The Line of Control is the ceasefire line of 1949, adjusted in 1972; it is not an international border. The base map shows the territory each state administers; the positions occupied in 1999 are drawn as areas and are approximate.
+sources:
+  - title: Kargil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kargil_War
+  - title: Kargil War (Britannica)
+    url: https://www.britannica.com/event/Kargil-War
+  - title: Lahore Declaration (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Lahore_Declaration
+  - title: Operation Safed Sagar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Safed_Sagar
+  - title: Battle of Tololing (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tololing
+  - title: Battle of Tiger Hill (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tiger_Hill
+  - title: Kargil Review Committee (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kargil_Review_Committee
+steps:
+  - title: The bus to Lahore, and the intrusion
+    date: February – May 1999
+    when: "1999-05-03"
+    borders: "1999-05-03"
+    countries: [in, pk]
+    body:
+      - "India and then Pakistan tested nuclear weapons in May 1998. In February 1999 the Indian prime minister, Atal Bihari Vajpayee, rode the first bus service from Delhi to Lahore, and on 21 February he and Nawaz Sharif signed the Lahore Declaration, in which both promised to settle their disputes, Kashmir among them, by peaceful means. By then, however, Pakistani troops had begun to cross the Line of Control in the Kargil district, where the Indian army withdrew from many high posts during the winter."
+      - "Several battalions of the Northern Light Infantry, then a paramilitary force recruited in the Northern Areas (Gilgit-Baltistan), with some special forces and irregulars, occupied well over a hundred positions on the ridges along about 150 km of the line, from the Mushkoh valley west of Dras to Batalik and Turtuk. From there their artillery observers could direct fire onto the only road from Srinagar to Leh. The plan was drawn up by the army chief, General Pervez Musharraf, and a few senior generals; how much Sharif knew of it beforehand is disputed."
+      - "Local shepherds reported armed men on the heights near Batalik at the beginning of May. A patrol led by Captain Saurabh Kalia with five soldiers, which went out on 15 May, was captured; their bodies, returned in June, bore marks of torture, which Pakistan denied. Only after several more patrols were ambushed did the Indian army realise the scale of the intrusion. Pakistani shelling set off the army’s ammunition dump at Kargil on 9 May."
+    facts:
+      - [Lahore Declaration, "21 February 1999"]
+      - [Intrusion discovered, "early May 1999"]
+      - [Front, "about 150 km, from Mushkoh to Turtuk"]
+    markers:
+      - kind: event
+        side: pk
+        name: Batalik
+        date: 3 May 1999
+        text: Shepherds told the army they had seen armed strangers on the ridges. The patrols sent to check were fired on.
+        lonlat: [76.339, 34.656]
+      - kind: event
+        side: pk
+        name: Kargil
+        date: 9 May 1999
+        text: Pakistani artillery hit the town and the army’s ammunition dump, and went on shelling the town and the road through the war.
+        lonlat: [76.135, 34.557]
+        lp: b
+      - kind: event
+        side: pk
+        name: Dras
+        date: May 1999
+        text: The heights above Dras, among them Tololing and Tiger Hill, looked straight down on the Srinagar–Leh highway.
+        lonlat: [75.751, 34.429]
+        lp: b
+      - kind: event
+        side: pk
+        name: Turtuk
+        date: May 1999
+        text: Heights above the Shyok valley near the village were the eastern end of the intrusion.
+        lonlat: [76.828, 34.845]
+      - kind: event
+        side: pk
+        name: Skardu
+        date: 1998–1999
+        text: The Northern Light Infantry battalions were supplied from bases in Baltistan across the line.
+        lonlat: [75.633, 35.297]
+    arrows:
+      - side: pk
+        phase: 1
+        via: [[75.600, 34.760], [75.680, 34.600], [75.740, 34.500]]
+      - side: pk
+        phase: 1
+        via: [[76.200, 34.900], [76.300, 34.780], [76.340, 34.700]]
+    areas:
+      - style: occupied
+        side: pk
+        label: Heights occupied by Pakistani troops (approximate)
+        polygon: [[75.58, 34.44], [75.80, 34.45], [75.95, 34.51], [76.10, 34.58], [76.30, 34.665], [76.45, 34.71], [76.75, 34.80], [76.75, 34.86], [76.45, 34.79], [76.25, 34.73], [76.05, 34.66], [75.90, 34.61], [75.75, 34.57], [75.58, 34.54]]
+  - title: Operation Vijay and the air war
+    date: late May – early June 1999
+    when: "1999-05-26"
+    borders: "1999-05-26"
+    countries: [in, pk]
+    body:
+      - "India launched Operation Vijay to clear the intrusion, moving in two divisions and large numbers of guns, and on 26 May its air force began air strikes, Operation Safed Sagar, the first use of air power in Kashmir since 1971. It soon learned how dangerous the mountains were: on 27 May a MiG-27 went down with engine trouble and a MiG-21 was shot down by a shoulder-fired missile while searching for it; the MiG-27 pilot was captured and the MiG-21 pilot killed. On 28 May a Mi-17 helicopter was shot down near Tololing with its crew of four. The air force switched to Mirage 2000s bombing from higher altitudes, some with laser-guided bombs, and hit Pakistani supply camps."
+      - "On the ground, Indian infantry had to climb steep, bare slopes at 4,000 to 5,500 metres, often at night, against men dug in on the crests above them. The first attacks in Dras and Batalik failed with heavy losses. India kept its troops and aircraft on its own side of the Line of Control, a restraint that won it international support, while its navy moved ships towards the Pakistani coast."
+    facts:
+      - [Operation Safed Sagar, "from 26 May 1999"]
+      - [Aircraft lost, "MiG-27 and MiG-21 on 27 May, Mi-17 on 28 May"]
+    markers:
+      - kind: air
+        side: pk
+        name: Batalik sector
+        date: 27 May 1999
+        text: A MiG-21 was shot down by a Pakistani shoulder-fired missile and a MiG-27 crashed. Flight Lieutenant K. Nachiketa was taken prisoner and released a week later.
+        lonlat: [76.300, 34.700]
+      - kind: air
+        side: pk
+        name: Tololing
+        date: 28 May 1999
+        text: An Indian Mi-17 helicopter attacking the ridge was brought down by a missile; its four crew were killed.
+        lonlat: [75.795, 34.471]
+      - kind: event
+        side: in
+        name: Kargil
+        date: May–July 1999
+        text: Headquarters of the Indian brigades in the sector, under constant Pakistani shellfire.
+        lonlat: [76.135, 34.557]
+        lp: b
+      - kind: event
+        side: in
+        name: Srinagar
+        date: May–July 1999
+        text: Base for Indian aircraft, reinforcements and supplies, which reached the front over the Zoji La pass.
+        lonlat: [74.797, 34.084]
+    arrows:
+      - side: in
+        phase: 1
+        via: [[74.797, 34.084], [75.300, 34.250], [75.470, 34.280], [75.700, 34.410]]
+      - side: in
+        phase: 2
+        via: [[76.135, 34.557], [76.250, 34.600], [76.330, 34.650]]
+    areas:
+      - style: occupied
+        side: pk
+        label: Heights occupied by Pakistani troops (approximate)
+        polygon: [[75.58, 34.44], [75.80, 34.45], [75.95, 34.51], [76.10, 34.58], [76.30, 34.665], [76.45, 34.71], [76.75, 34.80], [76.75, 34.86], [76.45, 34.79], [76.25, 34.73], [76.05, 34.66], [75.90, 34.61], [75.75, 34.57], [75.58, 34.54]]
+  - title: Tololing and the Dras heights
+    date: June 1999
+    when: "1999-06-13"
+    borders: "1999-06-13"
+    countries: [in, pk]
+    body:
+      - "The key was Tololing, a ridge east of Dras from which Pakistani observers could watch every vehicle on the highway. Attacks by 18 Grenadiers from late May failed with heavy losses. On the night of 12–13 June 2 Rajputana Rifles, under massive artillery cover, took the ridge after hand-to-hand fighting, the first major Indian victory of the war. The nearby Hump and Point 4590 followed."
+      - "Massed Indian artillery, including Bofors howitzers firing directly at the peaks, made the difference in the battles that followed. On 20 June 13 Jammu and Kashmir Rifles took Point 5140 above Tololing; its young company commander, Captain Vikram Batra, radioed the success with a soft-drink slogan, “Yeh dil maange more” (“This heart wants more”), which made him famous. Diplomatic pressure on Pakistan grew: the United States and the G8 called on it to restore the Line of Control."
+    facts:
+      - [Tololing taken, "13 June 1999"]
+      - [Point 5140 taken, "20 June 1999"]
+    markers:
+      - kind: battle
+        side: in
+        name: Tololing
+        date: 12–13 June 1999
+        text: Taken by 2 Rajputana Rifles after three weeks of failed assaults. Point 5140, on the ridge above, fell on 20 June.
+        lonlat: [75.795, 34.471]
+      - kind: event
+        side: in
+        name: Dras
+        date: June 1999
+        text: Indian guns were massed in the valley around the town to support the assaults on the heights.
+        lonlat: [75.751, 34.429]
+        lp: b
+    arrows:
+      - side: in
+        label: 2 Rajputana Rifles
+        via: [[75.751, 34.429], [75.775, 34.448], [75.792, 34.466]]
+    areas:
+      - style: occupied
+        side: pk
+        label: Heights still held by Pakistani troops (approximate)
+        polygon: [[75.58, 34.44], [75.75, 34.45], [75.95, 34.51], [76.10, 34.58], [76.30, 34.665], [76.45, 34.71], [76.75, 34.80], [76.75, 34.86], [76.45, 34.79], [76.25, 34.73], [76.05, 34.66], [75.90, 34.61], [75.75, 34.57], [75.58, 34.54]]
+  - title: Tiger Hill and Batalik
+    date: late June – 7 July 1999
+    when: "1999-07-04"
+    borders: "1999-07-04"
+    countries: [in, pk]
+    body:
+      - "Tiger Hill, a peak of more than 5,000 metres west of Dras, was the highest point overlooking the road. After air strikes and days of shelling, 18 Grenadiers climbed its sheer north-eastern face while 8 Sikh attacked from the west, and the summit was taken early on 4 July; Grenadier Yogendra Singh Yadav, who led the climb though badly wounded, received India’s highest award for gallantry, the Param Vir Chakra. Pakistani counter-attacks failed. Captain Karnal Sher Khan of the Northern Light Infantry was killed in one of them and received Pakistan’s highest award, the Nishan-e-Haider, as did Havildar Lalak Jan, killed in the same days."
+      - "In the Mushkoh valley Point 4875 was taken on 7 July; Captain Vikram Batra was killed there and awarded the Param Vir Chakra after his death. In the Batalik sector, where Indian troops had been fighting since May, 1/11 Gorkha Rifles took the Khalubar ridge on 3 July; its platoon leader, Lieutenant Manoj Kumar Pandey, was killed in the assault and also received the Param Vir Chakra. By then most of the heights were back in Indian hands."
+    facts:
+      - [Khalubar taken, "3 July 1999"]
+      - [Tiger Hill taken, "4 July 1999"]
+      - [Point 4875 taken, "7 July 1999"]
+    markers:
+      - kind: battle
+        side: in
+        name: Tiger Hill
+        date: 3–4 July 1999
+        text: Taken by 18 Grenadiers and 8 Sikh after a night climb up near-vertical rock under fire.
+        lonlat: [75.658, 34.484]
+      - kind: battle
+        side: in
+        name: Point 4875
+        date: 7 July 1999
+        text: Taken by 13 Jammu and Kashmir Rifles in the Mushkoh valley. The peak is now officially called Batra Top.
+        lonlat: [75.670, 34.437]
+        lp: b
+      - kind: battle
+        side: in
+        name: Khalubar
+        date: 3 July 1999
+        text: The Gorkhas took the ridge in the Batalik sector after a night of close fighting.
+        lonlat: [76.370, 34.690]
+    arrows:
+      - side: in
+        label: 18 Grenadiers
+        via: [[75.751, 34.429], [75.700, 34.455], [75.665, 34.478]]
+      - side: in
+        label: 1/11 Gorkha Rifles
+        via: [[76.339, 34.640], [76.355, 34.665], [76.368, 34.685]]
+    areas:
+      - style: gained
+        side: in
+        label: Heights retaken by India by early July 1999 (approximate)
+        polygon: [[75.58, 34.44], [75.75, 34.45], [75.95, 34.51], [76.10, 34.58], [76.30, 34.665], [76.45, 34.71], [76.75, 34.80], [76.75, 34.86], [76.45, 34.79], [76.25, 34.73], [76.05, 34.66], [75.90, 34.61], [75.75, 34.57], [75.58, 34.54]]
+  - title: Washington and the withdrawal
+    date: July – October 1999
+    when: "1999-07-26"
+    borders: "1999-07-26"
+    countries: [in, pk]
+    body:
+      - "With his troops losing ground and almost no international backing, even from China, Nawaz Sharif flew to Washington and met President Bill Clinton at Blair House on 4 July. According to Clinton’s adviser Bruce Riedel, Clinton warned him of the danger of nuclear escalation and refused to mediate on Kashmir. Sharif agreed to take steps to restore the Line of Control. The Pakistani forces began to withdraw around 11 July; India attacked the posts that were not vacated, and on 26 July declared Operation Vijay complete, a date it marks as Kargil Vijay Diwas."
+      - "India’s official toll was 527 dead; Pakistan acknowledged 453. In India the Kargil Review Committee criticised the failure of intelligence to detect the intrusion, and the army kept troops on the heights through the winter from then on. In Pakistan the war deepened the rift between Sharif and Musharraf, who blamed each other for it; on 12 October 1999, when Sharif tried to dismiss him, the army overthrew the government and Musharraf took power. The Northern Light Infantry was made a regular regiment of the Pakistan Army."
+    facts:
+      - [Clinton–Sharif meeting, "Washington, 4 July 1999"]
+      - [Operation Vijay declared complete, "26 July 1999"]
+      - [Dead, "India 527, Pakistan 453 (official figures)"]
+      - [Military coup in Pakistan, "12 October 1999"]
+    markers:
+      - kind: event
+        side: in
+        name: Kargil
+        date: 26 July 1999
+        text: India declared the intrusion cleared. The last Pakistani positions had been vacated or taken in the preceding two weeks.
+        lonlat: [76.135, 34.557]
+        lp: b
+      - kind: event
+        name: Dras
+        date: since 1999
+        text: The Kargil War Memorial, below Tololing, honours the Indian dead.
+        lonlat: [75.751, 34.429]
+        lp: b
+    arrows:
+      - side: pk
+        label: Withdrawal
+        via: [[76.000, 34.640], [75.950, 34.720], [75.880, 34.820]]
+    areas:
+      - style: gained
+        side: in
+        label: Heights retaken by India (approximate)
+        polygon: [[75.58, 34.44], [75.75, 34.45], [75.95, 34.51], [76.10, 34.58], [76.30, 34.665], [76.45, 34.71], [76.75, 34.80], [76.75, 34.86], [76.45, 34.79], [76.25, 34.73], [76.05, 34.66], [75.90, 34.61], [75.75, 34.57], [75.58, 34.54]]

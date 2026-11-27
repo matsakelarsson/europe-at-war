@@ -15,9 +15,9 @@ whose 67 steps are included here as the Sweden view (`#/country/se`).
   runtime dependency is `topojson-client`, vendored in `site/vendor/`.
 - **A globe.** The map is a globe you can turn and zoom (`site/globe.js`).
   Borders cover the whole world: hand-curated for Europe, the Near East, Iran,
-  Arabia and Central Asia, drafted from historical-basemaps elsewhere. Wars and
-  capitals cover the same regions so far; [ROADMAP.md](ROADMAP.md) has the plan
-  for the rest of the world.
+  Arabia, Central Asia and South Asia, drafted from historical-basemaps
+  elsewhere. Wars and capitals cover the same regions so far;
+  [ROADMAP.md](ROADMAP.md) has the plan for the rest of the world.
 - **Atoms.** The map is built from all of Natural Earth's admin-1 regions
   (provinces, states, counties), cut further where history needs finer lines
   (`content/borders/splits/`). Atoms in Europe and around it keep the most
@@ -121,7 +121,7 @@ npm run draft        # fill keyframe gaps for new atoms (never overwrites existi
 | Command | What it does |
 | --- | --- |
 | `node tools/set-owner.mjs 1530,1600 russia RU-PSK` | Hand-correct atoms in drafted keyframes |
-| `node tools/palette.mjs world.yaml --auto` | Recolour polities so that neighbours stand apart (after a build) |
+| `node tools/palette.mjs south-asia.yaml --region '^(IN\|PK)-'` | Recolour polities so that neighbours stand apart (after a build); `--region` also keeps apart polities shown together in a region |
 | `node tools/rename-polity.mjs muscovy russia` | Rename or merge a polity id across all content |
 | `node tools/split-from-hb.mjs 30-poland 1880 Germany memel "Memel land" LT-KL` | Cut atoms along a historical-basemaps border |
 | `node tools/owners-at.mjs 1772-08-06 poland prussia` | Who owns which atoms on a date (after a build) |

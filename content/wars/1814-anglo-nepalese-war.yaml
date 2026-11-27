@@ -1,0 +1,532 @@
+id: anglo-nepalese-war
+name: Anglo-Nepalese War
+start: "1814-11-01"
+end: "1816-03-04"
+tier: A
+summary: "A war between the East India Company and the Gorkha kingdom of Nepal, which in half a century had grown from a small hill state into a Himalayan empire stretching from the Teesta to the Sutlej. Border disputes in the Terai lowlands, above all over Butwal and Sheoraj, led the Governor-General, Lord Moira, to invade along the whole frontier in 1814. Nepalese garrisons beat off the first attacks at Kalunga and Jaithak and in the Terai, but in 1815 the Company took Kumaon and forced Amar Singh Thapa to give up the western hills at Malaun. When Kathmandu would not ratify the Treaty of Sugauli, Sir David Ochterlony marched to Makwanpur, and Nepal accepted the treaty on 4 March 1816. It lost Kumaon, Garhwal, the hill states to the Sutlej, the Sikkim lands and most of the Terai, part of which was soon returned, and took a British Resident, but kept its independence. The British began recruiting the soldiers they had fought, the origin of the Gurkha regiments."
+countries: [np, in]
+sides:
+  - id: eic
+    name: East India Company and Sikkim
+    polities: [british-india, sikkim]
+    ink: red
+    moves: Company and allied moves
+    success: Company success
+  - id: np
+    name: Kingdom of Nepal (Gorkha)
+    polities: [nepal]
+    ink: purple
+    moves: Nepalese moves
+    success: Nepalese success
+notes:
+  - The Company’s armies were mostly Bengal Army sepoys under British officers, with some British Army regiments, and irregular levies raised for the war. Nepal’s army drew on many hill peoples, among them Khas, Magars and Gurungs; the British called them all “Goorkhas”, after the ruling house’s home, Gorkha.
+  - British accounts, above all the dispatches of the commanders, dominate the record. Nepalese losses are not known, and figures for the size of Nepal’s army range from about 11,000 to 22,000 men.
+  - The Terai, the strip of plains and forest along Nepal’s southern edge, does not follow the provinces on the map; it is drawn as an outline in the steps.
+sources:
+  - title: Anglo-Nepalese War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Anglo-Nepalese_War
+  - title: Battle of Nalapani (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Nalapani
+  - title: Battle of Jaithak (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Jaithak
+  - title: Battle of Makwanpur (1816) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Makwanpur_(1816)
+  - title: Sugauli Treaty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sugauli_Treaty
+  - title: Treaty of Sagauli (Britannica)
+    url: https://www.britannica.com/event/Treaty-of-Sagauli
+  - title: Treaty of Titalia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Titalia
+  - title: Amar Singh Thapa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Amar_Singh_Thapa
+  - title: Bhakti Thapa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bhakti_Thapa
+  - title: Balbhadra Kunwar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Balbhadra_Kunwar
+  - title: Unification of Nepal (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Unification_of_Nepal
+  - title: Brigade of Gurkhas (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Brigade_of_Gurkhas
+steps:
+  - title: From the Teesta to the Sutlej
+    date: 1768–1814
+    when: "1768"
+    borders: "1813-06-01"
+    countries: [np, in]
+    body:
+      - In 1768–1769 Prithvi Narayan Shah, king of the small hill state of Gorkha, conquered the three Malla kingdoms of the Kathmandu valley and made Kathmandu his capital. His successors, ruling through regents and generals, carried the conquests along the Himalaya in both directions. In the east they took the Kirata lands and, in 1788–1789, the lands of Sikkim west of the Teesta. In the west they absorbed the Chaubisi and Baise states and went on into Kumaon, whose capital Almora fell in 1790, and Garhwal, conquered in 1803–1804, when its raja Pradyumna Shah was killed at Khurbura near Dehradun.
+      - By 1806 Gorkhali armies under Amar Singh Thapa held the hill states as far as the Sutlej and were besieging Kangra, the fortress of the Katoch raja Sansar Chand. Ranjit Singh’s Sikh army relieved it in 1809, and the Sutlej became the limit of Nepal’s expansion.
+      - In the plains, Nepal now bordered the East India Company, which had taken Gorakhpur and the land along the foot of the hills from Awadh in 1801. When Nepal annexed the kingdom of Palpa in 1806, it also claimed Palpa’s lowland districts of Butwal and Sheoraj, which the Company said belonged to Gorakhpur. Similar disputes ran along the whole frontier, and a joint commission in 1812–1813 settled none of them. In Kathmandu, Bhimsen Thapa had governed as chief minister (mukhtiyar) since 1806 for the young king Girvan Yuddha Bikram Shah.
+    facts:
+      - [Kathmandu valley conquered, "1768–1769"]
+      - [Almora taken, "1790"]
+      - [Garhwal conquered, "1803–1804"]
+      - [Siege of Kangra, "1806–1809, relieved by the Sikhs"]
+    markers:
+      - kind: capital
+        side: np
+        name: Kathmandu
+        date: from 1768
+        text: Prithvi Narayan Shah took the city in September 1768 and made it the capital of the new kingdom.
+        lonlat: [85.324, 27.717]
+      - kind: event
+        side: np
+        name: Gorkha
+        date: before 1768
+        text: The hill town from which the Shah dynasty began its conquests, and which gave its name to the kingdom’s soldiers.
+        lonlat: [84.630, 28.000]
+        lp: l
+      - kind: taken
+        side: np
+        name: Almora
+        date: "1790"
+        text: Capital of the Chand rajas of Kumaon, taken by a Gorkhali army from the east.
+        lonlat: [79.663, 29.602]
+      - kind: taken
+        side: np
+        name: Srinagar (Garhwal)
+        date: "1803"
+        text: Capital of the Garhwal kingdom. Its raja fled to the plains and was killed fighting the Gorkhalis at Khurbura in 1804.
+        lonlat: [78.779, 30.223]
+        lp: l
+      - kind: siege
+        name: Kangra
+        date: 1806–1809
+        text: Amar Singh Thapa besieged the fortress for three years. Sansar Chand called in Ranjit Singh, whose army forced the Gorkhalis to withdraw in 1809.
+        lonlat: [76.254, 32.087]
+      - kind: event
+        side: np
+        name: Butwal
+        date: "1806"
+        text: A lowland district of Palpa, claimed by Nepal after it annexed Palpa and by the Company as part of Gorakhpur.
+        lonlat: [83.450, 27.690]
+        lp: b
+    arrows:
+      - side: np
+        label: Westward conquests, 1790–1806
+        phase: 1
+        via: [[80.600, 29.400], [79.663, 29.650], [78.779, 30.250], [77.600, 30.750], [76.900, 31.200]]
+      - side: np
+        label: Into Sikkim, 1788–1789
+        phase: 1
+        via: [[85.324, 27.717], [86.700, 27.300], [87.800, 27.200], [88.300, 27.300]]
+      - side: np
+        label: Kangra
+        phase: 2
+        via: [[76.900, 31.250], [76.600, 31.650], [76.300, 32.020]]
+    areas:
+      - style: gained
+        side: np
+        label: Kumaon, conquered 1790
+        atoms: [IN-UT~kumaon]
+      - style: gained
+        side: np
+        label: Garhwal, conquered 1803–1804
+        atoms: [IN-UT]
+      - style: gained
+        side: np
+        label: Hill states between the Yamuna and the Sutlej, held from 1804–1806
+        polygon: [[76.62, 31.02], [76.72, 31.38], [77.20, 31.45], [77.65, 31.50], [78.20, 31.35], [77.95, 30.95], [77.85, 30.55], [77.62, 30.44], [77.30, 30.52], [76.94, 30.80]]
+      - style: gained
+        side: np
+        label: Sikkim lands west of the Teesta, taken 1788–1789
+        polygon: [[88.08, 26.55], [88.05, 27.15], [88.15, 27.45], [88.45, 27.45], [88.50, 27.15], [88.45, 26.85], [88.20, 26.65]]
+  - title: Butwal and the declaration of war
+    date: April – November 1814
+    when: "1814-05-29"
+    borders: "1814-11-01"
+    countries: [np, in]
+    body:
+      - Francis Rawdon-Hastings, Earl of Moira (later Marquess of Hastings), became Governor-General in 1813. He demanded that Nepal give up Butwal and Sheoraj, and in April 1814 Company troops occupied them. When the malaria season came the troops withdrew, leaving police posts behind. On 29 May 1814 Nepalese soldiers attacked the posts in Butwal and killed eighteen of their men. The court in Kathmandu, where Bhimsen Thapa believed the hills would protect the kingdom, chose to fight, although some commanders, among them Amar Singh Thapa, warned against a war with the Company.
+      - Moira prepared through the summer and declared war on 1 November 1814, by which time the first fighting had already begun. He sent four columns into the hills at once along a frontier of some 1,500 km. Major-General David Ochterlony was to march from Ludhiana with about 6,000 men against Amar Singh Thapa’s army between the Sutlej and the Yamuna. Major-General Robert Rollo Gillespie was to take about 3,500 from Meerut into the Dun valley around Dehradun. Major-General John Sullivan Wood had about 4,500 at Gorakhpur for Butwal and Palpa. The largest column, about 8,000 men under Major-General Bennet Marley, was to march from Dinapur (Danapur) on Makwanpur and Kathmandu itself.
+      - A smaller force under Major Barré Latter held the frontier at Purnea in the east and sought the help of Sikkim, which hoped to win back the lands Nepal had taken from it. Nepal’s troops were spread in forts and stockades along the whole length of the hills; its commanders hoped that the steep ridges, the forests and the malarial Terai would wear the invaders down.
+    facts:
+      - [Butwal police posts attacked, "29 May 1814"]
+      - [War declared, "1 November 1814"]
+      - [Company columns, "four, about 22,000 men, with Latter’s force in the east"]
+    markers:
+      - kind: event
+        side: np
+        name: Butwal
+        date: 29 May 1814
+        text: Nepalese troops attacked the Company’s police posts here, the incident Moira treated as the cause of the war.
+        lonlat: [83.450, 27.690]
+      - kind: capital
+        side: np
+        name: Kathmandu
+        date: "1814"
+        text: Seat of King Girvan Yuddha Bikram Shah and his chief minister Bhimsen Thapa.
+        lonlat: [85.324, 27.717]
+      - kind: event
+        side: eic
+        name: Ludhiana
+        date: October 1814
+        text: The Company’s frontier station facing the Sikh Empire, from which Ochterlony’s division set out.
+        lonlat: [75.852, 30.909]
+        lp: l
+      - kind: event
+        side: eic
+        name: Meerut
+        date: October 1814
+        text: Base of Gillespie’s division.
+        lonlat: [77.706, 28.984]
+        lp: l
+      - kind: event
+        side: eic
+        name: Gorakhpur
+        date: November 1814
+        text: Base of Wood’s division, facing Butwal and Palpa.
+        lonlat: [83.373, 26.760]
+        lp: b
+      - kind: event
+        side: eic
+        name: Dinapur
+        date: November 1814
+        text: Base of Marley’s division, the largest, which was to strike at the heart of the kingdom.
+        lonlat: [85.047, 25.636]
+        lp: b
+    arrows:
+      - side: eic
+        label: Ochterlony
+        phase: 1
+        via: [[75.852, 30.909], [76.529, 31.000], [76.717, 31.042]]
+      - side: eic
+        label: Gillespie
+        phase: 1
+        via: [[77.706, 28.984], [77.504, 29.986], [77.880, 30.200], [78.030, 30.310]]
+      - side: eic
+        label: Wood
+        phase: 1
+        via: [[83.373, 26.760], [83.420, 27.200], [83.450, 27.620]]
+      - side: eic
+        label: Marley
+        phase: 1
+        via: [[85.047, 25.636], [84.900, 26.300], [84.507, 26.802], [84.850, 27.050]]
+      - side: eic
+        label: Latter
+        phase: 1
+        via: [[87.409, 25.776], [87.700, 26.150], [87.950, 26.450]]
+  - title: Kalunga and Jaithak
+    date: October – December 1814
+    when: "1814-10-31"
+    borders: "1814-11-30"
+    countries: [in, np]
+    body:
+      - Gillespie’s advance guard entered the Dun valley in October and occupied Dehradun, but found the small hill fort of Kalunga (Nalapani), a few kilometres to the north-east, held by Captain Balbhadra Kunwar with about 600 people, women and children among them. On 31 October 1814 Gillespie led a hurried assault and was shot dead near the gate; the attack failed with some 260 killed and wounded. A second assault, after siege guns had arrived from Delhi, failed on 27 November with nearly 500 more.
+      - The besiegers then cut off the fort’s water. On the night of 30 November Balbhadra broke out with about seventy survivors and joined other Nepalese forces. Two small obelisks still stand at Kalunga, one for Gillespie and one for the defenders, whom it calls “our gallant adversary”.
+      - The column, now under Major-General Gabriel Martindell, marched west into Sirmur, occupied its capital Nahan in late December and attacked the ridge fort of Jaithak, held by Amar Singh Thapa’s son Ranajor Singh Thapa. On 27 December two detachments sent against the ridge from opposite sides were beaten back with heavy losses. Martindell made no further attack for months and settled down to a blockade. The Company had lost more than a thousand killed and wounded before two small hill forts, and Nepal’s soldiers had won a reputation they kept.
+    facts:
+      - [Gillespie killed at Kalunga, "31 October 1814"]
+      - [Second assault fails, "27 November 1814"]
+      - [Kalunga abandoned, "30 November 1814"]
+      - [Company losses at Kalunga, "more than 700 killed and wounded"]
+      - [Attack on Jaithak, "27 December 1814, Nepalese success"]
+    markers:
+      - kind: siege
+        side: eic
+        name: Kalunga (Nalapani)
+        date: 31 October – 30 November 1814
+        text: Two assaults failed with heavy losses. The fort fell only when its water was cut off and the garrison broke out.
+        lonlat: [78.085, 30.393]
+      - kind: taken
+        side: eic
+        name: Dehradun
+        date: October 1814
+        text: The main town of the Dun valley, occupied by Gillespie’s advance guard.
+        lonlat: [78.032, 30.316]
+        lp: l
+      - kind: taken
+        side: eic
+        name: Nahan
+        date: December 1814
+        text: Capital of Sirmur, whose raja had been driven out by the Gorkhalis. Martindell occupied it without a fight.
+        lonlat: [77.292, 30.560]
+        lp: l
+      - kind: battle
+        side: np
+        name: Jaithak
+        date: 27 December 1814
+        text: Ranajor Singh Thapa’s garrison drove off both attacking columns. The fort held out until the convention of May 1815.
+        lonlat: [77.337, 30.596]
+    arrows:
+      - side: eic
+        label: Gillespie
+        phase: 1
+        via: [[77.706, 28.984], [77.504, 29.986], [77.880, 30.200], [78.030, 30.330]]
+      - side: eic
+        label: Martindell
+        phase: 2
+        via: [[78.030, 30.330], [77.850, 30.470], [77.620, 30.440], [77.300, 30.540]]
+  - title: Setbacks in the Terai
+    date: December 1814 – February 1815
+    when: "1815-01-01"
+    borders: "1815-01-01"
+    countries: [np, in]
+    body:
+      - In the east the two largest columns achieved almost nothing. Marley moved slowly north from Bettiah and spread his outposts along the edge of the forest. On 1 January 1815 Nepalese troops surprised and overran the posts at Parsa and Samanpur, killing or scattering their garrisons and carrying off their guns. Marley halted and asked for reinforcements, and in February he rode away from his camp; his successor could do little before the hot season.
+      - Wood, ordered to take Butwal and the hills of Palpa, attacked the Nepalese stockade at Jitgadh near Butwal in early January 1815. Ujir Singh Thapa’s troops beat him back, and Wood kept to the defensive along the Gorakhpur frontier for the rest of the season. In the east, Latter held the Purnea frontier and made an alliance with Sikkim.
+      - By February the Company had lost several thousand men to fighting and disease with little to show for it. Nepal’s strategy of holding the hills and striking at isolated posts was working, and Moira’s hopes now rested on Ochterlony in the west and on a new venture into Kumaon.
+    facts:
+      - [Parsa and Samanpur posts overrun, "1 January 1815"]
+      - [Wood repulsed at Jitgadh, "January 1815"]
+    markers:
+      - kind: taken
+        side: np
+        name: Parsa
+        date: 1 January 1815
+        text: One of Marley’s forward posts, overrun at dawn together with the post at Samanpur further east.
+        lonlat: [84.880, 27.149]
+      - kind: battle
+        side: np
+        name: Jitgadh
+        date: January 1815
+        text: Wood’s attack on the stockade near Butwal failed, and he withdrew to the plains.
+        lonlat: [83.450, 27.690]
+      - kind: event
+        side: eic
+        name: Bettiah
+        date: December 1814
+        text: Marley’s base on the edge of the Terai.
+        lonlat: [84.507, 26.802]
+        lp: l
+      - kind: held
+        side: np
+        name: Makwanpur
+        date: "1815"
+        text: The fort guarding the road over the hills to Kathmandu, Marley’s objective, which he never came near.
+        lonlat: [85.148, 27.411]
+      - kind: capital
+        side: np
+        name: Kathmandu
+        date: "1815"
+        text: Capital of Nepal.
+        lonlat: [85.324, 27.717]
+    arrows:
+      - side: eic
+        label: Marley
+        phase: 1
+        via: [[85.047, 25.636], [84.900, 26.300], [84.507, 26.802], [84.800, 27.050]]
+      - side: eic
+        label: Wood
+        phase: 1
+        via: [[83.373, 26.760], [83.420, 27.200], [83.450, 27.640]]
+      - side: np
+        phase: 2
+        via: [[85.030, 27.420], [84.960, 27.290], [84.890, 27.170]]
+    areas:
+      - style: outline
+        side: np
+        label: The Terai
+        polygon: [[80.25, 29.05], [80.85, 28.85], [81.40, 28.55], [81.70, 28.25], [82.50, 27.85], [83.45, 27.70], [84.00, 27.60], [84.60, 27.45], [85.03, 27.30], [85.60, 27.05], [86.20, 26.90], [86.80, 26.78], [87.30, 26.80], [87.90, 26.75], [88.12, 26.70], [88.10, 26.50], [87.90, 26.45], [87.27, 26.42], [86.75, 26.40], [86.30, 26.55], [85.90, 26.60], [85.27, 26.77], [84.88, 27.00], [84.00, 27.40], [83.45, 27.47], [83.00, 27.45], [82.50, 27.70], [81.70, 28.00], [81.30, 28.25], [80.80, 28.45], [80.50, 28.60], [80.05, 28.85]]
+  - title: Kumaon and Almora
+    date: February – April 1815
+    when: "1815-04-27"
+    borders: "1815-04-27"
+    countries: [in, np]
+    body:
+      - Nepal had held Kumaon for twenty-five years, but most of its troops had been sent west against Ochterlony. In February 1815 Moira sent Lieutenant-Colonel William Gardner into the hills with irregular levies, many of them Rohilla Pathans raised in Rohilkhand, while a civil officer, Edward Gardner, worked to win over the Kumaoni chiefs. The Nepalese governor, Bam Shah, fell back on Almora. In April Colonel Jasper Nicolls arrived with about 2,000 regular troops and took command.
+      - In late April a Nepalese force of about 500 men under Hasti Dal Chautariya, coming to reinforce Almora, was intercepted near Gananath, north of the town, and Hasti Dal was killed. On 25 April Nicolls’s regulars and Gardner’s irregulars stormed the Sitoli ridge facing Almora, and on 27 April 1815 Bam Shah surrendered the town. Under the convention he signed, all the forts of Kumaon were given up, and his troops marched east across the Kali.
+    facts:
+      - [Company force, "about 2,000 regulars and many irregulars"]
+      - [Hasti Dal Chautariya killed, "April 1815"]
+      - [Almora surrendered, "27 April 1815"]
+    markers:
+      - kind: taken
+        side: eic
+        name: Almora
+        date: 27 April 1815
+        text: Bam Shah surrendered after the heights above the town were stormed. The rest of Kumaon followed.
+        lonlat: [79.663, 29.602]
+      - kind: battle
+        side: eic
+        name: Gananath
+        date: April 1815
+        text: The relief force from the east was cut off here and its commander, Hasti Dal Chautariya, was killed.
+        lonlat: [79.679, 29.766]
+      - kind: event
+        side: eic
+        name: Kashipur
+        date: February 1815
+        text: Gardner’s irregulars climbed into the hills from the plains near here.
+        lonlat: [78.962, 29.212]
+        lp: l
+    arrows:
+      - side: eic
+        label: Gardner and Nicolls
+        phase: 1
+        via: [[78.962, 29.212], [79.300, 29.420], [79.500, 29.600], [79.640, 29.620]]
+      - side: np
+        label: Hasti Dal
+        phase: 1
+        via: [[80.250, 29.580], [79.950, 29.750], [79.700, 29.770]]
+      - side: np
+        label: Bam Shah withdraws
+        phase: 2
+        via: [[79.680, 29.590], [80.000, 29.450], [80.250, 29.300]]
+    areas:
+      - style: occupied
+        side: eic
+        label: Kumaon, taken by the Company in April 1815
+        atoms: [IN-UT~kumaon]
+  - title: Malaun and Amar Singh Thapa
+    date: November 1814 – May 1815
+    when: "1815-04-16"
+    borders: "1815-05-15"
+    countries: [in, np]
+    body:
+      - Ochterlony, a cautious veteran of nearly forty years in India, advanced from Rupar (Rupnagar) into the hills in late October 1814 with about 6,000 men, building roads for his guns as he went, and took the forts of Nalagarh and Taragarh in November. Amar Singh Thapa, the most experienced Gorkhali commander, held a line of ridges and stockades around Ramgarh that Ochterlony would not attack head-on. Through the winter he outflanked it piece by piece, and in early 1815 Amar Singh fell back on the fortified ridge of Malaun, near the Sutlej, with his ally the raja of Bilaspur.
+      - In April Ochterlony seized points along the Malaun ridge, among them Deothal, cutting the main fort off from its outworks. On 16 April 1815 the veteran commander Bhakti Thapa, said to be over seventy, led an attack on the British position at Deothal and was killed with many of his men; British accounts say his body was returned to the Nepalese with honours. Ochterlony then brought up heavy guns, and Amar Singh’s men, short of food, began to desert.
+      - When news came that Almora had fallen, Amar Singh signed a convention with Ochterlony on 15 May 1815. Nepal gave up all its lands between the Kali and the Sutlej, and Amar Singh, his son Ranajor Singh at Jaithak and their soldiers were allowed to march home with their arms and property. Many of the soldiers, from Garhwal and Kumaon as well as Nepal, chose to enter Company service instead; they formed the Nasiri battalions at Subathu and the Sirmoor battalion at Dehradun, the first “Gurkha” units.
+    facts:
+      - [Bhakti Thapa killed at Deothal, "16 April 1815"]
+      - [Convention of Malaun, "15 May 1815"]
+      - [Ceded by the convention, "all of Nepal’s lands between the Kali and the Sutlej"]
+    markers:
+      - kind: siege
+        side: eic
+        name: Malaun
+        date: April – 15 May 1815
+        text: Amar Singh Thapa’s last stronghold. The attack on Deothal, on the same ridge, was his army’s last attempt to break the siege.
+        lonlat: [77.008, 31.233]
+      - kind: taken
+        side: eic
+        name: Nalagarh
+        date: November 1814
+        text: The first fort Ochterlony took after entering the hills.
+        lonlat: [76.717, 31.042]
+        lp: l
+      - kind: event
+        side: eic
+        name: Subathu
+        date: "1815"
+        text: Hill fort where the first Nasiri battalion was formed from men of Amar Singh’s army.
+        lonlat: [76.990, 30.976]
+        lp: b
+      - kind: taken
+        side: eic
+        name: Jaithak
+        date: May 1815
+        text: Ranajor Singh Thapa’s garrison marched out under the convention.
+        lonlat: [77.337, 30.596]
+    arrows:
+      - side: eic
+        label: Ochterlony
+        phase: 1
+        via: [[76.529, 30.970], [76.717, 31.042], [76.880, 31.150], [76.990, 31.220]]
+      - side: np
+        label: Amar Singh Thapa’s army goes home
+        phase: 2
+        via: [[77.020, 31.240], [77.700, 30.900], [78.400, 30.500], [79.300, 29.950], [80.200, 29.550]]
+    areas:
+      - style: occupied
+        side: eic
+        label: Given up by Nepal, April–May 1815
+        atoms: [IN-UT, IN-UT~kumaon]
+        polygon: [[76.62, 31.02], [76.72, 31.38], [77.20, 31.45], [77.65, 31.50], [78.20, 31.35], [77.95, 30.95], [77.85, 30.55], [77.62, 30.44], [77.30, 30.52], [76.94, 30.80]]
+  - title: Sugauli and Makwanpur
+    date: December 1815 – March 1816
+    when: "1816-02-28"
+    borders: "1816-03-04"
+    countries: [np, in]
+    body:
+      - Peace talks began in mid-1815. The Company demanded the hills west of the Kali, most of the Terai and a British Resident in Kathmandu. Moira softened the loss of the Terai by offering 200,000 rupees a year to the Nepalese chiefs who held land there, and on 2 December 1815 the Nepalese envoys Gajraj Mishra and Chandra Shekhar Upadhyaya signed a treaty with Lieutenant-Colonel Paris Bradshaw at Sugauli in Bihar. The court in Kathmandu, where many believed the British could not fight in the inner hills, refused to ratify it.
+      - Moira gave the command to Ochterlony, who gathered about 17,000 men, British regiments among them, on the Bihar frontier. In February 1816, rather than force the fortified Bichakori pass through the Churia hills, he led his main column by night along a little-used track shown to him by smugglers and came down to Hetauda behind the Nepalese defences. On 28 February Nepalese troops attacked a British force on a ridge near the fort of Makwanpur and were driven off after a day’s fighting with heavy losses. At the same time another column took the fort of Hariharpur further east.
+      - With a British army some 45 km from Kathmandu, the court gave way. On 4 March 1816 Chandra Shekhar Upadhyaya brought the ratified treaty to Ochterlony’s camp at Makwanpur, and the army withdrew to the plains.
+    facts:
+      - [Treaty signed at Sugauli, "2 December 1815"]
+      - [Battle of Makwanpur, "28 February 1816, Company victory"]
+      - [Treaty ratified, "4 March 1816"]
+    markers:
+      - kind: treaty
+        name: Sugauli
+        date: 2 December 1815
+        text: Where the treaty was negotiated and first signed. It takes its name from this Bihar town.
+        lonlat: [84.778, 26.757]
+        lp: l
+      - kind: battle
+        side: eic
+        name: Makwanpur
+        date: 28 February 1816
+        text: The Nepalese attack on the British position failed. The treaty was handed over in Ochterlony’s camp here on 4 March.
+        lonlat: [85.148, 27.411]
+      - kind: taken
+        side: eic
+        name: Hetauda
+        date: February 1816
+        text: Reached by Ochterlony’s column after it crossed the Churia hills by an unguarded path.
+        lonlat: [85.033, 27.430]
+        lp: l
+      - kind: taken
+        side: eic
+        name: Hariharpur
+        date: late February 1816
+        text: A hill fort on the Bagmati, taken by a column under Colonels Kelly and O’Halloran.
+        lonlat: [85.483, 27.316]
+      - kind: capital
+        side: np
+        name: Kathmandu
+        date: "1816"
+        text: The court accepted the treaty once a British army stood beyond the Terai.
+        lonlat: [85.324, 27.717]
+    arrows:
+      - side: eic
+        label: Ochterlony
+        phase: 1
+        via: [[84.860, 26.980], [84.950, 27.180], [85.033, 27.400], [85.120, 27.410]]
+      - side: eic
+        label: Kelly
+        phase: 1
+        via: [[85.600, 26.900], [85.520, 27.100], [85.483, 27.290]]
+  - title: The peace and the Gurkhas
+    date: 1816–1817
+    when: "1816-03-04"
+    borders: "1817-02-10"
+    countries: [np, in]
+    body:
+      - The Treaty of Sugauli cost Nepal about a third of its territory. It gave up all its conquests west of the Kali (Mahakali), that is Kumaon, Garhwal and the hill states up to the Sutlej; the lands it had taken from Sikkim between the Mechi and the Teesta; and most of the Terai. It accepted a British Resident in Kathmandu, the first being Edward Gardner. The Kali and the Mechi became Nepal’s western and eastern borders, as they still are.
+      - The Company kept Kumaon, Dehradun and eastern Garhwal, gave western Garhwal back to its raja Sudarshan Shah as the state of Tehri Garhwal, and returned most of the hill states between the Yamuna and the Sutlej to their rulers under its protection. By the Treaty of Titalia on 10 February 1817 it handed the Mechi–Teesta lands to Sikkim. The Terai proved hard to govern, and on 11 December 1816 the Company returned the lowlands from the Kosi to the Rapti in place of the yearly payment. The far-western Terai, the Naya Muluk, was returned in 1860, after Nepal had helped the British in the rising of 1857.
+      - The war’s longest legacy was military. Impressed by the men they had fought, the British went on recruiting soldiers from the Nepalese hills. The “Gurkha” regiments of the Company’s army became regiments of the Indian Army, and after 1947 of both the British and Indian armies, which still recruit in Nepal. Nepal kept its independence, and Bhimsen Thapa, who held power until 1837, kept the British at arm’s length.
+    facts:
+      - [Treaty of Sugauli ratified, "4 March 1816"]
+      - [Terai from the Kosi to the Rapti returned, "11 December 1816"]
+      - [Treaty of Titalia with Sikkim, "10 February 1817"]
+    markers:
+      - kind: capital
+        side: np
+        name: Kathmandu
+        date: "1816"
+        text: A British Residency was opened here, the only foreign mission Nepal allowed for most of the century.
+        lonlat: [85.324, 27.717]
+      - kind: event
+        side: eic
+        name: Almora
+        date: 1815–1816
+        text: Became the seat of British Kumaon.
+        lonlat: [79.663, 29.602]
+      - kind: event
+        name: Tehri
+        date: "1815"
+        text: New capital of the restored raja of Garhwal, whose old capital Srinagar stayed in British hands.
+        lonlat: [78.388, 30.403]
+        lp: l
+      - kind: event
+        side: eic
+        name: Dehradun
+        date: "1815"
+        text: Kept by the Company. The Sirmoor battalion, later the 2nd Gurkha Rifles, was stationed here.
+        lonlat: [78.032, 30.316]
+        lp: l
+    areas:
+      - style: gained
+        side: eic
+        label: Ceded by Nepal west of the Kali
+        atoms: [IN-UT, IN-UT~kumaon]
+        polygon: [[76.62, 31.02], [76.72, 31.38], [77.20, 31.45], [77.65, 31.50], [78.20, 31.35], [77.95, 30.95], [77.85, 30.55], [77.62, 30.44], [77.30, 30.52], [76.94, 30.80]]
+      - style: gained
+        side: eic
+        label: Mechi–Teesta lands, ceded by Nepal and given to Sikkim in 1817
+        polygon: [[88.08, 26.55], [88.05, 27.15], [88.15, 27.45], [88.45, 27.45], [88.50, 27.15], [88.45, 26.85], [88.20, 26.65]]
+      - style: outline
+        side: eic
+        label: Terai ceded at Sugauli, mostly returned in 1816 and 1860
+        polygon: [[80.25, 29.05], [80.85, 28.85], [81.40, 28.55], [81.70, 28.25], [82.50, 27.85], [83.45, 27.70], [84.00, 27.60], [84.60, 27.45], [85.03, 27.30], [85.60, 27.05], [86.20, 26.90], [86.80, 26.78], [87.30, 26.80], [87.90, 26.75], [88.12, 26.70], [88.10, 26.50], [87.90, 26.45], [87.27, 26.42], [86.75, 26.40], [86.30, 26.55], [85.90, 26.60], [85.27, 26.77], [84.88, 27.00], [84.00, 27.40], [83.45, 27.47], [83.00, 27.45], [82.50, 27.70], [81.70, 28.00], [81.30, 28.25], [80.80, 28.45], [80.50, 28.60], [80.05, 28.85]]

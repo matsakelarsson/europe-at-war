@@ -1,0 +1,105 @@
+id: chola-invasion-of-srivijaya
+name: Chola invasion of Srivijaya
+start: "1025"
+end: "1025"
+tier: B
+summary: The overseas expedition of the Chola emperor Rajendra I against Srivijaya, the maritime power of Sumatra and the Malay Peninsula that controlled the Strait of Malacca. In 1025 a Chola fleet crossed the Bay of Bengal and attacked Srivijaya’s ports, from Kadaram (Kedah) in the north to the capital at Palembang in the south; the king, Sangrama Vijayottungavarman, was taken prisoner. The raid brought plunder and fame rather than lasting conquest, but it weakened Srivijaya, and Chola influence in the straits lasted for decades.
+countries: [in, id, my, th]
+sides:
+  - id: ch
+    name: Chola Empire
+    polities: [cholas]
+    ink: red
+    moves: Chola moves
+    success: Chola success
+  - id: sv
+    name: Srivijaya
+    polities: [srivijaya-empire]
+    ink: purple
+    moves: Srivijayan moves
+    success: Srivijayan success
+notes:
+  - The raid is known almost only from Rajendra’s own inscriptions, above all the list of conquests carved on the Brihadisvara temple at Thanjavur in 1025. Most of the places it names have been identified, some only tentatively, and the inscription gives no details of the fighting.
+  - The reasons for the expedition are unknown. K. A. Nilakanta Sastri suggested that Srivijaya was obstructing Chola trade with China; others link it to the Khmer and their rivals on the Malay Peninsula, or see it simply as a show of power.
+sources:
+  - title: Chola invasion of Srivijaya (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Chola_invasion_of_Srivijaya
+  - title: Rajendra I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rajendra_I
+  - title: Srivijaya (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Srivijaya
+  - title: Chola dynasty (Britannica)
+    url: https://www.britannica.com/topic/Chola-dynasty
+steps:
+  - title: Kadaram and Palembang
+    date: "1025"
+    when: "1025"
+    borders: "1025"
+    countries: [in, id, my, th]
+    body:
+      - Srivijaya, ruled from Palembang on the Musi river in Sumatra, controlled the Strait of Malacca and the trade between India and China that passed through it. Its relations with the Cholas had been friendly. Under Rajaraja I, the Srivijayan king Mara Vijayottungavarman built a Buddhist monastery, the Chudamani Vihara, at the Chola port of Nagapattinam, and Rajaraja granted it the revenue of a village.
+      - In 1025 Rajendra I sent a fleet across the Bay of Bengal. His inscription at Thanjavur lists the places it took. Among them are Kadaram (Kedah), Srivijaya itself, whose “jewelled gate of war” was carried off, Malaiyur (Jambi) and Pannai on Sumatra, Ilamuridesam (Lamuri, in Aceh), Talaittakkolam (probably Takua Pa) and Ilangasogam (Langkasuka) on the Malay Peninsula, and Manakkavaram, the Nicobar Islands. The Srivijayan king, Sangrama Vijayottungavarman, was captured.
+      - Rajendra took the title Kadaram-konda, “who took Kadaram”, but did not try to rule the straits. Srivijaya survived, weakened, and made peace with the rising Javanese kingdom of Airlangga. Chola merchants and missions to China remained active, and Virarajendra’s inscriptions claim that in about 1068 he conquered Kadaram again for a king who had asked for his help.
+    facts:
+      - [Chola raid, "1025"]
+      - [King of Srivijaya, "Sangrama Vijayottungavarman, taken prisoner"]
+      - [Rajendra’s new title, "Kadaram-konda, “who took Kadaram”"]
+    markers:
+      - kind: event
+        side: ch
+        name: Nagapattinam
+        date: "1025"
+        text: The chief Chola port, where Srivijayan kings had built a Buddhist monastery.
+        lonlat: [79.84, 10.77]
+      - kind: taken
+        side: ch
+        name: Manakkavaram (Nicobars)
+        date: "1025"
+        text: The Nicobar Islands, on the sea route across the Bay of Bengal.
+        lonlat: [93.53, 7.98]
+        lp: l
+      - kind: taken
+        side: ch
+        name: Ilamuridesam (Lamuri)
+        date: "1025"
+        text: A port at the northern tip of Sumatra, in today’s Aceh.
+        lonlat: [95.40, 5.55]
+        lp: l
+      - kind: taken
+        side: ch
+        name: Talaittakkolam
+        date: "1025"
+        text: A port on the west coast of the Malay Peninsula, probably near Takua Pa in Thailand.
+        lonlat: [98.35, 8.87]
+      - kind: taken
+        side: ch
+        name: Kadaram (Kedah)
+        date: "1025"
+        text: The great port on the west coast of the Malay Peninsula, where ships waited for the monsoon. Its ruins lie in the Bujang Valley.
+        lonlat: [100.42, 5.74]
+      - kind: taken
+        side: ch
+        name: Ilangasogam (Langkasuka)
+        date: "1025"
+        text: The old kingdom on the east coast of the Malay Peninsula, near Pattani.
+        lonlat: [101.29, 6.77]
+      - kind: taken
+        side: ch
+        name: Malaiyur (Jambi)
+        date: "1025"
+        text: The old Malayu kingdom on the Batang Hari river in Sumatra.
+        lonlat: [103.61, -1.59]
+      - kind: taken
+        side: ch
+        name: Palembang
+        date: "1025"
+        text: The capital of Srivijaya. Its king was captured and its jewelled war gate carried off.
+        lonlat: [104.76, -2.99]
+    arrows:
+      - side: ch
+        label: Chola fleet
+        phase: 1
+        via: [[80.1, 10.6], [86.0, 9.2], [93.0, 7.6], [97.5, 6.6], [100.2, 5.8]]
+      - side: ch
+        phase: 2
+        via: [[100.1, 5.5], [101.0, 3.4], [103.4, 1.3], [104.6, -1.4], [104.75, -2.9]]

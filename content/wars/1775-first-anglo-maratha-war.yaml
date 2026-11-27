@@ -1,0 +1,200 @@
+id: first-anglo-maratha-war
+name: First Anglo-Maratha War
+start: "1775-03-06"
+end: "1782-05-17"
+tier: B
+summary: "The first war between the British East India Company and the Maratha state. After the murder of the Peshwa Narayanrao in 1773, the Company’s Bombay government backed his uncle Raghunathrao against the regency council of Nana Phadnavis, which ruled in the name of the infant Peshwa Madhavrao II. Bombay’s first intervention was disowned by Calcutta in the Treaty of Purandar (1776), and its second ended in the surrender of its army at Wadgaon in January 1779. Warren Hastings then sent an army across India under Thomas Goddard, which took Ahmedabad and Bassein, while another force stormed Gwalior. Neither side could win, and with Hyder Ali of Mysore at war with the Company, Mahadji Scindia mediated the Treaty of Salbai (1782). The Company kept Salsette, gave up Raghunathrao and returned its other conquests, and peace held for twenty years."
+countries: [in]
+sides:
+  - id: eic
+    name: East India Company and Raghunathrao
+    polities: [british-india]
+    ink: red
+    moves: Company and allied moves
+    success: Company success
+  - id: mar
+    name: Maratha regency, Scindia and Holkar
+    polities: [marathas, gwalior-state, indore-state]
+    ink: orange
+    moves: Maratha moves
+    success: Maratha success
+notes:
+  - The Company’s armies were mostly Indian sepoys under British officers, with some British Army regiments.
+  - The Company’s three presidencies (Bengal, Madras and Bombay) still largely made their own policy. The Regulating Act of 1773 put Bombay under the Governor-General in Calcutta, and the quarrels between them shaped the war.
+  - Hyder Ali’s war with the Company from 1780 is told in the Anglo-Mysore Wars.
+sources:
+  - title: First Anglo-Maratha War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Anglo-Maratha_War
+  - title: Maratha Wars (Britannica)
+    url: https://www.britannica.com/event/Maratha-Wars
+  - title: Convention of Wadgaon (Britannica)
+    url: https://www.britannica.com/event/Convention-of-Wadgaon
+  - title: Treaty of Surat (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Surat
+  - title: Treaty of Purandar (1776) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Purandar_(1776)
+  - title: Battle of Wadgaon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Wadgaon
+  - title: Treaty of Salbai (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Salbai
+  - title: Raghunathrao (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Raghunathrao
+steps:
+  - title: Raghunathrao and the Treaty of Surat
+    date: 1773–1776
+    when: "1775-03-06"
+    borders: "1776-03-01"
+    countries: [in]
+    body:
+      - In August 1773 the young Peshwa Narayanrao was murdered by palace guards in Pune (Poona), and suspicion fell on his uncle Raghunathrao, who took the office. A council of Maratha ministers and chiefs led by Nana Phadnavis, the Barbhai, opposed him, and when Narayanrao’s widow bore a son in April 1774 they proclaimed the child Peshwa as Madhavrao II. Raghunathrao, losing support, turned to the British. The Bombay government had long wanted the island of Salsette and the port of Bassein to secure Bombay, and in December 1774 it seized the fort of Thane on Salsette. On 6 March 1775 it signed the Treaty of Surat with Raghunathrao, promising troops to restore him in return for Salsette, Bassein and revenues in Gujarat.
+      - A small Company force under Colonel Thomas Keating joined Raghunathrao’s army in Gujarat, and on 18 May 1775 met the regency’s army under Haripant Phadke at Adas, near Anand. The fighting was costly for both sides; British accounts claim a victory, Maratha ones a check to the invaders, and the campaign did not reach Pune. The Supreme Council in Calcutta, which under the new Regulating Act now oversaw Bombay, condemned the war, and its envoy, Colonel John Upton, made peace with the regency in the Treaty of Purandar on 1 March 1776. The Company dropped Raghunathrao but kept Salsette.
+    facts:
+      - [Thane fort taken, "December 1774"]
+      - [Treaty of Surat, "6 March 1775"]
+      - [Battle of Adas, "18 May 1775, indecisive"]
+      - [Treaty of Purandar, "1 March 1776"]
+    markers:
+      - kind: taken
+        side: eic
+        name: Thane
+        date: December 1774
+        text: The Bombay government seized the Maratha fort on Salsette island, which the Company kept at every peace afterwards.
+        lonlat: [72.975, 19.195]
+      - kind: treaty
+        name: Treaty of Surat
+        date: 6 March 1775
+        text: Raghunathrao promised Salsette, Bassein and Gujarat revenues to Bombay in return for help to regain Pune.
+        lonlat: [72.819, 21.194]
+      - kind: battle
+        name: Adas
+        date: 18 May 1775
+        text: Keating and Raghunathrao fought the regency’s army under Haripant Phadke. Both sides suffered heavily and both claimed success.
+        lonlat: [73.033, 22.483]
+      - kind: treaty
+        name: Treaty of Purandar
+        date: 1 March 1776
+        text: Negotiated at the hill fort of Purandar by Calcutta’s envoy. It annulled the Treaty of Surat.
+        lonlat: [73.973, 18.282]
+      - kind: capital
+        side: mar
+        name: Pune
+        date: 1773–1776
+        text: The seat of the Peshwa and the regency council of Nana Phadnavis.
+        lonlat: [73.856, 18.520]
+        lp: l
+    arrows:
+      - side: eic
+        label: Keating
+        via: [[72.620, 22.310], [72.850, 22.420], [73.010, 22.480]]
+  - title: Wadgaon and Goddard’s march
+    date: 1778–1779
+    when: "1778-11"
+    borders: "1779-01-16"
+    countries: [in]
+    body:
+      - The war revived when a French envoy, the Chevalier de Saint-Lubin, was received at Pune in 1777 and Britain and France went to war in 1778. Bombay again took up Raghunathrao’s cause, and in November 1778 an army of about 3,900 men under Colonel Egerton, with Raghunathrao and two civilian commissioners, set out for Pune. It climbed the Bhor Ghat slowly, under constant attack, and reached Talegaon on 9 January 1779 to find the town burnt and the Maratha armies of Mahadji Scindia and Tukoji Holkar gathering around it.
+      - The commissioners ordered a retreat. The army fell back by night, was surrounded at Wadgaon, and on 16 January 1779 signed a convention that gave up all lands Bombay had won since 1773 and handed Raghunathrao over to Scindia. Warren Hastings, the Governor-General, repudiated it, since Bombay’s officers had no authority to sign. He had already sent an army of about 6,000 men from Bengal across central India under Colonel Thomas Goddard. Marching from Kalpi through Bundelkhand, Bhopal and Burhanpur, it reached Surat in February 1779, too late to save the Bombay army but in time to restart the war.
+    facts:
+      - [Bombay army reaches Talegaon, "9 January 1779"]
+      - [Convention of Wadgaon, "16 January 1779"]
+      - [Goddard reaches Surat, "February 1779"]
+    markers:
+      - kind: event
+        side: mar
+        name: Talegaon
+        date: 9 January 1779
+        text: The Bombay army found the town burnt by the Marathas and the road to Pune blocked.
+        lonlat: [73.680, 18.735]
+      - kind: treaty
+        side: mar
+        name: Wadgaon
+        date: 16 January 1779
+        text: The surrounded Bombay army bought its way back to Bombay by giving up Raghunathrao and its conquests.
+        lonlat: [73.637, 18.742]
+        lp: l
+      - kind: event
+        side: eic
+        name: Kalpi
+        date: May 1778
+        text: The Bengal army set out from the Yamuna for the west coast, first under Colonel Leslie and from October under Goddard.
+        lonlat: [79.735, 26.120]
+      - kind: event
+        side: eic
+        name: Surat
+        date: February 1779
+        text: Goddard’s army reached the Company’s factory town on the west coast after a march of more than 1,000 km.
+        lonlat: [72.819, 21.194]
+    arrows:
+      - side: eic
+        label: Egerton
+        phase: 1
+        via: [[73.110, 18.990], [73.340, 18.790], [73.480, 18.780], [73.660, 18.735]]
+      - side: eic
+        label: Goddard
+        phase: 1
+        via: [[79.735, 26.120], [79.590, 24.920], [77.410, 23.260], [76.230, 21.310], [72.850, 21.180]]
+  - title: Gwalior, Bassein and the Treaty of Salbai
+    date: 1780–1782
+    when: "1780-02-15"
+    borders: "1782-05-17"
+    countries: [in]
+    body:
+      - Goddard took Ahmedabad by storm on 15 February 1780 and campaigned in Gujarat with the support of the Gaekwad. In the north Hastings sent a force under Captain William Popham into Scindia’s country, and with the help of the Rana of Gohad it took the fortress of Gwalior by a night escalade on 3–4 August 1780. On 11 December Goddard captured Bassein. In 1781 a Bengal force under Colonel Camac defeated Scindia near Sipri, but when Goddard advanced up the Bhor Ghat towards Pune in April 1781 the Maratha armies under Haripant Phadke, Parshurambhau and Holkar drove him back to the coast with heavy losses.
+      - By then the Company was also at war with Hyder Ali of Mysore, who had overrun the Carnatic, and with France. Hastings looked for a way out through Mahadji Scindia, the most powerful of the Maratha chiefs. The Treaty of Salbai, agreed with Scindia on 17 May 1782 and ratified by Nana Phadnavis for the Peshwa in 1783, restored the conquests on both sides except Salsette and the islands near Bombay, which the Company kept. Bassein and the Gujarat lands went back to the Marathas, Broach passed to Scindia, Raghunathrao was given a pension, and Madhavrao II was recognised as Peshwa. The peace made Scindia the leading power in Hindustan for the next twenty years.
+    facts:
+      - [Ahmedabad stormed, "15 February 1780"]
+      - [Gwalior taken by escalade, "3–4 August 1780"]
+      - [Bassein taken, "11 December 1780"]
+      - [Goddard repulsed at the Bhor Ghat, "April 1781"]
+      - [Treaty of Salbai, "17 May 1782"]
+    markers:
+      - kind: taken
+        side: eic
+        name: Ahmedabad
+        date: 15 February 1780
+        text: Goddard stormed the city walls; Gujarat’s capital was held for the Gaekwad.
+        lonlat: [72.581, 23.024]
+      - kind: taken
+        side: eic
+        name: Gwalior
+        date: 3–4 August 1780
+        text: Popham’s sepoys climbed the cliffs of the fortress by night, guided by local men, and took it almost without loss.
+        lonlat: [78.169, 26.230]
+      - kind: taken
+        side: eic
+        name: Bassein
+        date: 11 December 1780
+        text: Taken by Goddard after a siege. It was returned to the Marathas at the peace.
+        lonlat: [72.813, 19.330]
+      - kind: battle
+        side: eic
+        name: Sipri
+        date: March 1781
+        text: Camac’s force, cut off and short of food, surprised Scindia’s camp by night and captured guns and elephants.
+        lonlat: [77.660, 25.430]
+      - kind: battle
+        side: mar
+        name: Bhor Ghat
+        date: April 1781
+        text: Goddard’s advance on Pune was stopped in the passes of the Western Ghats, and his army fell back to the coast under attack.
+        lonlat: [73.375, 18.758]
+      - kind: treaty
+        name: Treaty of Salbai
+        date: 17 May 1782
+        text: Signed at a village south-east of Gwalior, with Mahadji Scindia as mediator and guarantor.
+        lonlat: [78.317, 25.850]
+    arrows:
+      - side: eic
+        label: Goddard
+        phase: 1
+        via: [[72.850, 21.200], [72.900, 22.000], [72.600, 22.600], [72.590, 23.000]]
+      - side: eic
+        label: Popham
+        phase: 2
+        via: [[78.440, 26.430], [78.300, 26.320], [78.180, 26.240]]
+      - side: eic
+        phase: 3
+        via: [[72.900, 21.150], [72.950, 20.300], [72.850, 19.400]]
+      - side: eic
+        phase: 4
+        via: [[72.900, 19.250], [73.200, 18.950], [73.360, 18.770]]

@@ -1,0 +1,204 @@
+id: sikh-mughal-wars
+name: Sikh–Mughal wars (1688–1716)
+start: "1688"
+end: "1716-06-09"
+tier: B
+summary: "The wars of the tenth Sikh Guru, Gobind Singh, and of his follower Banda Singh Bahadur against the hill rajas of the Punjab Himalaya and the Mughal governors of Sirhind and Lahore. From his base at Anandpur the Guru fought the hill rajas at Bhangani in 1688 and founded the Khalsa, the order of initiated Sikhs, in 1699. In 1704 a Mughal and hill army besieged Anandpur; leaving under a promise of safe conduct, the Guru’s party was attacked, his two elder sons were killed at Chamkaur and his two younger sons put to death at Sirhind. After a last battle at Muktsar he made peace with Aurangzeb’s successor and was assassinated at Nanded in 1708. Banda Singh, sent to the Punjab, raised the peasantry, sacked Sirhind in 1710 and ruled the country between the Sutlej and the Yamuna from Lohgarh, until Mughal armies drove him into the hills and besieged him at Gurdas Nangal; he was captured in 1715 and executed in Delhi with hundreds of his followers in 1716."
+countries: [in, pk]
+sides:
+  - id: sikh
+    name: Sikhs under Guru Gobind Singh and Banda Singh Bahadur
+    polities: [khalsa]
+    ink: orange
+    moves: Sikh moves
+    success: Sikh success
+  - id: mug
+    name: Mughal Empire
+    polities: [mughals]
+    ink: green
+    moves: Mughal moves
+    success: Mughal success
+  - id: hill
+    name: Hill rajas
+    polities: [punjab-hill-states, garhwal]
+    ink: brown
+    moves: Moves of the hill rajas
+    success: Success for the hill rajas
+notes:
+  - The main sources are Sikh writings, among them the Guru’s own Bachittar Natak and Zafarnama and later works such as Sainapati’s Gursobha, and the Persian histories of the Mughal court. They differ on numbers and on many details; Sikh tradition gives much higher numbers of enemy soldiers than the Persian sources.
+  - The departure from Anandpur and the battle of Chamkaur are dated December 1704 in most accounts, but some historians argue for 1705, and the conversion of the Bikrami dates is disputed. The earlier battles of Guru Hargobind with the Mughals (1628–1635) are not part of this story.
+sources:
+  - title: Guru Gobind Singh (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Guru_Gobind_Singh
+  - title: Battle of Bhangani (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Bhangani
+  - title: Battle of Anandpur (1704) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Anandpur_(1704)
+  - title: Battle of Chamkaur (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Chamkaur
+  - title: Battle of Muktsar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Muktsar
+  - title: Banda Singh Bahadur (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Banda_Singh_Bahadur
+  - title: Battle of Chappar Chiri (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Chappar_Chiri
+  - title: Siege of Gurdas Nangal (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Gurdas_Nangal
+  - title: Khalsa (Britannica)
+    url: https://www.britannica.com/topic/Khalsa
+  - title: "Sikhism: the 18th and 19th centuries (Britannica)"
+    url: https://www.britannica.com/topic/Sikhism/The-18th-and-19th-centuries
+steps:
+  - title: Anandpur and the hill rajas
+    date: 1688–1704
+    when: "1688"
+    borders: "1700-01-01"
+    countries: [in]
+    body:
+      - Gobind Rai became Guru as a boy of nine in 1675, after his father, Guru Tegh Bahadur, was executed in Delhi on Aurangzeb’s orders. He grew up at Anandpur in the Shivalik foothills, which the Sikh community had bought from the raja of Kahlur, and the growing armed following there alarmed the Hindu hill rajas around it. In 1688, while the Guru was staying at Paonta on the Yamuna, Raja Fateh Shah of Garhwal and his allies attacked him at Bhangani; several Pathan captains in the Guru’s pay deserted to the enemy, but his men, helped by the Sufi Pir Budhu Shah and his followers, won the day. In 1691 he fought beside the hill rajas against a Mughal force at Nadaun.
+      - At the Vaisakhi festival of 1699 at Anandpur, the Guru founded the Khalsa, a brotherhood of initiated Sikhs bound by a common discipline, with the name Singh for men (and later Kaur for women), and took the name Gobind Singh himself. The hill rajas, led by Ajmer Chand of Kahlur, saw the Khalsa as a threat to their authority and to caste order. They attacked Anandpur several times from 1700 onwards and asked the Mughal governor of Sirhind, Wazir Khan, and the emperor for help.
+    facts:
+      - [Battle of Bhangani, "1688, victory for the Guru"]
+      - [Founding of the Khalsa, "Vaisakhi 1699, at Anandpur"]
+    markers:
+      - kind: battle
+        side: sikh
+        name: Bhangani
+        date: 1688
+        text: The Guru’s first battle, against Fateh Shah of Garhwal and the hill rajas, near the Yamuna.
+        lonlat: [77.725, 30.499]
+      - kind: event
+        side: sikh
+        name: Anandpur
+        date: 1699
+        text: The Guru’s town in the Shivalik foothills, where the Khalsa was founded at Vaisakhi.
+        lonlat: [76.500, 31.235]
+      - kind: battle
+        side: hill
+        name: Nadaun
+        date: 1691
+        text: The hill rajas and the Guru defeated a Mughal force sent to collect tribute.
+        lonlat: [76.343, 31.780]
+      - kind: capital
+        side: mug
+        name: Sirhind
+        date: 1700s
+        text: Seat of Wazir Khan, the Mughal governor (faujdar) of the plains below the hills.
+        lonlat: [76.389, 30.645]
+    arrows:
+      - side: hill
+        label: Hill rajas
+        via: [[77.000, 31.300], [76.750, 31.250], [76.540, 31.240]]
+  - title: Chamkaur, Sirhind and Muktsar
+    date: May 1704 – 1708
+    when: "1704-12"
+    borders: "1704-12-06"
+    countries: [in]
+    body:
+      - In May 1704 a Mughal army under Wazir Khan joined the hill rajas in a siege of Anandpur that lasted until December. Starving, the Sikhs accepted an offer of safe conduct, sworn, according to Sikh accounts, on the Quran and on a cow, and in December the Guru left the town by night. His party was attacked as it crossed the flooded Sarsa river and broke apart. With about forty men he held out in a mud house at Chamkaur, where his elder sons, Ajit Singh and Jujhar Singh, aged 18 and 14, were killed; the Guru escaped at night. His younger sons, Zorawar Singh and Fateh Singh, aged about 9 and 6, were captured with their grandmother Mata Gujri and taken to Sirhind, where Wazir Khan had them put to death after they refused to convert to Islam; Mata Gujri died soon after.
+      - The Guru went south into the Malwa plain, where he gathered new followers, and in 1705 defeated a pursuing Mughal force at Khidrana, renamed Muktsar after forty Sikhs who had earlier deserted him and came back to die there. From Dina he sent Aurangzeb the Zafarnama, a Persian letter reproaching him for the broken oath. After Aurangzeb’s death in 1707 he accompanied the new emperor, Bahadur Shah, to the Deccan, where at Nanded in October 1708 he was stabbed by an Afghan assassin and died of his wounds. Before his death he declared the scripture, the Guru Granth Sahib, to be the Guru after him.
+    facts:
+      - [Siege of Anandpur, "May – December 1704"]
+      - [Battle of Chamkaur, "December 1704"]
+      - [Battle of Muktsar, "29 December 1705, Sikh victory"]
+      - [Death of Guru Gobind Singh at Nanded, "7 October 1708"]
+    markers:
+      - kind: siege
+        side: mug
+        name: Anandpur
+        date: May – December 1704
+        text: Besieged by Wazir Khan and the hill rajas until the Guru agreed to leave under a promise of safe conduct.
+        lonlat: [76.500, 31.235]
+      - kind: battle
+        side: mug
+        name: Sarsa
+        date: December 1704
+        text: The Guru’s party was attacked at the river crossing; many were killed or drowned, and his family was scattered.
+        lonlat: [76.640, 31.080]
+        lp: r
+      - kind: battle
+        side: mug
+        name: Chamkaur
+        date: December 1704
+        text: The Guru and some forty Sikhs held a mud fortress against a Mughal force. His two elder sons were killed.
+        lonlat: [76.425, 30.892]
+        lp: l
+      - kind: event
+        side: mug
+        name: Sirhind
+        date: December 1704
+        text: The Guru’s younger sons were executed here on Wazir Khan’s orders. The site is now the gurdwara of Fatehgarh Sahib.
+        lonlat: [76.389, 30.645]
+        lp: b
+      - kind: battle
+        side: sikh
+        name: Muktsar
+        date: 29 December 1705
+        text: The Guru’s last battle, at the pool of Khidrana, in which the forty Sikhs known as the Chali Mukte were killed.
+        lonlat: [74.516, 30.474]
+    arrows:
+      - side: sikh
+        label: Guru Gobind Singh
+        via: [[76.500, 31.235], [76.640, 31.080], [76.425, 30.892], [76.200, 30.917], [75.400, 30.700], [74.550, 30.480]]
+  - title: Banda Singh Bahadur
+    date: 1709–1716
+    when: "1710-05-12"
+    borders: "1710-05-14"
+    countries: [in, pk]
+    body:
+      - Before his death the Guru gave a Hindu ascetic he had met at Nanded, who took the name Banda Singh, the authority to lead the Sikhs in the Punjab. Banda arrived in 1709, and peasants and Sikhs flocked to him. He sacked Samana in November 1709 and took Sadhaura, and on 12 May 1710, at Chappar Chiri, his army defeated and killed Wazir Khan. Two days later Sirhind was taken and sacked. Banda made the hill fort of Mukhlisgarh, renamed Lohgarh, his capital, struck coins in the name of the Gurus, and gave land to those who tilled it in the country between the Sutlej and the Yamuna.
+      - Bahadur Shah came north himself and took Lohgarh in December 1710, but Banda escaped into the hills, and after the emperor’s death in 1712 the Sikhs recovered much of their ground. In 1715 the governor of Lahore, Abd al-Samad Khan, trapped Banda and several thousand followers in the walled enclosure of Gurdas Nangal and starved them out; it fell on 7 December 1715. Banda and some 700 to 800 prisoners were taken to Delhi in a procession; the prisoners were beheaded over several days, and on 9 June 1716 Banda was put to death after torture. Persecution drove the Sikhs into the hills and forests for a generation, until the misls rose in the 1740s and 1750s.
+    facts:
+      - [Battle of Chappar Chiri, "12 May 1710, Sikh victory"]
+      - [Sirhind sacked, "14 May 1710"]
+      - [Lohgarh taken by Bahadur Shah, "December 1710"]
+      - [Gurdas Nangal falls, "7 December 1715"]
+      - [Banda executed in Delhi, "9 June 1716"]
+    markers:
+      - kind: battle
+        side: sikh
+        name: Chappar Chiri
+        date: 12 May 1710
+        text: Banda’s army defeated the army of Sirhind, and Wazir Khan was killed.
+        lonlat: [76.661, 30.709]
+        lp: b
+      - kind: taken
+        side: sikh
+        name: Sirhind
+        date: 14 May 1710
+        text: The city of the governor who had executed the Guru’s sons was taken and sacked.
+        lonlat: [76.389, 30.645]
+        lp: l
+      - kind: taken
+        side: sikh
+        name: Samana
+        date: November 1709
+        text: Banda’s first conquest, sacked by his followers.
+        lonlat: [76.190, 30.150]
+      - kind: capital
+        side: sikh
+        name: Lohgarh
+        date: 1710
+        text: Banda’s hill fort and capital near Sadhaura, taken by Bahadur Shah in December 1710.
+        lonlat: [77.300, 30.490]
+      - kind: siege
+        side: mug
+        name: Gurdas Nangal
+        date: 1715
+        text: Banda’s last stand, besieged for eight months by the governor of Lahore.
+        lonlat: [75.346, 32.002]
+      - kind: event
+        side: mug
+        name: Delhi
+        date: March – June 1716
+        text: The prisoners from Gurdas Nangal were executed here, and Banda after them on 9 June.
+        lonlat: [77.241, 28.656]
+    arrows:
+      - side: sikh
+        label: Banda Singh
+        via: [[77.000, 29.000], [76.190, 30.150], [76.661, 30.709], [76.420, 30.650]]
+    areas:
+      - style: occupied
+        side: sikh
+        label: Under Banda Singh, 1710
+        polygon: [[75.900, 30.900], [76.600, 31.050], [77.450, 30.600], [77.400, 30.000], [76.400, 29.900], [75.900, 30.300]]

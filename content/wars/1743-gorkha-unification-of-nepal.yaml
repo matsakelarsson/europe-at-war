@@ -1,0 +1,195 @@
+id: gorkha-unification-of-nepal
+name: Gorkha conquest of the Kathmandu Valley
+start: "1743-04"
+end: "1769-11-25"
+tier: B
+summary: "The wars in which Prithvi Narayan Shah, king of the small hill state of Gorkha, conquered the rich Newar kingdoms of the Kathmandu Valley and founded the Kingdom of Nepal. Starting in 1743, he took the fort of Nuwakot above the valley in 1744 and then, over two decades, cut the valley off from its trade routes to Tibet and India. He took Makwanpur in 1762, beat off an army sent by the Nawab of Bengal, Mir Qasim, in 1763, and finally took Kirtipur after two failed assaults. In 1767 the British East India Company sent a small expedition under Captain George Kinloch to help Jaya Prakash Malla, king of Kathmandu, but it was driven back from the hills. Prithvi Narayan took Kathmandu in September 1768, Lalitpur soon after and Bhaktapur in 1769, and made Kathmandu his capital. The conquests of his successors in the east and west are not part of this story."
+countries: [np, in]
+sides:
+  - id: gor
+    name: Gorkha (Prithvi Narayan Shah)
+    polities: [nepal]
+    ink: red
+    moves: Gorkha moves
+    success: Gorkha success
+  - id: val
+    name: Malla kings of the Kathmandu Valley and their allies
+    polities: [nepal-valley]
+    ink: gold
+    moves: Moves of the valley kingdoms
+    success: Success for the valley kingdoms
+  - id: eic
+    name: British East India Company
+    polities: [british-india]
+    ink: slate
+    moves: British moves
+    success: British success
+  - id: ben
+    name: Mir Qasim, Nawab of Bengal
+    polities: [bengal-nawabs]
+    ink: teal
+    moves: Moves of Mir Qasim’s army
+    success: Success for Mir Qasim
+notes:
+  - Dates come from Nepali chronicles, Newar journals and the letters of Capuchin missionaries in the valley, and often differ by a year or more. Prithvi Narayan’s accession is given as 1742 or 1743, the fall of Kirtipur as 1766 or 1767, and the fall of Bhaktapur as 14 April or 25 November 1769; the November date comes from a journal kept at the Jana Baha monastery in Kathmandu.
+  - The size of Kinloch’s force is uncertain; accounts give figures from about 800 to about 2,500 men.
+sources:
+  - title: Unification of Nepal (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Unification_of_Nepal
+  - title: Prithvi Narayan Shah (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Prithvi_Narayan_Shah
+  - title: Battle of Kirtipur (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kirtipur
+  - title: Battle of Makwanpur (1763) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Makwanpur_(1763)
+  - title: Battle of Sindhuli (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sindhuli
+  - title: Battle of Kathmandu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kathmandu
+  - title: Battle of Bhaktapur (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Bhaktapur
+  - title: Prithvi Narayan Shah (Britannica)
+    url: https://www.britannica.com/biography/Prithvi-Narayan-Shah
+  - title: Thomas Bell, Diary of a disastrous campaign (Himal Southasian)
+    url: https://www.himalmag.com/reviews/diary-disastrous-campaign
+steps:
+  - title: Nuwakot
+    date: 1743–1757
+    when: "1744-09-26"
+    borders: "1744-09-26"
+    countries: [np]
+    body:
+      - Prithvi Narayan Shah became king of Gorkha, one of the many small hill states of central Nepal, in 1743. The Kathmandu Valley to the east was divided between three related Newar kingdoms, Kathmandu (Kantipur), Lalitpur (Patan) and Bhaktapur, ruled by kings of the Malla dynasty, which grew rich on the trade between India and Tibet. A first Gorkha attack on Nuwakot, the fort that guarded the valley’s road to Tibet, failed, but on 26 September 1744 the Gorkhas took it; they lost it in 1745 and won it back for good.
+      - From Nuwakot and the hills around the valley Prithvi Narayan began to cut off the valley’s trade. In 1757 he attacked Kirtipur, a hill town on the south-west edge of the valley belonging to Lalitpur, but the Newar defenders, helped by Jaya Prakash Malla of Kathmandu, threw the Gorkhas back, and their commander Kalu Pande was killed.
+    facts:
+      - [Nuwakot taken, "26 September 1744"]
+      - [First attack on Kirtipur, "1757, repulsed; Kalu Pande killed"]
+    markers:
+      - kind: taken
+        side: gor
+        name: Nuwakot
+        date: 26 September 1744
+        text: The fort on the road from the valley to Tibet, Prithvi Narayan’s first great conquest.
+        lonlat: [85.165, 27.915]
+      - kind: capital
+        side: gor
+        name: Gorkha
+        date: 1743
+        text: The hilltop capital of the Shah kings.
+        lonlat: [84.630, 28.007]
+      - kind: battle
+        side: val
+        name: Kirtipur
+        date: 1757
+        text: The first Gorkha assault was beaten off with heavy losses.
+        lonlat: [85.278, 27.677]
+        lp: l
+    arrows:
+      - side: gor
+        label: Prithvi Narayan
+        phase: 1
+        via: [[84.630, 28.007], [84.900, 27.950], [85.165, 27.915]]
+      - side: gor
+        phase: 2
+        via: [[85.165, 27.915], [85.200, 27.780], [85.270, 27.690]]
+  - title: Makwanpur, Mir Qasim and Kirtipur
+    date: 1762–1767
+    when: "1763-01-21"
+    borders: "1767"
+    countries: [np, in]
+    body:
+      - In August 1762 the Gorkhas took Makwanpur, the hill kingdom south of the valley that controlled the road to the Indian plains, and in October the fort of Hariharpur. The Sen king of Makwanpur, Digbardhan Sen, appealed to Mir Qasim, Nawab of Bengal, who sent some 3,500 men under his Armenian general Gurgin Khan. They attacked the Makwanpur fort on 21 January 1763, but a Gorkha night attack routed them and they fled back to Bengal.
+      - A second assault on Kirtipur failed in 1764. The Gorkhas then blockaded the town, and in 1766 or 1767 a Lalitpur noble let them in and it surrendered. Prithvi Narayan ordered that the noses and ears of its inhabitants be cut off; Capuchin missionaries in the valley described this, and Nepali sources confirm it. With Kirtipur and the passes in Gorkha hands, the valley was surrounded and its trade cut off.
+    facts:
+      - [Makwanpur taken, "August 1762"]
+      - [Mir Qasim’s army defeated, "21 January 1763"]
+      - [Kirtipur surrenders, "1766 or 1767, after assaults in 1757 and 1764"]
+    markers:
+      - kind: taken
+        side: gor
+        name: Makwanpur
+        date: August 1762
+        text: The fortress of the Sen kings, on the road from the valley to the plains.
+        lonlat: [85.153, 27.412]
+      - kind: battle
+        side: gor
+        name: Makwanpur
+        date: 21 January 1763
+        text: Gurgin Khan’s Bengal army was routed in a night attack.
+        lonlat: [85.153, 27.412]
+        lp: l
+      - kind: taken
+        side: gor
+        name: Kirtipur
+        date: 1766 or 1767
+        text: Surrendered after a long blockade; its people were mutilated on the king’s orders.
+        lonlat: [85.278, 27.677]
+        lp: l
+      - kind: taken
+        side: gor
+        name: Hariharpur
+        date: October 1762
+        text: The fort guarding the route along the Bagmati to the plains.
+        lonlat: [85.483, 27.316]
+    arrows:
+      - side: ben
+        label: Gurgin Khan
+        via: [[84.880, 27.000], [85.000, 27.200], [85.140, 27.390]]
+  - title: Kinloch, Kathmandu and Bhaktapur
+    date: August 1767 – November 1769
+    when: "1768-09-26"
+    borders: "1769-11-25"
+    countries: [np, in]
+    body:
+      - In 1767 Jaya Prakash Malla asked the East India Company for help, and the Company, whose trade through Nepal had been cut off, agreed. Captain George Kinloch marched into the Tarai in August 1767 with a small force of sepoys and reached the hill fort of Sindhuli, but the monsoon, floods, failing grain supplies and malaria wore his men down, and Gorkha attacks around Sindhuli (dated 6 November 1767) forced him back to the plains. It was the first clash between the Company and the Gorkhas.
+      - On 26 September 1768, while the people of Kathmandu were celebrating the festival of Indra Jatra, Gorkha troops entered the city from three sides and took the palace. Jaya Prakash Malla fled to Lalitpur, which surrendered a few weeks later, and then to Bhaktapur, where the three Malla kings made a last stand. The Gorkhas took Bhaktapur in 1769; a Kathmandu journal records 2,001 killed. Prithvi Narayan made Kathmandu the capital of his kingdom, which later took the name Nepal.
+    facts:
+      - [Battle of Sindhuli, "6 November 1767, Gorkha victory"]
+      - [Kathmandu taken, "26 September 1768"]
+      - [Lalitpur taken, "October 1768"]
+      - [Bhaktapur taken, "1769 (14 April or 25 November)"]
+    markers:
+      - kind: battle
+        side: gor
+        name: Sindhuli
+        date: 6 November 1767
+        text: Kinloch’s expedition, worn down by disease and floods, was driven back to the plains.
+        lonlat: [85.977, 27.285]
+      - kind: taken
+        side: gor
+        name: Kathmandu
+        date: 26 September 1768
+        text: Taken during the Indra Jatra festival; Jaya Prakash Malla fled to Lalitpur.
+        lonlat: [85.307, 27.704]
+        lp: t
+      - kind: taken
+        side: gor
+        name: Lalitpur
+        date: October 1768
+        text: The city of Patan surrendered soon after Kathmandu.
+        lonlat: [85.325, 27.673]
+        lp: b
+      - kind: taken
+        side: gor
+        name: Bhaktapur
+        date: 1769
+        text: The last Malla kingdom, taken after a battle in which, by one Newar account, 2,001 people were killed.
+        lonlat: [85.428, 27.672]
+        lp: r
+    arrows:
+      - side: eic
+        label: Kinloch
+        phase: 1
+        via: [[85.925, 26.728], [85.950, 27.000], [85.977, 27.270]]
+      - side: gor
+        label: Prithvi Narayan
+        phase: 2
+        via: [[85.165, 27.915], [85.250, 27.800], [85.300, 27.715]]
+      - side: gor
+        phase: 2
+        via: [[85.278, 27.677], [85.320, 27.672]]
+    areas:
+      - style: gained
+        side: gor
+        label: Conquered by Gorkha, 1768–1769
+        atoms: [NP-BA, NP-JA]

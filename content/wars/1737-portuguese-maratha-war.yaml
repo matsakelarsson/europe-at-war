@@ -1,0 +1,143 @@
+id: portuguese-maratha-war
+name: Portuguese–Maratha war (1737–1740)
+start: "1737-03"
+end: "1740-10-14"
+tier: B
+summary: "The war in which the Marathas under Chimaji Appa, brother of the Peshwa Baji Rao I, conquered the Portuguese Northern Province, the coastal strip north of Bombay that Portugal had held for two hundred years. In 1737 the Marathas took the island fort of Arnala, Thane and most of Salsette island. In 1738–1739 they captured the forts of the coast up to Daman one after another and besieged Bassein, the capital of the province, which surrendered on 16 May 1739 after a three-month siege and costly assaults. Another Maratha army attacked the outer districts of Goa itself. By the peace of 1740, mediated by the English at Bombay, Portugal also gave up Chaul, keeping only Daman, Diu and Goa on the Indian coast."
+countries: [in, pt]
+sides:
+  - id: mar
+    name: Marathas
+    polities: [marathas]
+    ink: orange
+    moves: Maratha moves
+    success: Maratha success
+  - id: pt
+    name: Portuguese State of India
+    polities: [portugal]
+    ink: blue
+    moves: Portuguese moves
+    success: Portuguese success
+notes:
+  - Maratha accounts present the war partly as a response to the Portuguese authorities’ treatment of their Hindu subjects, including forced conversions and the destruction of temples in the Northern Province; Portuguese accounts stress the military weakness of the province after years of neglect. The English at Bombay, who feared both a Maratha neighbour and a Portuguese collapse, sent supplies to the Portuguese and then brokered the peace.
+sources:
+  - title: Battle of Vasai (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Vasai
+  - title: Chimaji Appa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Chimaji_Appa
+  - title: Northern Province (Portuguese India) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Northern_Province_(Portuguese_India)
+  - title: Vasai Fort (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Vasai_Fort
+  - title: The decline of Portuguese India (Britannica)
+    url: https://www.britannica.com/place/Portuguese-India/The-decline-of-Portuguese-India
+  - title: The East India Company and the Portuguese loss of the Província do Norte (Tempo, open access)
+    url: https://www.scielo.br/j/tem/a/nWLMPtQQDRKFbH7SWDMBWdy/?lang=en
+steps:
+  - title: Arnala, Thane and Salsette
+    date: March 1737 – 1738
+    when: "1737-03-28"
+    borders: "1737-12"
+    countries: [in]
+    body:
+      - The Portuguese Northern Province, with its capital at Bassein (Vasai), had been Portuguese since 1534 and was one of the richest parts of their Asian empire, but its forts were undermanned and Goa could spare little help. In March 1737 Maratha forces seized the island fortress of Arnala at the mouth of the Vaitarna, which cut the sea route from Bassein to the north. Chimaji Appa’s armies then crossed into Salsette island and took Thane, with most of the island, later in the year.
+      - The Portuguese sent reinforcements from Goa and held on to Bassein and a few forts on the creeks, but could not win back what had been lost. The Marathas built a fort of their own at Bhavangad to watch Bassein and waited for the next campaigning season.
+    facts:
+      - [Arnala taken, "28 March 1737"]
+      - [Thane and most of Salsette taken, "1737"]
+    markers:
+      - kind: taken
+        side: mar
+        name: Arnala
+        date: 28 March 1737
+        text: The island fort at the mouth of the Vaitarna, whose loss cut Bassein off from the north by sea.
+        lonlat: [72.733, 19.467]
+        lp: l
+      - kind: taken
+        side: mar
+        name: Thane
+        date: 1737
+        text: The Portuguese town and fort on the mainland side of Salsette island.
+        lonlat: [72.975, 19.195]
+      - kind: held
+        side: pt
+        name: Bassein
+        date: 1737–1738
+        text: The walled capital of the Northern Province, still in Portuguese hands.
+        lonlat: [72.815, 19.329]
+        lp: l
+      - kind: event
+        name: Bombay
+        date: 1737
+        text: The English island, cut out of the Portuguese province in 1661, watched the war closely and sent supplies to Bassein.
+        lonlat: [72.842, 18.932]
+        lp: l
+    arrows:
+      - side: mar
+        label: Chimaji Appa
+        via: [[73.400, 19.300], [73.150, 19.250], [72.990, 19.200]]
+    areas:
+      - style: occupied
+        side: mar
+        label: Taken by the Marathas, 1737 (approximate)
+        polygon: [[72.880, 19.080], [73.020, 19.080], [73.050, 19.260], [72.950, 19.300], [72.860, 19.250]]
+  - title: Bassein
+    date: November 1738 – October 1740
+    when: "1739-05-16"
+    borders: "1739-05-23"
+    countries: [in]
+    body:
+      - In the winter of 1738–1739 the Marathas took the coast north of Bassein, Dahanu in November and Mahim on 20 January 1739, then Kelve, Shirgaon and Tarapur, while their troops occupied Versova and Dharavi to close the creeks around Bassein. On 17 February Chimaji Appa laid siege to the city with a large army; a Portuguese account speaks of 40,000 infantry and 25,000 horsemen, against a garrison of about 1,200 Portuguese and Indian soldiers. Maratha engineers drove mines under the walls from May, and several assaults were beaten back with heavy losses before the garrison commander, Caetano de Souza Pereira, surrendered on 16 May. The Portuguese were allowed eight days to leave with their property, and on 23 May the Maratha flag was raised over the fort.
+      - In 1739 another Maratha army overran the outer districts of Goa, and according to Britannica only the unexpected arrival of a new viceroy with a fleet saved the city. The war ended with the help of the English governor at Bombay, whose envoy, Captain Inchbird, negotiated the peace signed on 14 October 1740. Portugal gave up its northern province and Chaul, south of Bombay, keeping Daman, Diu and Goa until 1961.
+    facts:
+      - [Siege of Bassein, "17 February – 16 May 1739"]
+      - [Portuguese garrison, "about 1,200"]
+      - [Peace treaty, "14 October 1740; Chaul ceded to the Marathas"]
+    markers:
+      - kind: siege
+        side: mar
+        name: Bassein
+        date: 17 February – 16 May 1739
+        text: The capital of the Northern Province surrendered after mines breached the walls. Its churches still stand in ruins inside the fort.
+        lonlat: [72.815, 19.329]
+        lp: l
+      - kind: taken
+        side: mar
+        name: Mahim
+        date: 20 January 1739
+        text: One of the Portuguese coastal forts north of Bassein, taken in the winter campaign.
+        lonlat: [72.745, 19.660]
+        lp: l
+      - kind: taken
+        side: mar
+        name: Tarapur
+        date: early 1739
+        text: Taken after Mahim; the coast up to Daman fell in a few weeks.
+        lonlat: [72.685, 19.876]
+        lp: l
+      - kind: held
+        side: pt
+        name: Daman
+        date: 1739
+        text: The northernmost Portuguese town, which held out and stayed Portuguese until 1961.
+        lonlat: [72.833, 20.414]
+      - kind: treaty
+        side: mar
+        name: Chaul
+        date: 14 October 1740
+        text: The old Portuguese port south of Bombay, handed over to the Marathas in the peace.
+        lonlat: [72.933, 18.568]
+        lp: l
+    arrows:
+      - side: mar
+        label: Chimaji Appa
+        phase: 1
+        via: [[72.990, 19.200], [72.950, 19.300], [72.850, 19.340]]
+      - side: mar
+        phase: 1
+        via: [[73.100, 19.900], [72.850, 19.750], [72.760, 19.660]]
+    areas:
+      - style: gained
+        side: mar
+        label: The Northern Province, taken by the Marathas in 1737–1739 (approximate)
+        polygon: [[72.800, 19.050], [73.020, 19.060], [73.060, 19.300], [72.960, 19.500], [72.880, 19.950], [72.660, 19.960], [72.700, 19.450], [72.780, 19.200]]

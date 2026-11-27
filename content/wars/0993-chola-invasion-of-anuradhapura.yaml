@@ -1,0 +1,137 @@
+id: chola-invasion-of-anuradhapura
+name: Chola conquest of Anuradhapura
+start: "993"
+end: "1017"
+tier: B
+summary: The conquest of northern Sri Lanka by the Chola Empire of southern India. In 993 the army of Rajaraja I crossed the Palk Strait while the Sinhalese king Mahinda V was struggling with a mutiny of his mercenaries, and sacked Anuradhapura, the island’s capital for more than a thousand years. The north became a Chola province governed from Polonnaruwa. In 1017 Rajaraja’s son Rajendra I invaded Ruhuna in the south-east, captured Mahinda V with his queen, his crown and his treasure, and took him to India, where he died in 1029. Anuradhapura was never a capital again, and the Cholas held the north until Vijayabahu I drove them out in 1070.
+countries: [lk, in]
+sides:
+  - id: ch
+    name: Chola Empire
+    polities: [cholas]
+    ink: red
+    moves: Chola moves
+    success: Chola success
+  - id: si
+    name: Anuradhapura kingdom
+    polities: [sinhala]
+    ink: blue
+    moves: Sinhalese moves
+    success: Sinhalese success
+notes:
+  - The sources are the Chola inscriptions, above all the Tiruvalangadu and Karandai copper plates, which celebrate the conquest, and the Sinhalese chronicle Culavamsa (the later part of the Mahavamsa), which mourns it. The year 993 comes from Rajaraja’s inscriptions; the Culavamsa dates the fall of Mahinda V to the 36th year of his reign, about 1017.
+sources:
+  - title: Chola conquest of Anuradhapura (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Chola_conquest_of_Anuradhapura
+  - title: Rajendra I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rajendra_I
+  - title: Rajaraja I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rajaraja_I
+  - title: Mahinda V (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mahinda_V
+  - title: Chola dynasty (Britannica)
+    url: https://www.britannica.com/topic/Chola-dynasty
+  - title: Ancient City of Polonnaruwa (UNESCO World Heritage Centre)
+    url: https://whc.unesco.org/en/list/201
+steps:
+  - title: Rajaraja I takes the north
+    date: "993"
+    when: "993"
+    borders: "993"
+    countries: [lk, in]
+    body:
+      - Under Rajaraja I (985–1014) the Cholas of the Kaveri delta became the leading power of southern India. The Sinhalese kings of Anuradhapura had long backed the Pandyas, the Cholas’ rivals in the far south, and in the 10th century a defeated Pandya king had fled to the island and left his crown and royal regalia there, which the Cholas wanted. In Sri Lanka, Mahinda V faced a revolt of his foreign mercenaries over unpaid wages and withdrew to Ruhuna in the south-east.
+      - In 993 a Chola army crossed the Palk Strait and took the north of the island. The Culavamsa says that Anuradhapura, the royal city for more than a thousand years, was “utterly destroyed in every way by the Chola army”, its monasteries plundered and its relic shrines broken open. The Tiruvalangadu plates boast that Rajaraja had outdone Rama, who in the Ramayana needed a bridge of monkeys to reach Lanka. The Cholas made the north a province, Mummudi-sola-mandalam, and governed it from Polonnaruwa, which they renamed Jananathamangalam. At the port of Mahatittha (Mantai) a Chola official built a temple of Shiva, the Rajarajeshvara.
+    facts:
+      - [Anuradhapura sacked, "993"]
+      - [Chola province, "Mummudi-sola-mandalam, governed from Polonnaruwa"]
+    markers:
+      - kind: capital
+        side: ch
+        name: Thanjavur
+        date: "993"
+        text: Rajaraja’s capital, where he built the great Brihadisvara temple, finished in 1010.
+        lonlat: [79.132, 10.783]
+      - kind: taken
+        side: ch
+        name: Anuradhapura
+        date: "993"
+        text: The Sinhalese capital since the 4th century BCE was sacked and abandoned.
+        lonlat: [80.40, 8.35]
+        lp: l
+      - kind: capital
+        side: ch
+        name: Polonnaruwa
+        date: from 993
+        text: The Chola seat of government in the island, renamed Jananathamangalam.
+        lonlat: [81.00, 7.94]
+      - kind: event
+        side: ch
+        name: Mahatittha (Mantai)
+        date: 990s
+        text: The main port of the north-west, renamed Rajarajapura, with a temple of Shiva built by a Chola official.
+        lonlat: [79.93, 8.97]
+        lp: l
+      - kind: held
+        side: si
+        name: Ruhuna
+        date: 993–1017
+        text: The south-eastern province, where Mahinda V kept his court after the north was lost.
+        lonlat: [81.29, 6.28]
+    arrows:
+      - side: ch
+        label: Rajaraja I
+        phase: 1
+        via: [[79.13, 10.72], [79.3, 9.6], [79.6, 9.2], [79.95, 8.92], [80.38, 8.4]]
+      - side: ch
+        phase: 2
+        via: [[80.45, 8.32], [80.75, 8.1], [80.97, 7.97]]
+      - side: si
+        label: Mahinda V
+        phase: 1
+        via: [[80.45, 8.3], [80.9, 7.3], [81.25, 6.35]]
+    areas:
+      - style: gained
+        side: ch
+        label: Northern Sri Lanka, conquered by the Cholas
+        atoms: [LK-41, LK-42, LK-43, LK-44, LK-45, LK-71, LK-72, LK-53]
+  - title: Rajendra I takes Ruhuna and the king
+    date: "1017"
+    when: "1017"
+    borders: "1017"
+    countries: [lk, in]
+    body:
+      - Rajaraja’s son Rajendra I, king from 1014, sent his army into Ruhuna in 1017. According to the Culavamsa and the Karandai plates, Mahinda V was captured with his queen and daughter, his crown and his treasure, and the Cholas also recovered the Pandya regalia left in the island decades before. Mahinda was taken to the Chola country, where he died a prisoner in 1029. Rajendra’s inscriptions claim the conquest of all of Lanka, but the Cholas never held the south firmly.
+      - Mahinda’s son Kassapa escaped and was crowned in Ruhuna as Vikramabahu, but neither he nor the short-lived rulers who followed could drive the Cholas from the north. For more than half a century Polonnaruwa was a Chola provincial capital, and the Shiva temple known as Siva Devale No. 2, built in the Chola style, is the oldest surviving building there. The Cholas were driven out by Vijayabahu I between 1055 and 1070; Polonnaruwa, not Anuradhapura, became the capital of the restored Sinhalese kingdom.
+    facts:
+      - [Mahinda V captured, "1017"]
+      - [Death of Mahinda V, "1029, a prisoner in the Chola country"]
+    link: { href: "#/war/vijayabahu-war-against-the-cholas", text: Vijayabahu’s war against the Cholas }
+    markers:
+      - kind: taken
+        side: ch
+        name: Ruhuna
+        date: "1017"
+        text: Mahinda V was captured here with his family and treasure.
+        lonlat: [81.29, 6.28]
+      - kind: capital
+        side: ch
+        name: Polonnaruwa
+        date: 1017–1070
+        text: The Chola provincial capital, where Chola officials built temples of Shiva.
+        lonlat: [81.00, 7.94]
+      - kind: event
+        side: ch
+        name: Thanjavur
+        date: 1017–1029
+        text: The Chola capital, to which Mahinda V was taken. He died in captivity in 1029.
+        lonlat: [79.132, 10.783]
+    arrows:
+      - side: ch
+        label: Rajendra I’s army
+        phase: 1
+        via: [[81.0, 7.88], [81.1, 7.0], [81.27, 6.35]]
+      - side: ch
+        label: Mahinda V taken to India
+        phase: 2
+        via: [[81.2, 6.4], [80.4, 7.6], [79.95, 8.95], [79.35, 9.5], [79.13, 10.72]]

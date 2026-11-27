@@ -227,6 +227,7 @@ they ever border, keeping curated colours.
   | 800–today | Iran (without Azerbaijan before 1801), Iraq, Afghanistan, Uzbekistan, Turkmenistan, Tajikistan, Kyrgyzstan | `iran-central-asia.yaml` (`russia.yaml` for 1991) |
   | 1801–today | Iranian Azerbaijan (East and West Azerbaijan, Ardabil) | `iran-central-asia.yaml` |
   | 800–today | Saudi Arabia, Yemen, Oman, the United Arab Emirates, Qatar, Bahrain, Kuwait | `arabia.yaml` |
+  | 800–today | India, Pakistan, Bangladesh, Sri Lanka, Nepal, Bhutan, the Maldives | `south-asia.yaml` |
 
   Other event files (`central-europe.yaml`) correct drafts outside any curated range; there, the next keyframe can
   still override an event. `central-europe.yaml` is a first pass made for the
@@ -371,6 +372,26 @@ they ever border, keeping curated colours.
   states (`saudi-arabia`, 1744/1824/1902), the Rashidis, the Trucial States
   (1820) and Aden (1839). The eastern-Arabian dynasties hold the Eastern
   Province atom, which also covers the Empty Quarter: read it as the coast.
+- **South Asia.** In 800 the Pratiharas, Palas and Rashtrakutas contend for
+  the north, the Pallavas, Pandyas and Chera Perumals share the south, the
+  Abbasids hold Sind and the Hindu Shahis (`kabul-shahis`) Gandhara. Then the
+  Cholas (848–1258), the Western Chalukyas (973), the Rajput kingdoms, the
+  Ghaznavids and Ghurids, the Delhi Sultanate (1206), the regional sultanates
+  and Vijayanagara (1336), the Mughals (1526), the Deccan sultanates, the
+  Marathas (1674; Scindia and Holkar as `gwalior-state` and `indore-state` from
+  1761), the successor states of the 1700s, and the East India Company
+  (`british-india`, Crown rule from 1858). Princely states that kept their
+  dynasty to 1947 (Mewar, Marwar, Jaipur, Bikaner, Jaisalmer, Bundi, Cutch,
+  Kathiawar, Orchha, Rewa, Bhopal, Hyderabad, Mysore, Travancore, Cochin,
+  Bahawalpur, Kalat, Jammu and Kashmir) stay coloured as such; smaller ones fall
+  inside the British atoms. Groupings without one capital are `hill-states`
+  (Nepal), `punjab-hill-states` (western Himalaya), `kathiawar`, `gonds` and
+  `sikh-misls`. Hill and forest peoples of the north-east, the Kirat hills, the
+  Thar and Kutch are `none` until a state takes them. Sri Lanka: Anuradhapura
+  and its successors (`sinhala`, from 1412 Kotte), Jaffna, Kandy (1469), the
+  Portuguese, the Dutch (1656/58) and the British (1795/1815). Remainders of
+  split provinces are written with `!` (`IN-MP!` is Gondwana, `IN-UP!` Awadh,
+  `IN-MH!` Desh, `IN-KA!` Mysore, `IN-KL!` Travancore, `IN-RJ!` Dhundhar).
 - **Checking borders.** After a build, `node tools/owners-at.mjs <date>
   [polities…] [--atoms <regex>]` lists who owns what on a date, and
   `node tools/owner-history.mjs <regex> [from] [to]` lists every change to the

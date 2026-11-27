@@ -1,0 +1,134 @@
+id: vijayabahu-war-against-the-cholas
+name: Vijayabahu’s war against the Cholas
+start: "1055"
+end: "1070"
+tier: B
+summary: The war in which the Sinhalese prince Kitti, crowned as Vijayabahu I, drove the Chola Empire out of Sri Lanka. From 1055 he led the resistance in Ruhuna, the south-eastern province the Cholas had never firmly held, and by 1058 he controlled it. A first attack on the Chola capital of Polonnaruwa in 1066 was beaten back by reinforcements from India, but when the Chola kingdom was shaken by a disputed succession in 1069–1070, his armies took Anuradhapura and, after a siege of about seven months, Polonnaruwa. The Cholas withdrew in 1070, ending more than seventy years of occupation in the north, and the island was united under one king again for the first time in over a century.
+countries: [lk, in]
+sides:
+  - id: si
+    name: Vijayabahu I
+    polities: [sinhala]
+    ink: blue
+    moves: Sinhalese moves
+    success: Sinhalese success
+  - id: ch
+    name: Chola Empire
+    polities: [cholas]
+    ink: red
+    moves: Chola moves
+    success: Chola success
+notes:
+  - The war is known mainly from the Sinhalese chronicle Culavamsa, written long afterwards, and from a few Chola inscriptions, which claim victories in the island under Virarajendra. The dates of the early campaigns are uncertain, and historians give Vijayabahu’s coronation as anything from 1055 to 1073, depending on how they count his reign.
+sources:
+  - title: Vijayabahu I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Vijayabahu_I
+  - title: Chola conquest of Anuradhapura (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Chola_conquest_of_Anuradhapura
+  - title: Kingdom of Polonnaruwa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kingdom_of_Polonnaruwa
+  - title: Virarajendra Chola (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Virarajendra_Chola
+  - title: Ancient City of Polonnaruwa (UNESCO World Heritage Centre)
+    url: https://whc.unesco.org/en/list/201
+steps:
+  - title: Ruhuna and the first attack on Polonnaruwa
+    date: 1055–1066
+    when: "1055"
+    borders: "1066"
+    countries: [lk, in]
+    body:
+      - Since Rajendra I captured Mahinda V in 1017, the Cholas had ruled the north of Sri Lanka from Polonnaruwa, while Sinhalese princes held out in the forests and hills of Ruhuna. In 1055 a young prince of the royal line, Kitti, took the lead of the resistance under the name Vijayabahu, and by 1058 he had made himself master of Ruhuna. The Chola king Virarajendra sent the army stationed in the island against him, and Vijayabahu sought help from abroad; the Culavamsa says that Anawrahta, the king of Pagan in Burma, sent him ships laden with goods.
+      - In 1066 Vijayabahu marched north and took Polonnaruwa, but fresh Chola troops landed from India and drove him out. He fell back into the hills of the south-west and later made Kataragama his base, keeping up raids and stirring revolts in the Chola-held north.
+    facts:
+      - [Vijayabahu leads the resistance, "1055"]
+      - [Ruhuna freed, "about 1058"]
+      - [First capture of Polonnaruwa, "1066, lost again"]
+    markers:
+      - kind: capital
+        side: si
+        name: Kataragama
+        date: 1060s
+        text: The shrine town in Ruhuna that became Vijayabahu’s base.
+        lonlat: [81.33, 6.41]
+      - kind: held
+        side: ch
+        name: Polonnaruwa
+        date: "1066"
+        text: Taken by Vijayabahu, then retaken by the Cholas with reinforcements from the mainland.
+        lonlat: [81.00, 7.94]
+      - kind: event
+        side: ch
+        name: Mahatittha (Mantai)
+        date: "1066"
+        text: The Chola port in the north-west, where troops from India landed.
+        lonlat: [79.93, 8.97]
+        lp: l
+    arrows:
+      - side: ch
+        label: Chola army
+        phase: 1
+        via: [[81.0, 7.88], [81.15, 7.0], [81.3, 6.48]]
+      - side: si
+        label: Vijayabahu
+        phase: 2
+        via: [[81.25, 6.48], [81.05, 7.1], [81.0, 7.86]]
+      - side: ch
+        label: Chola reinforcements
+        phase: 3
+        via: [[79.3, 9.6], [79.6, 9.2], [79.95, 8.92], [80.6, 8.3], [80.95, 7.98]]
+  - title: The fall of Polonnaruwa
+    date: 1069–1070
+    when: "1070"
+    borders: "1070"
+    countries: [lk, in]
+    body:
+      - Virarajendra died in 1069, and his son Adhirajendra was killed within months in a disturbance that brought the Eastern Chalukya prince Kulottunga I to the Chola throne in 1070. Vijayabahu used the confusion. He sent three armies north, one along the west coast towards Mahatittha, one through Magama in the east, and the main force by way of Mahiyangana. Anuradhapura fell quickly; the Chola garrison of Polonnaruwa held out for about seven months before the city was taken. After some indecisive fighting the Cholas withdrew from the island, and Kulottunga, busy on the mainland, did not try to win it back.
+      - Vijayabahu was crowned and made Polonnaruwa his capital, more central than Anuradhapura and closer to the turbulent south. In about 1084 his Velakkara mercenaries, from southern India, refused to fight the Cholas and rose against him; he fled the city for a time before crushing them. He rebuilt the monasteries that had decayed under Chola rule and invited monks from Burma to restore the Buddhist ordination, and he reigned until 1110.
+    facts:
+      - [Polonnaruwa taken, "1070, after a siege of about seven months"]
+      - [Cholas leave Sri Lanka, "1070"]
+    markers:
+      - kind: taken
+        side: si
+        name: Anuradhapura
+        date: "1070"
+        text: Taken quickly by Vijayabahu’s western army.
+        lonlat: [80.40, 8.35]
+        lp: l
+      - kind: siege
+        side: si
+        name: Polonnaruwa
+        date: "1070"
+        text: The isolated Chola garrison surrendered after about seven months. The city became Vijayabahu’s capital.
+        lonlat: [81.00, 7.94]
+      - kind: event
+        side: si
+        name: Mahiyangana
+        date: "1070"
+        text: The main army marched north by way of this old shrine town on the Mahaweli river.
+        lonlat: [80.99, 7.32]
+      - kind: capital
+        side: si
+        name: Kataragama
+        date: "1069"
+        text: The base from which the three armies set out.
+        lonlat: [81.33, 6.41]
+    arrows:
+      - side: si
+        label: Western army
+        phase: 1
+        via: [[81.2, 6.45], [80.4, 6.75], [80.0, 7.5], [80.05, 8.0], [80.35, 8.3]]
+      - side: si
+        label: Vijayabahu
+        phase: 1
+        via: [[81.3, 6.48], [81.1, 6.95], [80.99, 7.36], [81.0, 7.86]]
+      - side: si
+        label: Eastern army
+        phase: 1
+        via: [[81.35, 6.45], [81.65, 7.0], [81.5, 7.6], [81.08, 7.95]]
+    areas:
+      - style: gained
+        side: si
+        label: Retaken from the Cholas, 1070
+        atoms: [LK-41, LK-42, LK-43, LK-44, LK-45, LK-71, LK-72, LK-53]

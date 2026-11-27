@@ -1,0 +1,320 @@
+id: portuguese-calicut-wars
+name: Portuguese–Calicut wars
+start: "1500-12"
+end: "1531"
+tier: A
+summary: "The wars between Portugal and the Zamorin of Calicut, the ruler of the greatest pepper port on the Malabar Coast, which began when Pedro Álvares Cabral bombarded Calicut in December 1500 and made an alliance with its rival Cochin. Vasco da Gama returned in 1502 with a war fleet and burned a pilgrim ship with hundreds aboard. The Zamorin’s armies burned Cochin in 1503 but were held off at its fords in 1504 by Duarte Pacheco Pereira’s small garrison, and Portuguese fleets beat Calicut’s at Cannanore (1506) and elsewhere. Albuquerque’s assault on Calicut failed in 1510, but the Portuguese blockade forced a peace in 1513 that gave Portugal a fortress there. War broke out again in the 1520s; the Zamorin took the fort at Calicut in 1526, and in 1531 the Portuguese built a new one at Chaliyam. Truces and wars followed for the rest of the century."
+countries: [in, pt]
+sides:
+  - id: pt
+    name: Portugal and Cochin
+    polities: [portugal, cochin]
+    ink: green
+    moves: Portuguese and Cochin moves
+    success: Portuguese or Cochin success
+  - id: cal
+    name: Calicut (the Zamorin) and his allies
+    polities: [calicut]
+    ink: red
+    moves: Calicut moves
+    success: Calicut success
+notes:
+  - "The ruler of Calicut was known by his title, the Samoothiri (Zamorin in Portuguese and English). The Portuguese chroniclers Castanheda, Correia, Barros and Albuquerque’s son Brás are the main sources, with the Arabic Tuhfat al-Mujahidin of Zain al-Din Makhdum, written in the 1580s from the side of the Muslim merchants of Malabar. Numbers for the Calicut armies (50,000 to 84,000 at Cochin in 1504) come from the Portuguese side and are probably too high."
+  - The Battle of Chaul (1508) and the Battle of Diu (1509), in which Calicut’s ships fought beside the fleets of the Mamluk sultan and Gujarat, are told in their own war, as is Albuquerque’s conquest of Goa (1510).
+  - The war at sea went on after 1531, led by the Kunjali Marakkars, Calicut’s Muslim admirals. The Zamorin starved out the fort at Chaliyam in 1571, and in 1600 he joined the Portuguese to destroy the last Kunjali’s stronghold.
+sources:
+  - title: First Luso-Malabarese War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/First_Luso-Malabarese_War
+  - title: Pedro Álvares Cabral (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pedro_%C3%81lvares_Cabral
+  - title: Vasco da Gama (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Vasco_da_Gama
+  - title: Battle of Calicut (1503) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Calicut_(1503)
+  - title: Battle of Cochin (1504) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Cochin_(1504)
+  - title: Battle of Cannanore (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Cannanore
+  - title: Siege of Cannanore (1507) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Cannanore_(1507)
+  - title: Siege of Calicut (1526) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Calicut_(1526)
+  - title: Chaliyam (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Chaliyam
+  - title: Zamorin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Zamorin
+  - title: Kingdom of Cochin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kingdom_of_Cochin
+  - title: Afonso de Albuquerque (Britannica)
+    url: https://www.britannica.com/biography/Afonso-de-Albuquerque
+steps:
+  - title: Cabral at Calicut
+    date: 1500
+    when: "1500-12"
+    borders: "1500-12-24"
+    countries: [in, pt]
+    body:
+      - Vasco da Gama had reached Calicut, the greatest pepper port of the Malabar Coast, in May 1498. Its Hindu ruler, the Zamorin, lived from the trade, which was largely in the hands of Muslim merchants, both local Mappilas and traders from Egypt and Arabia, who carried the spices on to the Red Sea. In 1500 a royal fleet under Pedro Álvares Cabral reached Calicut, made a treaty with the Zamorin and opened a trading post. The merchants saw the Portuguese as rivals, and the Portuguese found it hard to buy pepper.
+      - In December 1500, after Cabral seized a Muslim ship loading spices in the harbour, a crowd stormed the trading post and killed about 50 Portuguese, among them the factor Aires Correia. Cabral blamed the Zamorin. He seized ten merchant ships in the harbour, killed their crews and burned them, and bombarded the city for two days, killing an estimated 500 to 600 people. Then he sailed south to Cochin, a smaller port whose raja, Unni Goda Varma, was a vassal of the Zamorin and resented it. On 24 December the raja made an alliance with the Portuguese, who loaded pepper and left factors in his town. Cannanore, to the north, also welcomed them.
+    facts:
+      - [Da Gama at Calicut, "May 1498"]
+      - [Trading post attacked, "December 1500, about 50 Portuguese killed"]
+      - [Treaty with Cochin, "24 December 1500"]
+    markers:
+      - kind: naval
+        side: pt
+        name: Calicut
+        date: December 1500
+        text: After the attack on the trading post Cabral burned the ships in the harbour and bombarded the city for two days.
+        lonlat: [75.77, 11.25]
+      - kind: treaty
+        side: pt
+        name: Cochin
+        date: 24 December 1500
+        text: Its raja, eager to be free of the Zamorin, became Portugal’s ally. The alliance lasted, with Cochin a Portuguese client, until the Dutch came in 1663.
+        lonlat: [76.24, 9.965]
+      - kind: event
+        side: pt
+        name: Cannanore
+        date: January 1501
+        text: Its ruler, the Kolathiri, also offered pepper to Cabral, who called here on his way home.
+        lonlat: [75.37, 11.86]
+    arrows:
+      - side: pt
+        label: Cabral
+        via: [[75.7, 11.22], [75.82, 10.6], [76.07, 10.2], [76.2, 9.99]]
+  - title: Da Gama returns
+    date: 1502–1503
+    when: "1502-10"
+    borders: "1503-08"
+    countries: [in, pt]
+    body:
+      - In 1502 da Gama came back with a war fleet. Off Madayi, north of Cannanore, he captured the Miri, a ship carrying more than 400 pilgrims home from Mecca, took its cargo and burned it with most of its passengers, women and children among them, locked aboard. At Calicut he demanded that the Zamorin expel all Muslims from the city. When the Zamorin refused, da Gama bombarded Calicut and hanged and mutilated fishermen and traders he had seized. He loaded pepper at Cochin and Cannanore, and in January 1503 his ships, sailing in line and firing broadsides, routed a large Calicut fleet off the city.
+      - In April 1503, after the fleets had gone, the Zamorin marched on Cochin with an army of some 50,000. Narayan, a prince of Cochin, was killed defending the ford at Edappally, the town was burned, and the raja and the Portuguese factors fled to the island of Vypin. In August the arrival of squadrons under Francisco and Afonso de Albuquerque forced the Zamorin back, and with the raja’s leave the Portuguese built a wooden fort at Cochin, Fort Manuel, their first fortress in India.
+    facts:
+      - [Burning of the Miri, "October 1502, over 400 pilgrims aboard"]
+      - [Battle off Calicut, "January 1503, Portuguese victory"]
+      - [Fort Manuel built at Cochin, "1503"]
+    markers:
+      - kind: event
+        side: pt
+        name: The Miri
+        date: October 1502
+        text: The pilgrim ship was plundered and burned off Madayi. A few children were spared and baptised.
+        lonlat: [75.25, 12.03]
+      - kind: naval
+        side: pt
+        name: Calicut
+        date: November 1502 – January 1503
+        text: Bombarded by da Gama, who later beat a Calicut fleet of some 20 large ships and many smaller ones off the harbour.
+        lonlat: [75.77, 11.25]
+      - kind: battle
+        side: cal
+        name: Edappally
+        date: April 1503
+        text: The ford where the Cochin prince Narayan fell. Its chief was an ally of the Zamorin.
+        lonlat: [76.31, 10.03]
+      - kind: held
+        side: pt
+        name: Cochin
+        date: 1503
+        text: Burned by the Zamorin’s army in 1503, while the raja took refuge on the island of Vypin across the harbour. Fort Manuel was built here after the Zamorin withdrew.
+        lonlat: [76.24, 9.965]
+        lp: l
+    arrows:
+      - side: pt
+        label: Da Gama
+        phase: 1
+        via: [[75.15, 12.1], [75.45, 11.75], [75.68, 11.3]]
+      - side: cal
+        label: The Zamorin
+        phase: 2
+        via: [[75.8, 11.2], [76.02, 10.65], [76.22, 10.25], [76.3, 10.06]]
+  - title: The defence of Cochin
+    date: March – July 1504
+    when: "1504-03-16"
+    borders: "1504-07"
+    countries: [in, pt]
+    body:
+      - When the Portuguese fleets sailed home in early 1504 they left Duarte Pacheco Pereira at Cochin with about 150 Portuguese, a few ships and the raja’s remaining forces, fewer than 5,000 men. In March the Zamorin came back with an army the chroniclers put at 57,000 or more, with European-style guns, and a fleet of about 160 boats. Cochin’s defence was its backwaters, which could be crossed only at a few fords.
+      - Pacheco used the tides to shift his ships and men between the crossings at Kumbalam, Palluruthy and Panangad. From Palm Sunday, 31 March, to July he beat off seven assaults, sinking the war boats by the score with his guns. Cholera broke out in the Calicut camp, and in July 1504 the Zamorin withdrew. The defeat cost him much of his standing among the rulers of Malabar. In the autumn a new fleet under Lopo Soares de Albergaria bombarded Calicut, sacked Cranganore, and on 31 December 1504 burned 17 Muslim merchant ships at Pandarane.
+    facts:
+      - [Battle of Cochin, "16 March – 3 July 1504, Portuguese and Cochin victory"]
+      - [Defenders, "about 150 Portuguese and under 5,000 Cochin soldiers"]
+      - [Battle of Pandarane, "31 December 1504"]
+    markers:
+      - kind: battle
+        side: pt
+        name: Kumbalam
+        date: 31 March – April 1504
+        text: The main ford south of Cochin, where Pacheco’s ships beat off the first three assaults. Later attacks came at Palluruthy and Panangad nearby.
+        lonlat: [76.31, 9.9]
+        lp: r
+      - kind: held
+        side: pt
+        name: Fort Manuel (Cochin)
+        date: 1504
+        text: The Portuguese base, held throughout the siege.
+        lonlat: [76.24, 9.965]
+        lp: l
+      - kind: event
+        side: cal
+        name: Edappally
+        date: March – July 1504
+        text: The Zamorin’s base for the campaign, in the land of his ally the chief of Edappally.
+        lonlat: [76.31, 10.03]
+      - kind: taken
+        side: pt
+        name: Cranganore
+        date: 1504
+        text: Sacked by Lopo Soares’ men. The neighbouring ruler of Tanur went over to the Portuguese.
+        lonlat: [76.2, 10.22]
+        lp: l
+      - kind: naval
+        side: pt
+        name: Pandarane
+        date: 31 December 1504
+        text: Seventeen Muslim merchant ships were burned in the anchorage.
+        lonlat: [75.7, 11.46]
+    arrows:
+      - side: cal
+        label: The Zamorin
+        via: [[75.8, 11.2], [76.05, 10.6], [76.27, 10.2], [76.31, 10.05], [76.31, 9.93]]
+      - side: pt
+        label: Lopo Soares
+        via: [[76.2, 9.98], [76.15, 10.22], [75.95, 10.8], [75.72, 11.42]]
+  - title: Almeida and the Battle of Cannanore
+    date: 1505–1507
+    when: "1506-03"
+    borders: "1506-03"
+    countries: [in, pt]
+    body:
+      - In 1505 King Manuel I sent Francisco de Almeida as the first viceroy of India, with 21 ships and about 1,500 men, to build fortresses and rule the sea. He built forts on the island of Anjediva, at Cannanore with the leave of its ruler, the Kolathiri, and at Cochin, where the Portuguese crowned a new raja. When the Portuguese at Kollam (Quilon) were killed, his son Lourenço burned 24 Calicut merchant ships in its harbour.
+      - In March 1506 the Zamorin sent a fleet of more than 200 vessels against them. Lourenço de Almeida met it off Cannanore with a few carracks, a caravel and some smaller ships and defeated it; the young Ferdinand Magellan was among the wounded. In 1507 a new Kolathiri, who owed his throne to the Zamorin, turned on the Portuguese. With Calicut’s men and guns he besieged their fort at Cannanore from 27 April until Tristão da Cunha’s fleet relieved it on 27 August.
+    facts:
+      - [Almeida arrives, "1505, with 21 ships"]
+      - [Battle of Cannanore, "March 1506, Portuguese victory"]
+      - [Siege of Cannanore, "27 April – 27 August 1507, relieved"]
+    markers:
+      - kind: event
+        side: pt
+        name: Anjediva
+        date: 1505
+        text: An island off the Kanara coast where Almeida built his first fort, a watering place for the fleets.
+        lonlat: [74.1, 14.76]
+      - kind: naval
+        side: pt
+        name: Cannanore
+        date: March 1506
+        text: Lourenço de Almeida’s squadron beat the Zamorin’s fleet off the harbour. The fort of Sant’Angelo held out against a four-month siege in 1507.
+        lonlat: [75.37, 11.86]
+      - kind: naval
+        side: pt
+        name: Kollam (Quilon)
+        date: November 1505
+        text: After the Portuguese traders here were killed, Lourenço de Almeida burned the Calicut ships in the port.
+        lonlat: [76.58, 8.88]
+      - kind: held
+        side: pt
+        name: Cochin
+        date: 1505
+        text: Almeida strengthened the fort and crowned a new raja friendly to Portugal.
+        lonlat: [76.24, 9.965]
+      - kind: capital
+        side: cal
+        name: Calicut
+        date: 1505–1507
+        text: The Zamorin’s capital, where Italian gunfounders helped him cast cannon.
+        lonlat: [75.77, 11.25]
+    arrows:
+      - side: cal
+        label: Calicut fleet
+        phase: 1
+        via: [[75.72, 11.3], [75.55, 11.55], [75.4, 11.82]]
+      - side: pt
+        label: Lourenço de Almeida
+        phase: 1
+        via: [[75.1, 12.3], [75.25, 12.0], [75.36, 11.88]]
+  - title: Albuquerque at Calicut and the peace of 1513
+    date: 1510–1513
+    when: "1510-01-04"
+    borders: "1510-01-04"
+    countries: [in, pt]
+    body:
+      - Afonso de Albuquerque, governor from November 1509, struck at Calicut itself. On 4 January 1510, while the Zamorin was away, a force of about 2,000 men landed, stormed the shore and broke into the palace. But the marshal Fernando Coutinho, who led the attack, was killed as the Nairs counter-attacked in the narrow streets, and Albuquerque was badly wounded; the Portuguese lost some 300 dead. Albuquerque fell back on a blockade and turned his strength to Goa (1510), Malacca (1511) and the Red Sea.
+      - The blockade strangled Calicut’s trade. The Zamorin died in 1513, poisoned on his heir’s orders at Albuquerque’s urging according to the Portuguese, and on 24 December 1513 his successor signed a peace that let the Portuguese build a fortress at Calicut and buy pepper there.
+    facts:
+      - [Attack on Calicut, "4 January 1510, Portuguese repulse"]
+      - [Portuguese losses, "about 300 dead, including Fernando Coutinho"]
+      - [Peace of Calicut, "24 December 1513"]
+    markers:
+      - kind: battle
+        side: cal
+        name: Calicut
+        date: 4 January 1510
+        text: The Portuguese broke into the palace but were driven back to their boats with heavy losses.
+        lonlat: [75.77, 11.25]
+      - kind: event
+        side: pt
+        name: Cochin
+        date: 31 December 1509
+        text: Albuquerque’s fleet of 20 ships sailed from here for Calicut.
+        lonlat: [76.24, 9.965]
+      - kind: taken
+        side: pt
+        name: Goa
+        date: 1510
+        text: Albuquerque took Goa from Bijapur later that year, and it became the capital of Portuguese India.
+        lonlat: [73.91, 15.5]
+    arrows:
+      - side: pt
+        label: Albuquerque
+        via: [[76.2, 9.98], [76.1, 10.3], [75.88, 10.85], [75.74, 11.22]]
+  - title: The fort at Calicut and Chaliyam
+    date: 1525–1531
+    when: "1526-06-03"
+    borders: "1531"
+    countries: [in, pt]
+    body:
+      - The peace did not last. The Muslim merchants of Calicut and their sea captains, the Kunjali Marakkars, kept up a war at sea against Portuguese shipping and the passes (cartazes) the Portuguese tried to force on Indian traders. In March 1525 a Portuguese fleet destroyed a Calicut fleet at Ponnani. On 3 June 1526 the Zamorin besieged the Portuguese fort at Calicut, held by about 300 men under João de Lima. A fleet from Goa arrived in September, and the Portuguese decided to abandon the fort, which they partly destroyed before leaving.
+      - In 1531, after a new peace with the Zamorin, the governor Nuno da Cunha built a fortress at Chaliyam, on a river mouth south of Calicut, in the land of the ruler of Tanur, an ally of Portugal. From there the Portuguese could watch the trade of Calicut, and the seat of their government moved from Cochin to Goa. The war between Portugal and Calicut went on, broken by truces, for the rest of the century.
+    facts:
+      - [Calicut fleet destroyed at Ponnani, "March 1525"]
+      - [Siege of the fort at Calicut, "June – September 1526, fort abandoned"]
+      - [Fort at Chaliyam built, "1531"]
+    markers:
+      - kind: naval
+        side: pt
+        name: Ponnani
+        date: March 1525
+        text: The Zamorin’s fleet was destroyed in the river mouth here.
+        lonlat: [75.92, 10.77]
+      - kind: siege
+        side: cal
+        name: Calicut fort
+        date: June – September 1526
+        text: The fortress built under the peace of 1513, besieged by the Zamorin and abandoned by its garrison.
+        lonlat: [75.77, 11.25]
+      - kind: held
+        side: pt
+        name: Chaliyam
+        date: "1531"
+        text: The new Portuguese fortress south of Calicut. The Zamorin starved it into surrender in 1571.
+        lonlat: [75.81, 11.16]
+        lp: l
+      - kind: event
+        side: pt
+        name: Tanur
+        date: 1531
+        text: Its ruler, an ally of the Portuguese since 1504, allowed the fort to be built in his land.
+        lonlat: [75.87, 10.97]
+      - kind: held
+        side: pt
+        name: Cochin
+        date: 1525–1531
+        text: The Portuguese base in Malabar until the viceroys moved to Goa in 1530.
+        lonlat: [76.24, 9.965]
+    arrows:
+      - side: cal
+        label: The Zamorin
+        via: [[75.9, 11.32], [75.82, 11.27], [75.78, 11.25]]

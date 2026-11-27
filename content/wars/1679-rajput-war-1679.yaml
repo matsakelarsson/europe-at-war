@@ -1,0 +1,191 @@
+id: rajput-war-1679
+name: Rajput war (1679–1707)
+start: "1679"
+end: "1707-03-12"
+tier: B
+summary: "The war between Aurangzeb and the Rajput kingdoms of Marwar and Mewar. When Maharaja Jaswant Singh of Marwar died at Jamrud in 1678 without a living heir, Aurangzeb took Jodhpur under direct rule and tried to bring Jaswant’s posthumous son, Ajit Singh, up at his court. The Rathor nobles under Durgadas Rathore smuggled the boy out of Delhi, and Rana Raj Singh of Mewar took up their cause. Mughal armies occupied both kingdoms in 1679–1680, and in 1681 Aurangzeb’s son Prince Akbar went over to the Rajputs and proclaimed himself emperor, but his army melted away and he fled to the Marathas. Mewar made peace in 1681; the Rathors fought on in a guerrilla war for a quarter of a century, until Ajit Singh retook Jodhpur days after Aurangzeb’s death in 1707."
+countries: [in]
+sides:
+  - id: mug
+    name: Mughal Empire
+    polities: [mughals]
+    ink: green
+    moves: Mughal moves
+    success: Mughal success
+  - id: rat
+    name: Rathors of Marwar
+    polities: [marwar]
+    ink: orange
+    moves: Rathor moves
+    success: Rathor success
+  - id: mew
+    name: Mewar
+    polities: [mewar]
+    ink: red
+    moves: Mewar’s moves
+    success: Success for Mewar
+  - id: akb
+    name: Prince Akbar
+    polities: [mughals]
+    ink: magenta
+    moves: Akbar’s moves
+    success: Success for Akbar
+notes:
+  - The war is also called the Rathore rebellion. Aurangzeb’s reimposition of the jizya, the poll tax on non-Muslims, in April 1679, and the destruction of temples in Jodhpur and Udaipur, made it in Rajput memory a war of faith as well as of succession; historians still debate how far religion or politics drove Aurangzeb’s policy.
+  - Dates follow the usual English-language accounts, which go back to Jadunath Sarkar and are partly in the Julian calendar.
+sources:
+  - title: Rajput War (1679–1707) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Rajput_War_(1679%E2%80%931707)
+  - title: Durgadas Rathore (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Durgadas_Rathore
+  - title: Ajit Singh of Marwar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ajit_Singh_of_Marwar
+  - title: Raj Singh I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Raj_Singh_I
+  - title: Muhammad Akbar (Mughal prince) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Muhammad_Akbar_(Mughal_prince)
+  - title: Aurangzeb (Britannica)
+    url: https://www.britannica.com/biography/Aurangzeb
+steps:
+  - title: Jodhpur under Mughal rule
+    date: November 1678 – 1679
+    when: "1679-07"
+    borders: "1679-07"
+    countries: [in]
+    body:
+      - Jaswant Singh, the Rathor king of Marwar and one of the great Rajput nobles of the empire, died on duty at Jamrud near the Khyber Pass in November 1678. He left no living son, and early in 1679 Aurangzeb placed Jodhpur under Mughal officers; temples in the city were pulled down. Two of Jaswant’s widows gave birth to sons at Lahore in February, one of whom, Ajit Singh, survived. In May the emperor gave the throne of Marwar to a great-nephew of Jaswant, Inder Singh of Nagaur, for a large payment, and in April he reimposed the jizya on all his non-Muslim subjects.
+      - Aurangzeb wanted Ajit Singh brought up in the imperial household. In July 1679 Jaswant’s widows and the infant were in Delhi, guarded by Mughal troops, when the Rathor captain Durgadas Rathore and his companions fought their way out of the city; most of the escort were killed in the streets, while the baby was carried away in disguise. Aurangzeb declared the child an impostor. In the autumn he moved to Ajmer and sent armies into Marwar, which occupied Jodhpur and the plains.
+    facts:
+      - [Death of Jaswant Singh, "November 1678, at Jamrud"]
+      - [Jizya reimposed, "April 1679"]
+      - [Escape of Ajit Singh from Delhi, "July 1679"]
+    markers:
+      - kind: taken
+        side: mug
+        name: Jodhpur
+        date: 1679
+        text: The capital of Marwar, put under Mughal officers after Jaswant Singh’s death and occupied by imperial troops.
+        lonlat: [73.019, 26.298]
+      - kind: event
+        side: rat
+        name: Delhi
+        date: July 1679
+        text: Durgadas and the Rathor guard broke out of the city with the infant Ajit Singh, who was hidden for years afterwards.
+        lonlat: [77.241, 28.656]
+      - kind: capital
+        side: mug
+        name: Ajmer
+        date: autumn 1679
+        text: Aurangzeb’s headquarters for the war in Rajasthan.
+        lonlat: [74.640, 26.450]
+    arrows:
+      - side: rat
+        label: Durgadas and Ajit Singh
+        phase: 1
+        via: [[77.241, 28.656], [76.000, 28.000], [74.700, 27.000], [73.300, 26.400]]
+      - side: mug
+        phase: 2
+        via: [[74.640, 26.450], [74.000, 26.400], [73.100, 26.300]]
+    areas:
+      - style: occupied
+        side: mug
+        label: Marwar under Mughal occupation, from 1679
+        atoms: [IN-RJ~marwar]
+  - title: Mewar and Prince Akbar
+    date: 1680–1681
+    when: "1681-01"
+    borders: "1681-01"
+    countries: [in]
+    body:
+      - Rana Raj Singh of Mewar sheltered the Rathors and refused the jizya. In January 1680 Aurangzeb invaded Mewar. The Rana abandoned Udaipur and Chittor and withdrew into the Aravalli hills, from where his forces cut Mughal supply lines; temples in Udaipur were destroyed, but the Mughal armies could not catch the Rajput forces in the hills. Raj Singh died in November 1680, and his son Jai Singh carried on the war.
+      - The emperor’s fourth son, Prince Akbar, commanding in Rajasthan, was persuaded by the Rajput leaders that his father’s policies were ruining the empire. On 1 January 1681 he proclaimed himself emperor and marched on Ajmer with the Rathor and Sisodia forces, while most of Aurangzeb’s troops were away. Aurangzeb had a letter written to Akbar praising him for luring the Rajputs into a trap and let it fall into their hands; the Rajputs, suspecting betrayal, left Akbar’s camp, and his own army dissolved. Durgadas, learning the truth too late, took Akbar south to the court of the Maratha king Sambhaji. In June 1681 Rana Jai Singh made peace, ceding three districts in lieu of the jizya, and the Mughal army left Mewar.
+    facts:
+      - [Mughal invasion of Mewar, "January 1680"]
+      - [Akbar proclaims himself emperor, "1 January 1681"]
+      - [Peace with Mewar, "June 1681"]
+    markers:
+      - kind: taken
+        side: mug
+        name: Udaipur
+        date: January 1680
+        text: The capital of Mewar, abandoned by the Rana and occupied by Mughal troops.
+        lonlat: [73.683, 24.576]
+      - kind: taken
+        side: mug
+        name: Chittor
+        date: 1680
+        text: The old fortress capital of Mewar, occupied by the Mughals.
+        lonlat: [74.646, 24.887]
+      - kind: held
+        side: mew
+        name: Kumbhalgarh
+        date: 1680
+        text: A fortress in the Aravalli hills, from where the Sisodia forces raided Mughal posts and convoys.
+        lonlat: [73.587, 25.153]
+        lp: l
+      - kind: event
+        side: akb
+        name: Nadol
+        date: 1 January 1681
+        text: Prince Akbar proclaimed himself emperor near here, with the support of the Rathor and Sisodia chiefs.
+        lonlat: [73.450, 25.370]
+        lp: l
+      - kind: event
+        side: mug
+        name: Ajmer
+        date: January 1681
+        text: Aurangzeb, with few troops at hand, broke up Akbar’s alliance with a forged letter before the armies met.
+        lonlat: [74.640, 26.450]
+    arrows:
+      - side: mug
+        label: Aurangzeb
+        phase: 1
+        via: [[74.640, 26.450], [74.300, 25.600], [73.900, 24.900], [73.720, 24.620]]
+      - side: akb
+        label: Akbar
+        phase: 2
+        via: [[73.450, 25.370], [73.900, 25.900], [74.500, 26.350]]
+      - side: akb
+        phase: 3
+        via: [[74.500, 26.300], [73.300, 25.000], [73.300, 22.500], [73.300, 19.500]]
+    areas:
+      - style: occupied
+        side: mug
+        label: Mughal occupation, 1680–1681
+        atoms: [IN-RJ~marwar, IN-RJ~mewar]
+  - title: The long Rathor war
+    date: 1681 – March 1707
+    when: "1707-03-12"
+    borders: "1707-03-12"
+    countries: [in]
+    body:
+      - In Marwar the war went on for another quarter-century. Ajit Singh was kept hidden in the hills, and the Rathor clans raided Mughal posts, collected revenue from villages and made the Mughal hold on the country little more than the towns and the roads. Durgadas returned from the Deccan in 1687 and led the resistance; in 1698 he handed back Prince Akbar’s two children, whom he had brought up as Muslims, and Aurangzeb gave him a rank at court, but the war soon flared again. Ajit Singh’s attempts on Jodhpur in 1701 and 1706 failed.
+      - Aurangzeb died in the Deccan on 3 March 1707. On 12 March Ajit Singh entered Jodhpur, drove out the Mughal garrison and took Sojat, Pali and Merta. The new emperor, Bahadur Shah I, marched on Rajasthan in 1708, but the Rathors, now allied with the rulers of Mewar and Amber, held out, and he soon had to recognise Ajit Singh as king of Marwar.
+    facts:
+      - [Durgadas returns from the Deccan, "1687"]
+      - [Ajit Singh enters Jodhpur, "12 March 1707"]
+    markers:
+      - kind: taken
+        side: rat
+        name: Jodhpur
+        date: 12 March 1707
+        text: Ajit Singh took his capital back nine days after Aurangzeb’s death.
+        lonlat: [73.019, 26.298]
+      - kind: taken
+        side: rat
+        name: Merta
+        date: 1707
+        text: Taken by the Rathors after Jodhpur, with Sojat and Pali.
+        lonlat: [74.033, 26.650]
+      - kind: taken
+        side: rat
+        name: Sojat
+        date: 1707
+        text: One of the Mughal posts in Marwar taken after Aurangzeb’s death.
+        lonlat: [73.667, 25.917]
+        lp: l
+    areas:
+      - style: contested
+        side: rat
+        label: Rathor guerrilla war against the Mughal garrisons, 1681–1707
+        atoms: [IN-RJ~marwar]

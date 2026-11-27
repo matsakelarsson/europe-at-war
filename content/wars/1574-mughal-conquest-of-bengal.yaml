@@ -1,0 +1,198 @@
+id: mughal-conquest-of-bengal
+name: Mughal conquest of Bengal
+start: "1574"
+end: "1612-03-12"
+tier: B
+summary: "The long conquest of Bihar and Bengal by the Mughal Empire. In 1574 Akbar took Patna from Daud Khan Karrani, the Afghan sultan of Bengal, and his generals pursued Daud into Odisha and defeated him at Tukaroi in March 1575. Daud broke the peace that followed, and at Rajmahal on 12 July 1576 he was defeated again, captured and executed, ending the Karrani dynasty and the Bengal Sultanate. The Mughals held western and northern Bengal, but the river country of the east, the Bhati, stayed in the hands of local lords known as the Baro-Bhuyans, led by Isa Khan of Sonargaon, who beat back Mughal fleets in 1584 and 1597. Only under Jahangir did the governor Islam Khan Chishti, with a large river fleet, subdue Isa Khan’s son Musa Khan in 1610–1611 and make Dhaka the capital of Mughal Bengal. The last Afghan chief, Khwaja Usman, was killed in Sylhet in 1612."
+countries: [bd, in]
+sides:
+  - id: mug
+    name: Mughal Empire
+    polities: [mughals]
+    ink: green
+    moves: Mughal moves
+    success: Mughal success
+  - id: ben
+    name: Karrani sultans of Bengal
+    polities: [bengal-sultanate]
+    ink: teal
+    moves: Karrani moves
+    success: Karrani success
+  - id: bhu
+    name: Baro-Bhuyans and Afghan chiefs
+    polities: [baro-bhuyans]
+    ink: orange
+    moves: Moves of the Bhuyans
+    success: Success of the Bhuyans
+notes:
+  - Dates before 1582 are in the Julian calendar, as the sources give them.
+  - Much of the later story comes from the Baharistan-i-Ghaibi of Mirza Nathan, a Mughal officer who fought under Islam Khan. Sources differ on details and dates of the fighting in the Bhati; the dates of Musa Khan’s submission range from 1610 to 1611.
+  - “Baro-Bhuyan” (Bengali for “twelve landlords”) is a traditional name; the number of these chiefs, Muslim and Hindu, varied.
+sources:
+  - title: Battle of Tukaroi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tukaroi
+  - title: Battle of Rajmahal (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Rajmahal
+  - title: Isa Khan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Isa_Khan
+  - title: Isa Khan (Banglapedia)
+    url: https://en.banglapedia.org/index.php/Isa_Khan
+  - title: Musa Khan (Banglapedia)
+    url: https://en.banglapedia.org/index.php/Musa_Khan
+  - title: Khwaja Usman (Banglapedia)
+    url: https://en.banglapedia.org/index.php/Khwaja_Usman
+  - title: Islam Khan I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Islam_Khan_I
+  - title: Battle of Tukaroi (Britannica)
+    url: https://www.britannica.com/event/Battle-of-Tukaroi
+steps:
+  - title: Patna, Tukaroi and Rajmahal
+    date: 1574–1576
+    when: "1574-08"
+    borders: "1574-08"
+    countries: [in, bd]
+    body:
+      - "The Karrani dynasty, Afghans who had served Sher Shah, ruled Bengal and Bihar from Tanda near Gaur, and under Sulaiman Khan Karrani had also conquered Odisha. Sulaiman had been careful to acknowledge Akbar as overlord, but his son Daud Khan, who succeeded in 1572, had the Friday prayer read in his own name and seized a Mughal frontier fort. In 1574 Akbar came down the Ganges in person, took Hajipur and then Patna in August, and sent his general Munim Khan, with Raja Todar Mal, after Daud, who fled to Bengal. The Mughals entered Tanda in September and followed Daud into Odisha."
+      - "On 3 March 1575 the armies met at Tukaroi, between Midnapore and Jaleswar. Daud’s general Gujar Khan was killed and the Afghans were defeated. By the treaty that followed at Katak (Cuttack), Daud gave up Bengal and Bihar and kept Odisha as a Mughal vassal. But in October 1575 an epidemic at Gaur, where Munim Khan had moved his headquarters, killed him and many of his officers, and Daud came back and retook much of Bengal."
+      - "Akbar sent a new army under Khan Jahan Husain Quli Beg. On 12 July 1576, near Rajmahal, where the Ganges turns south into Bengal, Daud was defeated, captured and beheaded. The Bengal Sultanate, which had lasted more than two centuries, came to an end, and Bengal became a Mughal province, though Afghan chiefs and, in 1580–82, rebellious Mughal officers kept it unsettled for years."
+    facts:
+      - [Patna taken by Akbar, "August 1574"]
+      - [Battle of Tukaroi, "3 March 1575, Mughal victory"]
+      - [Battle of Rajmahal, "12 July 1576, Mughal victory; Daud Khan Karrani executed"]
+    markers:
+      - kind: taken
+        side: mug
+        name: Patna
+        date: August 1574
+        text: Taken after Akbar captured Hajipur across the Ganges, which had supplied the town. Daud escaped by night.
+        lonlat: [85.14, 25.61]
+      - kind: event
+        side: mug
+        name: Gaur
+        date: 1574–1575
+        text: The old capital beside Tanda. Munim Khan made it his headquarters and died here in an epidemic in October 1575.
+        lonlat: [88.13, 24.87]
+      - kind: battle
+        side: mug
+        name: Battle of Tukaroi
+        date: 3 March 1575
+        text: Munim Khan and Todar Mal defeated Daud’s army. Daud fled to Cuttack and made peace.
+        lonlat: [87.284, 21.973]
+      - kind: treaty
+        name: Katak (Cuttack)
+        date: April 1575
+        text: Daud kept Odisha as a Mughal vassal and gave up Bengal and Bihar. The peace lasted only a few months.
+        lonlat: [85.88, 20.46]
+      - kind: battle
+        side: mug
+        name: Battle of Rajmahal
+        date: 12 July 1576
+        text: Daud Khan Karrani was defeated, captured and put to death, ending the Bengal Sultanate.
+        lonlat: [87.84, 25.05]
+        lp: l
+    arrows:
+      - side: mug
+        label: Munim Khan
+        phase: 1
+        via: [[85.14, 25.61], [86.47, 25.37], [87.6, 25.1], [88.08, 24.9]]
+      - side: mug
+        phase: 2
+        via: [[88.08, 24.85], [87.8, 23.6], [87.32, 22.42], [87.29, 22.02]]
+      - side: ben
+        label: Daud Khan
+        phase: 3
+        via: [[87.24, 21.92], [86.9, 21.5], [85.95, 20.52]]
+  - title: Isa Khan and the Bhati
+    date: 1576–1599
+    when: "1584"
+    borders: "1584"
+    countries: [bd]
+    body:
+      - "Beyond the great rivers in the east of Bengal lay the Bhati, the lowlands of the Meghna and the old Brahmaputra, a country of channels and islands where war was fought from boats. Its lords, the Baro-Bhuyans, were Muslim and Hindu landholders with their own forts and river fleets. Their leader was Isa Khan, whose family held Sarail and who made his seat at Sonargaon and Katrabo near today’s Dhaka. He gave refuge to Afghan chiefs and to Mughal officers who had rebelled against Akbar, such as Masum Khan Kabuli."
+      - "In 1584 Akbar’s governor Shahbaz Khan attacked Sonargaon and Katrabo, but Isa Khan and Masum Khan beat him on land and water near Egarasindur and Bhawal, and he fell back to Tanda. Isa Khan offered a nominal submission in 1586. Raja Man Singh of Amber, governor from 1594, founded a new capital at Rajmahal and in 1597 sent a fleet and an army under his son Durjan Singh against Katrabo. In September 1597, about twelve miles from Bikrampur, Isa Khan’s boats surrounded the Mughal fleet, and Durjan Singh was killed. Isa Khan died in September 1599, still undefeated, and his son Musa Khan succeeded him."
+    facts:
+      - [Shahbaz Khan driven back, "1584"]
+      - [Durjan Singh killed, "September 1597"]
+      - [Death of Isa Khan, "September 1599"]
+    markers:
+      - kind: capital
+        side: bhu
+        name: Sonargaon
+        date: 1576–1611
+        text: The old capital of eastern Bengal, seat of Isa Khan and then of Musa Khan.
+        lonlat: [90.615, 23.656]
+      - kind: battle
+        side: bhu
+        name: Egarasindur
+        date: 1584
+        text: Isa Khan and Masum Khan Kabuli defeated Shahbaz Khan’s army and fleet in fighting around this river fort.
+        lonlat: [90.73, 24.29]
+      - kind: battle
+        side: bhu
+        name: Katrabo
+        date: September 1597
+        text: The Mughal fleet sent against Isa Khan’s fort was surrounded and Durjan Singh, son of Man Singh, was killed.
+        lonlat: [90.53, 23.77]
+        lp: l
+      - kind: capital
+        side: mug
+        name: Rajmahal
+        date: from 1595
+        text: Founded by Man Singh as the capital of Mughal Bengal and named Akbarnagar.
+        lonlat: [87.84, 25.05]
+    arrows:
+      - side: mug
+        label: Shahbaz Khan
+        via: [[88.08, 24.88], [89.3, 24.45], [90.2, 24.15], [90.55, 23.8]]
+    areas:
+      - style: contested
+        side: bhu
+        label: The Bhati, held by the Baro-Bhuyans
+        atoms: [BD-C, BD-B]
+  - title: Islam Khan and Dhaka
+    date: 1608–1612
+    when: "1608-06"
+    borders: "1612-03-12"
+    countries: [bd, in]
+    body:
+      - "In 1608 Jahangir made Islam Khan Chishti governor of Bengal. He set out from Rajmahal at the end of the rains with an army and a large fleet of war boats, and won over or defeated the western zamindars before moving into the Bhati. In mid-1610 his troops took Musa Khan’s forts at Jatrapur and Dakchara on the rivers west of Dhaka, and he made Dhaka the capital of the province, renaming it Jahangirnagar. Over the next year his commanders, among them Mirza Nathan, took Katrabo by a night attack and forced Musa Khan out of Sonargaon, which was handed over in April 1611. Musa Khan and his allies submitted and were held at Dhaka; he later served the Mughals."
+      - "The Afghan chief Khwaja Usman, who had held out at Bokainagar in Mymensingh, withdrew east to Sylhet. On 12 March 1612 a Mughal army under Shuja’at Khan met him at Daulambapur, south of today’s Moulvibazar; Usman was mortally wounded, and his followers surrendered. Sylhet, Jessore and the coastal kingdoms were brought under Mughal rule, and Bengal was at last a settled province of the empire. Islam Khan died in 1613."
+    facts:
+      - [Islam Khan appointed governor, "1608"]
+      - [Dhaka made the capital, "1610"]
+      - [Sonargaon handed over, "April 1611"]
+      - [Battle of Daulambapur, "12 March 1612, Mughal victory"]
+    markers:
+      - kind: capital
+        side: mug
+        name: Dhaka
+        date: from 1610
+        text: Made the capital of Mughal Bengal by Islam Khan and renamed Jahangirnagar after the emperor.
+        lonlat: [90.4, 23.71]
+        lp: l
+      - kind: taken
+        side: mug
+        name: Sonargaon
+        date: April 1611
+        text: Musa Khan’s capital, handed over after his defeats on the rivers around it.
+        lonlat: [90.615, 23.656]
+      - kind: battle
+        side: mug
+        name: Daulambapur
+        date: 12 March 1612
+        text: The last battle against the Afghan chiefs of Bengal. Khwaja Usman was mortally wounded.
+        lonlat: [91.74, 24.42]
+    arrows:
+      - side: mug
+        label: Islam Khan
+        phase: 1
+        via: [[87.84, 25.05], [88.9, 24.7], [89.8, 24.1], [90.35, 23.75]]
+      - side: mug
+        label: Shuja’at Khan
+        phase: 2
+        via: [[90.45, 23.75], [91.0, 24.1], [91.68, 24.4]]
+    areas:
+      - style: gained
+        side: mug
+        label: Brought under Mughal rule, 1610–1612
+        atoms: [BD-C, BD-B, BD-G]

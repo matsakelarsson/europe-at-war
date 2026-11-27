@@ -1,0 +1,128 @@
+id: anglo-mughal-war
+name: Child’s War (Anglo-Mughal war)
+start: "1686-10"
+end: "1690-06"
+tier: B
+summary: "The English East India Company’s first war against an Indian power, named after Sir Josiah Child, the Company’s head in London, who decided to win better trading terms and a fortified base in Bengal by force. In 1686 Company troops fought the Mughal governor’s men at Hooghly, and Job Charnock withdrew the Company’s Bengal staff down the river to the island of Hijli, where they were besieged and decimated by disease. In 1688–1689 English ships seized Mughal merchant and pilgrim ships off the western coast; Aurangzeb ordered the Company’s factories across India seized, and his admiral, the Siddi of Janjira, besieged Bombay for more than a year. In 1690 the Company sued for peace, paid a fine of 150,000 rupees and was allowed to trade again. Charnock returned to Bengal and in August 1690 set up the settlement at Sutanuti that grew into Calcutta."
+countries: [in, bd]
+sides:
+  - id: eic
+    name: English East India Company
+    polities: [british-india]
+    ink: red
+    moves: Company moves
+    success: Company success
+  - id: mug
+    name: Mughal Empire and the Siddis of Janjira
+    polities: [mughals]
+    ink: green
+    moves: Mughal moves
+    success: Mughal success
+notes:
+  - The war was fought by the Company with a small force of ships and some hundreds of soldiers, authorised by King James II; to the Mughals it was a rebellion by foreign merchants, not a war between states.
+  - Job Charnock is traditionally called the founder of Calcutta, and 24 August 1690 its founding date; in 2003 the Calcutta High Court ruled that the city had no single founder or founding date, as villages and markets had existed there long before.
+sources:
+  - title: Child’s War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Child%27s_War
+  - title: Job Charnock (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Job_Charnock
+  - title: Josiah Child (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Josiah_Child
+  - title: Job Charnock (Britannica)
+    url: https://www.britannica.com/biography/Job-Charnock
+  - title: Job Charnock (Banglapedia)
+    url: https://en.banglapedia.org/index.php/Charnock,_Job
+steps:
+  - title: Hooghly and Hijli
+    date: October 1686 – January 1689
+    when: "1686-10"
+    borders: "1687-05"
+    countries: [in, bd]
+    body:
+      - The Company’s merchants in Bengal complained that Mughal officials ignored their old privileges and demanded duties and presents at every turn. Josiah Child, who dominated the Company in London, persuaded it to send a fleet with about 600 soldiers under Vice-Admiral Nicholson to seize and fortify Chittagong. Only part of it reached the Hooghly. In October 1686 a brawl between three English soldiers and the governor’s men in the market at Hooghly turned into a battle; Company troops drove off the Mughal force and bombarded the town. The governor of Bengal, Shaista Khan, gathered an army, and Job Charnock, chief of the Company’s Bengal factories, withdrew downriver, first to Sutanuti and in February 1687 to the island of Hijli at the mouth of the river.
+      - On Hijli the English were besieged by a Mughal army, and fever and dysentery killed about half of them within three months. In June 1687 a truce let Charnock return upriver, but the Company sent out Captain William Heath with new ships. Rejecting the terms on offer, Heath took the Company’s staff off in November 1688, attacked Balasore and sailed to Chittagong, which he found too strong to attack, and on to Madras. For the moment the English had left Bengal.
+    facts:
+      - [Fighting at Hooghly, "October 1686"]
+      - [Siege of Hijli, "spring 1687"]
+      - [English leave Bengal, "November 1688"]
+    markers:
+      - kind: battle
+        side: eic
+        name: Hooghly
+        date: October 1686
+        text: A market brawl turned into a battle; Company troops beat off the governor’s men and the ships bombarded the town.
+        lonlat: [88.390, 22.910]
+      - kind: event
+        side: eic
+        name: Sutanuti
+        date: December 1686
+        text: Charnock’s first stop downriver, a village of weavers where he would return in 1690.
+        lonlat: [88.355, 22.595]
+        lp: l
+      - kind: siege
+        side: mug
+        name: Hijli
+        date: spring 1687
+        text: The English garrison on the island was besieged by the Mughal army and lost about half its men to disease.
+        lonlat: [87.961, 21.866]
+        lp: l
+      - kind: event
+        side: eic
+        name: Balasore
+        date: November 1688
+        text: Heath’s men attacked the town and the Mughal fort before sailing away.
+        lonlat: [86.930, 21.490]
+        lp: l
+      - kind: capital
+        side: mug
+        name: Dhaka
+        date: 1686–1688
+        text: Seat of Shaista Khan, governor of Bengal, who directed the war against the Company.
+        lonlat: [90.410, 23.720]
+    arrows:
+      - side: eic
+        label: Charnock
+        via: [[88.390, 22.910], [88.355, 22.595], [88.150, 22.200], [87.975, 21.890]]
+  - title: The siege of Bombay
+    date: 1688–1690
+    when: "1689-02-15"
+    borders: "1689-02-15"
+    countries: [in]
+    body:
+      - On the western coast Sir John Child, the Company’s governor at Bombay, seized Mughal ships, including vessels carrying pilgrims to Mecca. Aurangzeb, then besieging the Maratha forts, ordered the Company’s factories across the empire seized and its servants arrested; at Surat the English merchants were imprisoned. In February 1689 his admiral, Siddi Yaqub Khan of Janjira, landed on Bombay island with some 14,000 men. He took the outer forts at Sewri and Mazagaon and confined the English to Bombay Castle and the town around it for more than a year. Famine and disease, and the fighting, cost the garrison very heavily.
+      - The Company had to give in. Its envoys went to the imperial camp and, according to the Mughal account, prostrated themselves before Aurangzeb. A farman of February 1690 pardoned the Company on condition that it pay 150,000 rupees, return what it had taken and send Child, who had died that month, out of India. The Siddi left Bombay in June 1690. The emperor needed the trade and the customs revenue, and the Company’s privileges were restored; on 24 August 1690 Charnock landed again at Sutanuti and founded the settlement that became Calcutta.
+    facts:
+      - [Siddi Yaqub lands on Bombay island, "February 1689"]
+      - [Peace farman, "February 1690; fine of 150,000 rupees"]
+      - [Siege of Bombay lifted, "June 1690"]
+      - [Charnock at Sutanuti, "24 August 1690"]
+    markers:
+      - kind: siege
+        side: mug
+        name: Bombay
+        date: February 1689 – June 1690
+        text: The Siddi’s troops held most of the island and besieged the Company in Bombay Castle for over a year.
+        lonlat: [72.842, 18.932]
+        lp: l
+      - kind: taken
+        side: mug
+        name: Mazagaon
+        date: February 1689
+        text: The Siddis took the fort and used it as their base on the island.
+        lonlat: [72.845, 18.966]
+      - kind: held
+        side: mug
+        name: Janjira
+        date: 1689
+        text: The island fortress of the Siddis, African-descended admirals of the Mughal fleet on the western coast.
+        lonlat: [72.964, 18.300]
+      - kind: event
+        side: mug
+        name: Surat
+        date: 1689
+        text: The Company’s chief factory in western India; its merchants were imprisoned on the emperor’s orders.
+        lonlat: [72.831, 21.195]
+    arrows:
+      - side: mug
+        label: Siddi Yaqub
+        via: [[72.964, 18.300], [72.900, 18.600], [72.870, 18.900], [72.860, 19.000]]

@@ -1,0 +1,277 @@
+id: indo-pakistani-war-of-1965
+name: Indo-Pakistani War of 1965
+start: "1965-08-05"
+end: "1965-09-23"
+tier: A
+summary: "The second war between India and Pakistan over Kashmir, also called the Second Kashmir War. After clashes in the Rann of Kutch in the spring, Pakistan sent several thousand irregulars across the ceasefire line in August 1965 (Operation Gibraltar) in the hope of a rising in Indian-held Kashmir, which did not come. India crossed the line and took the Haji Pir pass, and Pakistan attacked in the Chhamb sector towards Akhnoor. On 6 September India opened a front across the international border towards Lahore and then Sialkot, and great tank battles were fought at Asal Uttar and Chawinda. A UN-demanded ceasefire took effect on 23 September with neither side decisively ahead, and in the Tashkent Declaration of January 1966 both agreed to return to their pre-war positions. Each country still marks the war as a success."
+countries: [in, pk]
+sides:
+  - id: in
+    name: India
+    polities: [india]
+    ink: orange
+    moves: Indian moves
+    success: Indian success
+  - id: pk
+    name: Pakistan
+    polities: [pakistan]
+    ink: green
+    moves: Pakistani moves
+    success: Pakistani success
+notes:
+  - Claims of losses, especially of tanks and aircraft, differ widely between Indian and Pakistani sources. Figures given here are the independent estimates cited by the sources, or are marked as one side’s claim.
+  - India commemorates the war as a victory in which it stopped Pakistan’s attempts to take Kashmir; Pakistan marks 6 September as Defence Day for the defence of Lahore. Most neutral accounts call the result a stalemate.
+sources:
+  - title: Indo-Pakistani war of 1965 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Indo-Pakistani_war_of_1965
+  - title: 1965 India-Pakistan War (Britannica)
+    url: https://www.britannica.com/event/1965-India-Pakistan-War
+  - title: Operation Gibraltar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Gibraltar
+  - title: Operation Grand Slam (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Grand_Slam
+  - title: Battle of Asal Uttar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Asal_Uttar
+  - title: Battle of Chawinda (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Chawinda
+  - title: Operation Desert Hawk (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Desert_Hawk
+  - title: Tashkent Declaration (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tashkent_Declaration
+  - title: The India-Pakistan War of 1965 (US Office of the Historian)
+    url: https://history.state.gov/milestones/1961-1968/india-pakistan-war
+steps:
+  - title: The Rann of Kutch
+    date: April – June 1965
+    when: "1965-04-09"
+    borders: "1965-04-26"
+    countries: [in, pk]
+    body:
+      - The Rann of Kutch is a salt marsh between Sindh and Gujarat, flooded in the monsoon and dry for the rest of the year. Its northern border had never been marked, and Pakistan claimed roughly the northern half. From early 1965 both sides set up posts there, and in April the clashes grew into fighting between brigades. Indian police beat off a Pakistani attack on Sardar Post on 9 April, but later in the month Pakistani forces with American-supplied Patton tanks took Biar Bet and other Indian posts. The British prime minister, Harold Wilson, arranged a ceasefire and an agreement of 30 June to refer the border to an international tribunal, which in 1968 gave Pakistan about a tenth of the area it claimed.
+      - In Kashmir tension had been rising since the theft of a revered relic from the Hazratbal shrine in Srinagar in December 1963, and India was tying Indian-held Kashmir more closely to the union; Sheikh Abdullah was arrested again in May 1965. Pakistan’s foreign minister, Zulfikar Ali Bhutto, and part of its army leadership believed that India had been weakened by its defeat by China, that Kashmiris would rise if given a lead, and that time was against Pakistan as India rearmed.
+    facts:
+      - [Fighting in the Rann of Kutch, "April 1965"]
+      - [Kutch agreement, "30 June 1965"]
+      - [Tribunal award, "February 1968"]
+    markers:
+      - kind: battle
+        side: pk
+        name: Rann of Kutch
+        date: April 1965
+        text: Pakistani forces took Indian posts in the north of the Rann. Both sides withdrew under the June agreement.
+        lonlat: [69.900, 24.050]
+  - title: Operation Gibraltar
+    date: August 1965
+    when: "1965-08-05"
+    borders: "1965-08-28"
+    countries: [in, pk]
+    body:
+      - From 5 August 1965 groups of armed men, mostly Azad Kashmir irregulars and volunteers led by Pakistani officers, crossed the ceasefire line at many points to raid, sabotage and start a rising in Indian-held Kashmir. Most accounts put them at seven to eight thousand. Some reached the outskirts of Srinagar, but the population did not rise, many villagers reported them, and most were killed, captured or driven back within weeks.
+      - India answered by crossing the ceasefire line to close the infiltration routes. It took heights near Kargil overlooking the Srinagar–Leh road on 15 August and posts near Tithwal, and on 28 August Indian paratroops captured the Haji Pir pass, cutting the main route between Azad Kashmir’s Poonch and Uri sectors.
+    facts:
+      - [Infiltration begins, "5 August 1965"]
+      - [Infiltrators, "7,000–8,000 by most accounts"]
+      - [Haji Pir pass taken, "28 August 1965"]
+    markers:
+      - kind: taken
+        side: in
+        name: Haji Pir pass
+        date: 28 August 1965
+        text: Taken by the 1st Battalion of the Parachute Regiment after a night climb. India returned it under the Tashkent Declaration.
+        lonlat: [74.070, 33.985]
+        lp: l
+      - kind: event
+        side: in
+        name: Srinagar
+        date: August 1965
+        text: Infiltrators reached the edges of the city but found little support.
+        lonlat: [74.797, 34.084]
+      - kind: taken
+        side: in
+        name: Kargil
+        date: 15 August 1965
+        text: Indian troops took Pakistani positions on the heights across the ceasefire line above the town.
+        lonlat: [76.131, 34.557]
+      - kind: taken
+        side: in
+        name: Tithwal
+        date: August 1965
+        text: Indian troops seized posts across the ceasefire line in the Kishanganga valley.
+        lonlat: [73.773, 34.394]
+        lp: l
+    arrows:
+      - side: pk
+        label: Infiltrators
+        phase: 1
+        via: [[73.470, 34.370], [73.900, 34.200], [74.380, 34.060]]
+      - side: pk
+        phase: 1
+        via: [[73.900, 33.520], [74.150, 33.450], [74.300, 33.390]]
+      - side: in
+        phase: 2
+        via: [[74.040, 34.085], [74.060, 34.040], [74.070, 33.995]]
+      - side: in
+        phase: 2
+        via: [[74.096, 33.770], [74.090, 33.880], [74.075, 33.975]]
+  - title: Grand Slam
+    date: 1–6 September 1965
+    when: "1965-09-01"
+    borders: "1965-09-05"
+    countries: [in, pk]
+    body:
+      - At five in the morning of 1 September 1965 Pakistani armour and infantry attacked across the ceasefire line and the border in the Chhamb sector, south-west of Jammu. Their aim was the bridge at Akhnoor on the Chenab, which carried the only road from Jammu to the Indian forces in Poonch and Rajouri. The outnumbered Indian brigade fell back, and India sent in its air force for the first time, losing several old Vampire jets to Pakistani Sabres.
+      - On 2 September command of the Pakistani attack passed from Major-General Akhtar Hussain Malik to Major-General Yahya Khan, a pause that gave India time to bring up reinforcements. Pakistani troops took Chhamb and pushed on to Jaurian, some 15 km from Akhnoor, but did not reach it. On 6 September India opened a new front in the Punjab, and Pakistan had to send its reserves south.
+    facts:
+      - [Operation Grand Slam, "1–6 September 1965"]
+      - [Ground taken by Pakistan, "about 490 km² in the Chhamb sector"]
+    markers:
+      - kind: taken
+        side: pk
+        name: Chhamb
+        date: 1–2 September 1965
+        text: The Indian positions on the Munawar Tawi were overrun by Pakistani tanks on the first days.
+        lonlat: [74.400, 32.900]
+        lp: l
+      - kind: taken
+        side: pk
+        name: Jaurian
+        date: 5 September 1965
+        text: The furthest Pakistani advance towards Akhnoor.
+        lonlat: [74.575, 32.833]
+        lp: b
+      - kind: held
+        side: in
+        name: Akhnoor
+        date: September 1965
+        text: The Chenab bridge on the road from Jammu to Poonch, the objective of the attack.
+        lonlat: [74.738, 32.892]
+    arrows:
+      - side: pk
+        label: Grand Slam
+        via: [[74.250, 32.800], [74.400, 32.880], [74.575, 32.845], [74.690, 32.880]]
+  - title: Lahore and Khem Karan
+    date: 6–11 September 1965
+    when: "1965-09-06"
+    borders: "1965-09-10"
+    countries: [in, pk]
+    body:
+      - On 6 September India’s XI Corps crossed the international border towards Lahore on three axes, from Amritsar along the Grand Trunk Road, through Khalra towards Burki, and from Khem Karan towards Kasur. Its divisions reached the Ichhogil canal, a wide irrigation channel that formed Lahore’s outer defence, and fought at Dograi, Burki and the bridges, but did not cross in force. The same evening the Pakistani air force struck Indian air bases at Pathankot, Adampur and Halwara, and the Indian air force attacked Sargodha the next day. Pakistan marks 6 September as Defence Day.
+      - On 8 September Pakistan’s 1st Armoured Division, equipped with American Patton tanks, attacked from Kasur through Khem Karan towards the Beas bridges, to cut off the Indian forces before Lahore. Near the village of Asal Uttar the Indian 4th Mountain Division and an armoured brigade waited in sugar-cane fields flooded by breaching the irrigation channels. Over three days the Pakistani tanks were caught in the mud and destroyed or abandoned; Indian accounts count about 97 destroyed or captured. Khem Karan stayed in Pakistani hands until the end of the war.
+      - On the night of 7 September the Pakistani navy shelled the Indian coastal town of Dwarka in Gujarat.
+    facts:
+      - [Indian attack towards Lahore, "6 September 1965"]
+      - [Battle of Asal Uttar, "8–10 September 1965, Indian victory"]
+      - [Pakistani tanks lost at Asal Uttar (Indian figure), "about 97"]
+      - [Bombardment of Dwarka, "7–8 September 1965"]
+    markers:
+      - kind: held
+        side: pk
+        name: Lahore
+        date: September 1965
+        text: The capital of Pakistani Punjab, 25 km from the border. Indian troops reached the canal east of the city.
+        lonlat: [74.343, 31.549]
+        lp: l
+      - kind: battle
+        side: in
+        name: Burki
+        date: 10 September 1965
+        text: The village and its fortified police post on the canal approach to Lahore were taken by Indian troops.
+        lonlat: [74.530, 31.480]
+        lp: b
+      - kind: battle
+        side: in
+        name: Asal Uttar
+        date: 8–10 September 1965
+        text: The Pakistani armoured thrust towards the Beas was stopped here in one of the largest tank battles of the war.
+        lonlat: [74.590, 31.170]
+      - kind: air
+        side: pk
+        name: Pathankot
+        date: 6 September 1965
+        text: Pakistani Sabres destroyed a number of Indian aircraft on the ground at the airfield.
+        lonlat: [75.634, 32.234]
+      - kind: air
+        side: in
+        name: Sargodha
+        date: 7 September 1965
+        text: The main Pakistani air base, attacked repeatedly by the Indian air force.
+        lonlat: [72.672, 32.083]
+    arrows:
+      - side: in
+        phase: 1
+        via: [[74.872, 31.634], [74.573, 31.604], [74.455, 31.565]]
+      - side: in
+        phase: 1
+        via: [[74.680, 31.400], [74.590, 31.450], [74.535, 31.478]]
+      - side: pk
+        label: 1st Armoured Division
+        phase: 2
+        via: [[74.450, 31.115], [74.556, 31.145], [74.590, 31.168]]
+  - title: Sialkot and Chawinda
+    date: 8–22 September 1965
+    when: "1965-09-14"
+    borders: "1965-09-19"
+    countries: [in, pk]
+    body:
+      - On the night of 7–8 September India’s I Corps, with its 1st Armoured Division, attacked from Jammu into the Sialkot sector, aiming at the Grand Trunk Road behind Sialkot. Pakistan’s 6th Armoured Division and infantry met it in a series of tank battles. India won at Phillora on 11 September, and the Pakistani forces fell back to the railway town of Chawinda.
+      - From 14 to 19 September hundreds of tanks fought around Chawinda, in what has often been called the largest tank battle since the Second World War. The Indian attacks were held, with heavy losses on both sides; neutral estimates put tank losses at about 100 Indian and 60 Pakistani. Further south, Indian troops took Dograi on the Ichhogil canal in hand-to-hand fighting on 21–22 September. In the Rajasthan desert Pakistan took Munabao, and India occupied ground in Sindh.
+    facts:
+      - [Battle of Phillora, "11 September 1965, Indian victory"]
+      - [Battle of Chawinda, "14–19 September 1965, Pakistani victory"]
+      - [Dograi taken, "21–22 September 1965"]
+    markers:
+      - kind: held
+        side: pk
+        name: Sialkot
+        date: September 1965
+        text: The city stayed in Pakistani hands; the Indian offensive was aimed at the country east of it.
+        lonlat: [74.531, 32.494]
+        lp: l
+      - kind: battle
+        side: pk
+        name: Chawinda
+        date: 14–19 September 1965
+        text: The Indian armoured offensive was stopped in front of the town and its railway station.
+        lonlat: [74.725, 32.384]
+      - kind: taken
+        side: in
+        name: Dograi
+        date: 21–22 September 1965
+        text: Taken by the 3rd Jat Regiment in a night attack, the last major action of the war.
+        lonlat: [74.450, 31.560]
+    arrows:
+      - side: in
+        label: I Corps
+        via: [[75.000, 32.600], [74.850, 32.480], [74.760, 32.400]]
+  - title: Ceasefire and Tashkent
+    date: September 1965 – February 1966
+    when: "1965-09-23"
+    borders: "1965-09-23"
+    countries: [in, pk]
+    body:
+      - On 20 September the UN Security Council demanded a ceasefire within two days. India accepted at once; Pakistan, running short of ammunition under an American embargo on arms to both countries, accepted too, and the fighting stopped on 23 September. UN observers watched the lines. Independent estimates put the dead at about 3,000 Indian and 3,800 Pakistani soldiers. At the ceasefire India held about 1,840 km² of Pakistani territory, mainly in the Sialkot and Lahore sectors and around Haji Pir, and Pakistan about 540 km² of Indian territory, mainly at Chhamb, Khem Karan and in the desert.
+      - The Soviet premier, Alexei Kosygin, brought the Indian prime minister, Lal Bahadur Shastri, and President Ayub Khan together at Tashkent. In the Tashkent Declaration of 10 January 1966 both agreed to withdraw to the positions of 5 August 1965 and to settle disputes peacefully. Shastri died of a heart attack in Tashkent the next night. The withdrawals were completed by 25 February. In Pakistan the return of the gains, Haji Pir among them on the Indian side, was unpopular; Bhutto left the government and began the opposition that brought down Ayub Khan in 1969.
+    facts:
+      - [UN Security Council Resolution 211, "20 September 1965"]
+      - [Ceasefire, "23 September 1965"]
+      - [Soldiers killed (independent estimates), "about 3,000 Indian and 3,800 Pakistani"]
+      - [Tashkent Declaration, "10 January 1966"]
+    markers:
+      - kind: event
+        side: in
+        name: Haji Pir pass
+        date: February 1966
+        text: Returned to Pakistan under the Tashkent Declaration.
+        lonlat: [74.070, 33.985]
+      - kind: event
+        side: pk
+        name: Chhamb
+        date: February 1966
+        text: Returned to India under the Tashkent Declaration.
+        lonlat: [74.400, 32.900]
+      - kind: event
+        side: pk
+        name: Khem Karan
+        date: February 1966
+        text: The Indian border town held by Pakistan since 8 September, returned under the Tashkent Declaration.
+        lonlat: [74.557, 31.145]

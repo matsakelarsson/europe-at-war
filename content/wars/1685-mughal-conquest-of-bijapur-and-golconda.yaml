@@ -1,0 +1,128 @@
+id: mughal-conquest-of-bijapur-and-golconda
+name: Mughal conquest of Bijapur and Golconda
+start: "1685-04-01"
+end: "1687-09-21"
+tier: B
+summary: "Aurangzeb’s conquest of the last two Deccan sultanates, the Adil Shahi kingdom of Bijapur and the Qutb Shahi kingdom of Golconda, which had paid tribute to the Mughals for decades but kept their independence and were accused of helping the Marathas. A Mughal army besieged Bijapur from April 1685; Aurangzeb took command himself in July 1686, and the starving city surrendered on 12 September. His son Shah Alam had already occupied Hyderabad in 1685, and in January 1687 the emperor laid siege to the fortress of Golconda, which held out for eight months against mines, famine and plague until one of its officers opened a gate on the night of 21 September 1687. Both kingdoms were annexed, bringing the Mughal empire to its greatest extent and leaving the Marathas as Aurangzeb’s only enemy in the Deccan."
+countries: [in]
+sides:
+  - id: mug
+    name: Mughal Empire
+    polities: [mughals]
+    ink: green
+    moves: Mughal moves
+    success: Mughal success
+  - id: bij
+    name: Bijapur Sultanate
+    polities: [bijapur]
+    ink: teal
+    moves: Bijapuri moves
+    success: Bijapuri success
+  - id: gol
+    name: Golconda Sultanate
+    polities: [golconda]
+    ink: purple
+    moves: Golconda’s moves
+    success: Success for Golconda
+notes:
+  - Both sultanates were Shia states, which Aurangzeb’s court used as an argument for the war; the payment of subsidies to the Marathas and the alliance of Golconda with Shivaji in 1677 weighed at least as much. Dates follow the usual English-language accounts, partly in the Julian calendar.
+sources:
+  - title: Siege of Bijapur (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Bijapur
+  - title: Siege of Golconda (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Golconda
+  - title: Sikandar Adil Shah (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sikandar_Adil_Shah
+  - title: Abul Hasan Qutb Shah (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Abul_Hasan_Qutb_Shah
+  - title: Golconda (Britannica)
+    url: https://www.britannica.com/place/Golconda
+  - title: Bijapur (Britannica)
+    url: https://www.britannica.com/place/Vijayapura
+steps:
+  - title: The fall of Bijapur
+    date: April 1685 – September 1686
+    when: "1686-09-12"
+    borders: "1686-09-12"
+    countries: [in]
+    body:
+      - Bijapur, once the strongest kingdom of the Deccan, was ruled by the boy sultan Sikandar Adil Shah and torn by rival factions. On 1 April 1685 a Mughal army of about 80,000 under Prince Azam Shah dug its trenches before the city, defended by some 30,000 troops and a Maratha contingent. Bijapuri cavalry and Maratha raiders cut off the besiegers’ supplies, and famine in the Mughal camp nearly forced a retreat. Meanwhile Prince Muazzam (Shah Alam) defeated a Golconda army at Malkhed and occupied Hyderabad in October 1685; Abul Hasan Qutb Shah fled to his fortress of Golconda and bought peace with a large indemnity.
+      - Aurangzeb took over the siege himself, arriving outside Bijapur on 3 July 1686. With food and water running out, the garrison and townspeople could hold no longer, and on 12 September Sikandar Adil Shah surrendered the citadel. Aurangzeb entered the city a week later. Bijapur was made a Mughal province, the last Adil Shahi sultan was kept a prisoner, first at Daulatabad and then in the imperial camp, and he died at Satara in 1700. The city’s population and trade declined quickly once the court was gone.
+    facts:
+      - [Siege of Bijapur, "1 April 1685 – 12 September 1686"]
+      - [Mughal army, "about 80,000"]
+      - [Garrison, "about 30,000, with a Maratha contingent"]
+    markers:
+      - kind: siege
+        side: mug
+        name: Bijapur
+        date: 1 April 1685 – 12 September 1686
+        text: The Adil Shahi capital held out for seventeen months. Its great walls had been built for the wars against Vijayanagara.
+        lonlat: [75.716, 16.830]
+      - kind: battle
+        side: mug
+        name: Malkhed
+        date: 1685
+        text: Prince Muazzam defeated the Golconda army here on his way to Hyderabad.
+        lonlat: [77.160, 17.190]
+      - kind: taken
+        side: mug
+        name: Hyderabad
+        date: October 1685
+        text: Occupied and plundered by Muazzam’s troops; the sultan withdrew into the fortress of Golconda.
+        lonlat: [78.474, 17.361]
+      - kind: event
+        side: mug
+        name: Sholapur
+        date: June 1686
+        text: Aurangzeb’s camp before he moved to Bijapur to take over the siege.
+        lonlat: [75.906, 17.659]
+        lp: l
+    arrows:
+      - side: mug
+        label: Aurangzeb
+        phase: 1
+        via: [[75.906, 17.659], [75.850, 17.250], [75.760, 16.900]]
+      - side: mug
+        label: Muazzam
+        phase: 1
+        via: [[76.832, 17.329], [77.160, 17.190], [77.900, 17.300], [78.420, 17.360]]
+    areas:
+      - style: gained
+        side: mug
+        label: Kingdom of Bijapur, annexed in 1686
+        atoms: [IN-KA~bijapur, IN-KA~bellary]
+  - title: Golconda
+    date: January – September 1687
+    when: "1687-01-28"
+    borders: "1687-09-21"
+    countries: [in]
+    body:
+      - Aurangzeb then turned on Golconda. Its Brahmin ministers Madanna and Akkanna, the architects of the alliance with the Marathas, had been murdered by court rivals in 1686, but the emperor demanded the kingdom itself. On 28 January 1687 the Mughal army began the siege of the fortress of Golconda, on its granite hill west of Hyderabad. The defenders under Abul Hasan Qutb Shah fought hard. Mughal mines blew up in the faces of their own troops, heavy rains flooded the trenches, and famine and plague swept the camp. Several Golconda nobles went over to the Mughals, but the fortress held out for eight months.
+      - In the end treachery decided it. On the night of 21 September 1687 an officer of the garrison opened a postern gate to a Mughal storming party, which let the army in. One noble, Abdur Razzaq Lari, fought on alone and was left for dead with many wounds. Abul Hasan, who received the victors in his audience hall, was sent as a prisoner to Daulatabad, where he spent the rest of his life. Golconda and its diamond country became the Mughal province of Hyderabad, which in the next century passed to the Nizams.
+    facts:
+      - [Siege of Golconda, "28 January – 21 September 1687"]
+      - [Mughal army, "about 100,000 with some 100 siege guns"]
+    markers:
+      - kind: siege
+        side: mug
+        name: Golconda
+        date: 28 January – 21 September 1687
+        text: The Qutb Shahi fortress fell after eight months, when a gate was opened from inside.
+        lonlat: [78.401, 17.383]
+        lp: l
+      - kind: event
+        side: mug
+        name: Daulatabad
+        date: 1687
+        text: The hilltop fortress where Abul Hasan Qutb Shah was held for the rest of his life.
+        lonlat: [75.215, 19.943]
+    arrows:
+      - side: mug
+        label: Aurangzeb
+        via: [[75.716, 16.900], [76.832, 17.329], [77.700, 17.350], [78.350, 17.390]]
+    areas:
+      - style: gained
+        side: mug
+        label: Kingdom of Golconda, annexed in 1687
+        atoms: [IN-TG, IN-AP, IN-AP~rayalaseema]

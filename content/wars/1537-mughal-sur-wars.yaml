@@ -1,0 +1,382 @@
+id: mughal-sur-wars
+name: Mughal–Sur wars
+start: "1537"
+end: "1557-07-25"
+tier: A
+summary: "The struggle between Babur’s son Humayun and the Afghan Sur dynasty for northern India. Sher Khan Sur, an Afghan chief of Bihar, took Bengal in 1538, destroyed Humayun’s army at Chausa in 1539 and beat him again at Kannauj in 1540, driving the Mughals out of India. As Sher Shah he ruled from Bengal to the Indus until his death in 1545, building roads, forts and a new silver coinage. Humayun wandered through Sindh and the desert, where his son Akbar was born, and found help in Safavid Persia, which let him take Kandahar and Kabul in 1545. When the Sur empire split between rival claimants after 1554, he came back, won at Sirhind and re-entered Delhi in July 1555, but died six months later. Hemu, general of the Sur ruler Adil Shah, then took Agra and Delhi, until the Mughal army of the 13-year-old Akbar and his regent Bairam Khan defeated him at the Second Battle of Panipat on 5 November 1556."
+countries: [in, pk, af, bd]
+sides:
+  - id: mug
+    name: Mughals (Humayun, then Akbar)
+    polities: [mughals]
+    ink: green
+    moves: Mughal moves
+    success: Mughal success
+  - id: sur
+    name: Sur dynasty (Sher Shah and his successors)
+    polities: [sur-empire]
+    ink: orange
+    moves: Sur moves
+    success: Sur success
+notes:
+  - Dates are in the Julian calendar, as the sources give them.
+  - The main sources are Mughal court histories written later (Abu’l-Fazl’s Akbarnama, Gulbadan Begum’s memoir of her brother Humayun, Jauhar’s memoir) and the Afghan histories of Abbas Khan Sarwani and others. Army sizes in them are unreliable.
+  - Humayun’s quarrels with his brothers Kamran, Askari and Hindal, who held Kabul, Kandahar and the Punjab at different times, run through the whole story; they are mentioned only where they shaped the war with the Surs.
+sources:
+  - title: Humayun (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Humayun
+  - title: Sher Shah Suri (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sher_Shah_Suri
+  - title: Battle of Chausa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Chausa
+  - title: Islam Shah Suri (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Islam_Shah_Suri
+  - title: Sikandar Shah Suri (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sikandar_Shah_Suri
+  - title: Hemu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hemu
+  - title: Second Battle of Panipat (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Second_Battle_of_Panipat
+  - title: Battle of Sammel (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sammel
+  - title: Sher Shah of Sur (Britannica)
+    url: https://www.britannica.com/biography/Sher-Shah-of-Sur
+  - title: Humayun (Britannica)
+    url: https://www.britannica.com/biography/Humayun
+steps:
+  - title: Chunar and Gaur
+    date: 1537–1538
+    when: "1537-10"
+    borders: "1538-04"
+    countries: [in, bd]
+    body:
+      - "Humayun inherited his father’s realm in 1530, but not his authority. His brother Kamran took Kabul and the Punjab, and in 1535–36 Humayun spent his strength conquering Gujarat, which he lost again within a year. Meanwhile Sher Khan, an Afghan of the Sur clan who had risen in the service of the Lohani rulers of Bihar, made himself master of Bihar. He held the fortress of Chunar on the Ganges, and in 1537 he invaded Bengal."
+      - "In late 1537 Humayun marched east and laid siege to Chunar, which held out for about six months. Sher Khan used the time well. In March 1538 he took the hill fortress of Rohtasgarh by a ruse and lodged his family and treasure there, and in April he captured Gaur, the capital of Bengal, and carried off its wealth."
+      - "Humayun followed him into Bengal and entered Gaur in the late summer of 1538, but stayed there through the rains. Behind him Sher Khan’s men took Benares, besieged Jaunpur and raided as far as Kannauj, cutting the road to Agra, while at Agra Humayun’s brother Hindal had the Friday prayer read in his own name."
+    facts:
+      - [Siege of Chunar, "late 1537 – 1538"]
+      - [Rohtasgarh taken by Sher Khan, "March 1538"]
+      - [Gaur taken by Sher Khan, "April 1538"]
+    markers:
+      - kind: siege
+        side: mug
+        name: Chunar
+        date: 1537–1538
+        text: Sher Khan’s fortress on the Ganges, which Humayun took after a long siege while Sher Khan was in Bengal.
+        lonlat: [82.88, 25.13]
+      - kind: taken
+        side: sur
+        name: Rohtasgarh
+        date: March 1538
+        text: Sher Khan gained this hill fortress by a trick, according to the chronicles by smuggling soldiers in disguised as women in litters.
+        lonlat: [83.93, 24.62]
+      - kind: taken
+        side: sur
+        name: Gaur
+        date: April 1538
+        text: The capital of Bengal, taken and stripped by Sher Khan. Humayun entered it a few months later.
+        lonlat: [88.13, 24.87]
+      - kind: event
+        side: mug
+        name: Agra
+        date: 1538
+        text: Humayun’s capital, where his brother Hindal claimed the throne while Humayun was in Bengal.
+        lonlat: [78.02, 27.18]
+    arrows:
+      - side: mug
+        label: Humayun
+        phase: 1
+        via: [[78.02, 27.18], [79.9, 26.45], [81.85, 25.45], [82.82, 25.16]]
+      - side: sur
+        label: Sher Khan
+        phase: 1
+        via: [[84.6, 25.25], [86.47, 25.37], [87.6, 25.1], [88.08, 24.9]]
+      - side: mug
+        phase: 2
+        via: [[82.95, 25.15], [84.5, 25.55], [86.47, 25.4], [88.08, 24.92]]
+      - side: sur
+        phase: 2
+        via: [[84.2, 25.0], [83.0, 25.32], [82.7, 25.7], [80.4, 26.6], [79.95, 27.0]]
+  - title: Chausa
+    date: 26 June 1539
+    when: "1539-06-26"
+    borders: "1539-06-26"
+    countries: [in]
+    body:
+      - "Early in 1539 Humayun left Gaur and marched back up the Ganges. Sher Khan barred his way at Chausa, near where the Karmanasa river flows into the Ganges, and for about three months the two armies faced each other while envoys discussed terms. The monsoon broke and flooded the low ground where the Mughals were camped."
+      - "Before dawn on 26 June 1539 Sher Khan’s men fell on the Mughal camp from several sides. Many of Humayun’s soldiers were killed or drowned in the swollen river, perhaps 7,000 to 8,000 in all. Humayun escaped across the Ganges; according to Mughal tradition he was kept afloat by a water-carrier named Nizam, whom he later rewarded by letting him sit on the throne for half a day. The camp, the guns and many of the women of the court were captured; Sher Khan had the women sent back with honour."
+      - "After the victory Sher Khan took the title Sher Shah and had coins struck and the Friday prayer read in his name. Humayun reached Agra and made peace with his brothers, but Kamran, ill and suspicious, soon took his troops back to Lahore."
+    facts:
+      - [Battle of Chausa, "26 June 1539, Sur victory"]
+      - [Mughal losses, "about 7,000–8,000 killed or drowned"]
+    markers:
+      - kind: battle
+        side: sur
+        name: Battle of Chausa
+        date: 26 June 1539
+        text: A dawn attack on the flooded Mughal camp. Humayun barely escaped across the Ganges.
+        lonlat: [83.896, 25.517]
+      - kind: event
+        side: sur
+        name: Rohtasgarh
+        date: 1539
+        text: Sher Khan’s stronghold and treasury south of the Ganges.
+        lonlat: [83.93, 24.62]
+    arrows:
+      - side: mug
+        label: Humayun
+        via: [[88.1, 24.92], [86.47, 25.4], [85.14, 25.62], [83.95, 25.55]]
+      - side: sur
+        label: Sher Khan
+        via: [[83.93, 24.66], [84.03, 24.95], [83.93, 25.45]]
+  - title: Kannauj, and the loss of India
+    date: May 1540 – 1541
+    when: "1540-05-17"
+    borders: "1540-05-17"
+    countries: [in, pk]
+    body:
+      - "Humayun gathered a new army at Agra, though Kamran sent only a few troops, and marched down the Ganges to meet Sher Shah near Kannauj. On 17 May 1540 the armies met near Bilgram, on the east bank opposite Kannauj, after weeks of waiting in which the rains again flooded the Mughal camp. Humayun’s cousin Mirza Haidar Dughlat, who fought in the battle and later wrote about it, said the Mughal army was routed almost without a fight."
+      - "Humayun fled through Agra and Delhi to Lahore, where his brothers met but could not agree. As Sher Shah’s army approached in the autumn of 1540, the Mughals abandoned the Punjab. Kamran and Askari went to Kabul and Kandahar, Mirza Haidar went off to conquer Kashmir, and Humayun, with a dwindling band of followers, turned south towards Sindh."
+      - "Sher Shah, crowned again as ruler of Hindustan, secured the north-west by building the great fortress of Rohtas near the Jhelum to watch the Gakhar tribes and the road from Kabul."
+    facts:
+      - [Battle of Kannauj (Bilgram), "17 May 1540, Sur victory"]
+      - [Mughals leave the Punjab, "autumn 1540"]
+    markers:
+      - kind: battle
+        side: sur
+        name: Battle of Kannauj
+        date: 17 May 1540
+        text: Fought near Bilgram across the Ganges from Kannauj. The Mughal army broke and fled.
+        lonlat: [80.0, 27.12]
+      - kind: event
+        side: mug
+        name: Lahore
+        date: 1540
+        text: Humayun and his brothers met here for the last time before the Mughals gave up India.
+        lonlat: [74.33, 31.58]
+      - kind: event
+        side: sur
+        name: Rohtas Fort
+        date: from 1541
+        text: Built by Sher Shah to hold the north-west against the Gakhars and the Mughals in Kabul.
+        lonlat: [73.577, 32.963]
+    arrows:
+      - side: mug
+        label: Humayun
+        phase: 1
+        via: [[79.95, 27.08], [78.02, 27.18], [77.23, 28.65], [76.38, 30.64], [74.33, 31.58]]
+      - side: sur
+        label: Sher Shah
+        phase: 2
+        via: [[77.3, 28.75], [76.45, 30.55], [75.0, 31.45], [74.4, 31.65], [73.6, 32.9]]
+    areas:
+      - style: gained
+        side: sur
+        label: Mughal lands taken by Sher Shah, 1540
+        atoms: [IN-DL, IN-HR, IN-UP~doab, IN-PB, IN-CH, PK-PB, IN-UP, IN-UP~rohilkhand, IN-UP~benares, IN-MP~gwalior]
+  - title: Exile
+    date: 1541–1545
+    when: "1541"
+    borders: "1545-11-18"
+    countries: [pk, af, ir, in]
+    body:
+      - "For two years Humayun tried to find a base in Sindh, whose Arghun ruler, Shah Husain, gave him no help. There he married Hamida Banu Begum. In 1542 he crossed the Thar desert to seek the help of Rao Maldeo of Marwar, but learning that Maldeo had come to terms with Sher Shah, he turned back across the sand, losing men and animals to thirst. At Umarkot, whose Rajput ruler took him in, Hamida gave birth to their son Akbar on 15 October 1542."
+      - "In 1543 Humayun left Sindh for Kandahar, held by his brother Askari, who tried to seize him. Humayun fled into Persia, leaving the infant Akbar behind, and in 1544 was received by Shah Tahmasp at Qazvin. Tahmasp gave him about 12,000 horsemen on condition that Kandahar be handed to Persia, and Humayun had to outwardly accept the Shia faith."
+      - "With the Persian army Humayun besieged Kandahar from March 1545. Askari gave it up in September and it went to the Persians, but Humayun soon took it for himself. On 18 November 1545 he entered Kabul unopposed and found Akbar again. For eight more years he fought Kamran for Kabul, until in 1553 he had his brother blinded and sent to Mecca."
+    facts:
+      - [Birth of Akbar, "15 October 1542, at Umarkot"]
+      - [Humayun meets Shah Tahmasp, "1544, at Qazvin"]
+      - [Kandahar surrenders, "3 September 1545"]
+      - [Kabul entered, "18 November 1545"]
+    markers:
+      - kind: event
+        side: mug
+        name: Umarkot
+        date: 15 October 1542
+        text: Akbar was born here while his father was a fugitive in the desert.
+        lonlat: [69.74, 25.36]
+      - kind: event
+        side: mug
+        name: Bhakkar
+        date: 1541
+        text: The island fortress on the Indus held by the Arghun rulers of Sindh, which Humayun tried and failed to win.
+        lonlat: [68.9, 27.7]
+      - kind: event
+        side: mug
+        name: Herat
+        date: 1544
+        text: Humayun’s first stop in Persia, on his way to the court of Shah Tahmasp at Qazvin.
+        lonlat: [62.2, 34.35]
+      - kind: taken
+        side: mug
+        name: Kandahar
+        date: September 1545
+        text: Besieged with Persian help. Handed to the Persians as promised, then seized by Humayun weeks later.
+        lonlat: [65.71, 31.62]
+      - kind: taken
+        side: mug
+        name: Kabul
+        date: 18 November 1545
+        text: Entered without a fight. Humayun found his three-year-old son Akbar here.
+        lonlat: [69.17, 34.53]
+    arrows:
+      - side: mug
+        label: Humayun
+        phase: 1
+        via: [[74.33, 31.58], [71.47, 30.2], [68.9, 27.7], [69.7, 25.42]]
+      - side: mug
+        phase: 2
+        via: [[69.6, 25.5], [68.4, 27.4], [67.45, 29.45], [64.4, 31.4], [62.25, 34.3]]
+      - side: mug
+        phase: 3
+        via: [[61.9, 31.2], [64.4, 31.6], [65.65, 31.62], [68.42, 33.55], [69.15, 34.48]]
+  - title: Sher Shah’s empire
+    date: 1540–1545
+    when: "1542"
+    borders: "1544-06"
+    countries: [in, pk, bd]
+    body:
+      - "Sher Shah ruled for only five years, but his reign left a mark on the government of India. He had the land surveyed and taxed by its yield, rebuilt the great road from Bengal to the Indus, later called the Grand Trunk Road, with inns and wells along it, set up a mounted post, and issued a silver coin of a fixed weight, the rupiya, the ancestor of the rupee."
+      - "He also kept fighting. In 1542 he took Malwa. In 1543 he besieged Raisen, and when its Rajput garrison under Puran Mal came out under terms, his troops attacked and killed them, an act his own historians found hard to excuse. In January 1544 he defeated the army of Marwar at Sammel, where the Rathore commanders Jaita and Kumpa died fighting after their ruler Maldeo had withdrawn; Sher Shah is said to have remarked that he had nearly lost the empire of Hindustan for a handful of millet. Jodhpur fell, and the rana of Mewar handed over Chittorgarh."
+      - "In November 1544 Sher Shah besieged Kalinjar, the fortress of the Bundela country. On 22 May 1545, as the final assault began, a store of gunpowder or a rebounding rocket exploded near him, and he died of his burns the same day, after hearing that the fort had fallen. He was buried in the great tomb he had built at Sasaram. His son Jalal Khan succeeded him as Islam Shah."
+    facts:
+      - [Malwa annexed, "1542"]
+      - [Battle of Sammel, "5 January 1544, Sur victory"]
+      - [Death of Sher Shah, "22 May 1545, at Kalinjar"]
+    markers:
+      - kind: taken
+        side: sur
+        name: Raisen
+        date: 1543
+        text: The Rajput garrison was killed after leaving the fort on terms.
+        lonlat: [77.78, 23.33]
+      - kind: taken
+        side: sur
+        name: Jodhpur
+        date: 1544
+        text: Taken by Sher Shah’s general Khawas Khan after the battle of Sammel. Maldeo won it back in 1545.
+        lonlat: [73.02, 26.3]
+      - kind: taken
+        side: sur
+        name: Chittorgarh
+        date: 1544
+        text: The fortress of Mewar, surrendered without a fight.
+        lonlat: [74.645, 24.887]
+      - kind: taken
+        side: sur
+        name: Kalinjar
+        date: 22 May 1545
+        text: Sher Shah was fatally burned during the final assault and died as the fort fell.
+        lonlat: [80.485, 25.006]
+      - kind: event
+        side: sur
+        name: Sasaram
+        date: 1545
+        text: Sher Shah’s home town, where he was buried in a tomb set in an artificial lake.
+        lonlat: [84.02, 24.95]
+  - title: The Sur split, and Humayun’s return
+    date: 1554–1556
+    when: "1554-11-22"
+    borders: "1555-07-23"
+    countries: [in, pk]
+    body:
+      - "Islam Shah held his father’s empire together until his death in late 1554. His young son Firuz was murdered within days by his uncle, who took the throne as Muhammad Adil Shah, and the empire broke apart. Ibrahim Shah Sur seized Delhi and Agra, Sikandar Shah Sur proclaimed himself in the Punjab, and Bengal went its own way. Adil Shah held the east, with his able Hindu minister Hemu as his general."
+      - "Humayun saw his chance. He crossed the Indus with a small army led by his general Bairam Khan, and in February 1555 occupied Lahore. In May his troops won a battle at Machhiwara on the Sutlej, and on 22 June 1555 at Sirhind they routed Sikandar Shah, who had driven Ibrahim from Delhi and Agra and come north with a much larger army. Sikandar fled into the Siwalik hills."
+      - "On 23 July 1555 Humayun entered Delhi, fifteen years after he had lost it. His restoration was short. On 24 January 1556 he slipped on the steep stairs of his library in the Purana Qila in Delhi, and he died three days later. Bairam Khan had his 13-year-old son Akbar proclaimed emperor at Kalanaur in the Punjab, where they were campaigning against Sikandar."
+    facts:
+      - [Death of Islam Shah, "22 November 1554"]
+      - [Battle of Sirhind, "22 June 1555, Mughal victory"]
+      - [Humayun re-enters Delhi, "23 July 1555"]
+      - [Death of Humayun, "27 January 1556"]
+    markers:
+      - kind: taken
+        side: mug
+        name: Lahore
+        date: February 1555
+        text: Occupied without a fight as Sikandar Shah’s officers withdrew.
+        lonlat: [74.33, 31.58]
+      - kind: battle
+        side: mug
+        name: Machhiwara
+        date: May 1555
+        text: Bairam Khan defeated Sikandar Shah’s forward army near the Sutlej.
+        lonlat: [76.18, 30.92]
+        lp: l
+      - kind: battle
+        side: mug
+        name: Battle of Sirhind
+        date: 22 June 1555
+        text: The decisive battle of Humayun’s return. Sikandar Shah’s army broke and fled.
+        lonlat: [76.38, 30.64]
+      - kind: taken
+        side: mug
+        name: Delhi
+        date: 23 July 1555
+        text: Humayun re-entered his capital. He died here after a fall in January 1556.
+        lonlat: [77.243, 28.609]
+      - kind: event
+        side: mug
+        name: Kalanaur
+        date: 14 February 1556
+        text: Akbar was enthroned here, on a brick platform in a garden, with Bairam Khan as his guardian.
+        lonlat: [75.15, 32.02]
+    arrows:
+      - side: mug
+        label: Humayun
+        phase: 1
+        via: [[69.17, 34.53], [71.57, 34.01], [72.25, 33.88], [73.72, 32.94], [74.3, 31.65]]
+      - side: mug
+        label: Bairam Khan
+        phase: 2
+        via: [[74.4, 31.55], [75.6, 31.2], [76.18, 30.92], [76.38, 30.66]]
+      - side: sur
+        label: Sikandar Shah
+        phase: 2
+        via: [[77.23, 28.68], [76.95, 29.6], [76.6, 30.3], [76.42, 30.6]]
+      - side: mug
+        phase: 3
+        via: [[76.4, 30.6], [76.8, 29.9], [77.05, 29.0], [77.24, 28.65]]
+  - title: Hemu and the Second Battle of Panipat
+    date: October 1556 – July 1557
+    when: "1556-10-07"
+    borders: "1556-10-07"
+    countries: [in, pk]
+    body:
+      - "Hemu was a Hindu of humble origins from Rewari, south-west of Delhi, who had risen under Islam Shah from market superintendent to high office and become Adil Shah’s chief minister and general. He is said to have won some twenty battles for his master against rival Sur claimants. When Humayun died, Hemu marched west from Bengal, drove the Mughal garrisons out of the towns of the Ganges plain and took Agra. On 7 October 1556 he defeated the Mughal governor of Delhi, Tardi Beg Khan, at Tughlaqabad and entered the city, where he took the royal title Vikramaditya. Historians disagree on whether he meant to rule in his own name or still for Adil Shah."
+      - "Bairam Khan had Tardi Beg executed for his retreat and led Akbar’s army south. Before the battle Mughal cavalry under Ali Quli Khan captured Hemu’s artillery train, which had been left weakly guarded. On 5 November 1556 the armies met at Panipat, on the field of Babur’s victory thirty years earlier. Hemu, riding a war elephant, broke both Mughal wings, but an arrow struck him in the eye and he fell unconscious in his howdah. Seeing their leader down, his army fled."
+      - "Hemu was brought to the Mughal camp and beheaded; Mughal chronicles later claimed that Akbar refused to strike a helpless man, which many historians doubt. Adil Shah was killed in Bihar in April 1557 by the ruler of Bengal, and Sikandar Shah, besieged in the hill fort of Mankot, surrendered on 25 July 1557. The Sur empire was gone, and under Akbar the Mughals ruled northern India for two centuries."
+    facts:
+      - [Battle of Tughlaqabad, "7 October 1556, Sur victory"]
+      - [Second Battle of Panipat, "5 November 1556, Mughal victory"]
+      - [Sikandar Shah surrenders at Mankot, "25 July 1557"]
+    markers:
+      - kind: battle
+        side: sur
+        name: Tughlaqabad
+        date: 7 October 1556
+        text: Hemu defeated the Mughal governor of Delhi here and occupied the city.
+        lonlat: [77.26, 28.51]
+      - kind: taken
+        side: sur
+        name: Agra
+        date: October 1556
+        text: Abandoned by its Mughal governor as Hemu approached.
+        lonlat: [78.02, 27.18]
+      - kind: battle
+        side: mug
+        name: Second Battle of Panipat
+        date: 5 November 1556
+        text: Hemu was wounded by a chance arrow at the height of the battle, and his army broke.
+        lonlat: [76.98, 29.42]
+    arrows:
+      - side: sur
+        label: Hemu
+        phase: 1
+        via: [[81.85, 25.45], [79.74, 26.12], [78.02, 27.18], [77.28, 28.48]]
+      - side: sur
+        phase: 2
+        via: [[77.23, 28.68], [77.05, 29.05], [77.0, 29.36]]
+      - side: mug
+        label: Bairam Khan and Akbar
+        phase: 2
+        via: [[75.58, 31.33], [76.38, 30.64], [76.85, 29.95], [76.97, 29.47]]

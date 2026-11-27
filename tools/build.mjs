@@ -3,9 +3,12 @@
 //   dist/index.html, app.js, style.css, vendor/…    (copied from site/)
 //   dist/data/atoms.topo.json                      (from site-data/, see build-geo.mjs)
 //   dist/data/borders.json                         polities + the dates of border changes
-//   dist/data/borders/<century>.json               those changes and their notes, by century
+//   dist/data/borders/<bucket>.json                those changes and their notes, by date
 //   dist/data/wars.json                            catalogue: names, dates, countries
-//   dist/data/catalogue/<century>.json             summaries and step titles, by start century
+//   dist/data/catalogue/<bucket>.json              summaries and step titles, by start date
+//   dist/data/locales/<code>/…                     a language's index, and translated
+//                                                  copies of the bucket files
+// A bucket is a century, or part of a busy one (site/buckets.js).
 //   dist/data/wars/<id>.json                       one per war
 //   dist/data/labels.json                          seas, regions, capitals
 //
@@ -19,7 +22,8 @@ import { mkdir, writeFile, cp, rm, readFile, stat, rename } from 'node:fs/promis
 import { join } from 'node:path';
 import { gzipSync } from 'node:zlib';
 import { ROOT, CONTENT, readJSON, readYAML, listFiles, exists, loadPolities } from './lib.mjs';
-import { loadLocales, prepareLocaleOutput, compileWarTranslations, emitLocales } from './locales.mjs';
+import { loadLocales, prepareLocaleOutput, compileWarTranslations, compileLocaleMaps, emitLocales } from './locales.mjs';
+import { bucketOf, bucketStarts } from '../site/buckets.js';
 import { compileCapitals } from './capitals.mjs';
 import { feature } from 'topojson-client';
 import { geoArea } from 'd3-geo';
@@ -484,8 +488,11 @@ function buildWar(w, file, ctx) {
   };
 }
 
-/** The century file a date key belongs to ("1648-…" -> "1600"), for the catalogue and the borders. site/app.js has the same rule. */
-const catalogueKey = (sk) => (sk || '0000').slice(0, 2) + '00';
+// Bucket files are cut to stay under these sizes (raw JSON, in the largest
+// language), so a visit that needs one date loads little.
+const CATALOGUE_FILE_LIMIT = 64e3;
+const BORDERS_FILE_LIMIT = 80e3;
+const textSize = (value) => JSON.stringify(value).length;
 
 // ---------------------------------------------------------------- main
 // `--check`: validate only, write nothing (safe to run alongside a dev build).
@@ -520,7 +527,7 @@ async function main() {
   const locales = await loadLocales(err);
   if (!CHECK) await prepareLocaleOutput(locales, OUT);
   const wars = [];
-  const catalogue = new Map();
+  const catalogue = [];
   const seen = new Set();
   const files = await listFiles(join(CONTENT, 'wars'), '.yaml');
   for (let start = 0; start < files.length; start += 16) {
@@ -532,9 +539,8 @@ async function main() {
       seen.add(w.id);
       const { war, core, detail } = buildWar(w, f, { pol, borders });
       wars.push(core);
-      const century = catalogueKey(core.sk);
-      (catalogue.get(century) || catalogue.set(century, new Map()).get(century)).set(core.id, detail);
-      return { war, entry: { name: core.name, century, detail } };
+      catalogue.push({ id: core.id, sk: core.sk || '0000', detail });
+      return { war, entry: { name: core.name, detail } };
     });
     await Promise.all(outputs.map(async ({ war, entry }) => {
       await compileWarTranslations(locales, war, entry, emit, err);
@@ -564,28 +570,48 @@ async function main() {
     // country has no atoms of its own), for the country filter.
     countries: await buildCountries(topo, new Set(wars.flatMap((w) => w.countries))),
   };
+  // Translated map strings and border notes, needed to size the buckets.
+  compileLocaleMaps(locales, { polities: bordersOut.polities, timeline }, labels, err);
+  // Buckets are sized by their largest language, so each language's copy of a
+  // file stays under the limit.
+  const largestNote = (s) => Math.max(textSize(s ?? null), ...locales.map(({ notes }) => textSize(notes.get(s) ?? s ?? null)));
+  const borderStarts = bucketStarts(
+    timeline.map((t) => ({ year: t.k.slice(0, 4), size: textSize({ d: t.d, c: t.c }) + largestNote(t.s) })),
+    BORDERS_FILE_LIMIT, textSize(new Array(borders.order.length).fill(pol.list.length)));
+  catalogue.sort((a, b) => (a.sk < b.sk ? -1 : a.sk > b.sk ? 1 : a.id.localeCompare(b.id)));
+  const catalogueStarts = bucketStarts(catalogue.map(({ id, sk, detail }) => ({
+    year: sk.slice(0, 4),
+    size: id.length + Math.max(textSize(detail), ...locales.map(({ details }) => (details.has(id) ? textSize(details.get(id)) : 0))),
+  })), CATALOGUE_FILE_LIMIT);
+  bordersOut.buckets = { borders: borderStarts, catalogue: catalogueStarts };
+
   const borderChunks = new Map();
   {
     const owners = new Array(borders.order.length).fill(-1);
     timeline.forEach((t, i) => {
-      const century = catalogueKey(t.k);
-      if (!borderChunks.has(century)) borderChunks.set(century, { start: i, base: owners.slice(), entries: [] });
-      borderChunks.get(century).entries.push({ d: t.d, s: t.s, c: t.c });
+      const bucket = bucketOf(borderStarts, t.k);
+      if (!borderChunks.has(bucket)) borderChunks.set(bucket, { start: i, base: owners.slice(), entries: [] });
+      borderChunks.get(bucket).entries.push({ d: t.d, s: t.s, c: t.c });
       for (let j = 0; j < t.c.length; j += 2) owners[t.c[j]] = t.c[j + 1];
     });
   }
-  await emitLocales(locales, { polities: bordersOut.polities, timeline }, borderChunks, labels, emit, err);
+  const catalogueFiles = new Map();
+  for (const { id, sk, detail } of catalogue) {
+    const bucket = bucketOf(catalogueStarts, sk);
+    if (!catalogueFiles.has(bucket)) catalogueFiles.set(bucket, []);
+    catalogueFiles.get(bucket).push([id, detail]);
+  }
+  for (const entries of catalogueFiles.values()) entries.sort(([a], [b]) => a.localeCompare(b));
+  await emitLocales(locales, borderChunks, catalogueFiles, emit);
   await emit('data/atoms.topo.json', topoText);
   await emit('data/borders.json', JSON.stringify(bordersOut));
-  for (const [century, chunk] of borderChunks) await emit(`data/borders/${century}.json`, JSON.stringify(chunk));
+  for (const [bucket, chunk] of borderChunks) await emit(`data/borders/${bucket}.json`, JSON.stringify(chunk));
   await emit('data/wars.json', JSON.stringify(wars));
-  for (const [century, entries] of catalogue) {
-    await emit(`data/catalogue/${century}.json`, JSON.stringify(Object.fromEntries([...entries].sort(([a], [b]) => a.localeCompare(b)))));
-  }
+  for (const [bucket, entries] of catalogueFiles) await emit(`data/catalogue/${bucket}.json`, JSON.stringify(Object.fromEntries(entries)));
   await emit('data/labels.json', JSON.stringify(labels));
 
   // Size report: what a first visit downloads.
-  const first = ['index.html', 'app.js', 'globe.js', 'colors.js', 'i18n.js', 'localized-content.js', ...(await listFiles(join(ROOT, 'site/locales'), '.js')).map(file => `locales/${file}`), 'style.css', 'relief.webp', 'vendor/topojson-client.min.js', 'data/atoms.topo.json', 'data/borders.json', 'data/wars.json', 'data/labels.json'];
+  const first = ['index.html', 'app.js', 'globe.js', 'colors.js', 'i18n.js', 'localized-content.js', 'buckets.js', ...(await listFiles(join(ROOT, 'site/locales'), '.js')).map(file => `locales/${file}`), 'style.css', 'relief.webp', 'vendor/topojson-client.min.js', 'data/atoms.topo.json', 'data/borders.json', 'data/wars.json', 'data/labels.json'];
   // A French or Swedish visitor also loads that language's index.
   const size = async (files) => {
     let raw = 0, gz = 0;
@@ -594,16 +620,17 @@ async function main() {
   };
   console.log(`polities ${pol.list.length}, atoms ${borders.order.length}, timeline entries ${borders.timeline.length}, wars ${wars.length}`);
   if (!CHECK) {
-    // Showing a year also takes one century of borders and one of the
-    // catalogue: count the largest of each.
+    // Showing a year also takes one bucket of borders and one of the
+    // catalogue: count the largest of each. Other languages load translated
+    // copies of them instead of the English ones.
     const largest = async (dir) => {
       let best = null, bytes = -1;
       for (const f of await listFiles(join(OUT, dir), '.json')) { const n = (await stat(join(OUT, dir, f))).size; if (n > bytes) { bytes = n; best = `${dir}/${f}`; } }
       return best ? [best] : [];
     };
-    const centuries = async (prefix) => [...await largest(`${prefix}borders`), ...await largest(`${prefix}catalogue`)];
-    const base = await size([...first, ...await centuries('data/')]);
-    const perLocale = await Promise.all(locales.map(async ({ code }) => [code, await size([...first, ...await centuries('data/'), `data/locales/${code}/index.json`, ...await centuries(`data/locales/${code}/`)])]));
+    const largestBuckets = async (prefix) => [...await largest(`${prefix}borders`), ...await largest(`${prefix}catalogue`)];
+    const base = await size([...first, ...await largestBuckets('data/')]);
+    const perLocale = await Promise.all(locales.map(async ({ code }) => [code, await size([...first, `data/locales/${code}/index.json`, ...await largestBuckets(`data/locales/${code}/`)])]));
     const mb = (b) => (b / 1e6).toFixed(2);
     console.log(`first load: ${mb(base.raw)} MB raw, ${mb(base.gz)} MB gzip` + perLocale.map(([code, s]) => `; ${code} ${mb(s.gz)}`).join(''));
     // The budget that keeps the site fast and inside GitHub Pages' free bandwidth (ROADMAP.md).

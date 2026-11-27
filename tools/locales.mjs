@@ -2,7 +2,7 @@ import { mkdir, readdir, stat } from 'node:fs/promises';
 import { join } from 'node:path';
 import { CONTENT, exists, listFiles, readYAML } from './lib.mjs';
 import { defaultLocale, locales, matchLocale } from '../site/locales/index.js';
-import { localizeCatalogue, localizeMap, localizeWar } from '../site/localized-content.js';
+import { localizeCatalogue, localizeMap, localizeWar, translateText } from '../site/localized-content.js';
 
 const placeholders = (text) => [...new Set(text.match(/\{\w+\}/g))].sort().join(' ');
 const isDirectory = (path) => stat(path).then(info => info.isDirectory()).catch(error => {
@@ -64,14 +64,17 @@ export async function loadLocales(err) {
     if (await isDirectory(warsFolder)) for (const name of await listFiles(warsFolder, '.yaml')) {
       wars.set(name.slice(0, -5), await readYAML(join(warsFolder, name)));
     }
-    return { code, map, wars, names: {}, catalogue: new Map(), stories: [] };
+    // details: war id -> its translated catalogue details; notes: English
+    // border note -> translation (both filled in during the build).
+    return { code, map, wars, names: {}, details: new Map(), notes: new Map(), stories: [] };
   }));
 }
 
 /**
- * A war's translation file, plus its catalogue strings: the name goes into the
- * language's index (loaded at once), the rest into the century file the war's
- * details are in (`entry.century`, see catalogueKey in build.mjs).
+ * A war's translation file, plus its catalogue details: the name goes into the
+ * language's index (loaded at once), and the translated details (summary,
+ * step titles and dates, sources) into `details`, for the language's copy of
+ * the catalogue bucket the war is in.
  */
 export async function compileWarTranslations(locales, war, entry, emit, err) {
   const targets = locales.filter(({ wars }) => wars.has(war.id));
@@ -79,49 +82,59 @@ export async function compileWarTranslations(locales, war, entry, emit, err) {
   const strings = new Set();
   const collect = value => { if (value !== '') strings.add(String(value)); return value; };
   localizeWar(war, collect);
-  const catalogue = new Set();
-  localizeCatalogue({ name: entry.name, ...structuredClone(entry.detail) }, value => { catalogue.add(String(value)); return value; });
   for (const locale of targets) {
     const { code, wars, stories } = locale;
     const text = dictionary(wars.get(war.id), strings, `Locale ${code}, war ${war.id}`, err);
     wars.delete(war.id);
     if (Object.hasOwn(text, entry.name)) locale.names[war.id] = text[entry.name];
-    const own = Object.fromEntries(Object.entries(text).filter(([key]) => catalogue.has(key)));
-    if (Object.keys(own).length) (locale.catalogue.get(entry.century) || locale.catalogue.set(entry.century, {}).get(entry.century))[war.id] = own;
+    const { name, ...details } = localizeCatalogue({ name: entry.name, ...structuredClone(entry.detail) }, value => translateText(text, value));
+    locale.details.set(war.id, details);
     stories.push(war.id);
     await emit(`data/locales/${code}/wars/${war.id}.json`, JSON.stringify(text));
   }
 }
 
 /**
- * Each language's index (map strings, war names) and, per century, its
- * catalogue strings and border notes. `borders` has the full timeline (with
- * notes); `borderChunks` says which century file each note goes in.
+ * Each language's map strings, checked against what the map shows. `borders`
+ * has the polities and the full timeline (with notes). Border notes go to
+ * `notes`, the rest to the language's index.
  */
-export async function emitLocales(locales, borders, borderChunks, labels, emit, err) {
+export function compileLocaleMaps(locales, borders, labels, err) {
   const strings = {};
   localizeMap(borders, labels, (category, value) => {
     (strings[category] ??= new Set()).add(value);
     return value;
   });
-  const sorted = (object) => Object.fromEntries(Object.entries(object).sort(([a], [b]) => a.localeCompare(b)));
-  for (const { code, map, wars, names, catalogue, stories } of locales) {
+  for (const locale of locales) {
+    const { code, map, wars } = locale;
     for (const id of wars.keys()) err(`Locale ${code}: unknown war ${id}`);
+    locale.translatedMap = {};
     if (!isMapping(map)) { err(`Locale ${code}: expected a mapping in map.yaml`); continue; }
-    const translatedMap = {};
     for (const [category, value] of Object.entries(map)) {
       if (!Object.hasOwn(strings, category)) err(`Locale ${code}: unknown map category ${category}`);
-      else translatedMap[category] = dictionary(value, strings[category], `Locale ${code}, map ${category}`, err);
+      else locale.translatedMap[category] = dictionary(value, strings[category], `Locale ${code}, map ${category}`, err);
     }
-    // Border notes go with their century, like the notes themselves.
-    const notes = translatedMap.borderSources || {};
-    delete translatedMap.borderSources;
-    for (const [century, chunk] of borderChunks) {
-      const own = Object.fromEntries(chunk.entries.filter((e) => Object.hasOwn(notes, e.s)).map((e) => [e.s, notes[e.s]]));
-      if (Object.keys(own).length) await emit(`data/locales/${code}/borders/${century}.json`, JSON.stringify(own));
-    }
+    locale.notes = new Map(Object.entries(locale.translatedMap.borderSources || {}));
+    delete locale.translatedMap.borderSources;
+  }
+}
+
+/**
+ * Each language's index (map strings, war names, translated stories) and its
+ * copies of the bucket files: the border changes with translated notes, and
+ * the catalogue details, translated where there is a translation.
+ */
+export async function emitLocales(locales, borderChunks, catalogueFiles, emit) {
+  const sorted = (object) => Object.fromEntries(Object.entries(object).sort(([a], [b]) => a.localeCompare(b)));
+  for (const { code, translatedMap, names, details, notes, stories } of locales) {
     await emit(`data/locales/${code}/index.json`, JSON.stringify({ map: translatedMap, names: sorted(names), stories: stories.sort() }));
-    for (const [century, entries] of catalogue) await emit(`data/locales/${code}/catalogue/${century}.json`, JSON.stringify(sorted(entries)));
+    for (const [bucket, chunk] of borderChunks) {
+      const entries = chunk.entries.map((entry) => (notes.has(entry.s) ? { ...entry, s: notes.get(entry.s) } : entry));
+      await emit(`data/locales/${code}/borders/${bucket}.json`, JSON.stringify({ ...chunk, entries }));
+    }
+    for (const [bucket, entries] of catalogueFiles) {
+      await emit(`data/locales/${code}/catalogue/${bucket}.json`, JSON.stringify(Object.fromEntries(entries.map(([id, detail]) => [id, details.get(id) || detail]))));
+    }
   }
 }
 

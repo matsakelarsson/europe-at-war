@@ -91,11 +91,18 @@ below are the number of new war entries (tiers A, B and C).
   Drafts outside the region still show in some steps until their waves: Pakistan
   appears as the Maratha Confederacy in 1842 (wave 8), and the Kazakh steppe as
   "Turan" in the 1860s (wave 9).*
-- [ ] Keep the first load under budget as the catalogue grows: French and
+- [x] Keep the first load under budget as the catalogue grows: French and
   Swedish visitors load one translated century file instead of the English one
   plus a translation map, and heavy centuries (the 1900s) are split into
   smaller files. *Needed before wave 8: the French first load reached 1.18 MB
   of the 1.2 MB budget with wave 7.*
+  *Done: the build cuts a century whose catalogue or border file would pass
+  64 KB or 80 KB of raw JSON (in its largest language) at year boundaries, and
+  `borders.json` lists the files (`buckets`). The 1800s and 1900s are now in
+  two or three files each. Each language gets complete translated copies, so a
+  French visit no longer loads the English text as well. First load: en 1.02 MB
+  gzip, fr and sv 1.05 (were 1.05, 1.18 and 1.17). Searching in French or Swedish
+  now matches the translated summaries only; war names match in both languages.*
 - [ ] Wave 8: South Asia (~100)
 - [ ] Wave 9: China, Mongolia, Tibet and the steppe east of the Urals (~120)
 - [ ] Wave 10: Korea and Japan (~60)

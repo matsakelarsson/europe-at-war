@@ -1,21 +1,23 @@
 // Run after npm run build: node --test tests/borders.mjs
-// The border timeline is split by century. Each century file starts from a
-// snapshot that must equal the state the earlier centuries lead to.
+// The border timeline is split into bucket files by date (site/buckets.js).
+// Each file starts from a snapshot that must equal the state the earlier
+// files lead to.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
+import { bucketOf } from '../site/buckets.js';
 const DATA = new URL('../dist/data/', import.meta.url);
 const load = (name) => JSON.parse(readFileSync(new URL(name, DATA)));
-const { keys, polities } = load('borders.json');
+const { keys, polities, buckets } = load('borders.json');
 const atoms = load('atoms.topo.json').objects.atoms.geometries.length;
 const chunks = readdirSync(new URL('borders/', DATA)).filter((f) => f.endsWith('.json')).sort()
   .map((f) => ({ file: f, ...load('borders/' + f) }));
 
-test('century files cover every change, in order, each in its own century', () => {
+test('bucket files cover every change, in order, each in the file of its date', () => {
   let next = 0;
   for (const c of chunks) {
     assert.equal(c.start, next, c.file);
-    c.entries.forEach((_, j) => assert.equal(keys[c.start + j].slice(0, 2) + '00.json', c.file));
+    c.entries.forEach((_, j) => assert.equal(bucketOf(buckets.borders, keys[c.start + j]) + '.json', c.file));
     next += c.entries.length;
   }
   assert.equal(next, keys.length);
@@ -33,13 +35,20 @@ test('each snapshot is the state the changes before it lead to', () => {
   }
 });
 
-test('translated notes are filed with their century', () => {
+test('translated copies of the bucket files differ only in the notes', () => {
   for (const code of readdirSync(new URL('locales/', DATA))) {
     assert.equal(load(`locales/${code}/index.json`).map.borderSources, undefined);
-    for (const f of readdirSync(new URL(`locales/${code}/borders/`, DATA))) {
-      const notes = new Set(chunks.find((c) => c.file === f).entries.map((e) => e.s));
-      for (const note of Object.keys(load(`locales/${code}/borders/${f}`))) assert.ok(notes.has(note), `${code} ${f}: ${note.slice(0, 40)}`);
+    const copies = readdirSync(new URL(`locales/${code}/borders/`, DATA)).filter((f) => f.endsWith('.json')).sort();
+    assert.deepEqual(copies, chunks.map((c) => c.file), code);
+    let translated = 0;
+    for (const c of chunks) {
+      const copy = load(`locales/${code}/borders/${c.file}`);
+      assert.equal(copy.start, c.start, `${code} ${c.file}`);
+      assert.deepEqual(copy.base, c.base, `${code} ${c.file}`);
+      assert.deepEqual(copy.entries.map((e) => [e.d, e.c]), c.entries.map((e) => [e.d, e.c]), `${code} ${c.file}`);
+      translated += copy.entries.filter((e, j) => e.s !== c.entries[j].s).length;
     }
+    assert.ok(translated > 0, `${code}: no translated notes`);
   }
 });
 

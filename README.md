@@ -34,10 +34,12 @@ whose 67 steps are included here as the Sweden view (`#/country/se`).
 - **Loaded when needed.** A first visit loads the map, the polities, the dates
   of all border changes and a short catalogue of wars (names, dates,
   countries). Everything else comes in pieces as the reader needs it: a war's
-  steps when it is opened (`data/wars/`), war summaries and step titles per
-  century (`data/catalogue/`), and border changes and their notes per century
-  (`data/borders/`). The build fails if a first visit would load more than
-  1.2 MB gzip; see [ROADMAP.md](ROADMAP.md).
+  steps when it is opened (`data/wars/`), war summaries and step titles
+  (`data/catalogue/`), and border changes and their notes (`data/borders/`).
+  These come in files by date: one per century, and a busy century is cut
+  into smaller files (`site/buckets.js`). French and Swedish visitors load
+  translated copies of the same files. The build fails if a first visit would
+  load more than 1.2 MB gzip; see [ROADMAP.md](ROADMAP.md).
 
 See [CONTENT_GUIDE.md](CONTENT_GUIDE.md) for the data formats and how to write
 a war.

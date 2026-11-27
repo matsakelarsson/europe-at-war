@@ -7,7 +7,8 @@
 // screen pixels from longitude and latitude, again on every view change.
 import { applyLocale, count, esc, formatDate, locale, number, rich, t } from './i18n.js';
 import { defaultLocale } from './locales/index.js';
-import { localizeCatalogue, localizeMap, localizeWar, translateText } from './localized-content.js';
+import { localizeMap, localizeWar, translateText } from './localized-content.js';
+import { bucketOf } from './buckets.js';
 import { polityCSS } from './colors.js';
 import { Globe, R, capOf, capVisible, fitBox, laeaInvert, linesPath, lonLat, projector, ringsPath, screenLines, screenRings, unit, vecRings } from './globe.js';
 
@@ -126,6 +127,10 @@ function polylabel(poly, precision) {
 const fetchJSON = (u) => fetch(u).then((r) => { if (!r.ok) throw new Error(`${r.status} ${u}`); return r.json(); });
 const localeData = `data/locales/${locale}`;
 const optionalTranslation = (file) => fetchJSON(`${localeData}/${file}`).catch(() => null);
+/** A bucket file in the reader's language (a translated copy), or in English. */
+const bucketFile = (file) => (translations
+  ? fetchJSON(`${localeData}/${file}`).catch(() => fetchJSON(`data/${file}`))
+  : fetchJSON(`data/${file}`));
 let topo, B, WARS, LBL, translations;
 try {
   const files = ['data/atoms.topo.json', 'data/borders.json', 'data/wars.json', 'data/labels.json'];
@@ -138,8 +143,9 @@ try {
   throw e;
 }
 // The catalogue (wars.json) holds what the timeline and lists need at once.
-// A war's summary, step titles and sources come with its start century's
-// file (data/catalogue/), loaded when a list, a search or a story needs them;
+// A war's summary, step titles and sources come with the bucket file of its
+// start date (data/catalogue/, B.buckets.catalogue; translated copies in
+// data/locales/), loaded when a list, a search or a story needs them;
 // `w.steps` is set once they are there, and `w.n` is the number of steps.
 const searchIndex = new Map();
 const searchText = (value) => value.toLocaleLowerCase(locale).normalize('NFC');
@@ -154,38 +160,28 @@ for (const war of WARS) {
 const storyTranslations = new Set(translations?.stories);
 
 const warById = new Map(WARS.map((w) => [w.id, w]));
-/** Same rule as catalogueKey in tools/build.mjs: "1648-…" -> "1600". */
-const catalogueKey = (sk) => sk.slice(0, 2) + '00';
 const catalogueCache = new Map();
-function loadCatalogue(century) {
-  if (!catalogueCache.has(century)) {
-    const translated = translations ? optionalTranslation(`catalogue/${century}.json`) : null;
-    catalogueCache.set(century, Promise.all([fetchJSON(`data/catalogue/${century}.json`), translated]).then(([chunk, dictionaries]) => {
+function loadCatalogue(bucket) {
+  if (!catalogueCache.has(bucket)) {
+    catalogueCache.set(bucket, bucketFile(`catalogue/${bucket}.json`).then((chunk) => {
       for (const [id, detail] of Object.entries(chunk)) {
         const war = warById.get(id);
         if (!war || war.steps) continue;
-        const detailText = () => [war.summary, ...war.steps.map((step) => step.t)].map(searchText);
         Object.assign(war, detail);
-        const search = searchIndex.get(id);
-        search.push(...detailText());
-        const dictionary = dictionaries?.[id];
-        if (dictionary) {
-          localizeCatalogue(war, (value) => translateText(dictionary, value));
-          search.push(...detailText());
-        }
+        searchIndex.get(id).push(...[war.summary, ...war.steps.map((step) => step.t)].map(searchText));
       }
     }).catch((error) => {
-      catalogueCache.delete(century);
+      catalogueCache.delete(bucket);
       throw error;
     }));
   }
-  return catalogueCache.get(century);
+  return catalogueCache.get(bucket);
 }
 /** Load the details of these wars (resolves at once when they are there). */
 function withDetails(wars) {
-  const centuries = new Set();
-  for (const w of wars) if (!w.steps) centuries.add(catalogueKey(w.sk));
-  return Promise.all([...centuries].map(loadCatalogue));
+  const buckets = new Set();
+  for (const w of wars) if (!w.steps) buckets.add(bucketOf(B.buckets.catalogue, w.sk));
+  return Promise.all([...buckets].map(loadCatalogue));
 }
 const warCache = new Map();
 function loadWar(id) {
@@ -222,28 +218,27 @@ const REF_W = LBL.refWidth || 2000;
 
 // ---------- Border timeline ----------
 // borders.json has the date of every border change (B.keys). The changes
-// (atom, owner pairs) and their notes come per century, from
-// data/borders/<century>.json, with a full snapshot of the owners before the
-// century's first change. bordersReady(key) loads what a date needs.
+// (atom, owner pairs) and their notes come in bucket files by date (B.buckets,
+// data/borders/; translated copies in data/locales/), each with a full snapshot
+// of the owners before its first change. bordersReady(key) loads what a date needs.
 const T = B.keys.map((k) => ({ k }));
-const borderCenturies = new Map();
-const centuryBase = new Map(); // a loaded century's first entry -> owners before it
-function loadBorders(century) {
-  if (!borderCenturies.has(century)) {
-    const translated = translations ? optionalTranslation(`borders/${century}.json`) : null;
-    borderCenturies.set(century, Promise.all([fetchJSON(`data/borders/${century}.json`), translated]).then(([chunk, notes]) => {
-      chunk.entries.forEach((entry, j) => Object.assign(T[chunk.start + j], { c: entry.c, s: translateText(notes, entry.s) }));
-      centuryBase.set(chunk.start, Int16Array.from(chunk.base));
+const borderBuckets = new Map();
+const bucketBase = new Map(); // a loaded bucket's first entry -> owners before it
+function loadBorders(bucket) {
+  if (!borderBuckets.has(bucket)) {
+    borderBuckets.set(bucket, bucketFile(`borders/${bucket}.json`).then((chunk) => {
+      chunk.entries.forEach((entry, j) => Object.assign(T[chunk.start + j], { c: entry.c, s: entry.s }));
+      bucketBase.set(chunk.start, Int16Array.from(chunk.base));
     }).catch((error) => {
-      borderCenturies.delete(century);
+      borderBuckets.delete(bucket);
       throw error;
     }));
   }
-  return borderCenturies.get(century);
+  return borderBuckets.get(bucket);
 }
 const bordersLoaded = (key) => { const si = stateIndex(key); return si < 0 || !!T[si].c; };
 function bordersReady(key) {
-  return bordersLoaded(key) ? Promise.resolve() : loadBorders(catalogueKey(T[stateIndex(key)].k));
+  return bordersLoaded(key) ? Promise.resolve() : loadBorders(bucketOf(B.buckets.borders, T[stateIndex(key)].k));
 }
 const snaps = new Map();
 function stateIndex(key) {
@@ -251,13 +246,13 @@ function stateIndex(key) {
   while (lo <= hi) { const m = (lo + hi) >> 1; if (T[m].k <= key) { ans = m; lo = m + 1; } else hi = m - 1; }
   return ans;
 }
-/** The owner of every atom after entry si (whose century must be loaded). */
+/** The owner of every atom after entry si (whose bucket must be loaded). */
 function ownersAt(si) {
   if (snaps.has(si)) return snaps.get(si);
-  // Start from the latest known state that is not before si's century:
-  // the century's snapshot, or a state worked out since.
+  // Start from the latest known state that is not before si's bucket:
+  // the bucket's snapshot, or a state worked out since.
   let k = -1, base = null;
-  for (const [start, owners] of centuryBase) if (start <= si && start - 1 > k) { k = start - 1; base = owners; }
+  for (const [start, owners] of bucketBase) if (start <= si && start - 1 > k) { k = start - 1; base = owners; }
   for (const [index, owners] of snaps) if (index <= si && index > k) { k = index; base = owners; }
   const owners = base ? base.slice() : new Int16Array(NA).fill(-1);
   for (let i = k + 1; i <= si; i++) {
@@ -1046,7 +1041,7 @@ function setYear(y, opts = {}) {
   const key = `${String(year).padStart(4, '0')}-12-31`;
   closePop();
   renderWarList(); markTimeline();
-  // The borders follow when their century is loaded (at once if it is).
+  // The borders follow when their bucket is loaded (at once if it is).
   const showBorders = () => {
     $('loading')?.remove();
     setBorders(key, null, key, opts.scrub);

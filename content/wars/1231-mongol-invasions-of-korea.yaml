@@ -1,0 +1,327 @@
+id: mongol-invasions-of-korea
+name: Mongol invasions of Korea
+start: "1231-08-26"
+end: "1259"
+tier: A
+summary: "A series of Mongol invasions of Goryeo over nearly three decades, which ended with Goryeo becoming a subordinate ally of the Mongol Yuan empire but keeping its own dynasty. After a Mongol envoy was killed on his way home from Goryeo in 1225, Saritai invaded in 1231, defeated the Goryeo army and forced the court to submit. In 1232 the military ruler Choe U moved the court to Ganghwa Island, off the west coast, which the Mongols never attacked, and told the people to take refuge in mountain fortresses and on islands; Saritai was killed by an arrow at Cheoin later that year. Further invasions in 1235–1239, 1247–1248 and 1253–1257 spread devastation across the country while the court held out on Ganghwa. Mountain fortresses such as Kuju and Chungju resisted long sieges, but the countryside was stripped: the chronicles record 206,800 people carried off in 1254 alone, and the nine-storey pagoda of Hwangnyongsa and the first printing blocks of the Buddhist canon were burned. In 1258 the last of the Choe dictators was killed, the north-east went over to the Mongols, and in 1259 the court made peace and sent the crown prince to the Mongol court. The court moved back to the old capital, Kaegyong, in 1270, which set off the Sambyeolcho rebellion."
+countries: [kp, kr]
+sides:
+  - id: gor
+    name: Goryeo
+    polities: [goryeo]
+    ink: blue
+    moves: Goryeo moves
+    success: Goryeo success
+  - id: mon
+    name: Mongols, with Eastern Xia Jurchens and Korean defectors
+    polities: [mongol-empire, yuan, eastern-xia]
+    ink: slate
+    moves: Mongol moves
+    success: Mongol success
+notes:
+  - The usual count of six or nine invasions varies between historians. English dates for the invasions follow William Henthorn’s study (1963) as given on Wikipedia; other dates are lunar months from the Goryeosa.
+  - The figure of 206,800 people carried off in 1254 comes from the Goryeosa and is the only number the chronicles give for the losses; the total death toll of the invasions is unknown.
+  - Some English accounts say the Mongols massacred the people of Chungju at the end of the siege of 1253; the Korean chronicles and the Encyclopedia of Korean Culture record that the fortress held out and the Mongols withdrew.
+sources:
+  - title: Mongol invasions of Korea (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mongol_invasions_of_Korea
+  - title: Siege of Kuju (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kuju
+  - title: Battle of Cheoin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Cheoin
+  - title: Ch’oe U (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ch%27oe_U
+  - title: Ssangseong Prefecture (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ssangseong_Prefectures
+  - title: Dongnyeong Prefecture (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Dongnyeong_Prefecture
+  - title: 처인성 전투 (Battle of Cheoin, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0055720
+  - title: 김윤후 (Kim Yun-hu, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0010122
+  - title: 충주성 전투 (Battle of Chungju, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0058221
+  - title: 고종 (King Gojong of Goryeo, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0003938
+  - title: 고려-몽골 전쟁 (Goryeo–Mongol War, Korean Wikipedia)
+    url: https://ko.wikipedia.org/wiki/%EA%B3%A0%EB%A0%A4-%EB%AA%BD%EA%B3%A8_%EC%A0%84%EC%9F%81
+steps:
+  - title: Saritai’s first invasion
+    date: August 1231 – January 1232
+    when: "1231-08-26"
+    borders: "1231-12-31"
+    countries: [kp]
+    body:
+      - Goryeo had sworn brotherhood with the Mongols in 1219, when they helped it destroy the Khitan invaders, but resented their heavy demands for tribute. In 1225 the Mongol envoy Zhuguyu was killed on his way home after crossing the Yalu; the Mongols blamed Goryeo and broke off relations. On 26 August 1231 an army under Saritai crossed the Yalu, and the frontier fortress of Hamsinjin (Uiju) surrendered. At Inju Hong Bok-won went over to the Mongols with 1,500 households, and his family later guided Mongol armies in Korea. At Cheolju, rather than surrender, the defenders killed their families and themselves. Yongju, Seonju and Gwakju fell in October.
+      - The military ruler Choe U raised the Three Armies, which marched north and were defeated at Anju. Bypassing the fortresses that held out, the Mongols reached Kaegyong and surrounded it late in December. The court submitted, and the Three Armies laid down their arms.
+    facts:
+      - [Mongols cross the Yalu, "26 August 1231"]
+      - [Defeat of the Three Armies, "1231, at Anju"]
+      - [Goryeo submits, "December 1231 – January 1232"]
+    markers:
+      - kind: taken
+        side: mon
+        name: Hamsinjin (Uiju)
+        date: 26 August 1231
+        text: The frontier fortress surrendered to Saritai as soon as he crossed the Yalu.
+        lonlat: [124.532, 40.197]
+        lp: l
+      - kind: battle
+        side: mon
+        name: Anju
+        date: "1231"
+        text: The Three Armies of Goryeo were defeated here.
+        lonlat: [125.660, 39.620]
+      - kind: siege
+        side: mon
+        name: Kaegyong
+        date: December 1231
+        text: The capital was surrounded and the court submitted.
+        lonlat: [126.543, 37.985]
+        lp: l
+    arrows:
+      - side: mon
+        label: Saritai
+        phase: 1
+        via: [[124.380, 40.300], [124.530, 40.190], [124.950, 39.820], [125.640, 39.630]]
+      - side: mon
+        phase: 2
+        via: [[125.700, 39.580], [125.850, 39.000], [126.150, 38.500], [126.500, 38.050]]
+      - side: gor
+        label: Three Armies
+        phase: 1
+        via: [[126.520, 38.020], [126.100, 38.600], [125.800, 39.150], [125.650, 39.580]]
+  - title: Kuju and Jaju hold out
+    date: 1231–1232
+    when: "1231-10"
+    borders: "1232-03"
+    countries: [kp]
+    body:
+      - Behind the Mongol advance several fortresses refused to surrender. At Kuju (Gwiju, today’s Kusong), Pak Seo, with Kim Gyeong-son and troops gathered from the surrounding towns, held out for months. The Mongols attacked with siege towers and carts of brushwood, mined the walls and bombarded the south wall with fifteen large catapults; the defenders poured molten iron on the siege engines, put out fires with mud and water, repaired the breaches and drove the attackers off with sorties. Jaju, under Choe Chun-myeong, also held. Both gave up only after repeated orders from the court, which had already submitted.
+      - Saritai demanded 20,000 horses, 10,000 bolts of silk, 20,000 otter skins, clothing for a million soldiers and hostages from the royal family and the great officials. Goryeo sent a large tribute but no hostages. In the spring of 1232 Saritai withdrew his main army, leaving 72 Mongol overseers (darughachi) in the towns of the north-west to see that Goryeo kept its word.
+    facts:
+      - [Siege of Kuju, "1231–1232, the fortress held out"]
+      - [Mongol overseers left behind, "72, in the spring of 1232"]
+    markers:
+      - kind: held
+        side: gor
+        name: Kuju
+        date: 1231–1232
+        text: Pak Seo held the fortress through a long siege with catapults, towers and mines, surrendering only on the court’s orders.
+        lonlat: [125.230, 39.960]
+        lp: l
+      - kind: held
+        side: gor
+        name: Jaju
+        date: 1231–1232
+        text: Choe Chun-myeong held the town until ordered by the court to submit.
+        lonlat: [125.933, 39.417]
+    areas:
+      - style: occupied
+        side: mon
+        label: Towns under Mongol overseers, 1232 (approximate)
+        atoms: [KP-03, KP-02]
+  - title: Ganghwa and the death of Saritai
+    date: 1232–1233
+    when: "1232-12"
+    borders: "1233-06"
+    countries: [kp, kr]
+    body:
+      - In the sixth month of 1232 Choe U decided to move the king and court to Ganghwa Island, and the king moved there in the seventh month, close to the coast but separated from it by fast tidal channels, and ordered the people of the provinces to take refuge in mountain fortresses and on islands. An official who spoke against the move was executed. That summer the Mongol overseers in the north-west were killed. Saritai invaded again and swept south into the valley of the Han River; the fortress of Gwangju held out, and the first set of printing blocks of the Buddhist canon, kept at Buinsa near today’s Daegu, was burned.
+      - In the twelfth month of 1232 Saritai attacked the small earth-walled fortress of Cheoin, near today’s Yongin, held by about a hundred monks and a thousand refugees. He was killed by an arrow, traditionally credited to the monk Kim Yun-hu, and the Mongol army withdrew, leaving Hong Bok-won in charge of the north-west. In 1233 Goryeo forces drove Hong out of the Western Capital, Pyongyang, and he fled to Liaodong.
+    facts:
+      - [Court moves to Ganghwa, "seventh month of 1232"]
+      - [Death of Saritai, "twelfth month of 1232, at Cheoin"]
+      - [Hong Bok-won driven from Pyongyang, "1233"]
+    markers:
+      - kind: capital
+        side: gor
+        name: Ganghwa
+        date: 1232–1270
+        text: The court’s refuge for 38 years; the Mongols never attacked the island.
+        lonlat: [126.485, 37.751]
+        lp: l
+      - kind: event
+        side: mon
+        name: Buinsa
+        date: "1232"
+        text: The temple near Daegu where the first printing blocks of the Buddhist canon were burned.
+        lonlat: [128.707, 35.979]
+      - kind: battle
+        side: gor
+        name: Cheoin
+        date: "1232"
+        text: Saritai was killed by an arrow while attacking the fortress, held by monks and refugees.
+        lonlat: [127.169, 37.148]
+      - kind: taken
+        side: gor
+        name: Pyongyang
+        date: "1233"
+        text: Goryeo forces drove the defector Hong Bok-won out of the Western Capital.
+        lonlat: [125.754, 39.019]
+        lp: l
+    arrows:
+      - side: gor
+        label: The court
+        phase: 1
+        via: [[126.543, 37.975], [126.510, 37.860], [126.490, 37.765]]
+      - side: mon
+        label: Saritai
+        phase: 2
+        via: [[125.750, 39.000], [126.300, 38.300], [126.900, 37.600], [127.160, 37.170]]
+  - title: Tangut-Batur and the burning of Hwangnyongsa
+    date: 1235–1241
+    when: "1236"
+    borders: "1239-04"
+    countries: [kp, kr]
+    body:
+      - After the Mongols destroyed the Jin empire in 1234, Ögedei Khan ordered a new campaign against Goryeo. From 1235 an army of Mongols and Eastern Xia Jurchens under Tangut-Batur ranged across the country for four years, reaching Cheongju and the area of today’s Seoul in 1236 and the south-east in 1238, when the great wooden pagoda of Hwangnyongsa in Gyeongju, nine storeys high, was burned. Goryeo fielded no large army. The court stayed on Ganghwa, the people sheltered in mountain fortresses and on islands, and small mobile units, the byeolcho, ambushed Mongol detachments.
+      - In 1237 the court began carving a new set of printing blocks for the Buddhist canon as a prayer for the country’s protection; the more than 80,000 blocks of the Tripitaka Koreana, finished in 1248, survive at Haeinsa. After talks in the winter of 1238 the Mongols withdrew in 1239. They demanded that the king come to their court in person; Gojong excused himself on grounds of mourning, age and illness, and in 1241 Goryeo sent a royal relative, Wang Sun, passing him off as the king’s son.
+    facts:
+      - [Third invasion, "1235–1239"]
+      - [Hwangnyongsa pagoda burned, "1238"]
+      - [Tripitaka Koreana carved, "1237–1248"]
+    markers:
+      - kind: event
+        side: mon
+        name: Hwangnyongsa
+        date: "1238"
+        text: The nine-storey wooden pagoda of the royal temple in Gyeongju was burned by the Mongols.
+        lonlat: [129.233, 35.837]
+      - kind: held
+        side: gor
+        name: Ganghwa
+        date: 1235–1239
+        text: The court remained on the island throughout the invasion.
+        lonlat: [126.485, 37.751]
+        lp: l
+    arrows:
+      - side: mon
+        label: Tangut-Batur
+        phase: 1
+        via: [[124.500, 40.200], [125.700, 39.400], [126.400, 38.300], [127.200, 37.400], [127.500, 36.650]]
+      - side: mon
+        phase: 2
+        via: [[127.550, 36.600], [128.300, 36.200], [128.900, 35.950], [129.210, 35.850]]
+  - title: Yegü and the siege of Chungju
+    date: 1247–1254
+    when: "1253-08-03"
+    borders: "1254-01"
+    countries: [kp, kr]
+    body:
+      - A Mongol army under Amukan invaded again in 1247–1248, and Mongol forces held the land north of the Cheongcheon River. Choe U died in 1249 and was succeeded by his son Choe Hang. When Möngke became khan in 1251 he repeated the demands that the king come to the Mongol court and that the court leave Ganghwa. They were refused, and on 3 August 1253 an army under Prince Yegü, Amukan and Hong Bok-won crossed the Yalu and swept south.
+      - The mountain fortress of Chungju, in the centre of the country, held out for about seventy days. Its commander, Kim Yun-hu, the monk credited with killing Saritai, burned the registers of government slaves and promised rank to all who fought, and the defenders beat off the siege. Yegü fell ill and went north. A Mongol envoy met King Gojong on the mainland opposite Ganghwa, at Seungcheon-bu, and Gojong sent his second son Wang Chang as a hostage, but Choe Hang stayed on the island and the Mongols withdrew early in 1254.
+    facts:
+      - [Fourth invasion, "1247–1248"]
+      - [Fifth invasion, "3 August 1253 – January 1254"]
+      - [Siege of Chungju, "about 70 days, 1253"]
+    markers:
+      - kind: held
+        side: gor
+        name: Chungju
+        date: "1253"
+        text: Kim Yun-hu held the mountain fortress for about seventy days, burning the slave registers to rally the defenders.
+        lonlat: [127.976, 36.955]
+      - kind: event
+        side: gor
+        name: Seungcheon-bu
+        date: "1253"
+        text: King Gojong left Ganghwa to meet the Mongol envoy on the mainland.
+        lonlat: [126.470, 37.840]
+        lp: t
+    arrows:
+      - side: mon
+        label: Yegü
+        phase: 1
+        via: [[124.450, 40.250], [125.700, 39.100], [126.300, 38.300], [127.200, 37.500], [127.900, 37.000]]
+  - title: Jalairtai’s campaigns
+    date: 1254–1257
+    when: "1254-09"
+    borders: "1257-10"
+    countries: [kp, kr]
+    body:
+      - In September 1254 the Mongol general Jalairtai crossed the Yalu and led the most destructive of the invasions. His army besieged Chungju until a storm forced it to withdraw, and then attacked the mountain fortress of Sangju, where it lost heavily and a Mongol officer was shot by the monk Hongji. According to the Goryeosa the Mongols carried off 206,800 men and women in 1254, and the dead were beyond counting; famine followed, and the chronicles describe abandoned infants left tied to trees.
+      - Jalairtai returned in 1255 and stayed through 1256, camping at Haeyang (today’s Gwangju) in the south-west and building ships to attack the islands where people had taken refuge; Goryeo forces beat off some of these attacks. Another invasion came in 1257. In October 1257 the envoy Kim Su-gang persuaded the Mongol court to withdraw the army.
+    facts:
+      - [Jalairtai crosses the Yalu, "6 September 1254"]
+      - [People carried off, "206,800 in 1254 (Goryeosa)"]
+      - [Mongol withdrawal, "October 1257"]
+    markers:
+      - kind: held
+        side: gor
+        name: Sangju
+        date: "1254"
+        text: The mountain fortress held out; the monk Hongji shot a Mongol officer, and the attackers lifted the siege.
+        lonlat: [128.159, 36.411]
+      - kind: held
+        side: gor
+        name: Chungju
+        date: "1254"
+        text: Besieged again by Jalairtai, who withdrew after a storm.
+        lonlat: [127.976, 36.955]
+        lp: t
+      - kind: event
+        side: mon
+        name: Haeyang (Gwangju)
+        date: 1255–1256
+        text: Jalairtai’s camp in the south-west, from which he attacked the islands.
+        lonlat: [126.853, 35.160]
+    arrows:
+      - side: mon
+        label: Jalairtai
+        phase: 1
+        via: [[124.450, 40.250], [125.750, 39.000], [126.500, 38.000], [127.400, 37.300], [127.950, 36.990], [128.150, 36.430]]
+      - side: mon
+        phase: 2
+        via: [[128.100, 36.380], [127.500, 35.700], [126.900, 35.200]]
+  - title: The end of military rule and the peace of 1259
+    date: 1258–1270
+    when: "1259-04"
+    borders: "1270-06"
+    countries: [kp, kr]
+    body:
+      - In the third month of 1258 Kim Jun and the official Yu Gyeong killed Choe Ui, the last of the Choe dictators, and power returned, for the time being, to the king. The Mongols ravaged the country again, and late in 1258 Jo Hwi and Tak Cheong, local men of the north-east, killed the Goryeo governor and went over to the Mongols, who made the land north of the Cheollyeong pass the Ssangseong commandery. In 1259 the court made peace and sent the crown prince, Wang Jeon, to the Mongols. King Gojong died while he was away. The prince met Kublai, who was then making his bid for the throne and welcomed him warmly; he came home in 1260 as King Wonjong.
+      - Under the peace Goryeo kept its own dynasty and customs but became a subordinate ally of the Mongols, and its kings later married into the family of the Yuan emperors. The military men who opposed the peace remained strong for another decade. In 1269 Choe Tan, an officer in Pyongyang, went over to the Mongols with the towns of the north-west, which became the Yuan’s Dongnyeong prefecture in 1270. In the fifth month of 1270 the last military ruler, Im Yu-mu, was killed, and the court moved back to Kaegyong, which set off the Sambyeolcho rebellion.
+    facts:
+      - [Death of Choe Ui, "third month of 1258"]
+      - [Ssangseong commandery, "1258"]
+      - [Peace with the Mongols, "1259"]
+      - [Court returns to Kaegyong, "fifth month of 1270"]
+    markers:
+      - kind: taken
+        side: mon
+        name: Hwaju (Ssangseong)
+        date: "1258"
+        text: Seat of the Mongol commandery set up after Jo Hwi and Tak Cheong went over to the Mongols.
+        lonlat: [127.240, 39.545]
+      - kind: treaty
+        side: gor
+        name: Ganghwa
+        date: "1259"
+        text: The court agreed to peace and sent the crown prince to the Mongols.
+        lonlat: [126.485, 37.751]
+        lp: l
+      - kind: capital
+        side: gor
+        name: Kaegyong
+        date: "1270"
+        text: The court moved back to the old capital after the fall of the last military ruler.
+        lonlat: [126.543, 37.985]
+        lp: t
+      - kind: taken
+        side: mon
+        name: Pyongyang (Dongnyeong)
+        date: 1269–1270
+        text: Choe Tan handed the north-west to the Mongols; it was ruled as the Yuan’s Dongnyeong prefecture until 1290.
+        lonlat: [125.754, 39.019]
+        lp: l
+    arrows:
+      - side: gor
+        label: Crown prince Wang Jeon
+        phase: 1
+        via: [[126.485, 37.760], [125.750, 39.050], [124.700, 40.150], [123.250, 41.250]]
+    areas:
+      - style: gained
+        side: mon
+        label: Ssangseong commandery (1258) and Dongnyeong prefecture (1270)
+        atoms: [KP-08~yonghung, KP-01, KP-02, KP-03]

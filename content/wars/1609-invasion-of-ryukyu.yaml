@@ -1,0 +1,217 @@
+id: invasion-of-ryukyu
+name: Invasion of Ryukyu
+start: "1609-04"
+end: "1609-05"
+tier: B
+summary: "The conquest of the Ryukyu Kingdom by the Shimazu lords of Satsuma in the spring of 1609, with the permission of the Tokugawa shogunate. King Shō Nei had ignored repeated demands from Satsuma and from Tokugawa Ieyasu that he send an embassy to thank Ieyasu for returning shipwrecked Ryukyuan sailors and acknowledge the new regime, and Satsuma, deep in debt after the Korean wars, wanted a share of Ryukyu’s trade with China. About 3,000 Satsuma soldiers in some 100 ships under Kabayama Hisataka and Hirata Masumune sailed from Yamakawa in early April. They took Amami Ōshima without resistance, overcame armed islanders on Tokunoshima and passed Okinoerabu, then landed at Unten on Okinawa, burned the deserted castle of Nakijin and marched on the capital, Shuri, from the west coast while their ships forced the harbour of Naha. Shō Nei surrendered in early May. He was taken to Kagoshima, brought before Ieyasu at Sunpu and the shogun Hidetada at Edo in 1610, and in 1611 made to swear oaths of loyalty to the Shimazu and accept the Fifteen Injunctions, which put Ryukyu’s foreign trade under Satsuma control. Satsuma annexed the Amami Islands and took a yearly tribute, while the kingdom kept its king, its government and its tribute relations with China, which Satsuma and Ryukyu hid from the Chinese court. This dual subordination lasted until Japan annexed Ryukyu as Okinawa Prefecture in 1879."
+countries: [jp]
+sides:
+  - id: sat
+    name: Satsuma domain (Shimazu)
+    polities: [shimazu-clan]
+    ink: teal
+    moves: Satsuma moves
+    success: Satsuma success
+  - id: ryu
+    name: Ryukyu Kingdom
+    polities: [ryukyu]
+    ink: magenta
+    moves: Ryukyuan moves
+    success: Ryukyuan success
+notes:
+  - The dates of the campaign come from the diary of a Satsuma soldier and other Japanese records kept in the lunar calendar; the Gregorian dates here are converted and may be a day or two out. The fleet sailed on the fourth day of the third month of Keichō 14, and Shō Nei left Shuri Castle on the fourth day of the fourth month.
+  - Losses are not well recorded. Japanese and Ryukyuan accounts mention about 50 islanders killed at Wanya and 20 to 30 at Akitoku on Tokunoshima; the overall figures sometimes given, around 1,500 Ryukyuan and 500 Satsuma dead, are uncertain.
+  - The Amami Islands stayed part of Satsuma and are today in Kagoshima Prefecture.
+sources:
+  - title: Invasion of Ryukyu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Invasion_of_Ryukyu
+  - title: 琉球侵攻 (Japanese Wikipedia)
+    url: https://ja.wikipedia.org/wiki/%E7%90%89%E7%90%83%E4%BE%B5%E6%94%BB
+  - title: Shō Nei (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sh%C5%8D_Nei
+  - title: Kabayama Hisataka (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kabayama_Hisataka
+steps:
+  - title: Through the Amami Islands
+    date: April 1609
+    when: "1609-04"
+    borders: "1609-04-01"
+    countries: [jp]
+    body:
+      - In the spring of 1609 the Shimazu gathered about 3,000 men, many of them veterans of the Korean war and armed with muskets, in some 100 ships at Yamakawa at the southern tip of Satsuma. Kabayama Hisataka commanded, with Hirata Masumune as his deputy. The fleet sailed in early April, passed the Tokara Islands and reached Amami Ōshima, the largest of the northern islands that Ryukyu had ruled since the 15th century, around 11 April. The island’s chiefs did not resist; the chief of Kasari, who had dealings with Kabayama, called on the islanders to submit, and others supplied the army.
+      - On Tokunoshima the islanders fought. About a thousand people surrounded the first Satsuma ships to arrive at Wanya and were driven off with musket fire, losing about 50 dead, and 20 to 30 more were killed when the people of Akitoku attacked the landing parties at the water’s edge. The fleet moved on to Okinoerabu, which gave in, and bypassed Yoron. In Shuri, Shō Nei sent a Zen priest to seek terms, but the envoys missed the Satsuma fleet.
+    facts:
+      - [Satsuma force, about 3,000 men in some 100 ships]
+      - [Commanders, Kabayama Hisataka and Hirata Masumune]
+      - [Amami Ōshima occupied, "about 11 April 1609"]
+      - [Fighting on Tokunoshima, "about 21–24 April 1609"]
+    markers:
+      - kind: event
+        side: sat
+        name: Yamakawa
+        date: early April 1609
+        text: The harbour at the southern tip of Satsuma where the invasion fleet assembled and from which it sailed.
+        lonlat: [130.637, 31.205]
+      - kind: taken
+        side: sat
+        name: Kasari (Amami Ōshima)
+        date: about 11 April 1609
+        text: The Satsuma fleet reached Amami Ōshima without meeting resistance; the chief of Kasari urged the islanders to submit.
+        lonlat: [129.691, 28.489]
+      - kind: battle
+        side: sat
+        name: Wanya (Tokunoshima)
+        date: about 21–22 April 1609
+        text: About a thousand islanders surrounded the first Satsuma ships through the night. The next day the troops landed and fired into the crowd, killing about 50.
+        lonlat: [128.892, 27.825]
+        lp: l
+      - kind: battle
+        side: sat
+        name: Akitoku (Tokunoshima)
+        date: about 22 April 1609
+        text: The people of Akitoku (today Kametoku) attacked the Satsuma landing party at the water’s edge and lost 20 to 30 dead.
+        lonlat: [129.023, 27.745]
+      - kind: taken
+        side: sat
+        name: Okinoerabu
+        date: late April 1609
+        text: The island submitted as the fleet passed on its way to Okinawa.
+        lonlat: [128.567, 27.369]
+        lp: l
+      - kind: capital
+        side: ryu
+        name: Shuri
+        date: "1609"
+        text: Capital of the Ryukyu Kingdom under King Shō Nei (reigned 1587–1620).
+        lonlat: [127.719, 26.217]
+    arrows:
+      - side: sat
+        label: Kabayama Hisataka
+        phase: 1
+        via: [[130.637, 31.180], [130.000, 30.200], [129.750, 28.700], [129.690, 28.500]]
+      - side: sat
+        phase: 2
+        via: [[129.600, 28.540], [129.250, 28.460], [128.950, 28.050], [128.885, 27.840]]
+      - side: sat
+        phase: 3
+        via: [[128.860, 27.760], [128.720, 27.500], [128.300, 27.000], [127.995, 26.690]]
+    areas:
+      - style: occupied
+        side: sat
+        label: Amami Islands, occupied by Satsuma
+        atoms: [JP-47~amami]
+  - title: The fall of Shuri
+    date: late April – May 1609
+    when: "1609-04-29"
+    borders: "1609-05-01"
+    countries: [jp]
+    body:
+      - The fleet anchored at Unten on the Motobu Peninsula of Okinawa on about 29 April. Satsuma troops found Nakijin Castle, the old seat of the northern kingdom, deserted and set fire to it and to the villages around it. A Ryukyuan peace mission led by the Zen master Kikuin, who had lived in Satsuma, met Kabayama at Nakijin and was told to wait for him at Naha.
+      - Learning that a chain closed the entrance of Naha harbour, Kabayama landed his army at Ōwan on the west coast near Yomitan and marched south overland, burning Urasoe on the way, while part of the fleet sailed for Naha. Peace talks began at Naha in early May; when a fire broke out in Shuri, Satsuma troops surged towards the capital and had to be called back by their officers. Shō Nei handed over his brother and his three chief ministers as hostages, and a few days later left Shuri Castle; Satsuma officers entered it and drew up an inventory of its treasures. Resistance had been short, for the kingdom had no army able to face musket-armed veterans.
+    facts:
+      - [Landing at Unten, "about 29 April 1609"]
+      - [Peace talks at Naha, "early May 1609"]
+      - [Shō Nei leaves Shuri Castle, "early May 1609"]
+    markers:
+      - kind: event
+        side: sat
+        name: Unten
+        date: about 29 April 1609
+        text: The Satsuma fleet anchored in this harbour on the Motobu Peninsula.
+        lonlat: [127.997, 26.678]
+      - kind: taken
+        side: sat
+        name: Nakijin Castle
+        date: about 1 May 1609
+        text: Found deserted and set on fire by the Satsuma troops.
+        lonlat: [127.930, 26.691]
+        lp: l
+      - kind: event
+        side: sat
+        name: Ōwan (Yomitan)
+        date: about 3 May 1609
+        text: Kabayama landed his army here rather than risk the chained harbour of Naha, and marched on Shuri.
+        lonlat: [127.750, 26.375]
+        lp: l
+      - kind: taken
+        side: sat
+        name: Urasoe
+        date: early May 1609
+        text: Urasoe Castle and the town were burned as the Satsuma army marched south.
+        lonlat: [127.732, 26.248]
+        lp: l
+      - kind: treaty
+        side: sat
+        name: Naha
+        date: early May 1609
+        text: The Satsuma ships entered the harbour and peace talks were held at the Oyamise, the royal trading office.
+        lonlat: [127.674, 26.214]
+        lp: l
+      - kind: taken
+        side: sat
+        name: Shuri
+        date: early May 1609
+        text: Shō Nei gave hostages, then left his castle and surrendered to Kabayama Hisataka.
+        lonlat: [127.719, 26.217]
+    arrows:
+      - side: sat
+        phase: 1
+        via: [[127.970, 26.720], [127.840, 26.720], [127.780, 26.550], [127.736, 26.374]]
+      - side: sat
+        phase: 2
+        via: [[127.755, 26.370], [127.745, 26.300], [127.735, 26.255], [127.722, 26.222]]
+      - side: sat
+        phase: 2
+        via: [[127.700, 26.390], [127.640, 26.320], [127.630, 26.240], [127.666, 26.214]]
+    areas:
+      - style: occupied
+        side: sat
+        label: Amami Islands, occupied by Satsuma
+        atoms: [JP-47~amami]
+  - title: The king before the shogun
+    date: 1609–1611
+    when: "1609-06"
+    borders: "1611-12-31"
+    countries: [jp]
+    body:
+      - In the summer of 1609 Shō Nei sailed from Unten for Satsuma with about a hundred of his officials. In 1610 he was brought before the retired shogun Tokugawa Ieyasu at Sunpu and the shogun Tokugawa Hidetada at Edo. Meanwhile Satsuma officials surveyed the islands, and Kabayama and his deputy governed them for the Shimazu lord Tadatsune.
+      - At Kagoshima in 1611 the king and his councillors had to swear that Ryukyu had always been a dependency of Satsuma and that the invasion had been deserved. One of the king’s councillors, Tei Dō (Jana Ueekata), refused to sign and was beheaded. The Fifteen Injunctions put Ryukyu’s trade and diplomacy under Satsuma’s control, Satsuma annexed the Amami Islands, and the king returned to Shuri in 1611 as Satsuma’s vassal. Ryukyu went on sending tribute to the Ming and later the Qing court, and Satsuma and Ryukyu took care to hide Satsuma’s hold from Chinese envoys.
+    facts:
+      - [Audience with Ieyasu at Sunpu, "1610"]
+      - [Oaths and the Fifteen Injunctions, "Kagoshima, 1611"]
+      - [Annexed by Satsuma, the Amami Islands]
+    markers:
+      - kind: treaty
+        side: sat
+        name: Kagoshima
+        date: "1611"
+        text: Seat of the Shimazu lords, where Shō Nei swore his oaths of loyalty and accepted the Fifteen Injunctions. His councillor Tei Dō was executed here for refusing to sign.
+        lonlat: [130.555, 31.599]
+      - kind: event
+        side: sat
+        name: Sunpu
+        date: "1610"
+        text: Shō Nei was received by the retired shogun Tokugawa Ieyasu.
+        lonlat: [138.384, 34.979]
+        lp: b
+      - kind: event
+        side: sat
+        name: Edo
+        date: "1610"
+        text: Shō Nei was received by the shogun Tokugawa Hidetada.
+        lonlat: [139.754, 35.688]
+      - kind: capital
+        side: ryu
+        name: Shuri
+        date: "1611"
+        text: Shō Nei returned to his capital in 1611 as a vassal of Satsuma.
+        lonlat: [127.719, 26.217]
+    arrows:
+      - side: sat
+        label: Shō Nei taken to Satsuma
+        via: [[127.997, 26.700], [128.700, 27.700], [129.700, 29.300], [130.700, 31.150], [130.560, 31.585]]
+    areas:
+      - style: gained
+        side: sat
+        label: Amami Islands, annexed by Satsuma
+        atoms: [JP-47~amami]

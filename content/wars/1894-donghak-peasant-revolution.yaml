@@ -1,0 +1,214 @@
+id: donghak-peasant-revolution
+name: Donghak Peasant Revolution
+start: "1894-02-15"
+end: "1895-04-24"
+tier: B
+summary: "A peasant rising in south-western Korea led by members of Donghak (“Eastern Learning”), a religion founded in 1860. It began on 15 February 1894 at Gobu, where Jeon Bong-jun led farmers against a corrupt magistrate, and grew in the spring into a rebellion across Jeolla. The peasant army beat government troops at Hwangtohyeon on 11 May and on the Hwangryong River on 27 May, and entered Jeonju, the provincial capital, on 31 May. The government asked the Qing for troops; Japan sent its own, and the rebels made a truce at Jeonju in June and set up local offices of their own across Jeolla. After Japanese troops seized the royal palace in July and the First Sino-Japanese War began, the Donghak rose again in October, this time against the Japanese. At Ugeumchi, outside Gongju, Japanese and government troops with modern rifles destroyed the peasant army in early December. Jeon was captured at the end of the year and hanged with other leaders on 24 April 1895. Estimates of the peasants killed range from tens of thousands to several hundred thousand."
+countries: [kr]
+sides:
+  - id: dh
+    name: Donghak peasant army
+    polities: [donghak]
+    ink: teal
+    moves: Peasant army moves
+    success: Peasant army success
+  - id: js
+    name: Joseon government
+    polities: [joseon]
+    ink: blue
+    moves: Government moves
+    success: Government success
+  - id: jp
+    name: Japan
+    polities: [japan]
+    ink: red
+    moves: Japanese moves
+    success: Japanese success
+notes:
+  - Korea used the lunar calendar until the end of 1895. The English Wikipedia articles give most dates of the rising in the lunar calendar as if they were Gregorian (Gobu on “10 January”, Hwangtojae on “7 April”); the dates here are Gregorian conversions (the Gobu rising, on the 10th day of the first month, was 15 February 1894, and Hwangtohyeon, on the 7th day of the fourth month, 11 May 1894). Where the conversion is uncertain the text gives a month.
+  - The rebels were organised in jeop, Donghak congregations. The southern jeop of Jeolla under Jeon Bong-jun led both risings; the northern jeop under the religion’s leader Choe Si-hyeong opposed the first and joined the second. The war between China and Japan that the rising set off is told as the First Sino-Japanese War.
+sources:
+  - title: Donghak Peasant Revolution (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Donghak_Peasant_Revolution
+  - title: Jeon Bong-jun (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jeon_Bong-jun
+  - title: Battle of Ugeumchi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ugeumchi
+  - title: 동학 농민 혁명 (Donghak Peasant Revolution, Korean Wikipedia)
+    url: https://ko.wikipedia.org/wiki/%EB%8F%99%ED%95%99_%EB%86%8D%EB%AF%BC_%ED%98%81%EB%AA%85
+  - title: Convention of Tientsin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Convention_of_Tientsin
+steps:
+  - title: Gobu, Hwangtohyeon and the march on Jeonju
+    date: February – May 1894
+    when: "1894-02"
+    borders: "1894-05-31"
+    countries: [kr]
+    body:
+      - Donghak, “Eastern Learning”, was founded in 1860 by Choe Je-u, who was executed in 1864 as a heretic. Under its second leader, Choe Si-hyeong, it spread among the peasants of the south with its teaching that every person bears Heaven within and its promise of a new age, and in 1892–1893 its members petitioned for the clearing of Choe Je-u’s name. The peasants of Jeolla, the richest rice province, suffered from heavy and arbitrary taxes, corrupt officials and the sale of rice to Japanese merchants.
+      - In Gobu the magistrate Jo Byeong-gap forced the farmers to build a new reservoir and then charged them for its water. On 15 February 1894 about a thousand peasants led by Jeon Bong-jun, a village teacher and local Donghak leader, took the county office, opened the armoury and the prison, returned the rice Jo had taken and broke the reservoir. They dispersed when a new magistrate was appointed, but the government’s inspector then hunted down those involved.
+      - Jeon, with Son Hwa-jung and Kim Gae-nam, raised about 4,000 men at Mujang in late April and gathered tens of thousands at Baeksan, where they swore not to kill the innocent, to expel the Japanese and to march on Hanseong to drive out the powerful families. On 11 May, at the pass of Hwangtohyeon, they ambushed the provincial troops at dawn in the fog and routed them. Troops sent from the capital under Hong Gye-hun followed them south; on 27 May, on the Hwangryong River at Jangseong, the peasants rolled bamboo baskets ahead of them as shields against the bullets and defeated the vanguard. Jeon turned north again and on 31 May entered Jeonju, the capital of Jeolla, without a fight.
+    facts:
+      - [Gobu rising, "15 February 1894"]
+      - [Battle of Hwangtohyeon, "11 May 1894, peasant victory"]
+      - [Battle of the Hwangryong River, "27 May 1894, peasant victory"]
+      - [Jeonju taken, "31 May 1894"]
+    markers:
+      - kind: taken
+        side: dh
+        name: Gobu
+        date: 15 February 1894
+        text: Peasants led by Jeon Bong-jun took the county office from the magistrate Jo Byeong-gap.
+        lonlat: [126.764, 35.608]
+        lp: l
+      - kind: event
+        side: dh
+        name: Mujang
+        date: April 1894
+        text: Jeon Bong-jun, Son Hwa-jung and Kim Gae-nam proclaimed the rising here with about 4,000 men.
+        lonlat: [126.571, 35.414]
+        lp: l
+      - kind: event
+        side: dh
+        name: Baeksan
+        date: late April 1894
+        text: The peasant army gathered here in tens of thousands and chose Jeon Bong-jun as its leader.
+        lonlat: [126.795, 35.705]
+        lp: t
+      - kind: battle
+        side: dh
+        name: Hwangtohyeon
+        date: 11 May 1894
+        text: The provincial troops were ambushed at dawn and routed.
+        lonlat: [126.830, 35.632]
+      - kind: battle
+        side: dh
+        name: Hwangryong River
+        date: 27 May 1894
+        text: The vanguard of Hong Gye-hun’s capital troops was defeated at Jangseong.
+        lonlat: [126.745, 35.300]
+      - kind: taken
+        side: dh
+        name: Jeonju
+        date: 31 May 1894
+        text: The capital of Jeolla, entered by the peasant army without a fight.
+        lonlat: [127.148, 35.824]
+    arrows:
+      - side: dh
+        phase: 1
+        via: [[126.57, 35.42], [126.70, 35.55], [126.80, 35.68], [126.83, 35.63]]
+      - side: dh
+        label: Jeon Bong-jun
+        phase: 2
+        via: [[126.82, 35.61], [126.70, 35.43], [126.52, 35.28], [126.60, 35.20], [126.74, 35.29]]
+      - side: js
+        label: Hong Gye-hun
+        phase: 2
+        via: [[127.12, 35.80], [126.95, 35.55], [126.85, 35.38], [126.76, 35.31]]
+      - side: dh
+        phase: 3
+        via: [[126.76, 35.32], [126.85, 35.57], [127.02, 35.72], [127.13, 35.81]]
+  - title: The Jeonju truce and the arrival of foreign troops
+    date: June – September 1894
+    when: "1894-06"
+    borders: "1894-07-23"
+    countries: [kr]
+    body:
+      - The fall of Jeonju alarmed the court, which asked the Qing to send troops. Qing soldiers landed at Asan Bay, south of Incheon, in early June, and Japan, claiming the right under the Tianjin Convention of 1885 to send troops whenever China did, landed a larger force at Incheon and marched it to Hanseong. With foreign armies on Korean soil, both the government and the rebels wanted an end to the fighting.
+      - At Jeonju, on 10–11 June, the peasant leaders agreed to leave the town in return for promises of reform. Their demands included the punishment of corrupt officials and exploiting landlords, the burning of slave registers, an end to discrimination against outcast groups, permission for widows to remarry, the cancellation of debts, fairer taxes and an equal share of land for the peasants. Through the summer the rebels governed much of Jeolla through their own local offices, the jipgangso, set up alongside the magistrates; landowners in Naju and Namwon resisted them.
+      - The Qing and Japanese troops did not leave. On 23 July 1894 Japanese troops seized Gyeongbokgung, the royal palace, and set up a new government under the old regent Heungseon Daewongun and the reformer Kim Hong-jip, which began the Gabo reforms. Two days later Japanese warships attacked Chinese transports off Asan, opening the First Sino-Japanese War, which the Japanese won in Korea at Seonghwan in July and Pyongyang in September.
+    facts:
+      - [Truce of Jeonju, "10–11 June 1894"]
+      - [Gyeongbokgung seized by Japanese troops, "23 July 1894"]
+    markers:
+      - kind: treaty
+        name: Jeonju
+        date: 10–11 June 1894
+        text: The peasant army left the town in return for promises of reform. Jeon Bong-jun then directed the jipgangso of Jeolla from here.
+        lonlat: [127.148, 35.824]
+      - kind: event
+        side: jp
+        name: Incheon
+        date: June 1894
+        text: Japanese troops landed here and marched to Hanseong.
+        lonlat: [126.616, 37.474]
+        lp: l
+      - kind: taken
+        side: jp
+        name: Gyeongbokgung
+        date: 23 July 1894
+        text: The royal palace in Hanseong, seized by Japanese troops, who installed a new government.
+        lonlat: [126.977, 37.580]
+    arrows:
+      - side: jp
+        phase: 1
+        via: [[126.62, 37.47], [126.80, 37.52], [126.96, 37.575]]
+    areas:
+      - style: occupied
+        side: dh
+        label: Jeolla under the peasant offices (jipgangso), summer 1894
+        atoms: [KR-45, KR-46, KR-29]
+  - title: The second rising and Ugeumchi
+    date: October 1894 – April 1895
+    when: "1894-10"
+    borders: "1894-12-05"
+    countries: [kr]
+    body:
+      - After the Japanese victory at Pyongyang, Jeon Bong-jun decided to drive the Japanese out and raised the southern peasant army again at Samnye in October. Choe Si-hyeong, who had opposed the first rising for fear that it would bring about the destruction of Donghak, now called out the northern congregations under Son Byeong-hui, who joined Jeon at Nonsan. Risings broke out in Chungcheong, Gyeongsang, Gangwon and Hwanghae. Tens of thousands of peasants, armed mostly with spears, bows and matchlocks, marched north towards Gongju, the key to the road to Hanseong.
+      - Gongju was held by about 3,000 government troops and a few hundred Japanese soldiers with modern rifles. After a first round of fighting south of the town in late November, the peasant army attacked the pass of Ugeumchi from 4 to 7 December, charging up the slope again and again into rifle and artillery fire. It broke with enormous losses; one account says only about 500 of its men remained together afterwards.
+      - Jeon fell back by way of Nonsan and Wonpyeong to Taein, where he was beaten again and disbanded his army. Betrayed by a follower, he was captured at Pinori, in Sunchang, on 28 December 1894. Japanese and government troops and local militias hunted down the rebels through the winter, burning villages and killing captives, and the last band was destroyed on Mount Daedun in February 1895. Jeon, Son Hwa-jung, Choe Gyeong-seon and Kim Deok-myeong were hanged in Hanseong on 24 April 1895; Choe Si-hyeong was caught and executed in 1898. Some of the peasants’ demands, such as the abolition of slavery and the right of widows to remarry, were enacted in the Gabo reforms, and many former rebels later fought in the righteous armies against Japan.
+    facts:
+      - [Peasant army at Gongju, "tens of thousands"]
+      - [Battle of Ugeumchi, "4–7 December 1894, Japanese and government victory"]
+      - [Jeon Bong-jun captured, "28 December 1894"]
+      - [Peasants killed, "estimates range from tens of thousands to several hundred thousand"]
+    markers:
+      - kind: event
+        side: dh
+        name: Samnye
+        date: October 1894
+        text: Jeon Bong-jun raised the southern peasant army here for the second rising.
+        lonlat: [127.090, 35.910]
+      - kind: event
+        side: dh
+        name: Nonsan
+        date: November 1894
+        text: The southern and northern armies joined here before marching on Gongju.
+        lonlat: [127.099, 36.187]
+      - kind: held
+        side: js
+        name: Gongju
+        date: November – December 1894
+        text: The town held by government and Japanese troops against the peasant army.
+        lonlat: [127.120, 36.455]
+        lp: t
+      - kind: battle
+        side: jp
+        name: Ugeumchi
+        date: 4–7 December 1894
+        text: The peasant army attacked the pass again and again and was destroyed by Japanese and government rifle fire.
+        lonlat: [127.112, 36.431]
+        lp: b
+      - kind: battle
+        side: js
+        name: Taein
+        date: December 1894
+        text: Jeon Bong-jun’s last battle, after which he disbanded his army.
+        lonlat: [126.937, 35.652]
+    arrows:
+      - side: dh
+        label: Jeon Bong-jun
+        phase: 1
+        via: [[127.09, 35.92], [127.10, 36.05], [127.10, 36.19], [127.11, 36.40]]
+      - side: dh
+        label: Northern congregations
+        phase: 1
+        via: [[127.73, 36.49], [127.45, 36.30], [127.20, 36.20], [127.12, 36.20]]
+      - side: jp
+        label: Japanese and government troops
+        phase: 1
+        via: [[126.98, 37.52], [127.05, 37.00], [127.12, 36.70], [127.12, 36.47]]
+      - side: dh
+        label: Retreat
+        phase: 2
+        via: [[127.10, 36.40], [127.10, 36.19], [127.02, 35.80], [126.94, 35.66]]

@@ -1,0 +1,144 @@
+id: hong-gyeong-nae-rebellion
+name: Hong Gyeong-nae’s rebellion
+start: "1812-01-31"
+end: "1812-05-29"
+tier: B
+summary: "A rising in Pyongan province, in north-western Korea, led by Hong Gyeong-nae, an impoverished yangban and geomancer, with discontented local gentry, merchants and miners, after a year of famine. They resented the discrimination of the court in Hanseong against men of the north-west and the burden of compulsory grain loans and taxes, and drew on prophecies of the fall of the Yi dynasty. Rising at Gasan on the night of 31 January 1812, they took eight towns north of the Cheongcheon River within days and opened the government granaries, but were beaten at Songnim near Bakcheon on 11 February and soon after near Gwaksan, and fell back into the walled town of Jeongju. There the rebels and the peasants who had fled to them held out against the government army for about a hundred days, until the wall was blown open by a mine on 29 May 1812. Hong was killed; of 2,983 people taken, 1,917 were executed. The rising is also called the Pyeongan or Gwanseo peasant war."
+countries: [kp]
+sides:
+  - id: hgn
+    name: Hong Gyeong-nae’s army
+    polities: [hong-gyeong-nae-army]
+    ink: orange
+    moves: Rebel moves
+    success: Rebel success
+  - id: js
+    name: Joseon government
+    polities: [joseon]
+    ink: blue
+    moves: Government moves
+    success: Government success
+notes:
+  - Korean records date the rising by the lunar calendar (it began on the 18th day of the twelfth month of 1811). The dates here are the Gregorian equivalents given in the English and Korean Wikipedia articles.
+  - Old Gasan county, where the rising began, is now part of North Pyongan’s Pakchon and Unjon counties. Jeongju is today’s Chongju, North Pyongan (not the Cheongju of North Chungcheong).
+sources:
+  - title: Hong Kyŏngnae’s Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hong_Ky%C5%8Fngnae%27s_Rebellion
+  - title: 홍경래의 난 (Hong Gyeong-nae’s rebellion, Korean Wikipedia)
+    url: https://ko.wikipedia.org/wiki/%ED%99%8D%EA%B2%BD%EB%9E%98%EC%9D%98_%EB%82%9C
+  - title: 19th-century peasant rebellions in Korea (Wikipedia)
+    url: https://en.wikipedia.org/wiki/19th-century_peasant_rebellions_in_Korea
+steps:
+  - title: The rising north of the Cheongcheon
+    date: January – February 1812
+    when: "1812-01"
+    borders: "1812-02-11"
+    countries: [kp]
+    body:
+      - Pyongan, on the road to China, had grown rich on trade and gold mining, but its men were barred in practice from high office in Hanseong. The rebels’ manifesto complained that the court treated the province like “rotten earth”. Hong Gyeong-nae spent about ten years building a network with the geomancer U Gun-chik, the scholar Kim Chang-si, the gentleman Kim Sa-yong and merchants such as Yi Hui-jeo, who paid for the rising. At Dabokdong, near the Daeryeong River in Gasan, they gathered landless peasants and labourers on the pretext of working a gold mine. The disastrous harvest of 1811 gave them their moment.
+      - On the night of 31 January 1812 Yi Hui-jeo’s band seized the county office at Gasan and killed the magistrate. Hong, who took the title Pyeongseo Daewonsu, grand marshal of the west, led the southern army, which took Gasan, Bakcheon and Taecheon without resistance; Kim Sa-yong’s northern army took Gwaksan and Jeongju and went on through Seoncheon and Cheolsan to Yongcheon, threatening Uiju. In each town the rebels appointed local notables to govern in their name and distributed government grain.
+      - The rising lost momentum when its supporters in Yeongbyeon were discovered and executed, and an internal quarrel delayed the attack on Anju, the seat of the provincial army command. On 11 February the provincial army commander Yi Hae-u and the magistrate of Anju, with troops brought by Yi Yeong-sik, the magistrate of Gwaksan who had escaped from the rebels, attacked Hong’s army at Songnim, across the Cheongcheon from Anju, and routed it.
+    facts:
+      - [Rising at Gasan, "31 January 1812"]
+      - [Towns taken, "eight, north of the Cheongcheon River"]
+      - [Battle of Songnim, "11 February 1812, government victory"]
+    markers:
+      - kind: taken
+        side: hgn
+        name: Bakcheon
+        date: February 1812
+        text: Taken by Hong’s southern army in the first days of the rising, with neighbouring Gasan and Taecheon.
+        lonlat: [125.582, 39.723]
+        lp: t
+      - kind: taken
+        side: hgn
+        name: Jeongju
+        date: February 1812
+        text: The walled town taken by Kim Sa-yong’s northern army.
+        lonlat: [125.330, 39.695]
+      - kind: taken
+        side: hgn
+        name: Seoncheon
+        date: February 1812
+        text: Taken by the northern army on its way towards Uiju.
+        lonlat: [124.917, 39.799]
+      - kind: battle
+        side: js
+        name: Songnim
+        date: 11 February 1812
+        text: Hong’s army, gathered near Bakcheon to attack Anju, was routed by the provincial troops.
+        lonlat: [125.620, 39.670]
+        lp: b
+      - kind: held
+        side: js
+        name: Anju
+        date: "1812"
+        text: Seat of the Pyongan army command, which the rebels never reached.
+        lonlat: [125.661, 39.617]
+        lp: r
+      - kind: held
+        side: js
+        name: Yeongbyeon
+        date: "1812"
+        text: The rebels’ supporters here were discovered and executed before they could act.
+        lonlat: [125.805, 39.815]
+    arrows:
+      - side: hgn
+        label: Kim Sa-yong
+        phase: 1
+        via: [[125.45, 39.67], [125.33, 39.70], [125.08, 39.69], [124.92, 39.80], [124.62, 39.82]]
+      - side: hgn
+        label: Hong Gyeong-nae
+        phase: 1
+        via: [[125.47, 39.66], [125.57, 39.71], [125.61, 39.68]]
+      - side: js
+        phase: 2
+        via: [[125.67, 39.60], [125.64, 39.64], [125.625, 39.665]]
+    areas:
+      - style: occupied
+        side: hgn
+        label: Held by the rebels, February 1812
+        polygon: [[124.40, 39.85], [124.55, 40.00], [124.95, 39.95], [125.45, 40.00], [125.70, 39.80], [125.62, 39.66], [125.35, 39.62], [125.00, 39.60], [124.62, 39.60], [124.40, 39.70]]
+  - title: The siege of Jeongju
+    date: February – May 1812
+    when: "1812-02"
+    borders: "1812-05-29"
+    countries: [kp]
+    body:
+      - After Songnim the government troops retook Bakcheon and Gasan, looting and killing as they went, and the northern rebel army, attacked by a militia from Uiju, was defeated at Sasongpyeong near Gwaksan. The rebel leaders and thousands of peasants from Gasan and Bakcheon, who feared the government troops more than a siege, shut themselves up in Jeongju. A punitive army sent from Hanseong under Yi Yo-heon arrived outside the town in mid-February. By then every other town had been retaken.
+      - For about a hundred days the defenders beat off assaults and made sorties, while their hopes of help from the hunters of the northern frontier towns, from a rising in Hanseong or even from Qing troops came to nothing. The besiegers dug a tunnel under the wall and on 29 May 1812 blew a breach in it with gunpowder. Hong Gyeong-nae was killed by a bullet in the fighting; U Gun-chik, Hong Chong-gak and other leaders were taken to Hanseong and beheaded. Of the 2,983 people captured in the town, the 842 women and the boys under ten were spared, and the remaining 1,917 were executed.
+      - The rising failed, but it showed how deep the discontent ran in the provinces. It was followed by the peasant risings of 1862 in the south and, in 1894, by the Donghak revolution.
+    facts:
+      - [Siege of Jeongju, "February – 29 May 1812"]
+      - [Captured, "2,983 people"]
+      - [Executed, "1,917"]
+    markers:
+      - kind: siege
+        side: js
+        name: Jeongju
+        date: February – 29 May 1812
+        text: The rebels’ last stronghold. Government troops blew a breach in the wall with a mine after about a hundred days.
+        lonlat: [125.330, 39.695]
+      - kind: battle
+        side: js
+        name: Sasongpyeong (Gwaksan)
+        date: February 1812
+        text: The northern rebel army was defeated near Gwaksan and broke up; its leaders joined the defenders of Jeongju.
+        lonlat: [125.080, 39.680]
+        lp: l
+      - kind: taken
+        side: js
+        name: Bakcheon
+        date: February 1812
+        text: Retaken by government troops after the battle of Songnim.
+        lonlat: [125.582, 39.723]
+        lp: t
+    arrows:
+      - side: hgn
+        label: Retreat to Jeongju
+        phase: 1
+        via: [[125.61, 39.68], [125.47, 39.70], [125.35, 39.70]]
+      - side: js
+        label: Government army
+        phase: 2
+        via: [[125.66, 39.62], [125.50, 39.66], [125.36, 39.68]]

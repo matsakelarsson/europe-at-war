@@ -1,0 +1,372 @@
+id: satsuma-rebellion
+name: Satsuma Rebellion
+start: "1877-01-29"
+end: "1877-09-24"
+tier: A
+summary: "The last and largest of the armed risings of former samurai against the Meiji government, known in Japan as the Seinan War (the south-western war). Saigō Takamori, a leader of the Meiji Restoration and chief of staff of the imperial army in the Boshin War, left the government in 1873 after it rejected his plan for a confrontation with Korea and returned to Kagoshima, where his private academies (shigakkō) trained thousands of young former samurai. Resentment grew as the government abolished the samurai’s stipends and their right to wear swords. In January 1877 academy students seized the arms in the government arsenals at Kagoshima, and when they believed they had uncovered a government plot to murder Saigō, he agreed to lead them to Tokyo. About 13,000 men left Kagoshima in mid-February and laid siege to Kumamoto Castle, but they could not take it. The new conscript army and militarised police, led by Yamagata Aritomo, fought its way through the Satsuma lines at Tabaruzaka in March and relieved Kumamoto in April, and over the summer drove the rebels back through Hitoyoshi, Miyakonojō and Miyazaki to Nobeoka. Saigō broke out of encirclement at Mount Enodake with a few hundred men and returned to Kagoshima, where he died in the final assault on Shiroyama on 24 September 1877. About 6,400 government and 6,800 rebel soldiers were killed. The war showed that a peasant conscript army could defeat the samurai, and ended armed resistance to the Meiji state."
+countries: [jp]
+sides:
+  - id: gov
+    name: Imperial Japanese government
+    polities: [japan]
+    ink: purple
+    moves: Government moves
+    success: Government success
+  - id: sat
+    name: Satsuma army (Saigō Takamori)
+    polities: [satsuma-rebels]
+    ink: teal
+    moves: Satsuma moves
+    success: Satsuma success
+notes:
+  - The rebels never declared war on the emperor; Saigō said he was going to Tokyo to question the government. Former samurai from Kumamoto, Hitoyoshi, Nobeoka and other domains of Kyushu joined the Satsuma army, which at its height numbered some 30,000 men.
+  - The government mobilised about 52,000 soldiers of the Imperial Japanese Army, 5,000 of the Imperial Guard and about 18,000 police, and fired on average 322,000 rifle rounds a day. The war cost about 41 million yen, nearly the whole of the government’s tax revenue of about 48 million yen for a year.
+  - The killed are given here as in the Japanese sources, about 6,400 on the government side and about 6,800 on the rebel side; the wounded on each side numbered about 10,000 or more.
+sources:
+  - title: Satsuma Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Satsuma_Rebellion
+  - title: Siege of Kumamoto Castle (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kumamoto_Castle
+  - title: Battle of Tabaruzaka (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Tabaruzaka
+  - title: Battle of Shiroyama (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Shiroyama
+  - title: Satsuma Rebellion (Britannica)
+    url: https://www.britannica.com/topic/Satsuma-Rebellion
+  - title: 西南戦争 (Japanese Wikipedia)
+    url: https://ja.wikipedia.org/wiki/%E8%A5%BF%E5%8D%97%E6%88%A6%E4%BA%89
+steps:
+  - title: Saigō and the academies
+    date: 1873 – February 1877
+    when: "1877-01-29"
+    borders: "1877-01-29"
+    countries: [jp]
+    body:
+      - Saigō Takamori had led the Satsuma troops in the overthrow of the shogunate and served in the new government as commander of the Imperial Guard and a councillor of state. In 1873 he proposed to go to Korea as envoy, expecting to provoke a war that would give the samurai a purpose; when his colleagues, back from their tour of the West, rejected the plan, he resigned and returned to Kagoshima with many Satsuma officers. There he founded private academies, the shigakkō, which taught military drill and the Chinese classics to former samurai, and whose graduates came to fill the offices of Kagoshima Prefecture, which went its own way under Saigō’s friend, the governor Ōyama Tsunayoshi.
+      - The government meanwhile dismantled the samurai order. A conscription law of 1873 opened the army to commoners, the wearing of swords in public was banned in March 1876, and in August 1876 the samurai stipends were converted into government bonds. Revolts in Saga in 1874 and in Kumamoto, Akizuki and Hagi in 1876 were put down. In January 1877 the government began to ship the arms and powder in the Kagoshima arsenals to Osaka by night. Academy students broke into the powder magazine at Sōmuta on the night of 29 January and into the naval yard and arsenal over the following days. They had also arrested Nakahara Hisao, one of a group of police officers born in Kagoshima whom the police chief Kawaji Toshiyoshi had sent home, and under torture he confessed to a plot to assassinate Saigō. Saigō, who had been away hunting, decided to lead his followers to Tokyo.
+    facts:
+      - [Saigō leaves the government, "October 1873"]
+      - [Samurai stipends abolished, "August 1876"]
+      - [Raid on the Sōmuta powder magazine, "29 January 1877"]
+    markers:
+      - kind: event
+        side: sat
+        name: Kagoshima (Shigakkō)
+        date: 1874–1877
+        text: Saigō’s private academies trained thousands of former Satsuma samurai.
+        lonlat: [130.557, 31.600]
+        lp: l
+      - kind: taken
+        side: sat
+        name: Sōmuta arsenal
+        date: 29 January – 1 February 1877
+        text: Academy students seized the arms and powder that the government was removing from the Kagoshima arsenals.
+        lonlat: [130.541, 31.609]
+        lp: t
+      - kind: capital
+        side: gov
+        name: Tokyo
+        date: "1877"
+        text: Seat of the Meiji government, led by Saigō’s former comrade Ōkubo Toshimichi.
+        lonlat: [139.754, 35.688]
+  - title: The march on Kumamoto
+    date: February 1877
+    when: "1877-02-15"
+    borders: "1877-02-22"
+    countries: [jp]
+    body:
+      - On 15 February 1877 the main Satsuma army, about 13,000 men in seven battalions, set out from Kagoshima in an unusually heavy snowfall, with Saigō in an army general’s uniform, Kirino Toshiaki and Shinohara Kunimoto as his commanders. On 19 February the government declared it a rebellion and named Prince Arisugawa Taruhito commander of the punitive force, with Yamagata Aritomo and Admiral Kawamura Sumiyoshi as his deputies. Satsuma’s only plan was to march north through Kumamoto, where the government had a garrison of about 4,000 men under Major General Tani Tateki.
+      - Tani, unsure of the loyalty of his Kyushu conscripts, decided to stand on the defensive in Katō Kiyomasa’s great castle. On 19 February a fire, whose cause is still disputed, burned the keep and much of the stores. The Satsuma vanguard reached Kawashiri on 20 February, and on 22 February the Satsuma army attacked the castle from two sides. The attacks failed with heavy losses, and the rebels settled down to a siege. The same day the 14th Infantry Regiment from Kokura, marching to relieve the castle, ran into Satsuma troops at Ueki; in the night fighting its acting commander, Major Nogi Maresuke, lost the regiment’s colours.
+    facts:
+      - [Satsuma army leaves Kagoshima, "15 February 1877"]
+      - [Satsuma army, "about 13,000, later about 30,000 with allies from other domains"]
+      - [Kumamoto garrison, "about 3,800 soldiers and 600 police"]
+      - [Assault on Kumamoto Castle, "22–23 February 1877"]
+    markers:
+      - kind: event
+        side: sat
+        name: Kagoshima
+        date: 15 February 1877
+        text: The Satsuma army marched out in deep snow on the road north to Kumamoto.
+        lonlat: [130.555, 31.599]
+        lp: l
+      - kind: siege
+        side: gov
+        name: Kumamoto Castle
+        date: 22 February – 14 April 1877
+        text: Tani Tateki’s garrison held the castle against the Satsuma assaults and a siege of more than seven weeks.
+        lonlat: [130.706, 32.806]
+      - kind: event
+        side: sat
+        name: Kawashiri
+        date: 20 February 1877
+        text: The Satsuma vanguard reached the town and clashed with a government patrol.
+        lonlat: [130.687, 32.738]
+        lp: l
+      - kind: battle
+        side: sat
+        name: Ueki
+        date: 22 February 1877
+        text: Satsuma troops checked the relief column from Kokura; Major Nogi Maresuke lost the regimental colours.
+        lonlat: [130.681, 32.880]
+        lp: l
+    arrows:
+      - side: sat
+        label: Saigō Takamori
+        phase: 1
+        via: [[130.555, 31.610], [130.500, 31.900], [130.570, 32.430], [130.600, 32.510], [130.687, 32.738]]
+      - side: sat
+        phase: 2
+        via: [[130.687, 32.740], [130.700, 32.780], [130.706, 32.800]]
+      - side: gov
+        label: 14th Infantry Regiment
+        phase: 2
+        via: [[130.874, 33.884], [130.700, 33.300], [130.690, 33.010], [130.682, 32.890]]
+    areas:
+      - style: front
+        side: sat
+        label: Satsuma siege lines
+        line: [[130.680, 32.830], [130.730, 32.835], [130.740, 32.795], [130.690, 32.780], [130.675, 32.805]]
+  - title: Tabaruzaka
+    date: February – March 1877
+    when: "1877-03-04"
+    borders: "1877-03-20"
+    countries: [jp]
+    body:
+      - Government reinforcements landed at Hakata from 22 February and marched south down the road to Kumamoto. The Satsuma army sent part of its strength north to meet them and fought them at Takase in late February, where Saigō’s youngest brother Kohei was killed. The rebels then dug in on the hills north-west of Kumamoto, where the road climbed through a sunken track at Tabaruzaka, the only route for the government’s artillery. Some 15,000 Satsuma men and their allies held a line from Kichiji Pass to Tabaruzaka.
+      - From 4 March the government brigades attacked Tabaruzaka in heavy rain. The battle lasted seventeen days. The Satsuma swordsmen made the conscripts pay heavily, and the government formed the Battōtai, sword-bearing units of police chosen from former samurai, many of them from the domains Satsuma had fought in the Boshin War, who went into action on 14 March. On 20 March, with fresh troops and artillery, the government broke through the Satsuma line. Losses on both sides were heavy; the government counted about 2,400 killed in the fighting around Tabaruzaka alone. Meanwhile an imperial envoy, Yanagiwara Sakimitsu, arrived at Kagoshima with warships in early March and carried off governor Ōyama Tsunayoshi, who was later tried and executed.
+    facts:
+      - [Battle of Takase, "25–27 February 1877"]
+      - [Battle of Tabaruzaka, "4–20 March 1877"]
+      - [Battōtai first in action, "14 March 1877"]
+      - [Government dead around Tabaruzaka, "about 2,400"]
+    markers:
+      - kind: battle
+        side: gov
+        name: Takase
+        date: 25–27 February 1877
+        text: The government brigades from Hakata defeated a Satsuma force; Saigō’s brother Kohei was killed.
+        lonlat: [130.562, 32.928]
+        lp: l
+      - kind: battle
+        side: gov
+        name: Tabaruzaka
+        date: 4–20 March 1877
+        text: The government broke through the Satsuma line after seventeen days of fighting in the rain.
+        lonlat: [130.653, 32.899]
+        lp: t
+      - kind: siege
+        side: gov
+        name: Kumamoto Castle
+        date: February – April 1877
+        text: Still besieged by the Satsuma army.
+        lonlat: [130.706, 32.806]
+      - kind: event
+        side: gov
+        name: Kagoshima
+        date: March 1877
+        text: The imperial envoy Yanagiwara Sakimitsu arrived with warships and took away governor Ōyama Tsunayoshi.
+        lonlat: [130.555, 31.599]
+        lp: l
+    arrows:
+      - side: gov
+        label: 1st and 2nd Brigades
+        phase: 1
+        via: [[130.400, 33.600], [130.520, 33.300], [130.540, 33.050], [130.562, 32.935]]
+      - side: gov
+        phase: 2
+        via: [[130.570, 32.930], [130.620, 32.910], [130.653, 32.900], [130.680, 32.880]]
+    areas:
+      - style: front
+        side: sat
+        label: Satsuma line north of Kumamoto, early March
+        line: [[130.600, 32.870], [130.630, 32.890], [130.653, 32.899], [130.700, 32.930], [130.760, 32.960]]
+  - title: The relief of Kumamoto
+    date: March – April 1877
+    when: "1877-03-19"
+    borders: "1877-04-14"
+    countries: [jp]
+    body:
+      - To strike the Satsuma army from behind, the government landed a second force from the sea on the coast of Yatsushiro Bay. On 19 March troops of the Separate 2nd Brigade, warned that Satsuma men were waiting at Hinagu, came ashore at Suguchi a few kilometres to the south, and police and soldiers took Yatsushiro. Reinforced to several brigades, this force pushed north along the coast towards Uto and Kawashiri, while the Satsuma army, short of men and ammunition after Tabaruzaka, had to fight on two fronts.
+      - In the castle food was running low. On 8 April part of the garrison broke out through the Satsuma lines to make contact with the southern force. On 14 April Lieutenant Colonel Yamakawa Hiroshi, a former Aizu officer who had fought against Satsuma in 1868, led a picked detachment through the lines into the castle, and the siege was over. The Satsuma army fell back east of the city and fought for a week along a line from Ōzu to Mifune, then withdrew south-east through the mountains, reaching Hitoyoshi at the end of April.
+    facts:
+      - [Landing near Hinagu, "19 March 1877"]
+      - [Garrison sortie, "8 April 1877"]
+      - [Siege of Kumamoto lifted, "14 April 1877"]
+    markers:
+      - kind: event
+        side: gov
+        name: Suguchi (Hinagu)
+        date: 19 March 1877
+        text: The government landed a force on the coast of Yatsushiro Bay to take the Satsuma army in the rear.
+        lonlat: [130.571, 32.435]
+        lp: l
+      - kind: taken
+        side: gov
+        name: Yatsushiro
+        date: March 1877
+        text: Taken by the landing force, which then pushed north towards Kumamoto.
+        lonlat: [130.600, 32.508]
+        lp: l
+      - kind: event
+        side: gov
+        name: Kumamoto Castle
+        date: 14 April 1877
+        text: Yamakawa Hiroshi’s detachment broke through to the castle and ended the siege.
+        lonlat: [130.706, 32.806]
+        lp: t
+      - kind: battle
+        side: gov
+        name: Mifune
+        date: April 1877
+        text: The government drove the Satsuma army from its last line east of Kumamoto.
+        lonlat: [130.802, 32.715]
+    arrows:
+      - side: gov
+        label: Separate 2nd Brigade
+        phase: 1
+        via: [[130.200, 32.300], [130.450, 32.400], [130.565, 32.435]]
+      - side: gov
+        phase: 2
+        via: [[130.590, 32.500], [130.640, 32.620], [130.687, 32.738], [130.704, 32.800]]
+      - side: sat
+        phase: 3
+        via: [[130.802, 32.715], [130.850, 32.550], [130.800, 32.350], [130.767, 32.215]]
+  - title: Hitoyoshi, Kagoshima and Miyazaki
+    date: April – July 1877
+    when: "1877-04-27"
+    borders: "1877-07-31"
+    countries: [jp]
+    body:
+      - Saigō made Hitoyoshi, in the upper Kuma valley, his new base and sent detachments to raise the provinces of Hyūga and Bungo. The government, rather than attack the mountains at once, landed a mixed force of soldiers, police and marines at Kagoshima on 27–28 April, took the town, the rebels’ base, and held it through two months of attacks by Satsuma detachments. From late May the government brigades advanced on Hitoyoshi along the valleys, and the town fell on 1 June.
+      - The Satsuma army fell back into Hyūga and made a stand at Miyakonojō under Murata Shinpachi, while other detachments fought in the hills of Bungo and northern Hyūga. Government forces took Miyakonojō on 24 July, and on 31 July the rebels abandoned Miyazaki, where they had issued their own paper money. Short of rifles and ammunition, the Satsuma army retreated north along the coast towards Nobeoka.
+    facts:
+      - [Government landing at Kagoshima, "27–28 April 1877"]
+      - [Hitoyoshi taken, "1 June 1877"]
+      - [Miyakonojō taken, "24 July 1877"]
+      - [Miyazaki abandoned by the rebels, "31 July 1877"]
+    markers:
+      - kind: taken
+        side: gov
+        name: Hitoyoshi
+        date: 1 June 1877
+        text: Saigō’s base after the retreat from Kumamoto, taken by government brigades advancing from several directions.
+        lonlat: [130.767, 32.211]
+        lp: l
+      - kind: taken
+        side: gov
+        name: Kagoshima
+        date: 27–28 April 1877
+        text: A government force landed from the sea and held the town against Satsuma counter-attacks.
+        lonlat: [130.555, 31.599]
+        lp: l
+      - kind: taken
+        side: gov
+        name: Miyakonojō
+        date: 24 July 1877
+        text: The Satsuma army under Murata Shinpachi was driven out.
+        lonlat: [131.061, 31.720]
+      - kind: taken
+        side: gov
+        name: Miyazaki
+        date: 31 July 1877
+        text: The rebels abandoned the town and retreated north towards Nobeoka.
+        lonlat: [131.420, 31.908]
+    arrows:
+      - side: gov
+        label: Landing force
+        phase: 1
+        via: [[130.300, 31.000], [130.600, 31.250], [130.580, 31.590]]
+      - side: gov
+        phase: 2
+        via: [[130.600, 32.500], [130.700, 32.330], [130.760, 32.220]]
+      - side: gov
+        phase: 3
+        via: [[130.767, 32.200], [130.900, 31.950], [131.050, 31.730]]
+      - side: sat
+        phase: 4
+        via: [[131.061, 31.730], [131.400, 31.920], [131.600, 32.300], [131.660, 32.580]]
+  - title: Wadagoe and Mount Enodake
+    date: August 1877
+    when: "1877-08-15"
+    borders: "1877-08-18"
+    countries: [jp]
+    body:
+      - The government took Nobeoka on 14 August. The next morning Saigō, for the only time in the war, took command in person and led some 3,000 to 3,500 men against the government army at Wadagoe north of the town. They were beaten and surrounded in the village of Nagai at the foot of Mount Enodake. On 16 August Saigō released his followers from their duty; most of them surrendered, and some took their own lives. Saigō burned his papers and his general’s uniform.
+      - On the night of 17–18 August Saigō, Kirino, Murata, Beppu Shinsuke and about 300 men, with porters about 400, climbed Mount Enodake, broke through the government lines at the summit and disappeared into the mountains of central Kyushu. For two weeks they marched south-west by mountain paths through Mitai and Kobayashi, while the government troops, unsure where they had gone, searched for them, and on 1 September they came down into Kagoshima and seized the hill of Shiroyama above the town.
+    facts:
+      - [Battle of Wadagoe, "15 August 1877"]
+      - [Saigō disbands his army, "16 August 1877"]
+      - [Breakout at Mount Enodake, "night of 17–18 August 1877"]
+      - [Saigō reaches Kagoshima, "1 September 1877"]
+    markers:
+      - kind: taken
+        side: gov
+        name: Nobeoka
+        date: 14 August 1877
+        text: Taken by the government army.
+        lonlat: [131.665, 32.582]
+        lp: l
+      - kind: battle
+        side: gov
+        name: Wadagoe
+        date: 15 August 1877
+        text: Saigō commanded in person for the only time in the war and was defeated.
+        lonlat: [131.652, 32.602]
+        lp: r
+      - kind: event
+        side: sat
+        name: Mount Enodake
+        date: 17–18 August 1877
+        text: Saigō and some 300 men broke through the encircling government army over the mountain at night.
+        lonlat: [131.656, 32.656]
+        lp: t
+    arrows:
+      - side: gov
+        phase: 1
+        via: [[131.600, 32.400], [131.640, 32.520], [131.660, 32.590]]
+      - side: sat
+        label: Saigō’s march to Kagoshima
+        phase: 2
+        via: [[131.656, 32.656], [131.307, 32.711], [131.155, 32.226], [130.977, 31.997], [130.560, 31.610]]
+  - title: Shiroyama
+    date: September 1877
+    when: "1877-09-24"
+    borders: "1877-09-24"
+    countries: [jp]
+    body:
+      - Saigō’s men drove the small government garrison from parts of Kagoshima and dug in on Shiroyama, the wooded hill behind the old castle. Yamagata did not risk another escape. Some 30,000 government troops surrounded the hill with trenches and palisades, while warships in the bay shelled it. Yamagata sent Saigō a letter urging him to end the fighting. Saigō did not answer it.
+      - The final assault began at four in the morning of 24 September 1877. Saigō was hit in the hip and abdomen as he and his last followers came down the hill; according to the most widely accepted account, Beppu Shinsuke beheaded him at his request, and Beppu, Kirino and the others were killed charging the government lines. Within a few hours the fighting was over. About 6,400 government and 6,800 rebel soldiers had been killed in the war, and the government had to print paper money to pay for it, which brought years of inflation.
+      - The rebellion ended armed samurai resistance to the Meiji state; opposition turned to the movement for freedom and popular rights, led by Itagaki Taisuke. Ōkubo Toshimichi, Saigō’s boyhood friend and the leading man of the government, was assassinated in Tokyo by former samurai from Kaga on 14 May 1878. Saigō remained popular as a symbol of loyalty and sincerity, and in 1889 the emperor pardoned him posthumously and restored his rank. His statue was unveiled in Ueno Park in Tokyo in 1898.
+    facts:
+      - [Saigō reaches Shiroyama, "1 September 1877"]
+      - [Final assault, "24 September 1877, 4 a.m."]
+      - [Satsuma men on Shiroyama, "about 300–500"]
+      - [Total killed, "about 6,400 government and 6,800 rebel soldiers"]
+    markers:
+      - kind: battle
+        side: gov
+        name: Shiroyama
+        date: 24 September 1877
+        text: The government army stormed the hill. Saigō Takamori was mortally wounded, and his last followers were killed.
+        lonlat: [130.549, 31.604]
+        lp: l
+      - kind: event
+        side: sat
+        name: Kagoshima (Shigakkō)
+        date: 1 September 1877
+        text: Saigō’s men retook the site of the academies when they returned to Kagoshima.
+        lonlat: [130.557, 31.600]
+        lp: r
+    arrows:
+      - side: gov
+        phase: 1
+        via: [[130.570, 31.620], [130.560, 31.612], [130.551, 31.606]]
+      - side: gov
+        phase: 1
+        via: [[130.535, 31.595], [130.542, 31.600], [130.548, 31.603]]
+    areas:
+      - style: front
+        side: gov
+        label: Government siege lines
+        line: [[130.538, 31.612], [130.552, 31.616], [130.562, 31.608], [130.558, 31.596], [130.540, 31.596], [130.538, 31.612]]

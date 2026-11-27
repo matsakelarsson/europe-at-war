@@ -1,0 +1,119 @@
+id: later-three-years-war
+name: Later Three Years’ War
+start: "1083"
+end: "1087-12-11"
+tier: B
+summary: "A succession war within the Kiyohara, the family that had ruled northern Mutsu and Dewa since the Former Nine Years’ War, in which the governor of Mutsu, Minamoto no Yoshiie, took sides and Fujiwara no Kiyohira emerged as master of the north. When Yoshiie arrived as governor in 1083 the Kiyohara chief Sanehira was fighting his half-brother Iehira and his step-brother Kiyohira. Sanehira died suddenly on campaign, and Yoshiie divided his six districts between the two brothers; in 1086 Iehira burned Kiyohira’s house and killed his wife and children, and Yoshiie took up Kiyohira’s cause. Yoshiie failed against Iehira at the fort of Numa in the winter of 1086, and in 1087 besieged Iehira and his uncle Takehira in the fort of Kanazawa in Dewa. After a siege through the autumn, in which women and children who came out were killed so that the defenders’ food would run out faster, the starving garrison set fire to the fort and fled on 11 December 1087; Takehira was captured and beheaded and Iehira was killed in flight. The court refused to treat the war as a public campaign, gave Yoshiie no reward and dismissed him, but his generosity to his eastern warriors from his own purse built the loyalty on which his descendant Yoritomo would draw. Kiyohira took his father’s name of Fujiwara and founded the Northern Fujiwara of Hiraizumi."
+countries: [jp]
+sides:
+  - id: min
+    name: Minamoto no Yoshiie and Kiyohara (Fujiwara) no Kiyohira
+    polities: [minamoto-clan, northern-fujiwara]
+    ink: navy
+    moves: Yoshiie’s moves
+    success: Yoshiie’s success
+  - id: kiy
+    name: Kiyohara no Iehira and Kiyohara no Takehira
+    polities: [kiyohara-clan]
+    ink: brown
+    moves: Kiyohara moves
+    success: Kiyohara success
+notes:
+  - The main source is the Ōshū gosannen ki, a war tale known through the illustrated scrolls Gosannen kassen emaki; a first version of the scrolls was made in 1171, and the surviving set of 1347 is in the Tokyo National Museum. Courtiers’ diaries confirm the outline. The day date is the Julian equivalent of the 14th day of the eleventh month; other dates are months of the Japanese lunar calendar.
+sources:
+  - title: Gosannen War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Gosannen_War
+  - title: 後三年の役 (Later Three Years’ War, Japanese Wikipedia)
+    url: https://ja.wikipedia.org/wiki/後三年の役
+  - title: Kiyohara clan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kiyohara_clan
+  - title: Fujiwara no Kiyohira (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fujiwara_no_Kiyohira
+  - title: Hiraizumi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hiraizumi
+steps:
+  - title: Yoshiie and the Kiyohara feud
+    date: 1083–1086
+    when: "1086"
+    borders: "1086"
+    countries: [jp]
+    body:
+      - "Kiyohara no Takenori’s grandson Sanehira headed the family in the 1080s and ruled the six districts of the Kitakami basin from Mutsu as well as the family’s homeland around Yokote in Dewa. A quarrel with Kimiko no Hidetake, a kinsman by marriage, set him against his half-brother Iehira and his step-brother Kiyohira, the son of Fujiwara no Tsunekiyo and the Abe princess whom Sanehira’s father had married after the Former Nine Years’ War. In the autumn of 1083 Minamoto no Yoshiie, the son of Yoriyoshi, came to Mutsu as governor and supported Sanehira, whose adopted son had married Yoshiie’s half-sister; with the help of Yoshiie’s men, Sanehira’s garrison beat off an attack by Iehira and Kiyohira. Sanehira then died of illness while marching against Hidetake."
+      - "Yoshiie divided the six districts between the brothers, giving Kiyohira the rich southern districts of Isawa, Esashi and Waga and Iehira the northern ones of Iwate, Shiwa and Hienuki. In the summer of 1086 Iehira, resentful, attacked Kiyohira’s residence and burned it, killing his wife and children; Kiyohira escaped and appealed to Yoshiie. That winter Yoshiie attacked Iehira in his fort at Numa in Dewa with several thousand horsemen, but snow and cold forced him back after many of his men had frozen or starved. Iehira’s uncle Takehira joined him and persuaded him to move to the stronger fort of Kanazawa."
+    facts:
+      - [Yoshiie appointed governor of Mutsu, "1083"]
+      - [Iehira attacks Kiyohira, "summer of 1086"]
+      - [Yoshiie’s attack on Numa, "winter of 1086, failed"]
+    markers:
+      - kind: event
+        side: kiy
+        name: Kiyohira’s residence
+        date: summer of 1086
+        text: Burned by Iehira, who killed Kiyohira’s wife and children. Kiyohira escaped and turned to Yoshiie. The site is thought to be in Esashi, today’s Ōshū.
+        lonlat: [141.160, 39.170]
+        lp: r
+      - kind: siege
+        side: kiy
+        name: Numa
+        date: winter of 1086
+        text: Iehira’s fort in the Yokote basin, attacked by Yoshiie with several thousand horsemen. The winter forced the attackers to withdraw.
+        lonlat: [140.427, 39.297]
+        lp: l
+      - kind: held
+        side: kiy
+        name: Kanazawa
+        date: 1086–1087
+        text: Hill fort above the Yokote basin, to which Iehira moved on the advice of his uncle Takehira.
+        lonlat: [140.567, 39.366]
+        lp: r
+    arrows:
+      - side: kiy
+        label: Iehira
+        phase: 1
+        via: [[141.120, 39.500], [141.150, 39.300], [141.160, 39.180]]
+      - side: min
+        label: Yoshiie
+        phase: 2
+        via: [[141.130, 39.150], [140.800, 39.250], [140.450, 39.295]]
+    areas:
+      - style: occupied
+        side: kiy
+        label: Kiyohara homeland in Dewa
+        polygon: [[140.35, 39.10], [140.75, 39.10], [140.80, 39.65], [140.35, 39.65]]
+  - title: The siege of Kanazawa
+    date: "1087"
+    when: "1087-12-11"
+    borders: "1087"
+    countries: [jp]
+    body:
+      - "In the ninth month of 1087 Yoshiie and Kiyohira laid siege to Kanazawa, a hill fort above the Yokote basin. Yoshiie’s younger brother Yoshimitsu had left his post at court without leave to join him, and the court had already decided to send an envoy to order the fighting stopped. Legend tells that on the march Yoshiie noticed wild geese breaking formation over a field and found an ambush there, remembering a lesson in Chinese military texts from the scholar Ōe no Masafusa. Assaults failed, and on Hidetake’s advice Yoshiie settled down to starve the garrison out. As autumn turned to winter, women and children came out of the fort; Yoshiie had them killed in sight of the walls so that no more would leave and the food would run out faster."
+      - "On 11 December 1087 the garrison set fire to the fort and broke out. Takehira was found hiding in a pond and beheaded after Yoshiie refused his brother’s plea for mercy, and Iehira, disguised as a servant, was killed by a warrior named Agata no Tsugitō. Yoshiie asked the court for a decree recognising the war as a campaign against rebels, but it called the affair a private war, refused any reward and dismissed him as governor; he paid his eastern warriors from his own wealth. Kiyohira, the only survivor of the brothers, inherited all the Kiyohara lands, took his father’s surname of Fujiwara, and around 1100 moved his seat to Hiraizumi, where he built the temple of Chūson-ji. His descendants ruled the north until 1189."
+    facts:
+      - [Siege of Kanazawa, "ninth month to 11 December 1087"]
+      - [Outcome, "fort burned; Takehira beheaded, Iehira killed"]
+      - [Court’s verdict, "a private war, no reward for Yoshiie"]
+    markers:
+      - kind: siege
+        side: min
+        name: Kanazawa
+        date: 11 December 1087
+        text: Besieged by Yoshiie and Kiyohira from the ninth month. The starving garrison burned the fort and fled; Takehira and Iehira were killed.
+        lonlat: [140.567, 39.366]
+        lp: r
+      - kind: capital
+        side: min
+        name: Hiraizumi
+        date: from about 1100
+        text: Seat of Fujiwara no Kiyohira and his descendants, the Northern Fujiwara, who ruled Mutsu and Dewa for nearly a century.
+        lonlat: [141.110, 38.989]
+        lp: r
+    arrows:
+      - side: min
+        label: Yoshiie and Kiyohira
+        phase: 1
+        via: [[141.130, 39.150], [140.850, 39.300], [140.590, 39.360]]
+    areas:
+      - style: gained
+        side: min
+        label: Kiyohara lands, to Kiyohira
+        polygon: [[140.35, 39.10], [140.75, 39.10], [140.92, 38.97], [141.35, 38.97], [141.42, 39.40], [141.35, 39.85], [140.80, 39.85], [140.80, 39.65], [140.35, 39.65]]

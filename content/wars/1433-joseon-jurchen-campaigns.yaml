@@ -1,0 +1,189 @@
+id: joseon-jurchen-campaigns
+name: Joseon’s Jurchen campaigns
+start: "1433-04"
+end: "1491-10"
+tier: B
+summary: "The campaigns in which Joseon pushed its northern frontier to the Yalu and Tumen rivers and fought the Jurchen tribes beyond them. After Jianzhou Jurchens under Li Manzhu raided the upper Yalu in 1432, King Sejong sent Choe Yun-deok across the river in 1433 with 15,000 men against their villages on the Pojeo (Hun) River, and a second campaign followed in 1437; four new commanderies were set up along the upper Yalu. In the north-east, after the Jurchen chief Möngke Temür was killed in 1433, Kim Jong-seo built six fortified garrisons along the Tumen and settled them with people from the south. The upper-Yalu commanderies proved too costly and were abandoned in the 1450s, but the Tumen line held, and the two rivers became Korea’s border. Joseon joined Ming attacks on the Jianzhou Jurchens in 1467, when Li Manzhu was killed, and in 1479, and in 1491 Heo Jong led some 20,000 men across the Tumen against the Udige."
+countries: [kp, cn]
+sides:
+  - id: jos
+    name: Joseon
+    polities: [joseon]
+    ink: blue
+    moves: Joseon moves
+    success: Joseon success
+  - id: ming
+    name: Ming (1467 and 1479)
+    polities: [ming]
+    ink: red
+    moves: Ming moves
+    success: Ming success
+  - id: jur
+    name: Jurchens
+    polities: [jurchens]
+    ink: green
+    moves: Jurchen moves
+    success: Jurchen success
+notes:
+  - Dates are lunar months from the Annals of the Joseon Dynasty. Numbers of Jurchens killed and captured come from the Korean records.
+  - The four commanderies were Yeoyeon, Jaseong, Muchang and Uye; the six garrisons were Hoeryong, Jongseong, Onseong, Gyeongwon, Gyeongheung and Buryeong. Historians differ on the dates at which each was founded, between 1434 and 1449.
+sources:
+  - title: Jianzhou Jurchens (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jianzhou_Jurchens
+  - title: Kim Chongsŏ (Kim Jong-seo, Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kim_Chongs%C5%8F
+  - title: 파저강 토벌 (Pojeo River expedition, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0059589
+  - title: 사군 (The four commanderies, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0025393
+  - title: 최윤덕 (Choe Yun-deok, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0057552
+  - title: 북방 정책 (Northern policy, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0024747
+  - title: 여진 (Jurchens, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0036518
+  - title: 윤필상 (Yun Pil-sang, Korean Wikipedia)
+    url: https://ko.wikipedia.org/wiki/%EC%9C%A4%ED%95%84%EC%83%81
+steps:
+  - title: The Pojeo River and the four commanderies
+    date: 1432–1443
+    when: "1433-04"
+    borders: "1433-12"
+    countries: [kp, cn]
+    body:
+      - At the end of 1432 Jianzhou Jurchens under Li Manzhu, whose people lived along the Pojeo (Hun) River north of the Yalu, raided Yeoyeon on the upper Yalu, killing and carrying off dozens of people. In the fourth month of 1433 King Sejong sent Choe Yun-deok with 15,000 men from Ganggye. They crossed the Yalu in seven columns and attacked the Jurchen villages; the Korean records count 178 Jurchens killed and 248 captured. In 1437 Yi Cheon led a second campaign of 8,000 men across the river.
+      - To hold the upper Yalu, Joseon set up four commanderies, Yeoyeon, Jaseong, Muchang and Uye, by 1443. They were exposed and hard to supply, and between 1455 and 1459 they were abandoned, becoming known as the “abandoned four commanderies”.
+    facts:
+      - [Choe Yun-deok’s campaign, "fourth month of 1433, 15,000 men"]
+      - [Jurchen losses, "178 killed, 248 captured (Korean records)"]
+      - [Second campaign, "1437, 8,000 men under Yi Cheon"]
+    markers:
+      - kind: event
+        side: jur
+        name: Yeoyeon
+        date: "1432"
+        text: Raided by Li Manzhu’s Jurchens; later one of the four commanderies.
+        lonlat: [126.850, 41.780]
+      - kind: event
+        side: jos
+        name: Ganggye
+        date: "1433"
+        text: Choe Yun-deok’s army set out from here.
+        lonlat: [126.600, 40.967]
+        lp: b
+      - kind: battle
+        side: jos
+        name: Pojeo River
+        date: "1433"
+        text: Choe Yun-deok’s columns attacked Li Manzhu’s villages along the Hun River.
+        lonlat: [125.370, 41.270]
+        lp: l
+    arrows:
+      - side: jur
+        label: Li Manzhu’s raid
+        phase: 1
+        via: [[125.500, 41.320], [126.200, 41.600], [126.830, 41.770]]
+      - side: jos
+        label: Choe Yun-deok
+        phase: 2
+        via: [[126.600, 40.967], [126.100, 41.150], [125.700, 41.250], [125.400, 41.270]]
+    areas:
+      - style: gained
+        side: jos
+        label: Upper Yalu, settled by Joseon in the 1430s (approximate)
+        atoms: [KP-04, KP-10]
+  - title: The six garrisons on the Tumen
+    date: 1434–1449
+    when: "1434"
+    borders: "1449-12"
+    countries: [kp]
+    body:
+      - In 1433 Möngke Temür, chief of the Odoli Jurchens who lived around Hoeryong and an ancestor of the later Qing emperors, was killed in a feud with other Jurchens. Sejong seized the chance to take the lower Tumen valley. From 1434 Kim Jong-seo, commander of Hamgil province, built fortified garrisons at Hoeryong, Jongseong, Onseong, Gyeongwon, Gyeongheung and Buryeong, with the help of officers such as Yi Jing-ok, and thousands of families from the southern provinces were moved north to settle them.
+      - The six garrisons held, and with the line of forts on the Yalu they made the two rivers the northern border of Korea, as they have remained. The settlers and local strongmen of the north-east, however, resented the burdens of frontier defence and the officials sent from the south, which later fed Yi Si-ae’s rebellion of 1467.
+    facts:
+      - [Death of Möngke Temür, "1433"]
+      - [Six garrisons built, "from 1434, completed by the 1440s"]
+    markers:
+      - kind: held
+        side: jos
+        name: Hoeryong
+        date: from 1434
+        text: One of the six garrisons, on the Tumen.
+        lonlat: [129.750, 42.433]
+        lp: l
+      - kind: held
+        side: jos
+        name: Jongseong
+        date: 1440s
+        text: One of the six garrisons.
+        lonlat: [129.800, 42.760]
+        lp: l
+      - kind: held
+        side: jos
+        name: Onseong
+        date: 1440s
+        text: One of the six garrisons, at the northernmost bend of the Tumen.
+        lonlat: [129.992, 42.956]
+      - kind: held
+        side: jos
+        name: Gyeongwon
+        date: 1430s
+        text: One of the six garrisons.
+        lonlat: [130.199, 42.811]
+      - kind: held
+        side: jos
+        name: Buryeong
+        date: 1449
+        text: The last of the six garrisons to be founded.
+        lonlat: [129.710, 42.060]
+        lp: l
+    arrows:
+      - side: jos
+        label: Kim Jong-seo
+        phase: 1
+        via: [[129.330, 40.960], [129.600, 41.600], [129.700, 42.050], [129.750, 42.420]]
+    areas:
+      - style: gained
+        side: jos
+        label: The Tumen frontier (approximate)
+        atoms: [KP-09, KP-13]
+  - title: Joining the Ming against Jianzhou
+    date: 1467–1491
+    when: "1467-10"
+    borders: "1491-12"
+    countries: [kp, cn]
+    body:
+      - In 1467, after crushing Yi Si-ae’s rebellion, King Sejo sent an army to join a Ming campaign against the Jianzhou Jurchens. Under Gang Sun, with Nam I and Eo Yu-so leading the vanguard, it crossed the Yalu from Manpo and attacked the villages on the Pojeo River, killing Li Manzhu, his son and many of their people. In 1479 Yun Pil-sang led 5,000 men across the river to join another Ming attack on Jianzhou, after a first force under Eo Yu-so had turned back.
+      - In the north-east, the Udige Jurchens raided the Tumen garrisons. In the tenth month of 1491 Heo Jong led about 20,000 men across the Tumen against their villages. The Jurchen tribes beyond the rivers remained divided until Nurhaci, a descendant of Möngke Temür, united them at the end of the sixteenth century.
+    facts:
+      - [Joint campaign with the Ming, "1467; Li Manzhu killed"]
+      - [Second joint campaign, "1479, 5,000 men under Yun Pil-sang"]
+      - [Heo Jong’s expedition, "tenth month of 1491, about 20,000 men"]
+    markers:
+      - kind: event
+        side: jos
+        name: Manpo
+        date: "1467"
+        text: Gang Sun’s army crossed the Yalu here.
+        lonlat: [126.290, 41.157]
+        lp: b
+      - kind: battle
+        side: jos
+        name: Li Manzhu’s villages
+        date: "1467"
+        text: Joseon troops killed Li Manzhu and his son on the Pojeo River.
+        lonlat: [125.370, 41.270]
+        lp: l
+    arrows:
+      - side: jos
+        label: Gang Sun and Nam I
+        phase: 1
+        via: [[126.290, 41.157], [125.900, 41.200], [125.420, 41.270]]
+      - side: ming
+        label: Ming army
+        phase: 1
+        via: [[123.800, 41.400], [124.500, 41.350], [125.300, 41.290]]
+      - side: jos
+        label: Heo Jong (1491)
+        phase: 2
+        via: [[129.750, 42.430], [130.000, 42.800], [130.300, 43.200]]

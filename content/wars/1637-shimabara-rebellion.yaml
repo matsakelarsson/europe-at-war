@@ -1,0 +1,150 @@
+id: shimabara-rebellion
+name: Shimabara rebellion
+start: "1637-12-17"
+end: "1638-04-15"
+tier: B
+summary: "A rising of peasants, fishermen and former samurai in the Shimabara peninsula and the Amakusa Islands of western Kyushu, the last large armed conflict in Japan until the 1860s. Both areas had once been ruled by Christian lords and had many Christian converts. Their new lords, Matsukura Katsuie of Shimabara and the Terasawa of Karatsu, who held Amakusa, levied crushing taxes during years of crop failure, punished defaulters with torture and persecuted the Christians. On 17 December 1637 the people of the southern Shimabara peninsula killed the local magistrate, and Amakusa rose at the same time. Under a charismatic sixteen-year-old, Amakusa Shirō, the rebels attacked the castles of Tomioka and Hondo on Amakusa and Shimabara Castle, failed to take them and gathered, some 27,000 to 37,000 strong with their families, in the ruined castle of Hara on the Shimabara coast. The shogunate’s first commander, Itakura Shigemasa, was killed in a failed assault; his successor Matsudaira Nobutsuna besieged the castle with about 125,000 men from the Kyushu domains, and the Dutch at Hirado lent cannon and the ship de Ryp to bombard it. When the defenders’ food and powder ran out, the castle was stormed on 12–15 April 1638. Estimates put the rebels and sympathisers killed in the assault and the executions that followed at about 37,000, women and children among them; Amakusa Shirō’s head was displayed at Nagasaki. Matsukura was beheaded for misrule. The shogunate treated the rising as a Christian revolt, expelled the Portuguese in 1639 and tightened its persecution of Christians and its closure of the country."
+countries: [jp, nl]
+sides:
+  - id: reb
+    name: Shimabara and Amakusa rebels
+    polities: [shimabara-rebels]
+    ink: brown
+    moves: Rebel moves
+    success: Rebel success
+  - id: tok
+    name: Tokugawa shogunate and the Kyushu domains
+    polities: [tokugawa-shogunate]
+    ink: navy
+    moves: Shogunate moves
+    success: Shogunate success
+  - id: nl
+    name: Dutch East India Company (in support of the shogunate)
+    polities: [dutch-republic]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+notes:
+  - Historians disagree on how far the rising was a religious one. The shogunate presented it as a Christian rebellion, and the rebels fought under Christian banners; most modern historians see heavy taxation and famine as its main causes, with Christianity giving the rebels unity and hope.
+  - Figures for the armies and the dead come from Japanese records and later chronicles and vary widely. The rebels and their families in Hara Castle are usually counted at 27,000 to 37,000; nearly all were killed. Estimates of the shogunate’s losses range from several thousand to well over 10,000.
+sources:
+  - title: Shimabara Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Shimabara_Rebellion
+  - title: 島原の乱 (Japanese Wikipedia)
+    url: https://ja.wikipedia.org/wiki/%E5%B3%B6%E5%8E%9F%E3%81%AE%E4%B9%B1
+  - title: Hara Castle (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hara_Castle
+  - title: Shimabara Rebellion (Britannica)
+    url: https://www.britannica.com/event/Shimabara-Rebellion
+steps:
+  - title: The rising in Shimabara and Amakusa
+    date: December 1637 – January 1638
+    when: "1637-12-17"
+    borders: "1637-12-17"
+    countries: [jp]
+    body:
+      - Matsukura Shigemasa and his son Katsuie, lords of Shimabara since 1616, built a new castle far beyond the means of their small domain and raised the land tax to pay for it. In a famine year, peasants who could not pay were tortured, their wives and daughters taken as hostages. In neighbouring Amakusa, governed by the Terasawa of Karatsu, conditions were much the same. Both lands had been Christian under the Arima and Konishi lords, and the persecution of the Christians was harsh. Former retainers of the old lords, now rōnin farming in the villages, plotted a rising and found a leader in Amakusa Shirō, a sixteen-year-old said to work miracles.
+      - On 17 December 1637 villagers in the south of the Shimabara peninsula killed the magistrate Hayashi Hyōzaemon, and within days most of the peninsula’s south and much of Amakusa had risen, forcing villagers who held back to join. The rebels besieged Shimabara Castle, and on Amakusa the Terasawa castles of Hondo and Tomioka, but troops from the neighbouring domains came to the castles’ relief. The rebels then crossed the Ariake Sea in boats and gathered in the ruined castle of Hara, the old seat of the Arima, which they rebuilt with palisades made from the timber of their boats and stocked with food and arms taken from the Matsukura storehouses.
+    facts:
+      - [Start of the rising, "17 December 1637"]
+      - [Leader, Amakusa Shirō (Masuda Shirō Tokisada)]
+      - [Rebels in Hara Castle, "about 27,000–37,000, with their families"]
+    markers:
+      - kind: siege
+        side: tok
+        name: Shimabara Castle
+        date: December 1637
+        text: The new castle of Matsukura Katsuie, whose cost had driven up the taxes. The rebels besieged it but could not take it.
+        lonlat: [130.367, 32.789]
+      - kind: siege
+        side: tok
+        name: Tomioka Castle
+        date: December 1637 – January 1638
+        text: Terasawa castle on Amakusa, besieged by the rebels and relieved by troops from the neighbouring domains.
+        lonlat: [130.035, 32.524]
+        lp: l
+      - kind: siege
+        side: tok
+        name: Hondo
+        date: December 1637
+        text: The Terasawa garrison town on Amakusa, attacked by the Amakusa rebels.
+        lonlat: [130.190, 32.450]
+        lp: b
+      - kind: held
+        side: reb
+        name: Hara Castle
+        date: January 1638
+        text: The ruined castle of the Arima, rebuilt by the rebels as their stronghold.
+        lonlat: [130.257, 32.633]
+    arrows:
+      - side: reb
+        phase: 1
+        via: [[130.150, 32.530], [130.200, 32.580], [130.250, 32.625]]
+      - side: reb
+        phase: 1
+        via: [[130.300, 32.700], [130.340, 32.750], [130.362, 32.780]]
+    areas:
+      - style: occupied
+        side: reb
+        label: Areas held by the rebels
+        polygons:
+          - [[130.205, 32.640], [130.250, 32.705], [130.330, 32.720], [130.360, 32.700], [130.330, 32.640], [130.290, 32.600], [130.230, 32.605]]
+          - [[130.080, 32.470], [130.140, 32.510], [130.210, 32.480], [130.220, 32.420], [130.150, 32.390], [130.090, 32.420]]
+  - title: The siege of Hara Castle
+    date: January – April 1638
+    when: "1638-01"
+    borders: "1638-04-15"
+    countries: [jp, nl]
+    body:
+      - The shogun Tokugawa Iemitsu sent Itakura Shigemasa to command the armies of the Kyushu domains against Hara. His assaults failed, and on 14 February 1638, the first day of the new year by the lunar calendar, he was killed leading an attack to forestall his replacement, the senior councillor Matsudaira Nobutsuna. Nobutsuna surrounded the castle with about 125,000 men, the largest contingents from Saga, Kumamoto and Fukuoka; the swordsman Miyamoto Musashi served with the Hosokawa of Kumamoto. At the shogunate’s request Nicolaes Couckebacker, head of the Dutch trading post at Hirado, brought the ship de Ryp to bombard the castle from the sea, with little result; the Japanese commanders sent it away after the rebels mocked them for calling on foreigners.
+      - Nobutsuna chose to starve the defenders. By early April they were gathering seaweed below the cliffs to eat, and a desperate night sortie failed. The general assault was set for 13 April, but on 12 April the Saga troops of Nabeshima Katsushige attacked a day early and the other contingents followed; by 15 April the last defenders had been killed. Estimates put the rebels and sympathisers killed in the assault and in the executions that followed at about 37,000, women and children among them; the castle was razed and the dead buried in its ruins. Amakusa Shirō’s head was displayed at Nagasaki. Matsukura Katsuie was beheaded in Edo, the only daimyo executed in the Edo period, and the Terasawa lost Amakusa. Blaming Portuguese priests for the rising, the shogunate expelled the Portuguese in 1639, leaving the Dutch at Hirado, later at Dejima in Nagasaki, as the only Europeans allowed to trade with Japan.
+    facts:
+      - [Shogunate army, "about 125,000"]
+      - [Itakura Shigemasa killed, "14 February 1638"]
+      - [Final assault, "12–15 April 1638"]
+      - [Rebels and sympathisers killed, "about 37,000 (estimate)"]
+    markers:
+      - kind: siege
+        side: tok
+        name: Hara Castle
+        date: 12–15 April 1638
+        text: Stormed after a siege of about three months. Almost all the defenders and their families were killed.
+        lonlat: [130.257, 32.633]
+        lp: l
+      - kind: naval
+        side: nl
+        name: de Ryp
+        date: February – March 1638
+        text: The Dutch ship bombarded the castle from offshore at the shogunate’s request.
+        lonlat: [130.290, 32.622]
+        lp: r
+      - kind: event
+        side: nl
+        name: Hirado
+        date: "1638"
+        text: The Dutch trading post, which sent cannon and gunpowder to the besiegers.
+        lonlat: [129.555, 33.369]
+      - kind: event
+        side: tok
+        name: Nagasaki
+        date: April 1638
+        text: Amakusa Shirō’s head was put on display here.
+        lonlat: [129.873, 32.750]
+        lp: l
+    arrows:
+      - side: tok
+        label: Saga and Fukuoka troops
+        phase: 1
+        via: [[130.300, 33.250], [130.100, 33.050], [130.080, 32.830], [130.200, 32.720], [130.245, 32.645]]
+      - side: tok
+        label: Kumamoto troops
+        phase: 1
+        via: [[130.600, 32.730], [130.450, 32.680], [130.300, 32.640], [130.265, 32.635]]
+      - side: nl
+        phase: 1
+        via: [[129.555, 33.340], [129.550, 33.000], [129.720, 32.520], [130.000, 32.600], [130.285, 32.620]]
+    areas:
+      - style: front
+        side: tok
+        label: Siege lines
+        line: [[130.240, 32.648], [130.258, 32.652], [130.268, 32.642], [130.266, 32.625]]

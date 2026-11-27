@@ -1,0 +1,113 @@
+id: united-states-expedition-to-korea
+name: United States expedition to Korea
+start: "1871-06-01"
+end: "1871-07-03"
+tier: B
+summary: "An American naval expedition to Korea, called Sinmi Yangyo in Korean (“the Western disturbance of 1871”). Frederick Low, the United States minister to China, and Rear Admiral John Rodgers sailed to Korea with five warships to learn the fate of the merchant schooner General Sherman, destroyed at Pyongyang in 1866, and to negotiate a treaty. On 1 June 1871 Korean batteries fired on American ships surveying the Ganghwa strait. When no apology came, about 650 sailors and marines landed on Ganghwa on 10 June, took the forts of Chojijin and Deokjinjin, and on 11 June stormed the citadel of Gwangseongbo, where the Korean commander Eo Jae-yeon and most of his men were killed: 243 Koreans by the American count, against three Americans. The Korean government still refused to negotiate, and the squadron left for China on 3 July. The regent Heungseon Daewongun set up stelae across the country warning against peace with Westerners; Korea and the United States signed a treaty only in 1882."
+countries: [kr, us]
+sides:
+  - id: us
+    name: United States
+    polities: [united-states]
+    ink: navy
+    moves: American moves
+    success: American success
+  - id: js
+    name: Joseon Korea
+    polities: [joseon]
+    ink: red
+    moves: Korean moves
+    success: Korean success
+notes:
+  - The dates are the Gregorian dates of the American reports. Korean records use the lunar calendar (the landing at Chojijin was on the 23rd day of the fourth month).
+  - Korean estimates of their losses at Gwangseongbo, about 350 dead, are higher than the American count of 243; some of the defenders are said to have drowned themselves rather than be captured.
+sources:
+  - title: United States expedition to Korea (Wikipedia)
+    url: https://en.wikipedia.org/wiki/United_States_expedition_to_Korea
+  - title: 신미양요 (United States expedition, Korean Wikipedia)
+    url: https://ko.wikipedia.org/wiki/%EC%8B%A0%EB%AF%B8%EC%96%91%EC%9A%94
+  - title: General Sherman incident (Wikipedia)
+    url: https://en.wikipedia.org/wiki/General_Sherman_incident
+  - title: TWE Remembers, the Korean Expedition of 1871 (Council on Foreign Relations)
+    url: https://www.cfr.org/blog/twe-remembers-korean-expedition-1871-and-battle-ganghwa-shinmiyangyo
+steps:
+  - title: The voyage and the firing at Sondolmok
+    date: May – June 1871
+    when: "1871-05"
+    borders: "1871-06-01"
+    countries: [kr, us]
+    body:
+      - The fate of the General Sherman, burned with all its crew on the Taedong River in 1866, had never been officially explained, and Korean officials had evaded the questions of American naval officers in 1867 and 1868. In 1871 the State Department sent Frederick Low, its minister in Beijing, with the Asiatic Squadron under Rear Admiral John Rodgers, to find out what had happened and to negotiate a treaty on shipwrecked sailors and trade. The squadron, the frigate Colorado, the sloops Alaska and Benicia and the gunboats Monocacy and Palos, left Nagasaki on 16 May and anchored off Jakyak Island near Incheon at the end of the month.
+      - Korean officials came aboard but said that their government was not interested in a treaty. The Americans announced that they would survey the waters, which Korean law closed to foreign ships because they led to the capital. On 1 June, as the gunboats and steam launches passed the narrows of Sondolmok in the Ganghwa strait, the Korean batteries opened fire. The fire did little damage; the Americans returned it and withdrew. Rodgers demanded an apology within ten days. The governor of Ganghwa sent cattle, chickens and eggs, which the Americans refused, but no apology.
+    facts:
+      - [American squadron, "1 frigate, 2 sloops, 2 gunboats"]
+      - [Firing at Sondolmok, "1 June 1871"]
+    markers:
+      - kind: event
+        side: us
+        name: Jakyak Island
+        date: May – July 1871
+        text: The squadron’s anchorage off Incheon throughout the expedition.
+        lonlat: [126.589, 37.498]
+      - kind: battle
+        name: Sondolmok
+        date: 1 June 1871
+        text: Korean batteries fired on the American gunboats passing the narrows. Neither side lost a ship.
+        lonlat: [126.531, 37.665]
+      - kind: held
+        side: js
+        name: Ganghwa
+        date: "1871"
+        text: The fortified island guarding the river approach to Hanseong.
+        lonlat: [126.484, 37.748]
+        lp: l
+    arrows:
+      - side: us
+        label: Survey party
+        via: [[126.59, 37.51], [126.55, 37.60], [126.535, 37.660], [126.530, 37.700]]
+  - title: The Ganghwa forts
+    date: 10–11 June 1871
+    when: "1871-06"
+    borders: "1871-06-11"
+    countries: [kr, us]
+    view:
+      center: [126.52, 37.66]
+      size: [30, 26]
+    body:
+      - On 10 June, covered by the guns of the Monocacy and the Palos, about 650 sailors and marines landed near Chojijin, at the south-eastern corner of Ganghwa, and overran the fort, whose defenders had only matchlocks and old cannon. The next morning they found the fort of Deokjinjin abandoned, dismantled it, and moved north along the shore to Gwangseongbo, a walled citadel on a headland over the Sondolmok narrows, where the Korean troops had regrouped.
+      - After an artillery bombardment from the hills and from the Monocacy, the Americans stormed the citadel. The fighting inside lasted about fifteen minutes. Lieutenant Hugh McKee, the first man over the wall, was mortally wounded; the Korean commander Eo Jae-yeon was killed and his great flag, the sujagi, captured. American reports counted 243 Korean dead and 20 prisoners, against three Americans killed and ten wounded. Fifteen Americans received the Medal of Honor, the first awarded for action abroad.
+      - The Koreans still refused to negotiate, and more troops gathered on the mainland. The squadron stayed at its anchorage until 3 July and then sailed for China. The Daewongun had stone stelae set up in Hanseong and across the country, inscribed “When Western barbarians invade, not to fight is to make peace, and to urge peace is to sell out the country”; Korea opened to Japan in 1876, and the United States obtained a treaty in 1882.
+    facts:
+      - [American landing force, "about 650 sailors and marines"]
+      - [Korean dead at Gwangseongbo, "243 (American count) to about 350 (Korean estimates)"]
+      - [American losses, "3 killed, 10 wounded"]
+    markers:
+      - kind: taken
+        side: us
+        name: Chojijin
+        date: 10 June 1871
+        text: The first fort taken after the landing.
+        lonlat: [126.515, 37.649]
+        lp: l
+      - kind: taken
+        side: us
+        name: Deokjinjin
+        date: 11 June 1871
+        text: Found abandoned and dismantled.
+        lonlat: [126.526, 37.648]
+        lp: r
+      - kind: taken
+        side: us
+        name: Gwangseongbo
+        date: 11 June 1871
+        text: The citadel was stormed after a bombardment. Eo Jae-yeon and most of his men were killed.
+        lonlat: [126.528, 37.664]
+        lp: t
+    arrows:
+      - side: us
+        label: Landing
+        phase: 1
+        via: [[126.500, 37.620], [126.508, 37.635], [126.513, 37.646]]
+      - side: us
+        phase: 2
+        via: [[126.517, 37.651], [126.524, 37.652], [126.527, 37.661]]

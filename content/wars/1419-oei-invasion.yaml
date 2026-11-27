@@ -1,0 +1,103 @@
+id: oei-invasion
+name: Ōei invasion (Gihae eastern expedition)
+start: "1419-07-11"
+end: "1419-07-25"
+tier: B
+summary: "A Joseon expedition against the island of Tsushima, the main base of the wokou who raided Korea. In May 1419 a wokou fleet attacked Biin on the west coast of Korea and then Haeju. The retired king Taejong, who still controlled the army under his son Sejong, decided to strike the island while many of its fighting men were away raiding. On 11 July 1419 Yi Jong-mu sailed from Geoje with 227 ships and 17,285 men, and the next day the fleet landed in Asō Bay. The Koreans burned houses and ships, freed Chinese captives and fenced off the island’s narrow neck at Funakoshi. On 21 July a Korean column was ambushed at Nukadake and lost heavily, and with the typhoon season coming and the lord of the island, Sō Sadamori, asking for peace, the fleet sailed home on 25 July. Joseon dropped its demand that Tsushima submit, and the island’s trade with Korea was regulated through the Sō, by the Treaty of Gyehae in 1443. The invasion is known in Japan by its era name, Ōei, and in Korea as the eastern expedition of the gihae year."
+countries: [jp, kr]
+sides:
+  - id: jos
+    name: Joseon
+    polities: [joseon]
+    ink: blue
+    moves: Joseon moves
+    success: Joseon success
+  - id: tsu
+    name: Tsushima (the Sō clan and the wokou)
+    polities: [so-clan, wokou]
+    ink: purple
+    moves: Tsushima moves
+    success: Tsushima success
+notes:
+  - Dates are Julian equivalents of the lunar dates in the Annals of King Sejong, as given in Japanese and English sources. The fleet sailed on the nineteenth day of the sixth month, landed on the twentieth, fought at Nukadake on the twenty-ninth and left on the third day of the seventh month.
+  - "Losses are disputed. The Annals of King Sejong record 180 Korean dead and say Tsushima lost close to 200 people; the report of the Kyushu deputy Shōni Mitsusada claimed 3,700 Korean dead, and the Sō family genealogy of 1719 gives 123 Japanese and more than 2,500 Korean dead. The Muromachi court at first feared a Mongol or Chinese invasion."
+sources:
+  - title: Ōei Invasion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/%C5%8Cei_Invasion
+  - title: 応永の外寇 (Ōei invasion, Japanese Wikipedia)
+    url: https://ja.wikipedia.org/wiki/%E5%BF%9C%E6%B0%B8%E3%81%AE%E5%A4%96%E5%AF%87
+  - title: Treaty of Gyehae (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Gyehae
+  - title: 대마도 정벌 (Expeditions to Tsushima, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0014343
+  - title: 이순몽 (Yi Sun-mong, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0044895
+steps:
+  - title: The landing on Tsushima
+    date: May – July 1419
+    when: "1419-07-12"
+    borders: "1419-07-12"
+    countries: [kr, jp]
+    body:
+      - Tsushima, rocky and short of farmland, lived by fishing, trade and, in bad years, raiding. Its lord Sō Sadashige had kept the raiders in check, but after his death in 1418 his heir Sadamori was a boy and the island went hungry. On 31 May 1419 a wokou fleet of about fifty ships attacked Biin on the west coast of Korea, killing many of the garrison, and went on to raid Haeju before sailing for China. On 7 June the retired king Taejong, who kept control of the army after handing the throne to Sejong, decided to attack Tsushima while its raiders were away.
+      - Yi Jong-mu sailed from Geoje on 11 July with 227 ships, 17,285 men and food for 65 days, and landed at Ozaki in Asō Bay on 12 July. Islanders at first mistook the leading ships for their own men returning. According to the Annals of King Sejong the Koreans took 129 ships, burned 1,939 houses, killed 114 people and captured 21 on the first days, and freed 131 Chinese captives. They then built a palisade across the narrow neck of the island at Funakoshi to cut its communications, meaning to starve out the people who had fled into the hills.
+    facts:
+      - [Wokou raid on Biin, "31 May 1419"]
+      - [Joseon fleet, "227 ships, 17,285 men"]
+      - [Landing in Asō Bay, "12 July 1419"]
+    markers:
+      - kind: event
+        side: jos
+        name: Geoje
+        date: 11 July 1419
+        text: Yi Jong-mu’s fleet sailed from here.
+        lonlat: [128.620, 34.880]
+        lp: l
+      - kind: taken
+        side: jos
+        name: Ozaki
+        date: 12 July 1419
+        text: The Joseon army landed here in Asō Bay and burned ships and houses.
+        lonlat: [129.230, 34.320]
+        lp: l
+      - kind: held
+        side: jos
+        name: Funakoshi
+        date: July 1419
+        text: The Koreans fenced off the narrow neck of the island to cut its communications.
+        lonlat: [129.310, 34.280]
+        lp: b
+    arrows:
+      - side: jos
+        label: Yi Jong-mu
+        phase: 1
+        via: [[128.650, 34.850], [128.950, 34.650], [129.220, 34.330]]
+  - title: Nukadake and the withdrawal
+    date: July 1419 – 1443
+    when: "1419-07-21"
+    borders: "1419-07-25"
+    countries: [kr, jp]
+    body:
+      - On 21 July Yi Jong-mu sent columns to search the island again and landed troops in Nii district. The Tsushima men, reinforced from Iki, lay in wait in the mountains, and Bak Sil’s left army was ambushed at Nukadake; more than a hundred Koreans were killed in the fighting or fell from the cliffs before the right army came up and the officer Yi Sun-mong shot the enemy’s leader. Sō Sadamori wrote asking for peace and warning that the storms of the seventh month made a long stay dangerous, and Taejong had already told his commanders not to remain. On 25 July the fleet sailed back to Geoje.
+      - A second expedition was discussed but not carried out. Envoys went back and forth, and in 1420 Song Hui-gyeong travelled to the shogun’s court in Kyoto. Joseon gave up its demand that Tsushima submit and instead licensed the island’s trade through the Sō, who issued passes to ships bound for Korea. The Treaty of Gyehae of 1443 allowed Tsushima 50 trading ships a year, and the great raids on Korea came to an end.
+    facts:
+      - [Ambush at Nukadake, "21 July 1419"]
+      - [Korean dead, "180 (Annals of King Sejong)"]
+      - [Fleet back at Geoje, "25 July 1419"]
+      - [Treaty of Gyehae, "1443"]
+    markers:
+      - kind: battle
+        side: tsu
+        name: Nukadake
+        date: 21 July 1419
+        text: Bak Sil’s column was ambushed in the mountains and lost heavily.
+        lonlat: [129.290, 34.390]
+    arrows:
+      - side: jos
+        label: Bak Sil
+        phase: 1
+        via: [[129.240, 34.330], [129.270, 34.360], [129.285, 34.385]]
+      - side: jos
+        label: Withdrawal
+        phase: 2
+        via: [[129.220, 34.320], [128.950, 34.650], [128.650, 34.860]]

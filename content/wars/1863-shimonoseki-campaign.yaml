@@ -1,0 +1,135 @@
+id: shimonoseki-campaign
+name: Shimonoseki campaign
+start: "1863-06-25"
+end: "1864-09-08"
+tier: B
+summary: "Fighting between the Chōshū domain and the navies of the United States, France, the Netherlands and Britain over the Strait of Shimonoseki, the narrow passage between Honshu and Kyushu that links the Inland Sea with the Sea of Japan. In 1863 Emperor Kōmei, under pressure from the radical samurai of the “revere the emperor, expel the barbarians” (sonnō jōi) movement, ordered the shogunate to expel the foreigners by the 10th day of the 5th month (25 June). The shogunate did nothing, but Chōshū, whose lord Mōri Takachika backed the radicals, opened fire from its batteries and steamers on the American steamer Pembroke, the French dispatch boat Kien Chan and the Dutch warship Medusa and closed the strait. The USS Wyoming sank two Chōshū ships on 16 July and a French squadron landed men and wrecked batteries on 20 July, but the strait stayed closed for a year. In September 1864, after Chōshū had been driven from Kyoto, a squadron of nine British, four Dutch and three French warships with an American chartered steamer, about 2,000 men in all, under the British admiral Augustus Kuper, silenced the batteries on 5 September, landed and destroyed them, and forced Chōshū to make peace on 8 September; Takasugi Shinsaku negotiated for the domain. The shogunate had to accept an indemnity of $3,000,000. The defeat turned Chōshū’s leaders from expelling the foreigners to modernising their army with Western arms and overthrowing the shogunate."
+countries: [jp, gb, fr, nl, us]
+sides:
+  - id: cho
+    name: Chōshū domain
+    polities: [choshu-domain]
+    ink: red
+    moves: Chōshū moves
+    success: Chōshū success
+  - id: al
+    name: United States, France, the Netherlands and Britain
+    polities: [united-kingdom, france, netherlands, united-states]
+    ink: blue
+    moves: Western moves
+    success: Western success
+notes:
+  - The English accounts give Gregorian dates; the imperial deadline was the 10th day of the 5th month of Bunkyū 3 in the Japanese calendar.
+  - Casualty figures for 1864 differ. The allies are usually given 12 killed and about 50 wounded (the British diplomat Ernest Satow, who was present, counted 8 killed and 30 wounded among the British), Chōshū 18 killed and 29 wounded.
+  - The United States returned its share of the indemnity, about $785,000, to Japan in 1883.
+sources:
+  - title: Shimonoseki campaign (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Shimonoseki_campaign
+  - title: Battle of Shimonoseki Straits (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Shimonoseki_Straits
+  - title: 下関戦争 (Japanese Wikipedia)
+    url: https://ja.wikipedia.org/wiki/%E4%B8%8B%E9%96%A2%E6%88%A6%E4%BA%89
+steps:
+  - title: Chōshū closes the strait
+    date: June – July 1863
+    when: "1863-06-25"
+    borders: "1863-07-01"
+    countries: [jp, us, fr, nl]
+    body:
+      - On 25 June 1863, the day after the emperor’s deadline, two Chōshū warships fired on the American merchant steamer Pembroke as she lay at anchor at the eastern entrance of the strait; she escaped through the Bungo Channel. The next day shore batteries damaged the French dispatch steamer Kien Chan, and on 11 July the Dutch warship Medusa, whose captain trusted in the old friendship between Japan and the Netherlands, ran the strait under fire with nine men killed or wounded. Chōshū had fired on the flags of most of the treaty powers.
+      - On 16 July the American frigate USS Wyoming under Captain David McDougal steamed into the strait and fought the batteries and Chōshū’s American-built steamers for about two hours, sinking two of them and damaging a third; four of her crew were killed. On 20 July the French warships Sémiramis and Tancrède under Captain Benjamin Jaurès bombarded the batteries and landed 250 men, who spiked guns and burned a village. Chōshū rebuilt its batteries, and the strait stayed closed to foreign ships for more than a year while the powers negotiated with the shogunate.
+    facts:
+      - [Pembroke fired on, "25 June 1863"]
+      - [Medusa fired on, "11 July 1863"]
+      - [USS Wyoming in the strait, "16 July 1863"]
+      - [French landing, "20 July 1863"]
+    markers:
+      - kind: event
+        side: cho
+        name: Pembroke fired on
+        date: 25 June 1863
+        text: Two Chōshū warships fired on the American steamer, which escaped with slight damage.
+        lonlat: [131.010, 33.940]
+        lp: r
+      - kind: event
+        side: cho
+        name: Kameyama battery
+        date: June – July 1863
+        text: One of some fifteen Chōshū batteries on the heights along the strait, which fired on foreign ships passing below.
+        lonlat: [130.942, 33.955]
+        lp: l
+      - kind: naval
+        side: al
+        name: USS Wyoming
+        date: 16 July 1863
+        text: The American frigate sank two Chōshū steamers and damaged a third before withdrawing; four Americans were killed.
+        lonlat: [130.955, 33.948]
+        lp: b
+      - kind: taken
+        side: al
+        name: Maeda batteries
+        date: 20 July 1863
+        text: French marines and sailors landed and destroyed the guns and a nearby village.
+        lonlat: [130.974, 33.970]
+        lp: t
+      - kind: capital
+        side: cho
+        name: Hagi
+        date: "1863"
+        text: The castle town of the Mōri lords of Chōshū. In 1863 Mōri Takachika moved his seat to Yamaguchi, further from the coast.
+        lonlat: [131.381, 34.421]
+    arrows:
+      - side: al
+        label: USS Wyoming
+        phase: 1
+        via: [[131.150, 33.900], [131.020, 33.935], [130.960, 33.950]]
+      - side: al
+        label: Jaurès
+        phase: 2
+        via: [[131.150, 33.880], [131.030, 33.945], [130.980, 33.965]]
+  - title: The allied bombardment
+    date: September 1864
+    when: "1864-09-05"
+    borders: "1864-09-05"
+    countries: [jp, gb, fr, nl, us]
+    body:
+      - In August 1864, with the strait still closed and the shogunate unable to act, the four powers sent a joint squadron from Yokohama under the British admiral Sir Augustus Kuper. The ships gathered off the island of Himeshima, on the Kyushu side of the Inland Sea, for their final preparations. Nine British, four Dutch and three French warships carried about 2,000 sailors, marines and soldiers, and the chartered American steamer Ta-Kiang came as a token of United States support. Chōshū was at its weakest. In August its troops had been beaten in Kyoto in the Kinmon incident, and the shogunate was preparing an army against it.
+      - On 5 September the squadron entered the strait and in an afternoon’s firing silenced the batteries at Maeda and Dan-no-ura. The next day landing parties stormed the positions, spiked or carried off some 60 guns and burned the magazines, beating back Chōshū counter-attacks. On 8 September Chōshū asked for peace, sending the young officer Takasugi Shinsaku to negotiate. Under the peace agreed on 18 September Chōshū opened the strait to foreign ships, promised to supply them with coal, food and water and to remove its batteries, and accepted an indemnity of $3,000,000, which the powers then claimed from the shogunate. The shogunate could pay only part of it, and in return the powers pressed for the opening of Hyōgo (Kobe) to trade and lower customs duties. In Chōshū the defeat strengthened those, like Takasugi and Itō Hirobumi, who wanted Western weapons and drill.
+    facts:
+      - [Allied squadron, "16 warships and a chartered steamer, about 2,000 men"]
+      - [Commander, Admiral Sir Augustus Kuper]
+      - [Bombardment, "5–6 September 1864"]
+      - [Chōshū asks for peace, "8 September 1864"]
+      - [Indemnity, "$3,000,000"]
+    markers:
+      - kind: taken
+        side: al
+        name: Maeda and Dan-no-ura batteries
+        date: 5–6 September 1864
+        text: Seventeen British, Dutch, French and American ships silenced the Chōshū batteries in an afternoon; the next day British, French and Dutch landing parties stormed the batteries at Maeda and at the narrowest point of the strait, carried off the guns and burned the magazines.
+        lonlat: [130.974, 33.970]
+        lp: t
+      - kind: treaty
+        side: al
+        name: Shimonoseki
+        date: 8–18 September 1864
+        text: Takasugi Shinsaku, with Itō Hirobumi as interpreter, negotiated the peace with Kuper aboard the British flagship Euryalus.
+        lonlat: [130.941, 33.958]
+        lp: l
+      - kind: event
+        side: al
+        name: Himeshima
+        date: early September 1864
+        text: The seventeen ships of the four-power squadron anchored here for their last preparations before the attack.
+        lonlat: [131.650, 33.725]
+      - kind: capital
+        side: cho
+        name: Yamaguchi
+        date: "1864"
+        text: Seat of the Chōshū government since 1863.
+        lonlat: [131.474, 34.178]
+    arrows:
+      - side: al
+        label: Kuper’s squadron
+        phase: 1
+        via: [[131.640, 33.735], [131.350, 33.820], [131.100, 33.910], [130.990, 33.955]]

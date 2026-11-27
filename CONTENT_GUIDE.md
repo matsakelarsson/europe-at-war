@@ -228,7 +228,8 @@ they ever border, keeping curated colours.
   | 1801–today | Iranian Azerbaijan (East and West Azerbaijan, Ardabil) | `iran-central-asia.yaml` |
   | 800–today | Saudi Arabia, Yemen, Oman, the United Arab Emirates, Qatar, Bahrain, Kuwait | `arabia.yaml` |
   | 800–today | India, Pakistan, Bangladesh, Sri Lanka, Nepal, Bhutan, the Maldives | `south-asia.yaml` |
-  | 800–today | China, Mongolia, Taiwan, Hong Kong, Macau, eastern and southern Kazakhstan, Siberia (without Sakhalin and the Kurils) | `east-asia.yaml` (`russia.yaml` for 1917 and 1991) |
+  | 800–today | China, Mongolia, Taiwan, Hong Kong, Macau, eastern and southern Kazakhstan, Siberia without Sakhalin and the Kurils | `east-asia.yaml` (`russia.yaml` for 1917 and 1991) |
+  | 800–today | Korea, Japan, the Ryukyu Islands, Sakhalin and the Kurils | `korea-japan.yaml` |
   | 1236–today | Western Kazakhstan (West Kazakhstan, Atyrau, Aktobe, Mangystau, Kostanay) | `east-asia.yaml`, `rus-and-russia.yaml` (1242, 1440), `russia.yaml` |
 
   Other event files (`central-europe.yaml`) correct drafts outside any curated range; there, the next keyframe can
@@ -255,7 +256,9 @@ they ever border, keeping curated colours.
   Luxembourg, the partition of Yugoslavia in 1941–1945 (the Independent State
   of Croatia, the annexations, German-occupied Serbia and Italian-occupied
   Montenegro, each region returning to Yugoslavia when it was liberated) and the
-  Bulgarian annexation in Greece. Occupied France, the Low Countries, Denmark,
+  Bulgarian annexation in Greece; and, in `korea-japan.yaml`, the American
+  and Soviet military governments in Korea (1945–1948) and the American
+  administration of the Ryukyu and Amami Islands (1946–1972). Occupied France, the Low Countries, Denmark,
   Norway, Greece, Albania after 1943, Italy after the armistice and Hungary
   in 1944 are areas. Abkhazia,
   South Ossetia, Transnistria, Karabakh, Crimea after 2014 and the occupied
@@ -419,6 +422,25 @@ they ever border, keeping curated colours.
   `CN-AH!` the land south of the Yangtze, `CN-FJ!` north-western Fujian,
   `CN-SC!` the Sichuan basin, `CN-XJ!` the northern Tarim, `CN-XZ!` Ü-Tsang,
   `CN-QH!` Qinghai without Xining, `RU-KHA!` the Okhotsk coast.
+- **Korea and Japan** (`korea-japan.yaml`). Korea: `silla`, Later Baekje
+  and Taebong (892–936), `goryeo`, `joseon` (the Korean Empire from 1897),
+  `tamna` (Jeju, until 1105), with Balhae, the Jurchens, the Jin, Eastern Xia
+  and the Mongols in the north until Goryeo and Joseon reach the Yalu and the
+  Tumen (1369–1449), and the lands the Mongols ruled directly (Ssangseong
+  1258–1356, Dongnyeong 1270–1290, Jeju 1273–1294). After 1945 the American
+  and Soviet military governments (`usamgik`, `soviet-civil-administration`),
+  then `south-korea` and `north-korea`; the front lines of the Korean War are
+  areas, and the base map changes at the armistice (`KR-41~n38`, `KR-42~n38`,
+  `KP-05~s38`, `KP-06~s38`). Japan is one polity throughout (`japan`; rival
+  courts, daimyo and rebels are areas), with `emishi` in the north of Tōhoku
+  until 802 and about 1100, `ainu` in Hokkaido (Matsumae from 1604, the rest
+  from 1799), southern Sakhalin and the Kurils, `sanzan` and `ryukyu` in the
+  Ryukyu Islands until 1879, and `uscar` there in 1946–1972. Russia takes the
+  northern Kurils in 1711 and northern Sakhalin in 1853; then the treaties of
+  1855, 1875 and 1905 and the Soviet annexation of 1946 (`RU-SAK~karafuto`, `RU-SAK~skurils`, `RU-SAK~nkurils`; `RU-SAK!` is
+  northern Sakhalin). Remainders: `JP-01!` is Hokkaido without the Matsumae
+  tip, `JP-47!` Okinawa Island, `KP-08!` South Hamgyong north of Yonghung
+  (`KP-08~yonghung`, the old Hwaju).
 - **Checking borders.** After a build, `node tools/owners-at.mjs <date>
   [polities…] [--atoms <regex>]` lists who owns what on a date, and
   `node tools/owner-history.mjs <regex> [from] [to]` lists every change to the

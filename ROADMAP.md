@@ -137,7 +137,27 @@ below are the number of new war entries (tiers A, B and C).
   zones are drawn in war steps only. Side move and success labels in war legends
   are still English in French and Swedish for every wave (1,652 strings).
   Site 35 MB, first load 1.05 MB gzip (fr and sv 1.10).*
-- [ ] Wave 10: Korea and Japan (~60)
+- [x] Wave 10: Korea and Japan (~60)
+  *Done: 100 wars (14 tier A, 38 B, 48 C; 202 steps), from the Emishi wars
+  (774–811) to the clashes on the Northern Limit Line (1999–2010), with the
+  Imjin War, the Korean War, the Genpei, Ōnin and Boshin wars and the Soviet
+  landings on South Sakhalin and the Kurils. Borders are curated from 800 for
+  Korea, Japan, the Ryukyu Islands, Sakhalin and the Kurils in
+  `events/korea-japan.yaml` (58 events, checked by two fact-checkers), on 11
+  new splits (South Sakhalin, the southern and northern Kurils, the Matsumae
+  tip of Hokkaido, the Amami and Sakishima Islands, Yonghung, and the land on
+  each side of the 38th parallel; `splits/99b-korea-japan.geojson`), with 13
+  new polities, 85 war actors, 24 capital tenures and 11 labels. Japan is one
+  state throughout; the American and Soviet military governments in Korea
+  (1945–1948) and the American administration of the Ryukyus (1946–1972) are
+  on the base map as the map of their time. Catalogue text, polity names,
+  border notes, capitals and labels are in French and Swedish. Known limits:
+  the old provinces and daimyo domains of Japan do not match today's
+  prefectures, so domains and fronts are drawn approximately; battles fought
+  within a few kilometres are told with one or two markers, because the map
+  cannot zoom in further; German and Japanese Micronesia (1885–1944), which
+  the Siege of Tsingtao touches, waits for Oceania (wave 16). Site 39 MB,
+  first load 1.06 MB gzip (fr and sv 1.11).*
 - [ ] Wave 11: Southeast Asia (~70)
 - [ ] Wave 12: North Africa, the Sahel and the Horn of Africa (~70)
 - [ ] Wave 13: Africa south of the Sahara (~100)

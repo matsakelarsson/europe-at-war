@@ -1,0 +1,142 @@
+id: goryeo-jurchen-war
+name: Goryeo–Jurchen war
+start: "1104"
+end: "1109-07"
+tier: B
+summary: "Goryeo’s war with the Jurchens of the north-east, then being united by the Wanyan clan. In 1104 Wanyan forces under Wuyashu reached Goryeo’s border near Jeongju, the eastern end of the Thousand-li Wall, and defeated two Goryeo armies. The general Yun Gwan then built up a new force, the Byeolmuban, with cavalry, infantry and a corps of monks, and at the end of 1107 he and O Yeon-chong crossed the wall with an army of 170,000. They overran the Jurchen villages of the north-eastern coastal plain and built nine fortresses, from Hamju (Hamhung) northwards. The Jurchens counterattacked again and again, the forts proved hard to hold and supply, and in 1109 the Goryeo court gave them back in return for promises of peace and tribute. Six years later Wuyashu’s brother Aguda founded the Jin empire, which destroyed Liao and in 1126 made Goryeo accept it as overlord."
+countries: [kp]
+sides:
+  - id: gor
+    name: Goryeo
+    polities: [goryeo]
+    ink: blue
+    moves: Goryeo moves
+    success: Goryeo success
+  - id: jur
+    name: Jurchens (Wanyan)
+    polities: [jurchens]
+    ink: green
+    moves: Jurchen moves
+    success: Jurchen success
+notes:
+  - The location of the Nine Fortresses is disputed. The traditional view places them on the coastal plain between Hamhung and Kilju; the Annals of King Sejong and some modern historians place the northernmost fort, Gongheomjin, and Yun Gwan’s boundary stone at Seonchunryeong beyond the Tumen River. The area on the map follows the traditional view.
+  - Dates are lunar months from the Goryeosa. The campaign began in the twelfth month of 1107, which falls early in 1108.
+sources:
+  - title: Yun Gwan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Yun_Gwan
+  - title: Byeolmuban (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Byeolmuban
+  - title: 동북 9성 (Nine Fortresses of the north-east, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0005847
+  - title: 윤관 (Yun Gwan, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0042215
+  - title: 별무반 (Byeolmuban, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0023022
+  - title: 동북 9성 (Korean Wikipedia)
+    url: https://ko.wikipedia.org/wiki/%EB%8F%99%EB%B6%81_9%EC%84%B1
+steps:
+  - title: Wuyashu’s advance and the Byeolmuban
+    date: "1104"
+    when: "1104-02"
+    borders: "1104-12"
+    countries: [kp]
+    body:
+      - Since the late eleventh century the Wanyan clan of the Jurchens, under Yingge and then his nephew Wuyashu, had been bringing the Jurchen tribes of Manchuria and the north-east under its control, including the communities along Goryeo’s border that had paid tribute to Goryeo. Early in 1104 Wanyan forces chasing their opponents reached the frontier near Jeongju (today’s Jeongpyeong), at the eastern end of the Thousand-li Wall. In the second month they defeated a Goryeo army under Im Gan. Yun Gwan, sent in his place, was also beaten and made peace.
+      - Yun Gwan told King Sukjong that the Jurchens had won because they fought on horseback and Goryeo on foot. At the end of 1104 the king set up the Byeolmuban, or “special army”. It had a cavalry corps (Singigun) raised from everyone who owned a horse, an infantry corps (Sinbogun), and a corps of Buddhist monks (Hangmagun), and it trained for three years.
+    facts:
+      - [Defeat of Im Gan, "second month of 1104"]
+      - [Byeolmuban founded, "twelfth month of 1104"]
+    markers:
+      - kind: battle
+        side: jur
+        name: Jeongju
+        date: "1104"
+        text: The Goryeo border fortress (today’s Jeongpyeong) where Jurchen forces beat Im Gan’s and then Yun Gwan’s armies.
+        lonlat: [127.380, 39.780]
+        lp: l
+    arrows:
+      - side: jur
+        label: Wuyashu’s forces
+        phase: 1
+        via: [[128.400, 40.350], [127.950, 40.080], [127.450, 39.830]]
+  - title: The Nine Fortresses
+    date: 1107–1108
+    when: "1107-12"
+    borders: "1108-04"
+    countries: [kp]
+    body:
+      - In the twelfth month of 1107, under King Yejong, Yun Gwan and his deputy O Yeon-chong crossed the wall from Jeongju with an army of 170,000 in several columns, while 2,600 men sailed up the coast from Doryeonpo. They overran 135 Jurchen villages; the Goryeosa records 4,940 Jurchens killed and 1,030 captured.
+      - Over the next months Goryeo built fortresses at Hamju (Hamhung), where it set up a grand protectorate, and at Yeongju, Ungju, Bokju (Tanchon), Gilju (Kilju) and Gongheomjin, followed in 1108 by Sungnyeong, Tongtae and Jinyang. These were the Nine Fortresses. Settlers were moved in from the south, and by tradition Yun Gwan set up a stone marking “the boundary of Goryeo” at Seonchunryeong. He returned to Kaegyong in triumph in 1108.
+    facts:
+      - [Campaign begins, "twelfth month of 1107"]
+      - [Goryeo army, "170,000 and a fleet of 2,600 men"]
+      - [Jurchen losses, "4,940 killed, 1,030 captured, 135 villages taken (Goryeosa)"]
+    markers:
+      - kind: taken
+        side: gor
+        name: Hamju (Hamhung)
+        date: 1107–1108
+        text: The first and largest of the Nine Fortresses, seat of a grand protectorate.
+        lonlat: [127.533, 39.917]
+        lp: l
+      - kind: taken
+        side: gor
+        name: Bokju (Tanchon)
+        date: "1108"
+        text: One of the Nine Fortresses, on the coast at today’s Tanchon.
+        lonlat: [128.911, 40.458]
+      - kind: taken
+        side: gor
+        name: Gilju (Kilju)
+        date: "1108"
+        text: One of the northernmost of the Nine Fortresses in the traditional view.
+        lonlat: [129.337, 40.962]
+    arrows:
+      - side: gor
+        label: Yun Gwan
+        phase: 1
+        via: [[127.380, 39.780], [127.530, 39.910], [128.300, 40.250], [128.880, 40.450], [129.300, 40.930]]
+      - side: gor
+        label: Fleet from Doryeonpo
+        phase: 1
+        via: [[127.480, 39.700], [128.200, 39.950], [128.900, 40.380]]
+    areas:
+      - style: occupied
+        side: gor
+        label: Area of the Nine Fortresses, in the traditional view (approximate)
+        polygon: [[127.350, 39.800], [127.300, 40.100], [128.000, 40.400], [128.800, 40.850], [129.200, 41.150], [129.450, 41.000], [129.100, 40.600], [128.600, 40.300], [127.900, 39.950], [127.550, 39.750]]
+  - title: The fortresses given back
+    date: 1108–1109
+    when: "1109-07"
+    borders: "1109-08"
+    countries: [kp]
+    body:
+      - The Jurchens fought back at once. In 1108 Yun Gwan was surrounded at Gahancheon and saved only by Cheok Jun-gyeong, and Ungju was besieged; in 1109 the Jurchens besieged Gilju and ambushed Yun Gwan and O Yeon-chong near Gongheomjin. The forts were far apart, across mountain country, and hard to supply. Jurchen envoys asked for the land back, promising tribute and an end to raids.
+      - In the seventh month of 1109, over Yun Gwan’s objections, the court agreed, and the garrisons withdrew. Yun Gwan was stripped of his offices and died in 1111. In 1115 Wuyashu’s younger brother Aguda proclaimed the Jin empire; it destroyed Liao by 1125, and in 1126 Goryeo accepted Jin as its overlord.
+    facts:
+      - [Fortresses given back, "seventh month of 1109"]
+      - [Jin empire proclaimed, "1115"]
+    markers:
+      - kind: siege
+        side: jur
+        name: Gilju
+        date: "1109"
+        text: Besieged by the Jurchens in 1109, shortly before the fortresses were given up.
+        lonlat: [129.337, 40.962]
+      - kind: treaty
+        side: jur
+        name: Hamju
+        date: "1109"
+        text: The Goryeo garrisons withdrew to the old frontier after the court decided to return the Nine Fortresses.
+        lonlat: [127.533, 39.917]
+        lp: l
+    arrows:
+      - side: gor
+        label: Withdrawal
+        phase: 1
+        via: [[129.300, 40.930], [128.880, 40.450], [128.300, 40.250], [127.500, 39.850]]
+    areas:
+      - style: lost
+        side: gor
+        label: Nine Fortresses, returned to the Jurchens in 1109 (approximate)
+        polygon: [[127.350, 39.800], [127.300, 40.100], [128.000, 40.400], [128.800, 40.850], [129.200, 41.150], [129.450, 41.000], [129.100, 40.600], [128.600, 40.300], [127.900, 39.950], [127.550, 39.750]]

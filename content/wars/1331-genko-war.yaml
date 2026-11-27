@@ -1,0 +1,218 @@
+id: genko-war
+name: Genkō War
+start: "1331-06-05"
+end: "1333-07-17"
+tier: B
+summary: "The war in which Emperor Go-Daigo and the warriors who rallied to him overthrew the Kamakura shogunate and the Hōjō family that had ruled it as regents for more than a century. Go-Daigo, determined to rule in person rather than through retired emperors or the shogunate, was betrayed by an adviser in 1331, fled to the mountain temple of Kasagi and was captured; Kamakura enthroned his rival Kōgon and exiled him to the Oki Islands in 1332. His son Prince Morinaga and Kusunoki Masashige, a warrior of Kawachi, kept up the fight, and Masashige’s defence of Chihaya against a huge besieging army in 1333 encouraged risings across the country. Go-Daigo escaped from Oki and raised his banner at Mount Senjō in Hōki. The shogunate sent Ashikaga Takauji, head of a great Minamoto branch family, against him, but Takauji changed sides and took Rokuhara, the shogunate’s headquarters in Kyoto, on 19 June 1333. Days later Nitta Yoshisada rose in Kōzuke, defeated the Hōjō armies on the plains of Musashi and broke into Kamakura, where the regent Hōjō Takatoki and some 800 of his family and followers killed themselves on 4 July 1333. The shogunate’s headquarters in Kyushu fell three days later, and Go-Daigo returned to Kyoto to begin the Kenmu Restoration."
+countries: [jp]
+sides:
+  - id: gdl
+    name: Emperor Go-Daigo and his supporters
+    polities: [go-daigo-loyalists]
+    ink: purple
+    moves: Loyalist moves
+    success: Loyalist success
+  - id: kam
+    name: Kamakura shogunate and the Hōjō
+    polities: [kamakura-shogunate]
+    ink: green
+    moves: Kamakura moves
+    success: Kamakura success
+notes:
+  - "The war is named after the era name Genkō, which Go-Daigo proclaimed in 1331 and Kamakura did not recognise. Much of the familiar story, including Masashige’s stratagems at Chihaya and the tide that let Nitta Yoshisada past Inamuragasaki, comes from the Taiheiki, a war chronicle completed decades later, and its numbers are not reliable."
+  - Day dates are the Julian equivalents of the Japanese lunar dates given by Japanese historians; other dates are lunar months.
+sources:
+  - title: Genkō War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Genk%C5%8D_War
+  - title: 元弘の乱 (Genkō War, Japanese Wikipedia)
+    url: https://ja.wikipedia.org/wiki/元弘の乱
+  - title: Siege of Chihaya (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Chihaya
+  - title: Siege of Kamakura (1333) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Kamakura_(1333)
+  - title: Kusunoki Masashige (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kusunoki_Masashige
+  - title: Go-Daigo (Britannica)
+    url: https://www.britannica.com/biography/Go-Daigo
+steps:
+  - title: Kasagi and Akasaka
+    date: 1331–1332
+    when: "1331-10"
+    borders: "1331"
+    countries: [jp]
+    body:
+      - "By the early fourteenth century the Hōjō regents ruled through puppet shōguns, and the imperial family was split between two rival lines that took turns on the throne under Kamakura’s supervision. Many warriors were impoverished by the cost of guarding the coast after the Mongol invasions and by the division of their lands among heirs, and armed bands the documents call akutō, “evil bands”, defied estate owners and officials. Go-Daigo, who came to the throne in 1318, wanted to rule in person and to keep the throne in his own line. A first plot was discovered in 1324; in the spring of 1331 one of his closest advisers, Yoshida Sadafusa, revealed a second one to the shogunate’s deputies at Rokuhara on 5 June 1331."
+      - In the eighth month Go-Daigo slipped out of the palace, reportedly in women’s clothes, and took refuge with the regalia in the temple on Mount Kasagi above the Kizu River, while Kusunoki Masashige rose in his support at his fort of Akasaka in Kawachi. The shogunate’s armies, among them Ashikaga Takauji and Nitta Yoshisada, took Kasagi in the ninth month; Go-Daigo fled and was captured. Masashige held Akasaka with stratagems such as a false outer wall that collapsed on the attackers, then burned the fort in the tenth month and disappeared. Kamakura put Kōgon of the rival line on the throne, executed several of Go-Daigo’s advisers, and in 1332 exiled him to the Oki Islands.
+    facts:
+      - [Plot revealed, "5 June 1331"]
+      - [Fall of Kasagi, "ninth month of 1331"]
+      - [Fall of Akasaka, "tenth month of 1331"]
+      - [Go-Daigo exiled to Oki, "1332"]
+    markers:
+      - kind: event
+        side: kam
+        name: Rokuhara
+        date: 5 June 1331
+        text: The shogunate’s headquarters in Kyoto, where Yoshida Sadafusa revealed Go-Daigo’s plot.
+        lonlat: [135.772, 34.996]
+        lp: r
+      - kind: siege
+        side: kam
+        name: Kasagi
+        date: ninth month of 1331
+        text: Mountain temple above the Kizu River where Go-Daigo took refuge with the regalia. It was stormed by the shogunate’s armies, and Go-Daigo was captured as he fled.
+        lonlat: [135.940, 34.756]
+        lp: r
+      - kind: siege
+        side: kam
+        name: Akasaka
+        date: tenth month of 1331
+        text: Kusunoki Masashige’s fort in Kawachi. He held off the shogunate’s armies for weeks, then burned it and slipped away.
+        lonlat: [135.628, 34.449]
+        lp: l
+      - kind: event
+        side: gdl
+        name: Oki Islands
+        date: 1332
+        text: Go-Daigo’s place of exile, as it had been Go-Toba’s a century earlier.
+        lonlat: [133.250, 36.200]
+        lp: r
+    arrows:
+      - side: gdl
+        label: Go-Daigo
+        phase: 1
+        via: [[135.762, 35.023], [135.850, 34.900], [135.935, 34.765]]
+      - side: kam
+        phase: 2
+        via: [[135.775, 34.990], [135.800, 34.850], [135.920, 34.760]]
+      - side: kam
+        phase: 3
+        via: [[135.775, 34.985], [135.680, 34.750], [135.635, 34.460]]
+  - title: Chihaya, Mount Senjō and the fall of Rokuhara
+    date: 1332–1333
+    when: "1333-06-19"
+    borders: "1333"
+    countries: [jp]
+    body:
+      - "At the end of 1332 Masashige reappeared and retook Akasaka, and Prince Morinaga, who had given up his post as head of the Tendai school to fight, raised troops at Yoshino and sent out orders calling the warriors to arms. In early 1333 Kamakura sent a great army against them. Yoshino and upper Akasaka fell, but Masashige held Chihaya, a mountain fort on Mount Kongō, for about three months with a small garrison, using rocks, fire, raids on the besiegers’ camps and, the Taiheiki says, armoured straw dummies to draw their arrows. The news of the siege spread across Japan; Akamatsu Norimura rose in Harima and marched on Kyoto, and Kikuchi Taketoki attacked the shogunate’s headquarters in Kyushu and was killed."
+      - "In the leap second month Go-Daigo escaped from Oki with the help of the shipowner Nawa Nagatoshi and set up his court on Mount Senjō in Hōki, where his supporters beat off the provincial governor. Kamakura sent Ashikaga Takauji and Nagoe Takaie west. Takaie was killed by Akamatsu’s men, and Takauji, whose family descended from the Minamoto and had long married into the Hōjō, declared for Go-Daigo at the shrine of Shinomura in Tanba on the 29th day of the fourth month. With Akamatsu Norimura and Sasaki Dōyo he stormed Rokuhara on 19 June 1333. The two deputies fled east with the emperor Kōgon and two retired emperors; one was killed on the way, and the other, Hōjō Nakatoki, killed himself with more than 400 followers at the temple of Renge-ji at Banba in Ōmi. The besiegers of Chihaya broke up."
+    facts:
+      - [Siege of Chihaya, "about three months in 1333"]
+      - [Go-Daigo escapes from Oki, "leap second month of 1333"]
+      - [Takauji changes sides, "29th day of the fourth month of 1333"]
+      - [Fall of Rokuhara, "19 June 1333"]
+    markers:
+      - kind: siege
+        side: gdl
+        name: Chihaya
+        date: 1333
+        text: Kusunoki Masashige’s mountain fort on Mount Kongō, which held out against the shogunate’s army for about three months until the besiegers gave up.
+        lonlat: [135.648, 34.428]
+        lp: l
+      - kind: held
+        side: gdl
+        name: Mount Senjō
+        date: leap second month of 1333
+        text: Go-Daigo set up his court on this mountain in Hōki after escaping from Oki with the help of Nawa Nagatoshi.
+        lonlat: [133.580, 35.453]
+        lp: r
+      - kind: event
+        side: gdl
+        name: Shinomura
+        date: 29th day of the fourth month
+        text: At the Hachiman shrine here, in Tanba, Ashikaga Takauji declared for Go-Daigo and turned against the shogunate.
+        lonlat: [135.535, 35.010]
+        lp: l
+      - kind: taken
+        side: gdl
+        name: Rokuhara
+        date: 19 June 1333
+        text: Stormed by Ashikaga Takauji, Akamatsu Norimura and Sasaki Dōyo. The shogunate’s deputies fled east.
+        lonlat: [135.772, 34.996]
+        lp: r
+      - kind: toll
+        side: gdl
+        name: Banba
+        date: June 1333
+        text: Hōjō Nakatoki, deputy at Rokuhara, killed himself here with more than 400 followers after his flight was blocked.
+        lonlat: [136.310, 35.310]
+        lp: r
+    arrows:
+      - side: gdl
+        label: Go-Daigo
+        phase: 1
+        via: [[133.250, 36.200], [133.450, 35.800], [133.580, 35.470]]
+      - side: gdl
+        label: Takauji
+        phase: 2
+        via: [[135.535, 35.010], [135.650, 35.000], [135.765, 34.996]]
+      - side: gdl
+        label: Akamatsu Norimura
+        phase: 2
+        via: [[134.500, 34.900], [135.200, 34.800], [135.700, 34.950]]
+      - side: kam
+        phase: 3
+        via: [[135.780, 35.000], [136.000, 35.100], [136.300, 35.300]]
+  - title: Nitta Yoshisada and the fall of Kamakura
+    date: June–July 1333
+    when: "1333-07-04"
+    borders: "1333"
+    countries: [jp]
+    body:
+      - "On 20 June 1333, a day after the fall of Rokuhara, Nitta Yoshisada, a Minamoto warrior of Kōzuke who had served in the siege of Chihaya, raised Go-Daigo’s banner at the Ikushina shrine near his home and marched south. Takauji’s young son, the future shōgun Yoshiakira, joined him, and warriors flocked to the army, which grew to tens of thousands. Yoshisada met the Hōjō armies at Kotesashi, where they fell back after two days of fighting, and on 27–28 June at Bubaigawara on the Tama River, where he defeated Hōjō Yasuie after a first setback."
+      - "Yoshisada attacked Kamakura from three sides, but the narrow cuttings through the hills that ringed the city were strongly held, and the attack on the Gokurakuji pass stalled. On 3 July his men got round the cape of Inamuragasaki along the beach at low tide, which the Taiheiki turned into a miracle answering Yoshisada’s offering of his sword to the sea, and broke into the city. After a day of street fighting Hōjō Takatoki, the former regent, and the remnants of the government, some 800 people, killed themselves at Tōshō-ji, the Hōjō family temple, on 4 July 1333. The shogunate’s headquarters in Kyushu was taken on 7 July, and on 17 July Go-Daigo entered Kyoto and set Kōgon aside."
+    facts:
+      - [Nitta Yoshisada rises, "20 June 1333"]
+      - [Battle of Bubaigawara, "27–28 June 1333"]
+      - [Fall of Kamakura, "4 July 1333"]
+      - [Suicides at Tōshō-ji, "Hōjō Takatoki and about 800 others"]
+      - [Go-Daigo returns to Kyoto, "17 July 1333"]
+    markers:
+      - kind: event
+        side: gdl
+        name: Ikushina shrine
+        date: 20 June 1333
+        text: Nitta Yoshisada raised Go-Daigo’s banner here, near his home in Kōzuke.
+        lonlat: [139.300, 36.300]
+        lp: r
+      - kind: battle
+        side: gdl
+        name: Kotesashi
+        date: June 1333
+        text: First clash between Nitta Yoshisada and the Hōjō army in Musashi. The Hōjō fell back after two days.
+        lonlat: [139.420, 35.800]
+        lp: l
+      - kind: battle
+        side: gdl
+        name: Bubaigawara
+        date: 27–28 June 1333
+        text: Yoshisada defeated Hōjō Yasuie on the Tama River after a setback on the first day, opening the road to Kamakura.
+        lonlat: [139.470, 35.670]
+        lp: r
+      - kind: event
+        side: gdl
+        name: Inamuragasaki
+        date: 3 July 1333
+        text: Yoshisada’s men slipped round this cape at low tide and entered Kamakura behind the defenders of the passes.
+        lonlat: [139.525, 35.302]
+        lp: l
+      - kind: taken
+        side: gdl
+        name: Kamakura
+        date: 4 July 1333
+        text: Seat of the shogunate for 150 years. Hōjō Takatoki and some 800 of his kin and followers killed themselves at the Tōshō-ji temple.
+        lonlat: [139.557, 35.322]
+        lp: r
+    arrows:
+      - side: gdl
+        label: Nitta Yoshisada
+        phase: 1
+        via: [[139.300, 36.300], [139.380, 36.000], [139.420, 35.810], [139.470, 35.680]]
+      - side: gdl
+        phase: 2
+        via: [[139.470, 35.660], [139.500, 35.450], [139.540, 35.340]]
+    areas:
+      - style: front
+        side: gdl
+        label: Lines round Kamakura
+        line: [[139.520, 35.300], [139.530, 35.330], [139.555, 35.345], [139.580, 35.330]]

@@ -1,0 +1,197 @@
+id: korean-righteous-armies
+name: Korean righteous armies (1895–1915)
+start: "1895-10-08"
+end: "1915-07-05"
+tier: B
+summary: "Armed resistance to Japanese control of Korea by volunteer “righteous armies” (uibyeong), named after the militias that had fought the Japanese invasions of the 1590s. The first wave rose in 1896 after Japanese agents murdered Queen Min in the palace in Seoul in October 1895 and the government ordered men to cut their topknots; it faded after King Gojong took refuge in the Russian legation. A second wave followed the protectorate treaty of 1905, and the largest after Japan forced Gojong to abdicate and disbanded the Korean army in 1907: thousands of former soldiers joined the scholars, peasants, hunters and miners in the hills. A combined army of thirteen provinces tried to march on Seoul in January 1908 and was driven back, and a Japanese sweep through Jeolla in 1909 broke the strongest remaining bands. After the annexation of 1910 the survivors went to Manchuria and the Russian Far East, and the last leader in Korea, Chae Eung-eon, was captured in 1915. Japanese figures count some 17,800 Korean fighters killed between 1906 and 1911."
+countries: [kr, kp, jp]
+sides:
+  - id: ra
+    name: Righteous armies
+    polities: [righteous-armies]
+    ink: green
+    moves: Righteous army moves
+    success: Righteous army success
+  - id: jp
+    name: Empire of Japan (army, gendarmerie and police in Korea)
+    polities: [japan]
+    ink: red
+    moves: Japanese moves
+    success: Japanese success
+notes:
+  - The righteous armies were many separate bands, not one army. Their leaders were at first Confucian scholars loyal to the king; from 1906–1907 commoners and disbanded soldiers led more and more of them. Korean government troops fought them in 1896, and Korean auxiliaries served with the Japanese forces after 1907.
+  - Korea adopted the Gregorian calendar on 1 January 1896; earlier dates are the Gregorian equivalents the sources give.
+  - The figures for the fighting come mostly from Japanese military and police records, which counted the dead and captured but not the villagers killed or the houses burned in reprisals. Korean historians regard the true losses as higher.
+sources:
+  - title: Righteous armies (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Righteous_armies
+  - title: Assassination of Empress Myeongseong (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Assassination_of_Empress_Myeongseong
+  - title: Korea Under Japanese Rule (Britannica)
+    url: https://www.britannica.com/topic/Korea-Under-Japanese-Rule
+  - title: 남한 대토벌 작전 (Encyclopedia of Korean Culture)
+    url: https://encykorea.aks.ac.kr/Article/E0066314
+  - title: 허위 (Encyclopedia of Korean Culture)
+    url: https://encykorea.aks.ac.kr/Article/E0045479
+  - title: 채응언 (Encyclopedia of Korean Culture)
+    url: https://encykorea.aks.ac.kr/Article/E0055639
+  - title: Choe Ik-hyeon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Choe_Ik-hyeon
+  - title: Japan–Korea Treaty of 1907 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Japan%E2%80%93Korea_Treaty_of_1907
+steps:
+  - title: The queen’s murder and the Eulmi armies
+    date: October 1895 – 1896
+    when: "1895-10-08"
+    borders: "1896-02-11"
+    countries: [kr, jp]
+    body:
+      - After the war with China, Queen Min and her circle turned to Russia to balance Japanese power at court. Before dawn on 8 October 1895 Japanese soldiers, legation police and civilian adventurers (sōshi), acting on a plan approved by the Japanese minister Miura Gorō and joined by Korean troops of the Japanese-trained Hullyeondae, broke into Gyeongbokgung, killed the queen in her quarters and burned her body. Miura and dozens of others were recalled and tried in Hiroshima, but were all released for lack of evidence. On 30 December the new pro-Japanese cabinet ordered men to cut off their topknots, a sign of adult status and Confucian propriety.
+      - From January 1896 Confucian scholars raised righteous armies in Gangwon, Chungcheong, Gyeongsang and elsewhere, attacking Japanese troops, telegraph lines and officials of the new order. Yu In-seok’s army, gathered at Jecheon, took Chungju in February and killed its governor. On 11 February King Gojong escaped from the palace to the Russian legation; the prime minister Kim Hong-jip was killed by a crowd, and the king revoked the topknot order and called on the armies to disband. Most did so by the summer. Government troops defeated Yu In-seok at Jecheon in May, and he led his remaining men into Manchuria.
+    facts:
+      - [Murder of Queen Min (Eulmi incident), "8 October 1895"]
+      - [Topknot ordinance, "30 December 1895"]
+      - [Gojong in the Russian legation, "11 February 1896 – February 1897"]
+    markers:
+      - kind: toll
+        side: jp
+        name: Gyeongbokgung
+        date: 8 October 1895
+        text: The queen was killed in the Geoncheonggung quarters at the back of the palace. She was given the title Empress Myeongseong in 1897.
+        lonlat: [126.977, 37.583]
+        lp: t
+      - kind: event
+        side: ra
+        name: Seoul (Russian legation)
+        date: 11 February 1896
+        text: King Gojong lived in the Russian legation for a year, out of Japanese reach; Russian influence at court replaced Japanese.
+        lonlat: [126.972, 37.567]
+        lp: b
+      - kind: taken
+        side: ra
+        name: Chungju
+        date: February 1896
+        text: Taken by Yu In-seok’s righteous army, which killed the provincial governor appointed by the pro-Japanese cabinet.
+        lonlat: [127.926, 36.991]
+      - kind: battle
+        side: jp
+        name: Jecheon
+        date: May 1896
+        text: Yu In-seok’s base, taken by Korean government troops. He crossed into Manchuria with the survivors later in the year.
+        lonlat: [128.191, 37.133]
+    arrows:
+      - side: ra
+        label: Yu In-seok
+        via: [[128.190, 37.140], [128.050, 37.050], [127.940, 37.000]]
+  - title: Protectorate and the disbanded army
+    date: 1905 – August 1907
+    when: "1905-11-17"
+    borders: "1907-08-01"
+    countries: [kr, jp]
+    body:
+      - After its victory over Russia, Japan made Korea a protectorate by the Eulsa treaty of 17 November 1905, which five ministers signed under Japanese military pressure while Emperor Gojong refused to put his seal to it. Righteous armies rose again. The former official Min Jong-sik took the walled town of Hongju (Hongseong) in May 1906 and held it until Japanese troops stormed it at the end of the month. The 73-year-old scholar Choe Ik-hyeon raised an army at Taein in Jeolla in June, but when Korean government troops came against him at Sunchang he dismissed his men rather than fight fellow Koreans; he died in Japanese custody on Tsushima on 1 January 1907. In the mountains of the east coast Sin Dol-seok, a commoner, led a band that grew to some thousands.
+      - In July 1907, after Gojong had sent secret envoys to the peace conference at The Hague to protest against the protectorate, the Japanese forced him to abdicate in favour of his son Sunjong, and a new treaty on 24 July put the Korean government under the Japanese resident-general. On 1 August the Korean army was disbanded. In Seoul Major Park Seung-hwan of the guards killed himself, and his soldiers fought the Japanese around the Namdaemun gate; the garrisons of Wonju and Ganghwa rose in the following days. Thousands of former soldiers, with their rifles and training, joined the righteous armies, and the fighting spread to every province.
+    facts:
+      - [Eulsa protectorate treaty, "17 November 1905"]
+      - [Hongju held by Min Jong-sik, "May 1906"]
+      - [Gojong forced to abdicate, "20 July 1907"]
+      - [Korean army disbanded, "1 August 1907"]
+    markers:
+      - kind: siege
+        side: jp
+        name: Hongju (Hongseong)
+        date: May 1906
+        text: Taken by Min Jong-sik’s righteous army and stormed by Japanese troops at the end of May with heavy losses to the defenders.
+        lonlat: [126.663, 36.597]
+      - kind: event
+        side: ra
+        name: Taein
+        date: June 1906
+        text: Choe Ik-hyeon proclaimed his rising at the Museong Confucian academy here. He was captured a few days later at Sunchang.
+        lonlat: [126.984, 35.602]
+      - kind: event
+        side: ra
+        name: Pyeonghae
+        date: from April 1906
+        text: Sin Dol-seok raised his band on the east coast and fought in the mountains of Gyeongsang and Gangwon until he was killed in 1908.
+        lonlat: [129.441, 36.727]
+      - kind: battle
+        side: jp
+        name: Seoul (Namdaemun)
+        date: 1 August 1907
+        text: Soldiers of the disbanded guards fought Japanese troops in and around their barracks near the South Gate.
+        lonlat: [126.975, 37.560]
+        lp: l
+      - kind: event
+        side: ra
+        name: Wonju
+        date: 5 August 1907
+        text: The provincial garrison rose against the disbandment and took the town; its soldiers went into the hills as righteous armies.
+        lonlat: [127.920, 37.342]
+      - kind: event
+        side: ra
+        name: Ganghwa
+        date: August 1907
+        text: The island garrison also rose against the disbandment.
+        lonlat: [126.484, 37.748]
+        lp: l
+  - title: The march on Seoul, the 1909 sweep and the end
+    date: 1907–1915
+    when: "1908-01"
+    borders: "1909-10-01"
+    countries: [kr, kp, jp]
+    body:
+      - At the end of 1907 righteous army leaders gathered at Yangju, north-east of Seoul, as the Army of the Thirteen Provinces under Yi In-yeong, with Heo Wi as military commander, and asked the foreign legations to recognise them as belligerents. In January 1908 Heo Wi’s vanguard of some 300 men reached a point about 30 ri (12 km) outside the East Gate of Seoul, but Japanese troops attacked it before the main body arrived, and it fell back. Yi In-yeong had gone home on hearing of his father’s death. The bands dispersed to fight on alone; Heo Wi was captured and hanged in 1908. In the north, Hong Beom-do’s army of hunters fought the Japanese in the mountains around Gapsan and Samsu.
+      - The fighting reached its height in 1908, above all in Jeolla, where bands led by men such as Jeon Hae-san, Sim Nam-il and An Gyu-hong attacked Japanese police posts, tax collectors and landowners. From September to October 1909 the Japanese army ran what it called the “great punitive operation in southern Korea”, sealing off the Jeolla coast with warships and combing the province district by district. A Jeolla police report counted 420 fighters killed and 1,687 captured or surrendered between late August and late October; most of the leaders, Sim Nam-il and An Gyu-hong among them, were taken and executed, and villages accused of sheltering fighters were burned.
+      - Japan annexed Korea in August 1910. Most of the surviving fighters moved to Manchuria and the Russian Far East, where they formed the core of the later independence armies. In Korea, Chae Eung-eon kept a band together in the mountains of the north until he was captured on 5 July 1915 at Seongcheon in South Pyongan; he was hanged in Pyongyang in November. Japanese records count about 17,800 righteous army fighters killed between 1906 and 1911, against far smaller Japanese losses.
+    facts:
+      - [March on Seoul, "January 1908"]
+      - [“Great punitive operation in southern Korea”, "September – October 1909"]
+      - [Annexation of Korea, "29 August 1910"]
+      - [Chae Eung-eon captured, "5 July 1915"]
+      - [Korean fighters killed 1906–1911 (Japanese figures), "17,779"]
+    markers:
+      - kind: event
+        side: ra
+        name: Yangju
+        date: December 1907
+        text: The Army of the Thirteen Provinces gathered here, perhaps 10,000 men, before the march on Seoul.
+        lonlat: [127.046, 37.785]
+      - kind: battle
+        side: jp
+        name: Seoul (East Gate)
+        date: January 1908
+        text: Heo Wi’s vanguard came within about 12 km of the East Gate before Japanese troops drove it back.
+        lonlat: [127.009, 37.571]
+        lp: b
+      - kind: event
+        side: ra
+        name: Gapsan
+        date: 1907–1908
+        text: Hong Beom-do’s righteous army of mountain hunters fought the Japanese in this region before crossing into Manchuria.
+        lonlat: [128.321, 41.136]
+      - kind: event
+        side: jp
+        name: Jeolla
+        date: September – October 1909
+        text: The province with the most clashes in 1908–1909, swept by the Japanese army and navy in the autumn of 1909.
+        lonlat: [127.000, 35.000]
+      - kind: event
+        side: jp
+        name: Seongcheon
+        date: 5 July 1915
+        text: Chae Eung-eon, the last righteous army leader in Korea, was arrested here by Japanese military police while raising funds.
+        lonlat: [126.490, 39.245]
+    arrows:
+      - side: ra
+        label: Heo Wi
+        phase: 1
+        via: [[127.046, 37.785], [127.080, 37.680], [127.060, 37.600]]
+      - side: jp
+        phase: 2
+        via: [[127.000, 37.575], [127.050, 37.640], [127.070, 37.720]]
+    areas:
+      - style: occupied
+        side: jp
+        label: The 1909 operation in Jeolla
+        atoms: [KR-45, KR-46, KR-29]

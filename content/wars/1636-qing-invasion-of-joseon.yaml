@@ -1,0 +1,147 @@
+id: qing-invasion-of-joseon
+name: Qing invasion of Joseon
+start: "1636-12-28"
+end: "1637-02-24"
+tier: B
+summary: "The second Manchu invasion of Korea, called Byeongja Horan in Korean after the year 1636 in the sixty-year cycle. Hong Taiji had proclaimed the Qing dynasty in 1636, and the Joseon court, loyal to the Ming, refused to recognise him as emperor. He set out from Mukden at the end of December 1636 with Manchu, Mongol and Han banner troops, about 120,000 men by Korean accounts, crossed the Yalu at the start of January 1637 and, bypassing the northern fortresses, reached Hanseong within two weeks. Cut off from Ganghwa Island, King Injo shut himself up in the mountain fortress of Namhansanseong with about 13,800 men. Relief armies from the provinces were beaten one by one, and when Ganghwa fell on 16 February with the king’s family, Injo came out and submitted to Hong Taiji at Samjeondo on the Han River on 24 February 1637. Joseon broke with the Ming, became a tributary of the Qing and sent two princes as hostages to Mukden, and large numbers of Koreans were carried off as captives."
+countries: [kr, kp, cn]
+sides:
+  - id: qing
+    name: Qing
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+  - id: js
+    name: Joseon Korea
+    polities: [joseon]
+    ink: blue
+    moves: Korean moves
+    success: Korean success
+  - id: mg
+    name: Ming China (Ka Island)
+    polities: [ming]
+    ink: red
+    moves: Ming moves
+    success: Ming success
+notes:
+  - Korean and Qing records date the war by the lunar calendar. The English Wikipedia article gives most of these lunar dates as if they were Gregorian (the invasion on “9 December 1636”); the dates here are Gregorian conversions, as in the Korean article (the Qing army set out on the 2nd day of the twelfth month, 28 December 1636, and Injo submitted on the 30th day of the first month, 24 February 1637). Some accounts differ by a day.
+  - The war was part of the long struggle between the Ming and the Manchu state; see the Ming–Later Jin war (1618–1644) and the Later Jin invasion of Joseon (1627). The base map shows Joseon throughout, since the Qing did not annex Korean land.
+sources:
+  - title: Qing invasion of Joseon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Qing_invasion_of_Joseon
+  - title: 병자호란 (Qing invasion, Korean Wikipedia)
+    url: https://ko.wikipedia.org/wiki/%EB%B3%91%EC%9E%90%ED%98%B8%EB%9E%80
+  - title: Namhansanseong (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Namhansanseong
+  - title: Samjeondo Monument (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Samjeondo_Monument
+steps:
+  - title: The Qing cavalry and the flight to Namhansanseong
+    date: December 1636 – January 1637
+    when: "1636-12"
+    borders: "1637-01-10"
+    countries: [kp, kr, cn]
+    body:
+      - In 1636 Hong Taiji renamed his state the Great Qing and took the title of emperor. The Korean envoys at his enthronement refused to bow to him, King Injo would not receive the Manchu envoys sent to Hanseong, and a letter calling on Pyongan province to prepare for war fell into Manchu hands. After a raid deep into Ming territory in the summer, Hong Taiji turned on Korea, sending other forces to watch the coast so that the Ming could not send help by sea.
+      - The Qing army left Mukden on 28 December 1636, led by Hong Taiji himself, and its vanguard crossed the Yalu on 3 January 1637. Joseon had planned to hold the walled mountain fortresses along the road and force the invaders into long sieges; Im Gyeong-eop held the Baengma fortress near Uiju with 3,000 men. But the Qing simply rode past the fortresses. A vanguard of Manchu and Mongol cavalry made straight for Hanseong to stop the king escaping to Ganghwa Island, as he had in 1627.
+      - The road to Ganghwa was already cut when Injo tried to leave. On the night of 9 January he took refuge instead in Namhansanseong, a fortress on the mountains south-east of the capital, with the crown prince and about 13,800 soldiers, but with food for little more than a month. The crown princess, Prince Bongnim and other members of the royal family were sent to Ganghwa with the royal ancestral tablets. Hanseong was occupied without a fight.
+    facts:
+      - [Qing army, "about 120,000 men (Korean accounts)"]
+      - [Yalu crossed, "3 January 1637"]
+      - [Injo in Namhansanseong, "from 9 January 1637"]
+    markers:
+      - kind: event
+        side: qing
+        name: Mukden
+        date: 28 December 1636
+        text: The Qing capital (today’s Shenyang). Hong Taiji set out from here with the banner armies.
+        lonlat: [123.430, 41.800]
+      - kind: held
+        side: js
+        name: Uiju
+        date: January 1637
+        text: Im Gyeong-eop held the nearby Baengma fortress, but the Qing army bypassed it.
+        lonlat: [124.531, 40.197]
+        lp: l
+      - kind: taken
+        side: qing
+        name: Hanseong
+        date: January 1637
+        text: Occupied by the Qing vanguard after the king had left.
+        lonlat: [126.977, 37.570]
+        lp: l
+      - kind: held
+        side: js
+        name: Namhansanseong
+        date: from 9 January 1637
+        text: The mountain fortress where King Injo and his court took refuge.
+        lonlat: [127.181, 37.479]
+      - kind: held
+        side: js
+        name: Ganghwa
+        date: January 1637
+        text: Refuge of the royal family and the ancestral tablets.
+        lonlat: [126.484, 37.748]
+        lp: l
+    arrows:
+      - side: qing
+        label: Hong Taiji
+        phase: 1
+        via: [[123.43, 41.80], [124.45, 40.30], [125.66, 39.62], [126.55, 37.97], [126.98, 37.62]]
+      - side: js
+        label: King Injo
+        phase: 2
+        via: [[126.99, 37.56], [127.10, 37.52], [127.17, 37.485]]
+  - title: Namhansanseong and the submission at Samjeondo
+    date: January – February 1637
+    when: "1637-01"
+    borders: "1637-02-24"
+    countries: [kr]
+    body:
+      - The main Qing army surrounded Namhansanseong. The fortress held off assaults, and sorties destroyed some of the siege batteries, but the relief armies the king called for were beaten one by one before they could reach it. The Gangwon army was routed near Geomdansan and the Chungcheong army at Heomcheon; the vanguard of the large Gyeongsang army, some 8,000 musketeers, broke at Ssangnyeong when charged by a few hundred Manchu horsemen. The Jeolla army won a fight at Gwanggyosan but fell back for lack of supplies, and the Pyongan army was beaten at Gimhwa, where its commander Hong Myeong-gu was killed. The commander-in-chief, Kim Ja-jeom, kept his troops at Yanggeun (today’s Yangpyeong) and did not move. Inside the fortress food and firewood ran short in the bitter cold, and Qing cannon fired into it from the heights.
+      - In the fortress the court was divided between those, led by Kim Sang-heon, who wanted to fight on, and those, led by Choe Myeong-gil, who urged terms. On 16 February Qing troops crossed to Ganghwa in boats, with former Ming naval officers such as Kong Youde and Geng Zhongming among them, and took the island, capturing the crown princess, Prince Bongnim and the ancestral tablets; many of the inhabitants were killed. When the news reached Namhansanseong, Injo decided to surrender.
+      - On 24 February 1637 Injo came down from the fortress and, at Samjeondo, a ferry on the Han, knelt three times and bowed nine times before Hong Taiji. Joseon gave up the Ming seals and era name and took the Qing calendar, sent the crown prince Sohyeon and Prince Bongnim to Mukden as hostages, promised troops for Qing campaigns and yearly tribute, and undertook not to build fortresses. Three officials who had argued for war were handed over and executed. In the spring Korean troops had to help the Qing take Ka Island from the Ming. A stele praising the virtues of the Qing emperor was set up at Samjeondo in 1639; Joseon remained a Qing tributary until 1895.
+    facts:
+      - [Siege of Namhansanseong, "9 January – 24 February 1637"]
+      - [Ganghwa taken, "16 February 1637"]
+      - [Submission at Samjeondo, "24 February 1637"]
+      - [Hostages, "Crown Prince Sohyeon and Prince Bongnim (later King Hyojong)"]
+    markers:
+      - kind: held
+        side: js
+        name: Namhansanseong
+        date: 9 January – 24 February 1637
+        text: Held by King Injo’s garrison for 47 days until hunger and the fall of Ganghwa forced surrender.
+        lonlat: [127.181, 37.479]
+        lp: b
+      - kind: taken
+        side: qing
+        name: Ganghwa
+        date: 16 February 1637
+        text: Taken by Qing troops who crossed in boats. The crown princess and Prince Bongnim were captured.
+        lonlat: [126.484, 37.748]
+        lp: l
+      - kind: treaty
+        side: qing
+        name: Samjeondo
+        date: 24 February 1637
+        text: King Injo submitted to Hong Taiji at this Han River ferry. The Samjeondo stele of 1639 still stands nearby in Seoul.
+        lonlat: [127.102, 37.511]
+        lp: t
+      - kind: held
+        side: qing
+        name: Hanseong
+        date: January – February 1637
+        text: Occupied by Qing troops throughout the siege.
+        lonlat: [126.977, 37.570]
+        lp: l
+    arrows:
+      - side: qing
+        label: Dorgon
+        phase: 1
+        via: [[126.95, 37.60], [126.70, 37.66], [126.53, 37.73]]
+      - side: js
+        label: King Injo
+        phase: 2
+        via: [[127.18, 37.48], [127.14, 37.50], [127.105, 37.51]]

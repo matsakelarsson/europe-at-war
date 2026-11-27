@@ -1,0 +1,112 @@
+id: french-campaign-against-korea
+name: French campaign against Korea
+start: "1866-10-11"
+end: "1866-11-11"
+tier: B
+summary: "A French punitive expedition to Korea, called Byeongin Yangyo in Korean (“the Western disturbance of 1866”). Early in 1866 the government of the regent Heungseon Daewongun executed nine French Catholic missionaries and thousands of Korean converts. Rear Admiral Pierre-Gustave Roze, commander of the French squadron in the Far East, surveyed the Han River up to the outskirts of Hanseong in September and returned in October with seven ships and about 800 men. His marines took the town of Ganghwa on 16 October and held it for nearly four weeks, carrying off silver, weapons and books from the royal library there. But a landing at Munsusanseong on the mainland was driven back on 26 October, and on 9 November Korean tiger hunters under Yang Heon-su repulsed an attack on Jeongjoksanseong. Roze burned the government buildings of Ganghwa and withdrew on 11 November. The Daewongun treated the outcome as a victory and hardened Korea’s isolation; the looted royal protocols were returned to Korea on a renewable loan in 2011."
+countries: [kr, fr]
+sides:
+  - id: fr
+    name: France
+    polities: [france]
+    ink: navy
+    moves: French moves
+    success: French success
+  - id: js
+    name: Joseon Korea
+    polities: [joseon]
+    ink: red
+    moves: Korean moves
+    success: Korean success
+notes:
+  - The dates are the Gregorian dates of the French reports, as given in the English Wikipedia article. Korean records use the lunar calendar (Ganghwa fell on the 8th day of the ninth month); the Gregorian dates in the Korean Wikipedia article for the autumn fighting are about a month too late.
+  - French numbers vary between accounts, from about 600 to over 1,000 men; Korean accounts give larger figures.
+sources:
+  - title: French expedition to Korea (Wikipedia)
+    url: https://en.wikipedia.org/wiki/French_expedition_to_Korea
+  - title: 병인양요 (French campaign, Korean Wikipedia)
+    url: https://ko.wikipedia.org/wiki/%EB%B3%91%EC%9D%B8%EC%96%91%EC%9A%94
+  - title: General Sherman incident (Wikipedia)
+    url: https://en.wikipedia.org/wiki/General_Sherman_incident
+steps:
+  - title: The persecution of 1866 and the survey of the Han
+    date: March – October 1866
+    when: "1866-03"
+    borders: "1866-09-26"
+    countries: [kr, fr]
+    body:
+      - The regent Heungseon Daewongun, who governed for his young son King Gojong from 1864, at first tolerated the small Catholic church, which had about 23,000 Korean members and twelve French priests of the Paris Foreign Missions Society. After Russian ships appeared on the east coast in January 1866, Korean converts suggested an alliance with France against Russia; instead the court arrested the French bishop Siméon-François Berneux, who was beheaded on 7 March. Nine of the twelve French priests were executed, and estimates of the Korean Catholics killed in the persecution, many of them at Jeoldusan on the Han River in Hanseong, range from about 8,000 to 10,000.
+      - One of the surviving priests, Félix-Clair Ridel, escaped by fishing boat to China in July and told Rear Admiral Roze at Tianjin. Roze and the French chargé d’affaires in Beijing, Henri de Bellonet, decided on a punitive expedition without waiting for orders from Paris; Bellonet even demanded, without authority, that the Korean king give up his crown. Roze was more cautious and aimed at reparations.
+      - Having no charts, Roze first sent three ships to survey the approaches. In late September they passed Ganghwa Island and went up the Han as far as Yanghwajin and Seogang, just outside Hanseong, causing panic in the capital, before returning to China. The survey convinced Roze that his ships could not attack the city, and that the best he could do was to seize Ganghwa, which commanded the mouth of the river, and blockade the capital.
+    facts:
+      - [French missionaries executed, "nine of twelve"]
+      - [Korean Catholics killed, "about 8,000 to 10,000"]
+      - [Survey of the Han, "late September 1866"]
+    markers:
+      - kind: event
+        name: Jeoldusan and Yanghwajin
+        date: "1866"
+        text: Many Korean Catholics were executed on this bluff over the Han. The French survey ships came up the river to the ferry below it in September.
+        lonlat: [126.912, 37.544]
+        lp: b
+      - kind: capital
+        side: js
+        name: Hanseong
+        date: "1866"
+        text: Capital of Joseon, governed by the regent Heungseon Daewongun.
+        lonlat: [126.977, 37.570]
+    arrows:
+      - side: fr
+        label: Survey ships
+        via: [[126.45, 37.45], [126.53, 37.65], [126.56, 37.76], [126.75, 37.64], [126.90, 37.55]]
+  - title: Ganghwa, Munsusanseong and Jeongjoksanseong
+    date: October – November 1866
+    when: "1866-10"
+    borders: "1866-11-09"
+    countries: [kr, fr]
+    body:
+      - Roze sailed from Yantai on 11 October with the frigate Guerrière, two corvettes, two gunboats and two dispatch boats, carrying about 800 men, among them some 300 marines from Yokohama. On 16 October his marines landed at Gapgot and took the walled town of Ganghwa. They seized flags, cannon, thousands of muskets, boxes of silver and gold, and the manuscripts and paintings of the royal library at Oegyujanggak, among them the uigwe, the illustrated protocols of court ceremonies. Roze wrote to the Korean commander on the mainland, Yi Yong-hui, demanding reparations and the punishment of those responsible; there was no reply, and Korean troops gathered daily across the strait.
+      - On 26 October about 120 marines landed on the mainland to take the mountain fort of Munsusanseong, which overlooked the strait, and were met by heavy fire from Han Seong-geun’s troops; the French withdrew with losses. On the night of 7 November Yang Heon-su crossed secretly to the south of the island with about 500 tiger hunters, skilled marksmen, and occupied Jeongjoksanseong, the walled hill around the temple of Jeondeungsa. When about 160 marines under Olivier attacked it on 9 November, they were driven off with some thirty wounded.
+      - With winter coming, Korean forces growing, and news that the two missionaries he had come to rescue had escaped to China, Roze decided to leave. His men burned the palace and government buildings of Ganghwa, carried off what they could, and re-embarked on 11 November. The French lost three dead and about 35 wounded in the whole campaign. The Daewongun proclaimed a victory over the Western powers, and the books taken from Ganghwa went to the Bibliothèque nationale in Paris, where 297 volumes of uigwe remained until their return to Korea in 2011.
+    facts:
+      - [Ganghwa taken, "16 October 1866"]
+      - [Munsusanseong, "26 October 1866, Korean success"]
+      - [Jeongjoksanseong, "9 November 1866, Korean success"]
+      - [French losses, "3 killed, about 35 wounded"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Ganghwa
+        date: 16 October – 11 November 1866
+        text: Taken by French marines, who looted the royal library of Oegyujanggak and burned the government buildings when they left.
+        lonlat: [126.484, 37.748]
+        lp: l
+      - kind: battle
+        side: js
+        name: Munsusanseong
+        date: 26 October 1866
+        text: A French landing on the mainland was driven back by Han Seong-geun’s troops.
+        lonlat: [126.534, 37.714]
+      - kind: battle
+        side: js
+        name: Jeongjoksanseong
+        date: 9 November 1866
+        text: Yang Heon-su’s tiger hunters, hidden in the fortress around Jeondeungsa, repulsed the French marines.
+        lonlat: [126.488, 37.632]
+        lp: l
+    arrows:
+      - side: fr
+        label: Roze
+        phase: 1
+        via: [[126.30, 37.40], [126.45, 37.55], [126.535, 37.66], [126.52, 37.725]]
+      - side: fr
+        phase: 2
+        via: [[126.515, 37.735], [126.528, 37.718]]
+      - side: js
+        label: Yang Heon-su
+        phase: 3
+        via: [[126.58, 37.64], [126.53, 37.636], [126.495, 37.633]]
+      - side: fr
+        label: Olivier
+        phase: 4
+        via: [[126.484, 37.740], [126.470, 37.690], [126.484, 37.640]]

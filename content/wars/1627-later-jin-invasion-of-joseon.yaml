@@ -1,0 +1,147 @@
+id: later-jin-invasion-of-joseon
+name: Later Jin invasion of Joseon
+start: "1627-02-28"
+end: "1627-04-18"
+tier: B
+summary: "The first Manchu invasion of Korea, called Jeongmyo Horan in Korean after the year 1627 in the sixty-year cycle. Hong Taiji, the new khan of the Later Jin, wanted to secure his rear before fighting the Ming, to stop Korean support for the Ming general Mao Wenlong, who raided Liaodong from Ka Island off the Korean coast, and to obtain grain and trade for his people. At the end of February 1627 about 30,000 men under his cousin Amin crossed the Yalu, guided by the Korean general Gang Hong-rip, who had surrendered at Sarhu in 1619, and by fugitives from Yi Gwal’s rebellion. They took Uiju, Anju and Pyongyang within two weeks, and King Injo fled to Ganghwa Island. With militias active behind his lines and the war with the Ming in mind, Amin made peace at Ganghwa on 18 April 1627. Joseon and the Later Jin became “elder and younger brothers”, Korea opened border markets and sent tribute, but kept its ties with the Ming, which led to the second invasion of 1636."
+countries: [kp, kr, cn]
+sides:
+  - id: jin
+    name: Later Jin
+    polities: [qing]
+    ink: gold
+    moves: Later Jin moves
+    success: Later Jin success
+  - id: js
+    name: Joseon Korea
+    polities: [joseon]
+    ink: blue
+    moves: Korean moves
+    success: Korean success
+  - id: ra
+    name: Korean militias (righteous armies)
+    polities: [righteous-armies]
+    ink: green
+    moves: Militia moves
+    success: Militia success
+  - id: mg
+    name: Ming China (Mao Wenlong)
+    polities: [ming]
+    ink: red
+    moves: Ming moves
+    success: Ming success
+notes:
+  - Korean records date the war by the lunar calendar. The English Wikipedia article gives these lunar dates as if they were Gregorian (Uiju taken on “14 January”); the dates here are the Gregorian equivalents given in the Korean article (the invasion began on the 13th day of the first month, 28 February 1627, and peace was made on the 3rd day of the third month, 18 April 1627).
+  - The war was part of the long struggle between the Ming and the Jurchen state founded by Nurhaci; see the Ming–Later Jin war (1618–1644). The Later Jin was renamed Qing in 1636.
+sources:
+  - title: Later Jin invasion of Joseon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Later_Jin_invasion_of_Joseon
+  - title: 정묘호란 (Later Jin invasion, Korean Wikipedia)
+    url: https://ko.wikipedia.org/wiki/%EC%A0%95%EB%AC%98%ED%98%B8%EB%9E%80
+  - title: Battle of Sarhū (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Sarhu
+steps:
+  - title: Across the Yalu to Pyongyang
+    date: February – March 1627
+    when: "1627-02"
+    borders: "1627-03-12"
+    countries: [kp, cn]
+    body:
+      - After King Injo came to the throne in a coup in 1623, his government turned away from the cautious neutrality of his predecessor Gwanghaegun and sided openly with the Ming. It let the Ming general Mao Wenlong base his raids on Liaodong on Ka Island, off the coast of Pyongan, and station troops at Uiju. When Nurhaci died in 1626 after his defeat at Ningyuan, his son Hong Taiji decided to deal with Korea before turning on the Ming again. Korean fugitives from Yi Gwal’s failed rebellion of 1624 urged him on, telling him that Joseon’s northern army had been weakened.
+      - On 28 February 1627 about 30,000 troops under Amin, with Jirgalang, Ajige and Yoto, crossed the Yalu. They took Uiju on 1 March, while Mao Wenlong fled out to sea, and Jeongju the next day; the mountain fortress of Neunghan fell on 8 March. At Anju, held by Nam I-heung, the garrison blew itself up in its powder magazine rather than surrender. Pyongyang was abandoned by its governor and taken without a fight, and the Jin vanguard reached Hwangju.
+    facts:
+      - [Later Jin army, "about 30,000 men under Amin"]
+      - [Yalu crossed, "28 February 1627"]
+      - [Anju, "fell 8 March 1627"]
+    markers:
+      - kind: taken
+        side: jin
+        name: Uiju
+        date: 1 March 1627
+        text: The border town on the Yalu, where Mao Wenlong had stationed troops. He escaped by sea.
+        lonlat: [124.531, 40.197]
+        lp: l
+      - kind: held
+        side: mg
+        name: Ka Island
+        date: 1622–1637
+        text: Mao Wenlong’s island base off the Pyongan coast, from which he raided Liaodong.
+        lonlat: [124.655, 39.554]
+        lp: b
+      - kind: taken
+        side: jin
+        name: Jeongju
+        date: 2 March 1627
+        text: Taken on the march south; the nearby mountain fortress of Neunghan fell on 8 March.
+        lonlat: [125.330, 39.690]
+      - kind: siege
+        side: jin
+        name: Anju
+        date: 8 March 1627
+        text: The garrison under Nam I-heung blew up its powder magazine as the town fell.
+        lonlat: [125.661, 39.617]
+      - kind: taken
+        side: jin
+        name: Pyongyang
+        date: March 1627
+        text: Abandoned by the governor of Pyongan and occupied without a fight. It was looted for several days during the peace talks.
+        lonlat: [125.750, 39.020]
+      - kind: taken
+        side: jin
+        name: Hwangju
+        date: March 1627
+        text: The farthest point of the Jin advance towards Hanseong.
+        lonlat: [125.770, 38.670]
+    arrows:
+      - side: jin
+        label: Amin
+        phase: 1
+        via: [[124.45, 40.35], [124.60, 40.15], [125.30, 39.72], [125.62, 39.63]]
+      - side: jin
+        phase: 2
+        via: [[125.66, 39.60], [125.75, 39.08], [125.77, 38.70]]
+  - title: Ganghwa and the brothers’ treaty
+    date: March – April 1627
+    when: "1627-03"
+    borders: "1627-04-18"
+    countries: [kr, kp]
+    body:
+      - As the Jin army neared, King Injo and his court left Hanseong in mid-March and crossed to Ganghwa Island, which the Jurchen cavalry could not reach without ships; the crown prince Sohyeon went south to Jeonju. Militias rose behind the Jin lines in Pyongan, among them Jeong Bong-su’s in Cheolsan and Yi Rip’s at Yongcheon, which won several fights and threatened the invaders’ communications. A Ming relief force was on its way.
+      - Amin wanted more, but Hong Taiji, anxious about the Ming front, ordered him to settle. At Ganghwa, on 18 April 1627, the two sides agreed that the Later Jin and Joseon would be elder and younger brothers and would respect each other’s borders. Joseon stopped using the Ming era name in its dealings with the Jin, sent a royal kinsman, Yi Gak, as a hostage, opened markets on the border and paid tribute in horses, skins and cloth. The Jin army withdrew to Mukden. Korea went on supplying the Ming in secret, and in 1636 Hong Taiji, now emperor of the Qing, invaded again.
+    facts:
+      - [King Injo, "took refuge on Ganghwa Island"]
+      - [Peace of Ganghwa, "18 April 1627"]
+    markers:
+      - kind: treaty
+        name: Ganghwa
+        date: 18 April 1627
+        text: King Injo’s refuge during the war. The treaty making Joseon the Later Jin’s “younger brother” was agreed here.
+        lonlat: [126.484, 37.748]
+        lp: l
+      - kind: event
+        side: js
+        name: Hanseong
+        date: March 1627
+        text: King Injo and the court left the capital for Ganghwa.
+        lonlat: [126.977, 37.570]
+      - kind: event
+        side: js
+        name: Jeonju
+        date: March 1627
+        text: The crown prince Sohyeon set up a branch court here.
+        lonlat: [127.148, 35.824]
+      - kind: held
+        side: jin
+        name: Pyongyang
+        date: March – April 1627
+        text: Occupied and looted by the Jin army during the talks.
+        lonlat: [125.750, 39.020]
+    arrows:
+      - side: js
+        label: King Injo
+        phase: 1
+        via: [[126.98, 37.57], [126.75, 37.62], [126.52, 37.72]]
+      - side: jin
+        label: Withdrawal to Mukden
+        phase: 2
+        via: [[125.75, 39.05], [125.62, 39.65], [125.00, 39.85], [124.50, 40.25]]

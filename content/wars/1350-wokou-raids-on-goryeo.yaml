@@ -1,0 +1,153 @@
+id: wokou-raids-on-goryeo
+name: Wokou raids on Goryeo
+start: "1350-02"
+end: "1389-02"
+tier: B
+summary: "Four decades of raids on Goryeo by the wokou, bands of raiders and smugglers who came mostly from Tsushima, Iki and northern Kyushu at a time when Japan was divided by the civil war between its Northern and Southern Courts; Koreans and Chinese also joined such bands. From the second month of 1350 the raids came almost every year, first on the southern coasts and then up the west coast to the approaches to Kaegyong, seizing the tax grain that Goryeo shipped by sea and carrying off people. The Goryeosa records more than a hundred raids under King Gongmin and 378 under King U (1374–1388), and coastal districts were abandoned. Goryeo rebuilt its navy and, on the advice of Choe Mu-seon, began making gunpowder and cannon in 1377. In 1380 its fleet burned some 500 wokou ships at Jinpo at the mouth of the Geum River, and the stranded raiders, after plundering inland, were destroyed by Yi Seong-gye at Hwangsan. After a further naval victory at Gwaneumpo in 1383 and a raid on Tsushima in 1389 the attacks declined, and Yi Seong-gye’s fame from these wars helped him found the Joseon dynasty in 1392."
+countries: [kr, jp]
+sides:
+  - id: gor
+    name: Goryeo
+    polities: [goryeo]
+    ink: blue
+    moves: Goryeo moves
+    success: Goryeo success
+  - id: wk
+    name: Wokou
+    polities: [wokou]
+    ink: red
+    moves: Wokou moves
+    success: Wokou success
+notes:
+  - The word wokou (in Korean waegu, in Japanese wakō) means “Japanese raiders”, but the bands also included Koreans and Chinese; how many is debated between Japanese and Korean historians. The wokou of this period, based mainly in Tsushima, Iki and the Matsuura area of Kyushu, are distinguished from the largely Chinese wokou of the sixteenth century.
+  - Dates are lunar months from the Goryeosa. The numbers of raids and of ships (500 at Jinpo) come from the Korean chronicles; another source names 30 ships burned at Jinpo. Some Japanese historians think the account of Hwangsan was exaggerated to glorify Yi Seong-gye.
+sources:
+  - title: Wokou (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Wokou
+  - title: Ch’oe Mu-sŏn (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ch%27oe_Mu-s%C5%8Fn
+  - title: Ch’oe Yŏng (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ch%27oe_Y%C5%8Fng
+  - title: 왜구 (Wokou, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0039200
+  - title: 황산대첩 (Battle of Hwangsan, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0065178
+  - title: 화통도감 (Office of Gunpowder Weapons, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0064918
+  - title: 대마도 정벌 (Expeditions to Tsushima, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0014343
+  - title: 진포 해전 (Battle of Jinpo, Korean Wikipedia)
+    url: https://ko.wikipedia.org/wiki/%EC%A7%84%ED%8F%AC_%ED%95%B4%EC%A0%84
+  - title: 황산대첩 (Korean Wikipedia)
+    url: https://ko.wikipedia.org/wiki/%ED%99%A9%EC%82%B0%EB%8C%80%EC%B2%A9
+steps:
+  - title: The raids
+    date: 1350–1377
+    when: "1350-02"
+    borders: "1377-10"
+    countries: [kr, kp, jp]
+    body:
+      - Raiders from Japan had attacked the Korean coasts before, but from the second month of 1350, when they struck Goseong, Jukrim and Geoje on the south coast, the raids became almost yearly and grew in scale. Fleets of dozens or hundreds of ships attacked the south coast and then moved up the west coast; in 1357 raiders took Gyodong island and plundered grain ships at the mouth of the Han, close to Kaegyong. They targeted the tax grain that Goryeo shipped to the capital by sea, and carried off people to sell or ransom. Many coastal districts and islands were abandoned.
+      - Goryeo set up coastal garrisons and rebuilt its fleet. In 1376 Choe Yeong defeated a large raiding force at Hongsan, inland from the west coast. Choe Mu-seon, who had learned to refine saltpetre from a Chinese merchant, persuaded the court to set up an Office of Gunpowder Weapons in the tenth month of 1377, which made cannon and fire arrows and fitted warships to carry them.
+    facts:
+      - [First of the great raids, "second month of 1350"]
+      - [Raids under King U, "378 in 1374–1388 (Goryeosa)"]
+      - [Office of Gunpowder Weapons, "tenth month of 1377"]
+    markers:
+      - kind: event
+        side: wk
+        name: Geoje
+        date: "1350"
+        text: Among the places raided in the second month of 1350, at the start of the great raids.
+        lonlat: [128.620, 34.880]
+      - kind: event
+        side: wk
+        name: Gyodong
+        date: "1357"
+        text: Raiders seized the island and plundered grain ships near the mouth of the Han, close to Kaegyong.
+        lonlat: [126.297, 37.781]
+        lp: l
+      - kind: battle
+        side: gor
+        name: Hongsan
+        date: "1376"
+        text: Choe Yeong defeated a large raiding force.
+        lonlat: [126.770, 36.200]
+        lp: l
+    arrows:
+      - side: wk
+        label: Raiders from Tsushima
+        phase: 1
+        via: [[129.300, 34.400], [128.900, 34.700], [128.400, 34.900]]
+      - side: wk
+        phase: 2
+        via: [[129.100, 34.250], [127.600, 34.250], [126.300, 34.500], [126.000, 35.800], [126.300, 37.600]]
+  - title: Jinpo and Hwangsan
+    date: "1380"
+    when: "1380-08"
+    borders: "1380-10"
+    countries: [kr]
+    body:
+      - In the eighth month of 1380 a wokou fleet of some 500 ships came into Jinpo, the mouth of the Geum River, tied the ships together and sent raiding parties inland. Sim Deok-bu, Na Se and Choe Mu-seon sailed against it with 100 warships and, using Choe’s cannon for the first time at sea, burned the whole fleet. The raiders who had landed were stranded. They killed most of their captives (334 escaped to the Goryeo army) and plundered their way across Chungcheong, Gyeongsang and Jeolla, defeating a Goryeo army at Sageunnae.
+      - In the ninth month they gathered at Inwol station near Unbong, below the Jiri mountains, and threatened to march on Kaegyong. Yi Seong-gye, sent south as commander, attacked them on the heights of Hwangsan. His archers killed their young leader, known in Korean records as Ajibaldo, and the band was destroyed. According to the chronicles the river ran red for days, 1,600 horses were taken, and only about 70 raiders escaped into the mountains.
+    facts:
+      - [Battle of Jinpo, "eighth month of 1380"]
+      - [Wokou ships burned, "about 500"]
+      - [Battle of Hwangsan, "ninth month of 1380"]
+    markers:
+      - kind: naval
+        side: gor
+        name: Jinpo
+        date: "1380"
+        text: Goryeo’s fleet used cannon to burn the wokou ships moored in the mouth of the Geum River.
+        lonlat: [126.700, 36.020]
+        lp: l
+      - kind: battle
+        side: gor
+        name: Hwangsan
+        date: "1380"
+        text: Yi Seong-gye destroyed the stranded raiders and killed their leader.
+        lonlat: [127.562, 35.458]
+    arrows:
+      - side: gor
+        label: Na Se and Choe Mu-seon
+        phase: 1
+        via: [[126.200, 36.400], [126.450, 36.100], [126.680, 36.020]]
+      - side: wk
+        label: Stranded raiders
+        phase: 2
+        via: [[126.750, 36.050], [127.300, 36.250], [127.900, 36.150], [127.750, 35.700], [127.580, 35.480]]
+      - side: gor
+        label: Yi Seong-gye
+        phase: 2
+        via: [[126.550, 37.950], [127.100, 36.800], [127.400, 35.900], [127.540, 35.470]]
+  - title: Gwaneumpo and the raid on Tsushima
+    date: 1383–1389
+    when: "1389-02"
+    borders: "1389-03"
+    countries: [kr, jp]
+    body:
+      - In 1383 Jeong Ji, with 47 ships armed with Choe Mu-seon’s cannon, defeated a much larger wokou fleet at Gwaneumpo, off Namhae island on the south coast. In the second month of 1389 Bak Wi, commander of Gyeongsang, sailed to Tsushima with 100 ships, burned some 300 ships and many buildings, and brought back more than a hundred Korean captives.
+      - The raids grew rarer after 1389, helped by the end of the civil war in Japan in 1392 and by the new Joseon dynasty’s mix of diplomacy, trade privileges and force, which led to a larger expedition against Tsushima in 1419. Yi Seong-gye, whose victories over the wokou had made him the leading general of Goryeo, became the first king of Joseon in 1392.
+    facts:
+      - [Battle of Gwaneumpo, "1383"]
+      - [Raid on Tsushima, "second month of 1389"]
+      - [Ships burned on Tsushima, "about 300"]
+    markers:
+      - kind: naval
+        side: gor
+        name: Gwaneumpo
+        date: "1383"
+        text: Jeong Ji’s fleet defeated a large wokou fleet off Namhae.
+        lonlat: [127.857, 34.906]
+      - kind: taken
+        side: gor
+        name: Tsushima
+        date: "1389"
+        text: Bak Wi’s fleet burned wokou ships and freed Korean captives.
+        lonlat: [129.300, 34.400]
+    arrows:
+      - side: gor
+        label: Bak Wi
+        phase: 1
+        via: [[128.620, 34.880], [128.950, 34.620], [129.250, 34.420]]

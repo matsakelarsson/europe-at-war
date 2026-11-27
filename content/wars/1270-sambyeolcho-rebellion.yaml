@@ -1,0 +1,173 @@
+id: sambyeolcho-rebellion
+name: Sambyeolcho rebellion
+start: "1270-06"
+end: "1273-04"
+tier: B
+summary: "The last resistance to the peace between Goryeo and the Mongols, led by the Sambyeolcho, the elite units that had served Goryeo’s military rulers. When the court moved back from Ganghwa Island to Kaegyong in 1270 and ordered the units disbanded, their commander Bae Jung-son rebelled, made a royal relative, Wang On, king, and sailed south with more than 1,000 ships to the island of Jindo. From the fortress of Yongjang there the Sambyeolcho controlled the south-western coasts and islands and raided the provinces, and they took Jeju. In the fifth month of 1271 a Goryeo and Mongol army stormed Jindo; Wang On and Bae Jung-son were killed and more than 10,000 people were carried off. Kim Tong-jeong carried on the fight from Jeju until a force of 12,000 Goryeo, Mongol and Chinese troops took the island in 1273. Jeju then came under direct Yuan rule until 1294, and the way was clear for the Mongol invasions of Japan."
+countries: [kr]
+sides:
+  - id: sbc
+    name: Sambyeolcho
+    polities: [sambyeolcho]
+    ink: magenta
+    moves: Sambyeolcho moves
+    success: Sambyeolcho success
+  - id: gy
+    name: Goryeo and the Yuan
+    polities: [goryeo, yuan]
+    ink: blue
+    moves: Goryeo and Yuan moves
+    success: Goryeo and Yuan success
+notes:
+  - Dates are lunar months from the Goryeosa. The Sambyeolcho were the Left and Right Night Patrols and the Sinuigun, a unit of men who had escaped from Mongol captivity.
+  - Twentieth-century Korean historians often presented the Sambyeolcho as patriots resisting foreign rule; others stress that they were the private soldiers of the military regime, defending its power against the king.
+sources:
+  - title: Sambyeolcho Rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sambyeolcho_Rebellion
+  - title: 삼별초 (Sambyeolcho, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0026604
+  - title: 배중손 (Bae Jung-son, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0021928
+  - title: 김통정 (Kim Tong-jeong, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0010884
+  - title: 진도 용장성 (Yongjang fortress, Jindo, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0039655
+  - title: 제주 항파두리 항몽 유적 (Hangpaduri site, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0051473
+  - title: 삼별초의 난 (Korean Wikipedia)
+    url: https://ko.wikipedia.org/wiki/%EC%82%BC%EB%B3%84%EC%B4%88%EC%9D%98_%EB%82%9C
+steps:
+  - title: From Ganghwa to Jindo
+    date: "1270"
+    when: "1270-06"
+    borders: "1270-12"
+    countries: [kr]
+    body:
+      - The Sambyeolcho (“three elite patrols”) had been the main fighting force of the military rulers during the Mongol wars. In the fifth month of 1270 the last military ruler was killed and the court moved back from Ganghwa to Kaegyong; when it ordered the Sambyeolcho disbanded and their rolls seized, the soldiers feared they would be handed over to the Mongols. In the sixth month Bae Jung-son and No Yeong-hui rebelled on Ganghwa, proclaimed Wang On, the Marquis of Seunghwa, king, and set up their own government. With more than 1,000 ships carrying officials, soldiers, families and the stores of the island, they sailed south to Jindo, off the south-western tip of the peninsula.
+      - On Jindo they built the fortress of Yongjang, with a palace in the grounds of a temple. From there they controlled the islands and coasts of the south-west, seized tax grain bound for Kaegyong and raided the coasts of Jeolla and Gyeongsang. A first attack by Kim Bang-gyeong and the Mongol commander Ahai failed, and in the eleventh month of 1270 a Sambyeolcho force took Jeju from its Goryeo garrison. They also sent a letter to Japan seeking help against the Mongols.
+    facts:
+      - [Rebellion on Ganghwa, "sixth month of 1270"]
+      - [Ships taken south, "more than 1,000"]
+      - [Jeju taken, "eleventh month of 1270"]
+    markers:
+      - kind: event
+        side: sbc
+        name: Ganghwa
+        date: "1270"
+        text: Bae Jung-son rebelled here and proclaimed Wang On king.
+        lonlat: [126.485, 37.751]
+        lp: l
+      - kind: capital
+        side: sbc
+        name: Yongjang fortress
+        date: 1270–1271
+        text: The Sambyeolcho base on Jindo, with Wang On’s palace.
+        lonlat: [126.338, 34.516]
+        lp: l
+      - kind: taken
+        side: sbc
+        name: Jeju
+        date: "1270"
+        text: Taken from its Goryeo garrison by a Sambyeolcho force.
+        lonlat: [126.530, 33.500]
+    arrows:
+      - side: sbc
+        label: Sambyeolcho fleet
+        phase: 1
+        via: [[126.400, 37.700], [126.000, 37.000], [125.800, 36.000], [125.950, 35.000], [126.300, 34.560]]
+      - side: sbc
+        phase: 2
+        via: [[126.320, 34.450], [126.400, 34.000], [126.480, 33.560]]
+    areas:
+      - style: occupied
+        side: sbc
+        label: Coasts and islands under Sambyeolcho control (approximate)
+        polygon: [[125.900, 35.100], [126.600, 35.000], [126.950, 34.550], [126.450, 34.100], [125.900, 34.300]]
+      - style: occupied
+        side: sbc
+        label: Jeju, held by the Sambyeolcho
+        atoms: [KR-49]
+  - title: The fall of Jindo
+    date: "1271"
+    when: "1271-05"
+    borders: "1271-06"
+    countries: [kr]
+    body:
+      - In the fifth month of 1271 a Goryeo and Mongol army under Kim Bang-gyeong and the Mongol commanders Hindu and Hong Da-gu attacked Jindo in three columns. The main force landed at Byeokpajin, at the island’s north-eastern tip, while the others came ashore further along the coast. Yongjang fell. Wang On was caught and killed by Hong Da-gu, and Bae Jung-son died in the fighting, by tradition at Namdo fortress in the south-west of the island.
+      - More than 10,000 people, Sambyeolcho soldiers, their families and islanders, were captured and carried off. Kim Tong-jeong escaped with the survivors to Jeju.
+    facts:
+      - [Fall of Jindo, "fifth month of 1271"]
+      - [People captured, "more than 10,000"]
+    markers:
+      - kind: battle
+        side: gy
+        name: Byeokpajin
+        date: "1271"
+        text: The main Goryeo and Mongol force landed here.
+        lonlat: [126.345, 34.545]
+        lp: t
+      - kind: taken
+        side: gy
+        name: Yongjang fortress
+        date: "1271"
+        text: The Sambyeolcho base fell; Wang On was killed.
+        lonlat: [126.338, 34.516]
+        lp: l
+      - kind: event
+        side: gy
+        name: Namdo fortress
+        date: "1271"
+        text: By tradition, Bae Jung-son died fighting here.
+        lonlat: [126.140, 34.390]
+        lp: l
+    arrows:
+      - side: gy
+        label: Kim Bang-gyeong and Hindu
+        phase: 1
+        via: [[126.600, 34.750], [126.450, 34.620], [126.355, 34.555]]
+      - side: gy
+        phase: 1
+        via: [[126.150, 34.650], [126.220, 34.560], [126.300, 34.520]]
+      - side: sbc
+        label: Kim Tong-jeong
+        phase: 2
+        via: [[126.150, 34.350], [126.300, 33.900], [126.400, 33.520]]
+  - title: Jeju
+    date: 1271–1273
+    when: "1273-04"
+    borders: "1273-06"
+    countries: [kr]
+    body:
+      - On Jeju Kim Tong-jeong built the earth-walled fortress of Hangpaduri, near today’s Aewol, and raided the coasts of the peninsula as far as Gyeonggi, seizing tax ships. Kublai, who needed Jeju and Goryeo’s shipyards for his planned invasion of Japan, ordered an end to the rebellion. In the fourth month of 1273 a force of 12,000 Goryeo, Mongol and Chinese troops under Kim Bang-gyeong and Hindu landed at Hamdeok and took Hangpaduri. Kim Tong-jeong fled into the Halla mountains, where he was later found dead.
+      - The Yuan put Jeju, then called Tamna, under its own administration and set up horse ranches there, and kept it until 1294. A year after Jeju fell, Goryeo and Yuan forces sailed from Korea for the first invasion of Japan.
+    facts:
+      - [Jeju taken, "fourth month of 1273"]
+      - [Allied force, "12,000"]
+      - [Yuan rule on Jeju, "1273–1294"]
+    markers:
+      - kind: event
+        side: gy
+        name: Hamdeok
+        date: "1273"
+        text: The Goryeo and Mongol fleet landed here.
+        lonlat: [126.670, 33.540]
+      - kind: taken
+        side: gy
+        name: Hangpaduri
+        date: "1273"
+        text: The last Sambyeolcho fortress fell; Kim Tong-jeong fled and died.
+        lonlat: [126.407, 33.453]
+        lp: l
+    arrows:
+      - side: gy
+        label: Kim Bang-gyeong and Hindu
+        phase: 1
+        via: [[126.700, 34.400], [126.750, 33.950], [126.670, 33.560]]
+      - side: gy
+        phase: 2
+        via: [[126.660, 33.535], [126.520, 33.480], [126.420, 33.455]]
+    areas:
+      - style: gained
+        side: gy
+        label: Jeju (Tamna), under direct Yuan rule 1273–1294
+        atoms: [KR-49]

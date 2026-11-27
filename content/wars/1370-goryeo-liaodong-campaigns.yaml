@@ -1,0 +1,124 @@
+id: goryeo-liaodong-campaigns
+name: Goryeo’s Liaodong campaigns
+start: "1370-01"
+end: "1388-06"
+tier: B
+summary: "Goryeo’s two attempts to push into Liaodong as the Yuan empire collapsed, the second of which ended in Yi Seong-gye’s coup. After breaking with the Yuan in 1356 and retaking the north-east, King Gongmin sent armies across the Yalu in 1370 against the Yuan forces left in Liaodong. Yi Seong-gye took the mountain fortress of Uraseong (Wunu shan) in the first month, and in the eleventh month he and Ji Yong-su took Liaoyang, the main city of the region, but withdrew for lack of supplies. In the following years the new Ming dynasty took over Liaodong. In 1388, when the Ming announced that it would claim the lands north of Cheollyeong, King U and his chief minister Choe Yeong sent an army of nearly 39,000 to attack Liaodong. Yi Seong-gye, one of its two commanders, had argued against the war; when the army reached Wihwado, an island in the Yalu, in the rains, he and Jo Min-su turned it around, marched on Kaegyong, exiled Choe Yeong and deposed the king. Four years later Yi Seong-gye founded the Joseon dynasty."
+countries: [kp, cn, kr]
+sides:
+  - id: gor
+    name: Goryeo (in 1388, King U and Choe Yeong)
+    polities: [goryeo]
+    ink: blue
+    moves: Goryeo moves
+    success: Goryeo success
+  - id: nyu
+    name: Yuan forces in Liaodong (Northern Yuan)
+    polities: [northern-yuan]
+    ink: slate
+    moves: Yuan moves
+    success: Yuan success
+  - id: ysg
+    name: Yi Seong-gye and Jo Min-su’s army (1388)
+    polities: [yi-seong-gye]
+    ink: gold
+    moves: Yi Seong-gye’s moves
+    success: Yi Seong-gye’s success
+notes:
+  - Dates are lunar months from the Goryeosa. In 1388 the army left Pyongyang on the eighteenth day of the fourth month, reached Wihwado on the seventh day of the fifth month and turned back on the twenty-second, which fell in late June by the Julian calendar.
+  - Goryeo fought no battle with the Ming. The figure of nearly 39,000 soldiers (38,830, with 11,634 porters and 21,682 horses) is from the Goryeosa; some accounts give up to 100,000.
+sources:
+  - title: Taejo of Joseon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Taejo_of_Joseon
+  - title: U of Goryeo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/U_of_Goryeo
+  - title: Ch’oe Yŏng (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ch%27oe_Y%C5%8Fng
+  - title: 위화도 회군 (Withdrawal from Wihwado, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0041212
+  - title: 최영 (Choe Yeong, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0057469
+  - title: 철령위 (Tieling commandery, Encyclopedia of Korean Culture, in Korean)
+    url: https://encykorea.aks.ac.kr/Article/E0056121
+  - title: 요동 정벌 (Liaodong expedition, Korean Wikipedia)
+    url: https://ko.wikipedia.org/wiki/%EC%9A%94%EB%8F%99_%EC%A0%95%EB%B2%8C
+  - title: 위화도 회군 (Korean Wikipedia)
+    url: https://ko.wikipedia.org/wiki/%EC%9C%84%ED%99%94%EB%8F%84_%ED%9A%8C%EA%B5%B0
+steps:
+  - title: Uraseong and Liaoyang
+    date: "1370"
+    when: "1370-01"
+    borders: "1370-12"
+    countries: [cn, kp]
+    body:
+      - In 1356 King Gongmin broke with the Yuan, destroyed the pro-Yuan faction of the Gi family at court and retook the Ssangseong commandery in the north-east, where Yi Seong-gye’s father Yi Ja-chun went over to Goryeo. After the Ming took the Yuan capital in 1368 and the Yuan court fled north, Goryeo turned on the Yuan’s remaining officials in Liaodong, among them Gi Saein-temur, a son of the executed Gi Cheol. In the first month of 1370 Yi Seong-gye, then commander of the north-east, crossed the Yalu and the Pojeo (Hun) River and besieged the mountain fortress of Uraseong, today’s Wunu shan near Huanren. Its commander, Ilihuntimur (Yi Oro-temur), surrendered with his people.
+      - In the eleventh month of 1370 Ji Yong-su and Yi Seong-gye marched on Liaoyang, held by Gi Saein-temur, and took it. Without supplies to hold the city, they called on its people to accept Goryeo’s rule and withdrew. In the following years the Ming set up a military command in Liaodong and took control of the region.
+    facts:
+      - [Uraseong taken, "first month of 1370"]
+      - [Liaoyang taken, "eleventh month of 1370"]
+    markers:
+      - kind: taken
+        side: gor
+        name: Uraseong
+        date: "1370"
+        text: The mountain fortress at Wunu shan surrendered to Yi Seong-gye.
+        lonlat: [125.417, 41.328]
+      - kind: taken
+        side: gor
+        name: Liaoyang
+        date: "1370"
+        text: Taken by Ji Yong-su and Yi Seong-gye, then abandoned for lack of supplies.
+        lonlat: [123.176, 41.279]
+        lp: l
+    arrows:
+      - side: gor
+        label: Yi Seong-gye
+        phase: 1
+        via: [[126.600, 40.970], [126.100, 41.100], [125.700, 41.250], [125.440, 41.320]]
+      - side: gor
+        label: Ji Yong-su and Yi Seong-gye
+        phase: 2
+        via: [[124.500, 40.200], [124.100, 40.600], [123.600, 41.000], [123.200, 41.260]]
+  - title: Wihwado
+    date: "1388"
+    when: "1388-05"
+    borders: "1388-06"
+    countries: [kp, kr]
+    body:
+      - In the second month of 1388 an envoy returning from the Ming reported that the Ming emperor claimed the lands north of Cheollyeong, the former Ssangseong commandery, for a new Tieling commandery. King U and his chief minister Choe Yeong decided to attack Liaodong. Yi Seong-gye objected, giving four reasons. A small country should not defy a great one. A campaign in summer would take men from the fields. The wokou would raid while the army was away. And the monsoon rains would loosen the glue of the bows and spread disease. He was overruled. On the eighteenth day of the fourth month an army of 38,830 men, with 11,634 porters and 21,682 horses, left Pyongyang under Jo Min-su and Yi Seong-gye, while the king and Choe Yeong stayed behind.
+      - The army reached Wihwado, an island in the Yalu, on the seventh day of the fifth month. The rains had come, the river was in flood and men were deserting, and the court refused requests to turn back. On the twenty-second day Yi Seong-gye persuaded Jo Min-su to lead the army home. They marched on Kaegyong, overcame Choe Yeong’s troops and took the capital. Choe Yeong was exiled and executed at the end of the year, and King U was deposed and sent to Ganghwa. Yi Seong-gye now held power, and in 1392 he took the throne himself as the first king of Joseon.
+    facts:
+      - [Army leaves Pyongyang, "eighteenth day of the fourth month of 1388"]
+      - [Army turns back at Wihwado, "twenty-second day of the fifth month of 1388"]
+      - [King U deposed, "sixth month of 1388"]
+    markers:
+      - kind: event
+        side: gor
+        name: Pyongyang
+        date: "1388"
+        text: King U and Choe Yeong gathered the army here and stayed behind when it marched.
+        lonlat: [125.754, 39.019]
+        lp: l
+      - kind: event
+        side: ysg
+        name: Wihwado
+        date: "1388"
+        text: Yi Seong-gye and Jo Min-su turned the army around on this island in the Yalu.
+        lonlat: [124.446, 40.137]
+        lp: l
+      - kind: taken
+        side: ysg
+        name: Kaegyong
+        date: "1388"
+        text: Yi Seong-gye’s army took the capital; Choe Yeong was exiled and King U deposed.
+        lonlat: [126.543, 37.985]
+        lp: l
+    arrows:
+      - side: gor
+        label: Expedition
+        phase: 1
+        via: [[125.750, 39.030], [125.300, 39.650], [124.900, 39.900], [124.470, 40.120]]
+      - side: ysg
+        label: Yi Seong-gye and Jo Min-su
+        phase: 2
+        via: [[124.470, 40.120], [125.100, 39.800], [125.750, 39.000], [126.200, 38.400], [126.530, 38.000]]

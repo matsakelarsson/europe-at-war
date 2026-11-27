@@ -1,0 +1,456 @@
+id: boshin-war
+name: Boshin War
+start: "1868-01-27"
+end: "1869-06-27"
+tier: A
+summary: "The civil war of 1868–1869 in which the new imperial government, led by men of the Satsuma and Chōshū domains, destroyed the power of the Tokugawa shogunate and its allies. The shogun Tokugawa Yoshinobu had handed back his powers to the emperor in November 1867, hoping to keep his lands and a leading place in a council of lords, but on 3 January 1868 Satsuma and its allies seized the palace in Kyoto and proclaimed the restoration of imperial rule. Yoshinobu’s march on Kyoto was beaten at Toba and Fushimi in late January, and when the imperial banner appeared on the battlefield he fled to Edo. The imperial army marched east, and in May 1868 Katsu Kaishū surrendered Edo Castle without a fight. In the north-east more than thirty domains formed the Ōuetsu Reppan Dōmei (the Northern Alliance) around Sendai and Aizu; they were defeated in a summer and autumn of hard fighting at Shirakawa, Nagaoka and Bonari Pass, and Aizu-Wakamatsu fell after a month’s siege on 6 November 1868. Enomoto Takeaki took most of the shogunate’s navy and some French officers to Ezo (Hokkaido), took Hakodate and Matsumae and set up the Republic of Ezo, which surrendered at Goryōkaku on 27 June 1869. The war, named after the year of the earth dragon (boshin) in which it began, cost about 8,200 lives; it gave the Meiji government control of the whole country and opened the way to the abolition of the domains in 1871."
+countries: [jp, fr]
+sides:
+  - id: imp
+    name: Imperial government (Satsuma, Chōshū, Tosa and allied domains)
+    polities: [meiji-government, shimazu-clan, choshu-domain]
+    ink: purple
+    moves: Imperial moves
+    success: Imperial success
+  - id: tok
+    name: Tokugawa shogunate
+    polities: [tokugawa-shogunate]
+    ink: navy
+    moves: Shogunate moves
+    success: Shogunate success
+  - id: nor
+    name: Ōuetsu Reppan Dōmei (Northern Alliance) and Aizu
+    polities: [ouetsu-reppan-domei, aizu-domain]
+    ink: teal
+    moves: Northern Alliance moves
+    success: Northern Alliance success
+  - id: ezo
+    name: Republic of Ezo (Enomoto Takeaki)
+    polities: [republic-of-ezo]
+    ink: blue
+    moves: Ezo moves
+    success: Ezo success
+notes:
+  - Japan changed to the Gregorian calendar only in 1873, and the Japanese sources date the war by the lunar calendar. The dates here are Gregorian; some English accounts give lunar dates as if they were Gregorian (for example “August 20” for Enomoto’s departure from Shinagawa, which was 4 October).
+  - The numbers of men mobilised are given variously as about 69,000 and about 120,000; about 8,200 were killed and more than 5,000 wounded. The imperial dead were enshrined at the Tokyo Shōkonsha, founded in 1869 and later renamed Yasukuni Shrine; the dead of the defeated side were not.
+  - France had trained the shogunate’s army through a military mission from 1867, and some of its officers, among them Jules Brunet, resigned to fight in Ezo. Britain favoured the imperial side. The Western powers declared their neutrality in February 1868.
+sources:
+  - title: Boshin War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Boshin_War
+  - title: Battle of Toba–Fushimi (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Toba%E2%80%93Fushimi
+  - title: Ōuetsu Reppan Dōmei (Wikipedia)
+    url: https://en.wikipedia.org/wiki/%C5%8Cuetsu_Reppan_D%C5%8Dmei
+  - title: Battle of Aizu (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Aizu
+  - title: Battle of Hakodate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Hakodate
+  - title: Republic of Ezo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Republic_of_Ezo
+  - title: Battle of Miyako Bay (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Miyako_Bay
+  - title: Japan, the fall of the Tokugawa (Britannica)
+    url: https://www.britannica.com/place/Japan/The-fall-of-the-Tokugawa
+  - title: 戊辰戦争 (Japanese Wikipedia)
+    url: https://ja.wikipedia.org/wiki/%E6%88%8A%E8%BE%B0%E6%88%A6%E4%BA%89
+steps:
+  - title: The restoration of imperial rule
+    date: November 1867 – January 1868
+    when: "1867-11-09"
+    borders: "1868-01-03"
+    countries: [jp]
+    body:
+      - After the failure of the Second Chōshū expedition, Satsuma and Chōshū prepared to overthrow the shogunate by force. The new shogun, Tokugawa Yoshinobu, tried to forestall them. On 9 November 1867, on the advice of the Tosa domain, he returned his governing powers to the young Emperor Meiji, expecting to remain the greatest lord in the country and to lead a new council of daimyo. On 3 January 1868 Satsuma, with court nobles led by Iwakura Tomomi and troops from Tosa, Echizen, Owari and Aki, took over the gates of the imperial palace in Kyoto, proclaimed the restoration of imperial rule and the abolition of the shogunate, and that night demanded that Yoshinobu give up his offices and his lands.
+      - Yoshinobu withdrew with his troops and the Aizu and Kuwana soldiers to Osaka Castle, where he received the foreign envoys as Japan’s ruler and declared that he would not be bound by the proclamation. In Edo, rōnin sheltered by the Satsuma residence carried out robberies and arson to provoke the shogunate, and on 19 January 1868 shogunate troops and the Shōnai domain burned the Satsuma residence. When the news reached Osaka, Yoshinobu’s officers demanded war, and he agreed to march on Kyoto to petition the emperor against Satsuma.
+    facts:
+      - [Return of powers to the emperor, "9 November 1867"]
+      - [Coup in Kyoto and restoration of imperial rule, "3 January 1868"]
+      - [Burning of the Satsuma residence in Edo, "19 January 1868"]
+    markers:
+      - kind: event
+        side: imp
+        name: Kyoto Imperial Palace
+        date: 3 January 1868
+        text: Troops of Satsuma and its allies took over the palace gates, and the restoration of imperial rule was proclaimed.
+        lonlat: [135.762, 35.025]
+      - kind: event
+        side: tok
+        name: Osaka Castle
+        date: January 1868
+        text: Yoshinobu withdrew here from Kyoto with about 15,000 men, among them the Aizu and Kuwana troops.
+        lonlat: [135.526, 34.687]
+      - kind: event
+        side: tok
+        name: Satsuma residence, Edo
+        date: 19 January 1868
+        text: Burned by shogunate and Shōnai troops after a series of provocations by rōnin who sheltered there.
+        lonlat: [139.746, 35.647]
+    arrows:
+      - side: tok
+        label: Tokugawa Yoshinobu
+        via: [[135.748, 35.014], [135.700, 34.900], [135.600, 34.770], [135.530, 34.695]]
+  - title: Toba and Fushimi
+    date: 27–31 January 1868
+    when: "1868-01-27"
+    borders: "1868-01-27"
+    countries: [jp]
+    body:
+      - On 27 January 1868 the shogunate army, about 15,000 men including the French-trained infantry, Aizu and Kuwana troops and the Shinsengumi, marched from Osaka towards Kyoto along the Toba and Fushimi roads. Satsuma troops barred the bridge at Koeda on the Toba road and opened fire when the shogunate column tried to pass, while at Fushimi the Aizu troops and the Shinsengumi fought Chōshū and Satsuma soldiers around the magistrate’s office, which burned. The imperial side had only about 5,000 men, but they were better armed and led, and the shogunate columns, marching in road formation, were thrown back.
+      - On 28 January the court named Prince Ninnaji-no-miya Yoshiaki commander-in-chief and gave him the brocade banner of the imperial army, which was raised over the Satsuma and Chōshū troops. Fighting against the emperor’s banner, the shogunate’s allies wavered. The Yodo domain, whose lord was a member of the shogun’s government, shut its castle gates against the retreating shogunate troops, and on 30 January the Tsu domain, posted at Yamazaki, turned its guns on them at Hashimoto. The shogunate army fell back to Osaka with 895 killed and wounded, against 326 on the imperial side.
+      - On the night of 30–31 January Yoshinobu, who had promised to lead his troops in person, slipped out of Osaka Castle with Matsudaira Katamori of Aizu and a few others and sailed for Edo on the warship Kaiyō Maru. His army dispersed, and imperial troops took over Osaka Castle, which burned. The court declared Yoshinobu an enemy of the throne.
+    facts:
+      - [Shogunate army, "about 15,000"]
+      - [Imperial army, "about 5,000"]
+      - [Losses, "shogunate 895 killed and wounded, imperial 326"]
+      - [Yoshinobu leaves Osaka, "31 January 1868"]
+    markers:
+      - kind: battle
+        side: imp
+        name: Toba (Koeda Bridge)
+        date: 27 January 1868
+        text: Satsuma troops opened fire on the shogunate column on the Toba road, starting the war.
+        lonlat: [135.742, 34.954]
+        lp: l
+      - kind: battle
+        side: imp
+        name: Fushimi
+        date: 27–28 January 1868
+        text: Aizu troops and the Shinsengumi fought Satsuma and Chōshū around the Fushimi magistrate’s office, which burned.
+        lonlat: [135.766, 34.931]
+      - kind: event
+        side: imp
+        name: Yodo Castle
+        date: 29 January 1868
+        text: The Yodo domain closed its gates to the retreating shogunate army.
+        lonlat: [135.717, 34.905]
+        lp: l
+      - kind: battle
+        side: imp
+        name: Hashimoto
+        date: 30 January 1868
+        text: The Tsu domain changed sides and fired on the shogunate troops from across the river at Yamazaki.
+        lonlat: [135.676, 34.884]
+        lp: b
+      - kind: taken
+        side: imp
+        name: Osaka Castle
+        date: 31 January – February 1868
+        text: Abandoned by Yoshinobu, who sailed for Edo; occupied by imperial troops.
+        lonlat: [135.526, 34.687]
+    arrows:
+      - side: tok
+        phase: 1
+        via: [[135.530, 34.700], [135.640, 34.820], [135.710, 34.900], [135.740, 34.948]]
+      - side: tok
+        phase: 1
+        via: [[135.710, 34.900], [135.745, 34.915], [135.764, 34.928]]
+      - side: tok
+        phase: 2
+        via: [[135.720, 34.900], [135.676, 34.880], [135.600, 34.770], [135.530, 34.695]]
+      - side: tok
+        label: Kaiyō Maru
+        phase: 3
+        via: [[135.420, 34.640], [135.200, 34.300], [136.800, 33.800], [139.000, 34.700], [139.650, 35.450]]
+  - title: Edo opens its gates
+    date: February – July 1868
+    when: "1868-02"
+    borders: "1868-05-03"
+    countries: [jp]
+    body:
+      - The imperial army, with Prince Arisugawa Taruhito as commander and Saigō Takamori as its chief of staff, marched on Edo in three columns along the Tōkaidō, the Nakasendō and the Hokurikudō, while most domains of central and western Japan declared for the court. Yoshinobu rejected the advice of the French envoy Léon Roches and his own officers to fight and shut himself up in a temple at Ueno. On 29 March Kondō Isami of the Shinsengumi, leading a small shogunate force to hold Kōfu, was routed at Katsunuma.
+      - In Edo the shogunate’s army minister, Katsu Kaishū, met Saigō on 6 and 7 April and agreed that the city would be handed over without a battle in return for Yoshinobu’s life. The British envoy Harry Parkes, worried for foreign trade, also pressed Saigō for moderation. On 3 May 1868 Edo Castle was handed over to the imperial army, and Yoshinobu went into retirement at Mito. Many shogunate soldiers refused to accept the surrender. Ōtori Keisuke led some 2,000 north and fought for Utsunomiya Castle in May, and in Edo the Shōgitai held Kan’ei-ji at Ueno until the imperial army, under Ōmura Masujirō, stormed it with Armstrong guns on 4 July.
+    facts:
+      - [Battle of Kōshū-Katsunuma, "29 March 1868"]
+      - [Saigō–Katsu talks, "6–7 April 1868"]
+      - [Edo Castle handed over, "3 May 1868"]
+      - [Battle of Ueno, "4 July 1868"]
+    markers:
+      - kind: battle
+        side: imp
+        name: Katsunuma
+        date: 29 March 1868
+        text: Kondō Isami’s force of about 300 was routed by an imperial army of about 3,000.
+        lonlat: [138.733, 35.663]
+      - kind: treaty
+        side: imp
+        name: Edo Castle
+        date: 3 May 1868
+        text: Handed over to the imperial army without a fight under the agreement between Saigō Takamori and Katsu Kaishū.
+        lonlat: [139.754, 35.688]
+        lp: b
+      - kind: battle
+        side: imp
+        name: Utsunomiya
+        date: May 1868
+        text: Ōtori Keisuke’s shogunate troops took the castle and lost it again to the imperial army.
+        lonlat: [139.886, 36.554]
+      - kind: battle
+        side: imp
+        name: Ueno
+        date: 4 July 1868
+        text: The imperial army stormed Kan’ei-ji, held by the Shōgitai, in a day.
+        lonlat: [139.774, 35.721]
+        lp: t
+    arrows:
+      - side: imp
+        label: Tōkaidō column
+        phase: 1
+        via: [[135.760, 35.000], [136.900, 35.100], [138.380, 34.980], [139.100, 35.250], [139.740, 35.670]]
+      - side: imp
+        label: Nakasendō column
+        phase: 1
+        via: [[135.760, 35.010], [136.700, 35.400], [138.000, 35.900], [138.700, 35.700], [139.700, 35.700]]
+      - side: tok
+        label: Ōtori Keisuke
+        phase: 2
+        via: [[139.760, 35.700], [139.800, 36.100], [139.880, 36.540]]
+  - title: The Northern Alliance
+    date: June – September 1868
+    when: "1868-06"
+    borders: "1868-06-22"
+    countries: [jp]
+    body:
+      - The court ordered the domains of the north-east to punish Aizu, whose lord Matsudaira Katamori had commanded the shogunate’s forces in Kyoto, and Shōnai, which had burned the Satsuma residence. Sendai and Yonezawa pleaded for Aizu instead, and when the imperial envoy Sera Shūzō was killed by Sendai samurai, the northern domains made common cause. On 22 June 1868 more than twenty, and soon thirty-one domains formed the Ōuetsu Reppan Dōmei, the alliance of the domains of Mutsu, Dewa and Echigo, with its headquarters at Shiroishi and Prince Kitashirakawa Yoshihisa, abbot of Kan’ei-ji, as its nominal head. Its armies were large but mostly armed in the old style, and its members did not all share Aizu’s determination.
+      - The imperial army had taken the key castle of Shirakawa, the gateway to the north, on 20 June, and threw back the alliance’s efforts to retake it. In Echigo the Nagaoka domain, led by Kawai Tsugunosuke, who had bought modern rifles and two Gatling guns, joined the alliance; its castle fell on 8 July, was retaken in a daring counter-attack on 10 September and lost again a few days later, and Kawai died of his wounds. Through the summer the imperial army, with modern rifles and artillery, pushed north and took Nihonmatsu, whose boy soldiers died defending it. The Kubota (Akita) domain left the alliance, and Shōnai and Sendai troops invaded it.
+    facts:
+      - [Northern Alliance formed, "22 June 1868"]
+      - [Members, "31 domains"]
+      - [Shirakawa taken by the imperial army, "20 June 1868"]
+      - [Nagaoka Castle, "lost 8 July, retaken 10 September, lost again September 1868"]
+    markers:
+      - kind: treaty
+        side: nor
+        name: Shiroishi
+        date: 22 June 1868
+        text: The alliance of the northern domains was founded here, and its council met in the castle.
+        lonlat: [140.617, 38.003]
+      - kind: taken
+        side: imp
+        name: Shirakawa (Komine Castle)
+        date: 20 June 1868
+        text: The imperial army took the castle guarding the road north and held it against repeated alliance counter-attacks.
+        lonlat: [140.214, 37.133]
+        lp: l
+      - kind: battle
+        side: imp
+        name: Nagaoka
+        date: July – September 1868
+        text: Kawai Tsugunosuke’s modernised Nagaoka army lost its castle, retook it on 10 September and lost it again.
+        lonlat: [138.853, 37.447]
+        lp: l
+      - kind: taken
+        side: imp
+        name: Nihonmatsu
+        date: September 1868
+        text: The castle fell to the imperial army; its boy soldiers, some only 12 or 13 years old, died defending it.
+        lonlat: [140.428, 37.600]
+      - kind: capital
+        side: nor
+        name: Sendai
+        date: "1868"
+        text: The largest domain of the alliance, under Date Yoshikuni.
+        lonlat: [140.856, 38.252]
+      - kind: event
+        side: imp
+        name: Kubota (Akita)
+        date: August 1868
+        text: The domain left the alliance for the imperial side and was invaded by Shōnai and Sendai troops.
+        lonlat: [140.123, 39.724]
+    arrows:
+      - side: imp
+        phase: 1
+        via: [[139.880, 36.560], [140.050, 36.850], [140.210, 37.120]]
+      - side: imp
+        phase: 2
+        via: [[138.700, 37.150], [138.780, 37.300], [138.850, 37.440]]
+      - side: imp
+        phase: 3
+        via: [[140.214, 37.140], [140.350, 37.350], [140.428, 37.590]]
+    areas:
+      - style: outline
+        side: nor
+        label: Main domains of the Northern Alliance (approximate)
+        atoms: [JP-03, JP-04, JP-06, JP-07, JP-15]
+  - title: The siege of Aizu
+    date: October – November 1868
+    when: "1868-10-06"
+    borders: "1868-10-08"
+    countries: [jp]
+    body:
+      - On 6 October 1868 the imperial army under Itagaki Taisuke and Ijichi Masaharu broke through the alliance’s defences at Bonari Pass, on the mountain road from Nihonmatsu, and marched on Aizu-Wakamatsu faster than its defenders expected. On 8 October they entered the castle town. In the confusion a squad of the Byakkotai (“White Tiger Force”), teenage samurai sons, saw the town burning from the hill of Iimoriyama and, believing the castle lost, killed themselves; nineteen died. Many families of Aizu samurai also took their own lives rather than be captured, and women of Aizu, among them Nakano Takeko, fought and died with the men.
+      - The castle, Tsuruga-jō, held out for a month under bombardment by imperial artillery. One by one the other members of the alliance gave up. Yonezawa submitted in October and Sendai at the end of October, and Aizu’s lord Matsudaira Katamori surrendered on 6 November 1868. Aizu lost about 3,000 dead. The domain was abolished, and in 1869 its samurai were resettled in a small new domain at Tonami in the cold and barren far north of Honshu. Shōnai, the last of the alliance, surrendered a few days after Aizu.
+    facts:
+      - [Bonari Pass, "6 October 1868"]
+      - [Imperial army enters Aizu-Wakamatsu, "8 October 1868"]
+      - [Aizu surrenders, "6 November 1868"]
+      - [Aizu dead, "about 3,000"]
+    markers:
+      - kind: battle
+        side: imp
+        name: Bonari Pass
+        date: 6 October 1868
+        text: The imperial army forced the pass against Aizu and allied troops and the shogunate volunteers of Ōtori Keisuke.
+        lonlat: [140.244, 37.595]
+      - kind: event
+        side: nor
+        name: Iimoriyama
+        date: 8 October 1868
+        text: Nineteen boys of the Byakkotai killed themselves here, believing the castle had fallen.
+        lonlat: [139.956, 37.504]
+        lp: t
+      - kind: siege
+        side: imp
+        name: Aizu-Wakamatsu (Tsuruga Castle)
+        date: 8 October – 6 November 1868
+        text: The castle held out for a month under bombardment before Matsudaira Katamori surrendered.
+        lonlat: [139.930, 37.488]
+        lp: b
+      - kind: treaty
+        side: imp
+        name: Sendai
+        date: late October 1868
+        text: The largest domain of the alliance surrendered to the imperial army.
+        lonlat: [140.856, 38.252]
+      - kind: taken
+        side: imp
+        name: Tsuruoka (Shōnai)
+        date: November 1868
+        text: The Shōnai domain, undefeated in its campaign in Akita, surrendered after Aizu.
+        lonlat: [139.824, 38.728]
+        lp: l
+    arrows:
+      - side: imp
+        label: Itagaki Taisuke
+        phase: 1
+        via: [[140.428, 37.600], [140.330, 37.600], [140.244, 37.595]]
+      - side: imp
+        phase: 2
+        via: [[140.244, 37.595], [140.100, 37.560], [139.960, 37.500]]
+    areas:
+      - style: front
+        side: imp
+        label: Imperial siege lines around Wakamatsu
+        line: [[139.900, 37.510], [139.960, 37.505], [139.965, 37.470], [139.905, 37.465]]
+  - title: Enomoto’s fleet and the Republic of Ezo
+    date: October 1868 – January 1869
+    when: "1868-10-04"
+    borders: "1869-01-27"
+    countries: [jp, fr]
+    body:
+      - The shogunate’s navy had not been handed over with Edo. On 4 October 1868 its commander Enomoto Takeaki sailed from Shinagawa with eight ships, about 2,000 men and some of the French military advisers, among them Captain Jules Brunet, who had resigned to join him. The fleet lost two ships in a storm, gathered at Sendai, took on board the remnants of the shogunate and alliance troops, including Ōtori Keisuke and the Shinsengumi vice-commander Hijikata Toshizō, and sailed for Ezo, the northern island, which Enomoto proposed to develop as a home for the Tokugawa retainers.
+      - The fleet landed some 3,000 men at Washinoki on 3 December. They took Goryōkaku, the new Western-style star fort at Hakodate, a few days later, and on 18 December Hijikata took Matsumae Castle from the Matsumae domain, which had sided with the court. The flagship Kaiyō Maru, the most powerful warship in Japan, was wrecked in a storm at Esashi on 28 December. On 27 January 1869 Enomoto’s followers elected him president (sōsai) of what foreigners called the Republic of Ezo. Its government asked the court to let it hold Ezo for the Tokugawa retainers; the court refused.
+    facts:
+      - [Enomoto’s fleet leaves Shinagawa, "4 October 1868"]
+      - [Landing at Washinoki, "3 December 1868"]
+      - [Matsumae taken, "18 December 1868"]
+      - [Kaiyō Maru wrecked, "28 December 1868"]
+      - [Enomoto elected president, "27 January 1869"]
+    markers:
+      - kind: event
+        side: ezo
+        name: Washinoki
+        date: 3 December 1868
+        text: Enomoto’s troops landed here and marched on Hakodate.
+        lonlat: [140.539, 42.115]
+      - kind: capital
+        side: ezo
+        name: Goryōkaku
+        date: December 1868
+        text: The star-shaped fort of the Hakodate magistracy, occupied by Enomoto’s troops and seat of the Ezo government.
+        lonlat: [140.757, 41.797]
+      - kind: taken
+        side: ezo
+        name: Matsumae Castle
+        date: 18 December 1868
+        text: Taken by Hijikata Toshizō from the Matsumae domain, whose lord fled to the mainland.
+        lonlat: [140.108, 41.430]
+        lp: l
+      - kind: event
+        side: ezo
+        name: Esashi
+        date: 28 December 1868
+        text: The Kaiyō Maru, the flagship of Enomoto’s fleet, ran aground in a storm and was lost.
+        lonlat: [140.122, 41.868]
+        lp: l
+    arrows:
+      - side: ezo
+        label: Enomoto’s fleet
+        phase: 1
+        via: [[139.760, 35.600], [140.900, 35.300], [141.700, 37.000], [141.200, 38.250]]
+      - side: ezo
+        phase: 2
+        via: [[141.300, 38.300], [142.200, 39.500], [141.700, 41.400], [140.560, 42.100]]
+      - side: ezo
+        phase: 3
+        via: [[140.539, 42.100], [140.650, 41.950], [140.750, 41.810]]
+      - side: ezo
+        label: Hijikata Toshizō
+        phase: 4
+        via: [[140.740, 41.790], [140.500, 41.700], [140.300, 41.500], [140.120, 41.440]]
+    areas:
+      - style: occupied
+        side: ezo
+        label: Held by the Republic of Ezo
+        atoms: [JP-01~oshima]
+  - title: Miyako Bay and Hakodate
+    date: March – June 1869
+    when: "1869-03-09"
+    borders: "1869-06-27"
+    countries: [jp, fr]
+    body:
+      - In March 1869 the imperial fleet sailed north, led by the ironclad Kōtetsu, which the United States had withheld during the war and then delivered to the new government. When it put into Miyako Bay on the Iwate coast, Enomoto sent the warship Kaiten with Hijikata Toshizō and a boarding party to seize it by surprise on 6 May. The Kaiten came alongside, but its boarders were cut down by the Kōtetsu’s Gatling gun and the attack failed.
+      - On 20 May about 1,500 imperial troops landed at Otobe on the west coast of the Oshima peninsula, followed by more, until about 7,000 were ashore. They advanced on Hakodate by three roads; Hijikata held the pass at Futamata for weeks, but Matsumae fell and the defenders were driven back. In Hakodate Bay the two fleets fought for several weeks, and the Ezo navy was destroyed. The French advisers escaped on a French warship. On 20 June the imperial army launched its general attack on Hakodate, and Hijikata was killed in the fighting near the Benten battery. Enomoto surrendered Goryōkaku to Kuroda Kiyotaka on 27 June 1869.
+      - The new government pardoned and later employed many of its enemies; Enomoto himself became a minister. Ezo was renamed Hokkaido in 1869 and opened to Japanese settlement. In 1869 the daimyo returned their registers of land and people to the emperor, and in 1871 the domains were abolished and replaced by prefectures.
+    facts:
+      - [Battle of Miyako Bay, "6 May 1869"]
+      - [Imperial landing at Otobe, "20 May 1869"]
+      - [General attack on Hakodate, "20 June 1869"]
+      - [Surrender of Goryōkaku, "27 June 1869"]
+      - [Losses at Hakodate, "imperial about 770 killed and wounded, Ezo about 1,700 killed and wounded and 1,300 captured"]
+    markers:
+      - kind: naval
+        side: imp
+        name: Miyako Bay
+        date: 6 May 1869
+        text: The Kaiten’s attempt to board and seize the ironclad Kōtetsu was beaten off by its Gatling gun.
+        lonlat: [141.962, 39.635]
+      - kind: event
+        side: imp
+        name: Otobe
+        date: 20 May 1869
+        text: The imperial army landed here and advanced on Hakodate.
+        lonlat: [140.136, 41.968]
+        lp: l
+      - kind: battle
+        side: imp
+        name: Benten battery
+        date: 20 June 1869
+        text: Hijikata Toshizō was killed in the fighting near this harbour fort.
+        lonlat: [140.704, 41.774]
+        lp: l
+      - kind: treaty
+        side: imp
+        name: Goryōkaku
+        date: 27 June 1869
+        text: Enomoto Takeaki surrendered the fort to Kuroda Kiyotaka, ending the war.
+        lonlat: [140.757, 41.797]
+    arrows:
+      - side: imp
+        label: Imperial fleet
+        phase: 1
+        via: [[139.760, 35.600], [140.900, 35.300], [141.900, 37.500], [142.050, 39.600]]
+      - side: ezo
+        label: Kaiten
+        phase: 2
+        via: [[140.720, 41.770], [141.400, 41.500], [142.200, 40.300], [141.980, 39.640]]
+      - side: imp
+        phase: 3
+        via: [[141.950, 39.700], [141.900, 41.000], [140.600, 41.300], [140.130, 41.960]]
+      - side: imp
+        phase: 4
+        via: [[140.136, 41.968], [140.400, 41.900], [140.600, 41.830], [140.740, 41.800]]
+    areas:
+      - style: occupied
+        side: ezo
+        label: Held by the Republic of Ezo until June 1869
+        atoms: [JP-01~oshima]

@@ -1,0 +1,226 @@
+id: lao-rebellion
+name: Lao rebellion (Anouvong’s war)
+start: "1826-12"
+end: "1828-12"
+tier: B
+summary: "A war between King Anouvong of Vientiane and Siam, to which Vientiane and Champasak had been tributary since 1779. Angered by Siamese demands on the Lao of the Khorat plateau, and believing that Siam was about to be attacked by Britain, Anouvong sent his armies across the Mekong in the winter of 1826–1827. They took Nakhon Ratchasima and came within three days’ march of Bangkok, and began to move the Lao population of the plateau back across the river. Siam struck back with three armies: the Lao were beaten at Nong Bua Lamphu in May 1827, the Siamese took Vientiane, and Anouvong fled to Vietnam. When he returned with a small force in August 1828, the Siamese came back, razed Vientiane and carried off its people. Anouvong was handed over to them by the ruler of Muang Phuan and died a prisoner in Bangkok. The kingdom of Vientiane was abolished, and in the following decades well over 100,000 Lao were moved from the left bank of the Mekong to the Khorat plateau and central Siam."
+countries: [la, th, vn]
+sides:
+  - id: vte
+    name: Kingdom of Vientiane (Anouvong)
+    polities: [vientiane]
+    ink: olive
+    moves: Lao moves
+    success: Lao success
+  - id: cps
+    name: Kingdom of Champasak (Chao Nyo)
+    polities: [champasak]
+    ink: orange
+    moves: Champasak moves
+    success: Champasak success
+  - id: siam
+    name: Siam
+    polities: [thailand]
+    ink: purple
+    moves: Siamese moves
+    success: Siamese success
+notes:
+  - Thai chronicles call the war the rebellion of Chao Anu (Kabot Chao Anu); Lao histories treat it as a war of independence from Siam. Both traditions are coloured by later national history, and the numbers of soldiers, dead and deported people in them are uncertain.
+  - The Thai year then began in April, so events of early 1827 are dated 1826 (2369 in the Buddhist Era) in Thai sources. The dates here are the Gregorian equivalents given in the English sources cited.
+  - Anouvong is also called Chao Anou or Anu. Nakhon Ratchasima is also called Khorat.
+sources:
+  - title: Lao rebellion (1826–1828) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Lao_rebellion_(1826%E2%80%931828)
+  - title: Anouvong (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Anouvong
+  - title: Thao Suranari (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Thao_Suranari
+  - title: Kingdom of Vientiane (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kingdom_of_Vientiane
+  - title: Muang Phuan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Muang_Phuan
+  - title: Wat Si Saket (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Wat_Si_Saket
+  - title: Laos, history (Britannica)
+    url: https://www.britannica.com/place/Laos/History
+steps:
+  - title: Anouvong crosses the Mekong
+    date: December 1826 – March 1827
+    when: "1827-01"
+    borders: "1827-01-15"
+    countries: [la, th]
+    body:
+      - Anouvong had grown up at the Siamese court as a hostage after Siam took Vientiane in 1779 and carried off the Emerald Buddha, and he had fought in Siam’s wars against Burma before Bangkok made him king of Vientiane in 1805. His son Nyo had ruled Champasak since 1819. By the 1820s the Lao had many grievances. Siam was tattooing men on the Khorat plateau to register them for labour and military service, and Anouvong was humiliated at the funeral of King Rama II in Bangkok in 1825. The First Anglo-Burmese War and the arrival of a British envoy in Bangkok persuaded him that Siam might soon face a British attack.
+      - In December 1826 a Lao force under his son Prince Tissa took Kalasin, and in January 1827 three armies crossed the Mekong. Anouvong took Nakhon Ratchasima without a fight while its governor was away, his son Ratsavong Ngau pushed on as far as Saraburi, three days’ march from Bangkok, and Chao Nyo led the army of Champasak against Ubon. The aim, as far as it can be read from the sources, was to bring the Lao families of the plateau back to the left bank of the Mekong; Lao armies were never more than about 25,000 men.
+      - The best-known episode of the war is told in Thai sources. Families taken from Nakhon Ratchasima were being marched north when, in March 1827, they turned on their Lao guards at Thung Samrit near Phimai and escaped. Thai tradition credits the rising to Lady Mo (Khunying Mo), wife of the deputy governor, who is said to have armed the captives; Rama III gave her the title Thao Suranari. Accounts of what she did vary, and historians have pointed out that the story was much embellished in the 1930s, when her statue was raised in Nakhon Ratchasima and she became a symbol of Thai nationalism; Lao chronicles tell the fight differently.
+    facts:
+      - [Kalasin taken, "December 1826"]
+      - [Nakhon Ratchasima taken, "mid-January 1827"]
+      - [Lao armies, "at most about 25,000 men"]
+      - [Thung Samrit, "March 1827"]
+    markers:
+      - kind: capital
+        side: vte
+        name: Vientiane
+        date: 1826–1827
+        text: Anouvong’s capital, from which the main army marched in January 1827.
+        lonlat: [102.610, 17.966]
+      - kind: taken
+        side: vte
+        name: Kalasin
+        date: December 1826
+        text: Taken by Prince Tissa; its governor, loyal to Siam, was executed.
+        lonlat: [103.507, 16.433]
+      - kind: taken
+        side: vte
+        name: Nakhon Ratchasima (Khorat)
+        date: January 1827
+        text: Taken by Anouvong without resistance while its governor was away. He stayed here about five weeks.
+        lonlat: [102.098, 14.973]
+        lp: l
+      - kind: event
+        side: vte
+        name: Saraburi
+        date: early 1827
+        text: The farthest advance of the Lao, under Ratsavong Ngau, about three days’ march from Bangkok.
+        lonlat: [100.910, 14.530]
+        lp: l
+      - kind: battle
+        side: siam
+        name: Thung Samrit
+        date: March 1827
+        text: Here, by the Thai account, the families taken from Khorat rose against their Lao guards and escaped. Thai tradition credits Lady Mo (Thao Suranari) and the village woman Bunluea.
+        lonlat: [102.385, 15.211]
+    arrows:
+      - side: vte
+        label: Anouvong
+        phase: 1
+        via: [[102.600, 17.940], [102.780, 17.400], [102.830, 16.430], [102.400, 15.600], [102.130, 15.020]]
+      - side: vte
+        label: Prince Tissa
+        phase: 1
+        via: [[102.750, 17.900], [103.300, 17.300], [103.500, 16.470]]
+      - side: cps
+        label: Chao Nyo
+        phase: 1
+        via: [[105.870, 14.900], [105.500, 15.100], [104.900, 15.220]]
+      - side: vte
+        label: Ratsavong Ngau
+        phase: 2
+        via: [[102.060, 14.960], [101.600, 14.700], [101.200, 14.580], [100.960, 14.540]]
+      - side: siam
+        phase: 3
+        via: [[100.520, 13.800], [100.880, 14.400], [101.500, 14.700], [102.050, 14.950]]
+  - title: Nong Bua Lamphu and the fall of Vientiane
+    date: March – May 1827
+    when: "1827-05"
+    borders: "1827-05-26"
+    countries: [la, th, vn]
+    body:
+      - Rama III raised three armies. The main one, under the Front Palace (the viceroy, Maha Sakdi Polsep), marched by Saraburi and Khorat towards Vientiane; a second, under Prince Surinthontherak with Phraya Ratchasuphawadi (later Chaophraya Bodindecha), came by Prachinburi and the passes into the plateau; a third went north to Lom Sak to cut off the Lao vanguard. Anouvong fell back across the plateau, taking thousands of families with him.
+      - The Lao made their stand at Nong Bua Lamphu, a fort on the road to Vientiane held by Phaya Narin with about 2,300 men. The Siamese arrived on 3 May 1827 and stormed it on 6 May; Phaya Narin was captured and executed. Other Siamese columns beat Ratsavong Ngau near Loei and took the Khao San pass. Anouvong abandoned his capital, and the Siamese occupied Vientiane on 26 May. They sacked the city and levelled its walls, but left most of its monasteries standing.
+      - Anouvong escaped over the mountains into Vietnam, where the governor of Nghệ An received him at the end of May. In the south Bodindecha took Champasak; Chao Nyo fled into the hills, was caught by villagers and sent to Bangkok. Siam put Bodindecha in charge of Vientiane, Champasak and the Khorat plateau, and began moving people from the left bank of the Mekong to the right.
+    facts:
+      - [Battle of Nong Bua Lamphu, "3–6 May 1827, Siamese victory"]
+      - [Vientiane occupied, "26 May 1827"]
+      - [Anouvong in Vietnam, "end of May 1827"]
+    markers:
+      - kind: siege
+        side: siam
+        name: Nong Bua Lamphu
+        date: 3–6 May 1827
+        text: The Lao fort guarding the road to Vientiane, stormed by the Front Palace’s army. Its commander, Phaya Narin, was captured and executed.
+        lonlat: [102.430, 17.204]
+      - kind: taken
+        side: siam
+        name: Vientiane
+        date: 26 May 1827
+        text: Occupied after Anouvong’s flight. The walls were levelled and the city sacked, but most monasteries were spared.
+        lonlat: [102.610, 17.966]
+      - kind: taken
+        side: siam
+        name: Champasak
+        date: "1827"
+        text: Taken by Bodindecha’s army. Chao Nyo was captured in the hills and sent to Bangkok.
+        lonlat: [105.870, 14.890]
+      - kind: event
+        side: vte
+        name: Nghệ An
+        date: end of May 1827
+        text: Anouvong crossed into Vietnam and was received by the governor of Nghệ An province.
+        lonlat: [105.180, 19.320]
+        lp: l
+    arrows:
+      - side: siam
+        label: Front Palace
+        phase: 1
+        via: [[102.100, 15.000], [102.500, 15.900], [102.700, 16.700], [102.450, 17.180]]
+      - side: siam
+        phase: 2
+        via: [[102.430, 17.230], [102.550, 17.600], [102.610, 17.940]]
+      - side: siam
+        label: Bodindecha
+        phase: 2
+        via: [[104.860, 15.240], [105.400, 15.050], [105.840, 14.910]]
+      - side: vte
+        label: Anouvong’s flight
+        phase: 2
+        via: [[102.620, 17.980], [103.600, 18.400], [104.500, 18.900], [105.150, 19.290]]
+  - title: The destruction of Vientiane
+    date: August 1828 – 1829
+    when: "1828-08"
+    borders: "1828-12-01"
+    countries: [la, th, vn]
+    body:
+      - In August 1828 Anouvong came back to Vientiane with Ratsavong Ngau and about 1,000 followers, escorted by some 80–100 Vietnamese officials; on 1 August they re-entered the city and, by Siamese accounts, killed the Siamese soldiers stationed there. Bodindecha arrived opposite the city with 3,000 men the next day. Anouvong fled again, and Ratsavong Ngau was wounded in a fight at Bok Wan near Nong Khai in October. Rama III now ordered the destruction of Vientiane. The city was burned and razed, and its people were taken across the river; of its temples only Wat Si Saket, built by Anouvong in 1819–1824, is said to have survived largely intact. The Phra Bang image was carried off to Bangkok.
+      - Anouvong made for Muang Phuan (Xieng Khouang), whose ruler Chao Noi handed him over to the Siamese, by some accounts after betraying him. He was taken to Bangkok with members of his family, kept in an iron cage and exhibited, and died there soon afterwards; sources give 1828 or 1829. The kingdom of Vientiane ceased to exist. Minh Mạng, who regarded Muang Phuan as Vietnam’s tributary, summoned Chao Noi to Huế in 1831 and had him executed, and in 1832 annexed his principality as the prefecture of Trấn Ninh.
+      - Over the next three decades Siam moved at least 100,000 people from the left bank of the Mekong to the right, and the number of Siamese-administered towns (mueang) on the Khorat plateau rose from 33 in 1826 to 54 in 1840. The forced migrations are a main reason why far more ethnic Lao live in north-eastern Thailand today than in Laos. Rivalry over the Lao lands and Cambodia led to war between Siam and Vietnam in 1833.
+    facts:
+      - [Anouvong back in Vientiane, "1 August 1828"]
+      - [Bok Wan, "18 October 1828"]
+      - [Vientiane razed, "late 1828"]
+      - [People moved from the left bank, "at least 100,000 over three decades"]
+    markers:
+      - kind: taken
+        side: siam
+        name: Vientiane
+        date: late 1828
+        text: Retaken by Bodindecha and destroyed on Rama III’s orders. Its people were deported across the Mekong.
+        lonlat: [102.610, 17.966]
+      - kind: battle
+        side: siam
+        name: Bok Wan (Nong Khai)
+        date: 18 October 1828
+        text: Ratsavong Ngau was wounded here in a fight with Bodindecha’s troops but escaped.
+        lonlat: [102.740, 17.880]
+        lp: b
+      - kind: event
+        side: siam
+        name: Muang Phuan (Xieng Khouang)
+        date: late 1828
+        text: Anouvong fled here. Its ruler, Chao Noi, handed him over to the Siamese.
+        lonlat: [103.360, 19.330]
+      - kind: event
+        side: siam
+        name: Bangkok
+        date: 1828–1829
+        text: Anouvong was brought here and exhibited in a cage, and died in captivity.
+        lonlat: [100.500, 13.750]
+        lp: l
+    arrows:
+      - side: vte
+        label: Anouvong’s return
+        phase: 1
+        via: [[105.150, 19.290], [104.400, 18.800], [103.400, 18.300], [102.640, 17.990]]
+      - side: siam
+        label: Bodindecha
+        phase: 1
+        via: [[102.430, 17.230], [102.700, 17.700], [102.720, 17.890]]
+      - side: vte
+        label: Anouvong’s flight
+        phase: 2
+        via: [[102.620, 18.000], [102.900, 18.600], [103.340, 19.300]]
+      - side: siam
+        label: Deportations
+        phase: 3
+        via: [[102.600, 17.940], [102.800, 17.000], [102.800, 16.300], [102.400, 15.500]]

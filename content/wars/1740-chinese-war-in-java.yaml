@@ -1,0 +1,226 @@
+id: chinese-war-in-java
+name: Batavia massacre and the Chinese War in Java
+start: "1740-10-07"
+end: "1743-11-11"
+tier: B
+summary: "The killing of the Chinese of Batavia by the Dutch East India Company (VOC) and its soldiers and auxiliaries in October 1740, and the war that followed across Central and East Java. Chinese sugar-mill workers around Batavia, threatened with deportation to Ceylon and hit by falling sugar prices, rose in early October 1740 and killed 50 Company soldiers. Rumours of a Chinese plot spread in the town, and from 9 to 22 October Company troops, sailors, militia and other townspeople killed the Chinese inside the walls; historians estimate at least 10,000 dead, and survivors at between 600 and about 3,400. Survivors under Khe Pandjang fled east, where the Chinese of the north coast rose under Singseh and were joined by Javanese lords and, from July 1741, by the court of Mataram under Pakubuwono II, which stormed the Company’s garrison at Kartasura. Semarang was besieged by about 3,500 Chinese and 20,000 Javanese, but Company reinforcements and Cakraningrat IV of Madura turned the tide. Pakubuwono II changed sides in 1742; the rebels proclaimed his nephew Raden Mas Garendi king and took Kartasura in June, until Cakraningrat retook it in December. By the treaty of November 1743 the restored Pakubuwono II ceded the north coast of Java, Madura and the east of the island to the Company, which never again faced a Javanese state it could not dominate."
+countries: [id, nl]
+sides:
+  - id: chi
+    name: Chinese of Java and their Javanese allies
+    polities: [chinese-fighters-java]
+    ink: red
+    moves: Chinese and Javanese rebel moves
+    success: Rebel success
+  - id: mat
+    name: Mataram (Pakubuwono II, on the rebel side in 1741)
+    polities: [mataram-sultanate]
+    ink: brown
+    moves: Mataram moves
+    success: Mataram success
+  - id: voc
+    name: Dutch East India Company and Madura
+    polities: [dutch-east-indies, madura]
+    ink: orange
+    moves: Company moves
+    success: Company success
+notes:
+  - The number killed in Batavia is uncertain. Most accounts estimate that about 10,000 Chinese were killed inside the walls in October 1740; estimates of survivors range from 600 (Johannes Theodorus Vermeulen) to 3,000 (A. R. T. Kemasang) and 3,431 (Benny G. Setiono). Between 600 and 700 Chinese houses were plundered and burned. In Indonesia the massacre is known as Geger Pacinan, the “Chinese tumult”.
+  - The Company’s board in the Netherlands blamed Governor-General Adriaan Valckenier, who was arrested in 1741, sentenced to death in 1744 and died in prison in 1751 while his appeal was pending. After the massacre the Chinese of Batavia were made to live outside the walls, in what became Glodok.
+  - Mataram changed sides twice, so it has its own colour here; Cakraningrat IV of Madura fought for the Company in the hope of a kingdom of his own in East Java, which he did not receive.
+sources:
+  - title: 1740 Batavia massacre (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1740_Batavia_massacre
+  - title: Java War (1741–1743) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Java_War_(1741%E2%80%931743)
+  - title: Pakubuwono II (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pakubuwono_II
+  - title: Adriaan Valckenier (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Adriaan_Valckenier
+  - title: "Indonesia: growth and impact of the Dutch East India Company (Britannica)"
+    url: https://www.britannica.com/place/Indonesia/Growth-and-impact-of-the-Dutch-East-India-Company
+steps:
+  - title: The massacre in Batavia
+    date: October 1740
+    when: "1740-10-09"
+    borders: "1740-10"
+    countries: [id, nl]
+    body:
+      - Chinese settlers had helped build Batavia from its founding, as artisans, traders and shopkeepers, and by the 1730s many thousands worked in the sugar mills of the countryside around the town. When sugar prices fell, the Company tried to limit their numbers by registration and deportation. In July 1740 Governor-General Adriaan Valckenier decreed that suspect Chinese could be deported to Ceylon, and rumours spread that the deportees were thrown overboard at sea. Unemployed mill workers armed themselves in the countryside, and on 7 October they killed 50 Company soldiers at Meester Cornelis and Tanah Abang. The next day the Company turned back a large band at the town gates, and a curfew was imposed on the Chinese within the walls.
+      - Rumours that the Chinese meant to kill or enslave the other inhabitants spread among Batavia’s Europeans, enslaved people and Asian soldiers. On 9 October Chinese houses along the river were set on fire, and from about five in the afternoon Company troops fired cannon into the Chinese quarter. Over the following days soldiers, sailors, militia and gangs of other townspeople killed Chinese in their houses and in the streets; on 10 October Chinese patients were dragged from the hospital and killed, and on 13 October the council offered two ducats for every Chinese head brought in. The killing inside the walls was ordered to stop on 22 October. Most accounts estimate that about 10,000 Chinese were killed, and estimates of survivors range from 600 to about 3,400.
+      - Outside the walls the Chinese fought on into late November from fortified sugar mills such as Salapadjang, until Company cavalry drove them out. Survivors led by Khe Pandjang, blocked from Banten by its sultan’s troops, set out east along the coast towards Semarang.
+    facts:
+      - [Company soldiers killed, "50, on 7 October 1740"]
+      - [Massacre, "9–22 October 1740"]
+      - [Chinese killed in Batavia, "about 10,000 (most estimates)"]
+      - [Survivors, "estimates range from 600 to 3,431"]
+    markers:
+      - kind: toll
+        side: voc
+        name: Batavia
+        date: 9–22 October 1740
+        text: Company troops, militia and gangs of townspeople killed the Chinese inside the walls; most accounts estimate about 10,000 dead.
+        lonlat: [106.812, -6.135]
+        lp: t
+      - kind: battle
+        side: chi
+        name: Meester Cornelis
+        date: 7 October 1740
+        text: Armed Chinese mill workers killed Company soldiers here and at Tanah Abang, 50 in all.
+        lonlat: [106.870, -6.215]
+        lp: r
+      - kind: battle
+        side: voc
+        name: Tangerang
+        date: October – November 1740
+        text: Chinese fighters held out in the sugar-mill country west and south of Batavia until Company cavalry drove them out in late November.
+        lonlat: [106.632, -6.177]
+        lp: b
+    arrows:
+      - side: chi
+        label: Khe Pandjang’s survivors
+        phase: 1
+        via: [[106.95, -6.25], [107.70, -6.40], [108.60, -6.75], [109.60, -6.90], [110.35, -7.00]]
+  - title: The rising on the north coast and the siege of Semarang
+    date: "1741"
+    when: "1741-07"
+    borders: "1741-08"
+    countries: [id, nl]
+    body:
+      - On 1 February 1741 a band of Chinese killed a Company corporal at Pati, and the Chinese of Demak and Grobogan gathered and chose a leader of their own, Singseh, whom they called emperor. The court of Mataram, at Kartasura, debated for months whether to save the Company or join the rebels. Pakubuwono II secretly encouraged attacks on the Company while his regents staged sham battles with the Chinese to deceive it. The Company’s commander at Semarang, Bartholomeus Visscher, had fewer than 300 fit soldiers and broke down under the strain.
+      - In late May the Chinese attacked the Company posts at Juwana and Rembang, and in June they and their Javanese allies besieged Semarang, the Company’s headquarters on the north coast. Rembang fell on 27 July and Jepara on 31 July. On 20 July Pakubuwono II’s soldiers, pretending to help defend the Company’s garrison at Kartasura, opened fire on it; the garrison held out for three weeks, then surrendered, and its commander was killed.
+      - Cakraningrat IV of Madura, estranged from the Mataram court, offered the Company his alliance in return for a kingdom of his own, and his troops cleared East Java of the rebels, killing the Chinese they found. At Semarang the Company built up its garrison with reinforcements by sea to about 3,400 men, against about 3,500 Chinese and 20,000 Javanese with 30 cannon by November. In late 1741 Company firepower scattered Pakubuwono II’s troops, and the siege was broken.
+    facts:
+      - [First killing, "1 February 1741, at Pati"]
+      - [Kartasura garrison attacked, "20 July 1741"]
+      - [Besiegers of Semarang, "about 3,500 Chinese and 20,000 Javanese (November 1741)"]
+      - [Defenders, "about 3,400"]
+    markers:
+      - kind: siege
+        side: chi
+        name: Semarang
+        date: June – December 1741
+        text: The Company’s headquarters on the north coast, besieged by the Chinese and Javanese until reinforcements broke the siege.
+        lonlat: [110.423, -6.990]
+        lp: t
+      - kind: event
+        side: chi
+        name: Pati
+        date: 1 February 1741
+        text: The first killing of the war, of a Company corporal in his house.
+        lonlat: [111.040, -6.753]
+        lp: b
+      - kind: taken
+        side: chi
+        name: Rembang
+        date: 27 July 1741
+        text: The Company post fell to the Chinese after an attack in May on it and on Juwana.
+        lonlat: [111.349, -6.706]
+        lp: t
+      - kind: taken
+        side: chi
+        name: Jepara
+        date: 31 July 1741
+        text: Taken by the Chinese and their Javanese allies.
+        lonlat: [110.667, -6.590]
+        lp: t
+      - kind: taken
+        side: mat
+        name: Kartasura
+        date: 20 July – August 1741
+        text: Pakubuwono II’s soldiers turned on the Company garrison beside the palace, which surrendered after three weeks.
+        lonlat: [110.741, -7.552]
+        lp: b
+      - kind: event
+        side: voc
+        name: Madura (Cakraningrat IV)
+        date: "1741"
+        text: Cakraningrat IV broke with Mataram, allied with the Company and sent his troops into East Java.
+        lonlat: [113.251, -7.196]
+        lp: t
+    arrows:
+      - side: chi
+        label: Chinese along the coast
+        phase: 1
+        via: [[110.65, -6.90], [111.05, -6.76], [111.34, -6.72]]
+      - side: chi
+        label: To Semarang
+        phase: 2
+        via: [[110.92, -7.08], [110.65, -7.00], [110.45, -7.00]]
+      - side: voc
+        label: Cakraningrat’s troops
+        phase: 3
+        via: [[112.85, -7.00], [112.65, -7.18], [112.10, -7.30], [111.60, -7.40]]
+    areas:
+      - style: contested
+        side: chi
+        label: North coast of Central Java, fought over in 1741
+        atoms: ["ID-JT!"]
+  - title: The fall of Kartasura and the price of peace
+    date: 1742–1743
+    when: "1742-06-30"
+    borders: "1743-11-11"
+    countries: [id, nl]
+    body:
+      - With the rebels in retreat, Pakubuwono II made peace with the Company in early 1742 and gave hostages. The princes and Chinese leaders who fought on disowned him on 6 April and proclaimed his young nephew Raden Mas Garendi king, as Sunan Kuning. On 30 June 1742 Javanese rebels and Khe Pandjang’s Chinese took and plundered Kartasura; Pakubuwono II and the Company officers escaped on horseback across the Solo River and fled east to Ponorogo.
+      - On the coast, Company reinforcements from Sulawesi and Ambon retook Demak from Singseh and Raden Suryakusuma after several days of fighting, and Kudus surrendered without a fight on 28 August; the regents began to submit. In December 1742 Cakraningrat IV drove the rebels out of Kartasura. He wanted to keep the kingdom for himself, but the Company made him hand the palace back to Pakubuwono II. The last Chinese fighters, who had retreated towards Prambanan, surrendered by early 1743.
+      - The restored king paid dearly. By the treaty of November 1743 Pakubuwono II ceded to the Company the north coast of Java, Madura and the east of the island, agreed to a yearly tribute in rice and forbade Javanese to sail beyond Java, Madura and Bali. Because Kartasura had been desecrated, he built a new palace at Surakarta. Cakraningrat IV, left with Madura alone, rebelled in 1745 and was exiled to the Cape of Good Hope. The war left the dynasty divided and dependent on the Company, and led within a few years to the Third Javanese War of Succession.
+    facts:
+      - [Sunan Kuning proclaimed, "6 April 1742"]
+      - [Kartasura taken by the rebels, "30 June 1742"]
+      - [Kartasura retaken, "December 1742"]
+      - [Treaty, "November 1743"]
+    markers:
+      - kind: taken
+        side: chi
+        name: Kartasura
+        date: 30 June 1742
+        text: Taken and plundered by the rebels, who placed Sunan Kuning on the throne; retaken by Cakraningrat IV in December 1742.
+        lonlat: [110.741, -7.552]
+        lp: b
+      - kind: event
+        side: mat
+        name: Ponorogo
+        date: July – December 1742
+        text: Pakubuwono II took refuge here after the fall of his capital.
+        lonlat: [111.462, -7.871]
+        lp: b
+      - kind: taken
+        side: voc
+        name: Demak
+        date: July–August 1742
+        text: Retaken from Singseh’s rebels by Company troops from Sulawesi and Ambon.
+        lonlat: [110.639, -6.895]
+        lp: l
+      - kind: taken
+        side: voc
+        name: Kudus
+        date: 28 August 1742
+        text: Surrendered to the Company without a fight.
+        lonlat: [110.842, -6.808]
+        lp: t
+      - kind: capital
+        side: mat
+        name: Surakarta
+        date: "1745"
+        text: The new capital built by Pakubuwono II after the war.
+        lonlat: [110.827, -7.578]
+        lp: r
+    arrows:
+      - side: chi
+        label: Rebels take Kartasura
+        phase: 1
+        via: [[110.50, -7.33], [110.62, -7.45], [110.73, -7.54]]
+      - side: mat
+        label: Pakubuwono II’s flight
+        phase: 2
+        via: [[110.76, -7.56], [111.00, -7.70], [111.25, -7.80], [111.44, -7.86]]
+      - side: voc
+        label: Cakraningrat retakes Kartasura
+        phase: 3
+        via: [[112.70, -7.25], [112.00, -7.45], [111.30, -7.50], [110.76, -7.55]]
+    areas:
+      - style: gained
+        side: voc
+        label: Ceded to the Company, November 1743
+        atoms: ["ID-JT!", "ID-JI!", ID-JI~madura]

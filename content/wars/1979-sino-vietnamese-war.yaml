@@ -1,0 +1,140 @@
+id: sino-vietnamese-war
+name: Sino-Vietnamese War
+start: "1979-02-17"
+end: "1991-11"
+tier: B
+summary: "China’s invasion of northern Vietnam in February–March 1979 and the border war that followed until 1991. Relations between the former allies had broken down over Vietnam’s alliance with the Soviet Union, its treatment of its ethnic Chinese, who fled in their hundreds of thousands in 1978, disputed borders and islands, and above all its invasion of Cambodia, China’s ally. On 17 February 1979 some 200,000 Chinese troops attacked along the whole border to “teach Vietnam a lesson”, in Deng Xiaoping’s words. They took the provincial capitals of Lào Cai, Cao Bằng and Lạng Sơn against fierce resistance from Vietnamese border troops and militia, then announced their withdrawal on 5 March and left by 16 March, destroying what they could. Both sides claimed victory. Vietnam did not leave Cambodia, and for ten more years the two armies shelled each other and fought for hilltops along the border, most heavily at Vị Xuyên (Laoshan) in 1984–1989. Relations were normalised in November 1991."
+countries: [vn, cn]
+sides:
+  - id: cn
+    name: China
+    polities: [china]
+    ink: gold
+    moves: Chinese moves
+    success: Chinese success
+  - id: vn
+    name: Vietnam
+    polities: [vietnam]
+    ink: red
+    moves: Vietnamese moves
+    success: Vietnamese success
+notes:
+  - China called its attack a “self-defensive counter-attack” against Vietnamese border provocations; Vietnam calls the war the “war to defend the northern border” against Chinese aggression. For years the war was barely mentioned in either country’s official histories.
+  - "Casualty figures are disputed. China gave its losses in 1979 as about 6,900 dead and 15,000 wounded; Vietnam claimed 62,500 Chinese casualties. Chinese sources put Vietnamese losses at more than 40,000 dead; Vietnam gave about 10,000 civilian dead and has not published its military losses. Thousands more died in the border fighting of 1980–1989."
+sources:
+  - title: Sino-Vietnamese War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sino-Vietnamese_War
+  - title: Sino-Vietnamese conflicts (1979–1991) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sino-Vietnamese_conflicts_(1979%E2%80%931991)
+  - title: Battle of Laoshan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Laoshan
+  - title: Hoa people – Exodus of 1978–1979 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hoa_people
+  - title: Vietnam (Britannica)
+    url: https://www.britannica.com/place/Vietnam
+steps:
+  - title: The invasion of February 1979
+    date: 17 February – 16 March 1979
+    when: "1979-02-17"
+    borders: "1979-03-01"
+    countries: [vn, cn]
+    body:
+      - "Before dawn on 17 February 1979, after an artillery bombardment, Chinese armies crossed the border at some 26 points along its 1,300 km length, from Lai Châu in the west to Quảng Ninh on the coast. The main thrusts were aimed at the provincial capitals: Lào Cai, on the Red River opposite Hekou, fell within days, Cao Bằng after heavy fighting by the end of February, and Lạng Sơn, the gateway to Hanoi, after the battle for Đồng Đăng and its caves and a week of fighting in the town, on 5–6 March. Vietnam kept most of its regular divisions back to defend Hanoi or in Cambodia, and the Chinese, using the human-wave tactics and poor communications of an army that had not fought since Korea, lost heavily to border troops, militia and regional forces."
+      - "On 5 March, having taken Lạng Sơn and opened the road to the Red River delta, China announced that it had achieved its aims and would withdraw. As they left, its troops blew up bridges, railways, mines, factories and public buildings and drove off livestock; the last crossed back on 16 March. China said it had punished Vietnam and shown that the Soviet Union would not come to its aid; Vietnam said it had repelled the invasion with its local forces alone. Vietnam did not withdraw from Cambodia."
+    facts:
+      - [Chinese attack, "17 February 1979"]
+      - [Lạng Sơn taken, "5–6 March 1979"]
+      - [Chinese withdrawal completed, "16 March 1979"]
+    markers:
+      - kind: taken
+        side: cn
+        name: Lào Cai
+        date: February 1979
+        text: The border town opposite Hekou was taken in the first days, with the apatite mines of Cam Đường to the south.
+        lonlat: [103.970, 22.490]
+        lp: b
+      - kind: taken
+        side: cn
+        name: Cao Bằng
+        date: late February 1979
+        text: Taken after fighting in the mountains around the town; Vietnamese forces kept up attacks on the Chinese columns.
+        lonlat: [106.250, 22.670]
+      - kind: battle
+        side: cn
+        name: Đồng Đăng
+        date: 17–23 February 1979
+        text: The border town and its fortified caves held out for days against the main Chinese thrust towards Lạng Sơn.
+        lonlat: [106.700, 21.950]
+        lp: l
+      - kind: taken
+        side: cn
+        name: Lạng Sơn
+        date: 5–6 March 1979
+        text: Taken after a week of fighting in and around the town, which the Chinese largely destroyed before leaving.
+        lonlat: [106.760, 21.850]
+        lp: b
+      - kind: taken
+        side: cn
+        name: Phong Thổ
+        date: February 1979
+        text: The western front in Lai Châu province.
+        lonlat: [103.350, 22.530]
+        lp: l
+      - kind: capital
+        side: vn
+        name: Hanoi
+        date: 1979
+        text: Vietnam held most of its regular divisions here and in Cambodia; general mobilisation was ordered on 5 March.
+        lonlat: [105.850, 21.030]
+    arrows:
+      - side: cn
+        via: [[103.900, 22.700], [103.950, 22.560], [103.980, 22.480]]
+      - side: cn
+        via: [[103.500, 22.800], [103.400, 22.650], [103.350, 22.550]]
+      - side: cn
+        via: [[106.300, 23.100], [106.350, 22.850], [106.270, 22.700]]
+      - side: cn
+        via: [[106.750, 22.120], [106.700, 21.960], [106.760, 21.870]]
+    areas:
+      - style: contested
+        side: cn
+        label: Border provinces where Chinese troops took the main towns, February–March 1979
+        atoms: [VN-01, VN-02, VN-04, VN-09]
+  - title: The border war and normalisation
+    date: 1979–1991
+    when: "1984-04-28"
+    borders: "1984-07-12"
+    countries: [vn, cn]
+    body:
+      - "The border stayed a war zone for ten years. Chinese and Vietnamese troops shelled each other’s positions and fought for hilltops, at Fakashan and Koulin near Lạng Sơn in 1981 and most heavily in Vị Xuyên district of Hà Giang province, opposite Malipo in Yunnan, which the Chinese call Laoshan. On 28 April 1984 Chinese troops took Hill 1509 and the neighbouring heights there; a Vietnamese counter-attack on 12 July failed with heavy losses. Shelling and raids went on until 1989, and Vietnamese veterans remember the front as the “lime kiln of the century”. At sea, Chinese ships sank Vietnamese supply vessels at Johnson South Reef in the Spratly Islands on 14 March 1988, killing 64 Vietnamese sailors."
+      - "As the Soviet Union withdrew its support and Vietnamese troops left Cambodia in 1989, both governments sought a settlement. Vietnam’s party leader Đỗ Mười and prime minister Võ Văn Kiệt visited Beijing in November 1991, after the Paris agreements on Cambodia, and relations were normalised. A land border treaty followed on 30 December 1999, and the demarcation of the border was completed in 2008–2009. The dispute over the Paracel and Spratly islands in the South China Sea remains unresolved."
+    facts:
+      - [Battle for Vị Xuyên (Laoshan), "28 April 1984 – 1989"]
+      - [Johnson South Reef, "14 March 1988"]
+      - [Relations normalised, "November 1991"]
+      - [Land border treaty, "30 December 1999"]
+    markers:
+      - kind: battle
+        side: cn
+        name: Vị Xuyên (Laoshan)
+        date: 28 April 1984 – 1989
+        text: Chinese troops took Hill 1509 and the heights around it; years of fighting and shelling followed.
+        lonlat: [104.860, 22.930]
+        lp: l
+      - kind: event
+        side: vn
+        name: Hà Giang
+        date: 1984–1989
+        text: The provincial capital behind the Vị Xuyên front. Many of the Vietnamese soldiers killed there lie in the national cemetery of Vị Xuyên.
+        lonlat: [104.980, 22.820]
+      - kind: treaty
+        name: Friendship Pass
+        date: 1991–1999
+        text: The main crossing between Lạng Sơn and Pingxiang, near the hills fought over in 1981, reopened to trade after normalisation.
+        lonlat: [106.720, 22.020]
+        lp: r
+    arrows:
+      - side: cn
+        via: [[104.780, 23.100], [104.830, 23.000], [104.860, 22.940]]
+      - side: vn
+        via: [[104.980, 22.800], [104.930, 22.880], [104.880, 22.920]]

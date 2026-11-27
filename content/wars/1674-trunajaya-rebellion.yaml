@@ -1,0 +1,217 @@
+id: trunajaya-rebellion
+name: Trunajaya rebellion
+start: "1674"
+end: "1680-04"
+tier: B
+summary: "A rebellion against King Amangkurat I of Mataram, led by Trunajaya, a prince of Madura, and joined by Makassarese fighters who had left South Sulawesi after the Makassar War, by the spiritual lord of Giri and by Javanese nobles weary of the king’s cruelty. Raids on the north coast of Java from 1674 grew into open war: in 1676 a rebel army of about 9,000 crossed from Madura, routed the royal army at Gegodog near Tuban and took most of the north coast. In 1677 the Dutch East India Company (VOC), called in by Mataram, took Surabaya from Trunajaya, but the rebels took and plundered the royal capital, Plered; Amangkurat I died in flight, and his son Amangkurat II bought the Company’s help with sweeping concessions. Company troops, Bugis under Arung Palakka and Javanese levies took Trunajaya’s new capital, Kediri, in November 1678; Trunajaya surrendered in December 1679 and was stabbed to death by Amangkurat II in January 1680, and the last rebels at Giri were crushed in April. Amangkurat II built a new capital at Kartasura with a Company garrison beside his palace: Mataram survived, but the Company had become the arbiter of Javanese politics."
+countries: [id, nl]
+sides:
+  - id: tru
+    name: Trunajaya, the Makassarese of Karaeng Galesong and their allies
+    polities: [trunajaya]
+    ink: red
+    moves: Rebel moves
+    success: Rebel success
+  - id: mat
+    name: Mataram (Amangkurat I, then Amangkurat II)
+    polities: [mataram-sultanate]
+    ink: brown
+    moves: Mataram moves
+    success: Mataram success
+  - id: voc
+    name: Dutch East India Company, with Bugis and Ambonese troops
+    polities: [dutch-east-indies]
+    ink: orange
+    moves: Company moves
+    success: Company success
+notes:
+  - The Makassarese bands that joined Trunajaya were exiles who had refused the Treaty of Bungaya of 1667; the Dutch called them pirates. Their leader, Karaeng Galesong, was a son of Sultan Hasanuddin of Gowa and married Trunajaya’s daughter.
+  - The rebellion is known from VOC reports and from the Javanese chronicles (babad), which present Trunajaya’s rise as foretold. Many Javanese supported him in the expectation that the Mataram dynasty’s time had run out, and the crown prince had at first conspired with him against his own father.
+  - Amangkurat II’s brother Pangeran Puger held the ruined capital, Plered, as a rival king from 1677 until he submitted in 1681; he later reigned as Pakubuwono I.
+sources:
+  - title: Trunajaya rebellion (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Trunajaya_rebellion
+  - title: Trunajaya (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Trunajaya
+  - title: Amangkurat I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Amangkurat_I_of_Mataram
+  - title: Amangkurat II (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Amangkurat_II_of_Mataram
+  - title: Cornelis Speelman (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cornelis_Speelman
+  - title: Mataram Sultanate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mataram_Sultanate
+steps:
+  - title: Madura, the Makassarese and Gegodog
+    date: 1674–1676
+    when: "1676-10"
+    borders: "1676-10"
+    countries: [id]
+    body:
+      - Amangkurat I, who succeeded Sultan Agung in 1646, ruled by terror, killing rivals, Islamic teachers and even his own kin, and the crown prince was estranged from him. In 1670 the crown prince found an ally in Trunajaya, a prince of the Madurese royal house, who by 1671 had made himself master of Madura. Trunajaya joined forces with bands of Makassarese, exiles from the Makassar War who had settled at Demung on the east coast of Java and raided the north coast; the Dutch called them pirates. Their leader, Karaeng Galesong, married Trunajaya’s daughter. In 1675 they burned the coastal towns from Pajarakan to Surabaya and Gresik, and the lord of Giri, the most revered Islamic teacher of East Java, gave the rising his blessing. Trunajaya took the title Panembahan Maduretna.
+      - In September 1676 a rebel army of about 9,000, Madurese, Makassarese and Javanese, crossed from Madura to Java and took Surabaya. Mataram sent a much larger army under the crown prince, which met the rebels at Gegodog, east of Tuban, in October and was routed; the king’s uncle Pangeran Purbaya was killed and the crown prince fled home. By January 1677 the rebels held nearly every port on the north coast from Surabaya to Cirebon, except Jepara, where the Company held out.
+    facts:
+      - [Rebel army, "about 9,000 (1676)"]
+      - [Battle of Gegodog, "October 1676"]
+    markers:
+      - kind: capital
+        side: tru
+        name: Sampang
+        date: 1671–1676
+        text: Trunajaya’s seat on Madura, where he made himself master of the island.
+        lonlat: [113.251, -7.196]
+        lp: t
+      - kind: event
+        side: tru
+        name: Demung
+        date: 1674–1676
+        text: The settlement of the Makassarese exiles on the east coast of Java, from which they raided the north coast.
+        lonlat: [113.690, -7.734]
+        lp: b
+      - kind: battle
+        side: tru
+        name: Gegodog
+        date: October 1676
+        text: The royal army under the crown prince was routed by the rebels east of Tuban; Pangeran Purbaya was killed.
+        lonlat: [112.16, -6.89]
+        lp: t
+      - kind: taken
+        side: tru
+        name: Surabaya
+        date: "1676"
+        text: Taken by the rebels after they crossed from Madura; Trunajaya’s capital until May 1677.
+        lonlat: [112.738, -7.246]
+        lp: b
+      - kind: capital
+        side: mat
+        name: Plered
+        date: "1676"
+        text: The capital of Amangkurat I.
+        lonlat: [110.408, -7.866]
+        lp: b
+    arrows:
+      - side: tru
+        label: Crossing from Madura
+        phase: 1
+        via: [[113.10, -6.98], [112.85, -7.00], [112.75, -7.18]]
+      - side: mat
+        label: Royal army
+        phase: 1
+        via: [[110.42, -7.84], [110.95, -7.45], [111.60, -7.10], [112.10, -6.92]]
+      - side: tru
+        label: Rebels along the coast
+        phase: 2
+        via: [[112.20, -6.88], [111.40, -6.68], [110.90, -6.66], [110.42, -6.95], [108.60, -6.72]]
+    areas:
+      - style: occupied
+        side: tru
+        label: Held by Trunajaya and his allies, late 1676
+        atoms: [ID-JI~madura, "ID-JI!"]
+  - title: Surabaya, the fall of Plered and the Company’s price
+    date: "1677"
+    when: "1677-05"
+    borders: "1677-07"
+    countries: [id, nl]
+    body:
+      - Amangkurat I asked the Company for help, and in April 1677 Admiral Cornelis Speelman sailed for Surabaya with a fleet carrying European, Ambonese and Bugis troops. After talks failed, his men stormed Surabaya in May after hard fighting, taking 69 iron and 34 bronze guns. Company forces burned Trunajaya’s residence on Madura, and Trunajaya fled inland to Kediri, which he made his new capital.
+      - In the interior the rebels were winning. In June 1677 they took the royal capital, Plered, almost without a fight and plundered it, carrying off the treasury to Kediri. The sick king fled west with the crown prince and died at Tegal in July. The crown prince, now Amangkurat II, had no army and no treasury; his brother Pangeran Puger occupied the ruins of Plered and claimed the throne.
+      - Amangkurat II sailed to Jepara on Company ships and in September and October 1677 agreed to Speelman’s terms. The Company was to receive the revenues of all the north-coast ports and repayment of its war costs, Mataram would cede it the Priangan highlands south of Batavia and the town of Semarang, and non-Javanese in the kingdom would come under Company courts. In return the Company would restore him to his throne.
+    facts:
+      - [Surabaya stormed, "May 1677"]
+      - [Plered taken by the rebels, "June 1677"]
+      - [Death of Amangkurat I, "July 1677, near Tegal"]
+      - [Agreements at Jepara, "September–October 1677"]
+    markers:
+      - kind: taken
+        side: voc
+        name: Surabaya
+        date: May 1677
+        text: Stormed by Speelman’s troops; Trunajaya fled to Kediri.
+        lonlat: [112.738, -7.246]
+        lp: b
+      - kind: taken
+        side: tru
+        name: Plered
+        date: June 1677
+        text: The royal capital, taken and plundered by the rebels; they carried its treasury to Kediri.
+        lonlat: [110.408, -7.866]
+        lp: b
+      - kind: event
+        side: mat
+        name: Tegal
+        date: July 1677
+        text: Amangkurat I died here in flight and was buried at Tegalarum.
+        lonlat: [109.135, -6.931]
+        lp: b
+      - kind: treaty
+        side: voc
+        name: Jepara
+        date: September–October 1677
+        text: Amangkurat II promised the Company the revenues of the north coast, the Priangan, Semarang and its war costs in return for his restoration.
+        lonlat: [110.667, -6.590]
+        lp: t
+      - kind: capital
+        side: tru
+        name: Kediri
+        date: 1677–1678
+        text: Trunajaya’s capital after he lost Surabaya.
+        lonlat: [112.005, -7.811]
+        lp: b
+    arrows:
+      - side: voc
+        label: Speelman’s fleet
+        phase: 1
+        via: [[110.67, -6.50], [111.40, -6.55], [112.20, -6.80], [112.72, -7.15]]
+      - side: tru
+        label: Rebels to Plered
+        phase: 2
+        via: [[111.95, -7.80], [111.30, -7.75], [110.80, -7.80], [110.44, -7.86]]
+      - side: mat
+        label: Flight of the court
+        phase: 3
+        via: [[110.38, -7.85], [109.90, -7.55], [109.40, -7.15], [109.15, -6.95]]
+  - title: Kediri and the end of the rebellion
+    date: 1678–1680
+    when: "1678-11-25"
+    borders: "1679-12"
+    countries: [id, nl]
+    body:
+      - The restored king and the Company made slow progress at first; at the start of 1678 they held only a few towns on the central north coast. In September 1678 a combined army, more than 13,000 Javanese levies with about 1,750 Company troops and 1,500 Bugis under Arung Palakka, marched inland from the coast in three columns, gathering local lords as it went. On 25 November 1678 an assault led by Captain François Tack took Kediri, and Amangkurat II set up his court at Surabaya.
+      - Trunajaya escaped into the mountains of East Java. In 1679 Company and Bugis forces defeated his allies one by one. Raden Kajoran, a revered holy man who had backed him, was defeated at Mlambang near Pajang in September and executed after he surrendered, and Bugis under Arung Palakka drove the Makassarese from their stronghold at Keper in November. Isolated and starving, Trunajaya surrendered to the Company on 26 December 1679. In January 1680, during a ceremonial visit to the king at Payak, Amangkurat II and his courtiers stabbed him to death; the king claimed that Trunajaya had tried to kill him. In April 1680, after what the Company called the fiercest battle of the war, the lord of Giri was defeated and most of his family executed.
+      - Amangkurat II built a new capital at Kartasura in 1680, with a Company fort beside the palace, and drove Pangeran Puger from Plered; Puger submitted only in November 1681. The rebellion left Mataram heavily in debt and dependent on Company troops, and began the pattern of the Company backing Javanese kings and claimants in return for land and trade.
+    facts:
+      - [Army against Kediri, "about 16,000 (Mataram, Company and Bugis), 1678"]
+      - [Kediri taken, "25 November 1678"]
+      - [Trunajaya’s surrender, "26 December 1679"]
+      - [Giri taken, "April 1680"]
+    markers:
+      - kind: taken
+        side: voc
+        name: Kediri
+        date: 25 November 1678
+        text: Trunajaya’s capital, stormed by an assault force under Captain François Tack.
+        lonlat: [112.005, -7.811]
+        lp: b
+      - kind: taken
+        side: voc
+        name: Giri
+        date: April 1680
+        text: The seat of the lord of Giri, the rebellion’s spiritual patron, taken after what the Company called the fiercest battle of the war.
+        lonlat: [112.631, -7.169]
+        lp: t
+      - kind: capital
+        side: mat
+        name: Kartasura
+        date: "1680"
+        text: The new capital built by Amangkurat II, with a Company garrison beside the palace.
+        lonlat: [110.741, -7.552]
+        lp: t
+    arrows:
+      - side: voc
+        label: Columns to Kediri
+        phase: 1
+        via: [[110.67, -6.62], [111.10, -7.15], [111.55, -7.55], [111.98, -7.78]]
+      - side: mat
+        label: Javanese levies
+        phase: 1
+        via: [[110.75, -7.55], [111.30, -7.70], [111.95, -7.82]]

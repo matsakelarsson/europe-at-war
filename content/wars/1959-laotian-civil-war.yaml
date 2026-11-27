@@ -1,0 +1,203 @@
+id: laotian-civil-war
+name: Laotian Civil War
+start: "1959-05-23"
+end: "1975-12-02"
+tier: B
+summary: "The war between the Royal Lao Government and the communist Pathet Lao, a proxy front of the Vietnam War. Attempts to bring the Pathet Lao into the kingdom’s government and army broke down in 1959, and a neutralist coup by Captain Kong Le in 1960 led to a three-sided war in which the United States and Thailand backed the right-wing army and the Soviet Union and North Vietnam the Pathet Lao and the neutralists. The Geneva agreement of 1962 declared Laos neutral, but the fighting resumed within a year. North Vietnam kept its troops in the east of the country to guard the Ho Chi Minh trail, while the American Central Intelligence Agency waged a “secret war” with an army of Hmong and other highlanders under Vang Pao, based at Long Tieng. From 1964 to 1973 American aircraft dropped more than 2 million tonnes of bombs on Laos, making it, per person, the most heavily bombed country in history. After the ceasefire of 1973 the Pathet Lao took power step by step, and on 2 December 1975 they abolished the monarchy and proclaimed the Lao People’s Democratic Republic."
+countries: [la, vn, us, th]
+sides:
+  - id: rlg
+    name: Royal Lao Government, Vang Pao’s forces and the United States
+    polities: [laos, united-states, thailand]
+    ink: blue
+    moves: Royal Lao and American moves
+    success: Royal Lao and American success
+  - id: neu
+    name: Neutralists (Kong Le)
+    polities: [lao-neutralists]
+    ink: teal
+    moves: Neutralist moves
+    success: Neutralist success
+  - id: pl
+    name: Pathet Lao and North Vietnam
+    polities: [pathet-lao, north-vietnam]
+    ink: red
+    moves: Pathet Lao and North Vietnamese moves
+    success: Pathet Lao and North Vietnamese success
+notes:
+  - The neutralists changed sides. Kong Le’s forces fought alongside the Pathet Lao in 1960–1962; after the coalition of 1962 broke down, most of them joined the Royal Lao Government, while a pro-communist wing, the “patriotic neutralists” of Colonel Deuane Sunnalath, stayed with the Pathet Lao.
+  - The war was “secret” because the Geneva agreement of 1962 forbade foreign troops in Laos. North Vietnam denied that its army was there, and the United States hid its bombing and the CIA’s army from the American public until 1969–1970.
+  - Estimates of the war’s dead vary widely. The Royal Lao Army is thought to have lost some 15,000 killed; Hmong losses are put at tens of thousands; deaths in the Pathet Lao and North Vietnamese forces and among civilians killed by the bombing are not well known.
+sources:
+  - title: Laotian Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Laotian_Civil_War
+  - title: Laos – History (Britannica)
+    url: https://www.britannica.com/place/Laos/History
+  - title: "The Laos Crisis, 1960–1963 (Office of the Historian, US Department of State)"
+    url: https://history.state.gov/milestones/1961-1968/laos-crisis
+  - title: Battle of Vientiane (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Vientiane
+  - title: International Agreement on the Neutrality of Laos (Wikipedia)
+    url: https://en.wikipedia.org/wiki/International_Agreement_on_the_Neutrality_of_Laos
+  - title: Long Tieng (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Long_Tieng
+  - title: Battle of Lima Site 85 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Lima_Site_85
+  - title: Operation Barrel Roll (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Barrel_Roll
+  - title: "Secret War in Laos (Legacies of War)"
+    url: https://legaciesofwar.org/about-laos/secret-war-laos/
+  - title: Hmong people – Laos (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hmong_people#Laos
+steps:
+  - title: Coups and neutralists
+    date: 1959–1962
+    when: "1959-05-23"
+    borders: "1961-01-01"
+    countries: [la, vn, us, th]
+    body:
+      - "The Geneva conference of 1954 left the Pathet Lao, the communist movement led by Prince Souphanouvong and allied with the Viet Minh, in control of the north-eastern provinces of Phongsaly and Sam Neua. A coalition under Souvanna Phouma, Souphanouvong’s half-brother, brought them into the government in 1957, and in the elections of 1958 their party won 9 of 21 seats. American alarm brought a right-wing government, which dropped the Pathet Lao ministers. When the two Pathet Lao battalions were to be merged into the royal army in May 1959, one of them slipped away from the Plain of Jars to the Vietnamese border, and the war resumed; Souphanouvong, arrested, escaped in 1960."
+      - "On 9 August 1960 Captain Kong Le, a paratroop commander, seized Vientiane and called for a neutral Laos under Souvanna Phouma. General Phoumi Nosavan, backed by Thailand and the CIA, marched on the capital from Savannakhet and took it after a bombardment from 13 to 16 December that killed several hundred civilians. Kong Le retreated north and, with arms flown in by the Soviet Union, took the Plain of Jars at the turn of the year, allied with the Pathet Lao and North Vietnamese troops. The CIA began to arm Hmong villagers under Vang Pao, a royal army officer. After the royal army was routed at Nam Tha in May 1962, a fourteen-nation conference in Geneva declared Laos neutral on 23 July 1962 and called for foreign troops to leave, under a new coalition government."
+    facts:
+      - [Kong Le’s coup, "9 August 1960"]
+      - [Battle of Vientiane, "13–16 December 1960"]
+      - [Geneva agreement on the neutrality of Laos, "23 July 1962"]
+    markers:
+      - kind: battle
+        side: rlg
+        name: Vientiane
+        date: 13–16 December 1960
+        text: Phoumi Nosavan’s troops retook the capital from Kong Le’s paratroops after a bombardment that killed several hundred civilians.
+        lonlat: [102.600, 17.970]
+        lp: b
+      - kind: event
+        side: rlg
+        name: Savannakhet
+        date: 1960
+        text: Phoumi Nosavan’s base, from which he marched on Vientiane with Thai and American support.
+        lonlat: [104.750, 16.560]
+      - kind: taken
+        side: neu
+        name: Plain of Jars
+        date: December 1960 – January 1961
+        text: Taken by Kong Le’s neutralists and the Pathet Lao, supplied by a Soviet airlift.
+        lonlat: [103.180, 19.460]
+      - kind: held
+        side: pl
+        name: Sam Neua
+        date: from 1954
+        text: The Pathet Lao’s main base, near the North Vietnamese border.
+        lonlat: [104.048, 20.415]
+      - kind: battle
+        side: pl
+        name: Nam Tha
+        date: May 1962
+        text: The royal garrison fled to the Mekong and into Thailand; the United States sent troops to Thailand in response.
+        lonlat: [101.400, 20.950]
+    arrows:
+      - side: rlg
+        label: Phoumi Nosavan
+        via: [[104.750, 16.560], [104.100, 17.300], [103.200, 17.800], [102.700, 17.950]]
+      - side: neu
+        label: Kong Le
+        via: [[102.600, 18.050], [102.450, 18.920], [102.800, 19.300], [103.100, 19.450]]
+    areas:
+      - style: occupied
+        side: pl
+        label: Held by the Pathet Lao and the neutralists in 1962, with much of the eastern border strip (approximate)
+        atoms: [LA-PH, LA-HO, LA-XI, LA-LM]
+  - title: The secret war and the bombing
+    date: 1963–1973
+    when: "1964-05-01"
+    borders: "1970-01-01"
+    countries: [la, vn, us, th]
+    body:
+      - "The coalition broke apart in 1963, and fighting resumed around the Plain of Jars, which the Pathet Lao and North Vietnamese took in May 1964. North Vietnam kept tens of thousands of troops in Laos, most of them along the Ho Chi Minh trail in the east. The United States answered with bombing: from 1964 to 1973 its aircraft, flying from Thailand, South Vietnam and carriers, flew more than 580,000 bombing missions over Laos, about one every eight minutes for nine years, and dropped over 2 million tonnes of bombs, including some 270 million cluster bomblets, of which up to a third failed to explode. Villagers in the Pathet Lao zones lived in caves and farmed at night; the Pathet Lao leadership ran its government from the caves of Vieng Xay. Unexploded bombs have killed or injured more than 20,000 people in Laos since the war."
+      - "On the ground the war followed the seasons: the North Vietnamese and the Pathet Lao attacked in the dry season and the royal forces in the wet. Vang Pao’s army of Hmong, Lao and other highlanders, paid and supplied by the CIA through Air America from its base at Long Tieng, and later reinforced by Thai “volunteers”, bore much of the fighting. On 10–11 March 1968 North Vietnamese commandos overran the secret American radar station at Phou Pha Thi (Lima Site 85), killing 11 or 12 American airmen. Vang Pao swept the Plain of Jars in 1969, but the North Vietnamese retook it in 1970 and in 1971–1972 attacked Long Tieng itself, which held. Hmong losses were so great that boys of thirteen were recruited."
+    facts:
+      - [American bombing of Laos, "1964–1973, over 2 million tonnes"]
+      - [Fall of Lima Site 85, "10–11 March 1968"]
+      - [Vang Pao’s offensive on the Plain of Jars, "August–September 1969"]
+    markers:
+      - kind: held
+        side: rlg
+        name: Long Tieng
+        date: 1962–1975
+        text: The CIA’s base and Vang Pao’s headquarters (Lima Site 20A), for a time one of the busiest airfields in the world; not marked on maps.
+        lonlat: [102.923, 19.108]
+        lp: l
+      - kind: taken
+        side: pl
+        name: Phou Pha Thi (Lima Site 85)
+        date: 10–11 March 1968
+        text: The radar station guiding American bombers to North Vietnam was taken by North Vietnamese commandos.
+        lonlat: [103.718, 20.445]
+      - kind: battle
+        name: Plain of Jars
+        date: 1964–1972
+        text: Changed hands several times. Vang Pao took it in 1969; the North Vietnamese retook it in February 1970.
+        lonlat: [103.180, 19.460]
+      - kind: capital
+        side: pl
+        name: Vieng Xay
+        date: 1964–1973
+        text: The Pathet Lao leadership lived and governed in hundreds of caves here, out of reach of the bombers.
+        lonlat: [104.230, 20.400]
+      - kind: air
+        side: rlg
+        name: Tchepone
+        date: 1965–1973
+        text: A junction of the Ho Chi Minh trail, one of the most heavily bombed places in Laos.
+        lonlat: [106.235, 16.690]
+        lp: l
+    arrows:
+      - side: rlg
+        label: Barrel Roll
+        via: [[102.790, 17.390], [103.000, 18.400], [103.200, 19.350]]
+      - side: rlg
+        label: Steel Tiger
+        via: [[104.870, 15.250], [105.600, 15.900], [106.150, 16.600]]
+      - side: pl
+        via: [[103.700, 19.700], [103.300, 19.400], [103.000, 19.150]]
+  - title: The ceasefire and 1975
+    date: 1973–1975
+    when: "1973-02-21"
+    borders: "1975-12-02"
+    countries: [la, th, us]
+    body:
+      - "A month after the Paris accords on Vietnam, the Vientiane agreement of 21 February 1973 brought a ceasefire in Laos, and in April 1974 a Provisional Government of National Union took office under Souvanna Phouma, with the Pathet Lao sharing the ministries. American bombing stopped, but North Vietnamese troops stayed. After the fall of Phnom Penh and Saigon in April 1975 the Pathet Lao took power without a battle: demonstrations drove right-wing ministers out, and on 14 May Vang Pao and some of his officers were flown out of Long Tieng by the CIA, leaving tens of thousands of Hmong to flee on foot. The Pathet Lao entered Vientiane, which they declared liberated on 23 August."
+      - "On 2 December 1975 King Savang Vatthana abdicated, and the Lao People’s Democratic Republic was proclaimed under Kaysone Phomvihane. Tens of thousands of former officials and officers were sent to “seminar” camps in the north-east, where many died; the king, the queen and the crown prince were taken to a camp in Houaphanh in 1977 and died there. Some 300,000 people, about a tenth of the population, fled across the Mekong to Thailand in the following years, among them most of the Hmong who had fought with Vang Pao, many of whom settled in the United States. Some Hmong fought on in the mountains for decades."
+    facts:
+      - [Vientiane ceasefire agreement, "21 February 1973"]
+      - [Vang Pao leaves Long Tieng, "14 May 1975"]
+      - [Lao People’s Democratic Republic proclaimed, "2 December 1975"]
+    markers:
+      - kind: capital
+        side: pl
+        name: Vientiane
+        date: 23 August – 2 December 1975
+        text: Taken over by the Pathet Lao without fighting; the monarchy was abolished here on 2 December.
+        lonlat: [102.600, 17.970]
+        lp: l
+      - kind: event
+        side: rlg
+        name: Long Tieng
+        date: 14 May 1975
+        text: Vang Pao and his officers were flown out; thousands of Hmong were left at the airstrip.
+        lonlat: [102.923, 19.108]
+        lp: l
+      - kind: event
+        side: pl
+        name: Vieng Xay
+        date: from 1975
+        text: Former officials were held in camps in the province; the last king died in one of them.
+        lonlat: [104.230, 20.400]
+      - kind: event
+        name: Nong Khai
+        date: from 1975
+        text: Many refugees crossed the Mekong here into Thailand; the Hmong were gathered in camps such as Ban Vinai in Loei province.
+        lonlat: [102.740, 17.880]
+    arrows:
+      - side: none
+        label: Refugees to Thailand
+        via: [[102.900, 19.000], [102.600, 18.400], [102.700, 17.950]]

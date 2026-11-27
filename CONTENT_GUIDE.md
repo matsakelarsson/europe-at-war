@@ -230,6 +230,7 @@ they ever border, keeping curated colours.
   | 800–today | India, Pakistan, Bangladesh, Sri Lanka, Nepal, Bhutan, the Maldives | `south-asia.yaml` |
   | 800–today | China, Mongolia, Taiwan, Hong Kong, Macau, eastern and southern Kazakhstan, Siberia without Sakhalin and the Kurils | `east-asia.yaml` (`russia.yaml` for 1917 and 1991) |
   | 800–today | Korea, Japan, the Ryukyu Islands, Sakhalin and the Kurils | `korea-japan.yaml` |
+  | 800–today | Myanmar, Thailand, Laos, Cambodia, Vietnam, Malaysia, Singapore, Brunei, Indonesia, the Philippines and Timor-Leste | `southeast-asia.yaml` |
   | 1236–today | Western Kazakhstan (West Kazakhstan, Atyrau, Aktobe, Mangystau, Kostanay) | `east-asia.yaml`, `rus-and-russia.yaml` (1242, 1440), `russia.yaml` |
 
   Other event files (`central-europe.yaml`) correct drafts outside any curated range; there, the next keyframe can
@@ -258,7 +259,13 @@ they ever border, keeping curated colours.
   Montenegro, each region returning to Yugoslavia when it was liberated) and the
   Bulgarian annexation in Greece; and, in `korea-japan.yaml`, the American
   and Soviet military governments in Korea (1945–1948) and the American
-  administration of the Ryukyu and Amami Islands (1946–1972). Occupied France, the Low Countries, Denmark,
+  administration of the Ryukyu and Amami Islands (1946–1972); and, in
+  `southeast-asia.yaml`, the lands Thailand gained by the Tokyo convention
+  (1941–1946) and the Indonesian annexation of East Timor (1976–1999). The
+  Japanese occupation of Southeast Asia (1941–1945), the Thai annexations of
+  1943 in Malaya and the Shan states, the Indonesian Republic of 1945–1949,
+  the Viet Minh, Pathet Lao and Khmer Rouge zones before 1975 and the
+  First Philippine Republic are areas. Occupied France, the Low Countries, Denmark,
   Norway, Greece, Albania after 1943, Italy after the armistice and Hungary
   in 1944 are areas. Abkhazia,
   South Ossetia, Transnistria, Karabakh, Crimea after 2014 and the occupied
@@ -267,6 +274,12 @@ they ever border, keeping curated colours.
   the Napoleonic satellites and annexations, and the Allied occupation zones
   of Germany (1945–1949) and Austria (1945–1955, with Vienna under four-power
   rule like Berlin) are on the base map.
+- **Protectorates and vassals** keep their own polity until they are annexed
+  or ruled directly: Bukhara and Khiva, Hyderabad and the princely states,
+  Joseon until 1910, Tunisia, and in Southeast Asia Annam, Cambodia, Luang
+  Prabang, the Malay states, Brunei, Sulu (until 1904), Yogyakarta and
+  Surakarta, and the Lao and Malay vassals of Siam. Colonies ruled directly
+  take the colonial power's polity.
 - **The Holy Roman Empire.** Until 1500 the Empire is one polity (`hre`), with
   Bohemia, Habsburg Austria (from 1282) and the Swiss Confederacy (from 1291)
   separate. From the Diet of Augsburg (1500-07-02) the larger territorial
@@ -441,6 +454,63 @@ they ever border, keeping curated colours.
   northern Sakhalin). Remainders: `JP-01!` is Hokkaido without the Matsumae
   tip, `JP-47!` Okinawa Island, `KP-08!` South Hamgyong north of Yonghung
   (`KP-08~yonghung`, the old Hwaju).
+- **Southeast Asia** (`southeast-asia.yaml`). Burma: `pyu` and `ramanya`
+  (the Mon), `pagan` (849, Lower Burma 1057), and after 1287 `pinya`
+  (Myinsaing until 1313), `sagaing`, `ava` (1364), `hanthawaddy` (the Mon
+  kingdom of Lower Burma, again 1740–1757), `prome` (1482–1542), `toungoo`
+  (1510–1752), `konbaung` (1752), `shan-states` and `karenni`; `arakan`
+  until 1785. British Burma comes in three steps (1826, 1852, 1886) as
+  `british-india`, then `british-burma` (1937) and `myanmar` (1948).
+  Thailand: `dvaravati`, `haripunchai`, `lavo`, `sukhothai`, `lan-na`
+  (Burmese 1558–1596, 1614–1727 and 1763–1775, a Siamese vassal until 1899),
+  `ayutthaya` (1351–1767), `tambralinga`, `pattani` (until 1902), then
+  `thailand` (Thonburi from 1767). Laos: `lan-xang` (1353–1707),
+  `luang-prabang`, `vientiane` (until 1828), `champasak` (1713) and
+  `muang-phuan`, then `laos` (1946). Cambodia is `cambodia` throughout
+  (named Chenla and the Khmer Empire), with the north-west Siamese in
+  1795–1907 and Melou Prey in 1814–1904. Vietnam: `tang`, `jinghai` (905),
+  `dai-viet` (939; Ming Jiaozhi 1407–1427), `mac` (1527–1592, Cao Bằng until
+  1677), `nguyen` (the Nguyễn lords from about 1600, the empire from 1802),
+  `tay-son` (1773–1802) and `champa`, which loses land in 1069, 1306, 1402,
+  1471, 1611, 1653 and 1832; the Mekong delta passes from Cambodia in
+  1698–1757; the Central Highlands are `none` until the French claim of 1893.
+  `french-indochina` is Cochinchina (1862, 1867), the Lao left bank (1893),
+  Tonkin (1897) and the Highlands, and Annam as well once the Nguyễn monarchy
+  ends in 1945 (the Viet Minh zones are areas). `south-vietnam` (the State of
+  Vietnam) has the whole country from 1949, `north-vietnam` the north from
+  the Geneva line of 1954 (Quảng Bình north, Quảng Trị south); then
+  `republic-of-south-vietnam` (1975–1976) and `vietnam`. Malay world:
+  `srivijaya-empire`, `melayu`, `kedah`, `malacca` (about 1400–1511),
+  `johor`, `perak`, `pahang`, `selangor`, `negeri-sembilan`,
+  `terengganu`, `kelantan` and `perlis`; Portuguese, Dutch and British
+  Malacca, Penang (1786) and Singapore (1824), `straits-settlements` (1826),
+  `federated-malay-states` (1895), `malayan-union` (1946), `malaysia`
+  (Federation of Malaya 1948, Malaysia 1963) and `singapore`. Borneo:
+  `brunei`, Brooke `sarawak` in five steps (1841–1890), `north-borneo`
+  (1881) and Labuan. Indonesia: Sumatra (`pagaruyung`, `pasai`, `aceh`,
+  `aru`, `deli`, `siak`, `jambi`, `palembang`), Java (`medang`,
+  `sunda`, `kediri`, `singhasari`, `majapahit`, `demak`, `pajang`,
+  `surabaya`, `mataram-sultanate`, `yogyakarta` and `surakarta` from 1755,
+  `banten`, `cirebon`, `blambangan`), `bali`, `bima`, `tanjungpura`,
+  `pontianak`, `banjar`, `kutai`, `gowa`, `bone`, `luwu`, `buton`,
+  `ternate`, `tidore`, `riau-lingga`, `timorese-kingdoms` and
+  `papuan-peoples`. The VOC and the Dutch East Indies (`dutch-east-indies`)
+  take the islands piece by piece from 1605 to 1911, with British Java in
+  1811–1816; `indonesia` from 1949-12-27, `netherlands-new-guinea` and
+  `untea` (1962–1963). Timor: `portuguese-timor` (1702), Indonesia
+  (1976–1999), `untaet`, `timor-leste` (2002). Philippines:
+  `barangay-polities`, `sulu` (until 1904), `maguindanao` (until 1861),
+  `lanao` (until 1895), `spanish-east-indies` (1565–1899), the United States
+  and `philippines` (1946). Remainders: `MM-02!` is Pegu and Tharrawaddy,
+  `MM-03!` Magway north of Thayet, `MM-05!` Mergui and Tenasserim, `MM-13!`
+  and `MM-15!` the land east of the Salween, `MM-17!` the Shan plateau west
+  of the Salween, `MY-12!` Sabah without its west coast, `MY-13!` the Batang
+  Lupar and Saribas, `ID-AC!` Aceh without Pasai, `ID-JB!` West Java without
+  Cirebon, `ID-JT!` the north coast of Central Java, `ID-JI!` the Brantas
+  valley and Surabaya, `ID-BA!` southern Bali, `ID-NB!` Lombok, `ID-NT!` the
+  islands of East Nusa Tenggara without West Timor, `ID-SN!` Gowa and the
+  west coast, `ID-MU!` Ternate and western Halmahera. Philippine cities and
+  Vientiane Province have their own atoms (`PHL-…`, `LAO-3284`).
 - **Checking borders.** After a build, `node tools/owners-at.mjs <date>
   [polities…] [--atoms <regex>]` lists who owns what on a date, and
   `node tools/owner-history.mjs <regex> [from] [to]` lists every change to the

@@ -1,0 +1,133 @@
+id: konbaung-conquest-of-arakan
+name: Konbaung conquest of Arakan
+start: "1784-12-02"
+end: "1785-01-02"
+tier: B
+summary: "The campaign in which King Bodawpaya of Burma ended the independence of Arakan, the coastal kingdom of Mrauk U on the Bay of Bengal, which had been weakened by decades of factional strife between its kings and nobles. On 2 December 1784 the crown prince Thado Minsaw led more than 20,000 men, with 2,500 horse and 200 elephants, across the Arakan Yoma by three passes, while a flotilla sailed up the coast from Negrais and landed on Ramree island. On 31 December the Arakanese king attacked the Burmese camp at Laungkyet, near his capital, and was defeated; Mrauk U fell on 1 or 2 January 1785 (some sources say 31 December 1784). Maha Thammada was taken to Amarapura with his family and died there a captive. The Burmese carried off the Mahamuni image, the palladium of Arakan, to Amarapura, along with other bronzes, and deported more than 20,000 people. Arakan became a Burmese province under four governors. Burmese rule was harsh and resisted: some 35,000 Arakanese fled to British-ruled Chittagong, revolts broke out in 1794 and under Chin Byan from 1811, and the border with British Bengal became one of the grievances that led to the First Anglo-Burmese War in 1824."
+countries: [mm, bd]
+sides:
+  - id: kb
+    name: Konbaung Burma (Bodawpaya)
+    polities: [konbaung]
+    ink: brown
+    moves: Burmese moves
+    success: Burmese success
+  - id: ar
+    name: Kingdom of Mrauk U (Maha Thammada)
+    polities: [arakan]
+    ink: purple
+    moves: Arakanese moves
+    success: Arakanese success
+notes:
+  - "Sources give the fall of Mrauk U as 31 December 1784, 1 January or 2 January 1785. The numbers of the Burmese army and of the deported come from Burmese chronicles and later British reports; the refugee figure of about 35,000 is a British estimate."
+  - "Burmese accounts presented the conquest as the restoration of Buddhist order in a declining kingdom and the Mahamuni as rescued; for Arakanese tradition the removal of the image, still venerated in Mandalay, marks the loss of the kingdom’s independence. The deported were given as slaves to pagodas and monasteries and as labourers on the king’s works."
+sources:
+  - title: Konbaung conquest of Arakan (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Konbaung_conquest_of_Arakan
+  - title: Bodawpaya (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bodawpaya
+  - title: Maha Thammada (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Maha_Thammada
+  - title: Mahamuni Buddha Temple (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mahamuni_Buddha_Temple
+  - title: Bodawpaya (Encyclopaedia Britannica)
+    url: https://www.britannica.com/biography/Bodawpaya
+steps:
+  - title: Across the Arakan Yoma
+    date: December 1784 – January 1785
+    when: "1784-12-31"
+    borders: "1784-12"
+    countries: [mm]
+    body:
+      - "Bodawpaya, who had taken the throne in 1782 and moved his capital to Amarapura, wanted to extend his rule west to the Bay of Bengal, and saw in Arakan a Buddhist kingdom in decline. Its last king, Maha Thammada, ruled over elites so divided by faction that they could not unite against an invader. The invasion began on 2 December 1784. Three divisions crossed the Arakan Yoma by three different passes, the crown prince Thado Minsaw’s from his base at Minbu on the Irrawaddy, while a fourth, a flotilla, came up the coast from Negrais. The Burmese met little resistance. They secured the south, landed on Ramree island, where the local prince was defeated and fled into the jungle, and marched north on the capital."
+      - "On 31 December 1784 the Burmese set up camp at Laungkyet, south-east of Mrauk U. The king’s brother-in-law advised him to make peace by offering his daughter to Bodawpaya; Maha Thammada refused, led his land and naval forces out the same day to attack the camp, and was soundly defeated. Mrauk U was taken within two days, ending a kingdom that had ruled Arakan since 1429. Maha Thammada was captured and taken to Amarapura with his family."
+    facts:
+      - ["Burmese army", "over 20,000 men, 2,500 horse and 200 elephants"]
+      - ["Battle of Laungkyet", "31 December 1784, Burmese victory"]
+      - ["Mrauk U taken", "1 or 2 January 1785"]
+    markers:
+      - kind: event
+        side: kb
+        name: Minbu
+        date: December 1784
+        text: Thado Minsaw’s base on the Irrawaddy, from which his division crossed the Arakan Yoma.
+        lonlat: [94.880, 20.180]
+      - kind: taken
+        side: kb
+        name: Ramree
+        date: December 1784
+        text: The flotilla landed on the island and defeated its prince.
+        lonlat: [93.867, 19.083]
+      - kind: battle
+        side: kb
+        name: Laungkyet
+        date: 31 December 1784
+        text: Maha Thammada’s attack on the Burmese camp was beaten off.
+        lonlat: [93.243, 20.545]
+        lp: r
+      - kind: taken
+        side: kb
+        name: Mrauk U
+        date: 1 or 2 January 1785
+        text: The Arakanese capital was taken and its king captured.
+        lonlat: [93.193, 20.590]
+        lp: l
+    arrows:
+      - side: kb
+        label: Thado Minsaw
+        phase: 1
+        via: [[94.88, 20.18], [94.40, 20.05], [94.05, 19.78], [93.55, 20.20], [93.26, 20.53]]
+      - side: kb
+        label: Flotilla from Negrais
+        phase: 1
+        via: [[94.28, 16.06], [94.05, 16.60], [94.15, 17.60], [94.10, 18.40], [93.90, 19.00]]
+      - side: kb
+        label: North to Mrauk U
+        phase: 2
+        via: [[93.87, 19.10], [93.55, 19.70], [93.30, 20.20], [93.22, 20.52]]
+  - title: Arakan under Burmese rule
+    date: 1785–1815
+    when: "1785"
+    borders: "1785-01-02"
+    countries: [mm, bd]
+    body:
+      - "Arakan was annexed as a province of Burma under four governors, at Mrauk U, Ramree, Man Aung (Cheduba) and Thandwe, each with a garrison. Thado Minsaw took the Mahamuni image, a great bronze Buddha long regarded as the guardian of the kingdom, across the mountains to Amarapura in 1785, together with other bronzes the Arakanese had once taken as booty; it remains in Mandalay’s Mahamuni temple. Burmese and British sources speak of more than 20,000 people deported to Burma, given to pagodas and monasteries or set to work on the king’s projects. Maha Thammada died a captive at Amarapura two years later."
+      - "Burmese rule was resisted from the start. About 35,000 Arakanese fled to the Chittagong region of British Bengal, by a British estimate, and Arakanese rebels used it as a base. A revolt broke out in 1794; Burmese troops followed the rebels into Company territory, and the Governor-General sent Michael Symes on an embassy to Ava in 1795. In 1811 the rebel leader Chin Byan gathered a force among the refugees in British territory, crossed the border and took Mrauk U before Burmese troops drove him back; he kept up his raids until his death in 1815. Disputes over the border and the refugees were among the causes of the First Anglo-Burmese War of 1824–1826, after which Arakan passed to British rule."
+    facts:
+      - ["Deported to Burma", "more than 20,000 (Burmese and British sources)"]
+      - ["Refugees to Chittagong", "about 35,000 (British estimate)"]
+      - ["Revolts", "1794; Chin Byan 1811–1815"]
+    markers:
+      - kind: capital
+        side: kb
+        name: Amarapura
+        date: 1785
+        text: Bodawpaya’s capital, where the Mahamuni image was installed and Maha Thammada died a captive.
+        lonlat: [96.050, 21.900]
+      - kind: event
+        side: ar
+        name: Chittagong
+        date: 1785–1815
+        text: About 35,000 Arakanese fled to British-ruled Chittagong, a base for later revolts.
+        lonlat: [91.830, 22.340]
+      - kind: event
+        side: ar
+        name: Mrauk U
+        date: 1811
+        text: Taken by Chin Byan’s rebels from British territory, then retaken by the Burmese.
+        lonlat: [93.193, 20.590]
+        lp: l
+    arrows:
+      - side: kb
+        label: The Mahamuni and the deported
+        phase: 1
+        via: [[93.22, 20.56], [94.05, 19.78], [94.88, 20.18], [95.70, 21.20], [96.03, 21.88]]
+      - side: ar
+        label: Refugees
+        phase: 1
+        via: [[93.15, 20.65], [92.60, 21.10], [92.20, 21.60], [91.88, 22.28]]
+    areas:
+      - style: gained
+        side: kb
+        label: Annexed to Burma
+        atoms: [MM-16]

@@ -1,0 +1,339 @@
+id: padri-war
+name: Padri War
+start: "1803"
+end: "1838-12-28"
+tier: A
+summary: "A war in the Minangkabau highlands of West Sumatra that began as a struggle within Minangkabau society and ended in Dutch conquest. From about 1803 the Padri, Islamic reformers inspired by pilgrims returning from Mecca, set out to impose Islamic law and stamp out customs they held un-Islamic, such as cockfighting, gambling, opium, drink and parts of the matrilineal adat (customary law). Their war against the adat chiefs and the royal house of Pagaruyung, which they largely destroyed in 1815, turned many villages against each other. In 1821 adat leaders who had fled to Padang ceded their lands to the Dutch in return for help, and Dutch troops took Pagaruyung in 1822, but the Padri held them off, and the Treaty of Masang of 1824 left the war in abeyance during the Java War. From 1831 the Dutch, eager for the highlands’ coffee, conquered the Minangkabau heartland. A general rising of Padri and adat villages in January 1833 showed that the adat chiefs, too, had turned against Dutch rule. The Padri centre, Bonjol, fell on 16 August 1837 after a long siege; its leader, Tuanku Imam Bonjol, was seized during talks in October and exiled, and the last Padri stronghold, Tuanku Tambusai’s fort at Dalu-Dalu, fell in December 1838. The war left West Sumatra under Dutch rule and forced coffee cultivation, and produced the reconciliation of adat and Islam summed up in the saying that custom rests on Islamic law and Islamic law on the Qur’an."
+countries: [id, nl]
+sides:
+  - id: pad
+    name: Padri
+    polities: [padri]
+    ink: green
+    moves: Padri moves
+    success: Padri success
+  - id: adt
+    name: Adat chiefs and the royal house of Pagaruyung
+    polities: [pagaruyung]
+    ink: gold
+    moves: Adat moves
+    success: Adat success
+  - id: nl
+    name: Netherlands Indies government
+    polities: [dutch-east-indies]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+notes:
+  - Historians date the war differently. The fighting among the Minangkabau began soon after 1803; Dutch involvement began with the treaty of February 1821 (sources give 10 or 21 February), and Dutch accounts often divide the war into a first war (1821–1825) and a second (1831–1837 or 1838). The historian Christine Dobbin has stressed the role of the coffee trade on both sides.
+  - The Padri were feared in their time, and their campaigns, including raids into the Mandailing and Batak lands to the north, killed and enslaved many people; some Batak historians have objected to Tuanku Imam Bonjol’s status as a National Hero of Indonesia, which he received in 1973. Indonesian national history honours him and Tuanku Tambusai as leaders of resistance to colonial rule.
+  - “Padri” probably comes from Pedir in Aceh, where pilgrims embarked for Mecca, or from the Portuguese padre; the Padri leaders were known by the title Tuanku.
+sources:
+  - title: Padri Wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Padri_Wars
+  - title: Tuanku Imam Bonjol (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tuanku_Imam_Bonjol
+  - title: Tuanku Tambusai (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tuanku_Tambusai
+  - title: Pagaruyung kingdom (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pagaruyung_kingdom
+  - title: Padri War (Britannica)
+    url: https://www.britannica.com/event/Padri-War
+  - title: Minangkabau (Britannica)
+    url: https://www.britannica.com/topic/Minangkabau
+steps:
+  - title: The Padri and the civil war in the highlands
+    date: 1803–1820
+    when: "1815"
+    borders: "1815"
+    countries: [id]
+    body:
+      - The Minangkabau highlands, the old kingdom of Pagaruyung, were a land of self-governing villages (nagari) ruled by their adat, the customary law under which land and houses passed through the female line, with a king at Pagaruyung whose power was mostly ceremonial. Islam had long been taught there through Sufi schools, and the reformer Tuanku Nan Tuo of Koto Tuo had campaigned by preaching against cockfighting, gambling and opium. Around 1803 three pilgrims, Haji Miskin, Haji Sumanik and Haji Piobang, returned from Mecca, then falling to the Wahhabis, determined to enforce Islamic law. With Tuanku Nan Renceh and others they formed a council of eight leaders, the Harimau nan Salapan (eight tigers), and began to impose their rule by force.
+      - The Padri banned cockfighting, gambling, betel, tobacco and drink, made men wear white and grow beards and women cover themselves, and killed or enslaved those who resisted. Many villages joined them and others resisted, and the highlands fell into years of raids and village wars. Tuanku Nan Tuo, who rejected their violence, saw his village besieged from 1815, and his sons were killed.
+      - In 1815 Padri forces under Tuanku Lintau attacked the royal family at Koto Tangah near Pagaruyung. Many of its members were killed, and Sultan Arifin Muningsyah fled; when Raffles visited in 1818 he found only the burned remains of the palace. In the north, Peto Syarif, later known as Tuanku Imam Bonjol, built the fortified town of Bonjol in the Alahan Panjang valley.
+    facts:
+      - [Return of the three hajis, "about 1803"]
+      - [Attack on the royal family, "1815"]
+    markers:
+      - kind: taken
+        side: pad
+        name: Pagaruyung
+        date: "1815"
+        text: The royal family was attacked at nearby Koto Tangah by the Padri under Tuanku Lintau; many were killed and the sultan fled.
+        lonlat: [100.621, -0.471]
+        lp: b
+      - kind: siege
+        side: pad
+        name: Koto Tuo
+        date: 1815–1821
+        text: The village of the reformer Tuanku Nan Tuo, who rejected the Padri’s violence, besieged by them from 1815.
+        lonlat: [100.353, -0.338]
+        lp: l
+      - kind: capital
+        side: pad
+        name: Lintau
+        date: 1810s
+        text: Base of Tuanku Lintau, one of the Padri leaders.
+        lonlat: [100.794, -0.503]
+        lp: r
+      - kind: capital
+        side: pad
+        name: Bonjol
+        date: 1810s
+        text: The fortified town of Tuanku Imam Bonjol in the Alahan Panjang valley.
+        lonlat: [100.220, 0.000]
+        lp: t
+    arrows:
+      - side: pad
+        label: Tuanku Lintau against Pagaruyung
+        phase: 1
+        via: [[100.79, -0.50], [100.72, -0.49], [100.66, -0.48]]
+  - title: The Dutch intervene
+    date: 1821–1825
+    when: "1822-03-04"
+    borders: "1822-03"
+    countries: [id, nl]
+    body:
+      - The Dutch, back in Padang on the coast after the British occupation, were approached by adat chiefs and members of the royal house who had fled the Padri. On 10 February 1821 (some accounts say 21 February) they signed a treaty in Padang ceding the Pagaruyung lands to the Netherlands in return for help. In April 1821, on the orders of the resident, James du Puy, Dutch troops under Captains Goffinet and Dienema occupied Simawang and Sulit Air, and in December reinforcements arrived under Lieutenant-Colonel Raaff.
+      - On 4 March 1822 Raaff drove the Padri out of Pagaruyung, and the Dutch built Fort Van der Capellen at nearby Batusangkar. The Padri fell back to Lintau and fought on. On 14 August 1822 they defeated a Dutch force at Baso, wounding its commander, and in 1823 a Dutch attack on Lintau was beaten back. The adat chiefs found that the Dutch, in practice, meant to rule.
+      - With most of its troops needed in Java, the government made peace with the Padri of the north by the Treaty of Masang in 1824 (some accounts say 1825). For six years the highlands were largely quiet while the Java War lasted, and coffee growing spread in the highland villages, sold to traders on both coasts.
+    facts:
+      - [Treaty with the adat chiefs, "10 or 21 February 1821"]
+      - [Pagaruyung taken by Raaff, "4 March 1822"]
+      - [Battle of Baso, "14 August 1822"]
+      - [Treaty of Masang, "1824 or 1825"]
+    markers:
+      - kind: treaty
+        side: adt
+        name: Padang
+        date: February 1821
+        text: Adat chiefs and members of the royal house ceded their lands to the Dutch here in return for help against the Padri.
+        lonlat: [100.363, -0.925]
+        lp: l
+      - kind: taken
+        side: nl
+        name: Simawang
+        date: April 1821
+        text: Occupied by Dutch troops, with Sulit Air, at the start of the intervention.
+        lonlat: [100.571, -0.562]
+        lp: b
+      - kind: taken
+        side: nl
+        name: Pagaruyung
+        date: 4 March 1822
+        text: Taken by Raaff; the Dutch built Fort Van der Capellen at nearby Batusangkar.
+        lonlat: [100.621, -0.471]
+        lp: r
+      - kind: battle
+        side: pad
+        name: Baso
+        date: 14 August 1822
+        text: The Padri defeated a Dutch force and wounded its commander.
+        lonlat: [100.465, -0.285]
+        lp: t
+      - kind: battle
+        side: pad
+        name: Lintau
+        date: "1823"
+        text: A Dutch attack on the Padri stronghold was beaten back.
+        lonlat: [100.794, -0.503]
+        lp: r
+    arrows:
+      - side: nl
+        label: Dutch troops from Padang
+        phase: 1
+        via: [[100.37, -0.90], [100.45, -0.75], [100.56, -0.58]]
+      - side: nl
+        label: Raaff
+        phase: 2
+        via: [[100.57, -0.56], [100.60, -0.51], [100.62, -0.48]]
+  - title: The Dutch conquer the heartland
+    date: 1831–1832
+    when: "1832-10"
+    borders: "1832-12"
+    countries: [id, nl]
+    body:
+      - After the Java War the Dutch turned on the Padri again, wanting the coffee trade of the interior for themselves. Breaking the truce, they attacked Pandai Sikek, a centre of gunpowder and firearms making, and in early August 1831 they took Lintau and brought Tanah Datar under their control; Tuanku Lintau fought on from Limapuluh Kota. Lieutenant-Colonel Elout was reinforced by the Javanese legion of Sentot Prawirodirjo, the former commander of Diponegoro, but the Dutch came to suspect Sentot of dealings with the Padri, sent his men back to Java and later exiled him to Bengkulu.
+      - In July 1832 more infantry arrived from Batavia under Lieutenant-Colonel Ferdinand Vermeulen Krieger. In October Limapuluh Kota fell, and Tuanku Lintau died; at the end of the year the Dutch took Kamang, the last Padri stronghold in Agam, and the Padri withdrew north to Bonjol. The three luhak, the core lands of the Minangkabau, were in Dutch hands.
+    facts:
+      - [Lintau taken, "early August 1831"]
+      - [Limapuluh Kota taken, "October 1832"]
+      - [Kamang taken, "end of 1832"]
+    markers:
+      - kind: taken
+        side: nl
+        name: Pandai Sikek
+        date: "1831"
+        text: The Padri centre of gunpowder and firearms making, attacked by the Dutch in breach of the truce.
+        lonlat: [100.392, -0.402]
+        lp: l
+      - kind: taken
+        side: nl
+        name: Lintau
+        date: August 1831
+        text: Taken by the Dutch, who thus controlled Tanah Datar.
+        lonlat: [100.794, -0.503]
+        lp: r
+      - kind: taken
+        side: nl
+        name: Kamang
+        date: end of 1832
+        text: The last Padri stronghold in Agam; its fall drove the Padri north to Bonjol.
+        lonlat: [100.436, -0.238]
+        lp: t
+      - kind: held
+        side: nl
+        name: Fort de Kock (Bukittinggi)
+        date: 1831–1832
+        text: The Dutch base in Agam.
+        lonlat: [100.368, -0.300]
+        lp: l
+      - kind: taken
+        side: nl
+        name: Payakumbuh (Limapuluh Kota)
+        date: October 1832
+        text: Limapuluh Kota came under Dutch control.
+        lonlat: [100.632, -0.224]
+        lp: r
+    arrows:
+      - side: pad
+        label: Padri withdraw to Bonjol
+        phase: 1
+        via: [[100.43, -0.22], [100.35, -0.10], [100.26, -0.02]]
+    areas:
+      - style: occupied
+        side: nl
+        label: The three luhak, the Minangkabau heartland, taken by the Dutch 1831–1832
+        polygon: [[100.15, -0.10], [100.45, 0.05], [100.85, 0.00], [100.90, -0.40], [100.75, -0.70], [100.45, -0.62], [100.25, -0.45]]
+  - title: The rising of 1833 and the Long Declaration
+    date: "1833"
+    when: "1833-01-11"
+    borders: "1833"
+    countries: [id, nl]
+    body:
+      - The adat chiefs had come to fear Dutch rule as much as the Padri, and Padri and adat leaders began to make common cause. On 11 January 1833 Dutch posts across the highlands were attacked at once; about 139 European soldiers and hundreds of Indonesian soldiers were killed. The Dutch accused Sultan Tangkal Alam Bagagar, the Pagaruyung prince they had made regent of Tanah Datar, of treason, arrested him at Batusangkar on 2 May and exiled him to Batavia, though he denied any part in the attacks.
+      - In the north Tuanku Rao attacked a new Dutch fort at Padang Matinggi, but on 29 January he was badly wounded in a fight at Air Bangis and died on the ship taking him into exile. Tuanku Tambusai stormed Fort Amerongen, near Bonjol. Governor-General Johannes van den Bosch came to Padang in August 1833 and ordered Bonjol taken by mid-September, but the attack failed.
+      - Late in 1833 the government issued the Plakat Panjang (Long Declaration), promising the Minangkabau that it had come only to trade and keep the peace, that their own chiefs would govern them and that they would pay no taxes. Instead they were to grow coffee and sell it to the government at fixed prices, the beginning of forced coffee cultivation in West Sumatra.
+    facts:
+      - [General rising, "11 January 1833"]
+      - [Bagagar Shah arrested, "2 May 1833"]
+      - [Long Declaration, "1833"]
+    markers:
+      - kind: event
+        side: nl
+        name: Batusangkar
+        date: 2 May 1833
+        text: Sultan Tangkal Alam Bagagar was arrested here and exiled to Batavia.
+        lonlat: [100.594, -0.454]
+        lp: b
+      - kind: battle
+        side: nl
+        name: Air Bangis
+        date: 29 January 1833
+        text: Tuanku Rao was mortally wounded in a fight here.
+        lonlat: [99.379, 0.200]
+        lp: l
+      - kind: battle
+        side: pad
+        name: Bonjol
+        date: September 1833
+        text: The first Dutch attack on Bonjol, ordered by van den Bosch, failed.
+        lonlat: [100.220, 0.000]
+        lp: t
+      - kind: event
+        side: nl
+        name: Padang
+        date: August 1833
+        text: Van den Bosch came here in August and ordered Bonjol taken; the Long Declaration followed later in the year.
+        lonlat: [100.363, -0.925]
+        lp: l
+    arrows:
+      - side: nl
+        label: Attack on Bonjol
+        phase: 1
+        via: [[100.37, -0.28], [100.30, -0.15], [100.24, -0.03]]
+  - title: The siege of Bonjol
+    date: 1834 – August 1837
+    when: "1837-08-16"
+    borders: "1837-08-16"
+    countries: [id, nl]
+    body:
+      - In 1834 the Dutch used thousands of forced labourers to build roads and bridges towards Bonjol, and in June 1835 their troops pushed into the Alahan Panjang valley and began to bombard the town from 250 paces. Bonjol lay beneath Bukit Tajadi, a steep hill fortified with two stone walls about three metres high, a deep ditch and hedges of thorny bamboo, from which Padri cannon answered the Dutch guns. Padri fighters from the conquered districts streamed in to defend it.
+      - A blockade failed as the Padri raided the besiegers’ posts and supplies. Bugis troops led an attack in August 1835, but on 5 September the defenders sallied out and destroyed the Dutch works, and in December the villagers of Simpang and Alahan Mati rose behind the Dutch lines until Madurese troops put them down. On 3 December 1836 a great assault broke into the town and killed members of Imam Bonjol’s family, but the Padri drove the attackers out.
+      - In 1837 Major-General Cochius took command and encircled Bonjol from all sides, from 16 March to 17 August, with an army of 148 European and 36 Indonesian officers, 1,103 European and 4,130 Indonesian soldiers, Javanese, Madurese, Bugis and Ambonese, and a company of African soldiers recruited on the Gold Coast. Under Lieutenant-Colonel Michiels the besiegers closed in; Bukit Tajadi fell on 15 August and Bonjol on 16 August 1837. Tuanku Imam Bonjol escaped with a few followers.
+    facts:
+      - [Failed assault, "3 December 1836"]
+      - [Cochius’s army, "about 5,400 men"]
+      - [Bonjol taken, "16 August 1837"]
+    markers:
+      - kind: taken
+        side: nl
+        name: Bonjol
+        date: 16 August 1837
+        text: The Padri centre fell after a siege of more than two years; Bukit Tajadi above it had fallen the day before. Tuanku Imam Bonjol escaped.
+        lonlat: [100.220, 0.000]
+        lp: t
+      - kind: held
+        side: nl
+        name: Fort de Kock (Bukittinggi)
+        date: 1834–1837
+        text: The Dutch base from which the siege was supplied.
+        lonlat: [100.368, -0.300]
+        lp: r
+    arrows:
+      - side: nl
+        label: Road and troops from Fort de Kock
+        phase: 1
+        via: [[100.36, -0.28], [100.31, -0.16], [100.25, -0.04]]
+      - side: nl
+        label: Encirclement, 1837
+        phase: 2
+        via: [[100.12, 0.08], [100.18, 0.04], [100.21, 0.01]]
+    areas:
+      - style: contested
+        side: pad
+        label: Bonjol and the Alahan Panjang valley, held by the Padri until 1837
+        polygon: [[100.15, 0.10], [100.28, 0.10], [100.32, -0.06], [100.20, -0.10], [100.13, -0.02]]
+  - title: The end of the Padri
+    date: October 1837 – December 1838
+    when: "1838-12-28"
+    borders: "1838-12-28"
+    countries: [id, nl]
+    body:
+      - In October 1837 Tuanku Imam Bonjol was invited to talks at Palupuh and arrested there. He was exiled first to Cianjur in West Java, then to Ambon and finally to Minahasa in northern Sulawesi, where he died on 6 November 1864.
+      - The last Padri leader in the field was Tuanku Tambusai, whose campaigns had ranged from Rokan to Mandailing and the west coast at Natal, and whom the Dutch called “the Padri tiger of Rokan”. On 28 December 1838 Dutch troops and their allies took his fortress at Dalu-Dalu on the upper Rokan; he escaped by a secret door, travelled down the river to the Strait of Malacca and settled at Rasah in Negeri Sembilan on the Malay peninsula, where he died in 1882.
+      - West Sumatra was now under Dutch rule, and the coffee its villages had to grow for the government made it one of the most profitable regions of the colony. In the aftermath adat chiefs and religious leaders reached an accommodation summed up in the saying adat basandi syarak, syarak basandi Kitabullah, “custom rests on Islamic law, Islamic law rests on the Book of God”, which still defines Minangkabau identity.
+    facts:
+      - [Tuanku Imam Bonjol arrested, "October 1837"]
+      - [Dalu-Dalu taken, "28 December 1838"]
+    markers:
+      - kind: event
+        side: nl
+        name: Palupuh
+        date: October 1837
+        text: Tuanku Imam Bonjol was arrested here during talks and sent into exile.
+        lonlat: [100.303, -0.161]
+        lp: r
+      - kind: taken
+        side: nl
+        name: Dalu-Dalu
+        date: 28 December 1838
+        text: The fortress of Tuanku Tambusai, the last Padri stronghold; he escaped and settled in Negeri Sembilan on the Malay peninsula.
+        lonlat: [100.252, 1.083]
+        lp: t
+      - kind: held
+        side: nl
+        name: Bonjol
+        date: 1837–1838
+        text: In Dutch hands since August 1837.
+        lonlat: [100.220, 0.000]
+        lp: l
+    arrows:
+      - side: nl
+        label: Dutch troops to Dalu-Dalu
+        phase: 1
+        via: [[100.20, 0.10], [100.10, 0.45], [100.15, 0.80], [100.24, 1.05]]
+      - side: pad
+        label: Tuanku Tambusai’s escape
+        phase: 2
+        via: [[100.27, 1.10], [100.55, 1.60], [100.85, 2.15], [101.45, 2.45], [101.90, 2.68]]

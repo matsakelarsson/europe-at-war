@@ -1,0 +1,135 @@
+id: banjarmasin-war
+name: Banjarmasin War
+start: "1859-04-28"
+end: "1905-01-24"
+tier: B
+summary: "The war of the Banjar sultanate in south-eastern Borneo and its Dayak allies against the Dutch, known in Indonesia as the Banjar War (Perang Banjar). After Sultan Adam died in 1857 the Dutch installed Tamjidillah as sultan over the claims of Prince Hidayatullah, whom much of the court preferred, and exiled another claimant; resentment of Dutch interference, taxes and the new Dutch coal mines grew. On 28 April 1859 Prince Antasari, a member of the royal house, attacked the Oranje Nassau coal mine at Pengaron, and the rising spread across the sultanate and up the Barito River. The Dutch deposed Tamjidillah, declared the sultanate abolished in 1860 and annexed its lands, and by 1863 had broken the main resistance: Hidayatullah surrendered in 1862 and was exiled to Java, and Antasari, proclaimed head of the faithful by his followers, died of smallpox on the upper Barito in October 1862. His sons and other leaders fought on from forts in the interior for four more decades, until Gusti Muhammad Seman was killed at Baras Kuning on 24 January 1905."
+countries: [id]
+sides:
+  - id: nl
+    name: Dutch East Indies
+    polities: [dutch-east-indies]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+  - id: bjr
+    name: Banjar resistance (Antasari, Hidayatullah, Demang Lehman) and Dayak allies
+    polities: [banjar]
+    ink: teal
+    moves: Banjar moves
+    success: Banjar success
+notes:
+  - English and Dutch writers usually date the war 1859–1863, when the Dutch declared it over; Indonesian historians count the long resistance after 1863 as part of the same war and date it 1859–1905 or 1906.
+  - Losses were poorly recorded. The figures usually cited are several thousand dead on each side, including about 200 Europeans, with two Dutch steamers lost.
+sources:
+  - title: Banjarmasin War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Banjarmasin_War
+  - title: Perang Banjar (Indonesian Wikipedia)
+    url: https://id.wikipedia.org/wiki/Perang_Banjar
+  - title: Pangeran Antasari (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pangeran_Antasari
+  - title: Sultanate of Banjar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sultanate_of_Banjar
+steps:
+  - title: Pengaron and the end of the sultanate
+    date: April 1859 – 1860
+    when: "1859-04-28"
+    borders: "1859-04-28"
+    countries: [id]
+    body:
+      - The Banjar sultanate, centred on Martapura and the lower Barito, had been bound by treaties with the Dutch since the 18th century, and the Dutch residency stood at Banjarmasin. When Sultan Adam died in November 1857, the Dutch resident installed his grandson Tamjidillah, unpopular at court, rather than Prince Hidayatullah, whom Sultan Adam and many nobles favoured, and they later banished another claimant, Prince Prabu Anom, to Java. Dutch control of the succession, new taxes and labour demands, and the coal mines the government and private companies had opened at Pengaron and Kalangan turned many Banjar nobles, religious leaders and Dayak chiefs against them.
+      - On 28 April 1859 fighters led by Prince Antasari, a member of the royal house, attacked the Oranje Nassau coal mine at Pengaron. On 1 May the Europeans at the Julia Hermina mine at Kalangan were killed, among them the English engineer and naturalist James Motley with his wife and children, and missionaries in the Dayak country were also killed. Colonel Augustus Andresen took command at Banjarmasin with troops from Java. In June 1859 the Dutch made Tamjidillah abdicate; in 1860 they declared the sultanate abolished and placed its lands under direct rule from Batavia.
+      - The fighting spread on three fronts, in the Banua Lima districts up the Negara River, in Martapura and Tanah Laut under Kiai Demang Lehman, and along the Barito under Antasari. Demang Lehman attacked the Dutch post at Martapura on 30 June and the Bumi Selamat palace there on 30 August 1859, without success; in August he took the Dutch fort at Tabanio on the south coast, which the Dutch retook with the help of naval guns. On 27 September the Dutch stormed the fort of Gunung Lawak, but were harried so hard that they abandoned it.
+    facts:
+      - [Attack on Pengaron, "28 April 1859"]
+      - [Tamjidillah’s abdication, "June 1859"]
+      - [Sultanate abolished, "1860"]
+    markers:
+      - kind: battle
+        side: bjr
+        name: Pengaron
+        date: 28 April 1859
+        text: Antasari’s fighters attacked the Oranje Nassau coal mine, the opening blow of the war.
+        lonlat: [115.094, -3.296]
+      - kind: battle
+        side: nl
+        name: Martapura
+        date: 30 June and 30 August 1859
+        text: The sultan’s seat. Demang Lehman’s attacks on the Dutch post and the Bumi Selamat palace were beaten off.
+        lonlat: [114.849, -3.409]
+        lp: b
+      - kind: held
+        side: nl
+        name: Banjarmasin
+        date: 1859–1860
+        text: Seat of the Dutch resident, held throughout the war.
+        lonlat: [114.594, -3.319]
+        lp: l
+      - kind: taken
+        side: nl
+        name: Tabanio
+        date: August 1859
+        text: The Dutch fort on the south coast, taken by Demang Lehman and retaken by the Dutch with the help of warships.
+        lonlat: [114.616, -3.763]
+        lp: l
+      - kind: event
+        side: bjr
+        name: Amuntai
+        date: 1859
+        text: The upriver districts of Banua Lima rose with the rest of the sultanate.
+        lonlat: [115.254, -2.420]
+    arrows:
+      - side: nl
+        label: Andresen
+        via: [[114.400, -4.200], [114.480, -3.620], [114.530, -3.400], [114.590, -3.325]]
+    areas:
+      - style: contested
+        side: bjr
+        label: Main area of the war, 1859–1863
+        atoms: [ID-KS]
+  - title: Antasari and the war on the Barito
+    date: 1859–1905
+    when: "1862"
+    borders: "1862-10-11"
+    countries: [id]
+    body:
+      - Antasari’s strength lay up the Barito, among Banjar, Bakumpai and Dayak communities bound to him by marriage and alliance, notably the Dayak chief Tumenggung Surapati. In December 1859 Surapati’s men boarded the Dutch steamer Onrust on the Barito, killed its crew and sank it. Dutch reinforcements under Major Verspyck won a series of engagements in the following years, and in early 1862 Hidayatullah, who had sided with the fighters, surrendered and was sent into exile at Cianjur in West Java with a monthly allowance.
+      - On 14 March 1862 Antasari’s followers proclaimed him Panembahan Amiruddin Khalifatul Mukminin, head of the faithful. He died of smallpox on 11 October 1862 at Bayan Begok, in the forests of the upper Barito, and was buried there; his remains were moved to Banjarmasin in 1958. The Dutch declared the war over in 1863.
+      - Antasari’s sons and other leaders, among them Gusti Muhammad Seman, kept up a government in the interior, known as the Pagustian, with forts along the upper Barito and its tributaries, and raided Dutch posts for four decades. Gusti Muhammad Seman was killed defending the fort of Baras Kuning on 24 January 1905, which ended the organised resistance. Indonesia declared Antasari a National Hero in 1968.
+    facts:
+      - [Onrust sunk, "December 1859"]
+      - [Hidayatullah’s surrender, "early 1862"]
+      - [Death of Antasari, "11 October 1862"]
+      - [Death of Gusti Muhammad Seman, "24 January 1905"]
+    markers:
+      - kind: event
+        side: bjr
+        name: Muara Teweh
+        date: 1859–1905
+        text: The upper Barito, where Antasari had his main support. The steamer Onrust was sunk on the river in this region in December 1859.
+        lonlat: [114.897, -0.961]
+      - kind: event
+        side: bjr
+        name: Bayan Begok
+        date: 11 October 1862
+        text: Antasari died here of smallpox and was buried in the forest; his remains now lie in Banjarmasin.
+        lonlat: [115.379, -1.061]
+      - kind: battle
+        side: nl
+        name: Baras Kuning
+        date: 24 January 1905
+        text: Gusti Muhammad Seman was killed defending the fort, ending the organised resistance.
+        lonlat: [114.495, -0.677]
+        lp: l
+      - kind: held
+        side: nl
+        name: Banjarmasin
+        date: "1862"
+        text: Dutch headquarters. Hidayatullah surrendered in early 1862 and was exiled to Cianjur in Java.
+        lonlat: [114.594, -3.319]
+        lp: l
+    areas:
+      - style: contested
+        side: bjr
+        label: Main area of resistance after 1862
+        polygon: [[114.300, -0.400], [114.900, -0.500], [115.600, -0.850], [115.550, -1.350], [114.850, -1.450], [114.400, -1.000]]

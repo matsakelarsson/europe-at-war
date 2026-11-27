@@ -1,0 +1,367 @@
+id: java-war
+name: Java War
+start: "1825-07-20"
+end: "1830-03-28"
+tier: A
+summary: "The rebellion of Prince Diponegoro of Yogyakarta against the Dutch colonial government and the Javanese courts allied with it, the last great war of the Javanese aristocracy against colonial rule. Diponegoro, eldest son of Sultan Hamengkubuwono III, drew on resentment of Dutch interference at court, of land rents, tolls and the Chinese toll-farmers, and on hopes of a Just King after cholera and the eruption of Merapi. When Dutch troops came to arrest him at Tegalrejo on 20 July 1825 he withdrew to Selarong and declared a holy war. His followers besieged Yogyakarta and rose across Central Java, and in 1826 his army threatened Surakarta until it was beaten at Gawok. The war became a guerrilla struggle that General Hendrik Merkus de Kock answered from 1827 with a network of more than 250 small forts, the benteng-stelsel, which slowly penned the rebels into the hills west of Yogyakarta. After his commanders were captured, killed or surrendered, Diponegoro agreed to talks and was arrested by de Kock at Magelang on 28 March 1830 and exiled to Sulawesi. At least 200,000 Javanese died, most of them civilians, and 15,000 soldiers of the colonial army. The Dutch annexed the outer provinces of the courts and introduced the Cultivation System, and Java saw no further large-scale revolt until the Indonesian revolution."
+countries: [id, nl]
+sides:
+  - id: dip
+    name: Diponegoro and his followers
+    polities: [diponegoro]
+    ink: green
+    moves: Diponegoro’s moves
+    success: Diponegoro’s success
+  - id: nl
+    name: Netherlands Indies government, with the Mangkunegaran, the Pakualaman and the loyal parts of the courts
+    polities: [dutch-east-indies]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+notes:
+  - The war is known in Indonesia as Perang Diponegoro. Diponegoro wrote his own account in exile, the Babad Diponegoro, a verse chronicle of more than 1,000 pages now on UNESCO’s Memory of the World register; a Javanese account from the Dutch side, the Babad Kedung Kebo, was written by Cokronegoro I. The Dutch official history in six volumes (1894–1909) and the work of the historian Peter Carey are the main modern accounts.
+  - Estimates of the dead differ. Most give at least 200,000 Javanese dead from fighting, hunger and disease, with combat deaths among the rebels of about 20,000 or fewer; the colonial army lost about 15,000 men, 8,000 Europeans, most of them to disease, and 7,000 Indonesian soldiers. The population of the Yogyakarta districts reported by the Dutch fell from just over 400,000 in 1825 to under 200,000 in 1831.
+  - Diponegoro’s forces also killed many Chinese, seen as agents of the hated toll-gates, notably at Ngawi in September 1825, though some Chinese fought for and supplied him.
+sources:
+  - title: Java War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Java_War
+  - title: Diponegoro (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Diponegoro
+  - title: Hendrik Merkus de Kock (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hendrik_Merkus_de_Kock
+  - title: Babad Diponegoro (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Babad_Diponegoro
+  - title: Java War (Britannica)
+    url: https://www.britannica.com/event/Java-War
+  - title: Diponegoro (Britannica)
+    url: https://www.britannica.com/biography/Diponegoro
+steps:
+  - title: Tegalrejo and Selarong
+    date: 1816 – July 1825
+    when: "1825-07-20"
+    borders: "1825-07-20"
+    view:
+      center: [110.5, -7.45]
+      size: [520, 420]
+    countries: [id, nl]
+    body:
+      - When the Dutch took back Java from the British in 1816, the courts of Central Java had already been humbled. Daendels had bullied them, the British had stormed the palace of Yogyakarta in 1812 and taken Kedu and other lands, and the new government let European and Chinese planters lease land from the nobility and Chinese toll-farmers squeeze the peasants at countless toll-gates. Diponegoro, born in 1785, the eldest son of Sultan Hamengkubuwono III by a secondary wife, had been passed over for the succession in favour of a younger half-brother (by some accounts he had himself declined the title) and lived as a devout Muslim on his estate at Tegalrejo outside Yogyakarta. He told of visions in which he was called to restore the faith and the kingdom. After his father’s death in 1814 two child sultans followed, and in 1822 Diponegoro became a guardian of the infant Hamengkubuwono V, quarrelling with the other guardians and with the Dutch resident, Anthonie Hendrik Smissaert.
+      - In 1823 the government abolished the land leases and demanded heavy indemnities from the nobles who had to repay the planters. Cholera in 1821, the eruption of Merapi in 1822 and poor harvests fed hopes of the Ratu Adil, the Just King of Javanese prophecy, and by late 1824 Diponegoro was planning a rising with nobles, religious teachers and armed bands of the countryside.
+      - In June 1825 Smissaert had a road laid out across Diponegoro’s land at Tegalrejo, and his followers tore out the survey stakes and fought the road workers. On 20 July 1825 a detachment of Dutch and Yogyakarta troops came to arrest him; after a skirmish Diponegoro escaped with his followers to the cave of Selarong in the hills south-west of the city, and on 21 July he proclaimed his rebellion. Some seventy members of the royal family joined him with their retinues.
+    facts:
+      - [Clash at Tegalrejo, "20 July 1825"]
+      - [Rebellion declared, "21 July 1825"]
+    markers:
+      - kind: event
+        side: nl
+        name: Tegalrejo
+        date: 20 July 1825
+        text: Diponegoro’s estate, where Dutch and Yogyakarta troops tried to arrest him; his residence was burned.
+        lonlat: [110.352, -7.791]
+        lp: l
+      - kind: event
+        side: dip
+        name: Selarong
+        date: 21 July 1825
+        text: The cave in the hills south-west of Yogyakarta where Diponegoro gathered his followers and declared his rebellion.
+        lonlat: [110.300, -7.880]
+        lp: b
+      - kind: capital
+        side: nl
+        name: Surakarta
+        date: "1825"
+        text: The court of Pakubuwono VI, divided between supporters of the Dutch and of Diponegoro.
+        lonlat: [110.827, -7.578]
+        lp: r
+    arrows:
+      - side: dip
+        label: Diponegoro to Selarong
+        phase: 1
+        via: [[110.35, -7.80], [110.33, -7.84], [110.30, -7.87]]
+        label_at: [110.05, -8.12]
+  - title: The siege of Yogyakarta and the spread of the rising
+    date: July – September 1825
+    when: "1825-08"
+    borders: "1825-08"
+    countries: [id, nl]
+    body:
+      - Diponegoro’s men ambushed and destroyed a Dutch column marching to Yogyakarta and captured its arms, and from 28 July they besieged the city, where the Dutch, the court and the European residents held the fort and the palace. Risings followed in the districts to the north and west, around Magelang and in Kedu, in the countryside of Surakarta and as far as Madiun and the north coast. At Ngawi in September Diponegoro’s followers killed the town’s Chinese, whom they saw as agents of the toll-gates. Diponegoro took the title of Sultan Erucakra, the Just King of prophecy, and religious teachers rallied their students to the holy war.
+      - The government recalled troops from Sulawesi and appointed Lieutenant-General Hendrik Merkus de Kock commissioner for the princely states on 26 July. A relief force with troops from Sumenep and the Mangkunegaran reached Yogyakarta on 19 August and saved the city, and on 25 September de Kock arrived with 7,500 men and ended the siege. When his troops attacked Selarong soon after, Diponegoro had already left.
+    facts:
+      - [Siege of Yogyakarta, "28 July – 25 September 1825"]
+      - [De Kock’s relief force, "7,500 men"]
+    markers:
+      - kind: siege
+        side: dip
+        name: Yogyakarta
+        date: 28 July – 25 September 1825
+        text: Besieged by Diponegoro’s forces; relieved on 19 August and again by de Kock on 25 September.
+        lonlat: [110.364, -7.808]
+        lp: t
+      - kind: event
+        side: dip
+        name: Magelang
+        date: August 1825
+        text: Risings in Kedu around Magelang, put down by Dutch reinforcements.
+        lonlat: [110.218, -7.477]
+        lp: l
+      - kind: toll
+        side: dip
+        name: Ngawi
+        date: September 1825
+        text: The Chinese community of the town was massacred by Diponegoro’s followers.
+        lonlat: [111.446, -7.404]
+        lp: t
+      - kind: held
+        side: nl
+        name: Semarang
+        date: "1825"
+        text: The government’s base on the north coast, from which relief columns marched south.
+        lonlat: [110.423, -6.990]
+        lp: t
+    arrows:
+      - side: nl
+        label: Relief from Semarang
+        phase: 1
+        via: [[110.42, -7.03], [110.45, -7.30], [110.40, -7.55], [110.37, -7.78]]
+      - side: dip
+        label: Rising in Kedu
+        phase: 1
+        via: [[110.30, -7.85], [110.25, -7.70], [110.22, -7.50]]
+    areas:
+      - style: contested
+        side: dip
+        label: Countryside risen for Diponegoro, 1825
+        atoms: [ID-YO, ID-JT~kedu, ID-JT~surakarta]
+  - title: Diponegoro’s offensive and Gawok
+    date: "1826"
+    when: "1826-10-15"
+    borders: "1826-10"
+    countries: [id, nl]
+    body:
+      - Through late 1825 and 1826 de Kock’s columns chased Diponegoro without catching him. In June 1826 the Dutch stormed the rebel stronghold of Pleret, the old capital of Mataram. Diponegoro then marched north, ambushing a column of Yogyakarta nobles, destroying a Dutch column on the slopes of Merapi and taking a Dutch post, and he joined forces with Kyai Maja, his spiritual adviser, to strike at de Kock’s headquarters at Surakarta.
+      - Quarrels between the two leaders cost the rebels time, and the Dutch concentrated their troops. On 15 October 1826 Diponegoro’s army was beaten at Gawok, west of Surakarta. The defeat broke the rebels’ numerical advantage and ended their hopes of taking the courts; Diponegoro withdrew west with about 5,000 men.
+    facts:
+      - [Pleret stormed, "June 1826"]
+      - [Battle of Gawok, "15 October 1826"]
+    markers:
+      - kind: taken
+        side: nl
+        name: Pleret
+        date: June 1826
+        text: The old Mataram capital, a rebel stronghold, stormed by Dutch troops.
+        lonlat: [110.408, -7.866]
+        lp: b
+      - kind: battle
+        side: nl
+        name: Gawok
+        date: 15 October 1826
+        text: Diponegoro’s advance on Surakarta was defeated here; afterwards he could no longer fight pitched battles.
+        lonlat: [110.745, -7.589]
+        lp: t
+      - kind: capital
+        side: nl
+        name: Surakarta
+        date: "1826"
+        text: De Kock’s headquarters.
+        lonlat: [110.827, -7.578]
+        lp: r
+    arrows:
+      - side: dip
+        label: Diponegoro’s march on Surakarta
+        phase: 1
+        via: [[110.35, -7.86], [110.40, -7.70], [110.55, -7.63], [110.72, -7.59]]
+      - side: dip
+        label: Retreat west
+        phase: 2
+        via: [[110.72, -7.62], [110.55, -7.75], [110.38, -7.88], [110.25, -7.90]]
+  - title: Guerrilla war and the fort system
+    date: 1827–1828
+    when: "1827-10"
+    borders: "1827-10"
+    countries: [id, nl]
+    body:
+      - After Gawok Diponegoro fought a guerrilla war. His men ambushed Dutch columns from the tall grass along the roads, villagers blocked the tracks with felled trees and bamboo stakes, and the fortified villages of the countryside served as rebel strongholds. Disease, the hostility of the population and the cuts in spending ordered by the commissioner-general, Leonard du Bus de Gisignies, wore down the Dutch; by April 1827 de Kock had lost 1,600 men, and he compared the war to the Vendée.
+      - In 1827 de Kock changed his method. He built small forts (benteng) at short distances along the roads and rivers, linked by mobile columns, and pushed the network forward step by step, so that the rebels lost the villages that fed them. A ceasefire for talks in August–September 1827 led nowhere, and in October Diponegoro moved west along the south coast into Bagelen, surprising its Dutch posts. By the end of 1828 his men held most of the Bagelen countryside, but the Dutch had cleared the country around Yogyakarta and Surakarta.
+      - Of the 258 forts built during the war, 133 went up in 1828 and 1829. The colonial army was reinforced by about 3,000 soldiers from the Netherlands, two-thirds of whom died, and by thousands of Indonesian auxiliaries from Madura, Sulawesi, Buton, the Moluccas and Bali, with 2,500 men of the Mangkunegaran Legion.
+    facts:
+      - [Dutch losses by April 1827, "1,600 dead"]
+      - [Forts built, "258 in all, 133 of them in 1828–1829"]
+    markers:
+      - kind: event
+        side: dip
+        name: Bagelen
+        date: October 1827
+        text: Diponegoro moved into this region west of Yogyakarta, whose countryside his men held through 1828.
+        lonlat: [110.031, -7.817]
+        lp: b
+      - kind: held
+        side: nl
+        name: Yogyakarta
+        date: 1827–1828
+        text: The country around the city was cleared of rebels and ringed with forts.
+        lonlat: [110.364, -7.808]
+        lp: t
+    arrows:
+      - side: dip
+        label: Diponegoro into Bagelen
+        phase: 1
+        via: [[110.32, -7.92], [110.18, -7.92], [110.06, -7.86]]
+  - title: The war beyond Mataram
+    date: 1825–1828
+    when: "1828-03"
+    borders: "1828-03"
+    countries: [id, nl]
+    body:
+      - The rising reached far beyond the heartland. North of Surakarta, towards Semarang, Prince Serang led a rebel army said to number 8,000 at the start of the war, with his mother, Nyi Ageng Serang, then in her seventies, commanding a cavalry unit. They fought on until mid-1827, when they surrendered.
+      - In East Java Raden Aria Sasradilaga, Diponegoro’s brother-in-law, raised the country around Rembang and Lasem on the north coast in late 1827, with Chinese and mixed-descent fighters among his men, while Raden Ayu Yudakusuma, a princess of the Yogyakarta house whom the Dutch called “a clever but much dreaded woman”, led the rising around Ngawi and Madiun. Their forces joined from November 1827 to March 1828, when Sasradilaga was defeated; Yudakusuma fought on until October 1828. The Dutch had to build forts around Semarang and Madiun as well.
+    facts:
+      - [Prince Serang surrenders, "mid-1827"]
+      - [Sasradilaga defeated, "March 1828"]
+      - [Raden Ayu Yudakusuma surrenders, "October 1828"]
+    markers:
+      - kind: event
+        side: dip
+        name: Lasem
+        date: 1827–1828
+        text: Sasradilaga’s rising on the north coast around Rembang and Lasem.
+        lonlat: [111.452, -6.692]
+        lp: t
+      - kind: event
+        side: dip
+        name: Madiun
+        date: 1825–1828
+        text: Raden Ayu Yudakusuma led the rising around Madiun and Ngawi until October 1828.
+        lonlat: [111.517, -7.629]
+        lp: b
+      - kind: event
+        side: dip
+        name: Ngawi
+        date: 1825–1828
+        text: A centre of the rising in East Java.
+        lonlat: [111.446, -7.404]
+        lp: r
+      - kind: event
+        side: dip
+        name: Grobogan
+        date: 1825–1827
+        text: The country north of Surakarta where Prince Serang and Nyi Ageng Serang fought until mid-1827.
+        lonlat: [110.917, -7.081]
+        lp: t
+      - kind: held
+        side: nl
+        name: Semarang
+        date: 1825–1828
+        text: The government’s base on the north coast.
+        lonlat: [110.423, -6.990]
+        lp: l
+    arrows:
+      - side: dip
+        label: Sasradilaga and Yudakusuma join forces
+        phase: 1
+        via: [[111.43, -6.75], [111.45, -7.05], [111.45, -7.38]]
+  - title: The collapse of the rebellion
+    date: 1828 – October 1829
+    when: "1829-09-17"
+    borders: "1829-09"
+    countries: [id, nl]
+    body:
+      - In 1828 and 1829 the forts closed in on Diponegoro’s men between the Progo and Bogowonto rivers, and the Dutch turned to harsher measures against the villages that supported them. In November 1828 Kyai Maja was ambushed and surrendered, and his followers were later exiled to Minahasa in Sulawesi. A three-month ceasefire from January to April 1829 brought no settlement; the war had exhausted the countryside, the rebels ran short of food and money, and some villagers turned on Diponegoro’s officials.
+      - The final Dutch offensive began in June 1829. Within two months Diponegoro lost several strongholds, and by September he and his commander-in-chief, Sentot Ali Basah Prawirodirjo, had been pushed into the Progo valley with about 300 men. On 17 September they were routed at Siluk, where many of Diponegoro’s commanders were killed. His uncle Prince Jayakusuma died soon after, and in October Sentot surrendered with his men, who were taken into Dutch service. Diponegoro was left with about fifty followers.
+    facts:
+      - [Kyai Maja captured, "November 1828"]
+      - [Ceasefire, "January–April 1829"]
+      - [Battle of Siluk, "17 September 1829"]
+      - [Sentot surrenders, "October 1829"]
+    markers:
+      - kind: battle
+        side: nl
+        name: Siluk
+        date: 17 September 1829
+        text: Diponegoro’s last force was routed; many of his commanders were killed.
+        lonlat: [110.396, -7.953]
+        lp: b
+      - kind: held
+        side: nl
+        name: Wates
+        date: "1829"
+        text: In the fortified country west of the Progo, where the rebels were penned in.
+        lonlat: [110.149, -7.859]
+        lp: l
+    arrows:
+      - side: nl
+        label: Final offensive
+        phase: 1
+        via: [[110.36, -7.80], [110.38, -7.88], [110.39, -7.94]]
+    areas:
+      - style: contested
+        side: dip
+        label: Last rebel ground between the Progo and Bogowonto, 1828–1829
+        polygon: [[110.02, -7.62], [110.25, -7.60], [110.30, -7.78], [110.28, -7.98], [110.03, -7.92]]
+  - title: The arrest at Magelang
+    date: February – March 1830
+    when: "1830-03-28"
+    borders: "1830-03-28"
+    countries: [id, nl]
+    body:
+      - King William I had ordered that Diponegoro be killed or captured and that no agreement be made with him, but de Kock persuaded the new governor-general, Johannes van den Bosch, to offer safe conduct for talks. In February 1830 Diponegoro met the local Dutch commander and then came to Magelang, where he camped with his followers during the fasting month and paid informal visits to de Kock.
+      - On 28 March 1830, the second day of the festival at the end of Ramadan, Diponegoro came to the residence at Magelang to negotiate and demanded recognition as sultan and as head of Islam in Java. De Kock announced his arrest, soldiers surrounded the house, and his escort, away at morning exercises, was disarmed. He was taken the same day to Semarang and then to Batavia. Raden Saleh’s painting of the arrest, made in 1857 in answer to a Dutch painting of the “submission”, shows it as a betrayal.
+    facts:
+      - [Diponegoro arrested, "28 March 1830, at Magelang"]
+    markers:
+      - kind: event
+        side: nl
+        name: Magelang
+        date: 28 March 1830
+        text: Diponegoro was arrested here during talks with de Kock, under a promise of safe conduct.
+        lonlat: [110.218, -7.477]
+        lp: l
+      - kind: held
+        side: nl
+        name: Semarang
+        date: 28 March 1830
+        text: Diponegoro was taken here the day of his arrest, on his way to exile.
+        lonlat: [110.423, -6.990]
+        lp: t
+    arrows:
+      - side: dip
+        label: Diponegoro to Magelang
+        phase: 1
+        via: [[110.15, -7.80], [110.18, -7.65], [110.21, -7.50]]
+      - side: nl
+        label: Into exile
+        phase: 2
+        via: [[110.23, -7.45], [110.32, -7.25], [110.41, -7.02]]
+  - title: Annexation, exile and the Cultivation System
+    date: 1830–1855
+    when: "1830-07"
+    borders: "1830"
+    countries: [id, nl]
+    body:
+      - Diponegoro was exiled to Manado in northern Sulawesi, where he wrote his chronicle, and in 1833 to Makassar, where he died in Fort Rotterdam on 8 January 1855. Sentot was sent with his men to fight in the Padri War in Sumatra and was later exiled to Bengkulu. Pakubuwono VI of Surakarta, suspected of supporting Diponegoro, was deposed and exiled to Ambon in 1830.
+      - The government annexed the outer provinces (mancanagara) of Yogyakarta and Surakarta, Banyumas, Bagelen, Madiun and Kediri, leaving the courts with little more than their heartlands. At least 200,000 Javanese had died, a third of Java’s six million people had been touched by the war and a quarter of its farmland damaged; the colonial army had lost 15,000 men and the treasury 20 to 25 million guilders.
+      - To recover the costs, van den Bosch introduced the Cultivation System in 1830, which made Javanese villages grow export crops for the government and brought the Netherlands more than 800 million guilders by the 1870s. Java saw no large-scale revolt against Dutch rule again until the Indonesian revolution of 1945. Diponegoro was declared a National Hero of Indonesia in 1973.
+    facts:
+      - [Javanese dead, "at least 200,000"]
+      - [Colonial army dead, "about 15,000 (8,000 European, 7,000 Indonesian)"]
+      - [Cost to the Dutch, "20–25 million guilders"]
+    markers:
+      - kind: toll
+        side: dip
+        name: Central Java
+        date: 1825–1830
+        text: At least 200,000 Javanese died in the war, most of them from hunger and disease; the population of the Yogyakarta districts fell by half.
+        lonlat: [110.55, -7.70]
+        lp: b
+      - kind: capital
+        side: nl
+        name: Yogyakarta
+        date: "1830"
+        text: The sultanate survived, reduced to roughly today’s Special Region of Yogyakarta.
+        lonlat: [110.364, -7.808]
+        lp: l
+    areas:
+      - style: gained
+        side: nl
+        label: Outer provinces annexed by the Dutch, 1830 (Banyumas, Bagelen, Madiun and Kediri)
+        atoms: [ID-JT~kedu, ID-JI~kediri]

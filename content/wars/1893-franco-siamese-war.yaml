@@ -1,0 +1,181 @@
+id: franco-siamese-war
+name: Franco-Siamese crisis of 1893
+start: "1893-04"
+end: "1893-10-03"
+tier: B
+summary: "A short war between France and Siam over the lands east of the Mekong, which Siam held as overlord of the Lao principalities and France claimed as heir to Vietnam’s rights. In April 1893 French columns from Indochina moved into the disputed country; a French officer was captured in the Khone islands, and on 5 June a French police inspector, Grosgurin, was killed with seventeen Vietnamese militiamen at Keng Kert in Khammouane. On 13 July two French warships forced their way past the forts at Paknam at the mouth of the Chao Phraya and anchored off Bangkok. France sent an ultimatum on 20 July and blockaded the coast from 29 July to 3 August, and Siam, finding that Britain would not support it, gave way. By the treaty of 3 October 1893 Siam ceded all its lands east of the Mekong, accepted a demilitarised zone 25 km wide on the west bank and the French occupation of Chanthaburi, and paid an indemnity of three million francs. Later treaties, in 1904 and 1907, gave France the right-bank parts of Luang Prabang and Champasak and the Cambodian provinces of Battambang, Siem Reap and Sisophon, in return for the evacuation of Chanthaburi, Trat and Dan Sai."
+countries: [th, la, kh]
+sides:
+  - id: fr
+    name: France and French Indochina
+    polities: [france, french-indochina]
+    ink: blue
+    moves: French moves
+    success: French success
+  - id: siam
+    name: Siam
+    polities: [thailand]
+    ink: purple
+    moves: Siamese moves
+    success: Siamese success
+notes:
+  - The left bank of the Mekong had been tributary to Siam since 1779 and to Vietnam in some districts; both France and Siam based their claims on these overlapping tributes, which neither side’s maps could fix as lines.
+  - Some of the officers in the Siamese navy and forts were Danish, among them Andreas du Plessis de Richelieu, who commanded the fort at Paknam.
+sources:
+  - title: Franco-Siamese crisis (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Franco-Siamese_crisis
+  - title: Paknam incident (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Paknam_incident
+  - title: Franco-Siamese Treaty of 1904 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Franco-Siamese_Treaty_of_1904
+  - title: Franco-Siamese Treaty of 1907 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Franco-Siamese_Treaty_of_1907
+  - title: Anglo-Siamese Treaty of 1909 (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Anglo-Siamese_Treaty_of_1909
+  - title: Auguste Pavie (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Auguste_Pavie
+  - title: Chulalongkorn (Britannica)
+    url: https://www.britannica.com/biography/Chulalongkorn
+steps:
+  - title: The French columns on the Mekong
+    date: April – June 1893
+    when: "1893-04"
+    borders: "1893-06-05"
+    countries: [la, kh, th]
+    body:
+      - After the Haw wars Siam had garrisons and commissioners in the Lao lands on both banks of the Mekong, and a French consulate had opened at Luang Prabang in 1886. Auguste Pavie, the consul there and from 1892 the French minister in Bangkok, and the colonial party in Paris argued that the left bank had belonged to Vietnam, now a French protectorate. After Siamese governors expelled French traders from the middle Mekong in 1892, France demanded in March 1893 that Siam withdraw its posts east of the river, and sent the gunboat Lutin to Bangkok.
+      - In April the governor-general of Indochina, Jean de Lanessan, sent three columns into the disputed country. In the centre the small Siamese garrisons withdrew, and on 25 May the Siamese commissioner of Khammouane, Phra Yot Mueang Khwang, was made to leave his post. Elsewhere the French met resistance. In the Khone islands, where the Mekong falls into Cambodia, Siamese troops besieged a French post and captured an officer, Captain Thoreux.
+      - On 5 June Phra Yot’s men attacked the village of Keng Kert, where the French police inspector Grosgurin lay sick. Grosgurin and seventeen Vietnamese militiamen were killed and the village burned. Siam said that its commissioner had acted in self-defence, under orders to make the French withdraw; in France the killing was called a massacre, and the government decided to force the issue.
+    facts:
+      - [French columns, "April 1893"]
+      - [Khammouane evacuated by Siam, "25 May 1893"]
+      - [Keng Kert, "5 June 1893, Grosgurin and 17 militiamen killed"]
+    markers:
+      - kind: taken
+        side: fr
+        name: Stung Treng
+        date: April 1893
+        text: Occupied by the southern French column on its way up the Mekong.
+        lonlat: [105.970, 13.525]
+      - kind: battle
+        side: siam
+        name: Khone islands
+        date: April – May 1893
+        text: Siamese troops on the islands at the Khone falls besieged a French post and captured Captain Thoreux.
+        lonlat: [105.930, 13.960]
+      - kind: event
+        side: siam
+        name: Khammouane
+        date: May – June 1893
+        text: The district of the Siamese commissioner Phra Yot, evacuated on 25 May. Grosgurin was killed at the village of Keng Kert on 5 June.
+        lonlat: [104.900, 17.450]
+      - kind: capital
+        side: siam
+        name: Bangkok
+        date: "1893"
+        text: Capital of Siam under King Chulalongkorn. The French gunboat Lutin lay off the French legation from March.
+        lonlat: [100.500, 13.750]
+        lp: l
+    arrows:
+      - side: fr
+        phase: 1
+        via: [[105.960, 12.480], [106.000, 13.000], [105.970, 13.500], [105.940, 13.920]]
+      - side: fr
+        phase: 1
+        via: [[106.400, 17.600], [105.800, 17.700], [105.000, 17.480]]
+  - title: Paknam and the ultimatum
+    date: July – August 1893
+    when: "1893-07-13"
+    borders: "1893-07-13"
+    countries: [th]
+    body:
+      - On 13 July 1893 the aviso Inconstant and the gunboat Comète, led by the mail steamer Jean-Baptiste Say, entered the mouth of the Chao Phraya against Siamese orders. At about half past six in the evening the new Phra Chulachomklao fort at Paknam fired warning shots and then opened fire, with the Siamese gunboats joining in. In about 25 minutes the French ships forced the passage and steamed on to anchor off the French legation in Bangkok, with their guns trained on the palace; the Jean-Baptiste Say ran aground and was taken. The French lost three killed and three wounded, the Siamese about fifteen or sixteen killed and twenty wounded.
+      - On 20 July France sent an ultimatum demanding all the land east of the Mekong, an indemnity and the punishment of those responsible for the killings. Siam offered to accept most of it, but not the whole left bank; France rejected this and declared a blockade of the Siamese coast from 29 July. Britain, which had warships in the river to protect its subjects, advised Siam to give way and would not intervene, and Siam accepted the ultimatum in full. The blockade was lifted on 3 August.
+    facts:
+      - [Paknam, "13 July 1893, French ships forced the river"]
+      - [Losses, "3 French and about 16 Siamese killed"]
+      - [Ultimatum, "20 July 1893"]
+      - [Blockade, "29 July – 3 August 1893"]
+    markers:
+      - kind: naval
+        side: fr
+        name: Paknam
+        date: 13 July 1893
+        text: The Inconstant and the Comète forced their way past the Phra Chulachomklao fort, commanded by the Danish officer Andreas du Plessis de Richelieu, and the Siamese gunboats.
+        lonlat: [100.585, 13.545]
+        lp: l
+      - kind: event
+        side: fr
+        name: Bangkok
+        date: 13 July – August 1893
+        text: The French ships anchored off the French legation, beside the Lutin, while France pressed its ultimatum.
+        lonlat: [100.500, 13.750]
+        lp: l
+    arrows:
+      - side: fr
+        label: Inconstant and Comète
+        phase: 1
+        via: [[100.620, 13.350], [100.590, 13.520], [100.560, 13.640], [100.510, 13.730]]
+  - title: The treaty of 1893 and after
+    date: October 1893 – 1907
+    when: "1893-10-03"
+    borders: "1893-10-04"
+    countries: [th, la, kh]
+    body:
+      - The treaty signed in Bangkok on 3 October 1893 gave France all the land on the left bank of the Mekong and the islands in the river. Siam agreed to keep no troops or forts within 25 km of the west bank or in the provinces of Battambang and Siem Reap, and to pay three million francs. French troops occupied the port of Chanthaburi as a guarantee. Phra Yot, acquitted by a Siamese court, was retried by a mixed Franco-Siamese court in 1894 and sentenced to twenty years’ imprisonment. The ceded lands became French Laos, with the kingdom of Luang Prabang as a protectorate.
+      - Britain and France agreed in 1896 to keep the Chao Phraya basin as a neutral buffer between their empires. By a convention of 13 February 1904 Siam ceded the right-bank parts of Luang Prabang (Sainyabuli) and Champasak, with Mlu Prey and Tonle Repou; the French left Chanthaburi in 1905 but took Trat, Dan Sai and Koh Kong instead. By the treaty of 23 March 1907 Siam ceded Battambang, Siem Reap and Sisophon to French Cambodia and got back Trat and Dan Sai, and France gave up extraterritorial rights over its Asian subjects in Siam. In 1909 Siam ceded Kedah, Kelantan, Terengganu and Perlis to Britain on similar terms. These treaties fixed most of Thailand’s present borders.
+    facts:
+      - [Treaty of Bangkok, "3 October 1893"]
+      - [Indemnity, "3 million francs"]
+      - [Chanthaburi occupied, "1893–1905"]
+      - [Later treaties, "13 February 1904 and 23 March 1907"]
+    markers:
+      - kind: treaty
+        name: Bangkok
+        date: 3 October 1893
+        text: The treaty was signed here by Prince Devawongse for Siam and Charles Le Myre de Vilers for France.
+        lonlat: [100.500, 13.750]
+        lp: l
+      - kind: held
+        side: fr
+        name: Chanthaburi
+        date: 1893–1905
+        text: Occupied by French troops as a guarantee that Siam would carry out the treaty.
+        lonlat: [102.105, 12.610]
+      - kind: held
+        side: fr
+        name: Trat
+        date: 1904–1907
+        text: Occupied by France when it left Chanthaburi, and returned to Siam in 1907.
+        lonlat: [102.515, 12.240]
+      - kind: event
+        side: fr
+        name: Battambang
+        date: 23 March 1907
+        text: Ceded by Siam to French Cambodia in 1907, with Siem Reap and Sisophon.
+        lonlat: [103.200, 13.100]
+      - kind: event
+        side: fr
+        name: Sainyabuli
+        date: 13 February 1904
+        text: The right-bank part of the kingdom of Luang Prabang, ceded to France in 1904.
+        lonlat: [101.710, 19.250]
+      - kind: event
+        side: fr
+        name: Champasak
+        date: 13 February 1904
+        text: The old capital of Champasak, on the right bank, ceded to France in 1904.
+        lonlat: [105.870, 14.890]
+    areas:
+      - style: gained
+        side: fr
+        label: Ceded to France in 1893
+        atoms: [LA-AT, LA-BK, LA-BL, LA-HO, LA-KH, LA-LM, LA-LP, LA-OU, LA-PH, LA-SL, LA-SV, LA-VI, LAO-3284, LA-XE, LA-XI, KH-16, KH-19]
+      - style: outline
+        side: fr
+        label: Ceded to France in 1904
+        atoms: [LA-XA, LA-CH, KH-13]
+      - style: lost
+        side: siam
+        label: Ceded by Siam to French Cambodia in 1907
+        atoms: [KH-1, KH-2, KH-17, KH-22, KH-24]

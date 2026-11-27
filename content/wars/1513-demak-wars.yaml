@@ -1,0 +1,225 @@
+id: demak-wars
+name: Demak’s wars
+start: "1513-01"
+end: "1546"
+tier: B
+summary: "The wars of Demak, the first Muslim sultanate of Java, which in the first half of the 16th century made itself the leading power of the island. Demak, a port on the north coast of Central Java that had broken away from Majapahit, led the Javanese ports against the Portuguese after their capture of Malacca: in January 1513 Pati Unus, the ruler of Japara, attacked Malacca with about 100 ships and was defeated, and Javanese tradition tells of a second attack in 1521 in which he was killed. Under Sultan Trenggana Demak then overcame the last Hindu-Buddhist powers. It defeated Daha, the successor of Majapahit in the Brantas valley, a victory dated by different sources between 1518 and about 1527, and when the Hindu kingdom of Sunda made an alliance with the Portuguese in 1522, Trenggana sent Fatahillah with troops from Demak and Cirebon to take Banten and Sunda Kelapa, which he renamed Jayakarta, in 1527. Campaigns followed against the ports and inland principalities of eastern Java: Tuban, Madiun, Surabaya (1530), Pasuruan and Malang. In 1546 Trenggana was killed while besieging Panarukan, the port of the Hindu kingdom of Blambangan. Demak broke up in a succession war, and its lands passed to Pajang in 1568 and later to Mataram."
+countries: [id, my, pt]
+sides:
+  - id: dm
+    name: Demak (with Japara and Cirebon)
+    polities: [demak, cirebon]
+    ink: green
+    moves: Demak moves
+    success: Demak success
+  - id: pt
+    name: Portugal
+    polities: [portugal]
+    ink: orange
+    moves: Portuguese moves
+    success: Portuguese success
+  - id: mj
+    name: Daha (Majapahit’s successor)
+    polities: [majapahit]
+    ink: red
+    moves: Daha moves
+    success: Daha success
+  - id: su
+    name: Sunda
+    polities: [sunda]
+    ink: teal
+    moves: Sundanese moves
+    success: Sundanese success
+  - id: bl
+    name: Blambangan and the Hindu east
+    polities: [blambangan]
+    ink: navy
+    moves: Blambangan moves
+    success: Blambangan success
+notes:
+  - The history of Demak rests on the Portuguese writer Tomé Pires, who knew Java in 1512–1515, on later Portuguese reports (Fernão Mendes Pinto describes Trenggana’s death at Panarukan) and on Javanese chronicles (babad) written down long afterwards. The dates of Demak’s conquests differ between these sources by years, and the relationship of Pati Unus and Trenggana, and the order of their reigns, are disputed.
+  - The traditional date of the conquest of Sunda Kelapa, 22 June 1527, is celebrated as the founding day of Jakarta.
+sources:
+  - title: Demak Sultanate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Demak_Sultanate
+  - title: Pati Unus (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pati_Unus
+  - title: Trenggana (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Trenggana
+  - title: Fatahillah (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fatahillah
+  - title: Sunda Kelapa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sunda_Kelapa
+  - title: Luso-Sundanese padrão (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Luso-Sundanese_padr%C3%A3o
+  - title: Sunda Kingdom (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sunda_Kingdom
+  - title: Majapahit (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Majapahit
+  - title: Duchy of Surabaya (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Duchy_of_Surabaya
+  - title: Blambangan Kingdom (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Blambangan_Kingdom
+steps:
+  - title: Pati Unus against Malacca
+    date: 1512–1513
+    when: "1513-01"
+    borders: "1513-01"
+    countries: [id, my, pt]
+    body:
+      - Demak, founded in the late 15th century by Raden Patah on a channel that then separated the Muria peninsula from Java, had become the strongest of the Muslim port states of the north coast. It exported rice to Malacca and held the ports of Japara, Semarang, Tuban and Gresik, and Jambi and Palembang in Sumatra. The Portuguese capture of Malacca in 1511 threatened the trade on which these ports lived, and the Portuguese writer Tomé Pires reported that Pate Unus (Pati Unus), the young ruler of Japara and a kinsman of the ruler of Demak, had spent years building a fleet to make himself master of Malacca.
+      - At the end of 1512 Pati Unus sailed with about 100 ships and some 5,000 men from Japara and Palembang, among them about 30 large junks. In January 1513 the fleet attacked Malacca and was defeated by the Portuguese ships under Fernão Pires de Andrade, who reported that the cannonballs could not pierce Pati Unus’s own junk, built in layers of planking and plate. Pati Unus returned to Java with what was left of his fleet and is said to have laid up his junk as a memorial. He became ruler of Demak in 1518, and Javanese tradition tells that he led a second, larger fleet against Malacca in 1521 and was killed by a cannon shot; he is remembered as Pangeran Sabrang Lor, “the prince who crossed to the north”. The losses of ships crippled the trade of the Javanese ports for years.
+    facts:
+      - [Javanese fleet, "about 100 ships, some 5,000 men"]
+      - [Attack on Malacca, "January 1513, Portuguese victory"]
+    markers:
+      - kind: event
+        side: dm
+        name: Japara
+        date: "1512"
+        text: Pati Unus’s port, where the fleet was built and gathered.
+        lonlat: [110.668, -6.588]
+      - kind: event
+        side: dm
+        name: Palembang
+        date: "1512"
+        text: A dependency of Demak, which sent ships and men to the fleet.
+        lonlat: [104.756, -2.990]
+        lp: l
+      - kind: naval
+        side: pt
+        name: Malacca
+        date: January 1513
+        text: The Javanese fleet was defeated off the city by the Portuguese ships under Fernão Pires de Andrade.
+        lonlat: [102.249, 2.194]
+        lp: l
+    arrows:
+      - side: dm
+        label: Pati Unus
+        phase: 1
+        via: [[110.600, -6.450], [108.000, -5.300], [105.900, -3.300], [104.700, 0.300], [102.350, 2.120]]
+      - side: dm
+        phase: 1
+        via: [[104.780, -2.900], [105.300, -2.300], [105.700, -1.000]]
+  - title: Daha, and the conquest of Sunda Kelapa
+    date: 1518–1527
+    when: "1527"
+    borders: "1527-06-22"
+    countries: [id, pt]
+    body:
+      - In the Brantas valley the old Majapahit court survived at Daha (Kediri), held from 1498 by the minister Patih Udara, who seized the throne from Girindrawardhana. Demak’s rulers claimed descent from the Majapahit king Kertabhumi, whom Girindrawardhana had overthrown, and Javanese sources say that Udara sought Portuguese help against Demak. Demak’s armies marched on Daha overland by way of Madiun while its fleet sailed by way of Sedayu, and Daha fell to Demak. The date is uncertain; the Demak tradition gives 1518, other sources about 1527, the year usually given for the end of Majapahit. Tuban, Majapahit’s old port, was taken in about 1527. Many courtiers, priests and artisans of the old court are said to have fled to the mountains of the east and to Bali.
+      - In western Java the Hindu kingdom of Sunda, ruled from Pakuan Pajajaran near today’s Bogor, felt threatened by Demak and by Cirebon, which had stopped paying tribute to Sunda in 1482. King Surawisesa made a treaty with the Portuguese of Malacca, signed on 21 August 1522, which allowed them to build a fortress at Sunda Kelapa, the kingdom’s port at the mouth of the Ciliwung, in return for pepper and protection; a stone pillar, the padrão, marked the site. Before the Portuguese came back to build it, Sultan Trenggana of Demak sent Fatahillah, a commander who by most accounts came from Pasai, with troops from Demak and Cirebon. They took the port of Banten and, by tradition on 22 June 1527, Sunda Kelapa, where the harbour master and his people were killed and the town destroyed; a relief force from Pakuan was too weak to retake it. The port was renamed Jayakarta. When a Portuguese squadron arrived to build the fortress, some thirty sailors from a ship wrecked on the coast were killed, and the rest sailed back to Malacca.
+      - Banten became the seat of a new sultanate under Hasanuddin, son of Sunan Gunungjati of Cirebon, married to Trenggana’s sister. Surawisesa, by Sundanese tradition, fought fifteen battles against the Muslim forces before a peace with Cirebon in 1531, but Sunda had lost its ports for good and was finally conquered by Banten in 1579.
+    facts:
+      - [Treaty of Sunda and Portugal, "21 August 1522"]
+      - [Sunda Kelapa taken, "22 June 1527 (traditional date)"]
+      - [Fall of Daha, "between 1518 and about 1527"]
+    markers:
+      - kind: taken
+        side: dm
+        name: Daha
+        date: 1518 or about 1527
+        text: The last seat of the Majapahit court, taken by Demak. Demak claimed to be Majapahit’s rightful heir.
+        lonlat: [112.011, -7.817]
+      - kind: taken
+        side: dm
+        name: Tuban
+        date: about 1527
+        text: Majapahit’s old port on the north coast, conquered by Trenggana.
+        lonlat: [112.050, -6.897]
+      - kind: taken
+        side: dm
+        name: Sunda Kelapa (Jayakarta)
+        date: 22 June 1527
+        text: Sunda’s chief port, where the Portuguese had been promised a fortress in 1522. Taken by Fatahillah and renamed Jayakarta, the later Jakarta.
+        lonlat: [106.811, -6.124]
+      - kind: taken
+        side: dm
+        name: Banten
+        date: "1527"
+        text: Sunda’s western port, taken by the forces of Demak and Cirebon and made the seat of a new sultanate under Hasanuddin.
+        lonlat: [106.153, -6.036]
+        lp: l
+      - kind: capital
+        side: su
+        name: Pakuan Pajajaran
+        date: "1527"
+        text: The capital of Sunda, which sent too small a force to save its port.
+        lonlat: [106.810, -6.623]
+      - kind: held
+        side: dm
+        name: Cirebon
+        date: "1527"
+        text: The Muslim port state of Sunan Gunungjati, Demak’s ally, which sent troops with Fatahillah.
+        lonlat: [108.557, -6.707]
+    arrows:
+      - side: dm
+        label: Fatahillah
+        phase: 1
+        via: [[110.550, -6.500], [109.200, -6.250], [108.560, -6.500], [107.500, -5.900], [106.850, -6.050]]
+      - side: dm
+        phase: 2
+        via: [[106.800, -6.060], [106.500, -5.950], [106.180, -5.980]]
+      - side: dm
+        label: Towards Daha
+        phase: 1
+        via: [[110.700, -6.950], [111.250, -7.400], [111.550, -7.630], [111.900, -7.780]]
+  - title: Trenggana in the east, and his death at Panarukan
+    date: 1527–1546
+    when: "1535"
+    borders: "1546"
+    countries: [id]
+    body:
+      - Trenggana, remembered as the greatest ruler of Demak and crowned, by tradition, by Sunan Gunungjati, spent the following two decades extending Demak’s rule over the inland principalities and the ports of eastern Java, many of which were still Hindu. The Javanese chronicles date the conquest of Madiun to about 1529–1530, while Surabaya, the great port at the mouth of the Brantas, whose Muslim lord had long resisted Demak, submitted in 1530. Pasuruan followed in about 1535, and the principalities of the Malang highlands were brought under Demak by the mid-1540s. Majapahit’s heirlooms were carried to Demak as royal treasures. Trenggana gave Japara and Kalinyamat to his daughter, later known as Ratu Kalinyamat, and her husband, and Pajang to his son-in-law Jaka Tingkir.
+      - The last great Hindu state in Java was Blambangan in the eastern tip of the island, whose port of Panarukan was its commercial and political centre. In 1546 Trenggana besieged Panarukan and was killed there. Javanese tradition says that he was stabbed by a ten-year-old boy of the ruling family of Surabaya who was serving him betel; the Portuguese writer Fernão Mendes Pinto also tells of his death at Panarukan. The siege was abandoned.
+      - Trenggana’s death set off a war of succession. His son Sunan Prawata was murdered in 1549 on the orders of his cousin Arya Penangsang of Jipang, whose father Prawata had killed, and Penangsang was in turn defeated and killed by Hadiwijaya (Jaka Tingkir) of Pajang, Trenggana’s son-in-law, who took the regalia of Demak to Pajang in 1568. Surabaya became an independent principality, Blambangan held out until the 17th century, and Japara under Ratu Kalinyamat sent fleets against Portuguese Malacca in 1551 and 1574.
+    facts:
+      - [Surabaya submits, "1530"]
+      - [Pasuruan taken, "about 1535"]
+      - [Trenggana killed at Panarukan, "1546"]
+    markers:
+      - kind: capital
+        side: dm
+        name: Demak
+        date: 1527–1546
+        text: Trenggana’s capital, with the Great Mosque that still stands.
+        lonlat: [110.638, -6.894]
+      - kind: taken
+        side: dm
+        name: Madiun
+        date: about 1529–1530
+        text: The inland principality west of the Brantas, conquered by Demak.
+        lonlat: [111.523, -7.629]
+        lp: l
+      - kind: taken
+        side: dm
+        name: Surabaya
+        date: "1530"
+        text: The great port at the mouth of the Brantas, whose lord had long resisted Demak, submitted.
+        lonlat: [112.738, -7.246]
+      - kind: taken
+        side: dm
+        name: Pasuruan
+        date: about 1535
+        text: Conquered by Demak, which took it from the sphere of Blambangan.
+        lonlat: [112.906, -7.645]
+      - kind: siege
+        side: bl
+        name: Panarukan
+        date: "1546"
+        text: The port of Blambangan, besieged by Trenggana, who was killed in his camp. The siege was abandoned.
+        lonlat: [113.950, -7.700]
+    arrows:
+      - side: dm
+        phase: 1
+        via: [[110.700, -6.950], [111.100, -7.300], [111.480, -7.600]]
+      - side: dm
+        phase: 2
+        via: [[110.750, -6.650], [111.600, -6.700], [112.350, -6.900], [112.720, -7.180]]
+      - side: dm
+        phase: 3
+        via: [[112.760, -7.300], [112.880, -7.580]]
+      - side: dm
+        label: Trenggana, 1546
+        phase: 4
+        via: [[112.950, -7.620], [113.300, -7.700], [113.650, -7.720], [113.900, -7.700]]

@@ -1,0 +1,149 @@
+id: le-mac-war
+name: Lê–Mạc war
+start: "1533"
+end: "1677"
+tier: B
+summary: "The civil war between the Mạc dynasty, founded when the general Mạc Đăng Dung took the throne of Đại Việt in 1527, and supporters of the Later Lê dynasty, a period Vietnamese historians call the Southern and Northern Dynasties. In 1533 the general Nguyễn Kim, from exile in Lan Xang, proclaimed a Lê prince emperor and won back Thanh Hóa and Nghệ An. The Mạc, who held the Red River delta and the capital Đông Kinh (Hanoi), bought off a Ming invasion in 1540–1541 by submitting to the Ming at the border. For half a century the two courts fought along the Mã River and on the coasts of Thanh Hóa, while real power on the Lê side passed after Nguyễn Kim’s death to his son-in-law Trịnh Kiểm and the Trịnh lords. In 1592 Trịnh Tùng took Đông Kinh and the Mạc ruler Mạc Mậu Hợp was captured and executed. Members of the Mạc family held out in Cao Bằng on the Chinese border, under Ming and then Qing protection, until 1677."
+countries: [vn]
+sides:
+  - id: le
+    name: Lê dynasty (Nguyễn Kim, then the Trịnh lords)
+    polities: [dai-viet]
+    ink: red
+    moves: Lê moves
+    success: Lê success
+  - id: mac
+    name: Mạc dynasty
+    polities: [mac]
+    ink: purple
+    moves: Mạc moves
+    success: Mạc success
+notes:
+  - The war is known mainly from the Vietnamese chronicles, which were written under the restored Lê and the Trịnh and treat the Mạc as usurpers; modern Vietnamese historians judge the Mạc more favourably. Army sizes are those of the chronicles. The English-language accounts are thin, and dates of individual campaigns are given here to the year where they disagree.
+  - The Ming called the Lê side the legitimate dynasty until 1540 and then recognised the Mạc ruler as their commissioner in Annam; after 1597 they recognised the Lê court as well. The base map shows the Mạc in the north and the Lê in the south until 1592, and the Mạc in Cao Bằng until 1677.
+sources:
+  - title: Lê–Mạc War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/L%C3%AA%E2%80%93M%E1%BA%A1c_War
+  - title: Mạc dynasty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/M%E1%BA%A1c_dynasty
+  - title: Mạc Đăng Dung (Wikipedia)
+    url: https://en.wikipedia.org/wiki/M%E1%BA%A1c_%C4%90%C4%83ng_Dung
+  - title: Trịnh lords (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tr%E1%BB%8Bnh_lords
+  - title: Later Le dynasty (Britannica)
+    url: https://www.britannica.com/topic/Later-Le-dynasty
+steps:
+  - title: Two courts
+    date: 1527–1561
+    when: "1545"
+    borders: "1545-01-01"
+    countries: [vn, la, cn]
+    body:
+      - After decades of court intrigue and civil war, the general Mạc Đăng Dung, who had made himself master of the court, deposed and killed the young Lê emperor in 1527 and founded his own dynasty. Lê loyalists fled to the hills and to Lan Xang, and in 1533 the general Nguyễn Kim proclaimed a Lê prince, Lê Duy Ninh, emperor as Lê Trang Tông. Within a few years the Lê forces had won back Thanh Hóa and Nghệ An and set up their court in the uplands of Thanh Hóa. Lê Trang Tông appealed to the Ming, and the Jiajing Emperor massed troops on the border. In 1540 Mạc Đăng Dung went to the Nam Quan pass and submitted to the Ming officials, giving up border land in today’s Guangxi and his imperial title; the Ming made him their commissioner in Annam.
+      - Nguyễn Kim was poisoned in 1545 by a Mạc defector, and command of the Lê armies passed to his son-in-law Trịnh Kiểm, who sidelined Nguyễn Kim’s sons. One of them, Nguyễn Hoàng, had himself sent south as governor of Thuận Hóa in 1558. In 1555 and 1557 the Mạc general Mạc Kính Điển sailed up the Mã River with large fleets and was ambushed by the Lê, who had adopted Portuguese-style matchlocks. In 1559 Trịnh Kiểm marched north with 60,000 men and elephants and reached the outskirts of Đông Kinh, but could not take it or Hải Dương, and in 1561 a Mạc landing in Thanh Hóa and Nghệ An forced him back.
+    facts:
+      - [Mạc Đăng Dung takes the throne, "1527"]
+      - [Lê Trang Tông proclaimed, "1533"]
+      - [Mạc submission to the Ming, "1540–1541"]
+      - [Nguyễn Kim poisoned, "1545"]
+    markers:
+      - kind: capital
+        side: mac
+        name: Đông Kinh (Hanoi)
+        date: 1527–1592
+        text: Capital of the Mạc.
+        lonlat: [105.840, 21.035]
+      - kind: capital
+        side: le
+        name: Lê court in Thanh Hóa
+        date: 1543–1592
+        text: The Lê court and its armies were based in the uplands of today’s Thọ Xuân district.
+        lonlat: [105.550, 19.930]
+      - kind: treaty
+        side: mac
+        name: Nam Quan pass
+        date: 1540–1541
+        text: Mạc Đăng Dung submitted to the Ming officials here, ceding border land and accepting the title of commissioner.
+        lonlat: [106.710, 22.020]
+    arrows:
+      - side: mac
+        label: Mạc Kính Điển, 1555 and 1557
+        phase: 1
+        via: [[106.10, 20.40], [106.15, 20.10], [105.95, 19.80], [105.75, 19.85]]
+      - side: le
+        label: Trịnh Kiểm, 1559–1560
+        phase: 2
+        via: [[105.60, 19.95], [105.75, 20.35], [105.90, 20.70], [105.85, 20.95]]
+    areas:
+      - style: occupied
+        side: le
+        label: Held by the Lê court, about 1545 (approximate)
+        atoms: [VN-21, VN-22, VN-23]
+  - title: Mạc offensives and the fall of Đông Kinh
+    date: 1570–1593
+    when: "1592"
+    borders: "1592-12-01"
+    countries: [vn]
+    body:
+      - After Trịnh Kiểm’s death in 1570 his sons quarrelled; the elder, Trịnh Cối, went over to the Mạc, and the younger, Trịnh Tùng, took command. In the same year Mạc Kính Điển invaded Thanh Hóa by land and sea with, the chronicles say, 100,000 men and 700 ships, looted the Lê country and in 1571 reached the Cả River in Nghệ An before withdrawing in 1572. Four more Mạc offensives followed; in 1577 a Mạc army of 40,000 was defeated at Khoái Lạc in Thanh Hóa and its general Lại Thế Mỹ killed. Mạc Kính Điển died in 1580, and under the young Mạc Mậu Hợp the Mạc state weakened while Trịnh Tùng raided the delta.
+      - In early 1592 Trịnh Tùng marched north with about 60,000 men, defeated Mạc Mậu Hợp’s army and took Đông Kinh. Mạc Mậu Hợp fled, was captured in the autumn and was executed; his son Mạc Toàn was killed soon after. In April 1593 the Lê emperor Lê Thế Tông entered Đông Kinh. The restored Lê emperors reigned there until 1789, but power stayed with the Trịnh lords in the north, while Nguyễn Hoàng, who had helped in the war, went back to his southern provinces and ruled them more and more on his own.
+    facts:
+      - [Mạc invasion of Thanh Hóa, "1570–1572"]
+      - [Battle of Khoái Lạc, "1577, Lê victory"]
+      - [Đông Kinh taken by Trịnh Tùng, "1592"]
+      - [Lê Thế Tông enters Đông Kinh, "April 1593"]
+    markers:
+      - kind: taken
+        side: le
+        name: Đông Kinh (Hanoi)
+        date: "1592"
+        text: Taken by Trịnh Tùng. The Lê emperor entered it in April 1593.
+        lonlat: [105.840, 21.035]
+      - kind: event
+        side: le
+        name: Lê court in Thanh Hóa
+        date: 1570–1592
+        text: The base the Mạc offensives of the 1570s failed to destroy.
+        lonlat: [105.550, 19.930]
+    arrows:
+      - side: mac
+        label: Mạc Kính Điển, 1570
+        phase: 1
+        via: [[105.85, 20.90], [105.90, 20.40], [105.75, 20.05], [105.60, 19.95]]
+      - side: le
+        label: Trịnh Tùng, 1592
+        phase: 2
+        via: [[105.60, 19.95], [105.80, 20.30], [105.95, 20.65], [105.86, 20.98]]
+      - side: mac
+        label: Mạc retreat
+        phase: 3
+        via: [[105.90, 21.08], [106.20, 21.50], [106.10, 22.10], [106.22, 22.62]]
+  - title: The Mạc in Cao Bằng
+    date: 1593–1677
+    when: "1600"
+    borders: "1600-01-01"
+    countries: [vn, cn]
+    body:
+      - Members of the Mạc family fled to Cao Bằng, in the mountains on the Chinese border, recruited Tày and other upland peoples and kept a court there under the protection of the Ming, who for a time continued to recognise them as the rulers of Annam. In 1597 the Lê court sent the envoy Phùng Khắc Khoan to Beijing, and the Ming recognised the Lê as well, leaving the Mạc in Cao Bằng as a buffer.
+      - For eight decades the Mạc of Cao Bằng and their allies, among them the Vũ lords (chúa Bầu) in today’s Hà Giang, raided the Trịnh lands and were raided in turn. Trịnh armies finally took Cao Bằng in 1677, and the last Mạc ruler, Mạc Kính Vũ, fled to China. The long war left the north devastated and divided Đại Việt between the Trịnh in the north and the Nguyễn in the south, who fought each other from 1627.
+    facts:
+      - [Ming recognition of the Lê court, "1597"]
+      - [Cao Bằng taken by the Trịnh, "1677"]
+    markers:
+      - kind: capital
+        side: mac
+        name: Cao Bằng
+        date: 1593–1677
+        text: Seat of the Mạc rulers after 1592, under Ming and then Qing protection.
+        lonlat: [106.257, 22.666]
+      - kind: capital
+        side: le
+        name: Đông Kinh (Hanoi)
+        date: 1593–1677
+        text: Capital of the restored Lê emperors and the Trịnh lords.
+        lonlat: [105.840, 21.035]
+    areas:
+      - style: occupied
+        side: mac
+        label: Held by the Mạc, 1593–1677 (approximate)
+        atoms: [VN-04]

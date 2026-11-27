@@ -1,0 +1,148 @@
+id: qing-invasion-of-dai-viet
+name: Qing invasion of Đại Việt
+start: "1788-11"
+end: "1789-02"
+tier: B
+summary: "The Qing intervention to restore the last Lê emperor, Lê Chiêu Thống, who had fled from the Tây Sơn and appealed to the Qianlong Emperor. In November 1788 armies from Guangxi under the governor-general Sun Shiyi and from Yunnan under Wu Dajing crossed the border, and the Tây Sơn garrison of the north fell back to the Tam Điệp pass; on 17 December the Qing entered Thăng Long and installed Lê Chiêu Thống as king. Nguyễn Huệ answered by proclaiming himself Emperor Quang Trung at Phú Xuân on 22 December and marching north, gathering troops on the way. Over the Lunar New Year his army stormed the Qing forts south of the capital, at Hà Hồi, Ngọc Hồi and Đống Đa, and on 30 January 1789 retook Thăng Long. Several Qing generals were killed, and Sun Shiyi and Lê Chiêu Thống fled to China. Quang Trung then sought peace, and the Qianlong Emperor recognised him as king of Annam later in 1789. Vietnam remembers the battle as one of its greatest victories; in China the campaign was counted among Qianlong’s Ten Great Campaigns."
+countries: [vn, cn]
+sides:
+  - id: qing
+    name: Qing dynasty
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+  - id: le
+    name: Lê Chiêu Thống and the Lê loyalists
+    polities: [dai-viet]
+    ink: red
+    moves: Lê moves
+    success: Lê success
+  - id: ts
+    name: Tây Sơn (Quang Trung)
+    polities: [tay-son]
+    ink: orange
+    moves: Tây Sơn moves
+    success: Tây Sơn success
+notes:
+  - The size of the Qing army is disputed. Estimates in the sources range from 10,000 Qing soldiers with 100,000 Vietnamese Lê loyalists (Peter Perdue) and about 36,000 (a French missionary in 1789) to 200,000 (the Nguyễn chronicle) and 300,000 (another missionary); Sun Shiyi is said to have boasted of 500,000. Losses are equally uncertain. Dates are the Gregorian equivalents of the lunar dates in the English sources cited.
+  - Chinese historians have described the Qing aim as the restoration of a legitimate tributary king; Vietnamese historians argue that the Qianlong Emperor meant to make Đại Việt a dependency with Qing garrisons and Lê Chiêu Thống as a puppet king.
+sources:
+  - title: Battle of Ngọc Hồi-Đống Đa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Ng%E1%BB%8Dc_H%E1%BB%93i-%C4%90%E1%BB%91ng_%C4%90a
+  - title: Quang Trung (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Quang_Trung
+  - title: Lê Chiêu Thống (Wikipedia)
+    url: https://en.wikipedia.org/wiki/L%C3%AA_Chi%C3%AAu_Th%E1%BB%91ng
+  - title: Tây Sơn wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/T%C3%A2y_S%C6%A1n_wars
+  - title: Ten Great Campaigns (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ten_Great_Campaigns
+  - title: Tay Son brothers (Britannica)
+    url: https://www.britannica.com/topic/Tay-Son-brothers
+steps:
+  - title: The Qing take Thăng Long
+    date: November – December 1788
+    when: "1788-12"
+    borders: "1788-12-17"
+    countries: [vn, cn]
+    body:
+      - After the Tây Sơn general Vũ Văn Nhậm took Thăng Long in late 1787, Lê Chiêu Thống hid in the hills, and his mother and son fled to Longzhou in Guangxi to ask the Qing for help. Sun Shiyi, governor-general of Guangdong and Guangxi, persuaded the Qianlong Emperor that restoring the Lê would be easy. In November 1788 the Guangxi army under Sun Shiyi and Xu Shiheng crossed the Nam Quan pass and the Yunnan army under Wu Dajing came down from the Horse Pass (Maguan). Sun proclaimed that a much larger army was following and promised office to those who helped him, and Lê loyalists rose against the Tây Sơn.
+      - The Qing defeated the Tây Sơn at Lạng Sơn and pushed south. The Tây Sơn commander in the north, Ngô Văn Sở, on the advice of the scholar Ngô Thì Nhậm, abandoned Thăng Long and withdrew in good order to the Tam Điệp pass on the border of Thanh Hóa, after his general Phan Văn Lân was beaten on the Cầu River. The Qing crossed the Red River on 16 December and entered the capital unopposed the next morning, and Sun Shiyi invested Lê Chiêu Thống as king of Annam. The Qing generals settled in for the New Year, planning to march on Phú Xuân afterwards.
+    facts:
+      - [Qing armies cross the border, "November 1788"]
+      - [Thăng Long entered, "17 December 1788"]
+      - [Qing army, "10,000 to 300,000 or more (estimates)"]
+    markers:
+      - kind: battle
+        side: qing
+        name: Lạng Sơn
+        date: November 1788
+        text: The Tây Sơn garrison was defeated here and fell back.
+        lonlat: [106.760, 21.850]
+      - kind: battle
+        side: qing
+        name: Cầu River
+        date: December 1788
+        text: Phan Văn Lân attacked the Qing on the river, then called the Nguyệt Đức, and was beaten.
+        lonlat: [106.080, 21.195]
+      - kind: taken
+        side: qing
+        name: Thăng Long
+        date: 17 December 1788
+        text: Entered by the Qing without resistance. Sun Shiyi installed Lê Chiêu Thống as king of Annam.
+        lonlat: [105.840, 21.035]
+        lp: l
+      - kind: held
+        side: ts
+        name: Tam Điệp
+        date: December 1788
+        text: The Tây Sơn garrison of the north withdrew to this pass and waited for help from Phú Xuân.
+        lonlat: [105.900, 20.160]
+    arrows:
+      - side: qing
+        label: Sun Shiyi
+        phase: 1
+        via: [[106.75, 22.15], [106.72, 21.85], [106.45, 21.45], [106.10, 21.20], [105.88, 21.06]]
+      - side: qing
+        label: Wu Dajing
+        phase: 1
+        via: [[104.40, 23.00], [104.95, 22.70], [105.22, 22.10], [105.40, 21.50], [105.50, 21.16]]
+      - side: ts
+        label: Ngô Văn Sở
+        phase: 2
+        via: [[105.84, 21.00], [105.88, 20.60], [105.90, 20.20]]
+  - title: Ngọc Hồi and Đống Đa
+    date: December 1788 – February 1789
+    when: "1789-01"
+    borders: "1789-01-30"
+    countries: [vn, cn]
+    body:
+      - On 22 December 1788 Nguyễn Huệ had himself proclaimed emperor as Quang Trung on a hill south of Phú Xuân and marched north, raising more men in Nghệ An; the sources give him up to 100,000 men and about 100 war elephants. At Tam Điệp on 15 January 1789 he divided his army into five columns, two of them by water through the delta. The army celebrated the New Year early, crossed the Hoàng Long River on New Year’s Eve and on the night of 28 January took the Qing post at Hà Hồi. At dawn on 30 January Quang Trung, riding an elephant, led the assault on the fortified Qing camp at Ngọc Hồi, with soldiers shielded by bundles of wet wood; the camp was overrun, and another column took the camp at Đống Đa on the south-western edge of the city.
+      - The Qing army broke and fled across the Red River, where many drowned. The generals Xu Shiheng, Shang Weisheng, Zhang Chaolong and Cen Yidong were killed; Sun Shiyi fled with a few men, losing his seal of office, and Lê Chiêu Thống fled with him to China. Wu Dajing’s army from Yunnan, at Sơn Tây, withdrew in good order. The missionary Charles La Mothe put the Qing dead at 40,000 to 50,000, and the Draft History of Qing says more than half the army died; the Tây Sơn lost more than 8,000 killed. Quang Trung at once wrote in submissive terms to the Qianlong Emperor, who in 1789 recognised him as king of Annam and abandoned Lê Chiêu Thống, who died in China in 1793.
+    facts:
+      - [Quang Trung proclaimed emperor, "22 December 1788"]
+      - [Battle of Ngọc Hồi–Đống Đa, "30 January 1789, Tây Sơn victory"]
+      - [Qing dead, "more than half the army (Qing history); 40,000–50,000 (La Mothe)"]
+      - [Tây Sơn dead, "more than 8,000"]
+    markers:
+      - kind: battle
+        side: ts
+        name: Ngọc Hồi
+        date: 30 January 1789
+        text: The fortified Qing camp south of the capital, stormed at dawn by Quang Trung, who had taken the post at Hà Hồi further south two nights before.
+        lonlat: [105.840, 20.920]
+      - kind: battle
+        side: ts
+        name: Đống Đa
+        date: 30 January 1789
+        text: The Qing camp on the south-western edge of Thăng Long, overrun the same day. Cen Yidong was killed.
+        lonlat: [105.820, 21.010]
+        lp: l
+      - kind: held
+        side: ts
+        name: Tam Điệp
+        date: 15 January 1789
+        text: Quang Trung gathered his army here and divided it into five columns.
+        lonlat: [105.900, 20.160]
+      - kind: event
+        side: qing
+        name: Sơn Tây
+        date: February 1789
+        text: Wu Dajing’s army from Yunnan withdrew from here when it learned of the defeat.
+        lonlat: [105.505, 21.140]
+    arrows:
+      - side: ts
+        label: Quang Trung
+        phase: 1
+        via: [[107.50, 16.60], [106.40, 17.95], [105.70, 18.90], [105.85, 19.80], [105.90, 20.15]]
+      - side: ts
+        phase: 2
+        via: [[105.90, 20.20], [105.92, 20.55], [105.86, 20.85], [105.84, 20.91]]
+      - side: ts
+        phase: 2
+        via: [[105.85, 20.25], [105.62, 20.60], [105.70, 20.90], [105.81, 21.00]]
+      - side: qing
+        label: Qing flight
+        phase: 3
+        via: [[105.86, 21.04], [106.10, 21.20], [106.45, 21.45], [106.72, 21.85], [106.75, 22.15]]

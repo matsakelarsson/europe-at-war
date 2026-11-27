@@ -1,0 +1,138 @@
+id: sieges-of-batavia
+name: Mataram’s sieges of Batavia
+start: "1628-08"
+end: "1629-10"
+tier: B
+summary: "Two attempts by Sultan Agung of Mataram, master of Central and East Java since the fall of Surabaya in 1625, to take Batavia, the fortified headquarters that the Dutch East India Company (VOC) had built on the ruins of Jayakarta in 1619. Agung meant to rule all of Java and saw Batavia as the stepping stone to Banten. In August 1628 a Mataram fleet landed troops beside the castle and an army followed overland, about 10,000 men in all; they tried to storm the outworks and to dam the Ciliwung river, but the garrison of a few hundred held out, and by December the besiegers had run out of food. Agung had the two commanders executed, and the army withdrew, leaving hundreds of beheaded bodies. For the second siege in 1629 Mataram stocked rice at depots along the coast, but Dutch ships found and burned the stores at Tegal and Cirebon, and the Sundanese regent Dipati Ukur turned against Mataram. A weakened army of perhaps 14,000 to 20,000 besieged Batavia from August to early October 1629, when hunger and disease drove it home; Governor-General Jan Pieterszoon Coen died of illness during the siege. Mataram never attacked Batavia again, the Company held its base on Java, and Agung turned his armies east, against Blambangan."
+countries: [id, nl]
+sides:
+  - id: mat
+    name: Mataram under Sultan Agung
+    polities: [mataram-sultanate]
+    ink: brown
+    moves: Mataram moves
+    success: Mataram success
+  - id: voc
+    name: Dutch East India Company
+    polities: [dutch-east-indies]
+    ink: orange
+    moves: Dutch moves
+    success: Dutch success
+notes:
+  - Most of the detail comes from the VOC’s records at Batavia; the Javanese chronicles (babad) tell the sieges with legendary elements. Numbers of besiegers and of their losses are Dutch estimates.
+  - Mataram camps of 1628–1629 are remembered in Jakarta place names such as Matraman, from “Mataraman”.
+sources:
+  - title: Siege of Batavia (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siege_of_Batavia
+  - title: Sultan Agung of Mataram (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sultan_Agung_of_Mataram
+  - title: Jan Pieterszoon Coen (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jan_Pieterszoon_Coen
+  - title: Mataram Sultanate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mataram_Sultanate
+  - title: "Indonesia: growth and impact of the Dutch East India Company (Britannica)"
+    url: https://www.britannica.com/place/Indonesia/Growth-and-impact-of-the-Dutch-East-India-Company
+steps:
+  - title: The first siege
+    date: August – December 1628
+    when: "1628-08-22"
+    borders: "1628-09-01"
+    countries: [id, nl]
+    body:
+      - Sultan Agung had made peace overtures to the Company in the early 1620s in the hope of naval help against Surabaya, but the Dutch would not fight for him, and after Surabaya fell in 1625 he turned against them. In April 1628 his envoy proposed terms that the Company refused. In August Mataram ships arrived off Batavia, at first asking to land cattle and rice for trade; on 25–26 August, as more ships arrived, troops began to come ashore north of the castle, and the Dutch pulled everyone inside and burned the bamboo suburbs to deny the attackers cover. The fleet was commanded by Tumenggung Bahureksa, regent of Kendal, and an army under Pangeran Mandurareja marched overland.
+      - On 29 August the Javanese attacked Fort Hollandia, an outwork south-east of the town, and were driven off with heavy losses by about 120 men; reinforcements from Banten roads and Onrust island brought the garrison to about 730. By October the overland army had arrived, bringing the besiegers to about 10,000. They blocked the roads and tried to dam the Ciliwung to cut off Batavia’s water, and made repeated attempts to storm the walls with ladders, without success.
+      - The Mataram commanders had not prepared for a long siege far from home, and by December their army was starving. Sultan Agung sent executioners to punish Bahureksa and Mandurareja for their failure, and on 3 December the Dutch found that the besiegers had marched away, leaving 744 headless bodies of their own men behind.
+    facts:
+      - [Mataram landing, "25–26 August 1628"]
+      - [Besiegers, "about 10,000 by October"]
+      - [Garrison, "about 730 at the start"]
+      - [Withdrawal, "3 December 1628"]
+    markers:
+      - kind: held
+        side: voc
+        name: Batavia
+        date: August – December 1628
+        text: The castle and walled town held out against landings, assaults on Fort Hollandia and an attempt to dam the Ciliwung.
+        lonlat: [106.812, -6.128]
+        lp: t
+      - kind: capital
+        side: mat
+        name: Karta (Mataram)
+        date: "1628"
+        text: Sultan Agung’s court, near today’s Yogyakarta, from which the overland army set out.
+        lonlat: [110.402, -7.853]
+        lp: b
+      - kind: event
+        side: mat
+        name: Kendal
+        date: "1628"
+        text: Seat of Tumenggung Bahureksa, who commanded the fleet that carried troops and supplies to Batavia.
+        lonlat: [110.200, -6.920]
+        lp: t
+    arrows:
+      - side: mat
+        label: Bahureksa’s fleet
+        phase: 1
+        via: [[110.20, -6.88], [109.00, -6.60], [107.80, -5.95], [106.84, -6.07]]
+      - side: mat
+        label: Mandurareja’s army
+        phase: 2
+        via: [[110.38, -7.80], [109.30, -7.30], [108.40, -6.95], [107.30, -6.45], [106.86, -6.18]]
+  - title: The second siege and the burned rice stores
+    date: June – October 1629
+    when: "1629-08"
+    borders: "1629-08-01"
+    countries: [id, nl]
+    body:
+      - Sultan Agung saw that supply had defeated him, and for the second campaign he had rice stored at depots along the north coast of West Java, at Tegal and Cirebon and in the newly settled lands of Karawang, and boats gathered to carry it. In July 1629 Dutch ships found the stores at Tegal and Cirebon and burned them with the boats. Meanwhile Dipati Ukur, the Sundanese regent of the Priangan highlands, who was to march with the Mataram army, quarrelled with its commander, killed Mataram officials and rose in rebellion; it took Mataram until 1632 to crush him.
+      - The main army under Adipati Juminah, perhaps 14,000 to 20,000 strong, reached Batavia hungry and stricken by malaria and dysentery. It camped south of the town, at the place still called Matraman, attacked the redoubts and fouled the Ciliwung, spreading disease in the town. On 21 September 1629 Coen died in the castle, probably of dysentery or cholera. In early October the besiegers, starving, gave up and retreated, many dying on the way.
+      - Agung never attacked Batavia again. He turned his armies against Blambangan, the Hindu kingdom at the eastern end of Java backed by Bali, and in 1630–1636 against rebels in his own lands. The Company was left secure behind its walls, and many Javanese soldiers who dared not return to Mataram settled on the north coast of West Java, where the rice lands of Karawang, Bekasi and Indramayu grew from their villages. Mataram and the Company made peace only in 1646, after Agung’s death.
+    facts:
+      - [Rice stores burned, "Tegal and Cirebon, July 1629"]
+      - [Besiegers, "perhaps 14,000 to 20,000"]
+      - [Coen’s death, "21 September 1629"]
+      - [Withdrawal, "early October 1629"]
+    markers:
+      - kind: held
+        side: voc
+        name: Batavia
+        date: August – October 1629
+        text: Held through the second siege; Coen died in the castle on 21 September.
+        lonlat: [106.812, -6.128]
+        lp: t
+      - kind: event
+        side: mat
+        name: Matraman
+        date: August – October 1629
+        text: The site of the Mataram camp south of Batavia, named after it.
+        lonlat: [106.862, -6.205]
+        lp: r
+      - kind: taken
+        side: voc
+        name: Tegal
+        date: July 1629
+        text: Mataram’s rice stores and boats were burned here by Dutch ships.
+        lonlat: [109.138, -6.867]
+        lp: b
+      - kind: taken
+        side: voc
+        name: Cirebon
+        date: July 1629
+        text: A second Mataram supply depot, also burned by the Dutch.
+        lonlat: [108.561, -6.714]
+        lp: b
+      - kind: event
+        name: Priangan (Dipati Ukur)
+        date: "1629"
+        text: Dipati Ukur, regent of the Priangan highlands, broke with Mataram and rebelled instead of joining the siege.
+        lonlat: [107.610, -6.920]
+        lp: b
+    arrows:
+      - side: voc
+        label: Dutch raid on the depots
+        phase: 1
+        via: [[106.85, -6.05], [107.70, -5.95], [108.57, -6.66], [109.13, -6.82]]
+      - side: mat
+        label: Juminah’s army
+        phase: 2
+        via: [[110.38, -7.80], [109.30, -7.25], [108.45, -6.85], [107.40, -6.40], [106.87, -6.21]]

@@ -1,0 +1,179 @@
+id: third-javanese-war-of-succession
+name: Third Javanese War of Succession
+start: "1746-05"
+end: "1757-03-17"
+tier: B
+summary: "The war that split the kingdom of Mataram in two, and later three. Prince Mangkubumi, a younger brother of King Pakubuwono II, left the court at Surakarta in 1746 after the Dutch East India Company (VOC) had humiliated him and the king had taken back a fief promised to him, and joined his nephew Raden Mas Said, who had been in revolt since the Chinese War. In December 1749 the dying Pakubuwono II signed over the “sovereignty” of Mataram to the Company, which installed his son as Pakubuwono III, while Mangkubumi’s followers proclaimed him king. Mangkubumi and Raden Mas Said fought the Company and Pakubuwono III across Central Java and destroyed a Company army at the Bogowonto River in 1751, but neither side could win. Mangkubumi fell out with Raden Mas Said and made peace with the Company, and by the Treaty of Giyanti of 13 February 1755 Mataram was divided: Pakubuwono III kept Surakarta and the east, and Mangkubumi became Sultan Hamengkubuwono I of Yogyakarta in the west. Raden Mas Said fought on until the Treaty of Salatiga of 17 March 1757 gave him a principality of his own, Mangkunegaran, as Mangkunegara I. The partition, with the Company as overlord of all three courts, lasted until Indonesian independence."
+countries: [id, nl]
+sides:
+  - id: mgb
+    name: Mangkubumi (Sultan Hamengkubuwono I of Yogyakarta from 1755)
+    polities: [mangkubumi, yogyakarta]
+    ink: gold
+    moves: Mangkubumi’s moves
+    success: Mangkubumi’s success
+  - id: sai
+    name: Raden Mas Said (Mangkunegara I from 1757)
+    polities: [raden-mas-said]
+    ink: magenta
+    moves: Raden Mas Said’s moves
+    success: Raden Mas Said’s success
+  - id: mat
+    name: Pakubuwono II and III (Mataram, then Surakarta)
+    polities: [mataram-sultanate, surakarta]
+    ink: brown
+    moves: Surakarta moves
+    success: Surakarta success
+  - id: voc
+    name: Dutch East India Company
+    polities: [dutch-east-indies]
+    ink: orange
+    moves: Company moves
+    success: Company success
+notes:
+  - Many accounts date the war from Pakubuwono II’s death and Mangkubumi’s proclamation in December 1749, but Mangkubumi’s revolt began when he left the court in May 1746, and that date is used here.
+  - Javanese tradition and the Indonesian state honour both Hamengkubuwono I and Mangkunegara I, whom his followers called Pangeran Sambernyawa, “the prince who reaps lives”, as National Heroes. The Treaty of Giyanti is remembered in Java as the Palihan Nagari, the division of the realm.
+  - The outer provinces of the two courts were divided in a patchwork; the base map simplifies them.
+sources:
+  - title: Third Javanese War of Succession (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Third_Javanese_War_of_Succession
+  - title: Third Javanese War of Succession (Britannica)
+    url: https://www.britannica.com/topic/Third-Javanese-War-of-Succession
+  - title: Treaty of Giyanti (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Treaty_of_Giyanti
+  - title: Hamengkubuwono I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hamengkubuwono_I
+  - title: Mangkunegara I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mangkunegara_I
+  - title: Pakubuwono III (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pakubuwono_III
+steps:
+  - title: Mangkubumi’s revolt and the cession of Mataram
+    date: 1746–1749
+    when: "1749-12"
+    borders: "1749-12-11"
+    countries: [id, nl]
+    body:
+      - After the Chinese War Pakubuwono II ruled from his new palace at Surakarta as a client of the Company, which held the north coast. His nephew Raden Mas Said, a grandson of Amangkurat IV, had joined the rebels of 1742 and was still in arms in the country of Sukawati, north-east of Surakarta. The king’s younger brother Mangkubumi drove him out and was promised Sukawati as a fief. But when Governor-General Gustaaf Willem van Imhoff visited the court in 1746, he rebuked Mangkubumi in public, and with the chief minister Pringgalaya persuaded the king to take back the grant. In May 1746 Mangkubumi left Surakarta with his followers, rose against the Company and the king, and made common cause with Raden Mas Said, who married his daughter.
+      - In late 1749 Pakubuwono II fell gravely ill. On 11 December, at the urging of the Company’s commander at the court, Johan Andries van Hohendorff, he signed a document handing the “sovereignty” of Mataram to the Company, and he died soon after. The Company installed his son as Pakubuwono III on 15 December, while Mangkubumi’s followers proclaimed Mangkubumi king, and much of the Javanese nobility regarded him as the rightful ruler.
+    facts:
+      - [Mangkubumi leaves the court, "May 1746"]
+      - [Mataram ceded to the Company, "11 December 1749"]
+      - [Pakubuwono III installed, "15 December 1749"]
+    markers:
+      - kind: capital
+        side: mat
+        name: Surakarta
+        date: "1749"
+        text: The court of Pakubuwono II, who on 11 December 1749 signed over the sovereignty of Mataram to the Company; Pakubuwono III was installed here days later.
+        lonlat: [110.827, -7.578]
+        lp: r
+      - kind: event
+        side: sai
+        name: Sukawati
+        date: "1746"
+        text: The country north-east of Surakarta, held by Raden Mas Said until Mangkubumi drove him out; its promised grant to Mangkubumi was withdrawn.
+        lonlat: [111.023, -7.428]
+        lp: t
+    arrows:
+      - side: mgb
+        label: Mangkubumi leaves the court
+        phase: 1
+        via: [[110.80, -7.58], [110.65, -7.68], [110.45, -7.78]]
+  - title: The war in Central Java
+    date: 1750–1754
+    when: "1751-12"
+    borders: "1751-12"
+    countries: [id, nl]
+    body:
+      - Mangkubumi and Raden Mas Said waged a war of movement across the interior and the north coast, fighting the Company and Pakubuwono III’s forces at Grobogan, Demak and elsewhere, while the Company, short of troops and money, held the coast and the courts. In 1751 Mangkubumi’s army crushed a Company force under de Clerck on the Bogowonto River in Bagelen, west of Yogyakarta.
+      - Neither side could win. In 1752 Mangkubumi and Raden Mas Said quarrelled over the succession, and Mangkubumi began to look for terms. Governor-General Jacob Mossel sent Nicolaas Hartingh, the Company’s governor of the north-east coast, to negotiate; on 22–23 September 1754 Hartingh and Mangkubumi agreed that Mangkubumi would take the title of sultan and half of the kingdom, and Pakubuwono III accepted the terms in November.
+    facts:
+      - [Battle of the Bogowonto, "1751"]
+      - [Hartingh meets Mangkubumi, "22–23 September 1754"]
+    markers:
+      - kind: battle
+        side: mgb
+        name: Bogowonto River
+        date: "1751"
+        text: Mangkubumi’s army crushed a Company force under de Clerck here, west of the Mataram heartland.
+        lonlat: [110.031, -7.817]
+        lp: b
+      - kind: battle
+        side: mgb
+        name: Grobogan
+        date: 1750s
+        text: One of the districts north of Surakarta where Mangkubumi’s and Raden Mas Said’s forces fought the Company.
+        lonlat: [110.917, -7.081]
+        lp: t
+      - kind: battle
+        side: mgb
+        name: Demak
+        date: 1750s
+        text: Fighting reached the north coast near the Company’s stronghold at Semarang.
+        lonlat: [110.639, -6.895]
+        lp: t
+      - kind: held
+        side: voc
+        name: Semarang
+        date: 1750–1754
+        text: The Company’s headquarters for the north-east coast of Java.
+        lonlat: [110.423, -6.990]
+        lp: l
+    arrows:
+      - side: voc
+        label: De Clerck
+        phase: 1
+        via: [[110.42, -7.05], [110.30, -7.40], [110.12, -7.70], [110.05, -7.80]]
+      - side: mgb
+        label: Mangkubumi
+        phase: 2
+        via: [[110.36, -7.85], [110.20, -7.84], [110.06, -7.82]]
+  - title: Giyanti and Salatiga
+    date: 1755–1757
+    when: "1755-02-13"
+    borders: "1755-02-13"
+    countries: [id, nl]
+    body:
+      - On 13 February 1755, at the village of Giyanti east of Surakarta, Mangkubumi, Hartingh and the representatives of Pakubuwono III signed the treaty that divided Mataram. Pakubuwono III kept Surakarta and the eastern half of the kingdom; Mangkubumi, as Sultan Hamengkubuwono I, received the western half and built a new palace at Yogyakarta, near Kotagede, the burial place of Mataram’s founder. The north coast stayed with the Company, Mangkubumi received half of the yearly rent it paid for it, and the heirlooms of the palace were shared.
+      - Raden Mas Said refused to accept the division and fought both courts and the Company for two more years. By the Treaty of Salatiga of 17 March 1757 he received a domain carved out of Surakarta’s lands and the title of Mangkunegara I, with his own palace, the Puro Mangkunegaran, in Surakarta. Central Java now had three courts, each bound to the Company and none able to defy it alone, and the Mataram lands saw no major war until the British attack on Yogyakarta in 1812.
+    facts:
+      - [Treaty of Giyanti, "13 February 1755"]
+      - [Treaty of Salatiga, "17 March 1757"]
+    markers:
+      - kind: treaty
+        name: Giyanti
+        date: 13 February 1755
+        text: The treaty dividing Mataram between Pakubuwono III of Surakarta and Hamengkubuwono I of Yogyakarta was signed here.
+        lonlat: [110.975, -7.620]
+        lp: r
+      - kind: capital
+        side: mgb
+        name: Yogyakarta
+        date: 1755–1756
+        text: The new palace of Sultan Hamengkubuwono I.
+        lonlat: [110.364, -7.808]
+        lp: b
+      - kind: capital
+        side: mat
+        name: Surakarta
+        date: "1755"
+        text: The court of Pakubuwono III, and from 1757 also of Mangkunegara I.
+        lonlat: [110.827, -7.578]
+        lp: l
+      - kind: treaty
+        side: sai
+        name: Salatiga
+        date: 17 March 1757
+        text: Raden Mas Said made peace here and received the principality of Mangkunegaran.
+        lonlat: [110.500, -7.330]
+        lp: t
+    areas:
+      - style: gained
+        side: mgb
+        label: Yogyakarta, the share of Hamengkubuwono I (simplified)
+        atoms: [ID-YO, ID-JT~kedu]
+      - style: outline
+        side: mat
+        label: Surakarta, the share of Pakubuwono III (simplified)
+        atoms: [ID-JT~surakarta, ID-JI~kediri]

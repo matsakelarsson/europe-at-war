@@ -1,0 +1,279 @@
+id: sino-burmese-war
+name: Sino-Burmese War
+start: "1765-12"
+end: "1769-12-22"
+tier: A
+summary: "Four invasions of Konbaung Burma by Qing China, fought over the Shan and Tai states of the border hills that both empires claimed. After Burma’s new Konbaung kings reasserted their rule over states the Qing had drawn into their orbit in the 1730s, the governor of Yunnan sent Green Standard troops against Kengtung in December 1765; they were beaten back. A second, larger invasion by Bhamo in 1766–1767 was trapped between the Burmese fort at Kaungton and armies closing in from the hills, and destroyed by battle and disease. The Qianlong Emperor then sent Manchu Bannermen under his son-in-law Ming Rui, who broke through the Shan hills at the Goteik gorge late in 1767 and came within 30 miles of Ava; cut off from his supplies, he was surrounded and destroyed at Maymyo in March 1768 and hanged himself. In 1769 Fuheng led about 60,000 men down the Irrawaddy, but his flotilla was sunk and his army, sick and surrounded near Kaungton, accepted a truce on 13 (or 22) December 1769. Neither court ratified the terms, and Qing trade was banned for twenty years; but Burma had kept its independence and its border states, at the price of losing its conquests in Siam, which used the respite to recover."
+countries: [mm, cn]
+sides:
+  - id: kb
+    name: Konbaung Burma (Hsinbyushin)
+    polities: [konbaung]
+    ink: brown
+    moves: Burmese moves
+    success: Burmese success
+  - id: qg
+    name: Qing China (Qianlong Emperor)
+    polities: [qing]
+    ink: gold
+    moves: Qing moves
+    success: Qing success
+notes:
+  - "Dates and numbers come from Burmese chronicles and Qing records as used by modern historians (Htin Aung, Dai Yingcong, Myint-U, Zhou and Grabowsky). The Kaungton agreement is dated 13 or 22 December 1769 in different sources. Qing losses are estimated at more than 70,000 dead over the four invasions, most of them from disease."
+  - "How the war ended is still told differently. Burmese and most Western historians count it a Burmese victory. The Qing court, after relations were restored in 1788, treated Burma’s missions as tribute and the Qianlong Emperor counted the campaign among his Ten Great Campaigns; the historian Dai Yingcong has called it “a disguised defeat” for the Qing. Both sides claimed the border states, which kept looking to both."
+  - "Names: Ava is today’s Inwa, Maymyo Pyin Oo Lwin, Hsenwi Theinni, Kengtung Kyaingtong and Kenghung Jinghong; Kaungton is also written Kawng Ton. Chinese names are in pinyin (Liu Zao, Yang Yingju, Ming Rui, E’erdeng’e, Fuheng)."
+sources:
+  - title: Sino-Burmese War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sino-Burmese_War
+  - title: Battle of Maymyo (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Maymyo
+  - title: Ming Rui (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ming_Rui
+  - title: Fuheng (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fuheng
+  - title: Hsinbyushin (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Hsinbyushin
+  - title: Ten Great Campaigns (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ten_Great_Campaigns
+  - title: Hsinbyushin (Encyclopaedia Britannica)
+    url: https://www.britannica.com/biography/Hsinbyushin
+  - title: Kawng Ton (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kawng_Ton
+steps:
+  - title: The border states and the first invasion
+    date: 1730s – April 1766
+    when: "1765-12"
+    borders: "1766-01"
+    countries: [mm, cn]
+    body:
+      - "The Shan and Tai states of the hills between Burma and Yunnan had long paid tribute to both courts. In the 1730s, while Toungoo Burma was falling apart, the Qing tightened their hold on the frontier and drew the chiefs (sawbwas) of states from Mogaung and Bhamo to Hsenwi, Kengtung and Sipsongpanna to their side. In 1758–1759 Alaungpaya sent armies to bring them back under Burma; the sawbwas of Mogaung, Bhamo and Hsenwi fled to Yunnan and urged the Qing to intervene. As Burmese armies passed through the hills on their way to Siam in 1764, the complaints grew, and the Qianlong Emperor sent the scholar-official Liu Zao to Yunnan."
+      - "In early 1765 the Burmese army at Kengtung left for Siam. Using trade disputes as a pretext, Liu Zao sent 3,500 Green Standard troops with Tai militias against Kengtung in December 1765. They laid siege to the town but were beaten by its garrison under Ne Myo Sithu, who pursued them into Pu’er prefecture in Yunnan and defeated them there before returning to Ava in April 1766. Liu Zao tried to hide the defeat, was ordered recalled and demoted, and cut his own throat. The emperor, now treating Burma as a matter of imperial prestige, appointed Yang Yingju, a veteran frontier officer."
+    facts:
+      - ["Qing force", "3,500 Green Standard troops and Tai militias"]
+      - ["Siege of Kengtung", "December 1765, Burmese victory"]
+    markers:
+      - kind: siege
+        side: kb
+        name: Kengtung
+        date: December 1765
+        text: The Qing siege was beaten off by the garrison under Ne Myo Sithu.
+        lonlat: [99.608, 21.292]
+      - kind: battle
+        side: kb
+        name: Pu’er
+        date: early 1766
+        text: The Burmese pursued the retreating Qing troops into Yunnan and defeated them.
+        lonlat: [101.050, 23.060]
+    arrows:
+      - side: qg
+        label: Liu Zao’s troops
+        phase: 1
+        via: [[101.05, 23.06], [100.80, 22.00], [99.90, 21.45], [99.65, 21.30]]
+      - side: kb
+        label: Ne Myo Sithu
+        phase: 2
+        via: [[99.65, 21.35], [100.40, 22.05], [100.95, 22.95]]
+  - title: The trap at Bhamo and Kaungton
+    date: summer 1766 – May 1767
+    when: "1766-12"
+    borders: "1767-01"
+    countries: [mm, cn]
+    body:
+      - "Yang Yingju planned to strike at the Burmese heartland down the Irrawaddy from Bhamo, and reportedly to put a Qing candidate on the Burmese throne. Hsinbyushin, though his main armies were besieging Ayutthaya, prepared a trap. His commander Balamindin gave up Bhamo and held the stockade of Kaungton a few miles downriver, with a corps of French gunners captured at Syriam in 1756; a second army under Maha Thiha Thura marched from Kenghung, in the far east, across the Shan hills. In December 1766 the Qing army took Bhamo and laid siege to Kaungton, which held."
+      - "Two Burmese armies under Maha Sithu and Ne Myo Sithu closed in, while Maha Thiha Thura blocked the road back to Yunnan. The Qing troops, unused to the climate, were struck down by cholera, dysentery and malaria; one report told of 800 dead out of 1,000 men in a single garrison. In January 1767 Ne Myo Sithu retook Bhamo, and the Burmese attacked the trapped army from both sides; it fled east and north into Maha Thiha Thura’s army and was destroyed. The Burmese went on to occupy eight Tai states inside Yunnan. Yang Yingju reported to Beijing that Bhamo had been taken and the Burmese had sued for peace; the emperor saw through the reports, recalled him and ordered him to take his own life. Hsinbyushin, on 9 January 1767, ordered his generals in Siam to finish quickly."
+    facts:
+      - ["Bhamo taken by the Qing", "December 1766"]
+      - ["Bhamo retaken", "January 1767"]
+    markers:
+      - kind: siege
+        side: kb
+        name: Kaungton
+        date: December 1766 – January 1767
+        text: Balamindin’s stockade on the Irrawaddy, with French gunners, held against repeated Qing assaults.
+        lonlat: [97.105, 24.136]
+        lp: l
+      - kind: taken
+        side: kb
+        name: Bhamo
+        date: January 1767
+        text: Abandoned to the Qing in December 1766 as a lure and retaken by Ne Myo Sithu, trapping the Qing army.
+        lonlat: [97.233, 24.267]
+      - kind: event
+        side: kb
+        name: Kenghung
+        date: late 1766
+        text: Maha Thiha Thura’s army marched from this easternmost Burmese garrison across the Shan hills to Bhamo.
+        lonlat: [100.800, 22.000]
+    arrows:
+      - side: qg
+        label: Yang Yingju’s army
+        phase: 1
+        via: [[98.49, 25.02], [97.85, 24.55], [97.25, 24.28]]
+      - side: kb
+        label: Maha Thiha Thura
+        phase: 1
+        via: [[100.80, 22.00], [99.30, 22.60], [98.20, 23.70], [97.50, 24.35]]
+      - side: kb
+        label: Ne Myo Sithu
+        phase: 2
+        via: [[96.60, 24.90], [97.00, 24.55], [97.22, 24.30]]
+  - title: Ming Rui’s march on Ava
+    date: November 1767 – February 1768
+    when: "1767-12"
+    borders: "1768-01"
+    countries: [mm, cn]
+    body:
+      - "Convinced that the Chinese Green Standard troops were to blame, the emperor sent Manchu and Mongol Bannermen under Ming Rui, his son-in-law and a veteran of the wars in Xinjiang. With Green Standard troops and Tai militias the army counted about 50,000 men. Ming Rui planned a pincer: his main army would take the road through Hsenwi, Hsipaw and down the Namtu towards Ava, the route of the Manchus who had pursued the Southern Ming emperor a century before, while E’erdeng’e attacked again by Bhamo. Hsinbyushin had kept his main armies in Siam after Ayutthaya fell, and had perhaps 20,000 men to meet them."
+      - "The invasion began in November 1767. Within eight days Ming Rui held Hsenwi and Hsipaw; leaving 5,000 men at Hsenwi as his base, he marched on with 15,000. In late December, at the Goteik gorge south of Hsipaw, he routed Maha Sithu’s army, and Maha Thiha Thura was beaten back at Hsenwi. Hsinbyushin at last recalled his armies from Siam. Ming Rui pushed on through the hills and early in 1768 reached Singu on the Irrawaddy, 30 miles north of Ava. The court urged the king to flee; Hsinbyushin refused, and led an army out to face him. In the north, E’erdeng’e’s army was held at Kaungton and, against Ming Rui’s orders, retreated to Yunnan; the emperor later had him executed."
+    facts:
+      - ["Qing army", "about 50,000 men, including Manchu and Mongol Bannermen"]
+      - ["Battle of the Goteik gorge", "late December 1767, Qing victory"]
+      - ["Qing advance reaches", "Singu, 30 miles north of Ava"]
+    markers:
+      - kind: taken
+        side: qg
+        name: Hsenwi
+        date: November 1767
+        text: Ming Rui’s supply base, held by 5,000 men.
+        lonlat: [97.967, 23.300]
+      - kind: taken
+        side: qg
+        name: Hsipaw
+        date: November 1767
+        text: Occupied by Ming Rui’s main army on the march.
+        lonlat: [97.283, 22.617]
+      - kind: battle
+        side: qg
+        name: Goteik gorge
+        date: late December 1767
+        text: Maha Sithu’s main Burmese army was routed by Ming Rui’s Bannermen.
+        lonlat: [96.870, 22.340]
+        lp: l
+      - kind: event
+        side: qg
+        name: Singu
+        date: early 1768
+        text: The farthest point of Ming Rui’s advance, on the Irrawaddy 30 miles north of Ava.
+        lonlat: [95.999, 22.550]
+        lp: l
+      - kind: capital
+        side: kb
+        name: Ava
+        date: 1768
+        text: Hsinbyushin refused to leave his capital and led an army out towards Singu.
+        lonlat: [95.985, 21.858]
+        lp: l
+    arrows:
+      - side: qg
+        label: Ming Rui
+        phase: 1
+        via: [[98.60, 23.90], [97.97, 23.30], [97.28, 22.62], [96.87, 22.34], [96.05, 22.52]]
+      - side: qg
+        label: E’erdeng’e
+        phase: 1
+        via: [[98.49, 25.02], [97.80, 24.55], [97.15, 24.17]]
+  - title: Maymyo
+    date: February – March 1768
+    when: "1768-03"
+    borders: "1768-03"
+    countries: [mm, cn]
+    body:
+      - "Ming Rui had gone too far. His base at Hsenwi lay hundreds of miles back across the Shan hills, and Burmese raiders under Teingya Minkhaung harried his supply lines. With E’erdeng’e gone, he went over to the defensive. Troops recalled from Siam began to arrive, and Maha Thiha Thura and Ne Myo Sithu retook Hsenwi, whose Qing commander killed himself. By March 1768 the Bannermen, cut off and dying of malaria in the heat of the dry zone, gave up the march on Ava and turned back towards Yunnan."
+      - "A Burmese army of 10,000 infantry and 2,000 horse followed. Maha Thiha Thura, now in overall command, sent Maha Sithu after the Qing army while he led the larger force through the hills to come out ahead of it, and the Burmese encircled it near Maymyo, about 50 miles north-east of Ava. In three days of fighting the army was destroyed. Of about 30,000 men of the main army, only some 2,500 survived, as prisoners; the rest were killed in battle or died of their wounds and of disease. Ming Rui, badly wounded, cut off his queue to send to the emperor as a sign of loyalty and hanged himself from a tree."
+    facts:
+      - ["Battle of Maymyo", "March 1768, Burmese victory"]
+      - ["Qing losses", "about 30,000 men of the main army; about 2,500 captured"]
+    markers:
+      - kind: taken
+        side: kb
+        name: Hsenwi
+        date: early 1768
+        text: Retaken by Maha Thiha Thura and Ne Myo Sithu, cutting Ming Rui off from his base.
+        lonlat: [97.967, 23.300]
+      - kind: battle
+        side: kb
+        name: Maymyo
+        date: March 1768
+        text: Ming Rui’s retreating army was encircled and destroyed in three days of fighting; Ming Rui hanged himself.
+        lonlat: [96.459, 22.035]
+    arrows:
+      - side: qg
+        label: Ming Rui’s retreat
+        phase: 1
+        via: [[96.05, 22.52], [96.30, 22.30], [96.42, 22.08]]
+      - side: kb
+        label: Maha Thiha Thura
+        phase: 2
+        via: [[96.00, 21.90], [96.30, 21.85], [96.60, 22.10], [96.50, 22.05]]
+  - title: Fuheng’s invasion and the truce of Kaungton
+    date: April 1768 – December 1769
+    when: "1769-10"
+    borders: "1769-12"
+    countries: [mm, cn, th]
+    body:
+      - "On 14 April 1768 the court announced Ming Rui’s death and gave the command to the chief grand councillor Fuheng, with the Manchu generals Agui, Aligun and Suhede. The emperor demanded Burma’s full submission and sent envoys to Siam and the Lao states seeking allies. Hsinbyushin brought most of his troops home from Siam, which allowed the Siamese under Taksin to drive the Burmese out of their country in 1768–1769. Fuheng arrived in Yunnan in April 1769 with about 60,000 men and a plan modelled on Ming and Mongol campaigns: one army would attack Bhamo and Kaungton while two others marched down both banks of the Irrawaddy, escorted by war boats built on the spot and manned by sailors of the Fujian navy."
+      - "Fuheng struck in October 1769, before the rains had ended. His armies took Bhamo and built a great fort near Shwenyaungbin, twelve miles east of Kaungton. But the army that crossed to the west bank fell back when a Burmese army approached, the army on the east bank did not advance, and the Burmese flotilla sank the Qing boats. For four weeks the Bannermen assaulted Kaungton in vain. Disease spread, Fuheng himself fell ill, and a Burmese army sent round to cut his communications closed in from the rear; by early December the Qing forces, having lost some 20,000 men, were surrounded between Shwenyaungbin, which fell, and Kaungton."
+      - "The Qing commanders asked for terms. Maha Thiha Thura, against the wishes of his officers and without asking the king, granted them, arguing that another annihilation would only bring another invasion. On 13 (or 22) December 1769, by Htin Aung’s account, 14 Burmese and 13 Chinese officers agreed at Kaungton that the fugitive sawbwas would be handed over, Burma’s rule over its historic Shan states respected, prisoners released and embassies exchanged. The Qing burned their boats, melted their cannon and marched away up the Taping valley, where thousands more died of hunger in the passes."
+    facts:
+      - ["Qing army", "about 60,000 men with a river flotilla"]
+      - ["Siege of Kaungton", "November 1769, four weeks, held"]
+      - ["Truce of Kaungton", "13 or 22 December 1769"]
+    markers:
+      - kind: siege
+        side: kb
+        name: Kaungton
+        date: November – December 1769
+        text: Held for four weeks against the Bannermen; the truce was agreed here in a seven-roofed hall.
+        lonlat: [97.105, 24.136]
+        lp: l
+      - kind: battle
+        side: kb
+        name: Shwenyaungbin
+        date: December 1769
+        text: The great Qing fort twelve miles east of Kaungton, stormed by the Burmese when they encircled Fuheng’s army.
+        lonlat: [97.290, 24.140]
+      - kind: naval
+        side: kb
+        name: Irrawaddy flotillas
+        date: November 1769
+        text: The Burmese war boats came upriver and sank the Qing flotilla built at Bhamo.
+        lonlat: [97.000, 23.950]
+        lp: b
+    arrows:
+      - side: qg
+        label: Fuheng
+        phase: 1
+        via: [[98.49, 25.02], [97.85, 24.55], [97.28, 24.20]]
+      - side: kb
+        label: Burmese flotilla
+        phase: 1
+        via: [[96.00, 22.60], [96.10, 23.40], [96.70, 23.80], [97.05, 24.08]]
+      - side: qg
+        label: Qing withdrawal
+        phase: 2
+        via: [[97.25, 24.20], [97.60, 24.45], [98.20, 24.75]]
+  - title: An uneasy peace
+    date: 1770–1790
+    when: "1770"
+    borders: "1770"
+    countries: [mm, cn, th]
+    body:
+      - "Neither court accepted the agreement. The Qianlong Emperor refused to hand over the sawbwas and banned all trade across the border; Hsinbyushin, furious that his generals had made peace without him, tore up his copy, and Maha Thiha Thura and the other commanders, after putting down a rising in Manipur in January 1770, were sent into exile in the Shan states. Burma kept the 2,500 Chinese prisoners, who were settled in the country. The war had cost the Qing more than 70,000 dead, by modern estimates, and 9.8 million taels of silver; Fuheng died of malaria in 1770. For a decade the emperor kept large forces on the Yunnan frontier, and for two decades the trade ban held."
+      - "For Burma, the cost in men was heavy for its population, and the need to guard the north kept its armies out of Siam, which under Taksin recovered all its old lands but Tenasserim. Relations were restored in 1788, brokered by Tai nobles and Yunnan officials who wanted trade. King Bodawpaya treated the exchange of missions as one between equals; the Qing court recorded it as tribute, the emperor sent Bodawpaya the seals of Hsenwi and Bhamo in 1788 and invested him as king of Burma in 1790, and the Burma campaign was counted among the Ten Great Campaigns of his reign. The border, never demarcated, ran roughly where it had before the 1730s."
+    facts:
+      - ["Qing losses", "more than 70,000 dead (modern estimates), mostly from disease"]
+      - ["Cost to the Qing treasury", "9.8 million taels of silver"]
+      - ["Relations restored", "1788"]
+    markers:
+      - kind: capital
+        side: kb
+        name: Ava
+        date: 1770
+        text: Hsinbyushin repudiated the Kaungton agreement and exiled the generals who had made it.
+        lonlat: [95.985, 21.858]
+      - kind: capital
+        side: qg
+        name: Kunming
+        date: 1770–1790
+        text: Capital of Yunnan, where the Qing kept a heavy garrison on the frontier for a decade.
+        lonlat: [102.710, 25.040]

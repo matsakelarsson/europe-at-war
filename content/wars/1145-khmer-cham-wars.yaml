@@ -1,0 +1,251 @@
+id: khmer-cham-wars
+name: Khmer–Cham wars
+start: "1145"
+end: "1220"
+tier: A
+summary: "Seventy-five years of war between the Khmer Empire of Angkor and the Cham kingdoms on the coast of today’s central and southern Vietnam. In 1145 Suryavarman II, the builder of Angkor Wat, took the Cham capital Vijaya, but by 1150 Jaya Harivarman I had driven the Khmer and their Cham allies out. In 1177 Jaya Indravarman IV sent a fleet up the Mekong and across the Tonle Sap lake, took the Khmer capital Yaśodharapura by surprise and killed its king. Jayavarman VII drove the Chams out in a series of battles, among them a battle on the water shown on the walls of the Bayon, was crowned in 1181 and rebuilt the capital as Angkor Thom. In 1190 a Khmer army under the Cham prince Vidyanandana took Vijaya; after years of revolts and new invasions Champa was ruled as a Khmer province from 1203 until the Khmer withdrew in 1220 and Jaya Paramesvaravarman II restored its independence."
+countries: [kh, vn]
+sides:
+  - id: kh
+    name: Khmer Empire
+    polities: [cambodia]
+    ink: navy
+    moves: Khmer moves
+    success: Khmer success
+  - id: ch
+    name: Champa
+    polities: [champa]
+    ink: teal
+    moves: Cham moves
+    success: Cham success
+notes:
+  - The wars are known from Sanskrit, Khmer and Cham inscriptions, from Chinese records and from the reliefs of the Bayon and Banteay Chhmar. The inscriptions praise their kings and give few precise dates; historians such as Michael Vickery have questioned the date of the Cham attack on Yaśodharapura and the length of the Cham occupation that followed, which the older accounts of George Coedès and Georges Maspero put at about four years.
+  - Champa was not one kingdom but a group of regions, among them Amaravati (around Mỹ Sơn), Vijaya (Bình Định), Kauthara (Nha Trang) and Panduranga (Phan Rang), each of which could have its own king. Vijaya, the capital in this period, is the citadel the Vietnamese call Chà Bàn or Đồ Bàn. Yaśodharapura is the city of Angkor.
+sources:
+  - title: Khmer–Cham wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Khmer%E2%80%93Cham_wars
+  - title: Suryavarman II (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Suryavarman_II
+  - title: Jaya Harivarman I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jaya_Harivarman_I
+  - title: Jaya Indravarman IV (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jaya_Indravarman_IV
+  - title: Jayavarman VII (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jayavarman_VII
+  - title: Jayavarman VII (Britannica)
+    url: https://www.britannica.com/biography/Jayavarman-VII
+  - title: Bayon (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bayon
+  - title: Banteay Chhmar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Banteay_Chhmar
+  - title: Champa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Champa
+  - title: Yaśodharapura (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ya%C5%9Bodharapura
+steps:
+  - title: Suryavarman II takes Vijaya
+    date: "1145"
+    when: "1145"
+    borders: "1145-12-01"
+    countries: [kh, vn]
+    body:
+      - Suryavarman II, who ruled the Khmer Empire from 1113 to about 1150 and built Angkor Wat, was the most warlike of the kings of Angkor. From 1128 he attacked Đại Việt, sending an army of 20,000 men against Nghệ An, where it was routed. In 1132 he persuaded the Cham king Jaya Indravarman III to join him, and their armies briefly held Nghệ An and raided Thanh Hóa, but after a Vietnamese counter-attack across Laos in 1136 Champa made its own peace with Đại Việt and refused to go on.
+      - In 1145 Suryavarman turned on Champa. His army crossed the mountains, took the Cham capital Vijaya in today’s Bình Định and ended the reign of Jaya Indravarman III, who disappears from the record. The Khmer occupied the north of Champa, and temples at Mỹ Sơn, the holy valley of the Cham kings, were destroyed.
+    facts:
+      - [Vijaya taken, "1145"]
+      - [Khmer king, "Suryavarman II (about 1113–1150)"]
+    markers:
+      - kind: capital
+        side: kh
+        name: Yaśodharapura (Angkor)
+        date: "1145"
+        text: The Khmer capital. Suryavarman II’s temple, Angkor Wat, was being built just south of the city.
+        lonlat: [103.859, 13.441]
+      - kind: taken
+        side: kh
+        name: Vijaya
+        date: "1145"
+        text: The Cham capital, near today’s Quy Nhơn, taken by Suryavarman’s army. King Jaya Indravarman III was deposed.
+        lonlat: [109.110, 13.890]
+      - kind: event
+        side: kh
+        name: Mỹ Sơn
+        date: "1145"
+        text: The temple valley of the Cham kings; temples here were destroyed during the Khmer occupation.
+        lonlat: [108.124, 15.764]
+        lp: l
+    arrows:
+      - side: kh
+        label: Suryavarman II
+        via: [[103.950, 13.450], [105.900, 13.600], [107.500, 13.950], [108.950, 13.900]]
+    areas:
+      - style: occupied
+        side: kh
+        label: Northern Champa under Khmer occupation
+        atoms: [VN-DN, VN-27, VN-29, VN-31]
+  - title: Jaya Harivarman I fights back
+    date: 1147–1150
+    when: "1148"
+    borders: "1149-06-01"
+    countries: [kh, vn]
+    body:
+      - In 1147 Sivanandana, a prince of Panduranga in the south of Champa, was crowned as Jaya Harivarman I and took up the fight. Suryavarman sent against him a Khmer army, with Chams who had gone over to the Khmer, under the general Sankara; Harivarman defeated it at Rajapura in 1148. A larger Khmer army was beaten at Virapura and then at Caklyang. None of these places has been identified with certainty; they lay somewhere between Quy Nhơn and Phan Rang.
+      - In 1149 Suryavarman made a Cham prince, Harideva, king at Vijaya under Khmer protection. Harivarman marched north, defeated Harideva’s army on the plain of Mahisa, took Vijaya and put Harideva to death with his Khmer and Cham officers, ending the occupation. In 1150 another rival, Vamsaraja, who had fled to Đại Việt and raised troops among the highland peoples, was defeated and killed at Mỹ Sơn. Suryavarman II died at about this time, possibly on campaign, and under his successors the Khmer made no new attack for a generation, while Harivarman spent the rest of his reign putting down revolts in Champa.
+    facts:
+      - [Jaya Harivarman I crowned, "1147"]
+      - [Battle of Rajapura, "1148, Cham victory"]
+      - [Vijaya retaken, "1149"]
+      - [Battle of Mỹ Sơn, "1150, Vamsaraja killed"]
+    markers:
+      - kind: held
+        side: ch
+        name: Panduranga
+        date: "1147"
+        text: The southern Cham region around today’s Phan Rang, where Sivanandana was crowned as Jaya Harivarman I.
+        lonlat: [108.950, 11.600]
+      - kind: taken
+        side: ch
+        name: Vijaya
+        date: "1149"
+        text: Retaken by Jaya Harivarman I after his victory at Mahisa over Harideva, the king installed by Suryavarman.
+        lonlat: [109.110, 13.890]
+      - kind: battle
+        side: ch
+        name: Mỹ Sơn
+        date: "1150"
+        text: The pretender Vamsaraja, who had come back from Đại Việt with highland troops, was defeated and killed here.
+        lonlat: [108.124, 15.764]
+        lp: l
+    arrows:
+      - side: ch
+        label: Jaya Harivarman I
+        phase: 1
+        via: [[108.950, 11.700], [109.150, 12.400], [109.250, 13.150], [109.130, 13.820]]
+      - side: ch
+        phase: 2
+        via: [[109.100, 13.950], [108.900, 14.800], [108.300, 15.600]]
+  - title: The Cham fleet on the Tonle Sap
+    date: 1167–1177
+    when: "1177"
+    borders: "1177-07-01"
+    countries: [kh, vn]
+    body:
+      - In 1167 Jaya Indravarman IV seized the throne of Champa. He made peace with Đại Việt and in 1170 attacked the Khmer Empire by land, without result. He tried to buy horses from China for a new overland invasion and failed, but Song records say that Chinese crossbows reached Champa at about this time, and the Chams mounted them on war elephants. In Angkor, meanwhile, the throne had been seized in about 1165 by an official, Tribhuvanadityavarman.
+      - In 1177 Jaya Indravarman sent a fleet along the coast and up the Mekong, through the Tonle Sap river and across the great lake, and took Yaśodharapura by surprise. King Tribhuvanadityavarman was killed and the city, defended only by wooden palisades, was sacked; a Cham inscription of 1183 records the Khmer treasures carried off to Champa. The Chams held the capital for some years, in the accounts of Coedès and Maspero about four.
+    facts:
+      - [Cham attack on Yaśodharapura, "1177 (the date has been questioned)"]
+      - [Khmer king killed, "Tribhuvanadityavarman"]
+    markers:
+      - kind: capital
+        side: ch
+        name: Vijaya
+        date: "1177"
+        text: Capital of Jaya Indravarman IV, from which the fleet set out.
+        lonlat: [109.110, 13.890]
+      - kind: taken
+        side: ch
+        name: Yaśodharapura (Angkor)
+        date: "1177"
+        text: Surprised by the Cham fleet coming across the Tonle Sap. The king was killed and the city sacked.
+        lonlat: [103.859, 13.441]
+    arrows:
+      - side: ch
+        label: Cham fleet
+        phase: 1
+        via: [[109.400, 13.700], [109.500, 12.000], [108.700, 10.500], [106.750, 9.850]]
+      - side: ch
+        phase: 2
+        via: [[106.600, 10.000], [105.700, 10.600], [104.950, 11.650], [104.300, 12.700], [103.900, 13.300]]
+  - title: Jayavarman VII drives out the Chams
+    date: 1177–1182
+    when: "1180"
+    borders: "1181-06-01"
+    countries: [kh, vn]
+    body:
+      - Jayavarman, a son of King Dharanindravarman II who had stood aside when Tribhuvanadityavarman took the throne, now gathered an army against the Chams. Over about four years he won a series of battles, among them a battle on the water, probably on the Tonle Sap or the rivers that feed it, which his sculptors later carved on the walls of the Bayon and of Banteay Chhmar, with Khmer and Cham war boats grappling, the Chams in their flower-shaped helmets and men falling to the crocodiles. By 1181 the Chams had been driven out, and Jayavarman was crowned as Jayavarman VII.
+      - He went on to put down a revolt at Malyang, in the region of today’s Battambang, with the help of a Cham prince, Vidyanandana, who had come to his court in 1182 and was trained in the Khmer army. Jayavarman then rebuilt the capital as Angkor Thom, enclosed by stone walls about 3 km on each side and a wide moat, with the Bayon at its centre, and covered the empire with temples, hospitals and rest houses. Preah Khan, which he dedicated to his father, is said to stand on the site of one of his victories over the Chams.
+    facts:
+      - [Coronation of Jayavarman VII, "1181 (some sources 1182)"]
+      - [Angkor Thom, "walls about 3 km square, built after 1181"]
+    markers:
+      - kind: naval
+        side: kh
+        name: Battle on the Tonle Sap
+        date: about 1178–1181
+        text: The decisive battle on the water shown on the reliefs of the Bayon and Banteay Chhmar. Where it was fought is not known.
+        lonlat: [104.050, 12.950]
+      - kind: capital
+        side: kh
+        name: Yaśodharapura (Angkor Thom)
+        date: "1181"
+        text: Retaken by Jayavarman VII and rebuilt as Angkor Thom, with the Bayon at its centre.
+        lonlat: [103.859, 13.441]
+      - kind: event
+        side: kh
+        name: Malyang (Battambang)
+        date: about 1182
+        text: A revolt in the west was put down by Jayavarman VII with the help of the Cham prince Vidyanandana.
+        lonlat: [103.200, 13.100]
+        lp: l
+  - title: Vidyanandana takes Vijaya
+    date: 1190–1192
+    when: "1190"
+    borders: "1190-12-01"
+    countries: [kh, vn]
+    body:
+      - When Jaya Indravarman IV attacked again in 1190, Jayavarman VII put Vidyanandana at the head of a Khmer army. He took Vijaya, captured Jaya Indravarman IV and sent him to Angkor as a prisoner. Champa was divided between two kings under Khmer overlordship. Jayavarman’s brother-in-law, Prince In, became king at Vijaya as Suryajayavarman, and Vidyanandana took Panduranga in the south and the name Suryavarmadeva.
+      - The settlement did not last. In 1191 a revolt at Vijaya drove In back to Cambodia and put a Cham prince on the throne as Jaya Indravarman V. Vidyanandana, with Khmer help, retook Vijaya and killed him; Jaya Indravarman IV, whom the Khmer had released to win back his throne, was defeated and put to death by Vidyanandana in about 1192. Vidyanandana then ruled all of Champa himself and broke with Angkor.
+    facts:
+      - [Vijaya taken, "1190"]
+      - [Jaya Indravarman IV, "captured 1190, killed about 1192"]
+    markers:
+      - kind: capital
+        side: kh
+        name: Yaśodharapura (Angkor)
+        date: "1190"
+        text: Capital of Jayavarman VII, where Jaya Indravarman IV was brought as a prisoner.
+        lonlat: [103.859, 13.441]
+      - kind: taken
+        side: kh
+        name: Vijaya
+        date: "1190"
+        text: Taken by the Khmer army under Vidyanandana. Prince In ruled here for Angkor until a revolt in 1191.
+        lonlat: [109.110, 13.890]
+      - kind: event
+        side: kh
+        name: Panduranga
+        date: 1190–1191
+        text: Given to Vidyanandana, who ruled it as Suryavarmadeva under Khmer overlordship before taking all of Champa.
+        lonlat: [108.950, 11.600]
+    arrows:
+      - side: kh
+        label: Vidyanandana
+        via: [[103.950, 13.450], [105.900, 13.600], [107.500, 13.950], [108.950, 13.900]]
+  - title: The Khmer province of Champa
+    date: 1192–1220
+    when: "1203"
+    borders: "1203-06-01"
+    countries: [kh, vn]
+    body:
+      - Jayavarman VII sent armies against Champa again in 1192, 1195, 1198–1199 and 1201–1203. In 1203 a Cham prince on the Khmer side, Dhanapatigrama, drove Vidyanandana out, and Vidyanandana fled to Đại Việt. For the next seventeen years Champa was ruled as a province of the Khmer Empire, first by Dhanapatigrama and then by Prince Angsaraja, a son of Jaya Harivarman I who had been brought up at the Khmer court. In 1207 Angsaraja went with a Khmer army, which included Burmese and Siamese troops, against Đại Việt.
+      - Jayavarman VII died in about 1218, and the Khmer presence in Champa dwindled. In 1220 the Khmer withdrew of their own accord, and Angsaraja took power as Jaya Paramesvaravarman II, restoring Champa’s independence. The Khmer Empire never again attacked Champa on this scale; Champa’s later wars were with Đại Việt and the Mongols, and the Bayon’s reliefs remained the great record of the wars.
+    facts:
+      - [Khmer invasions, "1192, 1195, 1198–1199, 1201–1203"]
+      - [Champa a Khmer province, "1203–1220"]
+      - [Independence restored, "1220, under Jaya Paramesvaravarman II"]
+    markers:
+      - kind: capital
+        side: kh
+        name: Angkor Thom
+        date: "1203"
+        text: Capital of Jayavarman VII, who died in about 1218.
+        lonlat: [103.859, 13.441]
+      - kind: taken
+        side: kh
+        name: Vijaya
+        date: "1203"
+        text: Vidyanandana was driven out by Dhanapatigrama and fled to Đại Việt. Champa was ruled from here as a Khmer province until 1220.
+        lonlat: [109.110, 13.890]
+    arrows:
+      - side: kh
+        via: [[103.950, 13.450], [105.900, 13.600], [107.500, 13.950], [108.950, 13.900]]

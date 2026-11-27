@@ -1,0 +1,199 @@
+id: british-occupation-of-manila
+name: British occupation of Manila
+start: "1762-09-24"
+end: "1764-04"
+tier: B
+summary: "The capture and occupation of Manila and Cavite by a British and East India Company expedition from Madras in the Seven Years’ War, and the risings it set off in Luzon. Spain had entered the war on France’s side in January 1762. On 24 September a fleet under Rear-Admiral Samuel Cornish, carrying about 6,800 soldiers, sailors and marines under Brigadier William Draper, among them Company sepoys, sailed into Manila Bay. The city, governed by the acting governor, Archbishop Manuel Rojo, had small regular forces and thousands of Filipino militia; it was stormed on 6 October and sacked, and Rojo agreed to a ransom of four million dollars, of which only a quarter was ever paid. The judge Simón de Anda y Salazar escaped to Pampanga, proclaimed himself governor and, with an army of Filipino volunteers, kept the British confined to Manila and Cavite. In the Ilocos Diego Silang rose against Spanish rule in December 1762 and sought British help, which never came; he was killed on 28 May 1763, and his widow Gabriela Silang fought on until she and her followers were captured and hanged at Vigan in September. Juan de la Cruz Palaris led a revolt in Pangasinan that lasted until 1765. The Treaty of Paris of 10 February 1763 returned Manila to Spain, and the British sailed away in April 1764."
+countries: [ph, gb, in, es]
+sides:
+  - id: gb
+    name: Great Britain and the East India Company
+    polities: [united-kingdom, british-india]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: es
+    name: Spanish Philippines (Rojo, then Anda)
+    polities: [spanish-east-indies]
+    ink: gold
+    moves: Spanish and Filipino loyalist moves
+    success: Spanish success
+  - id: ilo
+    name: Revolts of the Silangs in the Ilocos and of Palaris in Pangasinan
+    polities: [silang-revolt]
+    ink: green
+    moves: Rebel moves
+    success: Rebel success
+notes:
+  - Dates are in the Gregorian calendar. The Spanish in Manila, who had come across the Pacific, kept their calendar a day behind Europe’s until 1844, so Spanish accounts date the storming of Manila to 5 October 1762.
+  - The British force was a joint venture of the Crown and the East India Company, which hoped to make Manila a base for its trade with China. The numbers of Spanish and Filipino dead come from Spanish accounts.
+sources:
+  - title: British occupation of Manila (Wikipedia)
+    url: https://en.wikipedia.org/wiki/British_occupation_of_Manila
+  - title: Simón de Anda y Salazar (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sim%C3%B3n_de_Anda_y_Salazar
+  - title: Diego Silang (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Diego_Silang
+  - title: Gabriela Silang (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Gabriela_Silang
+  - title: Juan de la Cruz Palaris (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Juan_de_la_Cruz_Palaris
+  - title: Azim ud-Din I (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Azim_ud-Din_I
+  - title: Seven Years’ War (Britannica)
+    url: https://www.britannica.com/event/Seven-Years-War
+steps:
+  - title: Draper and Cornish take Manila
+    date: September – October 1762
+    when: "1762-09-24"
+    borders: "1762-10-06"
+    countries: [ph, gb, in]
+    body:
+      - Britain declared war on Spain in January 1762, when Spain joined France in the Seven Years’ War. At Madras the East India Company and the Crown fitted out an expedition against Manila, the hub of Spain’s trade between China and Mexico, which the Company hoped to keep as a base for its own China trade. It sailed in August with eight ships of the line and three frigates under Rear-Admiral Samuel Cornish, carrying about 6,800 men under Brigadier William Draper, among them the 79th Regiment of Foot, Company sepoys, and seamen and marines from the fleet.
+      - The fleet entered Manila Bay on 24 September 1762, before news of the war had reached the city. Governor Pedro de Arandía had died in 1759, and Manila was governed by the archbishop, Manuel Rojo del Río y Vieyra, as acting governor. The British landed south of the walls, used the churches of the suburbs as cover and bombarded the city for ten days, firing more than 20,000 shot and 5,000 bombs. Filipino militia brought in from the provinces attacked the British lines and were driven back with heavy losses.
+      - On 5 October the British guns opened a breach in the bastion of San Diego, and at dawn on 6 October the troops stormed it, meeting little resistance. Spanish accounts give about 85 Spanish soldiers and militiamen killed and 300 Filipino troops killed and 400 wounded during the siege; the British lost 147 killed and wounded. The city was sacked, by Rojo’s account for forty hours. Rojo surrendered Manila and the port of Cavite and agreed to a ransom of four million Spanish dollars, of which only about a quarter was ever paid. British ships also took two galleons, the Filipina, inbound from Acapulco with silver, and the outbound Santísima Trinidad, whose cargo was valued at 1.5 million dollars.
+    facts:
+      - [British force, "about 6,800 regulars, sepoys, sailors and marines"]
+      - [Fleet in Manila Bay, "24 September 1762"]
+      - [Manila stormed, "6 October 1762"]
+      - [Ransom agreed, "4 million dollars, about a quarter paid"]
+    markers:
+      - kind: taken
+        side: gb
+        name: Manila
+        date: 6 October 1762
+        text: The walled city, stormed through a breach in the bastion of San Diego after a ten-day bombardment, and sacked.
+        lonlat: [120.975, 14.590]
+      - kind: taken
+        side: gb
+        name: Cavite
+        date: October 1762
+        text: The naval port of Manila, with Fort San Felipe, surrendered with the city.
+        lonlat: [120.888, 14.483]
+        lp: l
+      - kind: capital
+        side: es
+        name: Bacolor
+        date: from October 1762
+        text: The town in Pampanga where Simón de Anda set up his government after escaping from Manila.
+        lonlat: [120.652, 14.998]
+    arrows:
+      - side: gb
+        label: Cornish and Draper
+        phase: 1
+        via: [[119.70, 14.20], [120.45, 14.33], [120.65, 14.38], [120.88, 14.52], [120.980, 14.570]]
+      - side: es
+        label: Anda
+        phase: 2
+        via: [[120.975, 14.600], [120.900, 14.760], [120.820, 14.880], [120.660, 14.990]]
+  - title: Anda, the Silangs and Palaris
+    date: October 1762 – September 1763
+    when: "1762-12"
+    borders: "1763-03-01"
+    countries: [ph, gb]
+    body:
+      - Simón de Anda y Salazar, a judge of the Audiencia, slipped out of Manila on the night before the city fell, crossed to Bulacan and set up his headquarters at Bacolor in Pampanga. On 8 October he wrote to Rojo claiming the governorship for himself, and he refused to recognise the surrender. He raised an army that grew to more than 10,000, most of them Filipino volunteers, many of them without muskets. The British held Manila and Cavite but could not extend their rule. Captain Sleigh, reinforced by about 400 Chinese, took Malolos on 22 January 1763 but withdrew on 7 February without reaching Anda; in the spring Captain Backhouse marched as far as Batangas. Anda had Chinese he suspected of helping the British executed.
+      - In the north, the fall of Manila set off risings against Spanish rule. In the Ilocos Diego Silang, a former courier of the friars, led a revolt against tribute and the abuses of the province’s Spanish officials from December 1762, took over Vigan and set out to found an Ilocano state of his own. The British promised him arms and help, which never arrived. On 28 May 1763 he was killed at Vigan by Miguel Vicos and Pedro Becbec, former companions paid, by most accounts, by the church authorities. His widow Gabriela Silang fled to Abra and took command; her attack on Vigan on 10 September failed, and she and her followers were captured and hanged in the plaza of Vigan on 20 September 1763.
+      - In Pangasinan the principales of Binalatongan demanded the removal of the provincial governor and an end to tribute while the islands were under British control. When Anda refused, Juan de la Cruz Palaris rose in November 1762; at his height he led about 10,000 men and held Pangasinan up to the Agno river, and he kept in touch with Silang. A Spanish force under Alfonso de Arayat was driven back in a battle on the Agno on 1 March 1763.
+    facts:
+      - [Anda claims the governorship, "8 October 1762"]
+      - [British raid on Malolos, "22 January – 7 February 1763"]
+      - [Diego Silang killed, "28 May 1763"]
+      - [Gabriela Silang hanged, "20 September 1763, Vigan"]
+    markers:
+      - kind: held
+        side: gb
+        name: Manila
+        date: 1762–1764
+        text: Held by the British, with Cavite, until April 1764.
+        lonlat: [120.975, 14.590]
+        lp: l
+      - kind: capital
+        side: es
+        name: Bacolor
+        date: 1762–1764
+        text: Anda’s headquarters, which the British never reached.
+        lonlat: [120.652, 14.998]
+        lp: l
+      - kind: event
+        side: gb
+        name: Malolos
+        date: 22 January 1763
+        text: Taken by Captain Sleigh’s column, which withdrew on 7 February.
+        lonlat: [120.811, 14.843]
+      - kind: capital
+        side: ilo
+        name: Vigan
+        date: 1762–1763
+        text: Diego Silang’s seat. He was killed here on 28 May 1763; Gabriela Silang’s attack on 10 September failed, and she was hanged here on 20 September.
+        lonlat: [120.387, 17.574]
+        lp: l
+      - kind: capital
+        side: ilo
+        name: Binalatongan
+        date: 1762–1763
+        text: Palaris’s home town, now San Carlos, which he ordered burned rather than let the Spanish use it.
+        lonlat: [120.347, 15.928]
+    arrows:
+      - side: gb
+        label: Sleigh
+        phase: 1
+        via: [[120.975, 14.600], [120.930, 14.700], [120.880, 14.790], [120.815, 14.835]]
+      - side: ilo
+        label: Gabriela Silang
+        phase: 2
+        via: [[120.655, 17.617], [120.540, 17.600], [120.420, 17.580]]
+    areas:
+      - style: occupied
+        side: gb
+        label: Held by the British
+        polygons:
+          - [[120.95, 14.64], [121.01, 14.63], [121.02, 14.56], [120.98, 14.55], [120.96, 14.58]]
+          - [[120.86, 14.49], [120.91, 14.49], [120.92, 14.46], [120.88, 14.45]]
+      - style: occupied
+        side: ilo
+        label: Held by Silang’s forces, 1763
+        atoms: [PH-ILS]
+      - style: occupied
+        side: ilo
+        label: Pangasinan, most of it held by Palaris in 1763
+        atoms: [PH-PAN, PHL-5541]
+  - title: Peace and the British withdrawal
+    date: July 1763 – April 1764
+    when: "1763-07-24"
+    borders: "1764-04-05"
+    countries: [ph, gb, in]
+    body:
+      - The Treaty of Paris, signed on 10 February 1763, provided that conquests not known of at the signing were to be returned, and Manila fell under that clause. News that the fighting had ended reached Manila on 24 July 1763 and a draft of the treaty on 26 August, but the order to withdraw took months more to arrive. Archbishop Rojo died in January 1764, and Anda then agreed to an armistice. The British sailed from Manila and Cavite in the first week of April 1764, and Spanish rule was restored.
+      - The British took with them Azim ud-Din I, the Sultan of Sulu, whom the Spanish had held prisoner in Manila since the early 1750s and whom the British had freed; he signed a treaty of alliance with the East India Company, which hoped to trade in Sulu, and returned to rule in Jolo. In Pangasinan, many of Palaris’s men surrendered once news of the peace arrived; the Spanish defeated him at Mabalitec in December 1763, and he was betrayed, captured in January 1765 and hanged on 26 February 1765.
+      - The occupation showed how thinly Spain held the islands and how much it depended on the friars and on Filipino soldiers and principales. Anda, made governor himself in 1770, pressed for reforms of the army and of trade, and many of the Chinese of Manila, who were blamed for siding with the British, were expelled by royal order in the years that followed.
+    facts:
+      - [Treaty of Paris, "10 February 1763"]
+      - [News of the peace in Manila, "24 July 1763"]
+      - [British evacuation, "first week of April 1764"]
+      - [Palaris hanged, "26 February 1765"]
+    markers:
+      - kind: treaty
+        side: es
+        name: Manila
+        date: April 1764
+        text: Returned to Spain under the Treaty of Paris; the British embarked here and at Cavite in the first week of April 1764.
+        lonlat: [120.975, 14.590]
+      - kind: event
+        side: gb
+        name: Jolo
+        date: 1764
+        text: Seat of the Sultan of Sulu. Azim ud-Din I, freed by the British in Manila, returned here to rule again.
+        lonlat: [121.002, 6.052]
+      - kind: event
+        side: es
+        name: Binalatongan
+        date: 1763–1765
+        text: Palaris’s home town, rebuilt by the Spanish as San Carlos after his defeat at Mabalitec in December 1763. He was captured in January 1765 and hanged.
+        lonlat: [120.347, 15.928]
+        lp: l
+    arrows:
+      - side: gb
+        label: Azim ud-Din with the British
+        phase: 1
+        via: [[120.90, 14.48], [120.40, 13.50], [120.30, 11.00], [121.00, 8.00], [121.00, 6.15]]

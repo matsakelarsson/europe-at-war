@@ -1,0 +1,161 @@
+id: champa-dai-viet-war
+name: Champa–Đại Việt war of 1361–1390
+start: "1361"
+end: "1390"
+tier: B
+summary: "Three decades of war in which Champa, reunited under Chế Bồng Nga (Po Binasuor), nearly overthrew the Trần dynasty of Đại Việt. Cham fleets raided the coast from 1361, and in 1368 Chế Bồng Nga demanded back the districts of Ô and Lý, ceded to Đại Việt in 1306. In 1371, after a succession crisis in Thăng Long, his fleet sailed into the Red River delta and sacked the capital. In 1377 the Trần king Trần Duệ Tông led a large army against the Cham capital Vijaya and was killed in an ambush; the Cham marched north, overran Nghệ An and Thanh Hóa with the help of Vietnamese defectors, and sacked Thăng Long again in 1377–1378 and in 1383. The war ended in 1390 on the Hải Triều (Luộc) River, where a volley of handguns hit Chế Bồng Nga’s barge and killed him. Neither side gained land, both were exhausted, and the general Hồ Quý Ly, who had risen in the war, took the Trần throne in 1400."
+countries: [vn]
+sides:
+  - id: ch
+    name: Champa (Chế Bồng Nga)
+    polities: [champa]
+    ink: teal
+    moves: Cham moves
+    success: Cham success
+  - id: dv
+    name: Đại Việt (Trần dynasty)
+    polities: [dai-viet]
+    ink: red
+    moves: Trần moves
+    success: Trần success
+notes:
+  - The war is known mostly from the Vietnamese chronicles, with notices in the Ming Shilu; no Cham inscriptions survive from these years. The chronicles count the Cham sacks of Thăng Long differently (in 1371, 1377, 1378 and 1383 in some accounts, twice in 1377 in others). Wikipedia dates the war proper to 1367–1390; it is dated here from the first Cham raids in 1361.
+  - Chế Bồng Nga is the Vietnamese form of the king’s name; Cham tradition remembers him as Po Binasuor. The Ming Shilu gives another account of his death, in which his general La Khai murdered him and took the throne.
+sources:
+  - title: Champa–Đại Việt War (1367–1390) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Champa%E2%80%93%C4%90%E1%BA%A1i_Vi%E1%BB%87t_War_(1367%E2%80%931390)
+  - title: Po Binasuor (Chế Bồng Nga) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Po_Binasuor
+  - title: Battle of Vijaya (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Vijaya
+  - title: History of the Cham–Vietnamese wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/History_of_the_Cham%E2%80%93Vietnamese_wars
+  - title: Ming conquest of Đại Ngu (Wikipedia; background section)
+    url: https://en.wikipedia.org/wiki/Ming_conquest_of_%C4%90%E1%BA%A1i_Ngu
+steps:
+  - title: Chế Bồng Nga’s fleet and the sack of 1371
+    date: 1361–1376
+    when: "1371"
+    borders: "1371-06-01"
+    countries: [vn]
+    body:
+      - In the 14th century Đại Việt, like Cambodia, was weakened by plague, famine and failing harvests, while Champa recovered. Chế Bồng Nga, a son of King Chế A Nan, became king in 1360 and united the Cham lands. In 1361 Cham ships raided the coast of Đại Việt around Hóa Châu (near today’s Huế) and carried off young people gathered for a festival. In 1368 he sent envoys demanding back the districts of Ô and Lý, today’s Quảng Trị and Thừa Thiên Huế, which King Chế Mân had given Đại Việt in 1306 as the price of marrying a Trần princess. The Trần king answered by sending an army towards the old Cham lands around Indrapura, and it was beaten back.
+      - In 1369 the childless Trần Dụ Tông died and the crown went to Dương Nhật Lễ, who was not of the Trần blood; in 1370 the Trần princes overthrew and killed him. His mother fled to Champa and urged Chế Bồng Nga to take revenge. In the spring of 1371 a Cham fleet crossed the Gulf of Tonkin, entered the delta by the river mouths and found no army to oppose it. The Cham sacked Thăng Long and set it on fire, carrying off women, jewels and silk, and the books of the royal palace were lost. Chế Bồng Nga also sent tribute to the new Ming emperor and, in 1372, asked him for protection and weapons against Đại Việt.
+    facts:
+      - [Chế Bồng Nga king of Champa, "1360"]
+      - [First Cham raid, "1361"]
+      - [Thăng Long sacked, "spring 1371"]
+    markers:
+      - kind: capital
+        side: ch
+        name: Vijaya
+        date: 1360–1390
+        text: Capital of Champa under Chế Bồng Nga.
+        lonlat: [109.055, 13.918]
+      - kind: event
+        side: ch
+        name: Hóa Châu
+        date: "1361"
+        text: The southern frontier province of Đại Việt, near today’s Huế, raided by Cham ships in 1361 and again in 1376.
+        lonlat: [107.580, 16.470]
+      - kind: taken
+        side: ch
+        name: Thăng Long
+        date: spring 1371
+        text: Sacked and burned by the Cham. The royal library was lost.
+        lonlat: [105.840, 21.035]
+    arrows:
+      - side: ch
+        label: Chế Bồng Nga
+        via: [[109.20, 13.90], [109.40, 15.50], [107.90, 17.80], [106.70, 20.10], [106.05, 20.70]]
+  - title: Vijaya, 1377, and the march on the delta
+    date: 1376–1383
+    when: "1377"
+    borders: "1377-06-01"
+    countries: [vn]
+    body:
+      - After new Cham raids on Hóa Châu in 1376, King Trần Duệ Tông gathered an army that the chronicles number at 120,000 men from the delta, Nghệ An, Quảng Bình and Thuận Hóa, with Hồ Quý Ly in charge of supplies and Đỗ Tử Bình in command, and marched on Vijaya. In early 1377 he found an apparently deserted camp before the city and, ignoring warnings, advanced into it. The Cham sprang an ambush, southern troops in his army went over to them, and the king and several of his generals were killed. The Cham captured a Trần prince, Trần Húc, whom Chế Bồng Nga married to his daughter.
+      - The Cham followed the beaten army north, took Thanh Hóa and Nghệ An, where many local people joined them, and sacked Thăng Long again in 1377 and, with Trần Húc claiming the Vietnamese throne, in 1378. The court hid its treasures in the mountains and caves near the coast. In 1380 and 1382 Hồ Quý Ly and the general Nguyễn Đa Phương drove Cham attacks back from Thanh Hóa, raising taxes and men to keep the war going. In 1383 Chế Bồng Nga, on the advice of his general La Khai, took a western route through the mountains, came down on the delta near Sơn Tây, west of the capital, and sacked Thăng Long a fourth time, holding it for six months.
+    facts:
+      - [Battle of Vijaya, "early 1377, Cham victory"]
+      - [Trần Duệ Tông killed, "1377"]
+      - [Further sacks of Thăng Long, "1377, 1378 and 1383"]
+    markers:
+      - kind: battle
+        side: ch
+        name: Vijaya
+        date: early 1377
+        text: Trần Duệ Tông’s army was ambushed before the Cham capital and the king killed.
+        lonlat: [109.055, 13.918]
+      - kind: taken
+        side: ch
+        name: Thăng Long
+        date: 1377, 1378, 1383
+        text: Sacked by the Cham again after the battle of Vijaya, and occupied for six months in 1383.
+        lonlat: [105.840, 21.035]
+        lp: l
+      - kind: battle
+        side: dv
+        name: Thanh Hóa
+        date: 1380–1382
+        text: Cham attacks were driven back here by Hồ Quý Ly and Nguyễn Đa Phương.
+        lonlat: [105.780, 19.810]
+      - kind: event
+        side: ch
+        name: Sơn Tây
+        date: "1383"
+        text: The Cham army came down on the delta here after crossing the mountains, and defeated the force sent against it.
+        lonlat: [105.505, 21.140]
+        lp: l
+    arrows:
+      - side: dv
+        label: Trần Duệ Tông
+        phase: 1
+        via: [[107.58, 16.47], [108.25, 15.60], [108.80, 14.80], [109.03, 13.96]]
+      - side: ch
+        phase: 2
+        via: [[109.03, 13.98], [108.30, 15.70], [106.60, 17.60], [105.70, 18.70], [105.80, 19.80]]
+      - side: ch
+        label: Chế Bồng Nga, 1383
+        phase: 3
+        via: [[105.20, 19.10], [104.85, 19.80], [105.10, 20.60], [105.50, 21.12], [105.82, 21.04]]
+    areas:
+      - style: occupied
+        side: ch
+        label: Overrun by the Cham, 1377–1380 (approximate)
+        atoms: [VN-21, VN-22, VN-23]
+  - title: Handguns on the Hải Triều
+    date: 1389–1390
+    when: "1390"
+    borders: "1390-03-01"
+    countries: [vn]
+    body:
+      - In 1389, with Thanh Hóa in revolt against Hồ Quý Ly and a monk leading a rising north-west of the capital, Chế Bồng Nga sailed north again with a Trần prince who had gone over to him, and the Vietnamese defence broke up; Nguyễn Đa Phương killed himself. In early 1390 the Trần general Trần Khát Chân made a stand on the Hải Triều, the Luộc River in today’s Hưng Yên. A Cham officer who had deserted showed the Vietnamese which of the several hundred boats was the king’s, and Trần Khát Chân’s men concentrated the fire of their handguns, weapons recently come from Ming China, on it. Chế Bồng Nga was killed, and his head was brought to Thăng Long.
+      - The Cham army withdrew, and La Khai took the throne at Vijaya as Jaya Simhavarman VI; Chế Bồng Nga’s sons fled to Đại Việt. The war ended without any change of borders. By one modern estimate Đại Việt lost about a quarter of its population to war, famine and disease in the late 14th century. Hồ Quý Ly, chief minister from 1387, used his power to push through radical reforms, deposed the last Trần king in 1400 and founded the Hồ dynasty; in 1402–1403 he attacked Champa and took its northern districts, which helped bring on the Ming invasion of 1406.
+    facts:
+      - [Battle on the Hải Triều (Luộc) River, "early 1390, Trần victory"]
+      - [Chế Bồng Nga killed, "1390"]
+      - [Hồ Quý Ly takes the throne, "1400"]
+    markers:
+      - kind: naval
+        side: dv
+        name: Hải Triều (Luộc) River
+        date: early 1390
+        text: Trần Khát Chân’s handgunners fired on Chế Bồng Nga’s barge and killed him. The Cham army withdrew.
+        lonlat: [106.120, 20.660]
+      - kind: held
+        side: dv
+        name: Thăng Long
+        date: "1390"
+        text: The capital, saved by the victory on the river.
+        lonlat: [105.840, 21.035]
+        lp: l
+    arrows:
+      - side: ch
+        label: Chế Bồng Nga
+        phase: 1
+        via: [[106.10, 19.70], [106.30, 20.10], [106.25, 20.45], [106.13, 20.64]]
+      - side: ch
+        label: Cham withdrawal
+        phase: 2
+        via: [[106.15, 20.62], [106.45, 20.20], [106.55, 19.60], [106.70, 18.60]]

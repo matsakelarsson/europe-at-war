@@ -1,0 +1,236 @@
+id: siamese-invasion-of-kedah
+name: Siamese invasion of Kedah
+start: "1821-11"
+end: "1842"
+tier: B
+summary: "Siam’s conquest of the Malay sultanate of Kedah in November 1821 and the twenty years of resistance that followed. Kedah had long sent Siam the bunga mas, the gold and silver flowers of submission, but Sultan Ahmad Tajuddin Halim Shah II was suspected of dealing with Siam’s enemy Burma and refused a summons to Bangkok. Chaophraya Nakhon Noi, the Siamese governor of Nakhon Si Thammarat (Ligor), took Kedah by surprise with about 7,000 men; the sultan fled to the British at Penang, and about 10,000 Kedahans followed him into British territory. Siam ruled Kedah directly through Nakhon Noi’s son, and the British, who had refused the sultan help, accepted Siam’s claim in the Burney Treaty of 1826. Kedah princes rose in 1831 and in 1838–1839, joined by risings in Pattani, the Malay kingdom Siam had divided into seven provinces; each time Siamese forces retook the country, in 1838 with a British blockade of the coast. In 1839–1843 Siam cut Perlis and Kubang Pasu out of Kedah under rulers of their own, and in 1842 it restored the old sultan to the rest of Kedah as its vassal."
+countries: [my, th]
+sides:
+  - id: siam
+    name: Siam (Nakhon Si Thammarat)
+    polities: [thailand]
+    ink: blue
+    moves: Siamese moves
+    success: Siamese success
+  - id: ked
+    name: Kedah princes and their Malay allies
+    polities: [kedah, pattani]
+    ink: green
+    moves: Malay moves
+    success: Malay success
+  - id: gb
+    name: East India Company (Penang)
+    polities: [british-india, straits-settlements]
+    ink: red
+    moves: British moves
+    success: British success
+notes:
+  - Thai sources call Sultan Ahmad Tajuddin Halim Shah II “Tuanku Pangeran” and the governor of Nakhon Si Thammarat, Noi na Nakhon, “Chao Phraya Nakhon”. Malay tradition calls the risings of the 1830s Perang Musuh Bisik, the war of the whispering enemy.
+  - Numbers of dead were not recorded. British officials in Penang described killings and the burning of villages in 1821, but said the dead could not be counted.
+sources:
+  - title: Siamese invasion of Kedah (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siamese_invasion_of_Kedah
+  - title: Chaophraya Nakhon (Noi) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Chaophraya_Nakhon_(Noi)
+  - title: Kedah Sultanate (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kedah_Sultanate
+  - title: Burney Treaty (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Burney_Treaty
+  - title: Perlis (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Perlis
+  - title: Pattani Kingdom (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Pattani_Kingdom
+steps:
+  - title: The fall of Alor Setar
+    date: November 1821
+    when: "1821-11"
+    borders: "1821-11-01"
+    countries: [my, th]
+    body:
+      - Kedah, on the north-west coast of the Malay peninsula, had been a vassal of Siam since the 1780s, sending the bunga mas to Bangkok every three years. In 1786 Sultan Abdullah had leased Penang to Francis Light of the British East India Company in the hope of British protection against Siam and Burma, but none came. His successor, Sultan Ahmad Tajuddin Halim Shah II, served Siam loyally at first, sending troops against the Burmese in 1809 and occupying Perak on Bangkok’s orders in 1818. His quarrels with his brothers, some of whom sought the backing of Chaophraya Nakhon Noi, the Siamese governor of Nakhon Si Thammarat (Ligor), weakened him. In 1820, as Burma prepared a new invasion of Siam, one brother reported that Kedah was negotiating with the Burmese, and a merchant of Phuket seized a Burmese ship carrying a letter to the sultan. King Rama II summoned him to Bangkok to explain; he refused and stopped sending the bunga mas.
+      - In November 1821 Nakhon Noi gathered a fleet of about 7,000 men at Trang and Satun, officially against a Burmese attack, asked Kedah for provisions and, when none came, sailed for Kedah. The Kedahans did not expect an attack, and the Bendahara received the Siamese party with ceremony at the fort; once inside, Nakhon Noi’s men turned on their hosts, captured the Bendahara and killed the Laksamana. The sultan escaped to Penang. Villages were burned and houses looted, and Malays fled in thousands to Penang and Province Wellesley, where the British counted about 10,000 refugees.
+      - Siam now ruled Kedah directly. Nakhon Noi, raised by Rama II to the rank of Chaophraya, made his son Phraya Aphaithibet governor, a post he held until 1838. The East India Company protested the sultan’s treatment but would not go to war with Siam; its envoy John Crawfurd, who reached Bangkok in April 1822 with the sultan’s letter, came away without an agreement.
+    facts:
+      - [Siamese force, "about 7,000 men"]
+      - [Alor Setar taken, "November 1821"]
+      - [Refugees in British territory, "about 10,000"]
+    markers:
+      - kind: event
+        side: siam
+        name: Nakhon Si Thammarat
+        date: "1821"
+        text: Seat of Chaophraya Nakhon Noi, the Siamese governor who held authority over the Malay vassals of the south.
+        lonlat: [99.963, 8.430]
+      - kind: event
+        side: siam
+        name: Trang
+        date: November 1821
+        text: The Siamese fleet assembled here and at Satun, officially to guard against a Burmese attack.
+        lonlat: [99.611, 7.556]
+        lp: l
+      - kind: taken
+        side: siam
+        name: Alor Setar
+        date: November 1821
+        text: The Siamese party was received at the fort as guests and then attacked. The Bendahara was captured and the Laksamana killed.
+        lonlat: [100.368, 6.123]
+      - kind: event
+        side: ked
+        name: Penang
+        date: November 1821
+        text: Sultan Ahmad Tajuddin took refuge in the Company’s settlement, followed by thousands of Kedahans.
+        lonlat: [100.329, 5.415]
+        lp: l
+    arrows:
+      - side: siam
+        label: Nakhon Noi
+        phase: 1
+        via: [[99.520, 7.400], [99.450, 7.000], [99.800, 6.550], [100.180, 6.150], [100.330, 6.110]]
+      - side: ked
+        phase: 2
+        via: [[100.360, 6.110], [100.220, 5.950], [100.240, 5.650], [100.320, 5.430]]
+    areas:
+      - style: occupied
+        side: siam
+        label: Ruled directly by Siam from November 1821
+        atoms: [MY-02, MY-09]
+  - title: Exile, the Burney Treaty and the rising of 1831
+    date: 1822–1832
+    when: "1831"
+    borders: "1831-06-01"
+    countries: [my, th]
+    body:
+      - From Penang the sultan sought help to recover his throne, and Kedahan exiles there kept up raids across the border. In 1825 Nakhon Noi prepared a fleet to bring Perak and Selangor under Siam as well; Robert Fullerton, the governor of Penang, blockaded the mouth of the Trang River, and the expedition was called off. In the Burney Treaty, signed in Bangkok on 20 June 1826, the East India Company recognised Siam’s claims over Kedah and the other northern Malay states, which were not consulted; Siam gave up its designs on Perak and Selangor, and the British undertook to keep the sultan away from Kedah. He was moved to Malacca.
+      - In 1831 Tunku Kudin, a nephew of the sultan, led Kedahan fighters across the border and took Alor Setar; Phraya Aphaithibet fled. Nakhon Noi retook the town about four months later, and Tunku Kudin was killed and his head sent to Bangkok. The rising spread to Pattani, the old Malay kingdom on the east coast that Siam had divided into seven provinces after the rebellions of 1791 and 1808. Tuan Sulong, the ruler of Pattani province, joined the Kedahans with support from Kelantan and Terengganu. King Rama III sent the Phra Khlang with an army, and with Nakhon Noi he took Pattani in 1832. Tuan Sulong fled to Kelantan, whose sultan handed him over to the Siamese.
+    facts:
+      - [Burney Treaty, "20 June 1826"]
+      - [Tunku Kudin’s rising, "1831"]
+      - [Pattani retaken, "1832"]
+    markers:
+      - kind: event
+        side: ked
+        name: Penang
+        date: 1821–1831
+        text: Base of the exiled sultan and of the Kedahan resistance until the British moved him to Malacca.
+        lonlat: [100.329, 5.415]
+        lp: l
+      - kind: taken
+        side: siam
+        name: Alor Setar
+        date: "1831"
+        text: Taken by Tunku Kudin in 1831 and retaken by Nakhon Noi about four months later.
+        lonlat: [100.368, 6.123]
+      - kind: event
+        side: siam
+        name: Songkhla
+        date: "1832"
+        text: The main Siamese base on the east coast of the isthmus.
+        lonlat: [100.595, 7.190]
+        lp: l
+      - kind: event
+        side: gb
+        name: Trang River
+        date: "1825"
+        text: Robert Fullerton blockaded the river mouth, and the Siamese expedition against Perak and Selangor was called off.
+        lonlat: [99.480, 7.330]
+        lp: l
+      - kind: taken
+        side: siam
+        name: Pattani
+        date: "1832"
+        text: Its ruler Tuan Sulong had joined the Kedah rising. The town was taken by Nakhon Noi and the Phra Khlang.
+        lonlat: [101.250, 6.870]
+      - kind: event
+        side: siam
+        name: Kota Bharu
+        date: "1832"
+        text: Tuan Sulong fled to Kelantan, whose sultan gave him up to the Siamese.
+        lonlat: [102.238, 6.125]
+    arrows:
+      - side: siam
+        via: [[100.600, 7.150], [100.850, 7.020], [101.080, 6.930], [101.240, 6.880]]
+    areas:
+      - style: occupied
+        side: siam
+        label: Ruled directly by Siam
+        atoms: [MY-02, MY-09]
+      - style: contested
+        side: ked
+        label: Pattani rising, 1831–1832
+        atoms: [TH-94, TH-95, TH-96]
+  - title: The war of 1838 and the restoration
+    date: 1838–1843
+    when: "1838-02"
+    borders: "1843-06-01"
+    countries: [my, th]
+    body:
+      - In February 1838, while Nakhon Noi and most of the southern Siamese officials were in Bangkok for the funeral of the king’s mother, the sultan’s nephews Tunku Muhammad Saad and Tunku Muhammad Akib gathered a fleet in the Merbok River, joined by Malay seafarers under Wan Mali, whom the British and Siamese called pirates. They defeated a Siamese fleet, took the fort at Alor Setar and killed its garrison; Phraya Aphaithibet fled to Phatthalung. A Malay force of about 10,000 overran Perlis and Trang, sacking villages and Buddhist temples, and one column, joined by risings in Pattani, besieged Songkhla for three months until about 2,000 Siamese and 500 Chinese allies drove it back to Kedah.
+      - King Rama III sent Phraya Si Phiphat south with an army. Nakhon Noi, though ill, returned to Nakhon Si Thammarat, and the Siamese retook Alor Setar with about 1,500 men while British ships, bound by the Burney Treaty, blockaded the Kedah coast against the Malays. Nakhon Noi died on 14 May 1838. Si Phiphat chose a Kedah prince, Tunku Anom, to govern Kedah for Siam, and Bangkok divided the country. Kubang Pasu became a separate state in 1839 (until 1864), and Perlis, separate from about 1839, received its own raja, Syed Hussain Jamalullail, in 1843. Satun (Setul) already had a ruler of its own under Siam.
+      - After twenty years in exile Sultan Ahmad Tajuddin accepted Siamese terms and was restored in 1842 to the rest of Kedah, as a vassal sending the bunga mas; he died in 1845. Kedah and Perlis, with Kelantan and Terengganu, passed from Siamese to British overlordship under the Anglo-Siamese Treaty of 1909, while Satun and the seven provinces of Pattani stayed with Siam.
+    facts:
+      - [Alor Setar taken by the Malays, "February 1838"]
+      - [Siege of Songkhla, "about three months, 1838"]
+      - [Sultan restored, "1842"]
+      - [Perlis a separate state, "1843"]
+    markers:
+      - kind: battle
+        side: ked
+        name: Merbok River
+        date: February 1838
+        text: Tunku Muhammad Saad’s fleet gathered here and defeated a Siamese fleet before sailing north.
+        lonlat: [100.370, 5.680]
+      - kind: taken
+        side: siam
+        name: Alor Setar
+        date: "1838"
+        text: Taken by the Malays in February 1838, its garrison killed. Retaken by the Siamese later in the year.
+        lonlat: [100.368, 6.123]
+      - kind: taken
+        side: ked
+        name: Perlis
+        date: "1838"
+        text: Overrun by the Malay army. It became a separate state under Siam after the war.
+        lonlat: [100.195, 6.439]
+        lp: l
+      - kind: taken
+        side: ked
+        name: Trang
+        date: "1838"
+        text: Sacked by the Malay army on its march north.
+        lonlat: [99.611, 7.556]
+        lp: l
+      - kind: event
+        side: siam
+        name: Phatthalung
+        date: "1838"
+        text: Phraya Aphaithibet, the Siamese governor of Kedah, fled here.
+        lonlat: [100.074, 7.617]
+      - kind: siege
+        side: siam
+        name: Songkhla
+        date: "1838"
+        text: Besieged by Malay forces for three months and relieved by about 2,000 Siamese troops and 500 Chinese allies.
+        lonlat: [100.595, 7.190]
+    arrows:
+      - side: ked
+        label: Tunku Muhammad Saad
+        phase: 1
+        via: [[100.360, 5.690], [100.250, 5.850], [100.240, 6.050], [100.330, 6.110]]
+      - side: ked
+        phase: 2
+        via: [[100.360, 6.160], [100.300, 6.330], [100.210, 6.420]]
+      - side: ked
+        phase: 2
+        via: [[100.400, 6.180], [100.450, 6.600], [100.560, 7.120]]
+      - side: siam
+        phase: 3
+        via: [[100.530, 7.120], [100.420, 6.650], [100.380, 6.180]]
+    areas:
+      - style: outline
+        side: siam
+        label: Kubang Pasu, a separate state under Siam 1839–1864
+        polygon: [[100.340, 6.200], [100.330, 6.330], [100.370, 6.470], [100.420, 6.530], [100.500, 6.500], [100.600, 6.400], [100.550, 6.250], [100.450, 6.180]]
+      - style: outline
+        side: siam
+        label: Perlis, a separate state under Siam from 1843
+        atoms: [MY-09]

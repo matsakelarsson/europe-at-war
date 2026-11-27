@@ -1,0 +1,204 @@
+id: cambodian-civil-war
+name: Cambodian Civil War
+start: "1967-04-02"
+end: "1975-04-17"
+tier: B
+summary: "The war in which the Communist Party of Kampuchea, the Khmer Rouge, came to power in Cambodia. A peasant revolt at Samlaut in 1967 and a communist rising from 1968 were put down by Prince Norodom Sihanouk’s government, but the war widened when General Lon Nol deposed Sihanouk on 18 March 1970. Sihanouk allied with the Khmer Rouge from exile in Beijing; North Vietnamese troops, whose bases in eastern Cambodia had been bombed in secret by the Americans since 1969, routed Lon Nol’s army; and American and South Vietnamese forces invaded the border areas in May 1970. The Khmer Republic, kept alive by American aid and one of the heaviest bombing campaigns in history, lost the countryside to the Khmer Rouge, who besieged Phnom Penh from January 1975 and took it on 17 April 1975. They emptied the cities the same day and began the rule of Democratic Kampuchea, in which some 1.5 to 2 million people died."
+countries: [kh, vn, us]
+sides:
+  - id: kr
+    name: Khmer Rouge (FUNK) and North Vietnam
+    polities: [khmer-rouge, north-vietnam, viet-cong]
+    ink: brown
+    moves: Khmer Rouge and North Vietnamese moves
+    success: Khmer Rouge and North Vietnamese success
+  - id: gov
+    name: Kingdom of Cambodia and Khmer Republic, the United States and South Vietnam
+    polities: [cambodia, united-states, south-vietnam]
+    ink: blue
+    moves: Cambodian government and allied moves
+    success: Cambodian government and allied success
+notes:
+  - “Khmer Rouge” (“Red Khmers”) was Sihanouk’s name for the Cambodian communists. Their party, the Communist Party of Kampuchea, kept its existence secret until 1977 and spoke to the people as Angkar, “the Organisation”. From 1970 they fought as part of Sihanouk’s National United Front of Kampuchea (FUNK) and its government in exile (GRUNK). Lon Nol’s army was the Khmer National Armed Forces (FANK).
+  - Estimates of the dead of the civil war range from about 250,000 to 310,000. Estimates of the deaths caused by the American bombing range from tens of thousands to 150,000.
+sources:
+  - title: Cambodian Civil War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cambodian_Civil_War
+  - title: Cambodia – History (Britannica)
+    url: https://www.britannica.com/place/Cambodia/History
+  - title: "Insurrection and War, 1967–75 (Cambodia: A Country Study, Library of Congress)"
+    url: https://countrystudies.us/cambodia/22.htm
+  - title: Samlaut Uprising (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Samlaut_Uprising
+  - title: 1970 Cambodian coup d’état (Wikipedia)
+    url: https://en.wikipedia.org/wiki/1970_Cambodian_coup_d%27%C3%A9tat
+  - title: Operation Chenla II (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Chenla_II
+  - title: Operation Freedom Deal (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Operation_Freedom_Deal
+  - title: "Owen and Kiernan, Bombs over Cambodia (The Walrus, 2006; Yale Genocide Studies Program)"
+    url: https://gsp.yale.edu/sites/default/files/walrus_cambodiabombing_oct06.pdf
+  - title: Fall of Phnom Penh (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fall_of_Phnom_Penh
+steps:
+  - title: Samlaut and the coup against Sihanouk
+    date: 1967–1970
+    when: "1967-04-02"
+    borders: "1970-06-01"
+    countries: [kh, vn]
+    body:
+      - "Prince Norodom Sihanouk kept Cambodia neutral in the Vietnam War by tolerating North Vietnamese and NLF bases along the eastern border and the shipment of their supplies through the port of Sihanoukville, while his police hunted the Cambodian left. On 2 April 1967 villagers near Samlaut in Battambang province, angry at the forced sale of rice to the army at low prices and at land grabs, killed two soldiers and took up arms. The army and militias under Lon Nol put down the revolt with great brutality, burning villages and killing hundreds of people, perhaps more. Leftist politicians fled to the forests, and on 17 January 1968 the Communist Party of Kampuchea, led by Saloth Sar (later known as Pol Pot), began its armed struggle with an attack on an army post at Bay Damran near Battambang."
+      - "On 18 March 1970, while Sihanouk was abroad, the National Assembly voted him out of office and Lon Nol and Prince Sisowath Sirik Matak took power, demanding that the Vietnamese leave. Sihanouk, in Beijing, formed a National United Front with the Khmer Rouge, his former enemies, on 23 March; in Kampong Cham, crowds rising for him killed two deputies, and troops fired on the demonstrators. In April soldiers and police massacred hundreds of Vietnamese civilians living in Cambodia, and some 200,000 or more Vietnamese fled or were expelled to South Vietnam. The North Vietnamese army struck west, routed Lon Nol’s forces, took the north-eastern provinces and Angkor, and handed the conquered districts to the Khmer Rouge to govern."
+    facts:
+      - [Samlaut uprising, "from 2 April 1967"]
+      - [Communist armed struggle begins, "17 January 1968"]
+      - [Coup against Sihanouk, "18 March 1970"]
+    markers:
+      - kind: event
+        name: Samlaut
+        date: 2 April 1967
+        text: The revolt against the rice collection began here and spread through southern Battambang province before it was crushed.
+        lonlat: [102.858, 12.565]
+        lp: l
+      - kind: event
+        side: kr
+        name: Battambang
+        date: 17 January 1968
+        text: The communists’ attack on the army post at Bay Damran, south of the town, is counted as the start of their armed struggle.
+        lonlat: [103.200, 13.100]
+      - kind: event
+        name: Phnom Penh
+        date: 18 March 1970
+        text: The National Assembly deposed Sihanouk, and Lon Nol took power; the Khmer Republic was proclaimed on 9 October.
+        lonlat: [104.920, 11.560]
+        lp: b
+      - kind: toll
+        name: Kampong Cham
+        date: March 1970
+        text: Crowds demanding Sihanouk’s return killed two deputies sent from Phnom Penh, and troops fired on the demonstrators.
+        lonlat: [105.460, 11.990]
+      - kind: toll
+        side: gov
+        name: Takéo
+        date: April 1970
+        text: Vietnamese villagers held by the army near the town were massacred, one of several such killings that spring.
+        lonlat: [104.790, 10.990]
+        lp: l
+      - kind: taken
+        side: kr
+        name: Angkor
+        date: June 1970
+        text: The North Vietnamese army took the temples and the area north of Siem Reap.
+        lonlat: [103.867, 13.412]
+    arrows:
+      - side: kr
+        via: [[107.300, 13.700], [106.700, 13.600], [106.000, 13.520]]
+      - side: kr
+        via: [[106.400, 12.300], [106.150, 12.450], [106.020, 12.480]]
+    areas:
+      - style: occupied
+        side: kr
+        label: Taken by the North Vietnamese army by mid-1970 (approximate)
+        atoms: [KH-16, KH-19, KH-11, KH-10]
+  - title: Invasion, Chenla and the bombing
+    date: 1970–1973
+    when: "1970-05-01"
+    borders: "1972-01-01"
+    countries: [kh, vn, us]
+    body:
+      - "On 29 April and 1 May 1970 South Vietnamese and American troops crossed the border to destroy the bases in the Parrot’s Beak and the Fishhook; the Americans left by 30 June, and the South Vietnamese stayed to fight along the roads of eastern Cambodia. American aircraft, which had secretly bombed the border areas since March 1969, now bombed across the country in support of Lon Nol. Lon Nol’s army grew to some 200,000 men, many of them barely trained, and his two offensives to reopen Route 6 to Kampong Thom, Chenla I in 1970 and Chenla II in 1971, ended when the North Vietnamese and the Khmer Rouge cut the column apart in December 1971."
+      - "By 1972 the Khmer Rouge, trained and armed by the North Vietnamese, had grown into an army of tens of thousands and were taking over the fighting. They refused to join the Paris ceasefire of January 1973, began to purge Vietnamese-trained cadres and imposed collective farming in their zones. To hold them off, American B-52s bombed the countryside around Phnom Penh with great intensity from February to August 1973, until Congress cut off funds; on 6 August a misdirected strike on the town of Neak Leung killed 137 people. Estimates of the deaths caused by the bombing range from tens of thousands to 150,000, and its role in driving recruits to the Khmer Rouge is debated."
+    facts:
+      - [Incursion into Cambodia, "29 April – 30 June 1970 (US)"]
+      - [Chenla II destroyed, "December 1971"]
+      - [American bombing ends, "15 August 1973"]
+    markers:
+      - kind: event
+        side: gov
+        name: Fishhook
+        date: May – June 1970
+        text: American troops destroyed bases and the town of Snuol in this border salient.
+        lonlat: [106.300, 11.800]
+      - kind: event
+        side: gov
+        name: Parrot’s Beak
+        date: from 29 April 1970
+        text: South Vietnamese troops crossed into Svay Rieng province, the salient closest to Saigon.
+        lonlat: [105.950, 11.050]
+        lp: b
+      - kind: battle
+        side: kr
+        name: Route 6 (Chenla II)
+        date: August – December 1971
+        text: Lon Nol’s column on the road to Kampong Thom was cut apart near Rumlong and Kampong Thmar by the North Vietnamese 9th Division and the Khmer Rouge.
+        lonlat: [104.880, 12.420]
+        lp: l
+      - kind: toll
+        side: gov
+        name: Neak Leung
+        date: 6 August 1973
+        text: A B-52 strike hit the town by mistake, killing 137 people and wounding about 270.
+        lonlat: [105.283, 11.250]
+      - kind: capital
+        side: gov
+        name: Phnom Penh
+        date: 1970–1975
+        text: Capital of the Khmer Republic, swollen by refugees from the bombing and the fighting.
+        lonlat: [104.920, 11.560]
+        lp: l
+    arrows:
+      - side: gov
+        via: [[106.580, 11.700], [106.420, 11.900], [106.400, 12.050]]
+      - side: gov
+        via: [[106.200, 10.950], [105.950, 11.050], [105.800, 11.120]]
+      - side: gov
+        label: Chenla II
+        via: [[104.920, 11.650], [104.990, 12.000], [104.900, 12.400], [104.890, 12.650]]
+  - title: The fall of Phnom Penh
+    date: January – 17 April 1975
+    when: "1975-01-01"
+    borders: "1975-04-17"
+    countries: [kh, us]
+    body:
+      - "The Khmer Rouge took Oudong, the old royal capital, in March 1974 and drove out or killed its inhabitants, a sign of what was to come. On 1 January 1975 they launched their final offensive on Phnom Penh, a city of some two million people, most of them refugees. Mines and guns on the banks of the Mekong stopped the convoys that brought fuel and rice upriver from South Vietnam, and from February the city lived on an American airlift into Pochentong airport, which came under rocket fire. Neak Leung, the last government base on the Mekong, fell on 1 April; Lon Nol left the country the same day, and on 12 April the Americans evacuated their embassy by helicopter."
+      - "On 17 April 1975 Khmer Rouge troops entered Phnom Penh. Within hours they ordered the whole population out of the city, saying the Americans were about to bomb it; the old, the sick and patients from the hospitals were driven onto the roads with everyone else, and thousands died. Officers and officials of the Republic, among them Sirik Matak and the prime minister Long Boret, were executed. Democratic Kampuchea, as the Khmer Rouge state was named, abolished money, markets, schools and religion and drove the population into forced labour; by January 1979 an estimated 1.5 to 2 million people, about a quarter of the population, had died of execution, starvation, overwork and disease."
+    facts:
+      - [Final Khmer Rouge offensive, "from 1 January 1975"]
+      - [Neak Leung taken, "1 April 1975"]
+      - [American evacuation (Eagle Pull), "12 April 1975"]
+      - [Khmer Rouge enter Phnom Penh, "17 April 1975"]
+    markers:
+      - kind: taken
+        side: kr
+        name: Phnom Penh
+        date: 17 April 1975
+        text: Taken by the Khmer Rouge, who forced its whole population into the countryside the same day.
+        lonlat: [104.920, 11.560]
+        lp: l
+      - kind: taken
+        side: kr
+        name: Neak Leung
+        date: 1 April 1975
+        text: The fall of the last government base on the Mekong sealed the fate of the capital.
+        lonlat: [105.283, 11.250]
+      - kind: toll
+        side: kr
+        name: Oudong
+        date: March 1974
+        text: The Khmer Rouge took the old royal city, drove its people out and killed many officials and soldiers.
+        lonlat: [104.743, 11.824]
+        lp: l
+    arrows:
+      - side: kr
+        via: [[104.750, 11.950], [104.850, 11.700], [104.900, 11.600]]
+      - side: kr
+        via: [[104.500, 11.450], [104.750, 11.520], [104.880, 11.550]]
+      - side: kr
+        via: [[105.300, 11.200], [105.100, 11.400], [104.960, 11.540]]
+      - side: kr
+        via: [[105.200, 11.900], [105.050, 11.700], [104.950, 11.590]]
+    areas:
+      - style: occupied
+        side: kr
+        label: Held by the Khmer Rouge in April 1975 (approximate; the government held Phnom Penh, its surroundings and a few towns such as Battambang)
+        atoms: [KH-1, KH-3, KH-4, KH-5, KH-6, KH-7, KH-9, KH-10, KH-11, KH-13, KH-14, KH-15, KH-16, KH-17, KH-18, KH-19, KH-20, KH-21, KH-22, KH-23, KH-24]

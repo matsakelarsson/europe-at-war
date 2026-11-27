@@ -1,0 +1,155 @@
+id: ayutthaya-angkor-wars
+name: Ayutthaya’s wars with Angkor
+start: "1351"
+end: "1431"
+tier: B
+summary: "The wars between the new Siamese kingdom of Ayutthaya and the Khmer kingdom of Angkor, which ended with the Khmer court leaving Angkor. Ayutthaya, founded in 1351 on the lower Chao Phraya, in lands the Khmer had once ruled, attacked Angkor three times according to the chronicles. Its founder Uthong took the city in 1352 after a long siege and put his sons on the Khmer throne until a Khmer prince drove them out in 1357; Ramesuan took it again in 1393–1394 and carried off many captives; and in 1431 Borommaracha II took Angkor after a siege of seven months. The Khmer king Ponhea Yat then moved his court south-east, first to Basan near Srei Santhor and then to Chaktomuk, today’s Phnom Penh. Historians agree that the court left Angkor in the fifteenth century, but treat the chronicles’ account of the earlier wars with caution, and see the Siamese attacks as one cause among several, with the shift of trade to the Mekong and the sea, the decay of Angkor’s waterworks and long droughts."
+countries: [kh, th]
+sides:
+  - id: ay
+    name: Ayutthaya
+    polities: [ayutthaya]
+    ink: blue
+    moves: Ayutthayan moves
+    success: Ayutthayan success
+  - id: km
+    name: Khmer kingdom (Angkor)
+    polities: [cambodia]
+    ink: navy
+    moves: Khmer moves
+    success: Khmer success
+notes:
+  - Almost nothing survives from Cambodia itself for these years; the wars are known from the Ayutthaya chronicles and from Cambodian royal chronicles written down from the late eighteenth century, which give different dates and names. Michael Vickery and others have argued that the Cambodian chronicles’ account of the fourteenth century was partly reconstructed from Thai sources, so the sieges of 1352 and 1393–1394 are less certain than the fall of Angkor in 1431.
+sources:
+  - title: Fall of Angkor (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Fall_of_Angkor
+  - title: Post-Angkor period (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Post-Angkor_period
+  - title: Borommarachathirat II (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Borommarachathirat_II
+  - title: Ponhea Yat (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ponhea_Yat
+  - title: Ayutthaya Kingdom (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ayutthaya_Kingdom
+  - title: Mahamuni Buddha Temple (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mahamuni_Buddha_Temple
+  - title: Angkor (Britannica)
+    url: https://www.britannica.com/place/Angkor
+steps:
+  - title: Uthong’s siege of Angkor
+    date: 1351–1357
+    when: "1352"
+    borders: "1352-06-01"
+    countries: [kh, th]
+    body:
+      - In 1351 Uthong, a ruler with ties to Lopburi and Suphanburi, founded Ayutthaya on an island in the lower Chao Phraya and took the name Ramathibodi. The country around it had been part of the Khmer Empire in the twelfth and thirteenth centuries, and Ayutthaya took over much of Angkor’s court culture, its Brahmin rituals and its Khmer vocabulary of kingship, while claiming the Khmer lands to the east.
+      - According to the Cambodian chronicles, Uthong besieged Angkor in 1351 for about seventeen months. The Khmer king Lampong Reachea died during the siege, his son Soryavong fled to Laos with the royal regalia, and Angkor fell in 1352. Uthong carried captives and treasure back to Ayutthaya and made his sons kings at Angkor one after the other, until Soryavong came back with an army in 1357, drove the Siamese out and took the throne. No contemporary inscription confirms this war, and historians are divided on how much of the account to believe.
+    facts:
+      - [Ayutthaya founded, "1351"]
+      - [Angkor taken, "1352, after a siege of about seventeen months (Cambodian chronicles)"]
+      - [Siamese driven out, "1357"]
+    markers:
+      - kind: capital
+        side: ay
+        name: Ayutthaya
+        date: "1351"
+        text: Founded by Uthong (Ramathibodi I) on an island where the Lopburi and Pa Sak rivers meet the Chao Phraya.
+        lonlat: [100.568, 14.355]
+      - kind: siege
+        side: ay
+        name: Angkor
+        date: 1351–1352
+        text: Besieged by Uthong for about seventeen months, according to the Cambodian chronicles. Uthong’s sons ruled here until 1357.
+        lonlat: [103.859, 13.441]
+    arrows:
+      - side: ay
+        label: Uthong
+        via: [[100.650, 14.350], [101.800, 14.100], [102.600, 13.750], [103.300, 13.550], [103.780, 13.450]]
+  - title: Ramesuan takes Angkor
+    date: 1393–1394
+    when: "1394"
+    borders: "1394-01-01"
+    countries: [kh, th]
+    body:
+      - Uthong’s son Ramesuan, king of Ayutthaya from 1388 to 1395, attacked Angkor again. According to the Cambodian chronicles the city was besieged and taken in 1393, during the reign of Thommo Saok, who died. In 1394 the Siamese made a Khmer prince, Ponhea Prek, king as their vassal and took 70,000 Cambodian captives and much wealth back to Ayutthaya. The number, like most in the chronicles, is best read as a sign of the scale of the deportations.
+      - About five months later Ponhea Yat, a Khmer prince who held out at Srei Santhor on the Mekong, marched on Angkor, killed Ponhea Prek and took the throne.
+    facts:
+      - [Angkor taken, "1393 (some sources 1394)"]
+      - [Captives taken, "70,000 in the Cambodian chronicles"]
+    markers:
+      - kind: capital
+        side: ay
+        name: Ayutthaya
+        date: "1393"
+        text: Capital of King Ramesuan.
+        lonlat: [100.568, 14.355]
+      - kind: taken
+        side: ay
+        name: Angkor
+        date: 1393–1394
+        text: Taken by Ramesuan’s army. The Siamese made Ponhea Prek king as their vassal.
+        lonlat: [103.859, 13.441]
+      - kind: held
+        side: km
+        name: Srei Santhor
+        date: "1394"
+        text: Ponhea Yat’s base on the Mekong, from which he retook Angkor about five months after its fall.
+        lonlat: [105.060, 11.850]
+    arrows:
+      - side: ay
+        label: Ramesuan
+        phase: 1
+        via: [[100.650, 14.350], [101.800, 14.100], [102.600, 13.750], [103.300, 13.550], [103.780, 13.450]]
+      - side: km
+        label: Ponhea Yat
+        phase: 2
+        via: [[105.050, 11.900], [104.600, 12.400], [104.200, 12.950], [103.900, 13.350]]
+  - title: The fall of Angkor
+    date: 1430–1434
+    when: "1431"
+    borders: "1431-12-01"
+    countries: [kh, th]
+    body:
+      - In 1430 Borommaracha II, king of Ayutthaya from 1424 to 1448, marched on Angkor again. The Thai chronicles say he took the city in 1431 after a siege of seven months, by treachery within the walls, and made his son king there. His army looted the city and carried off its people and treasures; tradition holds that bronze statues taken from Angkor in 1431 were carried on to Pegu by the Burmese in 1564, to Mrauk U in 1599 and to Amarapura in 1785, and six of them stand today at the Mahamuni pagoda in Mandalay.
+      - The Khmer recovered the city within a year or so, but Ponhea Yat did not stay. He moved his court south-east to Basan, near Srei Santhor, and after floods there to Chaktomuk, where the Tonle Sap river meets the Mekong, today’s Phnom Penh, traditionally in 1434. Angkor was never wholly abandoned, for Angkor Wat remained a Buddhist shrine and later kings came back to it, but it was no longer the capital. Historians link the move to the Siamese wars, to the growth of trade along the Mekong and with China by sea, to the decay of Angkor’s reservoirs and canals and to severe droughts in the early fifteenth century.
+    facts:
+      - [Siege of Angkor, "1430–1431, seven months (Thai chronicles)"]
+      - [Court moved to Chaktomuk (Phnom Penh), "traditionally 1434"]
+    markers:
+      - kind: capital
+        side: ay
+        name: Ayutthaya
+        date: "1431"
+        text: Capital of Borommaracha II.
+        lonlat: [100.568, 14.355]
+      - kind: taken
+        side: ay
+        name: Angkor
+        date: "1431"
+        text: Taken after a siege of seven months and looted. The Khmer court left the city soon afterwards.
+        lonlat: [103.859, 13.441]
+      - kind: event
+        side: km
+        name: Basan (Srei Santhor)
+        date: after 1431
+        text: Ponhea Yat’s first seat after leaving Angkor, abandoned after floods.
+        lonlat: [105.060, 11.850]
+      - kind: capital
+        side: km
+        name: Chaktomuk (Phnom Penh)
+        date: about 1434
+        text: Ponhea Yat’s new capital at the meeting of the Tonle Sap river and the Mekong.
+        lonlat: [104.925, 11.565]
+        lp: l
+    arrows:
+      - side: ay
+        label: Borommaracha II
+        phase: 1
+        via: [[100.650, 14.350], [101.800, 14.100], [102.600, 13.750], [103.300, 13.550], [103.780, 13.450]]
+      - side: km
+        label: Ponhea Yat’s court
+        phase: 2
+        via: [[103.900, 13.350], [104.300, 12.800], [104.750, 12.300], [105.040, 11.900]]
+      - side: km
+        phase: 3
+        via: [[105.040, 11.830], [104.990, 11.700], [104.940, 11.590]]

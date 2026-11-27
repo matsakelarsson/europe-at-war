@@ -1,0 +1,125 @@
+id: dai-viet-champa-war
+name: Đại Việt–Champa war of 1471
+start: "1470-11"
+end: "1471-03"
+tier: B
+summary: "The invasion of Champa by the Lê emperor Lê Thánh Tông of Đại Việt, which destroyed the Cham capital Vijaya and ended Champa as a major power. After a Cham attack on the Vietnamese frontier at Hóa Châu in 1470, Lê Thánh Tông led south a fleet and army that the Vietnamese sources put at 250,000 men, with firearms on the Ming model. Landing on the coast of today’s Quảng Nam and Quảng Ngãi in February 1471, it overran northern Champa in two weeks, took the port of Thị Nại on 18 March and, after a siege of four days, stormed Vijaya on 22 March. The king, Trà Toàn, was captured and deported to the north; by the figures of the Vietnamese chronicles more than 30,000 Cham were captured and 40,000 executed. Đại Việt annexed the land as far as the Cù Mông pass, south of Vijaya, as the province of Quảng Nam, and the rest of Champa, centred on Panduranga in the far south, survived as a group of small principalities under Vietnamese overlordship until 1832."
+countries: [vn]
+sides:
+  - id: dv
+    name: Đại Việt (Later Lê dynasty)
+    polities: [dai-viet]
+    ink: red
+    moves: Lê moves
+    success: Lê success
+  - id: ch
+    name: Champa
+    polities: [champa]
+    ink: teal
+    moves: Cham moves
+    success: Cham success
+notes:
+  - The campaign is known almost only from the Vietnamese chronicles, with notices in the Ming Shilu and the Malay Annals; no Cham inscription from Vijaya survives after 1456. Army sizes and casualty figures are those of the Vietnamese sources and cannot be checked. Lê Thánh Tông justified the war by Cham raids, which some historians think his reports to the Ming exaggerated.
+  - Historians differ over how to describe the war. Ben Kiernan and others point to the emperor’s edict of 1470, which described the Cham as animals, and to the killing and deportation of Cham after the conquest, as a case of genocide; others treat it as a war of conquest typical of the period. Vietnamese historiography has long counted it as a step in the southward advance (Nam tiến).
+sources:
+  - title: Champa–Đại Việt War (1471) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Champa%E2%80%93%C4%90%E1%BA%A1i_Vi%E1%BB%87t_War_(1471)
+  - title: Lê Thánh Tông (Wikipedia)
+    url: https://en.wikipedia.org/wiki/L%C3%AA_Th%C3%A1nh_T%C3%B4ng
+  - title: History of the Cham–Vietnamese wars (Wikipedia)
+    url: https://en.wikipedia.org/wiki/History_of_the_Cham%E2%80%93Vietnamese_wars
+  - title: Champa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Champa
+  - title: Later Le dynasty (Britannica)
+    url: https://www.britannica.com/topic/Later-Le-dynasty
+steps:
+  - title: The fall of Vijaya
+    date: November 1470 – March 1471
+    when: "1471-03"
+    borders: "1471-02-01"
+    countries: [vn]
+    body:
+      - Champa had been weakened by civil wars, and Cambodia, which it had attacked earlier, refused to help it. In 1470, by the Vietnamese account, a Cham army under King Maha Sajan besieged the Vietnamese garrison at Hóa Châu, near today’s Huế. Lê Thánh Tông informed the Ming, issued an edict setting out the reasons for war, and on 28 November 1470 led a fleet south from Hóa Châu, with a second wave of supply troops following on 8 December. The Vietnamese sources give 100,000 soldiers by sea and 150,000 more on land.
+      - On 24 February 1471 a Vietnamese fleet blocked a Cham force of 5,000 men and elephants at Sa Kỳ, while the emperor landed the main army further north, near Hội An, and another column came down west of the mountains. The Vietnamese took the citadel of Mễ Cần in Quảng Ngãi with artillery on 26 February and in two weeks overran today’s Đà Nẵng, Quảng Nam and Quảng Ngãi. They took Thị Nại on the coast on 18 March and on 19 March surrounded Vijaya, where King Trà Toàn had taken refuge; the emperor rejected his offer to submit. The besiegers bombarded the walls and opened a breach in the east, and on 22 March the city fell. Trà Toàn and his family were captured and deported to the north. The chronicles give more than 30,000 Cham captured, 40,000 beheaded and, by some accounts, 60,000 killed in the fighting.
+    facts:
+      - [Fleet leaves Hóa Châu, "28 November 1470"]
+      - [Vietnamese force (Vietnamese sources), "250,000 men"]
+      - [Vijaya taken, "22 March 1471"]
+      - [Cham captured (Vietnamese sources), "more than 30,000"]
+    markers:
+      - kind: event
+        side: dv
+        name: Hóa Châu
+        date: 28 November 1470
+        text: The Vietnamese frontier province near today’s Huế, besieged by the Cham in 1470 and the starting point of the expedition.
+        lonlat: [107.580, 16.470]
+      - kind: naval
+        side: dv
+        name: Sa Kỳ
+        date: 24 February 1471
+        text: A Vietnamese fleet blocked a Cham force of 5,000 men and elephants here while the main army landed further north.
+        lonlat: [108.880, 15.200]
+      - kind: taken
+        side: dv
+        name: Thị Nại
+        date: 18 March 1471
+        text: The port of Vijaya, taken four days before the capital.
+        lonlat: [109.220, 13.830]
+      - kind: siege
+        side: dv
+        name: Vijaya
+        date: 19–22 March 1471
+        text: The Cham capital, stormed through a breach made by Vietnamese cannon after a four-day siege. King Trà Toàn was captured.
+        lonlat: [109.055, 13.918]
+        lp: l
+    arrows:
+      - side: dv
+        label: Lê Thánh Tông
+        phase: 1
+        via: [[107.60, 16.50], [108.25, 16.20], [108.42, 15.88]]
+      - side: dv
+        phase: 1
+        via: [[107.70, 16.40], [108.40, 16.10], [109.00, 15.50], [108.92, 15.22]]
+      - side: dv
+        phase: 2
+        via: [[108.40, 15.85], [108.80, 15.10], [109.00, 14.40], [109.06, 13.95]]
+      - side: dv
+        phase: 2
+        via: [[108.90, 15.20], [109.30, 14.50], [109.24, 13.86]]
+  - title: The new frontier at Cù Mông
+    date: 1471–1509
+    when: "1471-06"
+    borders: "1471-06-01"
+    countries: [vn]
+    body:
+      - Lê Thánh Tông annexed the conquered land as far as the Cù Mông pass, just south of Vijaya, and made it Đại Việt’s thirteenth province, Quảng Nam, with 42 military colonies of soldier-settlers under a Vietnamese governor. The Cham general Bố Trì Trì escaped south and made himself ruler at Panduranga (around today’s Phan Rang); he and two other Cham rulers, in the Central Highlands and on the coast of today’s Phú Yên and Khánh Hòa, submitted to Lê Thánh Tông as vassals. The Ming reproached Đại Việt but did nothing.
+      - Thousands of Cham were enslaved and settled in the north, among them 50 members of the royal family; in 1509 the emperor Lê Uy Mục had the remaining Cham prisoners of the war killed. The southern Cham principalities kept their kings and their trade, and, by the Malay Annals, Cham princes found refuge in Malacca and Aceh. The Cù Mông frontier held until 1611, when the Nguyễn lords annexed Phú Yên, and the last Cham principality, Panduranga, was absorbed by the Nguyễn emperor Minh Mạng in 1832.
+    facts:
+      - [New frontier, "Cù Mông pass"]
+      - [Quảng Nam province created, "1471"]
+      - [Remaining Cham prisoners killed, "1509"]
+    markers:
+      - kind: event
+        side: dv
+        name: Cù Mông pass
+        date: "1471"
+        text: The new border between Đại Việt and Champa, which held until 1611.
+        lonlat: [109.220, 13.620]
+      - kind: capital
+        side: ch
+        name: Panduranga
+        date: 1471–1832
+        text: Centre of the Cham principality ruled by Bố Trì Trì, around today’s Phan Rang.
+        lonlat: [108.990, 11.570]
+      - kind: taken
+        side: dv
+        name: Vijaya
+        date: "1471"
+        text: The former Cham capital, now in the Vietnamese province of Quảng Nam.
+        lonlat: [109.055, 13.918]
+        lp: l
+    areas:
+      - style: gained
+        side: dv
+        label: Annexed by Đại Việt as Quảng Nam, 1471
+        atoms: [VN-DN, VN-27, VN-29, VN-31]

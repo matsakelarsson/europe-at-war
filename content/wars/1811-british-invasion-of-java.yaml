@@ -1,0 +1,191 @@
+id: british-invasion-of-java
+name: British invasion of Java
+start: "1811-08-04"
+end: "1812-06-20"
+tier: B
+summary: "The British conquest of Java from its Franco-Dutch government during the Napoleonic Wars, and the storming of the court of Yogyakarta that followed. The Netherlands had been annexed by France in 1810, and Java, governed since 1808 by the marshal Herman Willem Daendels and from 1811 by General Jan Willem Janssens, was the last French-ruled base in the East. An expedition of about 12,000 men, half of them Indian sepoys of the East India Company, sailed from India under General Sir Samuel Auchmuty and landed at Cilincing east of Batavia on 4 August 1811. Batavia surrendered without a fight on 8 August, and on the night of 25–26 August the British stormed the fortified lines of Meester Cornelis, where about 5,000 defenders were captured and about 1,000 found dead. Janssens retreated east, and after his last force broke up he capitulated at Tuntang near Salatiga on 18 September. Thomas Stamford Raffles governed Java for the East India Company. On 20 June 1812 British and sepoy troops, with the Mangkunegaran Legion, stormed and plundered the palace of Sultan Hamengkubuwono II of Yogyakarta, who was deposed and exiled to Penang. Java was returned to the Netherlands in 1816."
+countries: [id, gb, nl, fr]
+sides:
+  - id: gb
+    name: Britain (East India Company and Crown forces)
+    polities: [british-india]
+    ink: red
+    moves: British moves
+    success: British success
+  - id: fd
+    name: Franco-Dutch government of Java
+    polities: [dutch-east-indies, france]
+    ink: blue
+    moves: Franco-Dutch moves
+    success: Franco-Dutch success
+  - id: yk
+    name: Yogyakarta under Hamengkubuwono II
+    polities: [yogyakarta]
+    ink: gold
+    moves: Yogyakarta moves
+    success: Yogyakarta success
+notes:
+  - The storming of the Yogyakarta palace is remembered in Java as Geger Sepehi, “the sepoy tumult”, after the Indian troops who did most of the fighting. The British carried off the palace treasury and its library and archives; some of the manuscripts, now in the British Library, were returned in digital form in 2019.
+  - The defenders of Java were Dutch, French and Javanese troops; many Dutch soldiers and Javanese auxiliaries deserted the French cause during the campaign.
+sources:
+  - title: Invasion of Java (1811) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Invasion_of_Java_(1811)
+  - title: Sack of Yogyakarta (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Sack_of_Yogyakarta
+  - title: French and British interregnum in the Dutch East Indies (Wikipedia)
+    url: https://en.wikipedia.org/wiki/French_and_British_interregnum_in_the_Dutch_East_Indies
+  - title: Jan Willem Janssens (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Jan_Willem_Janssens
+  - title: Battle of Jattoo (FIBIS wiki)
+    url: https://wiki.fibis.org/w/Battle_of_Jattoo
+  - title: "Indonesia: the French and the British in Java, 1806–15 (Britannica)"
+    url: https://www.britannica.com/place/Indonesia/The-French-and-the-British-in-Java-1806-15
+  - title: Remembering Geger Sepehi (The Jakarta Post, 2019)
+    url: https://www.thejakartapost.com/multimedia/2019/06/25/remembering-geger-sepehi-british-invation-to-yogyakarta-palace.html
+steps:
+  - title: The landing, Batavia and Meester Cornelis
+    date: August 1811
+    when: "1811-08-26"
+    borders: "1811-08-26"
+    countries: [id, gb, nl, fr]
+    body:
+      - After the Netherlands became part of France in 1810, Lord Minto, the governor-general of India, took up Thomas Stamford Raffles’s proposal to seize Java, the last base from which French ships could raid British trade in the East; the Moluccas had been taken in 1810. The expedition sailed from Madras and Bengal in April 1811 and gathered at Penang and Malacca, about 11,960 men under General Sir Samuel Auchmuty with a fleet under Commodore William Robert Broughton, later Rear-Admiral Robert Stopford. On 4 August it landed unopposed at the fishing village of Cilincing, about 20 km east of Batavia.
+      - Janssens, who meant to let the climate wear down the invaders, abandoned Batavia, which surrendered on 8 August, and withdrew with 8,000 to 10,000 men into the lines of Meester Cornelis, a fortified camp south of the town that Daendels had built, with 280 guns on its walls. The British took the cantonment of Weltevreeden on 10 August and dug batteries before the lines. After a sortie on 22 August was driven back, Colonel Rollo Gillespie, guided by a deserter, seized the key redoubts, and at midnight on 25 August the British stormed the lines. The siege cost them 630 killed and wounded; about 5,000 defenders were captured and about 1,000 found dead in the works. Janssens escaped to Buitenzorg with a few survivors.
+    facts:
+      - [British force, "about 12,000 men, half of them Indian sepoys"]
+      - [Landing at Cilincing, "4 August 1811"]
+      - [Batavia surrenders, "8 August 1811"]
+      - [Meester Cornelis stormed, "25–26 August 1811"]
+    markers:
+      - kind: event
+        side: gb
+        name: Cilincing
+        date: 4 August 1811
+        text: The British landed here unopposed; about 8,000 men were ashore before the defenders appeared.
+        lonlat: [106.943, -6.109]
+        lp: t
+      - kind: taken
+        side: gb
+        name: Batavia
+        date: 8 August 1811
+        text: Abandoned by Janssens and surrendered to Gillespie without a fight.
+        lonlat: [106.812, -6.135]
+        lp: l
+      - kind: siege
+        side: gb
+        name: Meester Cornelis
+        date: 14–26 August 1811
+        text: Daendels’s fortified camp, stormed at midnight on 25 August; about 5,000 defenders were captured and about 1,000 found dead.
+        lonlat: [106.870, -6.215]
+        lp: r
+      - kind: event
+        side: fd
+        name: Buitenzorg
+        date: August 1811
+        text: Janssens fled here after the fall of Meester Cornelis and then moved on east.
+        lonlat: [106.797, -6.596]
+        lp: b
+    arrows:
+      - side: gb
+        label: Expedition from India
+        phase: 1
+        via: [[102.25, 2.10], [104.60, 1.20], [108.60, -2.20], [108.35, -6.20], [106.97, -6.07]]
+      - side: gb
+        label: Advance on Batavia
+        phase: 2
+        via: [[106.94, -6.12], [106.88, -6.13], [106.83, -6.14]]
+      - side: fd
+        label: Janssens’s retreat
+        phase: 3
+        via: [[106.86, -6.24], [106.83, -6.40], [106.80, -6.58]]
+  - title: The pursuit and the capitulation of Tuntang
+    date: September 1811
+    when: "1811-09-16"
+    borders: "1811-09-18"
+    countries: [id, gb, nl, fr]
+    body:
+      - Janssens tried to rally an army in Central Java, reinforced on 3 September by 1,200 horsemen of the Mangkunegaran under Prince Prangwedana and by other Javanese levies. Meanwhile British ships took the coast. Sailors and marines captured Sumenep on Madura on 31 August, after which the rest of Madura went over to the British, and landed at Cirebon in early September, while Auchmuty shipped troops east to Semarang.
+      - On 16 September a British force under Colonel Samuel Gibbs beat off Janssens’s attack on the heights of Jatingaleh south of Semarang; in the rout many of the Javanese auxiliaries killed their Dutch officers. With only a handful of men left, Janssens signed the capitulation of Java and its dependencies at Tuntang, near Salatiga, on 18 September 1811. Raffles became lieutenant-governor and abolished much of the Dutch system of forced deliveries, replacing it with a land tax.
+    facts:
+      - [Sumenep taken, "31 August 1811"]
+      - [Janssens’s last battle, "16 September 1811"]
+      - [Capitulation of Tuntang, "18 September 1811"]
+    markers:
+      - kind: taken
+        side: gb
+        name: Sumenep
+        date: 31 August 1811
+        text: Taken from the sea by sailors and marines; the rest of Madura went over to the British.
+        lonlat: [113.860, -7.007]
+        lp: t
+      - kind: taken
+        side: gb
+        name: Cirebon
+        date: September 1811
+        text: Occupied by a landing party from the fleet.
+        lonlat: [108.561, -6.714]
+        lp: b
+      - kind: battle
+        side: gb
+        name: Jatingaleh
+        date: 16 September 1811
+        text: Janssens’s last attack was repulsed by Colonel Gibbs’s troops; his Javanese auxiliaries broke up.
+        lonlat: [110.424, -7.026]
+        lp: l
+      - kind: treaty
+        side: gb
+        name: Tuntang
+        date: 18 September 1811
+        text: Janssens capitulated here, surrendering Java and the remaining Dutch posts to the British.
+        lonlat: [110.454, -7.266]
+        lp: r
+    arrows:
+      - side: gb
+        label: British troops by sea
+        phase: 1
+        via: [[106.85, -6.05], [108.00, -5.95], [109.40, -6.65], [110.40, -6.92]]
+      - side: gb
+        label: Gibbs
+        phase: 2
+        via: [[110.42, -6.98], [110.43, -7.15], [110.45, -7.25]]
+    areas:
+      - style: gained
+        side: gb
+        label: Java under British rule from September 1811
+        atoms: [ID-JK, ID-JB, "ID-JT!", "ID-JI!", ID-JI~madura, ID-JI~blambangan]
+  - title: The sack of Yogyakarta
+    date: June 1812
+    when: "1812-06-20"
+    borders: "1812-06-20"
+    countries: [id, gb]
+    body:
+      - Sultan Hamengkubuwono II of Yogyakarta, whom Daendels had forced aside in 1810 and who took back power after the fall of the Franco-Dutch government, refused to accept British overlordship, and Raffles suspected him of plotting with Surakarta against the British. In June 1812 more than 1,000 British and sepoy troops under Gillespie, with the Mangkunegaran Legion, marched on Yogyakarta. After a bombardment they stormed the walled palace on 20 June; sepoys lowered a drawbridge for the assault column, and the sultan surrendered in the inner court. The British lost 23 killed and 76 wounded, the defenders hundreds.
+      - The palace was plundered of its treasure, worth more than 850,000 rixdollars, and of its library and archives. Hamengkubuwono II was exiled to Penang, his son was installed as Hamengkubuwono III, and the sultan’s half-brother Natakusuma, who had sided with the British, received his own principality as Paku Alam I. Yogyakarta had to cede Kedu and other lands to the British government. It was the first time a European army had stormed a central Javanese court, and the humiliation helped prepare the ground for the Java War of 1825, led by the new sultan’s eldest son, Diponegoro.
+    facts:
+      - [British force, "more than 1,000 British and sepoy troops"]
+      - [Palace stormed, "20 June 1812"]
+      - [Losses, "23 British killed and 76 wounded; hundreds of defenders"]
+    markers:
+      - kind: taken
+        side: gb
+        name: Yogyakarta
+        date: 20 June 1812
+        text: The palace of Hamengkubuwono II, stormed and plundered by British and sepoy troops; the sultan was deposed and exiled to Penang.
+        lonlat: [110.364, -7.808]
+        lp: b
+      - kind: capital
+        name: Surakarta
+        date: "1812"
+        text: The court of Pakubuwono IV, suspected by Raffles of dealings with Yogyakarta; it stayed out of the fighting.
+        lonlat: [110.827, -7.578]
+        lp: r
+    arrows:
+      - side: gb
+        label: Gillespie
+        phase: 1
+        via: [[110.82, -7.58], [110.60, -7.70], [110.38, -7.80]]
+    areas:
+      - style: gained
+        side: gb
+        label: Kedu, ceded by Yogyakarta, 1812
+        atoms: [ID-JT~kedu]

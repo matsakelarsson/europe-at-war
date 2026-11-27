@@ -1,0 +1,157 @@
+id: luchuan-pingmian-campaigns
+name: Luchuan–Pingmian campaigns
+start: "1436"
+end: "1449"
+tier: B
+summary: "Four Ming campaigns against Möng Mao, the Tai (Shan) state of the Shweli valley on today’s border between Yunnan and Myanmar, which the Ming called the Luchuan–Pingmian pacification commission. Its ruler Si Renfa (Thonganbwa in Burmese) stopped paying tribute and from 1437 annexed the lands of neighbouring chiefs under Ming protection. A first campaign under Mu Sheng and Fang Zheng ended in defeat in 1439. Under the influence of the palace eunuch Wang Zhen the court sent a much larger army under the minister of war Wang Ji, which took Si Renfa’s base in January 1442. Si Renfa fled to Ava, whose king Narapati held him as a bargaining counter and handed him over in 1445–1446, after Ming armies had come into Burma. Two more campaigns, in 1443 and 1449, pursued his son Si Jifa to Mong Yang (Mohnyin), west of the Irrawaddy, without capturing him; the Shan were allowed to stay there if they never crossed the river eastwards. The wars broke Möng Mao but cost the Ming dearly, and the Tumu crisis, in which the Mongols captured the emperor and killed Wang Zhen, followed months after the last campaign."
+countries: [cn, mm]
+sides:
+  - id: mg
+    name: Ming China
+    polities: [ming]
+    ink: gold
+    moves: Ming moves
+    success: Ming success
+  - id: mm
+    name: Möng Mao (Luchuan)
+    polities: [mong-mao]
+    ink: orange
+    moves: Möng Mao’s moves
+    success: Möng Mao’s success
+  - id: av
+    name: Ava
+    polities: [ava]
+    ink: red
+    moves: Ava’s moves
+    success: Ava’s success
+notes:
+  - The campaigns are known mainly from the Ming Veritable Records (Ming Shilu) and from Burmese and Shan chronicles, which tell a different story of Ava’s part and of Si Renfa’s death. The Chinese numbers, up to 150,000 men in one army, are those of the court records and may include porters and local levies.
+  - "Names: the Chinese, Burmese and Shan forms differ. Si Renfa is Thonganbwa in the Burmese chronicles, his son Si Jifa is Thokyeinbwa, Möng Mao is Maw, Mong Yang (Mengyang) is Mohnyin, and Yongchang is today’s Baoshan."
+sources:
+  - title: Luchuan–Pingmian campaigns (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Luchuan%E2%80%93Pingmian_campaigns
+  - title: Si Renfa (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Si_Renfa
+  - title: Mong Mao (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Mong_Mao
+  - title: Narapati I of Ava (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Narapati_I_of_Ava
+  - title: Wang Zhen (eunuch) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Wang_Zhen_(eunuch)
+  - title: Tumu Crisis (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Tumu_Crisis
+steps:
+  - title: Si Renfa and the first campaign
+    date: 1436–1439
+    when: "1438"
+    borders: "1438-12-08"
+    countries: [cn, mm]
+    body:
+      - Möng Mao, the Tai state of the Shweli valley around today’s Ruili and Mangshi, had been the strongest power of the Shan hills since the fourteenth century; in 1364 its raiders sacked Sagaing and Pinya in Upper Burma. After the Ming conquest of Yunnan in 1381–1382 its rulers accepted the title of pacification commissioner of Luchuan–Pingmian, but they kept their own armies and their claims over the neighbouring chiefs. Si Renfa, who succeeded his brother in 1413, asked in 1436 to be excused 2,500 taels of unpaid tribute, and the young Zhengtong emperor agreed.
+      - In November 1437 Si Renfa attacked the neighbouring chiefdom of Nandian and took its lands, and the Ming commander in Yunnan, Mu Sheng, reported raid after raid on chiefs under Ming protection. On 8 December 1438 the court ordered a punitive campaign. The Ming army came up to the Salween near Yongchang, where Si Renfa’s stockades stood on the far bank; the general Fang Zheng crossed by night and drove them off, and pursued Si Renfa westward. Early in 1439 Fang Zheng, his supplies cut and with few reinforcements, was ambushed by war elephants at Kongni and killed with his troops. Mu Sheng fell back to Yongchang, was reprimanded by the court and died on 2 May 1439.
+    facts:
+      - [Si Renfa annexes Nandian, "November 1437"]
+      - [Campaign ordered, "8 December 1438"]
+      - [Fang Zheng killed, "early 1439"]
+    markers:
+      - kind: capital
+        side: mm
+        name: Möng Mao
+        date: "1438"
+        text: Si Renfa’s seat in the Shweli valley, near today’s Ruili.
+        lonlat: [97.850, 24.010]
+      - kind: taken
+        side: mm
+        name: Nandian
+        date: November 1437
+        text: A chiefdom under Ming protection, annexed by Si Renfa.
+        lonlat: [98.300, 24.800]
+      - kind: battle
+        side: mg
+        name: Salween crossing
+        date: December 1438
+        text: Fang Zheng crossed the river by night and drove Si Renfa’s troops from their stockades on the western bank.
+        lonlat: [98.880, 24.980]
+      - kind: event
+        side: mg
+        name: Yongchang (Baoshan)
+        date: 1438–1439
+        text: The Ming base for the campaign, to which Mu Sheng withdrew after Fang Zheng’s death.
+        lonlat: [99.160, 25.120]
+    arrows:
+      - side: mm
+        label: Si Renfa
+        phase: 1
+        via: [[97.850, 24.050], [98.050, 24.400], [98.280, 24.770]]
+      - side: mg
+        label: Fang Zheng
+        phase: 2
+        via: [[99.150, 25.100], [98.900, 25.000], [98.600, 24.850]]
+  - title: Wang Ji takes Luchuan
+    date: 1441–1446
+    when: "1442"
+    borders: "1442-01-15"
+    countries: [cn, mm]
+    body:
+      - At court the eunuch Wang Zhen, who dominated the young emperor, pressed for a second, far larger campaign; officials who argued that the money was needed against the Mongols were overruled, and the Hanlin scholar Liu Qiu, who opposed Wang Zhen, was arrested and put to death. The campaign was launched on 27 February 1441 under the minister of war Wang Ji, with an army the records put at 150,000 men. In September 1441 the Ming beat off an advance by 30,000 Möng Mao troops with 80 elephants; in November Si Renfa’s ambush of a Ming column failed and he was besieged in his stronghold of Shangjiang, from which he escaped through a water gate. In January 1442 the Ming took his base, and Si Renfa fled into Burma.
+      - At Ava King Narapati I held him as a prisoner and a bargaining counter. The Ming demanded his surrender; in 1443 Wang Ji’s third campaign took the base of Si Renfa’s son Si Jifa, who escaped to Mong Yang, but the Ming did not follow him, fearing an alliance of Ava and Hsenwi against them. The Burmese chronicles say a Chinese army was held off near Bhamo in 1444 and that in 1445 the Chinese came down the Irrawaddy to Ava and helped Narapati take Yamethin in return for Si Renfa. In the Ming records Ava handed him over in August 1445 in return for Ming support against Hsenwi, and he was executed in January 1446; the Burmese chronicles say he took his own life and that his body was handed over.
+    facts:
+      - [Second campaign launched, "27 February 1441"]
+      - [Si Renfa’s base taken, "January 1442"]
+      - [Si Renfa handed over by Ava, "1445–1446"]
+    markers:
+      - kind: taken
+        side: mg
+        name: Möng Mao (Luchuan)
+        date: January 1442
+        text: Si Renfa’s base, taken by Wang Ji’s army. Si Renfa escaped to Burma.
+        lonlat: [97.850, 24.010]
+      - kind: event
+        side: av
+        name: Bhamo
+        date: 1444–1445
+        text: The Burmese chronicles say Ava’s army held a Chinese army off near here in 1444, and evacuated the town in November 1445.
+        lonlat: [97.230, 24.260]
+      - kind: capital
+        side: av
+        name: Ava
+        date: 1442–1446
+        text: King Narapati I held Si Renfa here until 1445–1446.
+        lonlat: [95.978, 21.857]
+    arrows:
+      - side: mg
+        label: Wang Ji
+        phase: 1
+        via: [[98.900, 25.050], [98.500, 24.800], [98.150, 24.400], [97.900, 24.080]]
+      - side: mm
+        label: Si Renfa’s flight
+        phase: 2
+        via: [[97.800, 24.000], [97.200, 23.700], [96.600, 23.000], [96.100, 22.000]]
+  - title: Mong Yang
+    date: March 1449
+    when: "1449"
+    borders: "1449-04-01"
+    countries: [cn, mm]
+    body:
+      - In March 1449 Wang Ji led a fourth campaign, of 130,000 or 150,000 men in different passages of the records, against Si Jifa at Mong Yang, west of the Irrawaddy. The army was badly supplied and badly disciplined, and many men were trampled to death in the crush on the first day of the march. It stormed the stockades of Mong Yang, but Si Jifa escaped again. The campaign ended in a compromise, by which the Möng Mao ruling family could stay in Mong Yang if they never crossed the Irrawaddy eastwards. Sources disagree on Si Jifa’s fate, but his son Si Hongfa went on ruling Mong Yang, whose chiefs later led the Shan confederation that took Ava in 1527.
+      - The four campaigns ended Möng Mao’s power in the Shweli valley, but the historian Wang Gungwu judges that they disrupted the economy of the south-west, damaged Ming prestige among the border chiefs and drained resources from the north. Months later, in September 1449, Wang Zhen led the emperor against the Oirat Mongols, and at Tumu the emperor was captured and Wang Zhen killed.
+    facts:
+      - [Fourth campaign, "March 1449, 130,000–150,000 men"]
+      - [Tumu crisis, "September 1449"]
+    markers:
+      - kind: battle
+        side: mg
+        name: Mong Yang (Mohnyin)
+        date: March 1449
+        text: The Ming army stormed the stockades of Mong Yang, but Si Jifa escaped. The Shan were allowed to stay west of the Irrawaddy.
+        lonlat: [96.370, 24.780]
+      - kind: event
+        side: mg
+        name: Möng Mao (Luchuan)
+        date: "1449"
+        text: Si Renfa’s old base, under Ming control since 1442.
+        lonlat: [97.850, 24.010]
+    arrows:
+      - side: mg
+        label: Wang Ji
+        via: [[98.500, 25.000], [97.900, 24.600], [97.300, 24.500], [96.800, 24.650], [96.420, 24.780]]

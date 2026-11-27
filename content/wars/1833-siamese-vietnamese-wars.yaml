@@ -1,0 +1,204 @@
+id: siamese-vietnamese-wars
+name: Siamese–Vietnamese wars over Cambodia
+start: "1833-11-23"
+end: "1847-05"
+tier: B
+summary: "Two wars between Siam and Vietnam for control of Cambodia, whose kings had long paid tribute to both. In November 1833, with southern Vietnam in revolt under Lê Văn Khôi, Rama III sent armies under Chaophraya Bodindecha into Cambodia and a fleet against Hà Tiên. The Siamese drove the pro-Vietnamese king Ang Chan from Phnom Penh, but were beaten on the Vàm Nao channel in January 1834 and withdrew. Vietnam then ruled most of Cambodia directly as the province of Trấn Tây, with Ang Chan’s daughter Ang Mey as a figurehead queen. Its attempts to remake Cambodian government and customs on the Vietnamese model provoked a general Cambodian rising in 1840, and Siam invaded again with Prince Ang Duong. Vietnam withdrew in 1841, returned in 1845 and besieged the Siamese at Oudong, and in December 1845 both sides agreed that Ang Duong should rule as a vassal of both courts. He was invested by Vietnam in 1847 and crowned by Siam in 1848."
+countries: [kh, vn, th, la]
+sides:
+  - id: siam
+    name: Siam (with Ang Duong)
+    polities: [thailand]
+    ink: purple
+    moves: Siamese moves
+    success: Siamese success
+  - id: vn
+    name: Vietnam (Nguyễn dynasty)
+    polities: [nguyen]
+    ink: gold
+    moves: Vietnamese moves
+    success: Vietnamese success
+  - id: kh
+    name: Cambodian forces
+    polities: [cambodia]
+    ink: teal
+    moves: Cambodian moves
+    success: Cambodian success
+notes:
+  - Older books date the first war 1831–1834. The Thai and Vietnamese chronicles, as read in the sources cited, place the Siamese invasion in November 1833, after the Lê Văn Khôi revolt had begun.
+  - Cambodians fought on both sides. Ang Chan and many officials relied on Vietnam, his brothers Ang Em and Ang Duong lived in Bangkok under Siamese protection, and the rising of 1840 was led by provincial officials against Vietnamese rule. Army sizes come from Thai and Vietnamese chronicles and are uncertain.
+  - Siam had held Battambang and Siem Reap since 1794. The province of Trấn Tây covered the rest of Cambodia from 1835 to 1841.
+sources:
+  - title: Siamese–Vietnamese War (1833–1834) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siamese%E2%80%93Vietnamese_War_(1833%E2%80%931834)
+  - title: Siamese–Vietnamese War (1841–1845) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Siamese%E2%80%93Vietnamese_War_(1841%E2%80%931845)
+  - title: Tây Thành province (Wikipedia)
+    url: https://en.wikipedia.org/wiki/T%C3%A2y_Th%C3%A0nh_province
+  - title: Ang Duong (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ang_Duong
+  - title: Ang Mey (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Ang_Mey
+  - title: Chaophraya Bodindecha (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bodindecha
+  - title: Cambodia, history (Britannica)
+    url: https://www.britannica.com/place/Cambodia/History
+steps:
+  - title: Bodindecha’s invasion and Vàm Nao
+    date: November 1833 – April 1834
+    when: "1833-11"
+    borders: "1833-12-31"
+    countries: [kh, vn, th, la]
+    body:
+      - Since the fall of Angkor, Cambodia’s kings had sought protection from Siam or Vietnam in turn. King Ang Chan, crowned with Siamese approval, had turned to Vietnam after 1812, while his brothers Ang Em and Ang Duong lived in Bangkok. When Lê Văn Khôi rose against the emperor Minh Mạng in Saigon in July 1833 and asked Siam for help, Rama III saw a chance to restore Siamese influence in Cambodia and perhaps take southern Vietnam.
+      - On 23 November 1833 three forces left Bangkok. Chaophraya Bodindecha led the land army, said to number about 40,000, by Battambang and Pursat; Chaophraya Phrakhlang (Dit Bunnag) took a fleet of about 10,000 men by sea against Hà Tiên; a third force marched into the Lao lands towards Vietnam’s western frontier and took Muang Phuan. Bodindecha defeated the Cambodian army at Kampong Chhnang in December, and on 31 December Ang Chan fled from Phnom Penh into Vietnam. In January 1834 the fleet took Hà Tiên and Châu Đốc, and Bodindecha joined it for an advance down the Mekong towards Saigon.
+      - On 21 January 1834 the Siamese met a Vietnamese army and river fleet under Trương Minh Giảng and Nguyễn Xuân on the Vàm Nao, the channel that joins the two arms of the Mekong. After about ten days of fighting, heaviest on 29 January, the Siamese broke off and fell back to Châu Đốc and Hà Tiên and then out of Cambodia, which they had left by April. They took thousands of Cambodian, Lao and Vietnamese captives with them, among them Vietnamese Catholics who settled in Bangkok. Ang Chan returned to Phnom Penh under Vietnamese escort in March 1834.
+    facts:
+      - [Siamese armies leave Bangkok, "23 November 1833"]
+      - [Siamese forces, "about 40,000 by land and 10,000 by sea (Thai figures)"]
+      - [Battle of Vàm Nao, "21–31 January 1834, Vietnamese victory"]
+    markers:
+      - kind: battle
+        side: siam
+        name: Kampong Chhnang
+        date: December 1833
+        text: Bodindecha defeated the Cambodian army of Ang Chan’s commander Chakrey Long.
+        lonlat: [104.670, 12.250]
+        lp: l
+      - kind: taken
+        side: siam
+        name: Phnom Penh
+        date: December 1833
+        text: Abandoned by Ang Chan on 31 December, who fled to Vĩnh Long in Vietnam.
+        lonlat: [104.920, 11.560]
+      - kind: taken
+        side: siam
+        name: Hà Tiên
+        date: January 1834
+        text: Taken by the Siamese fleet under Chaophraya Phrakhlang.
+        lonlat: [104.480, 10.380]
+        lp: l
+      - kind: taken
+        side: siam
+        name: Châu Đốc
+        date: January 1834
+        text: Taken by the Siamese before their advance down the Mekong.
+        lonlat: [105.120, 10.700]
+        lp: l
+      - kind: battle
+        side: vn
+        name: Vàm Nao
+        date: 21–31 January 1834
+        text: About ten days of fighting on the channel between the Mekong and the Bassac. The Siamese retreated.
+        lonlat: [105.360, 10.590]
+    arrows:
+      - side: siam
+        label: Bodindecha
+        phase: 1
+        via: [[102.400, 13.800], [103.200, 13.100], [103.900, 12.550], [104.650, 12.230], [104.900, 11.600]]
+      - side: siam
+        label: Phrakhlang’s fleet
+        phase: 1
+        via: [[100.600, 13.400], [101.300, 12.300], [102.600, 11.100], [104.400, 10.360]]
+      - side: siam
+        phase: 2
+        via: [[104.500, 10.400], [104.900, 10.550], [105.100, 10.690], [105.320, 10.590]]
+      - side: vn
+        label: Trương Minh Giảng
+        phase: 2
+        via: [[106.000, 10.250], [105.700, 10.400], [105.400, 10.580]]
+  - title: Trấn Tây and the Cambodian rising
+    date: 1835–1840
+    when: "1835"
+    borders: "1840-09-15"
+    countries: [kh, vn]
+    body:
+      - Ang Chan died in January 1835, leaving only daughters. Minh Mạng made his daughter Ang Mey queen in May 1835, and in November created the province of Trấn Tây, governed from Phnom Penh by Trương Minh Giảng. Cambodian provinces and officials were given Vietnamese names and titles, Vietnamese colonists and soldiers were settled, and the court tried to bring Cambodians to Vietnamese ways of dress, administration and farming. Cambodian chronicles remember these years as a time of heavy labour service and humiliation of the monkhood and the old elite; the Vietnamese records present it as bringing order and civilisation to the country.
+      - In 1840 the Vietnamese demoted Ang Mey, and after a banquet on 24 August took her and her sisters to Saigon and arrested leading officials accused of dealing with Siam. Early in September provincial officials rose west of Phnom Penh, and the revolt soon spread over most of the country. Vietnamese garrisons were besieged and settlers killed, and the rebels called on Siam and Ang Duong. On 3 November 1840 Bodindecha invaded again, with about 20,000 men, by Pursat and Kampong Thom.
+    facts:
+      - [Ang Mey made queen, "May 1835"]
+      - [Trấn Tây created, "November 1835"]
+      - [Cambodian rising, "September 1840"]
+      - [Second Siamese invasion, "3 November 1840"]
+    markers:
+      - kind: capital
+        side: vn
+        name: Phnom Penh
+        date: 1835–1841
+        text: Seat of Trương Minh Giảng, governor-general of Trấn Tây, in a new Vietnamese citadel.
+        lonlat: [104.920, 11.560]
+      - kind: event
+        side: kh
+        name: Samraong Tong
+        date: September 1840
+        text: The rising began among provincial officials west of Phnom Penh, here and at Bati.
+        lonlat: [104.530, 11.470]
+        lp: l
+      - kind: taken
+        side: siam
+        name: Pursat
+        date: November 1840
+        text: The Siamese army entered Cambodia here, with Ang Duong.
+        lonlat: [103.920, 12.540]
+        lp: l
+      - kind: event
+        side: siam
+        name: Kampong Thom
+        date: November 1840
+        text: A second Siamese column advanced by way of Kampong Thom.
+        lonlat: [104.890, 12.710]
+    arrows:
+      - side: siam
+        label: Bodindecha
+        phase: 1
+        via: [[103.200, 13.100], [103.900, 12.550], [104.500, 12.000]]
+      - side: siam
+        phase: 1
+        via: [[103.860, 13.360], [104.400, 12.950], [104.880, 12.720]]
+    areas:
+      - style: occupied
+        side: vn
+        label: Trấn Tây, ruled by Vietnam 1835–1841
+        atoms: [KH-3, KH-4, KH-5, KH-6, KH-7, KH-8, KH-10, KH-12, KH-14, KH-15, KH-18, KH-20, KH-21, KH-23]
+  - title: Ang Duong and the siege of Oudong
+    date: 1841–1847
+    when: "1841-11"
+    borders: "1845-12-01"
+    countries: [kh, vn, th]
+    body:
+      - Minh Mạng died in January 1841, and his successor Thiệu Trị decided that holding Cambodia was not worth the cost. In November 1841 the Vietnamese withdrew to the Mekong delta, taking the Cambodian royal women with them; Trương Minh Giảng died soon afterwards, by some accounts by his own hand. Ang Duong, brought from Bangkok, set up his court at Oudong under Siamese protection, while the Siamese fortified Battambang and their posts in the west.
+      - In July 1845 the Vietnamese came back with about 20,000 men under Nguyễn Tri Phương and Doãn Uẩn, retook Phnom Penh in September and besieged Ang Duong and Bodindecha at Oudong. The siege failed, and with neither side able to win, a settlement was reached in December 1845 under which Ang Duong would pay tribute to both courts. Vietnam released the princesses and invested Ang Duong as king at Oudong in May 1847; Siam crowned him in March 1848, and both armies left.
+      - Ang Duong reigned until 1860 as a vassal of both neighbours. Fearing that they would partition his kingdom, he sought French protection in the 1850s, and in 1863 his son Norodom accepted a French protectorate.
+    facts:
+      - [Vietnamese withdrawal, "November 1841"]
+      - [Siege of Oudong, "autumn 1845, Siamese and Cambodian success"]
+      - [Peace agreed, "December 1845"]
+      - [Ang Duong invested by Vietnam, "May 1847"]
+    markers:
+      - kind: siege
+        side: siam
+        name: Oudong
+        date: autumn 1845
+        text: Ang Duong’s royal city, defended by Bodindecha against the Vietnamese. Ang Duong was invested as king here in 1847 and crowned in 1848.
+        lonlat: [104.740, 11.820]
+        lp: l
+      - kind: taken
+        side: vn
+        name: Phnom Penh
+        date: September 1845
+        text: Retaken by the Vietnamese army of Nguyễn Tri Phương and Doãn Uẩn.
+        lonlat: [104.920, 11.560]
+      - kind: held
+        side: siam
+        name: Battambang
+        date: 1841–1847
+        text: The main Siamese base in western Cambodia, a province of Siam since 1794.
+        lonlat: [103.200, 13.100]
+    arrows:
+      - side: vn
+        label: Nguyễn Tri Phương
+        phase: 1
+        via: [[105.400, 10.700], [105.200, 11.150], [104.950, 11.520]]
+      - side: vn
+        phase: 2
+        via: [[104.900, 11.600], [104.800, 11.720], [104.760, 11.800]]

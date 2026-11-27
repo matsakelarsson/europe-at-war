@@ -158,7 +158,29 @@ below are the number of new war entries (tiers A, B and C).
   cannot zoom in further; German and Japanese Micronesia (1885–1944), which
   the Siege of Tsingtao touches, waits for Oceania (wave 16). Site 39 MB,
   first load 1.06 MB gzip (fr and sv 1.11).*
-- [ ] Wave 11: Southeast Asia (~70)
+- [x] Wave 11: Southeast Asia (~70)
+  *Done: 155 wars (31 tier A, 68 B, 56 C; 428 steps), from the Nanzhao raids
+  on the Pyu (832–835) to the battle of Marawi (2017), with the Mongol
+  invasions of Đại Việt, the Forty Years’ War, the Burmese–Siamese wars, the
+  Tây Sơn wars, the Java and Aceh wars, the Philippine Revolution and the
+  Philippine–American War, the Second World War in Burma, Malaya and the
+  Philippines, the Indochina wars and the conflicts in Myanmar. Borders are
+  curated from 800 for Myanmar, Thailand, Laos, Cambodia, Vietnam, Malaysia,
+  Singapore, Brunei, Indonesia, the Philippines and Timor-Leste in
+  `events/southeast-asia.yaml` (252 events, checked by two fact-checkers),
+  on 25 new splits (`splits/99c-southeast-asia.geojson`), with 100 new
+  polities, 100 war actors, 155 capital tenures and 24 labels. Protectorates
+  and vassals keep their own colour until annexed; the Viet Minh zones, the
+  Indonesian Republic of 1945–1949 and the First Philippine Republic are war
+  areas, not base-map states; the Thai gains of the Tokyo convention
+  (1941–1946) and Indonesian rule in East Timor (1976–1999) are on the base
+  map. Catalogue text, polity names, border notes, capitals and labels are in
+  French and Swedish. Known limits: the Balinese kingdoms (Karangasem, Badung,
+  Tabanan and the rest) share one area, and Pagan has no split of its own;
+  the Paracel and Spratly Islands and the Banda Islands have no land on the
+  map, so the Banda war is told with markers and a drawn outline; steps whose
+  places lie a few kilometres apart (Singapore 1942, Banda, Badung) use close
+  views. Site 45 MB, first load 1.07 MB gzip (fr and sv 1.13).*
 - [ ] Wave 12: North Africa, the Sahel and the Horn of Africa (~70)
 - [ ] Wave 13: Africa south of the Sahara (~100)
 - [ ] Wave 14: North America and the Caribbean (~100)
@@ -166,7 +188,8 @@ below are the number of new war entries (tiers A, B and C).
 - [ ] Wave 16: Oceania, and the non-European theatres of the world wars and of
   wars already on the map (Seven Years' War in India and America, Napoleon in
   Egypt, the Pacific War, the First World War in the Middle East and Africa) (~40
-  new, plus new steps)
+  new, plus new steps); the Second World War in Burma, Malaya, the Dutch East
+  Indies and the Philippines came with wave 11
 
 That is about 850 new wars, roughly 1,300 in all. More can follow at the same
 cost per war (about 50 KB of site each, in three languages).

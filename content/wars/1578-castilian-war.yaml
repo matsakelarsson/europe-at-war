@@ -1,0 +1,115 @@
+id: castilian-war
+name: Castilian War
+start: "1578-03"
+end: "1578-06-26"
+tier: B
+summary: "The Spanish attack on the sultanate of Brunei in 1578, which the Malays call the Perang Kastila, “the war of the Castilians”. Brunei, the leading Muslim power of northern Borneo, had family and trading ties with Manila and the Sulu archipelago, and the Spaniards, who had taken Manila in 1571, saw its merchants and preachers as rivals to their own rule and missions in the islands. When Sultan Saiful Rijal rejected Governor Francisco de Sande’s demands to stop Muslim preaching and to admit Christian missionaries, Sande sailed from Manila in March 1578 with about 40 ships and more than 2,000 men, most of them Filipino auxiliaries, taking with him two Bruneian nobles, Pengiran Seri Lela and Pengiran Seri Ratna, who hoped for Spanish help against the sultan. On 14 April the fleet destroyed Brunei’s ships in the harbour, and by 16 April the Spaniards held the capital, Kota Batu; they burned its great mosque, and the sultan withdrew to Jerudong. Disease and Bruneian counter-attacks forced the Spaniards out after 72 days, and on 26 June they sailed back to Manila; the sultan returned and rebuilt his capital. A Spanish force sent on to Sulu obtained the submission of Jolo, the start of three centuries of wars between Spain and the Muslim states of the southern Philippines. Brunei kept its independence but never regained its influence in Luzon."
+countries: [bn, ph, es, my]
+sides:
+  - id: es
+    name: Spain, with Pengiran Seri Lela and Pengiran Seri Ratna
+    polities: [spanish-east-indies]
+    ink: gold
+    moves: Spanish moves
+    success: Spanish success
+  - id: bn
+    name: Brunei
+    polities: [brunei]
+    ink: green
+    moves: Bruneian moves
+    success: Bruneian success
+  - id: su
+    name: Sulu
+    polities: [sulu]
+    ink: teal
+    moves: Sulu moves
+    success: Sulu success
+notes:
+  - The war is known mainly from Spanish letters and reports and from the Bruneian genealogies (the Silsilah Raja-Raja Brunei); the two disagree on many details. The Spaniards called Brunei “Borneo”, a name that later passed to the whole island. The sultan is called Lixar or Nula Alam in Spanish records.
+  - The Spanish–Moro wars that began with the expeditions to Sulu and Mindanao in 1578 are told in their own story.
+sources:
+  - title: Castilian War (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Castilian_War
+  - title: Battle of Kota Batu (1578) (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Battle_of_Kota_Batu_(1578)
+  - title: Saiful Rijal (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Saiful_Rijal
+  - title: Francisco de Sande (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Francisco_de_Sande
+  - title: Kota Batu, Brunei (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Kota_Batu,_Brunei
+  - title: Bruneian Empire (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Bruneian_Empire
+steps:
+  - title: Sande’s expedition and the fall of Kota Batu
+    date: March – April 1578
+    when: "1578-04"
+    borders: "1578-04-16"
+    countries: [bn, ph, es]
+    body:
+      - "In the early 16th century Brunei was the main trading power of the seas between Borneo and Luzon. Its royal family was related to the rulers of Manila and Sulu, and Spanish sources record Bruneian influence as far as Manila Bay. When the Spaniards made Manila their capital in 1571, they found themselves rivals of Brunei for the trade and the allegiance of the islands, and the Visayans of Cebu and Panay, long at odds with Brunei’s allies, took the Spanish side. Governor Francisco de Sande, who arrived in 1575, regarded Brunei as the source of the spread of Islam in the archipelago. In a letter of 13 April 1578 he accused Sultan Saiful Rijal of stirring up the people of Luzon against Spain and ordered him to send no more preachers to the islands. A dispute at the Bruneian court gave him an opening: two nobles who had fallen out with the sultan, Pengiran Seri Lela and Pengiran Seri Ratna, offered the Spaniards their help."
+      - Sande sailed from Manila in March 1578 with about 40 vessels and, by the counts in the sources, 2,000 to 2,200 men, among them about 400 Spaniards and Mexicans, 1,500 Filipino auxiliaries and 300 Bruneians. Off Brunei he sent a second demand, which was again refused. On 14 April the Spanish fleet attacked the Bruneian ships in the harbour and destroyed about fifty of them, and by 16 April it held the capital, Kota Batu, on the Brunei river. The palace and its treasures were taken, many townspeople were killed and the great mosque was burned. Saiful Rijal and his court withdrew to Jerudong on the coast to the west, and later inland up the Brunei river, to gather his forces.
+    facts:
+      - [Spanish fleet, "about 40 ships, 2,000–2,200 men"]
+      - [Kota Batu taken, "14–16 April 1578"]
+    markers:
+      - kind: taken
+        side: es
+        name: Kota Batu
+        date: 14–16 April 1578
+        text: The capital of Brunei, taken after the Bruneian fleet in the harbour was destroyed. The great mosque was burned.
+        lonlat: [114.965, 4.882]
+      - kind: held
+        side: bn
+        name: Jerudong
+        date: April 1578
+        text: Sultan Saiful Rijal withdrew here with his court and gathered his forces.
+        lonlat: [114.815, 4.945]
+        lp: l
+    arrows:
+      - side: es
+        label: Sande’s fleet from Manila
+        phase: 1
+        via: [[115.900, 5.900], [115.450, 5.350], [115.150, 5.050], [114.990, 4.900]]
+      - side: bn
+        phase: 2
+        via: [[114.950, 4.870], [114.880, 4.910], [114.830, 4.935]]
+  - title: Withdrawal from Brunei, and Sulu
+    date: May – June 1578
+    when: "1578-06"
+    borders: "1578-06-26"
+    countries: [bn, ph, es]
+    body:
+      - The Spaniards were soon struck by disease, which the sources describe as cholera or dysentery, and harried by Bruneian forces; Bruneian tradition credits a counter-attack led by the bendahara, Sakam, with about 1,000 men. After 72 days Sande abandoned Kota Batu and sailed back to Manila, which he reached on 26 June 1578. The sultan returned and rebuilt the capital.
+      - "From Brunei, Sande sent Captain Esteban Rodríguez de Figueroa with part of the fleet to Sulu and Mindanao. The sultan of Sulu submitted at Jolo and promised tribute, though the submission did not last, and the Spaniards went on to Maguindanao. These voyages opened the long wars between Spain and the sultanates of the south. Spain made no further attempt on Brunei, and relations slowly improved: in 1599 the governor Francisco Tello de Guzmán wrote to ask for normal trade. Brunei, cut off from Luzon, turned to its own coasts of Borneo."
+    facts:
+      - [Spanish withdrawal, "26 June 1578, after 72 days"]
+      - [Sulu, "submitted to Spain, 1578"]
+    markers:
+      - kind: taken
+        side: bn
+        name: Kota Batu
+        date: June 1578
+        text: Abandoned by the Spaniards after 72 days and reoccupied by the sultan, who rebuilt the town.
+        lonlat: [114.965, 4.882]
+      - kind: event
+        side: es
+        name: Jolo
+        date: "1578"
+        text: The seat of the sultan of Sulu, who submitted to Rodríguez de Figueroa’s expedition and promised tribute.
+        lonlat: [121.000, 6.050]
+      - kind: event
+        side: es
+        name: Manila
+        date: 26 June 1578
+        text: Sande’s fleet returned here.
+        lonlat: [120.975, 14.590]
+    arrows:
+      - side: es
+        label: Return to Manila
+        phase: 1
+        via: [[115.000, 4.950], [115.500, 5.700], [117.200, 8.200], [119.300, 10.900], [120.850, 14.350]]
+      - side: es
+        label: Rodríguez de Figueroa
+        phase: 1
+        via: [[115.100, 5.100], [116.500, 6.400], [118.500, 6.300], [120.900, 6.000]]

@@ -1,4 +1,4 @@
-// Europe at War — the globe. An orthographic projection drawn on canvas.
+// World at War — the globe. An orthographic projection drawn on canvas.
 //
 // Geometry comes from data/atoms.topo.json in longitude and latitude. Every
 // vertex is kept as a unit vector, so projecting a point is three dot

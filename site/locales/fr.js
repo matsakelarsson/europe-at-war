@@ -1,7 +1,7 @@
 export default {
-  siteTitle: 'L’Europe en guerre',
-  description: 'Une carte interactive des guerres en Europe, de l’an 800 environ à nos jours. Suivez les frontières, les campagnes, les batailles, les sièges et les traités, étape par étape.',
-  subtitle: 'Les guerres en Europe, de l’an 800 environ à nos jours. Parcourez les années pour voir les frontières évoluer, ou choisissez une guerre pour la suivre étape par étape.',
+  siteTitle: 'Le monde en guerre',
+  description: 'Une carte interactive des guerres du monde, de l’an 800 environ à nos jours. Suivez les frontières, les campagnes, les batailles, les sièges et les traités, étape par étape.',
+  subtitle: 'Les guerres du monde, de l’an 800 environ à nos jours. Parcourez les années pour voir les frontières évoluer, ou choisissez une guerre pour la suivre étape par étape.',
   language: 'Langue',
   switchToDarkTheme: 'Passer au thème sombre',
   switchToLightTheme: 'Passer au thème clair',

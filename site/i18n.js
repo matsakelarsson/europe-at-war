@@ -82,7 +82,7 @@ export function applyLocale() {
   });
   document.getElementById('footerProject').innerHTML = rich('footerProject', {
     sweden: link('https://matsakelarsson.github.io/sweden-at-war/', t('footerSweden')),
-    source: link('https://github.com/matsakelarsson/europe-at-war', t('footerSource')),
+    source: link('https://github.com/matsakelarsson/world-at-war', t('footerSource')),
   });
   document.getElementById('contentFallback').hidden = !t('contentFallback');
 }

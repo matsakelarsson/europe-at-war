@@ -1,4 +1,4 @@
-// Europe at War — browser runtime. Plain ES module, no framework, no build step.
+// World at War — browser runtime. Plain ES module, no framework, no build step.
 // Data comes from dist/data/*, produced by tools/build.mjs.
 //
 // The map is a globe (site/globe.js): two canvases for the base map, with the

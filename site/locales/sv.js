@@ -1,7 +1,7 @@
 export default {
-  siteTitle: 'Europa i krig',
-  description: 'En interaktiv karta över Europas krig från omkring år 800 till i dag. Följ gränser, fälttåg, slag, belägringar och fredsavtal steg för steg.',
-  subtitle: 'Europas krig från omkring år 800 till i dag. Bläddra mellan åren för att se hur gränserna förändras, eller öppna ett krig och följ det steg för steg.',
+  siteTitle: 'Världen i krig',
+  description: 'En interaktiv karta över världens krig från omkring år 800 till i dag. Följ gränser, fälttåg, slag, belägringar och fredsavtal steg för steg.',
+  subtitle: 'Världens krig från omkring år 800 till i dag. Bläddra mellan åren för att se hur gränserna förändras, eller öppna ett krig och följ det steg för steg.',
   language: 'Språk',
   switchToDarkTheme: 'Byt till mörkt tema',
   switchToLightTheme: 'Byt till ljust tema',

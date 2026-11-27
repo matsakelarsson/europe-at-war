@@ -293,6 +293,7 @@ cost per war (about 50 KB of site each, in three languages).
 
 ## Open decisions
 
-- **The name.** The site keeps the name "Europe at War" and its address until a
-  new name is chosen. Renaming the repository would change the address (GitHub
-  Pages does not redirect it), so the repository keeps its name.
+- **The name.** Decided 2026-11-27: the project is now "World at War" and the
+  repository is `world-at-war`, at https://matsakelarsson.github.io/world-at-war/.
+  The old `europe-at-war` Pages address no longer works (GitHub Pages does not
+  redirect it).

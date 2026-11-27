@@ -12,8 +12,8 @@
   document.documentElement.dataset.theme = theme === 'dark' ? 'dark' : 'light';
 })();
 </script>
-<title>Europe at War</title>
-<meta name="description" content="An interactive map of Europe’s wars, from about 800 to today: borders, campaigns, battles, sieges and treaties, step by step.">
+<title>World at War</title>
+<meta name="description" content="An interactive map of the world’s wars, from about 800 to today: borders, campaigns, battles, sieges and treaties, step by step.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231b232c'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23efcd5f'/%3E%3Cpath d='M11.5,11.5L20.5,20.5M20.5,11.5L11.5,20.5' stroke='%231b232c' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preload" as="fetch" crossorigin href="data/atoms.topo.json">
 <link rel="preload" as="fetch" crossorigin href="data/borders.json">
@@ -28,7 +28,7 @@
 <body>
 <header>
   <div class="heading">
-    <h1><a href="#/" class="home" data-i18n="siteTitle">Europe at War</a></h1>
+    <h1><a href="#/" class="home" data-i18n="siteTitle">World at War</a></h1>
     <div class="header-controls">
       <label class="language"><span data-i18n="language">Language</span><select id="language"></select></label>
       <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme">
@@ -37,7 +37,7 @@
       </button>
     </div>
   </div>
-  <p class="sub" id="sub" data-i18n="subtitle">Europe’s wars from about 800 to today. Move through the years to watch borders change, or open a war to follow it step by step.</p>
+  <p class="sub" id="sub" data-i18n="subtitle">The world’s wars from about 800 to today. Move through the years to watch borders change, or open a war to follow it step by step.</p>
 </header>
 
 <main class="stage">
@@ -100,7 +100,7 @@
   <p id="contentFallback" data-i18n="contentFallback" hidden></p>
   <div id="footStory"></div>
   <p id="footerBorders">Borders are approximate. They are drafted from the open <a href="https://github.com/aourednik/historical-basemaps">historical-basemaps</a> dataset (GPL-3.0) and corrected by hand where the stories need it, using modern regions as building blocks, so lines that cut across today’s regions are simplified. Map data: <a href="https://www.naturalearthdata.com/">Natural Earth</a>.</p>
-  <p id="footerProject">Part of the same project as <a href="https://matsakelarsson.github.io/sweden-at-war/">Sweden at War, c. 1150–1814</a>. <a href="https://github.com/matsakelarsson/europe-at-war">Source code and data</a> (GPL-3.0).</p>
+  <p id="footerProject">Part of the same project as <a href="https://matsakelarsson.github.io/sweden-at-war/">Sweden at War, c. 1150–1814</a>. <a href="https://github.com/matsakelarsson/world-at-war">Source code and data</a> (GPL-3.0).</p>
 </footer>
 
 <script src="vendor/topojson-client.min.js"></script>

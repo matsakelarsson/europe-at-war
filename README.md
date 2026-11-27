@@ -1,10 +1,10 @@
-# Europe at War
+# World at War
 
-An interactive map of Europe's wars from about 800 to today. Move through the
+An interactive map of the world's wars from about 800 to today. Move through the
 years to watch borders change, open a war to follow it step by step, or pick a
 country to read all of its wars in order.
 
-Live site: https://matsakelarsson.github.io/europe-at-war/
+Live site: https://matsakelarsson.github.io/world-at-war/
 
 It grew out of [Sweden at War](https://matsakelarsson.github.io/sweden-at-war/),
 whose 67 steps are included here as the Sweden view (`#/country/se`).
@@ -67,13 +67,13 @@ The same rules apply to every border and every war:
 
 A correction that applies these rules is welcome as an issue. A case for
 changing a rule itself belongs in
-[Discussions](https://github.com/matsakelarsson/europe-at-war/discussions),
+[Discussions](https://github.com/matsakelarsson/world-at-war/discussions),
 because it changes the map everywhere.
 
 ## Corrections and contributions
 
 Found a wrong border, date or fact? Open a
-[correction](https://github.com/matsakelarsson/europe-at-war/issues/new/choose)
+[correction](https://github.com/matsakelarsson/world-at-war/issues/new/choose)
 with a source. To change the content yourself, see
 [CONTRIBUTING.md](CONTRIBUTING.md).
 

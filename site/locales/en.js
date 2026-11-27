@@ -1,7 +1,7 @@
 export default {
-  siteTitle: 'Europe at War',
-  description: 'An interactive map of Europe’s wars, from about 800 to today: borders, campaigns, battles, sieges and treaties, step by step.',
-  subtitle: 'Europe’s wars from about 800 to today. Move through the years to watch borders change, or open a war to follow it step by step.',
+  siteTitle: 'World at War',
+  description: 'An interactive map of the world’s wars, from about 800 to today: borders, campaigns, battles, sieges and treaties, step by step.',
+  subtitle: 'The world’s wars from about 800 to today. Move through the years to watch borders change, or open a war to follow it step by step.',
   language: 'Language',
   switchToDarkTheme: 'Switch to dark theme',
   switchToLightTheme: 'Switch to light theme',

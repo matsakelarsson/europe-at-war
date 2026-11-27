@@ -1,4 +1,4 @@
-// One-off migration of ~/projects/sweden-at-war into Europe at War content.
+// One-off migration of ~/projects/sweden-at-war into World at War content.
 //
 //   node tools/migrate/sweden.mjs splits    -> content/borders/splits/10-sweden-at-war.geojson
 //   (then: npm run geo)
